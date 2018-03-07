@@ -1,0 +1,1907 @@
+#id = 170001	GER	国債回収問題
+#id = 170010	GER	民需資金による国債返済（BondsRepayment++）
+#id = 170011	GER	国債の返済が一段落した（BondsRepayment>=10）
+#id = 170012	GER	国債の返済が一段落した（BondsRepayment>=20）
+#id = 170013	GER	国債の返済が一段落した（BondsRepayment>=30）
+#id = 170014	GER	国債の返済が完了した！（BondsRepayment=40）
+#id = 170015	GER	軍縮か生活苦か
+
+#####ヴェルサイユ条約
+#id = 170020	GER	第二次ヴェルサイユ条約（賠償金請求）
+#id = 170021	GER	第二次ヴェルサイユ条約（集金開始）
+#id = 170022	U73	第二次ヴェルサイユ条約（英）
+#id = 170023	VIC	第二次ヴェルサイユ条約（仏）
+#id = 170024	RUS	第二次ヴェルサイユ条約（露）
+#id = 170025	ITA	RSI	第二次ヴェルサイユ条約（伊）
+#id = 170026	USA	第二次ヴェルサイユ条約（米）
+#id = 170027	CAL	第二次ヴェルサイユ条約（加州）
+#id = 170028	CSA	第二次ヴェルサイユ条約（テキサス）
+#id = 170029	TEX	第二次ヴェルサイユ条約（米連合）
+#id = 170030	GER	賠償金による国債返済（WarReparation++）
+#id = 170031	GER	賠償支払状況（WarReparation>=10）
+#id = 170032	GER	賠償支払状況（WarReparation>=20）
+#id = 170033	GER	賠償支払状況（WarReparation>=30）
+#id = 170034	GER	賠償支払状況（WarReparation>=40）
+#id = 170035	GER	賠償は完遂された！（WarReparation=50）
+#id = 170040	賠償各国	賠償のための予算問題（Issue_currency_Treaty_of_Versailles++）
+#id = 170042	U73	英国は賠償を完済した！
+#id = 170043	VIC	フランスは賠償を完済した！
+#id = 170044	RUS	ロシアは賠償を完済した！
+#id = 170045	ITA	RSI	イタリアは賠償を完済した！
+#id = 170046	USA	アメリカは賠償を完済した！
+#id = 170047	CAL	アメリカは賠償を完済した！（加州）
+#id = 170048	CSA	アメリカは賠償を完済した！（米連合）
+#id = 170049	TEX	アメリカは賠償を完済した！（的射）
+#id = 170050-59	未来のためにあけておく
+#id = 170060	（各国共通）賠償体制組み換え要請
+#id = 170061	（ドイツ側）賠償体制組み換え要請 ― 交渉
+#id = 170062	（連合側）賠償体制組み換え受諾
+#id = 170063	（連合側）賠償体制組み換え拒否
+#id = 170064	RUS	賠償の組み換え ― 旧ソビエト構成国の支払い義務
+#id = 170065	GER	賠償の組み換え ― 旧ソビエト構成国の支払い義務
+#id = 170066	SIB	賠償の組み換え ― 旧ソビエト構成国の支払い義務
+#id = 170067	KAZ	KYG TAZ	TRK	UZB	賠償の組み換え ― 旧ソビエト構成国の支払い義務
+#id = 170068	RUS	賠償の組み換え ― 旧ソビエト構成国からの収入（シベリア・中央アジア）
+#id = 170069	UKR	BLR	U16	賠償の組み換え ― 旧ソビエト構成国の支払い義務
+#id = 170070	RUS	賠償の組み換え ― 旧ソビエト構成国からの収入（ウクライナ・ベラルーシ・ザカフカース）
+#id = 170071	U73	賠償の組み換え ― 旧英国植民地からの吸収
+#id = 170072	GER	賠償の組み換え ― 旧英国植民地からの吸収
+#id = 170073	JAP	欧州はまたしてもインドを食い物にしようとしている！
+#id = 170074	IND	欧州はまたしてもインドを食い物にしようとしている！
+#id = 170075	IND	賠償の組み換え ― 旧英国植民地からの吸収
+#id = 170076	U73	賠償の組み換え ― 旧英国植民地からの収入
+#id = 170077-79	未来の為に明けておく
+
+#####ゲルマニアとドイツによる高速鉄道計画
+#id = 170100	GER	世界首都ゲルマニア
+#id = 170101	GER	ゲルマニアへの増資
+#id = 170102	GER	ゲルマニア建造状況
+#id = 170103	GER	ゲルマニア進捗（AIイベント）（IC0％）
+#id = 170104	GER	ゲルマニア進捗（AIイベント）（IC10％）
+#id = 170105	GER	ゲルマニア進捗（AIイベント）（IC20％）
+#id = 170106	GER	ゲルマニア進捗（AIイベント）（IC30％）
+#id = 170107	GER	世界首都ゲルマニア、半分が完成
+#id = 170108	GER	ドイツ国総統の引退
+#id = 170150	GER	ブライトシュプールバーン（ドイツ高速鉄道計画）
+#id = 170151	GER	ブライトシュプールバーン（東西線）
+#id = 170152	GER	ブライトシュプールバーン（南北線）
+#id = 170153	GER	ブライトシュプールバーン（東西２号線）
+#id = 170154	GER	ブライトシュプールバーン（南北平行線）
+#id = 170155	GER	ブライトシュプールバーン完成（東西線）
+#id = 170156	GER	ブライトシュプールバーン完成（南北線）
+#id = 170157	GER	ブライトシュプールバーン完成（東西２号線）
+#id = 170158	GER	ブライトシュプールバーン完成（南北平行線）
+#id = 170159	GER	ブライトシュプールバーン拡張計画
+#id = 170160	GER	南北線拡張計画（ルーマニア―トルコ間）
+#【南北線】ブカレスト―ヴァルナ―イスタンブール線
+#id = 170161	GER	東西線拡張計画（パリ―ブレスト間）
+#【東西線】パリ―ブレスト線
+#id = 170162	GER	東西2号線拡張計画（ミュンヘン―マルセイユ間）
+#【東西２号線】ミュンヘン―マルセイユ線
+#id = 170163	GER	東西2号線拡張計画（マルセイユ―バルセロナ間）
+#【東西２号線】マルセイユ―バルセロナ線
+#id = 170164	GER	南北平行線拡張計画（ウィーン―ローマ間）
+#【南北平行線】ウィーン―ベネツィア―ローマ線
+#id = 170165	GER	東西線拡張計画（ブレスラウ―カザン間）
+#【東西線】ブレスラウ―ワルシャワ―ミンスク―モスクワ―カザン線
+#id = 170166	GER	東西線拡張計画（ミンスク―ピエタリ間）
+#【東西線】ミンスク―ピエタリ線
+#id = 170167	GER	東西線拡張計画（キエフ―オデッサ間）
+#【東西線】キエフ―オデッサ線
+#id = 170167	GER	東西線拡張計画（キエフ―バクー間）
+#【東西線】キエフ―ポルタヴァ―ロストフ―バクー線
+#id = 170168	GER	東西線拡張計画（キエフ―ヴォルゴグラード間）
+#id = 170170	GER	南北線拡張完了（ルーマニア―トルコ間）
+#id = 170171	GER	東西線拡張完了（パリ―ブレスト間）
+#id = 170172	GER	東西2号線拡張完了（ミュンヘン―マルセイユ間）
+#id = 170173	GER	東西2号線拡張完了（マルセイユ―バルセロナ間）
+#id = 170174	GER	南北平行線拡張完了（ウィーン―ローマ間）
+#id = 170175	GER	東西線拡張完了（ブレスラウ―カザン間）
+#id = 170176	GER	東西線拡張完了（ミンスク―ピエタリ間）
+#id = 170177	GER	東西線拡張完了（キエフ―オデッサ間）
+#id = 170177	GER	東西線拡張完了（キエフ―バクー間）
+#id = 170178	GER	東西線拡張完了（キエフ―ヴォルゴグラード間）
+
+#id = 170300	VIC	旧連合国のハイパーインフレーション
+#id = 170301	VIC	オルレアン暴動
+#id = 170302	FRA	革命の幕開け
+#id = 170303	GER	国境騒乱
+#id = 170310	RUS	旧連合国のハイパーインフレーション
+#id = 170311	RUS	第二次ロシア革命
+#id = 170312	SOV	労働者の再起
+#id = 170313	GER	バルバロッサ再び？
+#id = 170320	U73	旧連合国のハイパーインフレーション
+#id = 170321	U73	ブリテン労働革命
+#id = 170322	GER	スカパ・フロー占領
+#id = 170330	USA	旧連合国のハイパーインフレーション
+#id = 170331	CSA	アメリカ労農赤軍
+#id = 170332	TEX	アメリカ労農赤軍に参加？
+#id = 170333	CAL	アメリカ労農赤軍に参加？
+#id = 170334	USA	アメリカ革命
+
+event = {
+	id = 170001
+	random = no
+	country = GER
+	trigger = {
+		atwar = no
+		event = 130850
+		event = 130900	#Victory in the west & east
+		exists = U73
+		exists = VIC
+		exists = RUS
+		exists = USA
+		OR = {
+			exists = RSI
+			exists = ITA
+		}
+		random = 50
+	}
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	picture = "MEFO"
+	style = 2
+	
+	name = "EVT_170001_NAME"	#ライヒ債務問題
+	desc = "EVT_170001_DESC"	#1933年にドイツが発行を開始したメフォ手形は、当時の財務相ヒャルマル・シャハトがドイツ経済復活の切り札として、またライヒスバンクが軍備を拡大したい政府に対して優位であるための財源として用意された。38年3月に発行が停止されるまでに204億ライヒスマルクがこれにより調達された。ライヒスバンクは手形の乱発はドイツ経済をインフレに招くとして軍事費の拡大中止を要望したもののヒトラー率いる政府はこれに反発しライヒスバンク幹部の首を挿げ替え、メフォ手形以降も更に多くの国債を発行して軍備を増強した。ヒトラーは借金によって国が滅びることはないとしたものの、債権の返済のためにドイツ経済は38年以降何度か危機に陥っていた。いまドイツの勝利により戦争が終わると、ついに債権の山と向き合わなければならない時が来た。ドイツは現在3500億ライヒスマルクの債務を抱えており、その大量の返済資金を調達するには２つの選択肢がある。１つ目は、軍事費の削減、緊縮財政、対外貿易による外貨の入手により自国の国庫での返済を目指す方法。２つ目は、戦勝国として各敗戦国に戦時賠償金の支払いを命じそれによって支払いを行う方法。前者の方法を取ると、我が国の軍備計画は確実に見直しを強いられ、また場合によっては軍のいくつかの解体も視野に入れねばならないかもしれない。後者の方法では軍備計画の変更は最小限で済むであろうが、敗戦国の経済の混乱が起こることは避けられないだろう（以前の我々のように）。さて、我々はどうするべきであろうか。
+	
+	action = {
+		name = "EVT_170001_ACTA"	#総力戦体制は終わりだ。我々は自力で財政の健全化を目指す
+		ai_chance = 0
+		command = { type = wakeminister which = 77 }
+		command = { type = wakeminister which = 92 }
+		command = { type = dissent value = 15 }
+		command = { type = set_domestic which = free_market value = 6 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = industrial_modifier which = total value = -40 }
+		command = { type = armamentminister which = 92 }
+		command = {
+			trigger = {
+				ai = no
+			} 
+			type = free_money value = 20 }
+	}
+	
+	action = {
+		name = "EVT_170001_ACTB"	#「戦利品を勝者へ」！　旧連合各国への賠償を命ぜよ！
+		ai_chance = 100
+		command = { type = dissent value = -5 }
+		command = { type = industrial_modifier which = total value = -15 }
+		command = { type = belligerence which = GER value = 20 }
+		command = { type = trigger which = 170020 }
+	}
+}	
+
+#エアハルト経済ルート
+event = {
+	id = 170010
+	country = GER
+	persistent = yes
+	decision = {
+		event = 170001
+		NOT = { event = 170020 }
+		money = 8000
+	}
+	decision_trigger = {
+		money = 10000
+	}
+	trigger = {
+		event = 170001
+		NOT = { event = 170020 }
+		random = 12
+	}
+	
+	date = { day = 1 month = january year = 1944 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	decision_picture = "decision_issue_currency"
+	picture = "MEFO"
+	style = 2
+	
+	name = "EVT_170010_NAME"	#民需資金による国債返済
+	desc = "EVT_170010_DESC"	#ドイツは大戦で使用された戦費を自国の力で返済することと定めた。ライヒスバンクはシャハトにより再び管理されることとなり、またルートヴィヒ・エアハルトがその補佐役として置かれた。エアハルトは戦中からドイツ経済の健全化のためのプランをまとめた文章を執筆しており、これが帝国財務省の目に止まったのだ。生産管理を停止、物品価格の自由化、中所得層での大幅な税率の削減などを通じて通貨改革を行うエアハルトの方針はこれまでドイツ帝国が行ってきた中央計画経済を真っ向から批判するものであったが、政府はそれを受け入れたのだ。今、いくらかの資金が調達されたことによりドイツは国債の返済にその国庫を充てることが出来る。長い道のりになろうが、必ずドイツはこれを乗り越えてさらなる経済発展を迎えることが出来るはずだ。
+	
+	action = {
+		name = "EVT_170010_ACTA"	#国庫支出を国債返済に充てよ
+		command = {
+			trigger = {
+				ai = no
+			}
+			type = money value = -10000 }
+		command = { type = industrial_modifier which = total value = 1 }
+		command = { type = local_setflag which = BondsRepayment value = 1 when = 1 }
+	}
+}
+
+event = {
+	id = 170011
+	country = GER
+	trigger = {
+		local_flag = { which = BondsRepayment when = 1 value = 10 }
+	}
+	
+	date = { day = 1 month = january year = 1944 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	picture = "economic"
+	
+	name = "EVT_170011_NAME"	#国債の返済が一段落した
+	desc = "EVT_170011_DESC"	#今朝の新聞のトップは経済動向に関する記事であった。国債の25％の返済が完了し、マルクの国際的な格付けが上がったことで隣国からの資金の流入や国内外での小規模な投資の動きが広まりつつあるのだという。少なくとも数字の上で、ドイツ経済は回復しつつある。
+	
+	action = {
+		name = "EVT_170011_ACTA"	#国債の２割５分の返済が完了したとのことだ
+		command = { type = dissent value = -5 }
+		#command = { type = domestic which = free_market value = 1 }
+	}
+}
+
+event = {
+	id = 170012
+	country = GER
+	trigger = {
+		local_flag = { which = BondsRepayment when = 1 value = 20 }
+	}
+	
+	date = { day = 1 month = january year = 1944 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	picture = "economic"
+	
+	name = "EVT_170012_NAME"	#国債の返済が一段落した
+	desc = "EVT_170012_DESC"	#目に見えて人々の生活が良くなってきている。大戦の開始以降めっきり話を効かなくなっていた国民車（フォルクスワーゲン）は目覚ましい勢いで国民に普及しているらしく、アウトバーンで小気味よく走り抜けていくタイプ１を見ない日はない。人々に車を買う余裕が出来たということはやはりそれ以下の様々な物を買えることになっているということで、誰にとっても素晴らしいことである。
+	
+	action = {
+		name = "EVT_170012_ACTA"	#国債の半分が返済されたらしい
+		command = { type = dissent value = -5 }
+		command = { type = domestic which = free_market value = 1 }
+	}
+}		
+
+event = {
+	id = 170013
+	country = GER
+	trigger = {
+		local_flag = { which = BondsRepayment when = 1 value = 30 }
+	}
+	
+	date = { day = 1 month = january year = 1944 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	picture = "economic"
+	
+	name = "EVT_170013_NAME"	#国債の返済が一段落した
+	desc = "EVT_170013_DESC"	#テレビが経済ニュースを伝えている。戦勝に喜ぶドイツ国に降りかかった借金という災厄は、その3/4が駆逐されたのだという。長い長い登山はようやく雲を超えて、山頂の輝きが視界に入りつつある。
+	
+	action = {
+		name = "EVT_170013_ACTA"	#あと少しで我々の借金生活は終わりだ
+		command = { type = dissent value = -5 }
+		command = { type = domestic which = free_market value = 1 }
+	}
+}		
+
+event = {
+	id = 170014
+	country = GER
+	trigger = {
+		local_flag = { which = BondsRepayment when = 1 value = 40 }
+	}
+	
+	date = { day = 1 month = january year = 1944 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	picture = "economic"
+	
+	name = "EVT_170014_NAME"	#国債の返済が完了した！
+	desc = "EVT_170014_DESC"	#ライヒスバンクの会見がテレビで生中継されている。戦時国債の全ての返済が完了し、ドイツ経済はついに完全な健全化を果たしたという。ドイツの金融センターであるところのフランクフルトでは、世界全体の経済に関わるようないくつもの銀行がこの日を祝っている。
+	
+	action = {
+		name = "EVT_170014_ACTA"	#素晴らしい！
+		command = { type = dissent value = -10 }
+		#command = { type = domestic which = free_market value = 1 }
+		command = { type = sleepevent which = 170010 }
+		command = {
+			trigger = {
+				ai = no
+			} 
+			type = free_money value = -20 }
+	}
+}	
+
+event = {
+	id = 170015
+	country = GER
+	persistent = yes
+	decision = {
+		event = 170001
+		NOT = { 
+			event = 170014
+			event = 170020	#ヴェルサイユ条約ルートではない
+		}
+	}
+	decision_trigger = {
+		NOT = { dissent = 20 }
+	}
+	trigger = {
+		event = 170010
+		NOT = { 
+			event = 170014 
+			event = 170020
+		}
+		land_percentage = { country = USA value = 2.0 }
+		land_percentage = { country = TEX value = 2.0 }
+		land_percentage = { country = CSA value = 2.0 }
+		land_percentage = { country = CAL value = 2.0 }
+		land_percentage = { country = ENG value = 2.0 }
+		land_percentage = { country = U73 value = 2.0 }
+		land_percentage = { country = VIC value = 2.0 }
+		land_percentage = { country = FRA value = 2.0 }
+		land_percentage = { country = RUS value = 2.0 }
+		land_percentage = { country = SIB value = 2.0 }
+		land_percentage = { country = JAP value = 2.0 }
+		land_percentage = { country = CHI value = 2.0 }
+		land_percentage = { country = ITA value = 2.0 }
+		land_percentage = { country = RSI value = 2.0 }
+		random = 30
+	}
+	
+	date = { day = 1 month = january year = 1944 }
+	offset = 40
+	deathdate = { day = 29 month = december year = 1963 }
+
+	picture = "economic"
+	decision_picture = "decision_issue_currency"
+	
+	name = "EVT_170015_NAME"	#国防軍か、銀行か
+	desc = "EVT_170015_DESC"	#ドイツはその戦後経済の再構築を自らの国力を拠って行うとし、それは実行されつつある。そうしていく中でドイツ経済復活の足枷となっていると試算されたのは、ドイツを歴史上最も大いなるものとした国防軍の存在そのものであった。彼らの維持にかかる経費、その兵力がドイツの内需のために利用されないことが、ドイツ経済に悪影響を与えているとするものであった。政府は難しい選択を迫られた。国家の英雄である彼らを手放すことは、兵士や参謀本部のみならず、国民からも小さくない反発を受けるだろう。しかし、彼らを解散させる道を選べば、これは経済にとって大きな利益をもたらすだろう。
+	decision_desc = "EVT_170015_DESC_DECISION"	#ユニットの削除と不満度を引き換えに、資金を入手できます。本ディシジョンでは三軍のユニットが古い方から5個師団（空軍は4個師団）削除されます。シナリオ上で古参のものから順々に削除されますから、最古参の高経験値ユニットが削除される可能性も十分にあるということにご注意下さい。
+	
+	action = {
+		ai_chance = 100
+		name = "EVT_170015_ACTA"	#旧式の陸軍5個師団の削減を行う
+		command = { type = dissent value = 7.5 }
+		command = { type = demobilize which = land when = 0 value = -5 }
+		command = { type = money value = 1000 }
+	}
+	action = `
+		ai_chance = 0
+		name = "EVT_170015_ACTB"	#旧式の海軍艦艇5隻の解体を行う
+		command = { type = dissent value = 7.5 }
+		command = { type = demobilize which = naval when = 0 value = -5 }
+		command = { type = money value = 1000 }
+	}
+	action = `
+		ai_chance = 0
+		name = "EVT_170015_ACTC"	#旧式の空軍4航空隊の解体を行う
+		command = { type = dissent value = 7.5 }
+		command = { type = demobilize which = air when = 0 value = -4 }
+		command = { type = money value = 1000 }
+	}
+}
+
+#賠償金請求ルート
+event = {
+	id = 170020
+	country = GER
+	
+	picture = "Versailles"
+	
+	name = "EVT_170020_NAME"	#第二次ヴェルサイユ条約
+	desc = "EVT_170020_DESC"	#鏡の間に各国の代表団が集められる。殆ど1919年と同じ光景であるが、一つだけ違うのはドイツとその他の国の立っている位置が逆であることである。これはそのまま、あの時と立場が逆であることを示していた。今日ここで、連合国には過酷な賠償金が請求される。その額は3500億ライヒスマルク、第一次大戦時に英仏が米国からの借入金を賠償金で支払おうとしたのと同じように、ドイツは国債を連合国からの賠償金により支払うと決めたのだ。ヴェルサイユ宮殿の周辺にはドイツ国防軍第1装甲師団も展開していた。もし調印を拒否すれば、これらの戦車が再び彼らの荒廃した国土を走り抜けることになるだろうという言葉なきメッセージであった。
+	
+	#所謂「ビット演算」。
+	#WarReparationPatternの値は以下のとおり。
+	#WarReparationPattern==1	露仏英のみによる賠償
+	#WarReparationPattern==3	露仏英伊による賠償
+	#WarReparationPattern==5	露仏英米による賠償
+	#WarReparationPattern==7	露仏英米伊による賠償
+	#ビット演算では状況に対して出力されるパターンが一意に定まるので、
+	#一つの変数フラグで値を管理するだけで全てのパターンを考慮することが出来る。
+	#当然、2^nのbitを増やしていくと、ほぼ無制限に対象国を拡張することも出来る！
+	action = {
+		name = "EVT_170020_ACTA"	#対象国家を招集せよ！
+		command = { type = setflag which = WarReparationPattern value = 1 when = 0 }
+		command = {	#イタリアの賠償義務
+			trigger = {
+				OR = {
+					AND = {
+						ispuppet = ITA
+						alliance = { country = ITA }
+					}
+					AND = {
+						ispuppet = RSI
+						alliance = { country = RSI }
+					}
+				}
+			}
+			type = setflag which = WarReparationPattern value = 2 when = 1 }
+		command = {	#アメリカの賠償義務
+			trigger = {
+				puppet = { country = USA }
+			}
+			type = setflag which = WarReparationPattern value = 4 when = 1 }
+		command = { type = trigger which = 170021 }
+		command = { type = trigger which = 170022 }
+		command = { type = trigger which = 170023 }
+		command = { type = trigger which = 170024 }
+		command = { type = trigger which = 170025 }
+		command = { type = trigger which = 170026 }
+		command = { type = trigger which = 170027 }
+		command = { type = trigger which = 170028 }
+		command = { type = trigger which = 170029 }
+	}
+}
+
+event = {
+	id = 170021
+	country = GER
+	
+	picture = "Versailles"
+	
+	name = "EVT_170021_NAME"	#第二次ヴェルサイユ条約
+	desc = "EVT_170021_DESC"	#ヴェルサイユ条約の取り決めにより、ドイツに対して旧連合国から莫大な賠償金が支払われることになった。第一次大戦後、ジョン・メイナード・ケインズなどによる委員会はドイツの支払い能力は最大1200億マルクだとしていたが、今回ドイツはその約3倍の3500億ライヒスマルクを8年間の割賦で支払うことを連合国に要求した。総額はともかく、これほどの短期間での支払いを求めるのは異常なことであった。
+	
+	action = {
+		name = "EVT_170021_ACTA"	#戦利品を勝者へ！
+		command = { type = dissent value = -5 }
+		command = {
+			trigger = {
+				ai = no
+			} 
+			type = free_money value = 138.9 }
+	}
+}
+
+event = {
+	id = 170022
+	country = U73
+	
+	picture = "Versailles"
+	
+	name = "EVT_170022_NAME"	#第二次ヴェルサイユ条約
+	desc = "EVT_170022_DESC"	#ヴェルサイユ条約の取り決めにより、ドイツに対して旧連合国から莫大な賠償金が支払われることになった。第一次大戦後、ジョン・メイナード・ケインズなどによる委員会はドイツの支払い能力は最大1200億マルクだとしていたが、今回ドイツはその約3倍の3500億ライヒスマルクを8年間の割賦で支払うことを連合国に要求した。連合国の主要国それぞれの国力に応じて支払が決定される。
+	
+	action = {
+		name = "EVT_170022_ACTA"	#仕方があるまい
+		command = { type = dissent value = 10 }
+		command = {
+			trigger = {	
+				flag = { which = WarReparationPattern when = 0 value = 1 }
+			}
+			type = free_money value = -46.5 }
+		command = {
+			trigger = {	
+				flag = { which = WarReparationPattern when = 0 value = 3 }
+			}
+			type = free_money value = -39.9 }
+		command = {
+			trigger = {	
+				flag = { which = WarReparationPattern when = 0 value = 5 }
+			}
+			type = free_money value = -23.3 }
+		command = {
+			trigger = {	
+				flag = { which = WarReparationPattern when = 0 value = 7 }
+			}
+			type = free_money value = -21.5 }
+	}
+}
+
+event = {
+	id = 170023
+	country = VIC
+	
+	picture = "Versailles"
+	
+	name = "EVT_170022_NAME"	#第二次ヴェルサイユ条約
+	desc = "EVT_170022_DESC"	#ヴェルサイユ条約の取り決めにより、ドイツに対して旧連合国から莫大な賠償金が支払われることになった。第一次大戦後、ジョン・メイナード・ケインズなどによる委員会はドイツの支払い能力は最大1200億マルクだとしていたが、今回ドイツはその約3倍の3500億ライヒスマルクを8年間の割賦で支払うことを連合国に要求した。連合国の主要国それぞれの国力に応じて支払が決定される。
+	
+	action = {
+		name = "EVT_170022_ACTA"	#仕方があるまい
+		command = { type = dissent value = 10 }
+		command = {
+			trigger = {	
+				flag = { which = WarReparationPattern when = 0 value = 1 }
+			}
+			type = free_money value = -29.2 }
+		command = {
+			trigger = {	
+				flag = { which = WarReparationPattern when = 0 value = 3 }
+			}
+			type = free_money value = -25.3 }
+		command = {
+			trigger = {	
+				flag = { which = WarReparationPattern when = 0 value = 5 }
+			}
+			type = free_money value = -14.6 }
+		command = {
+			trigger = {	
+				flag = { which = WarReparationPattern when = 0 value = 7 }
+			}
+			type = free_money value = -13.5 }
+	}
+}
+
+event = {
+	id = 170024
+	country = RUS
+	
+	picture = "Versailles"
+	
+	name = "EVT_170022_NAME"	#第二次ヴェルサイユ条約
+	desc = "EVT_170022_DESC"	#ヴェルサイユ条約の取り決めにより、ドイツに対して旧連合国から莫大な賠償金が支払われることになった。第一次大戦後、ジョン・メイナード・ケインズなどによる委員会はドイツの支払い能力は最大1200億マルクだとしていたが、今回ドイツはその約3倍の3500億ライヒスマルクを8年間の割賦で支払うことを連合国に要求した。連合国の主要国それぞれの国力に応じて支払が決定される。
+	
+	action = {
+		name = "EVT_170022_ACTA"	#仕方があるまい
+		command = { type = dissent value = 10 }
+		command = {
+			trigger = {	
+				flag = { which = WarReparationPattern when = 0 value = 1 }
+			}
+			type = free_money value = -63.2 }
+		command = {
+			trigger = {	
+				flag = { which = WarReparationPattern when = 0 value = 3 }
+			}
+			type = free_money value = -54.5 }
+		command = {
+			trigger = {	
+				flag = { which = WarReparationPattern when = 0 value = 5 }
+			}
+			type = free_money value = -31.9 }
+		command = {
+			trigger = {	
+				flag = { which = WarReparationPattern when = 0 value = 7 }
+			}
+			type = free_money value = -29.5 }
+	}
+}
+
+event = {
+	id = 170025
+	tag = { ITA RSI }
+	trigger = {
+		puppet = { country = -1 country = GER }
+		OR = {
+			flag = { which = WarReparationPattern when = 0 value = 3 }
+			flag = { which = WarReparationPattern when = 0 value = 7 }
+		}
+		control = { province = 515 data = -1 }
+		event = 170021
+	}
+	picture = "Versailles"
+	
+	date = { day = 1 month = january year = 1944 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	
+	name = "EVT_170022_NAME"	#第二次ヴェルサイユ条約
+	desc = "EVT_170022_DESC"	#ヴェルサイユ条約の取り決めにより、ドイツに対して旧連合国から莫大な賠償金が支払われることになった。第一次大戦後、ジョン・メイナード・ケインズなどによる委員会はドイツの支払い能力は最大1200億マルクだとしていたが、今回ドイツはその約3倍の3500億ライヒスマルクを8年間の割賦で支払うことを連合国に要求した。連合国の主要国それぞれの国力に応じて支払が決定される。
+	
+	action = {
+		name = "EVT_170022_ACTA"	#仕方があるまい
+		command = { type = dissent value = 10 }
+		command = {
+			trigger = {	
+				flag = { which = WarReparationPattern when = 0 value = 3 }
+			}
+			type = free_money value = -19.1 }
+		command = {
+			trigger = {	
+				flag = { which = WarReparationPattern when = 0 value = 7 }
+			}
+			type = free_money value = -10.4 }
+	}
+}
+
+event = {
+	id = 170026
+	country = USA
+	trigger = {
+		flag = { which = WarReparationPattern when = 1 value = 5 }
+	}
+	picture = "Versailles"
+	
+	name = "EVT_170022_NAME"	#第二次ヴェルサイユ条約
+	desc = "EVT_170022_DESC"	#ヴェルサイユ条約の取り決めにより、ドイツに対して旧連合国から莫大な賠償金が支払われることになった。第一次大戦後、ジョン・メイナード・ケインズなどによる委員会はドイツの支払い能力は最大1200億マルクだとしていたが、今回ドイツはその約3倍の3500億ライヒスマルクを8年間の割賦で支払うことを連合国に要求した。連合国の主要国それぞれの国力に応じて支払が決定される。
+	
+	action = {
+		name = "EVT_170022_ACTA"	#仕方があるまい
+		command = { type = dissent value = 10 }
+		command = {
+			trigger = {	
+				flag = { which = WarReparationPattern when = 0 value = 5 }
+			}
+			type = free_money value = -36.7 }
+		command = {
+			trigger = {	
+				flag = { which = WarReparationPattern when = 0 value = 7 }
+			}
+			type = free_money value = -39.7 }
+	}
+}
+
+event = {
+	id = 170027
+	country = CAL
+	trigger = {
+		flag = { which = WarReparationPattern when = 1 value = 5 }
+	}
+	picture = "Versailles"
+	
+	name = "EVT_170022_NAME"	#第二次ヴェルサイユ条約
+	desc = "EVT_170022_DESC"	#ヴェルサイユ条約の取り決めにより、ドイツに対して旧連合国から莫大な賠償金が支払われることになった。第一次大戦後、ジョン・メイナード・ケインズなどによる委員会はドイツの支払い能力は最大1200億マルクだとしていたが、今回ドイツはその約3倍の3500億ライヒスマルクを8年間の割賦で支払うことを連合国に要求した。連合国の主要国それぞれの国力に応じて支払が決定される。
+	
+	action = {
+		name = "EVT_170022_ACTA"	#仕方があるまい
+		command = { type = dissent value = 10 }
+		command = {
+			trigger = {	
+				flag = { which = WarReparationPattern when = 0 value = 5 }
+			}
+			type = free_money value = -10.7 }
+		command = {
+			trigger = {	
+				flag = { which = WarReparationPattern when = 0 value = 7 }
+			}
+			type = free_money value = -11.5 }
+	}
+}
+
+event = {
+	id = 170028
+	country = TEX
+	trigger = {
+		flag = { which = WarReparationPattern when = 1 value = 5 }
+	}
+	picture = "Versailles"
+	
+	name = "EVT_170022_NAME"	#第二次ヴェルサイユ条約
+	desc = "EVT_170022_DESC"	#ヴェルサイユ条約の取り決めにより、ドイツに対して旧連合国から莫大な賠償金が支払われることになった。第一次大戦後、ジョン・メイナード・ケインズなどによる委員会はドイツの支払い能力は最大1200億マルクだとしていたが、今回ドイツはその約3倍の3500億ライヒスマルクを8年間の割賦で支払うことを連合国に要求した。連合国の主要国それぞれの国力に応じて支払が決定される。
+	
+	action = {
+		name = "EVT_170022_ACTA"	#仕方があるまい
+		command = { type = dissent value = 10 }
+		command = {
+			trigger = {	
+				flag = { which = WarReparationPattern when = 0 value = 5 }
+			}
+			type = free_money value = -5.9 }
+		command = {
+			trigger = {	
+				flag = { which = WarReparationPattern when = 0 value = 7 }
+			}
+			type = free_money value = -6.4 }
+	}
+}
+
+event = {
+	id = 170029
+	country = CSA
+	trigger = {
+		flag = { which = WarReparationPattern when = 1 value = 5 }
+	}
+	picture = "Versailles"
+	
+	name = "EVT_170022_NAME"	#第二次ヴェルサイユ条約
+	desc = "EVT_170022_DESC"	#ヴェルサイユ条約の取り決めにより、ドイツに対して旧連合国から莫大な賠償金が支払われることになった。第一次大戦後、ジョン・メイナード・ケインズなどによる委員会はドイツの支払い能力は最大1200億マルクだとしていたが、今回ドイツはその約3倍の3500億ライヒスマルクを8年間の割賦で支払うことを連合国に要求した。連合国の主要国それぞれの国力に応じて支払が決定される。
+	
+	action = {
+		name = "EVT_170022_ACTA"	#仕方があるまい
+		command = { type = dissent value = 10 }
+		command = {
+			trigger = {	
+				flag = { which = WarReparationPattern when = 0 value = 5 }
+			}
+			type = free_money value = -10.7 }
+		command = {
+			trigger = {	
+				flag = { which = WarReparationPattern when = 0 value = 7 }
+			}
+			type = free_money value = -11.5 }
+	}
+}
+
+event = {
+	id = 170030
+	country = GER
+	persistent = yes
+	decision = {
+		event = 170001
+		event = 170021
+		money = 7000
+	}
+	decision_trigger = {
+		money = 8000
+	}
+	trigger = {
+		event = 170001
+		event = 170021
+		random = 50
+	}
+	
+	date = { day = 1 month = january year = 1944 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	decision_picture = "decision_issue_currency"
+	picture = "MEFO"
+	style = 2
+	
+	name = "EVT_170030_NAME"	#賠償金による国債返済
+	desc = "EVT_170030_DESC"	#ドイツは大戦で使用された軍事費を旧敵国からの賠償金により支払うことを決めた。大戦中ほぼ無制限に軍事費のために発行され続けたドイツ国債は、戦争が終わった今ドイツ経済の大きな荷物となった。莫大な国債はドイツの格を下げることになりかねず、政府の出資者であるところの大企業が海外に進出する際の障害となるのだ。I.G.ファルベンを始めとする海外への進出を進めたい者達による圧力も有り、ドイツ政府は可及的速やかに資金を回収する必要があった。
+	
+	action = {
+		name = "EVT_170030_ACTA"	#賠償金を国債返済に充てよ
+		command = {
+			trigger = {
+				ai = no
+			}
+			type = money value = -8000 }
+		command = { type = industrial_modifier which = total value = 0.3 }
+		command = { type = dissent value = -1 }
+		command = { type = local_setflag which = WarReparation value = 1 when = 1 }
+	}
+}
+
+event = {
+	id = 170031
+	country = GER
+	trigger = {
+		local_flag = { which = WarReparation when = 1 value = 10 }
+	}
+	
+	date = { day = 1 month = january year = 1944 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	picture = "economic"
+	
+	name = "EVT_170031_NAME"	#国債の返済が一段落した
+	desc = "EVT_170031_DESC"	#政府からの発表では、連合国は今のところまともに我々への賠償を支払っているという。彼らの生活がどうなっているかは知らないが、ともかく我々は最高の平和を謳歌している。
+	
+	action = {
+		name = "EVT_170031_ACTA"	#国債の2割の返済が完了したとのことだ
+		command = { type = dissent value = -5 }
+	}
+}
+
+event = {
+	id = 170032
+	country = GER
+	trigger = {
+		local_flag = { which = WarReparation when = 1 value = 20 }
+	}
+	
+	date = { day = 1 month = january year = 1944 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	picture = "economic"
+	
+	name = "EVT_170032_NAME"	#国債の返済が一段落した
+	desc = "EVT_170032_DESC"	#1400億ライヒスマルクの国債が返済された。1921年5月の第二回ロンドン会議でドイツが連合国に求められた賠償金総額が、だいたいこの値であった。まさか彼ら自身がこの額を支払わねばならぬなどとは思ってもみなかっただろう。
+	
+	action = {
+		name = "EVT_170032_ACTA"	#国債の4割が返済されたらしい
+		command = { type = dissent value = -5 }
+	}
+}		
+
+event = {
+	id = 170033
+	country = GER
+	trigger = {
+		local_flag = { which = WarReparation when = 1 value = 30 }
+	}
+	
+	date = { day = 1 month = january year = 1944 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	picture = "economic"
+	
+	name = "EVT_170033_NAME"	#国債の返済が一段落した
+	desc = "EVT_170033_DESC"	#連合国が第一次大戦からこちら奪い続けてきた正当なドイツの資産が国内に戻りつつある。だが、まだ彼らは我々に与えてきた侮辱と屈辱を支払いきってはいない。まだ彼らの動向は監視されなければならない。
+	
+	action = {
+		name = "EVT_170033_ACTA"	#ようやく半分を超え、6割が完了した
+		command = { type = dissent value = -5 }
+		#command = { type = domestic which = free_market value = 1 }
+	}
+}		
+
+event = {
+	id = 170034
+	country = GER
+	trigger = {
+		local_flag = { which = WarReparation when = 1 value = 40 }
+	}
+	
+	date = { day = 1 month = january year = 1944 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	picture = "economic"
+	
+	name = "EVT_170034_NAME"	#国債の返済が一段落した
+	desc = "EVT_170034_DESC"	#連合国による賠償金の支払いが彼らの首を締め上げると、世界経済のドイツへの集中が起こった。I.G.ファルベンは殆どの利益拠点を失ったアングロイラニアンの事業を引き継いで石油マーケットで世界最大規模を確保し、ダイムラーはM4シャーマン以来ろくな車を生産していないクライスラーを買収し、デトロイトに新拠点を構えるという。まさに、世界に冠たるドイツである。
+	
+	action = {
+		name = "EVT_170034_ACTA"	#8割が支払われた！　どれだけ彼らが溜め込んでいたかということだ！
+		command = { type = dissent value = -5 }
+		#command = { type = domestic which = free_market value = 1 }
+	}
+}		
+
+event = {
+	id = 170035
+	country = GER
+	trigger = {
+		local_flag = { which = WarReparation when = 1 value = 50 }
+	}
+	
+	date = { day = 1 month = january year = 1944 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	picture = "economic"
+	
+	name = "EVT_170014_NAME"	#国債の返済が完了した！
+	desc = "EVT_170014_DESC"	#ライヒスバンクの会見がテレビで生中継されている。戦時国債の全ての返済が完了し、ドイツ経済はついに完全な健全化を果たしたという。ドイツの金融センターであるところのフランクフルトでは、世界全体の経済に関わるようないくつもの銀行がこの日を祝っている。
+	
+	action = {
+		name = "EVT_170014_ACTA"	#素晴らしい！
+		command = { type = dissent value = -10 }
+		#command = { type = domestic which = free_market value = 1 }
+		command = { type = sleepevent which = 170030 }
+		command = {
+			trigger = {
+				ai = no
+			} 
+			type = free_money value = -138.9 }
+		command = { type = trigger which = 170042 }
+		command = { type = trigger which = 170043 }
+		command = { type = trigger which = 170044 }
+		command = { type = trigger which = 170045 }
+		command = { type = trigger which = 170046 }
+		command = { type = trigger which = 170047 }
+		command = { type = trigger which = 170048 }
+		command = { type = trigger which = 170049 }
+	}
+}		
+
+#### Issue Currency
+event = {
+	id = 170040
+	random = no
+	one_action = yes
+	TAG =  { U73 VIC RUS ITA RSI USA CAL TEX CSA }
+	persistent = yes
+	trigger = {
+		NOT = { money = 50 }
+		NOT = { event = 170035 }
+		OR = {
+			AND = {
+				country = U73
+				event = 170022
+			}
+			AND = {
+				country = VIC
+				event = 170023
+			}
+			AND = {
+				country = RUS
+				event = 170024
+			}
+			AND = {
+				OR = {
+					country = ITA
+					country = RSI
+				}
+				event = 170025
+			}
+			AND = {
+				country = USA
+				event = 170026
+			}
+			AND = {
+				country = CAL
+				event = 170027
+			}
+			AND = {
+				country = TEX
+				event = 170028
+			}
+			AND = {
+				country = CSA
+				event = 170029
+			}
+		}
+	}
+   
+	name = "EVT_170040_NAME"	#予算問題 ― ドイツへの賠償金のための資金調達
+	desc = "EVT_170040_DESC" 	#ドイツへの敗戦を喫した我が国は、第二次ヴェルサイユ条約に基づき賠償金の支払いを強いられている。ドイツは我々の経済状況を問わずこれを取り立てるつもりでいるから、我々は何を切り落としてでも資金を調達せねばならない。
+	style = 2
+	picture = "issue_currency"
+	decision_picture = "decision_issue_currency"
+
+	date = { day = 1 month = january year = 1914 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "EVT_170040_ACTA"	#国内産業を解体し、それを売却して資金とする
+		ai_chance = 50
+		command = { type = dissent value = 2 }
+		command = { type = money value = 500 }
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = relation which = GER value = -5 }
+		command = { type = local_setflag which = Issue_currency_Treaty_of_Versailles value = 1 when = 1 }
+	}
+	action = {
+		name = "EVT_170040_ACTB"	#通貨を切り上げ、貨幣増刷で対応する
+		ai_chance = 50
+		command = { type = dissent value = 2 }
+		command = { type = money value = 500 }
+		command = { type = industrial_modifier which = total value = -1 }
+		command = { type = relation which = GER value = -5 }
+		command = { type = local_setflag which = Issue_currency_Treaty_of_Versailles value = 1 when = 1 }
+	}
+}
+
+event = {
+	id = 170042
+	country = U73
+	
+	picture = "Versailles"
+	
+	name = "EVT_170042_NAME"	#賠償金支払いの終了
+	desc = "EVT_170042_DESC"	#ドイツ政府から、請求終了との通達があった。我々は敗北したそのことよりも苦い賠償を終えた。国民に財はなく、みな疲れきっている。果たしてここから立ち直ることは出来るのだろうか……。
+	
+	action = {
+		name = "EVT_170042_ACTA"	#やっと……
+		command = { type = dissent value = 10 }
+		command = {
+			trigger = {	
+				flag = { which = WarReparationPattern when = 0 value = 1 }
+			}
+			type = free_money value = 46.5 }
+		command = {
+			trigger = {	
+				flag = { which = WarReparationPattern when = 0 value = 3 }
+			}
+			type = free_money value = 39.9 }
+		command = {
+			trigger = {	
+				flag = { which = WarReparationPattern when = 0 value = 5 }
+			}
+			type = free_money value = 23.3 }
+		command = {
+			trigger = {	
+				flag = { which = WarReparationPattern when = 0 value = 7 }
+			}
+			type = free_money value = 21.5 }
+	}
+}
+
+event = {
+	id = 170043
+	country = VIC
+	
+	picture = "Versailles"
+	
+	name = "EVT_170042_NAME"	#賠償金支払いの終了
+	desc = "EVT_170042_DESC"	#ドイツ政府から、請求終了との通達があった。我々は敗北したそのことよりも苦い賠償を終えた。国民に財はなく、みな疲れきっている。果たしてここから立ち直ることは出来るのだろうか……。
+	
+	action = {
+		name = "EVT_170042_ACTA"	#やっと……
+		command = { type = dissent value = 10 }
+		command = {
+			trigger = {	
+				flag = { which = WarReparationPattern when = 0 value = 1 }
+			}
+			type = free_money value = 29.2 }
+		command = {
+			trigger = {	
+				flag = { which = WarReparationPattern when = 0 value = 3 }
+			}
+			type = free_money value = 25.3 }
+		command = {
+			trigger = {	
+				flag = { which = WarReparationPattern when = 0 value = 5 }
+			}
+			type = free_money value = 14.6 }
+		command = {
+			trigger = {	
+				flag = { which = WarReparationPattern when = 0 value = 7 }
+			}
+			type = free_money value = 13.5 }
+	}
+}
+
+event = {
+	id = 170044
+	country = RUS
+	
+	picture = "Versailles"
+	
+	name = "EVT_170042_NAME"	#賠償金支払いの終了
+	desc = "EVT_170042_DESC"	#ドイツ政府から、請求終了との通達があった。我々は敗北したそのことよりも苦い賠償を終えた。国民に財はなく、みな疲れきっている。果たしてここから立ち直ることは出来るのだろうか……。
+	
+	action = {
+		name = "EVT_170042_ACTA"	#やっと……
+		command = { type = dissent value = 10 }
+		command = {
+			trigger = {	
+				flag = { which = WarReparationPattern when = 0 value = 1 }
+			}
+			type = free_money value = 63.2 }
+		command = {
+			trigger = {	
+				flag = { which = WarReparationPattern when = 0 value = 3 }
+			}
+			type = free_money value = 54.5 }
+		command = {
+			trigger = {	
+				flag = { which = WarReparationPattern when = 0 value = 5 }
+			}
+			type = free_money value = 31.9 }
+		command = {
+			trigger = {	
+				flag = { which = WarReparationPattern when = 0 value = 7 }
+			}
+			type = free_money value = 29.5 }
+	}
+}
+
+event = {
+	id = 170045
+	tag = { ITA RSI }
+	trigger = {
+		ispuppet = yes
+		OR = {
+			flag = { which = WarReparationPattern when = 0 value = 3 }
+			flag = { which = WarReparationPattern when = 0 value = 7 }
+		}
+	}
+	picture = "Versailles"
+	
+	name = "EVT_170042_NAME"	#賠償金支払いの終了
+	desc = "EVT_170042_DESC"	#ドイツ政府から、請求終了との通達があった。我々は敗北したそのことよりも苦い賠償を終えた。国民に財はなく、みな疲れきっている。果たしてここから立ち直ることは出来るのだろうか……。
+	
+	action = {
+		name = "EVT_170042_ACTA"	#やっと……
+		command = { type = dissent value = 10 }
+		command = {
+			trigger = {	
+				flag = { which = WarReparationPattern when = 0 value = 3 }
+			}
+			type = free_money value = 19.1 }
+		command = {
+			trigger = {	
+				flag = { which = WarReparationPattern when = 0 value = 7 }
+			}
+			type = free_money value = 10.4 }
+	}
+}
+
+event = {
+	id = 170046
+	country = USA
+	trigger = {
+		flag = { which = WarReparationPattern when = 1 value = 5 }
+	}
+	picture = "Versailles"
+	
+	name = "EVT_170042_NAME"	#賠償金支払いの終了
+	desc = "EVT_170042_DESC"	#ドイツ政府から、請求終了との通達があった。我々は敗北したそのことよりも苦い賠償を終えた。国民に財はなく、みな疲れきっている。果たしてここから立ち直ることは出来るのだろうか……。
+	
+	action = {
+		name = "EVT_170042_ACTA"	#やっと……
+		command = { type = dissent value = 10 }
+		command = {
+			trigger = {	
+				flag = { which = WarReparationPattern when = 0 value = 5 }
+			}
+			type = free_money value = 36.7 }
+		command = {
+			trigger = {	
+				flag = { which = WarReparationPattern when = 0 value = 7 }
+			}
+			type = free_money value = 39.7 }
+	}
+}
+
+event = {
+	id = 170047
+	country = CAL
+	trigger = {
+		flag = { which = WarReparationPattern when = 1 value = 5 }
+	}
+	picture = "Versailles"
+	
+	name = "EVT_170042_NAME"	#賠償金支払いの終了
+	desc = "EVT_170042_DESC"	#ドイツ政府から、請求終了との通達があった。我々は敗北したそのことよりも苦い賠償を終えた。国民に財はなく、みな疲れきっている。果たしてここから立ち直ることは出来るのだろうか……。
+	
+	action = {
+		name = "EVT_170042_ACTA"	#やっと……
+		command = { type = dissent value = 10 }
+		command = {
+			trigger = {	
+				flag = { which = WarReparationPattern when = 0 value = 5 }
+			}
+			type = free_money value = 10.7 }
+		command = {
+			trigger = {	
+				flag = { which = WarReparationPattern when = 0 value = 7 }
+			}
+			type = free_money value = 11.5 }
+	}
+}
+
+event = {
+	id = 170048
+	country = TEX
+	trigger = {
+		flag = { which = WarReparationPattern when = 1 value = 5 }
+	}
+	picture = "Versailles"
+	
+	name = "EVT_170042_NAME"	#賠償金支払いの終了
+	desc = "EVT_170042_DESC"	#ドイツ政府から、請求終了との通達があった。我々は敗北したそのことよりも苦い賠償を終えた。国民に財はなく、みな疲れきっている。果たしてここから立ち直ることは出来るのだろうか……。
+	
+	action = {
+		name = "EVT_170042_ACTA"	#やっと……
+		command = { type = dissent value = 10 }
+		command = {
+			trigger = {	
+				flag = { which = WarReparationPattern when = 0 value = 5 }
+			}
+			type = free_money value = 5.9 }
+		command = {
+			trigger = {	
+				flag = { which = WarReparationPattern when = 0 value = 7 }
+			}
+			type = free_money value = 6.4 }
+	}
+}
+
+event = {
+	id = 170049
+	country = CSA
+	trigger = {
+		flag = { which = WarReparationPattern when = 1 value = 5 }
+	}
+	picture = "Versailles"
+	
+	name = "EVT_170042_NAME"	#賠償金支払いの終了
+	desc = "EVT_170042_DESC"	#ドイツ政府から、請求終了との通達があった。我々は敗北したそのことよりも苦い賠償を終えた。国民に財はなく、みな疲れきっている。果たしてここから立ち直ることは出来るのだろうか……。
+	
+	action = {
+		name = "EVT_170042_ACTA"	#やっと……
+		command = { type = dissent value = 10 }
+		command = {
+			trigger = {	
+				flag = { which = WarReparationPattern when = 0 value = 5 }
+			}
+			type = free_money value = 10.7 }
+		command = {
+			trigger = {	
+				flag = { which = WarReparationPattern when = 0 value = 7 }
+			}
+			type = free_money value = 11.5 }
+	}
+}
+
+
+event = {
+	id = 170100
+	country = GER
+	decision = {
+		incabinet = 1
+		#minister = 86 # Albert Speer
+	}
+	decision_trigger = {
+		manpower = 10
+		supplies = 10000
+		control = { province = 300 data = GER }
+	}
+	trigger = {
+		incabinet = 1
+		#minister = 86 # Albert Speer
+		atwar = no
+		supplies = 10000
+		ic = 350
+		event = 131900	#Victory in the east
+		control = { province = 300 data = GER }
+	}
+	
+	date = { day = 1 month = january year = 1941 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	picture = "MEFO"
+	style = 2
+	decision_picture = "decision_Olympiastadion"
+	
+	name = "EVT_170100_NAME"	#ゲルマニア計画
+	desc = "EVT_170100_DESC"	#「ゲルマニア」とは、ベルリンの改造を目指したアドルフ・ヒトラーの計画の総称である。ヒトラー自らが全体のデザインを定め、アルベルト・シュペーアが細部を補足して設計された。計画が完了すればベルリンはドイツだけでなく世界全体の都となり、大規模で先進的な都市となるはずであった。また、これを1950年までに完了させ、ヒトラー自身はそれを以て引退するのが彼の予定であった。戦時中でも計画は少しずつ推進されていたが、ドイツの戦況悪化とともに全てが破棄された。
+	decision_desc = "EVT_170100_DECISION_DESC"	#「ゲルマニア」の建設に本腰を入れることが出来るようになりました。首都の根本的改造に入ることとなりますから、ベルリンから得られる生産力は一時的に大きく減少し、またドイツ全体の技術効率も一時的に下がることになります。完成の暁にはベルリンは超大国の首都にふさわしい見違えるような規模を手に入れることとなり、また高速鉄道計画やドイツ国次期総統の選出など、様々なドイツの未来への道も開けます。
+	
+	action = {
+		name = "EVT_170100_ACTA"	#世界首都がここに生まれるのだ！
+		command = { type = industrial_modifier which = total value = -5 }
+		command = { type = supplies value = -10000 }
+		command = { type = dissent value = -2 }
+		command = { type = construct which = ic where = 300 value = -10 } 	#Berlin
+		command = { type = sleepevent which = 138144 }
+		command = { type = sleepevent which = 138145 }
+		command = { type = setflag which = Germania value = 1 when = 1 }
+	}
+}
+
+event = {
+	id = 170101
+	country = GER
+	persistent = yes
+	
+	decision = {
+		flag = { which = Germania when = 1 value = 1 }
+		NOT = { 
+			event = 170108 
+		}
+		NOT = { flag = { which = Germania_IncreaseCapital when = 0 value = 3 } }
+	}
+	decision_trigger = {
+		supplies = 20000
+	}
+	trigger = {
+		ic = 300
+		flag = { which = Germania when = 1 value = 1 }
+		NOT = { event = 170108 }
+		supplies = 20000
+		random = 20
+		NOT = { flag = { which = Germania_IncreaseCapital when = 0 value = 3 } }
+	}
+	
+	date = { day = 1 month = january year = 1941 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	picture = "MEFO"
+	style = 2
+	decision_picture = "decision_Olympiastadion"
+	
+	name = "EVT_170101_NAME"	#ゲルマニアへの増資
+	desc = "EVT_170101_DESC"	#ゲルマニアへの道のりが始まりました。余裕があるならば、工業力と引き換えに建設計画を加速することが出来ます。通常状態ではゲルマニアの完成までは9年かかります。増資は最大で3段階行うことが出来、この場合ゲルマニアは5年で出来上がります。ただし、これにはある程度大規模な物資と大量のICが必要です。また、一度増資を行うとそれは完成までキャンセルすることは出来ません。
+	
+	action = {
+		name = "EVT_170101_ACTA"	#総合建設計画にはより多くの資材が必要だ
+		command = { type = supplies value = -20000 }
+		command = { type = industrial_modifier which = total value = -10 }
+		command = { type = setflag which = Germania_IncreaseCapital value = 1 when = 1 }
+	}
+}
+
+event = {
+	id = 170102
+	random = no
+	country = GER
+	persistent = yes
+	
+	decision = {
+		flag = { which = Germania when = 1 value = 1 }
+		NOT = { event = 170108 }
+	}
+	
+	decision_trigger = { }
+	
+	trigger = { ai = no }
+	
+	date = { day = 1 month = january year = 1941 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	picture = "MEFO"
+	style = 2
+	decision_picture = "decision_Olympiastadion"
+	
+	name = "EVT_170102_NAME"	#ゲルマニアの建築状況
+	desc = "EVT_170102_DESC"	#ゲルマニアの大規模な工事が始まりました。本ディシジョンを用いると建造状況を大まかにではありますが確認することが出来ます。
+	
+	action = {
+		trigger = {	#1-10
+			flag = { which = Germania when = -1 value = 10 }
+		}
+		name = "EVT_170102_ACTA"	#ゲルマニアはまだ1割以下しか完成していません
+		command = {}
+	}
+	action = {
+		trigger = {	#11-20
+			flag = { which = Germania when = 1 value = 11 }
+			flag = { which = Germania when = -1 value = 20 }
+		}
+		name = "EVT_170102_ACTB"	#ゲルマニアはその1割の工事を完了しました
+		command = {}
+	}
+	action = {
+		trigger = {	#21-30
+			flag = { which = Germania when = 1 value = 21 }
+			flag = { which = Germania when = -1 value = 30 }
+		}
+		name = "EVT_170102_ACTC"	#ゲルマニアは2割は完成しているようです
+		command = {}
+	}
+	action = {
+		trigger = {	#31-40
+			flag = { which = Germania when = 1 value = 31 }
+			flag = { which = Germania when = -1 value = 40 }
+		}
+		name = "EVT_170102_ACTD"	#ゲルマニアは3割の工事を完了しました
+		command = {}
+	}
+	action = {
+		trigger = {	#41-50
+			flag = { which = Germania when = 1 value = 41 }
+			flag = { which = Germania when = -1 value = 50 }
+		}
+		name = "EVT_170102_ACTE"	#4割の工事が完了し、半分の完成が近づきつつあります
+		command = {}
+	}
+	action = {
+		trigger = {	#51-60
+			flag = { which = Germania when = 1 value = 51 }
+			flag = { which = Germania when = -1 value = 60 }
+		}
+		name = "EVT_170102_ACTF"	#ゲルマニアは半分が完成しました
+		command = {}
+	}
+	action = {
+		trigger = {	#61-70
+			flag = { which = Germania when = 1 value = 61 }
+			flag = { which = Germania when = -1 value = 70 }
+		}
+		name = "EVT_170102_ACTG"	#ゲルマニアはその6割の工事を完了しました
+		command = {}
+	}
+	action = {
+		trigger = {	#71-80
+			flag = { which = Germania when = 1 value = 71 }
+			flag = { which = Germania when = -1 value = 80 }
+		}
+		name = "EVT_170102_ACTH"	#ゲルマニアは既に7割が完成しました
+		command = {}
+	}
+	action = {
+		trigger = {	#81-90
+			flag = { which = Germania when = 1 value = 81 }
+			flag = { which = Germania when = -1 value = 90 }
+		}
+		name = "EVT_170102_ACTI"	#工事は8割が既に完了しています
+		command = {}
+	}
+	action = {
+		trigger = {	#91-100
+			flag = { which = Germania when = 1 value = 91 }
+			flag = { which = Germania when = -1 value = 100 }
+		}
+		name = "EVT_170102_ACTJ"	#工事は9割が完了し、完成は秒読みとなっています
+		command = {}
+	}
+	action = {
+		name = "EVT_170102_ACTK"	#報告はこれ以上必要ない
+		command = { type = sleepevent which = 170102 }
+	}
+}
+
+#3600日
+event = {
+	id = 170103
+	country = -1
+	persistent = yes
+	trigger = {
+		#local_flag = GermaniaProgressController
+		control = { province = 841 data = -1 }	#ファン・フェルナンデス諸島（ドイツが最も直接領有”しなさそう”な位置）
+		ai = yes
+		flag = { which = Germania when = 1 value = 1 }
+		NOT = { flag = Germania_IncreaseCapital }
+		control = { province = 300 data = GER }
+		random = 50
+	}
+	
+	date = { day = 1 month = january year = 1941 }
+	offset = 18
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		command = { type = setflag which = Germania value = 1 when = 1 }
+	}
+}
+
+#3000日
+event = {
+	id = 170104
+	country = -1
+	persistent = yes
+	trigger = {
+		#local_flag = GermaniaProgressController
+		control = { province = 841 data = -1 }	#ファン・フェルナンデス諸島（ドイツが最も直接領有”しなさそう”な位置）
+		ai = yes
+		flag = { which = Germania when = 1 value = 1 }
+		flag = { which = Germania_IncreaseCapital when = 0 value = 1 }
+		control = { province = 300 data = GER }
+		random = 50
+	}
+	
+	date = { day = 1 month = january year = 1941 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		command = { type = setflag which = Germania value = 1 when = 1 }
+	}
+}
+
+#2400日
+event = {
+	id = 170105
+	country = -1
+	persistent = yes
+	trigger = {
+		#local_flag = GermaniaProgressController
+		control = { province = 841 data = -1 }	#ファン・フェルナンデス諸島（ドイツが最も直接領有”しなさそう”な位置）
+		ai = yes
+		flag = { which = Germania when = 1 value = 1 }
+		flag = { which = Germania_IncreaseCapital when = 0 value = 2 }
+		control = { province = 300 data = GER }
+		random = 50
+	}
+	
+	date = { day = 1 month = january year = 1941 }
+	offset = 12
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		command = { type = setflag which = Germania value = 1 when = 1 }
+	}
+}
+
+#1800日
+event = {
+	id = 170106
+	country = -1
+	persistent = yes
+	trigger = {
+		#local_flag = GermaniaProgressController
+		control = { province = 841 data = -1 }	#ファン・フェルナンデス諸島（ドイツが最も直接領有”しなさそう”な位置）
+		ai = yes
+		flag = { which = Germania when = 1 value = 1 }
+		flag = { which = Germania_IncreaseCapital when = 0 value = 3 }
+		control = { province = 300 data = GER }
+		random = 50
+	}
+	
+	date = { day = 1 month = january year = 1941 }
+	offset = 9
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		command = { type = setflag which = Germania value = 1 when = 1 }
+	}
+}
+
+event = {
+	id = 170107
+	country = GER
+	random = no
+	trigger = {
+		flag = { which = Germania when = 1 value = 50 }
+		control = { province = 300 data = GER }
+	}
+	
+	date = { day = 1 month = january year = 1941 }
+	offset = 6
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	picture = "news_paper"
+	
+	name = "EVT_170107_NAME"	#ゲルマニア、半分が完成！
+	desc = "EVT_170107_DESC"	#本日付のフェルキッシャー・ベオバハター紙の一面は、先日落成を迎えたばかりのグロッセ・ハレ（Grosse Halle、大会議場）のその厳かな姿により飾られていた。本日開催される国会より、この聖杯神殿は国会議場として用いられる事となっている。1,200の議席を持つこの議場には、ドイツ本国のみならず、各国からのゲルマン諸民族の代表者も参加し、議員としての能力を振るうことになっている。この大きな建物はゲルマニアに含まれる最も大きな建造物の一つではあるが、それでも全容を考えれば一部にすぎない。ベルリンを囲む新道路はまだいくつか完成しておらず、ベルリン中央駅もまだ完成には程遠い。ゲルマニアはまだ半分が出来たところなのだ。だが、確実に完成に近づいている。千年帝国の栄光を形にして示す都市計画は、日に日にその姿を我々の前に示しつつある！
+	
+	action = {
+		name = "EVT_170107_ACTA"	#万歳！
+		command = { type = dissent value = -3 }
+		command = { type = construct which = ic where = 300 value = 5 } 	#Berlin
+	}
+}
+
+event = {
+	id = 170108
+	country = GER
+	trigger = {
+		flag = { which = Germania when = 1 value = 100 }
+		control = { province = 300 data = GER }
+	}
+	
+	date = { day = 1 month = january year = 1946 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	style = 2
+	picture = "Hitler_Turkey"
+
+	name = "EVT_170108_NAME"	#世界首都ゲルマニア完成式典
+	desc = "EVT_170108_DESC"	#今日、プロイセン州はここ数年で最も忙しい日を迎えている。空を見上げれば、記念式典の為に集まった要人を運ぶための航空機がひしめき合っている。当然、テンペルホーフ空港だけで処理できるトラフィックではない。新設されたブランデンブルク国際空港の真新しい空港ターミナルが次々と訪れる航空機を誘導している。見晴らしのいいメインストリートでは、ユーゲントのパレードを親衛隊の警備要員が何事も異常ないようにと監視している。中央駅に各国の代表団が到着し彼らが大会議場へ入ると、続いてメインストリートにはメルセデス・ベンツ770の車列が現れた。車列のどれかが、総統閣下のお乗りになられている車だ。今日、建物が揃い、道路が揃い、人が揃い、ついにこの日が来た。世界首都ゲルマニアが完成し、ドイツが世界をリードすることが改めて示される日が来たのだ。
+	
+	action = {
+		name = "EVT_170108_ACTA"	#万歳！
+		command = { type = dissent value = -5 }
+		command = { type = construct which = ic where = 300 value = 10 } 	#Berlin
+		command = { type = construct which = infrastructure where = 300 value = 200 }
+		command = { type = industrial_modifier which = total value = 20 }	#-5の補填+15％追加
+		command = { 
+			trigger = {
+				flag = { which = Germania_IncreaseCapital when = 0 value = 1 }
+			}
+			type = industrial_modifier which = total value = 10 }
+		command = { 
+			trigger = {
+				flag = { which = Germania_IncreaseCapital when = 0 value = 2 }
+			}
+			type = industrial_modifier which = total value = 20 }
+		command = { 
+			trigger = {
+				flag = { which = Germania_IncreaseCapital when = 0 value = 3 }
+			}
+			type = industrial_modifier which = total value = 30 }
+		command = { type = trigger which = 170109 }
+	}
+}
+
+event = {
+	id = 170109
+	
+	style = 2
+	picture = "Hitler_Turkey"
+	
+	name = "EVT_170109_NAME"	#ドイツ総統の引退 ― 後継者の指名
+	desc = "EVT_170109_DESC"	#いくつかの式典の催しの後、ヨーゼフ・ゲッベルスの後に大会議場の皆を前にして登壇したのは、総統閣下――アドルフ・ヒトラーであった。思い出してみれば戦前のような大衆皆に向けるあの煽動的な演説は陰りを潜め、ここ数年はラジオを通じてだとか、ダス・ライヒ紙でゲッベルスの筆を通してだとか、そんな代物が多かった。まだ新しい議場の壁が破れるような拍手が静まった後、総統は穏やかに話し始めた。彼は新たな都市の誕生を祝い、新たな秩序がここから生まれることを祝い、ドイツ民族の成すべきことを語り、そして、自らの進退について語った。彼は、彼自身の考えとして、まさにこのタイミングでドイツ総統は交代されるべきだと考えていると語った。そして、新たな総統の下で、世界を統制していく体制を維持していかねばならぬのだと語った。議場は、静まり返った。永遠のように感じられる沈黙の後で、新総統が呼び出された。
+	
+	action = {
+		name = "EVT_170109_ACTA"	#海軍元帥カール・デーニッツを新総統として指名する
+		trigger = {
+			minister = 32
+		}
+		ai_chance = 40
+		command = { type = domestic which = freedom value = 1 }
+		command = { type = trigger which = 170110 }
+	}
+	action = {
+		name = "EVT_170109_ACTB"	#航空相ヘルマン・ゲーリングを新総統として指名する
+		ai_chance = 40
+		trigger = {
+			minister = 245
+		}
+		command = { type = domestic which = freedom value = 1 }
+		command = { type = trigger which = 170111 }
+	}
+	action = {
+		name = "EVT_170109_ACTC"	#親衛隊全国指導者ハインリヒ・ヒムラーを指名する
+		ai_chance = 5
+		trigger = {
+			NOT = { event = 138140 }
+		}
+		command = { type = domestic which = freedom value = -2 }
+		command = { type = trigger which = 170112 }
+	}
+	action = {
+		name = "EVT_170109_ACTD"	#国内啓蒙・宣伝相ヨーゼフ・ゲッベルスを指名する
+		ai_chance = 5
+		trigger = {
+			minister = 246
+		}
+		command = { type = domestic which = freedom value = -1 }
+		command = { type = trigger which = 170113 }
+	}
+	action = {
+		name = "EVT_170109_ACTE"	#ウィーン指導者バルドゥール・フォン・シーラッハを指名する
+		ai_chance = 5
+		trigger = {
+			control = { province = 463 data = GER } #Vienne
+		}
+		command = { type = domestic which = freedom value = -1 }
+		command = { type = trigger which = 170114 }
+	}
+	action = {
+		name = "EVT_170109_ACTF"	#陸軍元帥エルヴィン・ロンメルを新総統として指名する
+		ai_chance = 5
+		trigger = {
+			NOT = { event = 138142 }
+			NOT = { ideology = nazi }
+			event = 130423	#ヴィシーフランス
+		}
+		command = { type = domestic which = freedom value = 1 }
+		command = { type = trigger which = 170115 }
+	}
+}	
+
+event = {
+	id = 170110
+	country = GER
+	
+	style = 2
+	picture = "Donitz"
+	
+	name = "EVT_170110_NAME"	#ドイツ国第二代総統カール・デーニッツ
+	desc = "EVT_170110_DESC"	#ヒトラーがドイツ指導者の後継として選んだのは、最も非政治的な海軍の要人を選出した。カール・デーニッツ海軍元帥である。ヒトラーは自らの後継者争いが水面下で醜く行われているのを知っており、それはゆくゆくはヴァイマル共和政のような政治的不安定に繋がると予測した。そこで、この争いから全く無関係で、かつヒトラー自身にとって最も信頼のおける人物に後を託すことに決めたのだ。政治闘争に明け暮れていたヒトラーの側近たちはボルマンを除いてこれを知らされていなかったために驚きを露わにしたものの、少なくとも自らの失脚を防ぐために――表面上は、かも知れないが――デーニッツ総統に付き従う態度を示した。
+	
+	action = {
+		name = "EVT_170110_ACTA"	#ハイル・デーニッツ！
+		command = { type = sleepminister which = 1 } #Hitler
+		command = { type = sleepminister which = 41 }
+		command = { type = sleepminister which = 177 }
+		command = { type = sleepminister which = 42 } #Bormann
+		command = { type = sleepminister which = 139 }
+		command = { type = sleepminister which = 2 } #Hess
+		command = { type = sleepminister which = 76 }
+		command = { type = sleepminister which = 55 } #Ribbentrop
+
+		command = { type = set_domestic which = democratic value = 2 }
+		command = { type = set_domestic which = political_left value = 2 }
+
+		command = { type = headofstate which = 32 } #Donitz
+		command = { type = headofgovernment which = 213 } #Goring
+		command = { type = foreignminister which = 59 } #Krosigk
+		command = { type = armamentminister which = 89 } #Saur
+		command = { type = ministerofsecurity which = 108 } #Himmler
+		command = { type = ministerofintelligence which = 142 } #Schellenberg
+		command = { type = chiefofstaff which = 176 } #Keitel
+		command = { type = chiefofarmy which = 178 } #Schorner
+		command = { type = chiefofnavy which = 193 } #Hans-Georg von Friedeburg
+		command = { type = chiefofair which = 204 } #Greim
+	}
+}
+
+event = {
+	id = 170111
+	country = GER
+
+	style = 2
+	picture = "Goering"
+
+	name = "EVT_170111_NAME"	#ドイツ国第二代総統ヘルマン・ゲーリング
+	desc = "EVT_170111_DESC"	#ヒトラーが1934年に「首相兼総統の後継者に関する法」定めたとおり、ドイツ国の新総統に選出されたのはヘルマン・ゲーリングであった。彼は、第一次大戦でのエースとして、もしくは戦間期の曲芸飛行師として、あるいはナチ党の馴染みやすい成金貴族として国民からの人気も高かった。確かに航空相・政治家としてはいくつかの失敗を重ねて決定力に欠くところはある。だが、彼の顔の広さが政府の体制を盤石としたことは否定できない。ゆえに、その調整能力は無碍に出来るものではないのだ。かくして、ヘルマン・ゲーリングは確かに、後継者の地位を手にした。新総統として現れた彼の姿は、『総統』というより『国王』のようであった。
+	
+	action = {
+		name = "EVT_170111_ACTA"	#ハイル・ゲーリング！
+		command = { type = sleepminister which = 1 } #Hitler
+		command = { type = sleepminister which = 41 }
+		command = { type = sleepminister which = 177 }
+		command = { type = sleepminister which = 42 } #Bormann
+		command = { type = sleepminister which = 139 }
+		command = { type = sleepminister which = 2 } #Hess
+		command = { type = sleepminister which = 76 }
+		command = { type = sleepminister which = 55 } #Ribbentrop
+
+		command = { type = set_domestic which = democratic value = 1 }
+		command = { type = set_domestic which = political_left value = 1 }
+		command = { type = set_domestic which = freedom value = 1 }
+		command = { type = set_domestic which = free_market value = 1 }
+		command = { type = set_domestic which = defense_lobby value = 10 }
+		command = { type = set_domestic which = interventionism value = 10 }
+
+		command = { type = headofstate which = 245 } #Goring
+		command = { type = headofgovernment which = 263 } #Goebbels
+		command = { type = foreignminister which = 57 } #Rosenberg
+		command = { type = armamentminister which = 100 } #Speer
+		command = { type = ministerofsecurity which = 108 } #Himmler
+		command = { type = ministerofintelligence which = 142 } #Schellenberg
+		command = { type = chiefofstaff which = 156 } #Jodl
+		command = { type = chiefofarmy which = 176 } #Keitel
+		command = { type = chiefofnavy which = 192 } #Donitz
+		command = { type = chiefofair which = 10 } #Goring
+		command = { type = dissent value = -3 }
+	}
+}
+
+event = {
+	id = 170112
+	country = GER
+
+	style = 2
+	picture = "Himmler"
+
+	name = "EVT_170112_NAME"	#ドイツ国第二代総統ハインリヒ・ヒムラー
+	desc = "EVT_170112_DESC"	#ヒトラーに最も忠誠を誓っていた男は、恐らくハインリヒ・ヒムラーであろう。彼はその恭順ゆえに、ヒトラーから新総統としての地位を約束された。一方で、その彼によってドイツに齎されるであろう将来はあまり楽観的には見えない。ヒムラー新総統の首相は、彼を影で操っているとささやかれるラインハルト・ハイドリヒである。暗殺を生き延びてより残虐となったと言われる彼は、果たして国政において何をするのだろう。実際、これは親衛隊による組閣に違いあるまい。少なくとも、親衛隊の規律正しさが例外なく勢力圏に住む一人ひとりに求められるのであろうことは間違いあるまい。
+	
+	action = {
+		name = "EVT_170112_ACTA"	#ハイル・ヒムラー！
+		command = { type = sleepminister which = 1 } #Hitler
+		command = { type = sleepminister which = 41 }
+		command = { type = sleepminister which = 177 }
+		command = { type = sleepminister which = 42 } #Bormann
+		command = { type = sleepminister which = 139 }
+		command = { type = sleepminister which = 2 } #Hess
+		command = { type = sleepminister which = 76 }
+		command = { type = sleepminister which = 55 } #Ribbentrop
+		
+		command = { type = headofstate which = 261 } #Himmler
+		command = { type = headofgovernment which = 266 } #Heydrich
+		command = { type = foreignminister which = 58 } #Seyss-Inquart
+		command = { type = armamentminister which = 87 } #Pohl
+		command = { type = ministerofsecurity which = 112 } #Muller
+		command = { type = ministerofintelligence which = 138 } #Kaltenbrunner
+		command = { type = chiefofstaff which = 230 } #Busch
+		command = { type = chiefofarmy which = 232 } #Hausser
+		command = { type = chiefofnavy which = 192 } #Donitz
+		command = { type = chiefofair which = 204 } #von Greim
+	}
+}
+
+event = {
+	id = 170113
+	country = GER
+
+	style = 2
+	picture = "Goebbels"
+
+	name = "EVT_170113_NAME"	#ドイツ国第二代総統ヨーゼフ・ゲッベルス
+	desc = "EVT_170113_DESC"	#ヒトラーの座を継いだのは、ヒトラーの次に演説の上手い男であった。戦況が良いときでも、悪いときでも、変わらず人々の前に姿を表し、党の方針、国民の成すべきことを伝え続けたのはゲッベルスただ一人である。ゲルマニアからの新たな世界を拡大するのにゲッベルス以上の人材は存在しない――それが、ヒトラーの判断であった。かくして、宣伝省の男は新総統官邸に転った。新総統として再び壇に戻った彼は、まさに総統であるように、情熱的に話し始めた。
+	
+	action = {
+		name = "EVT_170113_ACTA"	#ハイル・ゲッベルス！
+		command = { type = sleepminister which = 1 } #Hitler
+		command = { type = sleepminister which = 41 }
+		command = { type = sleepminister which = 177 }
+		command = { type = sleepminister which = 42 } #Bormann
+		command = { type = sleepminister which = 139 }
+		command = { type = sleepminister which = 2 } #Hess
+		command = { type = sleepminister which = 76 }
+		command = { type = sleepminister which = 55 } #Ribbentrop
+
+		command = { type = set_domestic which = democratic value = 1 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = domestic which = professional_army value = -1 }
+
+		command = { type = headofstate which = 246 } #Goebbels
+		command = { type = headofgovernment which = 43 } #Speer
+		command = { type = foreignminister which = 58 } #Seyss-Inquart
+		command = { type = armamentminister which = 80 } #Funk
+		command = { type = ministerofsecurity which = 243 } #Naumann
+		command = { type = ministerofintelligence which = 150 } #Gehlen
+		command = { type = chiefofstaff which = 158 } #Krebs
+		command = { type = chiefofarmy which = 178 } #Schorner
+		command = { type = chiefofnavy which = 192 } #Donitz
+		command = { type = chiefofair which = 10 } #Goring
+		command = { type = dissent value = -1 }
+	}
+}
+
+event = {
+	id = 170114
+	country = GER
+	
+	style = 2
+	picture = "von_Schirach"
+	
+	name = "EVT_170114_NAME"	#ドイツ国第二代総統バルドゥール・フォン・シーラッハ
+	desc = "EVT_170114_DESC"	#ヒトラーが壇を降りると、ユーゲントの大行進がメインストリートにて再び始まった。1932年のポツダムでの大行進に輪をかけて更に大規模だ。そう、あの日の再現である。若いドイツの未来達の中から現れたのは、元ヒトラーユーゲント指導者、現ウィーン帝国大管区指導者のバルドゥール・フォン・シーラッハであった。ヒトラーへの信奉と教養を備えたシーラッハは、その他の年老いた後継者候補たちを抑えてヒトラーから正当な後継者として見なされるようになっていた。シーラッハは他のナチ党幹部に比べてあまりに家柄が良く、文化的思想も政治的思想もあまりに貴族的である。貴族嫌いも多い中で、反発も多い。ただ、青少年を通じて支持者を増やした彼の能力と、ヒトラーからの寵愛故に、彼はついに総統としての地位を受け取ることになった。
+	
+	action = {
+		name = "EVT_170114_ACTA"	#ハイル・シーラッハ！
+		command = { type = sleepminister which = 1 } #Hitler
+		command = { type = sleepminister which = 41 }
+		command = { type = sleepminister which = 177 }
+		command = { type = sleepminister which = 42 } #Bormann
+		command = { type = sleepminister which = 139 }
+		command = { type = sleepminister which = 2 } #Hess
+		command = { type = sleepminister which = 76 }
+		command = { type = sleepminister which = 55 } #Ribbentrop
+
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = set_domestic which = freedom value = 4 }
+		command = { type = domestic which = professional_army value = -3 }
+
+		command = { type = headofstate which = 273 } #Schirach #新設
+		command = { type = headofgovernment which = 43 } #Speer
+		command = { type = foreignminister which = 59 } #Krosigk
+		command = { type = armamentminister which = 100 } #Speer
+		command = { type = ministerofsecurity which = 120 } #Axmann
+		command = { type = ministerofintelligence which = 150 } #Gehlen
+		command = { type = chiefofstaff which = 168 } #Heusinger
+		command = { type = chiefofarmy which = 178 } #Schorner
+		command = { type = chiefofnavy which = 193 } #Hans-Georg von Friedeburg
+		command = { type = chiefofair which = 204 } #Greim
+		command = { type = dissent value = 3 }
+	}
+}
+	
+event = {
+	id = 170115
+	country = GER
+	
+	style = 2
+	picture = "Rommel"
+	
+	name = "EVT_170115_NAME"	#ドイツ国第二代総統エルヴィン・ロンメル
+	desc = "EVT_170115_DESC"	#ドイツを現在の地位に押し上げたその背景には、少なからず軍の力がある。その軍の中で最も有名な英雄としてこの時扱われたのが、エルヴィン・ロンメルだ。フランス侵攻から今日まで、ロンメルはその時々でドイツにとって最も重要な戦線で最も戦果を上げた模範的なゲルマン人であると謳われ続けた。端正で騎士道に溢れ、（非ドイツ人でない者すら）魅了する彼に今度は軍ではなく国家の陣頭指揮を執らせたいと考える者は数多くあった。そのあまりにも高い人気から、ヒトラーには疎まれており後継者として指名されることはないと考える者もいたが、ヒトラーはその前評判を蹴散らすように誇らしげにロンメルの名を呼び、固い握手を交わして降壇した。代わって登壇したロンメルはその喝采の大きさに少し緊張を見せながら就任最初の演説を始めた。
+	
+	action = {
+		name = "EVT_170115_ACTA"	#ハイル・ロンメル！
+		command = { type = sleepminister which = 1 } #Hitler
+		command = { type = sleepminister which = 41 }
+		command = { type = sleepminister which = 177 }
+		command = { type = sleepminister which = 42 } #Bormann
+		command = { type = sleepminister which = 139 }
+		command = { type = sleepminister which = 2 } #Hess
+		command = { type = sleepminister which = 76 }
+		command = { type = sleepminister which = 55 } #Ribbentrop
+
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = set_domestic which = freedom value = 1 }
+		command = { type = domestic which = professional_army value = 1 }
+
+		command = { type = wakeminister which = 260 }
+		command = { type = headofstate which = 260 } #Rommel
+		command = { type = headofgovernment which = 43 } #Speer
+		command = { type = foreignminister which = 59 } #Krosigk
+		command = { type = armamentminister which = 100 } #Speer
+		command = { type = ministerofsecurity which = 268 } #Stauffenberg
+		command = { type = ministerofintelligence which = 146 }	#Hans Oster
+		command = { type = wakeminister which = 229 }
+		command = { type = chiefofstaff which = 229 } #Manstein
+		command = { type = chiefofarmy which = 157 } #Guderian
+		command = { type = chiefofnavy which = 192 } #Donitz
+		command = { type = chiefofair which = 272 } #Kammhuber
+	}
+}
+
+#
+#event = {
+#	id = 170119
+#	country = -1
+#	#中間コントロールイベントフラグ
+#	#進捗イベントを正常に動作させるための仕組み
+#	#DHSA0.42では不要になった（コントロール方式変更）
+#	trigger = {
+#		ai = yes
+#		flag = { which = Germania when = 1 value = 1 }
+#	}
+#	
+#	date = { day = 1 month = january year = 1941 }
+#	offset = 7
+#	deathdate = { day = 29 month = december year = 1963 }
+#	
+#	action = {
+#		command = { type = local_setflag which = GermaniaProgressController }
+#	}
+#}
+
+event = {
+	id = 170300
+	country = VIC
+	trigger = {
+		local_flag = { which = Issue_currency_Treaty_of_Versailles when = 1 value = 25 }	#予算問題25回以上
+		dissent = 50
+		NOT = { event = 170043 }
+		random = 19
+	}
+	
+	date = { day = 1 month = january year = 1944 }
+	offset = 12
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_170300_NAME"	#フランスにおけるハイパーインフレーション
+	desc = "EVT_170300_DESC"	#
+}

@@ -1,0 +1,140 @@
+# 0 - Great War Light Field Artillery
+model = { 
+	cost = 5 
+	buildtime = 45 
+	manpower = 2 
+	defensiveness = 2 
+	maxspeed = -1 
+	softattack = 2 
+	hardattack = 1 
+	supplyconsumption = 0.24 
+	upgrade_time_factor = 0.5 
+	upgrade_cost_factor = 1.0 
+	equipment = { manpower = 2000 horses = 520 artillery = 15 }
+}
+# 1 - Great War Medium Field Artillery
+model = { 
+	cost = 5 
+	buildtime = 60 
+	manpower = 2 
+	defensiveness = 2 
+	maxspeed = -1 
+	softattack = 3 
+	hardattack = 1 
+	supplyconsumption = 0.32 
+	upgrade_time_factor = 0.5 
+	upgrade_cost_factor = 1.0 
+	equipment = { manpower = 2000 horses = 520 artillery = 28 }
+}
+# 2 - Great War Heavy Field Artillery
+model = { 
+	cost = 6 
+	buildtime = 80 
+	manpower = 2 
+	defensiveness = 2 
+	maxspeed = -2 
+	softattack = 4 
+	hardattack = 1 
+	supplyconsumption = 0.44 
+	upgrade_time_factor = 0.5 
+	upgrade_cost_factor = 1.0 
+	equipment = { manpower = 2000 horses = 520 artillery = 32 }
+}
+# 3 - Early Field Artillery
+model = { 
+	cost = 5 
+	buildtime = 60 
+	manpower = 2 
+	defensiveness = 3 
+	maxspeed = -1 
+	softattack = 4 
+	hardattack = 2 
+	supplyconsumption = 0.4 
+	upgrade_time_factor = 0.5 
+	upgrade_cost_factor = 1.0 
+	equipment = { manpower = 2000 horses = 520 artillery = 32 heavy_artillery = 16 anti_tank = 34 }
+}
+# 4 - Basic Field Artillery
+model = { 
+	cost = 5 
+	buildtime = 60 
+	manpower = 2 
+	defensiveness = 4 
+	maxspeed = -1 
+	softattack = 5 
+	hardattack = 2 
+	supplyconsumption = 0.44 
+	upgrade_time_factor = 0.5 
+	upgrade_cost_factor = 1.0 
+	equipment = { manpower = 2000 horses = 520 artillery = 32 heavy_artillery = 16 anti_tank = 34 }
+}
+# 5 - Improved Field Artillery
+model = { 
+	cost = 6 
+	buildtime = 60 
+	manpower = 2 
+	defensiveness = 4 
+	maxspeed = -1 
+	softattack = 6 
+	hardattack = 2 
+	supplyconsumption = 0.48 
+	upgrade_time_factor = 0.5 
+	upgrade_cost_factor = 1.0 
+	equipment = { manpower = 2000 horses = 520 artillery = 32 heavy_artillery = 16 anti_tank = 34 }
+}
+# 6 - Advanced Field Artillery
+model = { 
+	cost = 7 
+	buildtime = 60 
+	manpower = 2 
+	defensiveness = 5
+	maxspeed = -1 
+	softattack = 7 
+	hardattack = 2 
+	supplyconsumption = 0.52 
+	upgrade_time_factor = 0.5 
+	upgrade_cost_factor = 1.0 
+	equipment = { manpower = 2000 trucks = 445 artillery = 32 heavy_artillery = 16 anti_tank = 34 }
+}
+# 7 - Semi-Modern Field Artillery
+model = {
+	cost = 7 
+	buildtime = 60 
+	manpower = 2 
+	defensiveness = 5 
+	maxspeed = -1 
+	softattack = 8 
+	hardattack = 3 
+	supplyconsumption = 0.56 
+	upgrade_time_factor = 0.5 
+	upgrade_cost_factor = 1.0 
+	equipment = { manpower = 2000 trucks = 453 artillery = 32 heavy_artillery = 16 anti_tank = 34 }
+}
+# åªë„å^ñÏñC
+model = { 
+	cost = 8 
+	buildtime = 60 
+	manpower = 2 
+	defensiveness = 5 
+	maxspeed = -1 
+	softattack = 9 
+	hardattack = 3 
+	supplyconsumption = 0.58 
+	upgrade_time_factor = 0.5 
+	upgrade_cost_factor = 1.0 
+	equipment = { manpower = 2000 trucks = 453 artillery = 32 heavy_artillery = 16 anti_tank = 34 }
+}
+# ñÙêiå^ñÏñC
+model = { 
+	cost = 8 
+	buildtime = 60 
+	manpower = 2 
+	defensiveness = 6 
+	maxspeed = -1 
+	softattack = 9 
+	hardattack = 4 
+	supplyconsumption = 0.60 
+	upgrade_time_factor = 0.5 
+	upgrade_cost_factor = 1.0 
+	equipment = { manpower = 2000 trucks = 453 artillery = 32 heavy_artillery = 16 anti_tank = 34 }
+}

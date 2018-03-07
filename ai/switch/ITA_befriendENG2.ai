@@ -1,0 +1,66 @@
+# Special resistance against "influence" by the listed nations. Value range = [0 - 10]  
+resistance = {  
+	SOV = 4
+}
+befriend = {
+	ROM = 50
+	SLO = 50
+	BUL = 40 
+	HUN = 80 
+	SPA = 50
+	YUG = 50
+	GER = 80 
+	SWE = 10
+	FIN = 20
+	JAP = 20
+	POR = 10
+	TUR = 30
+	ENG = 60
+	FRA = 60
+}
+protect = {
+	ROM = 80
+	BUL = 80 
+	HUN = 80 
+	SWE = 80
+	SCH = 80
+	AUS = 80
+	POL = 80
+	SLO = 80
+	NOR = 80
+	GER = 20
+	TUR = 80
+	ENG = 90
+	FRA = 90
+}
+trade = {
+	favored = {
+		ROM = 150
+		GER = 100
+		HUN = 100
+		YUG = 100
+		SPA = 80
+		BUL = 100
+		ENG = 60
+		FRA = 60
+	}
+	embargo = { }
+}
+tech_sharing = {
+	favored = {
+		ROM = 120
+		SLO = 80
+		BUL = 100
+		HUN = 100
+		SPA = 120
+		YUG = 50
+		GER = 150
+		SWE = 50
+		FIN = 120
+		JAP = 150
+		TUR = 100
+		ENG = 60
+		FRA = 60
+	}
+	embargo = { }
+}

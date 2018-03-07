@@ -1,0 +1,1420 @@
+
+##############
+# 中立化イベント
+##############
+
+event = {
+	id = 90600
+	random = no 
+	country = KOR
+	
+	trigger = {
+		exists = PRK
+		NOT = {
+			war = { country = SOV country = USA }
+			war = { country = USA country = GER }
+			war = { country = GER country = SOV }
+			war = { country = JAP country = USA }
+			war = { country = JAP country = GER }
+			war = { country = JAP country = SOV }
+			war = { country = PRK country = KOR }
+		}
+	}
+
+	name = "EVT_90600_NAME"
+	desc = "EVT_90600_DESC"
+	style = 0
+
+	picture = "coldwar"
+
+	date = { day = 1 month = june year = 1941 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "EVT_90600_ACTA"
+		ai_chance = 100
+		command = { type = capital which = 1199 }
+
+		command = { type = end_puppet }
+		command = { type = leave_alliance }
+
+		command = { type = peace which = AFG value = 1 }
+		command = { type = peace which = ALB value = 1 }
+		command = { type = peace which = ALG value = 1 }
+		command = { type = peace which = ALI value = 1 }
+		command = { type = peace which = ALS value = 1 }
+		command = { type = peace which = ANG value = 1 }
+		command = { type = peace which = ARA value = 1 }
+		command = { type = peace which = ARG value = 1 }
+		command = { type = peace which = ARM value = 1 }
+		command = { type = peace which = AST value = 1 }
+		command = { type = peace which = AUS value = 1 }
+		command = { type = peace which = AXI value = 1 }
+		command = { type = peace which = AZB value = 1 }
+		command = { type = peace which = BEL value = 1 }
+		command = { type = peace which = BEN value = 1 }
+		command = { type = peace which = BHU value = 1 }
+		command = { type = peace which = BLR value = 1 }
+		command = { type = peace which = BOL value = 1 }
+		command = { type = peace which = BOS value = 1 }
+		command = { type = peace which = BRA value = 1 }
+		command = { type = peace which = BRU value = 1 }
+		command = { type = peace which = BUL value = 1 }
+		command = { type = peace which = BUR value = 1 }
+		command = { type = peace which = CAL value = 1 }
+		command = { type = peace which = CAM value = 1 }
+		command = { type = peace which = CAN value = 1 }
+		command = { type = peace which = CGX value = 1 }
+		command = { type = peace which = CHC value = 1 }
+		command = { type = peace which = CHI value = 1 }
+		command = { type = peace which = CHL value = 1 }
+		command = { type = peace which = CMB value = 1 }
+		command = { type = peace which = COL value = 1 }
+		command = { type = peace which = CON value = 1 }
+		command = { type = peace which = COS value = 1 }
+		command = { type = peace which = CRO value = 1 }
+		command = { type = peace which = CSA value = 1 }
+		command = { type = peace which = CSX value = 1 }
+		command = { type = peace which = CUB value = 1 }
+		command = { type = peace which = CXB value = 1 }
+		command = { type = peace which = CYN value = 1 }
+		command = { type = peace which = CYP value = 1 }
+		command = { type = peace which = CZE value = 1 }
+		command = { type = peace which = DDR value = 1 }
+		command = { type = peace which = DEN value = 1 }
+		command = { type = peace which = DFR value = 1 }
+		command = { type = peace which = DOM value = 1 }
+		command = { type = peace which = EAF value = 1 }
+		command = { type = peace which = ECU value = 1 }
+		command = { type = peace which = EGY value = 1 }
+		command = { type = peace which = ENG value = 1 }
+		command = { type = peace which = EQA value = 1 }
+		command = { type = peace which = EST value = 1 }
+		command = { type = peace which = ETH value = 1 }
+		command = { type = peace which = EUS value = 1 }
+		command = { type = peace which = FIN value = 1 }
+		command = { type = peace which = FLA value = 1 }
+		command = { type = peace which = FRA value = 1 }
+		command = { type = peace which = GAB value = 1 }
+		command = { type = peace which = GEO value = 1 }
+		command = { type = peace which = GER value = 1 }
+		command = { type = peace which = GLD value = 1 }
+		command = { type = peace which = GRE value = 1 }
+		command = { type = peace which = GUA value = 1 }
+		command = { type = peace which = GUI value = 1 }
+		command = { type = peace which = GUY value = 1 }
+		command = { type = peace which = HAI value = 1 }
+		command = { type = peace which = HOL value = 1 }
+		command = { type = peace which = HON value = 1 }
+		command = { type = peace which = HUN value = 1 }
+		command = { type = peace which = ICL value = 1 }
+		command = { type = peace which = IDC value = 1 }
+		command = { type = peace which = IND value = 1 }
+		command = { type = peace which = INO value = 1 }
+		command = { type = peace which = IRE value = 1 }
+		command = { type = peace which = IRQ value = 1 }
+		command = { type = peace which = ISR value = 1 }
+		command = { type = peace which = ITA value = 1 }
+		command = { type = peace which = JAP value = 1 }
+		command = { type = peace which = JOR value = 1 }
+		command = { type = peace which = KAZ value = 1 }
+	#	command = { type = peace which = KOR value = 1 }
+		command = { type = peace which = KUR value = 1 }
+		command = { type = peace which = KYG value = 1 }
+		command = { type = peace which = LAO value = 1 }
+		command = { type = peace which = LAT value = 1 }
+		command = { type = peace which = LBY value = 1 }
+		command = { type = peace which = LEB value = 1 }
+		command = { type = peace which = LIB value = 1 }
+		command = { type = peace which = LIT value = 1 }
+		command = { type = peace which = LUX value = 1 }
+		command = { type = peace which = MAD value = 1 }
+		command = { type = peace which = MAL value = 1 }
+		command = { type = peace which = MAN value = 1 }
+		command = { type = peace which = MEN value = 1 }
+		command = { type = peace which = MEX value = 1 }
+		command = { type = peace which = MIN value = 1 }
+		command = { type = peace which = MLY value = 1 }
+		command = { type = peace which = MON value = 1 }
+		command = { type = peace which = MOR value = 1 }
+		command = { type = peace which = MOZ value = 1 }
+		command = { type = peace which = MTN value = 1 }
+		command = { type = peace which = NAM value = 1 }
+		command = { type = peace which = NEP value = 1 }
+		command = { type = peace which = NIC value = 1 }
+		command = { type = peace which = NIG value = 1 }
+		command = { type = peace which = NOR value = 1 }
+		command = { type = peace which = NZL value = 1 }
+		command = { type = peace which = OMN value = 1 }
+		command = { type = peace which = OTT value = 1 }
+		command = { type = peace which = PAK value = 1 }
+		command = { type = peace which = PAL value = 1 }
+		command = { type = peace which = PAN value = 1 }
+		command = { type = peace which = PAR value = 1 }
+		command = { type = peace which = PER value = 1 }
+		command = { type = peace which = PHI value = 1 }
+		command = { type = peace which = POL value = 1 }
+		command = { type = peace which = POR value = 1 }
+		command = { type = peace which = PRI value = 1 }
+		command = { type = peace which = PRK value = 1 }
+		command = { type = peace which = PRU value = 1 }
+		command = { type = peace which = QUE value = 1 }
+		command = { type = peace which = RHO value = 1 }
+		command = { type = peace which = ROM value = 1 }
+		command = { type = peace which = RSI value = 1 }
+		command = { type = peace which = RUS value = 1 }
+		command = { type = peace which = SAF value = 1 }
+		command = { type = peace which = SAL value = 1 }
+		command = { type = peace which = SAR value = 1 }
+		command = { type = peace which = SAU value = 1 }
+		command = { type = peace which = SCA value = 1 }
+		command = { type = peace which = SCH value = 1 }
+		command = { type = peace which = SCO value = 1 }
+		command = { type = peace which = SER value = 1 }
+		command = { type = peace which = SIA value = 1 }
+		command = { type = peace which = SIB value = 1 }
+		command = { type = peace which = SIE value = 1 }
+		command = { type = peace which = SIK value = 1 }
+		command = { type = peace which = SLO value = 1 }
+		command = { type = peace which = SLV value = 1 }
+		command = { type = peace which = SOM value = 1 }
+		command = { type = peace which = SOV value = 1 }
+		command = { type = peace which = SPA value = 1 }
+		command = { type = peace which = SPR value = 1 }
+		command = { type = peace which = SUD value = 1 }
+		command = { type = peace which = SWE value = 1 }
+		command = { type = peace which = SYR value = 1 }
+		command = { type = peace which = TAJ value = 1 }
+		command = { type = peace which = TAN value = 1 }
+		command = { type = peace which = TEX value = 1 }
+		command = { type = peace which = TIB value = 1 }
+		command = { type = peace which = TRA value = 1 }
+		command = { type = peace which = TRK value = 1 }
+		command = { type = peace which = TUN value = 1 }
+		command = { type = peace which = TUR value = 1 }
+		command = { type = peace which = UKR value = 1 }
+		command = { type = peace which = URU value = 1 }
+		command = { type = peace which = USA value = 1 }
+		command = { type = peace which = UZB value = 1 }
+		command = { type = peace which = VEN value = 1 }
+		command = { type = peace which = VIC value = 1 }
+		command = { type = peace which = VIE value = 1 }
+		command = { type = peace which = WLL value = 1 }
+		command = { type = peace which = YEM value = 1 }
+		command = { type = peace which = YUG value = 1 }
+		command = { type = peace which = U16 value = 1 }
+		command = { type = peace which = U73 value = 1 }
+		command = { type = peace which = U74 value = 1 }
+		command = { type = peace which = U87 value = 1 }
+
+		command = { type = trigger which = 90601 }
+	}
+}
+
+event = {
+	id = 90601
+	random = no 
+	country = KOR
+	
+	name = "EVT_90601_NAME"
+	desc = "EVT_90601_DESC"
+	style = 0
+
+	picture = "coldwar"
+
+	action_a = {
+		name = "EVT_90601_ACTA"
+		ai_chance = 100
+		command = { type = construct which = land_fort where = 1196 value = 7 }
+		command = { type = construct which = land_fort where = 1195 value = 5 }
+
+		command = { type = supplies value = 1000 }
+		command = { type = manpowerpool value = 50 }
+		command = { type = construct which = ic where = 1199 value = 2 }
+
+		command = { type = construct which = flak where = 1199 value = 1 } #flak
+		command = { type = construct which = flak where = 1198 value = 1 }
+		command = { type = construct which = flak where = 1197 value = 1 }
+		command = { type = construct which = flak where = 1196 value = 1 }
+		command = { type = construct which = flak where = 1195 value = 1 }
+		command = { type = clrflag which = americankorea }
+		command = { type = clrflag which = sovietkorea }
+		command = { type = clrflag which = britishkorea }
+	}
+}
+
+event = {
+	id = 90602
+	random = no 
+	country = PRK
+	
+	trigger = {
+		exists = KOR
+		NOT = {
+			war = { country = SOV country = USA }
+			war = { country = USA country = GER }
+			war = { country = GER country = SOV }
+			war = { country = JAP country = USA }
+			war = { country = JAP country = GER }
+			war = { country = JAP country = SOV }
+			war = { country = PRK country = KOR }
+		}
+	}
+
+	name = "EVT_90602_NAME"
+	desc = "EVT_90602_DESC"
+	style = 0
+
+	picture = "coldwar"
+
+	date = { day = 1 month = june year = 1941 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "EVT_90602_ACTA"
+		ai_chance = 100
+		command = { type = capital which = 1201 }
+
+		command = { type = end_puppet }
+		command = { type = leave_alliance }
+		command = { type = province_keypoints which = 1376 value = 1 }
+
+		command = { type = peace which = AFG value = 1 }
+		command = { type = peace which = ALB value = 1 }
+		command = { type = peace which = ALG value = 1 }
+		command = { type = peace which = ALI value = 1 }
+		command = { type = peace which = ALS value = 1 }
+		command = { type = peace which = ANG value = 1 }
+		command = { type = peace which = ARA value = 1 }
+		command = { type = peace which = ARG value = 1 }
+		command = { type = peace which = ARM value = 1 }
+		command = { type = peace which = AST value = 1 }
+		command = { type = peace which = AUS value = 1 }
+		command = { type = peace which = AXI value = 1 }
+		command = { type = peace which = AZB value = 1 }
+		command = { type = peace which = BEL value = 1 }
+		command = { type = peace which = BEN value = 1 }
+		command = { type = peace which = BHU value = 1 }
+		command = { type = peace which = BLR value = 1 }
+		command = { type = peace which = BOL value = 1 }
+		command = { type = peace which = BOS value = 1 }
+		command = { type = peace which = BRA value = 1 }
+		command = { type = peace which = BRU value = 1 }
+		command = { type = peace which = BUL value = 1 }
+		command = { type = peace which = BUR value = 1 }
+		command = { type = peace which = CAL value = 1 }
+		command = { type = peace which = CAM value = 1 }
+		command = { type = peace which = CAN value = 1 }
+		command = { type = peace which = CGX value = 1 }
+		command = { type = peace which = CHC value = 1 }
+		command = { type = peace which = CHI value = 1 }
+		command = { type = peace which = CHL value = 1 }
+		command = { type = peace which = CMB value = 1 }
+		command = { type = peace which = COL value = 1 }
+		command = { type = peace which = CON value = 1 }
+		command = { type = peace which = COS value = 1 }
+		command = { type = peace which = CRO value = 1 }
+		command = { type = peace which = CSA value = 1 }
+		command = { type = peace which = CSX value = 1 }
+		command = { type = peace which = CUB value = 1 }
+		command = { type = peace which = CXB value = 1 }
+		command = { type = peace which = CYN value = 1 }
+		command = { type = peace which = CYP value = 1 }
+		command = { type = peace which = CZE value = 1 }
+		command = { type = peace which = DDR value = 1 }
+		command = { type = peace which = DEN value = 1 }
+		command = { type = peace which = DFR value = 1 }
+		command = { type = peace which = DOM value = 1 }
+		command = { type = peace which = EAF value = 1 }
+		command = { type = peace which = ECU value = 1 }
+		command = { type = peace which = EGY value = 1 }
+		command = { type = peace which = ENG value = 1 }
+		command = { type = peace which = EQA value = 1 }
+		command = { type = peace which = EST value = 1 }
+		command = { type = peace which = ETH value = 1 }
+		command = { type = peace which = EUS value = 1 }
+		command = { type = peace which = FIN value = 1 }
+		command = { type = peace which = FLA value = 1 }
+		command = { type = peace which = FRA value = 1 }
+		command = { type = peace which = GAB value = 1 }
+		command = { type = peace which = GEO value = 1 }
+		command = { type = peace which = GER value = 1 }
+		command = { type = peace which = GLD value = 1 }
+		command = { type = peace which = GRE value = 1 }
+		command = { type = peace which = GUA value = 1 }
+		command = { type = peace which = GUI value = 1 }
+		command = { type = peace which = GUY value = 1 }
+		command = { type = peace which = HAI value = 1 }
+		command = { type = peace which = HOL value = 1 }
+		command = { type = peace which = HON value = 1 }
+		command = { type = peace which = HUN value = 1 }
+		command = { type = peace which = ICL value = 1 }
+		command = { type = peace which = IDC value = 1 }
+		command = { type = peace which = IND value = 1 }
+		command = { type = peace which = INO value = 1 }
+		command = { type = peace which = IRE value = 1 }
+		command = { type = peace which = IRQ value = 1 }
+		command = { type = peace which = ISR value = 1 }
+		command = { type = peace which = ITA value = 1 }
+		command = { type = peace which = JAP value = 1 }
+		command = { type = peace which = JOR value = 1 }
+		command = { type = peace which = KAZ value = 1 }
+		command = { type = peace which = KOR value = 1 }
+		command = { type = peace which = KUR value = 1 }
+		command = { type = peace which = KYG value = 1 }
+		command = { type = peace which = LAO value = 1 }
+		command = { type = peace which = LAT value = 1 }
+		command = { type = peace which = LBY value = 1 }
+		command = { type = peace which = LEB value = 1 }
+		command = { type = peace which = LIB value = 1 }
+		command = { type = peace which = LIT value = 1 }
+		command = { type = peace which = LUX value = 1 }
+		command = { type = peace which = MAD value = 1 }
+		command = { type = peace which = MAL value = 1 }
+		command = { type = peace which = MAN value = 1 }
+		command = { type = peace which = MEN value = 1 }
+		command = { type = peace which = MEX value = 1 }
+		command = { type = peace which = MIN value = 1 }
+		command = { type = peace which = MLY value = 1 }
+		command = { type = peace which = MON value = 1 }
+		command = { type = peace which = MOR value = 1 }
+		command = { type = peace which = MOZ value = 1 }
+		command = { type = peace which = MTN value = 1 }
+		command = { type = peace which = NAM value = 1 }
+		command = { type = peace which = NEP value = 1 }
+		command = { type = peace which = NIC value = 1 }
+		command = { type = peace which = NIG value = 1 }
+		command = { type = peace which = NOR value = 1 }
+		command = { type = peace which = NZL value = 1 }
+		command = { type = peace which = OMN value = 1 }
+		command = { type = peace which = OTT value = 1 }
+		command = { type = peace which = PAK value = 1 }
+		command = { type = peace which = PAL value = 1 }
+		command = { type = peace which = PAN value = 1 }
+		command = { type = peace which = PAR value = 1 }
+		command = { type = peace which = PER value = 1 }
+		command = { type = peace which = PHI value = 1 }
+		command = { type = peace which = POL value = 1 }
+		command = { type = peace which = POR value = 1 }
+		command = { type = peace which = PRI value = 1 }
+	#	command = { type = peace which = PRK value = 1 }
+		command = { type = peace which = PRU value = 1 }
+		command = { type = peace which = QUE value = 1 }
+		command = { type = peace which = RHO value = 1 }
+		command = { type = peace which = ROM value = 1 }
+		command = { type = peace which = RSI value = 1 }
+		command = { type = peace which = RUS value = 1 }
+		command = { type = peace which = SAF value = 1 }
+		command = { type = peace which = SAL value = 1 }
+		command = { type = peace which = SAR value = 1 }
+		command = { type = peace which = SAU value = 1 }
+		command = { type = peace which = SCA value = 1 }
+		command = { type = peace which = SCH value = 1 }
+		command = { type = peace which = SCO value = 1 }
+		command = { type = peace which = SER value = 1 }
+		command = { type = peace which = SIA value = 1 }
+		command = { type = peace which = SIB value = 1 }
+		command = { type = peace which = SIE value = 1 }
+		command = { type = peace which = SIK value = 1 }
+		command = { type = peace which = SLO value = 1 }
+		command = { type = peace which = SLV value = 1 }
+		command = { type = peace which = SOM value = 1 }
+		command = { type = peace which = SOV value = 1 }
+		command = { type = peace which = SPA value = 1 }
+		command = { type = peace which = SPR value = 1 }
+		command = { type = peace which = SUD value = 1 }
+		command = { type = peace which = SWE value = 1 }
+		command = { type = peace which = SYR value = 1 }
+		command = { type = peace which = TAJ value = 1 }
+		command = { type = peace which = TAN value = 1 }
+		command = { type = peace which = TEX value = 1 }
+		command = { type = peace which = TIB value = 1 }
+		command = { type = peace which = TRA value = 1 }
+		command = { type = peace which = TRK value = 1 }
+		command = { type = peace which = TUN value = 1 }
+		command = { type = peace which = TUR value = 1 }
+		command = { type = peace which = UKR value = 1 }
+		command = { type = peace which = URU value = 1 }
+		command = { type = peace which = USA value = 1 }
+		command = { type = peace which = UZB value = 1 }
+		command = { type = peace which = VEN value = 1 }
+		command = { type = peace which = VIC value = 1 }
+		command = { type = peace which = VIE value = 1 }
+		command = { type = peace which = WLL value = 1 }
+		command = { type = peace which = YEM value = 1 }
+		command = { type = peace which = YUG value = 1 }
+		command = { type = peace which = U16 value = 1 }
+		command = { type = peace which = U73 value = 1 }
+		command = { type = peace which = U74 value = 1 }
+		command = { type = peace which = U87 value = 1 }
+
+		command = { type = trigger which = 90603 } 
+	}
+}
+
+event = {
+	id = 90603
+	random = no 
+	country = PRK
+	
+	name = "EVT_90603_NAME"
+	desc = "EVT_90603_DESC"
+	style = 0
+
+	picture = "coldwar"
+
+	action_a = {
+		name = "EVT_90603_ACTA"
+		ai_chance = 100
+		command = { type = construct which = land_fort where = 1376 value = 7 }
+		command = { type = construct which = land_fort where = 1393 value = 5 }
+
+		command = { type = supplies value = 1000 }
+		command = { type = manpowerpool value = 50 }
+		command = { type = construct which = ic where = 1201 value = 7 }
+
+		command = { type = add_division value = infantry when = 0 }
+		command = { type = add_division value = infantry when = 0 }
+		command = { type = add_division value = infantry when = 0 }
+		command = { type = add_division value = infantry when = 0 }
+
+		command = { type = construct which = flak where = 1376 value = 1 }
+		command = { type = construct which = flak where = 1391 value = 1 } #flak
+		command = { type = construct which = flak where = 1392 value = 1 }
+		command = { type = construct which = flak where = 1393 value = 1 }
+		command = { type = construct which = flak where = 1200 value = 1 }
+		command = { type = construct which = flak where = 1201 value = 1 }
+		command = { type = clrflag which = americankorea }
+		command = { type = clrflag which = sovietkorea }
+		command = { type = clrflag which = britishkorea }
+	}
+}
+
+##############
+# 開戦イベント
+##############
+
+event = {
+	id = 90610
+	random = no 
+	country = PRK
+	
+	trigger = {
+		event = 90600
+		event = 90602
+		exists = KOR
+		random = 30
+		OR = { #日中戦争終了
+			event = 131572 #CHI defeats JAP
+			event = 131582 #CHC defeats JAP
+			flag = usadefeatsjap
+			flag = sovdefeatsjap
+		}
+		OR = { #国共内戦終了
+			NOT = {
+				exists = CHC
+			}
+			NOT = {
+				exists = CHI
+			}
+			AND = {
+				event = 131850
+				flag = chinesetaipei
+			}
+		}
+		NOT = {
+			war = { country = PRK country = KOR }
+			flag = koreanwar
+		}
+	}
+
+	name = "EVT_90610_NAME"
+	desc = "EVT_90610_DESC"
+	style = 0
+
+	picture = "coldwar"
+
+	date = { day = 1 month = june year = 1941 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "EVT_90610_ACTA"
+		ai_chance = 100
+		command = { type = war which = KOR }
+		command = { type = trigger which = 90611 }
+		command = { type = sleepevent which = 90612 }
+	}
+	action_b = {
+		name = "EVT_90610_ACTB"
+		ai_chance = 0
+		command = { type = dissent value = 15 }
+	}
+}
+
+event = {
+	id = 90611
+	random = no 
+	country = KOR
+
+	name = "EVT_90611_NAME"
+	desc = "EVT_90611_DESC"
+	style = 0
+
+	picture = "coldwar"
+	action_a = {
+		name = "EVT_90611_ACTA"
+		ai_chance = 100
+		command = { type = dissent value = 5 }
+	}
+}
+
+event = {
+	id = 90612
+	random = no 
+	country = KOR
+	
+	trigger = {
+		event = 90600
+		event = 90602
+		exists = KOR
+		random = 10
+		OR = { #日中戦争終了
+			event = 131572 #CHI defeats JAP
+			event = 131582 #CHC defeats JAP
+			flag = usadefeatsjap
+			flag = sovdefeatsjap
+		}
+		OR = { #国共内戦終了
+			NOT = {
+				exists = CHC
+			}
+			NOT = {
+				exists = CHI
+			}
+			AND = {
+				event = 131850
+				flag = chinesetaipei
+			}
+		}
+		NOT = {
+			war = { country = PRK country = KOR }
+			flag = koreanwar
+		}
+	}
+
+	name = "EVT_90612_NAME"
+	desc = "EVT_90612_DESC"
+	style = 0
+
+	picture = "coldwar"
+
+	date = { day = 1 month = june year = 1941 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "EVT_90612_ACTA"
+		ai_chance = 100
+		command = { type = war which = PRK }
+		command = { type = trigger which = 90613 }
+		command = { type = sleepevent which = 90610 }
+	}
+	action_b = {
+		name = "EVT_90612_ACTB"
+		ai_chance = 0
+		command = { type = dissent value = 15 }
+	}
+}
+
+event = {
+	id = 90613
+	random = no 
+	country = PRK
+
+	name = "EVT_90613_NAME"
+	desc = "EVT_90613_DESC"
+	style = 0
+
+	picture = "coldwar"
+	action_a = {
+		name = "EVT_90613_ACTA"
+		ai_chance = 100
+		command = { type = dissent value = 5 }
+	}
+}
+
+event = {
+	id = 90614
+	random = no 
+	country = PRK
+	
+	trigger = {
+		event = 90600
+		event = 90602
+		exists = PRK
+		exists = CHC
+		exists = USA
+		OR = { #日中戦争終了
+			event = 131572 #CHI defeats JAP
+			event = 131582 #CHC defeats JAP
+			flag = usadefeatsjap
+			flag = sovdefeatsjap
+		}
+		OR = { #国共内戦終了
+			NOT = {
+				exists = CHI
+			}
+			AND = {
+				event = 131850
+				flag = chinesetaipei
+			}
+		}
+	}
+
+	name = "AI_EVENT"
+
+	style = 0
+
+	picture = "coldwar"
+
+	date = { day = 1 month = june year = 1941 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = ai_prepare_war which = KOR }
+	}
+}
+
+event = { #FEPKBETA4.8
+	id = 90615
+	random = no 
+	country = PRK
+	
+	trigger = {
+		war = { country = PRK country = KOR }
+	}
+
+	name = "EVT_90615_NAME"
+	desc = "EVT_90615_DESC"
+	style = 0
+
+	picture = "coldwar"
+
+	date = { day = 1 month = june year = 1941 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "EVT_90610_ACTA"
+		ai_chance = 100
+		command = { type = setflag which = koreanwar }
+		command = { type = sleepevent which = 90610 }
+		command = { type = sleepevent which = 90612 }
+		command = { type = sleepevent which = 90614 }
+	}
+}
+
+event = { #FEPKBETA4.8
+	id = 90616
+	random = no 
+	country = KOR
+	
+	trigger = {
+		war = { country = PRK country = KOR }
+	}
+
+	name = "EVT_90615_NAME"
+	desc = "EVT_90615_DESC"
+	style = 0
+
+	picture = "coldwar"
+
+	date = { day = 1 month = june year = 1941 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "EVT_90610_ACTA"
+		ai_chance = 100
+		command = { type = setflag which = koreanwar }
+		command = { type = sleepevent which = 90610 }
+		command = { type = sleepevent which = 90612 }
+		command = { type = sleepevent which = 90614 }
+	}
+}
+
+event = {
+	id = 90620
+	random = no 
+	country = KOR
+	
+	trigger = {
+		flag = koreanwar
+		war = { country = PRK country = KOR }
+		exists = USA
+		control = { province = 1196 data = KOR }
+		lost_national = { country = KOR value = 30 } #2 prov
+		NOT = {
+			war = { country = USA country = KOR }
+			alliance = { country = USA country = PRK }
+			alliance = { country = USA country = CHC }
+		}
+	}
+
+	name = "EVT_90620_NAME"
+	desc = "EVT_90620_DESC"
+	style = 0
+
+	picture = "coldwar"
+
+	date = { day = 1 month = june year = 1941 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "EVT_90620_ACTA"
+		ai_chance = 95
+		command = { type = dissent value = 2 }
+		command = { type = trigger which = 90621 }
+	}
+	action_b = {
+		name = "EVT_90620_ACTB"
+		ai_chance = 5
+		command = { type = dissent value = 15 }
+	}
+}
+
+event = {
+	id = 90621
+	random = no 
+	country = USA
+
+	name = "EVT_90621_NAME"
+	desc = "EVT_90621_DESC"
+	style = 0
+
+	picture = "coldwar"
+
+	action_a = {
+		name = "EVT_90621_ACTA"
+		ai_chance = 80
+		command = { type = supplies value = -7000 }
+		command = { type = dissent value = 2 }
+		command = { type = trigger which = 90622 }
+	}
+	action_b = {
+		name = "EVT_90621_ACTB"
+		ai_chance = 20
+		command = { type = dissent value = 5 }
+	}
+}
+
+event = {
+	id = 90622
+	random = no 
+	country = KOR
+
+	name = "EVT_90622_NAME"
+	desc = "EVT_90622_DESC"
+	style = 0
+
+	picture = "coldwar"
+
+	action_a = {
+		name = "EVT_90622_ACTA"
+		ai_chance = 100
+		command = { type = supplies value = 2000 }
+		command = { type = add_corps value = land where = 1196 }
+		command = { type = add_division value = armor when = 3 where = artillery }
+		command = { type = add_division value = armor when = 3 where = artillery }
+		command = { type = add_division value = mechanized when = 0 where = artillery }
+		command = { type = add_division value = mechanized when = 0 where = anti_tank }
+		command = { type = add_division value = motorized when = 1 where = artillery }
+		command = { type = add_division value = motorized when = 1 where = artillery }
+		command = { type = add_division value = motorized when = 1 where = tank_destroyer }
+		command = { type = add_corps value = air where = 1196 }
+		command = { type = add_division value = tactical_bomber when = 3 }
+		command = { type = add_division value = tactical_bomber when = 3 }
+		command = { type = add_division value = tactical_bomber when = 3 }
+	}
+}
+
+event = {
+	id = 90623
+	random = no 
+	country = PRK
+	
+	trigger = {
+		flag = koreanwar
+		war = { country = PRK country = KOR }
+		exists = CHC
+		control = { province = 1376 data = PRK }
+		lost_national = { country = PRK value = 30 } #2 prov
+		NOT = {
+			war = { country = PRK country = CHC }
+			alliance = { country = CHC country = KOR }
+			alliance = { country = CHC country = USA }
+		}
+	}
+
+	name = "EVT_90623_NAME"
+	desc = "EVT_90623_DESC"
+	style = 0
+
+	picture = "coldwar"
+
+	date = { day = 1 month = june year = 1941 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "EVT_90623_ACTA"
+		ai_chance = 95
+		command = { type = dissent value = 2 }
+		command = { type = trigger which = 90624 }
+	}
+	action_b = {
+		name = "EVT_90623_ACTB"
+		ai_chance = 5
+		command = { type = dissent value = 15 }
+	}
+}
+
+event = {
+	id = 90624
+	random = no 
+	country = CHC
+
+	name = "EVT_90624_NAME"
+	desc = "EVT_90624_DESC"
+	style = 0
+
+	picture = "coldwar"
+
+	action_a = {
+		name = "EVT_90624_ACTA"
+		ai_chance = 80
+		command = { type = supplies value = -7000 }
+		command = { type = dissent value = 2 }
+		command = { type = trigger which = 90625 }
+	}
+	action_b = {
+		name = "EVT_90624_ACTB"
+		ai_chance = 20
+		command = { type = dissent value = 5 }
+	}
+}
+
+event = {
+	id = 90625
+	random = no 
+	country = PRK
+
+	name = "EVT_90625_NAME"
+	desc = "EVT_90625_DESC"
+	style = 0
+
+	picture = "coldwar"
+
+	action_a = {
+		name = "EVT_90625_ACTA"
+		ai_chance = 100
+		command = { type = supplies value = 2000 }
+		command = { type = add_corps value = land where = 1376 }
+		command = { type = add_division value = hq when = 3 }
+		command = { type = add_division value = bergsjaeger when = 3 where = artillery }
+		command = { type = add_division value = bergsjaeger when = 3 where = artillery }
+		command = { type = add_division value = bergsjaeger when = 3 where = artillery }
+		command = { type = add_division value = bergsjaeger when = 3 where = artillery }
+		command = { type = add_division value = bergsjaeger when = 3 where = artillery }
+		command = { type = add_division value = bergsjaeger when = 3 where = artillery }
+		command = { type = add_division value = bergsjaeger when = 3 where = artillery }
+		command = { type = add_division value = bergsjaeger when = 3 where = artillery }
+		command = { type = add_division value = bergsjaeger when = 3 where = artillery }
+		command = { type = add_division value = bergsjaeger when = 3 where = artillery }
+		command = { type = add_division value = bergsjaeger when = 3 where = artillery }
+		command = { type = construct which = air_base where = 1376 value = 2 }
+		command = { type = add_corps which = "人民解放空軍義勇軍" value = air where = 1379 }
+		command = { type = add_division which = "第1連隊" value = multi_role when = 3 }
+		command = { type = add_division which = "第2連隊" value = multi_role when = 3 }
+		command = { type = add_division which = "第3連隊" value = multi_role when = 3 }
+		command = { type = add_division which = "第4連隊" value = multi_role when = 3 }
+	}
+}
+
+
+event = {
+	id = 90626
+	random = no 
+	country = KOR
+	
+	trigger = {
+		flag = koreanwar
+		event = 90622
+		event = 90625
+		war = { country = PRK country = KOR }
+		exists = USA
+		control = { province = 1196 data = KOR }
+		NOT = {
+			control = { province = 1200 data = KOR }
+			control = { province = 1201 data = KOR }
+			war = { country = USA country = KOR }
+			alliance = { country = USA country = PRK }
+			alliance = { country = USA country = CHC }
+		}
+	}
+
+	name = "EVT_90626_NAME"
+	desc = "EVT_90626_DESC"
+	style = 0
+
+	picture = "coldwar"
+
+	date = { day = 1 month = june year = 1941 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "EVT_90626_ACTA"
+		ai_chance = 95
+		command = { type = dissent value = 2 }
+		command = { type = trigger which = 90627 }
+	}
+	action_b = {
+		name = "EVT_90626_ACTB"
+		ai_chance = 5
+		command = { type = dissent value = 15 }
+	}
+}
+
+event = {
+	id = 90627
+	random = no 
+	country = USA
+
+	name = "EVT_90627_NAME"
+	desc = "EVT_90627_DESC"
+	style = 0
+
+	picture = "coldwar"
+
+	action_a = {
+		name = "EVT_90627_ACTA"
+		ai_chance = 80
+		command = { type = supplies value = -7000 }
+		command = { type = dissent value = 3 }
+		command = { type = trigger which = 90628 }
+	}
+	action_b = {
+		name = "EVT_90627_ACTB"
+		ai_chance = 20
+		command = { type = dissent value = 7 }
+	}
+}
+
+event = {
+	id = 90628
+	random = no 
+	country = KOR
+
+	name = "EVT_90628_NAME"
+	desc = "EVT_90628_DESC"
+	style = 0
+
+	picture = "coldwar"
+
+	action_a = {
+		name = "EVT_90628_ACTA"
+		ai_chance = 100
+		command = { type = supplies value = 2000 }
+		command = { type = add_corps value = land where = 1196 }
+		command = { type = add_division value = hq when = 3 }
+		command = { type = add_division value = infantry when = 3 where = artillery }
+		command = { type = add_division value = infantry when = 3 where = artillery }
+		command = { type = add_division value = infantry when = 3 where = artillery }
+		command = { type = add_division value = infantry when = 3 where = anti_tank }
+		command = { type = add_division value = infantry when = 3 where = anti_tank }
+		command = { type = add_division value = infantry when = 3 where = anti_tank }
+		command = { type = add_division value = infantry when = 3 where = engineer }
+		command = { type = add_division value = infantry when = 3 where = engineer }
+		command = { type = add_division value = infantry when = 3 where = engineer }
+		command = { type = add_corps value = air where = 1196 }
+		command = { type = add_division value = interceptor when = 3 }
+		command = { type = add_division value = interceptor when = 3 }
+		command = { type = add_division value = interceptor when = 3 }
+		command = { type = add_corps value = air where = 1196 }
+		command = { type = add_division value = interceptor when = 3 }
+		command = { type = add_division value = interceptor when = 3 }
+		command = { type = add_division value = interceptor when = 3 }
+	}
+}
+
+event = {
+	id = 90630
+	random = no 
+	country = KOR
+	
+	trigger = {
+		flag = koreanwar
+		control = { province = 1201 data = KOR }
+		control = { province = 1376 data = KOR }
+		NOT = {
+			exists = PRK
+		}
+	}
+
+	name = "EVT_90630_NAME"
+	desc = "EVT_90630_DESC"
+	style = 0
+
+	picture = "coldwar"
+
+	date = { day = 1 month = june year = 1941 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "EVT_90630_ACTA"
+		ai_chance = 100
+		command = { type = dissent value = -30 }
+		command = { type = alliance which = USA }
+		command = { type = clrflag which = koreanwar }
+	}
+}
+
+event = {
+	id = 90631
+	random = no 
+	country = PRK
+	
+	trigger = {
+		flag = koreanwar
+		control = { province = 1199 data = PRK }
+		control = { province = 1196 data = PRK }
+		NOT = {
+			exists = KOR
+		}
+	}
+
+	name = "EVT_90631_NAME"
+	desc = "EVT_90631_DESC"
+	style = 0
+
+	picture = "coldwar"
+
+	date = { day = 1 month = june year = 1941 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "EVT_90631_ACTA"
+		ai_chance = 100
+		command = { type = dissent value = -30 }
+		command = { type = alliance which = CHC } #FEPKBETA5.4
+		command = { type = clrflag which = koreanwar }
+	}
+}
+
+event = {
+	id = 90632
+	random = no 
+	country = KOR
+	
+	trigger = {
+		flag = koreanwar
+		war = { country = PRK country = KOR }
+		OR = {
+			AND = {
+				NOT = {
+					lost_national = { country = PRK value = 30 } 
+				}
+				NOT = {
+					lost_national = { country = KOR value = 30 } 
+				}
+				random = 3
+			}
+			AND = {
+				event = 90622
+				event = 90625
+				random = 30
+			}
+		}
+	}
+
+	name = "EVT_90632_NAME"
+	desc = "EVT_90632_DESC"
+	style = 0
+
+	picture = "coldwar"
+
+	date = { day = 1 month = june year = 1941 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "EVT_90632_ACTA"
+		ai_chance = 90
+		command = { type = dissent value = 10 }
+		command = { type = leave_alliance }
+		command = { type = trigger which = 90633 }
+	}
+	action_b = {
+		name = "EVT_90632_ACTB"
+		ai_chance = 10
+		command = { type = dissent value = 5 }
+	}
+}
+
+event = {
+	id = 90633
+	random = no 
+	country = PRK
+
+	name = "EVT_90633_NAME"
+	desc = "EVT_90633_DESC"
+	style = 0
+
+	picture = "coldwar"
+
+	action_a = {
+		name = "EVT_90633_ACTA"
+		ai_chance = 90
+		command = { type = dissent value = 10 }
+		command = { type = leave_alliance }
+		command = { type = peace which = KOR value = 0 }
+		command = { type = trigger which = 90634 }
+		command = { type = trigger which = 90635 }
+	}
+	action_b = {
+		name = "EVT_90633_ACTB"
+		ai_chance = 10
+		command = { type = dissent value = 5 }
+	}
+}
+
+event = {
+	id = 90634
+	random = no 
+	country = KOR
+
+	name = "EVT_90634_NAME"
+	desc = "EVT_90634_DESC"
+	style = 0
+
+	picture = "coldwar"
+
+	action_a = {
+		name = "EVT_90634_ACTA"
+		ai_chance = 100
+		command = { type = alliance which = USA }
+		command = { type = secedeprovince which = PRK value = 1393 }
+		command = { type = secedeprovince which = PRK value = 1391 }
+		command = { type = secedeprovince which = PRK value = 1376 }
+		command = { type = secedeprovince which = PRK value = 1392 }
+		command = { type = secedeprovince which = PRK value = 1200 }
+		command = { type = secedeprovince which = PRK value = 1201 }
+	}
+}
+
+event = {
+	id = 90635
+	random = no 
+	country = PRK
+
+	name = "EVT_90635_NAME"
+	desc = "EVT_90635_DESC"
+	style = 0
+
+	picture = "coldwar"
+
+	action_a = {
+		name = "EVT_90635_ACTA"
+		ai_chance = 100
+		command = { type = alliance which = CHC }
+		command = { type = secedeprovince which = KOR value = 1194 }
+		command = { type = secedeprovince which = KOR value = 1195 }
+		command = { type = secedeprovince which = KOR value = 1196 }
+		command = { type = secedeprovince which = KOR value = 1197 }
+		command = { type = secedeprovince which = KOR value = 1198 }
+		command = { type = secedeprovince which = KOR value = 1199 }
+	}
+}
+
+event = {
+	id = 90636
+	random = no 
+	country = JAP
+	
+	trigger = {
+		war = { country = PRK country = KOR }
+		random = 30
+	}
+
+	name = "EVT_90636_NAME"
+	desc = "EVT_90636_DESC"
+	style = 0
+
+	picture = "coldwar"
+
+	date = { day = 1 month = june year = 1941 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "EVT_90636_ACTA"
+		ai_chance = 100
+		command = { type = money value = 200 }
+		command = { type = supplies value = 2000 }
+		command = { type = construct which = ic where = 1184 value = 4 }
+		command = { type = construct which = ic where = 1179 value = 1 }
+		command = { type = construct which = ic where = 1180 value = 1 }
+		command = { type = construct which = ic where = 1185 value = 1 }
+		command = { type = construct which = ic where = 1187 value = 1 }
+		command = { type = construct which = ic where = 1188 value = 1 }
+		command = { type = construct which = ic where = 1190 value = 1 }
+	}
+}
+
+##########
+#  朝鮮半島の分断
+##########
+
+event = {
+	id = 90640	#131540
+	random = no
+	country = KOR
+
+	#FEPK1.093
+	trigger = {
+		OR = {
+			event = 90641
+			AND = {
+				OR = {
+					event = 131511 #JAPsurrenderUSA
+					event = 131521 #JAPsurrenderSOV
+				}
+				NOT = {
+					war = { country = KOR country = PRK }
+				}
+				exists = KOR
+				exists = PRK
+				random = 33
+			}
+		}
+	}
+
+	#FEPK1.093
+        date = { day = 0 month = january year = 1935 }
+        offset = 35
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_90640_NAME"
+	desc = "EVT_90640_DESC"
+
+	picture = "korea_independent"
+
+	action_a = {
+		name = "EVT_90640_ACTA"
+		ai_chance = 100
+		command = { type = capital which = 1199 }
+
+		command = { type = secedeprovince which = PRK value = 1393 }#PRK
+		command = { type = secedeprovince which = PRK value = 1391 }
+		command = { type = secedeprovince which = PRK value = 1376 }
+		command = { type = secedeprovince which = PRK value = 1392 }
+		command = { type = secedeprovince which = PRK value = 1200 }
+		command = { type = secedeprovince which = PRK value = 1201 }
+
+		command = { type = relation which = PRK value = -100 }
+
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = set_domestic which = free_market value = 8 }
+		command = { type = set_domestic which = freedom value = 3 }
+		command = { type = headofstate which = 578001 }
+		command = { type = headofgovernment which = 578024 }
+		command = { type = foreignminister which = 578029 }
+		command = { type = armamentminister which = 578021 }
+		command = { type = ministerofsecurity which = 578022 }
+		command = { type = ministerofintelligence which = 578023 }
+		command = { type = chiefofstaff which = 578007 }
+		command = { type = chiefofarmy which = 578008 }
+		command = { type = chiefofnavy which = 578009 }
+		command = { type = chiefofair which = 578010 }
+
+	#	command = { type = add_division value = infantry } #BETA修正パッチ
+	#	command = { type = add_division value = infantry }
+	#	command = { type = add_division value = infantry }
+
+		#command = { type = trigger which = 90641 }	#なにこれ
+	}
+}
+
+event = {
+	id = 90641	#131541
+	random = no
+	country = PRK
+
+	#FEPK1.093
+	trigger = {
+		OR = {
+			event = 90640
+			AND = {
+				OR = {
+					event = 131511 #JAPsurrenderUSA
+					event = 131521 #JAPsurrenderSOV
+				}
+				NOT = {
+					war = { country = KOR country = PRK }
+				}
+				exists = KOR
+				exists = PRK
+				random = 33
+			}
+		}
+	}
+
+	#FEPK1.093
+        date = { day = 0 month = january year = 1935 }
+        offset = 35
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_90641_NAME"
+	desc = "EVT_90641_DESC"
+
+	picture = "korea_independent"
+
+	action_a = {
+		name = "EVT_90641_ACTA"
+		ai_chance = 100
+		command = { type = capital which = 1201 }
+
+		command = { type = secedeprovince which = KOR value = 1194 }#KOR
+		command = { type = secedeprovince which = KOR value = 1195 }
+		command = { type = secedeprovince which = KOR value = 1196 }
+		command = { type = secedeprovince which = KOR value = 1197 }
+		command = { type = secedeprovince which = KOR value = 1198 }
+		command = { type = secedeprovince which = KOR value = 1199 }
+
+		command = { type = relation which = KOR value = -100 }
+
+		command = { type = set_domestic which = democratic value = 1 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = set_domestic which = free_market value = 2 }
+		command = { type = set_domestic which = freedom value = 1 }
+		command = { type = headofstate which = 579001 }
+		command = { type = headofgovernment which = 579002 }
+
+	#	command = { type = add_division value = infantry } #BETA修正パッチ
+	#	command = { type = add_division value = infantry }
+	#	command = { type = add_division value = infantry }
+
+		#command = { type = trigger which = 90640 }
+	}
+}

@@ -1,0 +1,59 @@
+UPR;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+79701;Head of State;ヴィルヘルム3世;36;NS;Stern Imperialist;High;M37;x
+79702;Head of Government;ミラン・ホザ;36;NS;Silent Workhorse;High;M24002;x
+79703;Foreign Minister;ジャン・ピエカルキーウィッツ;36;NS;Biased Intellectual;Medium;M13065;x
+79704;Foreign Minister;アルフレート・ローゼンベルク;36;NS;Ideological Crusader;Very High;M57;x
+79705;Foreign Minister;ヨハン・シュヴェリン・フォン・クロジク;36;NS;Apologetic Clerk;High;M49;x
+79706;Foreign Minister;ヨアヒム・フォン・リッベントロップ;36;NS;Iron Fisted Brute;High;M55;x
+79707;Foreign Minister;コンスタンティン・フォン・ノイラート;36;NS;Great Compromiser;High;M3;x
+79708;Foreign Minister;オルドリッヒ・オタミール;36;NS;General Staffer;High;M24058;x
+79709;Foreign Minister;ヨーゼフ・ゲッベルス;36;NS;The Cloak N Dagger Schemer;Very High;M56;x
+79710;Minister of Armament;ヒャルマー・シャハト;36;NS;Administrative Genius;Medium;M14;x
+79711;Minister of Armament;ヴァルター・フンク;36;NS;Resource Industrialist;Very High;M80;x
+79712;Minister of Armament;ゲオルク・トマース;36;NS;Theoretical Scientist;Low;M98;x
+79713;Minister of Armament;スタニスラフ・グラビンスキ;36;NS;laissez-faire capitalist;Medium;M13083;x
+79714;Minister of Armament;ヴァルター・ダレ;36;NS;Military Entrepreneur;Very High;M81;x
+79715;Minister of Armament;マックス・アマン;36;NS;Battle Fleet Proponent;Very High;M83;x
+79716;Minister of Armament;ハンス＝ゲオルク・フォン・フリーデブルク;36;NS;Submarine Proponent;Very High;M93;x
+79717;Minister of Armament;パウル・ルジュヌ＝ユンク;36;NS;Tank Proponent;Medium;M96;x
+79718;Minister of Armament;オトカール・セブリン;36;NS;Infantry Proponent;Medium;M24076;x
+79719;Minister of Armament;クサフェル・ドルシュ;36;NS;Air Superiority Proponent;Very High;M222;x
+79720;Minister of Armament;ローベルト・ライ;36;NS;Corrupt Kleptocrat;High;M88;x
+79721;Minister of Armament;ヘルマン・ゲーリング;36;NS;Air to Ground Proponent;Very High;M10;x
+79722;Minister of Armament;アルベルト・シュペーア;36;NS;Air to Sea Proponent;Medium;M43;x
+79723;Minister of Armament;ルドルフ・ヘス;36;NS;Strategic Air Proponent;High;M40;x
+79724;Minister of Security;オタカール・エイシャー;36;NS;Silent Lawyer;High;M24087;x
+79725;Minister of Security;ヴィクトル・ルッツェ;36;NS;Compassionate Gentleman;Very High;M109;x
+79726;Minister of Security;ヴラディスラフ・ラツキーウィッツ;36;NS;Crime Fighter;Medium;M13005;x
+79727;Minister of Security;ヴィルヘルム・フォン・ガイル;36;NS;Prince of Terror;High;M15;x
+79728;Minister of Security;ヨハン・フォン・ベルンシュトルフ;36;NS;Back Stabber;Medium;M121;x
+79729;Minister of Security;アルトゥール・アクスマン;36;NS;Man of the People;Low;M120;x
+79730;Minister of Security;ヴァルター・シェレンベルク;36;NS;Efficient Sociopath;Low;M124;x
+79731;Minister of Security;カール・ヘルマン・フランク;36;NS;Crooked Kleptocrat;Very High;M24011;x
+79732;Head of Military Intelligence;ゲオルグ・ハンゼン;36;NS;Technical Specialist;Medium;M147;x
+79733;Head of Military Intelligence;カール・フォン・シューベルト;36;NS;Logistics Specialist;High;M144;x
+79734;Head of Military Intelligence;ヨセフ・ジェゼク;36;NS;Political Specialist;Medium;M24016;x
+79735;Head of Military Intelligence;ジャン・コワレウスキ;36;NS;Dismal Enigma;Medium;M13113;x
+79736;Head of Military Intelligence;ハンス・オスター;36;NS;Industrial Specialist;High;M146;x
+79737;Head of Military Intelligence;ハンス＝ゲオルク・フォン・フリーデブルク;36;NS;Naval Intelligence Specialist;Medium;M93;x
+79738;Chief of Staff;ルートヴィヒ・ベック;36;NS;School of Manoeuvre;High;M7;x
+79739;Chief of Staff;フランツ・ハルダー;36;NS;School of Fire Support;Medium;M155;x
+79740;Chief of Staff;ヨセフ・ツラネック;36;NS;School of Mass Combat;High;M24119;x
+79741;Chief of Staff;エドワード・リズ＝スミグリー;36;NS;School of Defence;High;M13007;x
+79742;Chief of Staff;フリッツ・バイエルライン;36;NS;School of Psychology;High;M159;x
+79743;Chief of Army;エーリヒ・ルーデンドルフ;36;NS;Elastic Defence Doctrine;High;M179;x
+79744;Chief of Army;オットー・ブラハ;36;NS;Static Defence Doctrine;Medium;M24018;x
+79745;Chief of Army;ジャン・コワレウスキ;36;NS;Decisive Battle Doctrine;Low;M13113;x
+79746;Chief of Army;エーリヒ・ヘプナー;36;NS;Armoured Spearhead Doctrine;High;M18;x
+79747;Chief of Army;ヴェルナー・フォン・ブロンベルク;36;NS;Guns and Butter Doctrine;High;M4;x
+79748;Chief of Navy;ジャージー・スウィルスキ;36;NS;Open Seas Doctrine;Medium;M13009;x
+79749;Chief of Navy;ロベルト・リクトルモク;36;NS;Decisive Naval Battle Doctrine;Medium;M24017;x
+79750;Chief of Navy;フェルディナンド・カトロス;36;NS;Power Projection Doctrine;High;M24117;x
+79751;Chief of Navy;カール・デーニッツ;36;NS;Indirect Approach Doctrine;Very High;M32;x
+79752;Chief of Navy;クルト・フライヴァルト;36;NS;Base Control Doctrine;Medium;M194;x
+79753;Chief of Air Force;カール・フリードリヒ・フォン・ジーメンス;36;NS;Air Superiority Doctrine;High;M208;x
+79754;Chief of Air Force;ヴィルヘルム・オクセニウス;36;NS;Naval Aviation Doctrine;Medium;M210;x
+79755;Chief of Air Force;カール・コラー;36;NS;Army Aviation Doctrine;Medium;M205;x
+79756;Chief of Air Force;フーゴ・シュペルレ;36;NS;Carpet Bombing Doctrine;High;M203;x
+79757;Chief of Air Force;アルベルト・ケッセルリンク;36;NS;Vertical Envelopment Doctrine;High;M207;x

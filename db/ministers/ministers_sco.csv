@@ -1,0 +1,39 @@
+SCO;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+561001;Head of State;ハロルド・ハリントン・バルフォア;36;ML;Barking Buffoon;High;M561001;x
+561002;Head of Government;ジョン・スチュアート・ボースウィック卿;36;ML;Silent Workhorse;High;M561002;x
+561003;Foreign Minister;ルーシャス・プランタジネット・ファークランド;36;ML;Great Compromiser;High;M561003;x
+561004;Minister of Armament;ジェームズ・フィッツワレン・デスペンサー;36;ML;Battle Fleet Proponent;Medium;M561004;x
+561005;Minister of Security;ハーブランド・ウォール伯爵;36;ML;Back Stabber;Medium;M561005;x
+561006;Head of Military Intelligence;ジョン・キンロス男爵;36;ML;Dismal Enigma;Medium;M561006;x
+561007;Chief of Staff;フィリップ・マクスウェル・バルフォア;36;ML;School of Psychology;Medium;L1018;x
+561008;Chief of Army;S・T・ヘイクウィル＝スミス;36;ML;Elastic Defence Doctrine;Medium;L1152;x
+561009;Chief of Navy;T・L・ブルース＝フレイザー;36;ML;Open Seas Doctrine;Medium;L1328;x
+561010;Chief of Air Force;オーウェン・ボイド;36;ML;Army Aviation Doctrine;Medium;L1418;x
+561011;Head of State;ウォルグレイヴ卿チャールズ3世;36;PA;Benevolent Gentleman;High;M561011;x
+561012;Head of State;ヘンリー・マグロー;36;LWR;Die-hard Reformer;High;M561012;x
+561013;Head of Government;ジェームズ・アバーコーン公爵;36;PA;Backroom Backstabber;High;M561013;x
+561014;Head of Government;イグナシオ・R・ドゥナチー;36;LWR;Happy Amateur;High;M561014;x
+561015;Foreign Minister;チャールズ・ゴードン公爵;36;PA;General Staffer;High;M561015;x
+561016;Foreign Minister;ドナルド・カードロス・アースキン;36;LWR;Iron Fisted Brute;High;M561016;x
+561017;Minister of Armament;イアン・キャンベル・グレイ;36;PA;Resource Industrialist;Medium;M561017;x
+561018;Minister of Armament;ピーター・ドラモンド・マクドナルド;36;LWR;Military Entrepreneur;Medium;M561018;x
+561019;Minister of Security;チャールズ・ブレッダルベイン伯爵;36;PA;Man of the People;Medium;M561019;x
+561020;Minister of Security;マルコム・マクドナルド;36;LWR;Compassionate Gentleman;Medium;M561020;x
+561021;Head of Military Intelligence;チャールズ・サウセスク伯爵;36;PA;Logistics Specialist;Medium;M561021;x
+561022;Head of Military Intelligence;マリー・カーマイケル・ストープス;36;LWR;Technical Specialist;Medium;M561022;x
+561023;Chief of Staff;ハロルド・フランクリン;36;PA;School of Defence;Medium;L1127;x
+561024;Chief of Staff;リチャード・マクリーリー;36;LWR;School of Manoeuvre;Medium;L1216;x
+561025;Chief of Army;アンドリュー・マクロッチ;36;PA;Static Defence Doctrine;Medium;L1217;x
+561026;Chief of Army;W・M・セント・ジョージ・カーク;36;LWR;Decisive Battle Doctrine;Medium;L1181;x
+561027;Chief of Navy;ジェフリー・レイトン;36;PA;Decisive Naval Battle Doctrine;Medium;L1364;x
+561028;Chief of Navy;アンソニー・ストークス;36;LWR;Indirect Approach Doctrine;Medium;L1391;x
+561029;Chief of Air Force;ペリー・キーン;36;PA;Naval Aviation Doctrine;Medium;L1453;x
+561030;Chief of Air Force;P・S・ショルト＝ダグラス;36;LWR;Carpet Bombing Doctrine;Medium;L1479;x
+561031;Minister of Armament;ジョージ・ブキャナン;39;SL;Resource Industrialist;High;M561031;x
+561032;Chief of Air Force;サー・ヒュー・ダウディング;36;ML;Air Superiority Doctrine;High;L1435;x
+561033;Foreign Minister;ウィリアム・ギャラハー;36;LWR;Ideological Crusader;High;M561033;x
+561034;Minister of Security;ジェームズ・モックストン;36;SD;Silent Lawyer;High;M561034;x
+561035;Minister of Security;デヴィッド・マクスウェル・ファイフ;41;ML;Compassionate Gentleman;High;M1085;x
+561036;Foreign Minister;アーチボルド・ラムゼー;43;FA;Iron Fisted Brute;Medium;M1054;x
+561037;Foreign Minister;ダグラス・ハミルトン公爵;36;PA;The Cloak N Dagger Schemer;High;M561037;x

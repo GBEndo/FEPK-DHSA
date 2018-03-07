@@ -1,0 +1,1106 @@
+#########################################################################
+#	FEPK_axispuppet.txt
+#	êïé≤ò¯ôSçëä÷òAÉCÉxÉìÉg
+#########################################################################
+#id = 133300-59		ì˙ì∆ÇÃò¯ôSçëê¨óßèàóù
+#id = 133360-99		ì˙ì∆ÇÃò¯ôSçëîªíËè¡é∏èàóù
+#########################################################################
+##########
+#   Middle East Axis Capture and Puppet Events
+##########
+#   Germany captures Tehran
+##########
+event = {
+	id = 133300
+	random = no 
+	country = GER
+	persistent = yes
+
+	trigger = {
+		control = { province = 1502 data = GER } #Tehran
+		NOT = { flag = germaniran }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133300_NAME"
+	desc = "EVT_133300_DESC"
+	style = 0
+
+	picture = "german_replacements"
+
+	action_a = {
+		name = "EVT_133300_ACTA"
+		command = { type = setflag which = germaniran }
+	}
+}
+##########
+#  Germany puppets Persia
+##########
+event = {
+	id = 133301
+	random = no 
+	country = GER
+
+	trigger = {
+		exists = PER
+		NOT = {
+			alliance = { country = PER country = GER }
+			puppet = { country = PER country = GER } #persia not a german puppet
+			puppet = { country = PER country = TUR } #persia not a turkish puppet
+			war = { country = PER country = ENG }
+			war = { country = PER country = SOV }
+		}
+		OR = {
+			flag = germaniran
+			event = 130769 #iran was occupied
+		}
+		event = 130850 #victory in the west
+		event = 130900 #victory in the east
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133301_NAME"
+	desc = "EVT_133301_DESC"
+	style = 0
+	picture = "german_replacements"
+
+	action_a = {
+		name = "EVT_133301_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = PER }
+		command = { type = secedeprovince which = PER value = 1859 } #Northern Iran
+		command = { type = secedeprovince which = PER value = 1787 } #
+		command = { type = secedeprovince which = PER value = 1503 } #
+		command = { type = secedeprovince which = PER value = 1500 } #
+		command = { type = secedeprovince which = PER value = 1789 } #Southern Iran
+		command = { type = secedeprovince which = PER value = 1498 } #
+		command = { type = secedeprovince which = PER value = 1497 } #
+		command = { type = secedeprovince which = PER value = 1496 } #
+		command = { type = secedeprovince which = PER value = 1495 } #
+		command = { type = secedeprovince which = IRQ value = 1825 } #to iraq
+		command = { type = secedeprovince which = PER value = 1788 } #New
+		command = { type = secedeprovince which = PER value = 1826 }
+		command = { type = secedeprovince which = PER value = 1499 }
+		command = { type = secedeprovince which = PER value = 1501 }
+		command = { type = clrflag which = germaniran }
+	}
+}
+##########
+#  Axis captures Jerusalem
+##########
+event = {
+	id = 133302
+	random = no 
+	country = GER
+	persistent = yes
+
+	trigger = {
+		OR = {
+			control = { province = 1797 data = GER } #Jerusalem
+			AND = {
+				control = { province = 1797 data = ITA }
+				alliance = { country = ITA country = GER }
+			}
+			AND = {
+				control = { province = 1797 data = VIC }
+				alliance = { country = VIC country = GER }
+			}
+		}
+		NOT = { flag = axispalestine }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133302_NAME"
+	desc = "EVT_133302_DESC"
+	style = 0
+	picture = "german_replacements"
+
+	action_a = {
+		name = "EVT_133302_ACTA"
+		ai_chance = 100
+		command = { type = setflag which = axispalestine }
+	}
+}
+##########
+#  Italy puppets Palestine
+##########
+event = {
+	id = 133303
+	random = no 
+	country = ITA
+
+	trigger = {
+		exists = PAL
+		flag = axispalestine
+		#placeholder
+		alliance = { country = GER country = ITA }
+		NOT = { ispuppet = ITA }
+		NOT = { alliance = { country = GER country = PAL } }
+		event = 130850 #victory in the west
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133303_NAME"
+	desc = "EVT_133303_DESC"
+	style = 0
+	picture = "german_replacements"
+
+	action_a = {
+		name = "EVT_133303_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = PAL }
+		command = { type = clrflag which = axispalestine }
+	}
+	action_b = {
+		name = "EVT_133303_ACTB"
+		ai_chance = 0
+		command = { type = inherit which = PAL }
+		command = { type = clrflag which = axispalestine }
+		#command = { type = belligerence which = ITA value = 3 } #is this enough/toomuch?
+		command = { type = dissent value = 2 }
+	}
+}
+##########
+#  Axis captures Amman
+##########
+event = {
+	id = 133304
+	random = no 
+	country = GER
+	persistent = yes
+
+	trigger = {
+		OR = {
+			control = { province = 1796 data = GER } #Amman
+			AND = {
+				control = { province = 1796 data = ITA } # 
+				alliance = { country = ITA country = GER }
+			}
+			AND = {
+				control = { province = 1796 data = VIC } # 
+				alliance = { country = VIC country = GER }
+			}
+		}
+		NOT = { flag = axisjordan }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133304_NAME"
+	desc = "EVT_133304_DESC"
+	style = 0
+	picture = "german_replacements"
+
+	action_a = {
+		name = "EVT_133304_ACTA"
+		ai_chance = 100
+		command = { type = setflag which = axisjordan }
+	}
+}
+##########
+#  Italy puppets Jordan
+##########
+event = {
+	id = 133305
+	random = no 
+	country = ITA
+
+	trigger = {
+		exists = JOR
+		flag = axisjordan
+		#placeholder
+		alliance = { country = GER country = ITA }
+		NOT = { ispuppet = ITA }
+		NOT = { alliance = { country = GER country = JOR } }
+		event = 130850 #victory in the west
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133305_NAME"
+	desc = "EVT_133305_DESC"
+	style = 0
+	picture = "german_replacements"
+
+	action_a = {
+		name = "EVT_133305_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = JOR }
+		command = { type = clrflag which = axisjordan }
+	}
+	action_b = {
+		name = "EVT_133305_ACTB"
+		ai_chance = 0
+		command = { type = inherit which = JOR }
+		command = { type = clrflag which = axisjordan }
+		#command = { type = belligerence which = ITA value = 3 } #is this enough/toomuch?
+		command = { type = dissent value = 2 }
+	}
+}
+##########
+#  Axis captures Damascus
+##########
+event = {
+	id = 133306
+	random = no 
+	country = GER
+	persistent = yes
+
+	trigger = {
+		OR = {
+		control = { province = 1792 data = GER } #Damascus
+			AND = {
+				control = { province = 1792 data = ITA } # 
+				alliance = { country = ITA country = GER }
+			}
+			AND = {
+				control = { province = 1792 data = VIC } # 
+				alliance = { country = VIC country = GER }
+			}
+		}
+		NOT = { flag = axissyria }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133306_NAME"
+	desc = "EVT_133306_DESC"
+	picture = "german_replacements"
+	style = 0
+
+	action_a = {
+		name = "EVT_133306_ACTA"
+		ai_chance = 100
+		command = { type = setflag which = axissyria }
+	}
+}
+##########
+#  Italy puppets Syria
+##########
+event = {
+	id = 133307
+	random = no 
+	country = ITA
+
+	trigger = {
+		exists = SYR
+		flag = axissyria
+		#placeholder
+		alliance = { country = GER country = ITA }
+		NOT = { ispuppet = ITA }
+		NOT = { alliance = { country = GER country = SYR } }
+		event = 130850 #victory in the west
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133307_NAME"
+	desc = "EVT_133307_DESC"
+	picture = "german_replacements"
+	style = 0
+
+	action_a = {
+		name = "EVT_133307_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = SYR }
+		command = { type = clrflag which = axissyria }
+	}
+	action_b = {
+		name = "EVT_133307_ACTB"
+		ai_chance = 0
+		command = { type = inherit which = SYR }
+		command = { type = clrflag which = axissyria }
+		#command = { type = belligerence which = ITA value = 3 } #is this enough/toomuch?
+		command = { type = dissent value = 2 }
+	}
+}
+##########
+# Axis captures Beirut
+##########
+event = {
+	id = 133308
+	random = no 
+	country = GER
+	persistent = yes
+
+	trigger = {
+		OR = {
+			control = { province = 1794 data = GER } #Beirut
+			AND = {
+				control = { province = 1794 data = ITA } # 
+				alliance = { country = ITA country = GER }
+			}
+			AND = {
+				control = { province = 1794 data = VIC } # 
+				alliance = { country = VIC country = GER }
+			}
+		}
+		NOT = { flag = axislebanon }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133308_NAME"
+	desc = "EVT_133308_DESC"
+	picture = "german_replacements"
+	style = 0
+
+	action_a = {
+		name = "EVT_133308_ACTA"
+		ai_chance = 100
+		command = { type = setflag which = axislebanon }
+	}
+}
+##########
+#  Italy puppets Lebanon
+##########
+event = {
+	id = 133309
+	random = no 
+	country = ITA
+
+	trigger = {
+		exists = LEB
+		flag = axislebanon
+		#placeholder
+		alliance = { country = GER country = ITA }
+		NOT = { ispuppet = ITA }
+		NOT = { alliance = { country = GER country = LEB } }
+		event = 130850 #victory in the west
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133309_NAME"
+	desc = "EVT_133309_DESC"
+	picture = "german_replacements"
+	style = 0
+
+	action_a = {
+		name = "EVT_133309_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = LEB }
+		command = { type = clrflag which = axislebanon }
+	}
+	action_b = {
+		name = "EVT_133309_ACTB"
+		ai_chance = 0
+		command = { type = inherit which = LEB }
+		command = { type = clrflag which = axislebanon }
+		#command = { type = belligerence which = ITA value = 3 } #is this enough/toomuch?
+		command = { type = dissent value = 2 }
+	}
+}
+##########
+# Axis captures Madrid
+##########
+event = {
+	id = 133310
+	random = no 
+	country = GER
+	persistent = yes
+
+	trigger = {
+		OR = {
+			control = { province = 341 data = GER } #madrid
+			AND = {
+				control = { province = 341 data = ITA } # 
+				alliance = { country = ITA country = GER }
+			}
+			AND = {
+				control = { province = 341 data = VIC } # 
+				alliance = { country = VIC country = GER }
+			}
+		}
+		NOT = { flag = axisspain }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133310_NAME"
+	desc = "EVT_133310_DESC"
+	picture = "german_replacements"
+	style = 0
+
+	action_a = {
+		name = "EVT_133310_ACTA"
+		ai_chance = 100
+		command = { type = setflag which = axisspain } #axisspain WITHOUT underscore means they fought
+	}
+}
+##########
+#  Germany puppets Spain
+##########
+event = {
+	id = 133311
+	random = no 
+	country = GER
+
+	trigger = {
+		exists = SPA
+		flag = axisspain
+		NOT = { alliance = { country = GER country = SPA } }
+		event = 130850 #victory in the west
+		NOT = { war = { country = GER country = SPA } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133311_NAME"
+	desc = "EVT_133311_DESC"
+	picture = "german_replacements"
+
+	action_a = {
+		name = "EVT_133311_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = SPA }
+		command = { type = clrflag which = axisspain }
+	}
+}
+
+##########
+#  Germany captures Rangoon
+##########
+event = {
+	id = 133352
+	random = no 
+	country = GER
+	persistent = yes
+
+	trigger = {
+		control = { province = 1299 data = GER } # Rangoon
+		NOT = { flag = germanburma }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133352_NAME"
+	desc = "EVT_133352_DESC"
+	style = 0
+	picture = "japanese_reinforcments3"
+
+	action_a = {
+		name = "EVT_133352_ACTA"
+		command = { type = setflag which = germanburma }
+	}
+}
+##########
+#  Germany puppets Burma
+##########
+event = {
+	id = 133353
+	random = no 
+	country = GER
+
+	trigger = {
+		exists = BUR
+		flag = germanburma
+		#otherrequirement?
+		NOT = { alliance = { country = GER country = BUR } }
+		event = 130850 #victory in the west
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133353_NAME"
+	desc = "EVT_133353_DESC"
+	style = 0
+	picture = "japanese_reinforcments3"
+
+	action_a = {
+		name = "EVT_133353_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = BUR } #
+		command = { type = clrflag which = germanburma }
+	}
+	action_b = {
+		name = "EVT_133353_ACTB"
+		ai_chance = 0
+		command = { type = belligerence which = GER value = -1 }
+		command = { type = clrflag which = germanburma }
+	}
+}
+
+
+##########
+#  Axis captures Bangkok
+##########
+event = {
+	id = 133358
+	random = no 
+	country = JAP
+	persistent = yes
+
+	trigger = {
+		control = { province = 1343 data = JAP } #Bangkok
+		NOT = { flag = japanesesiam }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133358_NAME"
+	desc = "EVT_133358_DESC"
+	picture = "japanese_reinforcments3"
+
+	action_a = {
+		name = "EVT_133358_ACTA"
+		ai_chance = 100
+		command = { type = setflag which = japanesesiam }
+	}
+}
+##########
+#  Japan puppets Siam
+##########
+event = {
+	id = 133359
+	random = no 
+	country = JAP
+
+	trigger = {
+		exists = SIA
+		flag = japanesesiam
+		#placeholdre
+		NOT = { alliance = { country = JAP country = SIA } }
+		OR = {
+			event = 131002 #UK defeated by GER
+			event = 131092 #UK defeated by JAP
+			NOT = {
+				exists = ENG
+			}
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133359_NAME"
+	desc = "EVT_133359_DESC"
+	picture = "japanese_reinforcments3"
+
+	action_a = {
+		name = "EVT_133359_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = SIA }
+		command = { type = clrflag which = japanesesiam }
+	}
+	action_b = {
+		name = "EVT_133359_ACTB"
+		ai_chance = 0
+		command = { type = belligerence which = JAP value = -1 }
+		command = { type = clrflag which = japanesesiam }
+	}
+}
+##########
+#  Germany captures Bangkok
+##########
+event = {
+	id = 133360
+	random = no 
+	country = GER
+	persistent = yes
+
+	trigger = {
+		control = { province = 1343 data = GER } #Bangkok
+		NOT = { flag = germansiam }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133360_NAME"
+	desc = "EVT_133360_DESC"
+	#picture = "japanese_reinforcments3"
+
+	action_a = {
+		name = "EVT_133360_ACTA"
+		ai_chance = 100
+		command = { type = setflag which = germansiam }
+	}
+}
+##########
+#  Germany puppets Siam
+##########
+event = {
+	id = 133361
+	random = no 
+	country = GER
+
+	trigger = {
+		exists = SIA
+		flag = germansiam
+		#otherrequirement?
+		NOT = { alliance = { country = GER country = SIA } }
+		event = 130850 #victory in the west
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133361_NAME"
+	desc = "EVT_133361_DESC"
+	#picture = "japanese_reinforcments3"
+
+	action_a = {
+		name = "EVT_133361_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = SIA } #
+		command = { type = clrflag which = germansiam }
+	}
+	action_b = {
+		name = "EVT_133361_ACTB"
+		ai_chance = 0
+		command = { type = belligerence which = GER value = -1 }
+		command = { type = clrflag which = germansiam }
+	}
+}
+##########
+#  Germany puppets Palestine
+##########
+event = {
+	id = 133362
+	random = no 
+	country = GER
+
+	trigger = {
+		exists = PAL
+		flag = axispalestine
+		#placeholder
+		NOT = { alliance = { country = GER country = PAL } }
+		event = 130850 #victory in the west
+		OR = {
+			NOT = {
+				alliance = { country = GER country = ITA } #if italy doesnt puppet them, germany will
+			}
+			ispuppet = ITA
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133362_NAME"
+	desc = "EVT_133362_DESC"
+	picture = "german_replacements"
+
+	action_a = {
+		name = "EVT_133362_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = PAL }
+		command = { type = clrflag which = axispalestine }
+	}
+	action_b = {
+		name = "EVT_133362_ACTB"
+		ai_chance = 0
+		command = { type = inherit which = PAL }
+		command = { type = clrflag which = axispalestine }
+		#command = { type = belligerence which = ITA value = 3 } #is this enough/toomuch?
+		command = { type = dissent value = 2 }
+	}
+}
+##########
+#  Germany puppets Jordan
+##########
+event = {
+	id = 133363
+	random = no 
+	country = GER
+
+	trigger = {
+		exists = JOR
+		flag = axisjordan
+		#placeholder
+		NOT = { alliance = { country = GER country = JOR } }
+		event = 130850 #victory in the west
+		OR = {
+			NOT = {
+				alliance = { country = GER country = ITA } #if italy doesnt puppet them, germany will
+			}
+			ispuppet = ITA
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133363_NAME"
+	desc = "EVT_133363_DESC"
+	picture = "german_replacements"
+
+	action_a = {
+		name = "EVT_133363_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = JOR }
+		command = { type = clrflag which = axisjordan }
+	}
+	action_b = {
+		name = "EVT_133363_ACTB"
+		ai_chance = 0
+		command = { type = inherit which = JOR }
+		command = { type = clrflag which = axisjordan }
+		#command = { type = belligerence which = ITA value = 3 } #is this enough/toomuch?
+		command = { type = dissent value = 2 }
+	}
+}
+##########
+#  Germany puppets Syria
+##########
+event = {
+	id = 133364
+	random = no 
+	country = GER
+
+	trigger = {
+		exists = SYR
+		flag = axissyria
+		#placeholder
+		NOT = { alliance = { country = GER country = SYR } }
+		event = 130850 #victory in the west
+		OR = {
+			NOT = {
+				alliance = { country = GER country = ITA } #if italy doesnt puppet them, germany will
+			}
+			ispuppet = ITA
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133364_NAME"
+	desc = "EVT_133364_DESC"
+	picture = "german_replacements"
+
+	action_a = {
+		name = "EVT_133364_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = SYR }
+		command = { type = clrflag which = axissyria }
+	}
+	action_b = {
+		name = "EVT_133364_ACTB"
+		ai_chance = 0
+		command = { type = inherit which = SYR }
+		command = { type = clrflag which = axissyria }
+		#command = { type = belligerence which = ITA value = 3 } #is this enough/toomuch?
+		command = { type = dissent value = 2 }
+	}
+}
+##########
+#  Germany puppets Lebanon
+##########
+event = {
+	id = 133365
+	random = no 
+	country = GER
+
+	trigger = {
+		exists = LEB
+		flag = axislebanon
+		#placeholder
+		NOT = { alliance = { country = GER country = LEB } }
+		event = 130850 #victory in the west
+		OR = {
+			NOT = {
+				alliance = { country = GER country = ITA } #if italy doesnt puppet them, germany will
+			}
+			ispuppet = ITA
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133365_NAME"
+	desc = "EVT_133365_DESC"
+	picture = "german_replacements"
+
+	action_a = {
+		name = "EVT_133365_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = LEB }
+		command = { type = clrflag which = axislebanon }
+	}
+	action_b = {
+		name = "EVT_133365_ACTB"
+		ai_chance = 0
+		command = { type = inherit which = LEB }
+		command = { type = clrflag which = axislebanon }
+		#command = { type = belligerence which = ITA value = 3 } #is this enough/toomuch?
+		command = { type = dissent value = 2 }
+	}
+}
+
+
+
+#########################################################################
+#  Axis Forces Lose Tehran
+#########################################################################
+event = {
+	id = 133375
+	random = no 
+	country = GER
+	persistent = yes
+
+	trigger = {
+		flag = germaniran
+		NOT = { control = { province = 1502 data = GER } } #Tehran
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133375_NAME"
+	desc = "EVT_133375_DESC"
+
+	picture = "german_replacements"
+
+	action_a = {
+		name = "EVT_133375_ACTA"
+		command = { type = clrflag which = germaniran }
+	}
+}
+#########################################################################
+#  Axis Forces Lose Jerusalem
+#########################################################################
+event = {
+	id = 133376
+	random = no 
+	country = GER
+	persistent = yes
+
+	trigger = {
+		flag = axispalestine
+		NOT = { control = { province = 1797 data = GER } } #Jerusalem
+		NOT = { control = { province = 1797 data = ITA } } #Jerusalem
+		NOT = { control = { province = 1797 data = VIC } } #Jerusalem
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133376_NAME"
+	desc = "EVT_133376_DESC"
+
+	picture = "german_replacements"
+
+	action_a = {
+		name = "EVT_133376_ACTA"
+		command = { type = clrflag which = axispalestine }
+	}
+}
+#########################################################################
+#  Axis Forces Lose Amman
+#########################################################################
+event = {
+	id = 133377
+	random = no 
+	country = GER
+	persistent = yes
+
+	trigger = {
+		flag = axisjordan
+		NOT = { control = { province = 1796 data = GER } } #Amman
+		NOT = { control = { province = 1796 data = ITA } } #Amman
+		NOT = { control = { province = 1796 data = VIC } } #Amman
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133377_NAME"
+	desc = "EVT_133377_DESC"
+
+	picture = "german_replacements"
+
+	action_a = {
+		name = "EVT_133377_ACTA"
+		command = { type = clrflag which = axisjordan }
+	}
+}
+#########################################################################
+#  Axis Forces Lose Damascus
+#########################################################################
+event = {
+	id = 133378
+	random = no 
+	country = GER
+	persistent = yes
+
+	trigger = {
+		flag = axissyria
+		NOT = { control = { province = 1792 data = GER } } #Damascus
+		NOT = { control = { province = 1792 data = ITA } } #Damascus
+		NOT = { control = { province = 1792 data = VIC } } #Damascus
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133378_NAME"
+	desc = "EVT_133378_DESC"
+
+	picture = "german_replacements"
+
+	action_a = {
+		name = "EVT_133378_ACTA"
+		command = { type = clrflag which = axissyria }
+	}
+}
+#########################################################################
+#  Axis Forces Lose Beirut
+#########################################################################
+event = {
+	id = 133379
+	random = no 
+	country = GER
+	persistent = yes
+
+	trigger = {
+		flag = axislebanon
+		NOT = { control = { province = 1794 data = GER } } #Beirut
+		NOT = { control = { province = 1794 data = ITA } } #Beirut
+		NOT = { control = { province = 1794 data = VIC } } #Beirut
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133379_NAME"
+	desc = "EVT_133379_DESC"
+
+	picture = "german_replacements"
+
+	action_a = {
+		name = "EVT_133379_ACTA"
+		command = { type = clrflag which = axislebanon }
+	}
+}
+
+#########################################################################
+#  Wehrmacht Loses Rangoon
+#########################################################################
+event = {
+	id = 133381
+	random = no 
+	country = GER
+	persistent = yes
+
+	trigger = {
+		flag = germanburma
+		NOT = { control = { province = 1299 data = GER } } #Rangoon
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133381_NAME"
+	desc = "EVT_133381_DESC"
+
+	picture = "german_replacements"
+
+	action_a = {
+		name = "EVT_133381_ACTA"
+		command = { type = clrflag which = germanburma }
+	}
+}
+#########################################################################
+#  Wehrmacht Loses Bangkok
+#########################################################################
+event = {
+	id = 133382
+	random = no 
+	country = GER
+	persistent = yes
+
+	trigger = {
+		flag = germansiam
+		NOT = { control = { province = 1343 data = GER } } #Bangkok
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133382_NAME"
+	desc = "EVT_133382_DESC"
+
+	picture = "german_replacements"
+
+	action_a = {
+		name = "EVT_133382_ACTA"
+		command = { type = clrflag which = germansiam }
+	}
+}
+
+event = {
+	id = 133392
+	random = no 
+	country = JAP
+	persistent = yes
+
+	trigger = {
+		flag = japanesesiam
+		NOT = { control = { province = 1343 data = JAP } } #Bangkok
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133392_NAME"
+	desc = "EVT_133392_DESC"
+
+	picture = "german_replacements"
+
+	action_a = {
+		name = "EVT_133392_ACTA"
+		command = { type = clrflag which = japanesesiam }
+	}
+}

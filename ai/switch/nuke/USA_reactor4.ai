@@ -1,0 +1,9 @@
+construction = { 
+         nuclear_reactor = yes
+         nuclear_reactor_prov = 726
+         max_nuclear = 4
+
+         rocket_test = yes
+         rocket_test_prov = 722
+         max_rocket = 10
+}

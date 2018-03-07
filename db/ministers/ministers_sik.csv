@@ -1,0 +1,32 @@
+SIK;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+72001;Head of State;盛世才 (ション・シーツァイ);35;PA;Resigned Generalissimo;High;M72001;x
+72002;Head of Government;ホージャ・ニヤズ;35;PA;Naive Optimist;High;M72002;x
+72003;Foreign Minister;盛世才 (ション・シーツァイ);35;PA;Great Compromiser;Very High;M72001;x
+72004;Minister of Armament;ハビブラー・フセイノフ;35;PA;Infantry Proponent;Medium;M72004;x
+72005;Minister of Security;チャン・シーリャン;35;PA;Crooked Kleptocrat;Medium;M72005;x
+72006;Head of Military Intelligence;ヴィクトル・A・F・ポリノフ;35;PA;Industrial Specialist;Medium;M72006;x
+72007;Chief of Staff;盛世才 (ション・シーツァイ);35;PA;School of Psychology;Very High;M72001;x
+72008;Chief of Army;盛世才 (ション・シーツァイ);35;PA;Guns and Butter Doctrine;Very High;M72001;x
+72009;Chief of Navy;薩鎭冰 (サー・ヂェンビン);35;PA;Indirect Approach Doctrine;Medium;M72009;x
+72010;Chief of Air Force;ピオトル・オルロフ;35;PA;Army Aviation Doctrine;Medium;M72010;x
+72031;Foreign Minister;イサ・ユスフ・アルプテキン;38;SC;Apologetic Clerk;Low;M72012;x
+72032;Minister of Armament;A・V・フェドユンスキジ;38;PA;Infantry Proponent;Medium;M72024;x
+72033;Minister of Security;イサ・ユスフ・アルプテキン;38;SC;Crooked Kleptocrat;Medium;M72012;x
+72034;Minister of Security;クニム・カーン;37;SC;Compassionate Gentleman;Very High;M72014;x
+72035;Minister of Security;イシャクジャン・モンハキエフ;35;SC;Man of the People;Medium;M72025;x
+72036;Head of Military Intelligence;張希良 (チャン・シーリャン);38;PA;Dismal Enigma;Medium;M72005;x
+72037;Head of Military Intelligence;ダレリム・カーン;38;PA;Political Specialist;Medium;M72016;x
+72038;Head of Military Intelligence;劉本 (リュー・ペン);39;PA;Technical Specialist;Medium;M72026;x
+72039;Chief of Staff;ヨル・バルス;41;PA;School of Mass Combat;Very Low;M72017;x
+72040;Chief of Army;ヨル・バルス;42;PA;Elastic Defence Doctrine;Very Low;M72017;x
+72011;Head of State;マクハムドサブリ;35;SL;Insignificant Layman;High;M72011;x
+72012;Head of Government;イサ・ユスフ・アルプテキン;35;SL;Corporate Suit;High;M72012;x
+72014;Minister of Armament;クニム・カーン;35;SL;Military Entrepreneur;Very High;M72014;x
+72021;Head of State;盛世才 (ション・シーツァイ);35;LWR;Resigned Generalissimo;High;M72001;x
+72022;Head of Government;盛世才 (ション・シーツァイ);35;LWR;Old General;High;M72001;x
+72023;Foreign Minister;盛世才 (ション・シーツァイ);35;LWR;Great Compromiser;Very High;M72001;x
+72027;Chief of Staff;盛世才 (ション・シーツァイ);35;LWR;School of Psychology;Very High;M72001;x
+72028;Chief of Army;盛世才 (ション・シーツァイ);35;LWR;Guns and Butter Doctrine;Undying;M72001;x
+72029;Chief of Navy;薩鎭冰 (サー・ヂェンビン);35;LE;Indirect Approach Doctrine;Medium;M72009;x
+72030;Chief of Air Force;ピオトル・オルロフ;35;LE;Army Aviation Doctrine;Medium;M72010;x

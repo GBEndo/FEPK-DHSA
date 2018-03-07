@@ -1,0 +1,455 @@
+##############################
+# Country definition for POL #
+##############################
+province = { id = 208 anti_air = 1 } # ヴィリニュス
+province = {
+  id = 211 # リダ
+  anti_air = 3
+  air_base = { size = 3 current_size = 3 }
+}
+province = {
+  id = 229 # スタニスワヴフ
+  air_base = { size = 4 current_size = 4 }
+}
+province = {
+  id = 303 # ダンツィヒ
+  anti_air = 2
+  air_base = { size = 4 current_size = 4 }
+  naval_base = { size = 8 current_size = 8 }
+}
+province = { id = 305 anti_air = 1 } # トルン
+province = { id = 307 anti_air = 2 } # ポズナニ
+province = { id = 479 anti_air = 2 } # クラクフ
+province = {
+  id = 483 # ウーチ
+  anti_air = 4
+  air_base = { size = 4 current_size = 4 }
+}
+province = {
+  id = 485 # ワルシャワ
+  anti_air = 2
+  air_base = { size = 6 current_size = 6 }
+}
+province = {
+  id = 504 # ブレストリトフスク
+  air_base = { size = 3 current_size = 3 }
+}
+province = { id = 509 anti_air = 1 } # スヴァウキ
+
+#####################
+# Country main data #
+#####################
+
+country = {
+  tag                = POL
+  capital            = 485 # ワルシャワ
+  manpower           = 275
+  # Resource Reserves
+  energy         = 1000
+  metal          = 1000
+  rare_materials = 500
+  oil            = 500
+  supplies       = 500
+  money          = 20
+
+  diplomacy = {
+    relation = {
+      tag        = CZE
+      value      = -1
+      guaranteed = { year = 1934 month = december day = 30 }
+    }
+    relation = { tag = ENG value = 50 }
+    relation = { tag = EST value = 75 }
+    relation = { tag = FIN value = 100 }
+    relation = { tag = FRA value = 100 }
+    relation = { tag = GER value = -10 }
+    relation = { tag = GRE value = 35 }
+    relation = { tag = HUN value = 50 }
+    relation = { tag = LAT value = 75 }
+    relation = { tag = LIT value = -75 }
+    relation = {
+      tag        = ROM
+      value      = 40
+      guaranteed = { year = 1934 month = december day = 30 }
+    }
+    relation = { tag = SOV value = -50 }
+  }
+  SpyInfo                = { country = "POL" NumberOfSpies = 7 }
+
+  nationalprovinces      = { 303 306 307 479 480 481 483 484 305 485 486 487 489 488 500 501 502 503 504 505 506 507 508 509 209 208 213 211 210 222 229 562 214 212 221 225 226 227 228 231 218 }
+  ownedprovinces         = { 303 306 307 479 480 481 483 484 305 485 486 487 489 488 500 501 502 503 504 505 506 507 508 509 209 208 213 211 210 222 229 562 214 }
+  controlledprovinces    = { 303 306 307 479 480 481 483 484 305 485 486 487 489 488 500 501 502 503 504 505 506 507 508 509 209 208 213 211 210 222 229 562 214 }
+
+  techapps               = { 1010 1020 1110 1190 1200 1310 14000 2010 2020 2150 2290 2300 2310 2400 2450 2460 2510 3010 3020 3400 3410 3470 4010 4020 4120 4130 5010 5080 5090 5190 6010 6030 8040 8050 9010 9020 }
+
+  policy = {
+    date              = { year = 0 month = january day = 0 }
+    democratic        = 7
+    political_left    = 1
+    freedom           = 4
+    free_market       = 5
+    professional_army = 3
+    defense_lobby     = 8
+    interventionism   = 6
+  }
+  headofstate            = { type = 9 id = 13001 } # イグナツィ・モシチツキ
+  headofgovernment       = { type = 9 id = 13002 } # マリアン・ズィンドラム＝コシチャウコフスキ
+  foreignminister        = { type = 9 id = 13003 } # ユゼフ・ベック
+  armamentminister       = { type = 9 id = 13004 } # タデウシュ・カスプジツキ
+  ministerofsecurity     = { type = 9 id = 13005 } # ヴワディスワフ・ラチュキェヴィチ
+  ministerofintelligence = { type = 9 id = 13006 } # T・ペルチンスキ・グジェゴシ
+  chiefofstaff           = { type = 9 id = 13007 } # エドヴァルト・リッツ＝シミグウィ
+  chiefofarmy            = { type = 9 id = 13008 } # エドヴァルト・リッツ＝シミグウィ
+  chiefofnavy            = { type = 9 id = 13009 } # ジャージー・スウィルスキ
+  chiefofair             = { type = 9 id = 13010 } # ジョゼフ・ザジャック
+
+  landunit = {
+    id       = { type = 18600 id = 1 }
+    name     = "クラクフ軍"
+    location = 479
+    division = {
+      id             = { type = 18600 id = 2 }
+      name           = "第6歩兵師団"
+      type           = infantry
+    }
+    division = {
+      id             = { type = 18600 id = 3 }
+      name           = "第7歩兵師団"
+      type           = infantry
+      extra          = artillery
+    }
+    division = {
+      id             = { type = 18600 id = 4 }
+      name           = "第22山岳歩兵師団"
+      type           = bergsjaeger
+    }
+    division = {
+      id             = { type = 18600 id = 5 }
+      name           = "第21山岳歩兵師団"
+      type           = bergsjaeger
+    }
+    division = {
+      id             = { type = 18600 id = 6 }
+      name           = "第23歩兵師団"
+      type           = infantry
+    }
+  }
+  landunit = {
+    id       = { type = 18600 id = 7 }
+    name     = "ウーチ軍"
+    location = 483
+    division = {
+      id             = { type = 18600 id = 8 }
+      name           = "第2歩兵師団"
+      type           = infantry
+    }
+    division = {
+      id             = { type = 18600 id = 9 }
+      name           = "第10歩兵師団"
+      type           = infantry
+      extra          = anti_air
+    }
+    division = {
+      id             = { type = 18600 id = 10 }
+      name           = "第29歩兵師団"
+      type           = infantry
+    }
+  }
+  landunit = {
+    id       = { type = 18600 id = 11 }
+    name     = "ルブリン軍"
+    location = 487
+    division = {
+      id             = { type = 18600 id = 12 }
+      name           = "第18歩兵師団"
+      type           = infantry
+    }
+    division = {
+      id             = { type = 18600 id = 13 }
+      name           = "第28歩兵師団"
+      type           = infantry
+    }
+    division = {
+      id             = { type = 18600 id = 14 }
+      name           = "第30歩兵師団"
+      type           = infantry
+      extra          = anti_tank
+    }
+  }
+  landunit = {
+    id       = { type = 18600 id = 15 }
+    name     = "モドリン軍"
+    location = 486
+    division = {
+      id             = { type = 18600 id = 16 }
+      name           = "第8歩兵師団"
+      type           = infantry
+    }
+    division = {
+      id             = { type = 18600 id = 17 }
+      name           = "第20歩兵師団"
+      type           = infantry
+      extra          = engineer
+    }
+  }
+  landunit = {
+    id       = { type = 18600 id = 18 }
+    name     = "ポモージェ軍"
+    location = 303
+    division = {
+      id             = { type = 18600 id = 19 }
+      name           = "第4歩兵師団"
+      type           = infantry
+    }
+    division = {
+      id             = { type = 18600 id = 20 }
+      name           = "第16歩兵師団"
+      type           = infantry
+    }
+    division = {
+      id             = { type = 18600 id = 21 }
+      name           = "第9歩兵師団"
+      type           = infantry
+      extra          = artillery
+    }
+    division = {
+      id             = { type = 18600 id = 22 }
+      name           = "第15歩兵師団"
+      type           = infantry
+    }
+    division = {
+      id             = { type = 18600 id = 23 }
+      name           = "第27歩兵師団"
+      type           = infantry
+    }
+    division = {
+      id             = { type = 18600 id = 58 }
+      name           = "ノヴォグルツカ騎兵旅団"
+      type           = cavalry
+    }
+  }
+  landunit = {
+    id       = { type = 18600 id = 24 }
+    name     = "ポズナン軍"
+    location = 307
+    division = {
+      id             = { type = 18600 id = 25 }
+      name           = "第14歩兵師団"
+      type           = infantry
+    }
+    division = {
+      id             = { type = 18600 id = 26 }
+      name           = "第17歩兵師団"
+      type           = infantry
+    }
+    division = {
+      id             = { type = 18600 id = 27 }
+      name           = "第25歩兵師団"
+      type           = infantry
+    }
+    division = {
+      id             = { type = 18600 id = 28 }
+      name           = "第26歩兵師団"
+      type           = infantry
+      extra          = anti_air
+    }
+    division = {
+      id             = { type = 18600 id = 57 }
+      name           = "クラクフスカ騎兵旅団"
+      type           = cavalry
+    }
+  }
+  landunit = {
+    id       = { type = 18600 id = 29 }
+    name     = "プロシャ軍"
+    location = 305
+    division = {
+      id             = { type = 18600 id = 30 }
+      name           = "レジョノヴォ第3歩兵師団"
+      type           = infantry
+    }
+    division = {
+      id             = { type = 18600 id = 31 }
+      name           = "第12歩兵師団"
+      type           = infantry
+    }
+    division = {
+      id             = { type = 18600 id = 32 }
+      name           = "第13歩兵師団"
+      type           = infantry
+      extra          = anti_tank
+    }
+    division = {
+      id             = { type = 18600 id = 33 }
+      name           = "第19歩兵師団"
+      type           = infantry
+    }
+    division = {
+      id             = { type = 18600 id = 56 }
+      name           = "クレソヴァ騎兵旅団"
+      type           = cavalry
+    }
+  }
+  landunit = {
+    id       = { type = 18600 id = 34 }
+    name     = "ワルシャワ軍"
+    location = 485
+    division = {
+      id             = { type = 18600 id = 1706 }
+      name           = "軍司令部"
+      type           = hq
+      model          = 0
+      strength       = 100
+    }
+    division = {
+      id             = { type = 18600 id = 35 }
+      name           = "マゾヴィエツカ騎兵旅団"
+      type           = cavalry
+      extra          = engineer
+    }
+    division = {
+      id             = { type = 18600 id = 36 }
+      name           = "レジョノヴォ第1歩兵師団「ピウスツキ」"
+      type           = infantry
+    }
+    division = {
+      id             = { type = 18600 id = 37 }
+      name           = "第5歩兵師団"
+      type           = infantry
+    }
+    division = {
+      id             = { type = 18600 id = 38 }
+      name           = "カルパッカ第11歩兵師団"
+      type           = infantry
+    }
+    division = {
+      id             = { type = 18600 id = 39 }
+      name           = "第24歩兵師団"
+      type           = infantry
+    }
+  }
+  landunit = {
+    id       = { type = 18600 id = 40 }
+    name     = "予備軍"
+    location = 487
+    division = {
+      id             = { type = 18600 id = 41 }
+      name           = "第31歩兵師団（予備役）"
+      type           = infantry
+      strength       = 30
+    }
+    division = {
+      id             = { type = 18600 id = 42 }
+      name           = "第33歩兵師団（予備役）"
+      type           = infantry
+      strength       = 30
+    }
+    division = {
+      id             = { type = 18600 id = 43 }
+      name           = "第35歩兵師団（予備役）"
+      type           = infantry
+      extra          = artillery
+      strength       = 30
+    }
+    division = {
+      id             = { type = 18600 id = 44 }
+      name           = "第36歩兵師団（予備役）"
+      type           = infantry
+      strength       = 30
+    }
+    division = {
+      id             = { type = 18600 id = 45 }
+      name           = "第38歩兵師団（予備役）"
+      type           = infantry
+      strength       = 30
+    }
+    division = {
+      id             = { type = 18600 id = 46 }
+      name           = "第39歩兵師団（予備役）"
+      type           = infantry
+      strength       = 30
+    }
+    division = {
+      id             = { type = 18600 id = 47 }
+      name           = "第41歩兵師団（予備役）"
+      type           = infantry
+      extra          = anti_air
+      strength       = 30
+    }
+    division = {
+      id             = { type = 18600 id = 48 }
+      name           = "第44歩兵師団（予備役）"
+      type           = infantry
+      strength       = 30
+    }
+    division = {
+      id             = { type = 18600 id = 49 }
+      name           = "第45歩兵師団（予備役）"
+      type           = infantry
+      strength       = 30
+    }
+    division = {
+      id             = { type = 18600 id = 50 }
+      name           = "第55歩兵師団（予備役）"
+      type           = infantry
+      strength       = 30
+    }
+    division = {
+      id             = { type = 18600 id = 51 }
+      name           = "第53歩兵師団（予備役）"
+      type           = infantry
+      strength       = 30
+    }
+    division = {
+      id             = { type = 18600 id = 52 }
+      name           = "第54歩兵師団（予備役）"
+      type           = infantry
+      strength       = 30
+    }
+  }
+
+  navalunit = {
+    id       = { type = 18600 id = 53 }
+    name     = "ポーランド海軍"
+    location = 303
+    base     = 303
+    division = {
+      id             = { type = 18600 id = 54 }
+      name           = "第1駆逐隊"
+      type           = destroyer
+      model          = 1
+      strength       = 40
+    }
+    division = {
+      id             = { type = 18600 id = 55 }
+      name           = "第1潜水隊"
+      type           = submarine
+      model          = 0
+    }
+  }
+
+  airunit = { 
+    id       = { type = 18600 id = 59 }
+    name     = "追撃旅団III/1航空団"
+    location = 485
+    base     = 485
+    division = {
+      id             = { type = 18600 id = 60 }
+      name           = "追撃旅団III/1航空団"
+      type           = interceptor
+      model          = 0
+    }
+    division = {
+      id             = { type = 18600 id = 61 }
+      name           = "追撃旅団IV/1航空団"
+      type           = interceptor
+      model          = 0
+    }
+    division = {
+      id             = { type = 18600 id = 62 }
+      name           = "第1ツィエズキフ爆撃航空団"
+      type           = tactical_bomber
+      model          = 0
+    }
+  }
+}

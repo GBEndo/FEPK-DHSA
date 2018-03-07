@@ -1,0 +1,17 @@
+garrison = {
+	# Borders with specific countries
+	country_priorities = {
+		VIC = 100
+		JAP = -1
+		ENG = -1
+		CHI = -1
+		CSX = -1
+		SIK = -1
+		CXB = -1
+		CYN = -1
+		CGX = -1
+		NEP = -1
+		BHU = -1
+	}
+}
+

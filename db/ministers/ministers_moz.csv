@@ -1,0 +1,35 @@
+MOZ;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+569001;Head of State;ジョゼ・ペレイラ・カブラル;36;PA;Resigned Generalissimo;High;M569001;x
+569002;Head of Government;ジョゼ・ヌネス・デ・オリヴェイラ;36;PA;old airmarshal;High;M569002;x
+569003;Foreign Minister;ルイス・デ・ソウサ・エ・ヴァスコンセロス;36;PA;General Staffer;High;M569003;x
+569004;Minister of Armament;アウグスト・ヌネス・ディアス;36;PA;Military Entrepreneur;Medium;M569004;x
+569005;Minister of Security;ジョアン・トリスタオ・デ・ベッテンコート;36;PA;Prince of Terror;Medium;M569005;x
+569006;Head of Military Intelligence;アントニオ・コンセイカオ・ネヴェス;36;PA;Naval Intelligence Specialist;Medium;M569006;x
+569007;Chief of Staff;ルイス・デ・ソウサ・エ・ヴァスコンセロス;36;PA;School of Psychology;Medium;M569003;x
+569008;Chief of Army;ジョアン・マルティンス・デ・カルヴァーリョ;36;PA;Guns and Butter Doctrine;Medium;M569008;x
+569009;Chief of Navy;トマス・ガルシア・ロサド;36;PA;Power Projection Doctrine;Medium;M569009;x
+569010;Chief of Air Force;ジョゼ・デ・サン・アルアジョ;36;PA;Air Superiority Doctrine;Medium;M569010;x
+569011;Head of State;エンリケ・ヌネス・ガルシア;36;SL;Benevolent Gentleman;High;M569011;x
+569012;Head of State;セバスティアン・カブラル・フンチャル;36;LWR;Powerhungry Demagogue;High;M569012;x
+569013;Head of Government;ジョゼ・ザルアル・ヌネス;36;SL;Political Protege;High;M569013;x
+569014;Head of Government;ジョゼ・バロロ・ロドリゲス;36;LWR;Naive Optimist;High;M569014;x
+569015;Foreign Minister;ジョアン・レイス・エ・カント;36;SL;Ideological Crusader;High;M569015;x
+569016;Foreign Minister;マリア・エステラ・デ・ベッテンコート;36;LWR;Biased Intellectual;High;M569016;x
+569017;Minister of Armament;アドルフォ・カマラキンティンガ;36;SL;laissez-faire capitalist;Medium;M569017;x
+569018;Minister of Armament;パウロ・イナシオ;36;LWR;Infantry Proponent;Medium;M569018;x
+569019;Minister of Security;ルイス・ペレイラ・ゴメス;36;SL;Compassionate Gentleman;Medium;M569019;x
+569020;Minister of Security;レオナルド・サントス・シマン;36;LWR;Crime Fighter;Medium;M569020;x
+569021;Head of Military Intelligence;ジョアン・カウルザ・デ・アリアガ;44;PA;Logistics Specialist;Medium;M569021;x
+569022;Head of Military Intelligence;ジョアン・シルヴァ・ヌネス;36;SL;Technical Specialist;Medium;M569022;x
+569023;Head of Military Intelligence;カルロス・ドス・サントス;36;LWR;Industrial Specialist;Medium;M569023;x
+569024;Chief of Staff;アルトゥル・イヴェンス・フェラス;42;PA;School of Mass Combat;Medium;M569024;x
+569025;Chief of Staff;ジョゼ・ロバト・ゲラ;36;SL;School of Fire Support;Medium;M569025;x
+569026;Chief of Staff;フェデリコ・ダ・コスタ・ロペス・ダ・シルヴァ;36;LWR;School of Manoeuvre;Medium;M569026;x
+569027;Chief of Army;ジョゼ・デ・バロス・ロドリゲス;42;PA;Elastic Defence Doctrine;Medium;M569027;x
+569028;Chief of Army;アントニオ・タヴェイラ・ペレイラ;36;SL;Armoured Spearhead Doctrine;Medium;M569028;x
+569029;Chief of Army;パトリシオ・ヌネス・ゴメス;36;LWR;Decisive Battle Doctrine;Medium;M569029;x
+569030;Chief of Navy;アントニオ・ロドリゲス・リベイロ;36;SL;Indirect Approach Doctrine;Medium;M569030;x
+569031;Chief of Navy;チェザーレ・ポンジョ;36;LWR;Open Seas Doctrine;Medium;M569031;x
+569032;Chief of Air Force;アントニオ・ヴァル＝コヴォ;36;SL;Naval Aviation Doctrine;Medium;M569032;x
+569033;Chief of Air Force;オリヴァ・ヌーノ・トマス;36;LWR;Vertical Envelopment Doctrine;Medium;M569033;x

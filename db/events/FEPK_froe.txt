@@ -1,0 +1,3005 @@
+#########################################################################
+#	FEPK_froe.txt
+#	東部戦線関連イベント
+#########################################################################
+#id = 130510-19	東方政策―ウクライナ独立
+#id = 130520-29	（【minor】八項目提案）→枢軸のポーランド
+#id = 130530-39	シスの抵抗：フィンランド冬戦争＋
+#id = 130540	戦時首都移転（モスクワ→ノヴォシビルスク）
+#id = 130541	クイビシェフへの避難
+#id = 130542	スヴェルドロフスクへの避難
+#id = 130543	ノヴォシビルスクへの避難
+#id = 130544	レニングラード攻囲戦
+#id = 130545	ワルシャワ蜂起
+#id = 130546-51	シベリアへの工場移転
+#id = 130553	ねじれの軸で
+#id = 130554	フィンランド「継続」戦争（死に体のソ連）
+#id = 130555-6	フィンランド-ドイツの協力
+#id = 130557	フィンランド継続戦争
+#id = 130558-9	ベッサラビア地方の回復
+#id = 130560-66	ウィーン裁定
+#id = 130567-9	南部ドブルジャ地方帰属問題
+#id = 130570	東方配備計画
+#id = 130571	エンゲルブレヒト輸送
+#id = 130572-3	タンヌ・トゥヴァの終焉
+#id = 130574	ドネツ洪水
+#id = 130575-6	モロトフ・リッベントロップ協定 ― ソ連へ東部ポーランドを割譲
+#id = 130577-83	フィンランドの冬戦争
+#id = 130585-8	スウェーデン冬戦争の終結
+#id = 130589	冬戦争への介入
+#id = 130590-1	連合国の軍事通行権要求への返答
+#id = 130592-5	ベッサラビアを要求
+#id = 130596-7	ワルシャワ・スロヴァキア人民蜂起
+#id = 130598-9	ゼット作戦派遣部隊撤収
+#########################################################################
+##########
+#  130510-? - Eastern Front events
+##########
+#  東方政策
+##########
+event = {
+	id = 130510
+	random = no
+	country = GER
+	
+	trigger = {
+		region = { region = "Ukraine" country = GER value = 30 }
+		random = 50
+		war = { country = GER country = SOV }
+		control = { province = 238 data = GER } #Kiev
+	}
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 11
+	deathdate = { day = 29 month = december year = 1964 }
+	
+	picture = "german_marginal_victory2"
+	name = "EVT_130510_NAME"	#ウクライナへの「解放軍」
+	desc = "EVT_130510_DESC"	#
+	
+	action = {
+		name = "OK"
+		command = { type = independence which = UKR value = 1 }
+		command = { type = access which = UKR when = 1 }
+		command = { type = inherit which = UKR }
+		command = { type = province_revoltrisk which = 238 value = -15 }
+		command = { type = province_revoltrisk which = 239 value = -15 }
+		command = { type = province_revoltrisk which = 237 value = -15 }
+		command = { type = province_revoltrisk which = 245 value = -15 }
+		command = { type = province_revoltrisk which = 228 value = -15 }
+		command = { type = province_revoltrisk which = 227 value = -15 }
+		command = { type = province_revoltrisk which = 244 value = -15 }
+		command = { type = province_revoltrisk which = 242 value = -15 }
+		command = { type = province_revoltrisk which = 506 value = -15 }
+		command = { type = province_revoltrisk which = 501 value = -15 }
+		command = { type = province_revoltrisk which = 229 value = -15 }
+		command = { type = province_revoltrisk which = 502 value = -15 }
+		command = { type = province_revoltrisk which = 562 value = -15 }
+		command = { type = province_revoltrisk which = 500 value = -15 }
+		command = { type = province_revoltrisk which = 252 value = -15 }
+		command = { type = province_revoltrisk which = 254 value = -15 }
+		command = { type = province_revoltrisk which = 253 value = -15 }
+		command = { type = province_revoltrisk which = 499 value = -15 }
+		command = { type = province_revoltrisk which = 231 value = -15 }
+		command = { type = province_revoltrisk which = 232 value = -15 }
+		command = { type = province_revoltrisk which = 233 value = -15 }
+		command = { type = province_revoltrisk which = 234 value = -15 }
+		command = { type = province_revoltrisk which = 226 value = -15 }
+		command = { type = province_revoltrisk which = 260 value = -15 }
+		command = { type = province_revoltrisk which = 235 value = -15 }
+		command = { type = province_revoltrisk which = 236 value = -15 }
+		command = { type = province_revoltrisk which = 240 value = -15 }
+		command = { type = province_revoltrisk which = 246 value = -15 }
+		command = { type = province_revoltrisk which = 247 value = -15 }
+		command = { type = province_revoltrisk which = 248 value = -15 }
+		command = { type = province_revoltrisk which = 249 value = -15 }
+		command = { type = province_revoltrisk which = 250 value = -15 }
+		command = { type = province_revoltrisk which = 251 value = -15 }
+		command = { type = province_revoltrisk which = 241 value = -15 }
+		command = { type = trigger which = 130511 }
+	}
+}
+	
+event = {
+	id = 130511
+	country = SOV
+	
+	picture = "german_marginal_victory2"
+	name = "EVT_130510_NAME"	#ウクライナへの「解放軍」
+	desc = "EVT_130510_DESC"	#世界最大級の穀倉地帯の１つであるウクライナは、ソビエト連邦にとって貴重な外貨獲得手段の一つであった。ロシア共産党はウクライナからの穀物を根こそぎ輸出していた。現地の農家の食べる分など当然残ってはいなかった。コルホーズの下での穀物生産ノルマは到底達成できるものではなく、農家たちはコムソモール（青年組織）の監視を恐れながら餓死していったが、誰ひとりとしてそれを助けるものはいなかった。そこに、独ソ戦が始まった。ドイツ軍に侵攻されたウクライナの農家たちは、侵攻軍を「解放軍」として喜んで歓迎し、大勢のウクライナ人が兵士に志願し共産党員を引き渡すなどドイツの支配に積極的に加担したほどであった。
+	
+	action = {
+		name = "EVT_130511_ACTA"	#やはり農村部は民族主義者の溜まり場であった！
+		command = { type = dissent value = 3 }
+		command = { type = province_revoltrisk which = 238 value = -15 }
+		command = { type = province_revoltrisk which = 239 value = -15 }
+		command = { type = province_revoltrisk which = 237 value = -15 }
+		command = { type = province_revoltrisk which = 245 value = -15 }
+		command = { type = province_revoltrisk which = 228 value = -15 }
+		command = { type = province_revoltrisk which = 227 value = -15 }
+		command = { type = province_revoltrisk which = 244 value = -15 }
+		command = { type = province_revoltrisk which = 242 value = -15 }
+		command = { type = province_revoltrisk which = 506 value = -15 }
+		command = { type = province_revoltrisk which = 501 value = -15 }
+		command = { type = province_revoltrisk which = 229 value = -15 }
+		command = { type = province_revoltrisk which = 502 value = -15 }
+		command = { type = province_revoltrisk which = 562 value = -15 }
+		command = { type = province_revoltrisk which = 500 value = -15 }
+		command = { type = province_revoltrisk which = 252 value = -15 }
+		command = { type = province_revoltrisk which = 254 value = -15 }
+		command = { type = province_revoltrisk which = 253 value = -15 }
+		command = { type = province_revoltrisk which = 499 value = -15 }
+		command = { type = province_revoltrisk which = 231 value = -15 }
+		command = { type = province_revoltrisk which = 232 value = -15 }
+		command = { type = province_revoltrisk which = 233 value = -15 }
+		command = { type = province_revoltrisk which = 234 value = -15 }
+		command = { type = province_revoltrisk which = 226 value = -15 }
+		command = { type = province_revoltrisk which = 260 value = -15 }
+		command = { type = province_revoltrisk which = 235 value = -15 }
+		command = { type = province_revoltrisk which = 236 value = -15 }
+		command = { type = province_revoltrisk which = 240 value = -15 }
+		command = { type = province_revoltrisk which = 246 value = -15 }
+		command = { type = province_revoltrisk which = 247 value = -15 }
+		command = { type = province_revoltrisk which = 248 value = -15 }
+		command = { type = province_revoltrisk which = 249 value = -15 }
+		command = { type = province_revoltrisk which = 250 value = -15 }
+		command = { type = province_revoltrisk which = 251 value = -15 }
+		command = { type = province_revoltrisk which = 241 value = -15 }
+	}
+}
+
+event = {
+	id = 130512
+	trigger = {
+		region = { region = "Ukraine" country = GER value = 60 }
+		random = 20
+		war = { country = GER country = SOV }
+		control = { province = 238 data = GER } #Kiev
+		event = 130510
+	}
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 11
+	deathdate = { day = 29 month = december year = 1964 }
+	
+	picture = "german_marginal_victory2"
+	name = "EVT_130512_NAME"	#ドイツの東方政策
+	desc = "EVT_130512_DESC"	#
+	
+	action = {
+		name = "EVT_130512_ACTA"	#ドイツ人の入植と直接支配
+		ai_chance = 99
+		command = { type = dissent value = -5 }
+		command = { type = province_revoltrisk which = 238 value = 15 }
+		command = { type = province_revoltrisk which = 239 value = 15 }
+		command = { type = province_revoltrisk which = 237 value = 15 }
+		command = { type = province_revoltrisk which = 245 value = 15 }
+		command = { type = province_revoltrisk which = 228 value = 15 }
+		command = { type = province_revoltrisk which = 227 value = 15 }
+		command = { type = province_revoltrisk which = 244 value = 15 }
+		command = { type = province_revoltrisk which = 242 value = 15 }
+		command = { type = province_revoltrisk which = 506 value = 15 }
+		command = { type = province_revoltrisk which = 501 value = 15 }
+		command = { type = province_revoltrisk which = 229 value = 15 }
+		command = { type = province_revoltrisk which = 502 value = 15 }
+		command = { type = province_revoltrisk which = 562 value = 15 }
+		command = { type = province_revoltrisk which = 500 value = 15 }
+		command = { type = province_revoltrisk which = 252 value = 15 }
+		command = { type = province_revoltrisk which = 254 value = 15 }
+		command = { type = province_revoltrisk which = 253 value = 15 }
+		command = { type = province_revoltrisk which = 499 value = 15 }
+		command = { type = province_revoltrisk which = 231 value = 15 }
+		command = { type = province_revoltrisk which = 232 value = 15 }
+		command = { type = province_revoltrisk which = 233 value = 15 }
+		command = { type = province_revoltrisk which = 234 value = 15 }
+		command = { type = province_revoltrisk which = 226 value = 15 }
+		command = { type = province_revoltrisk which = 260 value = 15 }
+		command = { type = province_revoltrisk which = 235 value = 15 }
+		command = { type = province_revoltrisk which = 236 value = 15 }
+		command = { type = province_revoltrisk which = 240 value = 15 }
+		command = { type = province_revoltrisk which = 246 value = 15 }
+		command = { type = province_revoltrisk which = 247 value = 15 }
+		command = { type = province_revoltrisk which = 248 value = 15 }
+		command = { type = province_revoltrisk which = 249 value = 15 }
+		command = { type = province_revoltrisk which = 250 value = 15 }
+		command = { type = province_revoltrisk which = 251 value = 15 }
+		command = { type = province_revoltrisk which = 241 value = 15 }
+	}
+	action = {
+		name = "EVT_130512_ACTB"	#ウクライナ人を圧政から解放せよ！
+		ai_chance = 1
+		command = { type = dissent value = 20 }
+		command = { type = independence which = UKR value = 1 }
+		command = { type = make_puppet which = UKR }
+		command = { type = trigger which = 130513 }
+	}
+}
+
+event = {
+	id = 130513
+	country = UKR
+	
+	name = "EVT_130513_NAME"	#ドイツ東方政策の転換
+	
+	action = {
+		command = { type = dissent value = 15 }
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 518013 }
+	}
+}
+
+##########
+#  Axis Poland if Soviet gets aggressive
+##########
+event = {
+         id = 130520
+         random = no
+         country = POL
+			
+		trigger = {
+				event = 132092
+				NOT = { alliance = { country = GER country = POL } }
+				NOT = { alliance = { country = SOV country = POL } }
+				NOT = { alliance = { country = ENG country = POL } }
+				war = { country = GER country = SOV }
+				attack = SOV
+                    	}
+
+         name = "EVT_130520_NAME"	#防共協定の発動
+         desc = "EVT_130520_DESC"	#
+         style = 0	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1964 }
+
+action_a = { name = "EVT_130520_ACTA"	#協定に従ってドイツを支援しよう
+			command = { type = alliance which = GER }
+	}
+}
+
+event = {
+         id = 130521
+         random = no
+         country = GER
+
+		trigger = {
+				event = 132092
+				NOT = { alliance = { country = GER country = POL } }
+				NOT = { alliance = { country = SOV country = POL } }
+				NOT = { alliance = { country = ENG country = POL } }
+				war = { country = GER country = SOV }
+                    	}
+         
+         name = "EVT_130520_NAME"
+         desc = "EVT_130520_DESC"
+         style = 0
+
+action_a = {
+		name = "EVT_130521_ACTA"	#協定に従ってポーランドを支援しよう
+		command = { type = alliance which = POL }
+            }
+}
+##########
+#  Axis Poland (after Vichy regime)
+##########
+event = {
+	id = 130522
+	random = no
+	country = GER
+
+	decision = {
+		NOT = { war = { country = GER country = POL } }
+		NOT = { alliance = { country = GER country = POL } }
+		NOT = { war = { country = GER country = SOV } }
+		NOT = { atwar = POL }
+		NOT = { alliance = { country = ENG country = POL } }
+		NOT = { alliance = { country = SOV country = POL } }
+		NOT = { alliance = { country = FRA country = POL } }
+		NOT = { alliance = { country = USA country = POL } }
+		NOT = { ispuppet = POL }
+		exists = POL
+		event = 132092
+		OR = { 
+			atwar = yes
+			AND = { 
+				atwar = no
+				event = 131052	#ハリファックス講和
+			}
+		}
+	}
+	decision_trigger = {
+		control = { province = 56 data = -3 }
+	}
+	trigger = {	
+		NOT = { war = { country = GER country = POL } }
+		NOT = { alliance = { country = GER country = POL } }
+		NOT = { war = { country = GER country = SOV } }
+		NOT = { atwar = POL }
+		NOT = { alliance = { country = ENG country = POL } }
+		NOT = { alliance = { country = SOV country = POL } }
+		NOT = { alliance = { country = FRA country = POL } }
+		NOT = { alliance = { country = USA country = POL } }
+		NOT = { ispuppet = POL }
+		exists = POL
+		event = 132092
+		OR = { 
+			atwar = yes
+			AND = { 
+				atwar = no
+				event = 131052	#ハリファックス講和
+			}
+		}
+		OR = {
+			AND = { 
+				ai = yes
+				random = 40
+			}
+			AND = { 
+				ai = yes
+				control = { province = 56 data = GER }
+				lost_IC = { country = FRA value = 50 }
+				random = 30
+			}
+			AND = { 
+				ai = yes
+				event = 130423	#ヴィシーフランス
+				random = 30
+			}
+		}
+	}
+
+	name = "EVT_130522_NAME"	#ポーランドと枢軸同盟
+	desc = "EVT_130522_DESC"	#
+	style = 2
+	decision_picture = "decision_diplomatic_campaign"
+	picture = "Wehrmacht"
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 7 # Check for trigger conditions every seven days
+	deathdate = { day = 30 month = december year = 1963 }
+
+action_a = {	ai_chance = 98
+		name = "EVT_130522_ACTA"	#枢軸同盟への正式加入を促す
+		command = { type = trigger which = 130523 }
+	}
+action_b = {	ai_chance = 2
+		name = "EVT_130522_ACTB"	#ポーランドは中立を保つべきだ
+		command = { }
+	}
+}
+
+event = {
+	id = 130523
+	random = no
+	country = POL
+
+	name = "EVT_130522_NAME"
+	desc = "EVT_130523_DESC"	#
+	style = 0
+	picture = "poland"
+
+action_a = {	ai_chance = 55
+		name = "EVT_130523_ACTA"	#枢軸同盟へ加盟する
+		command = { type = relation which = GER value = 50 }
+		command = { type = dissent value = 10 }
+		command = { type = trigger which = 130526 }
+	}
+action_b = {	ai_chance = 30
+		name = "EVT_130523_ACTB"	#同盟には加わらないが、軍の通行は許可する
+		command = { type = trigger which = 130525 }
+	}
+action_c = {	ai_chance = 15
+		name = "EVT_130523_ACTC"	#断固拒否
+		command = { type = dissent value = -2 }
+		command = { type = relation which = GER value = -20 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = end_non_aggression which = GER where = POL }
+		command = { type = trigger which = 130524 }
+	}
+}
+
+event = {
+	id = 130524
+	random = no
+	country = GER
+	
+	name = "EVT_130524_NAME"	#ポーランドが同盟を拒否
+	desc = "EVT_130524_DESC"	#
+	style = 0
+	picture = "Danzig"
+
+action_a = {	ai_chance = 99
+		name = "EVT_130524_ACTA"	#ならば蹂躙するまで
+		command = { type = war which = POL }
+	}
+action_b = {	ai_chance = 1
+		name = "EVT_130524_ACTB"	#仕方があるまい
+		command = { type = dissent value = 5 }
+		command = { type = domestic which = defense_lobby value = -1 }
+	}
+}
+
+event = {
+	id = 130525
+	random = no
+	country = GER
+
+	name = "EVT_130525_NAME"	#ポーランドが軍の通行を承認
+	desc = "EVT_130525_DESC"	#
+	style = 0
+	picture = "german_replacements"
+
+action_a = {	ai_chance = 80
+		name = "EVT_130525_ACTA"	#味方でないのならば敵だ！
+		command = { type = end_non_aggression which = GER where = POL }
+		command = { type = war which = POL }
+		command = { type = dissent value = 3 }
+	}
+action_b = {	ai_chance = 20
+		name = "EVT_130525_ACTB"	#とりあえずは満足しよう
+		command = { type = dissent value = 5 }
+		command = { type = relation which = POL value = 20 }
+		command = { type = trigger which = 130527 }
+	}
+}
+
+event = {
+	id = 130526
+	random = no
+	country = GER
+
+	name = "EVT_130526_NAME"	#ポーランドが同盟に加入
+	desc = "EVT_130526_DESC"	#
+	style = 0
+	picture = "tripartite"
+
+action_a = {
+		name = "EVT_130526_ACTA"	#賢明な判断だ
+		command = { type = alliance which = POL }
+	}
+}
+
+event = {
+	id = 130527
+	random = no
+	country = POL
+
+	name = "EVT_130527_NAME"	#ドイツ軍に通行権を付与
+	desc = "EVT_130527_DESC"	#
+	style = 0
+	picture = "german_replacements"
+
+action_a = {
+		name = "EVT_130527_ACTA"	#戦争よりはマシだ
+		command = { type = dissent value = 5 }
+		command = { type = access which = GER }
+	}
+}
+
+##########
+#  Finland Winter War + Sisu in the desperate
+##########
+event = {
+	id = 130530
+	random = no
+	country = FIN
+	
+	name = "EVT_130530_NAME"	#シスの抵抗
+	desc = "EVT_130530_DESC"	#フィンランド語でシス（Sisu）とは、フィン人の知性、闘志、勇気、抵抗力、忍耐力を示す言葉である。今、この時代に生きるフィン人にとってこれは最大限に発揮されるべきときである。ソビエト連邦はフィンランド政府に対して非誠実で残虐な戦争を企て、今や我々を皆殺しにしようとしている。最早選択の余地はない。勝利か、死だけが我々の取ることの出来る唯一の手段だ。赤い暴力をなんとしてでも堰き止め、国家を守る時が来たのだ。
+	
+	picture = "Winter_War"
+	
+	action = {
+		name = "EVT_130530_ACTA"	#殺すか、殺されるか。ただ、それだけだ
+		command = { type = dissent value = -15 }
+		command = { type = manpowerpool value = 50 }
+		command = { type = ground_def_eff when = 1 value = 0.3 }	#GDE1.1
+		command = { type = air_defense which = land value = 3 }
+		command = { type = air_attack which = land value = 1 }
+		#攻勢チットと同程度の永続バフ
+		command = { type = max_organization which = land value = 10 }
+		command = { type = morale which = land value = 10 }
+		command = { type = morale which = naval value = 10 }
+		command = { type = morale which = air value = 10 }
+		command = { type = counterattack value = 2 }
+		command = { type = assault value = 2 }
+		command = { type = ambush value = 2 }
+		command = { type = breakthrough value = 2 }
+		command = { type = encirclement value = 2 }
+		command = { type = hq_supply_eff value = 2 }
+		command = { type = sce_frequency value = 0.3 }
+		command = { type = attrition_mod value = 2 }
+		command = { type = trickleback_mod value = 5 }
+	}
+}
+
+event = {
+	id = 130531
+	random = no
+	country = SOV
+	
+	trigger = { 
+		event = 130530
+		NOT = { exists = FIN }
+		control = { province = 142 data = -1 }
+	}
+	
+	date = { day = 0 month = 11 year = 1935 } #1.06
+	offset = 7 # Check for trigger conditions every seven days
+	deathdate = { day = 29 month = 11 year = 1939 }
+	
+	name = "EVT_130531_NAME"	#フィンランド制圧
+	desc = "EVT_130531_DESC"	#予想外の抵抗にこそあったものの、赤軍はなんとかカレンダー通り年内のフィンランド全土制圧に成功した。現在、オットー・クーシネン率いるフィンランド民主共和国はヘルシンキに戻り、12月1日にタス通信が伝えたとおり唯一正当なフィンランドの政府として在る。オットーはモスクワからの『支援』を欲しており、我々の選択次第でフィンランドは新しい姿を見せることになるだろう！
+	
+	picture = "finland_sweden"
+	
+	action = {
+		name = "EVT_130531_ACTA"	#フィンランド民主共和国は衛星国とする
+		command = { type = independence which = FIN }
+		command = { type = make_puppet which = FIN }
+		command = { type = trigger which = 130534 }
+	}
+	action = {
+		name = "EVT_130531_ACTB"	#フィンランド自治ソビエト社会主義共和国として彼らを編入する
+		command = { type = belligerence value = 5 }
+		command = { type = addclaim which = 103 }
+		command = { type = addclaim which = 141 }
+		command = { type = addclaim which = 142 }
+		command = { type = addclaim which = 140 }
+		command = { type = addclaim which = 143 }
+		command = { type = addclaim which = 138 }
+		command = { type = addclaim which = 139 }
+		command = { type = addclaim which = 137 }
+		command = { type = addclaim which = 131 }
+		command = { type = addclaim which = 130 }
+		command = { type = addclaim which = 132 }
+		command = { type = addclaim which = 136 }
+		command = { type = addclaim which = 148 }
+		command = { type = addclaim which = 147 }
+		command = { type = addclaim which = 144 }
+		command = { type = addclaim which = 149 }
+		command = { type = trigger which = 130532 }
+	}
+}
+
+event = {
+	id = 130532
+	random = no
+	country = SOV
+	save_date = yes
+	
+	picture = "uprising"
+	
+	name = "EVT_130532_NAME"	#トゥルク暴動
+	desc = "EVT_130532_DESC"	#フィンランドの統合計画が発表されるのと前後して、フィンランドの都市トゥルクの反革命的な人間が暴動を起こした。ロシア帝国の頃からフィンランドの外と内側を繋ぐ場所であったトゥルクからは、今も独立運動家やファシストとその思想が輸入されている、ということである。フィンランド軍の武器と、冬戦争時の物資援助の残り物で武装した彼らを破壊する方法は実力以外に存在しないだろう。
+	
+	action = {
+		name = "EVT_130532_ACTA"	#余計なことを……
+		command = { type = revolt which = 141 }
+		command = { type = dissent value = 5 }
+	}
+}
+	
+event = {
+	id = 130533
+	random = no
+	country = SOV
+	trigger = {
+		event = { id = 130532 days = 1080 }	#1080日＝３年
+		control = { province = 142 data = SOV } #Helsinki
+	}
+	
+	date = { day = 0 month = 11 year = 1935 } #1.06
+	offset = 7 # Check for trigger conditions every seven days
+	deathdate = { day = 29 month = 11 year = 1964 }
+	
+	name = "EVT_130533_NAME"	#フィンランド民主共和国の参加
+	desc = "EVT_130533_DESC"	#フィンランドの革命は完了した。彼らは既にソビエトロシアの同志として手を取り、さらなる世界革命に向けた準備を整えている。ロシア革命から現在まで我々を悩ませ続けてきたフィンランドという叛乱は既に存在しなくなったのだ。
+	
+	picture = "finland_sweden"
+	action = {
+		name = "EVT_130533_ACTA"	#結構、結構！
+		command = { type = belligerence value = 5 }
+		command = { type = addcore which = 103 }
+		command = { type = addcore which = 141 }
+		command = { type = addcore which = 142 }
+		command = { type = addcore which = 140 }
+		command = { type = addcore which = 143 }
+		command = { type = addcore which = 138 }
+		command = { type = addcore which = 139 }
+		command = { type = addcore which = 137 }
+		command = { type = addcore which = 131 }
+		command = { type = addcore which = 130 }
+		command = { type = addcore which = 132 }
+		command = { type = addcore which = 136 }
+		command = { type = addcore which = 148 }
+		command = { type = addcore which = 147 }
+		command = { type = addcore which = 144 }
+		command = { type = addcore which = 149 }
+		command = { type = sleepevent which = 130532 }
+	}
+}
+
+event = {
+	id = 130534
+	country = FIN
+	
+	name = "EVT_130534_NAME"	#フィンランド民主共和国の成立
+	action = {
+		command = { type = dissent value = 25 }
+		command = { type = sleepteam which = 1300 }
+		command = { type = sleepteam which = 1301 }
+		command = { type = sleepteam which = 1302 }
+		command = { type = sleepteam which = 1303 }
+		command = { type = sleepteam which = 1305 }
+		command = { type = sleepteam which = 1307 }
+		command = { type = sleepteam which = 1311 }
+		command = { type = waketeam which = 1312 }
+		command = { type = waketeam which = 1313 }
+		command = { type = waketeam which = 1314 }
+		command = { type = waketeam which = 1315 }
+		command = { type = waketeam which = 1316 }
+		command = { type = flag_ext where = -1 which = "_SOV" }
+		command = { type = name where = -1 which = "FIN_SOV" }
+	}
+}
+
+##########
+#  Evacuating Moscow
+##########
+event = {
+	id = 130540
+	random = no 
+	country = SOV
+
+	trigger = {
+		war = { country = GER country = SOV }
+		control = { province = 175 data = SOV } #Moscow
+		control = { province = 1548 data = SOV } #Novosibirsk
+		NOT = {
+		#	event = 2625 #bitter peace with germany
+		#	event = 2646 #bitter peace with germany and japan
+			#FEPKBETA3
+			event = 135303 #bitter peace with germany
+			event = 135313 #bitter peace with germany and japan
+			flag = sovcapescaped3
+		}
+		OR = {
+			NOT = {
+				control = { province = 288 data = SOV }
+				control = { province = 182 data = SOV }
+				control = { province = 94 data = SOV }
+			}
+			NOT = {
+				control = { province = 176 data = SOV }
+				control = { province = 182 data = SOV }
+				control = { province = 94 data = SOV }
+			}
+			NOT = {
+				control = { province = 176 data = SOV }
+				control = { province = 174 data = SOV }
+				control = { province = 94 data = SOV }
+			}
+			NOT = {
+				control = { province = 176 data = SOV }
+				control = { province = 174 data = SOV }
+				control = { province = 288 data = SOV }
+			}
+			NOT = {
+				control = { province = 182 data = SOV }
+				control = { province = 174 data = SOV }
+				control = { province = 288 data = SOV }
+			}
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130540_NAME"
+	desc = "EVT_130540_DESC"
+
+	picture = "german_reinforcment_3"
+
+	action_a = {
+		name = "EVT_130540_ACTA"
+		ai_chance = 100
+		command = { type = dissent value = -3 }
+	}
+	action_b = {
+		name = "EVT_130540_ACTB"
+		ai_chance = 0
+		command = { type = dissent value = 5 }
+		command = { type = capital which = 1548 } #Novosibirsk
+		command = { type = clrflag which = sovcapescaped1 }
+		command = { type = clrflag which = sovcapescaped2 }
+		command = { type = setflag which = sovcapescaped3 }
+	}
+}
+##########
+#  Moscow captured, relocating the capital to Kuybyshev
+##########
+event = {
+	id = 130541
+	random = no 
+	country = SOV
+
+	trigger = {
+		atwar = yes
+		NOT = {
+			flag = russiancivilwar
+			flag = sovcapescaped1
+			flag = sovcapescaped2
+			flag = sovcapescaped3
+		}
+		OR = {
+			NOT = {	control = { province = 175 data = SOV } }
+			NOT = {	control = { province = 174 data = SOV } }
+			NOT = {	control = { province = 176 data = SOV } }
+			NOT = {	control = { province = 178 data = SOV } }
+			NOT = {	control = { province = 180 data = SOV } }
+			NOT = {	control = { province = 94 data = SOV } }
+			NOT = {	control = { province = 182 data = SOV } }
+		}
+		control = { province = 1828 data = SOV } #Kuybyshev
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130541_NAME"
+	desc = "EVT_130541_DESC"
+
+	picture = "german_reinforcment_3"
+
+	action_a = {
+		name = "EVT_130541_ACTA"
+		ai_chance = 100
+		command = { type = capital which = 1828 } #Kuybyshev
+		command = { type = setflag which = sovcapescaped1 }
+		command = { type = clrflag which = sovcapescaped2 }
+		command = { type = clrflag which = sovcapescaped3 }
+	}
+}
+
+##########
+#  Kuybyshev captured, relocating the capital to Sverdlovsk
+##########
+event = {
+	id = 130542
+	random = no 
+	country = SOV
+
+	trigger = {
+		atwar = yes
+		flag = sovcapescaped1
+		NOT = {
+			flag = russiancivilwar
+			flag = sovcapescaped2
+			flag = sovcapescaped3
+		}
+		OR = {
+			NOT = {	control = { province = 175 data = SOV } }
+			NOT = {	control = { province = 1828 data = SOV } }
+			NOT = {	control = { province = 1829 data = SOV } }
+			NOT = {	control = { province = 1830 data = SOV } }
+			NOT = {	control = { province = 1781 data = SOV } }
+			NOT = {	control = { province = 1827 data = SOV } }
+			NOT = {	control = { province = 1570 data = SOV } }
+			NOT = {	control = { province = 1568 data = SOV } }
+			NOT = {	control = { province = 1839 data = SOV } }
+		}
+		control = { province = 1572 data = SOV } #Sverdlovsk
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130542_NAME"
+	desc = "EVT_130542_DESC"
+
+	picture = "german_reinforcment_3"
+
+	action_a = {
+		name = "EVT_130542_ACTA"
+		ai_chance = 100
+		command = { type = capital which = 1572 } #Sverdlovsk
+		command = { type = clrflag which = sovcapescaped1 }
+		command = { type = setflag which = sovcapescaped2 }
+		command = { type = clrflag which = sovcapescaped3 }
+	}
+}
+##########
+#  Sverdlovsk captured, relocating the capital to Novosibirsk
+##########
+event = {
+	id = 130543
+	random = no 
+	country = SOV
+
+	trigger = {
+		atwar = yes
+		flag = sovcapescaped2
+		NOT = {
+			flag = russiancivilwar
+			flag = sovcapescaped1
+			flag = sovcapescaped3
+		}
+		NOT = {
+			control = { province = 175 data = SOV } #Moscow
+			control = { province = 1828 data = SOV } #Kuybyshev
+			control = { province = 1572 data = SOV } #Sverdlovsk
+		}
+		control = { province = 1548 data = SOV } #Novosibirsk
+	}
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130543_NAME"
+	desc = "EVT_130543_DESC"
+
+	picture = "german_reinforcment_3"
+
+	action_a = {
+		name = "EVT_130543_ACTA"
+		ai_chance = 100
+		command = { type = capital which = 1548 } #Novosibirsk
+		command = { type = clrflag which = sovcapescaped1 }
+		command = { type = clrflag which = sovcapescaped2 }
+		command = { type = setflag which = sovcapescaped3 }
+	}
+}
+##########
+#  Siege of Leningrad
+##########
+event = { 
+	id = 130544
+	random = no
+	country = SOV
+	persistent = yes
+
+	trigger = {
+		war = { country = SOV country = GER }
+		control = { province = 187 data = SOV } #Leningrad
+		OR = {
+			control = { province = 152 data = SOV } #by the lake
+			control = { province = 185 data = SOV } #by the lake
+		}
+		NOT = {
+			control = { province = 145 data = SOV }
+			control = { province = 188 data = SOV }
+			control = { province = 186 data = SOV }
+		}
+		AND = { #should only fire in winter
+			month = 1 # february
+			NOT = { month = 9 } # october
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130544_NAME" # "Siege of Leningrad"
+	desc = "EVT_130544_DESC"
+
+	#picture = "fort_sabotaged"
+
+	action_a = {
+		name = "EVT_130544_ACTA"
+		ai_chance = 100
+		command = { type = supplies value = -250 }
+		#command = { type = oilpool value = -50 }
+		command = { type = supplies value = 250 where = 187 } #leningrad
+		#command = { type = oilpool value = 50 where = 187 } #leningrad
+	}
+}
+##########
+#  Moving Soviet Industry to Siberia - Part 1
+##########
+event = {
+	id = 130546
+	random = no
+	country = SOV
+	save_date = yes
+
+	trigger = {
+		control = { province = 219 data = SOV } #Smolensk
+		control = { province = 238 data = SOV } #Kiev
+		control = { province = 248 data = SOV } #Kharkov
+            	control = { province = 187 data = SOV } #Leningrad
+            	control = { province = 212 data = SOV } #Minsk
+		control = { province = 1572 data = SOV } #Sverdlovsk
+		war = { country = GER country = SOV }
+		NOT = { exists = POL }
+	}
+
+	name = "EVT_2633_NAME"
+	desc = "EVT_2633_DESC"
+	picture = "siberia"
+
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 7
+	deathdate = { day = 15 month = june year = 1944 } #right before 1944 scenario
+
+	action_a = {
+		name = "ACTIONNAME2633A" # Let's move our industrial base to Sibiria
+		ai_chance = 97
+		command = { type = ministerofsecurity which = 4041 } #Beria
+		command = { type = construct which = ic where = 238 value = -6 } #Kiev
+		command = { type = construct which = ic where = 187 value = -6 } #Leningrad
+		#command = { type = construct which = ic where = 1572 value = 5 } #Sverdlovsk
+		#command = { type = construct which = ic where = 1574 value = 5 } #Chelyabinsk
+		#command = { type = construct which = ic where = 1576 value = 2 } #Kustanai
+	}
+	action_b = {
+		name = "ACTIONNAME2634B"
+		ai_chance = 3
+		command = { type = sleepevent which = 130549 }
+	}
+}
+##########
+#  Moving Soviet Industry to Siberia - Part 2
+##########
+event = {
+	id = 130547
+	random = no
+	country = SOV
+	save_date = yes
+
+	trigger = {
+		control = { province = 258 data = SOV } #Rostov
+		control = { province = 253 data = SOV } #Sevastapol
+		control = { province = 233 data = SOV } #Odessa
+		control = { province = 1575 data = SOV } #Kurgan
+		control = { province = 1576 data = SOV } #Kustanai
+		war = { country = GER country = SOV }
+		NOT = { exists = POL }
+	}
+
+	name = "EVT_2634_NAME"
+	desc = "EVT_2634_DESC"
+	picture = "siberia"
+
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 7
+	deathdate = { day = 15 month = june year = 1944 } #right before 1944 scenario
+
+	action_a = {
+		name = "ACTIONNAME2634A" # Let's move our industrial base to Sibiria
+		ai_chance = 97
+		command = { type = ministerofsecurity which = 4041 } #Beria
+		command = { type = construct which = ic where = 258 value = -1 } #Rostov
+		command = { type = construct which = ic where = 253 value = -1 } #Dnepropetrovsk
+		command = { type = construct which = ic where = 233 value = -1 } #Odessa
+		command = { type = construct which = ic where = 249 value = -4 } #Stalino
+		command = { type = construct which = ic where = 256 value = -1 } #Krasnodar
+		command = { type = construct which = ic where = 246 value = -1 } #Zaporozhye
+		command = { type = construct which = ic where = 244 value = -1 } #Sumy
+		command = { type = construct which = ic where = 234 value = -1 } #Kherson
+		command = { type = construct which = ic where = 248 value = -1 } #Kharkov
+		#command = { type = waketeam which = 3756 }	#遠藤マイクロ	#第183スターリン・ウラル戦車工場
+
+		#command = { type = construct which = ic where = 1548 value = 5 } #Novosibirsk
+		#command = { type = construct which = ic where = 1575 value = 2 } #Kurgan
+		#command = { type = construct which = ic where = 1552 value = 5 } #Omsk
+		
+		command = { type = sleepteam which = 3702 }	#ハリコフ
+		#command = { type = waketeam which = 3756 }	#ハリコフ
+	}
+	action_b = {
+		name = "ACTIONNAME2634B"
+		ai_chance = 3
+		command = { type = sleepevent which = 130550 }
+	}
+}
+##########
+#  Moving Soviet Industry to Siberia - Part 3
+##########
+event = {
+	id = 130548
+	random = no
+	country = SOV
+	save_date = yes
+
+	trigger = {
+		control = { province = 207 data = SOV } #Kaunas
+		control = { province = 197 data = SOV } #Riga
+		control = { province = 194 data = SOV } #Tallinn
+		control = { province = 1422 data = SOV } #Alma-Ata
+		control = { province = 1550 data = SOV } #Semipalatinsk
+		control = { province = 1560 data = SOV } #Krasnojarsk
+		war = { country = GER country = SOV }
+		NOT = { exists = POL }
+	}
+
+	name = "EVT_2635_NAME"
+	desc = "EVT_2635_DESC"
+	picture = "siberia"
+
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 7
+	deathdate = { day = 15 month = june year = 1944 } #right before 1944 scenario
+
+	action_a = {
+		name = "ACTIONNAME2635A" # Let's move our industrial base to Sibiria
+		ai_chance = 97
+		command = { type = ministerofsecurity which = 4041 } #Beria
+		command = { type = construct which = ic where = 212 value = -1 } #Minsk
+		command = { type = construct which = ic where = 197 value = -3 } #Riga
+		command = { type = construct which = ic where = 194 value = -3 } #Tallinn
+		command = { type = construct which = ic where = 228 value = -2 } #Vinnista
+		command = { type = construct which = ic where = 236 value = -1 } #Krivoy Rog
+		command = { type = construct which = ic where = 273 value = -1 } #Gomel
+		command = { type = construct which = ic where = 217 value = -1 } #Vitebsk
+
+		#command = { type = construct which = ic where = 1422 value = 2 } #Alma-Ata
+		#command = { type = construct which = ic where = 1550 value = 5 } #Semipalatinsk
+		#command = { type = construct which = ic where = 1560 value = 5 } #Krasnojarsk
+		
+		command = { type = sleepteam which = 3760 }	#キーロフ
+		#command = { type = waketeam which = 3761 }	#チェリャビンスク
+	}
+	action_b = {
+		name = "ACTIONNAME2634B"
+		ai_chance = 3
+		command = { type = sleepevent which = 130551 }
+	}
+}
+
+##########
+#  Complete of Moving Industry to Siberia - Part 1
+##########
+event = {
+	id = 130549
+	random = no
+	country = SOV
+	trigger = {
+		event = { id = 130546 days = 90 }
+	}
+	
+	name = "EVT_130549_NAME"	#工場移転の完了
+	desc = "EVT_130549_DESC"	#
+	picture = "siberia"
+
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 7
+	deathdate = { day = 15 month = june year = 1945 } 
+	
+	action = {
+		name = "OK"
+		command = { type = construct which = ic where = 1572 value = 5 } #Sverdlovsk
+		command = { type = construct which = ic where = 1574 value = 5 } #Chelyabinsk
+		command = { type = construct which = ic where = 1576 value = 2 } #Kustanai
+	}
+}
+
+##########
+#  Complete of Moving Industry to Siberia - Part 2
+##########
+event = {
+	id = 130550
+	random = no
+	country = SOV
+	trigger = {
+		event = { id = 130547 days = 90 }
+	}
+	
+	name = "EVT_130549_NAME"	#工場移転の完了
+	desc = "EVT_130549_DESC"	#
+	picture = "siberia"
+
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 7
+	deathdate = { day = 15 month = june year = 1945 } 
+	
+	action = {
+		name = "OK"
+		command = { type = construct which = ic where = 1548 value = 5 } #Novosibirsk
+		command = { type = construct which = ic where = 1575 value = 2 } #Kurgan
+		command = { type = construct which = ic where = 1552 value = 5 } #Omsk
+		command = { type = waketeam which = 3756 }	#ハリコフ
+	}
+}
+
+##########
+#  Complete of Moving Industry to Siberia - Part 3
+##########
+event = {
+	id = 130551
+	random = no
+	country = SOV
+	trigger = {
+		event = { id = 130548 days = 90 }
+	}
+	
+	name = "EVT_130549_NAME"	#工場移転の完了
+	desc = "EVT_130549_DESC"	#
+	picture = "siberia"
+
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 7
+	deathdate = { day = 15 month = june year = 1945 } 
+	
+	action = {
+		name = "OK"
+		command = { type = construct which = ic where = 1422 value = 2 } #Alma-Ata
+		command = { type = construct which = ic where = 1550 value = 5 } #Semipalatinsk
+		command = { type = construct which = ic where = 1560 value = 5 } #Krasnojarsk
+		command = { type = waketeam which = 3761 }	#チェリャビンスク
+	}
+}
+
+##########
+#  Finland - A Strange Situation
+##########
+event = {
+	id = 130553
+	random = no
+	country = FIN
+
+	trigger = { 
+		war = { country = ENG country = SOV }
+		war = { country = FIN country = SOV }
+		OR = {
+			war = { country = FIN country = SWE }
+			war = { country = FIN country = GER }
+		}
+		alliance = { country = FIN country = ENG }
+	} 
+
+	date = { day = 20 month = march year = 1940 } #is this correct?
+	offset = 2
+	deathdate = { day = 20 month = june year = 1941 } #before 1941 scenario
+
+	name = "EVT_130553_NAME"
+	desc = "EVT_130553_DESC"
+	picture = "End_Winter_War"
+
+	action_a = {
+		name = "EVT_130553_ACTA"
+		ai_chance = 100
+		command = { type = peace which = SWE value = 1 }
+		command = { type = peace which = GER value = 1 }
+	}
+}
+
+##########
+#  Finland attacks dying Soviets
+##########
+event = {
+	id = 130554
+	random = no 
+	country = FIN
+
+	trigger = {
+		event = 132161 #finland terminated hostilities with soviets
+		atwar = no
+		war = { country = GER country = SOV }
+		NOT = {
+			control = { province = 163 data = SOV } #Stalingrad has fallen
+			control = { province = 175 data = SOV } #Moscow has fallen
+			control = { province = 151 data = SOV } #these two mean soviets are cut off in karelia
+			control = { province = 183 data = SOV }
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130554_NAME"
+	desc = "EVT_130554_DESC"
+
+	picture = "german_reinforcment_3"
+
+	action_a = {
+		name = "EVT_130554_ACTA"
+		ai_chance = 100
+		command = { type = alliance which = GER }
+		#command = { type = war which = SOV }
+	}
+	action_b = {
+		name = "EVT_130554_ACTB"
+		ai_chance = 0
+		command = { }
+	}
+}
+
+##########
+#  Cooperation with Finland
+##########
+event = {
+	id = 130555
+	random = no
+	country = GER
+
+	trigger = {
+		event = 130583 #winter war ended
+		NOT = {
+			alliance = { country = GER country = FIN }
+			alliance = { country = GER country = SOV }
+			alliance = { country = FIN country = SOV }
+			war = { country = GER country = FIN }
+		}
+		exists = FIN #BETA修正パッチ
+		OR = {
+			control = { province = 56 data = VIC } #Paris
+			control = { province = 56 data = GER } #Paris
+		}
+		random = 20
+	}
+
+        date = { day = 1 month = august year = 1940 } #not historic date?
+        offset = 7
+	deathdate = { day = 20 month = june year = 1941 } #before 1941 scenario
+
+	name = "EVT_130555_NAME"
+	desc = "EVT_130555_DESC"
+	picture = "german_frozen"
+
+	action_a = {
+		name = "EVT_130555_ACTA"
+		ai_chance = 100
+		command = { type = supplies value = -500 }
+		command = { type = trigger which = 130556 }
+	}
+	action_b = {
+		name = "EVT_130555_ACTB"
+		ai_chance = 0
+		command = { type = relation which = FIN value = -10 }
+		command = { type = sleepevent which = 130557 } #Continuation War # 1.08
+	}
+}
+
+##########
+#  Cooperation with Germany
+##########
+event = {
+	id = 130556
+	random = no
+	country = FIN
+
+	name = "EVT_130556_NAME"
+	desc = "EVT_130556_DESC"
+	picture = "german_frozen"
+
+	action_a = {
+		name = "EVT_130556_ACTA"
+		ai_chance = 100
+		command = { type = supplies value = 500 }
+		command = { type = access which = GER }
+		command = { type = relation which = GER value = 20 }
+	}
+	action_b = {
+		name = "EVT_130556_ACTB"
+		ai_chance = 0
+		command = { type = relation which = GER value = -20 }
+		command = { type = sleepevent which = 130557 } #Continuation War # 1.08
+	}
+}
+
+##########
+#  Continuation War
+##########
+event = {
+	id = 130557
+	random = no
+	country = FIN
+
+	trigger = {
+		event = 130556	#ドイツとの協力
+		event = 130583 #winter war ended
+		war = { country = GER country = SOV }
+		NOT = {
+			alliance = { country = GER country = FIN }
+			alliance = { country = SOV country = FIN }
+			alliance = { country = SOV country = GER }
+			war = { country = GER country = FIN }
+		}
+	}
+
+        date = { day = 0 month = january year = 1935 }
+        offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130557_NAME"
+	desc = "EVT_130557_DESC"
+
+	action_a = {
+		ai_chance = 90
+		name = "EVT_130557_ACTA"
+		command = { type = alliance which = GER }
+	}
+	action_b = {
+		ai_chance = 10
+		name = "EVT_130557_ACTB"
+		command = { type = relation which = GER value = -20 }
+	}
+}
+
+
+##########
+#  Germany turns over land to Romania during Barbarossa
+##########
+event = {
+	id = 130558
+	random = no 
+	country = GER
+
+	trigger = {
+		alliance = { country = ROM country = GER }
+		war = { country = GER country = SOV }
+		NOT = { #if soviets dont control these the area must be secure
+			control = { province = 227 data = SOV }
+			control = { province = 238 data = SOV }
+			control = { province = 239 data = SOV }
+			control = { province = 245 data = SOV }
+			control = { province = 246 data = SOV }
+			control = { province = 250 data = SOV }
+			control = { province = 251 data = SOV }
+		}
+		OR = { #normal romanian land occupied by soviets
+			control = { province = 433 data = ROM }
+			control = { province = 433 data = GER }
+		}
+		OR = { #normal romanian land occupied by soviets
+			control = { province = 230 data = ROM }
+			control = { province = 230 data = GER }
+		}
+		OR = { #normal romanian land occupied by soviets
+			control = { province = 435 data = ROM }
+			control = { province = 435 data = GER }
+		}
+		OR = { #normal romanian land occupied by soviets
+			control = { province = 434 data = ROM }
+			control = { province = 434 data = GER }
+		}
+	}
+
+        date = { day = 1 month = january year = 1941 }
+        offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130558_NAME"
+	desc = "EVT_130558_DESC"
+	picture = "german_reinforcment_3"
+
+	action_a = {
+		name = "EVT_130558_ACTA"
+		ai_chance = 100
+		command = { type = secedeprovince which = ROM value = 230 } #normal romania
+		command = { type = secedeprovince which = ROM value = 433 }
+		command = { type = secedeprovince which = ROM value = 434 }
+		command = { type = secedeprovince which = ROM value = 435 }
+		command = { type = secedeprovince which = ROM value = 231 } #spoils
+		command = { type = secedeprovince which = ROM value = 232 }
+		command = { type = secedeprovince which = ROM value = 233 }
+		command = { type = trigger which = 130559 }
+	}
+	action_b = {
+		name = "EVT_130558_ACTB"
+		ai_chance = 0
+		command = { type = relation which = ROM value = -50 }
+	}
+}
+##########
+#  Romania is happy
+##########
+event = {
+	id = 130559
+	random = no 
+	country = ROM
+
+	name = "EVT_130559_NAME"
+	desc = "EVT_130559_DESC"
+	picture = "german_reinforcment_3"
+
+	action_a = {
+		name = "EVT_130559_ACTA"
+		ai_chance = 100
+		command = { type = dissent value = -5 }
+		command = { type = relation which = GER value = 30 }
+	}
+}
+
+##########
+#  The Vienna Diktat - Claim Transylvania with German blessing
+##########
+event = { 
+	id = 130560
+	random = no
+	country = HUN
+
+	trigger = {
+		exists = GER
+		exists = ROM
+		control = { province = 498 data = ROM } #Satu Mare
+		control = { province = 428 data = ROM } #Cluj
+		control = { province = 495 data = ROM } #Timiosara
+                government = fascist
+		NOT = {
+			war = { country = HUN country = ROM }
+			war = { country = HUN country = SOV } #barbarossa
+			war = { country = ROM country = SOV } #barbarossa
+			OR = {
+				control = { province = 495 data = -1 }
+				control = { province = 496 data = -1 }
+				control = { province = 498 data = -1 }
+			}
+		}
+		NOT = {
+			ispuppet = ROM
+		}
+		NOT = {
+			ispuppet = HUN
+		}
+		NOT = { # FEPKBETA3
+			flag = germanydefeated
+			event = 130210
+			lost_national = { country = GER value = 30 }
+		}
+	}
+
+	date = { day = 4 month = september year = 1940 }
+
+	name = "EVT_2503_NAME"
+	desc = "EVT_2503_DESC"
+	picture = "vienna_diktat"
+
+
+	action_a = {
+		name = "ACTIONNAME2503A" #Press the issue
+		ai_chance = 98
+		command = { type = belligerence which = HUN value = 10 }
+		command = { type = relation which = ROM value = -10 }
+		command = { type = trigger which = 130561 } #Germany approves or rejects
+	}
+	action_b = {
+		name = "ACTIONNAME2503B" #Refrain
+		ai_chance = 2
+		command = { type = relation which = ROM value = 10 }
+	}
+}
+##########
+#  The Vienna Diktat - Germany approves Hungarian ambitions
+##########
+event = {
+	id = 130561
+	random = no
+	country = GER
+
+	name = "EVT_2019_NAME"
+	desc = "EVT_2019_DESC"
+	picture = "vienna_diktat"
+
+
+	action_a = {
+		name = "ACTIONNAME2019A" #Force Romanian acceptance
+		ai_chance = 95
+		command = { type = relation which = ROM value = -10 }
+		command = { type = relation which = HUN value = 10 }
+		command = { type = trigger which = 130562 } #Romania makes her choice
+	}
+	action_b = {
+		name = "ACTIONNAME2019B" #Deny the Hungarian request
+		ai_chance = 5
+		command = { type = relation which = ROM value = 10 }
+		command = { type = relation which = HUN value = -10 }
+		command = { type = trigger which = 130565 } #Hungary is pissed
+		command = { type = sleepevent which = 130567 } #bulgaria takes romanian land
+	}
+}
+##########
+#  The Vienna Diktat
+##########
+event = { 
+	id = 130562
+	random = no
+	country = ROM
+
+	name = "EVT_2701_NAME"
+	desc = "EVT_2701_DESC"
+	picture = "vienna_diktat"
+
+
+	action_a = {
+		name = "ACTIONNAME2701A" #Accept
+		ai_chance = 99
+		command = { type = relation which = HUN value = 20 }
+		command = { type = relation which = GER value = 10 }
+		command = { type = secedeprovince which = HUN value = 428 }
+		command = { type = secedeprovince which = HUN value = 498 }
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = trigger which = 130563 } #Hungary rejoices
+	}
+	action_b = {
+		name = "ACTIONNAME2701B" #Refuse
+		ai_chance = 1
+		command = { type = leave_alliance }
+		command = { type = peace which = ENG value = 1 }
+		command = { type = peace which = USA value = 1 }
+		command = { type = peace which = CAN value = 1 }
+		command = { type = peace which = MEX value = 1 }
+		command = { type = peace which = VEN value = 1 }
+		command = { type = peace which = PAN value = 1 }
+		command = { type = peace which = LIB value = 1 }
+		command = { type = peace which = PHI value = 1 }
+		command = { type = peace which = JAP value = 1 }
+		command = { type = peace which = SOV value = 1 }
+		command = { type = peace which = HOL value = 1 }
+		command = { type = peace which = BRA value = 1 }
+		command = { type = peace which = ECU value = 1 }
+		command = { type = peace which = PRU value = 1 }
+		command = { type = peace which = HON value = 1 }
+		command = { type = peace which = COL value = 1 }
+		command = { type = peace which = TUR value = 1 }
+		command = { type = peace which = SAF value = 1 }
+		command = { type = peace which = FIN value = 1 }
+		command = { type = peace which = IRE value = 1 }
+
+		command = { type = peace which = CHI value = 1 }
+		command = { type = peace which = CHC value = 1 }
+		command = { type = peace which = CSX value = 1 }
+		command = { type = peace which = CGX value = 1 }
+		command = { type = peace which = CXB value = 1 }
+		command = { type = peace which = SIK value = 1 }
+		command = { type = peace which = CYN value = 1 }
+
+		command = { type = relation which = HUN value = -20 }
+		command = { type = relation which = GER value = -10 }
+		command = { type = trigger which = 130564 } #Hungary is PISSED
+	}
+}
+##########
+#  The Vienna Diktat - Romania folds under German duress
+##########
+event = { 
+	id = 130563
+	random = no
+	country = HUN
+
+	name = "EVT_2505_NAME"
+	desc = "EVT_2505_DESC"
+	picture = "vienna_diktat"
+
+
+	action_a = {
+		name = "OK"
+		command = { type = dissent value = -10 }
+		command = { type = relation which = GER value = 5 }
+	}
+}
+##########
+#  The Vienna Diktat - Romania refuses the demands!
+##########
+event = { 
+	id = 130564
+	random = no
+	country = HUN
+
+	name = "EVT_2506_NAME"
+	desc = "EVT_2506_DESC"
+	picture = "vienna_diktat"
+
+
+	action_a = {
+		name = "EVT_130563_ACTA"
+		ai_chance = 0 #20 #FEPK1.095
+		command = { type = dissent value = 5 }
+		command = { type = relation which = ROM value = -10 }
+	}
+	action_b = {
+		name = "EVT_130563_ACTB"
+		ai_chance = 100 #80 #FEPK1.095
+		command = { type = leave_alliance }
+		command = { type = peace which = ENG value = 1 }
+		command = { type = peace which = USA value = 1 }
+		command = { type = peace which = CAN value = 1 }
+		command = { type = peace which = MEX value = 1 }
+		command = { type = peace which = VEN value = 1 }
+		command = { type = peace which = PAN value = 1 }
+		command = { type = peace which = LIB value = 1 }
+		command = { type = peace which = PHI value = 1 }
+		command = { type = peace which = JAP value = 1 }
+		command = { type = peace which = SOV value = 1 }
+		command = { type = peace which = HOL value = 1 }
+		command = { type = peace which = BRA value = 1 }
+		command = { type = peace which = ECU value = 1 }
+		command = { type = peace which = PRU value = 1 }
+		command = { type = peace which = HON value = 1 }
+		command = { type = peace which = COL value = 1 }
+		command = { type = peace which = TUR value = 1 }
+		command = { type = peace which = SAF value = 1 }
+		command = { type = peace which = FIN value = 1 }
+		command = { type = peace which = IRE value = 1 }
+
+		command = { type = peace which = CHI value = 1 }
+		command = { type = peace which = CHC value = 1 }
+		command = { type = peace which = CSX value = 1 }
+		command = { type = peace which = CGX value = 1 }
+		command = { type = peace which = CXB value = 1 }
+		command = { type = peace which = SIK value = 1 }
+		command = { type = peace which = CYN value = 1 }
+
+		command = { type = war which = ROM } # Romania should be forced to declare the war, since the Axis stands behind the claim
+
+		command	= { type = setflag which = romano_hungarian_war } #FEPK1.095
+
+		command = { type = sleepevent which = 60210 } #post-barbarossa romano-hungarian war #FEPK
+	}
+}
+##########
+#  The Vienna Diktat - Germans rule in Romanian favor
+##########
+event = { 
+	id = 130565
+	random = no
+	country = HUN
+
+	name = "EVT_2504_NAME"
+	desc = "EVT_2504_DESC"
+	picture = "vienna_diktat"
+
+
+	action_a = {
+		name = "ACTIONNAME2504A"
+		command = { type = dissent value = 5 }
+		command = { type = trigger which = 130566 } #romania is happy
+	}
+}
+##########
+#  The Vienna Diktat - Germans rule in Romanian favor
+##########
+event = { 
+	id = 130566
+	random = no
+	country = ROM
+
+	name = "EVT_2702_NAME"
+	desc = "EVT_2702_DESC"
+	picture = "vienna_diktat"
+
+
+	action_a = {
+		name = "ACTIONNAME2702A"
+		command = { type = relation which = GER value = 10 }
+		command = { type = relation which = HUN value = -10 }
+	}
+}
+##########
+#  Claim Dobrogea!
+##########
+event = {
+	id = 130567
+	random = no
+	country = BUL
+
+	trigger = {
+		control = { province = 423 data = ROM } #Constanta
+		NOT = {
+			ispuppet = ROM
+			ispuppet = BUL
+			war = { country = BUL country = ROM }
+			war = { country = BUL country = SOV } #barbarossa
+			war = { country = ROM country = SOV } #barbarossa
+		}
+	}
+
+	date = { day = 7 month = september year = 1940 }
+
+	name = "EVT_130567_NAME"
+	desc = "EVT_130567_DESC"
+	picture = "romania"
+
+	action_a = {
+		name = "EVT_130567_ACTA"
+		ai_chance = 95
+		command = { type = belligerence which = BUL value = 10 }
+		command = { type = set_relation which = ROM value = -50 }
+		command = { type = trigger which = 130568 } #Romania's response
+	}
+	action_b = {
+		name = "EVT_130567_ACTB"
+		ai_chance = 5
+		command = { type = domestic which = interventionism value = -1 }
+	}
+}
+##########
+#  Bulgaria demands Dobrogea
+##########
+event = {
+	id = 130568
+	random = no
+	country = ROM
+
+	name = "EVT_130568_NAME"
+	desc = "EVT_130568_DESC"
+
+	picture = "romania"
+
+	action_a = {
+		name = "EVT_130568_ACTA"
+		ai_chance = 95
+		command = { type = set_relation which = BUL value = -50 }
+		command = { type = secedeprovince which = BUL value = 423 } #Constanta
+		command = { type = construct which = naval_base where = 436 value = 1 }
+		command = { type = construct which = naval_base where = 423 value = -2 }
+		command = { type = dissent value = 5 }
+	}
+	action_b = {
+		name = "EVT_130568_ACTB"
+		ai_chance = 5
+		command = { type = leave_alliance }
+		command = { type = peace which = ENG value = 1 }
+		command = { type = peace which = USA value = 1 }
+		command = { type = peace which = CAN value = 1 }
+		command = { type = peace which = MEX value = 1 }
+		command = { type = peace which = VEN value = 1 }
+		command = { type = peace which = PAN value = 1 }
+		command = { type = peace which = LIB value = 1 }
+		command = { type = peace which = PHI value = 1 }
+		command = { type = peace which = JAP value = 1 }
+		command = { type = peace which = SOV value = 1 }
+		command = { type = peace which = HOL value = 1 }
+		command = { type = peace which = BRA value = 1 }
+		command = { type = peace which = ECU value = 1 }
+		command = { type = peace which = PRU value = 1 }
+		command = { type = peace which = HON value = 1 }
+		command = { type = peace which = COL value = 1 }
+		command = { type = peace which = TUR value = 1 }
+		command = { type = peace which = FIN value = 1 }
+		command = { type = peace which = IRE value = 1 }
+
+		command = { type = peace which = CHI value = 1 }
+		command = { type = peace which = CHC value = 1 }
+		command = { type = peace which = CSX value = 1 }
+		command = { type = peace which = CGX value = 1 }
+		command = { type = peace which = CXB value = 1 }
+		command = { type = peace which = SIK value = 1 }
+		command = { type = peace which = CYN value = 1 }
+
+		command = { type = end_guarantee which = SOV where = ROM }
+		command = { type = end_guarantee which = GER where = ROM }
+		command = { type = set_relation which = BUL value = -100 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = dissent value = -10 }
+		command = { type = trigger which = 130569 } #Bulgaria's Response
+	}
+}
+##########
+#  Romania defies Bulgaria
+##########
+event = {
+	id = 130569
+	random = no
+	country = BUL
+
+	name = "EVT_130569_NAME"
+	desc = "EVT_130569_DESC"
+
+	picture = "romania_tank"
+
+	action_a = {
+		name = "EVT_130569_ACTA"
+		ai_chance = 100 #75
+		command = { type = leave_alliance }
+		command = { type = peace which = ENG value = 1 }
+		command = { type = peace which = USA value = 1 }
+		command = { type = peace which = CAN value = 1 }
+		command = { type = peace which = MEX value = 1 }
+		command = { type = peace which = VEN value = 1 }
+		command = { type = peace which = PAN value = 1 }
+		command = { type = peace which = LIB value = 1 }
+		command = { type = peace which = PHI value = 1 }
+		command = { type = peace which = JAP value = 1 }
+		command = { type = peace which = SOV value = 1 }
+		command = { type = peace which = HOL value = 1 }
+		command = { type = peace which = BRA value = 1 }
+		command = { type = peace which = ECU value = 1 }
+		command = { type = peace which = PRU value = 1 }
+		command = { type = peace which = HON value = 1 }
+		command = { type = peace which = COL value = 1 }
+		command = { type = peace which = TUR value = 1 }
+		command = { type = peace which = FIN value = 1 }
+		command = { type = peace which = IRE value = 1 }
+
+		command = { type = peace which = CHI value = 1 }
+		command = { type = peace which = CHC value = 1 }
+		command = { type = peace which = CSX value = 1 }
+		command = { type = peace which = CGX value = 1 }
+		command = { type = peace which = CXB value = 1 }
+		command = { type = peace which = SIK value = 1 }
+		command = { type = peace which = CYN value = 1 }
+
+		command = { type = end_guarantee which = SOV where = BUL }
+		command = { type = end_guarantee which = GER where = BUL }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = war which = ROM }
+
+		command	= { type = setflag which = romano_bulgarian_war } #FEPK1.095
+	}
+	action_b = {
+		name = "EVT_130569_ACTB"
+		ai_chance = 0 # 25
+		command = { type = domestic which = defense_lobby value = -1 }
+		command = { type = dissent value = 5 }
+	}
+}
+
+##########
+#  Transit in CZE
+##########
+event = { #FEPKBETA4.5
+	id = 130570
+	random = no
+	country = CZE
+
+	trigger = {
+		OR = {
+			war = { country = SOV country = GER }
+			war = { country = YUG country = GER }
+		}
+		alliance = { country = GER country = FIN }
+		NOT = {
+			war = { country = CZE country = GER }
+			alliance = { country = GER country = CZE }
+			alliance = { country = ENG country = CZE }
+			alliance = { country = SOV country = CZE }
+			ispuppet = CZE
+		}
+		atwar = no
+	}
+
+	date = { day = 1 month = january year = 1940 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130570_NAME"
+	desc = "EVT_130570_DESC"
+	picture = "transfer"
+
+
+	action_a = {
+		ai_chance = 97
+		name = "EVT_130570_ACTA"
+		command = { type = access which = GER }
+		command = { type = relation which = GER value = 10 }
+	}
+	action_b = {
+		ai_chance = 3
+		name = "EVT_130570_ACTB"
+		command = { type = relation which = GER value = -20 }
+	}
+}
+
+##########
+#  The Engelbrecht Transit
+##########
+event = {
+	id = 130571
+	random = no
+	country = SWE
+
+	trigger = {
+		war = { country = SOV country = GER }
+		alliance = { country = GER country = FIN }
+		NOT = {
+			war = { country = SWE country = GER }
+			alliance = { country = GER country = SWE }
+			alliance = { country = ENG country = SWE }
+			alliance = { country = SOV country = SWE }
+			ispuppet = SWE
+		}
+		control = { province = 107 data = GER } #Oslo
+		atwar = no
+	}
+
+	date = { day = 1 month = january year = 1940 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_92_NAME"
+	desc = "EVT_92_DESC"
+	picture = "transfer"
+
+
+	action_a = {
+		ai_chance = 97
+		name = "EVT_92_ACTA"
+		command = { type = access which = GER }
+		command = { type = relation which = GER value = 10 }
+	}
+	action_b = {
+		ai_chance = 3
+		name = "EVT_92_ACTB"
+		command = { type = relation which = GER value = -20 }
+	}
+}
+##########
+#  The End of Tannu Tuva - TAN
+##########
+event = {
+	id = 130572
+	random = no
+	country = TAN
+
+	trigger = {
+                exists = TAN
+                exists = SOV
+		alliance = { country = SOV country = TAN }
+		control = { province = 1418 data = TAN } # Kyzyl
+		NOT = {
+		#	OR = {
+		#		event = 2625 #bitter peace with germany
+		#		event = 2646 #bitter peace with germany and japan
+		#	}
+			OR = {
+				#FEPKBETA3
+				event = 135303 #bitter peace with germany
+				event = 135313 #bitter peace with germany and japan
+			}
+		}
+	}
+
+        date = { day = 1 month = november year = 1944 }
+        offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_11_NAME"
+	desc = "EVT_11_DESC"
+
+	picture = "tannu_tuva"
+
+	action_a = {
+		name = "EVT_11_ACTA"
+		ai_chance = 97
+		#command = { type = dissent value = -5 }
+		#command = { type = leave_alliance }
+		#command = { type = trigger which = 130573 }
+		command = { type = secedeprovince which = SOV value = 1418 }
+	}
+	action_b = {
+		ai_chance = 3
+		name = "EVT_11_ACTB"
+		command = { type = dissent value = 1 }
+		#command = { type = money value = -25 }
+	}
+}
+##########
+#  The End of Tannu Tuva - SOV
+##########
+event = {
+	id = 130573
+	random = no
+	country = SOV
+
+	trigger = {
+		control = { province = 1418 data = SOV } # Kyzyl
+		NOT = { exists = TAN }
+	}
+
+        date = { day = 1 month = november year = 1944 }
+        offset = 4
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_12_NAME"
+	desc = "EVT_12_DESC"
+
+	picture = "tannu_tuva"
+
+	action_a = {
+		name = "EVT_12_ACTA"
+		ai_chance = 95
+		command = { type = addcore which = 1418 } # Kyzyl becomes USSR national territory
+		command = { type = inherit which = TAN } # annex Tannu Tuva
+		command = { type = manpowerpool value = 16 } # inherit manpower
+		command = { type = dissent value = -1 } # the Soviet people rejoice
+		#command = { type = money value = 100 } # increase influence of USSR
+		command = { type = relation which = CHI value = -30 } # an insult to China
+	}
+	action_b = {
+		ai_chance = 5
+		name = "EVT_12_ACTB"
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = dissent value = -1 }
+		command = { type = independence which = TAN }
+		command = { type = make_puppet which = TAN }
+		#command = { type = money value = -200 }
+	}
+}
+##########
+#  Donetz flooding
+##########
+event = {
+	id = 130574
+	random = no
+	country = SOV
+
+	trigger = {
+		war = { country = SOV country = GER }
+		OR = {
+			control = { province = 234 data = GER }
+			control = { province = 236 data = GER }
+		}
+	}
+
+        date = { day = 0 month = january year = 1935 }
+        offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_88_NAME"
+	desc = "EVT_88_DESC"
+
+	picture = "donetz_flood"
+
+	action_a = {
+		ai_chance = 95
+		name = "EVT_88_ACTA"
+		command = { type = construct which = ic where = 235 value = -2 } #Dnepro-Petrovsk
+		command = { type = construct which = infrastructure where = 235 value = -40 }
+		command = { type = dissent value = 1 }
+	}
+	action_b = {
+		ai_chance = 5
+		name = "EVT_88_ACTB"
+		command = { } # no effects
+	}
+}
+##########
+#  The Molotov-Ribbentrop Pact - Eastern Poland to Soviets
+##########
+event = {
+	id = 130575
+	random = no
+	country = GER
+
+	trigger = {
+		#event = 130576 #poland had poland to soviets event
+		OR = { #FEPK1.11
+			event = 130138 #normal
+			event = 130146 #Limited
+			event = 130142 #No Full
+			event = 130143 #full
+		}
+		NOT = {
+			exists = POL
+			war = { country = GER country = SOV }
+		#		event = 2625 #bitter peace with germany
+		#		event = 2646 #bitter peace with germany and japan
+				#FEPKBETA3
+				event = 135303 #bitter peace with germany
+				event = 135313 #bitter peace with germany and japan
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_2018_NAME"
+	desc = "EVT_2018_DESC"
+
+	picture = "E_Poland_Sov"
+
+	action_a = {
+		name = "ACTIONNAME2018A" #Honor the Pact
+		ai_chance = 100
+		command = { type = secedeprovince which = SOV value = 500 }
+		command = { type = secedeprovince which = SOV value = 501 }
+		command = { type = secedeprovince which = SOV value = 502 }
+		command = { type = secedeprovince which = SOV value = 503 }
+		command = { type = secedeprovince which = SOV value = 504 }
+		command = { type = secedeprovince which = SOV value = 505 }
+		command = { type = secedeprovince which = SOV value = 506 }
+		command = { type = secedeprovince which = SOV value = 507 }
+		command = { type = secedeprovince which = SOV value = 508 }
+		command = { type = secedeprovince which = SOV value = 562 }
+		command = { type = secedeprovince which = SOV value = 229 }
+		command = { type = secedeprovince which = SOV value = 222 }
+		command = { type = secedeprovince which = SOV value = 210 }
+		command = { type = secedeprovince which = SOV value = 209 }
+		command = { type = secedeprovince which = SOV value = 211 }
+		command = { type = secedeprovince which = SOV value = 213 }
+		command = { type = secedeprovince which = SOV value = 214 }
+		command = { type = secedeprovince which = SOV value = 208 }
+		#command = { type = dissent value = 3 }
+		command = { type = oilpool value = 2000 }
+		command = { type = trigger which = 2604 }
+		command = { type = trigger which = 2301 } # SLO
+		command = { type = trigger which = 2507 } # HUN
+		command = { type = trigger which = 2704 } # ROM
+	}
+	action_b = {
+		name = "EVT_2018_ACTB" #f u ussr
+		ai_chance = 0
+		command = { type = relation which = SOV value = -200 }
+		command = { type = setflag which = Pact_Broken }
+		#command = { type = belligerence value = 5 }
+	}
+}
+##########
+#  The Molotov-Ribbentrop Pact - Eastern Poland to Soviets
+##########
+event = {
+	id = 130576
+	random = no
+	country = POL
+
+	trigger = {
+		ai = yes
+		control = { province = 485 data = GER } #Warzaw
+		war = { country = GER country = POL }
+		OR = { #FEPK1.11
+			event = 130138 #normal
+			event = 130146 #Limited
+			event = 130142 #No Full
+			event = 130143 #full
+		}
+		NOT = {
+		#		event = 2625 #bitter peace with germany
+		#		event = 2646 #bitter peace with germany and japan
+				#FEPKBETA3
+				event = 135303 #bitter peace with germany
+				event = 135313 #bitter peace with germany and japan
+		}
+	}
+
+	date = { day = 1 month = january year = 1939 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_2018_NAME"
+	desc = "EVT_2018_DESC"
+
+	picture = "E_Poland_Sov"
+
+	action_a = {
+		name = "ACTIONNAME2018A" #Honor the Pact
+		command = { type = secedeprovince which = SOV value = 500 }
+		command = { type = secedeprovince which = SOV value = 501 }
+		command = { type = secedeprovince which = SOV value = 502 }
+		command = { type = secedeprovince which = SOV value = 503 }
+		command = { type = secedeprovince which = SOV value = 504 }
+		command = { type = secedeprovince which = SOV value = 505 }
+		command = { type = secedeprovince which = SOV value = 506 }
+		command = { type = secedeprovince which = SOV value = 507 }
+		command = { type = secedeprovince which = SOV value = 508 }
+		command = { type = secedeprovince which = SOV value = 562 }
+		command = { type = secedeprovince which = SOV value = 229 }
+		command = { type = secedeprovince which = SOV value = 222 }
+		command = { type = secedeprovince which = SOV value = 210 }
+		command = { type = secedeprovince which = SOV value = 209 }
+		command = { type = secedeprovince which = SOV value = 211 }
+		command = { type = secedeprovince which = SOV value = 213 }
+		command = { type = secedeprovince which = SOV value = 214 }
+		command = { type = secedeprovince which = SOV value = 208 }
+	}
+}
+##########
+#  The Finnish Winter War
+##########
+event = {
+	id = 130577
+	random = no
+	country = SOV
+
+	trigger = {
+		exists = FIN
+		OR = {
+			war = { country = GER country = POL }
+			alliance = { country = POL country = GER }
+			AND = {
+				NOT = {
+					exists = POL
+				}
+				control = { province = 485 data = GER } #warsaw
+			}
+		}
+		OR = {
+			event = 130138 #normal
+			event = 130143 #full
+			event = 130142 #No Full
+		}
+		NOT = {
+			war = { country = JAP country = SOV }
+			war = { country = FIN country = SOV }
+			war = { country = GER country = SOV }
+			alliance = { country = FIN country = SOV }
+			alliance = { country = FIN country = ENG }
+			alliance = { country = FIN country = GER }
+			control = { province = 132 data = SOV }
+			control = { province = 146 data = SOV }
+			control = { province = 145 data = SOV }
+			ispuppet = FIN
+			ispuppet = SOV
+		#	event = 2625 #bitter peace with germany
+		#	event = 2646 #bitter peace with germany and japan
+			#FEPKBETA3
+			event = 135303 #bitter peace with germany
+			event = 135313 #bitter peace with germany and japan
+		}
+	}
+
+	name = "EVT_2620_NAME"
+	desc = "EVT_2620_DESC"
+
+	picture = "finland_sweden"
+
+	date = { day = 29 month = november year = 1939 }
+
+	action_a = {
+		name = "ACTIONNAME2620A" #Press claims
+		ai_chance = 99
+		command = { type = relation which = FIN value = -30 }
+		command = { type = relation which = SWE value = -20 }
+		command = { type = relation which = NOR value = -10 }
+		command = { type = trigger which = 130578 } # FIN
+	}
+	action_b = {
+		name = "ACTIONNAME2620B" #Leave them be
+		ai_chance = 1
+		command = { type = domestic which = interventionism value = -1 }
+	}
+}
+##########
+#  The Winter War
+##########
+event = {
+	id = 130578
+	random = no
+	country = FIN
+
+	name = "EVT_3200_NAME"
+	desc = "EVT_3200_DESC"
+
+	picture = "Winter_War"
+
+	action_a = {
+		name = "ACTIONNAME3200A" #Let them come if they dare!
+		ai_chance = 99
+		command = { type = headofgovernment which = 29058 } #Ryti
+		command = { type = chiefofstaff which = 29137 } #Mannerheim
+		command = { type = chiefofarmy which = 29145 } #Mannerheim
+		command = { type = domestic which = democratic value = -1 }
+		#command = { type = domestic which = political_left value = -1 }
+		command = { type = relation which = SOV value = -20 }
+		command = { type = relation which = SWE value = 20 }
+		command = { type = relation which = NOR value = 10 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = trigger which = 130579 } #SOV
+	}
+	action_b = {
+		name = "ACTIONNAME3200B" #Fold to Russian Pressure
+		ai_chance = 1
+		command = { type = secedeprovince which = SOV value = 145 }
+		command = { type = secedeprovince which = SOV value = 146 }
+		command = { type = domestic which = political_left value = 1 }
+		command = { type = relation which = SOV value = -20 }
+		command = { type = relation which = GER value = -10 }
+		command = { type = relation which = SWE value = -10 }
+		command = { type = trigger which = 130580 } #SOV
+	}
+}
+##########
+#  The Finnish Winter War - Demands rejected
+##########
+event = {
+	id = 130579
+	random = no
+	country = SOV
+	save_date = yes
+
+	name = "EVT_2621_NAME"
+	desc = "EVT_2621_DESC"
+
+	picture = "Winter_War"
+
+	action_a = {
+		name = "OK"
+		command = { type = war which = FIN }
+		command = { type = belligerence which = SOV value = 10 }
+		command = { type = relation which = ENG value = -10 }
+		command = { type = relation which = SWE value = -20 }
+		command = { type = relation which = NOR value = -10 }
+	}
+}
+##########
+#  The Finnish Winter War - Finland gives in
+##########
+event = {
+	id = 130580
+	random = no
+	country = SOV
+
+	name = "EVT_2622_NAME"
+	desc = "EVT_2622_DESC"
+
+	picture = "FIN_give_in"
+
+	action_a = {
+		name = "OK"
+		command = { type = belligerence which = SOV value = 5 }
+	}
+}
+##########
+#  End of the Finnish Winter War
+##########
+event = {
+	id = 130581
+	random = no
+	country = SOV
+
+	trigger = { 
+		OR = {
+			AND = {
+				control = { province = 145 data = SOV } #Viipuri
+				control = { province = 138 data = SOV } #Vaasa
+				control = { province = 141 data = SOV } #Turku
+			}
+			control = { province = 142 data = SOV } # Helsingfors
+			lost_national = { country = FIN value = 22 } #approximately 4 provinces
+		}
+		war = { country = FIN country = SOV } 
+		NOT = { alliance = { country = FIN country = GER } } 
+	} 
+
+	name = "EVT_2627_NAME"
+	desc = "EVT_2627_DESC"
+
+	picture = "End_Winter_War"
+
+	date = { day = 0 month = january year = 1935 } #1.06
+	offset = 7 # Check for trigger conditions every seven days
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "ACTIONNAME2627A" #We'll settle for what we asked for
+		ai_chance = 98
+		command = { type = trigger which = 130582 } # FIN
+		command = { type = gain_tech which = -2 } # get blueprints for a random tech currently being researched
+	}
+	action_b = {
+		name = "ACTIONNAME2627B" #Let's bring them Socialism!
+		ai_chance = 2
+		command = { type = belligerence which = SOV value = 10 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = end_non_aggression which = SOV where = GER }
+		command = { type = end_non_aggression which = SOV where = FRA }	
+		command = { type = end_non_aggression which = SOV where = ENG }
+		command = { type = end_non_aggression which = SOV where = USA }	
+		command = { type = trigger which = 130530 }
+	}
+}
+##########
+#  End of the Finnish Winter War
+##########
+event = {
+	id = 130582
+	random = no
+	country = FIN
+
+	name = "EVT_3203_NAME"
+	desc = "EVT_3203_DESC"
+
+	picture = "End_Winter_War"
+
+	action_a = {
+		name = "ACTIONNAME3203A" # Fold to Russian Demands
+		ai_chance = 99
+		command = { type = trigger which = 130583 } #SOV
+		command = { type = secedeprovince which = SOV value = 145 } #Viipuri
+		command = { type = secedeprovince which = SOV value = 146 } #Sortavala
+		#command = { type = domestic which = political_left value = -2 } 
+		#command = { type = domestic which = democratic value = -1 }
+		#command = { type = domestic which = freedom value = -1 }
+		#command = { type = relation which = SOV value = -25 }
+		#command = { type = relation which = GER value = 25 }
+		#command = { type = dissent value = 10 }
+		command = { type = leave_alliance }
+		command = { type = construct which = land_fort where = 103 value = -10 } #1.06
+		command = { type = construct which = land_fort where = 141 value = -10 }
+		command = { type = construct which = land_fort where = 142 value = -10 }
+		command = { type = construct which = land_fort where = 140 value = -10 }
+		command = { type = construct which = land_fort where = 143 value = -10 }
+		command = { type = construct which = land_fort where = 138 value = -10 }
+		command = { type = construct which = land_fort where = 139 value = -10 }
+		command = { type = construct which = land_fort where = 137 value = -10 }
+		command = { type = construct which = land_fort where = 131 value = -10 }
+		command = { type = construct which = land_fort where = 130 value = -10 }
+		command = { type = construct which = land_fort where = 132 value = -10 }
+		command = { type = construct which = land_fort where = 136 value = -10 }
+		command = { type = construct which = land_fort where = 148 value = -10 }
+		command = { type = construct which = land_fort where = 147 value = -10 }
+		command = { type = construct which = land_fort where = 144 value = -10 }
+		command = { type = construct which = land_fort where = 145 value = -10 }
+		command = { type = construct which = land_fort where = 146 value = -10 }
+		command = { type = construct which = land_fort where = 149 value = -10 }
+	}
+	action_b = {
+		name = "ACTIONNAME3203B" # We will never surrender!
+		ai_chance = 1
+		#command = { type = domestic which = political_left value = -4 }
+		#command = { type = domestic which = democratic value = 2 }
+		#command = { type = domestic which = freedom value = 2 }
+		command = { type = relation which = SOV value = -50 }
+		command = { type = relation which = GER value = 50 }
+		#command = { type = sleepevent which =  } #allies come to aid, could be considered an exploit
+	}
+}
+##########
+#  End of the Finnish Winter War - Finns accepts
+##########
+event = {
+	id = 130583
+	random = no
+	country = SOV
+
+	name = "EVT_2628_NAME"
+	desc = "EVT_2628_DESC"
+
+	picture = "End_Winter_War"
+
+	action_a = {
+		name = "ACTIONNAME2628A" #Good!
+		command = { type = peace which = FIN value = 0 }
+		command = { type = peace which = ENG value = 0 } #1.06
+		command = { type = dissent value = -10 }
+		command = { type = construct which = land_fort where = 103 value = -10 } #1.06
+		command = { type = construct which = land_fort where = 141 value = -10 }
+		command = { type = construct which = land_fort where = 142 value = -10 }
+		command = { type = construct which = land_fort where = 140 value = -10 }
+		command = { type = construct which = land_fort where = 143 value = -10 }
+		command = { type = construct which = land_fort where = 138 value = -10 }
+		command = { type = construct which = land_fort where = 139 value = -10 }
+		command = { type = construct which = land_fort where = 137 value = -10 }
+		command = { type = construct which = land_fort where = 131 value = -10 }
+		command = { type = construct which = land_fort where = 130 value = -10 }
+		command = { type = construct which = land_fort where = 132 value = -10 }
+		command = { type = construct which = land_fort where = 136 value = -10 }
+		command = { type = construct which = land_fort where = 148 value = -10 }
+		command = { type = construct which = land_fort where = 147 value = -10 }
+		command = { type = construct which = land_fort where = 144 value = -10 }
+		command = { type = construct which = land_fort where = 145 value = -10 }
+		command = { type = construct which = land_fort where = 146 value = -10 }
+		command = { type = construct which = land_fort where = 149 value = -10 }
+	}
+}
+##########
+#  End of the Swedish Winter War
+##########
+event = {
+	id = 130585
+	random = no
+	country = SOV
+        picture = "finland_sweden"
+
+	trigger = {
+		event = 130579 # The Finnish Winter War - Demands rejected #FEPK1.11
+		war = { country = SWE country = SOV }
+		NOT = {
+			war = { country = FIN country = SOV }
+		}
+		NOT = {
+			alliance = { country = SWE country = GER }
+		}
+		NOT = {
+			alliance = { country = SWE country = ENG }
+		}
+	}
+
+	name = "EVT_2630_NAME"
+	desc = "EVT_2630_DESC"
+
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "ACTIONNAME2630A" #Let us stop this unnecessary fighting
+		ai_chance = 99
+		command = { type = trigger which = 130586 } # SWE
+		command = { type = relation which = SWE value = 10 }
+		command = { type = relation which = NOR value = 5 }
+		command = { type = relation which = GER value = 10 }
+		command = { type = relation which = ENG value = 5 }
+	}
+	action_b = {
+		name = "ACTIONNAME2630B" #Let's bring them Socialism!
+		ai_chance = 1
+		command = { type = relation which = SWE value = -25 }
+		command = { type = relation which = NOR value = -10 }
+		command = { type = relation which = GER value = -20 }
+		command = { type = relation which = ENG value = -10 }
+		command = { type = relation which = USA value = -5 }
+		command = { type = domestic which = interventionism value = 1 }
+	}
+}
+##########
+#  End of the Swedish Winter War
+##########
+event = {
+	id = 130586
+	random = no
+	country = SWE
+
+	name = "EVT_3302_NAME"
+	desc = "EVT_3302_DESC"
+        picture = "finland_sweden"
+
+
+	action_a = {
+		name = "ACTIONNAME3302A" #Accept Peace Proposal
+		ai_chance = 99
+		command = { type = peace which = SOV value = 1 }
+		command = { type = relation which = SOV value = 10 }
+		command = { type = dissent value = -10 }
+		command = { type = trigger which = 130587 } # SOV
+	}
+	action_b = {
+		name = "ACTIONNAME3302B" #Reject Peace Proposal
+		ai_chance = 1
+		command = { type = dissent value = -10 }
+		command = { type = trigger which = 130588 } # SOV
+	}
+}
+##########
+#  End of the Swedish Winter War - Swedes accepts
+##########
+event = {
+	id = 130587
+	random = no
+	country = SOV
+
+	name = "EVT_2631_NAME"
+	desc = "EVT_2631_DESC"
+        picture = "finland_sweden"
+
+
+	action_a = {
+		name = "ACTIONNAME2631A" #Good!
+		command = { type = dissent value = -10 }
+	}
+}
+##########
+#  End of the Swedish Winter War - Swedes refuse
+##########
+event = {
+	id = 130588
+	random = no
+	country = SOV
+
+	name = "EVT_2632_NAME"
+	desc = "EVT_2632_DESC"
+        picture = "finland_sweden"
+
+
+	action_a = {
+		name = "ACTIONNAME2632A" # They will have to pay!
+		command = { type = dissent value = 5 }
+		command = { type = relation which = GER value = -10 }
+		command = { type = relation which = ENG value = -5 }
+		command = { type = relation which = NOR value = -20 }
+		command = { type = domestic which = interventionism value = 1 }
+	}
+}
+
+##########
+#  USSR continues Winter War - British Response
+##########
+event = {
+	id = 130589
+	random = no
+	country = ENG
+
+	trigger = {
+		war = { country = FIN country = SOV }
+		control = { province = 19 data = ENG } #London # England has britain
+		NOT = {
+			event = 130583 #冬戦争終結イベント #FEPK1.12
+			war = { country = FIN country = ENG } 
+			alliance = { country = FIN country = GER } #finns have a chance to be saved
+			alliance = { country = SOV country = GER } #stalin wouldnt give up if unholy alliance
+			alliance = { country = ENG country = GER } #lol
+			alliance = { country = ENG country = SOV } #wtf
+			alliance = { country = ENG country = FIN } #redundant
+			alliance = { country = SWE country = FIN } #Scandinavian Union #FEPK1.11
+		}
+	}
+
+	date = { day = 29 month = september year = 1940 } #テスト修正 #1.06
+
+	name = "EVT_130589_NAME"
+	desc = "EVT_130589_DESC"
+
+
+	picture = "End_Winter_War"
+
+	action_a = {
+		name = "EVT_130589_ACTA"
+		ai_chance = 99
+		command = { type = war which = SOV }
+		command = { type = alliance which = FIN }
+		command = { type = trigger which = 130590 }
+	}
+	action_b = {
+		name = "EVT_130589_ACTB"
+		ai_chance = 1
+		command = { type = dissent value = 15 }
+	}
+}
+##########
+#  Sweden Pressured by Allies
+##########
+event = {
+	id = 130590
+	random = no
+	country = SWE
+
+	name = "EVT_130590_NAME"
+	desc = "EVT_130590_DESC"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "EVT_130590_ACTA"
+		ai_chance = 50
+		command = { type = access which = ENG }
+		command = { type = access which = FRA }
+		command = { type = access which = NOR }
+		command = { type = access which = DEN }
+		command = { type = access which = FIN }
+		command = { type = relation which = SOV value = -50 }
+		command = { type = relation which = GER value = -50 }
+	}
+	action_b = {
+		name = "EVT_130590_ACTB"
+		ai_chance = 50
+		command = { type = trigger which = 130591 }
+	}
+}
+##########
+#  Sweden Pressured by UK
+##########
+event = {
+	id = 130591
+	random = no
+	country = ENG
+
+	name = "EVT_130591_NAME"
+	desc = "EVT_130591_DESC"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "EVT_130591_ACTA"
+		ai_chance = 50
+		command = { type = war which = SWE }
+	}
+	action_b = {
+		name = "EVT_130591_ACTB"
+		ai_chance = 50
+		command = { type = relation which = SWE value = 10 }
+	}
+}
+
+##########
+#  Claim Bessarabia
+##########
+event = {
+	id = 130592
+	random = no
+	country = SOV
+
+	trigger = {
+		NOT = {
+			ispuppet = ROM
+		}
+		OR = { 
+			event = 130138 #normal
+			event = 130142 #No Full #FEPK1.11
+			event = 130143 #full
+		}
+		OR = { 
+			event = 2604 #Eastern Poland has been given to the USSR
+			event = 130576 #Eastern Poland has been given to the USSR
+		}
+		exists = ROM
+		NOT = {
+			war = { country = ROM country = SOV }
+			war = { country = GER country = SOV }
+		}
+		NOT = {
+			control = { province = 434 data = SOV }
+			control = { province = 435 data = SOV }
+			control = { province = 230 data = SOV }
+		}
+	}
+
+	date = { day = 26 month = june year = 1940 }
+
+	name = "EVT_2606_NAME"
+	desc = "EVT_2606_DESC"
+	picture = "romania"
+
+
+	action_a = {
+		name = "ACTIONNAME2606A" # Claim Bessarabia
+		ai_chance = 97
+		command = { type = trigger which = 130593 } # ROM
+	}
+	action_b = {
+		name = "ACTIONNAME2606B" #The Romanians are our friends
+		ai_chance = 3
+		command = { type = domestic which = interventionism value = -1 }
+	}
+}
+##########
+#  USSR Claims Bessarabia
+##########
+event = { 
+	id = 130593
+	random = no
+	country = ROM
+
+	name = "EVT_2700_NAME"
+	desc = "EVT_2700_DESC"
+	picture = "romania"
+
+
+	action_a = {
+		name = "ACTIONNAME2700A" #Accept
+		ai_chance = 98
+		command = { type = secedeprovince which = SOV value = 434 }
+		command = { type = secedeprovince which = SOV value = 435 }
+		command = { type = secedeprovince which = SOV value = 230 }
+		command = { type = relation which = SOV value = -20 }
+		command = { type = trigger which = 130594 } #SOV
+	}
+	action_b = {
+		name = "ACTIONNAME2700B" #Refuse
+		ai_chance = 2
+		command = { type = end_puppet }
+		command = { type = leave_alliance }
+		command = { type = peace which = ENG value = 1 }
+		command = { type = peace which = USA value = 1 }
+		command = { type = peace which = CAN value = 1 }
+		command = { type = peace which = MEX value = 1 }
+		command = { type = peace which = VEN value = 1 }
+		command = { type = peace which = PAN value = 1 }
+		command = { type = peace which = LIB value = 1 }
+		command = { type = peace which = PHI value = 1 }
+		command = { type = peace which = JAP value = 1 }
+		command = { type = peace which = SOV value = 1 }
+		command = { type = peace which = HOL value = 1 }
+		command = { type = peace which = BRA value = 1 }
+		command = { type = peace which = ECU value = 1 }
+		command = { type = peace which = PRU value = 1 }
+		command = { type = peace which = HON value = 1 }
+		command = { type = peace which = COL value = 1 }
+		command = { type = peace which = TUR value = 1 }
+		command = { type = peace which = SAF value = 1 }
+		command = { type = peace which = FIN value = 1 }
+		command = { type = peace which = IRE value = 1 }
+
+		command = { type = peace which = CHI value = 1 }
+		command = { type = peace which = CHC value = 1 }
+		command = { type = peace which = CSX value = 1 }
+		command = { type = peace which = CGX value = 1 }
+		command = { type = peace which = CXB value = 1 }
+		command = { type = peace which = SIK value = 1 }
+		command = { type = peace which = CYN value = 1 }
+
+		command = { type = end_guarantee which = GER where = ROM }
+		command = { type = end_guarantee which = FRA where = ROM }
+		command = { type = end_guarantee which = ENG where = ROM }
+
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = relation which = SOV value = -50 }
+		command = { type = relation which = GER value = -200 } #so max is 0 relations
+		command = { type = trigger which = 130595 } # SOV
+	}
+}
+##########
+#  Claim Bessarabia - Done
+##########
+event = {
+	id = 130594
+	random = no
+	country = SOV
+
+	name = "EVT_2607_NAME"
+	desc = "EVT_2607_DESC"
+	picture = "romania"
+
+
+	action_a = {
+		name = "OK"
+		command = { type = belligerence which = SOV value = 5 }
+	}
+}
+##########
+#  Claim Bessarabia - the Romanians Fight!
+##########
+event = {
+	id = 130595
+	random = no
+	country = SOV
+
+	name = "EVT_2608_NAME"
+	desc = "EVT_2608_DESC"
+	picture = "romania_tank"
+
+
+	action_a = {
+		name = "EVT_130595_ACTA"
+		command = { type = war which = ROM } 
+	}
+}
+
+##########
+#  Warsaw Uprising
+##########
+event = {
+	id = 130596
+	random = no
+	country = GER
+
+	trigger = {
+		NOT = {
+			exists = POL
+		}
+		war = { country = GER country = SOV }
+		control = { province = 485 data = GER } #Warsaw
+		control = { province = 231 data = -2 } #no idea what these sov provinces are lol
+		control = { province = 228 data = -2 }
+		control = { province = 227 data = -2 }
+		control = { province = 226 data = -2 }
+		control = { province = 225 data = -2 }
+		control = { province = 221 data = -2 }
+		control = { province = 212 data = -2 }
+		control = { province = 218 data = -2 }
+		control = { province = 1874 data = -2 }
+	}
+
+	date = { day = 1 month = january year = 1943 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130596_NAME"
+	desc = "EVT_130596_DESC"
+
+	picture = "uprising"
+
+	action_a = {
+		name = "EVT_130596_ACTA"
+		ai_chance = 100
+		command = { type = revolt which = 485 }
+		command = { type = revolt which = 485 }
+		command = { type = revolt which = 485 }
+		command = { type = revolt which = 485 }
+		command = { type = revolt which = 485 }
+		command = { type = revolt which = 485 }
+		command = { type = revolt which = 485 }
+		command = { type = revolt which = 485 }
+		command = { type = revolt which = 485 }
+		command = { type = revolt which = 485 }
+	}
+}
+
+##########
+#  Slovak National Uprising
+##########
+event = {
+	id = 130597
+	random = no
+	tag = { GER HUN SLO }
+
+	trigger = {
+		war = { country = GER country = SOV }
+		control = { province = 477 data = -1 } #Banska
+		war = { country = GER country = ROM }
+		control = { province = 231 data = -2 } #no idea what these sov provinces are lol
+		control = { province = 228 data = -2 }
+		control = { province = 227 data = -2 }
+		control = { province = 226 data = -2 }
+		control = { province = 225 data = -2 }
+		control = { province = 221 data = -2 }
+		control = { province = 212 data = -2 }
+		control = { province = 218 data = -2 }
+		control = { province = 1874 data = -2 }
+	}
+
+	date = { day = 1 month = january year = 1943 }
+	offset = 29
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130597_NAME"	#スロヴァキア人民蜂起
+	desc = "EVT_130597_DESC"	#
+
+	picture = "uprising"
+
+	action_a = {
+		name = "EVT_130597_ACTA"	#この忙しい時に！
+		ai_chance = 100
+		command = { type = revolt which = 477 }
+		command = { type = revolt which = 477 }
+		command = { type = revolt which = 477 }
+		command = { type = revolt which = 477 }
+		command = { type = revolt which = 477 }
+		command = { type = revolt which = 477 }
+		command = { type = revolt which = 477 }
+		command = { type = revolt which = 477 }
+		command = { type = revolt which = 477 }
+		command = { type = revolt which = 477 }
+		command = { type = revolt which = 477 }
+		command = { type = revolt which = 477 }
+		command = { type = revolt which = 477 }
+	}
+}
+
+event = {
+	id = 130598
+	random = no
+	country = SOV
+	trigger = {
+		war = { country = GER country = SOV }
+		event = 132470
+		exists = CHI
+	}
+	
+	date = { day = 1 month = january year = 1940 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	name = "EVT_130598_NAME"	#ゼット作戦の終わり
+	desc = "EVT_130598_DESC"	#
+	
+	picture = "assistance"
+
+	action = {
+		name = "EVT_130598_ACTA"	#今は少しでも多くの兵が要る！
+		ai_chance = 99
+		command = { type = add_division value = interceptor when = 0 }
+		command = { type = add_division value = tactical_bomber when = 0 }
+		command = { type = relation which = CHI value = -20 }
+		command = { type = trigger which = 130599 }
+	}
+	action = {
+		name = "EVT_130598_ACTB"	#空軍志願隊はアジアで戦いを続けるべきだ
+		ai_chance = 1
+		command = { type = relation which = CHI value = 10 }
+		command = { type = supplies value = -500 }
+	}
+}
+
+event = {
+	id = 130599
+	country = CHI
+	
+	name = "EVT_130598_NAME"	#ゼット作戦の終わり
+	desc = "EVT_130598_DESC"	#
+	picture = "assistance"
+
+	action = {
+		name = "EVT_130599_ACTA"	#なお苦しくなる……
+		command = { type = remove_division which = "ゼット作戦派遣第1部隊" value = CHI }
+		command = { type = remove_division which = "ゼット作戦派遣第2部隊" value = CHI }
+		command = { type = sleepleader which = 50377 } #Khryukin
+	}
+}

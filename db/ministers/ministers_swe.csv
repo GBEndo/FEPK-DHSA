@@ -1,0 +1,91 @@
+SWE;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;Country
+;Replacements;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+7001;Head of State;グスタフ5世;36;SC;Pig-headed Isolationist;High;M7001;x
+7002;Head of Government;アクセル・ペールソン・ブラムストルプ;36;SL;Happy Amateur;High;M7002;x
+7003;Foreign Minister;カール・G・ヴェストマン;36;SL;Apologetic Clerk;Very High;M7003;x
+7004;Minister of Armament;ヴィルヘルム・リュンダール;36;SL;Tank Proponent;Very High;M7004;x
+7005;Minister of Security;ソルヴァルド・バーグクエスト;36;SL;Compassionate Gentleman;Very High;M7005;x
+7006;Head of Military Intelligence;カルロス・アドラークロイツ;36;SC;Political Specialist;High;M7068;x
+7007;Chief of Staff;オスカー・ニグレン;36;SC;School of Defence;Medium;M7007;x
+7008;Chief of Army;オスカー・ニグレン;36;SC;Guns and Butter Doctrine;Medium;M7007;x
+7009;Chief of Navy;シャルル・デ・シャンプス;36;PA;Decisive Naval Battle Doctrine;Very Low;M7009;x
+7010;Chief of Air Force;トルステン・フリース;36;ML;Army Aviation Doctrine;Very High;M7010;x
+7031;Head of State;グスタフ5世;36;SD;Pig-headed Isolationist;High;M7001;x
+7033;Head of Government;ペール・アルビン・ハンソン;36;SD;Ambitious Union Boss;High;M7033;x
+7034;Head of Government;ターゲ・エルランデル;46;SD;Political Protege;High;M7034;x
+7035;Head of Government;ゴスタ・バッゲ;42;ML;Smiling Oilman;High;M7035;x
+7036;Head of Government;アクセル・ペールソン・ブラムストルプ;38;SL;Happy Amateur;High;M7002;x
+7037;Head of Government;ベルティル・オリーン;45;SL;Corporate Suit;High;M7037;x
+7038;Foreign Minister;リカルド・サンドラー;36;SD;Biased Intellectual;Low;M7038;x
+7039;Foreign Minister;クリスチャン・ギュンター;40;SC;Apologetic Clerk;High;M7039;x
+7040;Foreign Minister;オステン・ウンデン;45;SD;Great Compromiser;High;M7040;x
+7041;Foreign Minister;ペール・エドヴィン・スコルド;36;SD;Ideological Crusader;Medium;M7041;x
+7042;Foreign Minister;ヴィルヘルム・ゴラン・ルンドヴィク;37;SL;Biased Intellectual;High;M7042;x
+7043;Foreign Minister;R・レソン・ソールマン;38;SL;Iron Fisted Brute;High;M7043;x
+7044;Foreign Minister;ペール・インスランダー;39;SL;General Staffer;High;M7044;x
+7045;Foreign Minister;ゲオルグ・アンドレン;45;SC;Ideological Crusader;High;M7045;x
+7046;Foreign Minister;アクセル・ペールソン・ブラムストルプ;40;SL;The Cloak N Dagger Schemer;Very High;M7002;x
+7047;Minister of Armament;エルンスト・ヴィグフォルス;36;SD;Resource Industrialist;Low;M7047;x
+7048;Minister of Armament;グスタフ・メラー;36;SD;laissez-faire capitalist;Medium;M7048;x
+7049;Minister of Armament;グスタフ・カッセル;37;ML;Administrative Genius;Medium;M7049;x
+7050;Minister of Armament;エリク・パルムスティルナ;37;SD;Battle Fleet Proponent;Medium;M7050;x
+7051;Minister of Armament;エルンスト・トリガー;38;ML;Theoretical Scientist;Medium;M7051;x
+7052;Minister of Armament;エリク・エイナー・エクストランド;39;ML;Submarine Proponent;Medium;M7052;x
+7053;Minister of Armament;ゴスタ・バッゲ;40;ML;Resource Industrialist;Medium;M7035;x
+7054;Minister of Armament;オステン・ウンデン;41;LWR;Infantry Proponent;Medium;M7054;x
+7055;Minister of Armament;ベルティル・オリーン;44;SL;Military Entrepreneur;Medium;M7037;x
+7056;Minister of Armament;マルティン・スコグルンド;40;ML;laissez-faire capitalist;High;M7056;x
+7057;Minister of Armament;フリチョフ・ドモ;45;ML;Administrative Genius;High;M7057;x
+7058;Minister of Security;カール・シリター;36;SD;Silent Lawyer;High;M7058;x
+7059;Minister of Security;グスタフ・アンダーソン＝ラスヨン;40;SL;Compassionate Gentleman;Medium;M7059;x
+7060;Minister of Security;アクセル・T・アデルスヴァルド;36;SL;Silent Lawyer;Very High;M7060;x
+7061;Minister of Security;アンダース・リンドステッド;37;SD;Compassionate Gentleman;Very High;M7061;x
+7063;Minister of Security;ペッター・ヴァイクマン;38;ML;Back Stabber;Very High;M7063;x
+7064;Minister of Security;リカルド・J・サンドラー;39;SD;Prince of Terror;Very High;M7038;x
+7065;Minister of Security;K・G・ヴェストマン;40;SL;Crime Fighter;Very High;M7003;x
+7066;Minister of Security;アルヴィド・G・リッケルト;40;SD;Man of the People;Very High;M7066;x
+7068;Head of Military Intelligence;ヘルゲ・ユング;42;SC;Political Specialist;Low;M7006;x
+7069;Head of Military Intelligence;エリク・パルムスティルナ;39;SC;Naval Intelligence Specialist;Medium;M7050;x
+7070;Head of Military Intelligence;ルケ・ハマースキョルド;41;SL;Dismal Enigma;High;M7070;x
+7072;Chief of Staff;オーロフ・テルネル;37;SC;School of Fire Support;Very High;M7072;x
+7073;Chief of Staff;アクセル・ラッペ;40;SC;School of Manoeuvre;Low;M7073;x
+7074;Chief of Staff;サミュエル・ルカーヒールム;41;ML;School of Mass Combat;Medium;M7074;x
+7075;Chief of Staff;アクセル・ブレッドベルグ;42;ML;School of Psychology;High;M7075;x
+7076;Chief of Staff;カール・グスタフ・エーレンスヴァルド;44;SC;School of Manoeuvre;Medium;M7076;x
+7077;Chief of Staff;ニルス・スヴェドルンド;46;ML;School of Psychology;Very High;M7077;x
+7079;Chief of Army;パル・シルヴァン;37;SC;Static Defence Doctrine;Medium;M7079;x
+7080;Chief of Army;オーロフ・テルネル;40;SC;Guns and Butter Doctrine;Very High;M7072;x
+7081;Chief of Army;ヘルゲ・ユング;43;SD;Armoured Spearhead Doctrine;Medium;M7006;x
+7082;Chief of Army;アーチボルド・ダグラス;43;PA;Decisive Battle Doctrine;Medium;M7017;x
+7083;Chief of Army;アクセル・ラッペ;43;SC;Elastic Defence Doctrine;Very Low;M7073;x
+7084;Chief of Army;ベングト・ノルデンショルド;43;SD;Decisive Battle Doctrine;Low;M7070;x
+7085;Chief of Army;アクセル・ブレッドベルグ;43;SL;Static Defence Doctrine;High;M7075;x
+7086;Chief of Navy;エリク・パルムスティルナ;36;SD;Base Control Doctrine;Medium;M7050;x
+7087;Chief of Navy;ゴスタ・エーレンスヴァルド;42;ML;Decisive Naval Battle Doctrine;Medium;M7087;x
+7088;Chief of Navy;ファビアン・タム;44;SC;Open Seas Doctrine;High;M7088;x
+7089;Chief of Navy;ヘルゲ・ストロンバック;45;SL;Indirect Approach Doctrine;High;M7089;x
+7091;Chief of Air Force;ベングト・ノルデンショルド;42;ML;Air Superiority Doctrine;High;M7070;x
+7092;Chief of Air Force;アクセル・リュンダール;44;SL;Vertical Envelopment Doctrine;Very High;M7092;x
+7011;Head of State;マルティン・エクストレム;36;NS;Powerhungry Demagogue;High;M7011;x
+7012;Head of Government;マルティン・エクストレム;36;NS;Naive Optimist;High;M7011;x
+7013;Foreign Minister;エリク・フォン・ローセン;36;NS;Ideological Crusader;Very High;M7013;x
+7014;Minister of Armament;アルトゥール・リンデン;36;NS;laissez-faire capitalist;Medium;M7014;x
+7015;Minister of Security;スヴェン・ヘディン;36;FA;Back Stabber;Very High;M7015;x
+7016;Head of Military Intelligence;ヘルマン・ニルソン＝エーレ;36;NS;Technical Specialist;Very High;M7016;x
+7017;Chief of Staff;アーチボルド・ダグラス;36;NS;School of Manoeuvre;High;M7017;x
+7018;Chief of Army;マルティン・エクストレム;36;NS;Decisive Battle Doctrine;Very High;M7011;x
+7019;Chief of Navy;シャルル・デ・シャンプス;36;FA;Decisive Naval Battle Doctrine;Very High;M7009;x
+7020;Chief of Air Force;アクセル・ギュレンクロック;36;PA;Army Aviation Doctrine;Low;M7020;x
+7021;Head of State;スヴェン・リンデロット;36;ST;Insignificant Layman;High;M7021;x
+7022;Head of Government;スヴェン・リンデロット;36;ST;Happy Amateur;High;M7021;x
+7023;Foreign Minister;フーゴ・セレン;36;ST;Ideological Crusader;Very High;M7023;x
+7024;Minister of Armament;ヒルディング・ハグベルグ;36;ST;Resource Industrialist;Very High;M7024;x
+7025;Minister of Security;カール・キルボム;36;LE;Crime Fighter;High;M7025;x
+7026;Head of Military Intelligence;C・H・ハーマンソン;36;ST;Naval Intelligence Specialist;High;M7026;x
+7027;Chief of Staff;グンナー・ヨハンソン;36;ST;School of Mass Combat;Very High;unknown;x
+7028;Chief of Army;アクセル・ペーターソン;36;ST;Decisive Battle Doctrine;Very High;unknown;x
+7029;Chief of Navy;ペール・エリクソン;36;ST;Decisive Naval Battle Doctrine;Very High;unknown;x
+7030;Chief of Air Force;クリスター・ロイタースヴァルド;36;LWR;Army Aviation Doctrine;Low;unknown;x
+7093;Head of State;グスタフ6世アドルフ;50;SD;Benevolent Gentleman;High;M7093;x
+7094;Minister of Armament;ペール・エドヴィン・スコルド;49;SD;Infantry Proponent;High;M7041;x
+7095;Head of State;グスタフ6世アドルフ;50;ML;Benevolent Gentleman;High;M7093;x

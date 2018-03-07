@@ -1,0 +1,3629 @@
+#########################################################################
+#	FEPK_fordanzig.txt
+#	戦間期関連イベント
+#########################################################################
+#id = 130010-19		ソ連のバルト諸国侵攻イベント
+#id = 130020-29		戦間期枢軸イベント(チェコ・蒙古)
+#id = 130100-09		三国同盟イベント
+#id = 130110-50		ドイツ戦前外交イベント(ダンツィヒまで)
+#id = 130160-84		アメリカ大陸関連イベント
+#id = 130185-99		ドイツ戦前外交イベント(史実外の選択)
+#########################################################################
+#  USSR makes moves against the Baltic states
+##########
+event = {
+	id = 130010
+	random = no
+	country = SOV
+
+	trigger = {
+		NOT = {
+			atwar = EST
+			atwar = LAT
+			atwar = LIT
+			alliance = { country = ENG country = EST }
+			alliance = { country = USA country = EST }
+			alliance = { country = ENG country = LAT }
+			alliance = { country = USA country = LAT }
+			alliance = { country = ENG country = LIT }
+			alliance = { country = USA country = LIT }
+		}
+		OR = {
+			exists = EST
+			exists = LAT
+			exists = LIT
+		}
+		control = { province = 175 data = SOV } # Moscow
+		OR = {
+			event = 130138 #normal
+			event = 130142 #No Full #FEPK1.11
+			event = 130143 #full
+			NOT = { exists = GER }
+		}
+	}
+
+	date = { day = 25 month = september year = 1939 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+
+	name = "EVT_130010_NAME"
+	desc = "EVT_130010_DESC"
+	picture = "sovietblackday"
+
+	action_a = {
+		name = "EVT_130010_ACTA"
+		ai_chance = 100
+		command = { }
+	}
+	action_b = {
+		name = "EVT_130010_ACTB"
+		ai_chance = 0
+		command = { type = sleepevent which = 130011 }
+		command = { type = sleepevent which = 130013 }
+		command = { type = sleepevent which = 130015 }
+	}
+}
+##########
+#  Estonia chooses
+##########
+event = {
+	id = 130011
+	random = no
+	country = EST
+
+	trigger = {
+		atwar = no
+		event = 130010
+	}
+
+	date = { day = 28 month = september year = 1939 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130011_NAME"
+	desc = "EVT_130011_DESC"
+	picture = "sovietblackday"
+
+
+	action_a = {
+		name = "EVT_130011_ACTA"
+		trigger = {
+			NOT = {
+				alliance = { country = ENG }
+				alliance = { country = USA }
+			}
+		}
+		ai_chance = 99
+		command = { type = trigger which = 130012 } #estonia folds
+		command = { type = sleepevent which = 130017 }
+	}
+	action_b = {
+		name = "EVT_130011_ACTB"
+		ai_chance = 1
+		command = { type = war which = SOV }
+	}
+}
+##########
+#  Estonia folds
+##########
+event = {
+	id = 130012
+	random = no
+	country = SOV
+
+	name = "EVT_130012_NAME"
+	desc = "EVT_130012_DESC"
+	picture = "sovietblackday"
+
+	action_a = {
+		name = "EVT_130012_ACTA"
+		ai_chance = 100
+		command = { type = inherit which = EST }
+	}
+}
+
+##########
+#  Latvia chooses
+##########
+event = {
+	id = 130013
+	random = no
+	country = LAT
+
+	trigger = {
+		atwar = no
+		event = 130010
+	}
+
+	date = { day = 5 month = october year = 1939 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130013_NAME"
+	desc = "EVT_130013_DESC"
+	picture = "sovietblackday"
+
+
+	action_a = {
+		name = "EVT_130013_ACTA"
+		ai_chance = 99
+		trigger = {
+			NOT = {
+				alliance = { country = ENG }
+				alliance = { country = USA }
+			}
+		}
+		command = { type = trigger which = 130014 } #estonia folds
+		command = { type = sleepevent which = 130017 }
+	}
+	action_b = {
+		name = "EVT_130013_ACTB"
+		ai_chance = 1
+		command = { type = war which = SOV }
+	}
+}
+##########
+#  Latvia folds
+##########
+event = {
+	id = 130014
+	random = no
+	country = SOV
+
+	name = "EVT_130014_NAME"
+	desc = "EVT_130014_DESC"
+	picture = "sovietblackday"
+
+	action_a = {
+		name = "EVT_130014_ACTA"
+		ai_chance = 100
+		command = { type = inherit which = LAT }
+	}
+}
+
+##########
+#  Lithuania chooses
+##########
+event = {
+	id = 130015
+	random = no
+	country = LIT
+
+	trigger = {
+		atwar = no
+		event = 130010
+	}
+
+	date = { day = 10 month = october year = 1939 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130015_NAME"
+	desc = "EVT_130015_DESC"
+	picture = "sovietblackday"
+
+
+	action_a = {
+		name = "EVT_130015_ACTA"
+		ai_chance = 99
+		trigger = {
+			NOT = {
+				alliance = { country = ENG }
+				alliance = { country = USA }
+			}
+		}
+		command = { type = trigger which = 130016 } #estonia folds
+		command = { type = sleepevent which = 130017 }
+	}
+	action_b = {
+		name = "EVT_130015_ACTB"
+		ai_chance = 1
+		command = { type = war which = SOV }
+	}
+}
+##########
+#  Lithuania folds
+##########
+event = {
+	id = 130016
+	random = no
+	country = SOV
+
+	name = "EVT_130016_NAME"
+	desc = "EVT_130016_DESC"
+	picture = "sovietblackday"
+
+	action_a = {
+		name = "EVT_130016_ACTA"
+		ai_chance = 100
+		command = { type = inherit which = LIT }
+	}
+}
+
+event = {
+	id = 130017
+	random = no
+	country = EST
+
+	trigger = {
+		exists = LIT
+		exists = LAT
+		event = 130011
+		event = 130013
+		event = 130015
+		war = { country = LIT country = SOV }
+		war = { country = LAT country = SOV }
+		war = { country = EST country = SOV }
+	}
+
+	date = { day = 10 month = october year = 1939 }
+
+	name = "EVT_130017_NAME"
+	desc = "EVT_130017_DESC"
+	picture = "sovietblackday"
+
+	action_a = {
+		name = "EVT_130017_ACTA"
+		ai_chance = 100
+		command = { type = alliance which = LAT }
+		command = { type = alliance which = LIT }
+		command = { type = add_division value = infantry when = 1 }
+		command = { type = add_division value = infantry when = 1 }
+		command = { type = add_division value = infantry when = 1 }
+		command = { type = add_division value = infantry when = 1 }
+		command = { type = add_division value = infantry when = 1 }
+		command = { type = add_division value = infantry when = 1 }
+		#command = { type = add_division value = infantry when = 1 }
+		#command = { type = add_division value = infantry when = 1 }
+		#command = { type = add_division value = infantry when = 1 }
+	}
+}
+
+##########
+#  Japan prepares to setup Mengkukuo in former Shanxi area
+##########
+event = {
+	id = 130020
+	random = no
+	country = JAP
+
+	trigger = {
+		AND = {
+			#Mengukuo area:
+			control = { province = 1206 data = JAP } # Kalgan
+			control = { province = 1207 data = JAP } # Jining
+			control = { province = 1208 data = JAP } # Hohhot
+			control = { province = 1209 data = JAP } # Datong
+			control = { province = 1386 data = -3 } # Xilinhot
+			control = { province = 1398 data = -3 } # Erenhot
+			#Provinces surrounding Mengukuo area:
+			control = { province = 1225 data = JAP } # Taiyuan
+			control = { province = 1205 data = JAP } # Beiping
+			control = { province = 1210 data = JAP } # Baoding
+			control = { province = 1211 data = JAP } # Shijiazhuang
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 8
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_3832_NAME"
+	desc = "EVT_3832_DESC"
+
+	picture = "Nomonhan"
+
+	action_a = {
+		name = "EVT_3832_ACTA" #Prepare better action name
+		ai_chance = 100
+		command = { type = removeclaim which = 1203 } #FEPKDH
+		command = { type = removeclaim which = 1397 }
+		command = { type = removeclaim which = 1398 }
+		command = { type = removeclaim which = 1386 }
+		command = { type = independence which = MEN value = 1 }
+		command = { type = dissent value = -5 }
+		command = { type = trigger which = 130021 }
+	}
+	action_b = {
+		name = "EVT_3823_ACTB" #Let us take it all!
+		ai_chance = 0
+		command = { type = dissent value = 1 }
+		command = { type = belligerence which = JAP value = 5 }
+	}
+}
+##########
+#  Japan installs puppet government in Mengukuo
+##########
+event = { 
+	id = 130021
+	random = no
+	country = JAP
+
+	name = "EVT_3833_NAME"
+	desc = "EVT_3833_DESC"
+
+
+	action_a = {
+		name = "OK" # "Ok" # Install a Puppet
+		command = { type = make_puppet which = MEN }
+		command = { type = secedeprovince which = MEN value = 1386 } #Xilinhot to Mengukuo
+		command = { type = secedeprovince which = MAN value = 1397 } #Changde to Manchuria
+		command = { type = trigger which = 130022 }
+	}
+}
+##########
+#  Mengkukuo country setup
+##########
+event = { 
+	id = 130022
+	random = no
+	country = MEN
+
+	name = "EVT_3834_NAME"
+	desc = "EVT_3834_DESC"
+
+
+	action_a = {
+		name = "EVT_2717_ACTA"
+		#Diplomacy:
+		command = { type = alliance which = JAP }
+		#Government:
+		command = { type = set_domestic which = democratic value = 2 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofstate which = 513001 }
+		command = { type = headofgovernment which = 513002 }
+		command = { type = foreignminister which = 513003 }
+		command = { type = armamentminister which = 513004 }
+		command = { type = ministerofsecurity which = 513005 }
+		command = { type = ministerofintelligence which = 513006 }
+		command = { type = chiefofstaff which = 513007 }
+		command = { type = chiefofarmy which = 513008 }
+		command = { type = chiefofnavy which = 513009 }
+		command = { type = chiefofair which = 513010 }
+		#Army: (taken from "Creation of Mengkukuo" chain) #in birth event
+		#command = { type = add_corps which = "Mongolian Army" value = land where = 1208 }
+		#command = { type = add_division which = "Garrison Corps" value = militia when = 0 }
+		#command = { type = add_division which = "1st Mongolian Corps" value = cavalry when = 1 }
+		#command = { type = add_division which = "West Suiyuan United Corps" value = militia when = 0 }
+		#Resources
+		#command = { type = free_ic value = 2 } #this is in the birth event, remove this later?
+		##power for 4 IC #this is in the Birth event
+		#command = { type = free_energy value = 8 }
+		#command = { type = free_metal value = 4 }
+		##command = { type = free_oil value = 10 }
+		#command = { type = free_rare_materials value = 2 }
+	}
+}
+
+
+
+##########
+#  Germany decides what to do about conquered Czechoslovakia
+##########
+event = {
+	id = 130023
+	random = no
+	country = GER
+
+	trigger = {
+		NOT = {
+			alliance = { country = AUS country = GER }
+			exists = CZE
+			exists = SLO
+			lost_national = { country = GER value = 1 }
+		}
+		#Bohemia-Moravia
+		control = { province = 471 data = -3 } #
+		control = { province = 466 data = -3 } #
+		control = { province = 470 data = -3 } #
+		control = { province = 472 data = -3 } #
+		control = { province = 469 data = -3 } #prague
+		control = { province = 468 data = -3 } #
+		#control = { province = 467 data = GER } #could be austrian
+		control = { province = 475 data = -3 } #
+		control = { province = 474 data = -3 } #
+		#Slovakia
+		control = { province = 476 data = -3 } #
+		control = { province = 477 data = -1 } #
+		control = { province = 478 data = -3 } #
+		control = { province = 490 data = -3 } #
+		#control = { province = 499 data = GER } #presov
+	}
+
+	date = { day = 1 month = april year = 1939 }
+	offset = 5
+	deathdate = { day = 15 month = june year = 1944 }
+
+	name = "EVT_130023_NAME"
+	desc = "EVT_130023_DESC"
+	style = 0
+	picture = "czechs_annexed"
+
+	action_a = {
+		name = "EVT_130023_ACTA"
+		ai_chance = 65
+		command = { type = addcore which = 467 } #5 Sudetenland provinces
+		command = { type = addcore which = 466 }
+		command = { type = addcore which = 471 }
+		command = { type = addcore which = 472 }
+		command = { type = addcore which = 474 }
+		command = { type = addcore which = 470 } #The rest of the Czech Republic
+		command = { type = addcore which = 468 }
+		command = { type = addcore which = 469 }
+		command = { type = addcore which = 475 }
+		command = { type = secedeprovince which = HUN value = 499 } #Presov
+		command = { type = independence which = SLO value = 1 when = 0 }
+		command = { type = dissent value = -5 }
+		command = { type = trigger which = 130024 } #germany puppets slovakia and bohemia if it exists
+		command = { type = trigger which = 2500 } #hungary is happy
+		command = { type = trigger which = 51 } #UK Gears up for war
+		command = { type = trigger which = 52 } #France Gears up for war
+	}
+	action_b = {
+		name = "EVT_130023_ACTB"
+		trigger = {
+			exists = HUN
+			NOT = { war = { country = HUN } }
+		}
+		ai_chance = 30
+		command = { type = addcore which = 467 } #5 Sudetenland provinces
+		command = { type = addcore which = 466 }
+		command = { type = addcore which = 471 }
+		command = { type = addcore which = 472 }
+		command = { type = addcore which = 474 }
+		command = { type = addcore which = 470 } #The rest of the Czech Republic
+		command = { type = addcore which = 468 }
+		command = { type = addcore which = 469 }
+		command = { type = addcore which = 475 }
+		command = { type = secedeprovince which = HUN value = 499 } #Presov
+		command = { type = secedeprovince which = HUN value = 476 } #Slovakia
+		command = { type = secedeprovince which = HUN value = 477 } #
+		command = { type = secedeprovince which = HUN value = 478 } #
+		command = { type = secedeprovince which = HUN value = 490 } #
+		command = { type = trigger which = 2501 } #hungary is VERY happy
+		command = { type = trigger which = 51 } #UK Gears up for war
+		command = { type = trigger which = 52 } #France Gears up for war
+	}
+	action_c = {
+		name = "EVT_130023_ACTC"
+		ai_chance = 5
+		command = { type = addcore which = 467 } #5 Sudetenland provinces
+		command = { type = addcore which = 466 }
+		command = { type = addcore which = 471 }
+		command = { type = addcore which = 472 }
+		command = { type = addcore which = 474 }
+		command = { type = dissent value = 2 }
+		command = { type = trigger which = 51 } #UK Gears up for war
+		command = { type = trigger which = 52 } #France Gears up for war
+	}
+}
+
+##########
+#  Puppeted Slovakia and Bohemia-Moravia
+##########
+event = { 
+	id = 130024
+	random = no
+	country = GER
+
+	name = "EVT_2051_NAME"
+	desc = "EVT_2051_DESC"
+
+	picture = "slovakia"
+
+	action_a = {
+		name = "ACTIONNAME2033A" #Install a Puppet
+		command = { type = make_puppet which = SLO }
+	}
+}
+
+event = { #FEPKDH
+	id = 130025
+	random = no
+	country = JAP
+	style = 0
+
+	name = "EVT_3831_NAME"
+	desc = "満州に対して錫林浩特地域の軍政権を要求し、これを獲得した！より華北地域への影響力を高めよう。"
+
+	picture = "Nomonhan"
+
+	action_a = {
+		name = "OK" # Opportunists
+		command = { type = addclaim which = 1203 }
+		command = { type = addclaim which = 1397 }
+		command = { type = addclaim which = 1398 }
+		command = { type = addclaim which = 1386 }
+	}
+}
+
+##########
+#  130100-? - Pre-war events
+##########
+#  France Responds to Remilitarization of Rhineland
+##########
+event = {
+	id = 130100
+	random = no
+	country = FRA
+
+	name = "EVT_130100_NAME"
+	desc = "EVT_130100_DESC"
+
+	picture = "Rhineland"
+
+	action_a = {
+		name = "EVT_130100_ACTA"
+		ai_chance = 99 #97
+		command = { }
+	}
+	action_b = {
+		name = "EVT_130100_ACTB" # "Demand the Wehrmacht evacuate the Rhineland"
+		ai_chance = 1 #3
+		command = { type = trigger which = 130101 } #germany responds
+		command = { type = domestic which = defense_lobby value = 1 }
+	}
+	action_c = {
+		name = "EVT_130100_ACTC"
+		ai_chance = 0
+		command = { type = leave_alliance }
+		command = { type = war which = GER }
+		command = { type = domestic which = defense_lobby value = 2 }
+		command = { type = domestic which = interventionism value = 1 }
+	}
+}
+##########
+#  France Demands Withdrawal
+##########
+event = {
+	id = 130101
+	random = no
+	country = GER
+
+	name = "EVT_130101_NAME"
+	desc = "EVT_130100_DESC"
+
+	picture = "Rhineland"
+	action_a = {
+		name = "EVT_130101_ACTA"
+		ai_chance = 80 #80
+		command = { type = trigger which = 130102 } #french bluff
+	}
+	action_b = {
+		name = "EVT_130101_ACTB"
+		ai_chance = 20 #20
+		command = { type = dissent value = 5 }
+		command = { type = domestic which = defense_lobby value = -1 }
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = trigger which = 130103 } #france celebrates german bluff
+	}
+}
+##########
+#  Germany Calls Our Bluff
+##########
+event = {
+	id = 130102
+	random = no
+	country = FRA
+
+	name = "EVT_130102_NAME"
+	desc = "EVT_130100_DESC"
+
+
+	picture = "furios_hitler"
+
+	action_a = {
+		name = "EVT_130100_ACTA"
+		ai_chance = 50 #50
+		command = { type = domestic which = defense_lobby value = -2 } #-2 back since +1 above, to make it a risk
+		command = { type = dissent value = 5 }
+	}
+	action_b = {
+		name = "EVT_130100_ACTC"
+		ai_chance = 50 #50
+		command = { type = leave_alliance }
+		command = { type = war which = GER }
+	}
+}
+##########
+#  Germany Pulls Out
+##########
+event = {
+	id = 130103
+	random = no
+	country = FRA
+
+	name = "EVT_130103_NAME"
+	desc = "EVT_130103_DESC"
+
+	picture = "ger_surrender"
+
+	action_a = {
+		name = "EVT_130103_ACTA" # "Vive la France!"
+		ai_chance = 100
+		command = { type = dissent value = -3 }
+	}
+}
+##########
+#  Anti-Comintern Pact - GER
+##########
+event = {
+	id = 130104
+	random = no
+	country = GER
+
+	name = "EVT_71_NAME"
+	desc = "EVT_71_DESC"
+	picture = "anti_comitern_pact"
+
+
+	trigger = {
+		#control = { province = 56 data = GER } #wtf, thanks Barking Baffoon
+		exists = JAP
+		exists = ITA
+		exists = SOV
+		NOT = {
+			war = { country = GER country = ITA }
+			war = { country = GER country = JAP }
+			war = { country = JAP country = ITA }
+			alliance = { country = GER country = ENG }
+			alliance = { country = GER country = SOV }
+			alliance = { country = ITA country = ENG }
+			alliance = { country = ITA country = SOV }
+			alliance = { country = JAP country = ENG }
+			alliance = { country = JAP country = SOV }
+			flag = ITA_NOT_ETH #FEPKBETA4
+		}
+	}
+
+	date = { day = 6 month = november year = 1937 }
+
+	action_a = {
+		ai_chance = 97
+		name = "EVT_71_ACTA"
+		command = { type = domestic which = freedom value = -1 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = relation which = SOV value = -20 }
+		command = { type = trigger which = 130105 }
+		command = { type = trigger which = 130106 }
+		command = { type = sleepevent which = 62020 } #FEPK_Italy_Allies #FEPKBETA4
+	}
+	action_b = {
+		ai_chance = 2
+		name = "EVT_71_ACTB"
+		command = { type = domestic which = freedom value = -1 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = relation which = SOV value = -10 }
+		command = { type = trigger which = 130105 } # Italy only
+		command = { type = sleepevent which = 132479 } #Recall of German mission in China
+		command = { type = sleepevent which = 62020 } #FEPK_Italy_Allies #FEPKBETA4
+	}
+	action_c = {
+		ai_chance = 1
+		name = "EVT_71_ACTC"
+		command = { type = domestic which = freedom value = -1 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = relation which = SOV value = -10 }
+		command = { type = trigger which = 130106 } # Japan only
+		command = { type = sleepevent which = 62020 } #FEPK_Italy_Allies #FEPKBETA4
+	}
+	action_d = {
+		ai_chance = 0
+		name = "EVT_71_ACTD"
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = sleepevent which = 132479 } #Recall of German mission in China
+		command = { type = sleepevent which = 62020 } #FEPK_Italy_Allies #FEPKBETA4
+	}
+}
+##########
+#  Anti-Comintern Pact - ITA
+##########
+event = {
+	id = 130105
+	random = no
+	country = ITA
+
+	name = "EVT_72_NAME"
+	desc = "EVT_72_DESC"
+	picture = "anti_comitern_pact"
+
+
+	action_a = {
+		ai_chance = 97
+		name = "EVT_72_ACTA"
+		command = { type = domestic which = freedom value = -1 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = relation which = SOV value = -10 }
+		command = { type = relation which = GER value = 10 }
+	}
+	action_b = {
+		ai_chance = 3
+		name = "EVT_72_ACTB"
+		command = { type = domestic which = interventionism value = -1 }
+	}
+}
+##########
+#  Anti-Comintern Pact - JAP
+##########
+event = {
+	id = 130106
+	random = no
+	country = JAP
+
+	name = "EVT_73_NAME"
+	desc = "EVT_73_DESC"
+	picture = "anti_comitern_pact"
+
+
+	action_a = {
+		ai_chance = 97
+		name = "EVT_73_ACTA"
+		command = { type = domestic which = freedom value = -1 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = relation which = SOV value = -10 }
+		command = { type = relation which = GER value = 10 }
+	}
+	action_b = {
+		ai_chance = 3
+		name = "EVT_73_ACTB"
+		command = { type = domestic which = interventionism value = -1 }
+	}
+}
+##########
+#  Tri-Partite Pact - GER
+##########
+event = {
+	id = 130107
+	random = no
+	country = GER
+
+	name = "EVT_74_NAME"
+	desc = "EVT_74_DESC"
+
+	picture = "tripartite"
+
+	trigger = {
+		OR = { #BETA修正パッチ
+			control = { province = 56 data = GER } #Paris
+			control = { province = 56 data = VIC } #Paris
+		}
+		exists = JAP
+		exists = ITA
+		exists = SOV
+		NOT = {
+			war = { country = GER country = ITA }
+			war = { country = GER country = JAP }
+			war = { country = JAP country = ITA }
+			alliance = { country = GER country = ENG }
+			alliance = { country = GER country = SOV }
+			alliance = { country = ITA country = ENG }
+			alliance = { country = ITA country = SOV }
+			alliance = { country = JAP country = ENG }
+			alliance = { country = JAP country = SOV }
+			event = 135260  #GER-JAP Pact #FEPKBETA3
+		}
+	}
+
+        date = { day = 27 month = september year = 1940 }
+
+	action_a = {
+		ai_chance = 94
+		name = "EVT_74_ACTA"
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = relation which = SOV value = -10 }
+		command = { type = trigger which = 130109 }
+		command = { type = trigger which = 130108 }
+		command = { type = sleepevent which = 135260 } #Without Italy #FEPKBETA3
+	}
+	action_b = {
+		ai_chance = 2
+		name = "EVT_71_ACTC"
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = relation which = SOV value = -10 }
+		command = { type = trigger which = 130109 } #Japan only
+		command = { type = sleepevent which = 135260 } #Without Italy #FEPKBETA3
+	}
+	action_c = {
+		ai_chance = 3
+		name = "EVT_71_ACTB"
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = relation which = SOV value = -10 }
+		command = { type = trigger which = 130108 } #Italy only
+		command = { type = sleepevent which = 3465 } #Falkenhausen leaves
+		command = { type = sleepevent which = 135260 } #Without Italy #FEPKBETA3
+	}
+	action_d = {
+		ai_chance = 1
+		name = "EVT_71_ACTD"
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = sleepevent which = 3465 } #Falkenhausen leaves
+		command = { type = sleepevent which = 135260 } #Without Italy #FEPKBETA3
+	}
+}
+##########
+#  Tri-Partite Pact - ITA
+##########
+event = {
+	id = 130108
+	random = no
+	country = ITA
+
+	name = EVT_76_NAME
+	desc = EVT_76_DESC
+
+	picture = "tripartite"
+
+	action_a = {
+		ai_chance = 97
+		name = "EVT_76_ACTA"
+		command = { type = money value = 10 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = relation which = SOV value = -10 }
+		command = { type = relation which = USA value = -10 }
+		command = { type = relation which = ENG value = -10 }
+		command = { type = relation which = AST value = -10 }
+		command = { type = relation which = NZL value = -10 }
+		command = { type = relation which = GER value = 10 }
+	}
+	action_b = {
+		ai_chance = 3
+		name = "EVT_76_ACTB"
+		command = { type = money value = -10 }
+		command = { type = domestic which = interventionism value = -1 }
+	}
+}
+##########
+#  Tri-Partite Pact - JAP
+##########
+event = {
+	id = 130109
+	random = no
+	country = JAP
+
+	name = EVT_75_NAME
+	desc = EVT_75_DESC
+
+	picture = "tripartite"
+
+	action_a = {
+		ai_chance = 97
+		name = "EVT_75_ACTA"
+		command = { type = money value = 10 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = relation which = SOV value = -10 }
+		command = { type = relation which = USA value = -10 }
+		command = { type = relation which = ENG value = -10 }
+		command = { type = relation which = AST value = -10 }
+		command = { type = relation which = NZL value = -10 }
+		command = { type = relation which = GER value = 10 }
+		command = { type = setflag which = JAPtripartite }
+	}
+	action_b = {
+		ai_chance = 3
+		name = "EVT_75_ACTB"
+		command = { type = money value = -10 }
+		command = { type = domestic which = interventionism value = -1 }
+	}
+}
+
+##########
+#  Guarantee Independence to Poland
+##########
+event = {
+	id = 130110
+	random = no
+	country = ENG
+
+	trigger = {
+		exists = POL
+		exists = GER
+		OR = { 
+			event = 130127 #The End of Czechoslovakia - Czechs annexed
+			event = 130129 #The End of Czechoslovakia - Czechs wish a fight!
+			event = 130130 #The End of Czechoslovakia - Czecho-Slovakia partitioned
+			event = 130131 #The End of Czechoslovakia - Czechs fight!
+		}
+		NOT = {
+			ispuppet = ENG
+			alliance = { country = POL country = SOV }
+			alliance = { country = POL country = GER }
+			alliance = { country = POL country = ENG }
+			war = { country = GER country = ENG }
+			atwar = POL
+		}
+	}
+
+	name = "EVT_3401_NAME"
+	desc = "EVT_3401_DESC"
+	picture = "guarantee_POL"
+
+	date = { day = 29 month = march year = 1939 }
+
+	action_a = {
+		ai_chance = 98
+		name = "ACTIONNAME3401A" # Poland must be protected
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = trigger which = 130111 } #POL
+	}
+	action_b = {
+		ai_chance = 2
+		name = "ACTIONNAME3401B" # The world must be spared another Great War
+		command = { type = dissent value = 10 }
+		command = { type = relation which = FRA value = -50 }
+		command = { type = domestic which = defense_lobby value = -1 }
+		command = { type = domestic which = interventionism value = -2 }
+		command = { type = trigger which = 130114 } #Poland cries
+	}
+}
+##########
+#  The UK offers an Alliance
+##########
+event = { 
+	id = 130111
+	random = no
+	country = POL
+
+	name = "EVT_3600_NAME"
+	desc = "EVT_3600_DESC"
+
+	picture = "guarantee_POL"
+
+	action_a = {
+		name = "ACTIONNAME3600A" # Accept
+		ai_chance = 98
+		command = { type = relation which = ENG value = 10 }
+		command = { type = relation which = FRA value = 10 }
+		command = { type = relation which = GER value = -15 }
+		command = { type = relation which = SOV value = -10 }
+		command = { type = trigger which = 130112 }
+	}
+	action_b = {
+		name = "ACTIONNAME3600B" # Decline
+		ai_chance = 2
+		command = { type = relation which = ENG value = -5 }
+		command = { type = relation which = FRA value = -5 }
+		command = { type = relation which = GER value = 5 }
+		command = { type = relation which = SOV value = 5 }
+		command = { type = trigger which = 130113 }
+	}
+}
+##########
+#  Guarantee Independence to Poland - Poland Accepts
+##########
+event = {
+	id = 130112
+	random = no
+	country = ENG
+
+	name = "EVT_3402_NAME"
+	desc = "EVT_3402_DESC"
+	picture = "chameberlain"
+
+
+	action_a = {
+		name = "OK" # "OK"
+		command = { type = alliance which = POL }
+		command = { type = sleepevent which = 2769 } #???
+	}
+}
+##########
+#  Guarantee Independence to Poland - Poland Declines
+##########
+event = {
+	id = 130113
+	random = no
+	country = ENG
+
+	name = "EVT_3403_NAME"
+	desc = "EVT_3403_DESC"
+	picture = "poland"
+
+
+	action_a = {
+		name = "OK" # "OK"
+		command = { type = end_guarantee which = ENG where = POL }
+		command = { type = sleepevent which = 2027 } #???
+	}
+}
+##############
+#  The UK does not stand by us! We are alone!
+##############
+event = {
+	id = 130114
+	random = no
+	country = POL
+
+	name = "EVT_3603_NAME"
+	desc = "EVT_3603_DESC"
+
+	picture = "Danzig"
+
+	action_a = {
+		name = "EVT_3603_ACTA"
+		command = { type = relation which = ENG value = -5 }
+	}
+}
+##########
+#  Great War Manifestation
+##########
+event = {
+	id = 130115
+	random = no
+	country = GER
+
+	trigger = {
+		InCabinet = 1 # AH
+		ai = no
+		NOT = { dissent = 13 }
+		NOT = { event = 2000 }
+		NOT = { war = { country = GER country = FRA } }
+		NOT = { alliance = { country = GER country = FRA } }
+	}
+
+	name = "EVT_1110R_NAME"
+	desc = "URGE_RHINELAND"
+	#picture = "great_war_manifestion"
+	picture = "Kaiser_demo"
+	style = 2
+
+	persistent = yes
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 45
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "ACTIONNAME1110A"
+		command = { type = dissent value = 3 }
+	}
+}
+##########
+#  Re-occupation of the Rhineland
+##########
+event = {
+	id = 130116
+	random = no
+	country = GER
+	decision = {
+		InCabinet = 1 # AH
+		ai = no
+		NOT = {
+			war = { country = GER country = FRA }
+			alliance = { country = GER country = FRA }
+		}
+		
+	}
+	decision_trigger = {
+		year = 1936
+		garrison = { country = GER province = 75 size = 1 }
+	}
+	trigger = {
+		InCabinet = 1 # AH
+		ai = yes
+		NOT = {
+			war = { country = GER country = FRA }
+			alliance = { country = GER country = FRA }
+		}
+		month = 2
+		day = 5
+		year = 1936
+	}
+
+	name = "EVT_2000_NAME"
+	desc = "EVT_2000_DESC"
+	
+	decision_picture = "decision_Rhineland"
+	picture = "Rhineland"
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action_a = {
+		name = "EVT_130116_ACTA" # "ラインラントに進駐する"
+		command = { type = relation which = FRA value = -15 }
+		command = { type = relation which = ENG value = -5 }
+		command = { type = relation which = BEL value = -10 }
+		command = { type = relation which = HOL value = -5 }
+		command = { type = belligerence which = GER value = 5 }
+		command = { type = dissent value = -2 }
+		command = { type = money value = 500 }
+		command = { type = peacetime_ic_mod value = 10 }
+		command = { type = manpowerpool value = 50 }
+		command = { type = trigger which = 51 } # UK Gears up for war
+		command = { type = trigger which = 52 } # France Gears up for war
+		command = { type = ai which = "switch/GER_Rhine.ai" }
+		command = { type = sleepevent which = 130115 } #manifestation
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = trigger which = 130100 } #french response
+	}
+}
+##########
+#  The Treaty of Munich
+##########
+event = {
+	id = 130118
+	random = no
+	country = GER
+
+	trigger = {
+		InCabinet = 1 # AH
+		atwar = no
+		exists = CZE
+		OR = {
+			control = { province = 467 data = CZE }
+			control = { province = 466 data = CZE }
+			control = { province = 471 data = CZE }
+			control = { province = 472 data = CZE }
+		}
+		NOT = {
+			OR = {
+				war = { country = CZE country = GER }
+				alliance = { country = CZE country = GER }
+				alliance = { country = CZE country = ENG }
+				alliance = { country = CZE country = SOV }
+				ispuppet = GER
+				puppet = { country = CZE country = GER }
+			}
+		}
+	}
+
+	name = "EVT_2030_NAME"
+	desc = "EVT_2030_DESC"
+
+	picture = "Munich"
+
+	date = { day = 29 month = september year = 1938 }
+
+	action_a = {
+		name = "ACTIONNAME2030A" # Demand Sudetenland!
+		ai_chance = 98
+		command = { type = trigger which = 130119 } # CZE
+		command = { type = addcore which = 467 } # 5 Sudetenland provinces
+		command = { type = addcore which = 466 }
+		command = { type = addcore which = 471 }
+		command = { type = addcore which = 472 }
+		command = { type = addcore which = 474 }
+		command = { type = relation which = FRA value = -10 }
+		command = { type = relation which = ENG value = -10 }
+		command = { type = relation which = CZE value = -20 }
+		command = { type = belligerence which = GER value = 1 }
+		command = { type = domestic which = interventionism value = 3 }
+		command = { type = trigger which = 51 } # UK Gears up for war
+		command = { type = trigger which = 52 } # France Gears up for war
+		command = { type = domestic which = defense_lobby value = 1 }
+	}
+	action_b = {
+		name = "ACTIONNAME2030B" # Leave well enough alone
+		ai_chance = 2
+		command = { type = non_aggression which = GER where = CZE }
+		command = { type = relation which = FRA value = 10 }
+		command = { type = relation which = ENG value = 10 }
+		command = { type = relation which = CZE value = 20 }
+		command = { type = belligerence which = GER value = -2 }
+		command = { type = dissent value = 5 }
+	}
+}
+##########
+#  The Treaty of Munich
+##########
+event = {
+	id = 130119
+	random = no
+	country = CZE
+
+	name = "EVT_2200_NAME"
+	desc = "EVT_2200_DESC"
+
+	picture = "Munich"
+
+	action_a = {
+		name = "ACTIONNAME2200A" # Accept the Claims
+		ai_chance = 10
+		command = { type = leave_alliance }
+		command = { type = secedeprovince which = GER value = 466 } #Strakonice
+		command = { type = secedeprovince which = GER value = 467 } #Tabor
+		command = { type = secedeprovince which = GER value = 471 } #Usti
+		command = { type = secedeprovince which = GER value = 472 } #Liberec
+		command = { type = secedeprovince which = GER value = 474 } #Ostrava
+		command = { type = relation which = GER value = 10 }
+		command = { type = relation which = ENG value = -10 }
+		command = { type = relation which = FRA value = -10 }
+		command = { type = domestic which = democratic value = -2 }
+		command = { type = domestic which = freedom value = -1 }
+		command = { type = dissent value = 25 }
+		command = { type = trigger which = 130120 } # GER
+		command = { type = headofstate which = 24031 } #ハーハ内閣 #BETA修正パッチ
+		command = { type = headofgovernment which = 24045 }
+		command = { type = foreignminister which = 24054 }
+		command = { type = armamentminister which = 24071 }
+	}
+	action_b = {
+		name = "ACTIONNAME2200B" # Join the Axis
+		ai_chance = 0
+		command = { type = leave_alliance }
+		command = { type = alliance which = GER }
+		command = { type = relation which = GER value = 40 }
+		command = { type = relation which = ENG value = -40 }
+		command = { type = relation which = FRA value = -40 }
+		command = { type = relation which = SOV value = -30 }
+		command = { type = domestic which = freedom value = -1 }
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = dissent value = 25 }
+		command = { type = trigger which = 130121 } # GER
+		command = { type = headofstate which = 24034 } #シロヴィー内閣
+		command = { type = headofgovernment which = 24046 }
+		command = { type = foreignminister which = 24058 }
+		command = { type = armamentminister which = 24070 }
+		command = { type = ministerofsecurity which = 24087 }
+		command = { type = ministerofintelligence which = 24104 }
+		command = { type = chiefofstaff which = 24119 }
+		command = { type = chiefofarmy which = 24131 }
+		command = { type = chiefofnavy which = 24138 }
+		command = { type = chiefofair which = 24144 }
+	}
+	action_c = {
+		name = "ACTIONNAME2200C" # No way!
+		ai_chance = 5
+		command = { type = leave_alliance }
+		command = { type = domestic which = political_left value = 2 }
+		command = { type = relation which = GER value = -50 }
+		command = { type = relation which = SOV value = 30 }
+		command = { type = relation which = ENG value = -10 }
+		command = { type = relation which = FRA value = -10 }
+		command = { type = dissent value = 25 }
+		command = { type = trigger which = 130122 } # GER
+	}
+	action_d = {
+		trigger = {
+			NOT = { flag = ITA_NOT_ETH }	#連合イタリア「ではない」
+			ai = yes
+		}
+		name = "ACTIONNAME2200A" # Accept the Claims
+		ai_chance = 85
+		command = { type = leave_alliance }
+		command = { type = secedeprovince which = GER value = 466 } #Strakonice
+		command = { type = secedeprovince which = GER value = 467 } #Tabor
+		command = { type = secedeprovince which = GER value = 471 } #Usti
+		command = { type = secedeprovince which = GER value = 472 } #Liberec
+		command = { type = secedeprovince which = GER value = 474 } #Ostrava
+		command = { type = relation which = GER value = 10 }
+		command = { type = relation which = ENG value = -10 }
+		command = { type = relation which = FRA value = -10 }
+		command = { type = domestic which = democratic value = -2 }
+		command = { type = domestic which = freedom value = -1 }
+		command = { type = dissent value = 25 }
+		command = { type = trigger which = 130120 } # GER
+		command = { type = headofstate which = 24031 } #ハーハ内閣 #BETA修正パッチ
+		command = { type = headofgovernment which = 24045 }
+		command = { type = foreignminister which = 24054 }
+		command = { type = armamentminister which = 24071 }
+	}
+}
+##########
+#  The Treaty of Munich - Sudetenland to Germany
+##########
+event = {
+	id = 130120
+	random = no
+	country = GER
+
+	name = "EVT_2003_NAME"
+	desc = "EVT_2003_DESC"
+
+	picture = "Sudetenland"
+
+	action_a = {
+		name = "OK" # "OK"
+		command = { type = dissent value = -10 }
+		command = { type = manpowerpool value = 100 }
+		command = { type = domestic which = defense_lobby value = 1 }
+	}
+}
+##########
+#  The Treaty of Munich - Czechoslovakia joins the Axis
+##########
+event = {
+	id = 130121
+	random = no
+	country = GER
+
+	name = "EVT_2004_NAME"
+	desc = "EVT_2004_DESC"
+
+	picture = "Munich"
+
+	action_a = {
+		name = "OK" # "OK"
+		command = { type = set_relation which = CZE value = 100 }
+	}
+}
+##########
+#  The Treaty of Munich - Czechoslovakia refuses claims
+##########
+event = {
+	id = 130122
+	random = no
+	country = GER
+
+	name = "EVT_2005_NAME"
+	desc = "EVT_2005_DESC"
+
+	picture = "Munich"
+
+	action_a = {
+		name = "ACTIONNAME2005A" # We dare not attack them outright
+		ai_chance = 25
+		command = { type = dissent value = 5 }
+		command = { type = domestic which = interventionism value = -2 }
+	}
+	action_b = {
+		name = "ACTIONNAME2005B" # What they will not give, we shall take!
+		ai_chance = 75
+		command = { type = war which = CZE }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = relation which = FRA value = -10 }
+		command = { type = relation which = ENG value = -10 }
+		command = { type = relation which = USA value = -7 } # changed for 1.3
+		command = { type = relation which = SOV value = -5 } # new for 1.3
+		command = { type = relation which = POL value = -5 } # new for 1.3
+
+	}
+}
+##########
+#  The End of Czechoslovakia
+##########
+event = {
+	id = 130123
+	random = no
+	country = GER
+
+	trigger = {
+		InCabinet = 1 #AH
+		event = 130120 #German event signalling annexation of Sudetenland
+		exists = CZE
+		NOT = {
+			alliance = { country = AUS country = GER }
+			OR = {		
+				ispuppet = CZE 
+				exists = SLO
+				alliance = { country = CZE country = GER }
+                   		alliance = { country = CZE country = SOV }
+				war = { country = CZE country = GER }
+			}
+		}
+	}
+
+	name = "EVT_2040_NAME"
+	desc = "EVT_2040_DESC"
+
+	picture = "czechs_annexed"
+
+	date = { day = 14 month = march year = 1939 }
+
+	action_a = {
+		name = "ACTIONNAME2040A" #Install Tiso in Slovakia
+		ai_chance = 90
+		command = { type = trigger which = 130125 } # CZE
+		command = { type = relation which = FRA value = -80 }
+		command = { type = relation which = ENG value = -80 }
+		command = { type = relation which = SOV value = -5 }
+		command = { type = relation which = POL value = -10 }
+		command = { type = relation which = HUN value = 10 }
+		command = { type = relation which = USA value = -3 } # new for 1.3
+		command = { type = belligerence which = GER value = 1 }
+		command = { type = trigger which = 51 } #UK Gears up for war
+		command = { type = trigger which = 52 } #France Gears up for war
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = addcore which = 470 } #The rest of the Czech Republic
+		command = { type = addcore which = 468 }
+		command = { type = addcore which = 469 }
+		command = { type = addcore which = 475 }
+	}
+	action_b = {
+		name = "ACTIONNAME2040B" #Partition Czecho-Slovakia with Hungary
+		ai_chance = 7
+		command = { type = trigger which = 130126 } # CZE
+		command = { type = relation which = FRA value = -100 }	# increased for 1.3
+		command = { type = relation which = ENG value = -100 }	# increased for 1.3
+		command = { type = relation which = SOV value = -10 }	# increased for 1.3
+		command = { type = relation which = POL value = -15 }	# increased for 1.3
+		command = { type = relation which = HUN value = 20 }
+		command = { type = relation which = USA value = -4 } # new for 1.3
+		command = { type = belligerence which = GER value = 2 }	# increased for 1.3
+		command = { type = belligerence which = HUN value = 2 }	# increased for 1.3
+		command = { type = trigger which = 51 } #UK Gears up for war
+		command = { type = trigger which = 52 } #France Gears up for war
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = addcore which = 470 } #The rest of the Czech Republic
+		command = { type = addcore which = 468 }
+		command = { type = addcore which = 469 }
+		command = { type = addcore which = 475 }
+		#command = { type = trigger which = 130185 } #Hungary can join Axis
+	}
+	action_c = {
+		name = "ACTIONNAME2040C" #Honor the Munich Agreement
+		ai_chance = 3
+		command = { type = relation which = CZE value = 30 }
+		command = { type = relation which = FRA value = 20 }
+		command = { type = relation which = ENG value = 20 }
+		command = { type = relation which = POL value = 10 }
+		command = { type = relation which = HUN value = -10 }
+		command = { type = dissent value = 4 } # new for 1.3
+	}
+}
+##########
+#  The End of Czechoslovakia--ahistorical case that HUN does not exist
+##########
+event = {
+	id = 130124
+	random = no
+	country = GER
+
+	trigger = {
+		InCabinet = 1 #AH
+		event = 130120 #German event signalling annexation of Sudetenland
+		exists = CZE
+		NOT = { exists = HUN }
+		NOT = {
+			OR = {
+				exists = SLO
+				ispuppet = CZE 
+				alliance = { country = CZE country = GER }
+				alliance = { country = CZE country = SOV }
+				war = { country = CZE country = GER }
+			}
+		}
+	}
+
+	name = "EVT_2040_NAME"
+	desc = "EVT_2040_DESC"
+
+	picture = "czechs_annexed"
+
+	date = { day = 13 month = march year = 1939 }
+
+	action_a = {
+		name = "ACTIONNAME2040A" # Install Tiso in Slovakia
+		ai_chance = 97
+		command = { type = trigger which = 130125 } #CZE
+		command = { type = relation which = FRA value = -80 }
+		command = { type = relation which = ENG value = -80 }
+		command = { type = relation which = SOV value = -5 }
+		command = { type = relation which = POL value = -5 }
+		command = { type = relation which = USA value = -3 } # new for 1.3
+		command = { type = belligerence which = GER value = 1 }
+		command = { type = trigger which = 51 } # UK Gears up for war
+		command = { type = trigger which = 52 } # France Gears up for war
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = addcore which = 470 } # The rest of the Czech Republic
+		command = { type = addcore which = 468 }
+		command = { type = addcore which = 469 }
+		command = { type = addcore which = 475 }
+		command = { type = sleepevent which = 130123 }
+	}
+	action_b = {
+		name = "ACTIONNAME2040C" # Honor the Munich Agreement
+		ai_chance = 3
+		command = { type = relation which = CZE value = 30 }
+		command = { type = relation which = FRA value = 20 }
+		command = { type = relation which = ENG value = 20 }
+		command = { type = relation which = POL value = 10 }
+		command = { type = dissent value = 4 } # new for 1.3
+		command = { type = sleepevent which = 130123 }
+	}
+}
+##########
+#  The End of Czechoslovakia - Slovakia Independent
+##########
+event = {
+	id = 130125
+	random = no
+	country = CZE
+
+	name = "EVT_2201_NAME"
+	desc = "EVT_2201_DESC"
+
+	picture = "End_Czech"
+
+	action_a = {
+		name = "ACTIONNAME2201A" # Accept the inevitable (Game Over)
+		ai_chance = 95
+		# Seventy two units are deleted:
+		command = { type = leave_alliance }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		###Slovakia Independent###
+		command = { type = secedeprovince which = HUN value = 499 } #Presov
+		command = { type = independence which = SLO value = 1 }
+		command = { type = end_mastery which = SLO }
+		# New for 1.3
+		# Chech territory
+		#command = { type = secedeprovince which = GER value = 476 } #Bratislava
+		#command = { type = secedeprovince which = GER value = 477 } #Banska
+		#command = { type = secedeprovince which = GER value = 478 } #Zilina
+		#command = { type = secedeprovince which = GER value = 490 } #Kosice
+		# Slovak territory
+		#command = { type = secedeprovince which = GER value = 470 }
+		#command = { type = secedeprovince which = GER value = 469 }
+		#command = { type = secedeprovince which = GER value = 468 }
+    		#command = { type = secedeprovince which = GER value = 475 }
+    	command = { type = secederegion which = GER value = Czechoslovakia when = 0 }	#どうだろう
+		command = { type = trigger which = 130127 } # GER
+	}
+	action_b = {
+		name = "ACTIONNAME2201B" # Fight!
+		ai_chance = 5
+		command = { type = leave_alliance }
+		command = { type = domestic which = political_left value = 2 }
+		command = { type = dissent value = -20 }
+		command = { type = relation which = GER value = -50 }
+		command = { type = relation which = SOV value = 25 }
+		command = { type = trigger which = 130129 } # GER
+	}
+}
+##########
+#  The End of Czechoslovakia - Partitioning
+##########
+event = {
+	id = 130126
+	random = no
+	country = CZE
+
+	name = "EVT_2202_NAME"
+	desc = "EVT_2202_DESC"
+
+	picture = "CZE_Partition"
+
+	action_a = {
+		name = "ACTIONNAME2202A" # Accept the inevitable (Game Over)
+		ai_chance = 35
+		command = { type = leave_alliance }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+
+		command = { type = secedeprovince which = GER value = 470 } #FEPKBETA4.5
+		command = { type = secedeprovince which = GER value = 469 }
+		command = { type = secedeprovince which = GER value = 468 }
+    		command = { type = secedeprovince which = GER value = 475 }
+		# Slovak territory
+		command = { type = secedeprovince which = HUN value = 476 } #Bratislava
+		command = { type = secedeprovince which = HUN value = 477 } #Banska
+		command = { type = secedeprovince which = HUN value = 478 } #Zilina
+		command = { type = secedeprovince which = HUN value = 490 } #Kosice
+		command = { type = secedeprovince which = HUN value = 499 } #Presov
+		command = { type = secederegion which = GER value = Czechoslovakia when = 0 }	#どうだろう
+		command = { type = trigger which = 130130 } # GER
+		command = { type = trigger which = 70908 } #hungary can join axis
+	}
+	action_b = {
+		name = "ACTIONNAME2202B" # Fight!
+		ai_chance = 65
+		command = { type = leave_alliance }
+		command = { type = relation which = GER value = -50 }
+		command = { type = relation which = HUN value = -25 }
+		command = { type = relation which = SOV value = 20 }
+		command = { type = relation which = ENG value = 15 } # new for 1.3
+		command = { type = relation which = FRA value = 15 } # new for 1.3
+		command = { type = domestic which = political_left value = 2 }
+		command = { type = dissent value = -20 }
+		command = { type = trigger which = 130131 } # GER
+		command = { type = trigger which = 2502 } #HUN - Czechs fight back
+	}
+}
+##########
+#  The End of Czechoslovakia - Czechs annexed
+##########
+event = {
+	id = 130127
+	random = no
+	country = GER
+
+	name = "EVT_2006_NAME"
+	desc = "EVT_2006_DESC"
+
+	picture = "czechs_annexed"
+
+	action_a = {
+		name = "OK" # "OK"
+		command = { type = dissent value = -10 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		# new for 1.3
+		#command = { type = independence which = SLO value = 1 }
+		command = { type = inherit which = CZE }
+		command = { type = gain_tech which = 130136 } # Improved Light Tank
+		command = { type = gain_tech which = 1230 } # Basic Motorized Division
+		command = { type = add_corps which = "北方予備軍団" value = land where = 469 }
+		command = { type = add_division value = light_armor when = 2 }
+		command = { type = manpowerpool value = -7 } # Manpower for 10. Panzer
+		command = { type = trigger which = 130128 } #  Puppeted Slovakia
+	}
+}
+##########
+#  Puppeted Slovakia
+##########
+event = { 
+	id = 130128
+	random = no
+	country = GER
+
+	name = "EVT_2051_NAME"
+	desc = "EVT_2051_DESC"
+
+	picture = "slovakia"
+
+	action_a = {
+		name = "ACTIONNAME2033A" #Install a Puppet
+		command = { type = make_puppet which = SLO }
+		command = { type = trigger which = 2300 } #The End of Czechoslovakia --> this triggers hun 2500 too
+	}
+}
+##########
+#  The End of Czechoslovakia - Czechs wish a fight!
+##########
+event = {
+	id = 130129
+	random = no
+	country = GER
+
+	name = "EVT_2007_NAME"
+	desc = "EVT_2007_DESC"
+
+	picture = "czechs_fight"
+
+	action_a = {
+		name = "OK" # "OK"
+		command = { type = war which = CZE }
+	}
+}
+##########
+#  The End of Czechoslovakia - Czecho-Slovakia partitioned
+##########
+event = {
+	id = 130130
+	random = no
+	country = GER
+
+	name = "EVT_2011_NAME"
+	desc = "EVT_2011_DESC"
+
+	picture = "CZE_Partition"
+
+	action_a = {
+		name = "OK" # "OK"
+		command = { type = inherit which = CZE } #unnec?
+		command = { type = domestic which = defense_lobby value = 1 }
+		# new for 1.3
+		command = { type = dissent value = -5 }
+		command = { type = gain_tech which = 130136 } # Improved Light Tank
+		command = { type = gain_tech which = 1230 } # Basic Motorized Division
+#		command = { type = add_corps which = "Reserve Heeresgruppe Nord" value = land where = 469 }
+#		command = { type = add_division which = "10. Panzer-Division" value = light_armor when = 2 }
+#		command = { type = dissent value = 2 } 
+	}
+}
+##########
+#  The End of Czechoslovakia - Czechs fight!
+##########
+event = {
+	id = 130131
+	random = no
+	country = GER
+
+	name = "EVT_2012_NAME"
+	desc = "EVT_2012_DESC"
+
+	picture = "czechs_fight"
+
+	action_a = {
+		name = "OK" # "OK"
+		#command = { type = alliance which = HUN }
+		command = { type = war which = CZE }
+	}
+}
+##########
+#  Claiming Memel
+##########
+event = {
+	id = 130132
+	random = no
+	country = GER
+
+	trigger = {
+		InCabinet = 1 # AH
+		control = { province = 206 data = LIT } #Memel
+		atwar = no
+		NOT = {
+			OR = {
+				alliance = { country = GER country = LIT }
+				ispuppet = LIT
+				ispuppet = GER
+			}
+		}
+	}
+
+	name = "EVT_2008_NAME"
+	desc = "EVT_2008_DESC"
+
+	picture = "Memel"
+
+	date = { day = 23 month = march year = 1939 } # Real Date: Sep 29
+
+	action_a = {
+		name = "ACTIONNAME2008A" # Claim Memel
+		ai_chance = 97
+		command = { type = trigger which = 130133 } # LIT
+		command = { type = relation which = SOV value = -5 }
+		command = { type = domestic which = interventionism value = 1 }
+	}
+	action_b = {
+		name = "ACTIONNAME2008B" # Let them keep it
+		ai_chance = 3
+		command = { type = relation which = LIT value = 10 }
+	}
+}
+##########
+#  Germany claims Memel
+##########
+event = { 
+	id = 130133
+	random = no
+	country = LIT
+
+	name = "EVT_2400_NAME"
+	desc = "EVT_2400_DESC"
+
+	picture = "Memel"
+	
+	action_a = {
+		name = "ACTIONNAME2400A" # Cede Memel to Germany
+		ai_chance = 99
+		command = { type = relation which = GER value = 10 }
+		command = { type = relation which = SOV value = -5 }
+		command = { type = relation which = POL value = -10 }
+		command = { type = secedeprovince which = GER value = 206 } # Memel
+		command = { type = trigger which = 130134 } # GER
+	}
+	action_b = {
+		name = "ACTIONNAME2400B" # Never!
+		ai_chance = 1
+		command = { type = relation which = GER value = -15 }
+		command = { type = relation which = SOV value = 5 }
+		command = { type = relation which = POL value = 10 }
+		command = { type = trigger which = 130135 } # GER
+	}
+}
+##########
+#  Claiming Memel - Lithuania Agrees!
+##########
+event = {
+	id = 130134
+	random = no
+	country = GER
+
+	name = "EVT_2009_NAME"
+	desc = "EVT_2009_DESC"
+
+	picture = "Memel"
+
+	action_a = {
+		name = "OK" # "OK"
+		command = { type = dissent value = -5 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = addcore which = 206 }
+		command = { type = domestic which = defense_lobby value = 1 }
+	}
+}
+##########
+#  Claiming Memel - Lithuania Refuses!
+##########
+event = {
+	id = 130135
+	random = no
+	country = GER
+
+	name = "EVT_2010_NAME"
+	desc = "EVT_2010_DESC"
+
+	picture = "Memel"
+
+	action_a = {
+		name = "OK" # "OK"
+		command = { type = dissent value = -5 }
+		command = { type = addcore which = 206 }
+		command = { type = relation which = LIT value = -20 }
+	}
+}
+##########
+#  The Molotov-Ribbentrop Pact
+##########
+event = {
+	id = 130136
+	random = no
+	country = GER
+
+	trigger = {
+		InCabinet = 1 #AH
+		exists = SOV
+		exists = POL
+		NOT = {
+			war = { country = SOV country = GER }
+			war = { country = POL country = GER }
+			alliance = { country = GER country = POL }
+			alliance = { country = GER country = SOV }
+			ispuppet = GER
+			ispuppet = SOV
+			ispuppet = POL
+		}
+	}
+
+	name = "EVT_2050_NAME"
+	desc = "EVT_2050_DESC"
+
+	picture = "Mol_Rib"
+
+	date = { day = 23 month = august year = 1939 }
+
+	action_a = {
+		name = "ACTIONNAME2050A" # Historical Agreement
+		ai_chance = 95
+		command = { type = trigger which = 130137 } # SOV
+		command = { type = relation which = SOV value = 15 }
+		command = { type = set_relation which = EST value = -75 }
+		command = { type = set_relation which = LAT value = -75 }
+		command = { type = set_relation which = LIT value = -75 }
+		command = { type = trigger which = 51 } # UK Gears up for war
+		command = { type = trigger which = 52 } # France Gears up for war
+		command = { type = sleepevent which = 130199 } #FEPKBETA4.91
+	}
+	action_b = {
+		name = "ACTIONNAME2050B" # Only agree to partition Poland
+		ai_chance = 4
+		command = { type = trigger which = 130140 } # SOV
+		command = { type = relation which = SOV value = 10 }
+		command = { type = dissent value = 5 }
+		command = { type = trigger which = 51 } # UK Gears up for war
+		command = { type = trigger which = 52 } # France Gears up for war
+		#command = { type = sleepevent which =  } #sov winter war
+		command = { type = sleepevent which = 130199 } #FEPKBETA4.91
+	}
+	action_c = {
+		name = "ACTIONNAME2050C" # No deals with the Bolsheviks!
+		ai_chance = 1
+		command = { type = relation which = SOV value = -20 }
+		command = { type = relation which = FIN value = 75 }
+		command = { type = relation which = HUN value = 75 }
+		command = { type = relation which = ROM value = 50 }
+		#command = { type = sleepevent which =  } #sov winter war
+		command = { type = dissent value = 10 }
+		command = { type = sleepevent which = 130199 } #FEPKBETA4.91
+	}
+}
+##########
+#  The Molotov-Ribbentrop Pact - Historical Pact
+##########
+event = {
+	id = 130137
+	random = no
+	country = SOV
+
+	name = "EVT_2600_NAME"
+	desc = "EVT_2600_DESC"
+
+	picture = "Mol_Rib"
+
+	action_a = {
+		name = "ACTIONNAME2600A" # A Most Excellent Proposition
+		ai_chance = 96 #96
+		command = { type = trigger which = 130138 } # GER
+
+		command = { type = end_guarantee which = SOV where = FRA }
+
+		# Estonia
+		command = { type = addcore which = 199 }
+		command = { type = addcore which = 195 }
+		command = { type = addcore which = 194 }
+		command = { type = addcore which = 196 }
+		command = { type = addcore which = 193 }
+
+		# Latvia
+		command = { type = addcore which = 197 }
+		command = { type = addcore which = 198 }
+		command = { type = addcore which = 202 }
+		command = { type = addcore which = 203 }
+		command = { type = addcore which = 204 }
+		command = { type = addcore which = 205 }
+
+		# Lithuania
+		command = { type = addcore which = 577 }
+		command = { type = addcore which = 511 }
+		command = { type = addcore which = 207 }
+		command = { type = addcore which = 206 }#memel, added by smep so lith doesnt survive
+
+		# Bessarabia
+		command = { type = addcore which = 434 }
+		command = { type = addcore which = 435 }
+		#command = { type = addcore which = 433 } #Iasi
+		command = { type = addcore which = 230 }
+
+		# Claims on Finland
+		command = { type = addcore which = 146 }
+		command = { type = addcore which = 145 }
+		command = { type = addcore which = 132 }
+
+		command = { type = relation which = GER value = 15 }
+		command = { type = relation which = FIN value = -5 }
+		command = { type = relation which = POL value = -50 }
+		command = { type = relation which = LIT value = -10 }
+		command = { type = relation which = LAT value = -10 }
+		command = { type = relation which = EST value = -10 }
+		command = { type = domestic which = interventionism value = 1 }
+
+		command = { type = sleepevent which = 2650 } #Germany attacks w/o pact
+	}
+	action_b = {
+		name = "ACTIONNAME2600B" # No deals with the enemies of the Workers!
+		ai_chance = 3 #3
+		command = { type = trigger which = 130139 } #GER
+		command = { type = relation which = GER value = -15 }
+		command = { type = sleepevent which = 130575 } #eastern poland to soviets
+		command = { type = sleepevent which = 2605 } #Germany dishonors Pact
+	}
+	action_c = {
+		name = "ACTIONNAME2600C" # Propose an unholy alliance
+		ai_chance = 1 #1
+		command = { type = relation which = GER value = 25 }
+		command = { type = trigger which = 130141 } #GER
+
+		command = { type = sleepevent which = 2650 } #Germany attacks w/o pact
+	}
+}
+##########
+#  The Molotov-Ribbentrop Pact - Historical Outcome
+##########
+event = {
+	id = 130138
+	random = no
+	country = GER
+
+	name = "EVT_2013_NAME"
+	desc = "EVT_2013_DESC"
+
+	picture = "Mol_Rib"
+
+	action_a = {
+		name = "OK" # "OK"
+		command = { type = addcore which = 307 }
+		command = { type = addcore which = 306 }
+		command = { type = addcore which = 305 }
+		#command = { type = wakeleader which = 579 }
+	}
+}
+##########
+#  The Molotov-Ribbentrop Pact - Soviet Refusal to Historical Pact
+##########
+event = {
+	id = 130139
+	random = no
+	country = GER
+
+	name = "EVT_2014_NAME"
+	desc = "EVT_2014_DESC"
+
+	picture = "Mol_Rib"
+
+	action_a = {
+		name = "OK" # "OK"
+		command = { type = relation which = SOV value = -20 }
+		command = { type = addcore which = 307 }
+		command = { type = addcore which = 306 }
+		command = { type = addcore which = 305 }
+	}
+}
+##########
+#  The Molotov-Ribbentrop Pact - Limited Pact
+##########
+event = {
+	id = 130140
+	random = no
+	country = SOV
+
+	name = "EVT_2601_NAME"
+	desc = "EVT_2601_DESC"
+
+	picture = "Mol_Rib"
+
+	action_a = {
+		name = "ACTIONNAME2601A" # Acceptable, but just barely
+		ai_chance = 80
+		command = { type = end_guarantee which = SOV where = FRA }
+		command = { type = trigger which = 130146 } # GER
+	}
+	action_b = {
+		name = "ACTIONNAME2601B" # No deals with the enemies of the Workers!
+		ai_chance = 20
+		command = { type = relation which = GER value = -15 }
+		command = { type = trigger which = 130147 } # GER
+	}
+}
+##########
+#  The Molotov-Ribbentrop Pact - Soviets Propose Alliance
+##########
+event = {
+	id = 130141
+	random = no
+	country = GER
+
+	name = "EVT_2015_NAME"
+	desc = "EVT_2015_DESC"
+
+	picture = "Mol_Rib"
+
+	action_a = {
+		name = "ACTIONNAME2015A" # Refuse alliance, but stand by pact
+		ai_chance = 95
+		command = { type = relation which = SOV value = 5 }
+		command = { type = trigger which = 130142 }
+		command = { type = addcore which = 307 }
+		command = { type = addcore which = 306 }
+		command = { type = addcore which = 305 }
+	}
+	action_b = {
+		name = "ACTIONNAME2015B" # Let the world tremble!
+		ai_chance = 5
+		command = { type = relation which = SOV value = 15 }
+		#command = { type = alliance which = SOV }
+		command = { type = dissent value = 20 }
+		command = { type = domestic which = freedom value = -1 }
+		command = { type = trigger which = 130143 }
+		command = { type = addcore which = 307 }
+		command = { type = addcore which = 306 }
+		command = { type = addcore which = 305 }
+		command = { type = relation which = ENG value = -30 }
+		command = { type = relation which = USA value = -30 }
+		command = { type = relation which = FRA value = -30 }
+	}
+}
+##########
+#  The Molotov-Ribbentrop Pact - No Full Alliance
+##########
+event = {
+	id = 130142
+	random = no
+	country = SOV
+
+	name = "EVT_2603_NAME"
+	desc = "EVT_2603_DESC"
+
+	picture = "Mol_Rib"
+
+	action_a = {
+		name = "OK" # "OK" # Too bad
+		command = { type = end_guarantee which = SOV where = FRA }
+		command = { type = relation which = GER value = -15 }
+
+		# Estonia
+		command = { type = addcore which = 199 }
+		command = { type = addcore which = 195 }
+		command = { type = addcore which = 194 }
+		command = { type = addcore which = 196 }
+		command = { type = addcore which = 193 }
+
+		# Latvia
+		command = { type = addcore which = 197 }
+		command = { type = addcore which = 198 }
+		command = { type = addcore which = 202 }
+		command = { type = addcore which = 203 }
+		command = { type = addcore which = 204 }
+		command = { type = addcore which = 205 }
+
+		# Lithuania
+		command = { type = addcore which = 577 }
+		command = { type = addcore which = 511 }
+		command = { type = addcore which = 207 }
+
+		# Bessarabia
+		command = { type = addcore which = 434 }
+		command = { type = addcore which = 435 }
+		#command = { type = addcore which = 433 } #Iasi
+		command = { type = addcore which = 230 }
+
+		# Claims on Finland
+		command = { type = addcore which = 146 }
+		command = { type = addcore which = 145 }
+		command = { type = addcore which = 132 }
+	}
+}
+##########
+#  The Molotov-Ribbentrop Pact - Full Alliance
+##########
+event = {
+	id = 130143
+	random = no
+	country = SOV
+
+	name = "EVT_2602_NAME"
+	desc = "EVT_2602_DESC"
+
+	picture = "Mol_Rib"
+
+	action_a = {
+		name = "OK" # "OK" # Let the world tremble!
+		command = { type = end_guarantee which = SOV where = FRA }
+		command = { type = leave_alliance }
+
+		# Estonia
+		command = { type = addcore which = 199 }
+		command = { type = addcore which = 195 }
+		command = { type = addcore which = 194 }
+		command = { type = addcore which = 196 }
+		command = { type = addcore which = 193 }
+
+		# Latvia
+		command = { type = addcore which = 197 }
+		command = { type = addcore which = 198 }
+		command = { type = addcore which = 202 }
+		command = { type = addcore which = 203 }
+		command = { type = addcore which = 204 }
+		command = { type = addcore which = 205 }
+
+		# Lithuania
+		command = { type = addcore which = 577 }
+		command = { type = addcore which = 511 }
+		command = { type = addcore which = 207 }
+
+		# Bessarabia
+		command = { type = addcore which = 434 }
+		command = { type = addcore which = 435 }
+		#command = { type = addcore which = 433 } #Iasi
+		command = { type = addcore which = 230 }
+
+		# Claims on Finland
+		command = { type = addcore which = 146 }
+		command = { type = addcore which = 145 }
+		command = { type = addcore which = 132 }
+
+		command = { type = relation which = ENG value = -30 }
+		command = { type = relation which = USA value = -30 }
+		command = { type = relation which = FRA value = -30 }
+	}
+}
+##########
+#  Mongolia Leaves Comintern to prep Unholy Alliance
+##########
+event = {
+	id = 130144
+	random = no
+	country = MON
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	trigger = {
+		event = 130143
+	}
+
+name = "EVT_2602_NAME"
+desc = "EVT_2602_DESC"
+style = 0
+picture = "Mol_Rib"
+
+	action_a = {
+		name = "OK"
+		command = { type = leave_alliance }
+		command = { type = trigger which = 130145 } #
+	}
+}
+##########
+#  USSR Annexes Tannu Tuva and joins Unholy Alliance
+##########
+event = {
+	id = 130145
+	random = no
+	country = SOV
+
+name = "EVT_2602_NAME"
+desc = "EVT_2602_DESC"
+style = 0
+picture = "Mol_Rib"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = inherit which = TAN } 	# annex Tannu Tuva
+		command = { type = addcore which = 1418 } 	# Kyzyl becomes USSR national territory
+		command = { type = manpowerpool value = 16 } 	# inherit manpower
+		command = { type = dissent value = -1 } 	# the Soviet people rejoice
+		command = { type = money value = 100 } 		# increase influence of USSR
+		command = { type = relation which = CHI value = -10 } # an insult to China
+		command = { type = alliance which = GER }
+		command = { type = alliance which = MON }
+	}
+}
+##########
+#  The Molotov-Ribbentrop Pact - Limited Pact
+##########
+event = {
+	id = 130146
+	random = no
+	country = GER
+
+	name = "EVT_2016_NAME"
+	desc = "EVT_2016_DESC"
+
+	picture = "Mol_Rib"
+
+	action_a = {
+		name = "OK" # "OK"
+		command = { type = addcore which = 307 }
+		command = { type = addcore which = 306 }
+		command = { type = addcore which = 305 }
+		#command = { type = wakeleader which = 579 }
+	}
+}
+##########
+#  The Molotov-Ribbentrop Pact - Soviet Refusal to Limited Pact
+##########
+event = {
+	id = 130147
+	random = no
+	country = GER
+
+	name = "EVT_2017_NAME"
+	desc = "EVT_2017_DESC"
+
+	picture = "Mol_Rib"
+
+	action_a = {
+		name = "OK" # "OK"
+		command = { type = relation which = SOV value = -10 }
+	}
+}
+##########
+#  The Great Officer Purge Begins
+##########
+event = { 
+	id = 130148
+	random = no
+	country = SOV
+
+	trigger = {
+		minister = 4002 #Iosif in charge
+		ai = yes #FEPKBETA5.2
+		NOT = {
+			event = 130149
+		}
+	}
+
+	name = "EVT_2609_NAME"
+	desc = "EVT_2609_DESC"
+	picture = "gulag"
+
+	date = { day = 11 month = june year = 1937 }
+
+	action_a = { #1.12
+		name = "ACTIONNAME2609A" #Purge the traitors!
+		ai_chance = 99 #98
+		command = { type = manpowerpool value = -10 }
+		command = { type = belligerence which = SOV value = 1 }
+
+		command = { type = morale which = land value = -30 }
+		command = { type = max_organization which = land value = -20 }
+		command = { type = morale which = air value = -20 }
+		command = { type = max_organization which = air value = -20 }
+		
+		#DHSA0.4
+		#空軍調整
+		#制空権、地上攻撃、スクランブル-70、その他-35
+		command = { type = task_efficiency which = air_superiority value = -0.7 }
+		command = { type = task_efficiency which = ground_attack value = -0.7 }
+		command = { type = task_efficiency which = air_scramble value = -0.7 }
+		command = { type = task_efficiency which = runway_cratering value = -0.35 }
+		command = { type = task_efficiency which = installation_strike value = -0.35 }
+		command = { type = task_efficiency which = interdiction value = -0.35 }
+		command = { type = task_efficiency which = naval_strike value = -0.35 }
+		command = { type = task_efficiency which = port_strike value = -0.35 }
+		command = { type = task_efficiency which = logistical_strike value = -0.35 }
+		command = { type = task_efficiency which = strategic_bombardment value = -0.35 }
+
+		command = { type = sleepleader which = 9839 } #FEPK1.12
+		command = { type = sleepleader which = 9842 }
+		command = { type = sleepleader which = 9843 }
+		command = { type = sleepleader which = 9849 }
+		command = { type = sleepleader which = 9894 }
+		command = { type = sleepleader which = 9900 }
+		command = { type = sleepleader which = 9907 }
+		command = { type = sleepleader which = 9910 }
+		command = { type = sleepleader which = 9913 }
+		command = { type = sleepleader which = 9914 }
+		command = { type = sleepleader which = 9921 }
+		command = { type = sleepleader which = 9930 }
+		command = { type = sleepleader which = 9932 }
+		command = { type = sleepleader which = 9934 }
+		command = { type = sleepleader which = 9948 }
+		command = { type = sleepleader which = 9960 }
+		command = { type = sleepleader which = 9969 }
+		command = { type = sleepleader which = 9974 }
+		command = { type = sleepleader which = 9896 }
+		command = { type = sleepleader which = 9991 }
+		command = { type = sleepleader which = 9992 }
+		command = { type = sleepleader which = 9993 }
+		command = { type = sleepleader which = 9999 }
+		command = { type = sleepleader which = 10028 }
+		command = { type = sleepleader which = 10031 }
+		command = { type = sleepleader which = 10042 }
+		command = { type = sleepleader which = 10054 }
+		command = { type = sleepleader which = 10060 }
+		command = { type = sleepleader which = 10064 }
+		command = { type = sleepleader which = 10067 }
+		command = { type = sleepleader which = 10071 }
+		command = { type = sleepleader which = 10082 }
+		command = { type = sleepleader which = 10114 }
+		command = { type = sleepleader which = 10202 }
+		command = { type = sleepleader which = 10215 }
+		command = { type = sleepleader which = 10253 }
+		command = { type = sleepleader which = 10271 }
+		command = { type = sleepleader which = 10276 }
+		command = { type = sleepleader which = 10283 }
+		command = { type = sleepleader which = 10297 }
+		command = { type = sleepleader which = 10298 }
+		command = { type = sleepleader which = 10342 }
+		command = { type = sleepleader which = 10346 }
+		command = { type = sleepleader which = 10369 }
+		command = { type = sleepleader which = 10371 }
+		command = { type = sleepleader which = 10401 }
+		command = { type = sleepleader which = 10449 }
+		command = { type = sleepleader which = 10453 }
+		command = { type = sleepleader which = 10472 }
+		command = { type = sleepleader which = 10477 }
+		command = { type = sleepleader which = 10514 }
+		command = { type = sleepleader which = 10515 }
+		command = { type = sleepleader which = 10516 }
+		command = { type = sleepleader which = 10518 }
+		command = { type = sleepleader which = 10519 }
+		command = { type = sleepleader which = 10520 }
+		command = { type = sleepleader which = 10521 }
+
+		command = { type = sleepminister which = 4005 } #Yagoda
+		command = { type = sleepminister which = 4200 } #ウリツキー	#FEPKDH
+		command = { type = sleepminister which = 4007 } #Tukhachevsky
+		command = { type = sleepminister which = 4009 } #Orlov
+		command = { type = sleepminister which = 4010 } #Alksnis
+		command = { type = sleepminister which = 4030 } #FEPK1.12
+		command = { type = sleepminister which = 4040 } #Uritsky  #BETA修正パッチ
+		command = { type = sleepminister which = 4043 } #FEPK1.12
+		command = { type = sleepminister which = 4046 } #FEPK1.12
+		command = { type = sleepminister which = 4064 } #FEPK1.12
+		command = { type = sleepminister which = 4066 } #Smushkevich
+
+		command = { type = sleepteam which = 3706 } #Tukhachevsky
+		command = { type = sleepteam which = 3716 } #Alksnis
+
+		command = { type = ministerofsecurity which = 4039 } #Nikolai Yezhov
+		command = { type = chiefofstaff which = 4051 } #Boris M. Shaposhnikov
+		command = { type = chiefofnavy which = 4029 }
+		command = { type = chiefofair which = 4065 } #Pavel V. Rychagov
+		command = { type = ministerofintelligence which = 4006 }	#Berzin
+
+		command = { type = local_setflag which = SOVPurge1 } #FEPKBETA5.2
+		command = { type = sleepevent which = 130149 } #FEPKBETA5.2
+	}
+	action_b = {
+		name = "ACTIONNAME2609B" #No need for brutality
+		ai_chance = 1 #2
+		command = { type = dissent value = 30 }
+		command = { type = domestic which = defense_lobby value = -2 }
+		command = { type = domestic which = free_market value = -2 }
+
+		command = { type = sleepevent which = 130149 } #FEPKBETA5.2
+	}
+}
+
+event = { #FEPKBETA5.2
+	id = 130149
+	random = no
+	country = SOV
+
+	trigger = {
+		minister = 4002 #Iosif in charge
+		NOT = {
+			ai = yes
+		}
+		NOT = {
+			event = 130148
+		}
+	}
+
+	name = "EVT_2609_NAME"
+	desc = "EVT_2609_DESC"
+	picture = "gulag"
+
+	date = { day = 11 month = june year = 1937 }
+
+	action_a = { #FEPK1.12
+		name = "ACTIONNAME2609A" #Purge the traitors!
+		ai_chance = 98 #98
+		command = { type = dissent value = 10 }
+		command = { type = manpowerpool value = -1500 }
+		command = { type = belligerence which = SOV value = 1 }
+
+		command = { type = morale which = land value = -60 } #FEPKBETA5.2
+		command = { type = max_organization which = land value = -40 }
+		command = { type = morale which = air value = -20 }
+		command = { type = max_organization which = air value = -20 }
+
+		#DHSA0.4
+		#空軍調整
+		#制空権、地上攻撃、スクランブル-70、その他-35
+		command = { type = task_efficiency which = air_superiority value = -0.7 }
+		command = { type = task_efficiency which = ground_attack value = -0.7 }
+		command = { type = task_efficiency which = air_scramble value = -0.7 }
+		command = { type = task_efficiency which = runway_cratering value = -0.35 }
+		command = { type = task_efficiency which = installation_strike value = -0.35 }
+		command = { type = task_efficiency which = interdiction value = -0.35 }
+		command = { type = task_efficiency which = naval_strike value = -0.35 }
+		command = { type = task_efficiency which = port_strike value = -0.35 }
+		command = { type = task_efficiency which = logistical_strike value = -0.35 }
+		command = { type = task_efficiency which = strategic_bombardment value = -0.35 }
+
+		command = { type = sleepleader which = 9839 } #FEPK1.12
+		command = { type = sleepleader which = 9842 }
+		command = { type = sleepleader which = 9843 }
+		command = { type = sleepleader which = 9849 }
+		command = { type = sleepleader which = 9894 }
+		command = { type = sleepleader which = 9900 }
+		command = { type = sleepleader which = 9907 }
+		command = { type = sleepleader which = 9910 }
+		command = { type = sleepleader which = 9913 }
+		command = { type = sleepleader which = 9914 }
+		command = { type = sleepleader which = 9921 }
+		command = { type = sleepleader which = 9930 }
+		command = { type = sleepleader which = 9932 }
+		command = { type = sleepleader which = 9934 }
+		command = { type = sleepleader which = 9948 }
+		command = { type = sleepleader which = 9960 }
+		command = { type = sleepleader which = 9969 }
+		command = { type = sleepleader which = 9974 }
+		command = { type = sleepleader which = 9896 }
+		command = { type = sleepleader which = 9991 }
+		command = { type = sleepleader which = 9992 }
+		command = { type = sleepleader which = 9993 }
+		command = { type = sleepleader which = 9999 }
+		command = { type = sleepleader which = 10028 }
+		command = { type = sleepleader which = 10031 }
+		command = { type = sleepleader which = 10042 }
+		command = { type = sleepleader which = 10054 }
+		command = { type = sleepleader which = 10060 }
+		command = { type = sleepleader which = 10064 }
+		command = { type = sleepleader which = 10067 }
+		command = { type = sleepleader which = 10071 }
+		command = { type = sleepleader which = 10082 }
+		command = { type = sleepleader which = 10114 }
+		command = { type = sleepleader which = 10202 }
+		command = { type = sleepleader which = 10215 }
+		command = { type = sleepleader which = 10253 }
+		command = { type = sleepleader which = 10271 }
+		command = { type = sleepleader which = 10276 }
+		command = { type = sleepleader which = 10283 }
+		command = { type = sleepleader which = 10297 }
+		command = { type = sleepleader which = 10298 }
+		command = { type = sleepleader which = 10342 }
+		command = { type = sleepleader which = 10346 }
+		command = { type = sleepleader which = 10369 }
+		command = { type = sleepleader which = 10371 }
+		command = { type = sleepleader which = 10401 }
+		command = { type = sleepleader which = 10449 }
+		command = { type = sleepleader which = 10453 }
+		command = { type = sleepleader which = 10472 }
+		command = { type = sleepleader which = 10477 }
+		command = { type = sleepleader which = 10514 }
+		command = { type = sleepleader which = 10515 }
+		command = { type = sleepleader which = 10516 }
+		command = { type = sleepleader which = 10518 }
+		command = { type = sleepleader which = 10519 }
+		command = { type = sleepleader which = 10520 }
+		command = { type = sleepleader which = 10521 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+		#command = { type = sleepleader which = -1 }
+
+		command = { type = sleepminister which = 4005 } #Yagoda
+		command = { type = sleepminister which = 4200 } #ウリツキー	#FEPKDHSA
+		command = { type = sleepminister which = 4007 } #Tukhachevsky
+		command = { type = sleepminister which = 4009 } #Orlov
+		command = { type = sleepminister which = 4010 } #Alksnis
+		command = { type = sleepminister which = 4030 } #FEPK1.12
+		command = { type = sleepminister which = 4040 } #Uritsky  #BETA修正パッチ
+		command = { type = sleepminister which = 4043 } #FEPK1.12
+		command = { type = sleepminister which = 4046 } #FEPK1.12
+		command = { type = sleepminister which = 4064 } #FEPK1.12
+		command = { type = sleepminister which = 4066 } #Smushkevich
+
+		command = { type = sleepteam which = 3706 } #Tukhachevsky
+		command = { type = sleepteam which = 3716 } #Alksnis
+
+		command = { type = ministerofsecurity which = 4039 } #Nikolai Yezhov
+		command = { type = chiefofstaff which = 4051 } #Boris M. Shaposhnikov
+		command = { type = chiefofnavy which = 4029 }
+		command = { type = chiefofair which = 4065 } #Pavel V. Rychagov
+		command = { type = ministerofintelligence which = 4006 }	#Berzin
+
+		command = { type = local_setflag which = SOVPurge1 } #FEPKBETA5.2
+		command = { type = local_setflag which = SOVPurge2 } #FEPKBETA5.2
+		command = { type = sleepevent which = 130148 }
+	}
+	action_b = {
+		name = "ACTIONNAME2609B" #No need for brutality
+		ai_chance = 2 #2
+		command = { type = dissent value = 75 }
+		command = { type = domestic which = defense_lobby value = -2 }
+		command = { type = domestic which = free_market value = -2 }
+
+		command = { type = sleepevent which = 130148 }
+	}
+}
+
+##########
+#  Danzig or War (Last chance for peace) - UK stands with Poland
+##########
+event = {
+	id = 130150
+	random = no
+	country = GER
+
+	trigger = {
+		InCabinet = 1 #AH
+		OR = { #FEPK1.12 #試験的な調整
+			event = 130112 #poland guaranteed and allied with england
+			AND = {
+				NOT = {
+					event = 130110 #Guarantee Independence to Poland
+				}
+				alliance = { country = ENG country = POL }
+			}
+		}
+		exists = POL
+		government = fascist
+		NOT = {
+			owned = { province = 303 data = GER } # Danzig
+			alliance = { country = GER country = POL }
+			war = { country = GER country = POL }
+			puppet = { country = POL country = GER }
+			ispuppet = GER
+			atwar = GER
+		}
+	}
+
+	name = "EVT_2027_NAME"
+	desc = "EVT_2027_DESC"
+
+	picture = "Danzig"
+
+	date = { day = 29 month = august year = 1939 }
+
+	action_a = {
+		name = "ACTIONNAME2027A" # Final Ultimatum - Danzig or War
+		ai_chance = 99
+		command = { type = trigger which = 3601 } #Poland responds
+		command = { type = relation which = ENG value = -30 }
+		command = { type = relation which = FRA value = -30 }
+		command = { type = addcore which = 303 }
+	}
+	action_b = {
+		name = "ACTIONNAME2027B" # Time to back down
+		ai_chance = 1
+		command = { type = domestic which = defense_lobby value = -1 }
+		command = { type = domestic which = interventionism value = -1 }
+	}
+}
+
+##########
+#  130160-130199 - American events
+#########
+# Dust Bowl
+event = {
+	id = 130160
+	random = no
+	country = USA
+	trigger = {
+			random = 1
+			region = { region = "Midwest US" country = -1 value = 80 }
+	}
+	name = "EVT_130160_NAME"	#ダストボウル
+	desc = "EVT_130160_DESC"	#『ダストボウル（英：Dust Bowl）』とは、1931年から1939年にかけてグレートプレーンズ（英：Great Plains、北米大陸中西部、米国からカナダにまたがるロッキー山脈の東側とプレーリーの間を南北に広がる台地状の大平原）広域で断続的に発生した砂嵐である。天災というよりは人災に近く、何十年にもわたる不適当な農業技術が原因であった。過剰なスキ込みによって表土を保つ草が除去され、グレートプレーンズの肥沃土が曝され、日照りが続くと土は乾燥して土埃になり、それが風に乗って東方へと吹き飛ばされて巨大な黒雲となった。黒雲は遙かシカゴの空まで暗くし、表土の大部分は完全に大西洋へと失われていったのだ。
+	
+	style = 2
+	date = { day = 0 month = january year = 1934 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1939 }
+	picture = "dust_bowl"
+	action = {
+		name = "EVT_130160_ACTA"	#農家への支援を行わねばらない
+		command = { type = dissent value = 5 }
+		command = { type = money value = -100 }
+	}
+}
+
+#########
+#  1938ルーズベルト不況（from HEAM）
+#########
+event = {
+	id = 130170
+	random = no
+	country = USA
+	style = 0
+
+	trigger = {
+		atwar = no
+		headofstate = 6001
+	}
+
+	name = "EVT_130170_NAME"	#ニューディール政策の功罪 ― 連邦政府の財政赤字
+	desc = "EVT_130170_DESC"	#
+
+	date = { day = 0 month = october year = 1937 }
+
+	action_a = { ai_chance = 90
+		name = "EVT_130170_ACTA"	#財政引締を行い、赤字を補填しよう
+		command = { type = money value = 1000 }
+		command = { type = domestic which = free_market value = 1 }
+		command = { type = trigger which = 130171 }
+	}
+	action_b = {	ai_chance = 10
+		name = "EVT_130170_ACTB"	#支出の拡大路線を継続しよう
+		command = { type = money value = -1000 }
+		command = { type = trigger which = 130172 }
+	}
+}
+
+event = {
+	id = 130171
+	random = no
+	country = USA
+	style = 0
+
+	name = "EVT_130171_NAME"	#ルーズベルト不況
+	desc = "EVT_130171_DESC"	#
+
+	action_a = {
+		name = "ACTION_NAME_DAMN"
+		command = { type = peacetime_ic_mod value = -5 }
+		command = { type = dissent value = 10 }
+	}
+}
+
+event = {
+	id = 130172
+	random = no
+	country = USA
+	style = 0
+
+	name = "EVT_130172_NAME"	#支出拡大政策の堅持
+	desc = "EVT_130172_DESC"	#
+
+	action_a = {
+		name = "EVT_130172_ACTA"	#赤字は経済成長で補填できるだろう
+		command = { type = dissent value = 3 } #赤字を忌避する世論
+		command = { type = industrial_modifier which = total value = 3 }
+	}
+}
+
+event = {
+	id = 130173
+	random = no
+	country = USA
+	style = 0
+
+	trigger = {	event = 130171	}
+
+	name = "EVT_130173_NAME"	#積極財政路線への回帰
+	desc = "EVT_130173_DESC"	#
+
+	date = { day = 0 month = october year = 1938 }
+
+	action_a = {
+		name = "EVT_130173_ACTA"	#政府による経済刺激を再開する
+		command = { type = money value = -1000 }
+		command = { type = domestic which = free_market value = -1 }
+		command = { type = peacetime_ic_mod value = 5 }
+	}
+}
+
+##########
+#  Arsenal of Democracy
+##########
+event = {
+	id = 130174
+	random = no
+	country = USA
+
+	name = EVT_32_NAME
+	desc = EVT_32_DESC
+    picture = "war"
+	style = 0
+
+	trigger = {
+		#government = democratic
+		OR = {
+			atwar = yes
+			AND = {
+				atwar = no
+				war = { country = GER country = ENG }
+           		event = 130423 # Vichy France
+           		random = 25
+			}
+			AND = {
+				atwar = no
+				NOT = { control = { province = 19 data = ENG } }
+			}
+		}
+	}
+
+
+        date = { day = 1 month = january year = 1936 }
+        offset = 30
+		deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		ai_chance = 99
+		name = EVT_32_ACTA
+		command = { type = relation which = ENG value = 5 }
+		command = { type = relation which = GER value = -10 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = build_time which = land when = on_upgrade where = relative value = -10 }	#was 20
+		command = { type = build_cost which = land when = on_upgrade where = relative value = -10 }
+		command = { type = build_time which = naval when = on_upgrade where = relative value = -10 }
+		command = { type = build_cost which = naval when = on_upgrade where = relative value = -10 }
+		command = { type = build_time which = air when = on_upgrade where = relative value = -10 }
+		command = { type = build_cost which = air when = on_upgrade where = relative value = -10 }
+	}
+	action_b = {
+		ai_chance = 1
+		name = EVT_32_ACTB
+		command = { type = domestic which = interventionism value = -1 }
+
+	}
+}
+
+##########
+#  Destroyers for Bases - USA
+##########
+event = {
+	id = 130175
+	random = no
+	country = USA
+
+	name = EVT_30_NAME
+	desc = EVT_30_DESC
+
+	picture = "dd_transfer"
+
+	trigger = {
+		atwar = no
+		war = { country = GER country = ENG }
+		OR = { #BETA修正パッチ
+			control = { province = 56 data = GER } #Paris
+			control = { province = 56 data = VIC } #Paris
+		}
+	}
+
+	date = { day = 2 month = september year = 1940 } #historic date
+
+	action_a = {
+		ai_chance = 98
+		name = EVT_30_ACTA
+		command = { type = manpowerpool value = 5 } #manpower recovered
+		command = { type = escort_pool which = USA value = -50 }
+		command = { type = relation which = ENG value = 10 }
+		command = { type = trigger which = 130176 }
+	}
+	action_b = {
+		ai_chance = 2
+		name = EVT_30_ACTB
+		command = { type = relation which = ENG value = -10 }
+	}
+}
+##########
+#  Destroyers for Bases - UK
+##########
+event = {
+	id = 130176
+	random = no
+	country = ENG
+
+	name = EVT_31_NAME
+	desc = EVT_31_DESC
+
+	picture = "dd_transfer"
+
+	action_a = {
+		name = EVT_31_ACTA
+		command = { type = manpowerpool value = -5 } #ships are free, crew isn't
+		#command = { type = access which = USA }
+		command = { type = secedeprovince which = USA value = 538 } # Bermuda
+		command = { type = secedeprovince which = USA value = 758 } # Belize
+		command = { type = secedeprovince which = USA value = 891 } # Jamaica
+		command = { type = secedeprovince which = USA value = 652 } # Andros
+		command = { type = secedeprovince which = USA value = 653 } # Abacos
+		command = { type = secedeprovince which = USA value = 664 } # Grand Bahama
+		command = { type = secedeprovince which = USA value = 665 } #
+		command = { type = secedeprovince which = USA value = 666 } #
+		command = { type = secedeprovince which = USA value = 668 } #
+		command = { type = secedeprovince which = USA value = 896 } #
+		command = { type = secedeprovince which = USA value = 897 } #
+		command = { type = secedeprovince which = USA value = 805 } #
+		command = { type = secedeprovince which = USA value = 806 } #
+		command = { type = secedeprovince which = USA value = 807 } #
+		command = { type = secedeprovince which = USA value = 808 } #
+		command = { type = secedeprovince which = USA value = 809 } #
+		command = { type = secedeprovince which = USA value = 871 } #
+		command = { type = secedeprovince which = USA value = 873 } #
+		command = { type = secedeprovince which = USA value = 801 } #dutch stuff
+		command = { type = secedeprovince which = USA value = 874 } #
+		command = { type = escort_pool which = ENG value = 50 }
+	}
+}
+##########
+#  The Undeclared War
+##########
+event = {
+	id = 130177
+	random = no
+	country = USA
+
+	trigger = {
+		atwar = no
+		exists = GER #FEPK1.11
+		OR = {
+			AND = {
+				event = 130176
+				war = {
+					country = GER country = ENG
+				}
+			}
+			NOT = {
+				control = { province = 19 data = ENG }
+			}
+		}
+	}
+
+	date = { day = 1 month = september year = 1941 }
+
+	name = EVT_33_NAME
+	desc = EVT_33_DESC
+	picture = "war"
+
+
+	action_a = {
+		ai_chance = 97
+		name = "EVT_33_ACTA"
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = relation which = GER value = -20 }
+		command = { type = belligerence which = USA value = 1 } #badasses
+	}
+	action_b = {
+		ai_chance = 3
+		name = EVT_33_ACTB
+		command = { }
+	}
+}
+##########
+#  War between Peru and Ecuador - Peru
+##########
+event = {
+	id = 130178
+	random = no
+	country = PRU
+
+	name = EVT_96_NAME
+	desc = EVT_96_DESC
+
+	picture = "PRU_ECU2"
+
+	trigger = {
+		exists = ECU
+		control = { province = 818 data = ECU } #Iquitos
+		NOT = {
+			war = { country = ECU country = PRU }
+		}
+	}
+
+	date = { day = 5 month = july year = 1941 } #historic date
+
+	action_a = {
+		name = "EVT_96_ACTA" # "We want our rightful land!"
+		ai_chance = 95
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = relation which = ECU value = -30 }
+		command = { type = relation which = COL value = -20 }
+		command = { type = belligerence which = PRU value = 5 }
+		command = { type = trigger which = 130179 }
+	}
+	action_b = {
+		name = "EVT_130178_ACTB" # "We have no interest in worthless territory"
+		ai_chance = 5
+		command = { }
+	}
+}
+##########
+#  War between Peru and Ecuador - Ecuador
+##########
+event = {
+	id = 130179
+	random = no
+	country = ECU
+
+	name = EVT_97_NAME
+	desc = EVT_97_DESC
+
+	picture = "PRU_ECU2"
+
+	action_a = {
+		name = "EVT_97_ACTB" # "We will never give up our sacred territory!"
+		ai_chance = 95
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = secedeprovince which = PRU value = 818 } #Iquitos
+		command = { type = war which = PRU }
+		command = { type = dissent value = -20 }
+		command = { type = belligerence which = ECU value = -25 }
+		command = { type = trigger which = 130180 }
+	}
+	action_b = {
+		name = "EVT_97_ACTA" # "A jungle is not worth spilled blood"
+		ai_chance = 5
+		command = { type = secedeprovince which = PRU value = 818 } #Iquitos
+		command = { type = dissent value = 5 }
+		command = { type = relation which = PRU value = -20 }
+		command = { type = sleepevent which = 130180 }
+	}
+}
+##########
+#  War between Peru and Ecuador - Colombian Intervention
+##########
+event = {
+	id = 130180
+	random = no
+	country = COL
+
+	name = EVT_98_NAME
+	desc = EVT_98_DESC
+
+	picture = "PRU_ECU2"
+
+	action_a = {
+		ai_chance = 95
+		name = "EVT_98_ACTA"
+		command = { }
+	}
+	action_b = {
+		ai_chance = 5
+		name = "EVT_98_ACTB"
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = war which = PRU }
+		command = { type = dissent value = -5 }
+		#command = { type = belligerence which = ECU value = -20 }
+		command = { type = alliance which = ECU }
+	}
+}
+##########
+#  Loreto Seized by Peru
+##########
+event = { 
+	id = 130181
+	random = no
+	country = ECU
+
+	trigger = {
+		#control = { province = 818 data = PRU } #Iquitos
+		garrison = { country = PRU province = 818  type = land size = 1 area = no }
+		war = { country = ECU country = PRU }
+		event = 130179
+	}
+
+	date = { day = 5 month = july year = 1941 } #historic date
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130181_NAME" # "Loreto Seized by Peru"
+	desc = "EVT_97_DESC"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "EVT_130181_ACTA"
+		ai_chance = 100
+		command = { type = secedeprovince which = PRU value = 818 } #just incase
+		command = { type = dissent value = 5 }
+	}
+}
+##########
+#  End of Peru-Ecuador War
+##########
+event = { 
+	id = 130182
+	random = no
+	country = PRU
+
+	trigger = {
+		war = { country = ECU country = PRU }
+		event = 130179
+	}
+
+	date = { day = 29 month = july year = 1941 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130182_NAME" # "Protocolo de Rio de Janeiro"
+	desc = "EVT_130182_DESC"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "EVT_130182_ACTA" # "Sign the treaty"
+		ai_chance = 100
+		command = { type = leave_alliance }
+		command = { type = peace which = ECU value = 1 }
+		command = { type = non_aggression which = PRU where = ECU }
+		command = { type = sleepevent which = 130181 } #seizure
+	}
+	action_b = {
+		name = "EVT_130182_ACTB" # "Total conquest is preferable"
+		ai_chance = 0
+		command = { type = dissent value = 20 }
+	}
+}
+##########
+#  US occupation of Greenland and Iceland
+##########
+event = {
+	id = 130183
+	random = no
+	country = USA
+
+	trigger = {
+		control = { province = 800 data = ENG }
+		control = { province = 1 data = ENG }
+		control = { province = 2 data = ENG }
+		NOT = {		
+			OR = {
+				alliance = { country = USA country = GER }
+				alliance = { country = USA country = SOV }
+			} 
+		}
+	}
+
+	name = "EVT_3705_NAME"
+	desc = "EVT_3705_DESC"
+	picture = "troops_greenland"
+
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1947 }
+
+	action_a = {
+		name = "OK" # "OK"
+		command = { type = trigger which = 130184 } #ENG
+		#command = { type = addcore which = 1 }
+		#command = { type = addcore which = 2 }
+		#command = { type = addcore which = 800 }
+	}
+}
+##########
+#  US Occupation of Iceland and Greenland
+##########
+event = { 
+	id = 130184
+	random = no
+	country = ENG
+
+	name = "EVT_3900_NAME"
+	desc = "EVT_3900_DESC"
+	picture = "american_soldiers_winter"
+
+
+	action_a = {
+		name = "OK" # "OK"
+		command = { type = secedeprovince which = USA value = 800 } # Gothab
+		command = { type = secedeprovince which = USA value = 1 } # Reykjavik
+		command = { type = secedeprovince which = USA value = 2 } # Akureyri
+		command = { type = relation which = GER value = -10 }
+		command = { type = relation which = USA value = 10 }
+	}
+}
+##########
+#  Spoils from Czechoslovakia to Hungary - GER
+##########
+event = {
+	id = 130185
+	random = no
+	country = GER
+
+	trigger = {
+		NOT = { exists = SLO }
+		NOT = { exists = CZE }
+		OR = {
+			control = { province = 476 data = GER }
+			control = { province = 477 data = GER }
+			control = { province = 478 data = GER }
+			control = { province = 490 data = GER }
+			control = { province = 499 data = GER }
+		}
+		alliance = { country = GER country = HUN }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_2501_NAME"
+	desc = "EVT_2501_DESC"
+       picture = "slovakia"
+	style = 0
+
+	action_a = {
+		name = "OK" # "Excellent"
+		ai_chance = 100
+		command = { type = addcore which = 467 } #5 Sudetenland provinces
+		command = { type = addcore which = 466 }
+		command = { type = addcore which = 471 }
+		command = { type = addcore which = 472 }
+		command = { type = addcore which = 474 }
+		command = { type = addcore which = 470 } #The rest of the Czech Republic
+		command = { type = addcore which = 468 }
+		command = { type = addcore which = 469 }
+		command = { type = addcore which = 475 }
+		command = { type = secedeprovince which = HUN value = 476 } #Bratislava
+		command = { type = secedeprovince which = HUN value = 477 } #Banska
+		command = { type = secedeprovince which = HUN value = 478 } #Zilina
+		command = { type = secedeprovince which = HUN value = 490 } #Kosice
+		command = { type = secedeprovince which = HUN value = 499 } #Presov
+		command = { type = trigger which = 130186 }
+	}
+}
+##########
+#  Spoils from Czechoslovakia to Hungary - HUN
+##########
+event = {
+	id = 130186
+	random = no
+	country = HUN
+
+	name = "EVT_2501_NAME"
+	desc = "EVT_2501_DESC"
+       picture = "slovakia"
+	style = 0
+
+	action_a = {
+		name = "OK" # "Excellent"
+		ai_chance = 100
+		command = { type = addcore which = 476 } #slovakia
+		command = { type = addcore which = 477 }
+		command = { type = addcore which = 478 }
+		command = { type = addcore which = 490 }
+	}
+}
+##########
+#  Spoils from Czechoslovakia to Austria - GER
+##########
+event = {
+	id = 130187
+	random = no
+	country = GER
+
+	trigger = {
+		NOT = { exists = SLO }
+		NOT = { exists = CZE }
+		OR = {
+			control = { province = 475 data = GER } #Brno
+			control = { province = 468 data = GER } #Kunta Hora
+			control = { province = 469 data = GER } #Prague
+			control = { province = 470 data = GER } #Pilsen
+		}
+		alliance = { country = GER country = AUS }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130187_NAME"
+	desc = "EVT_2501_DESC"
+       picture = "slovakia"
+	style = 0
+
+	action_a = {
+		name = "OK" # "Excellent"
+		ai_chance = 100
+		command = { type = removecore which = 467 } #1.09
+		command = { type = secedeprovince which = AUS value = 467 } #
+		command = { type = secedeprovince which = AUS value = 475 } #
+		command = { type = secedeprovince which = AUS value = 468 } #
+		command = { type = secedeprovince which = AUS value = 469 } #
+		command = { type = secedeprovince which = AUS value = 470 } #
+		command = { type = trigger which = 130188 }
+	}
+}
+##########
+#  Spoils from Czechoslovakia to Austria - AUS
+##########
+event = {
+	id = 130188
+	random = no
+	country = AUS
+
+	name = "EVT_130187_NAME"
+	desc = "EVT_2501_DESC"
+	picture = "slovakia"
+	style = 0
+
+	action_a = {
+		name = "OK" # "Excellent"
+		ai_chance = 100
+		command = { type = addcore which = 470 } #The rest of the Czech Republic
+		command = { type = addcore which = 468 }
+		command = { type = addcore which = 469 }
+		command = { type = addcore which = 475 }
+	}
+}
+
+##########
+#  The Molotov-Ribbentrop Pact - Alternate
+##########
+event = {
+	id = 130199
+	random = no
+	country = GER
+
+	trigger = {
+		exists = SOV
+		exists = POL
+		war = { country = POL country = GER }
+		OR = {
+			war = { country = CZE country = GER }
+			event = 130130 #The End of Czechoslovakia - Czecho-Slovakia partitioned
+			event = 130131 #The End of Czechoslovakia - Czechs fight!
+			exists = SLO
+		}
+		NOT = {
+			war = { country = SOV country = GER }
+			alliance = { country = SOV country = POL }
+			alliance = { country = GER country = POL }
+			alliance = { country = GER country = SOV }
+			ispuppet = GER
+			ispuppet = SOV
+			ispuppet = POL
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 4
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_2050_NAME"
+	desc = "EVT_2050_DESC"
+	picture = "Mol_Rib"
+
+	action_a = {
+		name = "ACTIONNAME2050A"
+		ai_chance = 95
+		command = { type = addcore which = 303 }
+		command = { type = trigger which = 130137 } # SOV
+		command = { type = relation which = SOV value = 15 }
+		command = { type = set_relation which = EST value = -75 }
+		command = { type = set_relation which = LAT value = -75 }
+		command = { type = set_relation which = LIT value = -75 }
+		command = { type = trigger which = 51 } # UK Gears up for war
+		command = { type = trigger which = 52 } # France Gears up for war
+		command = { type = sleepevent which = 130136 } #FEPKBETA4.91
+	}
+	action_b = {
+		name = "ACTIONNAME2050B"
+		ai_chance = 4
+		command = { type = addcore which = 303 }
+		command = { type = trigger which = 130140 } # SOV
+		command = { type = relation which = SOV value = 10 }
+		command = { type = dissent value = 5 }
+		command = { type = trigger which = 51 } # UK Gears up for war
+		command = { type = trigger which = 52 } # France Gears up for war
+		command = { type = sleepevent which = 2620 }
+		command = { type = sleepevent which = 130136 } #FEPKBETA4.91
+	}
+	action_c = {
+		name = "ACTIONNAME2050C" # "No deals with the Bolsheviks!"
+		ai_chance = 1
+		command = { type = addcore which = 303 }
+		command = { type = relation which = SOV value = -20 }
+		command = { type = relation which = FIN value = 75 }
+		command = { type = relation which = HUN value = 75 }
+		command = { type = relation which = ROM value = 50 }
+		command = { type = sleepevent which = 2620 }
+		command = { type = dissent value = 10 }
+		command = { type = sleepevent which = 130136 } #FEPKBETA4.91
+	}
+}

@@ -1,0 +1,56 @@
+###################################
+# Diplomacy
+###################################
+combat = {
+	CHC = 150
+	CSX = 150
+	SIK = 150
+	CXB = 150
+	CYN = 150
+	CGX = 150
+	TIB = 150
+}
+demand_claims = {
+	CHC
+	CSX
+	SIK
+	CXB
+	CYN
+	CGX
+	TIB
+	SOV
+	MON
+	POR
+	ENG
+}
+befriend = {
+	JAP = 100
+	GER = 100
+}
+target = { }
+trade = {
+	cancel_deal_threshold = 2
+
+	energy 		= -1
+	rare_materials 	= -1
+	metal 		= -1
+	oil 		= -1
+	supplies 	= -1
+	money 		= -1
+
+	favored = {
+		JAP = 150
+	}
+	embargo = {
+		CHC 
+	}
+}
+tech_sharing = {
+	favored = {
+		GER = 100
+		JAP = 70
+	}
+	embargo = { }
+	not = { }
+	prioritized = {	}
+}

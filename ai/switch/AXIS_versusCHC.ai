@@ -1,0 +1,105 @@
+# German operation Barbarosa Invasion AI File by Lothos
+
+
+max_front_ratio = 1.5
+max_front_ratios = {
+	CHC = 3.0
+}
+max_garrison_prop = 0.80
+min_garrison_prop = 0.70
+no_exp_forces_to = { JAP SIA MAN }
+exp_force_ratio = 0.5
+
+###################################
+# Diplomacy
+###################################
+combat = {
+	CHC = 300
+}
+
+###################################
+# Ground Combat, Leaders and Garrisons
+###################################
+
+invasion = { 
+ 	base		= 0.1	#Relative modifier. (lower = specific targets much more important.)
+	random		= 10.0	#How big a random range.  (1.0 = 1%)
+	coastal		= 0.1	#increase to avoid coastal forts more.
+	beach		= 0.1	#higher, avoid worst beaches.
+	distance	= 0.1	#higher = avoid long distance.
+	max_distance    = 25.0  #About the distance from Rostock to Narvik
+	pocket		= 1.0	#prioritise pockets, ie provinces with no adjacent controlled by same.
+	island		= 0.1	#prioritise taking pure islands.
+	enemy		= 2.0	#higher = much more vary of troops in province.
+	adjacentenemy 	= 2.0	#higher = much more vary of troops nearby
+	air_base	= 1.5 
+      	naval_base 	= 0.1 
+      	air_support 	= 3.0 
+	invasion	= yes
+	ignore		= yes
+      	redirect 	= priority
+
+	target = { 
+		#Norway
+		107 = 1000 # Oslo
+		108 = 1000 # Kristiansan
+		109 = 1000 # Stavanger
+		110 = 1000 # Bergen
+		125 = 1000 # Narvik
+		117 = 1000 # Alesund
+		118 = 1000 # Trondheim
+		124 = 1000 # Mo I Ran
+
+		28 = -1
+	} 
+}
+
+admiral = { 
+	ignore = {
+		# South Atlantic
+		"Coast of Brazil"
+		"Cap Verde"
+		"Gulf of Guinea"
+		"Coast of Africa"
+		"Coast of Bissao"
+		"Guiana Basin"
+		"South-Central Mid-Atlantic Ridge"
+		"Atlantic-Indian Ridge"
+		"Coast of South Africa"
+		"Coast of Angola-Namibia"
+		"Angola Plain"
+		"Argentine Plain"
+		"Coast of Argentina"
+		"Coast of Uruguay"
+		"Coast of Guyana"
+		"Coast of Recife"
+		"Pernambuco Plain"
+		"Ascension Fracture Zone"
+
+		# Caribbean
+		"Yucatan Strait"
+		"Central Carribean"
+		"Windward Islands"
+		"West Gulf of Mexico"
+		"East Gulf of Mexico"
+		"Florida Strait"
+	}
+	target = {
+		2188 = 200
+		2189 = 200
+		2190 = 200
+		2186 = 150
+		2263 = 100
+		2158 = 100
+		2156 = 100
+	} 
+	core = {
+		2589
+		2193
+		2187
+		2192
+		2194
+		2213
+		2185
+	} 
+}

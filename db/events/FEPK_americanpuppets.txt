@@ -1,0 +1,2556 @@
+#########################################################################
+#	FEPK_americanpuppets.txt
+#	アメリカ傀儡国関連イベント
+#########################################################################
+#id = 133400-59		米国の傀儡国成立処理
+#id = 133460-99		米国の傀儡国判定消失処理
+#########################################################################
+##########
+#  American Capture and Puppet Events
+##########
+##########
+#  USA captures Warsaw
+##########
+event = {
+	id = 133400
+	random = no 
+	country = USA
+	persistent = yes
+
+	trigger = {
+		control = { province = 485 data = USA } #Warsaw
+		NOT = { flag = americanpoland }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133400_NAME"
+	desc = "EVT_133400_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133400_ACTA"
+		command = { type = setflag which = americanpoland }
+	}
+}
+##########
+#  USA allies Poland
+##########
+event = {
+	id = 133401
+	random = no
+	country = USA
+
+	trigger = {
+		exists = POL
+		flag = americanpoland
+		NOT = { exists = GER }
+		NOT = { alliance = { country = USA country = POL } }
+		NOT = { war = { country = USA country = POL } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133401_NAME"
+	desc = "EVT_133401_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133401_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = POL } #
+		command = { type = clrflag which = americanpoland }
+	}
+	action_b = {
+		name = "EVT_133401_ACTB"
+		ai_chance = 0
+		command = { type = relation which = SOV value = 5 }
+		command = { type = clrflag which = americanpoland }
+	}
+}
+##########
+#  USA captures Prague
+##########
+event = {
+	id = 133402
+	random = no 
+	country = USA
+	persistent = yes
+
+	trigger = {
+		control = { province = 469 data = USA } #Prague
+		NOT = { flag = americanczechoslovakia }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133402_NAME"
+	desc = "EVT_133402_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133402_ACTA"
+        	command = { type = setflag which = americanczechoslovakia }
+	}
+}
+##########
+#  USA allies Czechoslovakia
+##########
+event = {
+	id = 133403
+	random = no 
+	country = USA
+
+	trigger = {
+		exists = CZE
+		flag = americanczechoslovakia
+		NOT = { exists = GER }
+		NOT = { alliance = { country = USA country = CZE } }
+		NOT = { war = { country = USA country = CZE } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133403_NAME"
+	desc = "EVT_133403_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133403_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = CZE } #
+		command = { type = clrflag which = americanczechoslovakia }
+	}
+	action_b = {
+		name = "EVT_133403_ACTB"
+		ai_chance = 0
+		command = { type = relation which = SOV value = 5 }
+		command = { type = clrflag which = americanczechoslovakia }
+	}
+}
+##########
+#  USA captures Budapest
+##########
+event = {
+	id = 133404
+	random = no 
+	country = USA
+	persistent = yes
+
+	trigger = {
+		control = { province = 457 data = USA } #Budapest
+		NOT = { flag = americanhungary }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133404_NAME"
+	desc = "EVT_133404_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133404_ACTA"
+        	command = { type = setflag which = americanhungary }
+	}
+}
+##########
+#  USA allies Hungary
+##########
+event = {
+	id = 133405
+	random = no 
+	country = USA
+
+	trigger = {
+		exists = HUN
+		flag = americanhungary
+		NOT = { exists = GER }
+		NOT = { alliance = { country = USA country = HUN } }
+		NOT = { war = { country = USA country = HUN } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133405_NAME"
+	desc = "EVT_133405_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133405_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = HUN } #
+		command = { type = clrflag which = americanhungary }
+	}
+	action_b = {
+		name = "EVT_133405_ACTB"
+		ai_chance = 0
+		command = { type = relation which = SOV value = 5 }
+		command = { type = clrflag which = americanhungary }
+	}
+}
+##########
+#  USA captures Bucharest
+##########
+event = {
+	id = 133406
+	random = no 
+	country = USA
+	persistent = yes
+
+	trigger = {
+		control = { province = 424 data = USA } #Bucharest
+		NOT = { flag = americanromania }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133406_NAME"
+	desc = "EVT_133406_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133406_ACTA"
+        	command = { type = setflag which = americanromania }
+	}
+}
+##########
+#  USA allies Romania
+##########
+event = {
+	id = 133407
+	random = no 
+	country = USA
+
+	trigger = {
+		exists = ROM
+		flag = americanromania
+		NOT = { exists = GER }
+		NOT = { alliance = { country = USA country = ROM } }
+		NOT = { war = { country = USA country = ROM } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133407_NAME"
+	desc = "EVT_133407_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133407_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = ROM } #
+		command = { type = clrflag which = americanromania }
+	}
+	action_b = {
+		name = "EVT_133407_ACTB"
+		ai_chance = 0
+		command = { type = relation which = SOV value = 5 }
+		command = { type = clrflag which = americanromania }
+	}
+}
+##########
+#  USA captures Sofia
+##########
+event = {
+	id = 133408
+	random = no 
+	country = USA
+	persistent = yes
+
+	trigger = {
+		control = { province = 417 data = USA } #Sofia
+		NOT = { flag = americanbulgaria }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133408_NAME"
+	desc = "EVT_133408_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133408_ACTA"
+        	command = { type = setflag which = americanbulgaria }
+	}
+}
+##########
+#  USA allies Bulgaria
+##########
+event = {
+	id = 133409
+	random = no 
+	country = USA
+
+	trigger = {
+		exists = BUL
+		flag = americanbulgaria
+		NOT = { exists = GER }
+		NOT = { alliance = { country = USA country = BUL } }
+		NOT = { war = { country = USA country = BUL } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133409_NAME"
+	desc = "EVT_133409_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133409_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = BUL } #
+		command = { type = clrflag which = americanbulgaria }
+	}
+	action_b = {
+		name = "EVT_133409_ACTB"
+		ai_chance = 0
+		command = { type = relation which = SOV value = 5 }
+		command = { type = clrflag which = americanbulgaria }
+	}
+}
+##########
+#  USA captures Oslo
+##########
+event = {
+	id = 133410
+	random = no 
+	country = USA
+	persistent = yes
+
+	trigger = {
+		control = { province = 107 data = USA } #Oslo
+		NOT = { flag = americannorway }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133410_NAME"
+	desc = "EVT_133410_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133410_ACTA"
+        	command = { type = setflag which = americannorway }
+	}
+}
+##########
+#  USA allies Norway
+##########
+event = {
+	id = 133411
+	random = no 
+	country = USA
+
+	trigger = {
+		exists = NOR
+		flag = americannorway
+		NOT = { exists = GER }
+		NOT = { alliance = { country = USA country = NOR } }
+		NOT = { war = { country = USA country = NOR } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133411_NAME"
+	desc = "EVT_133411_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133411_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = NOR } #
+		command = { type = clrflag which = americannorway }
+	}
+	action_b = {
+		name = "EVT_133411_ACTB"
+		ai_chance = 0
+		command = { type = relation which = SOV value = 5 }
+		command = { type = clrflag which = americannorway }
+	}
+}
+##########
+#  USA captures Stockholm
+##########
+event = {
+	id = 133412
+	random = no 
+	country = USA
+	persistent = yes
+
+	trigger = {
+		control = { province = 101 data = USA } #Stockholm
+		NOT = { flag = americansweden }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133412_NAME"
+	desc = "EVT_133412_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133412_ACTA"
+        	command = { type = setflag which = americansweden }
+	}
+}
+##########
+#  USA allies Sweden
+##########
+event = {
+	id = 133413
+	random = no 
+	country = USA
+
+	trigger = {
+		exists = SWE
+		flag = americansweden
+		NOT = { exists = GER }
+		NOT = { alliance = { country = USA country = SWE } }
+		NOT = { war = { country = USA country = SWE } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133413_NAME"
+	desc = "EVT_133413_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133413_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = SWE } #
+		command = { type = clrflag which = americansweden }
+	}
+	action_b = {
+		name = "EVT_133413_ACTB"
+		ai_chance = 0
+		command = { type = relation which = SOV value = 5 }
+		command = { type = clrflag which = americansweden }
+	}
+}
+##########
+#  USA captures Copenhagen
+##########
+event = {
+	id = 133414
+	random = no 
+	country = USA
+	persistent = yes
+
+	trigger = {
+		control = { province = 294 data = USA } #Copenhagen
+		NOT = { flag = americandenmark }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133414_NAME"
+	desc = "EVT_133414_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133414_ACTA"
+        	command = { type = setflag which = americandenmark }
+	}
+}
+##########
+#  USA allies Denmark
+##########
+event = {
+	id = 133415
+	random = no 
+	country = USA
+
+	trigger = {
+		exists = DEN
+		flag = americandenmark
+		NOT = { exists = GER }
+		NOT = { alliance = { country = USA country = DEN } }
+		NOT = { war = { country = USA country = DEN } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133415_NAME"
+	desc = "EVT_133415_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133415_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = DEN } #
+		command = { type = clrflag which = americandenmark }
+	}
+	action_b = {
+		name = "EVT_133415_ACTB"
+		ai_chance = 0
+		command = { type = relation which = SOV value = 5 }
+		command = { type = clrflag which = americandenmark }
+	}
+}
+##########
+#  USA captures Vienna
+##########
+event = {
+	id = 133416
+	random = no 
+	country = USA
+	persistent = yes
+
+	trigger = {
+		control = { province = 463 data = USA } #Vienna
+		NOT = { flag = americanaustria }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133416_NAME"
+	desc = "EVT_133416_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133416_ACTA"
+        	command = { type = setflag which = americanaustria }
+	}
+}
+##########
+#  USA allies Austria
+##########
+event = {
+	id = 133417
+	random = no 
+	country = USA
+
+	trigger = {
+		exists = AUS
+		flag = americanaustria
+		NOT = { exists = GER }
+		NOT = { alliance = { country = USA country = AUS } }
+		NOT = { war = { country = USA country = AUS } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133417_NAME"
+	desc = "EVT_133417_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133417_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = AUS } #
+		command = { type = clrflag which = americanaustria }
+	}
+	action_b = {
+		name = "EVT_133417_ACTB"
+		ai_chance = 0
+		command = { type = relation which = SOV value = 5 }
+		command = { type = clrflag which = americanaustria }
+	}
+}
+##########
+#  USA captures Athens
+##########
+event = {
+	id = 133418
+	random = no 
+	country = USA
+	persistent = yes
+
+	trigger = {
+		control = { province = 401 data = USA } #Athens
+		NOT = { flag = americangreece }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133418_NAME"
+	desc = "EVT_133418_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133418_ACTA"
+        	command = { type = setflag which = americangreece }
+	}
+}
+##########
+#  USA allies Greece
+##########
+event = {
+	id = 133419
+	random = no 
+	country = USA
+
+	trigger = {
+		exists = GRE
+		flag = americangreece
+		NOT = { exists = GER }
+		NOT = { alliance = { country = USA country = GRE } }
+		NOT = { war = { country = USA country = GRE } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133419_NAME"
+	desc = "EVT_133419_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133419_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = GRE } #
+		command = { type = clrflag which = americangreece }
+	}
+	action_b = {
+		name = "EVT_133419_ACTB"
+		ai_chance = 0
+		command = { type = relation which = SOV value = 5 }
+		command = { type = clrflag which = americangreece }
+	}
+}
+##########
+#  USA captures Brussels
+##########
+event = {
+	id = 133420
+	random = no 
+	country = USA
+	persistent = yes
+
+	trigger = {
+		control = { province = 51 data = USA } #Brussels
+		NOT = { flag = americanbelgium }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133420_NAME"
+	desc = "EVT_133420_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133420_ACTA"
+        	command = { type = setflag which = americanbelgium }
+	}
+}
+##########
+#  USA allies Belgium
+##########
+event = {
+	id = 133421
+	random = no 
+	country = USA
+
+	trigger = {
+		exists = BEL
+		flag = americanbelgium
+		NOT = { exists = GER }
+		NOT = { alliance = { country = USA country = BEL } }
+		NOT = { war = { country = USA country = BEL } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133421_NAME"
+	desc = "EVT_133421_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133421_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = BEL } #
+		command = { type = clrflag which = americanbelgium }
+	}
+	action_b = {
+		name = "EVT_133421_ACTB"
+		ai_chance = 0
+		command = { type = relation which = SOV value = 5 }
+		command = { type = clrflag which = americanbelgium }
+	}
+}
+##########
+#  USA captures Amsterdam
+##########
+event = {
+	id = 133422
+	random = no 
+	country = USA
+	persistent = yes
+
+	trigger = {
+		control = { province = 47 data = USA } #Amsterdam
+		NOT = { flag = americanholland }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133422_NAME"
+	desc = "EVT_133422_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133422_ACTA"
+        	command = { type = setflag which = americanholland }
+	}
+}
+##########
+#  USA allies Holland
+##########
+event = {
+	id = 133423
+	random = no 
+	country = USA
+
+	trigger = {
+		exists = HOL
+		flag = americanholland
+		NOT = { exists = GER }
+		NOT = { alliance = { country = USA country = HOL } }
+		NOT = { war = { country = USA country = HOL } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133423_NAME"
+	desc = "EVT_133423_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133423_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = HOL } #
+		command = { type = clrflag which = americanholland }
+	}
+	action_b = {
+		name = "EVT_133423_ACTB"
+		ai_chance = 0
+		command = { type = relation which = SOV value = 5 }
+		command = { type = clrflag which = americanholland }
+	}
+}
+##########
+#  USA captures Luxembourg
+##########
+event = {
+	id = 133424
+	random = no 
+	country = USA
+	persistent = yes
+
+	trigger = {
+		control = { province = 71 data = USA } #Luxembourg
+		NOT = { flag = americanluxembourg }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133424_NAME"
+	desc = "EVT_133424_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133424_ACTA"
+        	command = { type = setflag which = americanluxembourg }
+	}
+}
+##########
+#  USA allies Luxembourg
+##########
+event = {
+	id = 133425
+	random = no 
+	country = USA
+
+	trigger = {
+		exists = LUX
+		flag = americanluxembourg
+		NOT = { exists = GER }
+		NOT = { alliance = { country = USA country = LUX } }
+		NOT = { war = { country = USA country = LUX } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133425_NAME"
+	desc = "EVT_133425_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133425_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = LUX } #
+		command = { type = clrflag which = americanluxembourg }
+	}
+	action_b = {
+		name = "EVT_133425_ACTB"
+		ai_chance = 0
+		command = { type = relation which = SOV value = 5 }
+		command = { type = clrflag which = americanluxembourg }
+	}
+}
+##########
+#  USA captures Paris
+##########
+event = {
+	id = 133426
+	random = no 
+	country = USA
+	persistent = yes
+
+	trigger = {
+		control = { province = 56 data = USA } #Paris
+		NOT = { flag = americanfrance }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133426_NAME"
+	desc = "EVT_133426_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133426_ACTA"
+        	command = { type = setflag which = americanfrance }
+        	command = { type = addclaim which = 56 }
+	}
+}
+##########
+#  USA allies France
+##########
+event = {
+	id = 133427
+	random = no 
+	country = USA
+
+	trigger = {
+		exists = FRA
+		flag = americanfrance
+		NOT = { exists = GER }
+		NOT = { alliance = { country = USA country = FRA } }
+		NOT = { war = { country = USA country = FRA } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133427_NAME"
+	desc = "EVT_133427_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133427_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = FRA } #
+		command = { type = clrflag which = americanfrance }
+	}
+	action_b = {
+		name = "EVT_133427_ACTB"
+		ai_chance = 0
+		command = { type = relation which = SOV value = 5 }
+		command = { type = clrflag which = americanfrance }
+	}
+}
+##########
+#  USA captures Rome
+##########
+event = {
+	id = 133428
+	random = no 
+	country = USA
+	persistent = yes
+
+	trigger = {
+		control = { province = 515 data = USA } #Rome
+		NOT = { flag = americanitaly }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133428_NAME"
+	desc = "EVT_133428_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133428_ACTA"
+        	command = { type = setflag which = americanitaly }
+	}
+}
+##########
+#  USA allies Italy
+##########
+event = {
+	id = 133429
+	random = no 
+	country = USA
+
+	trigger = {
+		exists = ITA
+		flag = americanitaly
+		NOT = { exists = GER }
+		NOT = { alliance = { country = USA country = ITA } }
+		NOT = { war = { country = USA country = ITA } } #possibly needed on all others, too
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133429_NAME"
+	desc = "EVT_133429_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133429_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = ITA } #
+		command = { type = clrflag which = americanitaly }
+	}
+	action_b = {
+		name = "EVT_133429_ACTB"
+		ai_chance = 0
+		command = { type = relation which = SOV value = 5 }
+		command = { type = clrflag which = americanitaly }
+	}
+}
+##########
+#  USA captures Belgrade
+##########
+event = {
+	id = 133430
+	random = no 
+	country = USA
+	persistent = yes
+
+	trigger = {
+		control = { province = 453 data = USA } #Belgrade
+		NOT = { flag = americanyugoslavia }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133430_NAME"
+	desc = "EVT_133430_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133430_ACTA"
+        	command = { type = setflag which = americanyugoslavia }
+	}
+}
+##########
+#  USA allies Yugoslavia
+##########
+event = {
+	id = 133431
+	random = no 
+	country = USA
+
+	trigger = {
+		exists = YUG
+		flag = americanyugoslavia
+		NOT = { exists = GER }
+		NOT = { alliance = { country = USA country = YUG } }
+		NOT = { war = { country = USA country = YUG } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133431_NAME"
+	desc = "EVT_133431_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133431_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = YUG } #
+		command = { type = clrflag which = americanyugoslavia }
+	}
+	action_b = {
+		name = "EVT_133431_ACTB"
+		ai_chance = 0
+		command = { type = relation which = SOV value = 5 }
+		command = { type = clrflag which = americanyugoslavia }
+	}
+}
+##########
+#  USA captures Tirana
+##########
+event = {
+	id = 133432
+	random = no 
+	country = USA
+	persistent = yes
+
+	trigger = {
+		control = { province = 390 data = USA } #Tirana
+		NOT = { flag = americanalbania }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133432_NAME"
+	desc = "EVT_133432_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133432_ACTA"
+        	command = { type = setflag which = americanalbania }
+	}
+}
+##########
+#  USA allies Albania
+##########
+event = {
+	id = 133433
+	random = no 
+	country = USA
+
+	trigger = {
+		exists = ALB
+		flag = americanalbania
+		NOT = { exists = GER }
+		NOT = { alliance = { country = USA country = ALB } }
+		NOT = { war = { country = USA country = ALB } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133433_NAME"
+	desc = "EVT_133433_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133433_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = ALB } #
+		command = { type = clrflag which = americanalbania }
+	}
+	action_b = {
+		name = "EVT_133433_ACTB"
+		ai_chance = 0
+		command = { type = relation which = SOV value = 5 }
+		command = { type = clrflag which = americanalbania }
+	}
+}
+##########
+#  USA captures Madrid
+##########
+event = {
+	id = 133434
+	random = no 
+	country = USA
+	persistent = yes
+
+	trigger = {
+		control = { province = 341 data = USA } #Madrid
+		NOT = { flag = americanspain }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133434_NAME"
+	desc = "EVT_133434_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133434_ACTA"
+        	command = { type = setflag which = americanspain }
+	}
+}
+##########
+#  USA allies Republican Spain
+##########
+event = {
+	id = 133435
+	random = no 
+	country = USA
+
+	trigger = {
+		exists = SPR
+		flag = americanspain
+		NOT = { exists = GER }
+		NOT = { alliance = { country = USA country = SPR } }
+		NOT = { war = { country = USA country = SPR } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133435_NAME"
+	desc = "EVT_133435_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133435_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = SPR } #
+		command = { type = clrflag which = americanspain }
+	}
+	action_b = {
+		name = "EVT_133435_ACTB"
+		ai_chance = 0
+		command = { type = relation which = SOV value = 5 }
+		command = { type = clrflag which = americanspain }
+	}
+}
+##########
+#  USA captures Lisbon
+##########
+event = {
+	id = 133436
+	random = no 
+	country = USA
+	persistent = yes
+
+	trigger = {
+		control = { province = 336 data = USA } #Lisbon
+		NOT = { flag = americanportugal }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133436_NAME"
+	desc = "EVT_133436_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133436_ACTA"
+        	command = { type = setflag which = americanportugal }
+	}
+}
+##########
+#  USA allies Portugal
+##########
+event = {
+	id = 133437
+	random = no 
+	country = USA
+
+	trigger = {
+		exists = POR
+		flag = americanportugal
+		NOT = { exists = GER }
+		NOT = { alliance = { country = USA country = POR } }
+		NOT = { war = { country = USA country = POR } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133437_NAME"
+	desc = "EVT_133437_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133437_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = POR } #
+		command = { type = clrflag which = americanportugal }
+	}
+	action_b = {
+		name = "EVT_133437_ACTB"
+		ai_chance = 0
+		command = { type = relation which = SOV value = 5 }
+		command = { type = clrflag which = americanportugal }
+	}
+}
+##########
+#  USA captures Bern
+##########
+event = {
+	id = 133438
+	random = no 
+	country = USA
+	persistent = yes
+
+	trigger = {
+		control = { province = 532 data = USA } #Bern
+		NOT = { flag = americanswitzerland }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133438_NAME"
+	desc = "EVT_133438_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133438_ACTA"
+        	command = { type = setflag which = americanswitzerland }
+	}
+}
+##########
+#  USA allies Switzerland
+##########
+event = {
+	id = 133439
+	random = no 
+	country = USA
+
+	trigger = {
+		exists = SCH
+		flag = americanswitzerland
+		NOT = { exists = GER }
+		NOT = { alliance = { country = USA country = SCH } }
+		NOT = { war = { country = USA country = SCH } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133439_NAME"
+	desc = "EVT_133439_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133439_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = SCH } #
+		command = { type = clrflag which = americanswitzerland }
+	}
+	action_b = {
+		name = "EVT_133439_ACTB"
+		ai_chance = 0
+		command = { type = relation which = SOV value = 5 }
+		command = { type = clrflag which = americanswitzerland }
+	}
+}
+##########
+#  USA captures Ankara
+##########
+event = {
+	id = 133440
+	random = no 
+	country = USA
+	persistent = yes
+
+	trigger = {
+		control = { province = 448 data = USA } #Ankara
+		NOT = { flag = americanturkey }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133440_NAME"
+	desc = "EVT_133440_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133440_ACTA"
+        	command = { type = setflag which = americanturkey }
+	}
+}
+##########
+#  USA allies Turkey
+##########
+event = {
+	id = 133441
+	random = no 
+	country = USA
+
+	trigger = {
+		exists = TUR
+		flag = americanturkey
+		NOT = { exists = GER }
+		NOT = { alliance = { country = USA country = TUR } }
+		NOT = { war = { country = USA country = TUR } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133441_NAME"
+	desc = "EVT_133441_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133441_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = TUR } #
+		command = { type = clrflag which = americanturkey }
+	}
+	action_b = {
+		name = "EVT_133441_ACTB"
+		ai_chance = 0
+		command = { type = relation which = SOV value = 5 }
+		command = { type = clrflag which = americanturkey }
+	}
+}
+##########
+#  USA captures Tripoli
+##########
+event = {
+	id = 133442
+	random = no 
+	country = USA
+	persistent = yes
+
+	trigger = {
+		control = { province = 932 data = USA } #Tripoli
+		NOT = { flag = americanlibya }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133442_NAME"
+	desc = "EVT_133442_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133442_ACTA"
+        	command = { type = setflag which = americanlibya }
+	}
+}
+##########
+#  USA allies Libya
+##########
+event = {
+	id = 133443
+	random = no 
+	country = USA
+
+	trigger = {
+		exists = LBY
+		flag = americanlibya
+		NOT = { exists = GER }
+		NOT = { alliance = { country = USA country = LBY } }
+		NOT = { war = { country = USA country = LBY } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133443_NAME"
+	desc = "EVT_133443_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133443_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = LBY } #
+		command = { type = clrflag which = americanlibya }
+	}
+	action_b = {
+		name = "EVT_133443_ACTB"
+		ai_chance = 0
+		command = { type = relation which = SOV value = 5 }
+		command = { type = clrflag which = americanlibya }
+	}
+}
+##########
+#  USA captures Seoul
+##########
+event = {
+	id = 133444
+	random = no 
+	country = USA
+	persistent = yes
+
+	trigger = {
+		control = { province = 1199 data = USA } #Seoul
+		NOT = { flag = americankorea }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133444_NAME"
+	desc = "EVT_133444_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133444_ACTA"
+        	command = { type = setflag which = americankorea }
+	}
+}
+##########
+#  USA allies Korea
+##########
+event = {
+	id = 133445
+	random = no 
+	country = USA
+
+	trigger = {
+		exists = KOR
+		flag = americankorea
+		NOT = { alliance = { country = USA country = KOR } }
+		NOT = { war = { country = USA country = KOR } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133445_NAME"
+	desc = "EVT_133445_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133445_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = KOR } #
+		command = { type = clrflag which = americankorea }
+	}
+	action_b = {
+		name = "EVT_133445_ACTB"
+		ai_chance = 0
+		command = { type = relation which = SOV value = 5 }
+		command = { type = clrflag which = americankorea }
+	}
+}
+
+##########
+#  USA captures Bangkok
+##########
+event = {
+	id = 133454
+	random = no 
+	country = USA
+	persistent = yes
+
+	trigger = {
+		control = { province = 1343 data = USA } #Bangkok
+		NOT = { flag = americansiam }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133454_NAME"
+	desc = "EVT_133454_DESC"
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133454_ACTA"
+		ai_chance = 100
+		command = { type = setflag which = americansiam }
+	}
+}
+##########
+#  USA allies Siam
+##########
+event = {
+	id = 133455
+	random = no 
+	country = USA
+
+	trigger = {
+		exists = SIA
+		flag = americansiam
+		OR = {
+			flag = usadefeatsjap
+			flag = sovdefeatsjap
+		}
+		NOT = { alliance = { country = USA country = SIA } }
+		NOT = { war = { country = USA country = SIA } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133455_NAME"
+	desc = "EVT_133455_DESC"
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133455_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = SIA }
+		command = { type = clrflag which = americansiam }
+	}
+	action_b = {
+		name = "EVT_133455_ACTB"
+		ai_chance = 0
+		command = { type = relation which = SOV value = 5 }
+		command = { type = clrflag which = americansiam }
+	}
+}
+
+#########################################################################
+#  USA Loses Warsaw
+#########################################################################
+event = {
+	id = 133460
+	random = no 
+	country = USA
+	persistent = yes
+
+	trigger = {
+		flag = americanpoland
+		NOT = { control = { province = 485 data = USA } }#Warsaw
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133460_NAME"
+	desc = "EVT_133460_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133460_ACTA"
+		command = { type = clrflag which = americanpoland }
+	}
+}
+#########################################################################
+#  USA Loses Prague
+#########################################################################
+event = {
+	id = 133461
+	random = no 
+	country = USA
+	persistent = yes
+
+	trigger = {
+		flag = americanczechoslovakia
+		NOT = {	control = { province = 469 data = USA } } #Prague
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133461_NAME"
+	desc = "EVT_133461_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133461_ACTA"
+        	command = { type = clrflag which = americanczechoslovakia }
+	}
+}
+#########################################################################
+#  USA Loses Budapest
+#########################################################################
+event = {
+	id = 133462
+	random = no 
+	country = USA
+	persistent = yes
+
+	trigger = {
+		flag = americanhungary
+		NOT = {	control = { province = 457 data = USA } } #Budapest
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133462_NAME"
+	desc = "EVT_133462_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133462_ACTA"
+        	command = { type = clrflag which = americanhungary }
+	}
+}
+#########################################################################
+#  USA Loses Bucharest
+#########################################################################
+event = {
+	id = 133463
+	random = no 
+	country = USA
+	persistent = yes
+
+	trigger = {
+		flag = americanromania
+		NOT = { control = { province = 424 data = USA } } #Bucharest
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133463_NAME"
+	desc = "EVT_133463_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133463_ACTA"
+        	command = { type = clrflag which = americanromania }
+	}
+}
+#########################################################################
+#  USA Loses Sofia
+#########################################################################
+event = {
+	id = 133464
+	random = no 
+	country = USA
+	persistent = yes
+
+	trigger = {
+		flag = americanbulgaria
+		NOT = { control = { province = 417 data = USA } } #Sofia
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133464_NAME"
+	desc = "EVT_133464_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133464_ACTA"
+        	command = { type = clrflag which = americanbulgaria }
+	}
+}
+#########################################################################
+#  USA Loses Oslo
+#########################################################################
+event = {
+	id = 133465
+	random = no 
+	country = USA
+	persistent = yes
+
+	trigger = {
+		flag = americannorway
+		NOT = { control = { province = 107 data = USA } } #Oslo
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133465_NAME"
+	desc = "EVT_133465_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133465_ACTA"
+        	command = { type = clrflag which = americannorway }
+	}
+}
+#########################################################################
+#  USA Loses Stockholm
+#########################################################################
+event = {
+	id = 133466
+	random = no 
+	country = USA
+	persistent = yes
+
+	trigger = {
+		flag = americansweden
+		NOT = { control = { province = 101 data = USA } } #Stockholm
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133466_NAME"
+	desc = "EVT_133466_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133466_ACTA"
+        	command = { type = clrflag which = americansweden }
+	}
+}
+#########################################################################
+#  USA Loses Copenhagen
+#########################################################################
+event = {
+	id = 133467
+	random = no 
+	country = USA
+	persistent = yes
+
+	trigger = {
+		flag = americandenmark
+		NOT = {	control = { province = 294 data = USA } } #Copenhagen
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133467_NAME"
+	desc = "EVT_133467_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133467_ACTA"
+        	command = { type = clrflag which = americandenmark }
+	}
+}
+#########################################################################
+#  USA Loses Vienna
+#########################################################################
+event = {
+	id = 133468
+	random = no 
+	country = USA
+	persistent = yes
+
+	trigger = {
+		flag = americanaustria
+		NOT = { control = { province = 463 data = USA } } #Vienna
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133468_NAME"
+	desc = "EVT_133468_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133468_ACTA"
+        	command = { type = clrflag which = americanaustria }
+	}
+}
+#########################################################################
+#  USA Loses Athens
+#########################################################################
+event = {
+	id = 133469
+	random = no 
+	country = USA
+	persistent = yes
+
+	trigger = {
+		flag = americangreece
+		NOT = { control = { province = 401 data = USA } } #Athens
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133469_NAME"
+	desc = "EVT_133469_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133469_ACTA"
+        	command = { type = clrflag which = americangreece }
+	}
+}
+#########################################################################
+#  USA Loses Brussels
+#########################################################################
+event = {
+	id = 133470
+	random = no 
+	country = USA
+	persistent = yes
+
+	trigger = {
+		flag = americanbelgium
+		NOT = {	control = { province = 51 data = USA } } #Brussels
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133470_NAME"
+	desc = "EVT_133470_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133470_ACTA"
+        	command = { type = clrflag which = americanbelgium }
+	}
+}
+#########################################################################
+#  USA Loses Amsterdam
+#########################################################################
+event = {
+	id = 133471
+	random = no 
+	country = USA
+	persistent = yes
+
+	trigger = {
+		flag = americanholland
+		NOT = {	control = { province = 47 data = USA } } #Amsterdam
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133471_NAME"
+	desc = "EVT_133471_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133471_ACTA"
+        	command = { type = clrflag which = americanholland }
+	}
+}
+#########################################################################
+#  USA Loses Luxembourg
+#########################################################################
+event = {
+	id = 133472
+	random = no 
+	country = USA
+	persistent = yes
+
+	trigger = {
+		flag = americanluxembourg
+		NOT = {	control = { province = 71 data = USA } } #Luxembourg
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133472_NAME"
+	desc = "EVT_133472_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133472_ACTA"
+        	command = { type = clrflag which = americanluxembourg }
+	}
+}
+#########################################################################
+#  USA Loses Paris
+#########################################################################
+event = {
+	id = 133473
+	random = no 
+	country = USA
+	persistent = yes
+
+	trigger = {
+		flag = americanfrance
+		NOT = {	control = { province = 56 data = USA } } #Paris
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133473_NAME"
+	desc = "EVT_133473_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133473_ACTA"
+        	command = { type = clrflag which = americanfrance }
+	}
+}
+#########################################################################
+#  USA Loses Rome
+#########################################################################
+event = {
+	id = 133474
+	random = no 
+	country = USA
+	persistent = yes
+
+	trigger = {
+		flag = americanitaly
+		NOT = {	control = { province = 515 data = USA } } #Rome
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133474_NAME"
+	desc = "EVT_133474_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133474_ACTA"
+        	command = { type = clrflag which = americanitaly }
+	}
+}
+#########################################################################
+#  USA Loses Belgrade
+#########################################################################
+event = {
+	id = 133475
+	random = no 
+	country = USA
+	persistent = yes
+
+	trigger = {
+		flag = americanyugoslavia
+		NOT = {	control = { province = 453 data = USA } } #Belgrade
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133475_NAME"
+	desc = "EVT_133475_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133475_ACTA"
+        	command = { type = clrflag which = americanyugoslavia }
+	}
+}
+#########################################################################
+#  USA Loses Tirana
+#########################################################################
+event = {
+	id = 133476
+	random = no 
+	country = USA
+	persistent = yes
+
+	trigger = {
+		flag = americanalbania
+		NOT = {	control = { province = 390 data = USA } } #Tirana
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133476_NAME"
+	desc = "EVT_133476_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133476_ACTA"
+        	command = { type = clrflag which = americanalbania }
+	}
+}
+#########################################################################
+#  USA Loses Madrid
+#########################################################################
+event = {
+	id = 133477
+	random = no 
+	country = USA
+	persistent = yes
+
+	trigger = {
+		flag = americanspain
+		NOT = {	control = { province = 341 data = USA } } #Madrid
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133477_NAME"
+	desc = "EVT_133477_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133477_ACTA"
+        	command = { type = clrflag which = americanspain }
+	}
+}
+#########################################################################
+#  USA Loses Lisbon
+#########################################################################
+event = {
+	id = 133478
+	random = no 
+	country = USA
+	persistent = yes
+
+	trigger = {
+		flag = americanportugal
+		NOT = {	control = { province = 336 data = USA } } #Lisbon
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133478_NAME"
+	desc = "EVT_133478_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133478_ACTA"
+        	command = { type = clrflag which = americanportugal }
+	}
+}
+#########################################################################
+#  USA Loses Bern
+#########################################################################
+event = {
+	id = 133479
+	random = no 
+	country = USA
+	persistent = yes
+
+	trigger = {
+		flag = americanswitzerland
+		NOT = {	control = { province = 532 data = USA } } #Bern
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133479_NAME"
+	desc = "EVT_133479_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133479_ACTA"
+        	command = { type = clrflag which = americanswitzerland }
+	}
+}
+#########################################################################
+#  USA Loses Ankara
+#########################################################################
+event = {
+	id = 133480
+	random = no 
+	country = USA
+	persistent = yes
+
+	trigger = {
+		flag = americanturkey
+		NOT = {	control = { province = 448 data = USA } } #Ankara
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133480_NAME"
+	desc = "EVT_133480_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133480_ACTA"
+        	command = { type = clrflag which = americanturkey }
+	}
+}
+#########################################################################
+#  USA Loses Rangoon
+#########################################################################
+event = {
+	id = 133481
+	random = no 
+	country = USA
+	persistent = yes
+
+	trigger = {
+		NOT = { control = { province = 1299 data = USA } } #Rangoon
+		flag = americanburma
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	#date = { day = 0 month = january year = 1935 }
+	#offset = 3
+	#deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133481_NAME"
+	desc = "EVT_133481_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133481_ACTA"
+		ai_chance = 100
+		command = { type = clrflag which = americanburma }
+	}
+}
+#########################################################################
+#  USA Loses Delhi
+#########################################################################
+event = {
+	id = 133482
+	random = no 
+	country = USA
+	persistent = yes
+
+	trigger = {
+		NOT = { control = { province = 1469 data = USA } } #Delhi
+		flag = americanindia
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	#date = { day = 0 month = january year = 1935 }
+	#offset = 3
+	#deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133482_NAME"
+	desc = "EVT_133482_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133482_ACTA"
+		ai_chance = 100
+		command = { type = clrflag which = americanindia }
+	}
+}
+#########################################################################
+#  USA Loses Bangkok
+#########################################################################
+event = {
+	id = 133483
+	random = no 
+	country = USA
+	persistent = yes
+
+	trigger = {
+		NOT = { control = { province = 1343 data = USA } } #Bangkok
+		flag = americansiam 
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	#date = { day = 0 month = january year = 1935 }
+	#offset = 3
+	#deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133483_NAME"
+	desc = "EVT_133483_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133483_ACTA"
+		ai_chance = 100
+		command = { type = clrflag which = americansiam }
+	}
+}
+#########################################################################
+#  USA Loses Kabul
+#########################################################################
+event = {
+	id = 133484
+	random = no 
+	country = USA
+	persistent = yes
+
+	trigger = {
+		NOT = { control = { province = 1486 data = USA } } #Kabul
+		flag = americanafghanistan
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	#date = { day = 0 month = january year = 1935 }
+	#offset = 3
+	#deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133484_NAME"
+	desc = "EVT_133484_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133484_ACTA"
+		ai_chance = 100
+		command = { type = clrflag which = americanafghanistan }
+	}
+}
+#########################################################################
+#  USA Loses Seoul
+#########################################################################
+event = {
+	id = 133485
+	random = no 
+	country = USA
+	persistent = yes
+
+	trigger = {
+		NOT = { control = { province = 1199 data = USA } } #Seoul
+		flag = americankorea 
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133485_NAME"
+	desc = "EVT_133485_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133485_ACTA"
+		command = { type = clrflag which = americankorea }
+	}
+}
+event = {
+	id = 133486
+	random = no 
+	country = USA
+	persistent = yes
+
+	trigger = {
+		control = { province = 98 data = USA } #イェーテボリ
+		NOT = { flag = americansca }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133486_NAME"
+	desc = "EVT_133486_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133486_ACTA"
+		command = { type = setflag which = americansca }
+	}
+}
+
+event = {
+	id = 133487
+	random = no
+	country = USA
+
+	trigger = {
+		exists = SCA
+		flag = americansca
+		NOT = { exists = GER }
+		NOT = { alliance = { country = USA country = SCA } }
+		NOT = { war = { country = USA country = SCA } }
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133487_NAME"
+	desc = "EVT_133487_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133487_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = SCA } #
+		command = { type = clrflag which = americansca }
+	}
+	action_b = {
+		name = "EVT_133487_ACTB"
+		ai_chance = 0
+		command = { type = relation which = SOV value = 5 }
+		command = { type = clrflag which = americansca }
+	}
+}
+event = {
+	id = 133488
+	random = no 
+	country = USA
+	persistent = yes
+
+	trigger = {
+		flag = americansca
+		NOT = { control = { province = 98 data = USA } }#イェーテボリ
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133488_NAME"
+	desc = "EVT_133488_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133488_ACTA"
+		command = { type = clrflag which = americansca }
+	}
+}

@@ -1,0 +1,1326 @@
+#########################################################################
+#
+#		日本・極東追加イベント（インドネシア独立戦争イベント）
+#				by 脳内毛沢東 & 統制派
+#
+#########################################################################
+###### 追加イベント一覧 ############
+#########################################################################
+#id = 55500 インドネシアの独立
+#id = 55501 インドネシアの占領政策方針
+#id = 55502 インドネシアの自治権拡大(if)
+#id = 55503 ムルデカ（インドネシア革命）（日本側）(if)
+#id = 55504 ムルデカ（インドネシア革命）（インドネシア側）(if)
+#id = 55505 インドネシアの自立支援
+#id = 55506 インドネシア郷土防衛義勇軍（日本側）
+#id = 55507 インドネシア郷土防衛義勇軍（インドネシア側）
+#id = 55508 ムルデカ（インドネシア革命）（インドネシア側）
+#id = 55509 インドネシア再占領
+#id = 55510 スラバヤ事件
+#id = 55511 スラバヤ事件の責任（オランダ側）
+#id = 55512 スラバヤ事件の責任（インドネシア側）
+#id = 55513 インドネシアが独立を勝ち取る（オランダ側）
+#id = 55514 インドネシアが独立を勝ち取る（インドネシア側）
+#id = 55515 インドネシアが独立を勝ち取る（日本側）
+#id = 55517 イリアンジャヤ占領
+#id = 55518 インドネシア再占領
+#id = 55519 インドネシア再占領
+#id = 55520 スラバヤ事件
+#id = 55521 スラバヤ事件の責任（オーストラリア側）
+#id = 55522 インドネシアが独立を勝ち取る（オーストラリア側）
+#########################################################################
+##### The Independance of INDONESIA
+event = {
+	id = 55500
+	random = no
+	country = HOL
+
+	name = "EVT_121_NAME"
+	desc = "EVT_121_DESC"
+	picture = "indochina_demand" #needs event picture
+	style = 0
+
+	#triggered from id = 59900 # jap surrender
+
+	trigger = { #FEPKBETA4
+		OR = {
+			event = 131511
+			event = 131521
+		}
+		random = 33
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "EVT_121_ACTA"
+		command = { type = sleepevent which = 15134 }
+		command = { type = independence which = INO value = 1 }
+
+		command = { type = trigger which = 55508 }
+	}
+}
+
+#########################################################################
+# インドネシアの占領政策方針
+#########################################################################
+event ={
+	id = 55501
+	random = no
+	country = JAP
+	style = 0
+	trigger = {
+		leader = 101059 # 今村均
+		control = { province = 1628 data = -3 } # バタヴィア
+		control = { province = 1629 data = -3 } # テラチャップ
+		control = { province = 1630 data = -3 } # スマラン
+		control = { province = 1631 data = -3 } # ジョグジャカルタ
+		control = { province = 1632 data = -3 } # スラバヤ
+		control = { province = 1633 data = -3 } # マラン
+		control = { province = 1634 data = -3 } # マドゥラ
+		NOT = {
+			event = 55509
+			ispuppet = yes
+			alliance = { country = HOL }
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_55501_NAME"
+	desc = "EVT_55501_DESC"
+	picture = "indochina_demand"
+
+	action_a = { # 
+		name = "EVT_55501_ACTA"
+		ai_chance = 10
+		command = { type = dissent value = 1 }
+	}
+	action_b = { # 
+		name = "EVT_55501_ACTB"
+		ai_chance = 90
+		command = { type = sleepevent which = 55502 }
+		command = { type = sleepteam which = 1932 }
+	}
+}
+
+#########################################################################
+# インドネシアの自治権拡大
+#########################################################################
+event ={
+	id = 55502
+	random = no
+	country = JAP
+	style = 0
+	trigger = {
+		event = 55501
+		event = 55505
+		random = 50
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_55502_NAME"
+	desc = "EVT_55502_DESC"
+
+	picture = "indochina_demand"
+
+	action_a = { # 
+		name = "EVT_55502_ACTA"
+		ai_chance = 10
+		command = { type = independence which = INO value = 1 }
+		command = { type = trigger which = 55503 }
+	}
+	action_b = { # 
+		name = "EVT_55502_ACTB"
+		ai_chance = 90
+		#command = { type = sleepevent which = 55503 }
+	}
+}
+
+#########################################################################
+# Merdeka('Independence' in Indonesian language)
+#########################################################################
+event ={
+	id = 55503
+	random = no
+	country = JAP
+	style = 0
+
+	name = "EVT_55503_NAME"
+	desc = "EVT_55503_DESC"
+
+	picture = "indochina_demand"
+
+	action_a = { # 
+		name = "EVT_55503_ACTA"
+		command = { type = belligerence which = JAP value = -10 }
+		command = { type = make_puppet which = INO }
+		command = { type = trigger which = 55504 }
+	}
+}
+
+#########################################################################
+# Merdeka('Independence' in Indonesian language)
+#########################################################################
+event ={
+	id = 55504
+	random = no
+	country = INO
+	style = 0
+
+	name = "EVT_55503_NAME"
+	desc = "EVT_55503_DESC"
+
+	picture = "indochina_demand"
+
+	action_a = { # 
+		name = "EVT_55504_ACTA"
+		command = { type = dissent value = -10 }
+		command = { type = access which = JAP }	#FEPKDH-SA
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 577011 }
+		command = { type = headofgovernment which = 577014 }
+		command = { type = foreignminister which = 577017 }
+		command = { type = armamentminister which = 577024 }
+		command = { type = ministerofsecurity which = 577062 }
+		command = { type = ministerofintelligence which = 577035 }
+		command = { type = chiefofstaff which = 577038 }
+		command = { type = chiefofarmy which = 577043 }
+		command = { type = chiefofnavy which = 577049 }
+		command = { type = chiefofair which = 577052 }
+
+		command = { type = ai which = "ino_1935.ai" }
+
+		# 以下、インドネシアのオランダ人閣僚を抹消
+		command = { type = sleepminister which = 577001 } # 
+		command = { type = sleepminister which = 577002 } # 
+		command = { type = sleepminister which = 577003 } # 
+		command = { type = sleepminister which = 577005 } # 
+		command = { type = sleepminister which = 577006 } # 
+		command = { type = sleepminister which = 577007 } # 
+		command = { type = sleepminister which = 577008 } # 
+		command = { type = sleepminister which = 577009 } # 
+		command = { type = sleepminister which = 577010 } # 
+		command = { type = sleepminister which = 577012 } # 
+		command = { type = sleepminister which = 577039 } # 
+		command = { type = sleepminister which = 577040 } # 
+		command = { type = sleepminister which = 577044 } # 
+		command = { type = sleepminister which = 577045 } # 
+		command = { type = sleepminister which = 577046 } # 
+		# 以下、インドネシアのオランダ人司令官を抹消
+		command = { type = sleepleader which = 577002 }
+		command = { type = sleepleader which = 577003 }
+		command = { type = sleepleader which = 577004 }
+		command = { type = sleepleader which = 577009 }
+		command = { type = sleepleader which = 577016 }
+		command = { type = sleepleader which = 577025 }
+		command = { type = sleepleader which = 577027 }
+		command = { type = sleepleader which = 577028 }
+		command = { type = sleepleader which = 577030 }
+		command = { type = sleepleader which = 577036 }
+	}
+}
+
+#########################################################################
+# Merdeka('Independence' in Indonesian language)
+#########################################################################
+event ={
+	id = 55505
+	random = no
+	country = JAP
+	style = 0
+
+	trigger = {
+		event = 55501
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_55505_NAME"
+	desc = "EVT_55505_DESC"
+
+	picture = "indochina_demand"
+
+	action_a = { # 
+		name = "EVT_55505_ACTA"
+		ai_chance = 80
+		command = { type = trigger which = 55506 }
+	}
+	action_b = { # 
+		name = "EVT_55505_ACTB"
+		ai_chance = 20
+		command = { type = sleepevent which = 55506 }
+	}
+}
+
+#########################################################################
+# Indonesian Patriotic Defence Volunteer Army (for JAP)
+#########################################################################
+event = { 
+	id = 55506
+	random = no
+	country = JAP
+	
+	name = "EVT_55506_NAME"
+	desc = "EVT_55506_DESC"
+	style = 0
+	picture = "japanese_reinforcments"
+
+	action_a = { #
+		name = "EVT_55506_ACTA"
+		command = { type = belligerence which = JAP value = -5 }
+	}
+}
+
+#########################################################################
+# Indonesian Patriotic Defence Volunteer Army (for INO)
+#########################################################################
+event = { 
+	id = 55507
+	random = no
+	country = INO
+	trigger = {
+		event = 55506
+		puppet = { country = INO country = JAP }
+	}
+	name = "EVT_55506_NAME"
+	desc = "EVT_55506_DESC"
+	style = 0
+	picture = "japanese_reinforcments"
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = { #
+		name = "EVT_55507_ACTA"
+		command = { type = add_corps value = land when = 577021 where = 1631 }
+		command = { type = add_division value = hq when = 1 }
+		command = { type = add_division value = infantry when = 1 }
+		command = { type = manpowerpool value = 500 } # manpower
+		command = { type = province_manpower which = 1628 value = 1 } # バタヴィア
+		command = { type = province_manpower which = 1631 value = 1 } # ジョグジャカルタ
+		command = { type = province_manpower which = 1632 value = 1 } # スラバヤ
+		command = { type = province_manpower which = 1358 value = 1 } # バレンバン
+		command = { type = province_manpower which = 1359 value = 1 } # オーストハーフェン
+	}
+}
+
+#########################################################################
+# ムルデカ（インドネシア革命）
+#########################################################################
+event = { 
+	id = 55508
+	random = no
+	country = INO
+	
+	name = "EVT_55508_NAME"
+	desc = "EVT_55508_DESC"
+	style = 0
+	picture = "indochina_demand"
+
+	action_a = { #
+		name = "EVT_55508_ACTA"
+		command = { type = ai which = "switch/ino_merdeka.ai" }
+		command = { type = dissent value = -10 }
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 577011 }
+		command = { type = headofgovernment which = 577014 }
+		command = { type = foreignminister which = 577017 }
+		command = { type = armamentminister which = 577024 }
+		command = { type = ministerofsecurity which = 577062 }
+		command = { type = ministerofintelligence which = 577035 }
+		command = { type = chiefofstaff which = 577038 }
+		command = { type = chiefofarmy which = 577043 }
+		command = { type = chiefofnavy which = 577049 }
+		command = { type = chiefofair which = 577052 }
+
+		# 以下、インドネシアのオランダ人閣僚を抹消
+		command = { type = sleepminister which = 577001 } # 
+		command = { type = sleepminister which = 577002 } # 
+		command = { type = sleepminister which = 577003 } # 
+		command = { type = sleepminister which = 577005 } # 
+		command = { type = sleepminister which = 577006 } # 
+		command = { type = sleepminister which = 577007 } # 
+		command = { type = sleepminister which = 577008 } # 
+		command = { type = sleepminister which = 577009 } # 
+		command = { type = sleepminister which = 577010 } # 
+		command = { type = sleepminister which = 577012 } # 
+		command = { type = sleepminister which = 577039 } # 
+		command = { type = sleepminister which = 577040 } # 
+		command = { type = sleepminister which = 577044 } # 
+		command = { type = sleepminister which = 577045 } # 
+		command = { type = sleepminister which = 577046 } # 
+		# 以下、インドネシアのオランダ人司令官を抹消
+		command = { type = sleepleader which = 577002 }
+		command = { type = sleepleader which = 577003 }
+		command = { type = sleepleader which = 577004 }
+		command = { type = sleepleader which = 577009 }
+		command = { type = sleepleader which = 577016 }
+		command = { type = sleepleader which = 577025 }
+		command = { type = sleepleader which = 577027 }
+		command = { type = sleepleader which = 577028 }
+		command = { type = sleepleader which = 577030 }
+		command = { type = sleepleader which = 577036 }
+
+		command = { type = add_division value = militia when = 1 }
+		command = { type = add_division value = militia when = 1 }
+		command = { type = add_division value = militia when = 1 }
+		command = { type = add_division value = militia when = 1 }
+		command = { type = add_division value = militia when = 1 }
+		command = { type = manpowerpool value = 200 } # manpower
+	}
+}
+
+#########################################################################
+# インドネシア再占領
+#########################################################################
+event = { 
+	id = 55509
+	random = no
+	country = HOL
+	trigger = {
+		event = 55508
+		random = 30
+		OR = { #BETA修正パッチ
+			NOT = {	exists = JAP }
+			event = 131510
+			event = 131520
+		}
+		NOT = { ispuppet = HOL }
+		exists = INO
+	}
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_55509_NAME"
+	desc = "EVT_55509_DESC"
+	style = 0
+	picture = "indochina_demand"
+
+	action_a = { #
+		name = "EVT_55509_ACTA"
+		ai_chance = 90
+#オランダが連合国だった場合、連合国も引っ付いてくるんでしょうか？（オランダ及びオーストリアとの単独戦争状態にしたい）
+#オランダを同盟離脱させた上で開戦じゃ駄目？ by 統制派
+		command = { type = leave_alliance }
+		command = { type = war which = INO }
+#ジャカルタ（バタヴィア）あたりにいきなり出現させてみる？？
+		command = { type = add_corps value = land where = 1628 }
+		command = { type = add_division value = hq when = 2 }
+		command = { type = add_division value = infantry when = 4 where = rocket_artillery }
+
+		command = { type = add_corps value = land where = 1628 }
+		command = { type = add_division value = paratrooper when = 4 }
+#日本軍
+		command = { type = add_corps value = land where = 1628 }
+		command = { type = add_division value = infantry when = 3 where = artillery }
+		command = { type = add_corps value = land where = 1628 }
+		command = { type = add_division value = infantry when = 3 where = artillery }
+	}
+	action_b = {
+		name = "EVT_55509_ACTB"
+		ai_chance = 10
+		command = { type = dissent value = 20 } # ウィルヘルミアタンが暴れる
+		command = { type = secederegion which = INO value = "Indonesia" }
+		command = { type = secederegion which = INO value = "New Guinea" }
+	}
+}
+
+#########################################################################
+# スラバヤ事件
+#########################################################################
+event = { 
+	id = 55510
+	random = no
+	country = INO
+	trigger = {
+		event = 55509
+		random = 30
+		war = { country = INO country = HOL }
+	}
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_55510_NAME"
+	desc = "EVT_55510_DESC"
+	style = 0
+	picture = "japanese_reinforcments"
+
+	action_a = {
+		name = "EVT_55510_ACTA"
+		command = { type = add_division value = hq when = 2 }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = manpowerpool value = 10 } # manpower
+	}
+}
+
+#########################################################################
+# スラバヤ事件の責任
+#########################################################################
+#スラバヤ事件の一ヵ月後くらいに発生
+event = { 
+	id = 55511
+	random = no
+	country = HOL
+	trigger = {
+		event = 55510
+		random = 30
+		war = { country = INO country = HOL }
+	}
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_55511_NAME"
+	desc = "EVT_55511_DESC"
+	style = 0
+
+	picture = "japanese_reinforcments"
+
+	action_a = {
+		name = "EVT_55511_ACTA"
+		command = { type = trigger which = 55512 }
+	}
+}
+
+#########################################################################
+# スラバヤ事件の責任
+#########################################################################
+event = { 
+	id = 55512
+	random = no
+	country = INO
+	
+	name = "EVT_55511_NAME"
+	desc = "EVT_55511_DESC"
+	style = 0
+	picture = "japanese_reinforcments"
+
+	action_a = {
+		name = "EVT_55512_ACTA"
+#戦車１個師団、歩兵（装甲車）*2、ノーマル歩兵3個師団ほど追加。39年あたりの装備。隼を一個師団追加。
+		command = { type = add_division value = light_armor when = 3 }
+		command = { type = add_division value = infantry when = 3 where = armored_car }
+		command = { type = add_division value = infantry when = 3 where = armored_car }
+		command = { type = add_division value = infantry when = 3 }
+		command = { type = add_division value = infantry when = 3 }
+		command = { type = add_division value = infantry when = 3 }
+		command = { type = add_division value = transport }
+		command = { type = add_division value = transport }
+		command = { type = add_division value = transport }
+		command = { type = add_division value = destroyer when = 2 }
+		command = { type = add_division value = destroyer when = 2 }
+		command = { type = supplies value = 1000 }
+	}
+}
+
+#########################################################################
+# インドネシアが（自力で）独立を勝ち取る
+#########################################################################
+event = { 
+	id = 55513
+	random = no
+	country = HOL
+
+	trigger = {
+#		event = 59901
+		NOT = { 
+			event = 55522
+			event = 131090	#遠藤マイクロ
+			alliance = { country = JAP country = GER }
+			alliance = { country = INO country = GER }
+			war = { country = JAP country = ENG }
+		 }
+		war = { country = INO country = HOL }
+		OR = {
+		control = { province = 1355 data = INO } # メダン
+		control = { province = 1355 data = JAP } # メダン
+		}
+		OR = {
+		control = { province = 1358 data = INO } # バレンバン
+		control = { province = 1358 data = JAP } # バレンバン
+		}
+		OR = {
+		control = { province = 1359 data = INO } # オーストハーフェン
+		control = { province = 1359 data = JAP } # オーストハーフェン
+		}
+		OR = {
+		control = { province = 1628 data = INO } # バタヴィア
+		control = { province = 1628 data = JAP } # バタヴィア
+		}
+		OR = {
+		control = { province = 1631 data = INO } # ジョグジャカルタ
+		control = { province = 1631 data = JAP } # ジョグジャカルタ
+		}
+		random = 50
+	}
+	
+	name = "EVT_55513_NAME"
+	desc = "EVT_55513_DESC"
+	style = 0
+
+	picture = "japanese_reinforcments"
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "EVT_55513_ACTA"
+		command = { type = peace which = INO value = 0 }
+		command = { type = peace which = JAP value = 0 }
+
+		command = { type = secedeprovince which = INO value = 1354 }
+		command = { type = secedeprovince which = INO value = 1355 }
+		command = { type = secedeprovince which = INO value = 1356 }
+		command = { type = secedeprovince which = INO value = 1357 }
+		command = { type = secedeprovince which = INO value = 1358 }
+		command = { type = secedeprovince which = INO value = 1359 }
+		command = { type = secedeprovince which = INO value = 1628 }
+		command = { type = secedeprovince which = INO value = 1629 }
+		command = { type = secedeprovince which = INO value = 1630 }
+		command = { type = secedeprovince which = INO value = 1631 }
+		command = { type = secedeprovince which = INO value = 1632 }
+		command = { type = secedeprovince which = INO value = 1633 }
+		command = { type = secedeprovince which = INO value = 1634 }
+		command = { type = secedeprovince which = INO value = 1635 }
+		command = { type = secedeprovince which = INO value = 1636 }
+		command = { type = secedeprovince which = INO value = 1637 }
+		command = { type = secedeprovince which = INO value = 1638 }
+		command = { type = secedeprovince which = INO value = 1639 }
+		command = { type = secedeprovince which = INO value = 1640 }
+		command = { type = secedeprovince which = INO value = 1641 }
+		command = { type = secedeprovince which = INO value = 1642 }
+		command = { type = secedeprovince which = INO value = 1643 }
+		command = { type = secedeprovince which = INO value = 1645 }
+		command = { type = secedeprovince which = INO value = 1648 }
+		command = { type = secedeprovince which = INO value = 1649 }
+		command = { type = secedeprovince which = INO value = 1650 }
+		command = { type = secedeprovince which = INO value = 1651 }
+		command = { type = secedeprovince which = INO value = 1652 }
+		command = { type = secedeprovince which = INO value = 1653 }
+		command = { type = secedeprovince which = INO value = 1654 }
+		command = { type = secedeprovince which = INO value = 1655 }
+		command = { type = secedeprovince which = INO value = 1656 }
+		command = { type = secedeprovince which = INO value = 1657 }
+#		command = { type = secedeprovince which = INO value = 1659 }
+#		command = { type = secedeprovince which = INO value = 1660 }
+#		command = { type = secedeprovince which = INO value = 1661 }
+#		command = { type = secedeprovince which = INO value = 1662 }
+#		command = { type = secedeprovince which = INO value = 1663 }
+#		command = { type = secedeprovince which = INO value = 1664 }
+#		command = { type = secedeprovince which = INO value = 1665 }
+#		command = { type = secedeprovince which = INO value = 1673 }
+#		command = { type = secedeprovince which = INO value = 1674 }
+		command = { type = dissent value = 5 } # ウィルヘルミアタンが暴れる
+
+		command = { type = removecore which = 1354 }
+		command = { type = removecore which = 1355 }
+		command = { type = removecore which = 1356 }
+		command = { type = removecore which = 1357 }
+		command = { type = removecore which = 1358 }
+		command = { type = removecore which = 1359 }
+		command = { type = removecore which = 1628 }
+		command = { type = removecore which = 1629 }
+		command = { type = removecore which = 1630 }
+		command = { type = removecore which = 1631 }
+		command = { type = removecore which = 1632 }
+		command = { type = removecore which = 1633 }
+		command = { type = removecore which = 1634 }
+		command = { type = removecore which = 1635 }
+		command = { type = removecore which = 1636 }
+		command = { type = removecore which = 1637 }
+		command = { type = removecore which = 1638 }
+		command = { type = removecore which = 1639 }
+		command = { type = removecore which = 1640 }
+		command = { type = removecore which = 1641 }
+		command = { type = removecore which = 1642 }
+		command = { type = removecore which = 1643 }
+		command = { type = removecore which = 1645 }
+		command = { type = removecore which = 1648 }
+		command = { type = removecore which = 1649 }
+		command = { type = removecore which = 1650 }
+		command = { type = removecore which = 1651 }
+		command = { type = removecore which = 1652 }
+		command = { type = removecore which = 1653 }
+		command = { type = removecore which = 1654 }
+		command = { type = removecore which = 1655 }
+		command = { type = removecore which = 1656 }
+		command = { type = removecore which = 1657 }
+#		command = { type = removecore which = 1659 }
+#		command = { type = removecore which = 1660 }
+#		command = { type = removecore which = 1661 }
+#		command = { type = removecore which = 1662 }
+#		command = { type = removecore which = 1663 }
+#		command = { type = removecore which = 1664 }
+#		command = { type = removecore which = 1665 }
+#		command = { type = removecore which = 1673 }
+#		command = { type = removecore which = 1674 }
+		command = { type = trigger which = 55514 }
+		command = { type = trigger which = 55515 }
+	}
+
+}
+
+#########################################################################
+# インドネシアが独立を勝ち取る
+#########################################################################
+event = { 
+	id = 55514
+	random = no
+	country = INO
+	
+	name = "EVT_55513_NAME"
+	desc = "EVT_55513_DESC"
+	style = 0
+
+	picture = "japanese_reinforcments"
+
+	action_a = {
+		name = "EVT_55514_ACTA"
+		command = { type = dissent value = -5 }
+#何故かインドネシアはジョグジャカルタが首都に設定されているのでここで修正する
+		command = { type = capital which = 1628 }
+	#	command = { type = province_manpower which = 1628 value = 9 } # バタヴィア
+	#	command = { type = province_manpower which = 1630 value = 1 } # テラチャップ
+	#	command = { type = province_manpower which = 1631 value = 4 } # ジョグジャカルタ
+	#	command = { type = province_manpower which = 1632 value = 2 } # スラバヤ
+	#	command = { type = province_manpower which = 1358 value = 3 } # バレンバン
+	#	command = { type = province_manpower which = 1359 value = 5 } # オーストハーフェン
+	}
+}
+
+#########################################################################
+# インドネシアが独立を勝ち取る
+#########################################################################
+event = { 
+	id = 55515
+	random = no
+	country = JAP
+	
+	name = "EVT_55513_NAME"
+	desc = "EVT_55513_DESC"
+	style = 0
+
+	picture = "japanese_reinforcments"
+
+	action_a = {
+		name = "EVT_55515_ACTA"
+		command = { type = dissent value = -5 }
+	}
+}
+#イギリスと戦争するのは辛すぎるので一応、オーストラリアと戦争するようにしています。それにともなってスラバヤ事件などオランダが起こす事件をそのままオーストラリアに当てはめているだけです。
+#オーストラリアが戦争状態か否かで介入する率が変動するようにしています。（ドイツとの戦争が終わっているかどうか、冷戦が始まっていないかどうかで介入する余裕があるのかどうかを表現している）
+#実を言うとインドネシア独立を勝ち取った時、オランダは多数の傀儡政権を建てて対抗しようとしたのでもっと少ない領土だったのですが、すぐにインドネシアに併合されたのでイリヤンジャヤをオランダ領のままにするだけでいいかと...
+#（その辺の事情までイベントにする必要ないですよね？）
+
+event = { 
+	id = 55517
+	random = no
+	country = INO
+	trigger = {
+		event = 55508
+		random = 30
+		NOT = {	exists = HOL }
+		exists = AST
+	}
+
+	name = "EVT_55517_NAME"
+	desc = "EVT_55517_DESC"
+	picture = "indochina_demand" #needs event picture
+	style = 0
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+	action_a = {
+		name = "EVT_55517_ACTA"
+		command = { type = secedeprovince which = AST value = 1635 }
+		command = { type = secedeprovince which = AST value = 1636 }
+		command = { type = secedeprovince which = AST value = 1637 }
+		command = { type = secedeprovince which = AST value = 1638 }
+		command = { type = secedeprovince which = AST value = 1639 }
+		command = { type = secedeprovince which = AST value = 1640 }
+		command = { type = secedeprovince which = AST value = 1641 }
+		command = { type = secedeprovince which = AST value = 1642 }
+		command = { type = secedeprovince which = AST value = 1643 }
+		command = { type = secedeprovince which = AST value = 1645 }
+		command = { type = secedeprovince which = AST value = 1648 }
+		command = { type = secedeprovince which = AST value = 1649 }
+		command = { type = secedeprovince which = AST value = 1650 }
+		command = { type = secedeprovince which = AST value = 1651 }
+		command = { type = secedeprovince which = AST value = 1652 }
+		command = { type = secedeprovince which = AST value = 1653 }
+		command = { type = secedeprovince which = AST value = 1654 }
+		command = { type = secedeprovince which = AST value = 1655 }
+		command = { type = secedeprovince which = AST value = 1656 }
+		command = { type = secedeprovince which = AST value = 1657 }
+		command = { type = secedeprovince which = AST value = 1659 }
+		command = { type = secedeprovince which = AST value = 1660 }
+		command = { type = secedeprovince which = AST value = 1661 }
+		command = { type = secedeprovince which = AST value = 1662 }
+		command = { type = secedeprovince which = AST value = 1663 }
+		command = { type = secedeprovince which = AST value = 1664 }
+		command = { type = secedeprovince which = AST value = 1665 }
+		command = { type = secedeprovince which = AST value = 1673 }
+		command = { type = secedeprovince which = AST value = 1674 }
+	}
+}
+
+event = { 
+	id = 55518
+	random = no
+	country = AST
+	trigger = {
+		event = 55517
+		random = 30
+		OR = { #BETA修正パッチ
+			NOT = {	exists = JAP }
+			event = 131510
+			event = 131520
+		}
+		exists = INO
+		atwar = yes
+	}
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_55518_NAME"
+	desc = "EVT_55518_DESC"
+	style = 0
+	picture = "indochina_demand"
+
+	action_a = { #
+		name = "EVT_55518_ACTA"
+		ai_chance = 20
+#オランダが連合国だった場合、連合国も引っ付いてくるんでしょうか？（オランダ及びオーストリアとの単独戦争状態にしたい）
+#オランダを同盟離脱させた上で開戦じゃ駄目？ by 統制派
+		command = { type = leave_alliance }
+		command = { type = war which = INO }
+#ジャカルタ（バタヴィア）あたりにいきなり出現させてみる？？
+		command = { type = add_corps which = "英軍オランダ領東インド派遣軍" value = land where = 1628 }
+		command = { type = add_division value = hq when = 2 }
+		command = { type = add_division value = infantry when = 4 where = rocket_artillery }
+
+		command = { type = add_corps value = land where = 1628 }
+		command = { type = add_division value = paratrooper when = 4 }
+#日本軍
+		command = { type = add_corps value = land where = 1628 }
+		command = { type = add_division value = infantry when = 3 where = artillery }
+		command = { type = add_corps value = land where = 1628 }
+		command = { type = add_division value = infantry when = 3 where = artillery }
+		command = { type = sleepevent which = 55519 }
+#奇襲と脳内補完(こうしないと即インドネシア勝利条件を満たしてしまう。占領イベントで割譲させないのはオーストラリアが引き下がった場合インドネシアが可哀そすぎるので)
+	}
+	action_b = {
+		name = "EVT_55518_ACTB"
+		ai_chance = 80
+		command = { type = sleepevent which = 55519 }
+	}
+}
+
+event = { 
+	id = 55519
+	random = no
+	country = AST
+	trigger = {
+		event = 55517
+		random = 30
+		OR = { #BETA修正パッチ
+			NOT = {	exists = JAP }
+			event = 131510
+			event = 131520
+		}
+		exists = INO
+		atwar = no
+	}
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_55518_NAME"
+	desc = "EVT_55518_DESC"
+	style = 0
+	picture = "indochina_demand"
+
+	action_a = { #
+		name = "EVT_55518_ACTA"
+		ai_chance = 50
+#オランダが連合国だった場合、連合国も引っ付いてくるんでしょうか？（オランダ及びオーストリアとの単独戦争状態にしたい）
+#オランダを同盟離脱させた上で開戦じゃ駄目？ by 統制派
+		command = { type = leave_alliance }
+		command = { type = war which = INO }
+#ジャカルタ（バタヴィア）あたりにいきなり出現させてみる？？
+		command = { type = add_corps value = land where = 1628 }
+		command = { type = add_division value = hq when = 2 }
+		command = { type = add_division value = infantry when = 4 where = rocket_artillery }
+
+		command = { type = add_corps value = land where = 1628 }
+		command = { type = add_division value = paratrooper when = 4 }
+#日本軍
+		command = { type = add_corps value = land where = 1628 }
+		command = { type = add_division value = infantry when = 3 where = artillery }
+		command = { type = add_corps value = land where = 1628 }
+		command = { type = add_division value = infantry when = 3 where = artillery }
+		command = { type = sleepevent which = 55518 }
+#奇襲と脳内補完(こうしないと即インドネシア勝利条件を満たしてしまう。占領イベントで割譲させないのはオーストラリアが引き下がった場合インドネシアが可哀そすぎるので)
+	}
+	action_b = {
+		name = "EVT_55518_ACTB"
+		ai_chance = 50
+		command = { type = sleepevent which = 55518 }
+	}
+}
+
+#########################################################################
+# インドネシアへの占領地返還（遠藤マイクロ）
+#########################################################################
+event = { 
+	id = 55520
+	random = no
+	tag = { JAP U87 MAN MEN U73 USA CSA TEX CAN AUS NZL BUR KOR SIB IND SIA }
+	persistent = yes
+	trigger = {
+		alliance = { country = INO country = -1 }
+		OR = {
+			control = { province = 1354 data = -1 } 
+			control = { province = 1355 data = -1 }
+			control = { province = 1356 data = -1 }
+			control = { province = 1357 data = -1 }
+			control = { province = 1358 data = -1 }
+			control = { province = 1359 data = -1 }
+			control = { province = 1628 data = -1 }
+			control = { province = 1629 data = -1 }
+			control = { province = 1630 data = -1 }
+			control = { province = 1631 data = -1 }
+			control = { province = 1632 data = -1 }
+			control = { province = 1633 data = -1 }
+			control = { province = 1634 data = -1 }
+			control = { province = 1635 data = -1 }
+			control = { province = 1636 data = -1 }
+			control = { province = 1637 data = -1 }
+			control = { province = 1638 data = -1 }
+			control = { province = 1639 data = -1 }
+			control = { province = 1640 data = -1 }
+			control = { province = 1641 data = -1 }
+			control = { province = 1642 data = -1 }
+			control = { province = 1643 data = -1 }
+			control = { province = 1645 data = -1 }
+			control = { province = 1648 data = -1 }
+			control = { province = 1649 data = -1 }
+			control = { province = 1650 data = -1 }
+			control = { province = 1651 data = -1 }
+			control = { province = 1652 data = -1 }
+			control = { province = 1653 data = -1 }
+			control = { province = 1654 data = -1 }
+			control = { province = 1655 data = -1 }
+			control = { province = 1656 data = -1 }
+			control = { province = 1657 data = -1 }
+			control = { province = 1659 data = -1 }
+			control = { province = 1660 data = -1 }
+			control = { province = 1661 data = -1 }
+			control = { province = 1662 data = -1 }
+			control = { province = 1663 data = -1 }
+			control = { province = 1664 data = -1 }
+			control = { province = 1665 data = -1 }
+			control = { province = 1673 data = -1 }
+			control = { province = 1674 data = -1 }
+			control = { province = 1666 data = -1 }
+			control = { province = 1667 data = -1 }
+			control = { province = 1672 data = -1 }
+			control = { province = 1675 data = -1 }
+			control = { province = 1676 data = -1 }
+			control = { province = 1677 data = -1 }
+			control = { province = 1678 data = -1 }
+			control = { province = 1679 data = -1 }
+			control = { province = 1680 data = -1 }
+		}
+	}
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_55520_NAME"
+	desc = "EVT_55520_DESC"
+	style = 0
+	picture = "japanese_reinforcments"
+
+	action_a = {
+		name = "OK"
+		command = { type = secedeprovince which = INO value = 1354 } #蘭領東インドをインドネシアに譲渡
+		command = { type = secedeprovince which = INO value = 1355 }
+		command = { type = secedeprovince which = INO value = 1356 }
+		command = { type = secedeprovince which = INO value = 1357 }
+		command = { type = secedeprovince which = INO value = 1358 }
+		command = { type = secedeprovince which = INO value = 1359 }
+		command = { type = secedeprovince which = INO value = 1628 }
+		command = { type = secedeprovince which = INO value = 1629 }
+		command = { type = secedeprovince which = INO value = 1630 }
+		command = { type = secedeprovince which = INO value = 1631 }
+		command = { type = secedeprovince which = INO value = 1632 }
+		command = { type = secedeprovince which = INO value = 1633 }
+		command = { type = secedeprovince which = INO value = 1634 }
+		command = { type = secedeprovince which = INO value = 1635 }
+		command = { type = secedeprovince which = INO value = 1636 }
+		command = { type = secedeprovince which = INO value = 1637 }
+		command = { type = secedeprovince which = INO value = 1638 }
+		command = { type = secedeprovince which = INO value = 1639 }
+		command = { type = secedeprovince which = INO value = 1640 }
+		command = { type = secedeprovince which = INO value = 1641 }
+		command = { type = secedeprovince which = INO value = 1642 }
+		command = { type = secedeprovince which = INO value = 1643 }
+		command = { type = secedeprovince which = INO value = 1645 }
+		command = { type = secedeprovince which = INO value = 1648 }
+		command = { type = secedeprovince which = INO value = 1649 }
+		command = { type = secedeprovince which = INO value = 1650 }
+		command = { type = secedeprovince which = INO value = 1651 }
+		command = { type = secedeprovince which = INO value = 1652 }
+		command = { type = secedeprovince which = INO value = 1653 }
+		command = { type = secedeprovince which = INO value = 1654 }
+		command = { type = secedeprovince which = INO value = 1655 }
+		command = { type = secedeprovince which = INO value = 1656 }
+		command = { type = secedeprovince which = INO value = 1657 }
+		command = { type = secedeprovince which = INO value = 1659 }
+		command = { type = secedeprovince which = INO value = 1660 }
+		command = { type = secedeprovince which = INO value = 1661 }
+		command = { type = secedeprovince which = INO value = 1662 }
+		command = { type = secedeprovince which = INO value = 1663 }
+		command = { type = secedeprovince which = INO value = 1664 }
+		command = { type = secedeprovince which = INO value = 1665 }
+		command = { type = secedeprovince which = INO value = 1673 }
+		command = { type = secedeprovince which = INO value = 1674 }
+		command = { type = secedeprovince which = INO value = 1666 }
+		command = { type = secedeprovince which = INO value = 1667 }
+		command = { type = secedeprovince which = INO value = 1672 }
+		command = { type = secedeprovince which = INO value = 1675 }
+		command = { type = secedeprovince which = INO value = 1676 }
+		command = { type = secedeprovince which = INO value = 1677 }
+		command = { type = secedeprovince which = INO value = 1678 }
+		command = { type = secedeprovince which = INO value = 1679 }
+		command = { type = secedeprovince which = INO value = 1680 }
+	}
+}
+
+#########################################################################
+# スラバヤ事件の責任
+#########################################################################
+#スラバヤ事件の一ヵ月後くらいに発生
+event = { 
+	id = 55521
+	random = no
+	country = AST
+	trigger = {
+		event = 55510
+		random = 30
+		war = { country = INO country = AST }
+	}
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_55511_NAME"
+	desc = "EVT_55511_DESC"
+	style = 0
+
+	picture = "japanese_reinforcments"
+
+	action_a = {
+		name = "EVT_55511_ACTA"
+		command = { type = trigger which = 55512 }
+	}
+}
+
+#########################################################################
+# インドネシアが独立を勝ち取る
+#########################################################################
+event = { 
+	id = 55522
+	random = no
+	country = AST
+
+	trigger = {
+		NOT = { 
+			event = 55522
+			alliance = { country = JAP country = GER }
+			alliance = { country = INO country = GER }
+			war = { country = JAP country = ENG }
+		 }
+		#event = 59901 #FEPK変更部分
+		NOT = { event = 55513
+			event = 131605 }#FEPK変更部分
+		war = { country = INO country = AST }
+		OR = {
+		control = { province = 1355 data = INO } # メダン
+		control = { province = 1355 data = JAP } # メダン
+		}
+		OR = {
+		control = { province = 1358 data = INO } # バレンバン
+		control = { province = 1358 data = JAP } # バレンバン
+		}
+		OR = {
+		control = { province = 1359 data = INO } # オーストハーフェン
+		control = { province = 1359 data = JAP } # オーストハーフェン
+		}
+		OR = {
+		control = { province = 1628 data = INO } # バタヴィア
+		control = { province = 1628 data = JAP } # バタヴィア
+		}
+		OR = {
+		control = { province = 1631 data = INO } # ジョグジャカルタ
+		control = { province = 1631 data = JAP } # ジョグジャカルタ
+		}
+		random = 50
+	}
+	
+	name = "EVT_55513_NAME"
+	desc = "EVT_55513_DESC"
+	style = 0
+
+	picture = "japanese_reinforcments"
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "EVT_55513_ACTA"
+		command = { type = peace which = INO value = 0 }
+		command = { type = peace which = JAP value = 0 }
+		command = { type = secedeprovince which = INO value = 1354 }
+		command = { type = secedeprovince which = INO value = 1355 }
+		command = { type = secedeprovince which = INO value = 1356 }
+		command = { type = secedeprovince which = INO value = 1357 }
+		command = { type = secedeprovince which = INO value = 1358 }
+		command = { type = secedeprovince which = INO value = 1359 }
+
+		command = { type = secedeprovince which = INO value = 1628 }
+		command = { type = secedeprovince which = INO value = 1629 }
+		command = { type = secedeprovince which = INO value = 1630 }
+		command = { type = secedeprovince which = INO value = 1631 }
+		command = { type = secedeprovince which = INO value = 1632 }
+		command = { type = secedeprovince which = INO value = 1633 }
+		command = { type = secedeprovince which = INO value = 1634 }
+		command = { type = secedeprovince which = INO value = 1635 }
+		command = { type = secedeprovince which = INO value = 1636 }
+		command = { type = secedeprovince which = INO value = 1637 }
+		command = { type = secedeprovince which = INO value = 1638 }
+		command = { type = secedeprovince which = INO value = 1639 }
+		command = { type = secedeprovince which = INO value = 1640 }
+		command = { type = secedeprovince which = INO value = 1641 }
+		command = { type = secedeprovince which = INO value = 1642 }
+		command = { type = secedeprovince which = INO value = 1643 }
+		command = { type = secedeprovince which = INO value = 1645 }
+		command = { type = secedeprovince which = INO value = 1648 }
+		command = { type = secedeprovince which = INO value = 1649 }
+		command = { type = secedeprovince which = INO value = 1650 }
+		command = { type = secedeprovince which = INO value = 1651 }
+		command = { type = secedeprovince which = INO value = 1652 }
+		command = { type = secedeprovince which = INO value = 1653 }
+		command = { type = secedeprovince which = INO value = 1654 }
+		command = { type = secedeprovince which = INO value = 1655 }
+		command = { type = secedeprovince which = INO value = 1656 }
+		command = { type = secedeprovince which = INO value = 1657 }
+		command = { type = secedeprovince which = INO value = 1659 }
+		command = { type = secedeprovince which = INO value = 1660 }
+		command = { type = secedeprovince which = INO value = 1661 }
+		command = { type = secedeprovince which = INO value = 1662 }
+		command = { type = secedeprovince which = INO value = 1663 }
+		command = { type = secedeprovince which = INO value = 1664 }
+		command = { type = secedeprovince which = INO value = 1665 }
+		command = { type = secedeprovince which = INO value = 1673 }
+		command = { type = secedeprovince which = INO value = 1674 }
+		command = { type = dissent value = 5 } # ウィルヘルミアタンが暴れる
+		command = { type = trigger which = 55514 }
+		command = { type = trigger which = 55515 }
+	}
+
+}
+
+
+#########################################################################
+# インドネシアの占領政策方針（ドイツ)
+#########################################################################
+event ={
+	id = 55531
+	random = no
+	country = GER
+	style = 0
+	trigger = {
+		control = { province = 1628 data = -3 } # バタヴィア
+		control = { province = 1629 data = -3 } # テラチャップ
+		control = { province = 1630 data = -3 } # スマラン
+		control = { province = 1631 data = -3 } # ジョグジャカルタ
+		control = { province = 1632 data = -3 } # スラバヤ
+		control = { province = 1633 data = -3 } # マラン
+		control = { province = 1634 data = -3 } # マドゥラ
+		OR = {
+			NOT = { alliance = { country = JAP } }
+			puppet = { country = JAP }
+		}
+		NOT = {
+			alliance = { country = HOL }
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_55531_NAME"
+	desc = "EVT_55531_DESC"
+	picture = "indochina_demand"
+
+	action_a = { # 
+		name = "EVT_55531_ACTA"	#インドネシアに現地人政権を樹立する
+		ai_chance = 10
+		command = { type = dissent value = -1 }
+	}
+	action_b = { # 
+		name = "EVT_55531_ACTB"	#この地はドイツ領ニューギニアの一部である
+		ai_chance = 90
+		command = { type = sleepevent which = 55532 }
+		command = { type = dissent value = 1 }
+	}
+}
+
+#########################################################################
+# インドネシアの自治権拡大
+#########################################################################
+event ={
+	id = 55532
+	random = no
+	country = GER
+	style = 0
+	trigger = {
+		event = 55531
+		random = 50
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_55532_NAME"
+	desc = "EVT_55532_DESC"
+
+	picture = "indochina_demand"
+
+	action_a = { # 
+		name = "EVT_55532_ACTA"
+		ai_chance = 99
+		command = { type = independence which = INO value = 1 }
+		command = { type = trigger which = 55533 }
+	}
+	action_b = { # 
+		name = "EVT_55532_ACTB"
+		ai_chance = 1
+		command = { type = sleepevent which = 55533 }
+	}
+}
+
+#########################################################################
+# Merdeka('Independence' in Indonesian language)
+#########################################################################
+event ={
+	id = 55533
+	random = no
+	country = GER
+	style = 0
+
+	name = "EVT_55533_NAME"
+	desc = "EVT_55533_DESC"
+
+	picture = "indochina_demand"
+
+	action_a = { # 
+		name = "EVT_55533_ACTA"
+		command = { type = make_puppet which = INO }
+		command = { type = trigger which = 55534 }
+	}
+}
+
+#########################################################################
+# Merdeka('Independence' in Indonesian language)
+#########################################################################
+event ={
+	id = 55534
+	random = no
+	country = INO
+	style = 0
+
+	name = "EVT_55533_NAME"
+	desc = "EVT_55533_DESC"
+
+	picture = "indochina_demand"
+
+	action_a = { # 
+		name = "EVT_55534_ACTA"
+		command = { type = dissent value = -10 }
+		command = { type = access which = GER }	#FEPKDH-SA
+		command = { type = set_domestic which = democratic value = 2 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 577011 }
+		command = { type = headofgovernment which = 577014 }
+		command = { type = foreignminister which = 577017 }
+		command = { type = armamentminister which = 577024 }
+		command = { type = ministerofsecurity which = 577062 }
+		command = { type = ministerofintelligence which = 577035 }
+		command = { type = chiefofstaff which = 577038 }
+		command = { type = chiefofarmy which = 577043 }
+		command = { type = chiefofnavy which = 577049 }
+		command = { type = chiefofair which = 577052 }
+
+		command = { type = ai which = "ino_1935.ai" }
+
+		# 以下、インドネシアのオランダ人閣僚を抹消
+		command = { type = sleepminister which = 577001 } # 
+		command = { type = sleepminister which = 577002 } # 
+		command = { type = sleepminister which = 577003 } # 
+		command = { type = sleepminister which = 577005 } # 
+		command = { type = sleepminister which = 577006 } # 
+		command = { type = sleepminister which = 577007 } # 
+		command = { type = sleepminister which = 577008 } # 
+		command = { type = sleepminister which = 577009 } # 
+		command = { type = sleepminister which = 577010 } # 
+		command = { type = sleepminister which = 577012 } # 
+		command = { type = sleepminister which = 577039 } # 
+		command = { type = sleepminister which = 577040 } # 
+		command = { type = sleepminister which = 577044 } # 
+		command = { type = sleepminister which = 577045 } # 
+		command = { type = sleepminister which = 577046 } # 
+		# 以下、インドネシアのオランダ人司令官を抹消
+		command = { type = sleepleader which = 577002 }
+		command = { type = sleepleader which = 577003 }
+		command = { type = sleepleader which = 577004 }
+		command = { type = sleepleader which = 577009 }
+		command = { type = sleepleader which = 577016 }
+		command = { type = sleepleader which = 577025 }
+		command = { type = sleepleader which = 577027 }
+		command = { type = sleepleader which = 577028 }
+		command = { type = sleepleader which = 577030 }
+		command = { type = sleepleader which = 577036 }
+	}
+}
+
+#FEPK変更部分  id 55523-55526 FEPK 対日英国降伏イベントとしてreplace

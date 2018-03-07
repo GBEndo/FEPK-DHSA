@@ -1,0 +1,3041 @@
+MODEL_AFG_4_0;CV-33;CV-33;;;;;;;;;X
+MODEL_AFG_4_1;LT vs.35;LT vs.35;;;;;;;;;X
+MODEL_AFG_4_2;BT-7;BT-7;;;;;;;;;X
+MODEL_AFG_5_0;T-18;T-18;;;;;;;;;X
+MODEL_AFG_5_1;T-28;T-28;;;;;;;;;X
+MODEL_AFG_5_2;BT-7M;BT-7M;;;;;;;;;X
+MODEL_AFG_5_3;T-34/76;T-34/76;;;;;;;;;X
+MODEL_AFG_5_4;T-34/85;T-34/85;;;;;;;;;X
+MODEL_AFG_13_0;ホーカー・ハインド;Hawker Hind;;;;;;;;;X
+MODEL_AFG_17_0;ブレダ Ba.25;Breda Ba.25;;;;;;;;;X
+MODEL_ALB_4_0;CV-35;CV-35;;;;;;;;;X
+MODEL_ALB_4_1;L3/38;L.3/38;;;;;;;;;X
+MODEL_ALB_4_2;L6/40;L.6/40;;;;;;;;;X
+MODEL_ALB_5_0;フィアット 2000;Fiat 2000;;;;;;;;;X
+MODEL_ALB_5_1;M11/39;M.11/39;;;;;;;;;X
+MODEL_ALB_5_2;M13/40;M.13/40;;;;;;;;;X
+MODEL_ALB_5_3;M15/42;M.15/42;;;;;;;;;X
+MODEL_ALB_5_4;M18/43 サハリアノ;M.18/43 Sahariano;;;;;;;;;X
+MODEL_ARG_4_0;M1A2;M1A2;;;;;;;;;X
+MODEL_ARG_4_1;L-60S;L-60S;;;;;;;;;X
+MODEL_ARG_4_2;LT vz 38;LT vz. 38;;;;;;;;;X
+MODEL_ARG_5_0;ルノー FT-17;Renault FT17;;;;;;;;;X
+MODEL_ARG_5_1;T4E1;T4E1;;;;;;;;;X
+MODEL_ARG_5_2;ナウエル D.L.43;Nahuel D.L.43;;;;;;;;;X
+MODEL_ARG_5_3;M4A1 シャーマン;M4A1 Sherman;;;;;;;;;X
+MODEL_ARG_5_4;M4/E8 シャーマン;M4/E8 Sherman;;;;;;;;;X
+MODEL_ARG_5_5;M26 パーシング;M26 Pershing;;;;;;;;;X
+MODEL_ARG_12_3;FMA I.Ae.33 プルキ II;FMA I.Ae.33 Pulqui II;;;;;;;;;X
+MODEL_ARG_13_0;カーチス・ホーク III;Curtiss Hawk III;;;;;;;;;X
+MODEL_ARG_13_1;カーチス・ホーク 75H;Curtiss Hawk 75H;;;;;;;;;X
+MODEL_ARG_13_2;FMA I.Ae-22 DL;FMA I.Ae-22 DL;;;;;;;;;X
+MODEL_ARG_13_8;FMA I.Ae.27 プルキ;FMA I.Ae.27 Pulqui;;;;;;;;;X
+MODEL_ARG_16_0;コンソリデーテッド P2Y-3A レンジャー;Consolidated P2Y-3A Ranger;;;;;;;;;X
+MODEL_ARG_17_0;FMA Ae-MB2 ボンビ;FMA Ae-MB2 Bombi;;;;;;;;;X
+MODEL_ARG_18_0;ダグラス C-32;Douglas C-32;;;;;;;;;X
+MODEL_ARG_21_0;リバダビア級;Rivadavia-class;;;;;;;;;X
+MODEL_ARG_22_1;ラ・アーヘンティーナ級;La Argentina-class;;;;;;;;;X
+MODEL_ARG_23_0;ヴェインティシンコ・デ・マージョ級;Veinticinco de Mayo-class;;;;;;;;;X
+MODEL_ARG_25_0;チュルカ級;Churucca-class;;;;;;;;;X
+MODEL_ARG_25_1;ブエノスアイレス級;Buenos Aires-class;;;;;;;;;X
+MODEL_ARG_28_0;サンタフェ級;Santa Fe-class;;;;;;;;;X
+MODEL_AST_4_0;カーデンロイド M1933;Carden-Loyd M1933;;;;;;;;;X
+MODEL_AST_4_1;ヴィッカース Mk.VIc;Vickers Mk.VIc;;;;;;;;;X
+MODEL_AST_4_2;スチュアート Mk.V;Stuart Mk.V;;;;;;;;;X
+MODEL_AST_5_0;ホイペット;Whippet;;;;;;;;;X
+MODEL_AST_5_1;巡航戦車 Mk.I A9;Cruiser Tank Mk.I A9;;;;;;;;;X
+MODEL_AST_5_2;AC1 センチネル;AC1 Sentinel;;;;;;;;;X
+MODEL_AST_5_3;AC4 センチネル;AC4 Sentinel;;;;;;;;;X
+MODEL_AST_5_4;A34 コメット;A34 Comet;;;;;;;;;X
+MODEL_AST_5_5;センチュリオン Mk.I;Centurion Mk.I;;;;;;;;;X
+MODEL_AST_5_6;センチュリオン Mk.III;Centurion Mk.III;;;;;;;;;X
+MODEL_AST_5_7;センチュリオン Mk.V;Centurion Mk.V;;;;;;;;;X
+MODEL_AST_12_0;カーチス・キティホーク;Curtiss Kittyhawk;;;;;;;;;X
+MODEL_AST_12_1;スーパーマリン・スピットファイア Mk.IX;Supermarine Spitfire Mk.IX;;;;;;;;;X
+MODEL_AST_12_2;CAC CA-15 カンガルー;CAC CA-15 Kangaroo;;;;;;;;;X
+MODEL_AST_12_3;グロスター・ミーティア Mk.III;Gloster Meteor Mk.III;;;;;;;;;X
+MODEL_AST_12_4;グロスター・ミーティア F.8;Gloster Meteor F.8;;;;;;;;;X
+MODEL_AST_13_0;ホーカー・デーモン;Hawker Demon;;;;;;;;;X
+MODEL_AST_13_1;ホーカー・ハリケーン Mk.I;Hawker Hurricane Mk.I;;;;;;;;;X
+MODEL_AST_13_2;ホーカー・ハリケーン Mk.II;Hawker Hurricane Mk.II;;;;;;;;;X
+MODEL_AST_13_3;CAC CA-12 ブーメラン;CAC CA-12 Boomerang;;;;;;;;;X
+MODEL_AST_13_4;CAC CA-19 ブーメラン;CAC CA-19 Boomerang;;;;;;;;;X
+MODEL_AST_13_5;ホーカー P.1052;Hawker P.1052;;;;;;;;;X
+MODEL_AST_13_6;SARO SR.177;SARO SR.177;;;;;;;;;X
+MODEL_AST_13_7;グロスター・ミーティア Mk.I;Gloster Meteor Mk.I;;;;;;;;;X
+MODEL_AST_13_8;コモンウェルス・サーブル;Commonwealth Sabre;;;;;;;;;X
+MODEL_AST_13_9;ダッソー・ミラージュ III;Dassault Mirage III;;;;;;;;;X
+MODEL_AST_14_0;アームストロング・ホイットワース・ホイットレー;Armstrong-Whitworth Whitley;;;;;;;;;X
+MODEL_AST_14_1;コンソリデーテッド B-24 リベレーター;Consolidated B-24 Liberator;;;;;;;;;X
+MODEL_AST_14_2;アブロ・ランカスター;Avro Lancaster;;;;;;;;;X
+MODEL_AST_14_3;ヴィッカース・ヴァリアント;Vickers Valiant;;;;;;;;;X
+MODEL_AST_15_0;ブリストル・ブレニム Mk.I;Bristol Beaufort;;;;;;;;;X
+MODEL_AST_15_1;ハンドレページ・ハンプデン;Handley Page Hampden;;;;;;;;;X
+MODEL_AST_15_2;ヴッカース・ウェリントン Mk.III;Vickers-Armstrong Wellington Mk.III;;;;;;;;;X
+MODEL_AST_15_3;ノースアメリカン・ミッチェル Mk.II;N.American Mitchell Mk.II;;;;;;;;;X
+MODEL_AST_15_4;デハビランド・モスキート B.XVI;de Havilland Mosquito B.XVI;;;;;;;;;X
+MODEL_AST_15_5;デハビランド・ヴェノム;de Havilland Venom;;;;;;;;;X
+MODEL_AST_15_6;イングリッシュ・エレクトリック・キャンベラ;English Electric Canberra;;;;;;;;;X
+MODEL_AST_16_0;ロッキード・ハドソン;Lockheed Hudson;;;;;;;;;X
+MODEL_AST_16_1;ロッキード・ヴェンチュラ;Lockheed Ventura;;;;;;;;;X
+MODEL_AST_16_2;CAC CA-11 ウーメラ;CAC CA-11 Woomera;;;;;;;;;X
+MODEL_AST_16_4;ロッキード P2V ネプチューン;Lockheed P2V Neptune;;;;;;;;;X
+MODEL_AST_17_0;CAC CA-10 ワイラウェイ;CAC CA-10 Wirraway;;;;;;;;;X
+MODEL_AST_17_1;ヴァルティー・ヴェンジャンス;Vultee Vengeance;;;;;;;;;X
+MODEL_AST_17_2;ブリストル・ボーファイター;Bristol Beaufighter;;;;;;;;;X
+MODEL_AST_18_0;アームストロング・ホイットワース・アルベマール;Armstrong-Whitworth AW.41 Albermarle;;;;;;;;;X
+MODEL_AST_18_1;ダグラス・ダコタ;Douglas Dakota;;;;;;;;;X
+MODEL_AST_18_2;アブロ・ヨーク;Avro 685 York;;;;;;;;;X
+MODEL_AST_22_0;カレドン級;Caledon-class;;;;;;;;;X
+MODEL_AST_22_1;エメラルド級;Emerald-class;;;;;;;;;X
+MODEL_AST_22_2;アンフィオン級;Amphion-class;;;;;;;;;X
+MODEL_AST_22_3;サザンプトン級;Southampton-class;;;;;;;;;X
+MODEL_AST_22_4;スイフトシュア級;Swiftsure-class;;;;;;;;;X
+MODEL_AST_23_1;オーストラリア級;Australia-class;;;;;;;;;X
+MODEL_AST_23_2;サリー級;Surrey-class;;;;;;;;;X
+MODEL_AST_25_0;V級;V-class;;;;;;;;;X
+MODEL_AST_25_1;A級;A-class;;;;;;;;;X
+MODEL_AST_25_2;アルンタ級;Arunta-class;;;;;;;;;X
+MODEL_AST_25_3;N級;Napier-class;;;;;;;;;X	#Jul, 1939
+MODEL_AST_25_4;Q級;Quadrant-class;;;;;;;;;X	#Oct, 1945
+MODEL_AST_25_5;アンザック級;Battle-class;;;;;;;;;X	#Sep, 1946
+MODEL_AST_25_6;ヴォイジャー級;Voyager-class;;;;;;;;;X
+MODEL_AST_25_8;パース級;Vampire-class;;;;;;;;;X
+MODEL_AST_26_0;ハーミーズ級;Hermes-class;;;;;;;;;X
+MODEL_AST_26_1;カレイジャス級;Courageous-class;;;;;;;;;X
+MODEL_AST_26_2;アーク・ロイヤル級;Ark Royal-class;;;;;;;;;X
+MODEL_AST_26_3;イラストリアス級;Illustrious-class;;;;;;;;;X
+MODEL_AST_26_4;ヴェンジャンス級;Vengeance-class;;;;;;;;;X
+MODEL_AST_26_5;メルボルン級;Melbourne-class;;;;;;;;;X
+MODEL_AST_27_0;ハーミーズ級;Hermes-class;;;;;;;;;X
+MODEL_AST_27_1;イーグル級;Eagle-class;;;;;;;;;X
+MODEL_AST_27_2;ユニコーン級;Unicorn-class;;;;;;;;;X
+MODEL_AST_27_3;メルボルン級;Melbourne-class;;;;;;;;;X
+MODEL_AST_27_4;セントー級;Centaur-class;;;;;;;;;X
+MODEL_AST_27_5;インヴィンシブル級;Invincible-class;;;;;;;;;X
+MODEL_AST_28_0;H級;H-boat-class;;;;;;;;;X
+MODEL_AST_28_1;ソードフィッシュ級;Swordfish-class;;;;;;;;;X
+MODEL_AST_28_2;トライトン級;Triton-class;;;;;;;;;X
+MODEL_AST_28_3;A級;A-boat-class;;;;;;;;;X
+MODEL_AST_28_5;オックスレイ級;Oxley-class;;;;;;;;;X
+MODEL_AUS_4_0;CV-35;CV-35;;;;;;;;;X
+MODEL_AUS_4_1;LT vz 35;LT vz. 35;;;;;;;;;X
+MODEL_AUS_4_2;ランツヴェルク L-60;Landsverk L-60;;;;;;;;;X
+MODEL_AUS_5_0;A7V 突撃戦車;Sturmpanzerwagen A7V;;;;;;;;;X
+MODEL_AUS_5_1;ランツヴェルク L-61;Landsverk L-61;;;;;;;;;X
+MODEL_AUS_5_2;シュコダ SP-III;Skoda SP-III;;;;;;;;;X
+MODEL_AUS_5_3;IV号戦車;PzKpfw.IV;;;;;;;;;X
+MODEL_AUS_5_4;V号戦車 パンター;PzKpfw.V Panther;;;;;;;;;X
+MODEL_AUS_5_5;V号戦車F型 パンター;PzKpfw.VF Panther II;;;;;;;;;X
+MODEL_AUS_5_6;E-50 中戦車;E-50 Standardpanzer;;;;;;;;;X
+MODEL_AUS_5_7;SK105キュラシェーア;SK105 Kurussier;;;;;;;;;X
+MODEL_AUS_13_0;フィアット CR.32 フレッチア;Fiat CR.32 Freccia;;;;;;;;;X
+MODEL_AUS_15_0;ユンカース Ju 86;Junkers Ju-86;;;;;;;;;X
+MODEL_AUS_16_0;カプロニ Ca.111;Caproni Ca.111;;;;;;;;;X
+MODEL_AUS_17_0;ブレダ Ba.28;Breda Ba.28;;;;;;;;;X
+MODEL_AUS_18_0;カプロニ Ca.133;Caproni Ca.133;;;;;;;;;X
+MODEL_BEL_4_0;カーデンロイド M1933;Carden-Loyd M1933;;;;;;;;;X
+MODEL_BEL_4_1;T-13;T-13;;;;;;;;;X
+MODEL_BEL_4_2;ACG-1;ACG-1;;;;;;;;;X
+MODEL_BEL_5_0;ルノー FT-17;Renault FT-17;;;;;;;;;X
+MODEL_BEL_5_1;ルノー R-35;Renault R35;;;;;;;;;X
+MODEL_BEL_5_2;Mk.VI A15 クルセイダー;Mk.VI A15 Crusader;;;;;;;;;X
+MODEL_BEL_5_3;M4A1 シャーマン;M4A1 Sherman;;;;;;;;;X
+MODEL_BEL_5_4;M4/E8 シャーマン;M4/E8 Sherman;;;;;;;;;X
+MODEL_BEL_5_5;M26 パーシング;M26 Pershing;;;;;;;;;X
+MODEL_BEL_13_0;SABCA フォックス VI;SABCA Fox VI;;;;;;;;;X
+MODEL_BEL_13_1;ルナール R-36;Renard R.36;;;;;;;;;X
+MODEL_BEL_13_2;ルナール R-40;Renard R-40;;;;;;;;;X
+MODEL_BEL_16_0;SABCA S.47;SABCA S.47;;;;;;;;;X
+MODEL_BEL_17_0;SABCA バトル;SABCA Battle;;;;;;;;;X
+MODEL_BOL_4_0;CV-33;CV-33;;;;;;;;;X
+MODEL_BOL_4_1;M2A4;M2A4;;;;;;;;;X
+MODEL_BOL_4_2;M5 スチュアート;M5 Stuart;;;;;;;;;X
+MODEL_BOL_5_0;ルノー FT-17;Renault FT-17;;;;;;;;;X
+MODEL_BOL_5_1;ヴィッカース Mk.E;Vickers Mk.E;;;;;;;;;X
+MODEL_BOL_5_2;M3 リー;M3 Lee;;;;;;;;;X
+MODEL_BOL_5_3;M4A1 シャーマン;M4A1 Sherman;;;;;;;;;X
+MODEL_BOL_5_4;M4/E8 シャーマン;M4/E8 Sherman;;;;;;;;;X
+MODEL_BOL_5_5;M26 パーシング;M26 Pershing;;;;;;;;;X
+MODEL_BOL_13_0;カーチス・ホーク II;Curtiss Hawk II;;;;;;;;;X
+MODEL_BOL_15_0;ユンカース Ju 86;Junkers Ju-86;;;;;;;;;X
+MODEL_BRA_4_0;CV-33;CV-33;;;;;;;;;X
+MODEL_BRA_4_1;M2A4;M2A4;;;;;;;;;X
+MODEL_BRA_4_2;M5 スチュアート;M5 Stuart;;;;;;;;;X
+MODEL_BRA_5_0;ルノー FT-17;Renault FT-17;;;;;;;;;X
+MODEL_BRA_5_1;ヴィッカース Mk.E;Vickers Mk.E;;;;;;;;;X
+MODEL_BRA_5_2;M3 リー;M3 Lee;;;;;;;;;X
+MODEL_BRA_5_3;M4A1 シャーマン;M4A1 Sherman;;;;;;;;;X
+MODEL_BRA_5_4;M4/E8 シャーマン;M4/E8 Sherman;;;;;;;;;X
+MODEL_BRA_5_5;M26 パーシング;M26 Pershing;;;;;;;;;X
+MODEL_BRA_12_0;カーチス・キティホーク;Curtiss Kittyhawk;;;;;;;;;X
+MODEL_BRA_12_1;リパブリック P-47D サンダーボルト;Republic P-47D Thunderbolt;;;;;;;;;X
+MODEL_BRA_13_0;ボーイング P-12;Boeing P-12;;;;;;;;;X
+MODEL_BRA_13_1;カーチス P-36;Curtiss P-36;;;;;;;;;X
+MODEL_BRA_13_2;カーチス・トマホーク;Curtiss Tomhawk;;;;;;;;;X
+MODEL_BRA_15_0;ダグラス B-18A ボロ;Boeing B-18A Bolo;;;;;;;;;X
+MODEL_BRA_15_3;ノースアメリカン B-25D ミッチェル;Boeing B-25D Mitchell;;;;;;;;;X
+MODEL_BRA_15_4;ノースアメリカン B-25J ミッチェル;Boeing B-25J Mitchell;;;;;;;;;X
+MODEL_BRA_16_0;ロッキード・ハドソン;Lockheed Hudson;;;;;;;;;X
+MODEL_BRA_16_1;ロッキード・ヴェンチュラ;Lockheed Ventura;;;;;;;;;X
+MODEL_BRA_16_2;ロッキード・ハープーン;Lockheed Harpoon;;;;;;;;;X
+MODEL_BRA_18_1;ダグラス C-47 スカイトレイン;Douglas C-47 Skytrain;;;;;;;;;X
+MODEL_BRA_21_0;ミナス・ジェライス級;Minas Gerais-class;;;;;;;;;X
+MODEL_BRA_22_0;バイア級;Bahia-class;;;;;;;;;X
+MODEL_BRA_25_0;マラニャン級;Maranhao-class;;;;;;;;;X
+MODEL_BRA_25_1;マルチリオ・ディアス級;Marcilio Dias-class;;;;;;;;;X
+MODEL_BRA_28_0;ウマイタ級;Humaita-class;;;;;;;;;X
+MODEL_BUL_4_0;CV-33;CV-33;;;;;;;;;X
+MODEL_BUL_4_1;シュコダ Lt-35;Skoda Lt-35;;;;;;;;;X
+MODEL_BUL_4_2;プラガ Lt-38;Praga Lt-38;;;;;;;;;X
+MODEL_BUL_5_0;ルノー FT-17;Renault FT-17;;;;;;;;;X
+MODEL_BUL_5_1;ヴィッカース Mk.II;Vickers Mk.II;;;;;;;;;X
+MODEL_BUL_5_2;マイバッハ T-III;Maybach T-III;;;;;;;;;X
+MODEL_BUL_5_3;マイバッハ T-IV;Maybach T-IV;;;;;;;;;X
+MODEL_BUL_5_4;マイバッハ T-V;Maybach T-V;;;;;;;;;X
+MODEL_BUL_12_0;アビア B-534 ドガン;Avia B-534 Dogan;;;;;;;;;X
+MODEL_BUL_12_1;メッサーシュミット Bf 109G;Messerschmitt Bf-109G;;;;;;;;;X
+MODEL_BUL_13_0;ハインケル He 51 ソコル;Heinkel He 51 Sokol;;;;;;;;;X
+MODEL_BUL_13_1;PZL P.24 ヴァストレフ;PZL P.24 Yastreb;;;;;;;;;X
+MODEL_BUL_13_2;メッサーシュミット Bf 109E ストレラ;Messerschmitt Bf-109E Strela;;;;;;;;;X
+MODEL_BUL_13_3;アビア B-135 リャストビカ;Avia B.135 Lyastovica ;;;;;;;;;X
+MODEL_BUL_13_4;ラザロフ Laz-14;Lazarov Laz-14;;;;;;;;;X
+MODEL_BUL_14_0;アエロ MB.200 En-4 ブハル;Aero MB.200 En-4 Buhal;;;;;;;;;X
+MODEL_BUL_15_0;ドルニエ Do 11 プリレプ;Dornier Do-11 Prilep;;;;;;;;;X
+MODEL_BUL_15_1;ドルニエ Do 17 ウラガン;Dornier Do-17 Uragan;;;;;;;;;X
+MODEL_BUL_15_2;DAR DAR-10 ベカス;DAR DAR-10 Bekas;;;;;;;;;X
+MODEL_BUL_15_3;ペトリャコフ Pe-2;Petljakov Pe-2;;;;;;;;;X
+MODEL_BUL_16_0;アラド Ar 196A アクラ;Arado Ar-196A Akula;;;;;;;;;X
+MODEL_BUL_17_0;ブルガラ KB-6 パパガル;Bulgara KB-6 Papagal;;;;;;;;;X
+MODEL_BUL_17_1;DAR-10 ベカス;DAR-10 Bekas;;;;;;;;;X
+MODEL_BUL_18_0;ユンカース Ju 52/3m ソワ;Junkers Ju-52/3m Sova;;;;;;;;;X
+MODEL_CAN_4_0;カーデンロイド Mk.VI;Carden-Loyd Mk.VI;;;;;;;;;X
+MODEL_CAN_4_1;ヴィッカース Mk.VIc;Vickers Mk.VIc;;;;;;;;;X
+MODEL_CAN_4_2;スチュアート Mk.V;Stuart Mk.V;;;;;;;;;X
+MODEL_CAN_5_0;ホイペット;Whippet;;;;;;;;;X
+MODEL_CAN_5_1;巡航戦車 Mk.I A9;Cruiser Tank Mk.I A9;;;;;;;;;X
+MODEL_CAN_5_2;ラム I;Ram I;;;;;;;;;X
+MODEL_CAN_5_3;グリズリー I;Grizzly I;;;;;;;;;X
+MODEL_CAN_5_4;A34 コメット;A34 Comet;;;;;;;;;X
+MODEL_CAN_5_5;M26 パーシング;M26 Pershing;;;;;;;;;X
+MODEL_CAN_5_6;センチュリオン Mk.3;Centurion Mk.3;;;;;;;;;X
+MODEL_CAN_5_7;レオパルド 1;Leopard 1;;;;;;;;;X
+MODEL_CAN_12_0;カーチス・キティホーク;Curtiss Kittyhawk;;;;;;;;;X
+MODEL_CAN_12_1;スーパーマリン・スピットファイア Mk.IX;Supermarine Spitfire Mk.IX;;;;;;;;;X
+MODEL_CAN_12_2;ノースアメリカン マスタング Mk.IV;N.American Mustang Mk.IV;;;;;;;;;X
+MODEL_CAN_12_3;グロスター・ミーティア Mk.III;Gloster Meteor Mk.III;;;;;;;;;X
+MODEL_CAN_12_4;デハビランド・バンパイア;de Havilland Vampire;;;;;;;;;X
+MODEL_CAN_12_5;アブロ・カナダ CF-100 カナック;Avro CF-100 Canuck;;;;;;;;;X
+MODEL_CAN_13_0;グラマン G-23 ゴブリン;Grumman C-23 Goblin;;;;;;;;;X
+MODEL_CAN_13_1;ホーカー・ハリケーン Mk.I;Hawker Hurricane Mk.I;;;;;;;;;X
+MODEL_CAN_13_2;グラマン F4F マートレット;Grumman F4F Martlet;;;;;;;;;X
+MODEL_CAN_13_3;ホーカー・タイフーン;Hawker Typhoon;;;;;;;;;X
+MODEL_CAN_13_4;ホーカー・テンペスト;Hawker Tempest;;;;;;;;;X
+MODEL_CAN_13_5;ホーカー P.1052;Hawker P.1052;;;;;;;;;X
+MODEL_CAN_13_6;SARO SR.177;SARO SR.177;;;;;;;;;X
+MODEL_CAN_13_7;グロスター・ミーティア Mk.I;Gloster Meteor Mk.I;;;;;;;;;X
+MODEL_CAN_13_8;カナディア CL-13 セイバー;Canadair CL-13 Sabre;;;;;;;;;X
+MODEL_CAN_13_9;アブロ カナダ CF-105 アロー;Avro Canada CF-105 Arrow;;;;;;;;;X
+MODEL_CAN_14_0;アームストロング・ホイットワース・ホイットレー;Armstrong-Whitworth Whitley;;;;;;;;;X
+MODEL_CAN_14_1;ハンドレページ・ハリファックス;Handley Page Halifax;;;;;;;;;X
+MODEL_CAN_14_2;アブロ・ランカスター;Avro Lancaster;;;;;;;;;X
+MODEL_CAN_14_3;ヴィッカース・ヴァリアント;Vickers Valiant;;;;;;;;;X
+MODEL_CAN_15_0;ダグラス B-18 ディグビー;Douglas B-18 Digby;;;;;;;;;X
+MODEL_CAN_15_1;ブリストル・ブレニム Mk.IV;Bristol Blenheim Mk.IV;;;;;;;;;X
+MODEL_CAN_15_2;ヴッカース ウェリントン Mk.III;Vickers-Armstrong Wellington Mk.III;;;;;;;;;X
+MODEL_CAN_15_3;ノースアメリカン・ミッチェル Mk.II;N.American Mitchell Mk.II;;;;;;;;;X
+MODEL_CAN_15_4;デハビランド・モスキート B.XVI;de Havilland Mosquito B.XVI;;;;;;;;;X
+MODEL_CAN_15_5;デハビランド・ヴェノム;de Havilland Venom;;;;;;;;;X
+MODEL_CAN_15_6;イングリッシュ・エレクトリック・キャンベラ;English Electric Canberra;;;;;;;;;X
+MODEL_CAN_16_0;ロッキード・ハドソン;Lockheed Hudson;;;;;;;;;X
+MODEL_CAN_16_1;ロッキード・ヴェンチュラ;Lockheed Ventura;;;;;;;;;X
+MODEL_CAN_16_2;ロッキード・ハープーン;Lockheed Harpoon;;;;;;;;;X
+MODEL_CAN_16_4;ロッキード CP-127 ネプチューン;Lockheed CP-127 Neptune;;;;;;;;;X
+MODEL_CAN_17_0;フェアリー・バトル;Fairey Battle;;;;;;;;;X
+MODEL_CAN_17_1;ヴァルティー・ヴェンジャンス;Vultee Vengeance;;;;;;;;;X
+MODEL_CAN_17_2;ブリストル・ボーファイター I;Bristol Beaufighter I;;;;;;;;;X
+MODEL_CAN_18_0;アームストロング・ホイットワース・アルベマール;Armstrong-Whitworth AW.41 Albermarle;;;;;;;;;X
+MODEL_CAN_18_1;ダグラス CC-129 ダコタ;Douglas CC-129 Dakota;;;;;;;;;X
+MODEL_CAN_18_2;ダグラス・ノーススター;Douglas North Star;;;;;;;;;X
+MODEL_CAN_22_0;カレドン級;Caledon-class;;;;;;;;;X
+MODEL_CAN_22_1;エメラルド級;Emerald-class;;;;;;;;;X
+MODEL_CAN_22_2;リアンダー級;Leander-class;;;;;;;;;X
+MODEL_CAN_22_3;ケベック級;Quebec-class;;;;;;;;;X
+MODEL_CAN_22_4;オンタリオ級;Ontario-class;;;;;;;;;X
+MODEL_CAN_23_1;ケント級;Kent-class;;;;;;;;;X
+MODEL_CAN_23_2;サリー級;Surrey-class;;;;;;;;;X
+MODEL_CAN_25_0;V級;V-class;;;;;;;;;X
+MODEL_CAN_25_1;A級;A-class;;;;;;;;;X
+MODEL_CAN_25_2;アサバスカン級;Athabaskan-class;;;;;;;;;X
+MODEL_CAN_25_3;バトル級;Battle-class;;;;;;;;;X
+MODEL_CAN_25_4;デアリング級;Daring-class;;;;;;;;;X
+MODEL_CAN_25_5;サン・ローラン級;St Laurent-class;;;;;;;;;X
+MODEL_CAN_26_0;ハーミーズ級;Hermes-class;;;;;;;;;X
+MODEL_CAN_26_1;ボナヴェンチャー級;Bonaventure-class;;;;;;;;;X
+MODEL_CAN_27_0;ハーミーズ級;Hermes-class;;;;;;;;;X
+MODEL_CAN_27_1;イーグル級;Eagle-class;;;;;;;;;X
+MODEL_CAN_27_2;ユニコーン級;Unicorn-class;;;;;;;;;X
+MODEL_CAN_27_3;コロッサス級;Colossus-class;;;;;;;;;X
+MODEL_CAN_27_4;セントー級;Centaur-class;;;;;;;;;X
+MODEL_CAN_27_5;インヴィンシブル級;Invincible-class;;;;;;;;;X
+MODEL_CAN_28_0;H級;H-boat-class;;;;;;;;;X
+MODEL_CAN_28_1;ソードフィッシュ級;Swordfish-class;;;;;;;;;X
+MODEL_CAN_28_2;トライトン級;Triton-class;;;;;;;;;X
+MODEL_CAN_28_3;グリルス級;Grilse-class;;;;;;;;;X
+MODEL_CAN_28_5;オジブワ級;Ojibwa-class;;;;;;;;;X
+MODEL_CHI_4_0;CV-33;CV-33;;;;;;;;;X
+MODEL_CHI_4_1;I号戦車;PzKpfw.I;;;;;;;;;X
+MODEL_CHI_4_2;M5 スチュアート;M5 Stuart;;;;;;;;;X
+MODEL_CHI_5_0;ルノー FT-17;Renault FT-17;;;;;;;;;X
+MODEL_CHI_5_1;ヴィッカース Mk.E;Vickers Mk.E;;;;;;;;;X
+MODEL_CHI_5_2;M3 リー;M3 Lee;;;;;;;;;X
+MODEL_CHI_5_3;M4A1 シャーマン;M4A1 Sherman;;;;;;;;;X
+MODEL_CHI_5_4;M4/E8 シャーマン;M4/E8 Sherman;;;;;;;;;X
+MODEL_CHI_5_5;M26 パーシング;M26 Pershing;;;;;;;;;X
+MODEL_CHI_12_0;カーチス・キティホーク;Curtiss Kittyhawk;;;;;;;;;X
+MODEL_CHI_12_1;リパブリック P-47D サンダーボルト;Republic P-47D Thunderbolt;;;;;;;;;X
+MODEL_CHI_12_2;ノースアメリカン P-51D マスタング;N.American P-51D Mustang;;;;;;;;;X
+MODEL_CHI_12_4;ノースアメリカン F-86F セイバー;North American F-86F Sabre;;;;;;;;;X
+MODEL_CHI_12_5;ノースアメリカン F-100 スーパーセイバー;NA F-100 Super Sabre;;;;;;;;;X
+MODEL_CHI_13_0;カーチス・ホーク III;Curtiss Hawk III;;;;;;;;;X
+MODEL_CHI_13_1;カーチス・ホーク 75-A;Curtiss Hawk 75-A;;;;;;;;;X
+MODEL_CHI_13_2;カーチス・トマホーク;Curtiss Tomahawk;;;;;;;;;X
+MODEL_CHI_13_3;ノースアメリカン P-51B マスタング;N.American P-51B Mustang;;;;;;;;;X
+MODEL_CHI_13_8;ノースアメリカン F-86 セイバー;N.American F-86 Sabre;;;;;;;;;X
+MODEL_CHI_13_9;ノースアメリカン F-100 スーパーセイバー;N.American F-100 Super Sabre;;;;;;;;;X
+MODEL_CHI_14_1;コンソリデーテッド B-24 リベレーター;Consolidated B-24 Liberator;;;;;;;;;X
+MODEL_CHI_15_0;ツポレフ SB-2;Tupolev SB-2;;;;;;;;;X
+MODEL_CHI_15_1;フィアット BR.20;Fiat BR.20 Cicogna;;;;;;;;;X
+MODEL_CHI_15_2;ダグラス A-20 ボストン;Douglas A-20 Boston;;;;;;;;;X
+MODEL_CHI_15_3;ノースアメリカン B-25C ミッチェル;N.American B-25C Mitchell;;;;;;;;;X
+MODEL_CHI_15_4;デハビランド・モスキート FB Mk.VI;de Havilland Mosquito FB Mk.VI;;;;;;;;;X
+MODEL_CHI_16_0;ロッキード・ハドソン;Lockheed Hudson;;;;;;;;;X
+MODEL_CHI_17_0;ヴァルティー V-12;Vultee V-12;;;;;;;;;X
+MODEL_CHI_18_0;ダグラス C-32;Douglas C-32;;;;;;;;;X
+MODEL_CHI_18_1;ダグラス C-47;Douglas C-47 Dakota;;;;;;;;;X
+MODEL_CHI_18_3;フェアチャイルド C-119G フライング・ボックスカー;Fairchild C-119G Flying Boxcar;;;;;;;;;X
+MODEL_CHI_22_0;応瑞級;Ying Swei-class;;;;;;;;;X
+MODEL_CHI_22_1;寧海級;Ning Hai-class;;;;;;;;;X
+MODEL_CHC_4_0;T-27;T-27;;;;;;;;;X
+MODEL_CHC_4_1;BT-5;BT-5;;;;;;;;;X
+MODEL_CHC_4_2;BT-7;BT-7;;;;;;;;;X
+MODEL_CHC_5_0;T-18;T-18;;;;;;;;;X
+MODEL_CHC_5_1;T-28;T-28;;;;;;;;;X
+MODEL_CHC_5_2;BT-7M;BT-7M;;;;;;;;;X
+MODEL_CHC_5_3;T-34/76 41年型;T-34 m.41;;;;;;;;;X
+MODEL_CHC_5_4;T-34/85 44年型;T-34 m.44;;;;;;;;;X
+MODEL_CHC_5_5;62型;Type 62;;;;;;;;;X
+MODEL_CHC_5_6;59型;Type 59;;;;;;;;;X
+MODEL_CHC_5_7;69-II型;Type 69-II;;;;;;;;;X
+MODEL_CHC_12_0;ミコヤン・グレビッチ MiG-3;Mikoyan-Gurevich MiG-3;;;;;;;;;X
+MODEL_CHC_12_1;ラボーチキン La-5;Lavochkin La-5;;;;;;;;;X
+MODEL_CHC_12_2;ラボーチキン La-7;Lavochkin La-7;;;;;;;;;X
+MODEL_CHC_12_3;ミコヤン・グレビッチ MiG-9;Mikoyan-Gurevich MiG-9 Fargo;;;;;;;;;X
+MODEL_CHC_12_4;瀋陽 J-2;Shenyang J-2 Fagot;;;;;;;;;X
+MODEL_CHC_12_5;南昌 Q-5;Shenyang Q-5 Fantan;;;;;;;;;X
+MODEL_CHC_13_0;ポリカルポフ I-15;Polikarpov I-15;;;;;;;;;X
+MODEL_CHC_13_1;ポリカルポフ I-16;Polikarpov I-16;;;;;;;;;X
+MODEL_CHC_13_2;ラボーチキン LaGG-3;Lavochkin LaGG-3;;;;;;;;;X
+MODEL_CHC_13_3;ヤコブレフ Yak-7;Yakovlev Yak-7;;;;;;;;;X
+MODEL_CHC_13_4;ヤコブレフ Yak-3;Yakovlev Yak-3;;;;;;;;;X
+MODEL_CHC_13_5;ベレズニャク・イサイエフ Bi-1;Bereznyak-Isayev Bi-1;;;;;;;;;X
+MODEL_CHC_13_6;ベレズニャク・イサイエフ Bi-6;Bereznyak-Isayev Bi-6;;;;;;;;;X
+MODEL_CHC_13_7;ヤコブレフ Yak-3;Yakovlev Yak-3;;;;;;;;;X
+MODEL_CHC_13_8;瀋陽 J-5;Shenyang J-5 Fresco;;;;;;;;;X
+MODEL_CHC_13_9;瀋陽 J-6;Shenyang J-6 Farmer;;;;;;;;;X
+MODEL_CHC_14_0;ツポレフ TB-3;Tupolev TB-3;;;;;;;;;X
+MODEL_CHC_14_1;ペトリャコフ Pe-8;Petljakov Pe-8;;;;;;;;;X
+MODEL_CHC_14_2;ツポレフ Tu-4;Tupolev Tu-4;;;;;;;;;X
+MODEL_CHC_14_3;ツポレフ Tu-95 ベア;Shenyang B-6 Badger;;;;;;;;;X
+MODEL_CHC_15_0;ツポレフ SB-2;Tupolev SB-2;;;;;;;;;X
+MODEL_CHC_15_1;イリューシン DB-3;Ilyushin DB-3;;;;;;;;;X
+MODEL_CHC_15_2;ヤコブレフ Yak-4;Yakovlev Yak-4;;;;;;;;;X
+MODEL_CHC_15_3;ペトリャコフ Pe-2;Petljakov Pe-2;;;;;;;;;X
+MODEL_CHC_15_4;ツポレフ Tu-2;Tupolev Tu-2;;;;;;;;;X
+MODEL_CHC_15_5;ツポレフ Tu-14;Tupolev Tu-14;;;;;;;;;X
+MODEL_CHC_15_6;ハルビン H-5;Shenyang B-5 Beagle;;;;;;;;;X
+MODEL_CHC_16_0;アルハンゲリスキー Ar-2;Arhangelsky Ar-2;;;;;;;;;X
+MODEL_CHC_16_1;イリューシン Il-4;Ilyushin Il-4;;;;;;;;;X
+MODEL_CHC_16_2;ツポレフ Tu-2T;Tupolev Tu-2T;;;;;;;;;X
+MODEL_CHC_16_3;ベリエフ Be-6 マッジ;Beriev Be-6 Madge;;;;;;;;;X
+MODEL_CHC_16_4;ハルビン H-5;Shenyang H-5 Beagle;;;;;;;;;X
+MODEL_CHC_17_0;スホーイ Su-2 イワノフ;Sukhoi Su-2 Ivanov;;;;;;;;;X
+MODEL_CHC_17_1;イリューシン Il-2M シュトルモヴィク;Ilyushin Il-2M Shturmovik;;;;;;;;;X
+MODEL_CHC_17_2;イリューシン Il-10;Ilyushin Il-10 Beast;;;;;;;;;X
+MODEL_CHC_17_3;瀋陽 J-3;Shenyang J-3 Fagot;;;;;;;;;X
+MODEL_CHC_17_4;瀋陽 J-4;Shenyang J-4 Fresco;;;;;;;;;X
+MODEL_CHC_17_5;南昌 Q-5;Shenyang Q-5 Fantan;;;;;;;;;X
+MODEL_CHC_18_0;リスノフ Li-2;Lisunov Li-2;;;;;;;;;X
+MODEL_CHC_18_1;リスノフ Li-2V;Lisunov Li-2V;;;;;;;;;X
+MODEL_CHC_18_2;イリューシン  Il-12;Ilyushin Il-12;;;;;;;;;X
+MODEL_CHC_18_3;イリューシン  Il-18;Ilyushin Il-18;;;;;;;;;X
+MODEL_CHC_18_4;アントノフ An-12;Antonov An-12 Cub;;;;;;;;;X
+MODEL_CHC_20_0;CSS-1;CSS-1;;;;;;;;;X
+MODEL_CHC_20_1;CSS-2;CSS-2;;;;;;;;;X
+MODEL_CHC_20_2;CSS-3;CSS-3;;;;;;;;;X
+MODEL_CHC_25_0;ノルヴィク級;Norvik-class;;;;;;;;;X
+MODEL_CHC_25_1;グネヴヌイ級;Gnevnyi-class;;;;;;;;;X
+MODEL_CHC_25_2;レニングラード級;Leningrad-class;;;;;;;;;X
+MODEL_CHC_25_3;キエフ級;Kiev-class;;;;;;;;;X
+MODEL_CHC_25_4;スコーリィ級;Skoriy-class;;;;;;;;;X
+MODEL_CHC_25_5;コトリン級;Kotlin-class;;;;;;;;;X
+MODEL_CHC_25_6;旅大級;Luta-class;;;;;;;;;X
+MODEL_CHC_28_0;AG級;AG-boat-class;;;;;;;;;X
+MODEL_CHC_28_1;レーニネツ級;Series II;;;;;;;;;X
+MODEL_CHC_28_2;SC級;Series V-bis;;;;;;;;;X
+MODEL_CHC_28_3;カチューシャ級;Series XIV;;;;;;;;;X
+MODEL_CHC_28_4;ウィスキー級;Whiskey-class;;;;;;;;;X
+MODEL_CHC_28_5;ロメオ級;Romeo-class;;;;;;;;;X
+MODEL_CHC_28_6;明級;Han-class;;;;;;;;;X
+MODEL_CHC_29_6;漢級;;;;;;;;;;X
+MODEL_CHL_4_0;CV-33;CV-33;;;;;;;;;X
+MODEL_CHL_4_1;M2A4;M2A4;;;;;;;;;X
+MODEL_CHL_4_2;M5 スチュアート;M5 Stuart;;;;;;;;;X
+MODEL_CHL_5_0;ルノー FT-17;Renault FT-17;;;;;;;;;X
+MODEL_CHL_5_1;ヴィッカース Mk.E;Vickers Mk.E;;;;;;;;;X
+MODEL_CHL_5_2;M3 リー;M3 Lee;;;;;;;;;X
+MODEL_CHL_5_3;M4A1 シャーマン;M4A1 Sherman;;;;;;;;;X
+MODEL_CHL_5_4;M4/E8 シャーマン;M4/E8 Sherman;;;;;;;;;X
+MODEL_CHL_5_5;M26 パーシング;M26 Pershing;;;;;;;;;X
+MODEL_CHL_13_0;フェアリー IV シール;Fairey IV Seal;;;;;;;;;X
+MODEL_CHL_15_0;ユンカース Ju 86;Junkers Ju-86;;;;;;;;;X
+MODEL_CHL_17_0;ブレダ Ba.65;Breda Ba.65;;;;;;;;;X
+MODEL_CHL_21_1;アルミランテ・ラトーレ級;Almirante Latorre-class;;;;;;;;;X
+MODEL_CHL_25_0;セラノ級;Serrano-class;;;;;;;;;X
+MODEL_CHL_28_0;キャプテン・オブライアン級;Capitan O'Brien-class;;;;;;;;;X
+MODEL_COL_4_0;CV-33;CV-33;;;;;;;;;X
+MODEL_COL_4_1;M2A4;M2A4;;;;;;;;;X
+MODEL_COL_4_2;M5 スチュアート;M5 Stuart;;;;;;;;;X
+MODEL_COL_5_0;ルノー FT-17;Renault FT-17;;;;;;;;;X
+MODEL_COL_5_1;ヴィッカース Mk.E;Vickers Mk.E;;;;;;;;;X
+MODEL_COL_5_2;M3 リー;M3 Lee;;;;;;;;;X
+MODEL_COL_5_3;M4A1 シャーマン;M4A1 Sherman;;;;;;;;;X
+MODEL_COL_5_4;M4/E8 シャーマン;M4/E8 Sherman;;;;;;;;;X
+MODEL_COL_5_5;M26 パーシング;M26 Pershing;;;;;;;;;X
+MODEL_COL_25_0;ヴォーガ級;Vouga-class;;;;;;;;;X
+MODEL_CRO_4_0;CV-35;CV-35;;;;;;;;;X
+MODEL_CRO_4_1;I号戦車;PzKpfw.I;;;;;;;;;X
+MODEL_CRO_4_2;II号戦車F型;PzKpfw.IIf;;;;;;;;;X
+MODEL_CRO_5_0;ルノー FT-17;Renault FT-17;;;;;;;;;X
+MODEL_CRO_5_1;II号戦車C型;PzKpfw.IIc;;;;;;;;;X
+MODEL_CRO_5_2;III号戦車;PzKpfw.III;;;;;;;;;X
+MODEL_CRO_5_3;IV号戦車;PzKpfw.IV;;;;;;;;;X
+MODEL_CRO_5_4;V号戦車;PzKpfw.V;;;;;;;;;X
+MODEL_CRO_12_0;マッキ MC.202 フォルゴーレ;Macchi MC.202 Folgore;;;;;;;;;X
+MODEL_CRO_12_1;メッサーシュミット Bf 109G;Messerschmitt Bf-109G Gustav;;;;;;;;;X
+MODEL_CRO_12_2;イカルス S-49;Ikarus S-49;;;;;;;;;X
+MODEL_CRO_13_0;フォッカー F.VII;Fokker F.VII;;;;;;;;;X
+MODEL_CRO_13_1;モラーヌ・ソルニエ MS.406;Morane-Saulnier M.S.406;;;;;;;;;X
+MODEL_CRO_13_2;メッサーシュミット Bf 109E;Messerschmitt Bf-109E Emil;;;;;;;;;X
+MODEL_CRO_15_0;ブリストル・ブレニム Mk.I;Bristol Blenheim Mk.I;;;;;;;;;X
+MODEL_CRO_15_1;ドルニエ Do 17;Dornier Do-17;;;;;;;;;X
+MODEL_CRO_15_2;カント Z.1007;Cant Z.1007 Alcione;;;;;;;;;X
+MODEL_CRO_16_0;ドルニエ Do 22;Dornier Do-22;;;;;;;;;X
+MODEL_CRO_16_1;サボイア・マルケッティ SM.84;Savoia-Marchetti SM.84;;;;;;;;;X
+MODEL_CRO_17_0;ユンカース Ju-87B;Junkers Ju-87B Stuka;;;;;;;;;X
+MODEL_CRO_17_1;ユンカース Ju-87D;Junkers Ju-87D Stuka;;;;;;;;;X
+MODEL_CRO_18_0;アビア・フォッカー F.39;Avia Fokker F.39;;;;;;;;;X
+MODEL_CRO_25_1;ドブロブニク級;Dubrovnik-class;;;;;;;;;X
+MODEL_CRO_25_2;ベオグラード級;Beograd-class;;;;;;;;;X
+MODEL_CRO_28_0;オスヴェトニク級;Osvetnik-class;;;;;;;;;X
+MODEL_CSA_4_0;Mk I ウェイティ;Mk I Watie;;;;;;;;;X
+MODEL_CSA_4_1;Mk III フォレスト;Mk III Forrest;;;;;;;;;X
+MODEL_CSA_4_2;Mk V スチュアート;Mk V Stuart;;;;;;;;;X
+MODEL_CSA_5_0;Mk A ホイペット;Mk A Whippet;;;;;;;;;X
+MODEL_CSA_5_1;Mk II ボールガール;Mk II Beauregard;;;;;;;;;X
+MODEL_CSA_5_2;Mk IV リー;Mk IV Lee;;;;;;;;;X
+MODEL_CSA_5_3;Mk VI ジャクソン;Mk VI Jackson;;;;;;;;;X
+MODEL_CSA_5_4;Mk VII ロングストリート;Mk VII Longstreet;;;;;;;;;X
+MODEL_CSA_5_5;Mk VIII ジョンストン;Mk VIII Johnston;;;;;;;;;X
+MODEL_CSA_5_6;Mk XIV ジョンストン;Mk XIV Johnston;;;;;;;;;X
+MODEL_CSA_5_7;Mk XV パットン;Mk XV Patton;;;;;;;;;X
+MODEL_CSA_12_0;スーパーマリン・スピットファイア Mk.I;Supermarine Spitfire Mk.I;;;;;;;;;X
+MODEL_CSA_12_1;スーパーマリン・スピットファイア Mk.IX;Supermarine Spitfire Mk.IX;;;;;;;;;X
+MODEL_CSA_12_2;スーパーマリン・スピットファイア Mk.XIV;Supermarine Spitfire Mk.XIV;;;;;;;;;X
+MODEL_CSA_12_3;グロスター・ミーティア Mk.III;Gloster Meteor Mk.III;;;;;;;;;X
+MODEL_CSA_12_4;グロスター・ミーティア F.8;Gloster Meteor F.8;;;;;;;;;X
+MODEL_CSA_12_5;グロスター・ジャベリン;Gloster Javelin;;;;;;;;;X
+MODEL_CSA_13_0;グロスター・グラジエーター;Gloster Gladiator;;;;;;;;;X
+MODEL_CSA_13_1;ホーカー・ハリケーン Mk.I;Hawker Hurricane Mk.I;;;;;;;;;X
+MODEL_CSA_13_2;ホーカー・ハリケーン Mk.II;Hawker Hurricane Mk.II;;;;;;;;;X
+MODEL_CSA_13_3;ホーカー・タイフーン;Hawker Typhoon;;;;;;;;;X
+MODEL_CSA_13_4;ホーカー・テンペスト;Hawker Tempest;;;;;;;;;X
+MODEL_CSA_13_5;ホーカー P.1052;Hawker P.1052;;;;;;;;;X
+MODEL_CSA_13_6;SARO SR.177;SARO SR.177;;;;;;;;;X
+MODEL_CSA_13_7;グロスター・ミーティア Mk.I;Gloster Meteor Mk.I;;;;;;;;;X
+MODEL_CSA_13_8;デハビランド・バンパイア;de Havilland Vampire;;;;;;;;;X
+MODEL_CSA_13_9;イングリッシュ・エレクトリック・ライトニング;English Electric Lightning;;;;;;;;;X
+MODEL_CSA_14_0;アームストロング・ホイットワース・ホイットレー;Armstrong-Whitworth Whitley;;;;;;;;;X
+MODEL_CSA_14_1;ハンドレページ・ハリファックス;Handley Page Halifax;;;;;;;;;X
+MODEL_CSA_14_2;アブロ・ランカスター;Avro Lancaster;;;;;;;;;X
+MODEL_CSA_14_3;ヴィッカース・ヴァリアント;Vickers Valiant;;;;;;;;;X
+MODEL_CSA_14_4;アブロ・バルカン;Avro Vulcan;;;;;;;;;X
+MODEL_CSA_14_5;ハンドレページ・ヴィクター;Handley Page Victor;;;;;;;;;X
+MODEL_CSA_15_0;ブリストル・ブレニム Mk.I;Bristol Blenheim Mk.I;;;;;;;;;X
+MODEL_CSA_15_1;ハンドレページ・ハンプデン;Handley Page Hampden;;;;;;;;;X
+MODEL_CSA_15_2;ヴッカース・ウェリントン Mk.III;Vickers-Armstrong Wellington Mk.III;;;;;;;;;X
+MODEL_CSA_15_3;ブリストル・バッキンガム;Bristol Buckingham;;;;;;;;;X
+MODEL_CSA_15_4;デハビランド・モスキート B.XVI;de Havilland Mosquito B.XVI;;;;;;;;;X
+MODEL_CSA_15_5;デハビランド・ヴェノム;de Havilland Venom;;;;;;;;;X
+MODEL_CSA_15_6;イングリッシュ・エレクトリック・キャンベラ;English Electric Canberra;;;;;;;;;X
+MODEL_CSA_16_0;ロッキード・ハドソン;Lockheed Hudson;;;;;;;;;X
+MODEL_CSA_16_1;ブリストル・ボーフォート;Bristol Beaufort;;;;;;;;;X
+MODEL_CSA_16_2;ブリストル・ブリガンド;Bristol Brigand;;;;;;;;;X
+MODEL_CSA_16_3;スーパーマリン・アタッカー;Supermarine Attacker;;;;;;;;;X
+MODEL_CSA_16_4;アブロ・シャックルトン;Avro Shackleton;;;;;;;;;X
+MODEL_CSA_17_0;フェアリー・バトル;Fairey Battle;;;;;;;;;X
+MODEL_CSA_17_1;ホーカー・ハリケーン Mk.IV;Hawker Hurricane Mk.IV;;;;;;;;;X
+MODEL_CSA_17_2;ブリストル・ボーファイター;Bristol Beaufighter;;;;;;;;;X
+MODEL_CSA_17_3;デハビランド・ヴェノム;de Havilland Venom;;;;;;;;;X
+MODEL_CSA_17_4;ホーカー・ハンター;Hawker Hunter;;;;;;;;;X
+MODEL_CSA_17_5;ブラックバーン・バッカニア;Blackburn Buccaneer;;;;;;;;;X
+MODEL_CSA_18_0;アームストロング・ホイットワース・アルベマール;Armstrong-Whitworth AW.41 Albermarle;;;;;;;;;X
+MODEL_CSA_18_1;ダグラス・ダコタ;Douglas Dakota;;;;;;;;;X
+MODEL_CSA_18_2;アブロ・ヨーク;Avro 685 York;;;;;;;;;X
+MODEL_CSA_18_3;ブラックバーン・ビバリー;Blackburn Beverly;;;;;;;;;X
+MODEL_CSA_18_4;ショート・ベルファスト;Short Belfast;;;;;;;;;X
+MODEL_CSA_20_0;サイバート;Sibert;;;;;;;;;X
+MODEL_CSA_20_1;レジャーン;Lejeune;;;;;;;;;X
+MODEL_CSA_20_2;バラード;Bullard;;;;;;;;;X
+MODEL_CSA_21_0;コンフェデレート・ステート級;Confederate States-class;;;;;;;;;X
+MODEL_CSA_21_1;ヴァージニア級;Virginia-class;;;;;;;;;X
+MODEL_CSA_21_3;ルイジアナ級;Louisiana-class;;;;;;;;;X
+MODEL_CSA_21_4;ミシシッピー級;Mississippi-class;;;;;;;;;X
+MODEL_CSA_21_6;セコイヤ級;Sequoyah-class;;;;;;;;;X
+MODEL_CSA_22_1;ヒューストン級;Houston-class;;;;;;;;;X
+MODEL_CSA_22_2;モバイル級;Mobile-class;;;;;;;;;X
+MODEL_CSA_22_3;ウィルミントン級;Wilmington-class;;;;;;;;;X
+MODEL_CSA_22_4;コーパス・クリスティ級;Corpus Christi-class;;;;;;;;;X
+MODEL_CSA_22_5;タンパ級;Tampa-class;;;;;;;;;X
+MODEL_CSA_22_6;ジャクソンビル級;Jacksonville-class;;;;;;;;;X
+MODEL_CSA_23_1;ナッシュビル級;Nashville-class;;;;;;;;;X
+MODEL_CSA_23_2;コロンビア級;Columbia-class;;;;;;;;;X
+MODEL_CSA_23_3;リッチモンド級;Richmond-class;;;;;;;;;X
+MODEL_CSA_23_4;バトンルージュ級;Baton Rouge-class;;;;;;;;;X
+MODEL_CSA_23_5;モントゴメリー級;Montgomery-class;;;;;;;;;X
+MODEL_CSA_23_6;オークリッジ級;Oak Ridge-class;;;;;;;;;X
+MODEL_CSA_23_7;オースティン級;Austin-class;;;;;;;;;X
+MODEL_CSA_24_2;チェロキー級;Cherokee-class;;;;;;;;;X
+MODEL_CSA_24_3;チカソー級;Chickasaw-class;;;;;;;;;X
+MODEL_CSA_24_4;チョクトー級;Choctaw-class;;;;;;;;;X
+MODEL_CSA_24_5;クリーク級;Creek-class;;;;;;;;;X
+MODEL_CSA_24_7;セミノール級;Seminole-class;;;;;;;;;X
+MODEL_CSA_25_0;ブキャナン級;Buchanan-class;;;;;;;;;X
+MODEL_CSA_25_1;ジョーンズ級;Jones-class;;;;;;;;;X
+MODEL_CSA_25_2;ブラウン級;Brown-class;;;;;;;;;X
+MODEL_CSA_25_3;リード級;Read-class;;;;;;;;;X
+MODEL_CSA_25_4;セメス級;Semmes-class;;;;;;;;;X
+MODEL_CSA_25_5;マフィット級;Maffitt-class;;;;;;;;;X
+MODEL_CSA_25_6;タトノール級;Tattnall-class;;;;;;;;;X
+MODEL_CSA_26_1;マナサス級;Manassas-class;;;;;;;;;X
+MODEL_CSA_26_2;サムター級;Sumter-class;;;;;;;;;X
+MODEL_CSA_26_3;ハンプトン・ローズ級;Hampton Roads-class;;;;;;;;;X
+MODEL_CSA_26_4;シャープスバーグ級;Sharpsburg-class;;;;;;;;;X
+MODEL_CSA_26_5;ジェファーソン・デイヴィス級;Jefferson Davis-class;;;;;;;;;X
+MODEL_CSA_26_6;ステファン・オースティン級;Stephen Austin-class;;;;;;;;;X
+MODEL_CSA_26_7;アラモ級;Alamo-class;;;;;;;;;X
+MODEL_CSA_26_8;シャイロー級;Shiloh-class;;;;;;;;;X
+MODEL_CSA_26_9;ジョージ・ワシントン級;George Washington-class;;;;;;;;;X
+MODEL_CSA_27_0;ゲインズ・ミル級;Gaines' Mill-class;;;;;;;;;X
+MODEL_CSA_27_1;カーリュー級;Curlew-class;;;;;;;;;X
+MODEL_CSA_27_2;ラーク級;Lark-class;;;;;;;;;X
+MODEL_CSA_28_0;パイオニア級;Pioneer-class;;;;;;;;;X
+MODEL_CSA_28_1;マロリー級;Mallory-class;;;;;;;;;X
+MODEL_CSA_28_2;モーリ級;Maury-class;;;;;;;;;X
+MODEL_CSA_28_3;デビッド級;David-class;;;;;;;;;X
+MODEL_CSA_28_4;バロック級;Bulloch-class;;;;;;;;;X
+MODEL_CSA_28_5;ディクソン級;Dixon-class;;;;;;;;;X
+MODEL_CSA_28_6;ハンリー級;Hunley-class;;;;;;;;;X
+;;;;;;;;;;;X
+MODEL_CUB_4_0;CV-33;CV-33;;;;;;;;;X
+MODEL_CUB_4_1;M2A4;M2A4;;;;;;;;;X
+MODEL_CUB_4_2;M5 スチュアート;M5 Stuart;;;;;;;;;X
+MODEL_CUB_5_0;ルノー FT-17;Renault FT-17;;;;;;;;;X
+MODEL_CUB_5_1;ヴィッカース Mk.E;Vickers Mk.E;;;;;;;;;X
+MODEL_CUB_5_2;M3 リー;M3 Lee;;;;;;;;;X
+MODEL_CUB_5_3;M4A1 シャーマン;M4A1 Sherman;;;;;;;;;X
+MODEL_CUB_5_4;M4/E8 シャーマン;M4/E8 Sherman;;;;;;;;;X
+MODEL_CUB_5_5;M26 パーシング;M26 Pershing;;;;;;;;;X
+MODEL_CUB_13_0;カーチス・ホーク III;Curtiss Hawk III;;;;;;;;;X
+MODEL_CZE_4_0;プラガ T-33;Praga T-33;;;;;;;;;X
+MODEL_CZE_4_1;LT vz 35;LT vz.35;;;;;;;;;X
+MODEL_CZE_4_2;LT vz 38;LT vz.38;;;;;;;;;X
+MODEL_CZE_5_0;コロホウセンカ KH-50;Kolohousenka KH-50;;;;;;;;;X
+MODEL_CZE_5_1;テトラ;Skoda SP-II-b;;;;;;;;;X
+MODEL_CZE_5_2;CKD V-8-H;CKD V-8-H;;;;;;;;;X
+MODEL_CZE_5_3;シュコダ T-24;;;;;;;;;;X
+MODEL_CZE_5_4;シュコダ T-25;;;;;;;;;;X
+MODEL_CZE_5_5;T-34-85CZ;;;;;;;;;;X
+MODEL_CZE_5_6;T-54-1;;;;;;;;;;X
+MODEL_CZE_5_7;T-54-2;;;;;;;;;;X
+MODEL_CZE_5_8;T-54A;;;;;;;;;;X
+MODEL_CZE_5_9;T-55;;;;;;;;;;X
+MODEL_CZE_13_0;アビア B-534;Avia B.534;;;;;;;;;X
+MODEL_CZE_13_1;アビア B-135;Avia B.135;;;;;;;;;X
+MODEL_CZE_13_2;アビア S-199;Avia S.199;;;;;;;;;X
+MODEL_CZE_13_7;アビア S-92;Avia S.92;;;;;;;;;X
+MODEL_CZE_13_8;アビア CS-102;Avia CS.102;;;;;;;;;X
+MODEL_CZE_15_0;ブロック MB.200;Bloch MB.200;;;;;;;;;X
+MODEL_CZE_15_1;アエロ A.300;Aero A.300;;;;;;;;;X
+MODEL_CZE_15_5;アビア B-228;Avia B.228;;;;;;;;;X
+MODEL_CZE_17_0;アビア A-304;Avia A.304;;;;;;;;;X
+MODEL_DDR_5_4;T-34 m.44;T-34 m.44;;;;;;;;;X
+MODEL_DDR_5_5;T-44;T-44;;;;;;;;;X
+MODEL_DDR_5_6;T-54;T-54;;;;;;;;;X
+MODEL_DDR_12_2;ラボーチキン La-7;Lavochkin La-7;;;;;;;;;X
+MODEL_DDR_12_3;ミコヤン・グレビッチ MiG-9;Mikoyan-Gurevich MiG-9 Fargo;;;;;;;;;X
+MODEL_DDR_12_4;ミコヤン・グレビッチ Mig-15bis;Mikoyan-Gurevich Mig-15bis Fagot;;;;;;;;;X
+MODEL_DDR_12_5;ミコヤン・グレビッチ MiG-19;Mikoyan-Gurevich MiG-19 Farmer;;;;;;;;;X
+MODEL_DDR_13_4;ヤコブレフ Yak-3;Yakovlev Yak-3;;;;;;;;;X
+MODEL_DDR_13_7;ヤコブレフ Yak-15;Yakovlev Yak-15 Feather;;;;;;;;;X
+MODEL_DDR_13_8;ミコヤン・グレビッチ MiG-17;Mikoyan-Gurevich MiG-17 Fresco;;;;;;;;;X
+MODEL_DDR_13_9;ミコヤン・グレビッチ MiG-19;Mikoyan-Gurevich MiG-19 Farmer;;;;;;;;;X
+MODEL_DDR_15_4;ツポレフ Tu-2;Tupolev Tu-2;;;;;;;;;X
+MODEL_DDR_15_5;ツポレフ Tu-14;Tupolev Tu-14 Bosun;;;;;;;;;X
+MODEL_DDR_15_6;イリューシン Il-28;Ilyushin Il-28 Beagle;;;;;;;;;X
+MODEL_DDR_17_2;イリューシン Il-10;Ilyushin Il-10 Beast;;;;;;;;;X
+MODEL_DDR_17_3;ミコヤン・グレビッチ Mig-15bis;Mikoyan-Gurevich Mig-15bis Fagot;;;;;;;;;X
+MODEL_DDR_17_4;アエロ AL-29;Aero L-29;;;;;;;;;X
+MODEL_DDR_17_5;アエロ AL-39;Aero L-39;;;;;;;;;X
+MODEL_DDR_18_2;イリューシン Il-12;Ilyushin Il-12;;;;;;;;;X
+MODEL_DDR_18_3;イリューシン Il-18;Ilyushin Il-18;;;;;;;;;X
+MODEL_DDR_25_4;スコーリィ級;Skoriy-class;;;;;;;;;X
+MODEL_DDR_25_5;コトリン級;Kotlin-class;;;;;;;;;X
+MODEL_DDR_25_6;クルップニイ級;Krupny-class;;;;;;;;;X
+MODEL_DDR_28_4;ウィスキー級;Whiskey-class;;;;;;;;;X
+MODEL_DDR_28_5;ロメオ級;Romeo-class;;;;;;;;;X
+MODEL_DEN_4_0;FP-5;FP-5;;;;;;;;;X
+MODEL_DEN_4_1;AMR-33;AMR-33;;;;;;;;;X
+MODEL_DEN_4_2;AMX-38;AMX-38;;;;;;;;;X
+MODEL_DEN_5_0;ルノー FT-17;Renault FT-17;;;;;;;;;X
+MODEL_DEN_5_1;ルノー R-35;Renault R35;;;;;;;;;X
+MODEL_DEN_5_2;ソミュア S-35;Somua S35;;;;;;;;;X
+MODEL_DEN_5_3;M4A1 シャーマン;M4A1 Sherman;;;;;;;;;X
+MODEL_DEN_5_4;M4/E8 シャーマン;M4/E8 Sherman;;;;;;;;;X
+MODEL_DEN_5_5;M26 パーシング;M26 Pershing;;;;;;;;;X
+MODEL_DEN_5_7;センチュリオン Mk.5;Centurion Mk.5;;;;;;;;;X
+MODEL_DEN_13_0;グロスター・ゴーントレット;Gloster Gauntlet;;;;;;;;;X
+MODEL_DEN_13_1;フォッカー D.XXI;Fokker D.XXI;;;;;;;;;X
+MODEL_DEN_23_0;ニールス・イウエル級;Niels Iuel-class;;;;;;;;;X
+MODEL_DEN_28_0;エーギル級;Aegir-class;;;;;;;;;X
+MODEL_DEN_28_1;ダフネ級;Daphne-class;;;;;;;;;X
+MODEL_DFR_5_3;IV号戦車;PzKpfw.IV;;;;;;;;;X
+MODEL_DFR_5_4;V号戦車 パンター;PzKpfw.V Panther;;;;;;;;;X
+MODEL_DFR_5_5;M26 パーシング;M-26 Pershing;;;;;;;;;X
+MODEL_DFR_5_6;M47 パットン;M-47 Patton;;;;;;;;;X
+MODEL_DFR_5_7;レオパルド 1;Leopard 1;;;;;;;;;X
+MODEL_DFR_12_1;メッサーシュミット Bf 109G;Messerschmitt Bf-109G Gustav;;;;;;;;;X
+MODEL_DFR_12_2;フォッケウルフ Fw 190D;Focke-Wulf Fw-190D;;;;;;;;;X
+MODEL_DFR_12_3;メッサーシュミット Me 262 シュワルベ;Messerschmitt Me-262 Schwalbe;;;;;;;;;X
+MODEL_DFR_12_4;リパブリック F-84F サンダーストリーク;Republic F-84F Thunderstreak;;;;;;;;;X
+MODEL_DFR_12_5;ロッキード F-104G スターファイター;Lockheed F-104G Starfighter;;;;;;;;;X
+MODEL_DFR_13_3;フォッケウルフ Fw 190A;Focke-Wulf Fw-190A;;;;;;;;;X
+MODEL_DFR_13_4;メッサーシュミット Bf 109K;Messerschmitt Bf-109K Kurfurst;;;;;;;;;X
+MODEL_DFR_13_7;ハインケル He 162 シュパッツ;Heinkel He-162 Salamander;;;;;;;;;X
+MODEL_DFR_13_8;カナディア CL-13 セイバー;Canadair CL-13 Sabre;;;;;;;;;X
+MODEL_DFR_13_9;ロッキード F-104G スターファイター;Lockheed F-104G Starfighter;;;;;;;;;X
+MODEL_DFR_15_3;ユンカース Ju 88;Junkers Ju-88;;;;;;;;;X
+MODEL_DFR_15_4;ユンカース Ju 388;Junkers Ju-388;;;;;;;;;X
+MODEL_DFR_15_5;アラド Ar 234B ブリッツ;Arado Ar-234B Blitz;;;;;;;;;X
+MODEL_DFR_15_6;ユンカース Ju 287;Junkers Ju-287;;;;;;;;;X
+MODEL_DFR_16_1;フォッケウルフ Fw 200C;Focke-Wulf Fw-200C;;;;;;;;;X
+MODEL_DFR_16_2;ユンカース Ju 290;Junkers Ju-290;;;;;;;;;X
+MODEL_DFR_16_3;フェアリー・ガネット;Fairey Gannet;;;;;;;;;X
+MODEL_DFR_16_4;ブレゲ アトランティック;Breguet Atlantic;;;;;;;;;X
+MODEL_DFR_17_1;ユンカース Ju 87G;Junkers Ju-87G Stuka;;;;;;;;;X
+MODEL_DFR_17_2;ヘンシェル Hs 129;Henschel Hs-129;;;;;;;;;X
+MODEL_DFR_17_3;ホーカー・シーホーク;Hawker Sea Hawk;;;;;;;;;X
+MODEL_DFR_17_4;フィアット G.91R;Fiat G-91R;;;;;;;;;X
+MODEL_DFR_17_5;ドルニエ アルファジェット;Dornier Alpha Jet;;;;;;;;;X
+MODEL_DFR_18_1;アラド Ar 232;Arado Ar-232;;;;;;;;;X
+MODEL_DFR_18_2;メッサーシュミット Me 323D ギガント;Messerschmitt Me-323D Gigant;;;;;;;;;X
+MODEL_DFR_18_3;ユンカース Ju 352;Junkers Ju-352;;;;;;;;;X
+MODEL_DFR_18_4;トランザール C-160;Transall C-160;;;;;;;;;X
+MODEL_DFR_21_3;ビスマルク級;Bismarck-class;;;;;;;;;X
+MODEL_DFR_21_4;H級;H-class;;;;;;;;;X
+MODEL_DFR_22_3;ライプツィヒ級;Nurnberg-class;;;;;;;;;X
+MODEL_DFR_22_4;M級;M-class;;;;;;;;;X
+MODEL_DFR_23_3;アドミラル・ヒッパー級;Hipper-class;;;;;;;;;X
+MODEL_DFR_24_3;シャルンホルスト級;Scharnhorst-class;;;;;;;;;X
+MODEL_DFR_24_4;P級;P-class;;;;;;;;;X
+MODEL_DFR_25_3;Z23級;Z23-class;;;;;;;;;X
+MODEL_DFR_25_4;Z46級;Z46-class;;;;;;;;;X
+MODEL_DFR_25_5;ハンブルク級;Hamburg-class;;;;;;;;;X
+MODEL_DFR_25_6;リュッチェンス級;Lutjens-class;;;;;;;;;X
+MODEL_DFR_26_2;グラーフ・ツェッペリン級;Graf Zeppelin-class;;;;;;;;;X
+MODEL_DFR_28_3;IX型;Type IX-class;;;;;;;;;X
+MODEL_DFR_28_4;XXI型;Type XXI-class;;;;;;;;;X
+MODEL_DFR_28_5;201型;Type 201-class;;;;;;;;;X
+MODEL_DOM_4_0;CV-33;CV-33;;;;;;;;;X
+MODEL_DOM_4_1;M2A4;M2A4;;;;;;;;;X
+MODEL_DOM_4_2;M5 スチュアート;M5 Stuart;;;;;;;;;X
+MODEL_DOM_5_0;ルノー FT-17;Renault FT-17;;;;;;;;;X
+MODEL_DOM_5_1;ヴィッカース Mk.E;Vickers Mk.E;;;;;;;;;X
+MODEL_DOM_5_2;M3 リー;M3 Lee;;;;;;;;;X
+MODEL_DOM_5_3;M4A1 シャーマン;M4A1 Sherman;;;;;;;;;X
+MODEL_DOM_5_4;M4/E8 シャーマン;M4/E8 Sherman;;;;;;;;;X
+MODEL_DOM_5_5;M26 パーシング;M26 Pershing;;;;;;;;;X
+MODEL_DOM_13_0;ヴォート O2U コルセア;Vought O2U Corsair;;;;;;;;;X
+MODEL_ECU_4_0;CV-33;CV-33;;;;;;;;;X
+MODEL_ECU_4_1;M2A4;M2A4;;;;;;;;;X
+MODEL_ECU_4_2;M5 スチュアート;M5 Stuart;;;;;;;;;X
+MODEL_ECU_5_0;ルノー FT-17;Renault FT-17;;;;;;;;;X
+MODEL_ECU_5_1;ヴィッカース Mk.E;Vickers Mk.E;;;;;;;;;X
+MODEL_ECU_5_2;M3 リー;M3 Lee;;;;;;;;;X
+MODEL_ECU_5_3;M4A1 シャーマン;M4A1 Sherman;;;;;;;;;X
+MODEL_ECU_5_4;M4/E8 シャーマン;M4/E8 Sherman;;;;;;;;;X
+MODEL_ECU_5_5;M26 パーシング;M26 Pershing;;;;;;;;;X
+MODEL_ECU_13_0;カーチス CW-19R スパロウ;Curtiss CW-19R Sparrows;;;;;;;;;X
+MODEL_ECU_13_1;カーチス CW-22 ファルコン;Curtiss CW-22 Falcon;;;;;;;;;X
+MODEL_EGY_4_0;カーデンロイド Mk.VI;Carden-Loyd Mk.VI;;;;;;;;;X
+MODEL_EGY_4_1;ヴィッカース Mk.VIc;Vickers Mk.VIc;;;;;;;;;X
+MODEL_EGY_4_2;スチュアート Mk.V;Stuart Mk.V;;;;;;;;;X
+MODEL_EGY_5_0;ホイペット;Whippet;;;;;;;;;X
+MODEL_EGY_5_1;巡航戦車 Mk.I A9;Cruiser Tank Mk.I A9;;;;;;;;;X
+MODEL_EGY_5_2;Mk.VI A15 クルセイダー;Mk.VI A15 Crusader;;;;;;;;;X
+MODEL_EGY_5_3;Mk.VIII A23M クロムウェル;Mk.VIII A23M Cromwell;;;;;;;;;X
+MODEL_EGY_5_4;A34 コメット;A34 Comet;;;;;;;;;X
+MODEL_EGY_5_5;センチュリオン Mk.I;Centurion Mk.I;;;;;;;;;X
+MODEL_EGY_12_0;スーパーマリン・スピットファイア Mk.I;Supermarine Spitfire Mk.I;;;;;;;;;X
+MODEL_EGY_12_1;スーパーマリン・スピットファイア Mk.IX;Supermarine Spitfire Mk.IX;;;;;;;;;X
+MODEL_EGY_12_2;スーパーマリン・スピットファイア Mk.XIV;Supermarine Spitfire Mk.XIV;;;;;;;;;X
+MODEL_EGY_12_3;グロスター・ミーティア Mk.III;Gloster Meteor Mk.III;;;;;;;;;X
+MODEL_EGY_12_4;グロスター・ミーティア F.8;Gloster Meteor F.8;;;;;;;;;X
+MODEL_EGY_13_0;グロスター・グラジエーター;Gloster Gladiator;;;;;;;;;X
+MODEL_EGY_13_1;ホーカー・ハリケーン Mk.I;Hawker Hurricane Mk.I;;;;;;;;;X
+MODEL_EGY_13_2;ホーカー・ハリケーン Mk.II;Hawker Hurricane Mk.II;;;;;;;;;X
+MODEL_EGY_13_3;ホーカー・タイフーン;Hawker Typhoon;;;;;;;;;X
+MODEL_EGY_13_4;ホーカー・テンペスト;Hawker Tempest;;;;;;;;;X
+MODEL_EGY_13_5;ホーカー P.1052;Hawker P.1052;;;;;;;;;X
+MODEL_EGY_13_6;SARO SR.177;SARO SR.177;;;;;;;;;X
+MODEL_EGY_13_7;グロスター・ミーティア Mk.I;Gloster Meteor Mk.I;;;;;;;;;X
+MODEL_EGY_13_8;デハビランド・バンパイア;de Havilland Vampire;;;;;;;;;X
+MODEL_EGY_14_0;アームストロング・ホイットワース・ホイットレー;Armstrong-Whitworth Whitley;;;;;;;;;X
+MODEL_EGY_14_1;ハンドレページ・ハリファックス;Handley Page Halifax;;;;;;;;;X
+MODEL_EGY_14_2;アブロ・ランカスター;Avro Lancaster;;;;;;;;;X
+MODEL_EGY_14_3;ヴィッカース・ヴァリアント;Vickers Valiant;;;;;;;;;X
+MODEL_EGY_15_0;ブリストル・ブレニム Mk.I;Bristol Blenheim Mk.I;;;;;;;;;X
+MODEL_EGY_15_1;ブリストル・ブレニム Mk.IV;Bristol Blenheim Mk.IV;;;;;;;;;X
+MODEL_EGY_15_2;ヴッカース・ウェリントン Mk.III;Vickers-Armstrong Wellington Mk.III;;;;;;;;;X
+MODEL_EGY_15_3;ブリストル・バッキンガム;Bristol Buckingham;;;;;;;;;X
+MODEL_EGY_15_4;デハビランド・モスキート B.XVI;de Havilland Mosquito B.XVI;;;;;;;;;X
+MODEL_EGY_15_5;デハビランド・ヴェノム;de Havilland Venom;;;;;;;;;X
+MODEL_EGY_16_0;ロッキード・ハドソン;Lockheed Hudson;;;;;;;;;X
+MODEL_EGY_16_1;ブリストル・ボーフォート;Bristol Beaufort;;;;;;;;;X
+MODEL_EGY_16_2;ブリストル・ブリガンド;Bristol Brigand;;;;;;;;;X
+MODEL_EGY_16_3;スーパーマリン・アタッカー;Supermarine Attacker;;;;;;;;;X
+MODEL_EGY_17_0;フェアリー・バトル;Fairey Battle;;;;;;;;;X
+MODEL_EGY_17_1;ホーカー・ハリケーン Mk.IV;Vultee Hurricane Mk.IV;;;;;;;;;X
+MODEL_EGY_17_2;ブリストル・ボーファイター;Bristol Beaufighter;;;;;;;;;X
+MODEL_EGY_18_0;アームストロング・ホイットワース・アルベマール;Armstrong-Whitworth AW.41 Albermarle;;;;;;;;;X
+MODEL_EGY_18_1;ダグラス・ダコタ;Douglas Dakota;;;;;;;;;X
+MODEL_EGY_18_2;アブロ・ヨーク;Avro 685 York;;;;;;;;;X
+;;;;;;;;;;;X
+MODEL_ENG_4_0;カーデンロイド Mk.VI;Carden-Loyd Mk.VI;;;;;;;;;X
+MODEL_ENG_4_1;ヴィッカース Mk.VIc;Vickers Mk.VIc;;;;;;;;;X
+MODEL_ENG_4_2;スチュアート Mk.V;Stuart Mk.V;;;;;;;;;X
+MODEL_ENG_4_3;ヴィッカース Mk.VIII ハリー・ホプキンス ;Harry Hopkins Mk.VIII;;;;;;;;;X
+MODEL_ENG_4_4;FV301;FV301;;;;;;;;;X
+MODEL_ENG_5_0;ホイペット;Whippet;;;;;;;;;X
+MODEL_ENG_5_1;巡航戦車 Mk.I A9;Cruiser Tank Mk.I A9;;;;;;;;;X
+MODEL_ENG_5_2;巡航戦車 Mk.V カヴェナンター;Cruiser Tank Mk.V Covenanter;;;;;;;;;X
+MODEL_ENG_5_3;巡航戦車 Mk.VI クルセイダー;Cruiser Tank Mk.VI Crusader;;;;;;;;;X
+MODEL_ENG_5_4;巡航戦車 Mk.VIII クロムウェル;Cruiser Tank Mk.VIII Cromwell;;;;;;;;;X
+MODEL_ENG_5_5;巡航戦車 コメット;Cruiser Tank Comet;;;;;;;;;X
+MODEL_ENG_5_6;センチュリオン Mk.3;Centurion Mk.III;;;;;;;;;X
+MODEL_ENG_5_7;センチュリオン Mk.5;Centurion Mk.V;;;;;;;;;X
+MODEL_ENG_5_8;センチュリオン Mk.8;Centurion Mk.VIII;;;;;;;;;X
+MODEL_ENG_5_9;センチュリオン Mk.10;Centurion Mk.X;;;;;;;;;X
+MODEL_ENG_12_0;スーパーマリン・スピットファイア Mk.I;Supermarine Spitfire Mk.I;;;;;;;;;X
+MODEL_ENG_12_1;スーパーマリン・スピットファイア Mk.IX;Supermarine Spitfire Mk.IX;;;;;;;;;X
+MODEL_ENG_12_2;スーパーマリン・スピットファイア Mk.XIV;Supermarine Spitfire Mk.XIV;;;;;;;;;X
+MODEL_ENG_12_3;グロスター・ミーティア Mk.III;Gloster Meteor Mk.III;;;;;;;;;X
+MODEL_ENG_12_4;グロスター・ミーティア F.8;Gloster Meteor F.8;;;;;;;;;X
+MODEL_ENG_12_5;グロスター・ジャベリン;Gloster Javelin;;;;;;;;;X
+MODEL_ENG_12_6;ホーカー・ハンター;Hawker Hunter;;;;;;;;;X
+MODEL_ENG_12_7;デ・ハヴィランド・ヴィクセン;de Havilland Vixen;;;;;;;;;X
+MODEL_ENG_12_8;マクドネル F-4 ファントム II;McDonnell F-4 Phantom II;;;;;;;;;X
+MODEL_ENG_13_0;ブリストル・ブルドッグ;Bristol Bulldog;;;;;;;;;X
+MODEL_ENG_13_1;グロスター・グラジエーター;Gloster Gladiator;;;;;;;;;X
+MODEL_ENG_13_2;ホーカー・ハリケーン;Hawker Hurricane;;;;;;;;;X
+MODEL_ENG_13_3;ホーカー・タイフーン;Hawker Typhoon;;;;;;;;;X
+MODEL_ENG_13_4;ホーカー・テンペスト;Hawker Tempest;;;;;;;;;X
+MODEL_ENG_13_5;ホーカー P.1052;Hawker P.1052;;;;;;;;;X
+MODEL_ENG_13_6;SARO SR.177;SARO SR.177;;;;;;;;;X
+MODEL_ENG_13_7;グロスター・ミーティア Mk.I;Gloster Meteor Mk.I;;;;;;;;;X
+MODEL_ENG_13_8;デハビランド・バンパイア;de Havilland Vampire;;;;;;;;;X
+MODEL_ENG_13_9;イングリッシュ・エレクトリック・ライトニング;English Electric Lightning;;;;;;;;;X
+MODEL_ENG_14_0;アームストロング・ホイットワース・ホイットレー;Armstrong-Whitworth Whitley;;;;;;;;;X
+MODEL_ENG_14_1;ハンドレページ・ハリファックス;Handley Page Halifax;;;;;;;;;X
+MODEL_ENG_14_2;アブロ・ランカスター;Avro Lancaster;;;;;;;;;X
+MODEL_ENG_14_3;アヴロ・リンカーン;Avro Lincoln;;;;;;;;;X
+MODEL_ENG_14_4;ヴィッカース・ヴァリアント;Vickers Valiant;;;;;;;;;X
+MODEL_ENG_14_5;アブロ・バルカン;Avro Vulcan;;;;;;;;;X
+MODEL_ENG_14_6;ハンドレページ・ヴィクター;Handley Page Victor;;;;;;;;;X
+MODEL_ENG_15_0;ハンドレページ・ヘイフォード;Handley Page Heyford;;;;;;;;;X
+MODEL_ENG_15_1;ブリストル・ブレニム;Bristol Blenheim;;;;;;;;;X
+MODEL_ENG_15_2;ヴィッカース ウェリントン Mk.III;Vickers-Armstrong Wellington Mk.III;;;;;;;;;X
+MODEL_ENG_15_3;ブリストル・バッキンガム;Bristol Buckingham;;;;;;;;;X
+MODEL_ENG_15_4;デハビランド・モスキート B.XVI;de Havilland Mosquito B.XVI;;;;;;;;;X
+MODEL_ENG_15_5;デハビランド・ヴェノム FB1;de Havilland Venom FB1;;;;;;;;;X
+MODEL_ENG_15_6;デハビランド・ヴェノム FB4;de Havilland Venom FB4;;;;;;;;;X
+MODEL_ENG_15_7;イングリッシュ・エレクトリック・キャンベラ;English Electric Canberra;;;;;;;;;X
+MODEL_ENG_15_8;BAC TSR-2;BAC TSR-2;;;;;;;;;X
+MODEL_ENG_16_0;ロッキード・ハドソン;Lockheed Hudson;;;;;;;;;X
+MODEL_ENG_16_1;ブリストル・ボーフォート;Bristol Beaufort;;;;;;;;;X
+MODEL_ENG_16_2;ブリストル・ブリガンド;Bristol Brigand;;;;;;;;;X
+MODEL_ENG_16_3;スーパーマリン・アタッカー;Supermarine Attacker;;;;;;;;;X
+MODEL_ENG_16_4;アブロ・シャックルトン;Avro Shackleton;;;;;;;;;X
+MODEL_ENG_16_5;ホーカー・シドレー ニムロッド;Hawker-Siddeley Nimrod;;;;;;;;;X
+MODEL_ENG_17_0;フェアリー・バトル;Fairey Battle;;;;;;;;;X
+MODEL_ENG_17_1;ホーカー・ハリケーン Mk.IV;Hawker Hurricane Mk.IV;;;;;;;;;X
+MODEL_ENG_17_2;ブリストル・ボーファイター;Bristol Beaufighter;;;;;;;;;X
+MODEL_ENG_17_3;デハビランド・ヴェノム;de Havilland Venom;;;;;;;;;X
+MODEL_ENG_17_4;ホーカー・ハンター;Hawker Hunter;;;;;;;;;X
+MODEL_ENG_17_5;ブラックバーン・バッカニア;Blackburn Buccaneer;;;;;;;;;X
+MODEL_ENG_17_7;ホーカー・シドレー ハリアー;Hawker Siddeley Harrier;;;;;;;;;X
+MODEL_ENG_18_0;アームストロング・ホイットワース・アルベマール;Armstrong-Whitworth AW.41 Albermarle;;;;;;;;;X
+MODEL_ENG_18_1;ダグラス・ダコタ;Douglas Dakota;;;;;;;;;X
+MODEL_ENG_18_2;アブロ・ヨーク;Avro 685 York;;;;;;;;;X
+MODEL_ENG_18_3;ブラックバーン・ビバリー;Blackburn Beverly;;;;;;;;;X
+MODEL_ENG_18_4;ショート・ベルファスト;Short Belfast;;;;;;;;;X
+MODEL_ENG_20_0;ソアー;Thor;;;;;;;;;X
+MODEL_ENG_20_1;ブルーストリーク;Blue Streak;;;;;;;;;X
+MODEL_ENG_21_1;クイーン・エリザベス級;Queen Elizabeth-class;;;;;;;;;X
+MODEL_ENG_21_2;ネルソン級;Nelson-class;;;;;;;;;X
+MODEL_ENG_21_3;キング・ジョージ5世級;King George V-class;;;;;;;;;X
+MODEL_ENG_21_4;ヴァンガード級;Vanguard-class;;;;;;;;;X
+MODEL_ENG_22_0;カレドン級;Caledon-class;;;;;;;;;X
+MODEL_ENG_22_1;エメラルド級;Emerald-class;;;;;;;;;X
+MODEL_ENG_22_2;リアンダー級;Leander-class;;;;;;;;;X
+MODEL_ENG_22_3;サザンプトン級;Southampton-class;;;;;;;;;X
+MODEL_ENG_22_4;スイフトシュア級;Swiftsure-class;;;;;;;;;X
+MODEL_ENG_22_5;ミノタウル級;Minotaur-class;;;;;;;;;X
+MODEL_ENG_22_6;タイガー級;Tiger-class;;;;;;;;;X
+MODEL_ENG_23_0;ホーキンス級;Hawkins-class;;;;;;;;;X
+MODEL_ENG_23_1;ケント級;Kent-class;;;;;;;;;X
+MODEL_ENG_23_2;サリー級;Surrey-class;;;;;;;;;X
+MODEL_ENG_24_1;レナウン級;Renown-class;;;;;;;;;X
+MODEL_ENG_24_2;フッド級;Hood-class;;;;;;;;;X
+MODEL_ENG_24_3;G3級;G3-class;;;;;;;;;X
+MODEL_ENG_25_0;W級;W-class;;;;;;;;;X
+MODEL_ENG_25_1;A級;A-class;;;;;;;;;X
+MODEL_ENG_25_2;G級;G-class;;;;;;;;;X
+MODEL_ENG_25_3;トライバル級;Tribal-class;;;;;;;;;X
+MODEL_ENG_25_4;O級;O-class;;;;;;;;;X
+MODEL_ENG_25_5;バトル級;Battle-class;;;;;;;;;X
+MODEL_ENG_25_6;デアリング級;Daring-class;;;;;;;;;X
+MODEL_ENG_25_7;カウンティ級;County-class;;;;;;;;;X
+MODEL_ENG_25_8;ブリストル級;Bristol-class;;;;;;;;;X
+MODEL_ENG_26_0;アーガス級;Argus-class;;;;;;;;;X
+MODEL_ENG_26_1;カレイジャス級;Courageous-class;;;;;;;;;X
+MODEL_ENG_26_2;アークロイヤル級;Ark Royal-class;;;;;;;;;X
+MODEL_ENG_26_3;イラストリアス級;Illustrious-class;;;;;;;;;X
+MODEL_ENG_26_4;インドミタブル級;Indomitable-class;;;;;;;;;X
+MODEL_ENG_26_5;インプラカブル級;Implacable-class;;;;;;;;;X
+MODEL_ENG_26_6;イーグル級;Eagle-class;;;;;;;;;X
+MODEL_ENG_26_7;マルタ級;Malta-class;;;;;;;;;X
+MODEL_ENG_26_8;CVA-01級;CVA-01-class;;;;;;;;;X
+MODEL_ENG_27_0;ハーミーズ級;Hermes-class;;;;;;;;;X
+MODEL_ENG_27_1;イーグル級;Eagle-class;;;;;;;;;X
+MODEL_ENG_27_2;ユニコーン級;Unicorn-class;;;;;;;;;X
+MODEL_ENG_27_3;コロッサス級;Colossus-class;;;;;;;;;X
+MODEL_ENG_27_4;セントー級;Centaur-class;;;;;;;;;X
+MODEL_ENG_27_5;インヴィンシブル級;Invincible-class;;;;;;;;;X
+MODEL_ENG_28_0;H級;H-boat-class;;;;;;;;;X
+MODEL_ENG_28_1;ソードフィッシュ級;Swordfish-class;;;;;;;;;X
+MODEL_ENG_28_2;トライトン級;Triton-class;;;;;;;;;X
+MODEL_ENG_28_3;A級;A-boat-class;;;;;;;;;X
+MODEL_ENG_28_4;エクスプローラー級;Explorer-class;;;;;;;;;X
+MODEL_ENG_28_5;ポーパス級;Porpoise-class;;;;;;;;;X
+MODEL_ENG_28_6;オベロン級;Dreadnought-class;;;;;;;;;X
+MODEL_ENG_29_0;M2級;M2-class;;;;;;;;;X
+MODEL_ENG_29_5;ドレッドノート級;;;;;;;;;;X
+MODEL_ENG_29_6;ヴァリアント級;;;;;;;;;;X
+;;;;;;;;;;;X
+MODEL_EST_4_0;TK-S;TK-S;;;;;;;;;X
+MODEL_EST_4_1;7TPjw;7TPjw;;;;;;;;;X
+MODEL_EST_4_2;10TPjw;10TPjw;;;;;;;;;X
+MODEL_EST_5_0;ルノー FT-17;Renault FT-17;;;;;;;;;X
+MODEL_EST_5_1;T-28;T-28;;;;;;;;;X
+MODEL_EST_5_2;14TPjw;14TPjw;;;;;;;;;X
+MODEL_EST_5_3;Mk.VIII A23M クロムウェル;Mk.VIII A23M Cromwell;;;;;;;;;X
+MODEL_EST_5_4;A34 コメット;A34 Comet;;;;;;;;;X
+MODEL_EST_5_5;センチュリオン Mk.I;Centurion Mk.I;;;;;;;;;X
+MODEL_EST_13_0;ブリストル・ブルドッグ II;Bristol Bulldog II;;;;;;;;;X
+MODEL_EST_25_0;レヌク級;Lennuk-class;;;;;;;;;X
+MODEL_EST_28_0;カレフ級;Kalev-class;;;;;;;;;X
+MODEL_ETH_4_0;CV-33;CV-33;;;;;;;;;X
+MODEL_ETH_4_1;ヴィッカース 6トン戦車;Vickers 6 ton.;;;;;;;;;X
+MODEL_ETH_4_2;M5 スチュアート;M5 Stuart;;;;;;;;;X
+MODEL_ETH_5_0;フィアット 2000;Fiat 2000;;;;;;;;;X
+MODEL_ETH_5_1;M.13/39;M.13/39;;;;;;;;;X
+MODEL_ETH_5_2;M3 リー;M3 Lee;;;;;;;;;X
+MODEL_ETH_5_3;M4A1 シャーマン;M4A1 Sherman;;;;;;;;;X
+MODEL_ETH_5_4;M4/E8 シャーマン;M4/E8 Sherman;;;;;;;;;X
+MODEL_ETH_5_5;M26 パーシング;M26 Pershing;;;;;;;;;X
+MODEL_ETH_13_0;フォッカー F.VII;Fokker F.VII;;;;;;;;;X
+MODEL_FIN_4_0;トラクター nr.53;Traktor nr.53;;;;;;;;;X
+MODEL_FIN_4_1;T-26;T-26;;;;;;;;;X
+MODEL_FIN_4_2;ランツヴェルク L-60;Landsverk L-60;;;;;;;;;X
+MODEL_FIN_5_0;T-18;T-18;;;;;;;;;X
+MODEL_FIN_5_1;ルノー R-35;Renault R35;;;;;;;;;X
+MODEL_FIN_5_2;BT42;BT42;;;;;;;;;X
+MODEL_FIN_5_3;ランツヴェルク L-63;Landsverk L-63;;;;;;;;;X
+MODEL_FIN_5_4;T-34/85 44年型;T-34 m.44;;;;;;;;;X
+MODEL_FIN_12_0;VL ミルスキ;VL Myrsky;;;;;;;;;X
+MODEL_FIN_12_1;メッサーシュミット Bf 109G;Messerschmitt Bf-109G Gustav;;;;;;;;;X
+MODEL_FIN_12_2;VL ピョレミルスキ ;VL Pyorremyrsky;;;;;;;;;X
+MODEL_FIN_13_0;グロスター・グラジエーター;Gloster Gladiator;;;;;;;;;X
+MODEL_FIN_13_1;フォッカー D.XXI;Fokker D.XXI;;;;;;;;;X
+MODEL_FIN_13_2;ホーカー・ハリケーン Mk.II;Hawker Hurricane Mk.II;;;;;;;;;X
+MODEL_FIN_13_3;VL ヴィフーリ;VL Vihuri;;;;;;;;;X
+MODEL_FIN_13_4;VL ミルスキ II;VL Myrsky II;;;;;;;;;X
+MODEL_FIN_15_0;ブリストル・ブレニム Mk.I;Bristol Blenheim Mk.I;;;;;;;;;X
+MODEL_FIN_15_1;ブリストル・ブレニム Mk.IV;Bristol Blenheim Mk.IV;;;;;;;;;X
+MODEL_FIN_15_2;ハインケル He 111;Heinkel He-111;;;;;;;;;X
+MODEL_FIN_15_3;ユンカース Ju 88;Junkers Ju-88;;;;;;;;;X
+MODEL_FIN_18_0;ユンカース Ju 52/3m;Junkers Ju52/3m;;;;;;;;;X
+MODEL_FIN_23_0;イルマリネン級;Ilmarinen-class;;;;;;;;;X
+MODEL_FIN_28_0;サウコ級;Saukko-class;;;;;;;;;X
+MODEL_FIN_28_1;ヴェテヒネン級;Vetehinen-class;;;;;;;;;X
+;;;;;;;;;;;X
+MODEL_FRA_4_0;ルノー AMR 1935;Renault AMR 1935;;;;;;;;;X
+MODEL_FRA_4_1;ホチキス H-39;Hotchkiss H-39;;;;;;;;;X
+MODEL_FRA_4_2;AMX R-40;AMX R-40;;;;;;;;;X
+MODEL_FRA_4_3;M24 チャーフィー;M24 Chaffee;;;;;;;;;X
+MODEL_FRA_4_4;AMX-13;AMX-13;;;;;;;;;X
+MODEL_FRA_5_0;ルノー FT-17;Renault FT-17;;;;;;;;;X
+MODEL_FRA_5_1;FCM-36;FCM-36;;;;;;;;;X
+MODEL_FRA_5_2;ソミュア S-35;Somua S-35;;;;;;;;;X
+MODEL_FRA_5_3;ソミュア S-40;Somua S-40;;;;;;;;;X
+MODEL_FRA_5_4;ARL-44;ARL-44;;;;;;;;;X
+MODEL_FRA_5_5;AMX-50;AMX-50;;;;;;;;;X
+MODEL_FRA_5_6;M47 パットン;M47 Patton;;;;;;;;;X
+MODEL_FRA_5_7;AMX-30;AMX-30;;;;;;;;;X
+MODEL_FRA_12_0;ドヴォワチーヌ D.520;Dewoitine D.520;;;;;;;;;X
+MODEL_FRA_12_1;ドヴォワチーヌ D.552;Dewoitine D.552;;;;;;;;;X
+MODEL_FRA_12_2;ヴォート F4U コルセア;Vought F4U Corsair;;;;;;;;;X
+MODEL_FRA_12_3;ダッソー・ウーラガン;Dassault Ouragan;;;;;;;;;X
+MODEL_FRA_12_4;ダッソー・ミステール IIC;Dassault Mystere IIC;;;;;;;;;X
+MODEL_FRA_12_5;ダッソー・ミステール IV;Dassault Mystere IV;;;;;;;;;X
+MODEL_FRA_12_6;ダッソー・シュペルミステール;Dassault Super Mystere;;;;;;;;;X
+MODEL_FRA_12_7;ダッソー・ミラージュ III;Dassault Mirage III;;;;;;;;;X
+MODEL_FRA_12_8;ダッソー・ミラージュ 5;Dassault Mirage 5;;;;;;;;;X
+MODEL_FRA_13_0;ドヴォワチーヌ D.510;Dewoitine D.510;;;;;;;;;X
+MODEL_FRA_13_1;モラーヌ・ソルニエ MS.406;Morane-Saulnier MS.406;;;;;;;;;X
+MODEL_FRA_13_2;ブロック MB.152;Bloch MB.152;;;;;;;;;X
+MODEL_FRA_13_3;アルセナル VG.33;Arsenal VG.33;;;;;;;;;X
+MODEL_FRA_13_4;ブロック MB.157;Bloch MB.157;;;;;;;;;X
+MODEL_FRA_13_6;アルセナル VG.70;Arsenal VG.70;;;;;;;;;X
+MODEL_FRA_13_7;シュド・エスト SE.530 ミストラル;Sud-Est SE.530 Mistral;;;;;;;;;X
+MODEL_FRA_13_8;ダッソー・ミステール IVA;Dassault Mystere IVA;;;;;;;;;X
+MODEL_FRA_13_9;ダッソー・ミラージュ IIIC;Dassault Mirage IIIC;;;;;;;;;X
+MODEL_FRA_14_0;ファルマン NC.223;Farman F.222;;;;;;;;;X
+MODEL_FRA_14_1;ブロック MB.162;Bloch MB.162;;;;;;;;;X
+MODEL_FRA_14_2;ブレゲー 482;Breguet 482;;;;;;;;;X
+MODEL_FRA_14_4;ダッソー・ミラージュ IV;Dassault Mirage IV;;;;;;;;;X
+MODEL_FRA_15_0;アミオ 143;Amiot 143;;;;;;;;;X
+MODEL_FRA_15_1;ブロック MB.210;Bloch MB.210;;;;;;;;;X
+MODEL_FRA_15_2;リオレ・エ・オリヴィエ LeO 451;Liore-Olivier LeO 451;;;;;;;;;X
+MODEL_FRA_15_3;マーチン B-26 マローダー;Martin B-26 Marauder;;;;;;;;;X
+MODEL_FRA_15_4;デハビランド・モスキート B.XVI;de Havilland Mosquito B.XVI;;;;;;;;;X
+MODEL_FRA_15_5;シュッド SE.202 アキロン;Sud SE.202 Aquilon;;;;;;;;;X
+MODEL_FRA_15_6;シュド・ウェスト・ボートゥール II-B;Sud-Ouest Vautour II-B;;;;;;;;;X
+MODEL_FRA_15_8;シュド・エスト バルデュール;Sud-Est Aviation Baroudeur;;;;;;;;;X
+MODEL_FRA_15_9;SEPECAT ジャギュア;SEPECAT Jaguar;;;;;;;;;X
+MODEL_FRA_16_0;ロワール・ニューポール LN.401;Loire LN.401;;;;;;;;;X
+MODEL_FRA_16_1;ポテーズ-C.A.M.S. 141;Potez-C.A.M.S. 141;;;;;;;;;X
+MODEL_FRA_16_2;ブレゲ 731;Breguet 731;;;;;;;;;X
+MODEL_FRA_16_3;ブレゲ アリゼ;Breguet Alize;;;;;;;;;X
+MODEL_FRA_16_4;ブレゲ アトランティック;Brequet Atlantic;;;;;;;;;X
+MODEL_FRA_16_5;ダッソー・エタンダール IVM;Dassault Etendard IVM;;;;;;;;;X
+MODEL_FRA_17_0;ポテーズ 633;Potez 633;;;;;;;;;X
+MODEL_FRA_17_1;ブレゲ Br.691;Breguet Br.691;;;;;;;;;X
+MODEL_FRA_17_3;シュド・エスト SE.535 ミストラル;Sud-Est SE.535 Mistral;;;;;;;;;X
+MODEL_FRA_17_4;ダッソー・エタンダール IVM;Dassault Etendard IVM;;;;;;;;;X
+MODEL_FRA_17_5;ダッソー・ミラージュ IIIE;Dassault Mirage IIIE;;;;;;;;;X
+MODEL_FRA_18_0;ブロック MB.221;Bloch MB.221;;;;;;;;;X
+MODEL_FRA_18_2;ブレゲ Br.765 サハラ;Breguet Br.765 Sahara;;;;;;;;;X
+MODEL_FRA_18_3;ノール・ノラトラ;Nord Noratlas;;;;;;;;;X
+MODEL_FRA_18_4;トランザール C-160;Transall C-160;;;;;;;;;X
+MODEL_FRA_21_0;クールベ級;Courbet-class;;;;;;;;;X
+MODEL_FRA_21_1;ブルターニュ級;Bretagne-class;;;;;;;;;X
+MODEL_FRA_21_3;リシュリュー級;Richelieu-class;;;;;;;;;X
+MODEL_FRA_22_0;プルトン級;Pluton-class;;;;;;;;;X
+MODEL_FRA_22_1;デュゲイ・トルーアン級;Duguay Trouin-class;;;;;;;;;X
+MODEL_FRA_22_2;エミール・ベルタン級;Emile Bertin-class;;;;;;;;;X
+MODEL_FRA_22_3;ラ・ガリソニエール級;La Galissonniere-class;;;;;;;;;X
+MODEL_FRA_22_4;ド・グラース級;De Grasse-class;;;;;;;;;X
+MODEL_FRA_22_5;コルベール級;Colbert-class;;;;;;;;;X
+MODEL_FRA_23_1;デュケーヌ級;Duquesne-class;;;;;;;;;X
+MODEL_FRA_23_2;アルジェリ級;Algerie-class;;;;;;;;;X
+MODEL_FRA_23_3;サン・ルイ級;St Louis-class;;;;;;;;;X
+MODEL_FRA_24_3;ダンケルク級;Dunkerque-class;;;;;;;;;X
+MODEL_FRA_25_0;アラブ級;Arabe-class;;;;;;;;;X
+MODEL_FRA_25_1;ゲパール級;Guepard-class;;;;;;;;;X
+MODEL_FRA_25_2;ル・ファンタスク級;Le Fantasque-class;;;;;;;;;X
+MODEL_FRA_25_3;モガドル級;Mogador-class;;;;;;;;;X
+MODEL_FRA_25_6;シュルクーフ級;Surcouf-class;;;;;;;;;X
+MODEL_FRA_25_7;シュフラン級;Suffren-class;;;;;;;;;X
+MODEL_FRA_25_8;アコニト級;Aconit-class;;;;;;;;;X
+MODEL_FRA_26_1;ベアルン級;Bearn-class;;;;;;;;;X
+MODEL_FRA_26_2;ジョフル級;Joffre-class;;;;;;;;;X
+MODEL_FRA_26_3;PA-28級;PA-28-class;;;;;;;;;X
+MODEL_FRA_26_4;クレマンソー級;Clemenceau-class;;;;;;;;;X
+MODEL_FRA_26_5;ヴェルダン級;Verdun-class;;;;;;;;;X
+MODEL_FRA_26_9;ド・ゴール級;De Gaulle-class;;;;;;;;;X
+MODEL_FRA_28_0;ラグランジュ級;Lagrange-class;;;;;;;;;X
+MODEL_FRA_28_1;シレーヌ級;Sirene-class;;;;;;;;;X
+MODEL_FRA_28_2;ルカン級;Requin-class;;;;;;;;;X
+MODEL_FRA_28_3;モリヨ級;Morillot-class;;;;;;;;;X
+MODEL_FRA_28_4;ナルヴァル級;Narval-class;;;;;;;;;X
+MODEL_FRA_28_5;アレチューズ級;Arethuse-class;;;;;;;;;X
+MODEL_FRA_28_6;リュビ級;Rubis-class;;;;;;;;;X
+MODEL_FRA_29_0;スルクフ級;Surcouf-class;;;;;;;;;X
+MODEL_FRA_29_6;ル・ルドゥタブル級;;;;;;;;;;X
+;;;;;;;;;;;X
+MODEL_GER_4_0;I号戦車;PzKpfw.I;;;;;;;;;X
+MODEL_GER_4_1;II号戦車C型;PzKpfw.IIc;;;;;;;;;X
+MODEL_GER_4_2;II号戦車F型;PzKpfw.IIf;;;;;;;;;X
+MODEL_GER_4_3;II号戦車L型;PzKpfw.IIl;;;;;;;;;X
+MODEL_GER_4_4;VK 1602 レオパルト;VK 1602 Leopard;;;;;;;;;X
+MODEL_GER_5_0;A7V 突撃戦車;Sturmpanzerwagen A7V;;;;;;;;;X
+MODEL_GER_5_1;NbFz戦車VI型;PzKpfw.NbFz.VI;;;;;;;;;X
+MODEL_GER_5_2;Sd.Kfz.141 III号戦車;PzKpfw.III;;;;;;;;;X
+MODEL_GER_5_3;Sd.Kfz.161 IV号戦車;PzKpfw.IV;;;;;;;;;X
+MODEL_GER_5_4;Sd.Kfz.171 パンターD型;PzKpfw.V Panther Ausf.D;;;;;;;;;X
+MODEL_GER_5_5;Sd.Kfz.171 パンターG型;PzKpfw.V Panther Ausf.G;;;;;;;;;X
+MODEL_GER_5_6;E-50標準戦車;E-50 Standardpanzer;;;;;;;;;X
+MODEL_GER_5_7;レオパルト I プロトタイプ;Leopard 1 Prototype;;;;;;;;;X
+MODEL_GER_5_8;レオパルト I;;;;;;;;;;X
+MODEL_GER_5_9;レオパルト I A5;;;;;;;;;;X
+MODEL_GER_12_0;メッサーシュミット Bf 109F;Messerschmitt Bf-109F Franz;;;;;;;;;X
+MODEL_GER_12_1;メッサーシュミット Bf 109G;Messerschmitt Bf-109G Gustav;;;;;;;;;X
+MODEL_GER_12_2;フォッケウルフ Fw 190D;Focke-Wulf Fw-190D;;;;;;;;;X
+MODEL_GER_12_3;メッサーシュミット Me 262 シュワルベ;Messerschmitt Me-262 Schwalbe;;;;;;;;;X
+MODEL_GER_12_4;ゴータ Go-229;Go-229;;;;;;;;;X
+MODEL_GER_12_5;ホルテン Ho.XIIIb;Horton Ho.XIIIb;;;;;;;;;X
+MODEL_GER_12_6;メッサーシュミット P.1112;Messerschmitt P.1112;;;;;;;;;X
+MODEL_GER_13_0;ハインケル HD 37;Heinkel HD 37;;;;;;;;;X
+MODEL_GER_13_1;ハインケル He 51;Heinkel He-51;;;;;;;;;X
+MODEL_GER_13_2;メッサーシュミット Bf 109E;Messerschmitt Bf-109E Emil;;;;;;;;;X
+MODEL_GER_13_3;フォッケウルフ Fw 190A;Focke-Wulf Fw-190A;;;;;;;;;X
+MODEL_GER_13_4;メッサーシュミット Bf 109K;Messerschmitt Bf-109K Kurfurst;;;;;;;;;X
+MODEL_GER_13_5;メッサーシュミット Me 163 コメート;Messerschmitt Me-163 Komet;;;;;;;;;X
+MODEL_GER_13_6;メッサーシュミット Me 263;Messerschmitt Me-263;;;;;;;;;X
+MODEL_GER_13_7;ハインケル He 162 シュパッツ;Heinkel He-162 Salamander;;;;;;;;;X
+MODEL_GER_13_8;フォッケウルフ Ta 183;Focke-Wulf Ta-183;;;;;;;;;X
+MODEL_GER_13_9;リピッシュ Li P.13a;Lippish Li.P13a;;;;;;;;;X
+MODEL_GER_14_0;ユンカース Ju 89;Junkers Ju-89;;;;;;;;;X
+MODEL_GER_14_1;ハインケル He 177 グライフ;Heinkel He-177 Greif;;;;;;;;;X
+MODEL_GER_14_2;ハインケル He 274;Heinkel He-274;;;;;;;;;X
+MODEL_GER_14_3;ユンカース Ju 488;Junkers Ju.488;;;;;;;;;X
+MODEL_GER_14_4;ユンカース EF 132;Junkers EF 132;;;;;;;;;X
+MODEL_GER_14_5;メッサーシュミット Me 264;Messerschmitt Me-264;;;;;;;;;X
+MODEL_GER_15_0;ユンカース Ju 52/3m;Junkers Ju-52;;;;;;;;;X
+MODEL_GER_15_1;ドルニエ Do 17;Dornier Do-17;;;;;;;;;X
+MODEL_GER_15_2;ハインケル He 111;Heinkel He-111;;;;;;;;;X
+MODEL_GER_15_3;ユンカース Ju 88;Junkers Ju-88;;;;;;;;;X
+MODEL_GER_15_4;ユンカース Ju 388;Junkers Ju-388;;;;;;;;;X
+MODEL_GER_15_5;アラド Ar 234B ブリッツ;Arado Ar-234B Blitz;;;;;;;;;X
+MODEL_GER_15_6;ユンカース Ju 287;Junkers Ju-287;;;;;;;;;X
+MODEL_GER_15_7;ハインケル He 343;Heinkel He-343;;;;;;;;;X
+MODEL_GER_16_0;ドルニエ Do 217;Dornier Do-217;;;;;;;;;X
+MODEL_GER_16_1;フォッケウルフ Fw 200C;Focke-Wulf Fw-200C;;;;;;;;;X
+MODEL_GER_16_2;ユンカース Ju 290;Junkers Ju-290;;;;;;;;;X
+MODEL_GER_16_3;ユンカース EF 140;Junkers Ju-287 EF-140;;;;;;;;;X
+MODEL_GER_16_4;ブロームウントフォス BV P.188;Blohm & Voss P.188;;;;;;;;;X
+MODEL_GER_16_5;ブレゲー アトランティック;Breguet Atlantic;;;;;;;;;X
+MODEL_GER_17_0;ユンカース Ju 87B スツーカ;Junkers Ju-87B Stuka;;;;;;;;;X
+MODEL_GER_17_1;ユンカース Ju 87G スツーカ;Junkers Ju-87G Stuka;;;;;;;;;X
+MODEL_GER_17_2;ヘンシェル Hs 129;Henschel Hs-129;;;;;;;;;X
+MODEL_GER_17_3;ヘンシェル Hs 132;Henschel Hs-132;;;;;;;;;X
+MODEL_GER_17_4;ユンカース Ju 387 スツーカ II;Junkers Ju-387 Stuka II;;;;;;;;;X
+MODEL_GER_17_7;ドルニエ アルファジェット;Dornier Alpha Jet;;;;;;;;;X
+MODEL_GER_18_0;ユンカース Ju 52/3m タンテ・ユー;Junkers Ju-52/3m Tante Ju;;;;;;;;;X
+MODEL_GER_18_1;アラド Ar 232;Arado Ar-232;;;;;;;;;X
+MODEL_GER_18_2;メッサーシュミット Me 323D ギガント;Messerschmitt Me-323D Gigant;;;;;;;;;X
+MODEL_GER_18_3;ユンカース Ju 352;Junkers Ju-352;;;;;;;;;X
+MODEL_GER_18_4;トランザール C 160;Transall C-160;;;;;;;;;X
+MODEL_GER_19_0;V1;V1;;;;;;;;;X
+MODEL_GER_20_0;V2;V2;;;;;;;;;X
+MODEL_GER_20_1;V2A4b;V2A9;;;;;;;;;X
+MODEL_GER_20_2;V2A9/A10;V2A10;;;;;;;;;X
+MODEL_GER_21_1;バイエルン級;Bayern-class;;;;;;;;;X
+MODEL_GER_21_2;L20級;L20-class;;;;;;;;;X
+MODEL_GER_21_3;ビスマルク級;Bismarck-class;;;;;;;;;X
+MODEL_GER_21_4;H級;H-class;;;;;;;;;X
+MODEL_GER_22_0;ガツェレ級;Gazelle-class;;;;;;;;;X
+MODEL_GER_22_1;エムデン級;Emden-class;;;;;;;;;X
+MODEL_GER_22_2;K級;K-class;;;;;;;;;X
+MODEL_GER_22_3;ライプツィヒ級;Nurnberg-class;;;;;;;;;X
+MODEL_GER_22_4;M級;M-class;;;;;;;;;X
+MODEL_GER_23_3;アドミラル・ヒッパー級;Hipper-class;;;;;;;;;X
+MODEL_GER_23_4;P級;P-class;;;;;;;;;X
+MODEL_GER_24_0;シュレースヴィヒ＝ホルシュタイン級;Schleswig-Holstein-class;;;;;;;;;X
+MODEL_GER_24_1;ヨルク級;Yorck-class;;;;;;;;;X
+MODEL_GER_24_3;シャルンホルスト級;Scharnhorst-class;;;;;;;;;X
+MODEL_GER_24_4;O級;O-class;;;;;;;;;X
+MODEL_GER_25_0;G7級;G7-class;;;;;;;;;X
+MODEL_GER_25_1;1924型水雷艇級;Type24-class;;;;;;;;;X
+MODEL_GER_25_2;Z1級;Z1-class;;;;;;;;;X
+MODEL_GER_25_3;Z17級;Z17-class;;;;;;;;;X
+MODEL_GER_25_4;Z23級;Z23-class;;;;;;;;;X
+MODEL_GER_25_5;Z46級;Z46-class;;;;;;;;;X
+MODEL_GER_25_7;ハンブルク級;Hamburg-class;;;;;;;;;X
+MODEL_GER_25_8;リュッチェンス級;Lutjens-class;;;;;;;;;X
+MODEL_GER_26_0;ザイドリッツ級;Seydlitz-class;;;;;;;;;X
+MODEL_GER_26_2;グラーフ・ツェッペリン級;Graf Zeppelin-class;;;;;;;;;X
+MODEL_GER_28_0;IIA型;Type IIA-class;;;;;;;;;X
+MODEL_GER_28_1;IIB型;Type IIB-class;;;;;;;;;X
+MODEL_GER_28_2;VII型;Type VII-class;;;;;;;;;X
+MODEL_GER_28_3;IX型;Type IX-class;;;;;;;;;X
+MODEL_GER_28_4;XXI型;Type XXI-class;;;;;;;;;X
+MODEL_GER_28_5;XXVIC型;Type 201-class;;;;;;;;;X
+MODEL_GER_29_1;IXD/2型級;Type IXD2-class;;;;;;;;;X
+;;;;;;;;;;;X
+MODEL_GRE_4_0;AMC-35;AMC-35;;;;;;;;;X
+MODEL_GRE_4_1;ホチキス H35;Hotchkiss H35;;;;;;;;;X
+MODEL_GRE_4_2;M5 スチュアート;M5 Stuart;;;;;;;;;X
+MODEL_GRE_5_0;ルノー FT-17;Renault FT-17;;;;;;;;;X
+MODEL_GRE_5_1;ヴィッカース Mk.E;Vickers Mk.E;;;;;;;;;X
+MODEL_GRE_5_2;Mk.VI A15 クルセイダー;Mk.VI A15 Crusader;;;;;;;;;X
+MODEL_GRE_5_3;Mk.VIII A23M クロムウェル;Mk.VIII A23M Cromwell;;;;;;;;;X
+MODEL_GRE_5_4;A34 コメット;A34 Comet;;;;;;;;;X
+MODEL_GRE_5_5;センチュリオン Mk.I;Centurion Mk.I;;;;;;;;;X
+MODEL_GRE_5_6;M47 パットン;M-47 Patton;;;;;;;;;X
+MODEL_GRE_5_7;M48A5 パットン;M48A5 Patton II;;;;;;;;;X
+MODEL_GRE_13_0;グロスター・グラジエーター;Gloster Gladiator;;;;;;;;;X
+MODEL_GRE_13_1;PZL P.24;PZL P.24;;;;;;;;;X
+MODEL_GRE_13_2;ホーカー・ハリケーン Mk.II;Hawker Hurricane Mk.II;;;;;;;;;X
+MODEL_GRE_15_0;ブリストル・ブレニム Mk.I;Bristol Blenheim Mk.I;;;;;;;;;X
+MODEL_GRE_15_1;ブリストル・ブレニム Mk.IV;Bristol Blenheim Mk.IV;;;;;;;;;X
+MODEL_GRE_15_2;ヴッカース・ウェリントン Mk.III;Vickers-Armstrong Wellington Mk.III;;;;;;;;;X
+MODEL_GRE_16_0;アブロ・アンソン;Avro Anson;;;;;;;;;X
+MODEL_GRE_17_0;フェアリー・バトル;Fairey Battle;;;;;;;;;X
+MODEL_GRE_17_1;マーチン・バルチモア;Martin 187 Baltimore;;;;;;;;;X
+MODEL_GRE_22_0;エリ級;Helle-class;;;;;;;;;X
+MODEL_GRE_25_0;イドラ級;Ydra-class;;;;;;;;;X
+MODEL_GRE_25_1;ヴァシレフス・ゲオルギオス級;Vasilefs Georgios-class;;;;;;;;;X
+MODEL_GRE_28_0;カトソニス級;Katsonis-class;;;;;;;;;X
+MODEL_GUA_4_0;CV-33;CV-33;;;;;;;;;X
+MODEL_GUA_4_1;M2A4;M2A4;;;;;;;;;X
+MODEL_GUA_4_2;M5 スチュアート;M5 Stuart;;;;;;;;;X
+MODEL_GUA_5_0;ルノー FT-17;Renault FT-17;;;;;;;;;X
+MODEL_GUA_5_1;ヴィッカース Mk.E;Vickers Mk.E;;;;;;;;;X
+MODEL_GUA_5_2;M3 リー;M3 Lee;;;;;;;;;X
+MODEL_GUA_5_3;M4A1 シャーマン;M4A1 Sherman;;;;;;;;;X
+MODEL_GUA_5_4;M4/E8 シャーマン;M4/E8 Sherman;;;;;;;;;X
+MODEL_GUA_5_5;M26 パーシング;M26 Pershing;;;;;;;;;X
+MODEL_GUA_13_0;ボーイング P-26;Boeing P-26;;;;;;;;;X
+MODEL_HAI_4_0;CV-33;CV-33;;;;;;;;;X
+MODEL_HAI_4_1;M2A4;M2A4;;;;;;;;;X
+MODEL_HAI_4_2;M5 スチュアート;M5 Stuart;;;;;;;;;X
+MODEL_HAI_5_0;ルノー FT-17;Renault FT-17;;;;;;;;;X
+MODEL_HAI_5_1;ヴィッカース Mk.E;Vickers Mk.E;;;;;;;;;X
+MODEL_HAI_5_2;M3 リー;M3 Lee;;;;;;;;;X
+MODEL_HAI_5_3;M4A1 シャーマン;M4A1 Sherman;;;;;;;;;X
+MODEL_HAI_5_4;M4/E8 シャーマン;M4/E8 Sherman;;;;;;;;;X
+MODEL_HAI_5_5;M26 パーシング;M26 Pershing;;;;;;;;;X
+MODEL_HOL_4_0;カーデンロイド M1933;Carden-Loyd M1933;;;;;;;;;X
+MODEL_HOL_4_1;マーモン・ハリントン;Marmon-Harrington;;;;;;;;;X
+MODEL_HOL_4_2;M5 スチュアート;M5 Stuart;;;;;;;;;X
+MODEL_HOL_5_0;ルノー FT-17;Renault FT-17;;;;;;;;;X
+MODEL_HOL_5_1;ヴィッカース Mk.E;Vickers Mk.E;;;;;;;;;X
+MODEL_HOL_5_2;Mk.VI A15 クルセイダー;Mk.VI A15 Crusader;;;;;;;;;X
+MODEL_HOL_5_3;Mk.VIII A23M クロムウェル;Mk.VIII A23M Cromwell;;;;;;;;;X
+MODEL_HOL_5_4;A34 コメット;A34 Comet;;;;;;;;;X
+MODEL_HOL_5_5;センチュリオン Mk.I;Centurion Mk.I;;;;;;;;;X
+MODEL_HOL_12_0;コールホーフェン F.K.58;Koolhoven F.K.58;;;;;;;;;X
+MODEL_HOL_12_1;フォッカー D.XXIII;Fokker D.XXIII;;;;;;;;;X
+MODEL_HOL_13_0;フォッカー D.XVII;Fokker D.XVII;;;;;;;;;X
+MODEL_HOL_13_1;フォッカー D.XXI;Fokker D.XXI;;;;;;;;;X
+MODEL_HOL_13_2;ホーカー・ハリケーン Mk.II;Hawker Hurricane Mk.II;;;;;;;;;X
+MODEL_HOL_13_3;スヘルデ S.21;Schelde S.21;;;;;;;;;X
+MODEL_HOL_15_0;フォッカー F-7/3mM;Fokker F-7/3mM;;;;;;;;;X
+MODEL_HOL_15_1;フォッカー T.V;Fokker T.V;;;;;;;;;X
+MODEL_HOL_15_2;フォッカー T.IX;Fokker T.IX;;;;;;;;;X
+MODEL_HOL_16_0;マーチン 139 WH;Martin 139 W;;;;;;;;;X
+MODEL_HOL_16_1;コールホーフェン FK.59;Koolhoven FK.59;;;;;;;;;X
+MODEL_HOL_17_1;ダグラス 8A-3N;Douglas 8A-3N;;;;;;;;;X
+MODEL_HOL_18_0;フォッカー F.56;Fokker F.56;;;;;;;;;X
+MODEL_HOL_22_1;スマトラ級;Sumatra-class;;;;;;;;;X
+MODEL_HOL_22_2;ゼーヴェン級;Zeven Provincien-class;;;;;;;;;X
+MODEL_HOL_25_1;ヴァン・ゲント級;Van Ghent-class;;;;;;;;;X
+MODEL_HOL_25_2;ティエルク・ヒッデス級;Tjerk Hiddes-class;;;;;;;;;X
+MODEL_HOL_28_0;KVIII級;KVIII-class;;;;;;;;;X
+MODEL_HOL_28_1;KXI級;KXI-class;;;;;;;;;X
+MODEL_HOL_28_2;O19級;O19-class;;;;;;;;;X
+MODEL_HUN_4_0;CV-33;CV-33;;;;;;;;;X
+MODEL_HUN_4_1;38M トルディ I;38M Toldi II;;;;;;;;;X
+MODEL_HUN_4_2;40M ニムロッド;40M Nimrod;;;;;;;;;X
+MODEL_HUN_5_0;ルノー FT-17;Renault FT-17;;;;;;;;;X
+MODEL_HUN_5_1;40M ズリニィ;40M Zrinyi;;;;;;;;;X
+MODEL_HUN_5_2;ツラン I;Turan I;;;;;;;;;X
+MODEL_HUN_5_3;ツラン III;Turan III;;;;;;;;;X
+MODEL_HUN_5_4;V号戦車 パンター;PzKpfw.V Panther;;;;;;;;;X
+MODEL_HUN_5_5;V号戦車F型 パンター;PzKpfw.VF Panther II;;;;;;;;;X
+MODEL_HUN_5_6;E-50 中戦車;E-50 Standardpanzer;;;;;;;;;X
+MODEL_HUN_12_0;ヴァイス WM-23 エストニール;Weiss W.M.23 Ezustnyil;;;;;;;;;X
+MODEL_HUN_12_1;メッサーシュミット Bf 109G;Messerschmitt Bf-109G Gustav;;;;;;;;;X
+MODEL_HUN_13_0;フィアット CR.32 フレッチア;Fiat CR.32 Freccia;;;;;;;;;X
+MODEL_HUN_13_1;ハインケル He 112;Heinkel He-112;;;;;;;;;X
+MODEL_HUN_13_2;レッジアーネ Re.2000 ヘジャ I;Reggiane RE.2000 Heja I;;;;;;;;;X
+MODEL_HUN_13_3;フォッケウルフ Fw 190A;Focke-Wulf Fw-190A;;;;;;;;;X
+MODEL_HUN_13_7;ヴァルガ RMI-1;Varga RMI-1;;;;;;;;;X
+MODEL_HUN_15_0;ユンカース Ju 86;Junkers Ju-86;;;;;;;;;X
+MODEL_HUN_15_1;カプロニ Ca.310 リベッチオ;Caproni Ca.310 Libeccio;;;;;;;;;X
+MODEL_HUN_15_2;ハインケル He 111;Heinkel He-111;;;;;;;;;X
+MODEL_HUN_15_3;ユンカース Ju 88;Junkers Ju-88;;;;;;;;;X
+MODEL_HUN_17_0;ヴァイス WM-21 ショーヨム;Weiss W.M.16 Budapest;;;;;;;;;X
+MODEL_HUN_17_1;ユンカース Ju 87D;Junkers Ju-87D Stuka;;;;;;;;;X
+MODEL_HUN_18_0;ユンカース Ju 52/3m;Junkers Ju-52/3m;;;;;;;;;X
+MODEL_IND_4_0;カーデンロイド Mk.VI;Carden-Loyd Mk.VI;;;;;;;;;X
+MODEL_IND_4_1;ヴィッカース Mk.VIc;Vickers Mk.VIc;;;;;;;;;X
+MODEL_IND_4_2;スチュアート Mk.V;Stuart Mk.V;;;;;;;;;X
+MODEL_IND_5_0;ホイペット;Whippet;;;;;;;;;X
+MODEL_IND_5_1;巡航戦車 Mk.I A9;Cruiser Tank Mk.I A9;;;;;;;;;X
+MODEL_IND_5_2;Mk.VI A15 クルセイダー;Mk.VI A15 Crusader;;;;;;;;;X
+MODEL_IND_5_3;Mk.VIII A23M クロムウェル;Mk.VIII A23M Cromwell;;;;;;;;;X
+MODEL_IND_5_4;A34 コメット;A34 Comet;;;;;;;;;X
+MODEL_IND_5_5;センチュリオン Mk.I;Centurion Mk.I;;;;;;;;;X
+MODEL_IND_5_6;センチュリオン Mk.III;Centurion Mk.III;;;;;;;;;X
+MODEL_IND_5_7;センチュリオン Mk.V;Centurion Mk.V;;;;;;;;;X
+MODEL_IND_12_0;スーパーマリン・スピットファイア Mk.I;Supermarine Spitfire Mk.I;;;;;;;;;X
+MODEL_IND_12_1;スーパーマリン・スピットファイア Mk.IX;Supermarine Spitfire Mk.IX;;;;;;;;;X
+MODEL_IND_12_2;スーパーマリン・スピットファイア Mk.XIV;Supermarine Spitfire Mk.XIV;;;;;;;;;X
+MODEL_IND_12_3;グロスター・ミーティア Mk.III;Gloster Meteor Mk.III;;;;;;;;;X
+MODEL_IND_12_4;HAL ナット;HAL Gnat;;;;;;;;;X
+MODEL_IND_12_5;HAL HF－24 マルート;HAL HF-24 Marut;;;;;;;;;X
+MODEL_IND_13_0;ウエストランド・ワピティ IIA;Westland Wapiti IIA;;;;;;;;;X
+MODEL_IND_13_1;ホーカー・ハリケーン Mk.I;Hawker Hurricane Mk.I;;;;;;;;;X
+MODEL_IND_13_2;ホーカー・ハリケーン Mk.II;Hawker Hurricane Mk.II;;;;;;;;;X
+MODEL_IND_13_3;ホーカー・タイフーン;Hawker Typhoon;;;;;;;;;X
+MODEL_IND_13_4;ホーカー・テンペスト;Hawker Tempest;;;;;;;;;X
+MODEL_IND_13_5;ホーカー P.1052;Hawker P.1052;;;;;;;;;X
+MODEL_IND_13_6;SARO SR.177;SARO SR.177;;;;;;;;;X
+MODEL_IND_13_7;グロスター・ミーティア Mk.I;Gloster Meteor Mk.I;;;;;;;;;X
+MODEL_IND_13_8;デハビランド・バンパイア;de Havilland Vampire;;;;;;;;;X
+MODEL_IND_14_0;アームストロング・ホイットワース・ホイットレー;Armstrong-Whitworth Whitley;;;;;;;;;X
+MODEL_IND_14_1;コンソリデーテッド B-24 リベレーター;Consolidated B-24 Liberator;;;;;;;;;X
+MODEL_IND_14_3;ヴィッカース・ヴァリアント;Vickers Valiant;;;;;;;;;X
+MODEL_IND_15_0;ブリストル・ブレニム Mk.I;Bristol Blenheim Mk.I;;;;;;;;;X
+MODEL_IND_15_1;ハンドレページ・ハンプデン;Handley Page Hampden;;;;;;;;;X
+MODEL_IND_15_2;ヴッカース ウェリントン Mk.III;Vickers-Armstrong Wellington Mk.III;;;;;;;;;X
+MODEL_IND_15_3;ブリストル・バッキンガム;Bristol Buckingham;;;;;;;;;X
+MODEL_IND_15_4;デハビランド・モスキート B.XVI;de Havilland Mosquito B.XVI;;;;;;;;;X
+MODEL_IND_15_5;デハビランド・ヴェノム;de Havilland Venom;;;;;;;;;X
+MODEL_IND_15_6;イングリッシュ・エレクトリック・キャンベラ;English Electric Canberra;;;;;;;;;X
+MODEL_IND_16_0;ロッキード・ハドソン;Lockheed Hudson;;;;;;;;;X
+MODEL_IND_16_1;ブリストル・ボーフォート;Bristol Beaufort;;;;;;;;;X
+MODEL_IND_16_2;ブリストル・ブリガンド;Bristol Brigand;;;;;;;;;X
+MODEL_IND_16_3;スーパーマリン・アタッカー;Supermarine Attacker;;;;;;;;;X
+MODEL_IND_17_0;フェアリー・バトル;Fairey Battle;;;;;;;;;X
+MODEL_IND_17_1;ホーカー・ハリケーン Mk.IV;Vultee Hurricane Mk.IV;;;;;;;;;X
+MODEL_IND_17_2;ブリストル・ボーファイター;Bristol Beaufighter;;;;;;;;;X
+MODEL_IND_17_4;ホーカー・ハンター;Hawker Hunter;;;;;;;;;X
+MODEL_IND_17_5;スホーイ Su-7;Sukhoi Su-7 Fitter;;;;;;;;;X
+MODEL_IND_18_0;アームストロング・ホイットワース・ホイットレー;Armstrong-Whitworth AW.41 Albermarle;;;;;;;;;X
+MODEL_IND_18_1;ダグラス・ダコタ;Douglas Dakota;;;;;;;;;X
+MODEL_IND_18_2;アブロ・ヨーク;Avro 685 York;;;;;;;;;X
+MODEL_IND_18_3;フェアチャイルド C-119G パケット;Fairchild C-119G Packet;;;;;;;;;X
+MODEL_IND_18_4;アントノフ An-12;Antonov An-12 Cub;;;;;;;;;X
+MODEL_IND_22_0;カレドン級;Caledon-class;;;;;;;;;X
+MODEL_IND_22_1;エメラルド級;Emerald-class;;;;;;;;;X
+MODEL_IND_22_2;リアンダー級;Leander-class;;;;;;;;;X
+MODEL_IND_22_3;サザンプトン級;Southampton-class;;;;;;;;;X
+MODEL_IND_22_4;スイフトシュア級;Swiftsure-class;;;;;;;;;X
+MODEL_IND_22_5;ミノタウル級;Minotaur-class;;;;;;;;;X
+MODEL_IND_23_1;ケント級;Kent-class;;;;;;;;;X
+MODEL_IND_23_2;サリー級;Surrey-class;;;;;;;;;X
+MODEL_IND_25_0;V級;V-class;;;;;;;;;X
+MODEL_IND_25_1;A級;A-class;;;;;;;;;X
+MODEL_IND_25_2;トライバル級;Tribal-class;;;;;;;;;X
+MODEL_IND_25_3;バトル級;Battle-class;;;;;;;;;X
+MODEL_IND_25_4;デアリング級;Daring-class;;;;;;;;;X
+MODEL_IND_25_5;カウンティ級;County-class;;;;;;;;;X
+MODEL_IND_26_0;ハーミーズ級;Hermes-class;;;;;;;;;X
+MODEL_IND_26_1;カレイジャス級;Courageous-class;;;;;;;;;X
+MODEL_IND_27_3;ヴィクラント級;Vikrant-class;;;;;;;;;X
+MODEL_IND_27_4;ヴィラート級;Viraat-class;;;;;;;;;X
+MODEL_IND_28_0;H級;H-boat-class;;;;;;;;;X
+MODEL_IND_28_1;ソードフィッシュ級;Swordfish-class;;;;;;;;;X
+MODEL_IND_28_2;トライトン級;Triton-class;;;;;;;;;X
+MODEL_IND_28_3;A級;A-boat-class;;;;;;;;;X
+MODEL_IND_28_4;エクスプローラー級;Explorer-class;;;;;;;;;X
+MODEL_IND_28_5;ポーパス級;Porpoise-class;;;;;;;;;X
+MODEL_IND_28_6;フォックストロット級;Foxtrot-class;;;;;;;;;X
+MODEL_IND_29_6;チャクラ級;;;;;;;;;;X
+MODEL_IRE_4_0;カーデンロイド Mk.VI;Carden-Loyd Mk.VI;;;;;;;;;X
+MODEL_IRE_4_1;ランツヴェルク L-10;Landsverk L-10.;;;;;;;;;X
+MODEL_IRE_4_2;ランツヴェルク L-60;Landsverk L-60;;;;;;;;;X
+MODEL_IRE_5_0;ホイペット;Whippet;;;;;;;;;X
+MODEL_IRE_5_1;ランツヴェルク L-61;Landsverk L-61;;;;;;;;;X
+MODEL_IRE_5_2;ランツヴェルク L-62;Landsverk L-62;;;;;;;;;X
+MODEL_IRE_5_3;ランツヴェルク L-63;Landsverk L-63;;;;;;;;;X
+MODEL_IRE_5_4;Mk.VIII A23M クロムウェル;Mk.VIII A23M Cromwell;;;;;;;;;X
+MODEL_IRE_5_5;センチュリオン Mk.I;Centurion Mk.I;;;;;;;;;X
+MODEL_IRE_12_0;スーパーマリン・スピットファイア Mk.I;Supermarine Spitfire Mk.I;;;;;;;;;X
+MODEL_IRE_13_0;グロスター・グラジエーター;Gloster Gladiator;;;;;;;;;X
+MODEL_IRE_13_1;ホーカー・ハリケーン Mk.I;Hawker Hurricane Mk.I;;;;;;;;;X
+MODEL_IRE_13_2;ホーカー・ハリケーン Mk.II;Hawker Hurricane Mk.II;;;;;;;;;X
+MODEL_IRE_14_0;アームストロング・ホイットワース・ホイットレー;Armstrong-Whitworth Whitley;;;;;;;;;X
+MODEL_IRE_14_1;ハンドレページ・ハリファックス;Handley Page Halifax;;;;;;;;;X
+MODEL_IRE_15_0;ブリストル・ブレニム Mk.I;Bristol Blenheim Mk.I;;;;;;;;;X
+MODEL_IRE_15_1;ハンドレページ・ハンプデン;Handley Page Hampden;;;;;;;;;X
+MODEL_IRE_16_0;ロッキード・ハドソン;Lockheed Hudson;;;;;;;;;X
+MODEL_IRE_16_1;ブリストル・ボーフォート;Bristol Beaufort;;;;;;;;;X
+MODEL_IRE_17_0;フェアリー・バトル;Fairey Battle;;;;;;;;;X
+MODEL_IRE_18_0;アームストロング・ホイットワース・アルベマール;Armstrong-Whitworth AW.41 Albermarle;;;;;;;;;X
+MODEL_IRE_18_1;ダグラス・ダコタ;Douglas Dakota;;;;;;;;;X
+MODEL_IRQ_4_0;CV-33;CV.33;;;;;;;;;X
+MODEL_IRQ_4_1;ヴィッカース 6トン戦車;Vickers 6 ton.;;;;;;;;;X
+MODEL_IRQ_4_2;スチュアート Mk.V;Stuart Mk.V;;;;;;;;;X
+MODEL_IRQ_5_0;ホイペット;Whippet;;;;;;;;;X
+MODEL_IRQ_5_1;巡航戦車 Mk.I A9;Cruiser Tank Mk.I A9;;;;;;;;;X
+MODEL_IRQ_5_2;Mk.VI A15 クルセイダー;Mk.VI A15 Crusader;;;;;;;;;X
+MODEL_IRQ_5_3;Mk.VIII A23M クロムウェル;Mk.VIII A23M Cromwell;;;;;;;;;X
+MODEL_IRQ_5_4;A34 コメット;A34 Comet;;;;;;;;;X
+MODEL_IRQ_5_5;センチュリオン Mk.I;Centurion Mk.I;;;;;;;;;X
+MODEL_IRQ_13_0;グロスター・グラジエーター;Gloster Gladiator;;;;;;;;;X
+MODEL_IRQ_16_0;アブロ・アンソン;Avro Anson;;;;;;;;;X
+MODEL_IRQ_17_0;ブレダ Ba.65;Breda Ba.65;;;;;;;;;X
+;;;;;;;;;;;X
+MODEL_ITA_4_0;CV-35;CV.35;;;;;;;;;X
+MODEL_ITA_4_1;L3/38;L.3/38;;;;;;;;;X
+MODEL_ITA_4_2;L6/40;L.6/40;;;;;;;;;X
+MODEL_ITA_5_0;フィアット 2000;Fiat 2000;;;;;;;;;X
+MODEL_ITA_5_1;M11/39;M.11/39;;;;;;;;;X
+MODEL_ITA_5_2;M13/40;M.13/40;;;;;;;;;X
+MODEL_ITA_5_3;M15/42;M.15/42;;;;;;;;;X
+MODEL_ITA_5_4;M18/43 サハリアノ;M.18/43 Sahariano;;;;;;;;;X
+MODEL_ITA_5_7;OF-40;OF-40;;;;;;;;;X
+MODEL_ITA_12_0;マッキ MC.202 フォルゴーレ;Macchi MC.202 Folgore;;;;;;;;;X
+MODEL_ITA_12_1;マッキ MC.205V ヴェルトロ;Macchi MC.205V Veltro;;;;;;;;;X
+MODEL_ITA_12_2;レッジアーネ Re.2005 サジッタリオ;Reggiane Re.2005 Sagittario;;;;;;;;;X
+MODEL_ITA_12_3;アエリフェル・サジッタリオ 2;Aerfer Sagittario 2;;;;;;;;;X
+MODEL_ITA_12_4;アエリフェル・アリエテ;Aerfer Ariete;;;;;;;;;X
+MODEL_ITA_12_5;アエリフェル・レオーネ;Aerfer Leone;;;;;;;;;X
+MODEL_ITA_12_6;リパブリック F-84 サンダージェット;Republic F-84 Thunderjet;;;;;;;;;X
+MODEL_ITA_12_7;ノースアメリカン F-86K セイバードッグ;North American F-86K Sabre Dog;;;;;;;;;X
+MODEL_ITA_12_8;フィアット G.91;FIAT G.91;;;;;;;;;X
+MODEL_ITA_13_0;フィアット CR.20;FIAT CR.20;;;;;;;;;X
+MODEL_ITA_13_1;フィアット CR.30;FIAT CR.30;;;;;;;;;X
+MODEL_ITA_13_2;マッキ MC.200 サエッタ;Macchi MC.200 Saetta;;;;;;;;;X
+MODEL_ITA_13_3;レッジアーネ Re.2001 アリエテ;Reggiane RE.2001 Ariete;;;;;;;;;X
+MODEL_ITA_13_4;フィアット G.55 チェンタウロ;Fiat G.55 Centauro;;;;;;;;;X
+MODEL_ITA_13_5;カンピニ CC.2;Campini Caproni CC.2;;;;;;;;;X
+MODEL_ITA_13_6;カプロニ Ca.183bis;Caproni Ca.183bis;;;;;;;;;X
+MODEL_ITA_13_7;レッジアーネ Re.2007;Reggiane Re.2007;;;;;;;;;X
+MODEL_ITA_13_8;フィアット G.91R;Fiat G-91R;;;;;;;;;X
+MODEL_ITA_13_9;アエリフェル・レオーネ;Aerfer Leone;;;;;;;;;X
+MODEL_ITA_14_0;ピアジオ P.108;Piaggio P.108;;;;;;;;;X
+MODEL_ITA_14_1;ピアジオ P.112;Piaggio P.112;;;;;;;;;X
+MODEL_ITA_14_2;ピアジオ P.114;Piaggio P.114;;;;;;;;;X
+MODEL_ITA_15_0;カプロニ Ca.111;Caproni Ca.111;;;;;;;;;X
+MODEL_ITA_15_1;フィアット BR.20 チコーニャ;Fiat BR.20 Cicogna;;;;;;;;;X
+MODEL_ITA_15_2;カント Z.1007bis アルチオーネ;Cant Z.1007bis Alcione;;;;;;;;;X
+MODEL_ITA_15_3;カント Z.1018 レオーネ;Cant Z.1018 Leone;;;;;;;;;X
+MODEL_ITA_16_0;サボイア・マルケッティ SM.79 スパルヴィエロ;Savoia Marchetti SM.79 Sparviero;;;;;;;;;X
+MODEL_ITA_16_1;サボイア・マルケッティ SM.84;Savoia Marchetti SM.84;;;;;;;;;X
+MODEL_ITA_16_3;ロッキード P-2 ネプチューン;Lockheed P-2 Neptune;;;;;;;;;X
+MODEL_ITA_16_4;グラマン S2 トラッカー;Grumman S-2 Tracker;;;;;;;;;X
+MODEL_ITA_16_5;ブレゲー アトランティック;Breguet Atlantic;;;;;;;;;X
+MODEL_ITA_17_0;ブレダ Ba.65;Breda Ba.65;;;;;;;;;X
+MODEL_ITA_17_1;ユンカース Ju.87D ピッチアテロ;Junkers Ju.87D Picchiarello;;;;;;;;;X
+MODEL_ITA_17_2;IMAM Ro.57;IMAM Ro.57;;;;;;;;;X
+MODEL_ITA_17_3;アエルマッキ MB-326;Aermacchi MB.326;;;;;;;;;X
+MODEL_ITA_17_4;フィアット G.91R;Fiat G-91R;;;;;;;;;X
+MODEL_ITA_17_5;アエリタリア AMX;Aeritalia AMX;;;;;;;;;X
+MODEL_ITA_18_0;サボイア・マルケッティ SM.75 マルスピアーレ;Savoia Marchetti SM.75 Marsupiale;;;;;;;;;X
+MODEL_ITA_18_1;サボイア・マルケッティ SM.82 カングーロ;Savoia Marchetti SM.82 Canguro;;;;;;;;;X
+MODEL_ITA_18_2;サボイア・マルケッティ SM.95;Savoia Marchetti SM.95;;;;;;;;;X
+MODEL_ITA_18_3;フィアット G.12;Fiat G.12;;;;;;;;;X
+MODEL_ITA_18_4;アエリタリア G.222;Aeritalia G.222;;;;;;;;;X
+MODEL_ITA_21_0;コンテ・ディ・カブール級;Cavour-class;;;;;;;;;X
+MODEL_ITA_21_1;カラッチョロ級;Caracciolo-class;;;;;;;;;X
+MODEL_ITA_21_3;リットリオ級;Littorio-class;;;;;;;;;X
+MODEL_ITA_22_0;リビア級;Libia-class;;;;;;;;;X
+MODEL_ITA_22_1;ジュッサーノ級;Giussano-class;;;;;;;;;X
+MODEL_ITA_22_2;モンテクッコリ級;Montecuccoli-class;;;;;;;;;X
+MODEL_ITA_22_3;アブルッチ級;Duca degli Abruzzi-class;;;;;;;;;X
+MODEL_ITA_22_5;アンドレーア・ドーリア級;Andrea Doria-class;;;;;;;;;X
+MODEL_ITA_22_6;ヴィットリオ・ヴェネト級;Vittorio Veneto-class;;;;;;;;;X
+MODEL_ITA_23_0;サン・ジョルジョ級;San Giorgio-class;;;;;;;;;X
+MODEL_ITA_23_1;トレント級;Trento-class;;;;;;;;;X
+MODEL_ITA_23_2;ザラ級;Zara-class;;;;;;;;;X
+MODEL_ITA_25_0;ラ・マーサ級;La Masa-class;;;;;;;;;X
+MODEL_ITA_25_1;セラ級;Sella-class;;;;;;;;;X
+MODEL_ITA_25_2;マエストラーレ級;Maestrale-class;;;;;;;;;X
+MODEL_ITA_25_3;ソルダティ級;Soldati-class;;;;;;;;;X
+MODEL_ITA_25_4;ドーロ級;D'Oro-class;;;;;;;;;X
+MODEL_ITA_25_6;インペツオーソ級;Impetuoso-class;;;;;;;;;X
+MODEL_ITA_25_7;インパヴィド級;Impavido-class;;;;;;;;;X
+MODEL_ITA_25_8;アウダーチェ級;Audace-class;;;;;;;;;X
+MODEL_ITA_26_1;アクイラ級;Aquila-class;;;;;;;;;X
+MODEL_ITA_28_0;マメリ級;Mameli-class;;;;;;;;;X
+MODEL_ITA_28_1;フィエラモスカ級;Fieramosca-class;;;;;;;;;X
+MODEL_ITA_28_2;ブラガディン級;Bragadin-class;;;;;;;;;X
+MODEL_ITA_28_3;カルヴィ級;Calvi-class;;;;;;;;;X
+MODEL_ITA_28_4;トーチ級;Toti-class;;;;;;;;;X
+MODEL_ITA_28_5;サウロ級;Sauro-class;;;;;;;;;X
+MODEL_ITA_29_0;エットレ・フィエラモスカ級;Ettore Fieramosca-class;;;;;;;;;X
+;;;;;;;;;;;X
+MODEL_JAP_4_0;九四式軽装甲車;Type 94;;;;;;;;;X
+MODEL_JAP_4_1;九五式軽戦車 ハ号;Type 95 Ha-Go;;;;;;;;;X
+MODEL_JAP_4_2;九七式軽装甲車 テケ;Type 97 Te-Ke;;;;;;;;;X
+MODEL_JAP_4_3;四式軽戦車 ケヌ;Type 4 Ke-Nu;;;;;;;;;X
+MODEL_JAP_4_4;五式軽戦車 ケト;Type5 Ke-To;;;;;;;;;X
+MODEL_JAP_5_0;ルノー FT-17 甲型;Renault FT-17 Ko;;;;;;;;;X
+MODEL_JAP_5_1;八九式戦車 イ号;Type 89 Otsu;;;;;;;;;X
+MODEL_JAP_5_2;一式中戦車 チヘ;Type 1 Chi-He;;;;;;;;;X
+MODEL_JAP_5_3;三式中戦車 チヌ;Type 3 Chi-Nu;;;;;;;;;X
+MODEL_JAP_5_4;五式中戦車 チリ;Type 5 Chi-Ri;;;;;;;;;X
+MODEL_JAP_5_5;STA-1;STA-1;;;;;;;;;X
+MODEL_JAP_5_6;61式戦車;Type 61;;;;;;;;;X
+MODEL_JAP_5_7;STB-1;STB-1;;;;;;;;;X
+MODEL_JAP_5_8;74式戦車;Type 74;;;;;;;;;X
+MODEL_JAP_5_9;74式戦車B型;Type 74B;;;;;;;;;X
+MODEL_JAP_12_0;中島 キ-44 二式単戦 鍾馗;Nakajima Ki-44 Shoki;;;;;;;;;X
+MODEL_JAP_12_1;三菱 J2M3 雷電;Mitsubishi J2M3 Raiden;;;;;;;;;X
+MODEL_JAP_12_2;川西 N1K2-J 紫電改;Kawanishi N1K2-J Shiden;;;;;;;;;X
+MODEL_JAP_12_3;九州飛行機 J7W2 震電;Kyushu J7W2 Shinden;;;;;;;;;X
+MODEL_JAP_12_4;中島 キ-201 火龍;Nakajima Ki-201 Karyu;;;;;;;;;X
+MODEL_JAP_12_5;美津濃 神龍;Mizuno Shinryu;;;;;;;;;X
+MODEL_JAP_12_6;ノースアメリカン F-86F セイバー;North American F-86F Sabre;;;;;;;;;X
+MODEL_JAP_12_7;ロッキード F-104J スターファイター;Lockheed F-104J Starfighter;;;;;;;;;X
+MODEL_JAP_12_8;マクドネル F-4 ファントム II;McDonnell F-4 Phantom II;;;;;;;;;X
+MODEL_JAP_13_0;三菱 九一式戦;Mitsubishi Type 91;;;;;;;;;X
+MODEL_JAP_13_1;川崎 キ-10 九五式戦;Kawasaki Ki-10;;;;;;;;;X
+MODEL_JAP_13_2;中島 キ-27 九七式戦;Nakajima Ki-27 Kyuunana sen;;;;;;;;;X
+MODEL_JAP_13_3;中島 キ-43 一式戦 隼;Nakajima Ki-43 Hayabusa;;;;;;;;;X
+MODEL_JAP_13_4;川崎 キ-61 三式戦 飛燕;Kawasaki Ki-61 Hien;;;;;;;;;X
+MODEL_JAP_13_7;中島 キ-84 四式戦 疾風;Nakajima Ki-84 Hayate;;;;;;;;;X
+MODEL_JAP_13_5;三菱 J8M 秋水;Mitsubishi J8M Shusui;;;;;;;;;X
+MODEL_JAP_13_6;三菱 キ-202 秋水改;Nakajima Ki-202 Shusui-Kai;;;;;;;;;X
+MODEL_JAP_13_8;中島 キ-201 火龍;Nakajima Ki-201 Karyu;;;;;;;;;X
+MODEL_JAP_13_9;三菱 F-1;Mitsubishi F-1;;;;;;;;;X
+MODEL_JAP_14_0;中島 G5N 深山;Nakajima G5N Shinzan;;;;;;;;;X
+MODEL_JAP_14_1;中島 G8N 連山;Nakajima G8N Renzan;;;;;;;;;X
+MODEL_JAP_14_2;中島 G10N1 富嶽;Nakajima G10N1 Fugaku;;;;;;;;;X
+MODEL_JAP_15_0;川崎 八七式重爆;Kawasaki Type 87;;;;;;;;;X
+MODEL_JAP_15_1;三菱 キ-2 九三式双軽爆;Mitsubishi Ki-2;;;;;;;;;X
+MODEL_JAP_15_2;川崎 キ-48 九九式双軽爆;Kawasaki Ki-48-II;;;;;;;;;X
+MODEL_JAP_15_3;中島 キ-49 一〇〇式重爆 呑龍;Nakajima Ki-49 Donryu;;;;;;;;;X
+MODEL_JAP_15_4;三菱 キ-67 四式重爆 飛龍;Mitsubishi Ki-67 Hiryu;;;;;;;;;X
+MODEL_JAP_15_5;中島 橘花;Nakajima Kikka;;;;;;;;;X
+MODEL_JAP_15_6;三菱 F-1;Mitsubishi F-1;;;;;;;;;X
+MODEL_JAP_16_0;三菱 G3M 九六式陸攻;Mitsubishi G3M Chukou;;;;;;;;;X
+MODEL_JAP_16_1;三菱 G4M 一式陸攻;Mitsubishi G4M Ishikkiro;;;;;;;;;X
+MODEL_JAP_16_2;川西 H8K3 二式大艇;Kawanishi H8K3;;;;;;;;;X
+MODEL_JAP_16_3;空技廠 天河;Kugisho Tenga;;;;;;;;;X
+MODEL_JAP_16_4;川崎 P-2J;Kawasaki P-2J;;;;;;;;;X
+MODEL_JAP_16_5;新明和 PS-1;Shin Meiwa PS-1;;;;;;;;;X
+MODEL_JAP_17_0;三菱 キ-51 九九式襲撃機;Mitsubishi Ki-51;;;;;;;;;X
+MODEL_JAP_17_1;川崎 キ-66 急降下爆撃機;Kawasaki Ki-66;;;;;;;;;X
+MODEL_JAP_17_2;空技廠 P1Y 銀河;Kugisho P1Y Ginga;;;;;;;;;X
+MODEL_JAP_18_0;中島 キ-34 九七式輸送機;Nakajima Ki-34;;;;;;;;;X
+MODEL_JAP_18_1;空技廠 L3Y 九六式輸送機;Kugisho L3Y;;;;;;;;;X
+MODEL_JAP_18_2;三菱 キ-57 一〇〇式輸送機;Mitsubishi Ki-57;;;;;;;;;X
+MODEL_JAP_18_4;川崎 C-1;Kawasaki C-1;;;;;;;;;X
+MODEL_JAP_21_0;扶桑級;Fuso-class;;;;;;;;;X
+MODEL_JAP_21_1;伊勢級;Ise-class;;;;;;;;;X
+MODEL_JAP_21_2;長門級;Nagato-class;;;;;;;;;X
+MODEL_JAP_21_3;加賀級;Kaga-class;;;;;;;;;X
+MODEL_JAP_21_4;紀伊級;Kii-class;;;;;;;;;X
+MODEL_JAP_21_6;大和級;Yamato-class;;;;;;;;;X
+MODEL_JAP_22_0;天龍級;Tenryu-class;;;;;;;;;X
+MODEL_JAP_22_1;球磨級;Kuma-class;;;;;;;;;X
+MODEL_JAP_22_2;夕張級;Yubari-class;;;;;;;;;X
+MODEL_JAP_22_3;最上級;Mogami-class;;;;;;;;;X
+MODEL_JAP_22_4;阿賀野級;Agano-class;;;;;;;;;X
+MODEL_JAP_22_5;大淀級;Oyodo-class;;;;;;;;;X
+MODEL_JAP_23_0;古鷹級;Furutaka-class;;;;;;;;;X
+MODEL_JAP_23_1;青葉級;Aoba-class;;;;;;;;;X
+MODEL_JAP_23_2;妙高級;Myoko-class;;;;;;;;;X
+MODEL_JAP_23_3;高雄級;Takao-class;;;;;;;;;X
+MODEL_JAP_23_4;最上級;Mogami-class;;;;;;;;;X
+MODEL_JAP_23_5;利根級;Tone-class;;;;;;;;;X
+MODEL_JAP_23_6;伊吹級;Ibuki-class;;;;;;;;;X
+MODEL_JAP_24_0;鞍馬級;Kongo-class;;;;;;;;;X
+MODEL_JAP_24_1;金剛級;Kongo-class;;;;;;;;;X
+MODEL_JAP_24_2;天城級;Amagi-class;;;;;;;;;X
+MODEL_JAP_24_3;13号艦級;No13-class;;;;;;;;;X
+MODEL_JAP_24_4;B-64級;B-64-class;;;;;;;;;X
+MODEL_JAP_25_0;峯風級;Minekaze-class;;;;;;;;;X
+MODEL_JAP_25_1;吹雪級;Fubuki-class;;;;;;;;;X
+MODEL_JAP_25_2;朝潮級;Asashio-class;;;;;;;;;X
+MODEL_JAP_25_3;陽炎級;Kagero-class;;;;;;;;;X
+MODEL_JAP_25_4;秋月級;Akizuki-class;;;;;;;;;X
+MODEL_JAP_25_5;はるかぜ級;Harukaze-class;;;;;;;;;X
+MODEL_JAP_25_6;あやなみ級;Ayanami-class;;;;;;;;;X
+MODEL_JAP_25_7;あきづき級;Akizuki-class;;;;;;;;;X
+MODEL_JAP_25_8;あまつかぜ級;Amatsukaze-class;;;;;;;;;X
+MODEL_JAP_26_0;鳳翔級;Hosho-class;;;;;;;;;X
+MODEL_JAP_26_1;赤城級;Akagi-class;;;;;;;;;X
+MODEL_JAP_26_2;蒼龍級;Soryu-class;;;;;;;;;X
+MODEL_JAP_26_3;翔鶴級;Shokaku-class;;;;;;;;;X
+MODEL_JAP_26_4;大鳳級;Taiho-class;;;;;;;;;X
+MODEL_JAP_26_5;信濃級;Shinano-class;;;;;;;;;X
+MODEL_JAP_27_0;鳳翔級;Hosho-class;;;;;;;;;X
+MODEL_JAP_27_1;瑞鳳級;Zuiho-class;;;;;;;;;X
+MODEL_JAP_27_2;大鷹級;Taiyo-class;;;;;;;;;X
+MODEL_JAP_28_0;L型;L-boat-class;;;;;;;;;X
+MODEL_JAP_28_1;海中型;K-boat-class;;;;;;;;;X
+MODEL_JAP_28_2;海大型;KD-boat-class;;;;;;;;;X
+MODEL_JAP_28_3;巡潜型;J-boat-class;;;;;;;;;X
+MODEL_JAP_28_4;伊201型;ST-boat-class;;;;;;;;;X
+MODEL_JAP_28_6;おやしお級;Oyashio-class;;;;;;;;;X
+MODEL_JAP_29_0;巡潜型;Junsen-gata class;;;;;;;;;X
+MODEL_JAP_29_1;巡潜乙型;Junsen Otsu-gata class;;;;;;;;;X
+MODEL_JAP_29_2;潜特型;Sen Toku class;;;;;;;;;X
+MODEL_JAP_29_3;巡潜甲型改2;Sen Toku class;;;;;;;;;X
+;;;;;;;;;;;X
+MODEL_JOR_4_0;カーデンロイド Mk.VI;Carden-Loyd Mk.VI;;;;;;;;;X
+MODEL_JOR_4_1;ヴィッカース 6トン戦車;Vickers 6 ton.;;;;;;;;;X
+MODEL_JOR_4_2;スチュアート Mk.V;Stuart Mk.V;;;;;;;;;X
+MODEL_JOR_5_0;ホイペット;Whippet;;;;;;;;;X
+MODEL_JOR_5_1;巡航戦車 Mk.I A9;Cruiser Tank Mk.I A9;;;;;;;;;X
+MODEL_JOR_5_2;Mk.VI A15 クルセイダー;Mk.VI A15 Crusader;;;;;;;;;X
+MODEL_JOR_5_3;Mk.VIII A23M クロムウェル;Mk.VIII A23M Cromwell;;;;;;;;;X
+MODEL_JOR_5_4;A34 コメット;A34 Comet;;;;;;;;;X
+MODEL_JOR_5_5;センチュリオン Mk.I;Centurion Mk.I;;;;;;;;;X
+MODEL_KOR_5_3;M4A1 シャーマン;M4A1 Sherman;;;;;;;;;X
+MODEL_KOR_5_4;M4/E8 シャーマン;M4/E8 Sherman;;;;;;;;;X
+MODEL_KOR_5_5;M26 パーシング;M26 Pershing;;;;;;;;;X
+MODEL_KOR_5_6;M47 パットン;M47 Patton;;;;;;;;;X
+MODEL_KOR_5_7;M48A5 パットン;M48A5 Patton II;;;;;;;;;X
+MODEL_KOR_12_2;ノースアメリカン P-51D マスタング;N.American P-51D Mustang;;;;;;;;;X
+MODEL_KOR_12_3;ロッキード P-80 シューティングスター;Lockheed P-80 Shooting Star;;;;;;;;;X
+MODEL_KOR_12_4;ノースアメリカン F-86D セイバー;North American F-86D Sabre;;;;;;;;;X
+MODEL_KOR_12_5;ノースアメリカン F-100 スーパーセイバー;NA F-100 Super Sabre;;;;;;;;;X
+MODEL_KOR_13_4;ノースアメリカン P-51D マスタング;N.American P-51D Mustang;;;;;;;;;X
+MODEL_KOR_13_7;ノースアメリカン F-86A セイバー;North American F-86A Sabre;;;;;;;;;X
+MODEL_KOR_13_8;ノースアメリカン F-86F セイバー;North American F-86F Sabre;;;;;;;;;X
+MODEL_KOR_13_9;ノースロップ F-5A フリーダムファイター;Northrop F-5A Freedom Fighter;;;;;;;;;X
+MODEL_KOR_16_4;グラマン S-2 トラッカー;Grumman S-2 Tracker;;;;;;;;;X
+MODEL_KOR_17_2;ダグラス A-26 インベーダー;Douglas A-26 Invader;;;;;;;;;X
+MODEL_KOR_17_3;セスナ A-37 ドラゴンフライ;Cessna A-37 Dragonfly;;;;;;;;;X
+MODEL_KOR_18_1;ダグラス C-47;Douglas C-47 Dakota;;;;;;;;;X
+MODEL_KOR_18_2;ダグラス C-54 スカイマスター;Douglas C-54 Skymaster;;;;;;;;;X
+MODEL_KOR_18_3;フェアチャイルド C-123 プロバイダー;Fairchild C-123 Provider;;;;;;;;;X
+MODEL_KOR_25_5;忠武級;Fletcher-class;;;;;;;;;X
+MODEL_KOR_25_6;大邱級;Allen M. Sumner-class;;;;;;;;;X
+MODEL_KOR_25_7;忠北級;Gearing-class;;;;;;;;;X
+MODEL_KOR_28_6;張保皐級;Chang Bogo-class;;;;;;;;;X
+MODEL_LAT_4_0;T-27;T-27;;;;;;;;;X
+MODEL_LAT_4_1;CKD LTL;CKD LTL;;;;;;;;;X
+MODEL_LAT_4_2;BT-7;BT-7;;;;;;;;;X
+MODEL_LAT_5_0;ルノー FT-17;Renault FT-17;;;;;;;;;X
+MODEL_LAT_5_1;T-28;T-28;;;;;;;;;X
+MODEL_LAT_5_2;BT-7M;BT-7M;;;;;;;;;X
+MODEL_LAT_5_3;T-34/76;T-34/76;;;;;;;;;X
+MODEL_LAT_5_4;T-34/85;T-34/85;;;;;;;;;X
+MODEL_LAT_13_0;グロスター・グラジエーター;Gloster Gladiator;;;;;;;;;X
+MODEL_LAT_28_0;ロニス級;Ronis-class;;;;;;;;;X
+MODEL_LEB_4_0;ルノー AMR 1935;Renault AMR 1935;;;;;;;;;X
+MODEL_LEB_4_1;ホチキス H-39;Hotchkiss H-39;;;;;;;;;X
+MODEL_LEB_4_2;AMX R-40;AMX R-40;;;;;;;;;X
+MODEL_LEB_5_0;ルノー FT-17;Renault FT-17;;;;;;;;;X
+MODEL_LEB_5_1;FCM-36;FCM-36;;;;;;;;;X
+MODEL_LEB_5_2;ソミュア S-35;Somua S-35;;;;;;;;;X
+MODEL_LEB_5_3;ソミュア S-40;Somua S-40;;;;;;;;;X
+MODEL_LEB_5_4;ルノー G1R;Renault G1R;;;;;;;;;X
+MODEL_LIB_4_0;M1A2;M1A2;;;;;;;;;X
+MODEL_LIB_4_1;M3 スチュアート;M3 Stuart;;;;;;;;;X
+MODEL_LIB_4_2;M5 スチュアート;M5 Stuart;;;;;;;;;X
+MODEL_LIB_5_0;マーク VIII リバティー;Mark VIII Liberty;;;;;;;;;X
+MODEL_LIB_5_1;T4E1;T4E1;;;;;;;;;X
+MODEL_LIB_5_2;M3 リー;M3 Lee;;;;;;;;;X
+MODEL_LIB_5_3;M4A1 シャーマン;M4A1 Sherman;;;;;;;;;X
+MODEL_LIB_5_4;M4/E8 シャーマン;M4/E8 Sherman;;;;;;;;;X
+MODEL_LIB_5_5;M26 パーシング;M26 Pershing;;;;;;;;;X
+MODEL_LIT_4_0;T-27;T-27;;;;;;;;;X
+MODEL_LIT_4_1;CKD LTL;CKD LTL;;;;;;;;;X
+MODEL_LIT_4_2;BT-7;BT-7;;;;;;;;;X
+MODEL_LIT_5_0;ルノー FT-17;Renault FT-17;;;;;;;;;X
+MODEL_LIT_5_1;T-28;T-28;;;;;;;;;X
+MODEL_LIT_5_2;BT-7M;BT-7M;;;;;;;;;X
+MODEL_LIT_5_3;T-34/76 41年型;T-34 m.41;;;;;;;;;X
+MODEL_LIT_5_4;T-34/85 44年型;T-34 m.44;;;;;;;;;X
+MODEL_LIT_13_0;グロスター・グラジエーター;Gloster Gladiator;;;;;;;;;X
+MODEL_LIT_17_0;アンボ VIII;Anbo VIII;;;;;;;;;X
+;;;;;;;;;;;X
+MODEL_MAN_29_0;巡潜型;Junsen-gata class;;;;;;;;;X
+MODEL_MAN_29_1;巡潜乙型;Junsen Otsu-gata class;;;;;;;;;X
+MODEL_MAN_29_2;潜特型;Sen Toku class;;;;;;;;;X
+MODEL_MAN_29_3;巡潜甲型改2;Sen Toku class;;;;;;;;;X
+;;;;;;;;;;;X
+MODEL_MEX_4_0;M1A2;M1A2;;;;;;;;;X
+MODEL_MEX_4_1;マーモン・ヘリントン;Marmon Herrington;;;;;;;;;X
+MODEL_MEX_4_2;M5 スチュアート;M5 Stuart;;;;;;;;;X
+MODEL_MEX_5_0;マーク VIII リバティー;Mark VIII Liberty;;;;;;;;;X
+MODEL_MEX_5_1;T4E1;T4E1;;;;;;;;;X
+MODEL_MEX_5_2;M3 リー;M3 Lee;;;;;;;;;X
+MODEL_MEX_5_3;M4A1 シャーマン;M4A1 Sherman;;;;;;;;;X
+MODEL_MEX_5_4;M4/E8 シャーマン;M4/E8 Sherman;;;;;;;;;X
+MODEL_MEX_5_5;M26 パーシング;M26 Pershing;;;;;;;;;X
+MODEL_MEX_13_0;ヴォート O2U-2M コルセア;Vought O2U-2M Corsair;;;;;;;;;X
+MODEL_MEX_17_0;ダグラス A-24;Douglas A-24 Dauntless;;;;;;;;;X
+MODEL_MEX_18_0;ビーチ C-45 エクスペディター;Beech C-45 Expeditor;;;;;;;;;X
+MODEL_MON_4_0;T-27;T-27;;;;;;;;;X
+MODEL_MON_4_1;BT-5;BT-5;;;;;;;;;X
+MODEL_MON_4_2;BT-7;BT-7;;;;;;;;;X
+MODEL_MON_5_0;ルノー FT-17;Renault FT-17;;;;;;;;;X
+MODEL_MON_5_1;T-28;T-28;;;;;;;;;X
+MODEL_MON_5_2;BT-7M;BT-7M;;;;;;;;;X
+MODEL_MON_5_3;T-34/76;T-34 m.41;;;;;;;;;X
+MODEL_MON_5_4;T-34/85;T-34 m.44;;;;;;;;;X
+MODEL_MON_5_5;T-44;T-44;;;;;;;;;X
+MODEL_MON_12_1;ミコヤン・グレビッチ MiG-3;Mikoyan-Gurevich MiG-3;;;;;;;;;X
+MODEL_MON_12_2;ラボーチキン La-5;Lavochkin La-5;;;;;;;;;X
+MODEL_MON_13_1;ポリカルポフ I-15;Polikarpov I-15;;;;;;;;;X
+MODEL_MON_13_2;ポリカルポフ I-16;Polikarpov I-16;;;;;;;;;X
+MODEL_MON_13_3;ラボーチキン LaGG-3;Lavochkin LaGG-3;;;;;;;;;X
+MODEL_MON_13_4;ヤコブレフ Yak-7;Yakovlev Yak-7;;;;;;;;;X
+MODEL_MON_14_0;ツポレフ TB-3;Tupolev TB-3;;;;;;;;;X
+MODEL_MON_14_1;ペトリャコフ Pe-8;Petljakov Pe-8;;;;;;;;;X
+MODEL_MON_14_2;ツポレフ Tu-4;Tupolev Tu-4;;;;;;;;;X
+MODEL_MON_15_1;ツポレフ SB-2;Tupolev SB-2;;;;;;;;;X
+MODEL_MON_15_2;イリューシン DB-3;Ilyushin DB-3;;;;;;;;;X
+MODEL_MON_15_3;ヤコブレフ Yak-4;Yakovlev Yak-4;;;;;;;;;X
+MODEL_MON_15_4;ペトリャコフ Pe-2;Petljakov Pe-2;;;;;;;;;X
+MODEL_MON_16_0;アルハンゲリスキー Ar-2;Arhangelsky Ar-2;;;;;;;;;X
+MODEL_MON_16_1;イリューシン Il-4;Ilyushin Il-4;;;;;;;;;X
+MODEL_MON_17_0;スホーイ Su-2 イワノフ;Sukhoi Su-2 Ivanov;;;;;;;;;X
+MODEL_MON_17_1;イリューシン Il-2M シュトルモヴィク;Ilyushin Il-2M Shturmovik;;;;;;;;;X
+MODEL_MON_18_0;リスノフ Li-2;Lisunov Li-2;;;;;;;;;X
+MODEL_NIC_4_0;CV-33;CV-33;;;;;;;;;X
+MODEL_NIC_4_1;M2A4;M2A4;;;;;;;;;X
+MODEL_NIC_4_2;M5 スチュアート;M5 Stuart;;;;;;;;;X
+MODEL_NIC_5_0;ルノー FT-17;Renault FT-17;;;;;;;;;X
+MODEL_NIC_5_1;ヴィッカース Mk.E;Vickers Mk.E;;;;;;;;;X
+MODEL_NIC_5_2;M3 リー;M3 Lee;;;;;;;;;X
+MODEL_NIC_5_3;M4A1 シャーマン;M4A1 Sherman;;;;;;;;;X
+MODEL_NIC_5_4;M4/E8 シャーマン;M4/E8 Sherman;;;;;;;;;X
+MODEL_NIC_5_5;M26 パーシング;M26 Pershing;;;;;;;;;X
+MODEL_NIC_13_0;グラマン・ゴブリン;Grumman Goblin;;;;;;;;;X
+MODEL_NOR_4_0;トラクター nr.52;Tractor nr.52;;;;;;;;;X
+MODEL_NOR_4_1;ランツヴェルク L-10;Landsverk L-10;;;;;;;;;X
+MODEL_NOR_4_2;ランツヴェルク L-60;Landsverk L-60;;;;;;;;;X
+MODEL_NOR_5_0;ルノー FT-17;Renault FT-17;;;;;;;;;X
+MODEL_NOR_5_1;ランツヴェルク L-61;Landsverk L-61;;;;;;;;;X
+MODEL_NOR_5_2;ランツヴェルク L-62;Landsverk L-62;;;;;;;;;X
+MODEL_NOR_5_3;IV号戦車;Stridsvogn KW-IV;;;;;;;;;X
+MODEL_NOR_5_4;V号戦車;Stridsvogn KW-V;;;;;;;;;X
+MODEL_NOR_5_5;M26 パーシング;M26 Pershing;;;;;;;;;X
+MODEL_NOR_13_0;フォッカー C.VE;Fokker C.VE;;;;;;;;;X
+MODEL_NOR_13_1;カーチス・ホーク 75-A;Curtiss Hawk 75-A;;;;;;;;;X
+MODEL_NOR_13_2;ホーカー・ハリケーン II;Hawker Hurricane II;;;;;;;;;X
+MODEL_NOR_17_0;ブレダ Ba.28;Breda Ba.28;;;;;;;;;X
+MODEL_NOR_23_0;ノルゲ級;Norge-class;;;;;;;;;X
+MODEL_NOR_25_0;ドラウグ級;Draug-class;;;;;;;;;X
+MODEL_NOR_25_1;エーレスンド級;Aalesund-class;;;;;;;;;X
+MODEL_NOR_28_0;A級;A'-class;;;;;;;;;X
+MODEL_NOR_28_1;B級;B'-class;;;;;;;;;X
+MODEL_NZL_4_0;カーデンロイド M1933;Carden-Loyd M1933;;;;;;;;;X
+MODEL_NZL_4_1;ヴィッカース Mk.VIc;Vickers Mk.VIc;;;;;;;;;X
+MODEL_NZL_4_2;スチュアート Mk.V;Stuart Mk.V;;;;;;;;;X
+MODEL_NZL_5_0;シェフィールド;Schofield;;;;;;;;;X
+MODEL_NZL_5_1;巡航戦車 Mk.I A9;Cruiser Tank Mk.I A9;;;;;;;;;X
+MODEL_NZL_5_2;AC1 センチネル;AC1 Sentinel;;;;;;;;;X
+MODEL_NZL_5_3;AC4 センチネル;AC4 Sentinel;;;;;;;;;X
+MODEL_NZL_5_4;Mk.VIII A23M クロムウェル;Mk.VIII A23M Cromwell;;;;;;;;;X
+MODEL_NZL_5_5;センチュリオン Mk.I;Centurion Mk.I;;;;;;;;;X
+MODEL_NZL_12_0;カーチス・キティホーク;Curtiss Kittyhawk;;;;;;;;;X
+MODEL_NZL_12_1;スーパーマリン・スピットファイア Mk.IX;Supermarine Spitfire Mk.IX;;;;;;;;;X
+MODEL_NZL_12_2;ノースアメリカン P-51D マスタング;N.American P-51D Mustang;;;;;;;;;X
+MODEL_NZL_12_3;グロスター・ミーティア Mk.III;Gloster Meteor Mk.III;;;;;;;;;X
+MODEL_NZL_12_4;グロスター・ミーティア F.8;Gloster Meteor F.8;;;;;;;;;X
+MODEL_NZL_13_0;ホーカー・デーモン;Hawker Demon;;;;;;;;;X
+MODEL_NZL_13_1;ホーカー・ハリケーン Mk.I;Hawker Hurricane Mk.I;;;;;;;;;X
+MODEL_NZL_13_2;ホーカー・ハリケーン Mk.II;Hawker Hurricane Mk.II;;;;;;;;;X
+MODEL_NZL_13_3;グラマン F6F ヘルキャット;Grumman F6F Hellcat;;;;;;;;;X
+MODEL_NZL_13_4;ヴォート F4U コルセア;Vought F4U Corsair;;;;;;;;;X
+MODEL_NZL_13_5;ホーカー P.1052;Hawker P.1052;;;;;;;;;X
+MODEL_NZL_13_6;SARO SR.177;SARO SR.177;;;;;;;;;X
+MODEL_NZL_13_7;グロスター・ミーティア Mk.I;Gloster Meteor Mk.I;;;;;;;;;X
+MODEL_NZL_13_8;デハビランド・バンパイア;de Havilland Vampire;;;;;;;;;X
+MODEL_NZL_14_0;アームストロング・ホイットワース・ホイットレー;Armstrong-Whitworth Whitley;;;;;;;;;X
+MODEL_NZL_14_1;ハンドレページ・ハリファックス;Handley Page Halifax;;;;;;;;;X
+MODEL_NZL_14_2;アブロ・ランカスター;Avro Lancaster;;;;;;;;;X
+MODEL_NZL_14_3;ヴィッカース・ヴァリアント;Vickers Valiant;;;;;;;;;X
+MODEL_NZL_15_0;ブリストル・ブレニム Mk.I;Bristol Blenheim Mk.I;;;;;;;;;X
+MODEL_NZL_15_1;ハンドレページ・ハンプデン;Handley Page Hampden;;;;;;;;;X
+MODEL_NZL_15_2;ヴッカース ウェリントン Mk.III;Vickers-Armstrong Wellington Mk.III;;;;;;;;;X
+MODEL_NZL_15_3;ノースアメリカン・ミッチェル Mk.II;N.American Mitchell Mk.II;;;;;;;;;X
+MODEL_NZL_15_4;デハビランド・モスキート B.XVI;de Havilland Mosquito B.XVI;;;;;;;;;X
+MODEL_NZL_15_5;デハビランド・ヴェノム;de Havilland Venom;;;;;;;;;X
+MODEL_NZL_15_6;イングリッシュ・エレクトリック・キャンベラ;English Electric Canberra;;;;;;;;;X
+MODEL_NZL_16_0;ロッキード・ハドソン;Lockheed Hudson;;;;;;;;;X
+MODEL_NZL_16_1;ロッキード・ヴェンチュラ;Lockheed Ventura;;;;;;;;;X
+MODEL_NZL_16_2;CAC CA-11 ウーメラ;CAC CA-11 Woomera;;;;;;;;;X
+MODEL_NZL_17_0;CAC CA-10 ワイラウェイ;CAC CA-10 Wirraway;;;;;;;;;X
+MODEL_NZL_17_1;ベルP-39 エアコブラ;Bell P-39 Aircobra;;;;;;;;;X
+MODEL_NZL_17_2;ブリストル・ボーファイター;Bristol Beaufighter;;;;;;;;;X
+MODEL_NZL_18_0;アームストロング・ホイットワース・ホイットレー;Armstrong-Whitworth AW.41 Albermarle;;;;;;;;;X
+MODEL_NZL_18_1;ダグラス・ダコタ;Douglas Dakota;;;;;;;;;X
+MODEL_NZL_18_2;アブロ・ヨーク;Avro 685 York;;;;;;;;;X
+MODEL_NZL_22_0;カレドン級;Caledon-class;;;;;;;;;X
+MODEL_NZL_22_1;エメラルド級;Emerald-class;;;;;;;;;X
+MODEL_NZL_22_2;リアンダー級;Leander-class;;;;;;;;;X
+MODEL_NZL_22_3;サザンプトン級;Southampton-class;;;;;;;;;X
+MODEL_NZL_22_4;スイフトシュア級;Swiftsure-class;;;;;;;;;X
+MODEL_NZL_22_5;ミノタウル級;Minotaur-class;;;;;;;;;X
+MODEL_NZL_23_1;ケント級;Kent-class;;;;;;;;;X
+MODEL_NZL_23_2;サリー級;Surrey-class;;;;;;;;;X
+MODEL_NZL_25_0;V級;V-class;;;;;;;;;X
+MODEL_NZL_25_1;A級;A-class;;;;;;;;;X
+MODEL_NZL_25_2;トライバル級;Tribal-class;;;;;;;;;X
+MODEL_NZL_25_3;バトル級;Battle-class;;;;;;;;;X
+MODEL_NZL_25_4;デアリング級;Daring-class;;;;;;;;;X
+MODEL_NZL_25_5;カウンティ級;County-class;;;;;;;;;X
+MODEL_NZL_26_0;ハーミーズ級;Hermes-class;;;;;;;;;X
+MODEL_NZL_26_1;カレイジャス級;Courageous-class;;;;;;;;;X
+MODEL_NZL_27_0;ハーミーズ級;Hermes-class;;;;;;;;;X
+MODEL_NZL_27_1;イーグル級;Eagle-class;;;;;;;;;X
+MODEL_NZL_27_2;ユニコーン級;Unicorn-class;;;;;;;;;X
+MODEL_NZL_27_3;コロッサス級;Colossus-class;;;;;;;;;X
+MODEL_NZL_27_4;セントー級;Centaur-class;;;;;;;;;X
+MODEL_NZL_27_5;インヴィンシブル級;Invincible-class;;;;;;;;;X
+MODEL_NZL_28_0;H級;H-boat-class;;;;;;;;;X
+MODEL_NZL_28_1;ソードフィッシュ級;Swordfish-class;;;;;;;;;X
+MODEL_NZL_28_2;トライトン級;Triton-class;;;;;;;;;X
+MODEL_NZL_28_3;A級;A-boat-class;;;;;;;;;X
+MODEL_NZL_28_4;エクスプローラー級;Explorer-class;;;;;;;;;X
+MODEL_NZL_28_5;ポーパス級;Porpoise-class;;;;;;;;;X
+MODEL_NZL_28_6;ドレッドノート級;Dreadnought-class;;;;;;;;;X
+MODEL_PAN_4_0;CV-33;CV-33;;;;;;;;;X
+MODEL_PAN_4_1;M2A4;M2A4;;;;;;;;;X
+MODEL_PAN_4_2;M5 スチュアート;M5 Stuart;;;;;;;;;X
+MODEL_PAN_5_0;ルノー FT-17;Renault FT-17;;;;;;;;;X
+MODEL_PAN_5_1;ヴィッカース Mk.E;Vickers Mk.E;;;;;;;;;X
+MODEL_PAN_5_2;M3 リー;M3 Lee;;;;;;;;;X
+MODEL_PAN_5_3;M4A1 シャーマン;M4A1 Sherman;;;;;;;;;X
+MODEL_PAN_5_4;M4/E8 シャーマン;M4/E8 Sherman;;;;;;;;;X
+MODEL_PAN_5_5;M26 パーシング;M26 Pershing;;;;;;;;;X
+MODEL_PAR_4_0;CV-33;CV-33;;;;;;;;;X
+MODEL_PAR_4_1;M2A4;M2A4;;;;;;;;;X
+MODEL_PAR_4_2;M5 スチュアート;M5 Stuart;;;;;;;;;X
+MODEL_PAR_5_0;ルノー FT-17;Renault FT-17;;;;;;;;;X
+MODEL_PAR_5_1;ヴィッカース Mk.E;Vickers Mk.E;;;;;;;;;X
+MODEL_PAR_5_2;M3 リー;M3 Lee;;;;;;;;;X
+MODEL_PAR_5_3;M4A1 シャーマン;M4A1 Sherman;;;;;;;;;X
+MODEL_PAR_5_4;M4/E8 シャーマン;M4/E8 Sherman;;;;;;;;;X
+MODEL_PAR_5_5;M26 パーシング;M26 Pershing;;;;;;;;;X
+MODEL_PER_4_0;カーデンロイド Mk.VI;Carden-Loyd Mk.VI;;;;;;;;;X
+MODEL_PER_4_1;マーモン・ヘリントン;Marmon Herrington;;;;;;;;;X
+MODEL_PER_4_2;CKD AH-IV;CKD AH-IV;;;;;;;;;X
+MODEL_PER_5_0;ルノー FT-17;Renault FT-17;;;;;;;;;X
+MODEL_PER_5_1;巡航戦車 Mk.I A9;Cruiser Tank Mk.I A9;;;;;;;;;X
+MODEL_PER_5_2;LT vz.40;LT vz.40;;;;;;;;;X
+MODEL_PER_5_3;Mk.VIII A23M クロムウェル;Mk.VIII A23M Cromwell;;;;;;;;;X
+MODEL_PER_5_4;A34 コメット;A34 Comet;;;;;;;;;X
+MODEL_PER_5_5;センチュリオン Mk.I;Centurion Mk.I;;;;;;;;;X
+MODEL_PER_13_0;ホーカー・フューリー II;Hawker Fury II;;;;;;;;;X
+MODEL_PER_13_1;カーチス・ホーク 75-A;Curtiss Hawk 75-A;;;;;;;;;X
+MODEL_PER_13_2;ホーカー・ハリケーン Mk.II;Hawker Hurricane Mk.II;;;;;;;;;X
+MODEL_PER_16_0;アブロ・アンソン;Avro Anson;;;;;;;;;X
+MODEL_PHI_4_0;M1A2;M1A2;;;;;;;;;X
+MODEL_PHI_4_1;M3 スチュアート;M3 Stuart;;;;;;;;;X
+MODEL_PHI_4_2;M5 スチュアート;M5 Stuart;;;;;;;;;X
+MODEL_PHI_5_0;マーク VIII リバティー;Mark VIII Liberty;;;;;;;;;X
+MODEL_PHI_5_1;T4E1;T4E1;;;;;;;;;X
+MODEL_PHI_5_2;M3 リー;M3 Lee;;;;;;;;;X
+MODEL_PHI_5_3;M4A1 シャーマン;M4A1 Sherman;;;;;;;;;X
+MODEL_PHI_5_4;M4/E8 シャーマン;M4/E8 Sherman;;;;;;;;;X
+MODEL_PHI_5_5;M26 パーシング;M26 Pershing;;;;;;;;;X
+MODEL_PHI_12_0;カーチス P-40B ウォーホーク;Curtiss P-40B Warhawk;;;;;;;;;X
+MODEL_PHI_13_0;グラマン F3F フライングバレル;Grumman F3F Flying Barrel;;;;;;;;;X
+MODEL_PHI_13_1;カーチス P-36;Curtiss P-36;;;;;;;;;X
+MODEL_PHI_14_0;ボーイング B-17 フライングフォートレス;Boeing B-17 Flying Fortress;;;;;;;;;X
+MODEL_PHI_15_0;ダグラス B-18 ボロ;Douglas B-18 Bolo;;;;;;;;;X
+MODEL_PHI_15_1;ダグラス B-23 ドラゴン;Douglas B-23 Dragon;;;;;;;;;X
+MODEL_PHI_15_2;ダグラス A-20 ボストン;Douglas A-20 Boston;;;;;;;;;X
+MODEL_PHI_16_0;コンソリデーテッド PBY カタリナ;Consolidated PBY Catalina;;;;;;;;;X
+MODEL_PHI_17_0;ダグラス A-24;Douglas A-24;;;;;;;;;X
+MODEL_PHI_18_0;ダグラス C-32;Douglas C-32;;;;;;;;;X
+MODEL_POL_4_0;TK-S;TK-S;;;;;;;;;X
+MODEL_POL_4_1;7TPjw;7TPjw;;;;;;;;;X
+MODEL_POL_4_2;10TP;10TP;;;;;;;;;X
+MODEL_POL_5_0;ルノー FT-17;Renault FT-17;;;;;;;;;X
+MODEL_POL_5_1;ルノー R-35;Renault R35;;;;;;;;;X
+MODEL_POL_5_2;14TPjw;14TPjw;;;;;;;;;X
+MODEL_POL_5_3;20TP;20TP;;;;;;;;;X
+MODEL_POL_5_4;T-34/85 44年型;T-34 m.44;;;;;;;;;X
+MODEL_POL_5_5;T-44;T-44;;;;;;;;;X
+MODEL_POL_12_0;PZL P.45 ソコル;PZL P.45 Sokol;;;;;;;;;X
+MODEL_POL_12_1;PZL P.62;PZL P.62;;;;;;;;;X
+MODEL_POL_12_4;WSK LIM-6P;WSK LIM-6P;;;;;;;;;X
+MODEL_POL_13_0;PZL P.11c;PZL P.11c;;;;;;;;;X
+MODEL_POL_13_1;PZL P.24;PZL P.24;;;;;;;;;X
+MODEL_POL_13_2;PZL P.50 ヤストレザブ;PZL P.50 Jastrzab;;;;;;;;;X
+MODEL_POL_13_3;PZL P.63;PZL P.63;;;;;;;;;X
+MODEL_POL_13_4;PZL P.56 カニヤ;PZL P.56 Kania;;;;;;;;;X
+MODEL_POL_13_7;WSK ミェレッツ LIM-1;WSK Mielec LIM-1;;;;;;;;;X
+MODEL_POL_13_8;WSK LIM-2;WSK LIM-2;;;;;;;;;X
+MODEL_POL_14_0;ブロック MB.162;Bloch MB.162;;;;;;;;;X
+MODEL_POL_15_1;LWS-4 ジュブル;LWS-4 Zubr;;;;;;;;;X
+MODEL_POL_15_2;PZL P.37 ウォシュ;PZL P.37 Los;;;;;;;;;X
+MODEL_POL_15_3;PZL P.49 ミシュ;PZL P.49 Mis;;;;;;;;;X
+MODEL_POL_16_1;カント Z.506B アイローネ;Cant Z.506B Airone;;;;;;;;;X
+MODEL_POL_16_2;RWD 22;RWD 22;;;;;;;;;X
+MODEL_POL_17_0;PZL P.46 スム;PZL P.46 Sum;;;;;;;;;X
+MODEL_POL_17_1;PZL ウォソシ;PZL Losos;;;;;;;;;X
+MODEL_POL_18_0;PZL 27;PZL 27;;;;;;;;;X
+MODEL_POL_18_1;ロッキード L-14H;Lockheed L-14H;;;;;;;;;X
+MODEL_POL_22_0;コンラッド級;Conrad-class;;;;;;;;;X
+MODEL_POL_25_1;ヴィッチェル級;Wicher-class;;;;;;;;;X
+MODEL_POL_25_2;グロム級;Grom-class;;;;;;;;;X
+MODEL_POL_28_0;ヴィルク級;Wilk-class;;;;;;;;;X
+MODEL_POL_28_1;オルゼル級;Orzel-class;;;;;;;;;X
+MODEL_POR_4_0;カーデンロイド M1933;Carden-Loyd M1933;;;;;;;;;X
+MODEL_POR_4_1;L3/38;L.3/38;;;;;;;;;X
+MODEL_POR_4_2;L6/40;L.6/40;;;;;;;;;X
+MODEL_POR_5_0;ルノー FT-17;Renault FT-17;;;;;;;;;X
+MODEL_POR_5_1;ヴィッカース Mk.E;Vickers Mk.E;;;;;;;;;X
+MODEL_POR_5_2;III号戦車;PzKpfw.III;;;;;;;;;X
+MODEL_POR_5_3;IV号戦車;PzKpfw.IV;;;;;;;;;X
+MODEL_POR_5_4;M4/E8 シャーマン;M4/E8 Sherman;;;;;;;;;X
+MODEL_POR_5_5;M26 パーシング;M26 Pershing;;;;;;;;;X
+MODEL_POR_12_0;スーパーマリン・スピットファイア Mk.I;Supermarine Spitfire Mk.I;;;;;;;;;X
+MODEL_POR_13_0;グロスター・グラジエーター;Gloster Gladiator;;;;;;;;;X
+MODEL_POR_13_1;カーチス・ホーク 75-A;Curtiss Hawk 75-A;;;;;;;;;X
+MODEL_POR_13_2;ハリケーン Mk.II;Hurricane Mk.II;;;;;;;;;X
+MODEL_POR_14_1;コンソリデーテッド B-24J リベレーター;Consolidated B-24J Liberator;;;;;;;;;X
+MODEL_POR_15_0;ユンカース Ju 86;Junkers Ju-86;;;;;;;;;X
+MODEL_POR_15_1;ブリストル・ブレニム Mk.IV;Bristol Blenheim Mk.IV;;;;;;;;;X
+MODEL_POR_16_0;ロッキード・ハドソン;Lockheed Hudson;;;;;;;;;X
+MODEL_POR_17_0;ブレダ Ba.65 (PW);Breda Ba.65 (PW);;;;;;;;;X
+MODEL_POR_17_1;ユンカース Ju 87D;Junkers Ju-87D Stuka;;;;;;;;;X
+MODEL_POR_17_2;ブリストル・ボーファイター I;Bristol Beaufighter I;;;;;;;;;X
+MODEL_POR_18_0;ユンカース Ju 52/3m;Junkers Ju-52/3m Tante Ju;;;;;;;;;X
+MODEL_POR_18_2;C-54 スカイマスター;C-54 Skymaster;;;;;;;;;X
+MODEL_POR_25_0;グアディアナ級;Guadiana-class;;;;;;;;;X
+MODEL_POR_25_1;ドーロ級;Douro-class;;;;;;;;;X
+MODEL_POR_28_0;デルフィム級;Delfim-class;;;;;;;;;X
+MODEL_PRK_5_3;T-34/76;T-34/76;;;;;;;;;X
+MODEL_PRK_5_4;T-34/85;T-34/85;;;;;;;;;X
+MODEL_PRK_5_5;T-44;T-44;;;;;;;;;X
+MODEL_PRK_5_6;T-54;T-54;;;;;;;;;X
+MODEL_PRK_5_7;T-62;T-62;;;;;;;;;X
+MODEL_PRK_12_1;ラボーチキン La-5;Lavochkin La-5;;;;;;;;;X
+MODEL_PRK_12_2;ラボーチキン La-7;Lavochkin La-7;;;;;;;;;X
+MODEL_PRK_12_3;ラボーチキン La-15;Lavochkin La-15;;;;;;;;;X
+MODEL_PRK_12_4;ミコヤン・グレビッチ MiG-17;Mikoyan-Gurevich MiG-17 Fresco;;;;;;;;;X
+MODEL_PRK_12_5;南昌 Q-5 ファンタン;Nanchang Q-5 Fantan;;;;;;;;;X
+MODEL_PRK_13_3;ヤコブレフ Yak-7;Yakovlev Yak-7;;;;;;;;;X
+MODEL_PRK_13_4;ヤコブレフ Yak-3;Yakovlev Yak-3;;;;;;;;;X
+MODEL_PRK_13_7;ヤコブレフ Yak-15;Yakovlev Yak-15 Feather;;;;;;;;;X
+MODEL_PRK_13_8;ヤコブレフ Yak-23;Yakovlev Yak-23 Flora;;;;;;;;;X
+MODEL_PRK_13_9;ミコヤン・グレビッチ MiG-19;Mikoyan-Gurevich MiG-19 Farmer;;;;;;;;;X
+MODEL_PRK_15_3;ペトリャコフ Pe-2;Petljakov Pe-2;;;;;;;;;X
+MODEL_PRK_15_4;ツポレフ Tu-2;Tupolev Tu-2;;;;;;;;;X
+MODEL_PRK_15_5;ツポレフ Tu-14;Tupolev Tu-14 Bosun;;;;;;;;;X
+MODEL_PRK_15_6;イリューシン Il-28;Ilyushin Il-28 Beagle;;;;;;;;;X
+MODEL_PRK_16_1;イリューシン Il-4;Ilyushin Il-4;;;;;;;;;X
+MODEL_PRK_16_2;ツポレフ Tu-2T;Tupolev Tu-2T;;;;;;;;;X
+MODEL_PRK_17_1;イリューシン Il-2M シュトルモヴィク;Ilyushin Il-2M Shturmovik;;;;;;;;;X
+MODEL_PRK_17_2;イリューシン Il-10;Ilyushin Il-10 Beast;;;;;;;;;X
+MODEL_PRK_17_3;ミコヤン・グレビッチ MiG-15bis;Mikoyan-Gurevich Mig-15bis Fagot;;;;;;;;;X
+MODEL_PRK_17_4;スホーイ Su-7B;Sukhoi Su-7B Fitter;;;;;;;;;X
+MODEL_PRK_17_5;スホーイ Su-7BM;Sukhoi Su-7BM Fitter;;;;;;;;;X
+MODEL_PRK_18_1;リスノフ Li-2V;Lisunov Li-2V;;;;;;;;;X
+MODEL_PRK_18_2;イリューシン Il-12;Ilyushin Il-12;;;;;;;;;X
+MODEL_PRK_18_3;イリューシン Il-18;Ilyushin Il-18;;;;;;;;;X
+MODEL_PRK_18_4;アントノフ An-12;Antonov An-12 Cub;;;;;;;;;X
+MODEL_PRK_25_4;スコーリィ級;Skoriy-class;;;;;;;;;X
+MODEL_PRK_25_5;コトリン級;Kotlin-class;;;;;;;;;X
+MODEL_PRK_25_6;クルップニイ級;Krupny-class;;;;;;;;;X
+MODEL_PRK_28_4;ウィスキー級;Whiskey-class;;;;;;;;;X
+MODEL_PRK_28_5;ロメオ級;Romeo-class;;;;;;;;;X
+MODEL_PRU_4_0;T-33;T-33;;;;;;;;;X
+MODEL_PRU_4_1;CKD LTP;CKD LTP;;;;;;;;;X
+MODEL_PRU_4_2;M5 スチュアート;M5 Stuart;;;;;;;;;X
+MODEL_PRU_5_0;KH-70;KH-70;;;;;;;;;X
+MODEL_PRU_5_1;T4E1;T4E1;;;;;;;;;X
+MODEL_PRU_5_2;M3 リー;M3 Lee;;;;;;;;;X
+MODEL_PRU_5_3;M4A1 シャーマン;M4A1 Sherman;;;;;;;;;X
+MODEL_PRU_5_4;M4/E8 シャーマン;M4/E8 Sherman;;;;;;;;;X
+MODEL_PRU_5_5;M26 パーシング;M26 Pershing;;;;;;;;;X
+MODEL_PRU_13_0;ヴォート O2U コルセア;Vought O2U Corsair;;;;;;;;;X
+MODEL_PRU_13_1;カーチス・ホーク 75-A;Curtiss Hawk 75-A;;;;;;;;;X
+MODEL_PRU_15_0;カプロニ Ca.310 リベッチオ;Caproni Ca.310 Libeccio;;;;;;;;;X
+MODEL_PRU_22_0;アルミランテ・グラウ級;Almirante Grau-class;;;;;;;;;X
+MODEL_PRU_25_0;ギーズ級;Guise-class;;;;;;;;;X
+MODEL_PRU_28_0;R級;R'-class;;;;;;;;;X
+MODEL_ROM_4_0;R-1;R-1;;;;;;;;;X
+MODEL_ROM_4_1;R-2;R-2;;;;;;;;;X
+MODEL_ROM_4_2;BT-7;BT-7;;;;;;;;;X
+MODEL_ROM_5_0;ルノー FT-17;Renault FT-17;;;;;;;;;X
+MODEL_ROM_5_1;ルノー R-35;Renault R35;;;;;;;;;X
+MODEL_ROM_5_2;III号戦車;PzKpfw.III;;;;;;;;;X
+MODEL_ROM_5_3;IV号戦車;PzKpfw.IV;;;;;;;;;X
+MODEL_ROM_5_4;V号戦車 パンター;PzKpfw.V Panther;;;;;;;;;X
+MODEL_ROM_12_0;IAR 80;IAR 80;;;;;;;;;X
+MODEL_ROM_12_1;メッサーシュミット Bf 109G;Messerschmitt Bf-109G Gustav;;;;;;;;;X
+MODEL_ROM_13_0;PZL P.11c;PZL P.11c;;;;;;;;;X
+MODEL_ROM_13_1;ホーカー・ハリケーン Mk.I;Hawker Hurricane Mk.I;;;;;;;;;X
+MODEL_ROM_13_2;メッサーシュミット Bf 109E;Messerschmitt Bf-109E Emil;;;;;;;;;X
+MODEL_ROM_15_0;ブリストル・ブレニム Mk.I;Bristol Blenheim Mk.I;;;;;;;;;X
+MODEL_ROM_15_1;ブロック MB.210;Bloch MB.210;;;;;;;;;X
+MODEL_ROM_15_2;ハインケル He 111;Heinkel He-111;;;;;;;;;X
+MODEL_ROM_15_3;ユンカース Ju 88;Junkers Ju-88;;;;;;;;;X
+MODEL_ROM_16_0;サボイア・マルケッティ SM.79;Savoia-Marchetti SM.79 Sparviero;;;;;;;;;X
+MODEL_ROM_17_0;ユンカース Ju 87B;Junkers Ju-87B Stuka;;;;;;;;;X
+MODEL_ROM_17_1;ユンカース Ju 87D;Junkers Ju-87D Stuka;;;;;;;;;X
+MODEL_ROM_17_2;ヘンシェル Hs 129;Henschel Hs-129;;;;;;;;;X
+MODEL_ROM_18_0;ユンカース Ju 52/3m;Junkers Ju-52/3m Tante Ju;;;;;;;;;X
+MODEL_ROM_25_0;リゲレ・フェルディナンド級;Regele Ferdinand-class;;;;;;;;;X
+MODEL_ROM_28_0;デルフィヌル級;Delfinul-class;;;;;;;;;X
+MODEL_RUS_26_9;オリョール級;Orel-class;;;;;;;;;X
+MODEL_RUS_27_5;モスクワ級;Moskva-class;;;;;;;;;X
+MODEL_SAF_4_0;カーデンロイド Mk.VI;Carden-Loyd Mk.VI;;;;;;;;;X
+MODEL_SAF_4_1;ヴィッカース 6トン戦車;Vickers 6 ton.;;;;;;;;;X
+MODEL_SAF_4_2;スチュアート Mk.V;Stuart Mk.V;;;;;;;;;X
+MODEL_SAF_5_0;ホイペット;Whippet;;;;;;;;;X
+MODEL_SAF_5_1;巡航戦車 Mk.I A9;Cruiser Tank Mk.I A9;;;;;;;;;X
+MODEL_SAF_5_2;Mk.VI A15 クルセイダー;Mk.VI A15 Crusader;;;;;;;;;X
+MODEL_SAF_5_3;Mk.VIII A23M クロムウェル;Mk.VIII A23M Cromwell;;;;;;;;;X
+MODEL_SAF_5_4;A34 コメット;A34 Comet;;;;;;;;;X
+MODEL_SAF_5_5;センチュリオン Mk.I;Centurion Mk.I;;;;;;;;;X
+MODEL_SAF_5_6;センチュリオン Mk.III;Centurion Mk.III;;;;;;;;;X
+MODEL_SAF_5_7;センチュリオン Mk.V;Centurion Mk.V;;;;;;;;;X
+MODEL_SAF_12_0;スーパーマリン・スピットファイア Mk.I;Supermarine Spitfire Mk.I;;;;;;;;;X
+MODEL_SAF_12_1;スーパーマリン・スピットファイア Mk.IX;Supermarine Spitfire Mk.IX;;;;;;;;;X
+MODEL_SAF_12_2;スーパーマリン・スピットファイア Mk.XIV;Supermarine Spitfire Mk.XIV;;;;;;;;;X
+MODEL_SAF_12_3;グロスター・ミーティア Mk.III;Gloster Meteor Mk.III;;;;;;;;;X
+MODEL_SAF_12_4;グロスター・ミーティア F.8;Gloster Meteor F.8;;;;;;;;;X
+MODEL_SAF_13_0;グロスター・グラジエーター;Gloster Gladiator;;;;;;;;;X
+MODEL_SAF_13_1;ホーカー・ハリケーン Mk.I;Hawker Hurricane Mk.I;;;;;;;;;X
+MODEL_SAF_13_2;ホーカー・ハリケーン Mk.II;Hawker Hurricane Mk.II;;;;;;;;;X
+MODEL_SAF_13_3;ホーカー・タイフーン;Hawker Typhoon;;;;;;;;;X
+MODEL_SAF_13_4;ホーカー・テンペスト;Hawker Tempest;;;;;;;;;X
+MODEL_SAF_13_7;グロスター・ミーティア Mk.I;Gloster Meteor Mk.I;;;;;;;;;X
+MODEL_SAF_13_8;デハビランド・バンパイア;de Havilland Vampire;;;;;;;;;X
+MODEL_SAF_13_9;ダッソー・ミラージュ IIIC;Dassault Mirage IIIC;;;;;;;;;X
+MODEL_SAF_14_0;アームストロング・ホイットワース・ホイットレー;Armstrong-Whitworth Whitley;;;;;;;;;X
+MODEL_SAF_14_1;コンソリデーテッド B-24 リベレーター;Consolidated B-24 Liberator;;;;;;;;;X
+MODEL_SAF_14_2;アブロ・ランカスター;Avro Lancaster;;;;;;;;;X
+MODEL_SAF_14_3;ヴィッカース・ヴァリアント;Vickers Valiant;;;;;;;;;X
+MODEL_SAF_15_0;ブリストル・ブレニム Mk.I;Bristol Blenheim Mk.I;;;;;;;;;X
+MODEL_SAF_15_1;ハンドレページ・ハンプデン;Handley Page Hampden;;;;;;;;;X
+MODEL_SAF_15_2;ヴッカース ウェリントン Mk.III;Vickers-Armstrong Wellington Mk.III;;;;;;;;;X
+MODEL_SAF_15_3;ブリストル・バッキンガム;Bristol Buckingham;;;;;;;;;X
+MODEL_SAF_15_4;デハビランド・モスキート B.XVI;de Havilland Mosquito B.XVI;;;;;;;;;X
+MODEL_SAF_15_5;デハビランド・ヴェノム;de Havilland Venom;;;;;;;;;X
+MODEL_SAF_15_6;イングリッシュ・エレクトリック・キャンベラ;English Electric Canberra;;;;;;;;;X
+MODEL_SAF_16_0;ロッキード・ハドソン;Lockheed Hudson;;;;;;;;;X
+MODEL_SAF_16_1;ブリストル・ボーフォート;Bristol Beaufort;;;;;;;;;X
+MODEL_SAF_16_2;ブリストル・ブリガンド;Bristol Brigand;;;;;;;;;X
+MODEL_SAF_16_3;スーパーマリン・アタッカー;Supermarine Attacker;;;;;;;;;X
+MODEL_SAF_16_4;アブロ・シャックルトン;Avro Shackleton;;;;;;;;;X
+MODEL_SAF_17_0;フェアリー・バトル;Fairey Battle;;;;;;;;;X
+MODEL_SAF_17_1;ホーカー・ハリケーン Mk.IV;Vultee Hurricane Mk.IV;;;;;;;;;X
+MODEL_SAF_17_2;ブリストル・ボーファイター;Bristol Beaufighter;;;;;;;;;X
+MODEL_SAF_17_3;アエルマッキ・インパラ Mk.1;Aermacchi Impala Mk.1;;;;;;;;;X
+MODEL_SAF_17_4;ホーカー・ハンター;Hawker Hunter;;;;;;;;;X
+MODEL_SAF_17_5;ブラックバーン・バッカニア;Blackburn Buccaneer;;;;;;;;;X
+MODEL_SAF_18_0;アームストロング・ホイットワース・ホイットレー;Armstrong-Whitworth AW.41 Albermarle;;;;;;;;;X
+MODEL_SAF_18_1;ダグラス・ダコタ;Douglas Dakota;;;;;;;;;X
+MODEL_SAF_18_2;アブロ・ヨーク;Avro 685 York;;;;;;;;;X
+MODEL_SAF_22_0;カレドン級;Caledon-class;;;;;;;;;X
+MODEL_SAF_22_1;エメラルド級;Emerald-class;;;;;;;;;X
+MODEL_SAF_22_2;リアンダー級;Leander-class;;;;;;;;;X
+MODEL_SAF_22_3;サザンプトン級;Southampton-class;;;;;;;;;X
+MODEL_SAF_22_4;スイフトシュア級;Swiftsure-class;;;;;;;;;X
+MODEL_SAF_22_5;ミノタウル級;Minotaur-class;;;;;;;;;X
+MODEL_SAF_23_1;ケント級;Kent-class;;;;;;;;;X
+MODEL_SAF_23_2;サリー級;Surrey-class;;;;;;;;;X
+MODEL_SAF_25_0;V級;V-class;;;;;;;;;X
+MODEL_SAF_25_1;A級;A-class;;;;;;;;;X
+MODEL_SAF_25_2;トライバル級;Tribal-class;;;;;;;;;X
+MODEL_SAF_25_3;バトル級;Battle-class;;;;;;;;;X
+MODEL_SAF_25_4;デアリング級;Daring-class;;;;;;;;;X
+MODEL_SAF_25_5;カウンティ級;County-class;;;;;;;;;X
+MODEL_SAF_26_0;ハーミーズ級;Hermes-class;;;;;;;;;X
+MODEL_SAF_26_1;カレイジャス級;Courageous-class;;;;;;;;;X
+MODEL_SAF_27_0;ハーミーズ級;Hermes-class;;;;;;;;;X
+MODEL_SAF_27_1;イーグル級;Eagle-class;;;;;;;;;X
+MODEL_SAF_27_2;ユニコーン級;Unicorn-class;;;;;;;;;X
+MODEL_SAF_27_3;コロッサス級;Colossus-class;;;;;;;;;X
+MODEL_SAF_27_4;セントー級;Centaur-class;;;;;;;;;X
+MODEL_SAF_27_5;インヴィンシブル級;Invincible-class;;;;;;;;;X
+MODEL_SAF_28_0;H級;H-boat-class;;;;;;;;;X
+MODEL_SAF_28_1;ソードフィッシュ級;Swordfish-class;;;;;;;;;X
+MODEL_SAF_28_2;トライトン級;Triton-class;;;;;;;;;X
+MODEL_SAF_28_3;A級;A-boat-class;;;;;;;;;X
+MODEL_SAF_28_4;エクスプローラー級;Explorer-class;;;;;;;;;X
+MODEL_SAF_28_5;ポーパス級;Porpoise-class;;;;;;;;;X
+MODEL_SAF_28_6;ドレッドノート級;Dreadnought-class;;;;;;;;;X
+MODEL_SAL_4_0;CV-33;CV-33;;;;;;;;;X
+MODEL_SAL_4_1;M2A4;M2A4;;;;;;;;;X
+MODEL_SAL_4_2;M5 スチュアート;M5 Stuart;;;;;;;;;X
+MODEL_SAL_5_0;ルノー FT-17;Renault FT-17;;;;;;;;;X
+MODEL_SAL_5_1;ヴィッカース Mk.E;Vickers Mk.E;;;;;;;;;X
+MODEL_SAL_5_2;M3 リー;M3 Lee;;;;;;;;;X
+MODEL_SAL_5_3;M4A1 シャーマン;M4A1 Sherman;;;;;;;;;X
+MODEL_SAL_5_4;M4/E8 シャーマン;M4/E8 Sherman;;;;;;;;;X
+MODEL_SAL_5_5;M26 パーシング;M26 Pershing;;;;;;;;;X
+MODEL_SAU_4_0;カーデンロイド Mk.VI;Carden-Loyd Mk.VI;;;;;;;;;X
+MODEL_SAU_4_1;ヴィッカース 6トン戦車;Vickers 6 ton.;;;;;;;;;X
+MODEL_SAU_4_2;スチュアート Mk.V;Stuart Mk.V;;;;;;;;;X
+MODEL_SAU_5_0;ホイペット;Whippet;;;;;;;;;X
+MODEL_SAU_5_1;巡航戦車 Mk.I A9;Cruiser Tank Mk.I A9;;;;;;;;;X
+MODEL_SAU_5_2;Mk.VI A15 クルセイダー;Mk.VI A15 Crusader;;;;;;;;;X
+MODEL_SAU_5_3;Mk.VIII A23M クロムウェル;Mk.VIII A23M Cromwell;;;;;;;;;X
+MODEL_SAU_5_4;A34 コメット;A34 Comet;;;;;;;;;X
+MODEL_SAU_5_5;センチュリオン Mk.I;Centurion Mk.I;;;;;;;;;X
+MODEL_SCH_4_0;T-27;T-27;;;;;;;;;X
+MODEL_SCH_4_1;I号戦車;PzKpfw.I;;;;;;;;;X
+MODEL_SCH_4_2;CKD AH-IV;CKD AH-IV;;;;;;;;;X
+MODEL_SCH_5_0;ルノー FT-17;Renault FT-17;;;;;;;;;X
+MODEL_SCH_5_1;ヴィッカース Mk.E;Vickers Mk.E;;;;;;;;;X
+MODEL_SCH_5_2;ソミュア S-35;Somua S-35;;;;;;;;;X
+MODEL_SCH_5_3;IV号戦車;PzKpfw.IV;;;;;;;;;X
+MODEL_SCH_5_4;A34 コメット;A34 Comet;;;;;;;;;X
+MODEL_SCH_5_5;M26 パーシング;M26 Pershing;;;;;;;;;X
+MODEL_SCH_12_0;EKW D-3800;EKW D-3800;;;;;;;;;X
+MODEL_SCH_12_2;ノースアメリカン P-51D マスタング;N.American P-51D Mustang;;;;;;;;;X
+MODEL_SCH_12_3;デハビランド・バンパイア;de Havilland Vampire;;;;;;;;;X
+MODEL_SCH_12_6;デハビランド・ヴェノム;de Havilland Venom;;;;;;;;;X
+MODEL_SCH_12_7;FFA P-16;FFA P-16;;;;;;;;;X
+MODEL_SCH_12_8;ダッソー・ミラージュ III;Dassault Mirage III;;;;;;;;;X
+MODEL_SCH_13_0;ドヴォワチーヌ D.27;Dewoitine D.27;;;;;;;;;X
+MODEL_SCH_13_2;メッサーシュミット Bf 109D;Messerschmitt Bf.109D Dora;;;;;;;;;X
+MODEL_SCH_13_3;メッサーシュミット Bf 109E;Messerschmitt Bf.109E Emil;;;;;;;;;X
+MODEL_SCH_13_4;メッサーシュミット Bf 109G;Messerschmitt Bf.109G Gustav;;;;;;;;;X
+MODEL_SCH_13_9;EFW N-20;EFW N-20 Aiguillon;;;;;;;;;X
+MODEL_SCH_17_0;EFW C-35;EFW C-35;;;;;;;;;X
+MODEL_SCH_17_1;EFW C-3602;EFW C-3602;;;;;;;;;X
+MODEL_SCH_17_2;EKW C-3603;EKW C-3603;;;;;;;;;X
+MODEL_SIA_4_0;カーデンロイド Mk.VI;Carden-Loyd Mk.VI;;;;;;;;;X
+MODEL_SIA_4_1;九五式軽戦車 ハ号;Type 95 Ha-Go;;;;;;;;;X
+MODEL_SIA_4_2;九八式軽戦車 ケニ;Type 98 Ke-Ni;;;;;;;;;X
+MODEL_SIA_5_0;ルノー FT-17 甲型;Renault FT-17 Ko;;;;;;;;;X
+MODEL_SIA_5_1;ヴィッカース Mk.E;Vickers Mk.E;;;;;;;;;X
+MODEL_SIA_5_2;九七式中戦車 チハ;Type 97 Chi-Ha;;;;;;;;;X
+MODEL_SIA_5_3;一式中戦車 チヘ;Type 1 Chi-He;;;;;;;;;X
+MODEL_SIA_5_5;四式中戦車 チト;Type 4 Chi-To;;;;;;;;;X
+MODEL_SIA_13_0;川崎 キ-10 九五式戦;Kawasaki Ki-10;;;;;;;;;X
+MODEL_SIA_13_1;中島 キ-27 九七式戦;Nakajima Ki-27 Kyuunana sen;;;;;;;;;X
+MODEL_SIA_13_2;中島 キ-43 隼;Nakajima Ki-43 Hayabusa;;;;;;;;;X
+MODEL_SIA_16_0;マーチン 139 WSM;Martin 139 W;;;;;;;;;X
+MODEL_SIA_17_0;三菱 キ-30 九七式軽爆;Mitsubishi Ki-30;;;;;;;;;X
+MODEL_SIA_22_0;タクシン級;Taksin-class;;;;;;;;;X
+MODEL_SIA_25_0;プラ・ルアン級;Phra Ruang-class;;;;;;;;;X
+MODEL_SIA_28_0;シンサムッタ級;Sinsamudar-class;;;;;;;;;X
+MODEL_SLO_4_0;プラガ T-33;Praga T-33;;;;;;;;;X
+MODEL_SLO_4_1;LT vz 35;LT vz.35;;;;;;;;;X
+MODEL_SLO_4_2;LT vz 38;LT vz.38;;;;;;;;;X
+MODEL_SLO_5_0;コロホウセンカ KH-50;Kolohousenka KH-50;;;;;;;;;X
+MODEL_SLO_5_1;シュコダ SP-II-b;Skoda SP-II-b;;;;;;;;;X
+MODEL_SLO_5_2;シュコダ SP-III;Skoda SP-III;;;;;;;;;X
+MODEL_SLO_5_3;タトラ T-III;Tatra T-III;;;;;;;;;X
+MODEL_SLO_5_4;E-38;E-38;;;;;;;;;X
+MODEL_SLO_5_5;E-50;E-50;;;;;;;;;X
+MODEL_SLO_13_0;アビア B-534;Avia B.534;;;;;;;;;X
+MODEL_SLO_13_1;アビア B-135;Avia B.135;;;;;;;;;X
+MODEL_SLO_13_2;アビア S-199;Avia S.199;;;;;;;;;X
+MODEL_SLO_13_4;メッサーシュミット Bf 109G;Messerschmitt Bf.109G Gustav;;;;;;;;;X
+MODEL_SLO_13_7;アビア S-92;Avia S.92;;;;;;;;;X
+MODEL_SLO_13_8;アビア CS-102;Avia CS.102;;;;;;;;;X
+MODEL_SLO_15_0;ブロック MB.200;Bloch MB.200;;;;;;;;;X
+MODEL_SLO_15_1;アエロ A.300;Aero A.300;;;;;;;;;X
+MODEL_SLO_15_5;アビア B-228;Avia B.228;;;;;;;;;X
+MODEL_SLO_17_0;アビア A-304;Avia A.304;;;;;;;;;X
+MODEL_SLO_17_1;ユンカース Ju 87D;Junkers Ju.87D Stuka;;;;;;;;;X
+;;;;;;;;;;;X
+MODEL_SOV_4_0;T-27;T-27;;;;;;;;;X
+MODEL_SOV_4_1;BT-5;BT-5;;;;;;;;;X
+MODEL_SOV_4_2;BT-7;BT-7;;;;;;;;;X
+MODEL_SOV_4_3;T-70;T-70;;;;;;;;;X
+MODEL_SOV_4_4;PT-76;PT-76;;;;;;;;;X
+MODEL_SOV_5_0;T-18;T-18;;;;;;;;;X
+MODEL_SOV_5_1;T-46;T-46;;;;;;;;;X
+MODEL_SOV_5_2;T-28;T-28;;;;;;;;;X
+MODEL_SOV_5_3;T-34/76;T-34/76;;;;;;;;;X
+MODEL_SOV_5_4;T-34/85;T-34/85;;;;;;;;;X
+MODEL_SOV_5_5;T-44;T-44;;;;;;;;;X
+MODEL_SOV_5_6;T-54;T-54;;;;;;;;;X
+MODEL_SOV_5_7;T-54-3;T-54-3;;;;;;;;;X
+MODEL_SOV_5_8;T-55;T-55;;;;;;;;;X
+MODEL_SOV_5_9;T-62;T-62;;;;;;;;;X
+MODEL_SOV_12_0;ミコヤン・グレビッチ MiG-3;Mikoyan-Gurevich MiG-3;;;;;;;;;X
+MODEL_SOV_12_1;ラボーチキン La-5;Lavochkin La-5;;;;;;;;;X
+MODEL_SOV_12_2;ラボーチキン La-7;Lavochkin La-7;;;;;;;;;X
+MODEL_SOV_12_3;ミコヤン・グレビッチ MiG-9;Mikoyan-Gurevich MiG-9 Fargo;;;;;;;;;X
+MODEL_SOV_12_4;ミコヤン・グレビッチ MiG-15;Mikoyan-Gurevich MiG-15 Fagot;;;;;;;;;X
+MODEL_SOV_12_5;ミコヤン・グレビッチ MiG-17;Mikoyan-Gurevich MiG-17 Fresco;;;;;;;;;X
+MODEL_SOV_12_6;ミコヤン・グレビッチ MiG-19;Mikoyan-Gurevich MiG-19 Farmer;;;;;;;;;X
+MODEL_SOV_12_7;ミコヤン・グレビッチ MiG-21;Mikoyan-Gurevich MiG-21 Fishbed;;;;;;;;;X
+MODEL_SOV_12_8;ミコヤン・グレビッチ MiG-21bis;Mikoyan-Gurevich MiG-21bis Fishbed;;;;;;;;;X
+MODEL_SOV_13_0;ポリカルポフ I-3;Polikarpov I-3;;;;;;;;;X
+MODEL_SOV_13_1;ポリカルポフ I-16;Polikarpov I-16;;;;;;;;;X
+MODEL_SOV_13_2;ラボーチキン LaGG-3;Lavochkin LaGG-3;;;;;;;;;X
+MODEL_SOV_13_3;ヤコブレフ Yak-7;Yakovlev Yak-7;;;;;;;;;X
+MODEL_SOV_13_4;ヤコブレフ Yak-3;Yakovlev Yak-3;;;;;;;;;X
+MODEL_SOV_13_5;ベレズニャク・イサイエフ Bi-1;Bereznyak-Isayev Bi-1;;;;;;;;;X
+MODEL_SOV_13_6;ベレズニャク・イサイエフ Bi-6;Bereznyak-Isayev Bi-6;;;;;;;;;X
+MODEL_SOV_13_7;ヤコブレフ Yak-15;Yakovlev Yak-15 Feather;;;;;;;;;X
+MODEL_SOV_13_8;ヤコブレフ Yak-23;Yakovlev Yak-23 Flora;;;;;;;;;X
+MODEL_SOV_13_9;スホーイ Su-9;Sukhoi Su-9 Fishpot;;;;;;;;;X
+MODEL_SOV_14_0;ツポレフ TB-3;Tupolev TB-3;;;;;;;;;X
+MODEL_SOV_14_1;ペトリャコフ Pe-8;Petljakov Pe-8;;;;;;;;;X
+MODEL_SOV_14_2;ツポレフ Tu-4;Tupolev Tu-4;;;;;;;;;X
+MODEL_SOV_14_3;ツポレフ Tu-16;Tupolev Tu-16 Badger;;;;;;;;;X
+MODEL_SOV_14_4;ツポレフ Tu-16E;Tupolev Tu-16E Badger;;;;;;;;;X
+MODEL_SOV_14_5;ミャスィーシチェフ Mya-4 モロット;Myasishchyev Mya-4 Bison;;;;;;;;;X
+MODEL_SOV_14_6;ツポレフ Tu-95;Tupolev Tu-95 Bear;;;;;;;;;X
+MODEL_SOV_14_7;ミャスィーシチェフ M-50;Myasishchev M-50 Bounder;;;;;;;;;X
+MODEL_SOV_15_0;ツポレフ TB-1;Tupolev TB-1;;;;;;;;;X
+MODEL_SOV_15_1;ツポレフ SB-2;Tupolev SB-2;;;;;;;;;X
+MODEL_SOV_15_2;イリューシン DB-3;Ilyushin DB-3;;;;;;;;;X
+MODEL_SOV_15_3;ペトリャコフ Pe-2;Petljakov Pe-2;;;;;;;;;X
+MODEL_SOV_15_4;ツポレフ Tu-2;Tupolev Tu-2;;;;;;;;;X
+MODEL_SOV_15_5;ツポレフ Tu-12;Tupolev Tu-12;;;;;;;;;X
+MODEL_SOV_15_6;イリューシン Il-28;Ilyushin Il-28 Beagle;;;;;;;;;X
+MODEL_SOV_15_7;イリューシン Il-54;Ilyushin Il-54 Blowlamp;;;;;;;;;X
+MODEL_SOV_15_8;ツポレフ Tu-22;Tupolev Tu-22 Blinder;;;;;;;;;X
+MODEL_SOV_15_9;ツポレフ Tu-22K;Tupolev Tu-22K Blinder;;;;;;;;;X
+MODEL_SOV_16_0;アルハンゲリスキー Ar-2;Arhangelsky Ar-2;;;;;;;;;X
+MODEL_SOV_16_1;イリューシン Il-4;Ilyushin Il-4;;;;;;;;;X
+MODEL_SOV_16_2;ツポレフ Tu-2T;Tupolev Tu-2T;;;;;;;;;X
+MODEL_SOV_16_3;ベリエフ Be-6;Beriev Be-6 Madge;;;;;;;;;X
+MODEL_SOV_16_4;ベリエフ Be-12 チャイカ;Beriev Be-12 Mail;;;;;;;;;X
+MODEL_SOV_16_5;ツポレフ Tu-14;Tupolev Tu-14 Bosun;;;;;;;;;X
+MODEL_SOV_17_0;スホーイ Su-2 イワノフ;Sukhoi Su-2 Ivanov;;;;;;;;;X
+MODEL_SOV_17_1;イリューシン Il-2 シュトルモヴィク;Ilyushin Il-2 Shturmovik;;;;;;;;;X
+MODEL_SOV_17_2;イリューシン Il-2M シュトルモヴィク;Ilyushin Il-2M Shturmovik;;;;;;;;;X
+MODEL_SOV_17_3;イリューシン Il-10;Ilyushin Il-10 Beast;;;;;;;;;X
+MODEL_SOV_17_4;イリューシン Il-16;Ilyushin Il-16 Beast;;;;;;;;;X
+MODEL_SOV_17_5;ミコヤン・グレビッチ MiG-15bis;Mikoyan-Gurevich Mig-15bis Fagot;;;;;;;;;X
+MODEL_SOV_17_6;スホーイ Su-7B;Sukhoi Su-7B Fitter;;;;;;;;;X
+MODEL_SOV_17_7;スホーイ Su-7BM;Sukhoi Su-7BM Fitter;;;;;;;;;X
+MODEL_SOV_18_0;ツポレフ TB-3;Tupolev TB-3;;;;;;;;;X
+MODEL_SOV_18_1;リスノフ Li-2;Lisunov Li-2;;;;;;;;;X
+MODEL_SOV_18_2;イリューシン Il-12;Ilyushin Il-12;;;;;;;;;X
+MODEL_SOV_18_3;アントノフ An-8;Antonov An-8 Camp;;;;;;;;;X
+MODEL_SOV_18_4;アントノフ An-12;Antonov An-12 Cub;;;;;;;;;X
+MODEL_SOV_20_0;SS-1 スカナー;SS-1 Scunner;;;;;;;;;X
+MODEL_SOV_20_1;SS-3 シャイスター;SS-3 Shyster;;;;;;;;;X
+MODEL_SOV_20_2;SS-6 サップウッド;SS-6 Sapwood;;;;;;;;;X
+MODEL_SOV_21_0;ガングート級;Gangut-class;;;;;;;;;X
+MODEL_SOV_21_4;ソビエツキ・ソユーズ級;Sovyetskiy Soyuz-class;;;;;;;;;X
+MODEL_SOV_22_0;プロフィンテルン級;Profintern-class;;;;;;;;;X
+MODEL_SOV_22_3;チャパエフ級;Chapayev-class;;;;;;;;;X
+MODEL_SOV_22_4;プロイェクト65級;Project 65-class;;;;;;;;;X
+MODEL_SOV_22_5;スヴェルドロフ級;Sverdlov-class;;;;;;;;;X
+MODEL_SOV_22_6;キンダ級;Kynda-class;;;;;;;;;X
+MODEL_SOV_23_0;クラスヌイ・カフカス級;Krasnyi Kavkaz-class;;;;;;;;;X
+MODEL_SOV_23_1;キーロフ級;Kirov-class;;;;;;;;;X
+MODEL_SOV_23_4;プロイェクト66級;Project 66-class;;;;;;;;;X
+MODEL_SOV_23_7;スラヴァ級;Slava-class;;;;;;;;;X
+MODEL_SOV_24_1;ボロディノ級;Borodino-class;;;;;;;;;X
+MODEL_SOV_24_3;クロンシュタット級;Kronshtadt-class;;;;;;;;;X
+MODEL_SOV_24_4;スターリングラード級;Stalingrad-class;;;;;;;;;X
+MODEL_SOV_24_6;キーロフ II級;Kirov II-class;;;;;;;;;X
+MODEL_SOV_25_0;ノルヴィク級;Norvik-class;;;;;;;;;X
+MODEL_SOV_25_1;レニングラード級;Leningrad-class;;;;;;;;;X
+MODEL_SOV_25_2;グネヴヌイ級;Gnevnyi-class;;;;;;;;;X
+MODEL_SOV_25_3;タシュケント級;Tashkent-class;;;;;;;;;X
+MODEL_SOV_25_4;オグネヴォイ級;Ognevoiy class-class;;;;;;;;;X
+MODEL_SOV_25_6;スコーリィ級;Skoriy-class;;;;;;;;;X
+MODEL_SOV_25_7;コトリン級;Kotlin-class;;;;;;;;;X
+MODEL_SOV_25_8;クルップニイ級;Krupny-class;;;;;;;;;X
+MODEL_SOV_26_5;コストロミチノワ級;Kostromitinova-class;;;;;;;;;X
+MODEL_SOV_26_7;キエフ級;Kiev-class;;;;;;;;;X
+MODEL_SOV_26_8;ウリヤノスク級;Ulyanovsk-class;;;;;;;;;X
+MODEL_SOV_26_9;オリョール級;Orel-class;;;;;;;;;X
+MODEL_SOV_27_1;プロジェクト71級;Projekt 71-class;;;;;;;;;X
+MODEL_SOV_27_2;プロジェクト716級;Projekt 716-class;;;;;;;;;X
+MODEL_SOV_27_3;プロジェクト72級;Projekt 72-class;;;;;;;;;X
+MODEL_SOV_27_4;プロジェクト69AV級;Projekt 69AV-class;;;;;;;;;X
+MODEL_SOV_27_5;モスクワ級;Moskva-class;;;;;;;;;X
+MODEL_SOV_28_0;AG級;AG-boat-class;;;;;;;;;X
+MODEL_SOV_28_1;レーニネツ級;Series II;;;;;;;;;X
+MODEL_SOV_28_2;SC級;Series V-bis;;;;;;;;;X
+MODEL_SOV_28_3;カチューシャ級;Series XIV;;;;;;;;;X
+MODEL_SOV_28_4;ウィスキー級;Whiskey-class;;;;;;;;;X
+MODEL_SOV_28_5;ロメオ級;Romeo-class;;;;;;;;;X
+MODEL_SOV_28_6;フォックストロット級;Foxtrot-class;;;;;;;;;X
+MODEL_SOV_29_1;K級;K-class;;;;;;;;;X
+MODEL_SOV_29_5;ロメオ級;Romeo-class;;;;;;;;;X
+MODEL_SOV_29_6;ノーヴェンバー級;November-class;;;;;;;;;X
+;;;;;;;;;;;X
+MODEL_SYR_4_0;ルノー AMR 1935;Renault AMR 1935;;;;;;;;;X
+MODEL_SYR_4_1;ホチキス H-39;Hotchkiss H-39;;;;;;;;;X
+MODEL_SYR_4_2;AMX R-40;AMX R-40;;;;;;;;;X
+MODEL_SYR_5_0;ルノー FT-17;Renault FT-17;;;;;;;;;X
+MODEL_SYR_5_1;FCM-36;FCM-36;;;;;;;;;X
+MODEL_SYR_5_2;ソミュア S-35;Somua S-35;;;;;;;;;X
+MODEL_SYR_5_3;ソミュア S-40;Somua S-40;;;;;;;;;X
+MODEL_SYR_5_4;ルノー G1R;Renault G1R;;;;;;;;;X
+MODEL_SPA_4_0;CV-33;CV-33;;;;;;;;;X
+MODEL_SPA_4_1;ヴェルデハ I;Verdeja I;;;;;;;;;X
+MODEL_SPA_4_2;II号戦車F型;PzKpfw.IIf;;;;;;;;;X
+MODEL_SPA_5_0;A7V 突撃戦車;Sturmpanzerwagen A7V;;;;;;;;;X
+MODEL_SPA_5_1;II号戦車C型;PzKpfw.IIc;;;;;;;;;X
+MODEL_SPA_5_2;M13/40;M.13/40;;;;;;;;;X
+MODEL_SPA_5_3;IV号戦車;PzKpfw.IV;;;;;;;;;X
+MODEL_SPA_5_4;V号戦車 パンター;PzKpfw.V Panther;;;;;;;;;X
+MODEL_SPA_5_5;V号戦車F型 パンター;PzKpfw.VF Panther II;;;;;;;;;X
+MODEL_SPA_12_0;メッサーシュミット Bf 109F;Messerschmitt Bf-109F Franz;;;;;;;;;X
+MODEL_SPA_12_3;イスパノ HA-200D スーペルサエタ;Hispano HA-200D Supersaeta;;;;;;;;;X
+MODEL_SPA_12_4;イスパノスイザ H/S-AV8S マタドール;Hispano-Suiza H/S-AV8S Matador;;;;;;;;;X
+MODEL_SPA_13_0;フィアット CR.32 チルリ;Fiat CR.32 Chirri;;;;;;;;;X
+MODEL_SPA_13_1;メッサーシュミット Bf 109D;Messerschmitt Bf-109D;;;;;;;;;X
+MODEL_SPA_13_2;メッサーシュミット Bf 109E;Messerschmitt Bf-109E Emil;;;;;;;;;X
+MODEL_SPA_13_3;イスパノ HA-1109;Hispano HA-1109;;;;;;;;;X
+MODEL_SPA_13_7;イスパノ HA-200C サエタ;Hispano HA-200C Saeta;;;;;;;;;X
+MODEL_SPA_15_0;ユンカース Ju 86;Junkers Ju-86;;;;;;;;;X
+MODEL_SPA_15_1;ドルニエ Do 17;Dornier Do-17;;;;;;;;;X
+MODEL_SPA_15_2;ハインケル He 111;Heinkel He-111;;;;;;;;;X
+MODEL_SPA_15_4;イスパノ HA-300P;Hispano HA-300P;;;;;;;;;X
+MODEL_SPA_16_0;サボイア・マルケッティ SM.79;Savoia-Marchetti SM.79;;;;;;;;;X
+MODEL_SPA_17_0;ユンカース Ju 87B;Junkers Ju-87B Stuka;;;;;;;;;X
+MODEL_SPA_17_1;ユンカース Ju 87D;Junkers Ju-87D Stuka;;;;;;;;;X
+MODEL_SPA_18_0;カーサ 201 アルコン;CASA 201 Halcon;;;;;;;;;X
+MODEL_SPA_18_1;カーサ 207;CASA 207;;;;;;;;;X
+MODEL_SPA_21_0;エスパーニャ級;Espana-class;;;;;;;;;X
+MODEL_SPA_22_0;ヌニェス級;Nunez-class;;;;;;;;;X
+MODEL_SPA_22_1;アルフォンソ級;Alfonso-class;;;;;;;;;X
+MODEL_SPA_23_1;カナリアス級;Canarias-class;;;;;;;;;X
+MODEL_SPA_25_0;アルセド級;Alsedo-class;;;;;;;;;X
+MODEL_SPA_25_1;チュルカ級;Churruca-class;;;;;;;;;X
+MODEL_SPA_25_2;アラヴァ級;Alava-class;;;;;;;;;X
+MODEL_SPA_28_0;B1級;B1-class;;;;;;;;;X
+MODEL_SPA_28_1;C級;C'-class;;;;;;;;;X
+MODEL_SPA_28_2;D級;D'-class;;;;;;;;;X
+MODEL_SPR_4_0;バスク軽戦車;Tanque de Jugute;;;;;;;;;X
+MODEL_SPR_4_1;ヴェルデハ I;Verdeja I;;;;;;;;;X
+MODEL_SPR_4_2;BT-7;BT-7;;;;;;;;;X
+MODEL_SPR_5_0;ルノー FT-17;Renault FT-17;;;;;;;;;X
+MODEL_SPR_5_1;T-28;T-28;;;;;;;;;X
+MODEL_SPR_5_2;BT-7M;BT-7M;;;;;;;;;X
+MODEL_SPR_5_3;T-34/76;T-34/76;;;;;;;;;X
+MODEL_SPR_5_4;T-34/85;T-34/85;;;;;;;;;X
+MODEL_SPR_12_3;イスパノ HA-200D スーペルサエタ;Hispano HA-200D Supersaeta;;;;;;;;;X
+MODEL_SPR_12_4;イスパノスイザ H/S-AV8S マタドール;Hispano-Suiza H/S-AV8S Matador;;;;;;;;;X
+MODEL_SPR_13_0;ポリカルポフ I-15 チャト;Polikarpov I-15 Chato;;;;;;;;;X
+MODEL_SPR_13_1;ポリカルポフ I-16;Polikarpov I-16;;;;;;;;;X
+MODEL_SPR_13_3;イスパノ HA-1109;Hispano HA-1109;;;;;;;;;X
+MODEL_SPR_13_7;イスパノ HA-200C サエタ;Hispano HA-200C Saeta;;;;;;;;;X
+MODEL_SPR_15_0;ツポレフ SB-2 ナターシャ;Tupolev SB-2 Natasha;;;;;;;;;X
+MODEL_SPR_15_1;イリューシン DB-3;Ilyushin DB-3;;;;;;;;;X
+MODEL_SPR_15_2;ハインケル He 111;Heinkel He-111;;;;;;;;;X
+MODEL_SPR_15_4;イスパノ HA-300P;Hispano HA-300P;;;;;;;;;X
+MODEL_SPR_16_0;サボイア・マルケッティ SM.79;Savoia-Marchetti SM.79;;;;;;;;;X
+MODEL_SPR_17_0;ポリカルポフ I-15bis スーペルチャト;Polikarpov I-15bis Superchato;;;;;;;;;X
+MODEL_SPR_18_0;カーサ 201 アルコン;CASA 201 Halcon;;;;;;;;;X
+MODEL_SPR_18_1;カーサ 207;CASA 207;;;;;;;;;X
+MODEL_SPR_21_0;エスパーニャ級;Espana-class;;;;;;;;;X
+MODEL_SPR_22_0;ヌニェス級;Nunez-class;;;;;;;;;X
+MODEL_SPR_22_1;アルフォンソ級;Alfonso-class;;;;;;;;;X
+MODEL_SPR_23_1;カナリアス級;Canarias-class;;;;;;;;;X
+MODEL_SPR_25_0;アルセド級;Alsedo-class;;;;;;;;;X
+MODEL_SPR_25_1;チュルカ級;Churruca-class;;;;;;;;;X
+MODEL_SPR_25_2;アラヴァ級;Alava-class;;;;;;;;;X
+MODEL_SPR_28_0;B1級;B1-class;;;;;;;;;X
+MODEL_SPR_28_1;C級;C'-class;;;;;;;;;X
+MODEL_SPR_28_2;D級;D'-class;;;;;;;;;X
+MODEL_SWE_4_0;トラクター nr.53;Tractor nr.53;;;;;;;;;X
+MODEL_SWE_4_1;Strv m/31;Strv m/31;;;;;;;;;X
+MODEL_SWE_4_2;Strv m/38;Strv m/38;;;;;;;;;X
+MODEL_SWE_5_0;Strv m/21;Strv m/21;;;;;;;;;X
+MODEL_SWE_5_1;Strv m/39;Strv m/39;;;;;;;;;X
+MODEL_SWE_5_2;Strv m/40;Strv m/40;;;;;;;;;X
+MODEL_SWE_5_3;Strv m/42;Strv m/42;;;;;;;;;X
+MODEL_SWE_5_4;Pvkv m/43;Pvkv m/43;;;;;;;;;X
+MODEL_SWE_5_5;Strv m/81;Strv m/81;;;;;;;;;X
+MODEL_SWE_5_6;Strv 74;Strv 74;;;;;;;;;X
+MODEL_SWE_5_7;センチュリオン Mk.5;Centurion Mk.5;;;;;;;;;X
+MODEL_SWE_12_0;J-8 グロスター・グラジエーター;J-8 Gloster Gladiator;;;;;;;;;X
+MODEL_SWE_12_1;J-22 FFVS;J-22 FFVS;;;;;;;;;X
+MODEL_SWE_12_2;J-26 P-51D マスタング;J-26 P-51D Mustang;;;;;;;;;X
+MODEL_SWE_12_3;J-21R サーブ;J-21R SAAB;;;;;;;;;X
+MODEL_SWE_12_4;サーブ J 29 トゥンナン;SAAB J 29 Tunnan;;;;;;;;;X
+MODEL_SWE_13_0;J-11 フィアット CR.42 ファルコ;J-11 Fiat CR.42 Falco;;;;;;;;;X
+MODEL_SWE_13_1;J-9 セバスキー P-35;J-9 Seversky P-35;;;;;;;;;X
+MODEL_SWE_13_2;J-20A Re.2000 ファルコ;J-20A Re.2000 Falco;;;;;;;;;X
+MODEL_SWE_13_3;J-20B Re.2001 ファルコ II;J-20B Re.2001 Falco II;;;;;;;;;X
+MODEL_SWE_13_8;J-28 デハビランド・バンパイア;J-28 de Havilland Vampire;;;;;;;;;X
+MODEL_SWE_13_9;サーブ J 35A ドラケン;SAAB J 35A Draken;;;;;;;;;X
+MODEL_SWE_15_0;B1 フィアット BR/BR-1;B1 Fiat BR/BR-1;;;;;;;;;X
+MODEL_SWE_15_1;B3A ユンカース Ju 86;B3A Junkers Ju-86;;;;;;;;;X
+MODEL_SWE_15_2;B3A ユンカース Ju 86;B3C Junkers Ju-86;;;;;;;;;X
+MODEL_SWE_15_3;B-18B サーブ;B-18B SAAB;;;;;;;;;X
+MODEL_SWE_15_4;サーブ S 32C ランセン;SAAB S 32C Lansen;;;;;;;;;X
+MODEL_SWE_16_0;T1 ハインケル HD 16;T1 Heinkel HD 16;;;;;;;;;X
+MODEL_SWE_16_1;T2 ハインケル He 115;T2 Heinkel He-115;;;;;;;;;X
+MODEL_SWE_16_2;T-18B サーブ;T-18B SAAB;;;;;;;;;X
+MODEL_SWE_16_4;サーブ S 32C ランセン;SAAB A 32A Lansen;;;;;;;;;X
+MODEL_SWE_17_0;B5 ノースロップ 8A-1;B5 Northrop 8A-1;;;;;;;;;X
+MODEL_SWE_17_1;B-17 サーブ;B-17 SAAB;;;;;;;;;X
+MODEL_SWE_17_2;A-21 サーブ ;A-21 SAAB ;;;;;;;;;X
+MODEL_SWE_17_3;サーブ A21R サーブ ;SAAB A21R SAAB ;;;;;;;;;X
+MODEL_SWE_21_0;スヴェア級;Svea-class*;;;;;;;;;X
+MODEL_SWE_21_1;カール12世級;Karl XII-class*;;;;;;;;;X
+MODEL_SWE_21_2;グスタフ2世 アドルフ級;Gustaf II Adolf-class*;;;;;;;;;X
+MODEL_SWE_21_3;クルナン級;Kronan-class*;;;;;;;;;X
+MODEL_SWE_22_0;フリギア級;Fylgia-class;;;;;;;;;X
+MODEL_SWE_22_1;ヨートランド級;Gotland-class;;;;;;;;;X
+MODEL_SWE_22_2;トレー・クローノル級;Tre Kronor-class;;;;;;;;;X
+MODEL_SWE_23_0;マンリゲーテン級;Manligheten-class;;;;;;;;;X
+MODEL_SWE_23_1;クラス・フレミング級;Clas Flemming-class;;;;;;;;;X
+MODEL_SWE_23_2;トーネル級;Thornell-class*;;;;;;;;;X
+MODEL_SWE_24_0;スヴァリエ級;Sverige-class;;;;;;;;;X
+MODEL_SWE_24_1;ヴァリエン級;Vargen-class*;;;;;;;;;X
+MODEL_SWE_24_2;スヴェンスクスンド級;Svensksund-class*;;;;;;;;;X
+MODEL_SWE_25_0;ヴランゲリ級;Wrangel-class;;;;;;;;;X
+MODEL_SWE_25_1;エーレンスコルド級;Ehrenskold-class;;;;;;;;;X
+MODEL_SWE_25_2;プーケ級;Puke-class;;;;;;;;;X
+MODEL_SWE_25_3;イェーテボリ級;Goteborg-class;;;;;;;;;X
+MODEL_SWE_25_4;オーランド級;Oland-class;;;;;;;;;X
+MODEL_SWE_26_0;ノルドシェー級;Nordsjo-class*;;;;;;;;;X
+MODEL_SWE_26_1;ヴァクトマイステル級;Wachtmeister-class*;;;;;;;;;X
+MODEL_SWE_26_2;アフ・チャプマン級;af Chapman-class*;;;;;;;;;X
+MODEL_SWE_28_0;ハヤン級;Hajen-class;;;;;;;;;X
+MODEL_SWE_28_1;ドラケン級;Draken-class;;;;;;;;;X
+MODEL_SWE_28_2;ショレヨネット級;Sjolejonet-class;;;;;;;;;X
+MODEL_SWE_28_3;フィスク級;Fisk-class;;;;;;;;;X
+MODEL_SWE_28_4;ハヤン II級;Hajen II-class;;;;;;;;;X
+MODEL_SWE_28_5;ドラケン II級;Draken II-class;;;;;;;;;X
+MODEL_TUR_4_0;CV-33;CV-33;;;;;;;;;X
+MODEL_TUR_4_1;L3/38;L.3/38;;;;;;;;;X
+MODEL_TUR_4_2;BT-7;BT-7;;;;;;;;;X
+MODEL_TUR_5_0;ルノー FT-17;Renault FT-17;;;;;;;;;X
+MODEL_TUR_5_1;ルノー R-35;Renault R35;;;;;;;;;X
+MODEL_TUR_5_2;III号戦車;PzKpfw.III;;;;;;;;;X
+MODEL_TUR_5_3;IV号戦車;PzKpfw.IV;;;;;;;;;X
+MODEL_TUR_5_4;T-34/85;T-34/85;;;;;;;;;X
+MODEL_TUR_12_0;カーチス・キティホーク;Curtiss Kittyhawk;;;;;;;;;X
+MODEL_TUR_12_1;フォッケウルフ Fw-190A;Focke-Wulf Fw-190A;;;;;;;;;X
+MODEL_TUR_12_2;スーパーマリン・スピットファイア Mk.XIV;Supermarine Spitfire Mk.XIV;;;;;;;;;X
+MODEL_TUR_13_0;カーチス・ホーク III;Curtiss Hawk III;;;;;;;;;X
+MODEL_TUR_13_1;ホーカー・ハリケーン I;Hawker Hurricane I;;;;;;;;;X
+MODEL_TUR_13_2;ホーカー・ハリケーン II;Hawker Hurricane II;;;;;;;;;X
+MODEL_TUR_15_0;ブリストル・ブレニム Mk.I;Bristol Blenheim Mk.I;;;;;;;;;X
+MODEL_TUR_15_1;ブリストル・ブレニム Mk.IV;Bristol Blenheim Mk.IV;;;;;;;;;X
+MODEL_TUR_15_2;ハインケル He 111;Heinkel He-111;;;;;;;;;X
+MODEL_TUR_16_1;ブリストル・ボーフォート;Bristol Beaufort;;;;;;;;;X
+MODEL_TUR_17_0;フェアリー・バトル;Fairey Battle;;;;;;;;;X
+MODEL_TUR_17_1;マーチン・バルチモア;Martin 187 Baltimore;;;;;;;;;X
+MODEL_TUR_17_2;ブリストル・ボーファイター;Bristol Beaufighter;;;;;;;;;X
+MODEL_TUR_18_0;ダグラス C-32;Douglas C-32;;;;;;;;;X
+MODEL_TUR_18_1;ダグラス C-47 スカイトレイン;Douglas C-47 Skytrain;;;;;;;;;X
+MODEL_TUR_18_2;ダグラス C-54 スカイマスター;Douglas C-54 Skymaster;;;;;;;;;X
+MODEL_TUR_21_0;レサディエ級;Resadiye-class;;;;;;;;;X
+MODEL_TUR_22_0;メジディエ級;Medjidieh-class;;;;;;;;;X
+MODEL_TUR_24_0;ヤウズ・スルタン・セリム級;Yavuz Sultan Selim-class;;;;;;;;;X
+MODEL_TUR_25_0;コジャテペ級;Kocatepe-class;;;;;;;;;X
+MODEL_TUR_25_1;ガイレット級;Gayret-class;;;;;;;;;X
+MODEL_TUR_28_0;ビリンジ・イノェニ級;Birindci Inonu-class;;;;;;;;;X
+MODEL_TUR_28_1;オリック・レイス級;Oruc Reis-class;;;;;;;;;X
+MODEL_TUR_28_2;アイ級;Ay'-class;;;;;;;;;X
+;;;;;;;;;;;X
+MODEL_URU_4_0;CV-33;CV-33;;;;;;;;;X
+MODEL_URU_4_1;M2A4;M2A4;;;;;;;;;X
+MODEL_URU_4_2;M5 スチュアート;M5 Stuart;;;;;;;;;X
+MODEL_URU_5_0;ルノー FT-17;Renault FT-17;;;;;;;;;X
+MODEL_URU_5_1;ヴィッカース Mk.E;Vickers Mk.E;;;;;;;;;X
+MODEL_URU_5_2;M3 リー;M3 Lee;;;;;;;;;X
+MODEL_URU_5_3;M4A1 シャーマン;M4A1 Sherman;;;;;;;;;X
+MODEL_URU_5_4;M4/E8 シャーマン;M4/E8 Sherman;;;;;;;;;X
+MODEL_URU_5_5;M26 パーシング;M26 Pershing;;;;;;;;;X
+MODEL_URU_13_0;カーチス・ファルコン;Curtiss Falcon;;;;;;;;;X
+;;;;;;;;;;;X
+MODEL_USA_4_0;M1A2;M1A2;;;;;;;;;X
+MODEL_USA_4_1;M3 スチュアート;M3 Stuart;;;;;;;;;X
+MODEL_USA_4_2;M5 スチュアート;M5 Stuart;;;;;;;;;X
+MODEL_USA_4_3;M24 チャーフィー;M24 Chaffee;;;;;;;;;X
+MODEL_USA_4_4;M41 ウォーカー・ブルドッグ;;;;;;;;;;X
+MODEL_USA_5_0;スチーム・タンク;Steam Tank;;;;;;;;;X
+MODEL_USA_5_1;M2 中戦車;M2 Medium Tank;;;;;;;;;X
+MODEL_USA_5_2;M3 リー;M3 Lee;;;;;;;;;X
+MODEL_USA_5_3;M4A1 シャーマン;M4A1 Sherman;;;;;;;;;X
+MODEL_USA_5_4;M4E8 シャーマン イージー・エイト;M4/E8 Sherman;;;;;;;;;X
+MODEL_USA_5_5;M26 パーシング;M26 Pershing;;;;;;;;;X
+MODEL_USA_5_6;M46 パットン;M46 Patton;;;;;;;;;X
+MODEL_USA_5_7;M47 パットン;M47 Patton;;;;;;;;;X
+MODEL_USA_5_8;M48A5 パットン;M48A5 Patton;;;;;;;;;X
+MODEL_USA_5_9;M60A1 パットン;M60 Patton;;;;;;;;;X
+MODEL_USA_12_0;カーチス P-40E-1 ウォーホーク;Curtiss P-40E-1 Warhawk;;;;;;;;;X
+MODEL_USA_12_1;ノースアメリカン P-51A マスタング;N.American P-51A Mustang;;;;;;;;;X
+MODEL_USA_12_2;ノースアメリカン P-51D マスタング;N.American P-51D Mustang;;;;;;;;;X
+MODEL_USA_12_3;ロッキード P-80 シューティングスター;Lockheed P-80 Shooting Star;;;;;;;;;X
+MODEL_USA_12_4;リパブリック F-84F サンダーストリーク;Republic F-84A Thunderjet;;;;;;;;;X
+MODEL_USA_12_5;ノースアメリカン F-100 スーパーセイバー;NA F-100 Super Sabre;;;;;;;;;X
+MODEL_USA_12_6;ロッキード F-104 スターファイター;Lockheed F-104 Starfighter;;;;;;;;;X
+MODEL_USA_12_7;リパブリック F-105 サンダーチーフ;Republic F-105 Thunderchief;;;;;;;;;X
+MODEL_USA_12_8;マクドネル F-4 ファントム;McDonnell F-4 PhantomII;;;;;;;;;X
+MODEL_USA_13_0;ボーイング P-26 ピーシューター;Boeing P-26 peashooter;;;;;;;;;X
+MODEL_USA_13_1;カーチス P-36 ホーク;Curtiss P-36 Hawk;;;;;;;;;X
+MODEL_USA_13_2;グラマン F4F ワイルドキャット;Grumman F4F Wildcat;;;;;;;;;X
+MODEL_USA_13_3;グラマン F6F ヘルキャット;Grumman F6F Hellcat;;;;;;;;;X
+MODEL_USA_13_4;ヴォート F4U コルセア;Vought F4U Corsair;;;;;;;;;X
+MODEL_USA_13_5;ノースロップ XP-79 フライングラム;Northrop XP-79 Flying Ram;;;;;;;;;X
+MODEL_USA_13_6;リパブリック XF-91 サンダーセプター;Republic XF-91 Thunderceptor;;;;;;;;;X
+MODEL_USA_13_7;ノースアメリカン F-86 セイバー;North American F-86A Sabre;;;;;;;;;X
+MODEL_USA_13_8;ノースロップ F-89 スコーピオン;Northrop F-89 Scorpion;;;;;;;;;X
+MODEL_USA_13_9;ロッキード F-94 スターファイア;Lockheed F-94 Starfire;;;;;;;;;X
+MODEL_USA_14_0;ボーイング B-17 フライングフォートレス;Boeing B-17 Flying Fortress;;;;;;;;;X
+MODEL_USA_14_1;コンソリデーテッド B-24 リベレーター;Consolidated B-24 Liberator;;;;;;;;;X
+MODEL_USA_14_2;ボーイング B-29 スーパーフォートレス;Boeing B-29 Superfortress;;;;;;;;;X
+MODEL_USA_14_3;コンベア B-36 ピースメーカー;Convair B-36 Peacemaker;;;;;;;;;X
+MODEL_USA_14_4;ボーイング B-50 スーパーフォートレス;Boeing B-50 Superfortress;;;;;;;;;X
+MODEL_USA_14_5;ボーイング B-47 ストラトジェット;Boeing B-47 Stratojet;;;;;;;;;X
+MODEL_USA_14_6;ボーイング B-52 ストラトフォートレス;Boeing B-52 Stratofortress;;;;;;;;;X
+MODEL_USA_14_7;コンベア B-58 ハスラー;Convair B-58 Hustler;;;;;;;;;X
+MODEL_USA_15_0;マーチン B-10;Martin B-10;;;;;;;;;X
+MODEL_USA_15_1;ダグラス B-18 ボロ;Douglas B-18 Bolo;;;;;;;;;X
+MODEL_USA_15_2;ダグラス B-23 ドラゴン;Douglas B-23 Dragon;;;;;;;;;X
+MODEL_USA_15_3;マーチン B-26 マローダー;Martin B-26 Marauder;;;;;;;;;X
+MODEL_USA_15_4;ノースアメリカン B-25J ミッチェル;N.American B-25J Mitchell;;;;;;;;;X
+MODEL_USA_15_5;ダグラス XB-43 ジェットマスター;Douglas XB-43 Jetmaster;;;;;;;;;X
+MODEL_USA_15_6;ノースアメリカン B-45 トルネード;N.American B-45 Tornado;;;;;;;;;X
+MODEL_USA_15_7;マーチン B-57B キャンベラ;Martin B-57B Canverra;;;;;;;;;X
+MODEL_USA_15_8;ダグラス B-66B デストロイヤー;North American B-66B Skywarrior;;;;;;;;;X
+MODEL_USA_15_9;ノースアメリカン XB-70 ヴァルキリー;N.American XB-70 Valkyrie;;;;;;;;;X
+MODEL_USA_16_0;ロッキード ハドソン PBO-1;Lockheed Hudson PBO-1;;;;;;;;;X
+MODEL_USA_16_1;ロッキード PV-1 ヴェンチュラ;Lockheed PV-1 ventura;;;;;;;;;X
+MODEL_USA_16_2;コンソリデーテッド PB4Y-2 プライバティア;Consolidated PB4Y-2 Privateer;;;;;;;;;X
+MODEL_USA_16_3;ロッキード PV-2 ハープーン;Lockheed PV-2 Harpoon;;;;;;;;;X
+MODEL_USA_16_4;ロッキード P2V ネプチューン;Lockheed P2V Neptune;;;;;;;;;X
+MODEL_USA_16_5;ロッキード P-3A オライオン;Lockheed P-3A Orion;;;;;;;;;X
+MODEL_USA_17_0;ダグラス A-24 バンシー;Douglas A-24;;;;;;;;;X
+MODEL_USA_17_1;ダグラス A-26 インベーダー;Douglas A-26 Invader;;;;;;;;;X
+MODEL_USA_17_2;ノースアメリカン A-36 アパッチ;N.American A-36 Apache;;;;;;;;;X
+MODEL_USA_17_3;ダグラス AD-1 スカイレーダー;Douglas AD-1 Skyraider;;;;;;;;;X
+MODEL_USA_17_4;ダグラス A-3 スカイウォリアー;Douglas A-3 Skywarrior;;;;;;;;;X
+MODEL_USA_17_5;ダグラス A-4 スカイホーク;McDonnell A-4 Skyhawk;;;;;;;;;X
+MODEL_USA_17_6;ノースアメリカン A-5 ヴィジランティ;NorthAmerican A-5 Vigilante;;;;;;;;;X
+MODEL_USA_17_7;グラマン A-6 イントルーダー;Grumman A-6 Intruder;;;;;;;;;X
+MODEL_USA_18_0;ダグラス C-32;Douglas C-32;;;;;;;;;X
+MODEL_USA_18_1;ダグラス C-47 スカイトレイン;Douglas C-47 Dakota;;;;;;;;;X
+MODEL_USA_18_2;ダグラス C-54 スカイマスター;Douglas C-54 Skymaster;;;;;;;;;X
+MODEL_USA_18_3;フェアチャイルド C-119G フライング・ボックスカー;Fairchild C-119J Flying Boxcar;;;;;;;;;X
+MODEL_USA_18_4;ダグラス C-124 グローブマスター II;Douglas C-124 Globemaster II;;;;;;;;;X
+MODEL_USA_20_0;レッドストーン;Redstone;;;;;;;;;X
+MODEL_USA_20_1;ソアー;Thor;;;;;;;;;X
+MODEL_USA_20_2;アトラス-D;Atlas-D;;;;;;;;;X
+MODEL_USA_21_0;ニューヨーク級;New York-class;;;;;;;;;X
+MODEL_USA_21_1;ネヴァダ級;Nevada-class;;;;;;;;;X
+MODEL_USA_21_2;ペンシルバニア級;Pennsylvania-class;;;;;;;;;X
+MODEL_USA_21_3;ノースカロライナ級;North Carolina-class;;;;;;;;;X
+MODEL_USA_21_4;アイオワ級;Iowa-class;;;;;;;;;X
+MODEL_USA_21_6;モンタナ級;Montana-class;;;;;;;;;X
+MODEL_USA_22_0;チェスター級;Chester-class;;;;;;;;;X
+MODEL_USA_22_1;オマハ級;Omaha-class;;;;;;;;;X
+MODEL_USA_22_2;ブルックリン級;Brooklyn-class;;;;;;;;;X
+MODEL_USA_22_3;アトランタ級;Atlanta-Class;;;;;;;;;X
+MODEL_USA_22_4;クリーブランド級;Cleveland-class;;;;;;;;;X
+MODEL_USA_22_5;ウースター級;Worcester-class;;;;;;;;;X
+MODEL_USA_22_6;ガルヴェストン級;Galveston-class;;;;;;;;;X
+MODEL_USA_23_0;ペンサコーラ級;Pensacola-class;;;;;;;;;X
+MODEL_USA_23_1;ノーザンプトン級;Northampton-class;;;;;;;;;X
+MODEL_USA_23_2;ポートランド級;Portland-class;;;;;;;;;X
+MODEL_USA_23_3;ニューオーリンズ級;New-Orleans-class;;;;;;;;;X
+MODEL_USA_23_4;バルチモア級;Baltimore-class;;;;;;;;;X
+MODEL_USA_23_5;デモイン級;Des Moines-class;;;;;;;;;X
+MODEL_USA_23_6;ロングビーチ級;Long Beach-class;;;;;;;;;X
+MODEL_USA_23_7;リーヒ級;Leahy-class;;;;;;;;;X
+MODEL_USA_24_2;レキシントン級;Lexington-class;;;;;;;;;X
+MODEL_USA_24_4;アラスカ級;Alaska-class;;;;;;;;;X
+MODEL_USA_24_6;CGN-42級;CGN 42-class;;;;;;;;;X
+MODEL_USA_25_0;クレムソン級;Clemson-class;;;;;;;;;X
+MODEL_USA_25_1;ファラガット級;Farragut-class;;;;;;;;;X
+MODEL_USA_25_2;サマーズ級;Somers-class;;;;;;;;;X
+MODEL_USA_25_3;フレッチャー級;Fletcher-class;;;;;;;;;X
+MODEL_USA_25_4;アレン・M・サムナー級;;;;;;;;;;X
+MODEL_USA_25_5;ギアリング級;Forest Sherman-class;;;;;;;;;X
+MODEL_USA_25_6;ミッチャー級;Adams-class;;;;;;;;;X
+MODEL_USA_25_7;フォレスト・シャーマン級;;;;;;;;;;X
+MODEL_USA_25_8;チャールズ・Ｆ・アダムズ級;;;;;;;;;;X
+MODEL_USA_26_0;ラングレー級;langley-class;;;;;;;;;X
+MODEL_USA_26_1;レキシントン級;Lexington-class;;;;;;;;;X
+MODEL_USA_26_2;ヨークタウン級;Yorktown-class;;;;;;;;;X
+MODEL_USA_26_3;ワスプ級;wasp-class;;;;;;;;;X
+MODEL_USA_26_4;エセックス級;Essex-class;;;;;;;;;X
+MODEL_USA_26_5;ミッドウェイ級;Midway-class;;;;;;;;;X
+MODEL_USA_26_6;ユナイテッド・ステイツ級;United States-class;;;;;;;;;X
+MODEL_USA_26_7;フォレスタル級;Forrestal-class;;;;;;;;;X
+MODEL_USA_26_8;キティホーク級;Kitty Hawk-class;;;;;;;;;X
+MODEL_USA_26_9;エンタープライズ級;Enterprise-class;;;;;;;;;X
+MODEL_USA_27_0;ロング・アイランド級;Independence-class;;;;;;;;;X
+MODEL_USA_27_1;チャージャー級;Saipan-class;;;;;;;;;X
+MODEL_USA_27_2;ボーグ級;Bogue-class;;;;;;;;;X
+MODEL_USA_27_3;サンガモン級;sangamon-class;;;;;;;;;X
+MODEL_USA_27_4;カサブランカ級;Casablanca-class;;;;;;;;;X
+MODEL_USA_27_5;コメンスメント・ベイ級;Commencement-Bay-class;;;;;;;;;X
+MODEL_USA_28_0;S級;S-boat;;;;;;;;;X
+MODEL_USA_28_1;R級;R-boat;;;;;;;;;X
+MODEL_USA_28_2;バラクーダ級;Barracuda-class;;;;;;;;;X
+MODEL_USA_28_3;パーチ級;Perch-class;;;;;;;;;X
+MODEL_USA_28_4;タング級;Tang-class;;;;;;;;;X
+MODEL_USA_28_5;バーベル級;Barbel-class;;;;;;;;;X
+MODEL_USA_28_6;ノーチラス級;Nautilus-class;;;;;;;;;X
+MODEL_USA_29_0;S級;S-class;;;;;;;;;X
+MODEL_USA_29_5;ジョージ・ワシントン級;George Washington-class;;;;;;;;;X
+MODEL_USA_29_6;イーサン・アレン級;Ethan Allen-class;;;;;;;;;X
+;;;;;;;;;;;X
+MODEL_VEN_4_0;CV-33;CV-33;;;;;;;;;X
+MODEL_VEN_4_1;M2A4;M2A4;;;;;;;;;X
+MODEL_VEN_4_2;M5 スチュアート;M5 Stuart;;;;;;;;;X
+MODEL_VEN_5_0;ルノー FT-17;Renault FT-17;;;;;;;;;X
+MODEL_VEN_5_1;ヴィッカース Mk.E;Vickers Mk.E;;;;;;;;;X
+MODEL_VEN_5_2;M3 リー;M3 Lee;;;;;;;;;X
+MODEL_VEN_5_3;M4A1 シャーマン;M4A1 Sherman;;;;;;;;;X
+MODEL_VEN_5_4;M4/E8 シャーマン;M4/E8 Sherman;;;;;;;;;X
+MODEL_VEN_5_5;M26 パーシング;M26 Pershing;;;;;;;;;X
+MODEL_VIC_4_0;ルノー AMR 1935;Renault AMR 1935;;;;;;;;;X
+MODEL_VIC_4_1;ホチキス H-39;Hotchkiss H-39;;;;;;;;;X
+MODEL_VIC_4_2;AMX R-40;AMX R-40;;;;;;;;;X
+MODEL_VIC_5_0;ルノー FT-17;Renault FT-17;;;;;;;;;X
+MODEL_VIC_5_1;FCM-36;FCM-36;;;;;;;;;X
+MODEL_VIC_5_2;ソミュア S-35;Somua S-35;;;;;;;;;X
+MODEL_VIC_5_3;ソミュア S-40;Somua S-40;;;;;;;;;X
+MODEL_VIC_5_4;ルノー G1R;Renault G1R;;;;;;;;;X
+MODEL_VIC_12_0;ドヴォワチーヌ D.520;Dewoitine D.520;;;;;;;;;X
+MODEL_VIC_12_1;ドヴォワチーヌ D.552;Dewoitine D.552;;;;;;;;;X
+MODEL_VIC_12_2;フォッケウルフ Fw 190D;Focke-Wulf Fw-190D;;;;;;;;;X
+MODEL_VIC_12_3;メッサーシュミット Me 262 シュワルベ;Messerschmitt Me-262 Schwalbe;;;;;;;;;X
+MODEL_VIC_13_0;ドヴォワチーヌ D.510;Dewoitine D.510;;;;;;;;;X
+MODEL_VIC_13_1;モラーヌ・ソルニエ MS.406;Morane-Saulnier MS.406;;;;;;;;;X
+MODEL_VIC_13_2;ブロック MB.152;Bloch MB.152;;;;;;;;;X
+MODEL_VIC_13_3;アルセナル VG.33;Arsenal VG.33;;;;;;;;;X
+MODEL_VIC_13_4;ブロック MB.157;Bloch MB.157;;;;;;;;;X
+MODEL_VIC_13_6;アルセナル VG.70;Arsenal VG.70;;;;;;;;;X
+MODEL_VIC_14_0;ブロック MB.162;Bloch MB.162;;;;;;;;;X
+MODEL_VIC_14_1;ファルマン NC.223;Farman NC.223;;;;;;;;;X
+MODEL_VIC_14_2;ファルマン F.420;Farman F.420;;;;;;;;;X
+MODEL_VIC_15_0;アミオ 143;Amiot 143;;;;;;;;;X
+MODEL_VIC_15_1;ブロック MB.210;Bloch MB.210;;;;;;;;;X
+MODEL_VIC_15_2;リオレ・エ・オリヴィエ LeO 451;Liore-Olivier LeO 451;;;;;;;;;X
+MODEL_VIC_15_3;ユンカース Ju 88;Junkers Ju-88;;;;;;;;;X
+MODEL_VIC_15_4;シュッド SE.202 アキロン;Sud SE.202 Aquilon;;;;;;;;;X
+MODEL_VIC_16_0;ロワール・ニューポール LN.401;Loire LN.401;;;;;;;;;X
+MODEL_VIC_16_1;ポテーズ-C.A.M.S. 141;Potez-C.A.M.S. 141;;;;;;;;;X
+MODEL_VIC_16_2;ユンカース Ju 290;Junkers Ju-290;;;;;;;;;X
+MODEL_VIC_16_3;ユンカース EF 140;Junkers Ju-287 EF-140;;;;;;;;;X
+MODEL_VIC_17_0;ポテーズ 633;Potez 633;;;;;;;;;X
+MODEL_VIC_17_1;ブレゲ Br.691;Breguet Br.691;;;;;;;;;X
+MODEL_VIC_17_2;ヘンシェル Hs 129;Henschel Hs-129;;;;;;;;;X
+MODEL_VIC_18_0;ブロック MB.221;Bloch MB.221;;;;;;;;;X
+MODEL_VIC_18_1;アラド Ar 232;Arado Ar-232;;;;;;;;;X
+MODEL_VIC_18_2;ブレゲ Br.765 サハラ;Breguet Br.765 Sahara;;;;;;;;;X
+MODEL_VIC_29_0;スルクフ級;Surcouf-class;;;;;;;;;X
+MODEL_VIC_29_1;IXD/2型級;Type IXD2-class;;;;;;;;;X
+MODEL_VIC_29_6;ル・ルドゥタブル級;;;;;;;;;;X
+;;;;;;;;;;;X
+MODEL_YUG_4_0;T-32;T-32;;;;;;;;;X
+MODEL_YUG_4_1;7TPjw;7TPjw;;;;;;;;;X
+MODEL_YUG_4_2;M5 スチュアート;M5 Stuart;;;;;;;;;X
+MODEL_YUG_5_0;ルノー FT-17;Renault FT-17;;;;;;;;;X
+MODEL_YUG_5_1;ルノー R-35;Renault R35;;;;;;;;;X
+MODEL_YUG_5_2;BT-7M;BT-7M;;;;;;;;;X
+MODEL_YUG_5_3;Mk.VIII A23M クロムウェル;Mk.VIII A23M Cromwell;;;;;;;;;X
+MODEL_YUG_5_4;A34 コメット;A34 Comet;;;;;;;;;X
+MODEL_YUG_5_5;センチュリオン Mk.I;Centurion Mk.I;;;;;;;;;X
+MODEL_YUG_12_2;イカルス S-49;Ikarus S-49;;;;;;;;;X
+MODEL_YUG_13_0;フォッカー F.VII;Fokker F.VII;;;;;;;;;X
+MODEL_YUG_13_1;モラーヌ・ソルニエ MS.406;Morane-Saulnier M.S.406;;;;;;;;;X
+MODEL_YUG_13_2;ホーカー・ハリケーン II;Hawker Hurricane II;;;;;;;;;X
+MODEL_YUG_15_0;ブリストル・ブレニム Mk.I;Bristol Blenheim Mk.I;;;;;;;;;X
+MODEL_YUG_15_1;ブリストル・ブレニム Mk.IV;Bristol Blenheim Mk.IV;;;;;;;;;X
+MODEL_YUG_16_0;ドルニエ Do 22;Dornier Do-22;;;;;;;;;X
+MODEL_YUG_18_0;アビア・フォッカー F.39;Avia Fokker F.39;;;;;;;;;X
+MODEL_YUG_25_1;ドブロブニク級;Dubrovnik-class;;;;;;;;;X
+MODEL_YUG_25_2;ベオグラード級;Beograd-class;;;;;;;;;X
+MODEL_YUG_28_0;オスヴェトニク級;Osvetnik-class;;;;;;;;;X
+;;;;;;;;;;;X
+MODEL_U73_29_0;M2級;M2-class;;;;;;;;;X
+MODEL_U73_29_5;ドレッドノート級;;;;;;;;;;X
+MODEL_U73_29_6;ヴァリアント級;;;;;;;;;;X
+;;;;;;;;;;;X
+MODEL_U87_29_0;巡潜型;Junsen-gata class;;;;;;;;;X
+MODEL_U87_29_1;巡潜乙型;Junsen Otsu-gata class;;;;;;;;;X
+MODEL_U87_29_2;潜特型;Sen Toku class;;;;;;;;;X
+MODEL_U87_29_3;巡潜甲型改2;Sen Toku class;;;;;;;;;X
+;;;;;;;;;;;X
+BRIG_MODEL_AST_2_2;ビショップ;Bishop;;;;;;;;;X
+BRIG_MODEL_AST_2_3;セクストン;Sexton;;;;;;;;;X
+BRIG_MODEL_AST_3_0;ランド・マットレス;Land Mattress;;;;;;;;;X
+BRIG_MODEL_AST_5_0;2Pdr.OQF Mk.IX;2Pdr.OQF Mk.IX;;;;;;;;;X
+BRIG_MODEL_AST_5_1;6Pdr.OQF Mk.II;6Pdr.OQF Mk.II;;;;;;;;;X
+BRIG_MODEL_AST_5_2;17ポンド砲;17Pdr. Gun;;;;;;;;;X
+BRIG_MODEL_AST_6_0;2ポンド砲 Portee;2Pdr.Portee;;;;;;;;;X
+BRIG_MODEL_AST_6_1;ディーコン;Deacon;;;;;;;;;X
+BRIG_MODEL_AST_6_2;アーチャー;Archer;;;;;;;;;X
+BRIG_MODEL_AST_7_0;Mk.VIII A25 ハリー・ホプキンス;Mk.VIII A25 Harry Hopkins;;;;;;;;;X
+BRIG_MODEL_AST_8_0;マチルダ Mk.II;Matilda Mk.II;;;;;;;;;X
+BRIG_MODEL_AST_8_1;Mk.IV A22 チャーチル Mk.I;Mk.IV A22 Churchill Mk.I;;;;;;;;;X
+BRIG_MODEL_AST_8_2;Mk.IV A22 チャーチル Mk.VII;Mk.IV A22 Churchill Mk.VII;;;;;;;;;X
+BRIG_MODEL_AST_9_0;A39 トータス;A39 Tortoise;;;;;;;;;X
+BRIG_MODEL_AST_10_0;ハンバー Mk.I;Humber Mk.I;;;;;;;;;X
+BRIG_MODEL_AST_10_1;スタッグハウンド Mk.I;Staghound Mk.I;;;;;;;;;X
+BRIG_MODEL_AST_10_2;フェレット Mk 1/2;Ferret Mk 1/2;;;;;;;;;X
+BRIG_MODEL_AST_14_0;ニムロッド / ソードフィッシュ;Nimrod / Swordfish;;;;;;;;;X
+BRIG_MODEL_AST_14_1;ニムロッド / ソードフィッシュ;Nimrod / Swordfish;;;;;;;;;X
+BRIG_MODEL_AST_14_2;シー・グラジエーター / ソードフィッシュ;Sea Gladiator / Swordfish;;;;;;;;;X
+BRIG_MODEL_AST_14_3;シー・グラジエーター / スキュア / ソードフィッシュ;Sea Gladiator / Skua / Swordfish;;;;;;;;;X
+BRIG_MODEL_AST_14_4;フルマー / スキュア / アルバコア;Fulmar / Skua / Albacore;;;;;;;;;X
+BRIG_MODEL_AST_14_5;ファイアフライ / バラクーダ;Firefly / Barracuda;;;;;;;;;X
+BRIG_MODEL_AST_14_6;シーファイア / ファイアブランド;Seafire / Firebrand;;;;;;;;;X
+BRIG_MODEL_AST_14_7;シーフューリー / ワイバーン;Sea Fury / Wyvern;;;;;;;;;X
+BRIG_MODEL_AST_14_8;シーヴェノム / アタッカー;Sea Venom / Attacker;;;;;;;;;X
+BRIG_MODEL_AST_14_9;シーホーク (F-1)  / シーホーク (FB-3);Sea Hawk (F-1) / Sea Hawk (FB-3);;;;;;;;;X
+BRIG_MODEL_AST_30_0;ホーカー オスプレイ;Hawker Osprey;;;;;;;;;X
+BRIG_MODEL_AST_30_1;スーパーマリン ウォーラス;Supermarine Walrus;;;;;;;;;X
+BRIG_MODEL_AST_30_2;スーパーマリン シーオッター;Supermarine Sea Otter;;;;;;;;;X
+BRIG_MODEL_AST_30_3;スーパーマリン スピットファイア Type 355;Supermarine Spitfire Type 355;;;;;;;;;X
+;;;;;;;;;;;X
+BRIG_MODEL_CAN_2_2;ビショップ;Bishop;;;;;;;;;X
+BRIG_MODEL_CAN_2_3;セクストン;Sexton;;;;;;;;;X
+BRIG_MODEL_CAN_3_0;ランド・マットレス;Land Mattress;;;;;;;;;X
+BRIG_MODEL_CAN_5_0;2Pdr.OQF Mk.IX;2Pdr.OQF Mk.IX;;;;;;;;;X
+BRIG_MODEL_CAN_5_1;6Pdr.OQF Mk.II;6Pdr.OQF Mk.II;;;;;;;;;X
+BRIG_MODEL_CAN_5_2;17ポンド砲;17Pdr. Gun;;;;;;;;;X
+BRIG_MODEL_CAN_6_0;2ポンド砲 Portee;2Pdr.Portee;;;;;;;;;X
+BRIG_MODEL_CAN_6_1;ディーコン;Deacon;;;;;;;;;X
+BRIG_MODEL_CAN_6_2;アーチャー;Archer;;;;;;;;;X
+BRIG_MODEL_CAN_7_0;ラム II;RAM II;;;;;;;;;X
+BRIG_MODEL_CAN_8_0;マチルダ Mk.II;Matilda Mk.II;;;;;;;;;X
+BRIG_MODEL_CAN_8_1;Mk.IV A22 チャーチル Mk.I;Mk.IV A22 Churchill Mk.I;;;;;;;;;X
+BRIG_MODEL_CAN_8_2;Mk.IV A22 チャーチル Mk.VII;Mk.IV A22 Churchill Mk.VII;;;;;;;;;X
+BRIG_MODEL_CAN_9_0;A39 トータス;A39 Tortoise;;;;;;;;;X
+BRIG_MODEL_CAN_10_0;ハンバー Mk.I;Humber Mk.I;;;;;;;;;X
+BRIG_MODEL_CAN_10_1;スタッグハウンド Mk.I;Staghound Mk.I;;;;;;;;;X
+BRIG_MODEL_CAN_10_2;フェレット Mk 1/2;Ferret Mk 1/2;;;;;;;;;X
+BRIG_MODEL_CAN_14_0;ニムロッド / ソードフィッシュ;Nimrod / Swordfish;;;;;;;;;X
+BRIG_MODEL_CAN_14_1;ニムロッド / ソードフィッシュ;Nimrod / Swordfish;;;;;;;;;X
+BRIG_MODEL_CAN_14_2;シー・グラジエーター / ソードフィッシュ;Sea Gladiator / Swordfish;;;;;;;;;X
+BRIG_MODEL_CAN_14_3;シー・グラジエーター / スキュア / ソードフィッシュ;Sea Gladiator / Skua / Swordfish;;;;;;;;;X
+BRIG_MODEL_CAN_14_4;フルマー / スキュア / アルバコア;Fulmar / Skua / Albacore;;;;;;;;;X
+BRIG_MODEL_CAN_14_5;ファイアフライ / バラクーダ;Firefly / Barracuda;;;;;;;;;X
+BRIG_MODEL_CAN_14_6;シーファイア / ファイアブランド;Seafire / Firebrand;;;;;;;;;X
+BRIG_MODEL_CAN_14_7;シーフューリー / ワイバーン;Sea Fury / Wyvern;;;;;;;;;X
+BRIG_MODEL_CAN_14_8;シーヴェノム / アタッカー;Sea Venom / Attacker;;;;;;;;;X
+BRIG_MODEL_CAN_14_9;F2H-3 バンシー  / アタッカー;F2H-3 Banshee / Attacker;;;;;;;;;X
+BRIG_MODEL_CAN_15_4;カナディア F-86 セイバー;Canadair F-86 Sabre;;;;;;;;;X
+BRIG_MODEL_CAN_15_5;マクダネル CF-101 ヴードゥー;McDonnell CF-101 Voodoo;;;;;;;;;X
+BRIG_MODEL_CAN_30_0;ホーカー オスプレイ;Hawker Osprey;;;;;;;;;X
+BRIG_MODEL_CAN_30_1;スーパーマリン ウォーラス;Supermarine Walrus;;;;;;;;;X
+BRIG_MODEL_CAN_30_2;スーパーマリン シーオッター;Supermarine Sea Otter;;;;;;;;;X
+BRIG_MODEL_CAN_30_3;スーパーマリン スピットファイア Type 355;Supermarine Spitfire Type 355;;;;;;;;;X
+;;;;;;;;;;;X
+BRIG_MODEL_ENG_2_2;ビショップ;Bishop;;;;;;;;;X
+BRIG_MODEL_ENG_2_3;セクストン;Sexton;;;;;;;;;X
+BRIG_MODEL_ENG_2_7;FV433 アボット;FV433 Abbot;;;;;;;;;X
+BRIG_MODEL_ENG_3_0;ランド・マットレス;Land Mattress;;;;;;;;;X
+BRIG_MODEL_ENG_5_0;2Pdr.OQF Mk.IX;2Pdr.OQF Mk.IX;;;;;;;;;X
+BRIG_MODEL_ENG_5_1;6Pdr.OQF Mk.II;6Pdr.OQF Mk.II;;;;;;;;;X
+BRIG_MODEL_ENG_5_2;17ポンド砲;17Pdr. Gun;;;;;;;;;X
+BRIG_MODEL_ENG_6_0;2ポンド砲 Portee;2Pdr.Portee;;;;;;;;;X
+BRIG_MODEL_ENG_6_1;ディーコン;Deacon;;;;;;;;;X
+BRIG_MODEL_ENG_6_2;アーチャー;Archer;;;;;;;;;X
+BRIG_MODEL_ENG_6_3;アヴェンジャー;Avenger;;;;;;;;;X
+BRIG_MODEL_ENG_6_5;FV4101 チャリオティア;FV4101 Charioteer;;;;;;;;;X
+BRIG_MODEL_ENG_7_0;M22 ローカスト;M22 Locust;;;;;;;;;X
+BRIG_MODEL_ENG_8_0;歩兵戦車 Mk.II マチルダII;Matilda Mk.II;;;;;;;;;X
+BRIG_MODEL_ENG_8_1;歩兵戦車 Mk.IV チャーチル Mk.I;Mk.IV A22 Churchill Mk.I;;;;;;;;;X
+BRIG_MODEL_ENG_8_2;歩兵戦車 Mk.IV チャーチル Mk.VII;Mk.IV A22 Churchill Mk.VII;;;;;;;;;X
+BRIG_MODEL_ENG_8_3;FV221 カーナーヴォン;;;;;;;;;;X
+BRIG_MODEL_ENG_9_0;A39 トータス;A39 Tortoise;;;;;;;;;X
+BRIG_MODEL_ENG_10_0;ハンバー Mk.I;Humber Mk.I;;;;;;;;;X
+BRIG_MODEL_ENG_10_1;スタッグハウンド Mk.I;Staghound Mk.I;;;;;;;;;X
+BRIG_MODEL_ENG_10_2;フェレット Mk 1/2;Ferret Mk 1/2;;;;;;;;;X
+BRIG_MODEL_ENG_14_0;ニムロッド / ソードフィッシュ;Nimrod / Swordfish;;;;;;;;;X
+BRIG_MODEL_ENG_14_1;ニムロッド / ソードフィッシュ;Nimrod / Swordfish;;;;;;;;;X
+BRIG_MODEL_ENG_14_2;シー・グラジエーター / ソードフィッシュ;Sea Gladiator / Swordfish;;;;;;;;;X
+BRIG_MODEL_ENG_14_3;シー・グラジエーター / スキュア / ソードフィッシュ;Sea Gladiator / Skua / Swordfish;;;;;;;;;X
+BRIG_MODEL_ENG_14_4;フルマー / スキュア / アルバコア;Fulmar / Skua / Albacore;;;;;;;;;X
+BRIG_MODEL_ENG_14_5;ファイアフライ / バラクーダ;Firefly / Barracuda;;;;;;;;;X
+BRIG_MODEL_ENG_14_6;シーファイア / ファイアブランド;Seafire / Firebrand;;;;;;;;;X
+BRIG_MODEL_ENG_14_7;シーフューリー / ワイバーン;Sea Fury / Wyvern;;;;;;;;;X
+BRIG_MODEL_ENG_14_8;シーヴェノム / アタッカー;Sea Venom / Attacker;;;;;;;;;X
+BRIG_MODEL_ENG_14_9;シーホーク (F-1)  / シーホーク (FB-3);Sea Hawk (F-1) / Sea Hawk (FB-3);;;;;;;;;X
+BRIG_MODEL_ENG_15_0;ウエストランド・ワールウィンド;Westland Whirlwind;;;;;;;;;X
+BRIG_MODEL_ENG_15_1;デハビランド・モスキート FB.VI;de Havilland Mosquito FB.VI;;;;;;;;;X
+BRIG_MODEL_ENG_15_2;ウエストランド・ウェルキン;Westland Welkin;;;;;;;;;X
+BRIG_MODEL_ENG_15_3;デハビランド・ヴェノム;de Havilland Venom;;;;;;;;;X
+BRIG_MODEL_ENG_15_4;ホーカー・ハンター;Hawker Hunter;;;;;;;;;X
+BRIG_MODEL_ENG_15_5;スーパーマリン・シミター;Supermarine Scimitar;;;;;;;;;X
+BRIG_MODEL_ENG_30_0;ホーカー オスプレイ;Hawker Osprey;;;;;;;;;X
+BRIG_MODEL_ENG_30_1;スーパーマリン ウォーラス;Supermarine Walrus;;;;;;;;;X
+BRIG_MODEL_ENG_30_2;フェアリー シーフォックス;Fairey Seafox;;;;;;;;;X
+BRIG_MODEL_ENG_30_3;スーパーマリン シーオッター;Supermarine Sea Otter;;;;;;;;;X
+BRIG_MODEL_ENG_30_4;スーパーマリン スピットファイア Type 355;Supermarine Spitfire Type 355;;;;;;;;;X
+BRIG_MODEL_ENG_30_5;サンダース・ロー SR.A/1;Saunders-Roe SR.A/1;;;;;;;;;X
+BRIG_MODEL_ENG_30_6;ウェストランド・ワスプ;Westland Wasp;;;;;;;;;X
+;;;;;;;;;;;X
+BRIG_MODEL_FIN_5_0;37mm K/36;37mm K/36;;;;;;;;;X
+BRIG_MODEL_FIN_5_1;45mm 20K m.1932;45mm 20K m.1932;;;;;;;;;X
+BRIG_MODEL_FIN_5_2;75mm K/40;75mm K/40;;;;;;;;;X
+BRIG_MODEL_FIN_5_3;88mm PaK43;88mm PaK43;;;;;;;;;X
+BRIG_MODEL_FIN_5_4;128mm 対戦車砲 PaK44;128mm PaK44;;;;;;;;;X
+BRIG_MODEL_FIN_6_0;I号対戦車自走砲;PzJg.I;;;;;;;;;X
+BRIG_MODEL_FIN_6_1;マーダー II;Marder II;;;;;;;;;X
+BRIG_MODEL_FIN_6_2;III号突撃砲G型;StuG.IIIG;;;;;;;;;X
+BRIG_MODEL_FIN_7_0;II号戦車L型ルクス;PzKpfw.IIL Luchs;;;;;;;;;X
+BRIG_MODEL_FIN_10_0;ランツヴェルク 182;Landsverk 182;;;;;;;;;X
+BRIG_MODEL_FIN_10_1;BA-10;BA-10;;;;;;;;;X
+;;;;;;;;;;;X
+BRIG_MODEL_FRA_2_0;自走砲;Autocannon;;;;;;;;;X
+BRIG_MODEL_FRA_2_1;75/97搭載自走砲;AC de 75/97;;;;;;;;;X
+BRIG_MODEL_FRA_2_2;ビショップ;Bishop;;;;;;;;;X
+BRIG_MODEL_FRA_2_3;セクストン;Sexton;;;;;;;;;X
+BRIG_MODEL_FRA_2_5;AMX 13 105;AMX 13 105;;;;;;;;;X
+BRIG_MODEL_FRA_5_0;25mm軽対戦車砲 SA-L;25mm SA-L;;;;;;;;;X
+BRIG_MODEL_FRA_5_1;47mm対戦車砲 SA 37/39;47mm SA 37/39;;;;;;;;;X
+BRIG_MODEL_FRA_5_2;6ポンド砲;6Pdr. Gun;;;;;;;;;X
+BRIG_MODEL_FRA_5_3;17ポンド砲;17Pdr. Gun;;;;;;;;;X
+BRIG_MODEL_FRA_6_0;AC(b) 自走砲;Carrier AC(b);;;;;;;;;X
+BRIG_MODEL_FRA_6_1;ラフリー W15;Laffly W15;;;;;;;;;X
+BRIG_MODEL_FRA_6_2;M18 ヘルキャット;M18 Hellcat;;;;;;;;;X
+BRIG_MODEL_FRA_6_3;M36 ジャクソン;M36 Jackson;;;;;;;;;X
+BRIG_MODEL_FRA_6_5;AMX 50 フォッシュ;AMX 50 Foch;;;;;;;;;X
+BRIG_MODEL_FRA_7_0;M24 チャーフィー;M24 Chaffee;;;;;;;;;X
+BRIG_MODEL_FRA_8_0;シャール B1bis;Char B1bis;;;;;;;;;X
+BRIG_MODEL_FRA_8_1;Mk.IV A22 チャーチル Mk.I;Mk.IV A22 Churchill Mk.I;;;;;;;;;X
+BRIG_MODEL_FRA_8_2;Mk.IV A22 チャーチル Mk.VII;Mk.IV A22 Churchill Mk.VII;;;;;;;;;X
+BRIG_MODEL_FRA_10_0;AMD パナール 178;AMD Panhard 178;;;;;;;;;X
+BRIG_MODEL_FRA_10_1;M8 グレイハウンド;M8 Greyhound;;;;;;;;;X
+BRIG_MODEL_FRA_10_2;パナール VBL;Panhard VBL;;;;;;;;;X
+BRIG_MODEL_FRA_14_0;D.501 / PL.101;D.501 / PL.101;;;;;;;;;X
+BRIG_MODEL_FRA_14_1;D.501 / PL.101;D.501 / PL.101;;;;;;;;;X
+BRIG_MODEL_FRA_14_2;D.373 / PL.101;D.373 / PL.101;;;;;;;;;X
+BRIG_MODEL_FRA_14_3;MB.152 / D.750;MB.152 / D.750;;;;;;;;;X
+BRIG_MODEL_FRA_14_4;MB.157 / D.750;MB.157 / D.750;;;;;;;;;X
+BRIG_MODEL_FRA_14_5;F6F ヘルキャット/SB2C ヘルダイバー/TBF アベンジャー;F6F Hellcat/SB2C Helldiver/TBF Avenger;;;;;;;;;X
+BRIG_MODEL_FRA_14_6;F6F ヘルキャット/SB2C ヘルダイバー/TBM アベンジャー;F6F Hellcat/SB2C Helldiver/TBM Avenger;;;;;;;;;X
+BRIG_MODEL_FRA_14_7;F4U コルセア / AM モーラー;F4U Corsair / AM Mauler;;;;;;;;;X
+BRIG_MODEL_FRA_14_8;S.E.202 アキロン / Br.1050 アリゼ;S.E.202 Aquilon / Br.1050 Alize;;;;;;;;;X
+BRIG_MODEL_FRA_14_9;ダッソー・エタンダール IV / Br.1050 アリゼ;Dassault Etendard IV / Br.1050 Alize;;;;;;;;;X
+BRIG_MODEL_FRA_15_0;ポテーズ 63-11;Potez 63-11;;;;;;;;;X
+BRIG_MODEL_FRA_15_1;ポテーズ 671;Potez 671;;;;;;;;;X
+BRIG_MODEL_FRA_15_2;シュド SE.100;Sud SE.100;;;;;;;;;X
+BRIG_MODEL_FRA_15_3;ダッソー・ウーラガン;Dassault Ouragan;;;;;;;;;X
+BRIG_MODEL_FRA_15_4;シュド・ウェスト・ボートゥール II-N;Sud-Ouest Vautour II-N;;;;;;;;;X
+BRIG_MODEL_FRA_15_5;ダッソー・ミラージュ IIIC;Dassault Mirage IIIC;;;;;;;;;X
+BRIG_MODEL_FRA_30_0;ロワール LN.130;Loire LN.130;;;;;;;;;X
+BRIG_MODEL_FRA_30_1;CAMS 37;CAMS 37;;;;;;;;;X
+BRIG_MODEL_FRA_30_2;ポテ 452;Potez 452;;;;;;;;;X
+BRIG_MODEL_FRA_30_4;ドボワチーヌ HD.730;Dewoitine HD.730;;;;;;;;;X
+BRIG_MODEL_FRA_30_6;SA 321 シュペルフルロン;SA 321 Super Frelon;;;;;;;;;X
+;;;;;;;;;;;X
+BRIG_MODEL_GER_2_0;III号突撃砲;StuG.III;;;;;;;;;X
+BRIG_MODEL_GER_2_1;III号突撃榴弾砲;StuH.42;;;;;;;;;X
+BRIG_MODEL_GER_2_2;II号自走榴弾砲ヴェスペ;PzA.II Wespe;;;;;;;;;X
+BRIG_MODEL_GER_2_3;III/IV号自走榴弾砲 フンメル;Hummel;;;;;;;;;X
+BRIG_MODEL_GER_3_0;ネーベルヴェルファー 41;NebelWerfer 41;;;;;;;;;X
+BRIG_MODEL_GER_3_1;ネーベルヴェルファー 42;NebelWerfer 42;;;;;;;;;X
+BRIG_MODEL_GER_3_2;ネーベルヴェルファー 44;NebelWerfer 44;;;;;;;;;X
+BRIG_MODEL_GER_4_0;マウルティア42式ロケット砲搭載型;Maultier PsW.42;;;;;;;;;X
+BRIG_MODEL_GER_4_2;ヴュルフラーメン40式ロケットランチャー;Wurfrahmen 40;;;;;;;;;X
+BRIG_MODEL_GER_5_0;3.7cm対戦車砲 Pak35/36;3.7cm PaK35/36;;;;;;;;;X
+BRIG_MODEL_GER_5_1;5cm対戦車砲 PaK38;5cm PaK38;;;;;;;;;X
+BRIG_MODEL_GER_5_2;7.5cm対戦車砲 PaK40;7.5cm PaK40;;;;;;;;;X
+BRIG_MODEL_GER_5_3;8.8cm対戦車砲 PaK43;8.8cm PaK43;;;;;;;;;X
+BRIG_MODEL_GER_5_4;12.8cm対戦車砲 PaK44;12.8cm PaK44;;;;;;;;;X
+BRIG_MODEL_GER_6_0;I号対戦車自走砲;PzJg.I;;;;;;;;;X
+BRIG_MODEL_GER_6_1;マーダー II;Marder II;;;;;;;;;X
+BRIG_MODEL_GER_6_2;38(t)駆逐戦車 ヘッツァー;Hetzer;;;;;;;;;X
+BRIG_MODEL_GER_6_3;ヤークトパンター;Jagdpanther;;;;;;;;;X
+BRIG_MODEL_GER_6_4;ヤークトティーガー;Jagdtiger;;;;;;;;;X
+BRIG_MODEL_GER_7_0;Sd.Kfz.123 II号戦車L型ルクス;PzKpfw.IIL Luchs;;;;;;;;;X
+BRIG_MODEL_GER_7_1;VK1602 レオパルト;;;;;;;;;;X
+BRIG_MODEL_GER_8_0;VK.3001(H);VK.3001(H);;;;;;;;;X
+BRIG_MODEL_GER_8_1;Sd.Kfz.181 VI号戦車 ティーガー;PzKpfw.VIE Tiger;;;;;;;;;X
+BRIG_MODEL_GER_8_2;Sd.Kfz.182 VI号戦車 ティーガーB型;PzKpfw.VIB Konigstiger;;;;;;;;;X
+BRIG_MODEL_GER_8_3;E-75 標準戦車;E-75 Standardpanzer;;;;;;;;;X
+BRIG_MODEL_GER_9_0;Sd.Kfz.205 VII号戦車 マウス;PzKpfw.VII Maus;;;;;;;;;X
+BRIG_MODEL_GER_10_0;Sd.Kfz. 231;SdKfz-231;;;;;;;;;X
+BRIG_MODEL_GER_10_1;Sd.Kfz. 234;SdKfz-234;;;;;;;;;X
+BRIG_MODEL_GER_10_2;ルクス;Luchs;;;;;;;;;X
+BRIG_MODEL_GER_14_0;He 51 / Hs 123;He.51 / Hs.123;;;;;;;;;X
+BRIG_MODEL_GER_14_1;He 51 / Hs 123;He.51 / Hs.123;;;;;;;;;X
+BRIG_MODEL_GER_14_2;He 51 / Hs 123 / Fi 167;He.51 / Hs.123 / Fi.167;;;;;;;;;X
+BRIG_MODEL_GER_14_3;Bf 109T / Ju 87C / Fi 167;Bf.109T / Ju.87C Stuka / Fi.167;;;;;;;;;X
+BRIG_MODEL_GER_14_4;Bf 109T / Ju 87C;Me.155 / Ju.87C Stuka;;;;;;;;;X
+BRIG_MODEL_GER_14_5;Me 155 / Ju 87C;Me.155 / Ju.87C Stuka;;;;;;;;;X
+BRIG_MODEL_GER_14_6;Me 155 / Ju 87T;Me.155 / Ju.87C Stuka;;;;;;;;;X
+BRIG_MODEL_GER_14_7;Fw 190T / Ju 87T;Fw.190T / Ju.87C Stuka;;;;;;;;;X
+BRIG_MODEL_GER_14_8;He 162 / Hs 132;He.162 / Hs.132;;;;;;;;;X
+BRIG_MODEL_GER_15_0;メッサーシュミット Bf 110 ツェアシュテーラー;Messerschmitt Bf-110 Zerstorer;;;;;;;;;X
+BRIG_MODEL_GER_15_1;メッサーシュミット Me 210;Messerschmitt Me-210;;;;;;;;;X
+BRIG_MODEL_GER_15_2;メッサーシュミット Me 410 ホルニッセ;Messerschmitt Me-410 Hornisse;;;;;;;;;X
+BRIG_MODEL_GER_15_3;メッサーシュミット Me 262;Messerschmitt Me-262;;;;;;;;;X
+BRIG_MODEL_GER_15_4;ホルテン Ho 229;Gotha Go-229;;;;;;;;;X
+BRIG_MODEL_GER_15_5;ホルテン Ho XIIIb;Horton Ho.XIIIb;;;;;;;;;X
+BRIG_MODEL_GER_30_1;ハインケル He 60;Heinkel He 60;;;;;;;;;X
+BRIG_MODEL_GER_30_2;アラド Ar 196;Arado Ar 196;;;;;;;;;X
+;;;;;;;;;;;X
+BRIG_MODEL_ITA_2_0;自走砲 75/27;Autocannone 75/27;;;;;;;;;X
+BRIG_MODEL_ITA_2_1;セモヴェンテ M40 75/18;Semovente M40 75/18;;;;;;;;;X
+BRIG_MODEL_ITA_2_2;セモヴェンテ M43 105/25;Semovente M43 105/25;;;;;;;;;X
+BRIG_MODEL_ITA_5_0;37mm対戦車砲 Pak35/36;37mm PaK35/36;;;;;;;;;X
+BRIG_MODEL_ITA_5_1;47mm対戦車砲 M35;47mm M35;;;;;;;;;X
+BRIG_MODEL_ITA_5_2;75mm対戦車砲 M40;75mm M40;;;;;;;;;X
+BRIG_MODEL_ITA_6_0;自走砲 65;Autocannone 65;;;;;;;;;X
+BRIG_MODEL_ITA_6_1;セモヴェンテL40 47/32;Semovente L40 47/32;;;;;;;;;X
+BRIG_MODEL_ITA_6_2;セモヴェンテM43 75/46;Semovente M43 75/46;;;;;;;;;X
+BRIG_MODEL_ITA_6_3;セモヴェンテM41 90/53;Semovente M41 90/53;;;;;;;;;X
+BRIG_MODEL_ITA_6_4;セモヴェンテM40 149/40;Semovente M40 149/40;;;;;;;;;X
+BRIG_MODEL_ITA_8_0;P26/40;P.26/40;;;;;;;;;X
+BRIG_MODEL_ITA_8_1;P43bis;P.43bis;;;;;;;;;X
+BRIG_MODEL_ITA_10_0;AB40装甲車;Autoblinda AB.40;;;;;;;;;X
+BRIG_MODEL_ITA_10_1;AB43装甲車;Autoblinda AB.43;;;;;;;;;X
+BRIG_MODEL_ITA_10_2;プーマ 4x4;Puma 4x4;;;;;;;;;X
+BRIG_MODEL_ITA_14_0;CR.32 フレッチア / Ro.37;CR.32 Freccia / Ro.37;;;;;;;;;X
+BRIG_MODEL_ITA_14_1;CR.42 ファルコ / Br.65;CR.42 Falco / Br.65;;;;;;;;;X
+BRIG_MODEL_ITA_14_2;G.50 フレッチア / Br.65;G.50 Freccia / Br.65;;;;;;;;;X
+BRIG_MODEL_ITA_14_3;Re.2001 ファルコ II/ Ju 87T ピッキアレロ;Re.2001 Falco II/ Ju.87T Picchiarello;;;;;;;;;X
+BRIG_MODEL_ITA_14_4;Re.2005 サジッタリオ / Ju 87T ピッキアレロ;Re.2005 Sagittario / Ju.87T Picchiarello;;;;;;;;;X
+BRIG_MODEL_ITA_14_5;Re.2005 サジッタリオ / Re.2002 アリエテ;Re.2005 Sagittario / Re.2002 Ariete;;;;;;;;;X
+BRIG_MODEL_ITA_15_0;フィアット CR.25;Fiat CR.25;;;;;;;;;X
+BRIG_MODEL_ITA_15_1;サボイア・マルケッティ SM.91;Savoia-Marchetti SM.91;;;;;;;;;X
+BRIG_MODEL_ITA_15_2;サボイア・マルケッティ SM.92;Savoia-Marchetti SM.92;;;;;;;;;X
+BRIG_MODEL_ITA_15_3;アエリフェル・サジッタリオ 2;Aerfer Sagittario 2;;;;;;;;;X
+BRIG_MODEL_ITA_15_4;アエリフェル・アリエテ;Aerfer Ariete;;;;;;;;;X
+BRIG_MODEL_ITA_15_5;アエリフェル・レオーネ;Aerfer Leone;;;;;;;;;X
+BRIG_MODEL_ITA_30_0;ピアジオ P.6;Piaggio P.6;;;;;;;;;X
+BRIG_MODEL_ITA_30_1;IMAM Ro.43;IMAM Ro.43;;;;;;;;;X
+BRIG_MODEL_ITA_30_6;シコルスキー HSS-2 シーキング;Sikorsky HSS-2 SeaKing;;;;;;;;;X
+;;;;;;;;;;;X
+BRIG_MODEL_JAP_2_1;一式自走砲 ホニ;Type 1 Ho-Ni;;;;;;;;;X
+BRIG_MODEL_JAP_2_2;一式自走砲 ホニII;Type 1 Ho-Ni II;;;;;;;;;X
+BRIG_MODEL_JAP_2_3;四式自走砲 ホロ;Type 4 Ho-Ro;;;;;;;;;X
+BRIG_MODEL_JAP_3_2;20cm 噴進砲;20cm Rocket;;;;;;;;;X
+BRIG_MODEL_JAP_5_0;37mm 九四式対戦車砲;37mm Type 94;;;;;;;;;X
+BRIG_MODEL_JAP_5_1;47mm 一式対戦車砲;47mm Type 1;;;;;;;;;X
+BRIG_MODEL_JAP_6_1;一式砲戦車 ホニ;Type 1 Ho-Ni;;;;;;;;;X
+BRIG_MODEL_JAP_6_2;三式砲戦車 ホニIII;Type 1 Ho-Ni III;;;;;;;;;X
+BRIG_MODEL_JAP_6_6;60式自走無反動砲;Type 60 SPRG;;;;;;;;;X
+BRIG_MODEL_JAP_7_0;九七式中戦車 チハ新砲塔;Shinhoto Chi-Ha;;;;;;;;;X
+BRIG_MODEL_JAP_7_1;M41 ウォーカー・ブルドッグ;M41 Walker Bulldog;;;;;;;;;X
+BRIG_MODEL_JAP_8_0;100t戦車（試製オイ車）;100t Tank(O-i Prototype);;;;;;;;;X
+BRIG_MODEL_JAP_8_1;VI号重戦車;Mk.VI Heavy "Tiger";;;;;;;;;X
+BRIG_MODEL_JAP_9_0;オイ車;O-i;;;;;;;;;X
+BRIG_MODEL_JAP_10_0;九二式重装甲車;Type 92;;;;;;;;;X
+BRIG_MODEL_JAP_14_0;九五式艦戦 / 九六式艦爆;A4N1 / D1A2 Susie;;;;;;;;;X
+BRIG_MODEL_JAP_14_1;九五式艦戦 / 九六式艦爆 / 八九式艦攻;A4N1 / D1A2 Susie / B2M1;;;;;;;;;X
+BRIG_MODEL_JAP_14_2;九六式艦戦 / 九六式艦爆 / 八九式艦攻;A5M Claude / D1A2 Susie / B2M1;;;;;;;;;X
+BRIG_MODEL_JAP_14_3;零戦21型 / 九九式艦爆 / 九七式1号艦攻;A6M2 Zeke / D3A1 Val / B5N1 Kate;;;;;;;;;X
+BRIG_MODEL_JAP_14_4;零戦32/22型 / 九九式艦爆 / 九七式3号艦攻;A6M3 Zeke / D3A1 Val / B5N2 Kate;;;;;;;;;X
+BRIG_MODEL_JAP_14_5;零戦52型 / 彗星艦爆11型 / 天山艦攻11型;A6M5 Zeke / D4Y1 Judy / B6N1 Jill;;;;;;;;;X
+BRIG_MODEL_JAP_14_6;零戦63型 / 彗星艦爆12型 / 天山艦攻12型;A6M7 Zeke / D4Y2 Judy / B6N2 Jill;;;;;;;;;X
+BRIG_MODEL_JAP_14_7;烈風11型 / 流星改;A7M2 Sam / B7A2 Grace;;;;;;;;;X
+BRIG_MODEL_JAP_14_8;キ-201 火龍 / 橘花;Ki-201 Karyu / Kikka;;;;;;;;;X
+BRIG_MODEL_JAP_15_0;川崎 キ-38;Kawasaki Ki-38;;;;;;;;;X
+BRIG_MODEL_JAP_15_1;三菱 A6M3 零戦 32/22型;Mitsubishi A6M3 Zeke;;;;;;;;;X
+BRIG_MODEL_JAP_15_2;三菱 A6M8 零戦 54/64型;Mitsubishi A6M8 Zeke;;;;;;;;;X
+BRIG_MODEL_JAP_15_3;九州飛行機 J7W2 震電;Kyushu J7W2 Shinden;;;;;;;;;X
+BRIG_MODEL_JAP_15_4;中島 キ-201 火龍;Nakajima Ki-201 Karyu;;;;;;;;;X
+BRIG_MODEL_JAP_15_5;三菱 F-1;Mitsubishi F-1;;;;;;;;;X
+BRIG_MODEL_JAP_30_0;中島 九〇式水上偵察機;Nakajima E4N;;;;;;;;;X
+BRIG_MODEL_JAP_30_1;川西 九四式水上偵察機;Kawanishi E7K Alf;;;;;;;;;X
+BRIG_MODEL_JAP_30_2;愛知 九八式水上偵察機;Aichi E11A Hank;;;;;;;;;X
+BRIG_MODEL_JAP_30_3;三菱 零式観測機;Aichi E13A Jake;;;;;;;;;X
+BRIG_MODEL_JAP_30_4;川西 紫雲;Kawanishi E15K Norm;;;;;;;;;X
+BRIG_MODEL_JAP_30_6;シコルスキー HSS-2 シーキング;Sikorsky HSS-2 SeaKing;;;;;;;;;X
+;;;;;;;;;;;X
+BRIG_MODEL_NZL_2_2;ビショップ;Bishop;;;;;;;;;X
+BRIG_MODEL_NZL_2_3;セクストン;Sexton;;;;;;;;;X
+BRIG_MODEL_NZL_3_0;ランド・マットレス;Land Mattress;;;;;;;;;X
+BRIG_MODEL_NZL_5_0;2Pdr.OQF Mk.IX;2Pdr.OQF Mk.IX;;;;;;;;;X
+BRIG_MODEL_NZL_5_1;6Pdr.OQF Mk.II;6Pdr.OQF Mk.II;;;;;;;;;X
+BRIG_MODEL_NZL_5_2;17ポンド砲;17Pdr. Gun;;;;;;;;;X
+BRIG_MODEL_NZL_6_0;2ポンド砲 Portee;2Pdr.Portee;;;;;;;;;X
+BRIG_MODEL_NZL_6_1;ディーコン;Deacon;;;;;;;;;X
+BRIG_MODEL_NZL_6_2;アーチャー;Archer;;;;;;;;;X
+BRIG_MODEL_NZL_7_0;Mk.VIII A25 ハリー・ホプキンス;Mk.VIII A25 Harry Hopkins;;;;;;;;;X
+BRIG_MODEL_NZL_8_0;マチルダ Mk.II;Matilda Mk.II;;;;;;;;;X
+BRIG_MODEL_NZL_8_1;Mk.IV A22 チャーチル Mk.I;Mk.IV A22 Churchill Mk.I;;;;;;;;;X
+BRIG_MODEL_NZL_8_2;Mk.IV A22 チャーチル Mk.VII;Mk.IV A22 Churchill Mk.VII;;;;;;;;;X
+BRIG_MODEL_NZL_9_0;A39 トータス;A39 Tortoise;;;;;;;;;X
+BRIG_MODEL_NZL_10_0;ハンバー Mk.I;Humber Mk.I;;;;;;;;;X
+BRIG_MODEL_NZL_10_1;スタッグハウンド Mk.I;Staghound Mk.I;;;;;;;;;X
+BRIG_MODEL_NZL_10_2;フェレット Mk 1/2;Ferret Mk 1/2;;;;;;;;;X
+BRIG_MODEL_NZL_14_0;ニムロッド / ソードフィッシュ;Nimrod / Swordfish;;;;;;;;;X
+BRIG_MODEL_NZL_14_1;ニムロッド / ソードフィッシュ;Nimrod / Swordfish;;;;;;;;;X
+BRIG_MODEL_NZL_14_2;シー・グラジエーター / ソードフィッシュ;Sea Gladiator / Swordfish;;;;;;;;;X
+BRIG_MODEL_NZL_14_3;シー・グラジエーター / スキュア / ソードフィッシュ;Sea Gladiator / Skua / Swordfish;;;;;;;;;X
+BRIG_MODEL_NZL_14_4;フルマー / スキュア / アルバコア;Fulmar / Skua / Albacore;;;;;;;;;X
+BRIG_MODEL_NZL_14_5;ファイアフライ / バラクーダ;Firefly / Barracuda;;;;;;;;;X
+BRIG_MODEL_NZL_14_6;シーファイア / ファイアブランド;Seafire / Firebrand;;;;;;;;;X
+BRIG_MODEL_NZL_14_7;シーフューリー / ワイバーン;Sea Fury / Wyvern;;;;;;;;;X
+BRIG_MODEL_NZL_14_8;シーヴェノム / アタッカー;Sea Venom / Attacker;;;;;;;;;X
+BRIG_MODEL_NZL_14_9;シーホーク (F-1)  / シーホーク (FB-3);Sea Hawk (F-1) / Sea Hawk (FB-3);;;;;;;;;X
+BRIG_MODEL_NZL_30_0;ホーカー オスプレイ;Hawker Osprey;;;;;;;;;X
+BRIG_MODEL_NZL_30_1;スーパーマリン ウォーラス;Supermarine Walrus;;;;;;;;;X
+BRIG_MODEL_NZL_30_2;スーパーマリン シーオッター;Supermarine Sea Otter;;;;;;;;;X
+BRIG_MODEL_NZL_30_3;スーパーマリン スピットファイア Type 355;Supermarine Spitfire Type 355;;;;;;;;;X
+BRIG_MODEL_NZL_30_6;ウェストランド・ワスプ;Westland Wasp;;;;;;;;;X
+;;;;;;;;;;;X
+BRIG_MODEL_SAF_10_2;フェレット Mk 1/2;Ferret Mk 1/2;;;;;;;;;X
+BRIG_MODEL_SAF_14_0;ニムロッド / ソードフィッシュ;Nimrod / Swordfish;;;;;;;;;X
+BRIG_MODEL_SAF_14_1;ニムロッド / ソードフィッシュ;Nimrod / Swordfish;;;;;;;;;X
+BRIG_MODEL_SAF_14_2;シー・グラジエーター / ソードフィッシュ;Sea Gladiator / Swordfish;;;;;;;;;X
+BRIG_MODEL_SAF_14_3;シー・グラジエーター / スキュア / ソードフィッシュ;Sea Gladiator / Skua / Swordfish;;;;;;;;;X
+BRIG_MODEL_SAF_14_4;フルマー / スキュア / アルバコア;Fulmar / Skua / Albacore;;;;;;;;;X
+BRIG_MODEL_SAF_14_5;ファイアフライ / バラクーダ;Firefly / Barracuda;;;;;;;;;X
+BRIG_MODEL_SAF_14_6;シーファイア / ファイアブランド;Seafire / Firebrand;;;;;;;;;X
+BRIG_MODEL_SAF_14_7;シーフューリー / ワイバーン;Sea Fury / Wyvern;;;;;;;;;X
+BRIG_MODEL_SAF_14_8;シーヴェノム / アタッカー;Sea Venom / Attacker;;;;;;;;;X
+BRIG_MODEL_SAF_14_9;シーホーク (F-1)  / シーホーク (FB-3);Sea Hawk (F-1) / Sea Hawk (FB-3);;;;;;;;;X
+BRIG_MODEL_SAF_30_0;ホーカー オスプレイ;Hawker Osprey;;;;;;;;;X
+BRIG_MODEL_SAF_30_1;スーパーマリン ウォーラス;Supermarine Walrus;;;;;;;;;X
+BRIG_MODEL_SAF_30_2;スーパーマリン シーオッター;Supermarine Sea Otter;;;;;;;;;X
+BRIG_MODEL_SAF_30_3;スーパーマリン スピットファイア Type 355;Supermarine Spitfire Type 355;;;;;;;;;X
+BRIG_MODEL_SAF_30_6;ウェストランド・ワスプ;Westland Wasp;;;;;;;;;X
+;;;;;;;;;;;X
+BRIG_MODEL_SOV_2_0;SU-5;SU-5;;;;;;;;;X
+BRIG_MODEL_SOV_2_1;SU-76M;SU-76M;;;;;;;;;X
+BRIG_MODEL_SOV_2_2;SU-122;SU-122;;;;;;;;;X
+BRIG_MODEL_SOV_2_3;SU-152 ズヴェラボイ;SU-152 Zveroboy;;;;;;;;;X
+BRIG_MODEL_SOV_2_4;ISU-152 m45;ISU-152 m45;;;;;;;;;X
+BRIG_MODEL_SOV_2_5;ISU-152K;ISU-152K;;;;;;;;;X
+BRIG_MODEL_SOV_2_6;ISU-152M;ISU-152M;;;;;;;;;X
+BRIG_MODEL_SOV_3_0;M-8 ロケット砲;M-8 Rocket;;;;;;;;;X
+BRIG_MODEL_SOV_3_1;M-13 ロケット砲;M-13 Rocket;;;;;;;;;X
+BRIG_MODEL_SOV_3_2;M-31 ロケット砲;M-31 Rocket;;;;;;;;;X
+BRIG_MODEL_SOV_4_0;BM-8 カチューシャ;BM-8 Katyusha;;;;;;;;;X
+BRIG_MODEL_SOV_4_1;BM-13 カチューシャ;BM-13 Katyusha;;;;;;;;;X
+BRIG_MODEL_SOV_4_2;BM-31 カチューシャ;BM-31 Katyusha;;;;;;;;;X
+BRIG_MODEL_SOV_4_3;BM-14 カチューシャ;BM-14 Katyusha;;;;;;;;;X
+BRIG_MODEL_SOV_4_4;BM-24;BM-24 Rocket;;;;;;;;;X
+BRIG_MODEL_SOV_4_5;BM-25 コルシュン;BM-25 Korshun;;;;;;;;;X
+BRIG_MODEL_SOV_4_6;BM-21 グラード;BM-21 Grad;;;;;;;;;X
+BRIG_MODEL_SOV_5_0;37mm対戦車砲 PTP obr.30;37mm PTP obr.30;;;;;;;;;X
+BRIG_MODEL_SOV_5_1;45mm対戦車砲 PTP obr.37;45mm PTP obr.37;;;;;;;;;X
+BRIG_MODEL_SOV_5_2;76.2mm野砲 ZiS-3E;76.2mm ZiS-3E;;;;;;;;;X
+BRIG_MODEL_SOV_5_3;85mm野砲 D-44;85mm D-44;;;;;;;;;X
+BRIG_MODEL_SOV_5_4;100mm野砲 BS-3;100mm BS-3;;;;;;;;;X
+BRIG_MODEL_SOV_5_5;85mm対戦車砲 D-48;85mm D-48;;;;;;;;;X
+BRIG_MODEL_SOV_5_6;100mm対戦車砲 T-12;100mm T-12;;;;;;;;;X
+BRIG_MODEL_SOV_6_0;ZiS-30自走砲;ZiS-30;;;;;;;;;X
+BRIG_MODEL_SOV_6_1;SU-76自走砲 スーカ;SU-76 Suka;;;;;;;;;X
+BRIG_MODEL_SOV_6_2;SU-85自走砲;SU-85;;;;;;;;;X
+BRIG_MODEL_SOV_6_3;SU-100自走砲;SU-100;;;;;;;;;X
+BRIG_MODEL_SOV_6_4;ISU-122自走砲;ISU-122;;;;;;;;;X
+BRIG_MODEL_SOV_6_5;SU-122-54自走砲;SU-122-54;;;;;;;;;X
+BRIG_MODEL_SOV_7_0;T-70;T-70;;;;;;;;;X
+BRIG_MODEL_SOV_7_1;PT-76;PT-76;;;;;;;;;X
+BRIG_MODEL_SOV_8_0;KV-1;KV-1;;;;;;;;;X
+BRIG_MODEL_SOV_8_1;KV-1 1941年型;KV-1 m.1941;;;;;;;;;X
+BRIG_MODEL_SOV_8_2;IS-2;IS-2;;;;;;;;;X
+BRIG_MODEL_SOV_8_3;IS-4;IS-4;;;;;;;;;X
+BRIG_MODEL_SOV_9_0;KV-4;KV-4;;;;;;;;;X
+BRIG_MODEL_SOV_10_0;BA-20;BA-20;;;;;;;;;X
+BRIG_MODEL_SOV_10_1;BA-10;BA-10;;;;;;;;;X
+BRIG_MODEL_SOV_10_2;BA-64;BA-64;;;;;;;;;X
+BRIG_MODEL_SOV_10_4;BRDM-1;BRDM-1;;;;;;;;;X
+BRIG_MODEL_SOV_14_9;Yak-36;Yak-36;;;;;;;;;X
+BRIG_MODEL_SOV_15_0;ヤコブレフ Yak-2;Yakovlev Yak-2;;;;;;;;;X
+BRIG_MODEL_SOV_15_1;ペトリャコフ Pe-3;Petljakov Pe-3;;;;;;;;;X
+BRIG_MODEL_SOV_15_2;ペトリャコフ Pe-3bis;Petljakov Pe-3bis;;;;;;;;;X
+BRIG_MODEL_SOV_15_3;ヤコブレフ Yak-17;Yakovlev Yak-17;;;;;;;;;X
+BRIG_MODEL_SOV_15_4;ヤコブレフ Yak-25;Yakovlev Yak-25;;;;;;;;;X
+BRIG_MODEL_SOV_15_5;ヤコブレフ Yak-28 ファイアバー;Yakovlev Yak-28 Firebar;;;;;;;;;X
+BRIG_MODEL_SOV_30_1;ベリエフ Be-2 モート;Beriev Be-2;;;;;;;;;X
+BRIG_MODEL_SOV_30_2;ベリエフ Be-4 マッグ;Beriev Be-4;;;;;;;;;X
+BRIG_MODEL_SOV_30_6;カモフ Ka-25;Kamov Ka-25 Hormone;;;;;;;;;X
+;;;;;;;;;;;X
+BRIG_MODEL_USA_2_0;T30 75mm自走榴弾砲;T30 75mm HMC;;;;;;;;;X
+BRIG_MODEL_USA_2_1;M8 スコット75mm自走榴弾砲;M8 Scott 75mm HMC;;;;;;;;;X
+BRIG_MODEL_USA_2_2;M7 プリースト自走榴弾砲;M7 Priest;;;;;;;;;X
+BRIG_MODEL_USA_2_3;M37 105mm自走榴弾砲;M37 105mm HMC;;;;;;;;;X
+BRIG_MODEL_USA_2_4;M41/M43 155/203mm自走榴弾砲;M41/M43 155mm/203mm HMC;;;;;;;;;X
+BRIG_MODEL_USA_2_5;M44/M52 155/105mm自走榴弾砲;M44/M52 155mm/105mm HMC;;;;;;;;;X
+BRIG_MODEL_USA_2_6;M53/M55 155/203mm自走榴弾砲;M53/M55 155mm/203mm HMC;;;;;;;;;X
+BRIG_MODEL_USA_2_7;M109/M110 155/203mm自走榴弾砲;M109/M110 155mm/203mm HMC;;;;;;;;;X
+BRIG_MODEL_USA_3_0;4.5インチロケット砲;4.5in Rocket;;;;;;;;;X
+BRIG_MODEL_USA_3_1;5インチロケット砲;5in Rocket;;;;;;;;;X
+BRIG_MODEL_USA_3_2;7.2インチロケット砲;7.2in Rocket;;;;;;;;;X
+BRIG_MODEL_USA_4_0;T34 ロケットランチャー カリオペ;T34 Calliope;;;;;;;;;X
+BRIG_MODEL_USA_4_2;M17 ロケットランチャー ウィズバン;M17 Whizbang;;;;;;;;;X
+BRIG_MODEL_USA_5_0;M3 37mm対戦車砲;37mm M3;;;;;;;;;X
+BRIG_MODEL_USA_5_1;M1 57mm対戦車砲;57mm M1;;;;;;;;;X
+BRIG_MODEL_USA_5_2;M1 76mm対戦車砲;76mm M1;;;;;;;;;X
+BRIG_MODEL_USA_5_3;T8 105mm対戦車砲;105mm T8;;;;;;;;;X
+BRIG_MODEL_USA_6_0;M6 37mm自走砲;M6 37mm GMC;;;;;;;;;X
+BRIG_MODEL_USA_6_1;M3 75mm自走砲;M3 75mm GMC;;;;;;;;;X
+BRIG_MODEL_USA_6_2;M10 3インチ対戦車自走砲;M10 3inch GMC;;;;;;;;;X
+BRIG_MODEL_USA_6_3;M18 ヘルキャット;M18 Hellcat;;;;;;;;;X
+BRIG_MODEL_USA_6_4;M36 ジャクソン;M36 Jackson;;;;;;;;;X
+BRIG_MODEL_USA_6_5;T95 105mm自走加農砲;105mm GMC T95;;;;;;;;;X
+BRIG_MODEL_USA_6_6;M50 オントス自走無反動砲;M50 Ontos Self-propelled recoilless rifle;;;;;;;;;X
+BRIG_MODEL_USA_6_7;M56 スコーピオン;M56 Scorpion;;;;;;;;;X
+BRIG_MODEL_USA_7_0;M24 チャーフィー;M24 Chaffee;;;;;;;;;X
+BRIG_MODEL_USA_7_1;M41 ウォーカー・ブルドッグ;M41 Walker Bulldog;;;;;;;;;X
+BRIG_MODEL_USA_8_0;T1;T1;;;;;;;;;X
+BRIG_MODEL_USA_8_1;M6A1;M6A1;;;;;;;;;X
+BRIG_MODEL_USA_8_2;T29;T29;;;;;;;;;X
+BRIG_MODEL_USA_8_3;M103;M103;;;;;;;;;X
+BRIG_MODEL_USA_9_0;T28;T28;;;;;;;;;X
+BRIG_MODEL_USA_10_0;M3 スカウトカー;M3 Scout Car;;;;;;;;;X
+BRIG_MODEL_USA_10_1;M8 グレイハウンド;M8 Greyhound;;;;;;;;;X
+BRIG_MODEL_USA_10_2;M44 AUV;M44 Armored Utility Vehicle;;;;;;;;;X
+BRIG_MODEL_USA_10_3;M75 APC;M75 Armored Personnel Carrier;;;;;;;;;X
+BRIG_MODEL_USA_10_4;M113 APC;M113 Armored Personnel Carrier;;;;;;;;;X
+BRIG_MODEL_USA_14_0;ボーイング F4B / SBC ヘルダイバー;Boeing F4B / SBC Helldiver;;;;;;;;;X
+BRIG_MODEL_USA_14_1;グラマン FF / SBC ヘルダイバー / BT-1;Grumman FF / SBC Helldiver / BT-1;;;;;;;;;X
+BRIG_MODEL_USA_14_2;F3F フライングバレル / SBC ヘルダイバー / BT-1;F3F Flying Barrel / SBC Helldiver / BT-1;;;;;;;;;X
+BRIG_MODEL_USA_14_3;F2A バッファロー/SBC ヘルダイバー/TBD デバステーター;F2A Buffalo/SBC Helldiver/TBD Devastator;;;;;;;;;X
+BRIG_MODEL_USA_14_4;F4F ワイルドキャット/SBD ドーントレス/TBD デバステーター;F4F Wildcat/SBD Dauntless/TBD Devastator;;;;;;;;;X
+BRIG_MODEL_USA_14_5;F6F ヘルキャット/SB2C ヘルダイバー/TBF アベンジャー;F6F Hellcat/SB2C Helldiver/TBF Avenger;;;;;;;;;X
+BRIG_MODEL_USA_14_6;F4U コルセア / SB2C ヘルダイバー / TBM アベンジャー;F4U Corsair / SB2C Helldiver / TBM Avenger;;;;;;;;;X
+BRIG_MODEL_USA_14_7;F8F ベアキャット / AM モーラー;F8F Bearcat / AM Mauler;;;;;;;;;X
+BRIG_MODEL_USA_14_8;FH ファントム / AD スカイレーダー;FH Phantom / AD Skyraider;;;;;;;;;X
+BRIG_MODEL_USA_14_9;F9F クーガー / A4D-1 スカイホーク;F9F Cougar / A4D-1 Skyhawk;;;;;;;;;X
+BRIG_MODEL_USA_15_0;カーチス P-40 ウォーホーク;Curtiss P-40 Warhawk;;;;;;;;;X
+BRIG_MODEL_USA_15_1;ロッキード P-38 ライトニング;Lockheed P-38 Lightning;;;;;;;;;X
+BRIG_MODEL_USA_15_2;リパブリック P-47 サンダーボルト;Republic P-47 Thunderbolt;;;;;;;;;X
+BRIG_MODEL_USA_15_3;ノースアメリカン F-82 ツインムスタング;N.American F-82 Twin Mustang;;;;;;;;;X
+BRIG_MODEL_USA_15_4;リパブリック F-84A サンダージェット;Republic F-84A Thunderjet;;;;;;;;;X
+BRIG_MODEL_USA_15_5;リパブリック F-84F サンダーストリーク;Republic F-84F Thunderstreak;;;;;;;;;X
+BRIG_MODEL_USA_30_0;ヴォート O3U コルセア;Vought O3U Corsair;;;;;;;;;X
+BRIG_MODEL_USA_30_1;カーチス・ライト SOC シーガル;Curtiss-Wright SOC Seagull;;;;;;;;;X
+BRIG_MODEL_USA_30_2;ヴォート OS2U キングフィッシャー;Vought OS2U Kingfisher;;;;;;;;;X
+BRIG_MODEL_USA_30_3;カーチス・ライト SO3C シーミュウ;Curtiss-Wright SO3C Seamew;;;;;;;;;X
+BRIG_MODEL_USA_30_4;カーチス・ライト SC シーホーク;Curtiss-Wright SC Seahawk;;;;;;;;;X
+BRIG_MODEL_USA_30_5;コンベア F2Y シーダート;Convair F2Y Sea Dart;;;;;;;;;X
+BRIG_MODEL_USA_30_6;シコルスキー HSS-2 シーキング;Sikorsky HSS-2 SeaKing;;;;;;;;;X
+;;;;;;;;;;;X
+BRIG_MODEL_BRA_10_2;EE-3 ジャララカ;EE-3 Jararaca;;;;;;;;;X
+BRIG_MODEL_POR_10_2;チャイマイト VBTP V-200;Chaimite VBTP V-200;;;;;;;;;X
+BRIG_MODEL_SIA_10_2;コマンド V-100;Commando V-100;;;;;;;;;X
+BRIG_MODEL_TUR_10_2;コマンド V-100;Commando V-100;;;;;;;;;X
+BRIG_MODEL_PHI_10_2;コマンド V-100;Commando V-100;;;;;;;;;X
+BRIG_MODEL_VEN_10_2;コマンド V-100;Commando V-100;;;;;;;;;X
+BRIG_MODEL_LEB_10_2;コマンド V-100;Commando V-100;;;;;;;;;X
+BRIG_MODEL_SAU_10_2;コマンド V-100;Commando V-100;;;;;;;;;X
+BRIG_MODEL_BOL_10_2;コマンド V-100;Commando V-100;;;;;;;;;X
+BRIG_MODEL_DFR_10_2;コマンド V-100;Commando V-100;;;;;;;;;X
+BRIG_MODEL_OMN_10_2;コマンド V-100;Commando V-100;;;;;;;;;X
+BRIG_MODEL_GUA_10_2;コマンド V-100;Commando V-100;;;;;;;;;X
+BRIG_MODEL_INO_10_2;コマンド V-100;Commando V-100;;;;;;;;;X
+BRIG_MODEL_MLY_10_2;コマンド V-100;Commando V-100;;;;;;;;;X
+BRIG_MODEL_POL_10_2;BRDM-1;BRDM-1;;;;;;;;;X
+BRIG_MODEL_ROM_10_2;BRDM-1;BRDM-1;;;;;;;;;X
+BRIG_MODEL_BUL_10_2;BRDM-1;BRDM-1;;;;;;;;;X
+BRIG_MODEL_CZE_10_2;BRDM-1;BRDM-1;;;;;;;;;X
+BRIG_MODEL_DDR_10_2;BRDM-1;BRDM-1;;;;;;;;;X
+BRIG_MODEL_HUN_10_2;OT-65;OT-65;;;;;;;;;X
+BRIG_MODEL_RUS_10_2;BRDM-1;BRDM-1;;;;;;;;;X
+BRIG_MODEL_RUS_30_1;ベリエフ Be-2 モート;Beriev Be-2;;;;;;;;;X
+BRIG_MODEL_RUS_30_2;ベリエフ Be-4 マッグ;Beriev Be-4;;;;;;;;;X
+;;;;;;;;;;;X
+;;;;;;;;;;;X
+;;;;;;;;;;;X
+;;;;;;;;;;;X
+;;;;;;;;;;;X
+;;;;;;;;;;;X
+;;;;;;;;;;;X
+;;;;;;;;;;;X
+MODEL_JAP_28_5;うずしお級;;;;;;;;;;X
+MODEL_HOL_28_5;ズヴァールトフィス級;;;;;;;;;;X
+MODEL_GER_28_6;205型;;;;;;;;;;X
+#EOF;;;;;;;;;;;X

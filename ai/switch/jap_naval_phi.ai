@@ -1,0 +1,418 @@
+# Japan Pacific War AI by Lothos
+
+max_front_ratios = {
+	#CHI = 0.1
+	#CHC = 0.1
+	PHI = 6.0
+	HOL = 3.0
+	USA = 2.5
+	ENG = 1.0
+}
+
+combat = {
+	PHI = 300
+	ENG = 100
+	USA = 100
+}
+target = {
+	1739 = 150
+	1737 = 300
+	1738 = 150
+	1745 = 150
+	1750 = 150
+	1749 = 150
+	1736 = 150
+
+	1299 = 200
+	1287 = 150
+}
+
+front = {
+	recklessness 		=  3 # 0-3
+	distrib_vs_ai 		= offensive
+	distrib_vs_human 	= offensive
+	enemy_reinf_days	= 6
+	reserve_prop		= 0.1
+	panic_ratio_vs_ai	= 2.5
+	panic_ratio_vs_human	= 2.5
+	base_attack_odds	= 1.333
+	min_attack_odds		= 1.1
+	max_attack_odds		= 3.0
+	reinforce_odds		= 1.2
+	withdraw_odds		= 0.6
+	enemy_handicap = { }
+	passivity = { 
+	}
+}
+
+###################################
+# Ground Combat, Leaders and Garrisons
+###################################
+garrison = {
+	defend_overseas_beaches = yes
+	home_multiplier 		= 1.0	#0.7	#0.5
+	overseas_multiplier 	= 1.0
+	home_peace_cap 			= 10
+	war_zone_odds 			= 2.0
+	key_point_prio_mult		= 0.6	#0.5
+	revolt_risk_mult		= 0.5
+
+	# PRIORITIES:
+	beach			= 50	#30	# Beach level 2
+	capital			= 30	# Our capital
+	human_border	= 0		# Ignored for allied human players
+	war_target		= 50	# The next country targeted for attack by this AI
+	
+	opposing_alliance	= 50	# For neutrals, all alliances are "opposing"
+	claim_threat		= 0	# If we are neutral, countries with claims on us get this
+	unstable_border		= 0	# Bordering countries at war with someone else get this
+
+	# Borders with specific countries
+	country_priorities = {
+		CHI = 50
+		CSX = 50
+		SIK = 50
+		CXB = 50
+		CYN = 50
+		CGX = 50
+		CHC = 50
+		VIC = -1
+		MAN = -1
+		MON = -1
+		SIA = -1
+		SOV = 15
+		POR = -1
+		ENG = 50
+		FRA = 50
+		HOL = 10
+		USA = 50
+		PHI = 100
+		AST = 10
+		NZL = 10
+	}
+	province_priorities = {
+		1337 = -1 # Saigon
+		1328 = -1 # Hanoi
+		1322 = 75 # Kaohsung
+		1613 = 75 # Truk
+		1601 = 75 # Eniwetok
+		1608 = 75 # Kwajelin
+		1670 = 75 # Rabaul
+
+		1306 = 50
+		1303 = 50
+		1344 = 50
+		1345 = 50
+	}
+	area_multiplier = {
+		1193 = 1.5	#‰«“ê
+		1785 = 1.5 # Marcus Island
+		1625 = 1.5 # Rota
+		1192 = 1.5 # Anami
+		1194 = 1.5 # Jeju
+		1784 = 1.5 # Bonin Island
+
+		1306 = 1.0
+		1303 = 1.0
+		1344 = 1.0
+		1345 = 1.0
+	}
+}
+###################################
+# Invasions and Naval
+###################################
+invasion = {
+	invasion	= yes
+
+ 	base			= 0.1	#Relative modifier. (lower = specific targets much more important.)
+	random			= 4.0	#How big a random range.  (1.0 = 1%)
+	coastal			= 0.1	#increase to avoid coastal forts more.
+	beach			= 0.1	#higher, avoid worst beaches.
+	max_distance   		= 250.0  #About the distance from Japan to Batavia
+	max_staging_distance 	= 15	# How far should the staging area be from the target invasion point
+	distance		= 5.0	#higher = avoid long distance.
+	pocket			= 20.0	#prioritise pockets, ie provinces with no adjacent controlled by same.
+	island			= 2.0	#prioritise taking pure islands.
+	enemy			= 2.0	#higher = much more vary of troops in province.
+	adjacentenemy 		= 2.0	#higher = much more vary of troops nearby
+	air_base		= 1.5 
+	naval_base 		= 0.1 
+	air_support 		= 3.0 
+	redirect 		= priority
+	ignore			= no
+	help_allies 		= no 	#[yes/no]
+      
+	staging_province = {
+		1337 # Saigon
+		1322 # Kaohsung
+		1613 # Truk
+		1187 # Osaka
+		1196 # Busan
+		1670 # Rabaul
+		1353 # Singapore
+		1627 # Saipan
+		1621 # Palau
+	}
+	target = {
+
+		#Philippines
+		1741 = 20000 # Aparri
+		1740 = 20000 # Lingayen Gulf
+		1742 = 20000 # Lamon Bay
+		1743 = 20000 # Legaspi
+		1750 = 15000 # Davao
+		1749 = 15000 # Cagayan
+		1748 = 15000 # Zamboangs
+		1744 = 10000 # Samar
+		1745 = 15000 # Leyte
+		1747 = 10000 # Negros
+		1746 = 10000 # Panay
+		1736 = 15000 # Mindoro
+		1735 = 10000 # Palawan
+
+		1624 = 25000 # Guam
+		1786 = 25000 # Wake
+	} 
+} 
+admiral = { 
+	ignore = {
+		#Baltic Area
+		"Northern Baltic"
+		"Southern Baltic" 
+		"Bothnian Bay"
+		
+		#Murmansk/Archangel
+		"Barents Sea"
+		"Arctic Ocean"
+		
+		#Norway Coast (Denmark Coast)
+		"Norwegian Sea"
+		"East North Sea"
+		"Kattegat"
+		
+		#North Sea, East Coast of England
+		"Central Northsea"
+		"West Northsea"
+		"Southeast Northsea"
+		
+		#England/France border Sea Areas
+		"English Channel"
+		"Bay of Biscay"
+		"Cape Finisterre"
+		
+		#Spanish Coast (Atlantic Side)
+		"Portugese Coast"
+		"Cap St Vincent"
+		
+		#Iceland
+		"Faroes Gap"
+		"Denmark Strait"
+		
+		#Ireland/West Coast of England
+		"Irish Sea"
+		"The Hebreides"
+		"Irish West Coast"
+		
+		#Greenland
+		"Greenland Coast"
+		"Northern Sea of Labrador" 
+		"Southern Sea of Labrador"
+		
+		#Canada East Coast
+		"Hudson Bay"
+		"Grand Banks"
+		"Canadian Maritimes"
+		
+		#Western Mediterranean
+		"Costa del Sol"
+		"Gulf of Lyon"
+		"Algerian Coast"
+		
+		#Central Mediterranean
+		"Tyrrhenian Sea"
+		"Adriatic Sea"
+		
+		#Eastern Mediterranean
+		"Black Sea"
+		"Aegean Sea"
+		"Egyptian Coast"
+		
+		
+		#North Atlantic
+		"North Atlantic"
+		"Western Approaches"
+		"The Seamounts"
+		"Azores"
+		
+		#Central Atlantic
+		"Central Atlantic"
+		"Central Mid-Atlantic Ridge"
+		"Bermuda Triangle"
+		"Guiana Basin"
+		"South-Central Mid-Atlantic Ridge"
+		"Cap Verde"
+		
+		#South Atlantic
+		"Pernambuco Plain"
+		"Ascension Fracture Zone"
+		"Argentine Plain"
+		"Angola Plain"
+		
+		#Caribbean Sea and Guilf of Mexico
+		"West Gulf of Mexico"
+		"East Gulf of Mexico" 
+		"Florida Strait"
+		"Yucatan Strait"
+		"Windward Islands"
+		"Central Carribean"
+		
+		#Brazil and Argentina Coast
+		"Coast of Guyana"
+		"Coast of Recife" 
+		"Coast of Uruguay"
+		"Coast of Brazil"
+		"Coast of Argentina"
+		
+		# West Africa
+		"Coast of Africa"
+		"Coast of Bissao" 
+		
+		#Equitorial Africa
+		"Gulf of Guinea"
+		"Coast of Angola-Namibia"
+		
+		#South Africa
+		"Coast of South Africa"
+		"Atlantic-Indian Ridge"
+		
+		#East Africa
+		"Red Sea"
+		"Horn of Africa"
+		
+		#Madagascar Coast
+		"South Mozambique Channel"
+		"North Mozambique Channel" 
+		"Northeast Coast of Madagascar"
+		"Southeast Coast of Madagascar" 
+		
+		#North Indian Ocean (Persian Gulf)
+		"Persian Gulf"
+		"North Arabian Sea"
+		"South Arabian Sea" 
+		"Coast of Ceylon"
+		
+		#Central/South Indian Ocean
+		"Mascarene Plateau"
+		"Mid-Indian Ridge" 
+		"Ninetyeast Ridge" 
+		"Southeast Indian Ocean"
+		"Southwest Indian Ocean" 
+
+		#Bay of Bengal & West Indonesia
+		"East Bay of Bengal"
+		"West Bay of Bengal"
+		"Malacca Strait"
+		"Java Ridge"
+		"Java Trench"
+
+		#New Guinea, East/North Australia and New Zealan
+		"Molucca Sea"
+		"Banda Sea"
+		"Arafura Sea"
+		"Solomon Sea"
+		"West Coral Sea"
+		"East Coral Sea" 
+		"North Tasman Sea"
+		"South Tasman Sea" 
+		"East Cost of New Zealand"
+
+		#North Pacific
+		"Coast of Kamchatka"
+		"East Bering Sea"
+		"West Bering Sea" 
+		"Aleutians"
+		"Northwest Pacific Basin"
+		"North Northeast Pacific Basin"
+		
+		#Central Pacific
+		"Hawaiian Rise"
+		"North East Pacific Ocean"
+		"South East Pacific Ocean"
+		"Western Solomons"
+		"Eastern Solomons"
+
+		#South Pacific
+		"Gilberts"
+		"Line Islands"
+		"Fiji Basin"
+		"Southwest Pacific Basin"
+
+		# South and West Australia
+		"Timor Sea"
+		"West Coast of Australia"
+		"East Great Australian Bight"
+		"West Great Australian Bight" 
+
+		# South American West Coast
+		"Southeast Pacific Basin"
+		"West Coast of Chile"
+		"West Coast of Peru"
+		"South Southeast Pacific Ocean"
+		"North Southeast Pacific Ocean"
+
+		# South American West Coast
+		"Southeast Pacific Basin"
+		"West Coast of Chile"
+		"West Coast of Peru"
+		"South Southeast Pacific Ocean"
+		"North Southeast Pacific Ocean"
+		
+		# USA West Coast
+		"Gulf of Alaska"
+		"West Coast of the United States"
+		
+		#West Coast of Mexico
+		"West Coast of Mexico"
+		"West Coast of Central America"
+	}
+	target = {
+		2159 = 100
+		2256 = 100
+		2254 = 100
+		2252 = 100
+		2250 = 100
+		2260 = 100
+		2258 = 100
+		2261 = 100
+		2262 = 100
+		2175 = 100
+		2181 = 100
+		2203 = 100
+		2073 = 100
+		2147 = 100
+		2146 = 100
+		2151 = 100
+		2152 = 100
+		2144 = 100
+		2143 = 100
+		2141 = 100
+		2161 = 100
+		2140 = 100
+		2139 = 100
+		2168 = 100
+		2160 = 100
+		2164 = 100
+		1931 = 100
+		1927 = 100
+		1929 = 100
+		1944 = 100
+		2168 = 100
+		2169 = 100
+		2121 = 100
+		2122 = 100
+		2126 = 100
+	} 
+	core = {
+		2589 2193 2187 2192 2194 2213 2185
+	} 
+}

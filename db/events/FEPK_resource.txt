@@ -1,0 +1,2316 @@
+#########################################################################
+#	FEPK_resource.txt
+#	資源関連イベント
+#########################################################################
+#id = 132900-22		TRAP資源イベント(戦後油田開発イベント)
+#id = 132923-37		SMEP資源イベント(中国地下資源開発)
+#id = 132938-49		史実準拠資源イベント(海南島開発・ミナスドリー油田)
+#id = 132950-99		FEPK新規資源イベント
+#########################################################################
+# 資源調整イベント改造
+#########################################################################
+
+##### ブルガン油田＠クウェート  最大生産量300
+event = {
+	id = 132900
+	random = no
+
+	decision = {
+		control = { province = 1822 data = -1 }
+	}
+	decision_trigger = {
+		money = 100
+	}
+	trigger = {
+		control = { province = 1822 data = -1 }
+		money = 100
+		}
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U67 U69 UTC UER UPE U70 U71 U72 U73 U74 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+
+	name = "EVT_132900_NAME"
+	desc = "EVT_132900_DESC"
+	picture = "oil_supply"
+	decision_picture = "decision_abadan_oil"
+	style = 0
+	
+	date = { day = 1 month = january year = 1939 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		ai_chance = 100
+		name = "EVT_132900_ACTA"
+		command = { type = money value = -100 }
+		command = { type = metalpool value = -5 }
+		command = { type = manpowerpool value = -1 }
+		command = { type = event which = 132901 where = -1 when = 0 }
+		}
+	action_b = {
+		ai_chance = 0
+		name = "EVT_132900_ACTB"
+		command = { type = sleepevent which = 132901 }
+		command = { type = sleepevent which = 132902 }
+		}
+	}
+
+event = {
+	id = 132901
+	random = no
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U67 U69 UTC UER UPE U70 U71 U72 U73 U74 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+
+	name = "EVT_132901_NAME"
+	desc = "EVT_132901_DESC"
+	picture = "oil_supply"
+	style = 0
+
+	action_a = {
+		name = "EVT_132901_ACTA"
+		command = { type = add_prov_resource which = 1822 value = 45 where = oil }
+		command = { type = add_prov_resource which = 1822 value = 3 where = energy }
+		command = { type = setflag which = kwaitoil_lev1 }
+	}
+}
+
+
+#開発2段階
+event = {
+	id = 132902
+	random = no
+
+	decision = {
+		control = { province = 1822 data = -1 }
+		OR = {
+			event = 132901
+			flag = kwaitoil_lev1
+		}
+	}
+	decision_trigger = {
+		money = 200
+	}
+	trigger = {
+		control = { province = 1822 data = -1 }
+		OR = {
+			event = 132901
+			flag = kwaitoil_lev1
+		}
+	}
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U67 U69 UTC UER UPE U70 U71 U72 U73 U74 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+
+	name = "EVT_132902_NAME"
+	desc = "EVT_132902_DESC"
+	decision_picture = "decision_abadan_oil"
+	picture = "oil_supply"
+	style = 0
+
+	date = { day = 1 month = january year = 1941 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "EVT_132902_ACTA"
+		ai_chance = 99
+		command = { type = money value = -200 }
+		command = { type = metalpool value = -10 }
+		command = { type = manpowerpool value = -2 }
+		command = { type = event which = 132903 where = -1 when = 0 }
+		}
+	action_b = {
+		name = "EVT_132902_ACTB"
+		ai_chance = 1
+		command = { type = sleepevent which = 132903 }
+		command = { type = sleepevent which = 132904 }
+		}
+	}
+
+event = {
+	id = 132903
+	random = no
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U67 U69 UTC UER UPE U70 U71 U72 U73 U74 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = "EVT_132903_NAME"
+	desc = "EVT_132903_DESC"
+	picture = "oil_supply"
+	style = 0
+
+	action_a = {
+		name = "EVT_132903_ACTA"
+		command = { type = add_prov_resource which = 1822 value = 60 where = oil }
+		command = { type = add_prov_resource which = 1822 value = 2 where = energy }
+		command = { type = setflag which = kwaitoil_lev2 }
+		command = { type = clrflag which = kwaitoil_lev1 }
+	}
+}
+
+#開発3段階
+event = {
+	id = 132904
+	random = no
+
+	decision = {
+		control = { province = 1822 data = -1 }
+		OR = {
+			event = 132903
+			flag = kwaitoil_lev2
+		}
+	}
+	decision_trigger = {
+		money = 500
+	}
+	trigger = {
+		control = { province = 1822 data = -1 }
+		OR = {
+			event = 132903
+			flag = kwaitoil_lev2
+		}
+	}
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U67 U69 UTC UER UPE U70 U71 U72 U73 U74 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+
+	name = "EVT_132904_NAME"
+	desc = "EVT_132904_DESC"
+	picture = "oil_supply"
+	decision_picture = "decision_abadan_oil"
+	style = 0
+
+	date = { day = 1 month = january year = 1944 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "EVT_132904_ACTA"
+		ai_chance = 99
+		command = { type = money value = -500 }
+		command = { type = metalpool value = -15 }
+		command = { type = manpowerpool value = -5 }
+		command = { type = event which = 132905 where = -1 when = 0 }
+		}
+	action_b = {
+		name = "EVT_132904_ACTB"
+		ai_chance = 1
+		command = { type = sleepevent which = 132905 }
+		command = { type = sleepevent which = 132906 }
+		}
+	}
+event = {
+	id = 132905
+	random = no
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U67 U69 UTC UER UPE U70 U71 U72 U73 U74 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+
+	name = "EVT_132905_NAME"
+	desc = "EVT_132905_DESC"
+	picture = "oil_supply"
+	style = 0
+
+	action_a = {
+		name = "EVT_132905_ACTA"
+		command = { type = add_prov_resource which = 1822 value = 100 where = oil }
+		command = { type = add_prov_resource which = 1822 value = 10 where = energy }
+		command = { type = setflag which = kwaitoil_lev3 }
+		command = { type = clrflag which = kwaitoil_lev2 }
+	}
+}
+
+#開発4段階
+event = {
+	id = 132906
+	random = no
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U67 U69 UTC UER UPE U70 U71 U72 U73 U74 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+
+	decision = {
+		control = { province = 1822 data = -1 }
+		OR = {
+			event = 132905
+			flag = kwaitoil_lev3
+		}
+	}
+	decision_trigger = {
+		money = 1000
+	}
+	trigger = {
+		control = { province = 1822 data = -1 }
+		OR = {
+			event = 132905
+			flag = kwaitoil_lev3
+		}
+	}
+
+	name = "EVT_132906_NAME"
+	desc = "EVT_132906_DESC"
+	picture = "oil_supply"
+	decision_picture = "decision_abadan_oil"
+	style = 0
+
+	date = { day = 1 month = june year = 1946 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "EVT_132906_ACTA"
+		ai_chance = 99
+		command = { type = money value = -1000 }
+		command = { type = metalpool value = -20 }
+		command = { type = manpowerpool value = -10 }
+		command = { type = event which = 132907 where = -1 when = 0 }
+		}
+	action_b = {
+		name = "EVT_132906_ACTB"
+		ai_chance = 1
+		command = { type = sleepevent which = 132907 }
+		}
+	}
+event = {
+	id = 132907
+	random = no
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U67 U69 UTC UER UPE U70 U71 U72 U73 U74 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+
+	name = "EVT_132907_NAME"
+	desc = "EVT_132907_DESC"
+	picture = "oil_supply"
+	style = 0
+
+	action_a = {
+		name = "EVT_132907_ACTA"
+		command = { type = add_prov_resource which = 1822 value = 160 where = oil }
+		command = { type = add_prov_resource which = 1822 value = 15 where = energy }
+		command = { type = setflag which = kwaitoil_lev4 }
+		command = { type = clrflag which = kwaitoil_lev3 }
+	}
+}
+
+#油田放火事件
+event = {
+	id = 132908
+	#persistent = yes
+	random = no
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U67 U69 UTC UER UPE U70 U71 U72 U73 U74 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+
+	trigger = {
+		atwar = yes
+		control = { province = 1822 data = -1 }
+		OR = {
+			flag = kwaitoil_lev4
+			flag = kwaitoil_lev3
+			flag = kwaitoil_lev2
+			flag = kwaitoil_lev1
+			}
+		NOT = { flag = kwaitoil_dest }
+		random = 5
+	}
+
+	name = "EVT_132908_NAME"
+	desc = "EVT_132908_DESC"
+	picture = "oil_supply"
+	style = 0
+
+	date = { day = 1 month = june year = 1946 }
+	offset = 15
+	deathdate = { day = 1 month = june year = 1953 }
+
+	action_a = {
+		name = "EVT_132908_ACTA"
+		command = { type = add_prov_resource which = 1822 value = -100 where = oil }
+		#command = { type = setflag which = kwaitoil_dest }
+		#command = { type = sleepevent which = 132908 }
+		}
+	}
+
+event = {
+	id = 132909
+	#persistent = yes
+	random = no
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U67 U69 UTC UER UPE U70 U71 U72 U73 U74 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+
+	trigger = {
+		atwar = yes
+		control = { province = 1822 data = -1 }
+		event = 132909
+		random = 25
+		}
+
+	name = "EVT_132909_NAME"
+	desc = "EVT_132909_DESC"
+	picture = "oil_supply"
+	style = 0
+
+	date = { day = 1 month = june year = 1946 }
+	offset = 15
+	deathdate = { day = 1 month = june year = 1953 }
+
+	action_a = {
+		name = "EVT_132909_ACTA"
+		command = { type = add_prov_resource which = 1822 value = 100 where = oil }
+		#command = { type = clrflag which = kwaitoil_dest }
+		}
+	}
+
+##### ガワール油田＠サウジ  最大生産量500
+event = {
+	id = 132910
+	random = no
+
+	trigger = {
+		control = { province = 1807 data = -1 }
+	}
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U67 U69 UTC UER UPE U70 U71 U72 U73 U74 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+
+	date = { day = 1 month = january year = 1949 }
+	#offset = 15
+
+	name = "EVT_132910_NAME"
+	desc = "EVT_132910_DESC"
+	picture = "oil_supply"
+	style = 0
+
+
+	action_a = {
+		name = "EVT_132910_ACTA"
+		ai_chance = 99
+		command = { type = money value = -100 }
+		command = { type = metalpool value = -5 }
+		command = { type = manpowerpool value = -1 }
+		command = { type = event which = 132911 where = -1 when = 0 }
+		}
+	action_b = {
+		name = "EVT_132910_ACTB"
+		ai_chance = 1
+		command = { type = sleepevent which = 132911 }
+		command = { type = sleepevent which = 132912 }
+		}
+	}
+event = {
+	id = 132911
+	random = no
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U67 U69 UTC UER UPE U70 U71 U72 U73 U74 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+
+	name = "EVT_132911_NAME"
+	desc = "EVT_132911_DESC"
+	picture = "oil_supply"
+	style = 0
+
+	action_a = {
+		name = "EVT_132911_ACTA"
+		command = { type = add_prov_resource which = 1807 value = 80 where = oil }
+		command = { type = add_prov_resource which = 1807 value = 5 where = energy }
+	}
+}
+event = {
+	id = 132912
+	random = no
+
+	trigger = {
+		control = { province = 1807 data = -1 }
+		event = 132910
+	}
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U67 U69 UTC UER UPE U70 U71 U72 U73 U74 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+
+	name = "EVT_132912_NAME"
+	desc = "EVT_132912_DESC"
+	picture = "oil_supply"
+	style = 0
+
+	date = { day = 1 month = january year = 1951 }
+	#offset = 15
+
+	action_a = {
+		name = "EVT_132912_ACTA"
+		ai_chance = 99
+		command = { type = money value = -1200 }
+		command = { type = metalpool value = -12 }
+		command = { type = manpowerpool value = -12 }
+		command = { type = event which = 132913 where = -1 when = 0 }
+		}
+	action_b = {
+		name = "EVT_132912_ACTB"
+		ai_chance = 1
+		command = { type = sleepevent which = 132913 }
+		}
+	}
+
+event = {
+	id = 132913
+	random = no
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U67 U69 UTC UER UPE U70 U71 U72 U73 U74 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+
+	name = "EVT_132913_NAME"
+	desc = "EVT_132913_DESC"
+	picture = "oil_supply"
+
+	style = 0
+	action_a = {
+		name = "EVT_132913_ACTA"
+		command = { type = add_prov_resource which = 1807 value = 500 where = oil }
+		command = { type = add_prov_resource which = 1807 value = 35 where = energy }
+	}
+}
+
+##### ハシメサウド油田＠アルジェリア  最大生産量180
+event = {
+	id = 132914
+	random = no
+
+	trigger = {
+		control = { province = 1013 data = -1 }
+	}
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U67 U69 UTC UER UPE U70 U71 U72 U73 U74 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	date = { day = 1 month = january year = 1956 }
+	#offset = 15
+
+	name = "EVT_132914_NAME"
+	desc = "EVT_132914_DESC"
+	picture = "oil_supply"
+	style = 0
+
+	action_a = {
+		name = "EVT_132914_ACTA"
+		ai_chance = 99
+		command = { type = money value = -100 }
+		command = { type = metalpool value = -5 }
+		command = { type = manpowerpool value = -1 }
+		command = { type = event which = 132915 where = -1 when = 0 }
+		}
+	action_b = {
+		name = "EVT_132914_ACTB"
+		ai_chance = 1
+		command = { type = sleepevent which = 132915 }
+		command = { type = sleepevent which = 132916 }
+		}
+	}
+
+event = {
+	id = 132915
+	random = no
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U67 U69 UTC UER UPE U70 U71 U72 U73 U74 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+
+	name = "EVT_132915_NAME"
+	desc = "EVT_132915_DESC"
+	picture = "oil_supply"
+	style = 0
+	
+
+	action_a = {
+		name = "EVT_132915_ACTA"
+		command = { type = add_prov_resource which = 1013 value = 50 where = oil }
+		command = { type = add_prov_resource which = 1013 value = 5 where = energy }
+	}
+}
+
+event = {
+	id = 132916
+	random = no
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U67 U69 UTC UER UPE U70 U71 U72 U73 U74 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+
+	trigger = {
+		control = { province = 1013 data = -1 }
+		event = 132915
+	}
+
+	name = "EVT_132916_NAME"
+	desc = "EVT_132916_DESC"
+	picture = "oil_supply"
+	style = 0
+
+	date = { day = 1 month = january year = 1958 }
+	#offset = 15
+
+	action_a = {
+		name = "EVT_132916_ACTA"
+		ai_chance = 99
+		command = { type = money value = -1200 }
+		command = { type = metalpool value = -12 }
+		command = { type = manpowerpool value = -12 }
+		command = { type = event which = 132917 where = -1 when = 0 }
+		}
+	action_b = {
+		name = "EVT_132916_ACTB"
+		ai_chance = 1
+		command = { type = sleepevent which = 132917 }
+		}
+	}
+event = {
+	id = 132917
+	random = no
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U67 U69 UTC UER UPE U70 U71 U72 U73 U74 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+
+	name = "EVT_132917_NAME"
+	desc = "EVT_132917_DESC"
+	picture = "oil_supply"
+	style = 0
+
+	action_a = {
+		name = "EVT_132917_ACTA"
+		command = { type = add_prov_resource which = 1013 value = 130 where = oil }
+		command = { type = add_prov_resource which = 1013 value = 13 where = energy }
+	}
+}
+
+##### ニジェールデルタ＠ナイジェリア  最大生産量250
+event = {
+	id = 132918
+	random = no
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U67 U69 UTC UER UPE U70 U71 U72 U73 U74 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+
+	trigger = {
+		control = { province = 1013 data = -1 }
+	}
+
+	date = { day = 1 month = january year = 1956 }
+	#offset = 15
+
+	name = "EVT_132918_NAME"
+	desc = "EVT_132918_DESC"
+	picture = "oil_supply"
+ 	style = 0
+
+
+	action_a = {
+		name = "EVT_132918_ACTA"
+		ai_chance = 99
+		command = { type = money value = -100 }
+		command = { type = metalpool value = -5 }
+		command = { type = manpowerpool value = -1 }
+		command = { type = event which = 132919 where = -1 when = 0 }
+		}
+	action_b = {
+		name = "EVT_132918_ACTB"
+		ai_chance = 1
+		command = { type = sleepevent which = 132919 }
+		command = { type = sleepevent which = 132920 }
+		}
+	}
+event = {
+	id = 132919
+	random = no
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U67 U69 UTC UER UPE U70 U71 U72 U73 U74 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+
+	name = "EVT_132919_NAME"
+	desc = "EVT_132919_DESC"
+	picture = "oil_supply"
+	style = 0
+
+	action_a = {
+		name = "EVT_132919_ACTA"
+		command = { type = add_prov_resource which = 926 value = 10 where = oil }
+		command = { type = add_prov_resource which = 926 value = 1 where = energy }
+		command = { type = add_prov_resource which = 927 value = 12 where = oil }
+		command = { type = add_prov_resource which = 927 value = 1 where = energy }
+		command = { type = add_prov_resource which = 922 value = 18 where = oil }
+		command = { type = add_prov_resource which = 922 value = 2 where = energy }
+		command = { type = add_prov_resource which = 918 value = 32 where = oil }
+		command = { type = add_prov_resource which = 918 value = 3 where = energy }
+		command = { type = add_prov_resource which = 917 value = 8 where = oil }
+		command = { type = add_prov_resource which = 917 value = 1 where = energy }
+	}
+}
+event = {
+	id = 132920
+	random = no
+
+	trigger = {
+		control = { province = 1013 data = -1 }
+		event = 132919
+	}
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U67 U69 UTC UER UPE U70 U71 U72 U73 U74 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+
+	name = "EVT_132920_NAME"
+	desc = "EVT_132920_DESC"
+	picture = "oil_supply"
+	style = 0
+
+	date = { day = 1 month = january year = 1958 }
+	#offset = 15
+
+	action_a = {
+		name = "EVT_132920_ACTA"
+		ai_chance = 99
+		command = { type = money value = -1200 }
+		command = { type = metalpool value = -12 }
+		command = { type = manpowerpool value = -12 }
+		command = { type = event which = 132921 where = -1 when = 0 }
+		}
+	action_b = {
+		name = "EVT_132920_ACTB"
+		ai_chance = 1
+		command = { type = sleepevent which = 132921 }
+		}
+	}
+event = {
+	id = 132921
+	random = no
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U67 U69 UTC UER UPE U70 U71 U72 U73 U74 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+
+	name = "EVT_132921_NAME"
+	desc = "EVT_132921_DESC"
+	picture = "oil_supply"
+ 	style = 0
+
+	action_a = {
+		name = "EVT_132921_ACTA"
+		command = { type = add_prov_resource which = 926 value = 20 where = oil }
+		command = { type = add_prov_resource which = 926 value = 1 where = energy }
+		command = { type = add_prov_resource which = 927 value = 30 where = oil }
+		command = { type = add_prov_resource which = 927 value = 1 where = energy }
+		command = { type = add_prov_resource which = 922 value = 40 where = oil }
+		command = { type = add_prov_resource which = 922 value = 2 where = energy }
+		command = { type = add_prov_resource which = 918 value = 70 where = oil }
+		command = { type = add_prov_resource which = 918 value = 3 where = energy }
+		command = { type = add_prov_resource which = 917 value = 10 where = oil }
+		command = { type = add_prov_resource which = 917 value = 1 where = energy }
+	}
+}
+event = {
+	id = 132922
+	random = no
+	country = -1
+
+	trigger = {
+		technology = 5540
+	}
+
+	name = "EVT_132922_NAME"
+	desc = "EVT_132922_DESC"
+	picture = "breaktroug_in_research"
+	invention = yes
+
+	#date = { day = 1 month = january year = 1942 }
+	#offset = 45
+
+	action_a = {
+		name = "EVT_132922_ACTA"
+		command = { type = free_energy value = 50 }
+	}
+}
+
+##########
+#  SMEP中国資源イベント 国民党
+##########
+
+event = {
+	id = 132923
+	random = no
+	country = CHI
+
+	trigger = {
+		supplies = 4500
+		manpower = 500
+		control = { province = 1390 data = CHI } #Xinjing
+		control = { province = 1225 data = CHI } #Tainyian
+		control = { province = 1235 data = CHI } #Nanjing
+		control = { province = 1258 data = CHI } #Guilin #BETA修正パッチ
+		control = { province = 1307 data = CHI } #Kunming
+		control = { province = 1442 data = CHI } #Golmud
+		control = { province = 1433 data = CHI } #Urumqi
+		control = { province = 1205 data = CHI } #Beiping
+		control = { province = 1271 data = CHI }
+		NOT = {
+			exists = CSX
+			exists = CGX
+			exists = CYN
+			exists = SIK
+			exists = MAN
+			exists = CXB
+			puppet = { country = CHI country = JAP }
+			exists = CHC
+			lost_national = { country = CHI value = 10 }
+		}
+		
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_132923_NAME"
+	desc = "EVT_132923_DESC"
+	picture = "oil_supply"
+
+	action_a = {
+		name = "EVT_132923_ACTA"
+		ai_chance = 70
+		command = { type = supplies value = -2000 }
+		command = { type = manpowerpool value = -200 }
+	}
+	action_b = {
+		name = "EVT_132923_ACTB"
+		ai_chance = 20
+		command = { type = supplies value = -1000 }
+		command = { type = manpowerpool value = -100 }
+		command = { type = sleepevent which = 132925 }
+	}
+
+	action_c = {
+		name = "EVT_132923_ACTC"
+		ai_chance = 10
+		command = { type = sleepevent which = 132924 }
+		command = { type = sleepevent which = 132925 }
+	}
+}
+
+event = {
+	id = 132924
+	random = no
+	country = CHI
+
+	trigger = {
+		event = 132923
+		random = 5
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_132924_NAME"
+	desc = "EVT_132924_DESC"
+	picture = "oil_supply"
+
+	action_a = {
+		name = "EVT_132924_ACTA"
+		command = { type = add_prov_resource which = 1216 value = 1 where = metal } #6/1/2/3
+		command = { type = add_prov_resource which = 1305 value = 1 where = metal } #5/1/2/2
+		command = { type = add_prov_resource which = 1225 value = 1 where = energy } #6/1/2/3
+		command = { type = add_prov_resource which = 1226 value = 1 where = energy } #6/1/2/3
+		command = { type = add_prov_resource which = 1228 value = 1 where = energy } #8/1/3/4
+		command = { type = add_prov_resource which = 1235 value = 3 where = energy } #12/3/4/5
+		command = { type = add_prov_resource which = 1258 value = 1 where = energy } #8/1/3/4
+		command = { type = add_prov_resource which = 1269 value = 1 where = energy } #5/1/2/2
+		command = { type = add_prov_resource which = 1271 value = 1 where = energy } #6/1/2/3
+		command = { type = add_prov_resource which = 1307 value = 1 where = energy } #6/1/2/3
+		command = { type = add_prov_resource which = 1313 value = 3 where = energy } #12/3/4/5
+		command = { type = add_prov_resource which = 1433 value = 1 where = energy } #6/1/2/3
+		command = { type = add_prov_resource which = 1442 value = 1 where = energy } #6/1/2/3
+	}
+}
+
+event = {
+	id = 132925
+	random = no
+	country = CHI
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1963 }
+
+	trigger = {
+		event = 132924
+		random = 5
+	}
+
+	name = "EVT_132925_NAME"
+	desc = "EVT_132925_DESC"
+	picture = "oil_supply"
+
+	action_a = {
+		name = "EVT_132925_ACTA"
+		command = { type = add_prov_resource which = 1205 value = 1 where = metal } #4/0/1/3
+		command = { type = add_prov_resource which = 1216 value = 2 where = metal } #6/1/2/3
+		command = { type = add_prov_resource which = 1225 value = 1 where = metal } #2/0/1/1
+		command = { type = add_prov_resource which = 1232 value = 1 where = metal } #2/0/1/1
+		command = { type = add_prov_resource which = 1235 value = 1 where = metal } #2/0/1/1
+		command = { type = add_prov_resource which = 1237 value = 1 where = metal } #2/0/1/1
+		command = { type = add_prov_resource which = 1258 value = 1 where = metal } #2/0/1/1
+		command = { type = add_prov_resource which = 1305 value = 2 where = metal } #5/1/2/2
+		command = { type = add_prov_resource which = 1313 value = 1 where = metal } #4/0/1/3
+		command = { type = add_prov_resource which = 1313 value = 1 where = energy } #4/0/1/3
+		command = { type = add_prov_resource which = 1208 value = 1 where = energy } #1/0/0/1
+		command = { type = add_prov_resource which = 1216 value = 1 where = energy } #3/0/1/2
+		command = { type = add_prov_resource which = 1221 value = 1 where = energy } #2/0/1/1
+		command = { type = add_prov_resource which = 1225 value = 2 where = energy } #6/1/2/3
+		command = { type = add_prov_resource which = 1226 value = 2 where = energy } #6/1/2/3
+		command = { type = add_prov_resource which = 1228 value = 3 where = energy } #8/1/3/4
+		command = { type = add_prov_resource which = 1235 value = 4 where = energy } #12/3/4/5
+		command = { type = add_prov_resource which = 1238 value = 1 where = energy } #3/0/1/2
+		command = { type = add_prov_resource which = 1251 value = 1 where = energy } #2/0/1/1
+		command = { type = add_prov_resource which = 1255 value = 1 where = energy } #2/0/1/1
+		command = { type = add_prov_resource which = 1258 value = 3 where = energy } #8/1/3/4
+		command = { type = add_prov_resource which = 1269 value = 2 where = energy } #5/1/2/2
+		command = { type = add_prov_resource which = 1271 value = 2 where = energy } #6/1/2/3
+		command = { type = add_prov_resource which = 1276 value = 1 where = energy } #4/0/1/3
+		command = { type = add_prov_resource which = 1307 value = 2 where = energy } #6/1/2/3
+		command = { type = add_prov_resource which = 1313 value = 4 where = energy } #12/3/4/5
+		command = { type = add_prov_resource which = 1319 value = 1 where = energy } #4/0/1/3
+		command = { type = add_prov_resource which = 1360 value = 1 where = energy } #4/0/1/3
+		command = { type = add_prov_resource which = 1364 value = 1 where = energy } #4/0/1/3
+		command = { type = add_prov_resource which = 1379 value = 1 where = energy } #4/0/1/3
+		command = { type = add_prov_resource which = 1433 value = 2 where = energy } #6/1/2/3
+		command = { type = add_prov_resource which = 1442 value = 2 where = energy } #6/1/2/3
+		command = { type = add_prov_resource which = 1235 value = 1 where = rare_materials } #2/0/1/1
+		command = { type = add_prov_resource which = 1313 value = 1 where = rare_materials } #2/0/1/1
+	}
+}
+
+event = {
+	id = 132926
+	random = no
+	country = CHI
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1963 }
+
+	trigger = {
+		event = 132925
+		random = 5
+	}
+
+	name = "EVT_132926_NAME"
+	desc = "EVT_132926_DESC"
+	picture = "oil_supply"
+
+	action_a = {
+		name = "EVT_132926_ACTA"
+		command = { type = add_prov_resource which = 1205 value = 3 where = metal } #4/0/1/3
+		command = { type = add_prov_resource which = 1216 value = 3 where = metal } #6/1/2/3
+		command = { type = add_prov_resource which = 1221 value = 1 where = metal } #1/0/0/1
+		command = { type = add_prov_resource which = 1222 value = 1 where = metal } #1/0/0/1
+		command = { type = add_prov_resource which = 1225 value = 1 where = metal } #2/0/1/1
+		command = { type = add_prov_resource which = 1232 value = 1 where = metal } #2/0/1/1
+		command = { type = add_prov_resource which = 1235 value = 1 where = metal } #2/0/1/1
+		command = { type = add_prov_resource which = 1237 value = 1 where = metal } #2/0/1/1
+		command = { type = add_prov_resource which = 1238 value = 1 where = metal } #1/0/0/1
+		command = { type = add_prov_resource which = 1244 value = 1 where = metal } #1/0/0/1
+		command = { type = add_prov_resource which = 1251 value = 1 where = metal } #1/0/0/1
+		command = { type = add_prov_resource which = 1253 value = 1 where = metal } #1/0/0/1
+		command = { type = add_prov_resource which = 1255 value = 1 where = metal } #1/0/0/1
+		command = { type = add_prov_resource which = 1258 value = 1 where = metal } #2/0/1/1
+		command = { type = add_prov_resource which = 1271 value = 1 where = metal } #1/0/0/1
+		command = { type = add_prov_resource which = 1276 value = 1 where = metal } #1/0/0/1
+		command = { type = add_prov_resource which = 1305 value = 2 where = metal } #5/1/2/2
+		command = { type = add_prov_resource which = 1307 value = 1 where = metal } #1/0/0/1
+		command = { type = add_prov_resource which = 1313 value = 3 where = metal } #4/0/1/3
+		command = { type = add_prov_resource which = 1319 value = 1 where = metal } #1/0/0/1
+		command = { type = add_prov_resource which = 1360 value = 1 where = metal } #1/0/0/1
+		command = { type = add_prov_resource which = 1379 value = 1 where = metal } #1/0/0/1
+		command = { type = add_prov_resource which = 1432 value = 1 where = metal } #1/0/0/1
+		command = { type = add_prov_resource which = 1433 value = 1 where = metal } #1/0/0/1
+		command = { type = add_prov_resource which = 1442 value = 1 where = metal } #1/0/0/1
+		command = { type = add_prov_resource which = 1313 value = 3 where = energy } #4/0/1/3
+		command = { type = add_prov_resource which = 1208 value = 1 where = energy } #1/0/0/1
+		command = { type = add_prov_resource which = 1216 value = 2 where = energy } #3/0/1/2
+		command = { type = add_prov_resource which = 1221 value = 1 where = energy } #2/0/1/1
+		command = { type = add_prov_resource which = 1225 value = 3 where = energy } #6/1/2/3
+		command = { type = add_prov_resource which = 1226 value = 3 where = energy } #6/1/2/3
+		command = { type = add_prov_resource which = 1228 value = 4 where = energy } #8/1/3/4
+		command = { type = add_prov_resource which = 1232 value = 1 where = energy } #1/0/0/1
+		command = { type = add_prov_resource which = 1235 value = 5 where = energy } #12/3/4/5
+		command = { type = add_prov_resource which = 1237 value = 1 where = energy } #1/0/0/1
+		command = { type = add_prov_resource which = 1238 value = 2 where = energy } #3/0/1/2
+		command = { type = add_prov_resource which = 1244 value = 1 where = energy } #1/0/0/1
+		command = { type = add_prov_resource which = 1251 value = 1 where = energy } #2/0/1/1
+		command = { type = add_prov_resource which = 1253 value = 1 where = energy } #1/0/0/1
+		command = { type = add_prov_resource which = 1255 value = 1 where = energy } #2/0/1/1
+		command = { type = add_prov_resource which = 1258 value = 4 where = energy } #8/1/3/4
+		command = { type = add_prov_resource which = 1269 value = 2 where = energy } #5/1/2/2
+		command = { type = add_prov_resource which = 1271 value = 3 where = energy } #6/1/2/3
+		command = { type = add_prov_resource which = 1276 value = 3 where = energy } #4/0/1/3
+		command = { type = add_prov_resource which = 1307 value = 3 where = energy } #6/1/2/3
+		command = { type = add_prov_resource which = 1313 value = 5 where = energy } #12/3/4/5
+		command = { type = add_prov_resource which = 1319 value = 3 where = energy } #4/0/1/3
+		command = { type = add_prov_resource which = 1360 value = 3 where = energy } #4/0/1/3
+		command = { type = add_prov_resource which = 1364 value = 3 where = energy } #4/0/1/3
+		command = { type = add_prov_resource which = 1379 value = 3 where = energy } #4/0/1/3
+		command = { type = add_prov_resource which = 1433 value = 3 where = energy } #6/1/2/3
+		command = { type = add_prov_resource which = 1442 value = 3 where = energy } #6/1/2/3
+		command = { type = add_prov_resource which = 1205 value = 1 where = rare_materials } #1/0/0/1
+		command = { type = add_prov_resource which = 1228 value = 1 where = rare_materials } #1/0/0/1
+		command = { type = add_prov_resource which = 1235 value = 1 where = rare_materials } #2/0/1/1
+		command = { type = add_prov_resource which = 1313 value = 1 where = rare_materials } #2/0/1/1
+		command = { type = add_prov_resource which = 1225 value = 1 where = oil } #1/0/0/1
+	}
+}
+
+event = {
+	id = 132927
+	random = no
+	country = CHI
+
+	trigger = {
+		event = 132926
+		random = 5
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_132927_NAME"
+	desc = "EVT_132927_DESC"
+	picture = "oil_supply"
+
+	action_a = {
+		name = "EVT_132927_ACTA"
+		command = { type = add_prov_resource which = 1397 value = 10 where = energy } #Natural Gas
+		command = { type = add_prov_resource which = 1317 value = 50 where = rare_materials } #Tungsten
+		command = { type = add_prov_resource which = 1317 value = 1 where = metal }
+		command = { type = add_prov_resource which = 1208 value = 2 where = metal } #Iron
+		command = { type = add_prov_resource which = 1445 value = 3 where = energy }
+		command = { type = add_prov_resource which = 1445 value = 1 where = oil }
+		command = { type = add_prov_resource which = 1271 value = 1 where = oil }
+	}
+}
+##########
+#  SMEP中国資源イベント 共産党
+##########
+
+event = {
+	id = 132928
+	random = no
+	country = CHC
+
+	trigger = {
+		supplies = 4500
+		manpower = 500
+		control = { province = 1390 data = CHC } #Xinjing
+		control = { province = 1225 data = CHC } #Tainyian
+		control = { province = 1235 data = CHC } #Nanjing
+		control = { province = 1258 data = CHC } #Guilin #BETA修正パッチ
+		control = { province = 1307 data = CHC } #Kunming
+		control = { province = 1442 data = CHC } #Golmud
+		control = { province = 1433 data = CHC } #Urumqi
+		control = { province = 1205 data = CHC } #Beiping
+		NOT = {
+			exists = CSX
+			exists = CGX
+			exists = CYN
+			exists = SIK
+			exists = MAN
+			exists = CXB
+			puppet = { country = CHC country = JAP }
+			puppet = { country = CHC country = SOV }
+			lost_national = { country = CHC value = 10 } 
+		}
+		
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_132928_NAME"
+	desc = "EVT_132928_DESC"
+	picture = "oil_supply"
+
+	action_a = {
+		name = "EVT_132928_ACTA"
+		ai_chance = 70
+		command = { type = supplies value = -2000 }
+		command = { type = manpowerpool value = -200 }
+	}
+	action_b = {
+		name = "EVT_132928_ACTB"
+		ai_chance = 20
+		command = { type = supplies value = -1000 }
+		command = { type = manpowerpool value = -100 }
+		command = { type = sleepevent which = 132930 }
+	}
+
+	action_c = {
+		name = "EVT_132928_ACTC"
+		ai_chance = 10
+		command = { type = sleepevent which = 132929 }
+		command = { type = sleepevent which = 132930 }
+	}
+}
+
+event = {
+	id = 132929
+	random = no
+	country = CHC
+
+	trigger = {
+		event = 132928
+		random = 5
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_132929_NAME"
+	desc = "EVT_132929_DESC"
+	picture = "oil_supply"
+
+	action_a = {
+		name = "EVT_132929_ACTA"
+		command = { type = add_prov_resource which = 1216 value = 1 where = metal } #6/1/2/3
+		command = { type = add_prov_resource which = 1305 value = 1 where = metal } #5/1/2/2
+		command = { type = add_prov_resource which = 1225 value = 1 where = energy } #6/1/2/3
+		command = { type = add_prov_resource which = 1226 value = 1 where = energy } #6/1/2/3
+		command = { type = add_prov_resource which = 1228 value = 1 where = energy } #8/1/3/4
+		command = { type = add_prov_resource which = 1235 value = 3 where = energy } #12/3/4/5
+		command = { type = add_prov_resource which = 1258 value = 1 where = energy } #8/1/3/4
+		command = { type = add_prov_resource which = 1269 value = 1 where = energy } #5/1/2/2
+		command = { type = add_prov_resource which = 1271 value = 1 where = energy } #6/1/2/3
+		command = { type = add_prov_resource which = 1307 value = 1 where = energy } #6/1/2/3
+		command = { type = add_prov_resource which = 1313 value = 3 where = energy } #12/3/4/5
+		command = { type = add_prov_resource which = 1433 value = 1 where = energy } #6/1/2/3
+		command = { type = add_prov_resource which = 1442 value = 1 where = energy } #6/1/2/3
+	}
+}
+
+event = {
+	id = 132930
+	random = no
+	country = CHC
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1963 }
+
+	trigger = {
+		event = 132929
+		random = 5
+	}
+
+	name = "EVT_132930_NAME"
+	desc = "EVT_132930_DESC"
+	picture = "oil_supply"
+
+	action_a = {
+		name = "EVT_132930_ACTA"
+		command = { type = add_prov_resource which = 1205 value = 1 where = metal } #4/0/1/3
+		command = { type = add_prov_resource which = 1216 value = 2 where = metal } #6/1/2/3
+		command = { type = add_prov_resource which = 1225 value = 1 where = metal } #2/0/1/1
+		command = { type = add_prov_resource which = 1232 value = 1 where = metal } #2/0/1/1
+		command = { type = add_prov_resource which = 1235 value = 1 where = metal } #2/0/1/1
+		command = { type = add_prov_resource which = 1237 value = 1 where = metal } #2/0/1/1
+		command = { type = add_prov_resource which = 1258 value = 1 where = metal } #2/0/1/1
+		command = { type = add_prov_resource which = 1305 value = 2 where = metal } #5/1/2/2
+		command = { type = add_prov_resource which = 1313 value = 1 where = metal } #4/0/1/3
+		command = { type = add_prov_resource which = 1313 value = 1 where = energy } #4/0/1/3
+		command = { type = add_prov_resource which = 1208 value = 1 where = energy } #1/0/0/1
+		command = { type = add_prov_resource which = 1216 value = 1 where = energy } #3/0/1/2
+		command = { type = add_prov_resource which = 1221 value = 1 where = energy } #2/0/1/1
+		command = { type = add_prov_resource which = 1225 value = 2 where = energy } #6/1/2/3
+		command = { type = add_prov_resource which = 1226 value = 2 where = energy } #6/1/2/3
+		command = { type = add_prov_resource which = 1228 value = 3 where = energy } #8/1/3/4
+		command = { type = add_prov_resource which = 1235 value = 4 where = energy } #12/3/4/5
+		command = { type = add_prov_resource which = 1238 value = 1 where = energy } #3/0/1/2
+		command = { type = add_prov_resource which = 1251 value = 1 where = energy } #2/0/1/1
+		command = { type = add_prov_resource which = 1255 value = 1 where = energy } #2/0/1/1
+		command = { type = add_prov_resource which = 1258 value = 3 where = energy } #8/1/3/4
+		command = { type = add_prov_resource which = 1269 value = 2 where = energy } #5/1/2/2
+		command = { type = add_prov_resource which = 1271 value = 2 where = energy } #6/1/2/3
+		command = { type = add_prov_resource which = 1276 value = 1 where = energy } #4/0/1/3
+		command = { type = add_prov_resource which = 1307 value = 2 where = energy } #6/1/2/3
+		command = { type = add_prov_resource which = 1313 value = 4 where = energy } #12/3/4/5
+		command = { type = add_prov_resource which = 1319 value = 1 where = energy } #4/0/1/3
+		command = { type = add_prov_resource which = 1360 value = 1 where = energy } #4/0/1/3
+		command = { type = add_prov_resource which = 1364 value = 1 where = energy } #4/0/1/3
+		command = { type = add_prov_resource which = 1379 value = 1 where = energy } #4/0/1/3
+		command = { type = add_prov_resource which = 1433 value = 2 where = energy } #6/1/2/3
+		command = { type = add_prov_resource which = 1442 value = 2 where = energy } #6/1/2/3
+		command = { type = add_prov_resource which = 1235 value = 1 where = rare_materials } #2/0/1/1
+		command = { type = add_prov_resource which = 1313 value = 1 where = rare_materials } #2/0/1/1
+	}
+}
+
+event = {
+	id = 132931
+	random = no
+	country = CHC
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1963 }
+
+	trigger = {
+		event = 132930
+		random = 5
+	}
+
+	name = "EVT_132931_NAME"
+	desc = "EVT_132931_DESC"
+	picture = "oil_supply"
+
+	action_a = {
+		name = "EVT_132931_ACTA"
+		command = { type = add_prov_resource which = 1205 value = 3 where = metal } #4/0/1/3
+		command = { type = add_prov_resource which = 1216 value = 3 where = metal } #6/1/2/3
+		command = { type = add_prov_resource which = 1221 value = 1 where = metal } #1/0/0/1
+		command = { type = add_prov_resource which = 1222 value = 1 where = metal } #1/0/0/1
+		command = { type = add_prov_resource which = 1225 value = 1 where = metal } #2/0/1/1
+		command = { type = add_prov_resource which = 1232 value = 1 where = metal } #2/0/1/1
+		command = { type = add_prov_resource which = 1235 value = 1 where = metal } #2/0/1/1
+		command = { type = add_prov_resource which = 1237 value = 1 where = metal } #2/0/1/1
+		command = { type = add_prov_resource which = 1238 value = 1 where = metal } #1/0/0/1
+		command = { type = add_prov_resource which = 1244 value = 1 where = metal } #1/0/0/1
+		command = { type = add_prov_resource which = 1251 value = 1 where = metal } #1/0/0/1
+		command = { type = add_prov_resource which = 1253 value = 1 where = metal } #1/0/0/1
+		command = { type = add_prov_resource which = 1255 value = 1 where = metal } #1/0/0/1
+		command = { type = add_prov_resource which = 1258 value = 1 where = metal } #2/0/1/1
+		command = { type = add_prov_resource which = 1271 value = 1 where = metal } #1/0/0/1
+		command = { type = add_prov_resource which = 1276 value = 1 where = metal } #1/0/0/1
+		command = { type = add_prov_resource which = 1305 value = 2 where = metal } #5/1/2/2
+		command = { type = add_prov_resource which = 1307 value = 1 where = metal } #1/0/0/1
+		command = { type = add_prov_resource which = 1313 value = 3 where = metal } #4/0/1/3
+		command = { type = add_prov_resource which = 1319 value = 1 where = metal } #1/0/0/1
+		command = { type = add_prov_resource which = 1360 value = 1 where = metal } #1/0/0/1
+		command = { type = add_prov_resource which = 1379 value = 1 where = metal } #1/0/0/1
+		command = { type = add_prov_resource which = 1432 value = 1 where = metal } #1/0/0/1
+		command = { type = add_prov_resource which = 1433 value = 1 where = metal } #1/0/0/1
+		command = { type = add_prov_resource which = 1442 value = 1 where = metal } #1/0/0/1
+		command = { type = add_prov_resource which = 1313 value = 3 where = energy } #4/0/1/3
+		command = { type = add_prov_resource which = 1208 value = 1 where = energy } #1/0/0/1
+		command = { type = add_prov_resource which = 1216 value = 2 where = energy } #3/0/1/2
+		command = { type = add_prov_resource which = 1221 value = 1 where = energy } #2/0/1/1
+		command = { type = add_prov_resource which = 1225 value = 3 where = energy } #6/1/2/3
+		command = { type = add_prov_resource which = 1226 value = 3 where = energy } #6/1/2/3
+		command = { type = add_prov_resource which = 1228 value = 4 where = energy } #8/1/3/4
+		command = { type = add_prov_resource which = 1232 value = 1 where = energy } #1/0/0/1
+		command = { type = add_prov_resource which = 1235 value = 5 where = energy } #12/3/4/5
+		command = { type = add_prov_resource which = 1237 value = 1 where = energy } #1/0/0/1
+		command = { type = add_prov_resource which = 1238 value = 2 where = energy } #3/0/1/2
+		command = { type = add_prov_resource which = 1244 value = 1 where = energy } #1/0/0/1
+		command = { type = add_prov_resource which = 1251 value = 1 where = energy } #2/0/1/1
+		command = { type = add_prov_resource which = 1253 value = 1 where = energy } #1/0/0/1
+		command = { type = add_prov_resource which = 1255 value = 1 where = energy } #2/0/1/1
+		command = { type = add_prov_resource which = 1258 value = 4 where = energy } #8/1/3/4
+		command = { type = add_prov_resource which = 1269 value = 2 where = energy } #5/1/2/2
+		command = { type = add_prov_resource which = 1271 value = 3 where = energy } #6/1/2/3
+		command = { type = add_prov_resource which = 1276 value = 3 where = energy } #4/0/1/3
+		command = { type = add_prov_resource which = 1307 value = 3 where = energy } #6/1/2/3
+		command = { type = add_prov_resource which = 1313 value = 5 where = energy } #12/3/4/5
+		command = { type = add_prov_resource which = 1319 value = 3 where = energy } #4/0/1/3
+		command = { type = add_prov_resource which = 1360 value = 3 where = energy } #4/0/1/3
+		command = { type = add_prov_resource which = 1364 value = 3 where = energy } #4/0/1/3
+		command = { type = add_prov_resource which = 1379 value = 3 where = energy } #4/0/1/3
+		command = { type = add_prov_resource which = 1433 value = 3 where = energy } #6/1/2/3
+		command = { type = add_prov_resource which = 1442 value = 3 where = energy } #6/1/2/3
+		command = { type = add_prov_resource which = 1205 value = 1 where = rare_materials } #1/0/0/1
+		command = { type = add_prov_resource which = 1228 value = 1 where = rare_materials } #1/0/0/1
+		command = { type = add_prov_resource which = 1235 value = 1 where = rare_materials } #2/0/1/1
+		command = { type = add_prov_resource which = 1313 value = 1 where = rare_materials } #2/0/1/1
+		command = { type = add_prov_resource which = 1225 value = 1 where = oil } #1/0/0/1
+	}
+}
+
+event = {
+	id = 132932
+	random = no
+	country = CHC
+
+	trigger = {
+		event = 132931
+		random = 5
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_132932_NAME"
+	desc = "EVT_132932_DESC"
+	picture = "oil_supply"
+
+	action_a = {
+		name = "EVT_132932_ACTA"
+		command = { type = add_prov_resource which = 1397 value = 10 where = energy } #Natural Gas
+		command = { type = add_prov_resource which = 1317 value = 50 where = rare_materials } #Tungsten
+		command = { type = add_prov_resource which = 1317 value = 1 where = metal }
+		command = { type = add_prov_resource which = 1208 value = 2 where = metal } #Iron
+		command = { type = add_prov_resource which = 1445 value = 3 where = energy }
+		command = { type = add_prov_resource which = 1445 value = 1 where = oil }
+		command = { type = add_prov_resource which = 1271 value = 1 where = oil }
+	}
+}
+
+##########
+#  SMEP中国資源イベント 南京政権
+##########
+
+event = {
+	id = 132933
+	random = no
+	country = U87
+
+	trigger = {
+		supplies = 4500
+		manpower = 500
+	#	control = { province = 1390 data = U87 } #Xinjing #満州領
+		control = { province = 1225 data = U87 } #Tainyian
+		control = { province = 1235 data = U87 } #Nanjing
+		control = { province = 1258 data = U87 } #Guilin #BETA修正パッチ
+		control = { province = 1307 data = U87 } #Kunming
+		control = { province = 1442 data = U87 } #Golmud
+		control = { province = 1433 data = U87 } #Urumqi
+		control = { province = 1205 data = U87 } #Beiping
+		NOT = {
+			exists = CSX
+			exists = CGX
+		#	exists = CYN
+		#	exists = SIK
+		#	exists = MAN
+			exists = CXB
+			puppet = { country = U87 country = JAP } #対等同盟
+			lost_national = { country = U87 value = 10 }
+		}
+		
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_132933_NAME"
+	desc = "EVT_132933_DESC"
+	picture = "oil_supply"
+
+	action_a = {
+		name = "EVT_132933_ACTA"
+		ai_chance = 70
+		command = { type = supplies value = -2000 }
+		command = { type = manpowerpool value = -200 }
+	}
+	action_b = {
+		name = "EVT_132933_ACTB"
+		ai_chance = 20
+		command = { type = supplies value = -1000 }
+		command = { type = manpowerpool value = -100 }
+		command = { type = sleepevent which = 132935 }
+	}
+
+	action_c = {
+		name = "EVT_132933_ACTC"
+		ai_chance = 10
+		command = { type = sleepevent which = 132934 }
+		command = { type = sleepevent which = 132935 }
+	}
+}
+
+event = {
+	id = 132934
+	random = no
+	country = U87
+
+	trigger = {
+		event = 132933
+		random = 5
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_132934_NAME"
+	desc = "EVT_132934_DESC"
+	picture = "oil_supply"
+
+	action_a = {
+		name = "EVT_132934_ACTA"
+		command = { type = add_prov_resource which = 1216 value = 1 where = metal } #6/1/2/3
+		command = { type = add_prov_resource which = 1305 value = 1 where = metal } #5/1/2/2
+		command = { type = add_prov_resource which = 1225 value = 1 where = energy } #6/1/2/3
+		command = { type = add_prov_resource which = 1226 value = 1 where = energy } #6/1/2/3
+		command = { type = add_prov_resource which = 1228 value = 1 where = energy } #8/1/3/4
+		command = { type = add_prov_resource which = 1235 value = 3 where = energy } #12/3/4/5
+		command = { type = add_prov_resource which = 1258 value = 1 where = energy } #8/1/3/4
+		command = { type = add_prov_resource which = 1269 value = 1 where = energy } #5/1/2/2
+		command = { type = add_prov_resource which = 1271 value = 1 where = energy } #6/1/2/3
+		command = { type = add_prov_resource which = 1307 value = 1 where = energy } #6/1/2/3
+		command = { type = add_prov_resource which = 1313 value = 3 where = energy } #12/3/4/5
+		command = { type = add_prov_resource which = 1433 value = 1 where = energy } #6/1/2/3
+		command = { type = add_prov_resource which = 1442 value = 1 where = energy } #6/1/2/3
+	}
+}
+
+event = {
+	id = 132935
+	random = no
+	country = U87
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1963 }
+
+	trigger = {
+		event = 132934
+		random = 5
+	}
+
+	name = "EVT_132935_NAME"
+	desc = "EVT_132935_DESC"
+	picture = "oil_supply"
+
+	action_a = {
+		name = "EVT_132935_ACTA"
+		command = { type = add_prov_resource which = 1205 value = 1 where = metal } #4/0/1/3
+		command = { type = add_prov_resource which = 1216 value = 2 where = metal } #6/1/2/3
+		command = { type = add_prov_resource which = 1225 value = 1 where = metal } #2/0/1/1
+		command = { type = add_prov_resource which = 1232 value = 1 where = metal } #2/0/1/1
+		command = { type = add_prov_resource which = 1235 value = 1 where = metal } #2/0/1/1
+		command = { type = add_prov_resource which = 1237 value = 1 where = metal } #2/0/1/1
+		command = { type = add_prov_resource which = 1258 value = 1 where = metal } #2/0/1/1
+		command = { type = add_prov_resource which = 1305 value = 2 where = metal } #5/1/2/2
+		command = { type = add_prov_resource which = 1313 value = 1 where = metal } #4/0/1/3
+		command = { type = add_prov_resource which = 1313 value = 1 where = energy } #4/0/1/3
+		command = { type = add_prov_resource which = 1208 value = 1 where = energy } #1/0/0/1
+		command = { type = add_prov_resource which = 1216 value = 1 where = energy } #3/0/1/2
+		command = { type = add_prov_resource which = 1221 value = 1 where = energy } #2/0/1/1
+		command = { type = add_prov_resource which = 1225 value = 2 where = energy } #6/1/2/3
+		command = { type = add_prov_resource which = 1226 value = 2 where = energy } #6/1/2/3
+		command = { type = add_prov_resource which = 1228 value = 3 where = energy } #8/1/3/4
+		command = { type = add_prov_resource which = 1235 value = 4 where = energy } #12/3/4/5
+		command = { type = add_prov_resource which = 1238 value = 1 where = energy } #3/0/1/2
+		command = { type = add_prov_resource which = 1251 value = 1 where = energy } #2/0/1/1
+		command = { type = add_prov_resource which = 1255 value = 1 where = energy } #2/0/1/1
+		command = { type = add_prov_resource which = 1258 value = 3 where = energy } #8/1/3/4
+		command = { type = add_prov_resource which = 1269 value = 2 where = energy } #5/1/2/2
+		command = { type = add_prov_resource which = 1271 value = 2 where = energy } #6/1/2/3
+		command = { type = add_prov_resource which = 1276 value = 1 where = energy } #4/0/1/3
+		command = { type = add_prov_resource which = 1307 value = 2 where = energy } #6/1/2/3
+		command = { type = add_prov_resource which = 1313 value = 4 where = energy } #12/3/4/5
+		command = { type = add_prov_resource which = 1319 value = 1 where = energy } #4/0/1/3
+		command = { type = add_prov_resource which = 1360 value = 1 where = energy } #4/0/1/3
+		command = { type = add_prov_resource which = 1364 value = 1 where = energy } #4/0/1/3
+	#	command = { type = add_prov_resource which = 1379 value = 1 where = energy } #4/0/1/3 #満州領
+		command = { type = add_prov_resource which = 1433 value = 2 where = energy } #6/1/2/3
+		command = { type = add_prov_resource which = 1442 value = 2 where = energy } #6/1/2/3
+		command = { type = add_prov_resource which = 1235 value = 1 where = rare_materials } #2/0/1/1
+		command = { type = add_prov_resource which = 1313 value = 1 where = rare_materials } #2/0/1/1
+	}
+}
+
+event = {
+	id = 132936
+	random = no
+	country = U87
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1963 }
+
+	trigger = {
+		event = 132935
+		random = 5
+	}
+
+	name = "EVT_132936_NAME"
+	desc = "EVT_132936_DESC"
+	picture = "oil_supply"
+
+	action_a = {
+		name = "EVT_132936_ACTA"
+		command = { type = add_prov_resource which = 1205 value = 3 where = metal } #4/0/1/3
+		command = { type = add_prov_resource which = 1216 value = 3 where = metal } #6/1/2/3
+		command = { type = add_prov_resource which = 1221 value = 1 where = metal } #1/0/0/1
+		command = { type = add_prov_resource which = 1222 value = 1 where = metal } #1/0/0/1
+		command = { type = add_prov_resource which = 1225 value = 1 where = metal } #2/0/1/1
+		command = { type = add_prov_resource which = 1232 value = 1 where = metal } #2/0/1/1
+		command = { type = add_prov_resource which = 1235 value = 1 where = metal } #2/0/1/1
+		command = { type = add_prov_resource which = 1237 value = 1 where = metal } #2/0/1/1
+		command = { type = add_prov_resource which = 1238 value = 1 where = metal } #1/0/0/1
+		command = { type = add_prov_resource which = 1244 value = 1 where = metal } #1/0/0/1
+		command = { type = add_prov_resource which = 1251 value = 1 where = metal } #1/0/0/1
+		command = { type = add_prov_resource which = 1253 value = 1 where = metal } #1/0/0/1
+		command = { type = add_prov_resource which = 1255 value = 1 where = metal } #1/0/0/1
+		command = { type = add_prov_resource which = 1258 value = 1 where = metal } #2/0/1/1
+		command = { type = add_prov_resource which = 1271 value = 1 where = metal } #1/0/0/1
+		command = { type = add_prov_resource which = 1276 value = 1 where = metal } #1/0/0/1
+		command = { type = add_prov_resource which = 1305 value = 2 where = metal } #5/1/2/2
+		command = { type = add_prov_resource which = 1307 value = 1 where = metal } #1/0/0/1
+		command = { type = add_prov_resource which = 1313 value = 3 where = metal } #4/0/1/3
+		command = { type = add_prov_resource which = 1319 value = 1 where = metal } #1/0/0/1
+		command = { type = add_prov_resource which = 1360 value = 1 where = metal } #1/0/0/1
+		command = { type = add_prov_resource which = 1379 value = 1 where = metal } #1/0/0/1
+		command = { type = add_prov_resource which = 1432 value = 1 where = metal } #1/0/0/1
+		command = { type = add_prov_resource which = 1433 value = 1 where = metal } #1/0/0/1
+		command = { type = add_prov_resource which = 1442 value = 1 where = metal } #1/0/0/1
+		command = { type = add_prov_resource which = 1313 value = 3 where = energy } #4/0/1/3
+		command = { type = add_prov_resource which = 1208 value = 1 where = energy } #1/0/0/1
+		command = { type = add_prov_resource which = 1216 value = 2 where = energy } #3/0/1/2
+		command = { type = add_prov_resource which = 1221 value = 1 where = energy } #2/0/1/1
+		command = { type = add_prov_resource which = 1225 value = 3 where = energy } #6/1/2/3
+		command = { type = add_prov_resource which = 1226 value = 3 where = energy } #6/1/2/3
+		command = { type = add_prov_resource which = 1228 value = 4 where = energy } #8/1/3/4
+		command = { type = add_prov_resource which = 1232 value = 1 where = energy } #1/0/0/1
+		command = { type = add_prov_resource which = 1235 value = 5 where = energy } #12/3/4/5
+		command = { type = add_prov_resource which = 1237 value = 1 where = energy } #1/0/0/1
+		command = { type = add_prov_resource which = 1238 value = 2 where = energy } #3/0/1/2
+		command = { type = add_prov_resource which = 1244 value = 1 where = energy } #1/0/0/1
+		command = { type = add_prov_resource which = 1251 value = 1 where = energy } #2/0/1/1
+		command = { type = add_prov_resource which = 1253 value = 1 where = energy } #1/0/0/1
+		command = { type = add_prov_resource which = 1255 value = 1 where = energy } #2/0/1/1
+		command = { type = add_prov_resource which = 1258 value = 4 where = energy } #8/1/3/4
+		command = { type = add_prov_resource which = 1269 value = 2 where = energy } #5/1/2/2
+		command = { type = add_prov_resource which = 1271 value = 3 where = energy } #6/1/2/3
+		command = { type = add_prov_resource which = 1276 value = 3 where = energy } #4/0/1/3
+		command = { type = add_prov_resource which = 1307 value = 3 where = energy } #6/1/2/3
+		command = { type = add_prov_resource which = 1313 value = 5 where = energy } #12/3/4/5
+		command = { type = add_prov_resource which = 1319 value = 3 where = energy } #4/0/1/3
+		command = { type = add_prov_resource which = 1360 value = 3 where = energy } #4/0/1/3
+		command = { type = add_prov_resource which = 1364 value = 3 where = energy } #4/0/1/3
+	#	command = { type = add_prov_resource which = 1379 value = 3 where = energy } #4/0/1/3 #満州領
+		command = { type = add_prov_resource which = 1433 value = 3 where = energy } #6/1/2/3
+		command = { type = add_prov_resource which = 1442 value = 3 where = energy } #6/1/2/3
+		command = { type = add_prov_resource which = 1205 value = 1 where = rare_materials } #1/0/0/1
+		command = { type = add_prov_resource which = 1228 value = 1 where = rare_materials } #1/0/0/1
+		command = { type = add_prov_resource which = 1235 value = 1 where = rare_materials } #2/0/1/1
+		command = { type = add_prov_resource which = 1313 value = 1 where = rare_materials } #2/0/1/1
+		command = { type = add_prov_resource which = 1225 value = 1 where = oil } #1/0/0/1
+	}
+}
+
+event = {
+	id = 132937
+	random = no
+	country = U87
+
+	trigger = {
+		event = 132936
+		random = 5
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_132937_NAME"
+	desc = "EVT_132937_DESC"
+	picture = "oil_supply"
+
+	action_a = {
+		name = "EVT_132937_ACTA"
+	#	command = { type = add_prov_resource which = 1397 value = 10 where = energy } #Natural Gas #満州領
+		command = { type = add_prov_resource which = 1317 value = 50 where = rare_materials } #Tungsten
+		command = { type = add_prov_resource which = 1317 value = 1 where = metal }
+		command = { type = add_prov_resource which = 1208 value = 2 where = metal } #Iron
+		command = { type = add_prov_resource which = 1445 value = 3 where = energy }
+		command = { type = add_prov_resource which = 1445 value = 1 where = oil }
+		command = { type = add_prov_resource which = 1271 value = 1 where = oil }
+	}
+}
+
+#########################################################################
+# 史実準拠資源イベント
+#########################################################################
+
+event = {
+	id = 132938
+	random = no
+	country = JAP
+
+	trigger = {
+		random = 15
+		control = { province = 1321 data = JAP }
+		NOT = {
+			flag = kainantou
+			flag = zoku_kainantou
+		}
+	}  
+
+	name = "EVT_132938_NAME"
+	desc = "EVT_132938_DESC"
+	style = 0
+	picture = "economic"
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1951 }
+
+	action_a = {
+		name = "EVT_132938_ACTA"
+		ai_chance = 98
+		#command = { type = setflag which = kainantou }
+		command = { type = supplies value = -1000 }
+		command = { type = money value = -150 }
+		command = { type = manpowerpool value = -50 }
+	}
+	action_b = {
+		name = "EVT_132938_ACTB"
+		ai_chance = 2
+		command = { type = sleepevent which = 132939 }
+	}
+}
+
+event = {
+	id = 132939
+	random = no
+	country = JAP
+
+	trigger = {
+		random = 6
+		#flag = kainantou
+		event = 132938
+		control = { province = 1321 data = JAP }                 
+	}
+
+	name = "EVT_132939_NAME"
+	desc = "EVT_132939_DESC"
+	style = 0
+	picture = "economic"
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 40
+	deathdate = { day = 29 month = december year = 1951 }
+
+	action_a = {
+		name = "EVT_132939_ACTA"
+		ai_chance = 95
+		command = { type = add_prov_resource which = 1321 value = 31 where = metal }
+		command = { type = construct which = infrastructure where = 1321 value = 10 }
+		command = { type = supplies value = -300 }
+		command = { type = money value = -50 }
+		command = { type = manpowerpool value = -20 }
+		#command = { type = clrflag which = kainantou }
+		#command = { type = setflag which = zoku_kainantou }   
+	}
+	action_b = {
+		name = "EVT_132939_ACTB"
+		ai_chance = 5
+		command = { type = add_prov_resource which = 1321 value = 31 where = metal }
+		command = { type = construct which = infrastructure where = 1321 value = 10 }
+		command = { type = sleepevent which = 132940 }
+	}
+}
+
+event = {
+	id = 132940
+	random = no
+	country = JAP
+
+	trigger = {
+		OR = {
+			random = 8
+			AND = {
+				year = 1950
+				random = 40
+			}
+		}
+		event = 132939
+		#flag = zoku_kainantou
+		control = { province = 1321 data = JAP }
+	}
+
+	name = "EVT_132940_NAME"
+	desc = "EVT_132940_DESC"
+	style = 0
+	picture = "economic"
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 29
+	deathdate = { day = 29 month = december year = 1951 }
+
+	action_a = {
+		name = "EVT_132940_ACTA"
+		command = { type = add_prov_resource which = 1321 value = 10 where = metal }
+		command = { type = construct which = infrastructure where = 1321 value = 10 }
+	}
+}
+
+#########################################################
+
+event = {
+	id = 132941
+	random = no
+	country = CHI
+	style = 0
+
+	trigger = {
+		random = 5
+		owned = { province = 1321 data = CHI }
+		control = { province = 1321 data = CHI }
+		control = { province = 1390 data = CHI } #Xinjing
+		control = { province = 1225 data = CHI } #Tainyian
+		control = { province = 1235 data = CHI } #Nanjing
+		control = { province = 1258 data = CHI } #Guilin #BETA修正パッチ
+		control = { province = 1307 data = CHI } #Kunming
+		control = { province = 1442 data = CHI } #Golmud
+		control = { province = 1433 data = CHI } #Urumqi
+		control = { province = 1205 data = CHI } #Beiping
+		control = { province = 1271 data = CHI }
+		NOT = {
+			event = 132940
+			exists = CSX
+			exists = CGX
+			exists = CYN
+			exists = SIK
+			exists = MAN
+			exists = CXB
+			puppet = { country = CHI country = JAP }
+			exists = CHC
+			lost_national = { country = CHI value = 10 }
+		}
+		
+	}
+
+	name = "EVT_132941_NAME"
+	desc = "EVT_132941_DESC"
+	picture = "economic"
+
+	date = { day = 0 month = january year = 1943 }
+	offset = 18
+	deathdate = { day = 29 month = may year = 1963 }
+
+	action_a = {
+		ai_chance = 97
+		name = "EVT_132941_ACTA"
+		command = { type = add_prov_resource which = 1321 value = 41 where = metal }
+		command = { type = construct which = infrastructure where = 1321 value = 20 }
+		command = { type = supplies value = -2000 }
+		command = { type = money value = -1500 }
+		command = { type = manpowerpool value = -200 }
+		command = { type = sleepevent which = 132938 }
+		command = { type = sleepevent which = 132939 }
+		command = { type = sleepevent which = 132940 }
+		command = { type = sleepevent which = 132942 }
+		command = { type = sleepevent which = 132943 }
+	}
+
+	action_b = {
+		ai_chance = 3
+		name = "EVT_132941_ACTB"
+		command = { }
+	}
+}
+
+event = {
+	id = 132942
+	random = no
+	country = CHC
+	style = 0
+
+	trigger = {
+		random = 5
+		owned = { province = 1321 data = CHI }
+		control = { province = 1321 data = CHI }
+		control = { province = 1390 data = CHC } #Xinjing
+		control = { province = 1225 data = CHC } #Tainyian
+		control = { province = 1235 data = CHC } #Nanjing
+		control = { province = 1258 data = CHC } #Guilin #BETA修正パッチ
+		control = { province = 1307 data = CHC } #Kunming
+		control = { province = 1442 data = CHC } #Golmud
+		control = { province = 1433 data = CHC } #Urumqi
+		control = { province = 1205 data = CHC } #Beiping
+		NOT = {
+			event = 132940
+			exists = CSX
+			exists = CGX
+			exists = CYN
+			exists = SIK
+			exists = MAN
+			exists = CXB
+			puppet = { country = CHC country = JAP }
+			puppet = { country = CHC country = SOV }
+			lost_national = { country = CHC value = 10 }
+		}
+		
+	}
+
+	name = "EVT_132942_NAME"
+	desc = "EVT_132942_DESC"
+	picture = "economic"
+
+	date = { day = 0 month = january year = 1943 }
+	offset = 18
+	deathdate = { day = 29 month = may year = 1963 }
+
+	action_a = {
+		ai_chance = 97
+		name = "EVT_132942_ACTA"
+		command = { type = add_prov_resource which = 1321 value = 41 where = metal }
+		command = { type = construct which = infrastructure where = 1321 value = 20 }
+		command = { type = supplies value = -2000 }
+		command = { type = money value = -1500 }
+		command = { type = manpowerpool value = -200 }
+		command = { type = sleepevent which = 132938 }
+		command = { type = sleepevent which = 132939 }
+		command = { type = sleepevent which = 132940 }
+		command = { type = sleepevent which = 132941 }
+		command = { type = sleepevent which = 132943 }
+	}
+
+	action_b = {
+		ai_chance = 3
+		name = "EVT_132942_ACTB"
+		command = { }
+	}
+}
+
+event = {
+	id = 132943
+	random = no
+	country = U87
+	style = 0
+
+	trigger = {
+		random = 5
+		owned = { province = 1321 data = CHI }
+		control = { province = 1321 data = CHI }
+	#	control = { province = 1390 data = U87 } #Xinjing #満州領
+		control = { province = 1225 data = U87 } #Tainyian
+		control = { province = 1235 data = U87 } #Nanjing
+		control = { province = 1258 data = U87 } #Guilin #BETA修正パッチ
+		control = { province = 1307 data = U87 } #Kunming
+		control = { province = 1442 data = U87 } #Golmud
+		control = { province = 1433 data = U87 } #Urumqi
+		control = { province = 1205 data = U87 } #Beiping
+		NOT = {
+			event = 132940
+			exists = CSX
+			exists = CGX
+			exists = CYN
+			exists = SIK
+		#	exists = MAN
+			exists = CXB
+			puppet = { country = U87 country = JAP } #対等同盟
+			lost_national = { country = U87 value = 10 }
+		}
+	}
+
+	name = "EVT_132943_NAME"
+	desc = "EVT_132943_DESC"
+	picture = "economic"
+
+	date = { day = 0 month = january year = 1943 }
+	offset = 18
+	deathdate = { day = 29 month = may year = 1963 }
+
+	action_a = {
+		ai_chance = 97
+		name = "EVT_132943_ACTA"
+		command = { type = add_prov_resource which = 1321 value = 41 where = metal }
+		command = { type = construct which = infrastructure where = 1321 value = 20 }
+		command = { type = supplies value = -2000 }
+		command = { type = money value = -1500 }
+		command = { type = manpowerpool value = -200 }
+		command = { type = sleepevent which = 132938 }
+		command = { type = sleepevent which = 132939 }
+		command = { type = sleepevent which = 132940 }
+		command = { type = sleepevent which = 132941 }
+		command = { type = sleepevent which = 132942 }
+	}
+
+	action_b = {
+		ai_chance = 3
+		name = "EVT_132943_ACTB"
+		command = { }
+	}
+}
+
+event = {
+	id = 132944
+	random = no
+	country = JAP
+
+	trigger = {
+		random = 50
+		control = { province = 1356 data = JAP }
+		NOT = {
+			event = 132947
+		}
+	}
+	picture = "oil_supply"
+
+	name = "EVT_132944_NAME"
+	desc = "EVT_132944_DESC"
+	style = 0
+
+	date = { day = 15 month = august year = 1943 }
+	offset = 16
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "EVT_132944_ACTA"
+		ai_chance = 99
+		command = { type = supplies value = -500 }
+		command = { type = manpowerpool value = -10 }
+		command = { type = setflag which = minas }
+	}
+	action_b = {
+		name = "EVT_132944_ACTB"
+		ai_chance = 1
+		command = { }
+	}
+}
+
+event = {
+	id = 132945
+	random = no
+	country = JAP
+
+	trigger = {
+		random = 35
+		event = 132944
+		control = { province = 1356 data = JAP }
+		flag = minas
+	}
+	picture = "oil_supply"
+
+	name = "EVT_132945_NAME"
+	desc = "EVT_132945_DESC"
+	style = 0
+
+	date = { day = 15 month = august year = 1945 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "EVT_132945_ACTA"
+		command = { type = add_prov_resource which = 1356 value = 21 where = oil }
+		command = { type = construct which = infrastructure where = 1356 value = 10 }
+		command = { type = clrflag which = minas }
+	}
+}
+
+event = {
+	id = 132946
+	random = no
+
+	trigger = {
+		random = 5
+		flag = minas
+		NOT = {
+			control = { province = 1356 data = JAP }
+		}
+		control = { province = 1356 data = -1 }
+	}
+	picture = "oil_supply"
+
+	name = "EVT_132946_NAME"
+	desc = "EVT_132946_DESC"
+	style = 0
+
+	date = { day = 0 month = september year = 1945 }
+	offset = 34
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "EVT_132946_ACTA"
+		command = { type = add_prov_resource which = 1356 value = 21 where = oil }
+		command = { type = construct which = infrastructure where = 1356 value = 10 }
+		command = { type = clrflag which = minas }
+	}
+}
+
+event = {
+	id = 132947
+	random = no
+	country = JAP
+
+	trigger = {
+		random = 50
+		manpower = 10
+		control = { province = 1356 data = INO }
+		OR = {
+			puppet = { country = INO country = JAP }
+			alliance = { country = INO country = JAP }
+		}
+		NOT = {
+			event = 132944
+		}
+	}
+	picture = "oil_supply"
+
+	name = "EVT_132947_NAME"
+	desc = "EVT_132947_DESC"
+	style = 0
+
+	date = { day = 15 month = august year = 1943 }
+	offset = 16
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "EVT_132947_ACTA"
+		ai_chance = 99
+		command = { type = supplies value = -500 }
+		command = { type = manpowerpool value = -10 }
+		command = { type = relation which = INO value = 30 }
+		command = { type = setflag which = minas }
+	}
+	action_b = {
+		name = "EVT_132947_ACTB"
+		ai_chance = 1
+		command = { type = relation which = INO value = -30 }
+	}
+}
+
+event = {
+	id = 132948
+	random = no
+	country = INO
+
+	trigger = {
+		random = 25
+		control = { province = 1356 data = INO }
+		OR = {
+			puppet = { country = INO country = JAP }
+  			alliance = { country = INO country = JAP }
+		}
+		flag = minas
+	}
+	picture = "oil_supply"
+
+	name = "EVT_132948_NAME"
+	desc = "EVT_132948_DESC"
+	style = 0
+
+	date = { day = 15 month = august year = 1945 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "EVT_132948_ACTA"
+		command = { type = add_prov_resource which = 1356 value = 20 where = oil }
+		command = { type = relation which = INO value = 20 }
+		command = { type = clrflag which = minas }
+	}
+}
+
+
+#########################################################################
+# FEPK新規資源イベント
+#########################################################################
+
+##### カッパーベルト
+
+event = {
+	id = 132950
+	random = no
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U67 U69 UTC UER UPE U70 U71 U72 U73 U74 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+
+	trigger = {
+		random = 15
+		control = { province = 1129 data = -1 }
+		control = { province = 1127 data = -1 }
+		control = { province = 1098 data = -1 }
+	}
+	
+	date = { day = 1 month = january year = 1950 }
+	offset = 15
+	deathdate = { day = 1 month = january year = 1963 }
+
+	name = "EVT_132950_NAME"
+	desc = "EVT_132950_DESC"
+	picture = "oil_supply"
+ 	style = 0
+
+
+	action_a = {
+		name = "EVT_132950_ACTA"
+		ai_chance = 99
+		command = { type = money value = -100 }
+		command = { type = metalpool value = -5 }
+		command = { type = manpowerpool value = -1 }
+		command = { type = event which = 132951 where = -1 when = 0 }
+		}
+	action_b = {
+		name = "EVT_132950_ACTB"
+		ai_chance = 1
+		command = { type = sleepevent which = 132951 }
+		command = { type = sleepevent which = 132952 }
+		}
+	}
+event = {
+	id = 132951
+	random = no
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U67 U69 UTC UER UPE U70 U71 U72 U73 U74 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+
+	name = "EVT_132951_NAME"
+	desc = "EVT_132951_DESC"
+	picture = "oil_supply"
+	style = 0
+
+	action_a = {
+		name = "EVT_132951_ACTA"
+		command = { type = add_prov_resource which = 1129 value = 21 where = rare_materials }
+		command = { type = add_prov_resource which = 1127 value = 15 where = rare_materials }
+		command = { type = add_prov_resource which = 1098 value = 9 where = rare_materials }
+	}
+}
+event = {
+	id = 132952
+	random = no
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U67 U69 UTC UER UPE U70 U71 U72 U73 U74 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+
+	trigger = {
+		random = 15
+		control = { province = 1129 data = -1 }
+		control = { province = 1127 data = -1 }
+		control = { province = 1098 data = -1 }
+		event = 132951
+	}
+
+	name = "EVT_132952_NAME"
+	desc = "EVT_132952_DESC"
+	picture = "oil_supply"
+	style = 0
+
+	date = { day = 1 month = january year = 1950 }
+	offset = 60
+	deathdate = { day = 1 month = january year = 1963 }
+
+	action_a = {
+		name = "EVT_132952_ACTA"
+		ai_chance = 99
+		command = { type = money value = -1200 }
+		command = { type = metalpool value = -12 }
+		command = { type = manpowerpool value = -12 }
+		command = { type = event which = 132953 where = -1 when = 0 }
+		}
+	action_b = {
+		name = "EVT_132952_ACTB"
+		ai_chance = 1
+		command = { type = sleepevent which = 132953 }
+		}
+	}
+event = {
+	id = 132953
+	random = no
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U67 U69 UTC UER UPE U70 U71 U72 U73 U74 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+
+	name = "EVT_132953_NAME"
+	desc = "EVT_132953_DESC"
+	picture = "oil_supply"
+ 	style = 0
+
+	action_a = {
+		name = "EVT_132953_ACTA"
+		command = { type = add_prov_resource which = 1129 value = 39 where = rare_materials }
+		command = { type = add_prov_resource which = 1127 value = 27 where = rare_materials }
+		command = { type = add_prov_resource which = 1098 value = 15 where = rare_materials }
+	}
+}
+
+
+##### リビア油田＠リビア  最大生産量250
+
+event = {
+	id = 132954
+	random = no
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U67 U69 UTC UER UPE U70 U71 U72 U73 U74 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+
+	trigger = {
+		control = { province = 922 data = -1 }
+	}
+	
+	date = { day = 1 month = january year = 1955 }
+	#offset = 15
+
+	name = "EVT_132954_NAME"
+	desc = "EVT_132954_DESC"
+	picture = "oil_supply"
+ 	style = 0
+
+
+	action_a = {
+		name = "EVT_132954_ACTA"
+		ai_chance = 99
+		command = { type = money value = -100 }
+		command = { type = metalpool value = -5 }
+		command = { type = manpowerpool value = -1 }
+		command = { type = event which = 132955 where = -1 when = 0 }
+		}
+	action_b = {
+		name = "EVT_132954_ACTB"
+		ai_chance = 1
+		command = { type = sleepevent which = 132955 }
+		command = { type = sleepevent which = 132956 }
+		}
+	}
+
+event = {
+	id = 132955
+	random = no
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U67 U69 UTC UER UPE U70 U71 U72 U73 U74 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+
+	name = "EVT_132955_NAME"
+	desc = "EVT_132955_DESC"
+	picture = "oil_supply"
+	style = 0
+
+	action_a = {
+		name = "EVT_132955_ACTA"
+		command = { type = add_prov_resource which = 922 value = 50 where = oil }
+		command = { type = add_prov_resource which = 922 value = 5 where = energy }
+	}
+}
+
+event = {
+	id = 132956
+	random = no
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U67 U69 UTC UER UPE U70 U71 U72 U73 U74 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+
+	trigger = {
+		random = 15
+		control = { province = 922 data = -1 } #FEPKBETA3
+		event = 132955
+	}
+
+	name = "EVT_132956_NAME"
+	desc = "EVT_132956_DESC"
+	picture = "oil_supply"
+	style = 0
+
+	date = { day = 1 month = january year = 1959 }
+	offset = 60
+	deathdate = { day = 1 month = january year = 1964 }
+
+	action_a = {
+		name = "EVT_132956_ACTA"
+		ai_chance = 99
+		command = { type = money value = -1200 }
+		command = { type = metalpool value = -12 }
+		command = { type = manpowerpool value = -12 }
+		command = { type = event which = 132957 where = -1 when = 0 }
+		}
+	action_b = {
+		name = "EVT_132956_ACTB"
+		ai_chance = 1
+		command = { type = sleepevent which = 132957 }
+		}
+	}
+
+event = {
+	id = 132957
+	random = no
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SOV SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U67 U69 UTC UER UPE U70 U71 U72 U73 U74 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+
+	name = "EVT_132957_NAME"
+	desc = "EVT_132957_DESC"
+	picture = "oil_supply"
+ 	style = 0
+
+	action_a = {
+		name = "EVT_132957_ACTA"
+		command = { type = add_prov_resource which = 922 value = 200 where = oil }
+		command = { type = add_prov_resource which = 922 value = 25 where = energy }
+	}
+}
+
+#####	フーバーダム（ボールダーダム）
+event = {
+	 id = 132958
+ 	 random = no
+	 country = USA
+
+	 trigger = {
+			owned = { province = 734 data = USA }
+			control = { province = 734 data = USA }
+                    }
+
+	 name = "EVT_132958_NAME"	#ボールダーダム
+	 desc = "EVT_132958_DESC"	#
+	style = 0
+	picture = "suihou-dam"
+
+	date = { day = 29 month = 8 year = 1936 }
+
+	action_a = {
+		name = "OK"
+		command = { type = construct which = infrastructure where = 734 value = 10 }
+		command = { type = add_prov_resource which = 734 value = 20 where = energy }
+	}
+}
+
+#####	玉門油田
+event = {
+	id = 132959
+	random = no
+	tag = { CHI U87 }
+	trigger = {
+		control = { province = 1440 data = -1 }
+	}
+	
+	date = { day = 1 month = june year = 1939 }
+	offset = 15
+	deathdate = { day = 1 month = june year = 1964 }
+	
+	name = "EVT_132959_NAME"	#玉門油田の発見
+	desc = "EVT_132959_DESC"	#
+	picture = "oil_supply"
+	style = 0
+	
+	action_a = {
+		name = "EVT_132959_ACTA"	#よろしい
+		command = { type = money value = -10 }
+		command = { type = add_prov_resource which = 1440 value = 1 where = oil }
+	}
+}
+
+event = {
+	id = 132960
+	random = no
+	tag = { U87 CHC CHI }
+	trigger = {
+		control = { province = 1440 data = -1 }
+		atwar = no
+	}
+	
+	name = "EVT_132960_NAME"	#玉門油田の拡大
+	desc = "EVT_132960_DESC"	#
+	picture = "oil_supply"
+	style = 0
+	
+	date = { day = 1 month = june year = 1948 }
+	offset = 15
+	deathdate = { day = 1 month = june year = 1964 }
+	
+
+	action = {
+		name = "EVT_132960_ACTA"	#設備を近代化し、更に増産を進めよ
+		command = { type = money value = -20 }
+		command = { type = add_prov_resource which = 1440 value = 4 where = oil }
+	}
+}
+
+event = {
+	id = 132961
+	random = no
+	tag = { CHI CHC }
+	trigger = {
+		NOT = { # North Manchuria Oil Field
+			event = 55411 
+			event = 55067
+		} 
+		OR = {
+			alliance = { country = ENG }
+			alliance = { country = USA }
+			alliance = { country = SOV }
+			technology = 13020
+		}
+		owned = { province = 1380 data = -1 }
+		random = 25
+	}
+	
+	name = "EVT_132961_NAME"	#大慶油田の発見
+	desc = "EVT_132961_DESC"	#
+	picture = "oil_supply"
+	style = 0
+
+	
+	date = { day = 1 month = june year = 1956 }
+	offset = 47
+	deathdate = { day = 1 month = june year = 1964 }
+	
+	action = {
+		name = "EVT_132961_ACTA"	#設備を近代化し、更に増産を進めよ
+		command = { type = money value = -250 }
+		command = { type = add_prov_resource which = 1380 value = 18 where = oil }
+		command = { type = add_prov_resource which = 1380 value = 24 where = energy } #
+		command = { type = add_prov_resource which = 1380 value = 9 where = metal } #
+		command = { type = add_prov_resource which = 1380 value = 7 where = rare_materials } #
+	}
+}
+
+#####	マッツェン油田＠オーストリア　最大生産量0.4
+event = {
+	id = 132962
+	random = no
+	country = AUS
+	trigger = {
+		control = { province = 463 data = -1 }
+		random = 11
+		money = 100
+	}
+	date = { day = 1 month = 0 year = 1948 }
+	offset = 8
+	deathdate = { day = 1 month = june year = 1964 }
+	
+	name = "EVT_132962_NAME"	#マッツェン油田の発見
+	desc = "EVT_132962_DESC"	#
+	
+	action = {
+		name = "OK"	#OK
+		command = { type = add_prov_resource which = 463 value = 0.5 where = oil }
+	}
+}

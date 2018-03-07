@@ -1,0 +1,2781 @@
+###############################################################################
+#		japanese_fascism.txt
+#		“ú–{E‹É“Œ’Ç‰ÁƒCƒxƒ“ƒgi“ú–{Št—»•ÏXj
+#
+###############################################################################
+# * ‚ÍIFƒCƒxƒ“ƒg
+#
+#‹ß‰q•¶–›i5034A5203j‚É‚Â‚¢‚Ä‚Ìà–¾
+#5034‚Í`39”N‚ÌijÀj“ú’†í‘ˆŠúA5203‚Í39”NˆÈ~‚Ì‘æ“ñŸ‘gŠtŠú‚ÆŠ„‚èU‚Á‚Ä‚¢‚Ü‚·B
+#
+###############################################################################
+###### ’Ç‰ÁƒCƒxƒ“ƒgˆê—— ############
+#############################################################Št—»•ÏXƒCƒxƒ“ƒgŒQ
+#############################################################jÀE€jÀƒ‹[ƒg
+#id = 55900#  226–Œ‚ÌûE  -‰ª“c“àŠt‘«E-		('36/03/09
+#id = 55901#  ŒR•”‘åbŒ»–ğ•Š¯§			('36/05/18
+#id = 55902#  • Ø‚è–â“š  -œA“c“àŠt“|Št-		('37/01/10
+#id = 55903#  —Ñ“àŠt‘«E				('37/06/04
+#id = 55904#* ŒR•”‘åbŒ»–ğ•Š¯§”p~
+#id = 55906#* ˜a•½¸”sE‹ß‰q“àŠt‘gŠt			('38
+#id = 55907#  ‘æˆêŸ‹ß‰q“àŠt  ‰ü‘¢  ‰FŠ_ŠO‘ŠA”C	('38/05/26
+#id = 55908#  ‘æˆêŸ‹ß‰q“àŠt  ‰ü‘¢  ‰FŠ_„—L“c		('38/10/29
+#
+#id = 55910#  •½À“àŠt‘gŠt				('39/01/05
+#id = 55911#  •½À“àŠt‘«E(ƒ‚ƒŠ‹¦’è  –jÀƒ‹[ƒg	('39/09/01
+#id = 55912#* •½À“àŠt‘«E(ƒ‚ƒŠ‹¦’è  –‰FŠ_ƒ‹[ƒg	('39/09/01
+#id = 55913#  ˆ¢•”“àŠt“|ŠtI(•Ä“à“àŠt‘gŠt		('40/01/15
+#id = 55914#  •Ä“à“àŠt“|ŠtI(‘æ“ñŸ‹ß‰q“àŠt‘gŠt		('40/07/22  –jÀƒ‹[ƒgiˆ¢•”„•Ä“à  Œ^
+#id = 55915#* ‹ß‰qV“}‰^“®I(‘æ“ñŸ‹ß‰q“àŠt‘gŠt		('40/07/22  –ãˆÈŠO‚Ìƒ‹[ƒgi•½À„ˆ¢•”ˆÈŠO‚Ì‚Rl
+#id = 55918#  ¼‰ª—m‰EX“RI(‘æOŸ‹ß‰q“àŠt‘gŠt		('41/07/18
+#################################################‘¾•½—mí’†“àŠti‘Sƒ‹[ƒg‹¤’Êj
+#id = 55920#  í“àŠt					('41/10/18
+#id = 55921#* ‰FŠ_í“àŠt“|Št  i„“Œğ
+#id = 55922#  ¬ˆé“àŠt‘gŠt				('44/07/22
+#id = 55923#  —é–Ø“àŠt‘gŠt				('45/04/07
+#id = 55924#* ˆ¢“ì“àŠt‘gŠt				('--------
+#
+###########################################ƒgƒ‰ƒEƒgƒ}ƒ“˜a•½“àŠti‘Sƒ‹[ƒg‹¤’Êj
+#id = 55940#* ƒgƒ‰ƒEƒgƒ}ƒ“HìE˜a•½Œã­Œ 0œA“c	0‚Í37”N‚©‚ç
+#id = 55941#* •¶–¯“àŠt‚PŒã“¡			1-4‚ª38”N‚©‚ç•À—ñƒ‰ƒ“ƒ_ƒ€
+#id = 55942#* •¶–¯“àŠt‚Q’r“c			0‚ª”­¶‚µ‚Ä‚¢‚È‚­‚Æ‚àA
+#id = 55943#* •¶–¯“àŠt‚RŸ“c			‘å‘‚Æí‘ˆ‚ª‹N‚±‚Á‚Ä‚¢‚È‚¯‚ê‚Î‚±‚ê‚ç‚Í”­¶‚·‚éB
+#id = 55944#* •¶–¯“àŠt‚S’¬“c			5‚Í39”NˆÈ~A2-4‚Ì”­¶Œã‚É‹N‚±‚éijÀ•œ‹A—pjA
+#id = 55945#* •¶–¯“àŠt‚T•½À			39”N9Œ‚Édeathdate
+#id = 55946#* •¶–¯“àŠt‚T•½À			6Œ‚É‹­§”­¶ƒCƒxƒ“ƒgB45‚ğsleep
+#
+###############################################################c“¹”hƒ‹[ƒg“àŠt
+#id = 55950#* (c“¹”h‘¤) • Ø‚è–â“š	    áÁè„‹ß‰q‘gŠt	('37/01/11
+#id = 55951#* (c“¹”h‘¤) “ú’†í“àŠt		„r–Øor–{¯	('37/09
+#id = 55952#* (c“¹”h‘¤) •½À“àŠt‘gŠt		„•½À‘gŠt	('39/01
+#id = 55953#* (c“¹”h‘¤) ƒ‚ƒŠ‹¦’èŒã“àŠt		„•Ä“à‘gŠt	('39/08/30
+#						i‹ß‰q‘gŠtj
+#id = 55954#* (c“¹”h‘¤) í“àŠt		„¬”¨oráÁè	('41
+#“à‘Š“¡]œ¨•ã(35)•½—Ñ·l(39)“c’†èÎšã(38)–L“ˆ–[‘¾˜Y(40)‚Í—¤ŒRl‚È‚Ì‚Åg‚¢‚â‚·‚¢‚©‚à
+#
+#################################################################‰i“cƒ‹[ƒg“àŠt
+#id = 55970#* (‰i“cƒ‹[ƒg) • ‚«‚è–â“š		„‰FŠ_“àŠt	('37/01/10
+#id = 55971#* (‰i“cƒ‹[ƒg) ‹ß‰qV“}		„‹ß‰q“àŠt	('38/03/`
+#						i•½À‘gŠtj
+#id = 55972#* (‰i“cƒ‹[ƒg) •Ä“à“àŠt‘gŠt		„•Ä“à“àŠt	('39/08/30
+#id = 55973#* (‰i“cƒ‹[ƒg) ”½ŒR‰‰à		„–ƒ¶“àŠt	('40/03/20
+#id = 55974#* (‰i“cƒ‹[ƒg) –ƒ¶‚Ì€		„‹ß‰q“àŠt	('40/09/06
+#id = 55975#* (‰i“cƒ‹[ƒg) ‰i“c“SRñ‘ŠA”C	„‰i“c“àŠt	('41
+#id = 55976#* (‰i“cƒ‹[ƒg) ‰i“c€Œã“àŠt
+
+#############################################################­¡ŠÖ˜AƒCƒxƒ“ƒgŒQ
+###########################################################################‘I‹“
+#id = 55980#  ‘æ19‰ñO‹c‰@‹cˆõ‘‘I‹“	('36/02/20
+#id = 55981#  H‚¢“¦‚°‰ğU		('37/04/01
+#id = 55982#* O‰@‹cˆõ”CŠú‰„’·40”N“x”Å	('40/02/01
+#id = 55983#  O‰@‹cˆõ”CŠú‰„’·41”N“x”Å	('41/04/01
+#id = 55984#  ‘å­—ƒ^‰ï		('40/10/12
+#id = 55985#* ‘å­—ƒ^‰ïiNSj		('40/10/12
+#id = 55986#  ”½ŒR‰‰à			('40/02/02
+#id = 55987#  —ƒ^‘I‹“			('42/04/30
+#id = 55988#* Ií‰ğU			('40-41
+#
+###########################################################################­¡
+#id = 55990#  x“ß–•Ï”­¶I
+#id = 55991#  ‹ß‰qº–¾ƒCƒxƒ“ƒg(38/1/16
+#id = 55992#  ‘‰Æ‘“®ˆõ–@(38/5
+
+###############################################################################
+#  ‰ª“c“àŠt‘«E -226–Œ‚ÌûE-
+###############################################################################
+event = { 
+	id = 55900
+	random = no
+	country = JAP
+	
+	name = "EVT55900N"
+	desc = "EVT55900D"
+
+	style = 0
+	picture = "japanese_officers"
+
+	trigger = {
+		
+		headofgovernment = 5002
+		OR = {
+			event = 1
+			event = 59903
+			event = 55614
+		}
+		flag = Toseiha
+		NOT = { flag = Kodoha }
+	}
+        date = { day = 9 month = march year = 1936 }	#36/03/09
+
+	action_a = { # 
+		name = "ACT55900A"#
+		command = { type = headofgovernment	which = 5040 }	#œA“c
+		command = { type = foreignminister	which = 5003 }	#œA“c O‹B ŠO–±‘åb
+		command = { type = armamentminister	which = 5072 }	#¬ì ‹½‘¾˜Y ¤H‘åb
+		command = { type = ministerofsecurity	which = 5105 }	#’ª œ¨”V•ã “à–±‘åb
+		command = { type = chiefofnavy		which = 5173 }	#‰i–ì Cg ŠCŒR‘åb
+		#command = { type = sleepminister	which = 5002 }	#‰ª“cŒ[‰î
+		#command = { type = dissent value = 1 }
+	}
+}
+###############################################################################
+#  ŒR•”‘åbŒ»–ğ•Š¯§
+###############################################################################
+event = { 
+	id = 55901
+	random = no
+	country = JAP
+	
+	name = "EVT55901N"
+	desc = "EVT55901D"
+	style = 0
+	picture = "japanese_reinforcments"
+
+	trigger = {
+		OR = {
+			event = 1
+			event = 59903	#2-2-6
+			event = 55614
+			event = 55615
+		}
+	}
+	date = { day = 18 month = may year = 1936 }	#1936/05/18     ŒR•”‘åbŒ»–ğ•Š¯§•œŠˆ
+
+	action_a = {  
+		name = "ACT55901A"
+		command = { type = domestic	which = democratic	value = -1 }
+		#command = { type = domestic	which = political_left	value = -1 }
+		#command = { type = dissent value = 1 }
+	}
+}
+###############################################################################
+#  • Ø‚è–â“š
+###############################################################################
+event = { 
+	id = 55902
+	random = no
+	country = JAP
+	
+	name = "EVT55902N"
+	desc = "EVT55902D"
+	style = 0
+	picture = "japanese_officers"
+
+	trigger = {
+		headofgovernment = 5040
+		event = 55901
+		NOT = { flag = Nagata }
+		#flag = Toseiha		#Œ±“I–³Œø‰»
+		NOT = { flag = Kodoha }
+	}
+	date = { day = 10 month = january year = 1937 } # Real Date: 
+	#offset = 1
+	#deathdate = { day = 11 month = january year = 1937 }
+
+	action_a = { # 
+		name = "ACT55902A"
+		ai_chance = 75 #FEPKBETA3
+		command = { type = headofgovernment	which = 5033 }	#—Ñ
+		command = { type = foreignminister	which = 5053 }	#²“¡ ®• ŠO–±‘åb
+		command = { type = armamentminister	which = 5073 }	#ŒŞ“° ‘ì—Y ¤H‘åb
+		command = { type = ministerofsecurity	which = 5099 }	#‰ÍŒ´“c ‰Ò‹g “à–±‘åb
+		#H‚¢“¦‚°‰ğU‚Ö‚Ìƒtƒ‰ƒO
+	}
+	action_b = { # 
+		name = "ACT55902B"
+		ai_chance = 25 #FEPKBETA3
+		command = { type = sleepevent	which = 55981 }
+		command = { type = trigger	which = 55904 }
+	}
+}
+###############################################################################
+#  —Ñ“àŠt‘«E('37/04/30)
+###############################################################################
+event = { 
+	id = 55903
+	random = no
+	country = JAP
+	
+	name = "EVT55903N"
+	desc = "EVT55903D"
+	style = 0
+	picture = "japanese_officers"
+
+	trigger = {
+		headofgovernment = 5033
+		event = 55981		#H‚¢“¦‚°‰ğU
+		NOT = { flag = Nagata }
+		#flag = Toseiha		#Œ±“I–³Œø‰»
+		NOT = { flag = Kodoha }
+	}
+
+	date = { day = 4 month = june year = 1937 } # Real Date: 37/6/4
+	action_a = { # 
+		name = "ACT55903A"
+		ai_chance = 98 #FEPKBETA3
+		command = { type = headofgovernment	which = 5034 }	#‹ß‰q
+		command = { type = foreignminister	which = 5003 }	#œA“c ŠO–±‘åb
+		command = { type = armamentminister	which = 5069 }	#‹g–ì MŸ ¤H‘åb
+		command = { type = ministerofsecurity	which = 5107 }	#”nê ú^ˆê “à–±‘åb
+		command = { type = sleepevent which = 55906 }
+	}
+	action_b = { # 
+		name = "ACT55903B"
+		ai_chance = 2 #FEPKBETA3
+		command = { type = headofgovernment	which = 5509 }	#™R Œ³
+		command = { type = foreignminister	which = 5057 }	#—L“c ”ª˜Y ŠO–±‘åb
+		command = { type = armamentminister	which = 5080 }	#ìè ‘ì‹g ¤H‘åb
+		command = { type = ministerofsecurity	which = 5107 }	#”nê ú^ˆê “à–±‘åb
+		command = { type = dissent value = 1 }
+	}
+}
+###############################################################################
+#  ŒR•”‘åbŒ»–ğ•Š¯§”p~
+###############################################################################
+
+event = { 
+	id = 55904
+	random = no
+	country = JAP
+	
+	name = "EVT55904N"
+	desc = "EVT55904D"
+	style = 0
+	picture = "japanese_reinforcments"
+
+	action_a = { # 
+		name = "ACT55904A"
+		command = { type = set_domestic which = democratic		value = 5 }
+		command = { type = set_domestic which = political_left	value = 4 }
+		command = { type = headofgovernment	which = 5028 }	#‰FŠ_
+		command = { type = foreignminister	which = 5057 }	#—L“c ”ª˜Y ŠO–±‘åb
+		command = { type = armamentminister	which = 5090 }	#Ÿ“c åŒv ¤H‘åb
+		command = { type = ministerofsecurity	which = 5105 }	#’ª œ¨”V•ã “à–±‘åb
+		command = { type = dissent value = 3 }
+	}
+}
+###############################################################################
+#  ˜a•½¸”sE‹ß‰q“àŠt‘gŠt
+###############################################################################
+event = { 
+	id = 55906
+	random = no
+	country = JAP
+	
+	name = "EVT55906N"
+	desc = "EVT55906D"
+	style = 0
+	picture = "japanese_officers"
+
+	trigger = {
+		#NOT = { year = 1939 }
+		war = { country = CHI country = JAP }
+		NOT = { headofgovernment = 5034 }	#‹ß‰q
+		NOT = { headofgovernment = 5041 }	#•½À
+		#NOT = { flag = Nagata }	#–³Œø‰»
+		#flag = Toseiha			#–³Œø‰»
+		NOT = { flag = Kodoha }
+		random = 50
+	}
+
+	date = { day = 0 month = january year = 1938 } # Real Date: *
+	offset = 30
+	deathdate = { day = 29 month = august year = 1939 }#‘æ“ñŸ‹ß‰q“àŠt‚É‚©‚Ô‚ç‚È‚¢‚æ‚¤‚É
+	action_a = { # 
+		name = "ACT55903A"
+		command = { type = headofgovernment	which = 5034 }	#‹ß‰q
+		command = { type = foreignminister	which = 5055 }	#‰FŠ_ ˆê¬ ŠO–±‘åb
+		command = { type = armamentminister	which = 5081 }	#’r“c ¬•j ¤H‘åb
+		command = { type = ministerofsecurity	which = 5106 }	#––Ÿ M³ “à–±‘åb
+		command = { type = sleepevent	which = 55907 }
+	}
+}
+###############################################################################
+#  ‹ß‰q“àŠt‰ü‘¢  ‰FŠ_ŠO‘ŠE’r“c¤H‘Š
+###############################################################################
+event = { 
+	id = 55907
+	random = no
+	country = JAP
+	
+	name = "EVT55907N"
+	desc = "EVT55907D"
+	style = 0
+	picture = "japanese_officers"
+
+	trigger = {
+		headofgovernment = 5034
+		war = { country = CHI country = JAP }
+		NOT = { incabinet = 5055 }
+		year = 1938
+		random = 15
+	}
+
+	date = { day = 0 month = january year = 1935 } # Real Date: 38/5.26
+	offset = 30
+	deathdate = { day = 29 month = august year = 1939 }#‘æ“ñŸ‹ß‰q“àŠt‚É‚©‚Ô‚ç‚È‚¢‚æ‚¤‚É
+	action_a = { # 
+		name = "ACT55907A"
+		command = { type = foreignminister	which = 5055 }	#‰FŠ_ ˆê¬ ŠO–±‘åb
+		command = { type = armamentminister	which = 5081 }	#’r“c ¬•j ¤H‘åb
+		command = { type = ministerofsecurity	which = 5106 }	#––Ÿ M³ “à–±‘åb
+	}
+}
+###############################################################################
+#  ‹ß‰q“àŠt‰ü‘¢  ‰FŠ_ŠO‘Š«”C
+###############################################################################
+event = { 
+	id = 55908
+	random = no
+	country = JAP
+	
+	name = "EVT55908N"
+	desc = "EVT55908D"
+	style = 0
+	picture = "japanese_officers"
+
+	trigger = {
+		year = 1938
+		headofgovernment = 5034
+		war = { country = CHI country = JAP }
+		incabinet = 5055
+		random = 15
+	}
+
+	date = { day = 1 month = june year = 1935 } # Real Date: 38/9/30
+	offset = 30
+	deathdate = { day = 29 month = august year = 1939 }#‘æ“ñŸ‹ß‰q“àŠt‚É‚©‚Ô‚ç‚È‚¢‚æ‚¤‚É
+	action_a = { # 
+		name = "ACT55908A"
+		command = { type = foreignminister which = 5057 }	#—L“c ”ª˜Y ŠO–±‘åb
+		command = { type = dissent value = 1 }
+	}
+}
+###############################################################################
+#  ‹ß‰q“àŠt„•½À“àŠt‘gŠt
+###############################################################################
+event = { 
+	id = 55910
+	random = no
+	country = JAP
+	
+	name = "EVT55910N"
+	desc = "EVT55910D"
+	style = 0
+	picture = "japanese_officers"
+
+	trigger = {
+		year = 1938
+		war = { country = CHI country = JAP }
+		event = 55104 #ŸŠ’›–ÁHìƒCƒxƒ“ƒg
+		#NOT = { flag = Nagata }	#–³Œø‰»
+		flag = Toseiha
+		NOT = { flag = Kodoha }
+	}
+
+	date = { day = 0 month = january year = 1935 } # Real Date: 39/1
+	offset = 30
+	deathdate = { day = 29 month = august year = 1939 }
+	action_a = { # 
+		name = "ACT55910A"
+		command = { type = headofgovernment	which = 5041 }	#•½À éuˆê˜Y
+		command = { type = foreignminister	which = 5057 }	#—L“c ”ª˜Y ŠO–±‘åb
+		command = { type = armamentminister	which = 5082 }	#”ª“c ‰Ã–¾ ¤H‘åb
+		command = { type = ministerofsecurity	which = 5108 }	#–ØŒË Kˆê “à–±‘åb
+	}
+}
+###############################################################################
+#  •½À“àŠt‘«E  iH‚¢“¦‚°‰ğU‘¤
+###############################################################################
+event = { 
+	id = 55911
+	random = no
+	country = JAP
+	
+	name = "EVT55911N"
+	desc = "EVT55911D"
+	style = 0
+	picture = "japanese_officers"
+
+	trigger = {
+		headofgovernment = 5041
+		OR = {
+			event = 130138 #normal #FEPK1.11
+			event = 130146 #Limited
+			event = 130142 #No Full
+			event = 130143 #full
+			#atwar = GER
+		}
+		event = 55981
+		NOT = { flag = Nagata }
+		flag = Toseiha
+		NOT = { flag = Kodoha }
+	}
+
+	date = { day = 29 month = august year = 1939 } # Real Date: 39/8
+	offset = 3
+	deathdate = { day = 29 month = september year = 1939 }
+	action_a = { # 
+		name = "ACT55911A"
+		ai_chance = 98 #FEPKBETA3
+		command = { type = headofgovernment	which = 5035 }	#ˆ¢•” Ms
+		command = { type = foreignminister	which = 5059 }	#–ì‘º‹gO˜Y ŠO–±‘åb
+		command = { type = armamentminister	which = 5073 }	#ŒŞ“° ‘ì—Y ¤H‘åb
+		command = { type = ministerofsecurity	which = 5100 }	#¬Œ´ ’¼ “à–±‘åb
+	}
+	action_b = { # 
+		name = "ACT55911B"
+		ai_chance = 2 #FEPKBETA3
+		command = { type = headofgovernment	which = 5511 }	#’r“c ¬•j
+		command = { type = foreignminister	which = 5055 }	#‰FŠ_ ˆê¬ ŠO–±‘åb
+		command = { type = armamentminister	which = 5072 }	#¬ì ‹½‘¾˜Y ¤H‘åb
+		command = { type = ministerofsecurity	which = 5108 }	#–ØŒË Kˆê “à–±‘åb
+		command = { type = dissent value = 1 }
+	}
+}
+###############################################################################
+#  •½À“àŠt‘«E  i‰FŠ_‘¤
+###############################################################################
+event = { 
+	id = 55912
+	random = no
+	country = JAP
+	
+	name = "EVT55912N"
+	desc = "EVT55912D" #FEPKBETA3
+	style = 0
+	picture = "japanese_officers"
+
+	trigger = {
+		headofgovernment = 5041
+		OR = {
+			event = 130138 #normal #FEPK1.11
+			event = 130146 #Limited
+			event = 130142 #No Full
+			event = 130143 #full
+			#atwar = GER
+		}
+		#atwar = GER
+		NOT = { event = 55981 }
+		NOT = { flag = Nagata }
+		flag = Toseiha
+		NOT = { flag = Kodoha }
+	}
+
+	date = { day = 29 month = august year = 1939 } # Real Date: 39/8
+	offset = 3
+	deathdate = { day = 29 month = september year = 1939 }
+	action_a = { # 
+		name = "ACT55912A"
+		ai_chance = 98 #FEPKBETA3
+		command = { type = headofgovernment	which = 5512 }	#Ÿ“c åŒv
+		command = { type = foreignminister	which = 5058 }	#ˆ¢•” Ms ŠO–±‘åb
+		command = { type = armamentminister	which = 5073 }	#ŒŞ“° ‘ì—Y ¤H‘åb
+		command = { type = ministerofsecurity	which = 5100 }	#¬Œ´ ’¼ “à–±‘åb
+	}
+	action_b = { # 
+		name = "ACT55902B"
+		ai_chance = 2 #FEPKBETA3
+		command = { type = headofgovernment	which = 5028 }	#‰FŠ_ ˆê¬
+		command = { type = foreignminister	which = 5059 }	#–ì‘º‹gO˜Y ŠO–±‘åb
+		command = { type = armamentminister	which = 5082 }	#”ª“c ‰Ã–¾ ¤H‘åb
+		command = { type = ministerofsecurity	which = 5105 }	#’ª œ¨”V•ã “à–±‘åb
+		command = { type = dissent value = 1 }
+	}
+}
+###############################################################################
+#  ˆ¢•”“àŠt“|ŠtI
+###############################################################################
+event = { 
+	id = 55913
+	random = no
+	country = JAP
+	
+	name = "EVT55913N"
+	desc = "EVT55913D"
+	style = 0
+	picture = "japanese_officers"
+
+	trigger = {
+		year = 1940
+		headofgovernment = 5035
+		NOT = { flag = Nagata }
+		flag = Toseiha
+		NOT = { flag = Kodoha }
+		random = 33
+	}
+
+	date = { day = 1 month = january year = 1940 } #  Real Date: 40/1
+	offset = 14
+	deathdate = { day = 29 month = december year = 1963 }
+	action_a = { # 
+		name = "ACT55913A"
+		command = { type = headofgovernment	which = 5036 }	#•Ä“à Œõ­
+		command = { type = foreignminister	which = 5057 }	#—L“c ”ª˜Y ŠO–±‘åb
+		command = { type = armamentminister	which = 5084 }	#“¡Œ´ ‹âŸ˜Y ¤H‘åb	#“¡Œ´‚ğ40”N‚É
+		command = { type = ministerofsecurity	which = 5121 }	#™Z‹Ê G—Y “à–±‘åb	#™Z‹Ê‚ğ40”N‚É
+	}
+}
+###############################################################################
+#  •Ä“à“àŠt“|ŠtI
+###############################################################################
+event = { 
+	id = 55914
+	random = no
+	country = JAP
+	
+	name = "EVT55914N"
+	desc = "EVT55914D"
+	style = 0
+	picture = "japanese_officers"
+
+	trigger = {
+		year = 1940
+		headofgovernment = 5036
+		NOT = { flag = Nagata }
+		flag = Toseiha
+		NOT = { flag = Kodoha }
+		random = 20
+	}
+
+	date = { day = 0 month = january year = 1935 } #  Real Date: 40/7
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+	action_a = { # 
+		name = "ACT55903A"
+		command = { type = headofgovernment	which = 5203 }	#‹ß‰q •¶–›
+		command = { type = foreignminister	which = 5060 }	#¼‰ª —m‰E ŠO–±‘åb
+		command = { type = armamentminister	which = 5084 }	#¬—Ñ ˆêO ¤H‘åb	40”N‚É
+		command = { type = ministerofsecurity	which = 5110 }	#ˆÀˆä ‰p“ñ “à–±‘åb	40”N‚É
+		command = { type = dissent value = 1 }
+		command = { type = sleepevent which = 55915 } 
+	}
+}
+###############################################################################
+#  ‹ß‰qV“}‰^“®‚Æ‘æ“ñŸ‹ß‰q“àŠt
+###############################################################################
+event = { 
+	id = 55915
+	random = no
+	country = JAP
+	
+	name = "EVT55915N"
+	desc = "EVT55915D"
+	style = 0
+	picture = "japanese_officers"
+
+	trigger = {
+		year = 1940
+		#NOT = { year = 1942 }
+		NOT = { event = 55918 } #‘æOŸ‹ß‰q“àŠt
+		NOT = { event = 55920 } #“§”hí“àŠt
+		NOT = { event = 55954 } #c“¹”hí“àŠt
+		NOT = { event = 55975 } #‰i“c“àŠt #FEPK•ÏX•”•ª #1.073 #ƒ~ƒXC³
+		NOT = { headofgovernment = 5203 } # ‹ß‰q
+		NOT = { headofgovernment = 5035 } # ˆ¢•”
+		OR = {
+			NOT = { headofgovernment = 5036 } # •Ä“à
+			AND = {
+				headofgovernment = 5036
+				flag = Kodoha
+			}
+		}
+		NOT = { headofgovernment = 5562 } # –ƒ¶
+		NOT = { headofgovernment = 5042 } # “Œğ
+		NOT = { headofgovernment = 5555 } # ‰i“c
+		NOT = { headofgovernment = 5552 } # ¬”¨
+		NOT = { headofgovernment = 5038 } # “Œ‹vç‹{
+		NOT = { headofgovernment = 5043 } # ¬ˆé‘º
+		NOT = { headofgovernment = 5037 } # —é–ØŠÑ‘¾˜Y
+
+		random = 15
+	}
+
+	date = { day = 0 month = january year = 1935 } #  Real Date: 40/7
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+	action_a = { # 
+		name = "ACT55903A"
+		command = { type = headofgovernment	which = 5203 }	#‹ß‰q •¶–›
+		command = { type = foreignminister	which = 5060 }	#¼‰ª —m‰E ŠO–±‘åb
+		command = { type = armamentminister	which = 5084 }	#¬—Ñ ˆêO ¤H‘åb
+		command = { type = ministerofsecurity	which = 5110 }	#ˆÀˆä ‰p“ñ “à–±‘åb
+		command = { type = sleepevent which = 55914 } 
+		command = { type = dissent value = 1 }
+	}
+}
+###############################################################################
+#  ¼‰ª—m‰EX“RI(‘æOŸ‹ß‰q“àŠt‘gŠt  i1941.7.18
+###############################################################################
+event = { 
+	id = 55918
+	random = no
+	country = JAP
+	
+	name = "EVT55918N"
+	desc = "EVT55918D"
+	style = 0
+	picture = "japanese_officers"
+
+	trigger = {
+		headofgovernment = 5203
+		InCabinet = 5060
+		OR = {
+			war = { country = GER  country = SOV }
+			war = { country = ITA  country = SOV }
+			#war = { country = JAP  country = SOV }
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 } #  Real Date: 41/7
+	offset = 14
+	deathdate = { day = 29 month = december year = 1963 }
+	action_a = { # 
+		name = "ACT55918A"
+		command = { type = headofgovernment which = 5203 }	#‹ß‰q •¶–›
+		command = { type = foreignminister which = 5061 }	#æ²“c ’åŸ˜Y ŠO–±‘åb
+		command = { type = armamentminister which = 5087 }	#¶‹ßi ­O ¤H‘åb	#¶‹ßi‚Ì“oê”N”‚ªˆÙí
+		command = { type = ministerofsecurity which = 5112 }	#“cç² ¡’Ê “à–±‘åb
+		command = { type = chiefofnavy		which = 5200 }	#R–{ŒÜ\˜Z ˜A‡ŠÍ‘ài—ß’·Š¯
+		command = { type = chiefofair		which = 5193 }	#“y”ìŒ´Œ«“ñ q‹ó‘ŠÄ
+	}
+}
+
+#################################################################‘¾•½—mí’†“àŠt
+###############################################################################
+#  “ŒŠí“àŠt”­‘«
+###############################################################################
+event = { 
+	id = 55920
+	random = no
+	country = JAP
+	
+	name = "EVT55920N"
+	desc = "EVT55920D"
+	style = 0
+	picture = "tojo"
+
+	trigger = {
+		OR = { 
+			ideology = nazi
+			ideology = fascist
+			ideology = paternal_autocrat
+			ideology = social_conservative
+		}
+		OR = {
+			AND = {
+				event = 3800
+				random = 20
+			}
+			war = { country = JAP  country = USA }
+			war = { country = JAP  country = SOV }
+			war = { country = JAP  country = ENG }
+			war = { country = JAP  country = FRA }
+			war = { country = JAP  country = ITA }
+			war = { country = JAP  country = GER }
+		}
+		NOT = { headofgovernment = 5555 } # Nagata
+		NOT = { flag = Nagata }
+		flag = Toseiha
+		NOT = { flag = Kodoha }
+	}
+
+	date = { day = 1 month = january year = 1941 } # Real Date: 41/10
+	offset = 14
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = { # 
+		name = "ACT55920A"
+		ai_chance = 98 #FEPKBETA3
+		command = { type = headofgovernment	which = 5042 }	#“Œğ ‰p‹@
+		command = { type = foreignminister	which = 5065 }	#“Œ‹½ –Î“¿ ŠO–±‘åb
+		command = { type = armamentminister	which = 5085 }	#Šİ M‰î ¤H‘åb
+		command = { type = ministerofsecurity	which = 5123 }	#“Œğ ‰p‹@ “à–±‘åb
+	#	command = { type = chiefofstaff		which = 5155 }	#™R Œ³ Q–d‘’·
+	#	command = { type = chiefofarmy		which = 5165 }	#™R Œ³ Q–d‘’·
+		command = { type = chiefofnavy		which = 5200 }	#R–{ŒÜ\˜Z ˜A‡ŠÍ‘ài—ß’·Š¯
+		command = { type = chiefofair		which = 5193 }	#“y”ìŒ´Œ«“ñ q‹ó‘ŠÄ
+		command = { type = sleepevent which = 55915 } 
+	}
+	action_b = { # 
+		name = "ACT55920B"
+		ai_chance = 1 #FEPKBETA3
+		command = { type = headofgovernment	which = 5028 }	#‰FŠ_ ˆê¬
+		command = { type = foreignminister	which = 5061 }	#æ²“c ’åŸ˜Y ŠO–±‘åb
+		command = { type = armamentminister	which = 5083 }	#¬—Ñ çR‘¢ ¤H‘åb
+		command = { type = ministerofsecurity	which = 5121 }	#™Z‹Ê G—Y “à–±‘åb
+	#	command = { type = chiefofstaff		which = 5155 }	#™R Œ³ Q–d‘’·
+	#	command = { type = chiefofarmy		which = 5165 }	#™R Œ³ Q–d‘’·
+		command = { type = chiefofnavy		which = 5200 }	#R–{ŒÜ\˜Z ˜A‡ŠÍ‘ài—ß’·Š¯
+		command = { type = chiefofair		which = 5193 }	#“y”ìŒ´Œ«“ñ q‹ó‘ŠÄ
+		command = { type = sleepevent which = 55915 } 
+		command = { type = dissent value = 1 }
+	}
+	action_c = { # 
+		name = "ACT55920C"
+		ai_chance = 1 #FEPKBETA3
+		command = { type = headofgovernment	which = 5038 }	#“Œ‹vç‹{
+		command = { type = foreignminister	which = 5050 }	#dŒõ ˆ¨ ŠO–±‘åb
+		command = { type = armamentminister	which = 5091 }	#¬—Ñ ˆêO ¤H‘åb
+		command = { type = ministerofsecurity	which = 5108 }	#–ØŒË Kˆê “à–±‘åb
+	#	command = { type = chiefofstaff		which = 5155 }	#™R Œ³ Q–d‘’·
+	#	command = { type = chiefofarmy		which = 5165 }	#™R Œ³ Q–d‘’·
+		command = { type = chiefofnavy		which = 5200 }	#R–{ŒÜ\˜Z ˜A‡ŠÍ‘ài—ß’·Š¯
+		command = { type = chiefofair		which = 5193 }	#“y”ìŒ´Œ«“ñ q‹ó‘ŠÄ
+		command = { type = sleepevent which = 55915 } 
+		command = { type = dissent value = 3 }
+		command = { type = local_setflag which = Higasikuni }
+	}
+}
+
+###############################################################################
+#  ‰FŠ_í“àŠt“|Št(“Œğí“àŠt”­‘«
+###############################################################################
+event = { 
+	id = 55921
+	random = no
+	country = JAP
+	
+	name = "EVT55921N"
+	desc = "EVT55921D"
+	style = 0
+	picture = "tojo"
+
+	trigger = {
+		event = 55920
+		headofgovernment = 5028
+		NOT = { carrier = 5 }
+		NOT = { flag = Nagata }
+		flag = Toseiha
+		NOT = { flag = Kodoha }
+		random = 33
+	}
+
+	date = { day = 0 month = january year = 1935 } # Real Date:*
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+	action_a = { # 
+		name = "ACT55921A"
+		command = { type = headofgovernment	which = 5042 }	#“Œğ ‰p‹@
+		command = { type = foreignminister	which = 5050 }	#dŒõ ˆ¨ ŠO–±‘åb
+		command = { type = armamentminister	which = 5085 }	#Šİ M‰î ¤H‘åb
+		command = { type = ministerofsecurity	which = 5123 }	#“Œğ ‰p‹@ “à–±‘åb
+		command = { type = chiefofstaff		which = 5156 }	#“Œğ‰p‹@ —¤–‹
+		command = { type = chiefofarmy		which = 5166 }	#“Œğ‰p‹@ —¤–‹
+		command = { type = chiefofnavy		which = 5170 }	#“ˆ“c”É‘¾˜Y ŒR—ß•”‘’·
+		command = { type = dissent value = 2 }
+	}
+}
+###############################################################################
+#  “Œğ“àŠt“|Št(¬ˆé“àŠt‘gŠt
+###############################################################################
+event = { 
+	id = 55922
+	random = no
+	country = JAP
+	
+	name = "EVT55922N"
+	desc = "EVT55922D"
+	style = 0
+	picture = "japanese_officers"
+
+	trigger = { #FEPK•ÏX•”•ª # 1.09
+		year = 1943
+		OR = {
+			AND = {
+				owned = { province = 1627 data = JAP } #ƒTƒCƒpƒ“
+				NOT = { control = { province = 1627 data = -1 } }
+			}
+			AND = {
+				owned = { province = 1741 data = JAP } #ƒtƒBƒŠƒsƒ“
+				NOT = { control = { province = 1741 data = -1 } }
+			}
+			AND = {
+				owned = { province = 1322 data = JAP } #‘ä˜p
+				NOT = { control = { province = 1322 data = -1 } }
+			}
+			AND = {
+				owned = { province = 1174 data = JAP } #ƒVƒ€ƒVƒ‹
+				NOT = { control = { province = 1174 data = -1 } }
+			}
+			AND = {
+				owned = { province = 1177 data = JAP } #ƒGƒgƒƒt
+				NOT = { control = { province = 1177 data = -1 } }
+			}
+			AND = {
+				owned = { province = 1202 data = JAP } #‘å˜A
+				NOT = { control = { province = 1202 data = -1 } }
+			}
+			AND = {
+				owned = { province = 1393 data = JAP } #’©‘N–k•”
+				NOT = { control = { province = 1393 data = -1 } }
+			}
+			AND = {
+				owned = { province = 1353 data = JAP } #—–ˆó{ƒVƒ“ƒKƒ|[ƒ‹
+				NOT = { control = { province = 1353 data = -1 } }
+				owned = { province = 1628 data = JAP } #
+				NOT = { control = { province = 1628 data = -1 } }
+			}
+		}
+		AND = {
+			owned = { province = 1193 data = JAP } #‰«“ê
+			control = { province = 1193 data = JAP }
+		}
+		random = 50
+		NOT = { ispuppet = yes }
+	}
+
+	date = { day = 0 month = january year = 1935 } # Real Date: 44/7
+	offset = 30
+	deathdate = { day = 29 month = december year = 1948 }	#¬ˆéE”~’Ã‚Ì€–S‘O‚Å‚ ‚é
+	action_a = { # 
+		name = "ACT55922A"
+		command = { type = headofgovernment	which = 5043 }	#¬ˆé‘º
+		command = { type = foreignminister	which = 5050 }	#dŒõ ˆ¨ ŠO–±‘åb
+		command = { type = armamentminister	which = 5084 }	#“¡Œ´ ‹âŸ˜Y ¤H‘åb
+		command = { type = ministerofsecurity	which = 5125 }	#‘å’B –Î—Y “à–±‘åb	43‚É
+		command = { type = chiefofstaff		which = 5157 }	#”~’Ã ”ü¡˜Y Q–d‘’·
+		command = { type = chiefofarmy		which = 5165 }	#™R Œ³ —¤ŒR‘åb
+		command = { type = chiefofnavy		which = 5171 }	#æ²“c •›• ˜A‡ŠÍ‘ài—ß’·Š¯	#•Ä“à€–S
+		command = { trigger = { minister = 5537 } type = chiefofnavy		which = 5537 }	#•Ä“à Œõ­ ŠCŒR‘åb
+		command = { type = dissent	value = -2 }
+	}
+}
+###############################################################################
+#  —é–Ø“àŠt‘gŠt
+###############################################################################
+event = { 
+	id = 55923
+	random = no
+	country = JAP
+	
+	name = "EVT55923N"
+	desc = "EVT55923D"
+	style = 0
+	picture = "japanese_officers"
+
+	trigger = {
+		event = 55922
+		OR = {	# Japan
+			AND = {
+				owned = { province = 1192 data = JAP } # Amami
+				NOT = { control = { province = 1192 data = JAP } } # Amami
+			}
+			AND = {
+				owned = { province = 1193 data = JAP } # Okinawa
+				NOT = { control = { province = 1193 data = JAP } } # Okinawa
+			}
+			AND = {
+				owned = { province = 1599 data = JAP } # Iwo Jima
+				NOT = { control = { province = 1599 data = JAP } } # Iwo Jima
+			}
+			AND = {
+				owned = { province = 1784 data = JAP } # Bonin Islands
+				NOT = { control = { province = 1784 data = JAP } } # Bonin Islands
+			}
+			AND = {
+				owned = { province = 1196 data = JAP } # Busan
+				NOT = { control = { province = 1196 data = JAP } } # Busan
+			}
+			AND = {
+				owned = { province = 1176 data = JAP } # Toyohara
+				NOT = { control = { province = 1176 data = JAP } } # Toyohara
+			}
+			AND = {
+				owned = { province = 1188 data = JAP } # Hiroshima
+				NOT = { control = { province = 1188 data = JAP } } # Hiroshima
+			}
+			AND = {
+				owned = { province = 1187 data = JAP } # Osaka
+				NOT = { control = { province = 1187 data = JAP } } # Osaka
+			}
+			AND = {
+				owned = { province = 1186 data = JAP } # Kanazawa
+				NOT = { control = { province = 1186 data = JAP } } # Kanazawa
+			}
+			AND = {
+				owned = { province = 1185 data = JAP } # Nagoya
+				NOT = { control = { province = 1185 data = JAP } } # Nagoya
+			}
+			AND = {
+				owned = { province = 1184 data = JAP } # Tokyo
+				NOT = { control = { province = 1184 data = JAP } } # Tokyo
+			}
+			AND = {
+				owned = { province = 1183 data = JAP } # Niigata
+				NOT = { control = { province = 1183 data = JAP } } # Niigata
+			}
+			AND = {
+				owned = { province = 1182 data = JAP } # Fukushima
+				NOT = { control = { province = 1182 data = JAP } } # Fukushima
+			}
+			AND = {
+				owned = { province = 1181 data = JAP } # Akita
+				NOT = { control = { province = 1181 data = JAP } } # Akita
+			}
+			AND = {
+				owned = { province = 1180 data = JAP } # Sendai
+				NOT = { control = { province = 1180 data = JAP } } # Sendai
+			}
+		}
+		NOT = { ispuppet = yes }
+	}
+
+	date = { day = 1 month = january year = 1941 } # Real Date: 45/4
+	offset = 30
+	deathdate = { day = 29 month = december year = 1947 }	#—é–Ø‚Ì€–S‘O‚Å‚ ‚é
+	action_a = { # 
+		name = "ACT55923A"
+		command = { type = headofgovernment	which = 5037 }	#—é–Ø ŠÑ‘¾˜Y
+		command = { type = foreignminister	which = 5065 }	#“Œ‹½ d“¿ ŠO–±‘åb
+		command = { type = armamentminister	which = 5086 }	#–L“c ’åŸ˜Y ¤H‘åb
+		command = { type = ministerofsecurity	which = 5114 }	#ˆÀ”{ Œ¹Šî “à–±‘åb
+		command = { type = chiefofstaff		which = 5157 }	#”~’Ã ”ü¡˜Y Q–d‘’·
+		command = { type = chiefofarmy		which = 5167 }	#”~’Ã ”ü¡˜Y Q–d‘’·
+		command = { type = chiefofnavy		which = 5537 }	#•Ä“à Œõ­ ŠCŒR‘åb
+		command = { type = sleepevent which = 55922 }
+		command = { type = dissent	value = -2 }
+	}
+}
+###############################################################################
+#  ˆ¢“ì“àŠt‘gŠt
+###############################################################################
+event = { 
+	id = 55924
+	random = no
+	country = JAP
+	
+	name = "EVT55924N"
+	desc = "EVT55924D"
+	style = 0
+	picture = "japanese_officers"
+
+	trigger = {
+		NOT = { ispuppet = yes }
+		OR = {
+			event = 55922
+			AND = {
+				OR = {	# Japan
+					AND = {
+						owned = { province = 1192 data = JAP } # Amami
+						NOT = { control = { province = 1192 data = JAP } } # Amami
+					}
+					AND = {
+						owned = { province = 1193 data = JAP } # Okinawa
+						NOT = { control = { province = 1193 data = JAP } } # Okinawa
+					}
+					AND = {
+						owned = { province = 1599 data = JAP } # Iwo Jima
+						NOT = { control = { province = 1599 data = JAP } } # Iwo Jima
+					}
+					AND = {
+						owned = { province = 1784 data = JAP } # Bonin Islands
+						NOT = { control = { province = 1784 data = JAP } } # Bonin Islands
+					}
+					AND = {
+						owned = { province = 1196 data = JAP } # Busan
+						NOT = { control = { province = 1196 data = JAP } } # Busan
+					}
+					AND = {
+						owned = { province = 1176 data = JAP } # Toyohara
+						NOT = { control = { province = 1176 data = JAP } } # Toyohara
+					}
+					AND = {
+					owned = { province = 1188 data = JAP } # Hiroshima
+						NOT = { control = { province = 1188 data = JAP } } # Hiroshima
+					}
+					AND = {
+						owned = { province = 1187 data = JAP } # Osaka
+						NOT = { control = { province = 1187 data = JAP } } # Osaka
+					}
+					AND = {
+						owned = { province = 1186 data = JAP } # Kanazawa
+						NOT = { control = { province = 1186 data = JAP } } # Kanazawa
+					}
+					AND = {
+						owned = { province = 1185 data = JAP } # Nagoya
+						NOT = { control = { province = 1185 data = JAP } } # Nagoya
+					}
+					AND = {
+						owned = { province = 1184 data = JAP } # Tokyo
+						NOT = { control = { province = 1184 data = JAP } } # Tokyo
+					}
+					AND = {
+						owned = { province = 1183 data = JAP } # Niigata
+						NOT = { control = { province = 1183 data = JAP } } # Niigata
+					}
+					AND = {
+						owned = { province = 1182 data = JAP } # Fukushima
+						NOT = { control = { province = 1182 data = JAP } } # Fukushima
+					}
+					AND = {
+						owned = { province = 1181 data = JAP } # Akita
+						NOT = { control = { province = 1181 data = JAP } } # Akita
+					}
+					AND = {
+						owned = { province = 1180 data = JAP } # Sendai
+						NOT = { control = { province = 1180 data = JAP } } # Sendai
+					}
+				}
+			}
+			AND = {
+				year = 1949
+				OR = {
+					AND = {
+						owned = { province = 1627 data = JAP } #ƒTƒCƒpƒ“
+						NOT = { control = { province = 1627 data = -1 } }
+					}
+					AND = {
+						owned = { province = 1741 data = JAP } #ƒtƒBƒŠƒsƒ“
+						NOT = { control = { province = 1741 data = -1 } }
+					}
+					AND = {
+						owned = { province = 1322 data = JAP } #‘ä˜p
+						NOT = { control = { province = 1322 data = -1 } }
+					}
+					AND = {
+						owned = { province = 1174 data = JAP } #ƒVƒ€ƒVƒ‹
+						NOT = { control = { province = 1174 data = -1 } }
+					}
+					AND = {
+						owned = { province = 1177 data = JAP } #ƒGƒgƒƒt
+						NOT = { control = { province = 1177 data = -1 } }
+					}
+					AND = {
+						owned = { province = 1202 data = JAP } #‘å˜A
+						NOT = { control = { province = 1202 data = -1 } }
+					}
+					AND = {
+						owned = { province = 1393 data = JAP } #’©‘N–k•”
+						NOT = { control = { province = 1393 data = -1 } }
+					}
+					AND = {
+						owned = { province = 1353 data = JAP } #—–ˆó{ƒVƒ“ƒKƒ|[ƒ‹
+						NOT = { control = { province = 1353 data = -1 } }
+						owned = { province = 1628 data = JAP } #
+						NOT = { control = { province = 1628 data = -1 } }
+					}
+				}
+			}
+		}
+	}
+
+	date = { day = 1 month = january year = 1948 } # Real Date: 45/4
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+	action_a = { # 
+		name = "ACT55924A"
+		command = { type = headofgovernment	which = 5516 }	#ˆ¢“ì ˆÒŠô
+		command = { type = foreignminister	which = 5065 }	#“Œ‹½ d“¿ ŠO–±‘åb
+		command = { type = armamentminister	which = 5086 }	#–L“c ’åŸ˜Y ¤H‘åb
+		command = { type = ministerofsecurity	which = 5114 }	#ˆÀ”{ Œ¹Šî “à–±‘åb
+		command = { type = chiefofstaff		which = 5526 }	#ˆ¢“ì ˆÒŠô Q–d‘’·
+		command = { type = chiefofarmy		which = 5535 }	#‰º‘º ’è —¤ŒR‘åb
+		command = { type = chiefofnavy		which = 5202 }	#¬àV ¡O˜Y ˜A‡ŠÍ‘ài—ß’·Š¯	#•Ä“à€–S
+		command = { trigger = { minister = 5537 } type = chiefofnavy	which = 5537 }	#•Ä“à Œõ­ ŠCŒR‘åb
+		command = { type = sleepevent which = 55922 }
+		command = { type = dissent	value = -2 }
+	}
+}
+###########################################################ƒgƒ‰ƒEƒgƒ}ƒ“˜a•½“àŠt
+###############################################################################
+#  ƒgƒ‰ƒEƒgƒ}ƒ“HìE˜a•½Œã­Œ ‚O  œA“c
+###############################################################################
+event = { 
+	id = 55940
+	random = no
+	country = JAP
+	save_date = yes
+	
+	name = "EVT55940N"
+	desc = "EVT55940D"
+	style = 0
+	picture = "japanese_officers"
+
+	trigger = {
+		year = 1937
+		NOT = { war = { country = JAP  country = CHI } }
+		NOT = { war = { country = JAP  country = USA } }
+		NOT = { war = { country = JAP  country = ENG } }
+		NOT = { war = { country = JAP  country = GER } }
+		NOT = { war = { country = JAP  country = SOV } }
+		flag = japanWarInChina
+	}
+
+	date = { day = 0 month = january year = 1935 } # Real Date: 
+	offset = 3
+	deathdate = { day = 1 month = may year = 1939 }
+	action_a = { # 
+		name = "ACT55900A"
+		command = { type = headofgovernment	which = 5040 }	#œA“c O‹B
+		command = { type = foreignminister	which = 5055 }	#‰FŠ_ ˆê¬ ŠO–±‘åb
+		command = { type = armamentminister	which = 5090 }	#Ÿ“c åŒv ¤H‘åb
+		command = { type = ministerofsecurity	which = 5099 }	#‰ÍŒ´“c ‰Ò‹g “à–±‘åb
+		command = { type = sleepevent which = 55906 }
+		command = { type = dissent	value = -1 }
+	}
+}
+###############################################################################
+#  •¶–¯“àŠt‚P`‚S  Œã“¡  ’r“c  Ÿ“c  ’¬“c
+###############################################################################
+event = { 
+	id = 55941
+	random = no
+	country = JAP
+	save_date = yes
+	
+	name = "EVT55941N"
+	desc = "EVT55941D"
+	style = 0
+	picture = "japanese_officers"
+
+	trigger = {
+		year = 1938
+		NOT = { war = { country = JAP  country = CHI } }
+		NOT = { war = { country = JAP  country = USA } }
+		NOT = { war = { country = JAP  country = ENG } }
+		NOT = { war = { country = JAP  country = GER } }
+		NOT = { war = { country = JAP  country = SOV } }
+		OR = {
+			AND = {
+				flag = japanWarInChina
+				event = { id = 55940 days = 60 }	#œA“c O‹B‚Ì‘gŠt
+			}
+			NOT = { flag = japanWarInChina }
+		}
+		NOT = { event  = 55945 }
+		NOT = { event  = 55946 }
+		OR = {
+			AND = {
+				NOT = { event = 55942 } 
+				NOT = { event = 55943 } 
+				NOT = { event = 55944 }
+				random = 5
+			}
+			AND = {
+				OR = { 
+					event = { id = 55942 days = 60 }
+					event = { id = 55943 days = 60 } 
+					event = { id = 55944 days = 60 } 
+				}
+				random = 7
+			}
+			AND = {
+				OR = {
+					AND = { 
+						NOT = { event = 55942 } 
+						event = { id = 55943 days = 60 } 
+						event = { id = 55944 days = 60 } 
+					}
+					AND = { 
+						event = { id = 55942 days = 60 }
+						NOT = { event = 55943 } 
+						event = { id = 55944 days = 60 } 
+					}
+					AND = { 
+						event = { id = 55942 days = 60 }
+						event = { id = 55943 days = 60 } 
+						NOT = { event = 55944 } 
+					}
+				}
+				random = 10
+			}
+			AND = { 
+				event = { id = 55942 days = 60 }
+				event = { id = 55943 days = 60 } 
+				event = { id = 55944 days = 60 } 
+				random = 20
+			}
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 } # Real Date: 
+	offset = 30
+	deathdate = { day = 20 month = may year = 1939 }
+	action_a = { # 
+		name = "ACT55941A"#
+		command = { type = headofgovernment	which = 5544 }	#Œã“¡ •¶•v
+		command = { type = foreignminister	which = 5003 }	#œA“c O‹B ŠO–±‘åb
+		command = { type = armamentminister	which = 5081 }	#’r“c ¬•j ¤H‘åb
+		command = { type = ministerofsecurity	which = 5108 }	#–ØŒË Kˆê “à–±‘åb
+		command = { type = dissent value = 1 }	
+	}
+}
+event = { 
+	id = 55942
+	random = no
+	country = JAP
+	save_date = yes
+	
+	name = "EVT55942N"
+	desc = "EVT55941D"
+	style = 0
+	picture = "japanese_officers"
+
+
+	trigger = {
+		year = 1938
+		NOT = { war = { country = JAP  country = CHI } }
+		NOT = { war = { country = JAP  country = USA } }
+		NOT = { war = { country = JAP  country = ENG } }
+		NOT = { war = { country = JAP  country = GER } }
+		NOT = { war = { country = JAP  country = SOV } }
+		OR = {
+			AND = {
+				flag = japanWarInChina
+				event = { id = 55940 days = 60 }	#œA“c O‹B‚Ì‘gŠt
+			}
+			NOT = { flag = japanWarInChina }
+		}
+		NOT = { event  = 55945 }
+		NOT = { event  = 55946 }
+		OR = {
+			AND = {
+				NOT = { event = 55941 } 
+				NOT = { event = 55943 } 
+				NOT = { event = 55944 }
+				random = 6
+			}
+			AND = {
+				OR = { 
+					event = { id = 55941 days = 60 }
+					event = { id = 55943 days = 60 } 
+					event = { id = 55944 days = 60 } 
+				}
+				random = 8
+			}
+			AND = {
+				OR = {
+					AND = { 
+						NOT = { event = 55941 } 
+						event = { id = 55943 days = 60 } 
+						event = { id = 55944 days = 60 } 
+					}
+					AND = { 
+						event = { id = 55941 days = 60 }
+						NOT = { event = 55943 } 
+						event = { id = 55944 days = 60 } 
+					}
+					AND = { 
+						event = { id = 55941 days = 60 }
+						event = { id = 55943 days = 60 } 
+						NOT = { event = 55944 } 
+					}
+				}
+				random = 9
+			}
+			AND = { 
+				event = { id = 55941 days = 60 }
+				event = { id = 55943 days = 60 } 
+				event = { id = 55944 days = 60 } 
+				random = 19
+			}
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 } # Real Date: 
+	offset = 30
+	deathdate = { day = 20 month = may year = 1939 }
+	action_a = { # 
+		name = "ACT55942A"#
+		command = { type = headofgovernment	which = 5511 }	#’r“c ¬•j
+		command = { type = foreignminister	which = 5056 }	#‹ßåÊ •¶–› ŠO–±‘åb
+		command = { type = armamentminister	which = 5072 }	#¬ì ‹½‘¾˜Y ¤H‘åb
+		command = { type = ministerofsecurity	which = 5116 }	#’†“‡ ¡’©Œá “à–±‘åb
+		command = { type = dissent value = 1 }	
+	}
+}
+event = { 
+	id = 55943
+	random = no
+	country = JAP
+	save_date = yes
+	
+	name = "EVT55943N"
+	desc = "EVT55941D"
+	style = 0
+	picture = "japanese_officers"
+
+	trigger = {
+		year = 1938
+		NOT = { war = { country = JAP  country = CHI } }
+		NOT = { war = { country = JAP  country = USA } }
+		NOT = { war = { country = JAP  country = ENG } }
+		NOT = { war = { country = JAP  country = GER } }
+		NOT = { war = { country = JAP  country = SOV } }
+		OR = {
+			AND = {
+				flag = japanWarInChina
+				event = { id = 55940 days = 60 }	#œA“c O‹B‚Ì‘gŠt
+			}
+			NOT = { flag = japanWarInChina }
+		}
+		NOT = { event  = 55945 }
+		NOT = { event  = 55946 }
+		OR = {
+			AND = {
+				NOT = { event = 55941 } 
+				NOT = { event = 55942 } 
+				NOT = { event = 55944 }
+				random = 4
+			}
+			AND = {
+				OR = { 
+					event = { id = 55941 days = 60 }
+					event = { id = 55942 days = 60 } 
+					event = { id = 55944 days = 60 } 
+				}
+				random = 11
+			}
+			AND = {
+				OR = {
+					AND = { 
+						NOT = { event = 55941 } 
+						event = { id = 55942 days = 60 } 
+						event = { id = 55944 days = 60 } 
+					}
+					AND = { 
+						event = { id = 55941 days = 60 }
+						NOT = { event = 55942 } 
+						event = { id = 55944 days = 60 } 
+					}
+					AND = { 
+						event = { id = 55941 days = 60 }
+						event = { id = 55942 days = 60 } 
+						NOT = { event = 55944 } 
+					}
+				}
+				random = 12
+			}
+			AND = { 
+				event = { id = 55941 days = 60 }
+				event = { id = 55942 days = 60 } 
+				event = { id = 55944 days = 60 } 
+				random = 21
+			}
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 } # Real Date: 
+	offset = 15
+	deathdate = { day = 20 month = may year = 1939 }
+	action_a = { # 
+		name = "ACT55943A"#
+		command = { type = headofgovernment	which = 5512 }	#Ÿ“c åŒv
+		command = { type = foreignminister	which = 5063 }	#—Ñ ‘L\˜N ŠO–±‘åb
+		command = { type = armamentminister	which = 5082 }	#”ª“c ‰Ã–¾ ¤H‘åb
+		command = { type = ministerofsecurity	which = 5099 }	#‰ÍŒ´“c ‰Ò‹g “à–±‘åb
+		command = { type = dissent value = 1 }	
+	}
+}
+event = { 
+	id = 55944
+	random = no
+	country = JAP
+	save_date = yes
+	
+	name = "EVT55944N"
+	desc = "EVT55941D"
+	style = 0
+	picture = "japanese_officers"
+
+	trigger = {
+		year = 1938
+		NOT = { war = { country = JAP  country = CHI } }
+		NOT = { war = { country = JAP  country = USA } }
+		NOT = { war = { country = JAP  country = ENG } }
+		NOT = { war = { country = JAP  country = GER } }
+		NOT = { war = { country = JAP  country = SOV } }
+		OR = {
+			AND = {
+				flag = japanWarInChina
+				event = { id = 55940 days = 60 }	#œA“c O‹B‚Ì‘gŠt
+			}
+			NOT = { flag = japanWarInChina }
+		}
+		NOT = { event  = 55945 }
+		NOT = { event  = 55946 }
+		OR = {
+			AND = {
+				NOT = { event = 55941 } 
+				NOT = { event = 55942 } 
+				NOT = { event = 55943 }
+				random = 3
+			}
+			AND = {
+				OR = { 
+					event = 55941 
+					event = 55942 
+					event = 55943 
+				}
+				random = 13
+			}
+			AND = {
+				OR = {
+					AND = { 
+						NOT = { event = 55941 } 
+						event = 55942 
+						event = 55943 
+					}
+					AND = { 
+						event = 55941 
+						NOT = { event = 55942 } 
+						event = 55943 
+					}
+					AND = { 
+						event = 55941 
+						event = 55942 
+						NOT = { event = 55943 } 
+					}
+				}
+				random = 14
+			}
+			AND = { 
+				event = 55941 event = 55942 event = 55943
+				random = 21
+			}
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 } # Real Date: 
+	offset = 15
+	deathdate = { day = 20 month = may year = 1939 }
+	action_a = { # 
+		name = "ACT55944A"#
+		command = { type = headofgovernment	which = 5518 }	#’¬“c’‰¡
+		command = { type = foreignminister	which = 5519 }	#•¼Œ´ Šìd˜Y ŠO–±‘åb
+		command = { type = armamentminister	which = 5081 }	#’r“c ¬•j ¤H‘åb
+		command = { type = ministerofsecurity	which = 5100 }	#¬Œ´ ’¼ “à–±‘åb
+		command = { type = dissent value = 1 }	
+	}
+}
+###############################################################################
+#  •¶–¯“àŠt‚T  •½À
+###############################################################################
+event = { 
+	id = 55945
+	random = no
+	country = JAP
+	
+	name = "EVT55945N"
+	desc = "EVT55945D"
+	style = 0
+	picture = "japanese_officers"
+
+	trigger = {
+		year = 1939
+		NOT = { war = { country = JAP  country = CHI } }
+		NOT = { war = { country = JAP  country = USA } }
+		NOT = { war = { country = JAP  country = ENG } }
+		NOT = { war = { country = JAP  country = GER } }
+		NOT = { war = { country = JAP  country = SOV } }
+		OR = {
+			AND = {
+				event = { id = 55941 days = 60 }	#Œã“¡‚Ì‘gŠt
+				event = { id = 55942 days = 60 }	#’r“c‚Ì‘gŠt
+				event = { id = 55943 days = 60 }	#Ÿ“c‚Ì‘gŠt
+				event = { id = 55944 days = 60 }	#’¬“c‚Ì‘gŠt
+				random = 15
+			}
+			AND = {
+				OR = { 
+					event = { id = 55941 days = 60 }	#Œã“¡‚Ì‘gŠt
+					event = { id = 55942 days = 60 }	#’r“c‚Ì‘gŠt
+					event = { id = 55943 days = 60 }	#Ÿ“c‚Ì‘gŠt
+					event = { id = 55944 days = 60 }	#’¬“c‚Ì‘gŠt
+				}
+				random = 2
+			}
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 } # Real Date: 39/1
+	offset = 13
+	deathdate = { day = 20 month = may year = 1939 }
+	action_a = { # 
+		name = "ACT55945A"
+		command = { type = headofgovernment	which = 5041 }	#•½Àéuˆê˜Y
+		command = { type = foreignminister	which = 5057 }	#—L“c ”ª˜Y ŠO–±‘åb
+		command = { type = armamentminister	which = 5082 }	#”ª“c ‰Ã–¾ ¤H‘åb
+		command = { type = ministerofsecurity	which = 5108 }	#–ØŒË Kˆê “à–±‘åb
+		command = { type = sleepevent	which = 55940 }
+		command = { type = sleepevent	which = 55941 }
+		command = { type = sleepevent	which = 55942 }
+		command = { type = sleepevent	which = 55943 }
+		command = { type = sleepevent	which = 55944 }
+		command = { type = sleepevent	which = 55946 }
+	}
+}
+event = { 
+	id = 55946
+	random = no
+	country = JAP
+	
+	name = "EVT55945N"
+	desc = "EVT55945D"
+	style = 0
+	picture = "japanese_officers"
+
+	trigger = {
+		NOT = { headofgovernment = 5041 }
+	}
+
+	date = { day = 20 month = may year = 1939 }
+	offset = 1
+	deathdate = { day = 29 month = may year = 1939 }
+	action_a = { # 
+		name = "ACT55910A"
+		command = { type = headofgovernment	which = 5041 }	#•½Àéuˆê˜Y
+		command = { type = foreignminister	which = 5057 }	#—L“c ”ª˜Y ŠO–±‘åb
+		command = { type = armamentminister	which = 5082 }	#”ª“c ‰Ã–¾ ¤H‘åb
+		command = { type = ministerofsecurity	which = 5108 }	#–ØŒË Kˆê “à–±‘åb
+		command = { type = sleepevent	which = 55940 }
+		command = { type = sleepevent	which = 55941 }
+		command = { type = sleepevent	which = 55942 }
+		command = { type = sleepevent	which = 55943 }
+		command = { type = sleepevent	which = 55944 }
+		command = { type = sleepevent	which = 55945 }
+	}
+}
+#################################################################c“¹”hƒ‹[ƒgH
+###############################################################################
+#  ic“¹”h‘¤j	• Ø‚è–â“š	áÁè„‹ß‰q‘gŠt
+###############################################################################
+event = { 
+	id = 55950
+	random = no
+	country = JAP
+	
+	name = "EVT55950N"
+	desc = "EVT55950D"
+	style = 0
+	picture = "japanese_officers"
+
+	trigger = {
+		headofgovernment = 5550
+		NOT = { flag = Toseiha }
+		flag = Kodoha
+	}
+	date = { day = 10 month = january year = 1937 } # Real Date: 
+	#offset = 1
+	#deathdate = { day = 11 month = january year = 1937 }
+
+	action_a = { # 
+		name = "ACT55903A"
+		command = { type = headofgovernment	which = 5034 }	#‹ß‰q •¶–›
+		command = { type = foreignminister	which = 5057 }	#—L“c ”ª˜Y ŠO–±‘åb
+		command = { type = armamentminister	which = 5073 }	#ŒŞ“° ‘ì—Y ¤H‘åb
+		command = { type = ministerofsecurity	which = 5099 }	#‰ÍŒ´“c ‰Ò‹g “à–±‘åb
+		command = { type = sleepevent	which = 186 }
+		command = { type = sleepevent	which = 187 }
+		command = { type = sleepevent	which = 188 }
+		command = { type = sleepevent	which = 189 }
+		command = { type = sleepevent	which = 190 }
+	}
+}
+###############################################################################
+#  ic“¹”h‘¤j	“ú’†í“àŠt	„r–Ø‘gŠtor–{¯
+###############################################################################
+event = { 
+	id = 55951
+	random = no
+	country = JAP
+	
+	name = "EVT55951N"
+	desc = "EVT55951D"
+	style = 0
+	picture = "japanese_officers"
+
+	trigger = {
+		event = 55705	#ãŠC–•Ï‚Ì”­“®
+		event = 55991	#‹ß‰qº–¾H
+		year = 1938
+		war = { country = CHI country = JAP }
+		NOT = { flag = Toseiha }
+		flag = Kodoha
+	}
+
+	date = { day = 0 month = january year = 1935 } # Real Date: *
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = { # 
+		name = "ACT55951A"
+		ai_chance = 98 #FEPKBETA3
+		command = { type = headofgovernment	which = 5510 }	#r–Ø ’å•v
+		command = { type = foreignminister	which = 5055 }	#‰FŠ_ ˆê¬ ŠO–±‘åb
+		command = { type = armamentminister	which = 5090 }	#Ÿ“c åŒv ¤H‘åb
+		command = { type = ministerofsecurity	which = 5106 }	#––Ÿ M³ “à–±‘åb
+		command = { type = chiefofarmy		which = 5554 }	#¬”¨ •ql˜Y Q–d‘’·
+	}
+	action_b = { # 
+		name = "ACT55951B"
+		ai_chance = 2 #FEPKBETA3
+		command = { type = headofgovernment	which = 5564 }	#–{¯ ”É
+		command = { type = foreignminister	which = 5048 }	#‰ª“c Œ[‰î ŠO–±‘åb
+		command = { type = armamentminister	which = 5081 }	#’r“c ¬•j ¤H‘åb  Oˆäà”´‘ƒ
+		command = { type = ministerofsecurity	which = 5105 }	#’ª œ¨”V•ã “à–±‘åb
+		command = { type = chiefofarmy		which = 5554 }	#¬”¨ •ql˜Y Q–d‘’·
+		command = { type = dissent value = 1 }	
+	}
+}
+###############################################################################
+#  ic“¹”h‘¤j	•½À“àŠt‘gŠt	„•½À‘gŠt
+###############################################################################
+event = { 
+	id = 55952
+	random = no
+	country = JAP
+	
+	name = "EVT55952N"
+	desc = "EVT55952D"
+	style = 0
+	picture = "japanese_officers"
+
+	trigger = {
+		year = 1938
+		war = { country = CHI country = JAP }
+		event = 55104 				#ŸŠ’›–ÁHìƒCƒxƒ“ƒg
+		NOT = { flag = Toseiha }
+		flag = Kodoha
+		random = 50
+	}
+
+	date = { day = 0 month = january year = 1935 } # Real Date: 39/1
+	offset = 30
+	deathdate = { day = 29 month = september year = 1939 }
+
+	action_a = { # 
+		name = "ACT55910A"
+		command = { type = headofgovernment	which = 5041 }	#•½À éuˆê˜Y
+		command = { type = foreignminister	which = 5053 }	#²“¡ ®• ŠO–±‘åb
+		command = { type = armamentminister	which = 5082 }	#”ª“c ‰Ã–¾ ¤H‘åb
+		command = { type = ministerofsecurity	which = 5108 }	#–ØŒË Kˆê “à–±‘åb
+	}
+}
+###############################################################################
+#  ic“¹”h‘¤j	ƒ‚ƒŠ‹¦’èŒã“àŠt	„•Ä“à‘gŠt
+###############################################################################
+event = { 
+	id = 55953
+	random = no
+	country = JAP
+	
+	name = "EVT55953N"
+	desc = "EVT55953D"
+
+	style = 0
+	picture = "japanese_officers"
+
+	trigger = {
+		headofgovernment = 5041
+		OR = {
+			event = 130138 #normal
+			event = 130146 #Limited
+			event = 130142 #No Full
+			event = 130143 #full
+			#atwar = GER
+		}
+		NOT = { flag = Toseiha }
+		flag = Kodoha
+	}
+
+	date = { day = 29 month = august year = 1939 } # Real Date: 39/8
+	offset = 3
+	deathdate = { day = 29 month = september year = 1939 }
+
+	action_a = { # 
+		name = "ACT55913A"
+		command = { type = headofgovernment	which = 5036 }	#•Ä“à Œõ­
+		command = { type = foreignminister	which = 5057 }	#—L“c ”ª˜Y ŠO–±‘åb
+		command = { type = armamentminister	which = 5084 }	#“¡Œ´ ‹âŸ˜Y ¤H‘åb
+		command = { type = ministerofsecurity	which = 5116 }	#’†“‡ ¡’©Œá “à–±‘åb
+	}
+}
+###############################################################################
+#  ic“¹”h‘¤j	í“àŠt	„áÁèrO˜Yorr–ØH
+###############################################################################
+event = { 
+	id = 55954
+	random = no
+	country = JAP
+	
+	name = "EVT55954N"
+	desc = "EVT55954D"
+	style = 0
+	picture = "japanese_officers"
+
+	trigger = {
+		OR = { 
+			ideology = nazi
+			ideology = fascist
+			ideology = paternal_autocrat
+			ideology = social_conservative
+		}
+		OR = {
+			AND = {
+				war = { country = JAP country = CHI }
+				event = 132440 #FEPKBETA4.9 #‹Ö—A
+				NOT = {
+					alliance = { country = JAP country = USA }
+					event = 55457 # ‰Í“ØŒv‰æ‚É‚æ‚é‹Ö—A‰ğœ
+				}
+			}
+			war = { country = JAP  country = USA }
+			war = { country = JAP  country = SOV }
+			war = { country = JAP  country = ENG }
+			war = { country = JAP  country = FRA }
+			war = { country = JAP  country = ITA }
+			war = { country = JAP  country = GER }
+		}
+		minister = 5552	#¬”¨
+		NOT = { headofgovernment = 5552 } # ¬”¨
+		NOT = { flag = Toseiha }
+		flag = Kodoha
+	}
+
+	date = { day = 1 month = january year = 1941 } # Real Date: 41/10
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = { # 
+		name = "ACT55954A"
+		ai_chance = 100 #FEPKBETA3
+		command = { type = headofgovernment	which = 5552 }	#¬”¨ •ql˜Y
+		command = { type = foreignminister	which = 5061 }	#æ²“c ’åŸ˜Y ŠO–±‘åb
+		command = { type = armamentminister	which = 5090 }	#Ÿ“c åŒv ¤H‘åb
+		command = { type = ministerofsecurity	which = 5116 }	#’†“‡ ¡’©Œá “à–±‘åb
+		command = { type = chiefofstaff		which = 5553 }	#¬”¨ •ql˜Y Q–d‘’·
+		command = { type = chiefofarmy		which = 5566 }	#R‰º •ò•¶
+		command = { type = sleepevent which = 55915 } 
+	}
+	action_b = { # 
+		name = "ACT55954B"
+		ai_chance = 0 #FEPKBETA3
+		command = { type = headofgovernment	which = 5550 }	#áÁè rO˜Y
+		command = { type = foreignminister	which = 5060 }	#¼‰ª —m‰E ŠO–±‘åb
+		command = { type = armamentminister	which = 5084 }	#“¡Œ´ ‹âŸ˜Y ¤H‘åb
+		command = { type = ministerofsecurity	which = 5106 }	#––Ÿ M³ “à–±‘åb
+		command = { type = chiefofstaff		which = 5553 }	#¬”¨ •ql˜Y Q–d‘’·
+		command = { type = chiefofarmy		which = 5566 }	#R‰º •ò•¶
+		command = { type = sleepevent which = 55915 } 
+		command = { type = dissent value = 1 }	
+	}
+}
+
+#####################################################################‰i“cƒ‹[ƒg
+###############################################################################
+#  (‰i“cƒ‹[ƒg) • ‚«‚è–â“š		„‰FŠ_“àŠt	('37/01/10
+###############################################################################
+event = { 
+	id = 55970
+	random = no
+	country = JAP
+	
+	name = "EVT55970N"
+	desc = "EVT55902D"
+	style = 0
+	picture = "japanese_officers"
+
+	trigger = {
+		headofgovernment = 5040
+		flag = Nagata
+		#flag = Toseiha		#Œ±“I–³Œø‰»
+		NOT = { flag = Kodoha }
+	}
+	date = { day = 10 month = january year = 1937 } # Real Date: 
+	#offset = 1
+	#deathdate = { day = 11 month = january year = 1937 }
+
+	action_a = { # 
+		name = "ACT55902A"
+		ai_chance = 99
+		command = { type = headofgovernment	which = 5033 }	#—Ñ
+		command = { type = foreignminister	which = 5053 }	#²“¡ ®• ŠO–±‘åb
+		command = { type = armamentminister	which = 5073 }	#ŒŞ“° ‘ì—Y ¤H‘åb
+		command = { type = ministerofsecurity	which = 5099 }	#‰ÍŒ´“c ‰Ò‹g “à–±‘åb
+		command = { type = sleepevent	which = 55906 }		#˜a•½¸”sE‹ß‰q“àŠt‘gŠt
+		#H‚¢“¦‚°‰ğU‚Ö‚Ìƒtƒ‰ƒO
+	}
+	action_b = { # 
+		name = "ACT55902B"
+		ai_chance = 1
+		command = { type = headofgovernment	which = 5028 }	#‰FŠ_
+		command = { type = foreignminister	which = 5057 }	#—L“c ”ª˜Y ŠO–±‘åb
+		command = { type = armamentminister	which = 5090 }	#Ÿ“c åŒv ¤H‘åb
+		command = { type = ministerofsecurity	which = 5105 }	#’ª œ¨”V•ã “à–±‘åb
+		command = { type = sleepevent	which = 55981 }
+		command = { type = trigger	which = 55904 }
+		command = { type = dissent value = 1 }
+	}
+}
+###############################################################################
+#  (‰i“cƒ‹[ƒg) ‹ß‰qV“}		„‹ß‰q“àŠt	('38/03/`
+###############################################################################
+event = { 
+	id = 55971
+	random = no
+	country = JAP
+	
+	name = "EVT55971N"
+	desc = "EVT55971D"
+	style = 0
+	picture = "japanese_officers"
+
+	trigger = {
+		headofgovernment = 5033
+		event = 55981		#H‚¢“¦‚°‰ğU
+		flag = Nagata
+		#flag = Toseiha		#Œ±“I–³Œø‰»
+		NOT = { flag = Kodoha }
+	}
+
+	date = { day = 4 month = june year = 1937 } # Real Date: 37/6/4
+	action_a = { # 
+		name = "ACT55903A"
+		command = { type = headofgovernment	which = 5034 }		#‹ß‰q
+		command = { type = foreignminister	which = 5063 }		#—Ñ ‘L\˜Y ŠO–±‘åb
+		command = { type = armamentminister	which = 5073 }		#ŒŞ“° ‘ì—Y ¤H‘åb
+		command = { type = ministerofsecurity	which = 5563 }		#–ƒ¶ ‹v “à–±‘åb
+		command = { type = dissent value = 1 }
+		command = { type = sleepevent	which = 55907 }
+		command = { type = sleepevent	which = 55908 }
+	}
+}
+###############################################################################
+#  (‰i“cƒ‹[ƒg) •Ä“à“àŠt‘gŠt
+###############################################################################
+event = { 
+	id = 55972
+	random = no
+	country = JAP
+	
+	name = "EVT55972N"
+	desc = "EVT55972D"
+	style = 0
+	picture = "japanese_officers"
+
+	trigger = {
+		headofgovernment = 5041
+		OR = {
+			#event = 2013
+			#event = 2015
+			#event = 2016
+			event = 130138 #normal #FEPK1.11
+			event = 130146 #Limited
+			event = 130142 #No Full
+			event = 130143 #full
+			#atwar = GER
+		}
+		flag = Nagata
+		#flag = Toseiha		#Œ±“I–³Œø‰»
+		NOT = { flag = Kodoha }
+	}
+
+	date = { day = 29 month = august year = 1939 } # Real Date: 39/8
+	offset = 3
+	deathdate = { day = 29 month = september year = 1939 }
+	action_a = { # 
+		name = "ACT55913A"
+		command = { type = headofgovernment	which = 5036 }	#•Ä“à Œõ­
+		command = { type = foreignminister	which = 5048 }	#‰ª“c Œ[‰î ŠO–±‘åb
+		command = { type = armamentminister	which = 5073 }	#ŒŞ“° ‘ì—Y ¤H‘åb
+		command = { type = ministerofsecurity	which = 5108 }	#–ØŒË Kˆê “à–±‘åb
+		#command = { type = dissent value = 1 }
+	}
+}
+###############################################################################
+#  (‰i“cƒ‹[ƒg) ”½ŒR‰‰à		•Ä“à„–ƒ¶“àŠt	('40/03/20
+###############################################################################
+event = { 
+	id = 55973
+	random = no
+	country = JAP
+	
+	name = "EVT55973N"
+	desc = "EVT55973D"
+	style = 0
+	picture = "japanese_officers"
+
+	trigger = {
+		year = 1940
+		headofgovernment = 5036		#•Ä“à
+		event = 55986			#”½ŒR‰‰à
+		flag = Nagata
+		#flag = Toseiha			#Œ±“I–³Œø‰»
+		NOT = { flag = Kodoha }
+	}
+
+	date = { day = 20 month = march year = 1940 }# Real Date: '40/03/20
+
+	action_a = { # 
+		name = "ACT55973A"
+		command = { type = headofgovernment	which = 5562 }	#–ƒ¶ ‹v
+		command = { type = foreignminister	which = 5060 }	#¼‰ª —m‰E ŠO–±‘åb
+		command = { type = armamentminister	which = 5073 }	#ŒŞ“° ‘ì—Y ¤H‘åb
+		command = { type = ministerofsecurity	which = 5100 }	#¬Œ´ ’¼   “à–±‘åb
+		command = { type = dissent value = 1 }
+	}
+}
+###############################################################################
+#   (‰i“cƒ‹[ƒg) –ƒ¶‚Ì€		„‹ß‰q“àŠt	('40/09/06
+###############################################################################
+event = { 
+	id = 55974
+	random = no
+	country = JAP
+	
+	name = "EVT55974N"
+	desc = "EVT55974D"
+	style = 0
+	picture = "japanese_officers"
+
+	trigger = {
+		event = 55973
+		headofgovernment = 5562 #–ƒ¶‚Ì€
+		flag = Nagata
+		#flag = Toseiha		#Œ±“I–³Œø‰»
+		NOT = { flag = Kodoha }
+	}
+
+	date = { year = 1940 month = september  day = 5 }
+
+	action_a = { # 
+		name = "ACT55903A"
+		command = { type = headofgovernment	which = 5203 }	#‹ß‰q
+		command = { type = foreignminister	which = 5060 }	#¼‰ª —m‰E ŠO–±‘åb
+		command = { type = armamentminister	which = 5084 }	#¬—Ñ ˆêO ¤H‘åb	40”N‚É
+		command = { type = ministerofsecurity	which = 5110 }	#ˆÀˆä ‰p“ñ “à–±‘åb	40”N‚É
+		command = { type = sleepevent which = 59867 }
+	}
+}
+###############################################################################
+#   (‰i“cƒ‹[ƒg) ‰i“c“SRñ‘ŠA”C	„‰i“c“àŠt	('41
+###############################################################################
+event = { 
+	id = 55975
+	random = no
+	country = JAP
+	
+	name = "EVT55975N"
+	desc = "EVT55975D"
+	style = 0
+	picture = "japanese_officers"
+
+	trigger = {
+		NOT = {
+			flag = sovdefeatsjap
+			flag = usadefeatsjap
+			flag = gerdefeatsjap
+		}
+		OR = { 
+			ideology = nazi
+			ideology = fascist
+			ideology = paternal_autocrat
+			ideology = social_conservative
+		}
+		OR = {
+			AND = {
+				war = { country = JAP country = CHI }
+				event = 132440 #FEPKBETA4.9 #‹Ö—A
+				NOT = {
+					alliance = { country = JAP country = USA }
+					event = 55457 # ‰Í“ØŒv‰æ‚É‚æ‚é‹Ö—A‰ğœ
+				}
+			}
+			war = { country = JAP  country = USA }
+			war = { country = JAP  country = SOV }
+			war = { country = JAP  country = ENG }
+			war = { country = JAP  country = FRA }
+			war = { country = JAP  country = ITA }
+			war = { country = JAP  country = GER }
+		}
+		minister = 5555	# ‰i“c
+		NOT = { headofgovernment = 5555 } # ‰i“c
+		flag = Nagata
+		#flag = Toseiha		#Œ±“I–³Œø‰»
+		NOT = { flag = Kodoha }
+	}
+
+	date = { day = 1 month = october year = 1940 } # Real Date: ‘å«¸i‚Í40”N8ŒˆÈ~
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = { # 
+		name = "ACT55975A"
+		command = { type = headofgovernment		which = 5555 }	#‰i“c “SR
+		command = { type = foreignminister		which = 5050 }	#dŒõ ˆ¨
+		command = { type = armamentminister		which = 5568 }	#‰ê‰® ‹»é 
+		command = { type = ministerofsecurity		which = 5567 }	#‹g“c –Î 
+		command = { type = ministerofintelligence	which = 5561 }	#’r“c ƒ‹v
+		command = { type = chiefofstaff			which = 5556 }	#‰i“c “SR
+		command = { type = chiefofarmy			which = 5166 }	#“Œğ ‰p‹@ Q–d‘’·
+	}
+	#action_b = { # 
+	#	name = "ACT55920C"
+	#	command = { type = headofgovernment	which = 5038 }	#“Œ‹vç‹{
+	#	command = { type = foreignminister	which = 5050 }	#dŒõ ˆ¨ ŠO–±‘åb
+	#	command = { type = armamentminister	which = 5091 }	#¬—Ñ ˆêO ¤H‘åb
+	#	command = { type = ministerofsecurity	which = 5108 }	#–ØŒË Kˆê “à–±‘åb
+	#	command = { type = chiefofstaff		which = 5556 }	#‰i“c “SR
+	#	command = { type = chiefofarmy		which = 5166 }	#“Œğ ‰p‹@ Q–d‘’·
+	#	command = { type = dissent value = 3 }
+	#	command = { type = local_setflag which = Higasikuni }
+	#}
+}
+
+#‰i“c‚Ì•a€‚©‚çƒgƒŠƒK[
+event = {
+	id = 55976
+	trigger = {
+		incabinet = 5555
+	}
+	
+	name = "EVT_55976_NAME"	#‰i“c‘ã‚ÌI‚í‚è
+	desc = "EVT_55976_DESC"	#
+	
+	action = {
+		name = "ACT55920A"	#“ŒŠ
+		ai_chance = 50
+		command = { type = headofgovernment	which = 5042 }	#“Œğ ‰p‹@
+		command = { type = foreignminister	which = 5206 }	#—é–Ø ŠÑ‘¾˜Y
+		command = { type = armamentminister	which = 5085 }	#Šİ M‰î ¤H‘åb
+		command = { type = ministerofsecurity	which = 5567 }	#‹g“c –Î “à–±‘åb
+		command = { type = chiefofnavy		which = 5202 }	#¬àV ¡O˜Y ˜A‡ŠÍ‘ài—ß’·Š¯
+		command = { type = chiefofair		which = 5193 }	#“y”ìŒ´Œ«“ñ q‹ó‘ŠÄ
+	}
+	action = {
+		name = "EVT_55976_ACTB"	#’r“cƒ‹v—¤ŒR‘å«‚É‘gŠt‚Ì‘å–½‚ğ‰º‚·
+		ai_chance = 49
+		command = { type = dissent value = 3 }
+		command = { type = headofgovernment		which = 5657 }	#’r“c ƒ‹v
+		command = { type = foreignminister		which = 5199 }	#“ŒŠ ‰p‹@
+		command = { type = armamentminister		which = 5568 }	#‰ê‰® ‹»é 
+		command = { type = ministerofsecurity		which = 5567 }	#‹g“c –Î 
+		command = { type = ministerofintelligence	which = 5006 }	#‰ª‘º ”JŸ
+		command = { type = chiefofstaff			which = 5157 }	#”~’Ã ”ü¡˜Y
+		command = { type = chiefofarmy			which = 5166 }	#“Œğ ‰p‹@ Q–d‘’·
+	}
+	action = {
+		name = "EVT_55976_ACTC"	#‹ß‰q•¶–›‚É‘gŠt‚Ì‘å–½‚ª‰º‚Á‚½B‚È‚ºH
+		ai_chance = 1
+		command = { type = dissent value = 10 }
+		command = { type = headofgovernment	which = 5034 }	#‹ß‰q •¶–›
+		command = { type = foreignminister	which = 5052 }	#‹g“c –Î ŠO–±‘åb
+		command = { type = armamentminister	which = 5087 }	#¶‹ßi ­O ¤H‘åb
+		command = { type = ministerofsecurity	which = 5110 }	#ˆÀˆä ‰p“ñ “à–±‘åb
+	}
+}
+
+###############################################################################
+#  —¤ŒR“à•”‚É•s‰¸‚È“®‚«
+###############################################################################
+event = { 
+	id = 55977
+	random = no
+	country = JAP
+	persistent = yes
+	
+	name = "EVT55977N"
+	desc = "EVT55977D"
+	style = 0
+	picture = "japanese_reinforcments"
+
+	trigger = {
+		NOT = { flag = Toseiha }
+		NOT = { flag = Kodoha }
+		NOT = { flag = Nagata }
+		event = 60030
+		random = 15
+	}
+
+	date = { day = 26 month = february year = 1936 } # Real Date: *
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = { # 
+		name = "ACT55977A"
+		command = { type = dissent value = 1 }
+	}
+}
+
+
+###############################################################­¡ŠÖ˜AƒCƒxƒ“ƒg
+###############################################################################
+#  ‘æ19‰ñO‹c‰@‘I‹“	('36/02/20
+###############################################################################
+event = { 
+	id = 55980
+	random = no
+	country = JAP
+	
+	name = "EVT55980N"
+	desc = "EVT55980D"
+	style = 0
+	picture = "election"
+
+	date = { day = 20 month = february year = 1936 } # Real Date: 36/2/20
+
+	action_a = { # 
+		name = "ACT55980A"
+		command = { type = dissent	value = -1 }	#
+		command = { type = domestic	which = democratic	value = 1 }
+	}
+}
+###############################################################################
+#  H‚¢“¦‚°‰ğU		('37/04/01
+###############################################################################
+event = { 
+	id = 55981
+	random = no
+	country = JAP
+	
+	name = "EVT55981N"
+	desc = "EVT55981D"
+	style = 0
+	picture = "election"
+
+	trigger = {
+		headofgovernment = 5033
+	}
+
+	date = { day = 1 month = april year = 1937 } # Real Date: 37/4/1
+
+	action_a = { # 
+		name = "ACT55981A"
+		command = { type = dissent	value = -1 }
+		command = { type = sleepevent which = 135401 }
+		command = { type = sleepevent which = 135402 }
+	}
+}
+###############################################################################
+#  O‰@‹cˆõ”CŠú‰„’·40”N“x”Å		('40/02/01
+###############################################################################
+event = { 
+	id = 55982
+	random = no
+	country = JAP
+	
+	name = "EVT55982N"
+	desc = "EVT55982D"
+	style = 0
+	picture = "election"
+
+	trigger = {
+	#	ai = no	#FEPKBETA3
+		NOT = { event = 55981 }
+		OR = {
+			war = { country = JAP  country = CHI }
+			war = { country = JAP  country = USA }
+			war = { country = JAP  country = ENG }
+			war = { country = JAP  country = GER }
+			war = { country = JAP  country = SOV }
+		}
+		OR = { #FEPKBETA3
+			government = democratic
+			ideology = paternal_autocrat
+		}
+	}
+
+	date = { day = 1 month = february year = 1940 } # Real Date:* 40/2
+
+	action_a = { # 
+		name = "ACT55982A"
+		ai_chance = 90 #FEPKBETA3
+		command = { type = dissent value = 1 }
+		command = { type = local_setflag	which = SenkyoEnki40 }
+		command = { type = sleepevent which = 135401 }
+	}
+	action_b = { # 
+		name = "ACT55982B"
+		ai_chance = 10 #FEPKBETA3
+		command = { type = dissent	value = -1 }
+		command = { type = supplies	value = -2000 }
+		command = { type = money	value = -100 }
+		command = { type = local_setflag which = Senkyo40 } # FEPKBETA3
+	}
+}
+###############################################################################
+#  O‰@‹cˆõ”CŠú‰„’·41”N“x”Å		('41/04/01
+###############################################################################
+event = { 
+	id = 55983
+	random = no
+	country = JAP
+	
+
+	name = "EVT55982N"
+	desc = "EVT55982D"
+	style = 0
+	picture = "election"
+
+	trigger = {
+	#	ai = no	#FEPKBETA3
+		OR = {
+			event = 55981
+			local_flag = SenkyoEnki40
+		}
+		OR = {
+			war = { country = JAP  country = CHI }
+			war = { country = JAP  country = USA }
+			war = { country = JAP  country = ENG }
+			war = { country = JAP  country = GER }
+			war = { country = JAP  country = SOV }
+		}
+		OR = { #FEPKBETA3
+			government = democratic
+			ideology = paternal_autocrat
+		}
+	}
+
+	date = { day = 1 month = april year = 1941 } # Real Date:* 41/4
+
+	action_a = { # 
+		name = "ACT55982A"
+		ai_chance = 80 #FEPKBETA3
+		command = { type = dissent value = 2 }
+		command = { type = sleepevent which = 135401 }
+		command = { type = sleepevent which = 135402 }
+	}
+	action_b = { # FEPKBETA3
+		name = "ACT55982B"
+		ai_chance = 20 #FEPKBETA3
+		command = { type = dissent	value = -1 }
+		command = { type = supplies	value = -3000 }
+		command = { type = money	value = -150 }
+		command = { type = sleepevent which = 135401 }
+		command = { type = local_setflag which = Senkyo41 }
+	}
+}
+
+###############################################################################
+#‘å­—ƒ^‰ï
+###############################################################################
+event ={
+	id = 55984
+	random = no
+	country = JAP
+
+	name = "EVT55984N"
+	desc = "EVT55984D"
+	style = 0
+	picture = "capital"
+	trigger = {
+		NOT = { flag = Kodoha }
+		OR = { 
+			ideology = fascist
+			ideology = paternal_autocrat
+			ideology = social_conservative
+		}
+		OR = {
+			AND = {
+				war = { country = JAP  country = CHI }
+				headofgovernment = 5203
+				NOT = { year = 1940 }
+				random = 30
+			}
+			AND = {
+				war = { country = JAP  country = CHI }
+				year = 1940
+				NOT = { year = 1941 }
+				random = 10
+			}
+			AND = {
+				war = { country = JAP  country = CHI }
+				year = 1941
+				random = 20
+			}
+			AND = {
+				year = 1941
+				OR = {
+					war = { country = JAP  country = USA }
+					war = { country = JAP  country = ENG }
+					war = { country = JAP  country = GER }
+					war = { country = JAP  country = SOV }
+					AND = {
+						war = { country = JAP  country = CHI }
+						year = 1942
+					}
+				}
+				random = 30
+			}
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 } # Real Date: 1940/10/12
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = { # 
+		name = "ACT55984A"
+		ai_chance = 98 #FEPKBETA3
+		command = { type = domestic which = political_left	value = -1 }
+		command = { type = domestic which = freedom		value = -1 }
+		command = { type = sleepevent	which = 55985 }
+		command = { type = local_setflag	which = Yokusan }
+
+	}
+	action_b = { # 
+		name = "ACT55984B"
+		ai_chance = 1 #FEPKBETA3
+		command = { type = headofstate which = 5013 }	# NS“Vc
+		command = { type = domestic which = democratic		value = -2 }
+		command = { type = domestic which = political_left	value = -1 }
+		command = { type = domestic	which = freedom		value = -2 }
+		command = { type = dissent	value = 4 }
+		command = { type = sleepevent	which = 55985 }
+		command = { type = local_setflag	which = Yokusan }
+	}
+	action_c = { # 
+		name = "ACT55984C"
+		ai_chance = 1 #FEPKBETA3
+		command = { type = set_domestic which = democratic	value = 6 }
+		command = { type = set_domestic which = political_left	value = 3 }
+		command = { type = domestic	which = freedom		value = 3 }
+		command = { type = domestic	which = free_market	value = 2 }
+		command = { type = domestic	which = interventionism	value = -1 }
+		command = { type = dissent	value = 6 }
+		command = { type = sleepevent	which = 55985 }
+		command = { type = local_clrflag which = Yokusan } #FEPKBETA3
+	}
+}
+###############################################################################
+#‘å­—ƒ^‰ï
+###############################################################################
+event ={
+	id = 55985
+	random = no
+	country = JAP
+
+	name = "EVT55984N"
+	desc = "EVT55984D"
+	style = 0
+	picture = "capital"
+	trigger = {
+		OR = {
+			ideology = nazi
+			flag = Kodoha 
+		}
+		OR = {
+			AND = {
+				war = { country = JAP  country = CHI }
+				headofgovernment = 5203
+				NOT = { year = 1940 }
+				random = 30
+			}
+			AND = {
+				war = { country = JAP  country = CHI }
+				year = 1940
+				NOT = { year = 1941 }
+				random = 10
+			}
+			AND = {
+				war = { country = JAP  country = CHI }
+				year = 1941
+				random = 20
+			}
+			AND = {
+				year = 1941
+				OR = {
+					war = { country = JAP  country = USA }
+					war = { country = JAP  country = ENG }
+					war = { country = JAP  country = GER }
+					war = { country = JAP  country = SOV }
+					AND = {
+						war = { country = JAP  country = CHI }
+						year = 1942
+					}
+				}
+				random = 30
+			}
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 } # Real Date: 1940/10/12
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = { # 
+		name = "ACT55984B"
+		ai_chance = 99 #FEPKBETA3
+		command = { type = headofstate 		which = 5013 }	# NS“Vc
+		command = { type = set_domestic 	which = democratic	value = 1 }
+		command = { type = set_domestic 	which = political_left	value = 3 }
+		command = { type = domestic		which = freedom		value = -2 }
+		command = { type = sleepevent		which = 55984 }
+		command = { type = local_setflag	which = Yokusan }
+		}
+	action_b = { # 
+		name = "ACT55984A"
+		ai_chance = 1 #FEPKBETA3
+		command = { type = domestic 		which = political_left	value = 1 }
+		command = { type = domestic		which = freedom		value = 1 }
+		command = { type = dissent		value = 2 }
+		command = { type = sleepevent		which = 55984 }
+		command = { type = local_setflag	which = Yokusan }
+	}
+}
+###############################################################################
+#  ”½ŒR‰‰à		('40/02/02
+###############################################################################
+event = { 
+	id = 55986
+	random = no
+	country = JAP
+	
+	name = "EVT55986N"
+	desc = "EVT55986D"
+	style = 0
+	picture = "japanese_officers"
+
+	trigger = {
+		NOT = { government = democratic }
+	}
+
+	date = { day = 2 month = february year = 1940 } # Real Date:* '40/02/02
+
+	action_a = { # 
+		name = "ACT55986A"
+		command = { type = dissent value = 1 }
+	}
+}
+###############################################################################
+#—ƒ^‘I‹“
+###############################################################################
+event ={
+	id = 55987
+	random = no
+	country = JAP
+
+	name = "EVT55987N"
+	desc = "EVT55987D"
+	style = 0
+	picture = "election"
+	trigger = {
+		year = 1942
+		OR = {
+			war = { country = JAP  country = CHI }
+			war = { country = JAP  country = USA }
+			war = { country = JAP  country = ENG }
+			war = { country = JAP  country = GER }
+			war = { country = JAP  country = SOV }
+		}
+		OR = {
+			local_flag = Yokusan
+			headofgovernment = 5042		#tojo
+			headofgovernment = 5043		#koiso
+			headofgovernment = 5550		#mazaki
+			headofgovernment = 5555		#nagata
+			headofgovernment = 5552		#obata
+			NOT = { domestic = { type = democratic value = 4 } }
+		}
+		random = 20
+	}
+
+	date = { day = 0 month = january year = 1935 } # Real Date: 1942/4/30
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = { # 
+		name = "ACT55987A"
+		ai_chance = 100 #FEPKBETA3
+		#command = { type = dissent value = 0 }
+		command = { type = supplies	value = -1000 }
+		command = { type = money	value = -10 }
+	}
+	action_b = { # 
+		name = "ACT55987B"
+		ai_chance = 0 #FEPKBETA3
+		command = { type = domestic	which = freedom value = -1 }
+		command = { type = dissent	value = 3 }
+	}
+}
+###############################################################################
+#  Ií‰ğU		('40-'41
+#  DHFEPKFìÒ‚Ìï–¡‚É‚æ‚èƒfƒBƒVƒWƒ‡ƒ“‰»
+###############################################################################
+event = { 
+	id = 55988
+	random = no
+	country = JAP
+	
+
+	name = "EVT55988N"
+	desc = "EVT55988D"
+	style = 0
+	picture = "election"
+	decision_picture = "decision_fireside_chat"
+
+	decision = {
+		year = 1938
+		NOT = { year = 1942 }
+		flag = japanWarInChina
+		NOT = { war = { country = JAP  country = CHI } }
+		NOT = { war = { country = JAP  country = USA } }
+		NOT = { war = { country = JAP  country = ENG } }
+		NOT = { war = { country = JAP  country = GER } }
+		NOT = { war = { country = JAP  country = SOV } }
+	}
+	
+	decision_trigger = { }
+
+	trigger = {
+		year = 1938
+		NOT = { year = 1942 }
+		flag = japanWarInChina
+		NOT = { war = { country = JAP  country = CHI } }
+		NOT = { war = { country = JAP  country = USA } }
+		NOT = { war = { country = JAP  country = ENG } }
+		NOT = { war = { country = JAP  country = GER } }
+		NOT = { war = { country = JAP  country = SOV } }
+	}
+
+	date = { day = 0 month = january year = 1935 } # Real Date:* --
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = { # 
+		name = "ACT55988A"
+		command = { type = dissent	value = -1 }
+		command = { type = set_domestic which = democratic	value = 6 } #FEPKBETA3
+		command = { type = set_domestic which = political_left	value = 3 }
+		command = { type = sleepevent	which = 55982 }
+		command = { type = sleepevent	which = 55983 }
+		command = { type = local_clrflag which = Yokusan } #FEPKBETA3
+	}
+}
+
+###############################################################################
+#’•ƒ‹{‰Æ’fâ
+###############################################################################
+event = { 
+	id = 55989
+	country = JAP
+	trigger = {
+		event = 59804
+		event = 131684
+	}
+	
+	date = { day = 0 month = january year = 1935 } # Real Date:* --
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_55989_NAME"	#’•ƒ‹{‰Æ’fâ
+	desc = "EVT_55989_DESC"	#ƒiƒ`ƒX‚É”ñ‹¦—Í“I‚Èº˜a“Vc‚Ì‘ã‚í‚è‚ÉƒhƒCƒc‚É]‡‚ÈÒ‚Æ‚µ‚ÄcˆÊ‚ÉA‚¢‚½‘ås“Vc‚ÍAq—‚Ì–³‚¢‚Ü‚Ü•öŒä‚³‚ê‚½‚½‚ß“ú–{‘“à‚Å‚Í­¡“I‚È¬—‚ª‹N‚±‚Á‚½BŒp‹{“a‰º‚É‘HâNŠè‚¤‚©Aæ’é•Ã‰º‚ÉdâNŠè‚¤‚©‚Ì‚¢‚¸‚ê‚©‚ª“ú–{‚Ì‚Æ‚é‚±‚Æ‚Ì‚Å‚«‚é‘I‘ğˆ‚Å‚ ‚éBƒhƒCƒc‚ª–]‚Ş‚Ì‚ÍAŒp‹{“a‰º‚ÉÛ­‚ğ’u‚«AƒhƒCƒc‚Ì‰e‹¿—Í‚ğ‹­‚­•Û‚Â‚±‚Æ‚Å‚ ‚éccB
+	
+	action = {
+		name = "EVT_55989_ACTA"	#Œp‹{“a‰º‚ª‘HâN‚³‚ê‚é
+		command = { type = dissent value = 5 }
+		command = { type = headofstate which = 5654 }
+		command = { type = headofgovernment which = 5652 }
+	}
+	action = {
+		name = "EVT_55989_ACTB"	#æ’é•Ã‰º‚ªe­‚µ“¡Œ ‚ğ‘®‚³‚ê‚é
+		command = { type = dissent value = -5 }
+		command = { type = headofstate which = 5001 }
+		command = { type = headofgovernment which = 5026 }
+	}
+}
+
+
+#############################################################­¡­ôƒCƒxƒ“ƒgŒQ
+###############################################################################
+#x“ß–•Ï”­¶I
+###############################################################################
+event ={
+	id = 55990
+	random = no
+	country = JAP
+
+	name = "EVT55990N"
+	desc = "EVT55990D"
+	style = 0
+	picture = "japanese_reinforcments"
+	trigger = {
+		OR = {
+			war = { country = CHI country = JAP }
+			war = { country = JAP country = CHI }
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 } # Real Date: 
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = { # 
+		name = "ACT55990A"
+		command = { type = setflag	which = japanWarInChina }
+	}
+}
+###############################################################################
+#  ‹ß‰qº–¾
+###############################################################################
+event = { 
+	id = 55991
+	random = no
+	country = JAP
+	
+	name = "EVT55991N"
+	desc = "EVT55991D"
+	style = 0
+	picture = "japanese_officers"
+
+	trigger = {
+		year = 1938
+		OR = {
+			headofgovernment = 5034
+			InCabinet = 5056
+		}
+		NOT = { headofgovernment = 5203 }
+		war = { country = CHI country = JAP }
+	}
+
+	date = { day = 10 month = january year = 1935 } # Real Date: 38/1/16
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+	action_a = { # 
+		name = "ACT55991A"
+		command = { type = sleepevent	which = 55710 }#ƒgƒ‰ƒEƒgƒ}ƒ“Hì‚ÌƒCƒxƒ“ƒg
+		command = { type = sleepevent	which = 55713 }
+		command = { type = clrflag	which = chiPeaceJap }
+		command = { type = clrflag	which = chiPeaceJap2 }
+		command = { type = dissent	value = -1 }
+	}
+}
+###############################################################################
+#  ‘‰Æ‘“®ˆõ–@{s
+###############################################################################
+
+event ={
+	id = 55992
+	random = no
+	country = JAP
+
+	name = "EVT55992N"
+	desc = "EVT55992D"
+	style = 0
+	picture = "japanese_reinforcments"
+	trigger = {
+		OR ={
+			AND = {
+				year = 1938
+				NOT = { year = 1940 }
+				OR = {
+					war = { country = JAP  country = CHI }
+					war = { country = JAP  country = USA }
+					war = { country = JAP  country = ENG }
+					war = { country = JAP  country = GER }
+					war = { country = JAP  country = SOV }
+				}
+				random = 5
+			}
+			AND = {
+				year = 1940
+				NOT = { year = 1942 }
+				OR = {
+					war = { country = JAP  country = CHI }
+					war = { country = JAP  country = USA }
+					war = { country = JAP  country = ENG }
+					war = { country = JAP  country = GER }
+					war = { country = JAP  country = SOV }
+				}
+				random = 10
+			}
+			AND = {
+				year = 1942
+				OR = {
+					war = { country = JAP  country = CHI }
+					war = { country = JAP  country = USA }
+					war = { country = JAP  country = ENG }
+					war = { country = JAP  country = GER }
+					war = { country = JAP  country = SOV }
+				}
+				random = 15
+			}
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 } # Real Date: 1938/5
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = { # 
+		name = "ACT55992A"
+		command = { type = industrial_modifier which = total value = 3 }
+		command = { type = domestic	which = free_market	value = -1 }
+		command = { type = domestic	which = freedom		value = -1 }
+		command = { type = dissent value = 2 }
+	}
+}
+
+event = {
+	id = 55993
+	random = no
+	country = JAP
+	trigger = {
+		NOT = { domestic = { type = political_left value = 6 } }
+		NOT = { ispuppet = JAP }
+		random = 15
+		flag = japanWarInChina
+	}
+
+	date = { day = 0 month = 8 year = 1938 } # Real Date: 1938/10
+	offset = 6
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	picture = "japanese_officers"
+	style = 0
+	name = "EVT_55993_NAME"	#Šé‰æ‰@–Œ
+	desc = "EVT_55993_DESC"	#
+	
+	action = {
+		name = "EVT_55993_ACTA"	#OK
+		command = { type = dissent value = 2 }
+	}
+}
+
+event = {
+	id = 55994
+	random = no
+	country = JAP
+	trigger = {
+		NOT = { domestic = { type = political_left value = 5 } }
+		domestic = { type = free_market value = 2 }
+		NOT = { ispuppet = JAP }
+		random = 20
+		event = 55993
+	}
+	
+	date = { day = 0 month = 8 year = 1940 } # Real Date: 1940/10
+	offset = 6
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	picture = "japanese_officers"
+	style = 0
+	name = "EVT_55994_NAME"	#ŒoÏV‘Ì§Šm—§—vj
+	desc = "EVT_55994_DESC"	#
+	
+	action = {
+		name = "EVT_55994_ACTA"	#v‘z“I‘O—ğÒ‚ğ­•{‚©‚ç”rœ‚¹‚æ
+		ai_chance = 9
+		command = { type = dissent value = 3 }
+	}
+	action = {
+		name = "EVT_55994_ACTB"	#Šé‰æ‰@‚Ì•ûj‚Í³‚µ‚¢I
+		ai_chance = 1
+		command = { type = dissent value = 5 }
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = domestic which = free_market value = -1 }
+	}
+	action = { 
+		name = "EVT_55994_ACTB"	#Šé‰æ‰@‚Ì•ûj‚Í³‚µ‚¢I
+		trigger = {
+			ai = yes
+			flag = Nagata
+		}
+		ai_chance = 90
+		command = { type = dissent value = 5 }
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = domestic which = free_market value = -1 }
+	}
+}

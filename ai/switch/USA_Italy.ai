@@ -1,0 +1,186 @@
+# USA Gear up 4 AI File by Lothos
+
+max_garrison_prop = 0.30
+min_garrison_prop = 0.20
+
+target = {
+	919 = 60
+	932 = 50
+	924 = 50
+	939 = 50
+	521 = 25
+}
+
+
+###################################
+# Ground Combat, Leaders and Garrisons
+###################################
+garrison = {
+	defend_overseas_beaches = yes
+	home_multiplier 	= 0.3
+	overseas_multiplier 	= 1.0
+	home_peace_cap 		= 0
+	war_zone_odds 		= 2.0 #4.0 #FEPKBETA4.9 #試験的に調整
+	key_point_prio_mult	= 1.0
+	revolt_risk_mult	= 0.3
+
+	# PRIORITIES:
+	beach			= 1	# Beach level 2
+	capital			= 1	# Our capital
+	human_border		= 0	# Ignored for allied human players
+	war_target		= 50	# The next country targeted for attack by this AI
+
+	opposing_alliance	= 20	# For neutrals, all alliances are "opposing"
+	claim_threat		= 0	# If we are neutral, countries with claims on us get this
+	unstable_border		= 0	# Bordering countries at war with someone else get this
+}
+front = { 
+	recklessness 		= 3 # 0-3
+	distrib_vs_ai 		= offensive
+	distrib_vs_human 	= offensive
+
+	hard_attack 	= 2.0
+} 
+###################################
+# Invasions and Naval
+###################################
+invasion = {
+	invasion		= yes
+ 	base			= 0.1	#Relative modifier. (lower = specific targets much more important.)
+	random			= 10.0	#How big a random range.  (1.0 = 1%)
+	coastal			= 0.1	#increase to avoid coastal forts more.
+	beach			= 0.1	#higher, avoid worst beaches.
+	distance		= 0.1	#higher = avoid long distance.
+	max_distance    	= 100.0
+	max_staging_distance 	= 100.0
+	pocket			= 1.0	#prioritise pockets, ie provinces with no adjacent controlled by same.
+	island			= 0.5	#prioritise taking pure islands.
+	enemy			= 1.0	#higher = much more vary of troops in province.
+	adjacentenemy 		= 0.5	#higher = much more vary of troops nearby
+	air_base		= 1.0
+	naval_base 		= 1.0
+	air_support 		= 0.1
+
+	invasion		= yes
+	ignore			= yes
+	help_allies 		= yes
+      	redirect 		= nearest
+      
+	staging_province = { 949 939 958 348 }
+
+	target = {
+		#England
+		20 = 5000 # Dover
+		17 = 5000 # Norwich
+		21 = 7000 # Portsmouth
+		23 = 5000 # Plymouth
+		13 = 5000 # Sheiffield
+		28 = 5000 # Belfast
+		22 = 5000 # Bristol
+		14 = 5000 # Liverpool
+		12 = 5000 # Blackpool
+		11 = 5000 # Sunderland
+		10 = 5000 # Edinburgh
+		9  = 5000 # Glasgow
+
+		#Kurils
+		1177 = -1 	# Estorofu
+		1174 = -1 	# Shumushushima
+
+		#Central Pacific
+		658  = 1000 #Hawai
+		659  = 1000 #Maui
+		660  = 1000 #Kawai
+		661  = 1000 #Niihau
+		662  = 3000 #Midway
+		663  = 4000 #Pearl Harbour
+		1766 = 3000 #Johnson
+		1785 = 60 #Marcus
+		1786 = 60 #Wake
+		1799 = 180 #IwoJima
+		1600 = 180 #Bikini
+		1601 = 45 #Eniwetok
+		
+
+
+		# MEDITERRANEAN SEA
+		# -----------------
+		# Italy
+		525 = 9000 # Palermo
+		526 = 8000 # Catania
+		521 = 7000 # Naples
+		523 = 8000 # Taranto
+		520 = 3000 # Foggia
+		519 = 3000 # Anzio
+		396 = 6000 # crete
+		399 = 3000
+		534 = 5000
+		31  = 3000 # Malta
+
+	} 
+} 
+
+
+admiral = { 
+	min_org			= 100	# NEW: Percent of org gained back before the unit can leave port
+	min_dmg			= 90    # NEW: Percent of dmg gained back before the unit can leave port
+	return_org 		= 70 	# NEW: PERCENT OF ORG LOST BEFORE RETURNING TO PORT applies to all fleets/ships
+	return_dmg 		= 70 	# NEW: PERCENT OF DMG LOST BEFORE RETURNING TO PORT for repairs applies to all fleets/ships
+
+	#Which provinces to use as bases..
+	base = {
+		663	# Pearl Harbor
+		1756	# Samoa
+		765	# San Francisco
+		633	# Norfolk
+		651	# Miami
+		#602	# Boston
+		1613	# Truk
+		1670	# Rabaul
+		1337	# Saigon
+		1353	# Singapore
+		1737	# Manila
+		1624	# Guam
+		949	# Alger
+		939	# Tunis		 #BETA修正パッチ
+		534	# Sardinia	 #BETA修正パッチ
+		31	# Malta		 #BETA修正パッチ
+	}
+
+	target = { 
+			2431 = 100   # Med. west central
+			2432 = 100
+			2434 = 100
+			2436 = 100
+			2437 = 100
+			2440 = 200
+			2442 = 200
+			2443 = 200
+			2441 = 200
+			2439 = 200
+
+	} 
+	core = {
+		2440
+		2441
+		2442
+		2443
+		2535
+		2348
+		2347
+		2346
+		2535
+		2534
+		2533
+		2531
+		2530
+		1922
+		1936
+		1937
+		1938
+		1943
+		1931
+		2564
+		2563
+	} 
+} 

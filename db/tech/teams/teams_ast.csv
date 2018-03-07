@@ -1,0 +1,20 @@
+AST;Name;Pic Name;Skill;Start Year;End Year;Speciality1;Speciality2;Speciality3;Speciality4;Speciality5;Speciality6;Speciality7;Speciality8;Speciality9;Speciality10;Speciality11;Speciality12;Speciality13;Speciality14;Speciality15;Speciality16;Speciality17;Speciality18;Speciality19;Speciality20;Speciality21;Speciality22;Speciality23;Speciality24;Speciality25;Speciality26;Speciality27;Speciality28;Speciality29;Speciality30;Speciality31;Speciality32;x
+500;陸軍発明理事会;T500;5;1930;1970;technical_efficiency;general_equipment;mechanics;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+501;チュロナ戦車製造工場;T501;4;1930;1970;mechanics;electronics;artillery;technical_efficiency;chemistry;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+502;デ・ハヴィランド社;T502;7;1930;1970;aeronautics;chemistry;electronics;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+503;フォード・モータース社;T503;8;1930;1970;mechanics;industrial_engineering;management;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+504;ニュー・サウス・ウェールズ州鉄道;T504;6;1930;1970;mechanics;general_equipment;industrial_engineering;management;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+505;ヴィッカース・アームストロング社;T505;8;1930;1970;mechanics;aeronautics;technical_efficiency;artillery;naval_engineering;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+506;ダッドリー・ラヴァラック;T506;6;1930;1957;small_unit_tactics;decentralized_execution;combined_arms_focus;individual_courage;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+507;ガイ・ロイル;T507;5;1930;1945;submarine_tactics;naval_training;centralized_execution;seamanship;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+508;ジョン・コリンズ;T508;6;1930;1970;large_taskforce_tactics;carrier_tactics;naval_training;seamanship;centralized_execution;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+509;ラグナー・M・コルヴィン;T509;4;1930;1954;small_taskforce_tactics;centralized_execution;naval_training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+510;リチャード・ウィリアムズ;T510;6;1930;1970;fighter_tactics;decentralized_execution;aircraft_testing;piloting;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+511;トーマス・ブレーミー;T511;4;1938;1951;large_unit_tactics;centralized_execution;combined_arms_focus;individual_courage;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+512;ウィリアム・ボストック;T512;5;1930;1958;bomber_tactics;aircraft_testing;centralized_execution;piloting;combined_arms_focus;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+513;カカトゥー島造船所;T513;4;1930;1970;naval_engineering;naval_artillery;technical_efficiency;electronics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+514;連邦科学産業研究機構;T514;5;1930;1970;mathematics;electronics;chemistry;mechanics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+515;ウィルフレッド・ハリントン;T515;4;1954;1965;small_taskforce_tactics;centralized_execution;naval_training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+516;サー・シドニー・フェアベーン・ロウウェル;T516;6;1950;1968;small_unit_tactics;decentralized_execution;combined_arms_focus;individual_courage;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+517;サー・コリン・トーマス・ハナ;T517;4;1959;1970;fighter_tactics;combined_arms_focus;centralized_execution;piloting;aircraft_testing;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+518;ホレス・R・キャンベル;T13607;4;1945;1954;individual_courage;management;combined_arms_focus;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x

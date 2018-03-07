@@ -1,0 +1,1872 @@
+#########################################################################
+#	FEPK_lendlease.txt
+#	レンドリース関連イベント
+#########################################################################
+#id = 133000-09		対英レンドリース
+#id = 133010-19		対ソレンドリース
+#id = 133020-29		対中レンドリース
+#id = 133030-39		対伊レンドリース
+#id = 133040-49		対仏レンドリース
+#id = 133050-59		対日レンドリース
+#id = 133060-69		レンドリースが途切れる（アメリカ側）
+#id = 133070-		レンドリースが途切れる（受給国側）
+#########################################################################
+##########
+#  Lend-Lease events
+##########
+#  The Lend-Lease Act to ENG
+##########
+event = {
+	id = 133000
+	random = no
+	country = USA
+
+	trigger = {
+		NOT = {
+			alliance = { country = GER country = USA }
+			war = { country = USA country = ENG }
+		}
+		OR = {
+			war = { country = USA country = GER }
+			AND = {
+				war = { country = ENG country = GER }
+				OR = { #FEPKBETA4.6
+					government = democratic
+					ideology = paternal_autocrat 
+					ideology = left_wing_radical
+				} 
+			}
+		}
+	}
+
+	date = { day = 11 month = march year = 1941 } #historic
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_3700_NAME"
+	desc = "EVT_3700_DESC"
+
+	picture = "lend_lease"
+
+	action_a = {
+		name = "ACTIONNAME3700A" #Pass the Act
+		ai_chance = 99
+		command = { type = supplies value = -2000 }
+		command = { type = oilpool value = -1000 }
+		command = { type = relation which = ENG value = 20 }
+		command = { type = relation which = GER value = -20 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = trigger which = 133001 } #UK lend-lease startup
+	}
+	action_b = {
+		name = "ACTIONNAME3700B" #Remain Completely Neutral
+		ai_chance = 1
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = sleepevent which = 133000 } #lend-lease ENG The First Shipment
+		command = { type = sleepevent which = 133002 } #lend-lease ENG
+		command = { type = sleepevent which = 133010 } #lend-lease SOV The First Shipment
+		command = { type = sleepevent which = 133012 } #lend-lease SOV
+		command = { type = sleepevent which = 133020 } #lend-lease CHI The First Shipment
+		command = { type = sleepevent which = 133022 } #lend-lease CHI
+		command = { type = sleepevent which = 133030 } #lend-lease ITA The First Shipment
+		command = { type = sleepevent which = 133032 } #lend-lease ITA
+		command = { type = sleepevent which = 133040 } #lend-lease FRA The First Shipment
+		command = { type = sleepevent which = 133042 } #lend-lease FRA
+		command = { type = sleepevent which = 133050 } #lend-lease JAP The First Shipment
+		command = { type = sleepevent which = 133052 } #lend-lease JAP
+	}
+}
+##########
+#  The Lend-Lease Act - The First Shipment
+##########
+event = {
+	id = 133001
+	random = no
+	country = ENG
+
+	name = "EVT_3404_NAME"
+	desc = "EVT_3404_DESC"
+
+	picture = "lend_lease"
+
+	action_a = {
+		name = "OK"
+		command = { type = supplies value = 2000 }
+		command = { type = oilpool value = 1000 }
+		command = { type = free_ic		value = 18 }
+		command = { type = free_energy		value = 36 }
+		command = { type = free_metal		value = 18 }
+		command = { type = free_rare_materials	value = 9 }
+		command = { type = free_money		value = 3 }
+		command = { type = free_oil		value = 18 }
+		command = { type = free_supplies	value = 9 }
+		command = { type = setflag which = USA_Lend-Lease_ENG }
+		command = { type = steal_tech which = USA }
+	}
+}
+##########
+#  Lend-Lease Shipment to ENG
+##########
+event = {
+	id = 133002
+	random = no
+	persistent = yes
+	country = USA
+
+	trigger = {
+		NOT = { flag = Lack_Of_Convoy_USA }
+		flag = USA_Lend-Lease_ENG
+		war = { country = ENG country = GER }
+		NOT = {
+			alliance = { country = GER country = USA }
+			war = { country = ENG country = USA }
+		}
+		supplies = 2000
+                random = 4 # 4% chance every 8 days
+	}
+
+	date = { day = 1 month = may year = 1941 }
+	offset = 8
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_3702_NAME"
+	desc = "EVT_3702_DESC"
+	picture = "lend_lease"
+
+	action_a = {
+		name = "ACTIONNAME3702A"
+		ai_chance = 99
+		command = { type = supplies value = -2000 }
+		command = { type = oilpool value = -1000 }
+		command = { type = trigger which = 133003 } # UK
+	}
+	action_b = {
+		name = "ACTIONNAME3702B"
+		ai_chance = 1
+		command = { type = relation which = ENG value = -5 }
+	}
+}
+
+##########
+#  A Lend-Lease Shipment Arrives from the USA
+##########
+event = {
+	id = 133003
+	random = no
+	country = ENG
+	persistent = yes
+
+	name = "EVT_3405_NAME"
+	desc = "EVT_3405_DESC"
+	picture = "lend_lease"
+
+	action_a = {
+		name = "OK"
+		command = { type = supplies value = 2000 }
+		command = { type = oilpool value = 1000 }
+	}
+}
+
+##########
+#  End Lend-Lease Shipment to ENG
+##########
+
+event = { #FEPKBETA5.4
+	id = 133004
+	random = no
+	country = ENG
+
+	trigger = {
+		flag = USA_Lend-Lease_ENG
+		OR = {
+			event = 131232 #USA surrender
+			event = 131242
+			event = 131253
+			NOT = {
+				war = { country = ENG country = GER }
+			}
+			NOT = {
+				exists = GER
+			}
+			NOT = {
+				exists = USA
+			}
+			alliance = { country = GER country = USA }
+			war = { country = ENG country = USA }
+		}
+	}
+
+	date = { day = 1 month = may year = 1941 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133004_NAME"
+	desc = "EVT_133004_DESC"
+	picture = "lend_lease"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = free_ic		value = -18 }
+		command = { type = free_energy		value = -36 }
+		command = { type = free_metal		value = -18 }
+		command = { type = free_rare_materials	value = -9 }
+		command = { type = free_money		value = -3 }
+		command = { type = free_oil		value = -18 }
+		command = { type = free_supplies	value = -9 }
+		command = { type = clrflag which = USA_Lend-Lease_ENG }
+		command = { type = sleepevent which = 133002 }
+	}
+}
+
+##########
+#  The Lend-Lease Act to SOV
+##########
+event = {
+	id = 133010
+	random = no
+	country = USA
+
+	trigger = {
+		war = { country = SOV country = GER }
+		OR = {
+			AND = {
+				control = { province = 154 data = SOV } #Archangelsk
+				AND = {
+					month = 1 # february
+					NOT = { month = 9 } # october
+				}
+			}
+			control = { province = 1825 data = ENG } #Abadan
+			control = { province = 1825 data = SOV } #Abadan
+			AND = { #allied persia
+				control = { province = 1825 data = PER } #Abadan
+				alliance = { country = ENG country = PER }
+			}
+			AND = { #comintern persia
+				control = { province = 1825 data = PER } #Abadan
+				alliance = { country = SOV country = PER }
+			}
+		}
+		NOT = {
+			alliance = { country = GER country = USA }
+			war = { country = SOV country = USA }
+			war = { country = SOV country = ENG }
+		}
+	}
+
+	date = { day = 11 month = march year = 1941 } #historic
+	offset = 60
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_3703_NAME"
+	desc = "EVT_3703_DESC"
+
+	picture = "lend_lease"
+
+	action_a = {
+		name = "ACTIONNAME3700A" #Pass the Act
+		ai_chance = 99
+		command = { type = supplies value = -2000 }
+		command = { type = relation which = SOV value = 20 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = trigger which = 133011 } #SOV lend-lease startup
+	}
+	action_b = {
+		name = "ACTIONNAME3700B" #Remain Completely Neutral
+		ai_chance = 1
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = sleepevent which = 133010 } #lend-lease SOV The First Shipment
+		command = { type = sleepevent which = 133012 } #lend-lease SOV
+	}
+}
+##########
+#  The Lend-Lease Act - The First Shipment
+##########
+event = {
+	id = 133011
+	random = no
+	country = SOV
+
+	name = "EVT_3405_NAME"
+	desc = "EVT_3405_DESC"
+
+	picture = "lend_lease"
+
+	action_a = {
+		name = "OK"
+		command = { type = supplies value = 2000 }
+		command = { type = free_ic		value = 12 }
+		command = { type = free_energy		value = 24 }
+		command = { type = free_metal		value = 12 }
+		command = { type = free_rare_materials	value = 6 }
+		command = { type = free_money		value = 3 }
+		command = { type = free_oil		value = 12 }
+		command = { type = free_supplies	value = 6 }
+		command = { type = setflag which = USA_Lend-Lease_SOV }
+		command = { type = steal_tech which = USA }
+	}
+}
+##########
+#  Lend-Lease Shipment to SOV
+##########
+event = {
+	id = 133012
+	random = no
+	persistent = yes
+	country = USA
+
+	trigger = {
+		NOT = { flag = Lack_Of_Convoy_USA }
+		flag = USA_Lend-Lease_SOV
+		war = { country = SOV country = GER }
+		OR = {
+			AND = {
+				control = { province = 154 data = SOV } #Archangelsk
+				AND = {
+					month = 1 # february
+					NOT = { month = 9 } # october
+				}
+			}
+			control = { province = 1825 data = ENG } #Abadan
+			control = { province = 1825 data = SOV } #Abadan
+			AND = { #allied persia
+				control = { province = 1825 data = PER } #Abadan
+				alliance = { country = ENG country = PER }
+			}
+			AND = { #comintern persia
+				control = { province = 1825 data = PER } #Abadan
+				alliance = { country = SOV country = PER }
+			}
+		}
+		NOT = {
+			alliance = { country = GER country = USA }
+			war = { country = SOV country = USA }
+			war = { country = SOV country = ENG }
+		}
+                random = 5 # 5% chance every 12 days
+	}
+
+	date = { day = 1 month = may year = 1941 }
+	offset = 12
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_3703_NAME"
+	desc = "EVT_3703_DESC"
+	picture = "lend_lease"
+
+	action_a = {
+		name = "ACTIONNAME3703A"
+		ai_chance = 99
+		command = { type = supplies value = -2000 }
+		command = { type = trigger which = 133013 }
+	}
+	action_b = {
+		name = "ACTIONNAME3703B"
+		ai_chance = 1
+		command = { type = relation which = SOV value = -5 }
+	}
+}
+
+##########
+#  A Lend-Lease Shipment Arrives from the USA
+##########
+event = {
+	id = 133013
+	random = no
+	country = SOV
+	persistent = yes
+
+	name = "EVT_3405_NAME"
+	desc = "EVT_3405_DESC"
+	picture = "lend_lease"
+
+	action_a = {
+		name = "OK"
+		command = { type = supplies value = 2000 }
+	}
+}
+
+##########
+#  End Lend-Lease Shipment to SOV
+##########
+
+event = { #FEPKBETA5.4
+	id = 133014
+	random = no
+	country = SOV
+
+	trigger = {
+		flag = USA_Lend-Lease_SOV
+		OR = {
+			NOT = { event = 133016 }
+			AND = { 
+				event = 133016
+				war = { country = USA country = JAP }
+			}
+		}
+		OR = {
+			event = 131232 #USA surrender
+			event = 131242
+			event = 131253
+			event = 131700 #Stalin parge
+			NOT = {
+				war = { country = SOV country = GER }
+			}
+			NOT = {
+				exists = GER
+			}
+			NOT = {
+				exists = USA
+			}
+			alliance = { country = GER country = USA }
+			war = { country = SOV country = USA }
+		}
+	}
+
+	date = { day = 1 month = may year = 1941 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133004_NAME"
+	desc = "EVT_133004_DESC"
+	picture = "lend_lease"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = free_ic		value = -12 }
+		command = { type = free_energy		value = -24 }
+		command = { type = free_metal		value = -12 }
+		command = { type = free_rare_materials	value = -6 }
+		command = { type = free_money		value = -3 }
+		command = { type = free_oil		value = -12 }
+		command = { type = free_supplies	value = -6 }
+		command = { type = clrflag which = USA_Lend-Lease_SOV }
+		command = { type = sleepevent which = 133012 }
+	}
+}
+
+##########
+#  マイルポスト合意
+##########
+event = {
+	id = 133015
+	random = no
+	country = SOV
+	
+	trigger = {
+		flag = USA_Lend_Lease_SOV
+		lost_national = { country = GER value = 70 }
+		war = { country = JAP country = USA }
+		NOT = { war = { country = JAP country = SOV } }
+	}
+	decision = {
+		flag = USA_Lend_Lease_SOV
+		lost_national = { country = GER value = 50 }
+		war = { country = JAP country = USA }
+		NOT = { war = { country = JAP country = SOV } }
+	}
+	decision_trigger = {
+		lost_national = { country = GER value = 70 }
+	}
+	
+	name = "EVT_133015_NAME"	#マイルポスト合意
+	desc = "EVT_133015_DESC"	#
+
+	picture = "lend_lease2"
+	decision_picture = "decision_lend_lease_SOV"
+	style = 2
+	
+	action = {
+		name = "EVT_133015_ACTA"	#アメリカに合意の締結を求める
+		command = { type = trigger which = 133016 }
+	}
+}
+
+event = {
+	id = 133016
+	country = USA
+	
+	name = "EVT_133015_NAME"	#マイルポスト合意
+	desc = "EVT_133015_DESC"	#
+	
+	picture = "lend_lease"
+	style = 0
+	
+	action = {
+		ai_chance = 95
+		name = "EVT_133016_ACAT"	#合意
+		command = { type = relation which = SOV value = 10 }
+	}
+	action = {
+		ai_chance = 5
+		name = "EVT_133016_ACTB"	#ドイツの降伏が確認できたなら、レンドリースは終わりだ
+		command = { type = relation which = SOV value = -10 }
+		command = { type = sleepevent which = 133015 }
+	}
+}
+
+##########
+#  The Lend-Lease Act to CHI
+##########
+event = {
+	id = 133020
+	random = no
+	country = USA
+
+	trigger = {
+		war = { country = CHI country = JAP }
+		NOT = {
+			war = { country = CHI country = USA }
+			war = { country = ENG country = USA }
+			flag = Chinese_unification_war	#攻められたのは日本であるという場合、レンドリースはちょっと
+		}
+		NOT = {
+			alliance = { country = GER country = CHI }
+			alliance = { country = JAP country = USA }
+			war = { country = CHI country = USA }
+			war = { country = CHI country = ENG }
+			war = { country = CHI country = HOL }
+		}
+		OR = { #Rangoon
+			control = { province = 1299 data = ENG }
+			AND = {
+				alliance = { country = ENG country = BUR }
+				control = { province = 1299 data = BUR }
+			}
+		}
+		OR = { #Lasio
+			control = { province = 1295 data = ENG }
+			AND = {
+				alliance = { country = ENG country = BUR }
+				control = { province = 1295 data = BUR }
+			}
+		}
+		OR = { #Kunming
+			control = { province = 1307 data = CHI }
+			AND = {
+				alliance = { country = CHI country = CYN }
+				control = { province = 1307 data = CYN }
+			}
+		}
+		supplies = 1000
+	}
+
+	date = { day = 11 month = march year = 1941 } #historic
+	offset = 60
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_3725_NAME"
+	desc = "EVT_3700_DESC"
+
+	picture = "lend_lease"
+
+	action_a = {
+		name = "ACTIONNAME3700A" #Pass the Act
+		ai_chance = 99
+		command = { type = metalpool value = -3000 }
+		command = { type = energypool value = -6000 }
+		command = { type = rarematerialspool value = -1500 }
+		command = { type = oilpool value = -500 }
+		command = { type = supplies value = -1000 }
+		command = { type = trigger which = 133021 } #CHI lend-lease startup
+	}
+	action_b = {
+		name = "ACTIONNAME3700B" #Remain Completely Neutral
+		ai_chance = 1
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = sleepevent which = 133020 } #lend-lease CHI The First Shipment
+		command = { type = sleepevent which = 133022 } #lend-lease CHI
+	}
+}
+##########
+#  The Lend-Lease Act - The First Shipment
+##########
+event = {
+	id = 133021
+	random = no
+	country = CHI
+
+	name = "EVT_3405_NAME"
+	desc = "EVT_3405_DESC"
+	picture = "lend_lease"
+
+	action_a = {
+		name = "OK"
+		#equivilent of 50 IC for 60 days
+		command = { type = metalpool value = 3000 }
+		command = { type = energypool value = 6000 }
+		command = { type = rarematerialspool value = 1500 }
+		command = { type = oilpool value = 500 }
+		command = { type = supplies value = 1000 }
+		command = { type = free_ic		value = 6 } #FEPKBETA4 # 12→6
+		command = { type = free_energy		value = 18 }
+		command = { type = free_metal		value = 3 }
+		command = { type = free_rare_materials	value = 6 }
+		command = { type = free_money		value = 1 }
+		command = { type = free_oil		value = 6 }
+	#	command = { type = free_supplies	value = 3 }
+		command = { type = setflag which = USA_Lend-Lease_CHI }
+		command = { type = steal_tech which = USA }
+	}
+}
+##########
+#  Lend-Lease Shipment to CHI
+##########
+event = {
+	id = 133022
+	random = no
+	persistent = yes
+	country = USA
+
+	trigger = {
+		NOT = { flag = Lack_Of_Convoy_USA }
+		flag = USA_Lend-Lease_CHI
+		war = { country = CHI country = JAP }
+		NOT = {
+			war = { country = CHI country = USA }
+			war = { country = ENG country = USA }
+		}
+		NOT = {
+			alliance = { country = GER country = CHI }
+			alliance = { country = JAP country = USA }
+			war = { country = CHI country = USA }
+			war = { country = CHI country = ENG }
+			war = { country = CHI country = HOL }
+		}
+		OR = { #Rangoon
+			control = { province = 1299 data = ENG }
+			AND = {
+				alliance = { country = ENG country = BUR }
+				control = { province = 1299 data = BUR }
+			}
+		}
+		OR = { #Lasio
+			control = { province = 1295 data = ENG }
+			AND = {
+				alliance = { country = ENG country = BUR }
+				control = { province = 1295 data = BUR }
+			}
+		}
+		OR = { #Kunming
+			control = { province = 1307 data = CHI }
+			AND = {
+				alliance = { country = CHI country = CYN }
+				control = { province = 1307 data = CYN }
+			}
+		}
+		supplies = 1000
+                random = 6 # 6% chance every 15 days
+	}
+
+	date = { day = 1 month = may year = 1941 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_3725_NAME"
+	desc = "EVT_3700_DESC"
+	picture = "lend_lease"
+
+	action_a = {
+		name = "ACTIONNAME3702A"
+		ai_chance = 99
+		command = { type = metalpool value = -3000 }
+		command = { type = energypool value = -6000 }
+		command = { type = rarematerialspool value = -1500 }
+		command = { type = oilpool value = -500 }
+		command = { type = supplies value = -1000 }
+		command = { type = trigger which = 133023 }
+	}
+	action_b = {
+		name = "ACTIONNAME3702B"
+		ai_chance = 1
+		command = { type = relation which = CHI value = -5 }
+	}
+}
+
+##########
+#  A Lend-Lease Shipment Arrives from the USA
+##########
+event = {
+	id = 133023
+	random = no
+	country = CHI
+	persistent = yes
+
+	name = "EVT_3405_NAME"
+	desc = "EVT_3405_DESC"
+	picture = "lend_lease"
+
+	action_a = {
+		name = "OK"
+		command = { type = metalpool value = 3000 }
+		command = { type = energypool value = 6000 }
+		command = { type = rarematerialspool value = 1500 }
+		command = { type = oilpool value = 500 }
+		command = { type = supplies value = 1000 }
+	}
+}
+
+##########
+#  End Lend-Lease Shipment to CHI
+##########
+
+event = { #FEPKBETA5.4
+	id = 133024
+	random = no
+	country = CHI
+
+	trigger = {
+		flag = USA_Lend-Lease_CHI
+		OR = {
+			event = 131232 #USA surrender
+			event = 131242
+			event = 131253
+			event = 56011 # hullnote
+			event = 56051 # hullnote
+			NOT = {
+				war = { country = CHI country = JAP }
+			}
+			NOT = {
+				exists = JAP
+			}
+			NOT = {
+				exists = USA
+			}
+			alliance = { country = JAP country = USA }
+			war = { country = CHI country = USA }
+		}
+	}
+
+	date = { day = 1 month = may year = 1941 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133004_NAME"
+	desc = "EVT_133004_DESC"
+	picture = "lend_lease"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = free_ic		value = -6 } #FEPKBETA4	#6
+		command = { type = free_energy		value = -18 }
+		command = { type = free_metal		value = -3 }
+		command = { type = free_rare_materials	value = -6 }
+		command = { type = free_money		value = -1 }
+		command = { type = free_oil		value = -6 }
+	#	command = { type = free_supplies	value = -3 }
+		command = { type = clrflag which = USA_Lend-Lease_CHI }
+		command = { type = sleepevent which = 133022 }
+	}
+}
+
+##########
+#  The Lend-Lease Act to ITA
+##########
+event = {
+	id = 133030
+	random = no
+	country = USA
+
+	trigger = {
+		war = { country = ITA country = GER }
+		NOT = {
+			war = { country = ITA country = ENG }
+			alliance = { country = GER country = USA }
+			war = { country = ITA country = USA }
+			event = 131404 #BETA修正パッチ
+			event = 131405 #BETA修正パッチ
+			event = 131422 #BETA修正パッチ
+			event = 131432 #BETA修正パッチ
+			event = 131453 #BETA修正パッチ
+		}
+		supplies = 1000
+	}
+
+	date = { day = 11 month = march year = 1941 } #historic
+	offset = 60
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133030_NAME"
+	desc = "EVT_3700_DESC"
+
+	picture = "lend_lease"
+
+	action_a = {
+		name = "ACTIONNAME3700A" #Pass the Act
+		ai_chance = 99
+		command = { type = metalpool value = -1000 }
+		command = { type = energypool value = -2000 }
+		command = { type = rarematerialspool value = -500 }
+		command = { type = oilpool value = -500 }
+		command = { type = supplies value = -1000 }
+		command = { type = trigger which = 133031 } #ITA lend-lease startup
+	}
+	action_b = {
+		name = "ACTIONNAME3700B" #Remain Completely Neutral
+		ai_chance = 1
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = sleepevent which = 133030 } #lend-lease ITA The First Shipment
+		command = { type = sleepevent which = 133032 } #lend-lease ITA
+	}
+}
+##########
+#  The Lend-Lease Act - The First Shipment
+##########
+event = {
+	id = 133031
+	random = no
+	country = ITA
+
+	name = "EVT_3405_NAME"
+	desc = "EVT_3405_DESC"
+
+	picture = "lend_lease"
+
+	action_a = {
+		name = "OK"
+		command = { type = metalpool value = 1000 }
+		command = { type = energypool value = 2000 }
+		command = { type = rarematerialspool value = 500 }
+		command = { type = oilpool value = 500 }
+		command = { type = supplies value = 1000 }
+		command = { type = free_ic		value = 9 }
+		command = { type = free_energy		value = 36 }
+		command = { type = free_metal		value = 12 }
+		command = { type = free_rare_materials	value = 6 }
+		command = { type = free_money		value = 3 }
+		command = { type = free_oil		value = 9 }
+		command = { type = free_supplies	value = 3 }
+		command = { type = setflag which = USA_Lend-Lease_ITA }
+		command = { type = steal_tech which = USA }
+	}
+}
+##########
+#  Lend-Lease Shipment to ITA
+##########
+event = {
+	id = 133032
+	random = no
+	persistent = yes
+	country = USA
+
+	trigger = {
+		NOT = { flag = Lack_Of_Convoy_USA }
+		flag = USA_Lend-Lease_ITA
+		war = { country = ITA country = GER }
+		NOT = {
+			alliance = { country = GER country = USA }
+			war = { country = ITA country = USA }
+		}
+		supplies = 1000
+                random = 7 # 7% chance every 17 days
+	}
+
+	date = { day = 1 month = may year = 1941 }
+	offset = 17
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133030_NAME"
+	desc = "EVT_3700_DESC"
+	picture = "lend_lease"
+
+	action_a = {
+		name = "ACTIONNAME3702A"
+		ai_chance = 99
+		command = { type = metalpool value = -1000 }
+		command = { type = energypool value = -2000 }
+		command = { type = rarematerialspool value = -500 }
+		command = { type = oilpool value = -500 }
+		command = { type = supplies value = -1000 }
+		command = { type = trigger which = 133033 }
+	}
+	action_b = {
+		name = "ACTIONNAME3702B"
+		ai_chance = 1
+		command = { type = relation which = ITA value = -5 }
+	}
+}
+
+##########
+#  A Lend-Lease Shipment Arrives from the USA
+##########
+event = {
+	id = 133033
+	random = no
+	country = ITA
+	persistent = yes
+
+	name = "EVT_3405_NAME"
+	desc = "EVT_3405_DESC"
+	picture = "lend_lease"
+
+	action_a = {
+		name = "OK"
+		command = { type = metalpool value = 1000 }
+		command = { type = energypool value = 2000 }
+		command = { type = rarematerialspool value = 500 }
+		command = { type = oilpool value = 500 }
+		command = { type = supplies value = 1000 }
+	}
+}
+
+##########
+#  End Lend-Lease Shipment to ITA
+##########
+
+event = { #FEPKBETA5.4
+	id = 133034
+	random = no
+	country = ITA
+
+	trigger = {
+		flag = USA_Lend-Lease_ITA
+		OR = {
+			event = 131232 #USA surrender
+			event = 131242
+			event = 131253
+			NOT = {
+				war = { country = ITA country = GER }
+			}
+			NOT = {
+				exists = GER
+			}
+			NOT = {
+				exists = USA
+			}
+			alliance = { country = GER country = USA }
+			war = { country = ITA country = USA }
+		}
+	}
+
+	date = { day = 1 month = may year = 1941 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133004_NAME"
+	desc = "EVT_133004_DESC"
+	picture = "lend_lease"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = free_ic		value = -9 }
+		command = { type = free_energy		value = -36 }
+		command = { type = free_metal		value = -12 }
+		command = { type = free_rare_materials	value = -6 }
+		command = { type = free_money		value = -3 }
+		command = { type = free_oil		value = -9 }
+		command = { type = free_supplies	value = -3 }
+		command = { type = clrflag which = USA_Lend-Lease_ITA }
+		command = { type = sleepevent which = 133032 }
+	}
+}
+
+##########
+#  The Lend-Lease Act to FRA
+##########
+event = {
+	id = 133040
+	random = no
+	country = USA
+
+	trigger = {
+		war = { country = FRA country = GER }
+		NOT = {
+			alliance = { country = GER country = USA }
+			war = { country = FRA country = USA }
+			war = { country = FRA country = ENG }
+			event = 130423 #ヴィシー成立
+			event = 131460
+		}
+		supplies = 1000
+	}
+
+	date = { day = 11 month = march year = 1941 } #historic
+	offset = 60
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133040_NAME"
+	desc = "EVT_3700_DESC"
+
+	picture = "lend_lease"
+
+	action_a = {
+		name = "ACTIONNAME3700A" #Pass the Act
+		ai_chance = 99
+		command = { type = metalpool value = -1000 }
+		command = { type = energypool value = -2000 }
+		command = { type = rarematerialspool value = -500 }
+		command = { type = oilpool value = -500 }
+		command = { type = supplies value = -1000 }
+		command = { type = trigger which = 133041 } #FRA lend-lease startup
+	}
+	action_b = {
+		name = "ACTIONNAME3700B" #Remain Completely Neutral
+		ai_chance = 1
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = sleepevent which = 133040 } #lend-lease FRA The First Shipment
+		command = { type = sleepevent which = 133042 } #lend-lease FRA
+	}
+}
+##########
+#  The Lend-Lease Act - The First Shipment
+##########
+event = {
+	id = 133041
+	random = no
+	country = FRA
+
+	name = "EVT_3405_NAME"
+	desc = "EVT_3405_DESC"
+
+	picture = "lend_lease"
+
+	action_a = {
+		name = "OK"
+		command = { type = metalpool value = 1000 }
+		command = { type = energypool value = 2000 }
+		command = { type = rarematerialspool value = 500 }
+		command = { type = oilpool value = 500 }
+		command = { type = supplies value = 1000 }
+		command = { type = free_ic		value = 12 }
+		command = { type = free_energy		value = 24 }
+		command = { type = free_metal		value = 12 }
+		command = { type = free_rare_materials	value = 6 }
+		command = { type = free_money		value = 3 }
+		command = { type = free_oil		value = 24 }
+		command = { type = free_supplies	value = 9 }
+		command = { type = setflag which = USA_Lend-Lease_FRA }
+		command = { type = steal_tech which = USA }
+	}
+}
+##########
+#  Lend-Lease Shipment to FRA
+##########
+event = {
+	id = 133042
+	random = no
+	persistent = yes
+	country = USA
+
+	trigger = {
+		NOT = { flag = Lack_Of_Convoy_USA }
+		flag = USA_Lend-Lease_FRA
+		war = { country = FRA country = GER }
+		NOT = {
+			alliance = { country = GER country = USA }
+			war = { country = FRA country = USA }
+		}
+		supplies = 1000
+                random = 8 # 8% chance every 18 days
+	}
+
+	date = { day = 1 month = may year = 1941 }
+	offset = 18
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133040_NAME"
+	desc = "EVT_3700_DESC"
+	picture = "lend_lease"
+
+	action_a = {
+		name = "ACTIONNAME3702A"
+		ai_chance = 99
+		command = { type = metalpool value = -1000 }
+		command = { type = energypool value = -2000 }
+		command = { type = rarematerialspool value = -500 }
+		command = { type = oilpool value = -500 }
+		command = { type = supplies value = -1000 }
+		command = { type = trigger which = 133043 }
+	}
+	action_b = {
+		name = "ACTIONNAME3702B"
+		ai_chance = 1
+		command = { type = relation which = FRA value = -5 }
+	}
+}
+
+##########
+#  A Lend-Lease Shipment Arrives from the USA
+##########
+event = {
+	id = 133043
+	random = no
+	country = FRA
+	persistent = yes
+
+	name = "EVT_3405_NAME"
+	desc = "EVT_3405_DESC"
+	picture = "lend_lease"
+
+	action_a = {
+		name = "OK"
+		command = { type = metalpool value = 1000 }
+		command = { type = energypool value = 2000 }
+		command = { type = rarematerialspool value = 500 }
+		command = { type = oilpool value = 500 }
+		command = { type = supplies value = 1000 }
+	}
+}
+
+##########
+#  End Lend-Lease Shipment to FRA
+##########
+
+event = { #FEPKBETA5.4
+	id = 133044
+	random = no
+	country = FRA
+
+	trigger = {
+		flag = USA_Lend-Lease_FRA
+		OR = {
+			event = 131232 #USA surrender
+			event = 131242
+			event = 131253
+			NOT = {
+				war = { country = FRA country = GER }
+			}
+			NOT = {
+				exists = GER
+			}
+			NOT = {
+				exists = USA
+			}
+			alliance = { country = GER country = USA }
+			war = { country = FRA country = USA }
+			event = 130423 #ヴィシー成立
+			event = 131460
+		}
+	}
+
+	date = { day = 1 month = may year = 1941 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133004_NAME"
+	desc = "EVT_133004_DESC"
+	picture = "lend_lease"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = free_ic		value = -12 }
+		command = { type = free_energy		value = -24 }
+		command = { type = free_metal		value = -12 }
+		command = { type = free_rare_materials	value = -6 }
+		command = { type = free_money		value = -3 }
+		command = { type = free_oil		value = -24 }
+		command = { type = free_supplies	value = -9 }
+		command = { type = clrflag which = USA_Lend-Lease_FRA }
+		command = { type = sleepevent which = 133042 }
+	}
+}
+
+##########
+#  The Lend-Lease Act to JAP
+##########
+event = {
+	id = 133050
+	random = no
+	country = USA
+
+	trigger = {
+		war = { country = JAP country = GER }
+		alliance = { country = JAP country = USA }
+		NOT = {
+			alliance = { country = GER country = USA }
+			war = { country = JAP country = ENG }
+			event = 131510 #BETA修正パッチ
+			event = 131520 #BETA修正パッチ
+		}
+		supplies = 1000
+	}
+
+	date = { day = 11 month = march year = 1941 } #historic
+	offset = 60
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133050_NAME"
+	desc = "EVT_3700_DESC"
+
+	picture = "lend_lease"
+
+	action_a = {
+		name = "ACTIONNAME3700A" #Pass the Act
+		ai_chance = 99
+		command = { type = energypool value = -4000 }
+		command = { type = rarematerialspool value = -1000 }
+		command = { type = oilpool value = -2000 }
+		command = { type = supplies value = -1000 }
+		command = { type = trigger which = 133051 } #JAP lend-lease startup
+	}
+	action_b = {
+		name = "ACTIONNAME3700B" #Remain Completely Neutral
+		ai_chance = 1
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = sleepevent which = 133050 } #lend-lease JAP The First Shipment
+		command = { type = sleepevent which = 133052 } #lend-lease JAP
+	}
+}
+##########
+#  The Lend-Lease Act - The First Shipment
+##########
+event = {
+	id = 133051
+	random = no
+	country = JAP
+
+	name = "EVT_3405_NAME"
+	desc = "EVT_3405_DESC"
+
+	picture = "lend_lease"
+
+	action_a = {
+		name = "OK"
+		command = { type = energypool value = 4000 }
+		command = { type = rarematerialspool value = 1000 }
+		command = { type = oilpool value = 2000 }
+		command = { type = supplies value = 1000 }
+		command = { type = free_ic		value = 9 }
+		command = { type = free_energy		value = 36 }
+		command = { type = free_metal		value = 18 }
+		command = { type = free_rare_materials	value = 9 }
+		command = { type = free_money		value = 3 }
+		command = { type = free_oil		value = 18 }
+		command = { type = free_supplies	value = 3 }
+		command = { type = setflag which = USA_Lend-Lease_JAP }
+		command = { type = steal_tech which = USA }
+	}
+}
+##########
+#  Lend-Lease Shipment to JAP
+##########
+event = {
+	id = 133052
+	random = no
+	persistent = yes
+	country = USA
+
+	trigger = {
+		NOT = { flag = Lack_Of_Convoy_USA }
+		flag = USA_Lend-Lease_JAP
+		war = { country = JAP country = GER }
+		alliance = { country = JAP country = USA }
+		NOT = {
+			alliance = { country = GER country = USA }
+		}
+		supplies = 1000
+                random = 9 # 9% chance every 20 days
+	}
+
+	date = { day = 1 month = may year = 1941 }
+	offset = 60
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133050_NAME"
+	desc = "EVT_3700_DESC"
+	picture = "lend_lease"
+
+	action_a = {
+		name = "ACTIONNAME3702A"
+		ai_chance = 99
+		command = { type = energypool value = -4000 }
+		command = { type = rarematerialspool value = -1000 }
+		command = { type = oilpool value = -2000 }
+		command = { type = supplies value = -1000 }
+		command = { type = trigger which = 133053 }
+	}
+	action_b = {
+		name = "ACTIONNAME3702B"
+		ai_chance = 1
+		command = { type = relation which = JAP value = -5 }
+	}
+}
+
+##########
+#  A Lend-Lease Shipment Arrives from the USA
+##########
+event = {
+	id = 133053
+	random = no
+	country = JAP
+	persistent = yes
+
+	name = "EVT_3405_NAME"
+	desc = "EVT_3405_DESC"
+	picture = "lend_lease"
+
+	action_a = {
+		name = "OK"
+		command = { type = energypool value = 4000 }
+		command = { type = rarematerialspool value = 1000 }
+		command = { type = oilpool value = 2000 }
+		command = { type = supplies value = 1000 }
+	}
+}
+
+
+
+event = { #FEPKBETA5.4
+	id = 133054
+	random = no
+	country = JAP
+
+	trigger = {
+		flag = USA_Lend-Lease_JAP
+		OR = {	
+			event = 131232 #USA surrender
+			event = 131242
+			event = 131253
+			NOT = {
+				war = { country = JAP country = GER }
+			}
+			NOT = {
+				exists = GER
+			}
+			NOT = {
+				exists = USA
+			}
+			alliance = { country = GER country = USA }
+			war = { country = JAP country = USA }
+		}
+	}
+
+	date = { day = 1 month = may year = 1941 }
+	offset = 60
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133004_NAME"
+	desc = "EVT_133004_DESC"
+	picture = "lend_lease"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = free_ic		value = -9 }
+		command = { type = free_energy		value = -36 }
+		command = { type = free_metal		value = -18 }
+		command = { type = free_rare_materials	value = -9 }
+		command = { type = free_money		value = -3 }
+		command = { type = free_oil		value = -18 }
+		command = { type = free_supplies	value = -3 }
+		command = { type = clrflag which = USA_Lend-Lease_JAP }
+		command = { type = sleepevent which = 133052 }
+	}
+}
+
+##########
+#  船団不足によるレンドリースの欠如と再開
+##########
+#IC+工場材料+物資ボーナス1単位=4+2+1+0.5+0.5=8
+event = {
+	id = 133060
+	random = no
+	country = USA
+	trigger = {
+		#country = USA	
+		NOT = { flag = Lack_Of_Convoy_USA }
+		NOT = { convoypool = 144 }
+		OR = {
+			flag = USA_Lend-Lease_ENG
+			flag = USA_Lend-Lease_SOV
+			flag = USA_Lend-Lease_CHI
+			flag = USA_Lend-Lease_FRA
+			flag = USA_Lend-Lease_ITA
+			flag = USA_Lend-Lease_JAP
+		}
+	}
+	
+	name = "EVT_133060_NAME"	#輸送船団の不足（アメリカ）
+	desc = "EVT_133060_DESC"	#
+	picture = "lend_lease"
+
+	date = { day = 1 month = may year = 1941 }
+	offset = 4
+	deathdate = { day = 29 month = december year = 1963 }
+
+
+	action_a = {
+		name = "EVT_133060_ACTA"	#早急に対策を取らねばなるまい……。
+		command = { type = setflag which = Lack_Of_Convoy_USA }
+	}
+}
+
+event = {
+	id = 133061
+	random = no
+	persistent = yes
+	country = USA
+	decision = {
+		#country = USA
+		flag = Lack_Of_Convoy_USA
+		convoypool = 144
+		OR = {
+			flag = USA_Lend-Lease_ENG
+			flag = USA_Lend-Lease_SOV
+			flag = USA_Lend-Lease_CHI
+			flag = USA_Lend-Lease_FRA
+			flag = USA_Lend-Lease_ITA
+			flag = USA_Lend-Lease_JAP
+		}
+	}
+	decision_trigger = { 
+		convoypool = 288
+	}
+	
+	trigger = {
+		#country = USA
+		flag = Lack_Of_Convoy_USA
+		convoypool = 288
+		OR = {
+			flag = USA_Lend-Lease_ENG
+			flag = USA_Lend-Lease_SOV
+			flag = USA_Lend-Lease_CHI
+			flag = USA_Lend-Lease_FRA
+			flag = USA_Lend-Lease_ITA
+			flag = USA_Lend-Lease_JAP
+		}
+	}
+	
+	name = "EVT_133061_NAME"	#船団不足状況の改善
+	desc = "EVT_133061_DESC"	#閣下、我々は今や十分な数の輸送船団を持つ状態になりました。我々はこれより先不足なく同盟国に軍需物資を提供することが出来る様になるでしょう。
+	
+	date = { day = 1 month = may year = 1941 }
+	offset = 4
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "EVT_133061_ACTA"	#支援を再開せよ
+		command = { type = clrflag which = Lack_Of_Convoy_USA }
+	}
+}
+
+event = {
+	id = 133070
+	persistent = yes
+	country = ENG
+	trigger = {
+		flag = Lack_Of_Convoy_USA
+		NOT = { convoypool = 144 }
+		flag = USA_Lend-Lease_ENG
+		NOT = { flag = Lack_Of_Convoy_ENG }
+	}
+	
+	name = "EVT_133070_NAME"	#輸送船団の不足（イギリス）
+	desc = "EVT_133070_DESC"	#
+	picture = "lend_lease"
+
+	date = { day = 1 month = may year = 1941 }
+	offset = 4
+	deathdate = { day = 29 month = december year = 1963 }
+
+
+	action_a = {
+		name = "EVT_133070_ACTA"	#早急に対策を取らねばなるまい……。
+		command = { type = setflag which = Lack_Of_Convoy_ENG }
+		command = { type = free_ic		value = -18 }
+		command = { type = free_energy		value = -36 }
+		command = { type = free_metal		value = -18 }
+		command = { type = free_rare_materials	value = -9 }
+		command = { type = free_money		value = -3 }
+		command = { type = free_oil		value = -18 }
+		command = { type = free_supplies	value = -9 }
+	}
+}
+
+event = {
+	id = 133071
+	persistent = yes
+	country = ENG
+	trigger = {
+		flag = Lack_Of_Convoy_ENG
+		OR = {
+			NOT = { flag = USA_Lend-Lease_ENG }	#レンドリース終了
+			convoypool = 288	#船団十分（英国）
+			NOT = { flag = Lack_Of_Convoy_USA }	#船団十分（米国）
+		}
+	}
+
+	name = "EVT_133071_NAME"	#船団不足状態の改善（イギリス）
+	desc = "EVT_133071_DESC"	#
+	
+	date = { day = 1 month = may year = 1941 }
+	offset = 4
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "OK"
+		command = { type = clrflag which = Lack_Of_Convoy_ENG }
+		command = { type = free_ic		value = 18 }
+		command = { type = free_energy		value = 36 }
+		command = { type = free_metal		value = 18 }
+		command = { type = free_rare_materials	value = 9 }
+		command = { type = free_money		value = 3 }
+		command = { type = free_oil		value = 18 }
+		command = { type = free_supplies	value = 9 }
+	}
+}
+
+event = {
+	id = 133072
+	persistent = yes
+	country = SOV
+	trigger = {
+		OR = {
+			AND = {
+				flag = Lack_Of_Convoy_USA
+				NOT = { convoypool = 96 }
+			}
+			AND = {
+				control = { province = 1372 data = -2 }	#ウラジオストク
+				control = { province = 1172 data = -2 }	#ペトロパブロフスク・カムチャツキー
+				control = { province = 1525 data = -2 }	#オホーツク
+				control = { province = 154 data = -2 }	#アルハンゲリスク
+				control = { province = 187 data = -2 }	#レニングラード
+				control = { province = 133 data = -2 }	#ムルマンスク
+				control = { province = 1787 data = -2 }	#ラシト
+				control = { province = 1503 data = -2 }	#バボル
+				control = { province = 510 data = -2 }	#カリーニングラード
+				control = { province = 197 data = -2 }	#リガ
+				control = { province = 194 data = -2 }	#タリン
+			}
+		}
+		flag = USA_Lend-Lease_SOV
+		NOT = { flag = Lack_Of_Convoy_SOV }
+	}
+	
+	name = "EVT_133072_NAME"	#輸送船団の不足（ソビエト連邦）
+	desc = "EVT_133072_DESC"	#
+	picture = "lend_lease"
+
+	date = { day = 1 month = may year = 1941 }
+	offset = 4
+	deathdate = { day = 29 month = december year = 1963 }
+
+
+	action_a = {
+		name = "EVT_133072_ACTA"	#早急に対策を取らねばなるまい……。
+		command = { type = setflag which = Lack_Of_Convoy_SOV }
+		command = { type = free_ic		value = -12 }
+		command = { type = free_energy		value = -24 }
+		command = { type = free_metal		value = -12 }
+		command = { type = free_rare_materials	value = -6 }
+		command = { type = free_money		value = -3 }
+		command = { type = free_oil		value = -12 }
+		command = { type = free_supplies	value = -6 }
+	}
+}
+
+event = {
+	id = 133073
+	persistent = yes
+	country = SOV
+	trigger = {
+		flag = Lack_Of_Convoy_SOV
+		OR = {
+			NOT = { flag = USA_Lend-Lease_SOV }	#レンドリース終了
+			convoypool = 192	#船団十分（自国）
+			NOT = { flag = Lack_Of_Convoy_USA }	#船団十分（米国）
+		}
+		OR = {
+			NOT = { control = { province = 1372 data = -2 } }	#ウラジオストク
+			NOT = { control = { province = 1172 data = -2 } }	#ペトロパブロフスク・カムチャツキー
+			NOT = { control = { province = 1525 data = -2 } }	#オホーツク
+			NOT = { control = { province = 154 data = -2 } }	#アルハンゲリスク
+			NOT = { control = { province = 187 data = -2 } }	#レニングラード
+			NOT = { control = { province = 133 data = -2 } }	#ムルマンスク
+			NOT = { control = { province = 1787 data = -2 } }	#ラシト
+			NOT = { control = { province = 1503 data = -2 } }	#バボル
+			NOT = { control = { province = 510 data = -2 } }	#カリーニングラード
+			NOT = { control = { province = 197 data = -2 } }	#リガ
+			NOT = { control = { province = 194 data = -2 } }	#タリン
+		}
+	}
+
+	name = "EVT_133073_NAME"	#船団不足状態の改善（ソビエト連邦）
+	desc = "EVT_133073_DESC"	#レンドリースを巡る状況は変わり、少なくとも我々は今やレンドリースを受け取りたくとも受け取れない状態からは脱しました。
+	
+	date = { day = 1 month = may year = 1941 }
+	offset = 4
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "OK"
+		command = { type = clrflag which = Lack_Of_Convoy_SOV }
+		command = { type = free_ic		value = 12 }
+		command = { type = free_energy		value = 24 }
+		command = { type = free_metal		value = 12 }
+		command = { type = free_rare_materials	value = 6 }
+		command = { type = free_money		value = 3 }
+		command = { type = free_oil		value = 12 }
+		command = { type = free_supplies	value = 6 }
+	}
+}
+
+event = {
+	id = 133074
+	persistent = yes
+	country = CHI
+	trigger = {
+		flag = Lack_Of_Convoy_USA
+		NOT = { convoypool = 96 }
+		flag = USA_Lend-Lease_CHI
+		NOT = { flag = Lack_Of_Convoy_CHI }
+	}
+	
+	name = "EVT_133074_NAME"	#輸送船団の不足（中華民国）
+	desc = "EVT_133074_DESC"	#閣下、我々には今や十分な輸送船が存在せず、自らの力でレンドリース品目を受け取ることが出来ません。アメリカ合衆国側も船団を十分に保有していない場合、今や我々はレンドリースを一時失ったまま戦闘を続行せねばなりません。
+	picture = "lend_lease"
+
+	date = { day = 1 month = may year = 1941 }
+	offset = 4
+	deathdate = { day = 29 month = december year = 1963 }
+
+
+	action_a = {
+		name = "EVT_133074_ACTA"	#早急に対策を取らねばなるまい……。
+		command = { type = setflag which = Lack_Of_Convoy_CHI }
+
+		command = { type = free_ic		value = -6 } #FEPKBETA4 # 12→6
+		command = { type = free_energy		value = -18 }
+		command = { type = free_metal		value = -3 }
+		command = { type = free_rare_materials	value = -6 }
+		command = { type = free_money		value = -1 }
+		command = { type = free_oil		value = -6 }
+	#	command = { type = free_supplies	value = -3 }
+	}
+}
+
+event = {
+	id = 133075
+	persistent = yes
+	country = CHI
+	trigger = {
+		flag = Lack_Of_Convoy_CHI
+		OR = {
+			NOT = { flag = USA_Lend-Lease_CHI }	#レンドリース終了
+			convoypool = 192	#船団十分（自国）
+			NOT = { flag = Lack_Of_Convoy_USA }	#船団十分（米国）
+		}
+	}
+
+	name = "EVT_133075_NAME"	#船団不足状態の改善（中華民国）
+	desc = "EVT_133075_DESC"	#レンドリースを巡る状況は変わり、少なくとも我々は今やレンドリースを受け取りたくとも受け取れない状態からは脱しました。
+	
+	date = { day = 1 month = may year = 1941 }
+	offset = 4
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "OK"
+		command = { type = clrflag which = Lack_Of_Convoy_CHI }
+		command = { type = free_ic		value = 6 } #FEPKBETA4 # 12→6
+		command = { type = free_energy		value = 18 }
+		command = { type = free_metal		value = 3 }
+		command = { type = free_rare_materials	value = 6 }
+		command = { type = free_money		value = 1 }
+		command = { type = free_oil		value = 6 }
+	#	command = { type = free_supplies	value = 3 }
+	}
+}
+
+event = {
+	id = 133076
+	persistent = yes
+	country = ITA
+	trigger = {
+		flag = Lack_Of_Convoy_USA
+		NOT = { convoypool = 96 }
+		flag = USA_Lend-Lease_ITA
+		NOT = { flag = Lack_Of_Convoy_ITA }
+	}
+	
+	name = "EVT_133076_NAME"	#輸送船団の不足（イタリア）
+	desc = "EVT_133076_DESC"	#閣下、我々には今や十分な輸送船が存在せず、自らの力でレンドリース品目を受け取ることが出来ません。アメリカ合衆国側も船団を十分に保有していない場合、今や我々はレンドリースを一時失ったまま戦闘を続行せねばなりません。
+	picture = "lend_lease"
+
+	date = { day = 1 month = may year = 1941 }
+	offset = 4
+	deathdate = { day = 29 month = december year = 1963 }
+
+
+	action_a = {
+		name = "EVT_133076_ACTA"	#早急に対策を取らねばなるまい……。
+		command = { type = setflag which = Lack_Of_Convoy_ITA }
+		command = { type = free_ic		value = -9 }
+		command = { type = free_energy		value = -36 }
+		command = { type = free_metal		value = -12 }
+		command = { type = free_rare_materials	value = -6 }
+		command = { type = free_money		value = -3 }
+		command = { type = free_oil		value = -9 }
+		command = { type = free_supplies	value = -3 }
+	}
+}
+
+event = {
+	id = 133077
+	persistent = yes
+	country = ITA
+	trigger = {
+		flag = Lack_Of_Convoy_ITA
+		OR = {
+			NOT = { flag = USA_Lend-Lease_ITA }	#レンドリース終了
+			convoypool = 192	#船団十分（自国）
+			NOT = { flag = Lack_Of_Convoy_USA }	#船団十分（米国）
+		}
+	}
+
+	name = "EVT_133077_NAME"	#船団不足状態の改善（イタリア）
+	desc = "EVT_133077_DESC"	#レンドリースを巡る状況は変わり、少なくとも我々は今やレンドリースを受け取りたくとも受け取れない状態からは脱しました。
+	
+	date = { day = 1 month = may year = 1941 }
+	offset = 4
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "OK"
+		command = { type = clrflag which = Lack_Of_Convoy_ITA }
+		command = { type = free_ic		value = 9 }
+		command = { type = free_energy		value = 36 }
+		command = { type = free_metal		value = 12 }
+		command = { type = free_rare_materials	value = 6 }
+		command = { type = free_money		value = 3 }
+		command = { type = free_oil		value = 9 }
+		command = { type = free_supplies	value = 3 }
+	}
+}
+
+event = {
+	id = 133078
+	persistent = yes
+	country = FRA
+	trigger = {
+		flag = Lack_Of_Convoy_USA
+		NOT = { convoypool = 96 }
+		flag = USA_Lend-Lease_FRA
+		NOT = { flag = Lack_Of_Convoy_FRA }
+	}
+	
+	name = "EVT_133078_NAME"	#輸送船団の不足（フランス）
+	desc = "EVT_133078_DESC"	#閣下、我々には今や十分な輸送船が存在せず、自らの力でレンドリース品目を受け取ることが出来ません。アメリカ合衆国側も船団を十分に保有していない場合、今や我々はレンドリースを一時失ったまま戦闘を続行せねばなりません。
+	picture = "lend_lease"
+
+	date = { day = 1 month = may year = 1941 }
+	offset = 4
+	deathdate = { day = 29 month = december year = 1963 }
+
+
+	action_a = {
+		name = "EVT_133078_ACTA"	#早急に対策を取らねばなるまい……。
+		command = { type = setflag which = Lack_Of_Convoy_FRA }
+		command = { type = free_ic		value = -12 }
+		command = { type = free_energy		value = -24 }
+		command = { type = free_metal		value = -12 }
+		command = { type = free_rare_materials	value = -6 }
+		command = { type = free_money		value = -3 }
+		command = { type = free_oil		value = -24 }
+		command = { type = free_supplies	value = -9 }
+	}
+}
+
+event = {
+	id = 133079
+	persistent = yes
+	country = FRA
+	trigger = {
+		flag = Lack_Of_Convoy_FRA
+		OR = {
+			NOT = { flag = USA_Lend-Lease_FRA }	#レンドリース終了
+			convoypool = 192	#船団十分（自国）
+			NOT = { flag = Lack_Of_Convoy_USA }	#船団十分（米国）
+		}
+	}
+
+	name = "EVT_133079_NAME"	#船団不足状態の改善（フランス）
+	desc = "EVT_133079_DESC"	#レンドリースを巡る状況は変わり、少なくとも我々は今やレンドリースを受け取りたくとも受け取れない状態からは脱しました。
+	
+	date = { day = 1 month = may year = 1941 }
+	offset = 4
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "OK"
+		command = { type = clrflag which = Lack_Of_Convoy_FRA }
+		command = { type = free_ic		value = 12 }
+		command = { type = free_energy		value = 24 }
+		command = { type = free_metal		value = 12 }
+		command = { type = free_rare_materials	value = 6 }
+		command = { type = free_money		value = 3 }
+		command = { type = free_oil		value = 24 }
+		command = { type = free_supplies	value = 9 }
+	}
+}
+
+event = {
+	id = 133080
+	persistent = yes
+	country = JAP
+	trigger = {
+		flag = Lack_Of_Convoy_USA
+		NOT = { convoypool = 96 }
+		flag = USA_Lend-Lease_JAP
+		NOT = { flag = Lack_Of_Convoy_JAP }
+	}
+	
+	name = "EVT_133080_NAME"	#輸送船団の不足（日本）
+	desc = "EVT_133080_DESC"	#閣下、我々には今や十分な輸送船が存在せず、自らの力でレンドリース品目を受け取ることが出来ません。アメリカ合衆国側も船団を十分に保有していない場合、今や我々はレンドリースを一時失ったまま戦闘を続行せねばなりません。
+	picture = "lend_lease"
+
+	date = { day = 1 month = may year = 1941 }
+	offset = 4
+	deathdate = { day = 29 month = december year = 1963 }
+
+
+	action_a = {
+		name = "EVT_133080_ACTA"	#早急に対策を取らねばなるまい……。
+		command = { type = setflag which = Lack_Of_Convoy_JAP }
+		command = { type = free_ic		value = -9 }
+		command = { type = free_energy		value = -36 }
+		command = { type = free_metal		value = -18 }
+		command = { type = free_rare_materials	value = -9 }
+		command = { type = free_money		value = -3 }
+		command = { type = free_oil		value = -18 }
+		command = { type = free_supplies	value = -3 }
+	}
+}
+
+event = {
+	id = 133081
+	persistent = yes
+	country = JAP
+	trigger = {
+		flag = Lack_Of_Convoy_JAP
+		OR = {
+			NOT = { flag = USA_Lend-Lease_JAP }	#レンドリース終了
+			convoypool = 192	#船団十分（自国）
+			NOT = { flag = Lack_Of_Convoy_USA }	#船団十分（米国）
+		}
+	}
+
+	name = "EVT_133081_NAME"	#船団不足状態の改善（日本）
+	desc = "EVT_133081_DESC"	#レンドリースを巡る状況は変わり、少なくとも我々は今やレンドリースを受け取りたくとも受け取れない状態からは脱しました。
+	
+	date = { day = 1 month = may year = 1941 }
+	offset = 4
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "OK"
+		command = { type = clrflag which = Lack_Of_Convoy_JAP }
+		command = { type = free_ic		value = 9 }
+		command = { type = free_energy		value = 36 }
+		command = { type = free_metal		value = 18 }
+		command = { type = free_rare_materials	value = 9 }
+		command = { type = free_money		value = 3 }
+		command = { type = free_oil		value = 18 }
+		command = { type = free_supplies	value = 3 }
+	}
+}

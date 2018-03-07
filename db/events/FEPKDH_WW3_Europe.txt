@@ -1,0 +1,524 @@
+#########################################################################
+#	FEPKDH_WW3_Europe.txt
+#	第三次大戦欧州戦線イベント
+#########################################################################
+#id = 135500-19	仏伊降伏後国境線調整
+#########################################################################
+event = {
+	id = 135500
+	country = SOV
+	trigger = {
+		NOT = { exists = GER }
+		war = { country = ENG country = SOV }
+		NOT = { war = { country = FRA country = SOV } }	#フランスと交戦中でない
+		puppet = { country = DDR country = SOV }
+		NOT = { war = { country = ITA country = SOV } }	#イタリアと交戦中でない
+		NOT = { exists = DFR }
+		NOT = { control = { province = 56 data = -2 } } #パリ
+		NOT = { control = { province = 515 data = -2 } } #ローマ
+		NOT = { control = { province = 530 data = -2 } } #ジュネーヴ
+		NOT = { control = { province = 300 data = -2 } } #ベルリン
+		NOT = { control = { province = 485 data = -2 } } #ワルシャワ
+		NOT = { control = { province = 175 data = -2 } } #モスクワ
+		NOT = { control = { province = 457 data = -2 } } #ブダペスト
+		NOT = { control = { province = 469 data = -2 } } #プラハ
+		NOT = { control = { province = 463 data = -2 } } #ウィーン
+		NOT = { control = { province = 453 data = -2 } } #ベオグラード
+		NOT = { control = { province = 424 data = -2 } } #ブカレスト
+		NOT = { control = { province = 294 data = -2 } } #コペンハーゲン
+		NOT = { control = { province = 101 data = -2 } } #ストックホルム
+		NOT = { control = { province = 107 data = -2 } } #オスロ
+		NOT = { control = { province = 142 data = -2 } } #ヘルシンキ
+		NOT = { control = { province = 390 data = -2 } } #ティラナ
+		NOT = { control = { province = 417 data = -2 } } #ソフィア
+		NOT = { control = { province = 401 data = -2 } } #アテネ
+		NOT = { control = { province = 341 data = -2 } } #マドリード
+		NOT = { control = { province = 336 data = -2 } } #リスボン
+		NOT = { control = { province = 51 data = -2 } } #ブリュッセル
+		NOT = { control = { province = 47 data = -2 } } #アムステルダム
+		NOT = { control = { province = 71 data = -2 } } #ルクセンブルク
+	}
+	
+	style = 0
+	date = { day = 0 month = january year = 1934 }
+	offset = 4
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135500_NAME"	#ヨーロッパ制圧
+	desc = "EVT_135500_DESC"	#
+	
+	picture = "soviet_strategic_victory"
+	
+	action = {
+		name = "EVT_135500_ACTA"	#もはや一国社会主義は古いのかもしれないな！
+		command = { type = dissent value = -5 }
+		command = [ type = trigger which = 135501 }
+		command = [ type = trigger which = 135506 }
+		command = [ type = trigger which = 135510 }
+	}
+}
+
+event = {
+	id = 135501
+	country = BEL
+	
+	trigger = {
+		war = { country = BEL country = SOV }
+		control = { province = 50 data = -2 }
+		control = { province = 68 data = -2 }
+		control = { province = 69 data = -2 }
+		control = { province = 51 data = -2 }
+		control = { province = 52 data = -2 }
+		control = { province = 70 data = -2 }
+		control = { province = 65 data = -2 }
+		control = { province = 45 data = -2 }
+	}
+	
+	picture = "allied_marginal_defeat"
+	style = 0
+	name = "EVT_135501_NAME"	#ベルギー陥落、再び
+	desc = "EVT_135501_DESC"	#
+	
+	action_a = {
+		name = "EVT_135501_ACTA" # "Oh noes!"	#なんということだ！
+		ai_chance = 80
+		command = { type = secedeprovince which = SOV value = 45 }
+		command = { type = secedeprovince which = SOV value = 46 }
+		command = { type = secedeprovince which = SOV value = 50 }
+		command = { type = secedeprovince which = SOV value = 51 }
+		command = { type = secedeprovince which = SOV value = 52 }
+		command = { type = secedeprovince which = SOV value = 65 }
+		command = { type = secedeprovince which = SOV value = 68 }
+		command = { type = secedeprovince which = SOV value = 69 }
+		command = { type = secedeprovince which = SOV value = 70 }
+		command = { type = dissent value = 5 }
+		command = { type = clrflag which = britishbelgium }
+		command = { type = clrflag which = americanbelgium }
+	}
+	action_b = {
+		name = "EVT_135501_ACTB"	#亡命と闘争の日々再びは勘弁だ、降伏を！
+		command = { type = dissent value = 25 }
+		command = { type = end_puppet }
+		command = { type = leave_alliance }
+		command = { type = clrflag which = britishbelgium }
+		command = { type = clrflag which = americanbelgium }
+		command = { type = trigger which = 135502 }
+	}
+}
+
+event = {	
+	id = 135502
+	country = SOV
+	
+	picture = "allied_marginal_defeat"
+	style = 0
+	name = "EVT_135502_NAME"	#ベルギー降伏
+	desc = "EVT_135502_DESC"	#
+	action = {
+		name = "EVT_135502_ACTA"	#結構！
+		ai_chance = 100
+		command = { type = dissent value = -2 }
+		command = { type = make_puppet which = BEL }
+		command = { type = alliance which = BEL }
+		command = { type = trigger which = 135503 }	#イギリスのベルギー領コンゴ占領
+	}
+	action = {
+		name = "EVT_135502_ACTB"	#アフリカにまだ何か残っているではないか！
+		ai_chance = 0
+		command = { type = dissent value = 5 }
+		command = { type = sleepevent which = 135503 }	#イギリスのベルギー領コンゴ占領
+	}
+}
+
+event = {
+	id = 135503
+	country = BEL
+	
+	trigger = {
+		region = { region = "Central Africa" country = -1 value = 1 }
+	}
+	
+	picture = "allied_marginal_defeat"
+	style = 0
+	name = "EVT_135503_NAME"	#イギリスのベルギー領コンゴ占領
+	desc = "EVT_135503_DESC"	#
+	
+	action = {
+		name = "EVT_135503_ACTA"	#帝国主義者め
+		command = { type = secederegion which = ENG value = "Central Africa" when = 0 }
+	}
+}
+
+
+event = {
+	id = 135506
+	country = HOL
+	
+	trigger = {
+		war = { country = HOL country = SOV }
+		control = { province = 77 data = -2 }
+		control = { province = 78 data = -2 }
+		control = { province = 79 data = -2 }
+		control = { province = 49 data = -2 }
+		control = { province = 48 data = -2 }
+		control = { province = 46 data = -2 }
+		control = { province = 48 data = -2 }
+	}
+	
+	picture = "allied_marginal_defeat"
+	style = 0
+	name = "EVT_135506_NAME"	#オランダ陥落、再び
+	desc = "EVT_135506_DESC"	#第三次大戦の勃発とともに欧州は再び戦火に包まれた。我が国はまだ前大戦の傷から癒えていないが故に、ソビエト連邦の圧倒的な戦力の前に容易に自国への侵入を許した。首都に自国の旗を上げ直したのも束の間、またしても亡命を余儀なくされた。
+	
+	action_a = {
+		name = "EVT_135506_ACTA" # "Oh noes!"	#なんということだ！
+		ai_chance = 80
+		command = { type = secedeprovince which = HOL value = 47 }
+		command = { type = secedeprovince which = HOL value = 46 }
+		command = { type = secedeprovince which = HOL value = 77 }
+		command = { type = secedeprovince which = HOL value = 78 }
+		command = { type = secedeprovince which = HOL value = 79 }
+		command = { type = secedeprovince which = HOL value = 48 }
+		command = { type = secedeprovince which = HOL value = 49 }
+		command = { type = dissent value = 5 }
+		command = { type = clrflag which = britishholland }
+		command = { type = clrflag which = americanholland }
+	}
+	action_b = {
+		name = "EVT_135506_ACTB"	#亡命と闘争の日々再びは勘弁だ、降伏を！
+		command = { type = dissent value = 25 }
+		command = { type = end_puppet }
+		command = { type = leave_alliance }
+		command = { type = trigger which = 135507 }
+		command = { type = clrflag which = britishholland }
+		command = { type = clrflag which = americanholland }
+	}
+}
+
+event = {	
+	id = 135507
+	country = SOV
+	
+	picture = "allied_marginal_defeat"
+	style = 0
+	name = "EVT_135507_NAME"	#オランダ降伏
+	desc = "EVT_135507_DESC"	#オランダはこれ以上の戦闘続行は不可能であると判断し、西側陣営からの離脱と我々との講和、そして革命政権の樹立を容認した。現在の反動主義政権を打倒し、彼らに共産主義をもたらそう！
+	action = {
+		name = "EVT_135507_ACTA"	#結構！
+		command = { type = dissent value = -2 }
+		command = { type = make_puppet which = BEL }
+		command = { type = alliance which = BEL }
+		command = { type = trigger which = 135508 }	#アメリカのオランダ領東インド占領
+	}
+	action = {
+		name = "EVT_135507_ACTB"	#太平洋にまだ何か残っているではないか！
+		command = { type = dissent value = 5 }
+		command = { type = sleepevent which = 135508 }	#アメリカのオランダ領東インド占領
+	}
+}
+
+event = {
+	id = 135508
+	country = HOL
+	
+	trigger = {
+		OR = {
+			region = { region = "New Guinea" country = -1 value = 1 }
+			region = { region = "Indonesia" country = -1 value = 1 }
+		}
+	}
+	
+	picture = "allied_marginal_defeat"
+	style = 0
+	name = "EVT_135508_NAME"	#アメリカのオランダ領東インド占領
+	desc = "EVT_135508_DESC"	#アムステルダムの政府が東側に下ったことにより、オランダ領東インドは空白地帯となった。アメリカは太平洋の治安維持の名目でインドネシア全体の制圧を行った。
+	
+	action = {
+		name = "EVT_135508_ACTA"	#帝国主義者め
+		command = { type = secederegion which = USA value = "New Guinea" when = 0 }
+		command = { type = secederegion which = USA value = "Indonesia" when = 0 }
+	}
+}
+
+
+event = {
+	id = 135510
+	country = SOV
+	
+	picture = "soviet_strategic_victory"
+	
+	name = "EVT_135510_NAME"	#国境線の調整
+	desc = "EVT_135510_DESC"	#
+	
+	action = {
+		name = "OK"
+		ai_chance = 99
+		#ベラルーシ
+		command = { type = inherit which = BLR }
+		command = { type = addcore which = 273 }
+		command = { type = addcore which = 274 }
+		command = { type = addcore which = 212 }
+		command = { type = addcore which = 221 }
+		command = { type = addcore which = 225 }
+		command = { type = addcore which = 218 }
+		command = { type = addcore which = 220 }
+		command = { type = addcore which = 272 }
+		command = { type = addcore which = 209 }
+		command = { type = addcore which = 211 }
+		command = { type = addcore which = 213 }
+		command = { type = addcore which = 214 }
+		command = { type = addcore which = 210 }
+		command = { type = addcore which = 222 }
+		command = { type = addcore which = 503 }
+		command = { type = addcore which = 504 }
+		command = { type = addcore which = 507 }
+		command = { type = addcore which = 505 }
+		command = { type = addcore which = 508 }
+		command = { type = addcore which = 208 }
+		#ウクライナ
+		command = { type = inherit which = UKR }
+		command = { type = addcore which = 260 }
+		command = { type = addcore which = 238 }
+		command = { type = addcore which = 239 }
+		command = { type = addcore which = 240 }
+		command = { type = addcore which = 242 }
+		command = { type = addcore which = 244 }
+		command = { type = addcore which = 245 }
+		command = { type = addcore which = 246 }
+		command = { type = addcore which = 247 }
+		command = { type = addcore which = 248 }
+		command = { type = addcore which = 249 }
+		command = { type = addcore which = 250 }
+		command = { type = addcore which = 251 }
+		command = { type = addcore which = 241 }
+		command = { type = addcore which = 506 }
+		command = { type = addcore which = 501 }
+		command = { type = addcore which = 229 }
+		command = { type = addcore which = 502 }
+		command = { type = addcore which = 562 }
+		command = { type = addcore which = 231 }
+		command = { type = addcore which = 232 }
+		command = { type = addcore which = 233 }
+		command = { type = addcore which = 234 }
+		command = { type = addcore which = 235 }
+		command = { type = addcore which = 236 }
+		command = { type = addcore which = 237 }
+		command = { type = addcore which = 227 }
+		command = { type = addcore which = 228 }
+		command = { type = addcore which = 226 }
+		command = { type = addcore which = 500 }
+		command = { type = addcore which = 252 }
+		command = { type = addcore which = 254 }
+		command = { type = addcore which = 253 }
+		command = { type = addcore which = 499 }
+		command = { type = addcore which = 230 } #bessarabia
+		command = { type = addcore which = 434 }
+		command = { type = addcore which = 435 }
+		#バルト
+		command = { type = inherit which = LIT }
+		command = { type = addcore which = 207 }
+		command = { type = addcore which = 511 }
+		command = { type = addcore which = 577 }
+		command = { type = addcore which = 208 }
+		command = { type = addcore which = 206 }
+		command = { type = inherit which = LAT }
+		command = { type = addcore which = 203 }
+		command = { type = addcore which = 204 }
+		command = { type = addcore which = 205 }
+		command = { type = addcore which = 197 }
+		command = { type = addcore which = 202 }
+		command = { type = addcore which = 198 }
+		command = { type = inherit which = EST }
+		command = { type = addcore which = 193 }
+		command = { type = addcore which = 194 }
+		command = { type = addcore which = 195 }
+		command = { type = addcore which = 196 }
+		command = { type = addcore which = 199 }
+		#ポーランド
+		command = { type = addcore which = 145 }
+		command = { type = addcore which = 146 }
+		command = { type = addcore which = 510 } #Konigsberg
+		command = { type = secedearea which = POL value = "Warsaw" }	#ワルシャワエリア
+		command = { type = secedearea which = POL value = "Krakow" }	#クラクフエリア
+		command = { type = secedeprovince which = POL value = 488 }	#ザモシチ
+		command = { type = secedearea which = POL value = "Poznan" }	#ポズナンエリア
+		command = { type = secedeprovince which = POL value = 305 }	#トルン
+		command = { type = secedeprovince which = POL value = 304 }	#エルヴィング
+		command = { type = secedeprovince which = POL value = 303 }	#ダンツィヒ
+		command = { type = secedeprovince which = POL value = 308 }	#キュストリン
+		command = { type = secedeprovince which = POL value = 302 }	#シュテッティン
+		#ドイツ
+		command = { type = secederegion which = DDR value = "Germany" }
+		#オーストリア
+		command = { type = secederegion which = AUS value = "Austria" }
+		#チェコスロバキア
+		command = { type = secederegion which = CZE value = "Czechoslovakia" }
+		#ハンガリー
+		command = { type = secederegion which = HUN value = "Hungary" }
+		#ユーゴスラビア
+		command = { type = secedearea which = YUG value = "Croatia" }
+		command = { type = secedearea which = YUG value = "Bosnia" }
+		command = { type = secedearea which = YUG value = "Central Serbia" }
+		command = { type = secedearea which = YUG value = "East Serbia" }
+		#アルバニア
+		command = { type = secedearea which = ALB value = "Albania" }
+		#ギリシャ
+		command = { type = secedearea which = GRE value = "Thrace" }
+		command = { type = secedearea which = GRE value = "Attica" }
+		#イタリア
+		command = { type = secederegion which = ITA value = "Italy" }
+		#スイス
+		command = { type = secederegion which = SCH value = "Switzerland" }
+		#フランス
+		command = { type = secederegion which = FRA value = "France" }
+		#オランダ
+		#command = { type = secedearea which = HOL value = "Netherlands" }
+		#ルクセンブルク
+		#command = { type = secedeprovince which = LUX value = 71 }
+		#ベルギー
+		#command = { type = secederegion which = BEL value = "Benelux" }
+		#スペイン
+		command = { type = secederegion which = SPR value = "Spain" }
+		command = { type = secederegion which = SPA value = "Spain" }
+		#ポルトガル
+		command = { type = secederegion which = POR value = "Portugal" }
+		#デンマーク
+		command = { type = secederegion which = DEN value = "Denmark" }
+		#スウェーデン
+		command = { type = secederegion which = SWE value = "Sweden" }
+		#ノルウェー
+		command = { type = secederegion which = NOR value = "Norway" }
+		command = { type = trigger which = 135511 }
+	}
+	action = {
+		name = "EVT_135510_ACTB"	#必要ない
+		command = { type = sleepevent which = 135512 }
+	}
+}
+
+event = {
+	id = 135511
+	country = SOV
+	trigger = {
+		control = { province = 71 data = -1 }
+	}
+	
+	name = "EVT_135511_NAME"	#ルクセンブルクの運命
+	desc = "EVT_135511_DESC"	#
+	
+	picture = "constitutional"
+	
+	action = {
+		ai_chance = 60
+		name = "EVT_135511_ACTA"	#ルクセンブルクに労働者政権を樹立する
+		command = { type = inherit which = LUX }
+		command = { type = independence which = LUX }
+		command = { type = make_puppet which = LUX }
+		command = { type = alliance which = LUX }
+	}
+	action = {
+		ai_chance = 15
+		name = "EVT_135511_ACTB"	#フランスに統合する
+		trigger = { alliance = { country = SOV country = FRA } }
+		command = { type = dissent value = 1 }
+		#command = { type = inherit which = LUX }
+		command = { type = addcore which = 71 where = FRA }
+		command = { type = secedeprovince which = FRA value = 71 }
+	}
+	action = {
+		ai_chance = 25
+		name = "EVT_135511_ACTC"	#ドイツに統合する
+		trigger = { alliance = { country = DDR country = SOV } }
+		command = { type = dissent value = 1 }
+		#command = { type = inherit which = LUX }
+		command = { type = addcore which = 71 where = DDR }
+		command = { type = secedeprovince which = DDR value = 71 }
+	}
+	action = {
+		ai_chance = 0
+		name = "EVT_135511_ACTD"	#軍政を続行する
+		command = { type = dissent value = 2 }
+		command = { type = inherit which = LUX }
+	}
+}
+
+event = {
+	id = 135512
+	random = no
+	tag = { FRA CZE ITA DDR NOR DEN SWE FIN HUN ROM BUL YUG GRE ALB SPA SPR }
+	persistent = yes
+
+	trigger = {
+		event = 135510
+		NOT = { local_flag = CedeWW3 }
+		participant = { country = -1 value = 3 } 
+		continent = "Europe"
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135512_NAME"	#共産圏によるヨーロッパ制圧
+	desc = "EVT_135512_DESC"	#新たな大戦の始まりとともに、ソビエト連邦はその圧倒的な戦闘能力を西側各国に見せつけた。ドイツ軍と4年に渡り死闘を繰り広げた実力は伊達ではなく、疲弊した欧州各国はアメリカらからの増援も叶わず、赤い津波に呑まれた。フランスとイタリアはこの猛攻の前に為す術無く降伏を選び、ソビエト連邦とコミンテルンはユーラシア大陸の欧州における完全な優勢を手にした。
+
+	#picture = ""
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = local_setflag which = CedeWW3 }
+		#ポーランド
+		command = { type = secedearea which = POL value = "Warsaw" }	#ワルシャワエリア
+		command = { type = secedearea which = POL value = "Krakow" }	#クラクフエリア
+		command = { type = secedeprovince which = POL value = 488 }	#ザモシチ
+		command = { type = secedearea which = POL value = "Poznan" }	#ポズナンエリア
+		command = { type = secedeprovince which = POL value = 305 }	#トルン
+		command = { type = secedeprovince which = POL value = 304 }	#エルヴィング
+		command = { type = secedeprovince which = POL value = 303 }	#ダンツィヒ
+		command = { type = secedeprovince which = POL value = 308 }	#キュストリン
+		command = { type = secedeprovince which = POL value = 302 }	#シュテッティン
+		#ドイツ
+		command = { type = secederegion which = DDR value = "Germany" }
+		#オーストリア
+		command = { type = secederegion which = AUS value = "Austria" }
+		#チェコスロバキア
+		command = { type = secederegion which = CZE value = "Czechoslovakia" }
+		#ハンガリー
+		command = { type = secederegion which = HUN value = "Hungary" }
+		#ユーゴスラビア
+		command = { type = secedearea which = YUG value = "Croatia" }
+		command = { type = secedearea which = YUG value = "Bosnia" }
+		command = { type = secedearea which = YUG value = "Central Serbia" }
+		command = { type = secedearea which = YUG value = "East Serbia" }
+		#アルバニア
+		command = { type = secedearea which = ALB value = "Albania" }
+		#ギリシャ
+		command = { type = secedearea which = GRE value = "Thrace" }
+		command = { type = secedearea which = GRE value = "Attica" }
+		#イタリア
+		command = { type = secederegion which = ITA value = "Italy" }
+		#スイス
+		command = { type = secederegion which = SCH value = "Switzerland" }
+		#フランス
+		command = { type = secederegion which = FRA value = "France" }
+		#オランダ
+		command = { trigger = { alliance = { country = HOL } } type = secedearea which = HOL value = "Netherlands" }
+		#ルクセンブルク
+		#command = { type = secedeprovince which = LUX value = 71 }
+		#ベルギー
+		command = { trigger = { alliance = { country = BEL } } type = secederegion which = BEL value = "Benelux" }
+		command = { type = secederegion which = SOV value = "Benelux" }
+		#スペイン
+		command = { type = secederegion which = SPR value = "Spain" }
+		command = { type = secederegion which = SPA value = "Spain" }
+		#ポルトガル
+		command = { type = secederegion which = POR value = "Portugal" }
+		#デンマーク
+		command = { type = secederegion which = DEN value = "Denmark" }
+		#スウェーデン
+		command = { type = secederegion which = SWE value = "Sweden" }
+		#ノルウェー
+		command = { type = secederegion which = NOR value = "Norway" }
+	}
+}

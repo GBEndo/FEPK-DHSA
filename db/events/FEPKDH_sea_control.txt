@@ -1,0 +1,705 @@
+#########################################################################
+#	FEPKDH_sea_control.txt
+#	制海権関連イベント
+#########################################################################
+#id = 132320-29		日欧海上貿易の断絶と再開
+#id = 132330-49		海峡の獲得
+#ENG	30％（スエズ＋ジブラルタル＋シンガポール＋ドーバー）
+#USA	10％（パナマ）
+#GER	5％（キール）
+#TUR	5％（イスタンブール）
+#-スエズ			30-
+#-ジブラルタル		32-
+#-パナマ			34-
+#-シンガポール		36-
+#-キール			38-
+#-イスタンブール	40-
+#-ドーバー			42-
+#id = 132350		アメリカ船団の壊滅
+#########################################################################
+
+event = {
+	id = 132320
+	random = no
+	country = JAP
+	trigger = {
+		event = 130106	#防共協定（日本）
+		OR = {
+			war = { country = ENG country = GER }
+			war = { country = USA country = GER }
+		}
+		OR = {
+			control = { province = 20 data = ENG }	#ドーバー
+			control = { province = 32 data = ENG }	#ブレスト
+			control = { province = 32 data = FRA }
+			control = { province = 348 data = ENG }	#ジブラルタル
+			control = { province = 31 data = ENG }	#マルタ
+			control = { province = 900 data = ENG }	#スエズ
+			control = { province = 1494 data = ENG }	#カラチ
+			control = { province = 1517 data = ENG }	#コロンボ
+			control = { province = 1505 data = ENG }	#ボンベイ
+			control = { province = 1299 data = ENG }	#ラングーン
+			control = { province = 1353 data = ENG }	#シンガポール
+			control = { province = 1315 data = ENG }	#香港
+		}
+		NOT = { 
+			war = { country = GER }
+		}
+	}
+	
+	picture = "dd_transfer"
+	style = 0
+	
+	name = "EVT_132320_NAME"	#日欧海上貿易の断絶
+	desc = "EVT_132320_DESC"	#欧州での戦争が始まると、イギリス海軍はその強大な海軍力を以て各地で海上封鎖を開始した。これにより、防共協定から続いていた日独での交易はもはや不可能となった。特にドイツの先進的な技術を手に入れたかった大日本帝国は潜水艦遣独作戦などでドイツとの交流をなんとかして続行しようとしたものの、当然ながら、そうそううまくいくものではなかった。
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = "EVT_132320_ACTA"	#くそっ
+		command = { type = dissent value = 1 }
+		command = { type = embargo which = GER where = JAP value = 1 }	
+		command = { type = embargo which = JAP where = GER value = 1 }	
+	}
+}
+
+event = {
+	id = 132321
+	random = no
+	country = -1
+	persistent = yes
+	trigger = {
+		event = 132320
+		alliance = { country = GER }
+		continent = "Europe"
+		NOT = { local_flag = Embargo_JAP_Europe }
+		OR = {
+			NOT = { country = SOV }
+			AND = { 
+				country = SOV
+				NOT = { control = { province = 1525 data = SOV } }	#オホーツク
+				NOT = { control = { province = 1372 data = SOV } }	#ウラジオストク
+			}	
+		}
+	}
+	
+	picture = "dd_transfer"
+	style = 0
+	
+	name = "EVT_132320_NAME"	#日欧海上貿易の断絶
+	desc = "EVT_132320_DESC"	#欧州での戦争が始まると、イギリス海軍はその強大な海軍力を以て各地で海上封鎖を開始した。これにより、防共協定から続いていた日独での交易はもはや不可能となった。特にドイツの先進的な技術を手に入れたかった大日本帝国は潜水艦遣独作戦などでドイツとの交流をなんとかして続行しようとしたものの、当然ながら、そうそううまくいくものではなかった。
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = "OK"
+		command = { type = embargo which = -1 where = JAP value = 1 }	
+		command = { type = embargo which = JAP where = -1 value = 1 }	
+		command = { type = local_setflag which = Embargo_JAP_Europe }
+	}
+}
+
+event = {
+	id = 132322
+	random = no
+	country = JAP
+	trigger = {
+		event = 132320
+		OR = {
+			war = { country = JAP country = SOV }
+			war = { country = GER country = SOV }
+		}
+		NOT = { war = { country = GER } }
+	}
+	
+	style = 0
+	picture = "soviet_reinforcments"
+	
+	name = "EVT_132322_NAME"	#日欧陸上交易の断絶
+	desc = "EVT_132322_DESC"	#枢軸国とソビエト連邦が戦争状態に入ると、当然ながら、ソ連経由での日欧の連携はもはや不可能になった。英国に海を塞がれたドイツにとって、日本との交易を保つ唯一の方法はシベリア鉄道であって、独ソ戦開始前まではある程度技術者の行き来が陸路により行われていたのだと言われている。
+	
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = "EVT_132322_ACTA"	#くそっ
+		command = { type = dissent value = 1 }
+		command = { type = embargo which = GER where = JAP value = 2 }	
+		command = { type = embargo which = JAP where = GER value = 2 }	
+	}
+}
+
+event = {
+	id = 132323
+	random = no
+	country = -1
+	persistent = yes
+	trigger = {
+		event = 132322
+		alliance = { country = GER }
+		continent = "Europe"
+		NOT = { local_flag = TechEmbargo_JAP_Europe }
+	}
+	
+	picture = "soviet_reinforcments"
+	style = 0
+	
+	name = "EVT_132322_NAME"	#日欧陸上交易の断絶
+	desc = "EVT_132322_DESC"	#枢軸国とソビエト連邦が戦争状態に入ると、当然ながら、ソ連経由での日欧の連携はもはや不可能になった。英国に海を塞がれたドイツにとって、日本との交易を保つ唯一の方法はシベリア鉄道であって、独ソ戦開始前まではある程度技術者の行き来が陸路により行われていたのだと言われている。
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = "OK"
+		command = { type = embargo which = -1 where = JAP value = 2 }	
+		command = { type = embargo which = JAP where = -1 value = 2 }	
+		command = { type = local_setflag which = TechEmbargo_JAP_Europe }
+	}
+}
+
+event = {
+	id = 132324
+	random = no
+	country = JAP
+	trigger = {
+		event = 132322
+		NOT = {
+			war = { country = JAP country = SOV }
+			war = { country = GER country = SOV }
+		}
+		NOT = { war = { country = GER } }
+		#exists = GER
+	}
+	
+	style = 0
+	picture = "soviet_reinforcments"
+	
+	name = "EVT_132324_NAME"	#日欧陸上交易の再開
+	desc = "EVT_132324_DESC"	#独ソの衝突は解消され、シベリア鉄道は再びアジアから欧州までを繋ぐことが出来るようになった。限定的にではあるが、欧州までの連絡は再び付くようになった。当然、一切が閉ざされていたこれまでより遥かに良いことである。
+	
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = "EVT_132324_ACTA"	#よろしい
+		command = { type = dissent value = -1 }
+		command = { type = embargo which = GER where = JAP value = -2 }	
+		command = { type = embargo which = JAP where = GER value = -2 }	
+		command = { type = sleepevent which = 132322 }
+	}
+}
+
+event = {
+	id = 132325
+	random = no
+	country = -1
+	persistent = yes
+	trigger = {
+		event = 132322
+		event = 132324
+		#alliance = { country = GER }
+		continent = "Europe"
+		local_flag = TechEmbargo_JAP_Europe
+	}
+	
+	picture = "soviet_reinforcments"
+	style = 0
+	
+	name = "EVT_132324_NAME"	#日欧陸上交易の再開
+	desc = "EVT_132324_DESC"	#独ソの衝突は解消され、シベリア鉄道は再びアジアから欧州までを繋ぐことが出来るようになった。限定的にではあるが、欧州までの連絡は再び付くようになった。当然、一切が閉ざされていたこれまでより遥かに良いことである。
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = "OK"
+		command = { type = embargo which = -1 where = JAP value = -2 }	
+		command = { type = embargo which = JAP where = -1 value = -2 }	
+		command = { type = local_clrflag which = TechEmbargo_JAP_Europe }
+	}
+}
+
+event = {
+	id = 132326
+	random = no
+	country = JAP
+	trigger = {
+		event = 132320	#WW2に伴う海上封鎖
+		OR = {
+			AND = {
+				NOT = {
+					control = { province = 88 data = -2 }	#ハンブルク
+					control = { province = 348 data = -2 }	#ジブラルタル
+					control = { province = 31 data = -2 }	#マルタ
+					control = { province = 900 data = -2 }	#スエズ
+					control = { province = 1494 data = -2 }	#カラチ
+					control = { province = 1517 data = -2 }	#コロンボ
+					control = { province = 1505 data = -2 }	#ボンベイ
+					control = { province = 1299 data = -2 }	#ラングーン
+					control = { province = 1353 data = -2 }	#シンガポール
+					control = { province = 1315 data = -2 }	#香港
+					control = { province = 1184 data = -2 }	#東京
+				}
+				war = { country = ENG country = JAP }
+			}
+			AND = {
+				NOT = {
+					control = { province = 88 data = ENG }	#ハンブルク
+					control = { province = 88 data = USA }	#ハンブルク
+					control = { province = 88 data = SOV }	#ハンブルク
+					control = { province = 348 data = ENG }	#ジブラルタル
+					control = { province = 31 data = ENG }	#マルタ
+					control = { province = 900 data = ENG }	#スエズ
+					control = { province = 1494 data = ENG }	#カラチ
+					control = { province = 1517 data = -2 }	#コロンボ
+					control = { province = 1505 data = ENG }	#ボンベイ
+					control = { province = 1299 data = ENG }	#ラングーン
+					control = { province = 1353 data = ENG }	#シンガポール
+					control = { province = 1315 data = ENG }	#香港
+					control = { province = 1184 data = ENG }	#東京
+					control = { province = 1184 data = USA }	#東京
+					control = { province = 1184 data = SOV }	#東京
+				}
+				NOT = { war = { country = ENG country = JAP } }
+			}
+		}
+	}
+	
+	picture = "dd_transfer"
+	style = 0
+	
+	name = "EVT_132326_NAME"	#日欧海上貿易の再開
+	desc = "EVT_132326_DESC"	#ハンブルクを出たコンテナ船が、妨害を受けること無く京浜に入った。非武装の船舶が地中海を渡りインド洋を渡りここまでたどり着けたことは、もはやこの航路が安全になったことを意味している。制海権は手の内に戻り、ついに我々は欧州との完全な貿易を再開できる。
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = "EVT_132326_ACTA"	#素晴らしい！
+		command = { type = dissent value = -1 }
+		command = { type = embargo which = GER where = JAP value = 0 }	
+		command = { type = embargo which = JAP where = GER value = 0 }	
+		command = { type = sleepevent which = 132320 }
+	}
+}
+
+event = {
+	id = 132327
+	random = no
+	country = -1
+	persistent = yes
+	trigger = {
+		event = 132321
+		#event = 132326
+		alliance = { country = GER }
+		continent = "Europe"
+		local_flag = Embargo_JAP_Europe
+	}
+	
+	picture = "dd_transfer"
+	style = 0
+	
+	name = "EVT_132327_NAME"	#日欧海上貿易の再開
+	desc = "EVT_132327_DESC"	#日本から欧州までの海域に、もはや敵海軍の現れる余地はない。日本は欧州に対する貿易の再開が可能であるとを宣言してきた。
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = "OK"
+		command = { type = embargo which = -1 where = JAP value = 0 }	
+		command = { type = embargo which = JAP where = -1 value = 0 }	
+		command = { type = local_clrflag which = Embargo_JAP_Europe }
+	}
+}
+
+#スエズ
+event = {
+	id = 132330
+	random = no
+	persistent = yes
+	trigger = {
+		NOT = { local_flag = Suez_Canal }
+		control = { province = 900 data = -1 }	#スエズ
+		convoypool = 50
+	}
+
+	picture = "dd_transfer"
+	style = 0
+	
+	name = "EVT_132330_NAME"	#スエズ運河の獲得
+	desc = "EVT_132330_DESC"	#海運の要衝、スエズ運河を獲得した。我らが同地を直接コントロール出来ることは、国軍の輸送能力に大きな利益を齎すだろう。
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = "OK"
+		command = { type = tc_mod value = 10 }
+		command = { type = local_setflag which = Suez_Canal }
+	}
+}
+
+event = {
+	id = 132331
+	random = no
+	persistent = yes
+	trigger = {
+		local_flag = Suez_Canal
+		NOT = { control = { province = 900 data = -3 } }	#スエズ
+	}
+
+	picture = "dd_transfer"
+	style = 0
+	
+	name = "EVT_132331_NAME"	#スエズ運河の失陥
+	desc = "EVT_132331_DESC"	#海運の要衝、スエズ運河を失陥した。本海域が今や我々の目の届かない場所であることは、海運に大きな影響を与えるだろう。
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = "OK"
+		command = { type = tc_mod value = -10 }
+		command = { type = local_clrflag which = Suez_Canal }
+	}
+}
+
+#ジブラルタル
+event = {
+	id = 132332
+	random = no
+	persistent = yes
+	trigger = {
+		NOT = { local_flag = Straits_of_Gibraltar }
+		control = { province = 348 data = -1 }	#ジブラルタル
+		convoypool = 50
+	}
+
+	picture = "dd_transfer"
+	style = 0
+	
+	name = "EVT_132332_NAME"	#ジブラルタル海峡の獲得
+	desc = "EVT_132332_DESC"	#海運の要衝、ジブラルタル海峡を獲得した。我らが同地を直接コントロール出来ることは、国軍の輸送能力に大きな利益を齎すだろう。
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = "OK"
+		command = { type = tc_mod value = 10 }
+		command = { type = local_setflag which = Straits_of_Gibraltar }
+	}
+}
+
+event = {
+	id = 132333
+	random = no
+	persistent = yes
+	trigger = {
+		local_flag = Straits_of_Gibraltar
+		NOT = { control = { province = 348 data = -3 } }	#ジブラルタル
+	}
+
+	picture = "dd_transfer"
+	style = 0
+	
+	name = "EVT_132333_NAME"	#ジブラルタル海峡の失陥
+	desc = "EVT_132333_DESC"	#海運の要衝、ジブラルタル海峡を失陥した。本海域が今や我々の目の届かない場所であることは、海運に大きな影響を与えるだろう。
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = "OK"
+		command = { type = tc_mod value = -10 }
+		command = { type = local_clrflag which = Straits_of_Gibraltar }
+	}
+}
+
+#パナマ
+event = {
+	id = 132334
+	random = no
+	persistent = yes
+	trigger = {
+		NOT = { local_flag = Panama_Canel }
+		control = { province = 889 data = -1 }	#パナマ
+		convoypool = 50
+	}
+
+	picture = "dd_transfer"
+	style = 0
+	
+	name = "EVT_132334_NAME"	#パナマ運河の獲得
+	desc = "EVT_132334_DESC"	#海運の要衝、パナマ運河を獲得した。我らが同地を直接コントロール出来ることは、国軍の輸送能力に大きな利益を齎すだろう。
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = "OK"
+		command = { type = tc_mod value = 10 }
+		command = { type = local_setflag which = Panama_Canel }
+	}
+}
+
+event = {
+	id = 132335
+	random = no
+	persistent = yes
+	trigger = {
+		local_flag = Panama_Canel
+		NOT = { control = { province = 889 data = -3 } }	#パナマ
+	}
+
+	picture = "dd_transfer"
+	style = 0
+	
+	name = "EVT_132335_NAME"	#パナマ運河の失陥
+	desc = "EVT_132335_DESC"	#海運の要衝、パナマ運河を失陥した。本海域が今や我々の目の届かない場所であることは、海運に大きな影響を与えるだろう。
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = "OK"
+		command = { type = tc_mod value = -10 }
+		command = { type = local_clrflag which = Panama_Canel }
+	}
+}
+
+#シンガポール
+event = {
+	id = 132336
+	random = no
+	persistent = yes
+	trigger = {
+		NOT = { local_flag = Singapore_Strait }
+		control = { province = 1353 data = -1 }	#シンガポール
+		convoypool = 50
+	}
+
+	picture = "dd_transfer"
+	style = 0
+	
+	name = "EVT_132336_NAME"	#シンガポール海峡の獲得
+	desc = "EVT_132336_DESC"	#海運の要衝、シンガポール海峡を獲得した。我らが同地を直接コントロール出来ることは、国軍の輸送能力に大きな利益を齎すだろう。
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = "OK"
+		command = { type = tc_mod value = 5 }
+		command = { type = local_setflag which = Singapore_Strait }
+	}
+}
+
+event = {
+	id = 132337
+	random = no
+	persistent = yes
+	trigger = {
+		local_flag = Singapore_Strait
+		NOT = { control = { province = 1353 data = -3 } }	#シンガポール
+	}
+
+	picture = "dd_transfer"
+	style = 0
+	
+	name = "EVT_132337_NAME"	#シンガポール海峡の失陥
+	desc = "EVT_132337_DESC"	#海運の要衝、シンガポール海峡を失陥した。本海域が今や我々の目の届かない場所であることは、海運に大きな影響を与えるだろう。
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = "OK"
+		command = { type = tc_mod value = -5 }
+		command = { type = local_clrflag which = Singapore_Strait }
+	}
+}
+
+#キール
+event = {
+	id = 132338
+	random = no
+	persistent = yes
+	trigger = {
+		NOT = { local_flag = Kiel_Canel }
+		control = { province = 90 data = -1 }	#キール
+		convoypool = 50
+	}
+
+	picture = "dd_transfer"
+	style = 0
+	
+	name = "EVT_132338_NAME"	#キール運河の獲得
+	desc = "EVT_132338_DESC"	#海運の要衝、キール運河を獲得した。我らが同地を直接コントロール出来ることは、国軍の輸送能力に大きな利益を齎すだろう。
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = "OK"
+		command = { type = tc_mod value = 5 }
+		command = { type = local_setflag which = Kiel_Canel }
+	}
+}
+
+event = {
+	id = 132339
+	random = no
+	persistent = yes
+	trigger = {
+		local_flag = Kiel_Canel
+		NOT = { control = { province = 90 data = -3 } }	#キール
+	}
+
+	picture = "dd_transfer"
+	style = 0
+	
+	name = "EVT_132339_NAME"	#キール運河の失陥
+	desc = "EVT_132339_DESC"	#海運の要衝、キール運河を失陥した。本海域が今や我々の目の届かない場所であることは、海運に大きな影響を与えるだろう。
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = "OK"
+		command = { type = tc_mod value = -5 }
+		command = { type = local_clrflag which = Kiel_Canel }
+	}
+}
+
+#イスタンブール
+event = {
+	id = 132340
+	random = no
+	persistent = yes
+	trigger = {
+		NOT = { local_flag = Bosporus }
+		control = { province = 409 data = -1 }	#イスタンブール
+		convoypool = 50
+	}
+
+	picture = "dd_transfer"
+	style = 0
+	
+	name = "EVT_132340_NAME"	#ボスポラス海峡の獲得
+	desc = "EVT_132340_DESC"	#海運の要衝、ボスポラス海峡を獲得した。我らが同地を直接コントロール出来ることは、国軍の輸送能力に大きな利益を齎すだろう。
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = "OK"
+		command = { type = tc_mod value = 5 }
+		command = { type = local_setflag which = Bosporus }
+	}
+}
+
+event = {
+	id = 132341
+	random = no
+	persistent = yes
+	trigger = {
+		local_flag = Bosporus
+		NOT = { control = { province = 409 data = -3 } }	#イスタンブール
+	}
+
+	picture = "dd_transfer"
+	style = 0
+	
+	name = "EVT_132341_NAME"	#ボスポラス海峡の失陥
+	desc = "EVT_132341_DESC"	#海運の要衝、ボスポラス海峡を失陥した。本海域が今や我々の目の届かない場所であることは、海運に大きな影響を与えるだろう。
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = "OK"
+		command = { type = tc_mod value = -5 }
+		command = { type = local_clrflag which = Bosporus }
+	}
+}
+
+#ドーバー
+event = {
+	id = 132342
+	random = no
+	persistent = yes
+	trigger = {
+		NOT = { local_flag = Strait_of_Dover }
+		control = { province = 20 data = -1 }	#ドーバー
+		convoypool = 50
+	}
+
+	picture = "dd_transfer"
+	style = 0
+	
+	name = "EVT_132342_NAME"	#ドーバー海峡の獲得
+	desc = "EVT_132342_DESC"	#海運の要衝、ドーバー海峡を獲得した。我らが同地を直接コントロール出来ることは、国軍の輸送能力に大きな利益を齎すだろう。
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = "OK"
+		command = { type = tc_mod value = 5 }
+		command = { type = local_setflag which = Strait_of_Dover }
+	}
+}
+
+event = {
+	id = 132343
+	random = no
+	persistent = yes
+	trigger = {
+		local_flag = Strait_of_Dover
+		NOT = { control = { province = 20 data = -3 } }	#ドーバー
+	}
+
+	picture = "dd_transfer"
+	style = 0
+	
+	name = "EVT_132343_NAME"	#ドーバー海峡の失陥
+	desc = "EVT_132343_DESC"	#海運の要衝、ドーバー海峡を失陥した。本海域が今や我々の目の届かない場所であることは、海運に大きな影響を与えるだろう。
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = "OK"
+		command = { type = tc_mod value = -5 }
+		command = { type = local_clrflag which = Strait_of_Dover }
+	}
+}

@@ -1,0 +1,246 @@
+switch = no # [yes/no]
+max_front_ratio = 2.0
+max_front_ratios = {
+	GER = 2.0
+	ITA = 0.9
+	EGY = 0.9
+}
+
+max_garrison_prop = 0.90
+min_garrison_prop = 0.80
+neutrality = 80.000 
+war = 1
+
+upgrading = 0.15
+reinforcement = 0.25
+
+strat_redeploy_threshold = 88
+no_exp_forces_to = { FRA }
+
+###################################
+# Invasions and Naval
+###################################
+invasion = {
+	base		= 0.1	#Relative modifier. (lower = specific targets much more important.)
+	random		= 5.0	#How big a random range.  (1.0 = 1%)
+	coastal		= 0.5	#increase to avoid coastal forts more.
+	beach		= 0.1	#higher, avoid worst beaches.
+	distance	= 3.0	#higher = avoid long distance.
+	max_distance    = 40.0
+	pocket		= 3.0	#prioritise pockets, ie provinces with no adjacent controlled by same.
+	island		= 2.0	#prioritise taking pure islands.
+	enemy		= 1.0	#higher = much more vary of troops in province.
+	adjacentenemy 	= 0.5	#higher = much more vary of troops nearby
+	air_base	= 0.1
+      	naval_base 	= 0.1
+      	air_support 	= 2.0
+      	redirect 	= nearest
+	ignore		= yes
+
+	target = {
+		# German
+		206 = -1 # Memel 
+		510 = -1 # Konigsburg
+		304 = -1 # Elbing
+		303 = -1 # Danzig
+		302 = -1 # Setting
+		301 = -1 # Stralsrul
+		296 = -1 # Rostock
+		89  = -1 # Lubeck
+	
+		# Norway
+		125 = -1
+		124 = -1
+		114 = -1
+		118 = -1
+		117 = -1
+		110 = -1
+		109 = -1
+		108 = -1
+		107 = -1
+		
+		# Atlantic Wall
+		292 = -1 # Arburg
+		92  = -1 # Arhus
+		91  = -1 # Kolding
+		90  = -1 # Kiel
+		78  = -1 # Leeweden
+		47  = -1 # Amsterdam
+		46  = -1 # Rotterdam
+		45  = -1 # Ghent
+		18  = -1 # Calais
+		43  = -1 # Dunquerque
+		42  = -1 # Dieppe
+		41  = -1 # Le Havre
+		39  = -1 # Caen
+		33  = -1 # Rennes
+		32  = -1 # Brest
+		34  = -1 # Lorient
+		35  = -1 # Nantes
+		59  = -1 # Cholet
+		325 = -1 # Bordeaux
+		326 = -1 # Dax	
+	}
+}
+
+
+###################################89 296 301 302
+# Construction and Tech Research
+###################################2476 290
+#Default values
+construction = { 
+	max_factor = 0.180
+
+	AA_batteries = yes
+	max_AA_level = 5
+	AA_provs = { 
+	17 19 20 21 23 16 11 13
+	} 
+
+	coastal_fort = no #‚·‚Å‚É‚â‚Á‚Æ‚é
+
+	radar_station = yes
+	max_radar = 1 
+	radar_provs = {
+	17 19 20 21 23 16 11 13
+	} 
+}
+
+military = { 
+	relative_build_scheme 	= no 
+	max_batch_peace 	= 180
+	max_batch_war 		= 180 
+	max_batch_home_front 	= 180
+
+	#### Divisions etc...
+	infantry 	= 29
+	cavalry 	= 0
+	motorized 	= 5
+	mechanized 	= 0
+	light_armor 	= 0
+	armor 		= 10
+	paratrooper 	= 0
+	marine 		= 0
+	bergsjaeger 	= 0
+	garrison	= 0
+      	hq 		= 0
+	militia 	= 0
+	d_rsv_33	= 1
+#				45 %
+	interceptor 	= 6
+	multi_role 	= 3
+	cas 		= 0
+	strategic_bomber= 3
+	tactical_bomber = 3
+	naval_bomber 	= 4
+	transport_plane = 0
+	flying_bomb 	= 0
+	flying_rocket 	= 0
+#				19 %
+	battleship 	= 0
+	carrier 	= 4
+	escort_carrier	= 2
+	destroyer 	= 13
+	light_cruiser 	= 4
+	heavy_cruiser 	= 2
+	battlecruiser 	= 0
+	submarine 	= 0
+	transports 	= 13
+#				34 %
+
+	#### Brigades
+	artillery 		= 20
+	sp_artillery 		= 0
+	rocket_artillery	= 0 
+	sp_rct_artillery 	= 0
+	anti_tank 		= 0
+	tank_destroyer 		= 0
+	light_armor_brigade 	= 0
+	heavy_armor 		= 15
+	super_heavy_armor 	= 0
+	armored_car 		= 15
+	anti_air 		= 0
+	police 			= 0	
+	engineer 		= 10
+
+	cag = 100.000 
+}
+
+#
+garrison = {
+	defend_overseas_beaches = yes
+	home_multiplier 	= 1.5
+	overseas_multiplier 	= 1.0
+	home_peace_cap 		= 21
+	war_zone_odds 		= 2.0
+	key_point_prio_mult	= 1.0
+	revolt_risk_mult	= 1.0
+
+	# PRIORITIES:
+	beach			= 40	# Beach level 2
+	capital			= 50	# Our capital
+	human_border		= 100	# Ignored for allied human players
+	war_target		= 50	# The next country targeted for attack by this AI
+	
+	opposing_alliance	= 50	# For neutrals, all alliances are "opposing"
+	claim_threat		= 0	# If we are neutral, countries with claims on us get this
+	unstable_border		= 0	# Bordering countries at war with someone else get this
+
+	# Borders with specific countries
+	country_priorities = {
+		BEL = -1
+		HOL = -1
+		LUX = -1
+		GER = 120
+		SPA = 20
+		SPR = -1
+		ITA = 60
+		SCH = -1
+		FRA = -1
+		CAN = -1
+		AST = -1
+		NZL = -1
+		POR = -1
+		CYN = -1
+		TUR = -1
+		PAK = -1
+		CHI = -1
+		SIK = -1
+		NEP = -1
+		BHU = -1
+		SIA = -1
+		SAU = -1
+		SIA = -1
+	}
+	province_priorities = {
+	}
+	area_multiplier = {
+	}
+}
+
+front = { 
+	recklessness 		= 2 # 0-3
+	distrib_vs_ai 		= Reactive
+	distrib_vs_human 	= Offensive
+
+	enemy_reinf_days	= 6
+	reserve_prop		= 0.1
+	panic_ratio_vs_ai	= 1.75
+	panic_ratio_vs_human	= 1.25
+	base_attack_odds	= 1.02
+	min_attack_odds		= 1.001
+	max_attack_odds		= 2.0
+	reinforce_odds		= 1.02
+	withdraw_odds		= 0.95
+      	enemy_handicap = { } 
+      	passivity = { } 
+}
+
+admiral = {
+	min_org		= 100	# NEW: Percent of org gained back before the unit can leave port
+	min_dmg		= 98    # NEW: Percent of dmg gained back before the unit can leave port
+	return_org 	= 60 	# NEW: PERCENT OF ORG LOST BEFORE RETURNING TO PORT applies to all fleets/ships
+	return_dmg 	= 80 	# NEW: PERCENT OF DMG LOST BEFORE RETURNING TO PORT for repairs applies to all fleets/ships
+base = { 5 21 348 906 }
+
+}

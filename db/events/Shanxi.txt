@@ -1,0 +1,1027 @@
+# U74
+#id = 60800#’†‰Ø–¯‘—Õ­•{‚Ìİ’u
+#id = 60801#’†‰Ø–¯‘—Õ­•{‚ğ˜ø™S‰»
+#id = 60802#Št—»‰Šúİ’è
+#id = 60803#–kx“ß•û–ÊŒRi—ßŠ¯„™RŒ³i'38
+#id = 60804#–kx“ß•û–ÊŒRi—ßŠ¯„‘½“cxi'39
+#id = 60805#–kx“ß•û–ÊŒRi—ßŠ¯„‰ª‘º”JŸi'41
+#id = 60806#–kx“ß•û–ÊŒRi—ßŠ¯„‰ª•”’¼O˜Yi'44
+#id = 60807#–kx“ß•û–ÊŒRi—ßŠ¯„‰º‘º’èi'44
+#id = 60808#‘æˆêŒRi—ßŠ¯„”~’Ã”ü¡˜Yi'38
+#id = 60809#‘æˆêŒRi—ßŠ¯„Â’Ë‹`’ji'39
+#id = 60810#‘æˆêŒRi—ßŠ¯„Šâ¼‹`—Yi'40
+#id = 60811#‘æˆêŒRi—ßŠ¯„‹g–{’åˆêi'41
+#id = 60812#‘æˆêŒRi—ßŠ¯„Ÿ“cŠL—ˆl˜Yi'44
+#id = 60813#‘ælŠÍ‘ài—ßŠ¯„“ú”ä–ì³¡i'37
+#id = 60814#‘ælŠÍ‘ài—ßŠ¯„–ì‘º’¼–Mi'38
+#id = 60815#‘ælŠÍ‘ài—ßŠ¯„´…Œõ”üi'39
+#id = 60816#‘ælŠÍ‘ài—ßŠ¯„™R˜Z‘ i'41
+#id = 60817#‘ælŠÍ‘ài—ßŠ¯„‰Í£l˜Yi'41
+#id = 60818#‘ælŠÍ‘à”p~i'42
+
+#id = 60820#‘Î”ŒHì‚ÌŠJn
+#id = 60821#‘Î”ŒHì‚Ì¸”s
+#id = 60822#‘Î”ŒHì‚Ì¸”s  U74‘¤
+#id = 60823#‘Î”ŒHì‚Ì¬Œ÷
+#id = 60824#‘Î”ŒHì‚Ì¬Œ÷  U74‘¤
+#id = 60825#‘Î”ŒHì‚Ì¬Œ÷  CHI‘¤
+
+#id = 60830#‰Í–{‘åìAR¼‚É“ü‚é
+#id = 60831#R¼Y‹ÆŠ”®‰ïĞ‚Ì”­‘«
+
+#id = 60840#“ì‹­•{‚Æ‰Ø–k­Œ ‚ğ“‡  U74‘¤
+#id = 60841#“ì‹­•{‚Æ‰Ø–k­Œ ‚ğ“‡  “ú–{‘¤
+#id = 60842#“ì‹­•{‚Æ‰Ø–k­Œ ‚ğ“‡  U87‘¤
+
+#id = 60843#“ì‹­•{‚Æ‰Ø–k­Œ ‚ğ•ª—£  U74‘¤
+#id = 60844#“ì‹­•{‚Æ‰Ø–k­Œ ‚ğ•ª—£  “ú–{‘¤
+#id = 60845#“ì‹­•{‚Æ‰Ø–k­Œ ‚ğ•ª—£  U87‘¤
+
+#id = 60850#“’¢˜a€–S
+
+
+event = {
+	id = 60800
+	random = no
+	country = JAP
+
+	decision = {
+		event = 130021	#–ÖŒÃ‚Ì“Æ—§ #BETAC³ƒpƒbƒ`
+		control = { province = 1205 data = JAP } # Beiping
+	}
+	decision_trigger = {
+		control = { province = 1203 data = JAP } # 
+		control = { province = 1204 data = JAP } # 
+		control = { province = 1205 data = JAP } # Beiping
+		control = { province = 1210 data = JAP } # Baoding
+		control = { province = 1211 data = JAP } # Shijiazhuang
+		control = { province = 1212 data = JAP } # 
+		control = { province = 1213 data = JAP } # 
+		control = { province = 1216 data = JAP } # 
+		control = { province = 1224 data = JAP } # 
+		control = { province = 1225 data = JAP } # Taiyuan
+		control = { province = 1226 data = JAP } # 
+	}
+
+	trigger = {
+		event = 130021	#–ÖŒÃ‚Ì“Æ—§ #BETAC³ƒpƒbƒ`
+		control = { province = 1203 data = JAP } # 
+		control = { province = 1204 data = JAP } # 
+		control = { province = 1205 data = JAP } # Beiping
+		control = { province = 1210 data = JAP } # Baoding
+		control = { province = 1211 data = JAP } # Shijiazhuang
+		control = { province = 1212 data = JAP } # 
+		control = { province = 1213 data = JAP } # 
+		control = { province = 1216 data = JAP } # 
+		control = { province = 1224 data = JAP } # 
+		control = { province = 1225 data = JAP } # Taiyuan
+		control = { province = 1226 data = JAP } # 
+		
+		#’Ç‰Á
+		control = { province = 1218 data = JAP }
+	}
+
+	date = { day = 1 month = april year = 1937 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT60800N"
+	desc = "EVT60800D"
+	picture = "independence_of_ROC"
+	decision_picture = "decision_ROC_independence"
+	style = 2
+
+	action_a = {
+		name = "ACT60800A" #Prepare better action name
+		command = { type = dissent value = -1 }
+		command = { type = relation which = SOV value = -5 }
+		command = { type = relation which = ENG value = -5 }
+		command = { type = relation which = USA value = -5 }
+		command = { type = construct which = naval_base where = 1204 value = 1 } #FEPKBETA4.6
+		command = { type = independence which = U74 value = 1 }
+		command = { type = alliance which = U74 }
+		command = { type = province_keypoints which = 1206 value = 1 }
+		command = { type = trigger which = 60801 } #  Puppet U74
+		command = { type = trigger which = 60802 } #  U74
+	}
+	
+	action_b = {
+		name = "EVT_3823_ACTB" # Let us take it all!
+		command = { type = supplies value = 100 }
+		command = { type = belligerence which = JAP value = 5 }
+	}
+}
+event = { 
+	id = 60801
+	random = no
+	country = JAP
+	
+	#Triggered by JAP 60800
+	
+	name = "EVT60800N"
+	desc = "EVT60800D"
+	picture = "japanese_reinforcments"
+	style = 0
+
+	action_a = {
+		name = "OK" # Install a Puppet
+		command = { type = make_puppet which = U74 }
+	}
+}
+event = { 
+	id = 60802
+	random = no
+	country = U74
+	
+	#Triggered by JAP 60800
+	
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	action_a = {
+		name = "OK" # Install a Puppet
+		command = { type = ai which = "U74_1935.ai" }
+		command = { type = alliance which = JAP }
+		command = { type = access which = JAP }
+
+		#command = { type = construct which = naval_base where = 1204 value = -1 } #FEPKBETA4.6
+
+		command = { type = add_corps value = land when = -1 where = 1225 }
+		#command = { type = add_division value = hq when = 0 where = none }
+		command = { type = add_division value = infantry when = 1 where = artillery }
+		command = { type = add_division value = infantry when = 1 where = anti_tank }
+		command = { type = transport_pool which = U74 value = 10 }
+		command = { type = escort_pool which = U74 value = 2 }
+
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = set_domestic which = free_market value = 3 }
+		command = { type = set_domestic which = freedom value = 2 }
+		command = { type = set_domestic which = professional_army value = 1 }
+		command = { type = set_domestic which = defense_lobby value = 5 }
+		command = { type = set_domestic which = interventionism value = 3 }
+
+		command = { type = headofstate 			which = 700400 }
+		command = { type = headofgovernment 		which = 700401 }
+		command = { type = foreignminister 		which = 700402 }
+		command = { type = armamentminister 		which = 700403 }
+		command = { type = ministerofsecurity 		which = 700404 }
+		command = { type = ministerofintelligence 	which = 700405 }
+		command = { type = chiefofstaff 		which = 700420 }
+		command = { type = chiefofarmy 			which = 700430 }
+		command = { type = chiefofnavy 			which = 700440 }
+		command = { type = chiefofair 			which = 700450 }
+
+	}
+}
+event = {
+	id = 60803
+	random = no
+	country = U74
+	style = 0
+
+	trigger = {
+		puppet = { country = U74 country = JAP }
+	}
+
+	date = { day = 9 month = december year = 1938 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	action_a = {
+		name = "OK" 
+		command = { type = chiefofstaff which = 700421 }
+		command = { type = chiefofair   which = 700451 }
+		command = { type = sleepminister which = 700420 }
+		command = { type = sleepminister which = 700450 }
+	}
+}
+event = {
+	id = 60804
+	random = no
+	country = U74
+	style = 0
+
+	trigger = {
+		puppet = { country = U74 country = JAP }
+		event =  60803
+	}
+
+	date = { day = 12 month = september year = 1939 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	action_a = {
+		name = "OK" 
+		command = { type = chiefofstaff which = 700422 }
+		command = { type = chiefofair   which = 700452 }
+		command = { type = sleepminister which = 700421 }
+		command = { type = sleepminister which = 700451 }
+	}
+}
+event = {
+	id = 60805
+	random = no
+	country = U74
+	style = 0
+
+	trigger = {
+		puppet = { country = U74 country = JAP }
+		event =  60804
+	}
+
+	date = { day = 7 month = july year = 1941 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	action_a = {
+		name = "OK" 
+		command = { type = chiefofstaff which = 700423 }
+		command = { type = chiefofair   which = 700453 }
+		command = { type = sleepminister which = 700422 }
+		command = { type = sleepminister which = 700452 }
+	}
+}
+event = {
+	id = 60806
+	random = no
+	country = U74
+	style = 0
+
+	trigger = {
+		puppet = { country = U74 country = JAP }
+		event =  60805
+	}
+
+	date = { day = 25 month = august year = 1944 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	action_a = {
+		name = "OK" 
+		command = { type = chiefofstaff which = 700424 }
+		command = { type = chiefofair   which = 700454 }
+		command = { type = sleepminister which = 700423 }
+		command = { type = sleepminister which = 700453 }
+	}
+}
+event = {
+	id = 60807
+	random = no
+	country = U74
+	style = 0
+
+	trigger = {
+		puppet = { country = U74 country = JAP }
+		event =  60806
+	}
+
+	date = { day = 22 month = november year = 1944 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	action_a = {
+		name = "OK" 
+		command = { type = chiefofstaff which = 700425 }
+		command = { type = chiefofair   which = 700455 }
+		command = { type = sleepminister which = 700424 }
+		command = { type = sleepminister which = 700454 }
+	}
+}
+event = {
+	id = 60808
+	random = no
+	country = U74
+	style = 0
+
+	trigger = {
+		puppet = { country = U74 country = JAP }
+	}
+
+	date = { day = 29 month = may year = 1938 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	action_a = {
+		name = "OK" 
+		command = { type = chiefofarmy which = 700431 }
+		command = { type = sleepminister which = 700430 }
+	}
+}
+event = {
+	id = 60809
+	random = no
+	country = U74
+	style = 0
+
+	trigger = {
+		puppet = { country = U74 country = JAP }
+		event =  60808
+	}
+
+	date = { day = 7 month = september year = 1938 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	action_a = {
+		name = "OK" 
+		command = { type = chiefofarmy which = 700432 }
+		command = { type = sleepminister which = 700431 }
+	}
+}
+event = {
+	id = 60810
+	random = no
+	country = U74
+	style = 0
+
+	trigger = {
+		puppet = { country = U74 country = JAP }
+		event =  60809
+	}
+
+	date = { day = 20 month = june year = 1940 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	action_a = {
+		name = "OK" 
+		command = { type = chiefofarmy which = 700433 }
+		command = { type = sleepminister which = 700432 }
+	}
+}
+event = {
+	id = 60811
+	random = no
+	country = U74
+	style = 0
+
+	trigger = {
+		puppet = { country = U74 country = JAP }
+		event =  60810
+	}
+
+	date = { day = 1 month = august year = 1941 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	action_a = {
+		name = "OK" 
+		command = { type = chiefofarmy which = 700434 }
+		command = { type = sleepminister which = 700433 }
+	}
+}
+event = {
+	id = 60812
+	random = no
+	country = U74
+	style = 0
+
+	trigger = {
+		puppet = { country = U74 country = JAP }
+		event =  60811
+	}
+
+	date = { day = 22 month = november year = 1944 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	action_a = {
+		name = "OK" 
+		command = { type = chiefofarmy which = 700435 }
+		command = { type = sleepminister which = 700434 }
+	}
+}
+event = {
+	id = 60813
+	random = no
+	country = U74
+	style = 0
+
+	trigger = {
+		puppet = { country = U74 country = JAP }
+	}
+
+	date = { day = 15 month = november year = 1937 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	action_a = {
+		name = "OK" 
+		command = { type = chiefofnavy which = 700441 }
+		command = { type = sleepminister which = 700440 }
+	}
+}
+event = {
+	id = 60814
+	random = no
+	country = U74
+	style = 0
+
+	trigger = {
+		puppet = { country = U74 country = JAP }
+		event =  60813
+	}
+
+	date = { day = 15 month = november year = 1938 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	action_a = {
+		name = "OK" 
+		command = { type = chiefofnavy which = 700442 }
+		command = { type = sleepminister which = 700441 }
+	}
+}
+event = {
+	id = 60815
+	random = no
+	country = U74
+	style = 0
+
+	trigger = {
+		puppet = { country = U74 country = JAP }
+		event =  60814
+	}
+
+	date = { day = 29 month = september year = 1939 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	action_a = {
+		name = "OK" 
+		command = { type = chiefofnavy which = 700443 }
+		command = { type = sleepminister which = 700442 }
+	}
+}
+event = {
+	id = 60816
+	random = no
+	country = U74
+	style = 0
+
+	trigger = {
+		puppet = { country = U74 country = JAP }
+		event =  60815
+	}
+
+	date = { day = 5 month = july year = 1941 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	action_a = {
+		name = "OK" 
+		command = { type = chiefofnavy which = 700444 }
+		command = { type = sleepminister which = 700443 }
+	}
+}
+event = {
+	id = 60817
+	random = no
+	country = U74
+	style = 0
+
+	trigger = {
+		puppet = { country = U74 country = JAP }
+		event =  60816
+	}
+
+	date = { day = 26 month = december year = 1941 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	action_a = {
+		name = "OK" 
+		command = { type = chiefofnavy which = 700445 }
+		command = { type = sleepminister which = 700444 }
+	}
+}
+event = {
+	id = 60818
+	random = no
+	country = U74
+	style = 0
+
+	trigger = {
+		puppet = { country = U74 country = JAP }
+		event =  60817
+	}
+
+	date = { day = 10 month = april year = 1942 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	action_a = {
+		name = "OK" 
+		command = { type = chiefofnavy which = 700408 }
+		command = { type = chiefofnavy which = 700464 }
+		command = { type = sleepminister which = 700445 }
+	}
+}
+###############################
+###  ‘Î”ŒHì
+###############################
+event = {
+	id = 60820
+	random = no
+	country = JAP
+	style = 0
+
+	trigger = {
+		puppet = { country = U74 country = JAP }
+	}
+
+	date = { day = 1 month = april year = 1937 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT60820N"
+	desc = "EVT60820D"
+	picture = "taihaku"
+
+	action_a = {
+		name = "ACT60820A"
+		command = { type = money value = -50 }
+	}
+	action_b = {
+		name = "ACT60820B"
+		command = { type = trigger which = 60822 }
+		command = { type = sleepevent which = 60821 }
+		command = { type = sleepevent which = 60823 }
+	}
+}
+event = {
+	id = 60821
+	random = no
+	country = JAP
+	style = 0
+
+	trigger = {
+		event = 60820
+		OR = {
+			NOT = { exists = U74 }
+			AND = {
+				exists = U87
+				random = 20
+			}
+			AND = {
+				NOT = { exists = U87 }
+				random = 10
+			}
+		}
+	}
+
+	date = { day = 1 month = april year = 1937 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT60821N"
+	desc = "EVT60820D"
+	picture = "taihaku"
+
+	action_a = {
+		name = "ACT60821A"
+		command = { type = sleepevent which = 60823 }
+		command = { type = sleepevent which = 60824 }
+	}
+}
+event = {
+	id = 60822
+	random = no
+	country = U74
+	style = 0
+	trigger = {
+		event = 60821
+	}
+
+	date = { day = 1 month = april year = 1937 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	action_a = {
+		name = "OK"
+		command = { type = sleepminister which = 700460 }	#è…àR
+		command = { type = sleepminister which = 700461 }
+		#command = { type = sleepminister which = 700462 }	#‰Í–{
+		#command = { type = sleepminister which = 700463 }
+		command = { type = sleepminister which = 700464 }	#ƒNƒƒ‹ƒ`ƒFƒt
+	}
+}
+event = {
+	id = 60823
+	random = no
+	country = JAP
+	style = 0
+
+	trigger = {
+		event = 60820
+		exists = U74
+		OR = {
+			AND = {
+				exists = U87
+				random = 20
+			}
+			AND = {
+				NOT = { exists = U87 }
+				random = 33
+			}
+		}
+	}
+
+	date = { day = 10 month = april year = 1939 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT60823N"
+	desc = "EVT60823D"
+	picture = "taihaku"
+
+	action_a = {
+		name = "ACT60823A"
+		command = { type = sleepevent which = 60821 }
+		command = { type = sleepevent which = 60822 }
+		command = { type = sleepevent which = 131980 } #FEPKBETA4.2 #FEPK_CHI inherit CSX
+		command = { type = trigger which = 60824 }
+	}
+}
+event = {
+	id = 60824
+	random = no
+	country = U74
+	style = 0
+
+	name = "EVT60823N"
+	desc = "EVT60823D"
+	picture = "taihaku"
+
+	action_a = {
+		name = "OK"
+		command = { type = headofstate 			which = 700460 } #è…àR
+		command = { type = headofgovernment 		which = 700411 } #
+		command = { type = ministerofsecurity		which = 700462 }
+		command = { type = dissent value = -5 }
+		command = { type = add_corps value = land when = -1 where = 1225 }
+		command = { type = add_division value = infantry when = 0 }
+		command = { type = add_division value = infantry when = 0 }
+		command = { type = add_division value = infantry when = 0 }
+		command = { type = domestic which = free_market value = -1 }
+		command = { type = domestic which = professional_army value = 2 }
+		command = { type = domestic which = defense_lobby value = 2 }
+		command = { type = domestic which = interventionism value = -2 }
+		command = { type = construct which = ic where = 1205 value = 1 }
+		command = { type = construct which = ic where = 1225 value = 1 }
+		command = { type = industrial_modifier which = total value = 2 }
+		command = { type = wakeleader which = 974025 }
+		command = { type = wakeleader which = 974026 }
+		command = { type = wakeleader which = 974027 }
+		command = { type = wakeleader which = 974028 }
+		command = { type = wakeleader which = 974029 }
+		command = { type = wakeleader which = 974030 }
+		command = { type = wakeleader which = 974031 }
+		command = { type = wakeleader which = 974032 }
+		command = { type = wakeleader which = 974033 }
+		command = { type = wakeleader which = 974034 }
+		command = { type = wakeleader which = 974035 }
+		command = { type = wakeleader which = 974036 }
+		command = { type = wakeleader which = 974037 }
+		command = { type = wakeleader which = 974038 }
+		command = { type = wakeleader which = 974039 }
+		command = { type = wakeleader which = 974040 }
+		command = { type = wakeleader which = 974041 }
+		command = { type = wakeleader which = 974042 }
+		command = { type = wakeleader which = 974043 }
+		command = { type = wakeleader which = 974044 }
+		command = { type = trigger which = 60825 }
+	}
+}
+event = {
+	id = 60825
+	random = no
+	country = CHI
+	style = 0
+
+	name = "EVT60823N"
+	desc = "EVT60823D"
+	picture = "taihaku"
+
+	action_a = {
+		name = "ACT60825A"
+		command = { type = dissent value = 5 }
+		command = { type = sleepminister which = 52004 }	#
+		command = { type = sleepminister which = 52217 }	#
+		command = { type = sleepminister which = 52218 }	#
+		command = { type = sleepminister which = 52220 }	#
+		command = { type = sleepleader which = 50348 }		#è…àR‚ğœŠO
+	}
+}
+event = {
+	id = 60830
+	random = no
+	country = U74
+	style = 0
+
+	trigger = {
+		minister = 700412
+		OR = {
+			InCabinet = 700460	#è…àR
+			InCabinet = 700433	#Šâ¼
+		}
+		random = 33
+	}
+
+
+	date = { day = 1 month = april year = 1937 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT60830N"
+	desc = "EVT60830D"
+	picture = "koumoto"
+
+	action_a = {
+		name = "OK"
+		command = { type = armamentminister which = 700412 }
+		#command = { type = armamentminister which = 700463 }
+		command = { type = wakeleader which = 974045 }
+		#command = { type = ministerofsecurity which = 700462 }
+		command = { type = domestic which = free_market value = -1 }
+	}
+}
+event = {
+	id = 60831
+	random = no
+	country = U74
+	style = 0
+
+	trigger = {
+		OR = {
+			AND = {
+				OR = {
+					InCabinet = 700412
+					InCabinet = 700463
+					InCabinet = 700462
+				}
+				random = 10
+			}
+			year = 1942
+		}
+	}
+
+
+	date = { day = 1 month = april year = 1937 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT60831N"
+	desc = "EVT60831D"
+	#ˆø—pŒ³ƒTƒCƒg(http://shanxi.nekoyamada.com/archives/000135.html)
+	picture = "economic"
+	
+	action_a = {
+		name = "OK"
+		command = { type = waketeam which = 97407 }
+		command = { type = construct which = ic where = 1225 value = 1 }
+		command = { type = industrial_modifier which = total value = 3 }
+		command = { type = domestic which = free_market value = -1 }
+	}
+}
+
+###############################
+###  “ì‹­•{‚Æ‚ÌŒ“‚Ë‡‚¢
+###############################
+event = {
+	id = 60840
+	random = no
+	country = U74
+	style = 0
+
+	trigger = {
+		exists = U87
+		NOT = { exists = CHI }
+		NOT = { headofstate = 700460 }
+	}
+
+
+	date = { day = 1 month = april year = 1937 }
+	offset = 90
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT60840N"
+	desc = "EVT60840D"
+	picture = "japanese_officers"
+
+	action_a = {
+		name = "ACT60840A"
+		ai_chance = 100
+		command = { type = secederegion which = U87 value = "China" when = 0 }
+		command = { type = trigger which = 60841 }
+		command = { type = sleepevent which = 60843 }
+	}
+	action_b = {
+		name = "ACT60840B"
+		ai_chance = 0
+		command = { type = dissent value = 10 } #FEPKBETA3
+	}
+}
+event = {
+	id = 60841
+	random = no
+	country = JAP
+	style = 0
+
+	name = "EVT60840N"
+	desc = "EVT60840D"
+	picture = "japanese_officers"
+
+	action_a = {
+		name = "ACT60841A"
+		ai_chance = 100
+		command = { type = trigger which = 60842 }
+		command = { type = end_mastery which = U74 }
+	}
+	action_b = {
+		name = "ACT60841B"
+		ai_chance = 0
+		command = { type = trigger which = 60845 }
+		command = { type = dissent value = 5 } #FEPKBETA3
+	}
+}
+event = {
+	id = 60842
+	random = no
+	country = U87
+	style = 0
+
+	name = "EVT60842N"
+	desc = "EVT60840D"
+	picture = "japanese_officers"
+
+	action_a = {
+		name = "OK"
+		command = { type = inherit which = U74 }
+		command = { type = waketeam which = 98715 }
+	}
+}
+event = {
+	id = 60843
+	random = no
+	country = U74
+	style = 0
+
+	trigger = {
+		exists = U87
+		headofstate = 700460
+	}
+
+	date = { day = 10 month = april year = 1939 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT60843N"
+	desc = "EVT60843D"
+	picture = "japanese_officers"
+
+	action_a = {
+		name = "ACT60843A"
+		ai_chance = 100
+		command = { type = trigger which = 60844 }
+		command = { type = sleepevent which = 60840 }
+		command = { type = dissent value = -5 }
+	}
+	action_b = {
+		name = "ACT60840A"
+		ai_chance = 0
+		command = { type = secederegion which = U87 value = "China" when = 0 }
+		command = { type = trigger which = 60841 }
+	}
+}
+
+event = {
+	id = 60844
+	random = no
+	country = JAP
+	style = 0
+
+	name = "EVT60843N"
+	desc = "EVT60844D"
+	picture = "japanese_officers"
+
+	action_a = {
+		name = "ACT60844A"
+		ai_chance = 100
+		command = { type = trigger which = 60845 }
+	}
+	action_b = {
+		name = "ACT60841A"
+		ai_chance = 0
+		command = { type = trigger which = 60842 }
+	}
+}
+event = {
+	id = 60845
+	random = no
+	country = U87
+	style = 0
+
+	name = "EVT60843N"
+	desc = "EVT60845D"
+	picture = "japanese_officers"
+
+	action_a = {
+		name = "OK"
+		command = { type = dissent value = 5 }
+		command = { type = removecore which = 1203 }
+		command = { type = removecore which = 1204 }
+		command = { type = removecore which = 1205 }
+		command = { type = removecore which = 1206 }
+		command = { type = removecore which = 1209 }
+		command = { type = removecore which = 1210 }
+		command = { type = removecore which = 1211 }
+		command = { type = removecore which = 1212 }
+		command = { type = removecore which = 1213 }
+		command = { type = removecore which = 1214 }
+		command = { type = removecore which = 1215 }
+		command = { type = removecore which = 1216 }
+		command = { type = removecore which = 1224 }
+		command = { type = removecore which = 1225 }
+		command = { type = removecore which = 1226 }
+		command = { type = removecore which = 1267 }
+		command = { type = removecore which = 1268 }
+		command = { type = removecore which = 1269 }
+		command = { type = removecore which = 1270 }
+		command = { type = removecore which = 1271 }
+		command = { type = removecore which = 1275 }
+		command = { type = removecore which = 1278 }
+	}
+}
+
+event = {
+	id = 60850
+	random = no
+	country = U74
+	style = 0
+
+	date = { year = 1940 month = november day = 8 }
+
+	name = "EVT_102_NAME"
+	desc = "EVT_102_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = sleepminister which = 700401 }
+		command = { type = headofgovernment which = 700411 }
+		}
+	}

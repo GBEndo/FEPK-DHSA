@@ -1,0 +1,54 @@
+# JAP and USA to MAN befliends
+
+max_redeploying = 0.05
+exp_force_ratio = 0.10
+exp_force_ratios = {
+	MAN = 0.5
+} 
+
+
+###################################
+# Diplomacy
+###################################
+trade = {
+	favored = {
+		MAN = 80
+		JAP = 80
+	}
+	embargo = {
+		CHI CSX SIK CXB CYN CGX CHC
+	}
+}
+
+tech_sharing = {
+	favored = {
+		JAP = 100
+		MAN = 150
+	}
+	embargo = {
+		CHI CSX SIK CXB CYN CGX CHC
+	}
+}
+
+befriend = {
+	MAN = 150
+	JAP = 100
+	MEN = 50
+}
+
+max_front_ratios = {
+	SOV = 6.0
+	CHI = 6.0
+}
+
+combat = {
+	SOV = 50
+	CHI = 30
+	CHC = 50
+}
+
+protect = {
+	MAN = 100
+	MEN = 10
+	JAP = 10
+}

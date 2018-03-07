@@ -1,0 +1,1413 @@
+#########################################################################
+#	FEPK_SOV.txt
+#	ソ連関連イベント
+#########################################################################
+#id = 131700-09		スターリン粛清イベント
+#id = 131710-19		モスクワ帰還イベント
+#id = 131720-29		ソ連・ルーマニア戦争イベント
+#id = 131730-39		日ソ国境紛争イベント
+#id = 131740-49		独中同盟時のビタピ処理
+#id = 131750-59		大粛清からの赤軍回復
+#id = 131760-69		極東アジア共産イベント
+#########################################################################
+##########
+#  独ソ戦IFイベント
+##########
+
+event = {
+	id = 131700
+	random = no 
+	country = SOV
+	
+	trigger = {
+		war = { country = GER country = SOV }
+		NOT = { exists = POL }
+		OR = { #FEPKBETA3
+			AND = {
+				dissent = 15 #12 #FEPKBETA5.5
+				OR = {
+					NOT = { control = { province = 1372 data = SOV } } # Vladivostok
+					NOT = { control = { province = 1907 data = SOV } } # Baku
+					NOT = { control = { province = 434 data = SOV } } # Chisinau
+					NOT = { control = { province = 145 data = SOV } } # Vyborg
+					NOT = { control = { province = 194 data = SOV } } # Tallinn
+					NOT = { control = { province = 197 data = SOV } } # Riga
+					NOT = { control = { province = 207 data = SOV } } # Kurakau
+				}
+			}
+			dissent = 24 #20 #FEPKBETA5.5
+		}
+		minister = 4074 # Joseph Stalin
+		minister = 4076 # Vyacheslav Molotov
+		NOT = {
+			event = 2657 # Great Patriotic War
+		}
+	}
+
+	name = "EVT_131700_NAME"
+	desc = "EVT_131700_DESC"
+	style = 0
+
+        picture = "Mol_Rib"
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "EVT_131700_ACTA"
+		ai_chance = 100
+		command = { type = dissent value = -100 }
+
+		command = { type = sleepminister which = 4002 } #Stalin
+		command = { type = sleepminister which = 4074 }
+		command = { type = sleepminister which = 4059 }
+		command = { type = sleepminister which = 4073 }
+
+		command = { type = set_domestic which = democratic value = 2 } # LE
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofstate which = 4076 } #Molotov
+		command = { type = headofgovernment which = 4072 }
+		command = { type = foreignminister which = 4034 }
+		command = { type = ministerofsecurity which = 4041 } #Berija
+
+		command = { type = sleepevent which = 400 } # The Death of Stalin
+		command = { type = sleepevent which = 130546 } # Moving Soviet Industry to Siberia
+		command = { type = sleepevent which = 130547 }
+		command = { type = sleepevent which = 130548 }
+		command = { type = sleepevent which = 130574 } # Donetz flooding
+		command = { type = sleepevent which = 130540 } # Relocating the capital
+		command = { type = sleepevent which = 130541 }
+		command = { type = sleepevent which = 130542 }
+		command = { type = sleepevent which = 130543 }
+		command = { type = sleepevent which = 133004 } # Lend-Lease Acts
+		command = { type = sleepevent which = 133005 }
+
+		command = { type = capital which = 175 } # Moscow
+		command = { type = manpowerpool value = -360 }
+
+		command = { type = trigger which = 131701 } #GER
+
+		command = { type = clrflag which = sovcapescaped1 }
+		command = { type = clrflag which = sovcapescaped2 }
+		command = { type = clrflag which = sovcapescaped3 }
+	}
+}
+
+event = {
+	id = 131701
+	random = no 
+	country = GER
+
+	name = "EVT_131701_NAME"
+	desc = "EVT_131701_DESC"
+	style = 0
+
+        picture = "tannu_tuva"
+
+	action_a = {
+		name = "EVT_131701_ACTA"
+		ai_chance = 100
+		command = { type = dissent value = -100 }
+		command = { type = manpowerpool value = 120 }
+	}
+}
+
+##########
+#  モスクワ帰還
+##########
+
+event = {
+	id = 131710
+	random = no 
+	country = SOV
+	
+	trigger = {
+		OR = {
+			event = 55333 # SOV wined Second Russian civilwar.
+			event = 55336
+		}
+		NOT = {
+			exists = SIB
+			exists = RUS
+			event = 60604
+			event = 60605
+		}
+		control = { province = 1548 data = SOV } # Novosibirsk
+		control = { province = 175 data = SOV } # Moscow
+	}
+
+	name = "EVT_131710_NAME"
+	desc = "EVT_131710_DESC"
+	style = 0
+
+	picture = "soviet_mud"
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "EVT_131710_ACTA"
+		ai_chance = 100
+		command = { type = dissent value = -10 }
+		command = { type = capital which = 175 } # Moscow
+		# Greater Romania
+		command = { type = addcore which = 231 }
+		command = { type = addcore which = 232 }
+		command = { type = addcore which = 233 }
+         	# Estonia
+		command = { type = addcore which = 199 }
+		command = { type = addcore which = 195 }
+		command = { type = addcore which = 193 }
+		command = { type = addcore which = 196 }
+		command = { type = addcore which = 194 }
+		# Latvia
+		command = { type = addcore which = 205 }
+		command = { type = addcore which = 204 }
+		command = { type = addcore which = 203 }
+		command = { type = addcore which = 202 }
+		command = { type = addcore which = 197 }
+		command = { type = addcore which = 198 }
+		# Lithuania
+		command = { type = addcore which = 577 }
+		command = { type = addcore which = 511 }
+		command = { type = addcore which = 206 }
+		command = { type = addcore which = 207 }
+		# Bessarabia
+		command = { type = addcore which = 434 }
+		command = { type = addcore which = 435 }
+		command = { type = addcore which = 433 }
+		command = { type = addcore which = 230 }
+		# Claims on Finland
+		command = { type = addcore which = 132 }
+		command = { type = addcore which = 145 }
+		command = { type = addcore which = 146 }
+		# Claims on Greater Finland
+		command = { type = addcore which = 133 }
+		command = { type = addcore which = 134 }
+		command = { type = addcore which = 135 }
+		command = { type = addcore which = 150 }
+		command = { type = addcore which = 151 }
+		command = { type = addcore which = 152 }
+		# Claims on German Russia
+		command = { type = addcore which = 212 }
+		command = { type = addcore which = 218 }
+		command = { type = addcore which = 219 }
+		command = { type = addcore which = 217 }
+		command = { type = addcore which = 216 }
+		command = { type = addcore which = 215 }
+		command = { type = addcore which = 200 }
+		command = { type = addcore which = 201 }
+		command = { type = addcore which = 221 }
+		command = { type = addcore which = 225 }
+		command = { type = addcore which = 226 }
+		command = { type = addcore which = 227 }
+		command = { type = addcore which = 228 }
+		command = { type = addcore which = 220 }
+		command = { type = addcore which = 231 }
+		command = { type = addcore which = 232 }
+		command = { type = addcore which = 233 }
+		command = { type = addcore which = 234 }
+		command = { type = addcore which = 235 }
+		command = { type = addcore which = 236 }
+		command = { type = addcore which = 237 }
+		command = { type = addcore which = 238 }
+		command = { type = addcore which = 239 }
+		command = { type = addcore which = 246 }
+		command = { type = addcore which = 249 }
+		command = { type = addcore which = 245 }
+		command = { type = addcore which = 247 }
+		command = { type = addcore which = 248 }
+		command = { type = addcore which = 249 }
+		command = { type = addcore which = 242 }
+		command = { type = addcore which = 244 }
+		command = { type = addcore which = 241 }
+		command = { type = addcore which = 240 }
+		command = { type = addcore which = 250 }
+		command = { type = addcore which = 256 }
+		command = { type = addcore which = 251 }
+		command = { type = addcore which = 252 }
+		command = { type = addcore which = 253 }
+		command = { type = addcore which = 254 }
+		command = { type = addcore which = 258 }
+		command = { type = addcore which = 259 }
+		command = { type = addcore which = 257 }
+		command = { type = addcore which = 255 }
+		command = { type = addcore which = 260 }
+		command = { type = addcore which = 263 }
+		command = { type = addcore which = 262 }
+		command = { type = addcore which = 261 }
+		command = { type = addcore which = 264 }
+		command = { type = addcore which = 265 }
+		command = { type = addcore which = 266 }
+		command = { type = addcore which = 267 }
+		command = { type = addcore which = 269 }
+		command = { type = addcore which = 268 }
+		command = { type = addcore which = 173 }
+		command = { type = addcore which = 172 }
+		command = { type = addcore which = 170 }
+		command = { type = addcore which = 171 }
+		command = { type = addcore which = 176 }
+		command = { type = addcore which = 174 }
+		command = { type = addcore which = 177 }
+		command = { type = addcore which = 175 }
+		command = { type = addcore which = 178 }
+		command = { type = addcore which = 272 }
+		command = { type = addcore which = 273 }
+		command = { type = addcore which = 271 }
+		command = { type = addcore which = 274 }
+		command = { type = addcore which = 275 }
+		command = { type = addcore which = 276 }
+		command = { type = addcore which = 277 }
+		command = { type = addcore which = 278 }
+		command = { type = addcore which = 270 }
+		command = { type = addcore which = 279 }
+		command = { type = addcore which = 94 }
+		command = { type = addcore which = 287 }
+		command = { type = addcore which = 286 }
+		command = { type = addcore which = 285 }
+		command = { type = addcore which = 281 }
+		command = { type = addcore which = 289 }
+		command = { type = addcore which = 288 }
+		command = { type = addcore which = 282 }
+		command = { type = addcore which = 283 }
+		command = { type = addcore which = 284 }
+		command = { type = addcore which = 280 }
+		command = { type = addcore which = 190 }
+		command = { type = addcore which = 191 }
+		command = { type = addcore which = 192 }
+		command = { type = addcore which = 186 }
+		command = { type = addcore which = 187 }
+		command = { type = addcore which = 188 }
+		command = { type = addcore which = 189 }
+		command = { type = addcore which = 185 }
+		command = { type = addcore which = 184 }
+		command = { type = addcore which = 183 }
+		command = { type = addcore which = 182 }
+		command = { type = addcore which = 181 }
+		command = { type = addcore which = 180 }
+		command = { type = addcore which = 153 }
+		command = { type = addcore which = 154 }
+		command = { type = addcore which = 155 }
+		command = { type = addcore which = 159 }
+		command = { type = addcore which = 157 }
+		command = { type = addcore which = 156 }
+		command = { type = addcore which = 165 }
+		command = { type = addcore which = 166 }
+		command = { type = addcore which = 169 }
+		command = { type = addcore which = 160 }
+		command = { type = addcore which = 167 }
+		command = { type = addcore which = 163 }
+		command = { type = addcore which = 168 }
+		command = { type = addcore which = 162 }
+		command = { type = addcore which = 161 }
+		command = { type = addcore which = 164 }
+		command = { type = addcore which = 1777 }
+		command = { type = addcore which = 1837 }
+		command = { type = addcore which = 1838 }
+		command = { type = addcore which = 1832 }
+		command = { type = addcore which = 1836 }
+		command = { type = addcore which = 1835 }
+		command = { type = addcore which = 1834 }
+		command = { type = addcore which = 1874 }
+		command = { type = addcore which = 1850 }
+		command = { type = addcore which = 1856 }
+		command = { type = addcore which = 1857 }
+		command = { type = addcore which = 1858 }
+		command = { type = addcore which = 1907 }
+		command = { type = addcore which = 1846 }
+		command = { type = addcore which = 1842 }
+		command = { type = addcore which = 1847 }
+		command = { type = addcore which = 1843 }
+		command = { type = addcore which = 1844 }
+		command = { type = addcore which = 1845 }
+		command = { type = addcore which = 1848 }
+		# New in HOI2, apparently German Russia
+		command = { type = addcore which = 194 }
+		command = { type = addcore which = 193 }
+		command = { type = addcore which = 195 }
+		command = { type = addcore which = 196 }
+		command = { type = addcore which = 199 }
+		command = { type = addcore which = 198 }
+		command = { type = addcore which = 197 }
+		command = { type = addcore which = 205 }
+		command = { type = addcore which = 204 }
+		command = { type = addcore which = 203 }
+		command = { type = addcore which = 202 }
+		command = { type = addcore which = 214 }
+		command = { type = addcore which = 577 }
+		command = { type = addcore which = 511 }
+		command = { type = addcore which = 207 }
+		command = { type = addcore which = 208 }
+		command = { type = addcore which = 213 }
+		command = { type = addcore which = 509 }
+		command = { type = addcore which = 209 }
+		command = { type = addcore which = 211 }
+		command = { type = addcore which = 508 }
+		command = { type = addcore which = 507 }
+		command = { type = addcore which = 210 }
+		command = { type = addcore which = 505 }
+		command = { type = addcore which = 503 }
+		command = { type = addcore which = 222 }
+		command = { type = addcore which = 504 }
+		command = { type = addcore which = 562 }
+		command = { type = addcore which = 506 }
+		command = { type = addcore which = 502 }
+		command = { type = addcore which = 501 }
+		command = { type = addcore which = 229 }
+		command = { type = addcore which = 500 }
+		command = { type = addcore which = 179 }
+		command = { type = addcore which = 243 }
+		command = { type = addcore which = 158 }
+		command = { type = addcore which = 1833 }
+		command = { type = addcore which = 1849 }
+		# Japanese Slice of the Cake:
+		command = { type = addcore which = 1175 } # Northern Sakhalin
+		command = { type = addcore which = 1172 } # Commodore
+		command = { type = addcore which = 1171 } # Kamtjatka
+		command = { type = addcore which = 1405 }
+		command = { type = addcore which = 1176 }
+		command = { type = addcore which = 1174 }
+		command = { type = addcore which = 1366 } # Vanino
+		command = { type = addcore which = 1368 } # Ulunga
+		command = { type = addcore which = 1369 } # Dalnegorsk
+		command = { type = addcore which = 1373 } # Spassk Dalnij
+		command = { type = addcore which = 1370 } # Dalneretjensk
+		command = { type = addcore which = 1367 } # Chabarovsk
+		command = { type = addcore which = 1371 } # Nachodka
+		command = { type = addcore which = 1372 } # Vladivostok
+		# Even bigger slice for Japan
+		command = { type = addcore which = 1160 }
+		command = { type = addcore which = 1166 }
+		command = { type = addcore which = 1167 }
+		command = { type = addcore which = 1163 }
+		command = { type = addcore which = 1161 } #new
+		command = { type = addcore which = 1165 }
+		command = { type = addcore which = 1170 }
+		command = { type = addcore which = 1158 }
+		command = { type = addcore which = 1159 }
+		command = { type = addcore which = 1525 }
+		command = { type = addcore which = 1522 }
+		command = { type = addcore which = 1524 }
+		command = { type = addcore which = 1521 }
+		command = { type = addcore which = 1520 }
+		command = { type = addcore which = 1412 }
+		command = { type = addcore which = 1411 }
+		command = { type = addcore which = 1409 }
+		command = { type = addcore which = 1384 }
+		command = { type = addcore which = 1383 }
+		command = { type = addcore which = 1410 }
+		command = { type = addcore which = 1526 }
+		command = { type = addcore which = 1523 }
+		command = { type = addcore which = 1528 }
+		command = { type = addcore which = 1529 }
+		command = { type = addcore which = 1527 }
+		command = { type = addcore which = 1404 }
+		command = { type = addcore which = 1437 }
+		command = { type = addcore which = 1438 }
+		command = { type = addcore which = 1399 }
+		command = { type = addcore which = 1164 }
+		command = { type = addcore which = 1418 } #Incase Tannu is dead
+	}
+}
+
+event = {
+	id = 131711
+	random = no 
+	country = SOV
+
+	trigger = {
+		atwar = no
+		OR = {
+			flag = sovcapescaped1
+			flag = sovcapescaped2
+			flag = sovcapescaped3
+		}
+		control = { province = 175 data = SOV } # Around Moscow
+		control = { province = 174 data = SOV }
+		control = { province = 176 data = SOV }
+		control = { province = 178 data = SOV }
+		control = { province = 180 data = SOV }
+		control = { province = 94 data = SOV }
+		control = { province = 182 data = SOV }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_131711_NAME"
+	desc = "EVT_131711_DESC"
+
+	picture = "soviet_politics2"
+
+	action_a = {
+		name = "EVT_131711_ACTA"
+		ai_chance = 100
+		command = { type = capital which = 175 } # Moscow
+		command = { type = clrflag which = sovcapescaped1 }
+		command = { type = clrflag which = sovcapescaped2 }
+		command = { type = clrflag which = sovcapescaped3 }
+	}
+}
+
+##########
+#  ソ連・ルーマニア戦争
+##########
+
+event = {
+	id = 131720
+	random = no
+	country = ROM
+
+	trigger = {
+		NOT = {
+			alliance = { country = GER country = SOV }
+			alliance = { country = GER country = ROM }
+		}
+		OR = {
+			control = { province = 233 data = ROM }
+			control = { province = 232 data = ROM }
+			control = { province = 231 data = ROM }
+			control = { province = 229 data = ROM }
+			control = { province = 500 data = ROM }
+		}
+		control = { province = 230 data = ROM }
+		control = { province = 434 data = ROM }
+		control = { province = 435 data = ROM }
+		control = { province = 433 data = ROM }
+		control = { province = 429 data = ROM }
+		war = { country = SOV country = ROM }
+		NOT = {
+			war = { country = SOV country = GER }
+		}
+		random = 30 #so romanians have to hold the territory for who knows how long
+	}
+
+	date = { day = 1 month = january year = 1940 }
+	offset = 5 #5 days as opposed to 1 so romanians have to hold territory
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_131720_NAME"
+	desc = "EVT_131720_DESC"
+
+	picture = "romania_tank"
+
+	action_a = {
+		name = "EVT_131720_ACTA"
+		ai_chance = 100
+		command = { type = dissent value = -15 }
+		command = { type = trigger which = 131721 }
+	}
+	action_b = {
+		name = "EVT_131720_ACTB"
+		ai_chance = 0
+		command = { type = dissent value = 15 }
+	}
+}
+
+event = {
+	id = 131721
+	random = no
+	country = SOV
+
+	name = "EVT_131721_NAME"
+	desc = "EVT_131721_DESC"
+
+	picture = "romania_tank"
+
+	action_a = {
+		name = "EVT_131721_ACTA"
+		ai_chance = 100
+		command = { type = peace which = ROM value = 0 }
+		command = { type = access which = ROM }
+	}
+	action_b = {
+		name = "EVT_131721_ACTB"
+		ai_chance = 0
+		command = { type = dissent value = 15 }
+		command = { type = sleepevent which = 131722 } #USSR gives spoils
+	}
+}
+
+event = {
+	id = 131722
+	random = no
+	country = SOV
+
+	trigger = {
+		event = 131721
+	}
+
+	date = { day = 1 month = january year = 1940 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_131722_NAME"
+	desc = "EVT_131722_DESC"
+
+	picture = "surrender"
+
+	action_a = {
+		name = "EVT_131722_ACTA"
+		command = { type = dissent value = 25 }
+		command = { type = removecore which = 230 } #bessarabia
+		command = { type = removecore which = 434 }
+		command = { type = removecore which = 435 }
+		command = { type = secedeprovince which = ROM value = 230 }
+		command = { type = secedeprovince which = ROM value = 434 }
+		command = { type = secedeprovince which = ROM value = 435 }
+	}
+}
+
+event = {
+	id = 131723
+	random = no
+	country = SOV
+
+	trigger = {
+		NOT = {
+			alliance = { country = GER country = SOV }
+			alliance = { country = GER country = ROM }
+		}
+		lost_national = { country = ROM value = 25 }
+		war = { country = SOV country = ROM }
+		NOT = {
+			war = { country = SOV country = GER }
+			event = 131300 #these events signal german defeat
+			event = 131301
+			event = 131302
+			event = 131303
+			event = 131304
+		}
+	}
+
+	date = { day = 1 month = january year = 1940 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_131723_NAME"
+	desc = "EVT_131723_DESC"
+
+	picture = "hungarian_tank"
+
+	action_a = {
+		name = "EVT_131723_ACTA"
+		ai_chance = 100
+		command = { type = dissent value = -2 }
+		command = { type = trigger which = 131724 }
+	}
+	action_b = {
+		name = "EVT_131723_ACTB"
+		ai_chance = 0
+		command = { type = dissent value = 10 }
+	}
+}
+
+event = {
+	id = 131724
+	random = no
+	country = ROM
+
+	name = "EVT_131724_NAME"
+	desc = "EVT_131724_DESC"
+
+	picture = "hungarian_tank"
+
+	action_a = {
+		name = "EVT_131724_ACTA"
+		ai_chance = 100
+		command = { type = peace which = SOV value = 1 }
+		command = { type = access which = SOV }
+	}
+	action_b = {
+		name = "EVT_131724_ACTB"
+		ai_chance = 0
+		command = { type = dissent value = 15 }
+		command = { type = sleepevent which = 131725 } #USSR gives spoils
+	}
+}
+
+event = {
+	id = 131725
+	random = no
+	country = ROM
+
+	trigger = {
+		event = 131724
+	}
+
+	date = { day = 1 month = january year = 1940 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_131725_NAME"
+	desc = "EVT_131725_DESC"
+
+	picture = "surrender"
+
+	action_a = {
+		name = "EVT_131725_ACTA"
+		command = { type = dissent value = 10 }
+		command = { type = secedeprovince which = SOV value = 230 }
+		command = { type = secedeprovince which = SOV value = 434 }
+		command = { type = secedeprovince which = SOV value = 435 }
+	}
+}
+
+##########
+#  日ソ国境紛争講和
+##########
+
+event = {
+	id = 131730
+	random = no
+	country = JAP
+
+	trigger = {
+		war = { country = JAP country = SOV }
+		NOT = {
+			alliance = { country = SOV country = GER }
+			alliance = { country = JAP country = GER }
+			alliance = { country = JAP country = ENG }
+			alliance = { country = JAP country = USA }
+			war = { country = GER country = SOV }
+			war = { country = JAP country = USA }
+		#	event = 2625 #bitter peace with germany
+		#	event = 2646 #bitter peace with germany and japan
+			#FEPKBETA3
+			event = 135303 #bitter peace with germany
+			event = 135313 #bitter peace with germany and japan
+		}
+		NOT = {
+			control = { province = 1371 data = SOV } #vlad region
+			control = { province = 1372 data = SOV }
+			control = { province = 1373 data = SOV }
+			control = { province = 1523 data = SOV } #above Manchuria
+			control = { province = 1390 data = SOV } #Manchuria
+		}
+		exists = GER	#ドイツを倒した後なら日本なんかと講和してやる義理はないので
+	}
+
+        date = { day = 0 month = january year = 1935 }
+        offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_131730_NAME"
+	desc = "EVT_131730_DESC"
+
+	picture = "Nomonhan"
+
+	action_a = {
+		name = "EVT_131730_ACTA"
+		ai_chance = 100
+		command = { type = trigger which = 131731 }
+		command = { type = sleepevent which = 59930 } #極東
+		command = { type = sleepevent which = 59931 }
+		command = { type = sleepevent which = 59932 }
+		command = { type = sleepevent which = 59933 }
+		command = { type = sleepevent which = 59934 }
+		command = { type = sleepevent which = 59935 }
+		command = { type = sleepevent which = 59939 }
+	}
+	action_b = {
+		name = "EVT_131730_ACTB"
+		ai_chance = 0
+		command = { type = dissent value = 5 }
+		command = { type = sleepevent which = 59930 } #極東
+		command = { type = sleepevent which = 59931 }
+		command = { type = sleepevent which = 59932 }
+		command = { type = sleepevent which = 59933 }
+		command = { type = sleepevent which = 59934 }
+		command = { type = sleepevent which = 59935 }
+		command = { type = sleepevent which = 59939 }
+	}
+}
+
+event = {
+	id = 131731
+	random = no
+	country = SOV
+
+	name = "EVT_131731_NAME"
+	desc = "EVT_131731_DESC"
+
+	picture = "Nomonhan"
+
+	action_a = {
+		name = "EVT_131731_ACTA"
+		ai_chance = 100
+		command = { type = peace which = JAP value = 0 }
+		command = { type = peace which = MAN value = 0 }
+		command = { type = peace which = MEN value = 0 }
+		command = { type = access which = JAP }
+		command = { type = access which = MAN }
+		command = { type = access which = MEN }
+	}
+	action_b = {
+		name = "EVT_131731_ACTB"
+		ai_chance = 0
+		command = { type = sleepevent which = 131732 }
+		command = { type = dissent value = 20 }
+		command = { type = domestic which = defense_lobby value = 1 }
+	}
+}
+
+event = {
+	id = 131732
+	random = no
+	country = SOV
+
+	trigger = {
+		event = 131731
+	}
+
+        date = { day = 0 month = january year = 1935 }
+        offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_131732_NAME"
+	desc = "EVT_131732_DESC"
+
+	picture = "Nomonhan"
+
+	action_a = {
+		name = "EVT_131732_ACTA"
+		command = { type = end_mastery which = MAN }
+		command = { type = end_mastery which = MEN }
+		command = { type = end_mastery which = MON }
+		command = { type = end_mastery which = TAN }
+		command = { type = end_mastery which = SIK }
+		command = { type = inherit which = TAN }
+		command = { type = independence which = MAN value = 1 }
+		command = { type = independence which = MEN value = 1 }
+		command = { type = independence which = MON value = 1 }
+
+		#Japanese islands
+		command = { type = removecore which = 1174 }
+		command = { type = removecore which = 1175 }
+		command = { type = removecore which = 1176 }
+		command = { type = removecore which = 1177 }
+		#Primorsk region
+		command = { type = removecore which = 1366 }
+		command = { type = removecore which = 1367 }
+		command = { type = removecore which = 1368 }
+		command = { type = removecore which = 1369 }
+		command = { type = removecore which = 1370 }
+		command = { type = removecore which = 1371 }
+		command = { type = removecore which = 1372 }
+		command = { type = removecore which = 1373 }
+		#Tannu
+		command = { type = addcore which = 1418 }
+
+		#Japanese islands
+		command = { type = secedeprovince which = JAP value = 1174 }
+		command = { type = secedeprovince which = JAP value = 1175 }
+		command = { type = secedeprovince which = JAP value = 1176 }
+		command = { type = secedeprovince which = JAP value = 1177 }
+		#Primorsk region
+		command = { type = secedeprovince which = JAP value = 1366 }
+		command = { type = secedeprovince which = JAP value = 1367 }
+		command = { type = secedeprovince which = JAP value = 1368 }
+		command = { type = secedeprovince which = JAP value = 1369 }
+		command = { type = secedeprovince which = JAP value = 1370 }
+		command = { type = secedeprovince which = JAP value = 1371 }
+		command = { type = secedeprovince which = JAP value = 1372 }
+		command = { type = secedeprovince which = JAP value = 1373 }
+		#Xinjiang
+		command = { type = secedeprovince which = JAP value = 1433 }
+		command = { type = secedeprovince which = JAP value = 1421 }
+		command = { type = secedeprovince which = JAP value = 1432 }
+		command = { type = secedeprovince which = JAP value = 1446 }
+		command = { type = secedeprovince which = JAP value = 1430 }
+		command = { type = secedeprovince which = JAP value = 1431 }
+		command = { type = secedeprovince which = JAP value = 1435 }
+		command = { type = secedeprovince which = JAP value = 1445 }
+		command = { type = secedeprovince which = JAP value = 1447 }
+		#Tibet
+		command = { type = secedeprovince which = JAP value = 1448 }
+		command = { type = secedeprovince which = JAP value = 1450 }
+		command = { type = secedeprovince which = JAP value = 1451 }
+		command = { type = secedeprovince which = JAP value = 1452 }
+		command = { type = secedeprovince which = JAP value = 1453 }
+		command = { type = secedeprovince which = JAP value = 1283 }
+
+		command = { type = non_aggression which = SOV where = JAP }
+		command = { type = set_relation which = JAP value = 0 }
+		command = { type = set_relation which = MAN value = 0 }
+		command = { type = set_relation which = MEN value = 0 }
+
+		command = { type = dissent value = 15 }
+		command = { type = trigger which = 131733 }
+	}
+}
+
+event = {
+	id = 131733
+	random = no
+	country = JAP
+
+	name = "EVT_131733_NAME"
+	desc = "EVT_131733_DESC"
+
+	picture = "Nomonhan"
+
+	action_a = {
+		name = "EVT_131733_ACTA"
+		command = { type = dissent value = -15 }
+		command = { type = inherit which = MON }
+		command = { type = make_puppet which = MAN }
+		command = { type = secedeprovince which = SOV value = 1418 }
+		command = { type = independence which = MEN value = 1 }
+		command = { type = make_puppet which = MEN }	#遠藤マイクロ
+		#Primorsk region
+		command = { type = addclaim which = 1366 }
+		command = { type = addclaim which = 1367 }
+		command = { type = addclaim which = 1368 }
+		command = { type = addclaim which = 1369 }
+		command = { type = addclaim which = 1370 }
+		command = { type = addclaim which = 1371 }
+		command = { type = addclaim which = 1372 }
+		command = { type = addclaim which = 1373 }
+	}
+}
+
+##########
+#  ビターピース～中国
+##########
+
+event = {
+	id = 131740
+	random = no
+	country = SOV
+
+	trigger = {
+		OR = {
+		#	event = 2625 #bitter peace with germany
+		#	event = 2646 #bitter peace with germany and japan
+			#FEPKBETA3
+			event = 135303 #bitter peace with germany
+			event = 135313 #bitter peace with germany and japan
+		}
+		OR = {
+			alliance = { country = CHI country = GER }
+			event = 55341
+		}
+		NOT = {
+			puppet = { country = CHI country = JAP }
+		}
+	}
+
+        date = { day = 0 month = january year = 1935 }
+        offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_131740_NAME"
+	desc = "EVT_131740_DESC"
+
+        picture = "Nomonhan"
+
+	action_a = {
+		name = "EVT_131740_ACTA"
+		ai_chance = 100
+		command = { type = access which = CHI }
+		command = { type = removecore which = 1420 } #claims on mon
+		command = { type = removecore which = 1434 }
+		command = { type = removecore which = 1436 }
+		command = { type = removecore which = 1419 }
+		command = { type = removecore which = 1404 }
+		command = { type = removecore which = 1437 }
+		command = { type = removecore which = 1438 }
+		command = { type = removecore which = 1399 }
+		command = { type = removecore which = 1385 }
+		command = { type = removecore which = 1418 } #claims on tan
+		command = { type = removecore which = 1520 } #the rest of tgreater mongolia
+		command = { type = removecore which = 1384 }
+		command = { type = removecore which = 1383 }
+		command = { type = removecore which = 1528 } #primorsk region
+		command = { type = removecore which = 1529 }
+		command = { type = removecore which = 1527 }
+		command = { type = removecore which = 1366 }
+		command = { type = removecore which = 1368 }
+		command = { type = removecore which = 1367 }
+		command = { type = removecore which = 1369 }
+		command = { type = removecore which = 1370 }
+		command = { type = removecore which = 1371 }
+		command = { type = removecore which = 1372 }
+		command = { type = removecore which = 1373 }
+		command = { type = removecore which = 1175 } #Sakhalin Island, new, CCIP
+		command = { type = removecore which = 1176 }
+		command = { type = removecore which = 1429 } #Lake Bikal Area
+		command = { type = removecore which = 1422 } 
+		command = { type = removecore which = 1556 }
+		command = { type = removecore which = 1423 }
+		command = { type = removecore which = 1557 }
+		command = { type = removecore which = 1521 } #new, CCIP
+		command = { type = removecore which = 1522 } #new, CCIP
+		command = { type = removecore which = 1525 } #Okhotsk
+		command = { type = removecore which = 1526 }
+		command = { type = secedeprovince which = CHI value = 1420 } #claims on mon
+		command = { type = secedeprovince which = CHI value = 1434 }
+		command = { type = secedeprovince which = CHI value = 1436 }
+		command = { type = secedeprovince which = CHI value = 1419 }
+		command = { type = secedeprovince which = CHI value = 1404 }
+		command = { type = secedeprovince which = CHI value = 1437 }
+		command = { type = secedeprovince which = CHI value = 1438 }
+		command = { type = secedeprovince which = CHI value = 1399 }
+		command = { type = secedeprovince which = CHI value = 1385 }
+		command = { type = secedeprovince which = CHI value = 1418 } #claims on tan
+		command = { type = secedeprovince which = CHI value = 1520 } #the rest of greater mongolia
+		command = { type = secedeprovince which = CHI value = 1384 }
+		command = { type = secedeprovince which = CHI value = 1383 }
+		command = { type = secedeprovince which = CHI value = 1528 } #primorsk region
+		command = { type = secedeprovince which = CHI value = 1529 }
+		command = { type = secedeprovince which = CHI value = 1527 }
+		command = { type = secedeprovince which = CHI value = 1366 }
+		command = { type = secedeprovince which = CHI value = 1368 }
+		command = { type = secedeprovince which = CHI value = 1367 }
+		command = { type = secedeprovince which = CHI value = 1369 }
+		command = { type = secedeprovince which = CHI value = 1370 }
+		command = { type = secedeprovince which = CHI value = 1371 }
+		command = { type = secedeprovince which = CHI value = 1372 }
+		command = { type = secedeprovince which = CHI value = 1373 }
+		command = { type = secedeprovince which = CHI value = 1175 } #Sakhalin Island, new, CCIP
+		command = { type = secedeprovince which = CHI value = 1176 }
+		command = { type = secedeprovince which = CHI value = 1429 } #Lake Bikal Area
+		command = { type = secedeprovince which = CHI value = 1422 } 
+		command = { type = secedeprovince which = CHI value = 1556 }
+		command = { type = secedeprovince which = CHI value = 1423 }
+		command = { type = secedeprovince which = CHI value = 1557 }
+		command = { type = secedeprovince which = CHI value = 1521 } #new, CCIP
+		command = { type = secedeprovince which = CHI value = 1522 } #new, CCIP
+		command = { type = secedeprovince which = CHI value = 1525 } #Okhotsk
+		command = { type = secedeprovince which = CHI value = 1526 }
+		command = { type = end_mastery which = MON }
+		command = { type = end_mastery which = TAN }
+		command = { type = end_mastery which = SIK }
+		command = { type = trigger which = 131741 } #chinese empire
+	}
+}
+
+event = {
+	id = 131741
+	random = no
+	country = CHI
+
+	name = "EVT_131741_NAME"
+	desc = "EVT_131741_DESC"
+        picture = "Nomonhan"
+
+	action_a = {
+		name = "EVT_131741_ACTA"
+		ai_chance = 100
+		command = { type = addcore which = 1420 } #claims on mon
+		command = { type = addcore which = 1434 }
+		command = { type = addcore which = 1436 }
+		command = { type = addcore which = 1419 }
+		command = { type = addcore which = 1404 }
+		command = { type = addcore which = 1437 }
+		command = { type = addcore which = 1438 }
+		command = { type = addcore which = 1399 }
+		command = { type = addcore which = 1385 }
+		command = { type = addcore which = 1418 } #claims on tan
+		command = { type = addcore which = 1520 } #the rest of greater mongolia
+		command = { type = addcore which = 1384 }
+		command = { type = addcore which = 1383 }
+		command = { type = addcore which = 1528 } #primorsk region
+		command = { type = addcore which = 1529 }
+		command = { type = addcore which = 1527 }
+		command = { type = addcore which = 1366 }
+		command = { type = addcore which = 1368 }
+		command = { type = addcore which = 1367 }
+		command = { type = addcore which = 1369 }
+		command = { type = addcore which = 1370 }
+		command = { type = addcore which = 1371 }
+		command = { type = addcore which = 1372 }
+		command = { type = addcore which = 1373 }
+		command = { type = addcore which = 1175 } #Sakhalin Island, new, CCIP
+		command = { type = addcore which = 1176 }
+		command = { type = addcore which = 1429 } #Lake Bikal Area
+		command = { type = addcore which = 1422 } 
+		command = { type = addcore which = 1556 }
+		command = { type = addcore which = 1423 }
+		command = { type = addcore which = 1557 }
+		command = { type = addcore which = 1521 } #new, CCIP
+		command = { type = addcore which = 1522 } #new, CCIP
+		command = { type = addcore which = 1525 } #Okhotsk
+		command = { type = addcore which = 1526 }
+		command = { type = inherit which = MON }
+		command = { type = inherit which = TAN }
+		command = { type = dissent value = -20 }
+	}
+}
+
+event = {
+	id = 131742
+	random = no
+	country = ENG
+
+	trigger = {
+		event = 131002 #actual treaty
+		NOT = {
+			puppet = { country = CHI country = JAP }
+		}
+		alliance = { country = CHI country = GER }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_131742_NAME"
+	desc = "EVT_131742_DESC"
+
+	picture = "surrender"
+
+	action_a = {
+		name = "EVT_131742_ACTA"
+		ai_chance = 100
+		command = { type = secedeprovince which = CHI value = 1474 } #?
+		command = { type = secedeprovince which = CHI value = 1473 } #?
+		command = { type = secedeprovince which = CHI value = 1455 } #?
+		command = { type = secedeprovince which = CHI value = 1454 } #?
+		command = { type = secedeprovince which = CHI value = 1315 } #hongkong
+		command = { type = trigger which = 131743 } #china gets stuff
+	}
+}
+
+event = {
+	id = 131743
+	random = no
+	country = CHI
+
+	name = "EVT_131743_NAME"
+	desc = "EVT_131743_DESC"
+
+	#picture = "korea_independent"
+
+	action_a = {
+		ai_chance = 100
+		name = "EVT_131743_ACTA"
+		command = { type = addcore which = 1474 } #
+		command = { type = addcore which = 1473 } #
+		command = { type = addcore which = 1455 } #
+		command = { type = addcore which = 1454 } #
+		command = { type = addcore which = 1315 } #hongkong
+		command = { type = addcore which = 1316 } #macao
+	}
+}
+
+event = {
+	id = 131744
+	random = no
+	country = JAP
+
+	trigger = {
+		event = 131741 #axis china received spoils from USSR
+		alliance = { country = CHI country = GER }
+		alliance = { country = JAP country = GER }
+		NOT = {
+			puppet = { country = CHI country = JAP }
+		}
+	}
+
+        date = { day = 0 month = january year = 1935 }
+        offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_131744_NAME"
+	desc = "EVT_131744_DESC"
+
+        picture = "Nomonhan"
+
+	action_a = {
+		name = "EVT_131744_ACTA"
+		ai_chance = 100
+		command = { type = relation which = CHI value = -50 }
+		command = { type = secedeprovince which = CHI value = 1420 } #claims on mon
+		command = { type = secedeprovince which = CHI value = 1434 }
+		command = { type = secedeprovince which = CHI value = 1436 }
+		command = { type = secedeprovince which = CHI value = 1419 }
+		command = { type = secedeprovince which = CHI value = 1404 }
+		command = { type = secedeprovince which = CHI value = 1437 }
+		command = { type = secedeprovince which = CHI value = 1438 }
+		command = { type = secedeprovince which = CHI value = 1399 }
+		command = { type = secedeprovince which = CHI value = 1385 }
+		command = { type = secedeprovince which = CHI value = 1418 } #claims on tan
+		command = { type = secedeprovince which = CHI value = 1520 } #the rest of greater mongolia
+		command = { type = secedeprovince which = CHI value = 1384 }
+		command = { type = secedeprovince which = CHI value = 1383 }
+		command = { type = secedeprovince which = CHI value = 1528 } #primorsk region
+		command = { type = secedeprovince which = CHI value = 1529 }
+		command = { type = secedeprovince which = CHI value = 1527 }
+		command = { type = secedeprovince which = CHI value = 1366 }
+		command = { type = secedeprovince which = CHI value = 1368 }
+		command = { type = secedeprovince which = CHI value = 1367 }
+		command = { type = secedeprovince which = CHI value = 1369 }
+		command = { type = secedeprovince which = CHI value = 1370 }
+		command = { type = secedeprovince which = CHI value = 1371 }
+		command = { type = secedeprovince which = CHI value = 1372 }
+		command = { type = secedeprovince which = CHI value = 1373 }
+		command = { type = secedeprovince which = CHI value = 1175 } #Sakhalin Island, new, CCIP
+		command = { type = secedeprovince which = CHI value = 1176 }
+		command = { type = secedeprovince which = CHI value = 1429 } #Lake Bikal Area
+		command = { type = secedeprovince which = CHI value = 1422 } 
+		command = { type = secedeprovince which = CHI value = 1556 }
+		command = { type = secedeprovince which = CHI value = 1423 }
+		command = { type = secedeprovince which = CHI value = 1557 }
+		command = { type = secedeprovince which = CHI value = 1521 } #new, CCIP
+		command = { type = secedeprovince which = CHI value = 1522 } #new, CCIP
+	}
+}
+
+event = {
+	id = 131745
+	country = KAZ
+	trigger = {
+		core = { province = 1422 data = CHI }
+		NOT = { control = { province = 1422 data = KAZ } }
+		control = { province = 1590 data = KAZ }
+		event = 131741
+	}
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_131745_NAME"	#アクモリンスクへ遷都
+	desc = "EVT_131745_DESC"	#
+	
+	action = {
+		name = "EVT_131745_ACTA"	#「聖地」アクモラの誕生だ！
+		command = { type = dissent value = -2 }
+		command = { type = capital which = 1590 }
+	}
+}
+
+##########
+#  大粛清からの回復
+##########
+
+event = {
+	id = 131750
+	random = no 
+	country = SOV
+	
+	trigger = {
+		atwar = yes
+		local_flag = SOVPurge1
+		OR = {
+			AND = { #ドイツ・ソ連いずれかがプレイヤー #ドイツプレイヤーなら完全回復 #ソ連プレイヤーなら半分回復
+				OR = {
+					NOT = {	ai = yes }
+					AND = {
+						exists = GER
+						NOT = {	ai = GER }
+					}
+				}
+				OR = {
+					event = 2656 #戦争の準備0.8
+					event = 2657 #大祖国戦争
+				}
+			}
+			AND = { #独ソAI
+				ai = yes
+				OR = {
+					ai = GER
+					NOT = {
+						exists = GER
+					}
+				}
+				OR = { # HQ`43
+					technology = 6080
+					technology = 6180
+					technology = 6190
+					technology = 6200
+					technology = 6270
+					technology = 6350
+				}
+				random = 25
+			}
+		}
+	}
+
+	name = "EVT_131750_NAME"
+	desc = "EVT_131750_DESC"
+	style = 0
+
+        picture = "ussr_strategic_victory"
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "EVT_131750_ACTA"
+		ai_chance = 100
+		command = { type = morale which = land value = 30 }
+		command = { type = max_organization which = land value = 20 }
+		command = { type = morale which = air value = 20 }
+		command = { type = max_organization which = air value = 20 }
+
+		#DHSA0.4
+		#空軍調整
+		#制空権、地上攻撃、スクランブル-70、その他-35
+		command = { type = task_efficiency which = air_superiority value = 0.7 }
+		command = { type = task_efficiency which = ground_attack value = 0.7 }
+		command = { type = task_efficiency which = air_scramble value = 0.7 }
+		command = { type = task_efficiency which = runway_cratering value = 0.35 }
+		command = { type = task_efficiency which = installation_strike value = 0.35 }
+		command = { type = task_efficiency which = interdiction value = 0.35 }
+		command = { type = task_efficiency which = naval_strike value = 0.35 }
+		command = { type = task_efficiency which = port_strike value = 0.35 }
+		command = { type = task_efficiency which = logistical_strike value = 0.35 }
+		command = { type = task_efficiency which = strategic_bombardment value = 0.35 }
+
+		command = { type = local_clrflag which = SOVPurge1 } #FEPKBETA5.2
+	}
+}
+
+event = { # second molare jump event
+	id = 131751
+	random = no
+	country = SOV
+
+	trigger= {
+		atwar = yes
+		local_flag = SOVPurge2
+		OR = { # HQ`43
+			technology = 6080
+			technology = 6180
+			technology = 6190
+			technology = 6200
+			technology = 6270
+			technology = 6350
+		}
+		OR = {
+			AND = {
+				ai = yes
+				random = 15
+			}
+			ai = no
+			NOT = { ai = GER }
+		}
+	}
+
+	name = "EVT_131750_NAME"
+	desc = "EVT_131750_DESC"
+	style = 0
+
+        picture = "ussr_strategic_victory"
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "EVT_131750_ACTA"
+		ai_chance = 100
+		command = { type = morale which = land value = 30 }
+		command = { type = max_organization which = land value = 20 }
+
+		command = { type = morale which = air value = 20 }
+		command = { type = max_organization which = air value = 20 }
+
+		command = { type = local_clrflag which = SOVPurge2 } #FEPKBETA5.2
+	}
+}
+
+event = {
+	id = 131760
+	random = no
+	country = SOV
+	save_date = yes
+	
+	trigger = {
+		NOT = { exists = MON }
+		control = { province = 1404 data = SOV } # ウランバートル
+	}
+	
+	name = "EVT_131760_NAME"	#モンゴルの運命
+	desc = "EVT_131760_DESC"	#モンゴルは極東での戦いの中で戦場となり、今は赤軍のコントロール下にある。モンゴル人民共和国成立初期、ソ連はモンゴルを自らの連邦に加えようとしていたという説もある。それを再び検討するか、もしくはモスクワから間接統治的な、2つめのモンゴル人民共和国を成立させる手もある。
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = "EVT_131760_ACTA"	#モンゴル第二人民共和国を独立させる
+		ai_chance = 80
+		command = { type = independence which = MON value = 1 }
+		command = { type = alliance which = MON }
+		command = { type = make_puppet which = MON }
+		command = { type = sleepevent which = 131761 }
+	}
+	action = {
+		trigger = {
+			alliance = { country = CHC }
+		}
+		ai_chance = 15
+		name = "EVT_131760_ACTB"	#内外モンゴルの統一として、中華人民共和国が併合すべきだ
+		command = { type = dissent value = 3 }
+		command = { type = relation which = CHC value = 50 }
+		command = { type = secedeprovince which = CHC value = 1420 }
+		command = { type = secedeprovince which = CHC value = 1434 }
+		command = { type = secedeprovince which = CHC value = 1436 }
+		command = { type = secedeprovince which = CHC value = 1419 }
+		command = { type = secedeprovince which = CHC value = 1404 }
+		command = { type = secedeprovince which = CHC value = 1437 }
+		command = { type = secedeprovince which = CHC value = 1438 }
+		command = { type = secedeprovince which = CHC value = 1399 }
+		command = { type = secedeprovince which = CHC value = 1385 }
+		command = { type = sleepevent which = 131761 }
+	}
+	action = {
+		name = "EVT_131760_ACTC"	#第18番目の共和国としてソビエト連邦に加盟させる
+		ai_chance = 5
+		command = { type = dissent value = 5 }
+		command = { type = addclaim which = 1420 }
+		command = { type = addclaim which = 1434 }
+		command = { type = addclaim which = 1436 }
+		command = { type = addclaim which = 1419 }
+		command = { type = addclaim which = 1404 }
+		command = { type = addclaim which = 1437 }
+		command = { type = addclaim which = 1438 }
+		command = { type = addclaim which = 1399 }
+		command = { type = addclaim which = 1385 }
+		command = { type = relation which = CHC value = -30 }
+	}
+}
+
+event = {
+	id = 131761
+	random = no
+	country = SOV
+	
+	trigger = {
+		event = { id = 131760 days = 480 }
+		control = { province = 1404 data = SOV } # ウランバートル
+	}
+	
+	name = "EVT_131761_NAME"	#モンゴル共和国の統合
+	desc = "EVT_131761_DESC"	#スターリンの首輪のもとでなんとかモンゴルの独立を保ってきたチョイバルサンが失脚した後、深刻な幹部の不足に見舞われたモンゴル人民革命党は、モスクワに対して言い返す能力を最早保つことはできなかった。弁務官めいたモンゴル党中央委員会書記がロシア本国から送られると、よりソ連に追従する政策が行われ、モンゴルはソ連に同化されることとなった。
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+	
+
+	action = {
+		name = "EVT_131761_ACTC"	#よろしい
+		command = { type = dissent value = 3 }
+		command = { type = addcore which = 1420 }
+		command = { type = addcore which = 1434 }
+		command = { type = addcore which = 1436 }
+		command = { type = addcore which = 1419 }
+		command = { type = addcore which = 1404 }
+		command = { type = addcore which = 1437 }
+		command = { type = addcore which = 1438 }
+		command = { type = addcore which = 1399 }
+		command = { type = addcore which = 1385 }
+	}
+}

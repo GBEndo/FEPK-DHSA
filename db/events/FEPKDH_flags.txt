@@ -1,0 +1,1511 @@
+#########################################################################
+#	FEPKDH_flags.txt
+#	FEPKDH用国旗・国名変更イベント by G.B.遠藤
+#########################################################################
+#id = 150100-01		国旗変更（日本属国オーストラリア連邦）・国旗戻し
+#id = 150102-03		国旗変更（日本属国ニュージーランド）・国旗戻し
+#id = 150104-06		国名変更（日本属国オーストララシア）・国名戻し
+#id = 150107		ITA	国旗変更（イタリア共和国）
+#id = 150108-09		国旗変更（日本属国カナダ）・国旗戻し
+#id = 150110-11		国旗・国名変更（ハンガリー＝クロアチア連立王国）・国旗戻し
+#id = 150112		国旗変更（ロンメル総統のドイツ国）
+#id = 150113		（空き）
+#id = 150114-15		国旗・国名変更（自由フランス・フランス第五共和制）
+#id = 150116		国旗変更（枢軸属国25州アメリカ）
+#id = 150117		国旗変更（共産アメリカ）
+#id = 150118		SPA	史実通りの国旗
+#id = 150119		SPA	カルリスタ
+#id = 150120		SPA	1945の国旗変更
+#id = 150121		U74	60845後の華北政府
+#id = 150122		JAP	国号変更（大日本帝国へ/1935版）
+#id = 150123		JAP	国号変更（大日本帝国へ/E55002版）
+#id = 150124		JAP	国号変更（降伏した日本）
+#id = 150125		ENG	国旗・国名変更（共産イギリス）
+#id = 150126		AUS	ハプスブルクのオーストリア
+#id = 150127		AUS	大ドイツのオーストリア
+#id = 150150		ソ連傀儡ポーランド
+#id = 150151		ソ連傀儡チェコスロバキア
+#id = 150152		ソ連傀儡ハンガリー
+#id = 150153		ソ連傀儡ルーマニア
+#id = 150154		ソ連傀儡ブルガリア
+#id = 150155		ソ連傀儡ノルウェー
+#id = 150156		ソ連傀儡スウェーデン
+#id = 150157		ソ連傀儡デンマーク
+#id = 150158		ソ連傀儡オーストリア
+#id = 150159		ソ連傀儡ギリシャ
+#id = 150160		ソ連傀儡ベルギー
+#id = 150161		ソ連傀儡オランダ
+#id = 150162		ソ連傀儡ルクセンブルク
+#id = 150163		ソ連傀儡フランス
+#id = 150164		ソ連傀儡ユーゴスラビア
+#id = 150165		ソ連傀儡アルバニア
+#id = 150166		ソ連傀儡スペイン共和国
+#id = 150167		ソ連傀儡ポルトガル
+#id = 150168		ソ連傀儡スイス
+#id = 150169		ソ連傀儡トルコ
+#id = 150170		ソ連傀儡ビルマ
+#id = 150171		ソ連傀儡インド
+#id = 150172		ソ連傀儡タイ
+#id = 150173		ソ連傀儡アフガニスタン
+#id = 150174		ソ連傀儡イタリア
+#id = 150175		ソ連傀儡日本
+#########################################################################
+#国旗・国号変更
+#オーストラリア
+event = {
+	id = 150100
+	country = AST
+	
+	trigger = {
+		event = 131645
+	}
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	style = 0
+	picture = "failed_coup"
+	
+	name = "EVT_150100_NAME"
+	desc = "EVT_150100_DESC"
+	
+	action_a = {
+		name = "EVT_150100_ACTA"	#無念
+		command = { type = dissent value = 5 }
+		command = { type = flag_ext where = AST which = "_jap" }
+		}
+}
+
+event = {
+	id = 150101
+	country = AST
+	
+	trigger = {
+		event = 150100
+		alliance = { country = ENG country = AST }
+		OR = {
+			event = 131510	#対米降伏
+			event = 131520	#対ソ降伏
+		}
+	}
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	style = 0
+	picture = "failed_coup"
+	
+	name = "EVT_150101_NAME"
+	desc = "EVT_150101_DESC"
+			
+	action_a = {
+		name = "MILALLACCEPT_BTN1"	#大変結構！
+		command = { type = dissent value = -2.5 }
+		command = { type = flag_ext where = AST }
+	}
+}
+
+
+#ニュージーランド
+event = {
+	id = 150102
+	country = NZL
+	
+	trigger = {
+		event = 131655
+	}
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	style = 0
+	picture = "failed_coup"
+	
+	name = "EVT_150102_NAME"
+	desc = "EVT_150100_DESC"
+	
+	action_a = {
+		name = "EVT_150100_ACTA"	#無念
+		command = { type = dissent value = 5 }
+		command = { type = flag_ext where = NZL which = "_jap" }
+		}
+}
+
+event = {
+	id = 150103
+	country = NZL
+	
+	trigger = {
+		event = 150102
+		alliance = { country = ENG country = NZL }
+		OR = {
+			event = 131510	#対米降伏
+			event = 131520	#対ソ降伏
+		}
+	}
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	style = 0
+	picture = "failed_coup"
+	
+	name = "EVT_150103_NAME"
+	desc = "EVT_150101_DESC"
+			
+	action_a = {
+		name = "MILALLACCEPT_BTN1"	#大変結構！
+		command = { type = dissent value = -2.5 }
+		command = { type = flag_ext where = NZL }
+	}
+}
+
+
+#オーストララシア
+event = {
+	id = 150104
+	country = AST
+	
+	trigger = {
+		event = 131666
+	}
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	style = 0
+	picture = "japan_celebrating"
+	
+	name = "EVT_131666_NAME"
+	desc = "EVT_150104_DESC"
+	
+	action_a = {
+		name = "OK"
+		command = { type = flag_ext where = AST which = "_jap" }
+		command = { type = name where = AST which = "AUSTRALASIA" }
+		command = { type = sleepevent which = 150100 }
+		}
+}
+
+event = {
+	id = 150105
+	country = AST
+	
+	trigger = {
+		event = 150104
+		alliance = { country = ENG country = AST }
+		OR = {
+			event = 131510	#対米降伏
+			event = 131520	#対ソ降伏
+		}
+	}
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	style = 0
+	picture = "failed_coup"
+	
+	name = "EVT_150105_NAME"
+	desc = "EVT_150105_DESC"
+			
+	action_a = {
+		name = "MILALLACCEPT_BTN1"	#大変結構！
+		command = { type = dissent value = -5 }
+		command = { type = flag_ext where = AST }
+		command = { type = name where = AST which = AST }
+		command = { type = removecore which = 1868 }
+		command = { type = removecore which = 1869 }
+		command = { type = removecore which = 1870 }
+		command = { type = removecore which = 1871 }
+		command = { type = removecore which = 1872 }
+		command = { type = removecore which = 1873 }
+		command = { type = independence which = NZL value = 1 when = 1 }
+		command = { type = trigger which = 150106 }
+	}
+}
+
+event = {
+	id = 150106
+	country = NZL
+	
+	name = "EVT_150105_NAME"
+	desc = "EVT_150105_DESC"
+	
+	style = 0
+	picture = "failed_coup"
+	
+	action_a = {
+		name = "MILALLACCEPT_BTN1"	#大変結構！
+		command = { type = alliance which = ENG }
+		command = { type = flag_ext where = NZL }
+		command = { type = sleepevent which = 150103 }
+	}
+}
+
+#イタリア共和国
+event = {
+	id = 150107
+	country = ITA
+	
+	trigger = {
+		event = 132270
+		NOT = { headofstate = 3037 }	#「王政廃止投票」後にウンベルトが元首でない＝王政が廃止されている
+	}
+		
+	date = { day = 0 month = january year = 1935 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	style = 0
+	picture = "failed_coup"
+	
+	name = "EVT_150107_NAME"	#イタリア共和国憲法第12条
+	desc = "EVT_150107_DESC"	#1948年1月1日、サヴォイア家による王政が廃止され、イタリア共和国憲法が制定された。その中でイタリアの国旗について『共和国の国旗はイタリア三色旗、すなわち、緑・白および赤の同じ幅の垂直な三つの帯の旗である。』とされた。1861年にサルデーニャ王国旗から始まりイタリア王国の国旗として制定された旧国旗はサヴォイア家と共に降ろされたのだ。
+	
+	action_a = {
+		name = "OK"
+		command = { type = dissent value = 1 }
+		command = { type = flag_ext where = ITA which = "_democratic" }
+	}
+}
+
+
+#カナダ
+event = {
+	id = 150108
+	country = CAN
+	
+	trigger = {
+		event = 131664
+	}
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	style = 0
+	picture = "failed_coup"
+	
+	name = "EVT_150108_NAME"
+	desc = "EVT_150100_DESC"
+	
+	action_a = {
+		name = "EVT_150100_ACTA"	#無念
+		command = { type = dissent value = 5 }
+		command = { type = flag_ext where = CAN which = "_jap" }
+		}
+}
+
+event = {
+	id = 150109
+	country = CAN
+	
+	trigger = {
+		event = 150102
+		alliance = { country = ENG country = CAN }
+		OR = {
+			event = 131510	#対米降伏
+			event = 131520	#対ソ降伏
+		}
+	}
+	
+	style = 0
+	picture = "failed_coup"
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	name = "EVT_150109_NAME"
+	desc = "EVT_150101_DESC"
+			
+	action_a = {
+		name = "MILALLACCEPT_BTN1"	#大変結構！
+		command = { type = dissent value = -2.5 }
+		command = { type = flag_ext where = CAN }
+	}
+}
+
+#HC連立王国
+event = {
+	id = 150110
+	country = HUN
+	
+	trigger = {
+		NOT = { exists = CRO }
+		event = 60252
+		control = { province = 382 data = -1 }
+	}
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	style = 0
+	picture = "hungary"
+	
+	name = "EVT_150110_NAME"
+	desc = "EVT_150110_DESC"
+	
+	action_a = {
+		name = "EVT_150110_ACTA"	#素晴らしい！
+		command = { type = flag_ext where = HUN which = "_CLO_Uni" }
+		command = { type = name where = HUN which = "HUNGARY_CLOATIA" }
+	}
+}
+
+event = {
+	id = 150111
+	country = HUN
+	
+	trigger = {
+		event = 150110
+		exists = CRO
+	}
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	name = "EVT_150111_NAME"
+	desc = "EVT_150111_DESC"
+	
+	style = 0
+	picture = "Croatia"
+	
+	action_a = {
+		name = "EVT_150111_ACTA"	#なんということだ！
+		command = { type = flag_ext where = HUN }
+		command = { type = name where = HUN which = HUN }
+		command = { type = dissent value = 10 }
+	}
+}
+
+#ロンメル総統、なやむ
+event = {
+	id = 150112
+	country = GER
+	
+	decision = {
+		event = 138143
+		NOT = { incabinet = 1 }
+		headofstate = 260
+	}
+	decision_trigger = { }	#好きに発動すればよろしい
+	trigger = {
+		event = 138143
+		NOT = { incabinet = 1 }
+		headofstate = 260
+	}
+	
+	date = { day = 1 month = july year = 1942 } #around when rommel became a marshal
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	name = "EVT_150112_NAME"
+	desc = "EVT_150112_DESC" 
+	style = 2
+	
+	decision_picture = "weimar_flag"
+	picture = "crusader"
+	
+	action = {
+		name = "EVT_150112_ACTA"
+		ai_chance = 50
+		command = { type = dissent value = -2 }
+		command = { type = flag_ext where = GER which = GER }
+	}
+	
+	action = {
+		name = "EVT_150112_ACTB"
+		ai_chance = 50
+		command = { type = dissent value = -2 }
+		command = { type = flag_ext where = GER which = "_weimar" }
+	}
+	
+	action = {
+		name = "EVT_150112_ACTC"
+		ai_chance = 0
+		command = { type = dissent value = 5 }
+	}
+}
+
+#150113　（空き）
+
+#自由フランス及びフランス第五共和政
+event = {
+	id = 150114
+	country = FRA
+	
+	trigger = {
+		event = 130428
+		exists = VIC
+	}
+	
+	name = "EVT_150114_NAME"
+	desc = "EVT_150114_DESC"
+	
+	style = 0
+	picture = "end_of_vichy"
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 15 month = june year = 1944 }
+	
+	action_a = {
+		name = "EVT_150114_ACTA"
+		command = { type = flag_ext where = FRA which = "_Free" }
+		command = { type = name where = FRA which = "自由フランス" }
+	}
+}
+
+event = {
+	id = 150115
+	country = FRA
+	
+	trigger = {
+		OR = { #these signal german defeat
+			NOT = {
+				exists = GER
+			}
+			event = 131301
+			event = 131302
+			event = 131303
+			event = 131304
+		}
+		control = { province = 56 data = FRA }
+		event = 150114
+		NOT = { exists = VIC }
+	}
+	
+	name = "EVT_150115_NAME"
+	desc = "EVT_150115_DESC"
+	
+	style = 0
+	picture = "end_of_vichy"
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1963 }
+		
+	action_a = {
+		name = "EVT_150115_ACTA"
+		command = { type = flag_ext where = FRA which = FRA }
+		command = { type = name where = FRA which = FRA }
+		command = { type = capital which = 56 }
+	}
+}
+
+
+#アメリカ合衆国（25州）
+event = {
+	id = 150116
+	country = USA
+	
+	trigger = {
+		OR = {
+			event = 131231
+			event = 131241
+			event = 131251
+			event = 131272
+		}
+	}
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	style = 0
+	picture = "failed_coup"
+	
+	name = "EVT_150116_NAME"
+	desc = "EVT_150116_DESC"
+	
+	action_a = {
+		name = "EVT_150116_ACTA"
+		command = { type = dissent value = 5 }
+		command = { type = flag_ext where = USA which = "_25" }
+		}
+}
+
+#アメリカ合衆国（共産）
+event = {
+	id = 150117
+	country = USA
+	
+	trigger = {
+		government = communist
+	}
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	style = 0
+	picture = "failed_coup"
+	
+	name = "EVT_150117_NAME"	#労働者の星条旗
+	desc = "EVT_150117_DESC"	#我らが書記長は合衆国法典の改正に署名した。新たな法典の第4編1章1条では、「アメリカ合衆国の国旗は13の水平、紅白の縞模様が在り、青地に白の星が48集合しているものとする」との表記は廃され、新国旗にあわせ、「革命の赤地に、戒心・忍耐・正義の青の上に赤い五芒星が48集合しているものとする」とされた。
+	
+	action_a = {
+		name = "EVT_150117_ACTA"	#赤い星は、共産党による新たな秩序を象徴するものだ！
+		command = { type = dissent value = 1 }
+		command = { type = flag_ext where = USA which = _communist }
+	}
+}
+
+event = {
+	id = 150118
+	country = SPA
+	trigger = {
+		event = 3007
+		NOT = { flag = carlistas_spain }
+	}
+	name = "EVT_150118_NAME"	#新たなる国旗―スペイン国
+	desc = "EVT_150118_DESC"	#共和派を打倒しスペイン全体を統一する政権を打ち立てたフランシスコ・フランコは新たな国旗を制定した。これより全土で、ヨハネの鷲が羽ばたくこととなる！
+	
+	style = 0
+	#picture = "SPA_victory"
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = "ACTION_NAME_EXCELLENT"	#大変結構！
+		command = { type = dissent value = -1 }
+		command = { type = flag_ext where = -1 which = "_1938" }
+	}
+}
+
+event = {
+	id = 150119
+	random = no
+	country = SPA
+	trigger = {
+		event = 3007
+		flag = carlistas_spain
+	}
+	name = "EVT_150119_NAME"	#新たなる国旗―カルリスタのスペイン
+	desc = "EVT_150119_DESC"	#共和派を打倒しスペイン全体を統一したフランシスコ・フランコは、政権をカルリスタの一派に政権を任せ、彼らの推すハビエル・デ・ボルボン＝パルマをハビエル１世と即位させることを認めた。100年以上を経てついにスペインの支配者となった彼らは、ブルゴーニュ十字を全土に掲げ、彼らが新たなるスペインを導くことを示した。
+	
+	style = 0
+	picture = "SPA_victory"
+	
+	date = { day = 18 month = july year = 1936 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = "ACTION_NAME_EXCELLENT"	#大変結構！
+		command = { type = dissent value = -1 }
+		command = { type = flag_ext where = -1 which = "_Cal" }
+	}
+}
+
+event = {
+	id = 150120
+	random = no
+	country = SPA
+	trigger = {
+		NOT = {
+			exists = GER
+			war = { country = ENG country = SPA }
+			flag = carlistas_spain
+		}
+	}
+	
+	name = "EVT_150120_NAME"	#新たなる国旗―戦後欧州でのスペイン
+	desc = "EVT_150120_DESC"	#1945年7月26日、スペインでは国旗に関する新法令が発布され、10月11日には新国旗デザインが発表された。この国旗はフランコが死去し王政復古が行われた直後まで使われ続けた。
+	
+	style = 0
+	picture = "SPA_victory"
+	
+	date = { day = 10 month = 9 year = 1945 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = "ACTION_NAME_EXCELLENT"	#大変結構！
+		command = { type = dissent value = -1 }
+		command = { type = flag_ext where = -1 which = "_1945" }
+	}
+}
+
+event = {
+	id = 150121
+	random = no
+	country = U74
+	trigger = {
+		event = 60845
+	}
+	
+	name = "EVT_150121_NAME"	#華北自治政府
+	desc = "EVT_150121_DESC"	#華北は南京政府から分離され、個別の行政権を持った一つの政府として運営されることとなる。これに伴い、北京は「臨時政府」ではなく「自治政府」を名乗った。
+	
+	style = 0
+	picture = "SPA_victory"
+	
+	date = { day = 10 month = 9 year = 1945 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = "ACTION_NAME_EXCELLENT"	#大変結構！
+		command = { type = dissent value = -1 }
+		command = { type = name where = -1 which = EVT_150121_NAME }
+	}
+}
+
+#日本国号変更（ディシジョン）
+event = {
+	id = 150122
+	random = no
+	persistent = no
+	country = JAP
+
+	decision = {
+	NOT = {
+		ideology = stalinist # 政治体制がスターリン主義
+		ideology = leninist # 政治体制がレーニン主義
+		ideology = left_wing_radical # 政治体制が急進的左翼
+		}
+	}
+
+	decision_trigger = {
+		NOT = { event = 55002 }
+	}
+
+	trigger = {
+		NOT = { event = 55002 }
+		dissent = 1
+	}
+   
+	name = "EVT_55002_NAME"
+	desc = "EVT_55002_DESC" 
+	style = 0
+
+	decision_picture = "decision_diplomatic_campaign"
+  	picture = "anti_comitern_pact"
+
+	date = { day = 0 month = 6 year = 1935 }
+	offset = 1
+	deathdate = { day = 1 month = may year = 1936 }
+
+	action = {
+		name = "EVT_150122_ACTA"
+		command = { type = dissent value = -1 }
+		command = { type = name where = JAP which = "大日本帝国" }
+		command = { type = sleepevent which = 55002 }
+		ai_chance = 50
+	}
+
+	action = {
+		name = "EVT_150122_ACTB"
+		command = { type = dissent value = -1 }
+		command = { type = name where = JAP which = "大日本帝國" }
+		command = { type = sleepevent which = 55002 }
+		ai_chance = 50
+	}
+}
+
+event = {
+	id = 150123
+	random = no
+	persistent = no
+	country = JAP
+	
+	trigger = {
+		event = 55003
+	}
+	
+	style = 0
+	picture = "japan_celebrating"
+	
+	date = { day = 0 month = 6 year = 1935 }
+	offset = 1
+	deathdate = { day = 1 month = may year = 1936 }
+	
+	name = "EVT_55003_NAME"
+	desc = "EVT_55003_DESC"
+	
+	action = {
+		name = "EVT_150122_ACTA"
+		command = { type = name where = JAP which = "EMPIRE_OF_JAPAN" }
+		ai_chance = 50
+	}
+
+	action = {
+		name = "EVT_150122_ACTB"
+		command = { type = name where = JAP which = "EMPIRE_OF_JAPAN_2" }
+		ai_chance = 50
+	}
+}
+	
+
+event = {
+	id = 150124
+	country = JAP
+	
+	trigger = {
+		OR = {
+			event = 131511	#対米降伏
+			event = 131521	#対ソ降伏
+			event = 131572	#対中降伏
+			government = communist	#左派独裁の帝国はないやろ
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	style = 0
+	picture = "failed_coup"
+	
+	name = "EVT_131512_NAME"
+	desc = "EVT_131512_DESC"
+
+	action = {
+		name = "EVT_150124_ACTA"
+		command = { type = name where = JAP which = JAP }
+		command = { type = secederegion which = CHI value = "China" when = 0 }
+		command = { type = secederegion which = CHC value = "China" when = 0 }
+	}
+}
+
+
+#イギリス（共産）
+event = {
+	id = 150125
+	country = ENG
+	
+	trigger = {
+		government = communist
+	}
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	style = 0
+	picture = "failed_coup"
+	
+	name = "EVT_150125_NAME"	#第二次イギリス革命
+	desc = "EVT_150125_DESC"	#人民の国家として英国は生まれ変わる。打倒された国王に代わり国家元首に就いた同志書記長は、TUC（Trades Union Congress、全英労働組合会議）発祥の地であるマンチェスターの工員教習所から新憲法を発布した。
+	
+	action_a = {
+		name = "EVT_150125_ACTA"	#穂と槌と円規の組み合わせは、人民の団結と共産主義を表す
+		ai_chance = 47
+		command = { type = dissent value = -1 }
+		command = { type = name where = -1 which = "ENG_SOV" }	#イギリス共和国
+		command = { type = flag_ext where = -1 which = "_SOV_1" }
+	}
+	action_b = {
+		name = "EVT_150125_ACTB"	#鎌は農民を、槌はプロレタリアートを表す
+		ai_chance = 53
+		command = { type = dissent value = -1 }
+		command = { type = name where = -1 which = "ENG_SOV" }
+		command = { type = flag_ext where = -1 which = "_SOV_2" }
+	}
+}
+
+event = {
+	id = 150126
+	country = AUS
+	trigger = {
+		flag = royal_vienne
+		NOT = { event = 132615 }
+	}
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_150126_NAME"	#ハプスブルクの旗
+	desc = "EVT_150126_DESC"	#ウィーンに皇帝が戻り、ハプスブルク家による統治が再開された！　
+
+	action = {
+		name = "EVT_150126_ACTA"	#神よ、皇帝フランツを守り給え
+		command = { type = dissent value = -1 }
+		command = { type = flag_ext where = -1 which = "_Empire" }
+	}
+}
+
+event = {
+	id = 150127
+	country = AUS
+	trigger = {
+		event = 132750
+	}
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_150127_NAME"	#オーストリアの統一ドイツ
+	desc = "EVT_150127_DESC"	#ナチス・ドイツに代わってドイツ民族の統一を成し遂げてしまったオーストリア帝国は、自らがなんであるのかを再定義する必要があった。彼らはあくまでオーストリアであるのか。それともドイツであるのか。はたまた、神聖ローマの後継者であるのだろうのか。
+	
+	action = {
+		name = "EVT_150127_ACTA"	#我々はオーストリアだ。これからもそうである
+		command = { type = dissent value = -1 }
+	}
+	action = {
+		name = "EVT_150127_ACTB"	#我々は中欧帝国である
+		command = { type = name where = -1 which = "AUS_MitteleuropaischesReich" }	#中欧帝国
+		command = { type = dissent value = 1 }
+	}
+	action = {
+		name = "EVT_150127_ACTC"	#我々は第二神聖ローマ帝国である
+		command = { type = name where = -1 which = "AUS_HeiligesRomischesReich" }	#神聖ローマ帝国
+		command = { type = flag_ext where = -1 which = "_RomanEmpire" }
+		command = { type = dissent value = 2 }
+	}
+	action = {
+		name = "EVT_150127_ACTD"	#我々はドイツ連邦である
+		command = { type = name where = -1 which = "AUS_DeutscherBund" }	#ドイツ連邦
+		command = { type = flag_ext where = -1 which = "_DeutscherBund" }
+		command = { type = dissent value = 1 }
+	}
+	action = {
+		name = "EVT_150127_ACTE"	#我々は今やドイツ帝国であるのだ
+		command = { type = name where = -1 which = "AUS_DeutscherReich" }	#ドイツ帝国
+		command = { type = flag_ext where = -1 which = "_DeutscherReich" }
+		command = { type = dissent value = 2 }
+	}
+}
+	
+
+event = {
+	id = 150150
+	random = no
+	country = POL #ソ連傀儡ポーランド
+	trigger = {
+		puppet = { country = -1 country = SOV }
+	}
+	name = "EVT_150150_NAME"
+	desc = "EVT_150150_DESC"
+	style = 0
+	picture = "failed_coup"
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+
+	action = {
+		name = "EVT_150150_ACTA"	#同志とともに！
+		command = { type = relation which = SOV value = 10 } 
+		command = { type = name where = -1 which = "POL_SOV" }
+		command = { type = flag_ext where = -1 which = "_SOV" }
+	}
+}
+
+event = {
+	id = 150151
+	random = no
+	country = CZE #ソ連傀儡チェコスロバキア
+	trigger = {
+		puppet = { country = -1 country = SOV }
+	}
+	name = "EVT_150151_NAME"
+	desc = "EVT_150151_DESC"
+	style = 0
+	picture = "failed_coup"
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+
+	action = {
+		name = "EVT_150151_ACTA"	#同志とともに！
+		command = { type = relation which = SOV value = 10 } 
+		#command = { type = flag_ext where = -1 which = "_SOV" }
+		command = { type = name where = -1 which = "CZE_SOV" }
+	}
+}
+
+event = {
+	id = 150152
+	random = no
+	country = HUN #ソ連傀儡ハンガリー
+	trigger = {
+		puppet = { country = -1 country = SOV }
+	}
+	name = "EVT_150152_NAME"
+	desc = "EVT_150152_DESC"
+	style = 0
+	picture = "failed_coup"
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+
+	action = {
+		name = "EVT_150152_ACTA"	#同志とともに！
+		command = { type = relation which = SOV value = 10 } 
+		command = { type = flag_ext where = -1 which = "_SOV" }
+		command = { type = name where = -1 which = "HUN_SOV" }
+	}
+}
+
+event = {
+	id = 150153
+	random = no
+	country = ROM #ソ連傀儡ルーマニア
+	trigger = {
+		puppet = { country = -1 country = SOV }
+	}
+	name = "EVT_150153_NAME"
+	desc = "EVT_150153_DESC"
+	style = 0
+	picture = "failed_coup"
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+
+	action = {
+		name = "EVT_150153_ACTA"	#同志とともに！
+		command = { type = relation which = SOV value = 10 } 
+		command = { type = flag_ext where = -1 which = "_SOV" }
+		command = { type = name where = -1 which = "ROM_SOV" }
+	}
+}
+
+event = {
+	id = 150154
+	random = no
+	country = BUL #ソ連傀儡ブルガリア
+	trigger = {
+		puppet = { country = -1 country = SOV }
+	}
+	name = "EVT_150154_NAME"
+	desc = "EVT_150154_DESC"
+	style = 0
+	picture = "failed_coup"
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+
+	action = {
+		name = "EVT_150154_ACTA"	#同志とともに！
+		command = { type = relation which = SOV value = 10 } 
+		command = { type = flag_ext where = -1 which = "_SOV" }
+		command = { type = name where = -1 which = "BUL_SOV" }
+	}
+}
+
+event = {
+	id = 150155
+	random = no
+	country = NOR #ソ連傀儡ノルウェー
+	trigger = {
+		puppet = { country = -1 country = SOV }
+	}
+	name = "EVT_150155_NAME"
+	desc = "EVT_150155_DESC"
+	style = 0
+	picture = "failed_coup"
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+
+	action = {
+		name = "EVT_150155_ACTA"	#同志とともに！
+		command = { type = relation which = SOV value = 10 } 
+		command = { type = flag_ext where = -1 which = "_SOV" }
+		command = { type = name where = -1 which = "NOR_SOV" }
+	}
+}
+
+event = {
+	id = 150156
+	random = no
+	country = SWE #ソ連傀儡スウェーデン
+	trigger = {
+		puppet = { country = -1 country = SOV }
+	}
+	name = "EVT_150156_NAME"
+	desc = "EVT_150156_DESC"
+	style = 0
+	picture = "failed_coup"
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+
+	action = {
+		name = "EVT_150156_ACTA"	#同志とともに！
+		command = { type = relation which = SOV value = 10 } 
+		command = { type = flag_ext where = -1 which = "_SOV" }
+		command = { type = name where = -1 which = "SWE_SOV" }
+	}
+}
+
+event = {
+	id = 150157
+	random = no
+	country = DEN #ソ連傀儡デンマーク
+	trigger = {
+		puppet = { country = -1 country = SOV }
+	}
+	name = "EVT_150157_NAME"
+	desc = "EVT_150157_DESC"
+	style = 0
+	picture = "failed_coup"
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+
+	action = {
+		name = "EVT_150157_ACTA"	#同志とともに！
+		command = { type = relation which = SOV value = 10 } 
+		command = { type = flag_ext where = -1 which = "_SOV" }
+		command = { type = name where = -1 which = "DEN_SOV" }
+	}
+}
+
+event = {
+	id = 150158
+	random = no
+	country = AUS #ソ連傀儡オーストリア
+	trigger = {
+		puppet = { country = -1 country = SOV }
+	}
+	name = "EVT_150158_NAME"
+	desc = "EVT_150158_DESC"
+	style = 0
+	picture = "failed_coup"
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+
+	action = {
+		name = "EVT_150158_ACTA"	#同志とともに！
+		command = { type = relation which = SOV value = 10 } 
+		command = { type = flag_ext where = -1 which = "_SOV" }
+		command = { type = name where = -1 which = "AUS_SOV" }
+	}
+}
+
+event = {
+	id = 150159
+	random = no
+	country = GRE #ソ連傀儡ギリシャ
+	trigger = {
+		puppet = { country = -1 country = SOV }
+	}
+	name = "EVT_150159_NAME"
+	desc = "EVT_150159_DESC"
+	style = 0
+	picture = "failed_coup"
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+
+	action = {
+		name = "EVT_150159_ACTA"	#同志とともに！
+		command = { type = relation which = SOV value = 10 } 
+		command = { type = flag_ext where = -1 which = "_SOV" }
+		command = { type = name where = -1 which = "GRE_SOV" }
+	}
+}
+
+event = {
+	id = 150160
+	random = no
+	country = BEL #ソ連傀儡ベルギー
+	trigger = {
+		puppet = { country = -1 country = SOV }
+	}
+	name = "EVT_150160_NAME"
+	desc = "EVT_150160_DESC"
+	style = 0
+	picture = "failed_coup"
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+
+	action = {
+		name = "EVT_150160_ACTA"	#同志とともに！
+		command = { type = relation which = SOV value = 10 } 
+		command = { type = flag_ext where = -1 which = "_SOV" }
+		command = { type = name where = -1 which = "BEL_SOV" }
+	}
+}
+
+event = {
+	id = 150161
+	random = no
+	country = HOL #ソ連傀儡オランダ
+	trigger = {
+		puppet = { country = -1 country = SOV }
+	}
+	name = "EVT_150161_NAME"
+	desc = "EVT_150161_DESC"
+	style = 0
+	picture = "failed_coup"
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "EVT_150161_ACTA"	#同志とともに！
+		command = { type = relation which = SOV value = 10 } 
+		command = { type = flag_ext where = -1 which = "_SOV" }
+		command = { type = name where = -1 which = "HOL_SOV" }
+	}
+}
+
+event = {
+	id = 150162
+	random = no
+	country = LUX #ソ連傀儡ルクセンブルク
+	trigger = {
+		puppet = { country = -1 country = SOV }
+	}
+	name = "EVT_150162_NAME"
+	desc = "EVT_150162_DESC"
+	style = 0
+	picture = "failed_coup"
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+
+	action = {
+		name = "EVT_150162_ACTA"	#同志とともに！
+		command = { type = relation which = SOV value = 10 } 
+		command = { type = name where = -1 which = "LUX_SOV" }
+		command = { type = flag_ext where = -1 which = "_SOV" }
+	}
+}
+
+event = {
+	id = 150163
+	random = no
+	country = FRA #ソ連傀儡フランス
+	trigger = {
+		puppet = { country = -1 country = SOV }
+	}
+	name = "EVT_150163_NAME"
+	desc = "EVT_150163_DESC"
+	style = 0
+	picture = "failed_coup"
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+
+	action = {
+		name = "EVT_150163_ACTA"	#同志とともに！
+		command = { type = relation which = SOV value = 10 } 
+		command = { type = flag_ext where = -1 which = "_SOV" }
+		command = { type = name where = -1 which = "FRA_SOV" }
+		command = { type = capital which = 56 }
+		command = { type = sleepevent which = 150115 }
+	}
+}
+
+event = {
+	id = 150164
+	random = no
+	country = YUG #ソ連傀儡ユーゴスラビア
+	trigger = {
+		puppet = { country = -1 country = SOV }
+	}
+	name = "EVT_150164_NAME"
+	desc = "EVT_150164_DESC"
+	style = 0
+	picture = "failed_coup"
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+
+	action = {
+		name = "EVT_150164_ACTA"	#同志とともに！
+		command = { type = relation which = SOV value = 10 } 
+		command = { type = flag_ext where = -1 which = "_SOV" }
+		command = { type = name where = -1 which = "YUG_SOV" }
+	}
+}
+
+event = {
+	id = 150165
+	random = no
+	country = ALB #ソ連傀儡アルバニア
+	trigger = {
+		puppet = { country = -1 country = SOV }
+	}
+	name = "EVT_150165_NAME"
+	desc = "EVT_150165_DESC"
+	style = 0
+	picture = "failed_coup"
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+
+	action = {
+		name = "EVT_150165_ACTA"	#同志とともに！
+		command = { type = relation which = SOV value = 10 } 
+		#command = { type = flag_ext where = -1 which = "_SOV" }
+		command = { type = name where = -1 which = "ALB_SOV" }
+	}
+}
+
+event = {
+	id = 150166
+	random = no
+	country = SPR #ソ連傀儡スペイン共和国
+	trigger = {
+		puppet = { country = -1 country = SOV }
+	}
+	name = "EVT_150166_NAME"
+	desc = "EVT_150166_DESC"
+	style = 0
+	picture = "failed_coup"
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+
+	action = {
+		name = "EVT_150160_ACTA"	#同志とともに！
+		command = { type = relation which = SOV value = 10 } 
+		command = { type = flag_ext where = -1 which = "_SOV" }
+		command = { type = name where = -1 which = "SPR_SOV" }
+	}
+}
+
+event = {
+	id = 150167
+	random = no
+	country = POR #ソ連傀儡ポルトガル
+	trigger = {
+		puppet = { country = -1 country = SOV }
+	}
+	name = "EVT_150167_NAME"
+	desc = "EVT_150167_DESC"
+	style = 0
+	picture = "failed_coup"
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+
+	action = {
+		name = "EVT_150166_ACTA"	#同志とともに！
+		command = { type = relation which = SOV value = 10 } 
+		command = { type = flag_ext where = -1 which = "_SOV" }
+		command = { type = name where = -1 which = "POR_SOV" }
+	}
+}
+
+event = {
+	id = 150168
+	random = no
+	country = SCH #ソ連傀儡スイス
+	trigger = {
+		puppet = { country = -1 country = SOV }
+	}
+	name = "EVT_150168_NAME"
+	desc = "EVT_150168_DESC"
+	style = 0
+	picture = "failed_coup"
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+
+	action = {
+		name = "EVT_150168_ACTA"	#同志とともに！
+		command = { type = relation which = SOV value = 10 } 
+		command = { type = flag_ext where = -1 which = "_SOV" }
+		command = { type = name where = -1 which = "SCH_SOV" }
+	}
+}
+
+event = {
+	id = 150169
+	random = no
+	country = TUR #ソ連傀儡トルコ
+	trigger = {
+		puppet = { country = -1 country = SOV }
+	}
+	name = "EVT_150169_NAME"
+	desc = "EVT_150169_DESC"
+	style = 0
+	picture = "failed_coup"
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+
+	action = {
+		name = "EVT_150169_ACTA"	#同志とともに！
+		command = { type = relation which = SOV value = 10 } 
+		command = { type = flag_ext where = -1 which = "_SOV" }
+		command = { type = name where = -1 which = "TUR_SOV" }
+	}
+}
+
+event = {
+	id = 150170
+	random = no
+	country = BUR #ソ連傀儡ビルマ
+	trigger = {
+		puppet = { country = -1 country = SOV }
+	}
+	name = "EVT_150170_NAME"
+	desc = "EVT_150170_DESC"
+	style = 0
+	picture = "failed_coup"
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+
+	action = {
+		name = "EVT_150170_ACTA"	#同志とともに！
+		command = { type = relation which = SOV value = 10 } 
+		command = { type = flag_ext where = -1 which = "_SOV" }	#要製作
+		command = { type = name where = -1 which = "BUR_SOV" }
+	}
+}
+
+event = {
+	id = 150171
+	random = no
+	country = IND #ソ連傀儡インド
+	trigger = {
+		puppet = { country = -1 country = SOV }
+	}
+	name = "EVT_150171_NAME"
+	desc = "EVT_150171_DESC"
+	style = 0
+	picture = "failed_coup"
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+
+	action = {
+		name = "EVT_150171_ACTA"	#同志とともに！
+		command = { type = relation which = SOV value = 10 } 
+		#command = { type = flag_ext where = -1 which = "_SOV" }
+		command = { type = name where = -1 which = "IND_SOV" }
+	}
+}
+
+event = {
+	id = 150172
+	random = no
+	country = SIA #ソ連傀儡タイ
+	trigger = {
+		OR = {
+			puppet = { country = -1 country = SOV }
+			puppet = { country = -1 country = CHC }
+		}
+	}
+	name = "EVT_150172_NAME"
+	desc = "EVT_150172_DESC"
+	style = 0
+	picture = "failed_coup"
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+
+	action = {
+		name = "EVT_150172_ACTA"	#同志とともに！
+		command = { type = relation which = SOV value = 10 } 
+		#command = { type = flag_ext where = -1 which = "_SOV" }
+		command = { type = name where = -1 which = "SIA_SOV" }
+	}
+}
+
+event = {
+	id = 150173
+	random = no
+	country = AFG #ソ連傀儡アフガニスタン
+	trigger = {
+		puppet = { country = -1 country = SOV }
+	}
+	name = "EVT_150173_NAME"
+	desc = "EVT_150173_DESC"
+	style = 0
+	picture = "failed_coup"
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+
+	action = {
+		name = "EVT_150173_ACTA"	#同志とともに！
+		command = { type = relation which = SOV value = 10 } 
+		command = { type = flag_ext where = -1 which = "_SOV" }
+		command = { type = name where = -1 which = "AFG_SOV" }
+	}
+}
+
+event = {
+	id = 150174
+	random = no
+	country = ITA #ソ連傀儡イタリア
+	trigger = {
+		puppet = { country = -1 country = SOV }
+	}
+	name = "EVT_150174_NAME"
+	desc = "EVT_150174_DESC"
+	style = 0
+	picture = "failed_coup"
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+
+	action = {
+		name = "EVT_150174_ACTA"	#同志とともに！
+		command = { type = relation which = SOV value = 10 } 
+		command = { type = flag_ext where = -1 which = "_SOV" }
+		command = { type = name where = -1 which = "ITA_SOV" }
+		command = { type = sleepevent which = 150107 }
+	}
+}
+
+event = {
+	id = 150175
+	random = no
+	country = JAP #ソ連傀儡日本
+	trigger = {
+		puppet = { country = -1 country = SOV }
+	}
+	name = "EVT_150175_NAME"
+	desc = "EVT_150175_DESC"
+	style = 0
+	picture = "failed_coup"
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "EVT_150175_ACTA"	#革命の赤地に、日象に金の国旗を採用する
+		command = { type = relation which = SOV value = 10 } 
+		command = { type = flag_ext where = -1 which = "UPS" }
+	}
+}

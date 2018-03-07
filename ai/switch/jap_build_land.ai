@@ -1,0 +1,57 @@
+# GFW 
+
+garrison = {
+	defend_overseas_beaches = yes
+	home_multiplier 	= 0.5
+	overseas_multiplier 	= 1.0
+}
+
+
+###################################
+# Construction and Tech Research
+###################################
+
+military = {
+	relative_build_scheme 	= no
+	max_batch_peace 	= 720
+	max_batch_war 		= 720
+	max_batch_home_front 	= 720
+
+	#### Divisions etc...
+	infantry 		= 48
+	cavalry 		= 0
+	motorized 		= 8
+	mechanized 		= 0
+	light_armor 		= 0
+	armor 			= 0
+	paratrooper 		= 0
+	marine 			= 0
+	bergsjaeger 		= 12
+	garrison		= 0
+      	hq 			= 0
+	militia 		= 0
+#					68 %
+	interceptor 		= 3
+	multi_role 		= 0
+	escort 			= 0
+	cas 			= 0
+	strategic_bomber 	= 0
+	tactical_bomber 	= 7
+	naval_bomber 		= 0
+	transport_plane 	= 0
+	flying_bomb 		= 0
+	flying_rocket 		= 0
+#					10 %
+	battleship 		= 0
+	carrier 		= 5
+	escort_carrier		= 1
+	destroyer 		= 6
+	light_cruiser 		= 2
+	heavy_cruiser 		= 1
+	battlecruiser 		= 0
+	submarine 		= 0
+	transports 		= 7
+#					22 %
+
+	cag = 100.000 
+}

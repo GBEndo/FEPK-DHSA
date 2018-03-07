@@ -1,0 +1,47 @@
+ALG;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+530001;Head of State;ジョルジュ・レ・ビュー;36;SL;Benevolent Gentleman;High;M530001;x
+530002;Head of Government;ジョルジュ・レ・ビュー;36;SL;Flamboyant Tough Guy;High;M530001;x
+530003;Foreign Minister;ジュール・デ・ケーニッシュウォーター;36;SL;Ideological Crusader;High;M530003;x
+530004;Minister of Armament;アントワーヌ・マシュレル;36;SL;Tank Proponent;Medium;M530004;x
+530005;Minister of Security;マルセル・ペイルトン;36;SL;Back Stabber;Medium;M530005;x
+530006;Head of Military Intelligence;ジャン・レボール・ダロネス;36;SL;Industrial Specialist;Medium;M530006;x
+530007;Chief of Staff;アルフレッド・ヒュールトー;36;SL;School of Fire Support;Medium;M530007;x
+530008;Chief of Army;ピエール・ド・シェヴァン;36;SL;Decisive Battle Doctrine;Medium;M530008;x
+530009;Chief of Navy;アンリ・マネス;36;SL;Indirect Approach Doctrine;Medium;M530009;x
+530010;Chief of Air Force;フランソワ・ソマー;36;SL;Air Superiority Doctrine;Medium;M530010;x
+530011;Head of State;ジャン・アブリアル;40;SL;Stern Imperialist;High;L24146;x
+530012;Head of State;マクシム・ウェイガン;41;SL;Resigned Generalissimo;High;L24145;x
+530013;Head of State;マルセル・ペイルトン;43;SL;Barking Buffoon;High;M530005;x
+530014;Head of State;ジョルジュ・カトルー;43;SL;Pig-headed Isolationist;High;L24029;x
+530015;Head of State;イヴ・シャテニョー;44;SL;Die-hard Reformer;High;M528020;x
+530016;Head of State;フェルハト・アバス;36;LWR;Autocratic Charmer;High;M530016;x
+530017;Head of Government;ジャン・アブリアル;40;SL;Old Admiral;High;L24146;x
+530018;Head of Government;マクシム・ウェイガン;41;SL;Happy Amateur;High;L24145;x
+530019;Head of Government;マルセル・ペイルトン;43;SL;Corporate Suit;High;M530005;x
+530020;Head of Government;ジョルジュ・カトルー;43;SL;Old General;High;L24029;x
+530021;Head of Government;イヴ・シャテニョー;44;SL;Corporate Suit;High;M528020;x
+530022;Head of Government;フェルハト・アバス;36;LWR;Smiling Oilman;High;M530016;x
+530023;Foreign Minister;ピエール＝アンリ・テイゲン;42;SL;The Cloak N Dagger Schemer;High;M530023;x
+530024;Foreign Minister;サーディ・ムバルカ;36;LWR;Biased Intellectual;High;M530024;x
+530025;Foreign Minister;ユーセフ・ベン＝ケダ;41;LWR;Great Compromiser;High;M530025;x
+530026;Minister of Armament;ウジェーヌ・ドシュレット;41;SL;Air Superiority Proponent;Medium;M530026;x
+530027;Minister of Armament;フランツ・ファノン;36;LWR;Military Entrepreneur;Medium;M530027;x
+530028;Minister of Armament;アフメド・ベン＝ベラ;45;LWR;Administrative Genius;Medium;M530028;x
+530029;Minister of Security;アンドレ・ジャン・ゴダン;42;SL;Compassionate Gentleman;Medium;M530029;x
+530030;Minister of Security;ユーセフ・ベン＝ケダ;36;LWR;Back Stabber;Medium;M530025;x
+530031;Minister of Security;ジャミル・チャリン;41;LWR;Man of the People;Medium;M530031;x
+530032;Head of Military Intelligence;ピエール・ジュリット;41;SL;Logistics Specialist;Medium;M530032;x
+530033;Head of Military Intelligence;ジャミル・チャリン;36;LWR;Industrial Specialist;Medium;M530031;x
+530034;Head of Military Intelligence;サーディ・ムバルカ;41;LWR;Naval Intelligence Specialist;Medium;M530024;x
+530035;Chief of Staff;ジャック・ ボーダス;44;SL;School of Manoeuvre;Medium;M530035;x
+530036;Chief of Staff;ムスタファ・アル＝ガニ;36;LWR;School of Psychology;Medium;M530036;x
+530037;Chief of Staff;フワリ・ブーメディエン;44;LWR;School of Mass Combat;Medium;M530037;x
+530038;Chief of Army;ポール・オッド;43;SL;Armoured Spearhead Doctrine;Medium;M530038;x
+530039;Chief of Army;ムスタファ・アル＝ガニ;36;LWR;Elastic Defence Doctrine;Medium;M530036;x
+530040;Chief of Army;フワリ・ブーメディエン;44;LWR;Guns and Butter Doctrine;Medium;M530037;x
+530041;Chief of Navy;ピエール・ド・シェヴァン;43;SL;Base Control Doctrine;Medium;M530008;x
+530042;Chief of Navy;キールディン・ダッチ;36;LWR;Open Seas Doctrine;Medium;M530042;x
+530043;Chief of Air Force;アルフレッド・ヒュールトー;39;SL;Army Aviation Doctrine;Medium;M530007;x
+530044;Chief of Air Force;フランツ・ファノン;36;LWR;Air Superiority Doctrine;Medium;M530027;x
+530045;Chief of Air Force;バクラ・バヤ;44;LWR;Vertical Envelopment Doctrine;Medium;M530045;x

@@ -1,0 +1,2005 @@
+technology =
+{ id          = 2
+  category    = armor
+  name        = TECH_ARMOR_NAME # Localized name
+  desc        = TECH_ARMOR_DESC # Localized description
+  label =
+  { tag      = TECH_CAT_lighttanks
+    position = { x = 24 y = 10 }
+  }
+  label =
+  { tag      = TECH_CAT_TANKDESTROYERS
+    position = { x = 160 y = 10 }
+  }
+  label =
+  { tag      = TECH_CAT_antitankart
+    position = { x = 296 y = 10 }
+  }
+  label =
+  { tag      = TECH_CAT_fieldart
+    position = { x = 432 y = 10 }
+  }
+  label =
+  { tag      = TECH_CAT_mediumtanks
+    position = { x = 24 y = 138 }
+  }
+  label =
+  { tag      = TECH_CAT_selfpropra
+    position = { x = 160 y = 155 }
+  }
+  label =
+  { tag      = TECH_CAT_rocketart
+    position = { x = 296 y = 155 }
+  }
+  label =
+  { tag      = TECH_CAT_heavytanks
+    position = { x = 24 y = 218 }
+  }
+  label =
+  { tag      = TECH_CAT_selfpropart
+    position = { x = 432 y = 186 }
+  }
+  label =
+  { tag      = TECH_CAT_antiair
+    position = { x = 160 y = 281 }
+  }
+  label =
+  { tag      = TECH_CAT_antiairbrig
+    position = { x = 296 y = 281 }
+  }
+  label =
+  { tag      = TECH_CAT_armouredcar
+    position = { x = 433 y = 309 }
+  }
+  # ‘O‘åíŒ^íÔ
+  application =
+  { id        = 2010
+    name      = TECH_APP_ARMOR_1_NAME
+    desc      = TECH_APP_ARMOR_1_DESC
+    position  = { x = 24 y = 24 }
+    year      = 1918
+    # ‘O‘åíŒ^‘•b
+    component = { id = 2011 name = TECH_CMP_ARMOR_1_1_NAME type = mechanics difficulty = 5 }
+    # 37mmíÔ–C
+    component = { id = 2012 name = TECH_CMP_ARMOR_1_2_NAME type = artillery difficulty = 5 }
+    # ‘O‘åíŒ^ƒGƒ“ƒWƒ“
+    component = { id = 2013 name = TECH_CMP_ARMOR_1_3_NAME type = mechanics difficulty = 5 }
+    # ‘oŠá‹¾
+    component = { id = 2014 name = TECH_CMP_ARMOR_1_4_NAME type = electronics difficulty = 5 }
+    # ‘O‘åíŒ^íÔìŒ±
+    component = { id = 2015 name = TECH_CMP_ARMOR_1_5_NAME type = technical_efficiency difficulty = 5 double_time = yes }
+    required  = { }
+    effects =
+    { command = { type = activate_unit_type which = armor }
+      command = { type = new_model which = armor value = 0 }
+    }
+  }
+  # “¤íÔ
+  application =
+  { id        = 2020
+    name      = TECH_APP_ARMOR_2_NAME
+    desc      = TECH_APP_ARMOR_2_DESC
+    position  = { x = 24 y = 40 }
+    year      = 1932
+    # “¤íÔ‚Ì‘•b
+    component = { id = 2021 name = TECH_CMP_ARMOR_2_1_NAME type = mechanics difficulty = 5 }
+    # 0.30ŒûŒad‹@ŠÖe
+    component = { id = 2022 name = TECH_CMP_ARMOR_2_2_NAME type = artillery difficulty = 5 }
+    # “¤íÔ‚ÌƒGƒ“ƒWƒ“
+    component = { id = 2023 name = TECH_CMP_ARMOR_2_3_NAME type = mechanics difficulty = 5 }
+    # ‘oŠá‹¾
+    component = { id = 2024 name = TECH_CMP_ARMOR_2_4_NAME type = electronics difficulty = 5 }
+    # “¤íÔìŒ±
+    component = { id = 2025 name = TECH_CMP_ARMOR_2_5_NAME type = technical_efficiency difficulty = 5 double_time = yes }
+    required  = { 2010 }
+    effects =
+    { command = { type = activate_unit_type which = light_armor }
+      command = { type = new_model which = light_armor value = 0 }
+    }
+  }
+  # ‰ŠúŒ^íÔ
+  application =
+  { id        = 2030
+    name      = TECH_APP_ARMOR_3_NAME
+    desc      = TECH_APP_ARMOR_3_DESC
+    position  = { x = 24 y = 56 }
+    year      = 1936
+    # ƒŠƒxƒbƒg—¯‚ß‘•b
+    component = { id = 2031 name = TECH_CMP_ARMOR_3_1_NAME type = mechanics difficulty = 6 }
+    # 0.50ŒûŒad‹@ŠÖe
+    component = { id = 2032 name = TECH_CMP_ARMOR_3_2_NAME type = artillery difficulty = 6 }
+    # ‰ŠúŒ^ƒGƒ“ƒWƒ“
+    component = { id = 2033 name = TECH_CMP_ARMOR_3_3_NAME type = mechanics difficulty = 6 }
+    # ‰ŠúŒ^ŒõŠwÆ€Ší
+    component = { id = 2034 name = TECH_CMP_ARMOR_3_4_NAME type = electronics difficulty = 6 }
+    # ‰ŠúŒ^íÔìŒ±
+    component = { id = 2035 name = TECH_CMP_ARMOR_3_5_NAME type = technical_efficiency difficulty = 6 double_time = yes }
+    required  = { 2020 }
+    effects =
+    { command = { type = new_model which = armor value = 1 }
+      command = { type = scrap_model which = armor value = 0 }
+    }
+  }
+  # Šî–{Œ^ŒyíÔ
+  application =
+  { id        = 2040
+    name      = TECH_APP_ARMOR_4_NAME
+    desc      = TECH_APP_ARMOR_4_DESC
+    position  = { x = 24 y = 72 }
+    year      = 1938
+    # Œy—Ê—nÚ‘•b
+    component = { id = 2041 name = TECH_CMP_ARMOR_4_1_NAME type = mechanics difficulty = 5 }
+    # 20mmíÔ–C
+    component = { id = 2042 name = TECH_CMP_ARMOR_4_2_NAME type = artillery difficulty = 5 }
+    # Šî–{Œ^¬Œ^ƒGƒ“ƒWƒ“
+    component = { id = 2043 name = TECH_CMP_ARMOR_4_3_NAME type = mechanics difficulty = 5 }
+    # Šî–{Œ^ŒõŠwÆ€Ší
+    component = { id = 2044 name = TECH_CMP_ARMOR_4_4_NAME type = electronics difficulty = 5 }
+    # Šî–{Œ^ŒyíÔìŒ±
+    component = { id = 2045 name = TECH_CMP_ARMOR_4_5_NAME type = technical_efficiency difficulty = 5 double_time = yes }
+    required  = { 2030 }
+    effects =
+    { command = { type = new_model which = light_armor value = 1 }
+      command = { type = scrap_model which = light_armor value = 0 }
+    }
+  }
+  # ‰ü—ÇŒ^ŒyíÔ
+  application =
+  { id        = 2050
+    name      = TECH_APP_ARMOR_5_NAME
+    desc      = TECH_APP_ARMOR_5_DESC
+    position  = { x = 24 y = 88 }
+    year      = 1939
+    # Œy—ÊŒXÎ‘•b
+    component = { id = 2051 name = TECH_CMP_ARMOR_5_1_NAME type = mechanics difficulty = 6 }
+    # 37mmíÔ–C
+    component = { id = 2052 name = TECH_CMP_ARMOR_5_2_NAME type = artillery difficulty = 6 }
+    # ‰ü—ÇŒ^¬Œ^ƒGƒ“ƒWƒ“
+    component = { id = 2053 name = TECH_CMP_ARMOR_5_3_NAME type = mechanics difficulty = 6 }
+    # ‰ü—ÇŒ^ŒõŠwÆ€Ší
+    component = { id = 2054 name = TECH_CMP_ARMOR_5_4_NAME type = electronics difficulty = 6 }
+    # ‰ü—ÇŒ^ŒyíÔìŒ±
+    component = { id = 2055 name = TECH_CMP_ARMOR_5_5_NAME type = technical_efficiency difficulty = 6 double_time = yes }
+    required  = { 2040 }
+    effects =
+    { command = { type = new_model which = light_armor value = 2 }
+      command = { type = scrap_model which = light_armor value = 1 }
+    }
+  }
+  # ”­“WŒ^ŒyíÔ
+  application =
+  { id        = 2060
+    name      = TECH_APP_ARMOR_6_NAME
+    desc      = TECH_APP_ARMOR_6_DESC
+    position  = { x = 24 y = 104 }
+    year      = 1943
+    # ”­“WŒ^Œy—ÊŒXÎ‘•b
+    component = { id = 2061 name = TECH_CMP_ARMOR_6_1_NAME type = mechanics difficulty = 4 }
+    # 50mmíÔ–C
+    component = { id = 2062 name = TECH_CMP_ARMOR_6_2_NAME type = artillery difficulty = 4 }
+    # ”­“WŒ^¬Œ^ƒGƒ“ƒWƒ“
+    component = { id = 2063 name = TECH_CMP_ARMOR_6_3_NAME type = mechanics difficulty = 4 }
+    # ”­“WŒ^ŒõŠwÆ€Ší
+    component = { id = 2064 name = TECH_CMP_ARMOR_6_4_NAME type = electronics difficulty = 4 }
+    # ”­“WŒ^ŒyíÔìŒ±
+    component = { id = 2065 name = TECH_CMP_ARMOR_6_5_NAME type = technical_efficiency difficulty = 4 double_time = yes }
+    required  = { 2050 }
+    effects =
+    { command = { type = new_model which = light_armor value = 3 }
+      command = { type = scrap_model which = light_armor value = 2 }
+      command = { type = activate_unit_type which = light_armor_brigade }
+      command = { type = new_model which = light_armor_brigade value = 0 }
+    }
+  }
+  # Šî–{Œ^’†íÔ
+  application =
+  { id        = 2070
+    name      = TECH_APP_ARMOR_7_NAME
+    desc      = TECH_APP_ARMOR_7_DESC
+    position  = { x = 24 y = 152 }
+    year      = 1939
+    # ’†—Ê—nÚ‘•b
+    component = { id = 2071 name = TECH_CMP_ARMOR_7_1_NAME type = mechanics difficulty = 7 }
+    # 50mmíÔ–C
+    component = { id = 2072 name = TECH_CMP_ARMOR_7_2_NAME type = artillery difficulty = 7 }
+    # Šî–{Œ^’†Œ^ƒGƒ“ƒWƒ“
+    component = { id = 2073 name = TECH_CMP_ARMOR_7_3_NAME type = mechanics difficulty = 7 }
+    # Šî–{Œ^ŒõŠwÆ€Ší
+    component = { id = 2074 name = TECH_CMP_ARMOR_7_4_NAME type = electronics difficulty = 7 }
+    # Šî–{Œ^’†íÔìŒ±
+    component = { id = 2075 name = TECH_CMP_ARMOR_7_5_NAME type = technical_efficiency difficulty = 7 double_time = yes }
+    required  = { 2050 }
+    effects =
+    { command = { type = new_model which = armor value = 2 }
+      command = { type = scrap_model which = armor value = 1 }
+    }
+  }
+  # ‰ü—ÇŒ^’†íÔ
+  application =
+  { id        = 2080
+    name      = TECH_APP_ARMOR_8_NAME
+    desc      = TECH_APP_ARMOR_8_DESC
+    position  = { x = 24 y = 168 }
+    year      = 1941
+    # ’†—ÊŒXÎ‘•b
+    component = { id = 2081 name = TECH_CMP_ARMOR_8_1_NAME type = mechanics difficulty = 8 }
+    # 75mmíÔ–C
+    component = { id = 2082 name = TECH_CMP_ARMOR_8_2_NAME type = artillery difficulty = 7 }
+    # ‰ü—ÇŒ^’†Œ^ƒGƒ“ƒWƒ“
+    component = { id = 2083 name = TECH_CMP_ARMOR_8_3_NAME type = mechanics difficulty = 8 }
+    # ‰ü—ÇŒ^ŒõŠwÆ€Ší
+    component = { id = 2084 name = TECH_CMP_ARMOR_8_4_NAME type = electronics difficulty = 7 }
+    # ‰ü—ÇŒ^’†íÔìŒ±
+    component = { id = 2085 name = TECH_CMP_ARMOR_8_5_NAME type = technical_efficiency difficulty = 8 double_time = yes }
+    required  = { 2070 }
+    effects =
+    { command = { type = new_model which = armor value = 3 }
+      command = { type = scrap_model which = armor value = 2 }
+    }
+  }
+  # €Œ»‘ãŒ^‘•bÔ
+  application =
+  { id        = 2550
+    name      = TECH_APP_ARMOR_55_NAME
+    desc      = TECH_APP_ARMOR_55_DESC
+    position  = { x = 434 y = 372 }
+    year      = 1951
+    # Œy‘•b
+    component = { id = 2551 name = TECH_CMP_ARMOR_55_1_NAME type = mechanics difficulty = 4 }
+    # ’†ŒûŒa‹@ŠÖ–C
+    component = { id = 2552 name = TECH_CMP_ARMOR_55_2_NAME type = artillery difficulty = 3 }
+    # Œ»‘ãŒ^ƒGƒ“ƒWƒ“
+    component = { id = 2553 name = TECH_CMP_ARMOR_55_3_NAME type = mechanics difficulty = 5 }
+    # ÔŠOüŒõŠwÆ€Ší
+    component = { id = 2554 name = TECH_CMP_ARMOR_55_4_NAME type = electronics difficulty = 6 }
+    # €Œ»‘ãŒ^‘•bÔìŒ±
+    component = { id = 2555 name = TECH_CMP_ARMOR_55_5_NAME type = technical_efficiency difficulty = 4 }
+    required  = { 11110 }
+    effects =
+    { command = { type = new_model which = armored_car value = 3 }
+      command = { type = scrap_model which = armored_car value = 2 }
+    }
+  }
+  # Œ»‘ãŒ^‘•bÔ
+  application =
+  { id        = 2560
+    name      = TECH_APP_ARMOR_56_NAME
+    desc      = TECH_APP_ARMOR_56_DESC
+    position  = { x = 434 y = 388 }
+    year      = 1957
+    # Œy‘•b
+    component = { id = 2561 name = TECH_CMP_ARMOR_56_1_NAME type = mechanics difficulty = 6 }
+    # ‘åŒûŒa‹@ŠÖ–C
+    component = { id = 2562 name = TECH_CMP_ARMOR_56_2_NAME type = artillery difficulty = 5 }
+    # —âíŠúƒGƒ“ƒWƒ“
+    component = { id = 2563 name = TECH_CMP_ARMOR_56_3_NAME type = mechanics difficulty = 6 }
+    # ƒpƒbƒVƒu®ÔŠOüŒõŠwÆ€Ší
+    component = { id = 2564 name = TECH_CMP_ARMOR_56_4_NAME type = electronics difficulty = 6 }
+    # Œ»‘ãŒ^‘•bÔìŒ±
+    component = { id = 2565 name = TECH_CMP_ARMOR_56_5_NAME type = technical_efficiency difficulty = 6 }
+    required  = { 2550 }
+    effects =
+    { command = { type = new_model which = armored_car value = 4 }
+      command = { type = scrap_model which = armored_car value = 3 }
+    }
+  }
+  # ”­“WŒ^’†íÔ
+  application =
+  { id        = 2090
+    name      = TECH_APP_ARMOR_9_NAME
+    desc      = TECH_APP_ARMOR_9_DESC
+    position  = { x = 24 y = 184 }
+    year      = 1943
+    # ”­“WŒ^’†—ÊŒXÎ‘•b
+    component = { id = 2091 name = TECH_CMP_ARMOR_9_1_NAME type = mechanics difficulty = 8 }
+    # 88mmíÔ–C
+    component = { id = 2092 name = TECH_CMP_ARMOR_9_2_NAME type = artillery difficulty = 8 }
+    # ”­“WŒ^’†Œ^ƒGƒ“ƒWƒ“
+    component = { id = 2093 name = TECH_CMP_ARMOR_9_3_NAME type = mechanics difficulty = 8 }
+    # ”­“WŒ^ŒõŠwÆ€Ší
+    component = { id = 2094 name = TECH_CMP_ARMOR_9_4_NAME type = electronics difficulty = 8 }
+    # ”­“WŒ^’†íÔìŒ±
+    component = { id = 2095 name = TECH_CMP_ARMOR_9_5_NAME type = technical_efficiency difficulty = 8 double_time = yes }
+    required  = { 2080 }
+    effects =
+    { command = { type = new_model which = armor value = 4 }
+      command = { type = scrap_model which = armor value = 3 }
+    }
+  }
+  # å—ÍíÔ
+  application =
+  { id        = 11000
+    name      = TECH_APP_ARMOR_100_NAME
+    desc      = TECH_APP_ARMOR_100_DESC
+    position  = { x = 24 y = 337 }
+    year      = 1947
+    # ‰ü—ÇŒ^”š”­”½‰‘•b
+    component = { id = 11001 name = TECH_CMP_ARMOR_100_1_NAME type = mechanics difficulty = 9 }
+    # 130mmíÔ–C
+    component = { id = 11002 name = TECH_CMP_ARMOR_100_2_NAME type = artillery difficulty = 9 }
+    # €Œ»‘ãŒ^ƒTƒXƒyƒ“ƒVƒ‡ƒ“
+    component = { id = 11003 name = TECH_CMP_ARMOR_100_3_NAME type = mechanics difficulty = 9 }
+    # ‰ü—ÇŒ^ÔŠOüŒõŠwÆ€Ší
+    component = { id = 11004 name = TECH_CMP_ARMOR_100_4_NAME type = electronics difficulty = 9 }
+    # å—ÍíÔìŒ±
+    component = { id = 11005 name = TECH_CMP_ARMOR_100_5_NAME type = technical_efficiency difficulty = 9 double_time = yes }
+    required  = { 2140 }
+    effects =
+    { command = { type = new_model which = armor value = 6 }
+      command = { type = scrap_model which = armor value = 5 }
+    }
+  }
+  # ”­“WŒ^å—ÍíÔ
+  application =
+  { id        = 11010
+    name      = TECH_APP_ARMOR_101_NAME
+    desc      = TECH_APP_ARMOR_101_DESC
+    position  = { x = 24 y = 355 }
+    year      = 1951
+    # ”­“WŒ^”š”­”½‰‘•b
+    component = { id = 11011 name = TECH_CMP_ARMOR_101_1_NAME type = mechanics difficulty = 10 }
+    # ”¼©“®100mmíÔ–C
+    component = { id = 11012 name = TECH_CMP_ARMOR_101_2_NAME type = artillery difficulty = 10 }
+    # €Œ»‘ãŒ^ƒTƒXƒyƒ“ƒVƒ‡ƒ“
+    component = { id = 11013 name = TECH_CMP_ARMOR_101_3_NAME type = mechanics difficulty = 9 }
+    # ‰“‹——£ÔŠOüŒõŠwÆ€Ší
+    component = { id = 11014 name = TECH_CMP_ARMOR_101_4_NAME type = electronics difficulty = 10 }
+    # ”­“WŒ^å—ÍíÔìŒ±
+    component = { id = 11015 name = TECH_CMP_ARMOR_101_5_NAME type = technical_efficiency difficulty = 10 double_time = yes }
+    required  = { 11000 }
+    effects =
+    { command = { type = new_model which = armor value = 7 }
+      command = { type = scrap_model which = armor value = 6 }
+    }
+  }
+  # —âíŒ^å—ÍíÔ
+  application =
+  { id        = 11120
+    name      = TECH_APP_ARMOR_112_NAME
+    desc      = TECH_APP_ARMOR_112_DESC
+    position  = { x = 24 y = 373 }
+    year      = 1955
+    # •¡‡‘•b
+    component = { id = 11121 name = TECH_CMP_ARMOR_112_1_NAME type = mechanics difficulty = 11 }
+    # ”¼©“®120mmíÔ–C
+    component = { id = 11122 name = TECH_CMP_ARMOR_112_2_NAME type = artillery difficulty = 10 }
+    # —âíŒ^ƒTƒXƒyƒ“ƒVƒ‡ƒ“
+    component = { id = 11123 name = TECH_CMP_ARMOR_112_3_NAME type = mechanics difficulty = 10 }
+    # Šî–{Œ^ËŒ‚“§‘•’u
+    component = { id = 11124 name = TECH_CMP_ARMOR_112_4_NAME type = electronics difficulty = 11 }
+    # —âíŒ^å—ÍíÔìŒ±
+    component = { id = 11125 name = TECH_CMP_ARMOR_112_5_NAME type = technical_efficiency difficulty = 11 double_time = yes }
+    required  = { 11010 }
+    effects =
+    { command = { type = new_model which = armor value = 8 }
+      command = { type = scrap_model which = armor value = 7 }
+    }
+  }
+  # Œ»‘ãŒ^å—ÍíÔ
+  application =
+  { id        = 11130
+    name      = TECH_APP_ARMOR_113_NAME
+    desc      = TECH_APP_ARMOR_113_DESC
+    position  = { x = 24 y = 391 }
+    year      = 1961
+    # •¡‡E’†‹ó‘•b
+    component = { id = 11131 name = TECH_CMP_ARMOR_113_1_NAME type = mechanics difficulty = 12 }
+    # 120mmŠŠo–C
+    component = { id = 11132 name = TECH_CMP_ARMOR_113_2_NAME type = artillery difficulty = 12 }
+    # Œ»‘ãŒ^ƒTƒXƒyƒ“ƒVƒ‡ƒ“
+    component = { id = 11133 name = TECH_CMP_ARMOR_113_3_NAME type = mechanics difficulty = 12 }
+    # Œ»‘ãŒ^ËŒ‚“§‘•’u
+    component = { id = 11134 name = TECH_CMP_ARMOR_113_4_NAME type = electronics difficulty = 12 }
+    # Œ»‘ãŒ^å—ÍíÔìŒ±
+    component = { id = 11135 name = TECH_CMP_ARMOR_113_5_NAME type = technical_efficiency difficulty = 12 double_time = yes }
+    required  = { 11120 }
+    effects =
+    { command = { type = new_model which = armor value = 9 }
+      command = { type = scrap_model which = armor value = 8 }
+    }
+  }
+  # Šî–{Œ^díÔ
+  application =
+  { id        = 2100
+    name      = TECH_APP_ARMOR_10_NAME
+    desc      = TECH_APP_ARMOR_10_DESC
+    position  = { x = 24 y = 229 }
+    year      = 1938
+    # Šî–{Œ^ƒA[ƒ}[ƒXƒJ[ƒg
+    component = { id = 2101 name = TECH_CMP_ARMOR_10_1_NAME type = mechanics difficulty = 6 }
+    # 75mmíÔ–C
+    component = { id = 2102 name = TECH_CMP_ARMOR_10_2_NAME type = artillery difficulty = 6 }
+    # Šî–{Œ^‘åŒ^ƒGƒ“ƒWƒ“
+    component = { id = 2103 name = TECH_CMP_ARMOR_10_3_NAME type = mechanics difficulty = 6 }
+    # Šî–{Œ^ŒõŠwÆ€Ší
+    component = { id = 2104 name = TECH_CMP_ARMOR_10_4_NAME type = electronics difficulty = 6 }
+    # Šî–{Œ^díÔìŒ±
+    component = { id = 2105 name = TECH_CMP_ARMOR_10_5_NAME type = technical_efficiency difficulty = 6 double_time = yes }
+    required  = { 2030 }
+    effects =
+    { command = { type = activate_unit_type which = heavy_armor }
+      command = { type = new_model which = heavy_armor value = 0 }
+    }
+  }
+  # ‰ü—ÇŒ^díÔ
+  application =
+  { id        = 2110
+    name      = TECH_APP_ARMOR_11_NAME
+    desc      = TECH_APP_ARMOR_11_DESC
+    position  = { x = 24 y = 247 }
+    year      = 1941
+    # ‰ü—ÇŒ^ƒA[ƒ}[ƒXƒJ[ƒg
+    component = { id = 2111 name = TECH_CMP_ARMOR_11_1_NAME type = mechanics difficulty = 7 }
+    # 88mmL56íÔ–C
+    component = { id = 2112 name = TECH_CMP_ARMOR_11_2_NAME type = artillery difficulty = 7 }
+    # ‰ü—ÇŒ^‘åŒ^ƒGƒ“ƒWƒ“
+    component = { id = 2113 name = TECH_CMP_ARMOR_11_3_NAME type = mechanics difficulty = 7 }
+    # ‰ü—ÇŒ^ŒõŠwÆ€Ší
+    component = { id = 2114 name = TECH_CMP_ARMOR_11_4_NAME type = electronics difficulty = 7 }
+    # ‰ü—ÇŒ^díÔìŒ±
+    component = { id = 2115 name = TECH_CMP_ARMOR_11_5_NAME type = technical_efficiency difficulty = 7 double_time = yes }
+    required  = { 2100 2080 }
+    effects =
+    { command = { type = new_model which = heavy_armor value = 1 }
+      command = { type = scrap_model which = heavy_armor value = 0 }
+    }
+  }
+  # ”­“WŒ^díÔ
+  application =
+  { id        = 2120
+    name      = TECH_APP_ARMOR_12_NAME
+    desc      = TECH_APP_ARMOR_12_DESC
+    position  = { x = 24 y = 265 }
+    year      = 1943
+    # ”­“WŒ^ƒA[ƒ}[ƒXƒJ[ƒg
+    component = { id = 2121 name = TECH_CMP_ARMOR_12_1_NAME type = mechanics difficulty = 9 }
+    # 88mmL71íÔ–C
+    component = { id = 2122 name = TECH_CMP_ARMOR_12_2_NAME type = artillery difficulty = 8 }
+    # ”­“WŒ^‘åŒ^ƒGƒ“ƒWƒ“
+    component = { id = 2123 name = TECH_CMP_ARMOR_12_3_NAME type = mechanics difficulty = 8 }
+    # ”­“WŒ^ŒõŠwÆ€Ší
+    component = { id = 2124 name = TECH_CMP_ARMOR_12_4_NAME type = electronics difficulty = 8 }
+    # ”­“WŒ^díÔìŒ±
+    component = { id = 2125 name = TECH_CMP_ARMOR_12_5_NAME type = technical_efficiency difficulty = 9 double_time = yes }
+    required  = { 2110 2090 }
+    effects =
+    { command = { type = new_model which = heavy_armor value = 2 }
+      command = { type = scrap_model which = heavy_armor value = 1 }
+    }
+  }
+  # ’´díÔ
+  application =
+  { id        = 2130
+    name      = TECH_APP_ARMOR_13_NAME
+    desc      = TECH_APP_ARMOR_13_DESC
+    position  = { x = 24 y = 301 }
+    year      = 1944
+    # ’´díÔ‘•b
+    component = { id = 2131 name = TECH_CMP_ARMOR_13_1_NAME type = mechanics difficulty = 8 }
+    # 128mmíÔ–C
+    component = { id = 2132 name = TECH_CMP_ARMOR_13_2_NAME type = artillery difficulty = 8 }
+    # ’´‘åŒ^ƒGƒ“ƒWƒ“
+    component = { id = 2133 name = TECH_CMP_ARMOR_13_3_NAME type = mechanics difficulty = 8 }
+    # ÔŠOüŒõŠwÆ€Ší
+    component = { id = 2134 name = TECH_CMP_ARMOR_13_4_NAME type = electronics difficulty = 9 }
+    # ’´díÔìŒ±
+    component = { id = 2135 name = TECH_CMP_ARMOR_13_5_NAME type = technical_efficiency difficulty = 8 double_time = yes }
+    required  = { 2120 }
+    effects =
+    { command = { type = activate_unit_type which = super_heavy_armor }
+      command = { type = new_model which = super_heavy_armor value = 0 }
+    }
+  }
+  # €Œ»‘ãŒ^íÔ
+  application =
+  { id        = 2140
+    name      = TECH_APP_ARMOR_14_NAME
+    desc      = TECH_APP_ARMOR_14_DESC
+    position  = { x = 24 y = 319 }
+    year      = 1945
+    # ”½‰‘•b
+    component = { id = 2141 name = TECH_CMP_ARMOR_14_1_NAME type = mechanics difficulty = 10 }
+    # 120mmíÔ–C
+    component = { id = 2142 name = TECH_CMP_ARMOR_14_2_NAME type = artillery difficulty = 10 }
+    # €Œ»‘ãŒ^ƒGƒ“ƒWƒ“
+    component = { id = 2143 name = TECH_CMP_ARMOR_14_3_NAME type = mechanics difficulty = 10 }
+    # ÔŠOüŒõŠwÆ€Ší
+    component = { id = 2144 name = TECH_CMP_ARMOR_14_4_NAME type = electronics difficulty = 10 }
+    # €Œ»‘ãŒ^íÔìŒ±
+    component = { id = 2145 name = TECH_CMP_ARMOR_14_5_NAME type = technical_efficiency difficulty = 10 double_time = yes }
+    required  = { 2120 2090 }
+    effects =
+    { command = { type = new_model which = armor value = 5 }
+      command = { type = scrap_model which = armor value = 4 }
+    }
+  }
+  # €Œ»‘ãŒ^díÔ
+  application =
+  { id        = 2570
+    name      = TECH_APP_ARMOR_57_NAME
+    desc      = TECH_APP_ARMOR_57_DESC
+    position  = { x = 24 y = 283 }
+    year      = 1950
+    # €Œ»‘ãŒ^‘åŒ^‘•b
+    component = { id = 2571 name = TECH_CMP_ARMOR_57_1_NAME type = mechanics difficulty = 9 }
+    # 128mmíÔ–C
+    component = { id = 2572 name = TECH_CMP_ARMOR_57_2_NAME type = artillery difficulty = 8 }
+    # €Œ»‘ãŒ^‘åŒ^ƒGƒ“ƒWƒ“
+    component = { id = 2573 name = TECH_CMP_ARMOR_57_3_NAME type = mechanics difficulty = 8 }
+    # ÔŠOüŒõŠwÆ€Ší
+    component = { id = 2574 name = TECH_CMP_ARMOR_57_4_NAME type = electronics difficulty = 8 }
+    # €Œ»‘ãŒ^díÔìŒ±
+    component = { id = 2575 name = TECH_CMP_ARMOR_57_5_NAME type = technical_efficiency difficulty = 9 double_time = yes }
+    required  = { 11000 2120 }
+    effects =
+    { command = { type = new_model which = heavy_armor value = 3 }
+      command = { type = scrap_model which = heavy_armor value = 2 }
+    }
+  }
+  # €Œ»‘ãŒ^ŒyíÔ
+  application =
+  { id        = 2580
+    name      = TECH_APP_ARMOR_58_NAME
+    desc      = TECH_APP_ARMOR_58_DESC
+    position  = { x = 24 y = 120 }
+    year      = 1948
+    # €Œ»‘ãŒ^Œy—Ê‘•b
+    component = { id = 2581 name = TECH_CMP_ARMOR_58_1_NAME type = mechanics difficulty = 5 }
+    # 57mmíÔ–C
+    component = { id = 2582 name = TECH_CMP_ARMOR_58_2_NAME type = artillery difficulty = 5 }
+    # €Œ»‘ãŒ^ŒyƒGƒ“ƒWƒ“
+    component = { id = 2583 name = TECH_CMP_ARMOR_58_3_NAME type = mechanics difficulty = 5 }
+    # ÔŠOüŒõŠwÆ€Ší
+    component = { id = 2584 name = TECH_CMP_ARMOR_58_4_NAME type = electronics difficulty = 5 }
+    # €Œ»‘ãŒ^ŒyíÔìƒeƒXƒg
+    component = { id = 2585 name = TECH_CMP_ARMOR_58_5_NAME type = technical_efficiency difficulty = 5 double_time = yes }
+    required  = { 2060 }
+    effects =
+    { command = { type = new_model which = light_armor value = 4 }
+      command = { type = scrap_model which = light_armor value = 3 }
+      command = { type = new_model which = light_armor_brigade value = 1 }
+      command = { type = scrap_model which = light_armor_brigade value = 0 }
+    }
+  }
+  # Šî–{Œ^‘•bÔ
+  application =
+  { id        = 2150
+    name      = TECH_APP_ARMOR_15_NAME
+    desc      = TECH_APP_ARMOR_15_DESC
+    position  = { x = 434 y = 324 }
+    year      = 1937
+    # Œy‘•b
+    component = { id = 2151 name = TECH_CMP_ARMOR_15_1_NAME type = mechanics difficulty = 3 }
+    # ¬ŒûŒa‹@ŠÖe
+    component = { id = 2152 name = TECH_CMP_ARMOR_15_2_NAME type = artillery difficulty = 3 }
+    # ’†Œ^ƒgƒ‰ƒNƒ^[ƒGƒ“ƒWƒ“
+    component = { id = 2153 name = TECH_CMP_ARMOR_15_3_NAME type = mechanics difficulty = 3 }
+    # ÔÚ’‹–éŒ“—p‘oŠá‹¾
+    component = { id = 2154 name = TECH_CMP_ARMOR_15_4_NAME type = electronics difficulty = 3 }
+    # Šî–{Œ^‘•bÔìŒ±
+    component = { id = 2155 name = TECH_CMP_ARMOR_15_5_NAME type = technical_efficiency difficulty = 3 }
+    required  = { }
+    effects =
+    { command = { type = activate_unit_type which = armored_car }
+      command = { type = new_model which = armored_car value = 0 }
+    }
+  }
+  # ‰ü—ÇŒ^‘•bÔ
+  application =
+  { id        = 2160
+    name      = TECH_APP_ARMOR_16_NAME
+    desc      = TECH_APP_ARMOR_16_DESC
+    position  = { x = 434 y = 340 }
+    year      = 1941
+    # Œy‘•b
+    component = { id = 2161 name = TECH_CMP_ARMOR_16_1_NAME type = mechanics difficulty = 3 }
+    # ’†ŒûŒa‹@ŠÖe
+    component = { id = 2162 name = TECH_CMP_ARMOR_16_2_NAME type = artillery difficulty = 3 }
+    # ‘åŒ^ƒgƒ‰ƒNƒ^[ƒGƒ“ƒWƒ“
+    component = { id = 2163 name = TECH_CMP_ARMOR_16_3_NAME type = mechanics difficulty = 3 }
+    # ÔÚ’‹–éŒ“—p‘oŠá‹¾
+    component = { id = 2164 name = TECH_CMP_ARMOR_16_4_NAME type = electronics difficulty = 3 }
+    # ‰ü—ÇŒ^‘•bÔìŒ±
+    component = { id = 2165 name = TECH_CMP_ARMOR_16_5_NAME type = technical_efficiency difficulty = 3 }
+    required  = { 2150 }
+    effects =
+    { command = { type = new_model which = armored_car value = 1 }
+      command = { type = scrap_model which = armored_car value = 0 }
+    }
+  }
+  # ”­“WŒ^‘•bÔ
+  application =
+  { id        = 11110
+    name      = TECH_APP_ARMOR_110_NAME
+    desc      = TECH_APP_ARMOR_110_DESC
+    position  = { x = 434 y = 356 }
+    year      = 1946
+    # Œy‘•b
+    component = { id = 11111 name = TECH_CMP_ARMOR_16_1_NAME type = mechanics difficulty = 3 }
+    # ’†ŒûŒa‹@ŠÖe
+    component = { id = 11112 name = TECH_CMP_ARMOR_16_2_NAME type = artillery difficulty = 2 }
+    # €Œ»‘ãŒ^ƒGƒ“ƒWƒ“
+    component = { id = 11113 name = TECH_CMP_ARMOR_14_3_NAME type = mechanics difficulty = 4 }
+    # ÔŠOüŒõŠwÆ€Ší
+    component = { id = 11114 name = TECH_CMP_ARMOR_21_4_NAME type = electronics difficulty = 5 }
+    # ”­“WŒ^‘•bÔìŒ±
+    component = { id = 11115 name = TECH_CMP_ARMOR_110_5_NAME type = technical_efficiency difficulty = 3 }
+    required  = { 2160 }
+    effects =
+    { command = { type = new_model which = armored_car value = 2 }
+      command = { type = scrap_model which = armored_car value = 1 }
+    }
+  }
+  # ‰ŠúŒ^‹ì’€íÔ
+  application =
+  { id        = 2170
+    name      = TECH_APP_ARMOR_17_NAME
+    desc      = TECH_APP_ARMOR_17_DESC
+    position  = { x = 160 y = 24 }
+    year      = 1938
+    # 50mm‘ÎíÔ–C
+    component = { id = 2171 name = TECH_CMP_ARMOR_17_1_NAME type = artillery difficulty = 3 }
+    # ‰ŠúŒ^íÔ—pÔ‘Ì
+    component = { id = 2172 name = TECH_CMP_ARMOR_17_2_NAME type = mechanics difficulty = 3 }
+    # ’Êí“Ob’e
+    component = { id = 2173 name = TECH_CMP_ARMOR_17_3_NAME type = chemistry difficulty = 3 }
+    # ‰ŠúŒ^ŒõŠwÆ€Ší
+    component = { id = 2174 name = TECH_CMP_ARMOR_17_4_NAME type = electronics difficulty = 3 }
+    # ‰ŠúŒ^‹ì’€íÔìŒ±
+    component = { id = 2175 name = TECH_CMP_ARMOR_17_5_NAME type = technical_efficiency difficulty = 3 }
+    required  = { 2030 2400 }
+    effects =
+    { command = { type = activate_unit_type which = tank_destroyer }
+      command = { type = new_model which = tank_destroyer value = 0 }
+    }
+  }
+  # Šî–{Œ^‹ì’€íÔ
+  application =
+  { id        = 2180
+    name      = TECH_APP_ARMOR_18_NAME
+    desc      = TECH_APP_ARMOR_18_DESC
+    position  = { x = 160 y = 40 }
+    year      = 1940
+    # 75mm‘ÎíÔ–C
+    component = { id = 2181 name = TECH_CMP_ARMOR_18_1_NAME type = artillery difficulty = 3 }
+    # Šî–{Œ^ŒyíÔ—pÔ‘Ì
+    component = { id = 2182 name = TECH_CMP_ARMOR_18_2_NAME type = mechanics difficulty = 3 }
+    # ¬Œ^ày–ò’e
+    component = { id = 2183 name = TECH_CMP_ARMOR_18_3_NAME type = chemistry difficulty = 3 }
+    # Šî–{Œ^ŒõŠwÆ€Ší
+    component = { id = 2184 name = TECH_CMP_ARMOR_18_4_NAME type = electronics difficulty = 3 }
+    # Šî–{Œ^‹ì’€íÔìŒ±
+    component = { id = 2185 name = TECH_CMP_ARMOR_18_5_NAME type = technical_efficiency difficulty = 3 }
+    required  = { 2040 2410 2170 }
+    effects =
+    { command = { type = new_model which = tank_destroyer value = 1 }
+      command = { type = scrap_model which = tank_destroyer value = 0 }
+    }
+  }
+  # ‰ü—ÇŒ^‹ì’€íÔ
+  application =
+  { id        = 2190
+    name      = TECH_APP_ARMOR_19_NAME
+    desc      = TECH_APP_ARMOR_19_DESC
+    position  = { x = 160 y = 56 }
+    year      = 1941
+    # 88mm‘ÎíÔ–C
+    component = { id = 2191 name = TECH_CMP_ARMOR_19_1_NAME type = artillery difficulty = 3 }
+    # ‰ü—ÇŒ^ŒyíÔ—pÔ‘Ì
+    component = { id = 2192 name = TECH_CMP_ARMOR_19_2_NAME type = mechanics difficulty = 3 }
+    # dcHEAT’e
+    component = { id = 2193 name = TECH_CMP_ARMOR_19_3_NAME type = chemistry difficulty = 3 }
+    # ‰ü—ÇŒ^ŒõŠwÆ€Ší
+    component = { id = 2194 name = TECH_CMP_ARMOR_19_4_NAME type = electronics difficulty = 3 }
+    # ‰ü—ÇŒ^‹ì’€íÔìŒ±
+    component = { id = 2195 name = TECH_CMP_ARMOR_19_5_NAME type = technical_efficiency difficulty = 3 }
+    required  = { 2050 2420 2180 }
+    effects =
+    { command = { type = new_model which = tank_destroyer value = 2 }
+      command = { type = scrap_model which = tank_destroyer value = 1 }
+    }
+  }
+  # ”­“WŒ^‹ì’€íÔ
+  application =
+  { id        = 2200
+    name      = TECH_APP_ARMOR_20_NAME
+    desc      = TECH_APP_ARMOR_20_DESC
+    position  = { x = 160 y = 72 }
+    year      = 1943
+    # 105mm‘ÎíÔ–C
+    component = { id = 2201 name = TECH_CMP_ARMOR_20_1_NAME type = artillery difficulty = 4 }
+    # Šî–{Œ^’†íÔ—pÔ‘Ì
+    component = { id = 2202 name = TECH_CMP_ARMOR_20_2_NAME type = mechanics difficulty = 4 }
+    # —£’E‘•’e“›•t‚«HEAT’e
+    component = { id = 2203 name = TECH_CMP_ARMOR_20_3_NAME type = chemistry difficulty = 4 }
+    # ”­“WŒ^ŒõŠwÆ€Ší
+    component = { id = 2204 name = TECH_CMP_ARMOR_20_4_NAME type = electronics difficulty = 4 }
+    # ”­“WŒ^‹ì’€íÔìŒ±
+    component = { id = 2205 name = TECH_CMP_ARMOR_20_5_NAME type = technical_efficiency difficulty = 4 }
+    required  = { 2070 2430 2190 }
+    effects =
+    { command = { type = new_model which = tank_destroyer value = 3 }
+      command = { type = scrap_model which = tank_destroyer value = 2 }
+    }
+  }
+  # €Œ»‘ãŒ^‹ì’€íÔ
+  application =
+  { id        = 2210
+    name      = TECH_APP_ARMOR_21_NAME
+    desc      = TECH_APP_ARMOR_21_DESC
+    position  = { x = 160 y = 88 }
+    year      = 1946
+    # 120mm‘ÎíÔ–C
+    component = { id = 2211 name = TECH_CMP_ARMOR_21_1_NAME type = artillery difficulty = 5 }
+    # ‰ü—ÇŒ^’†íÔ—pÔ‘Ì
+    component = { id = 2212 name = TECH_CMP_ARMOR_21_2_NAME type = mechanics difficulty = 5 }
+    # ”í–X“Ob’e
+    component = { id = 2213 name = TECH_CMP_ARMOR_21_3_NAME type = chemistry difficulty = 5 }
+    # ÔŠOüŒõŠwÆ€Ší
+    component = { id = 2214 name = TECH_CMP_ARMOR_21_4_NAME type = electronics difficulty = 5 }
+    # €Œ»‘ãŒ^‹ì’€íÔìŒ±
+    component = { id = 2215 name = TECH_CMP_ARMOR_21_5_NAME type = technical_efficiency difficulty = 5 }
+    required  = { 2080 2440 2200 }
+    effects =
+    { command = { type = new_model which = tank_destroyer value = 4 }
+      command = { type = scrap_model which = tank_destroyer value = 3 }
+    }
+  }
+  # Œ»‘ãŒ^‹ì’€íÔ
+  application =
+  { id        = 11020
+    name      = TECH_APP_ARMOR_102_NAME
+    desc      = TECH_APP_ARMOR_102_DESC
+    position  = { x = 160 y = 104 }
+    year      = 1950
+    # ‘ÎíÔ—U“±ƒ~ƒTƒCƒ‹
+    component = { id = 11021 name = TECH_CMP_ARMOR_102_1_NAME type = artillery difficulty = 5 }
+    # ‰ü—ÇŒ^’†íÔÔ‘ä
+    component = { id = 11022 name = TECH_CMP_ARMOR_102_2_NAME type = mechanics difficulty = 5 }
+    # ‚‘¬“Ob’e
+    component = { id = 11023 name = TECH_CMP_ARMOR_102_3_NAME type = chemistry difficulty = 5 }
+    # ‰“‹——£ÔŠOüŒõŠwÆ€Ší
+    component = { id = 11024 name = TECH_CMP_ARMOR_102_4_NAME type = electronics difficulty = 5 }
+    # ”­“WŒ^‹ì’€íÔìŒ±
+    component = { id = 11025 name = TECH_CMP_ARMOR_102_5_NAME type = technical_efficiency difficulty = 5 }
+    required  = { 2090 2210 }
+    effects =
+    { command = { type = new_model which = tank_destroyer value = 5 }
+      command = { type = scrap_model which = tank_destroyer value = 4 }
+    }
+  }
+  # –ôiŒ^‹ì’€íÔ
+  application =
+  { id        = 11280
+    name      = TECH_APP_ARMOR_114_NAME
+    desc      = TECH_APP_ARMOR_114_DESC
+    position  = { x = 160 y = 120 }
+    year      = 1955
+    # ‰ü—ÇŒ^‘ÎíÔ—U“±ƒ~ƒTƒCƒ‹
+    component = { id = 11281 name = TECH_CMP_ARMOR_114_1_NAME type = artillery difficulty = 6 }
+    # ”­“WŒ^Œ^’†íÔÔ‘ä
+    component = { id = 11282 name = TECH_CMP_ARMOR_114_2_NAME type = mechanics difficulty = 6 }
+    # ‰ü—ÇŒ^‚‘¬“Ob’e
+    component = { id = 11283 name = TECH_CMP_ARMOR_114_3_NAME type = chemistry difficulty = 6 }
+    # ‰ü—ÇŒ^‰“‹——£ÔŠOüŒõŠwÆ€Ší
+    component = { id = 11284 name = TECH_CMP_ARMOR_114_4_NAME type = electronics difficulty = 6 }
+    # –ôiŒ^‹ì’€íÔìŒ±
+    component = { id = 11285 name = TECH_CMP_ARMOR_114_5_NAME type = technical_efficiency difficulty = 6 }
+    required  = { 2140 11020 }
+    effects =
+    { command = { type = new_model which = tank_destroyer value = 6 }
+      command = { type = scrap_model which = tank_destroyer value = 5 }
+    }
+  }
+  # ”ò–ôŒ^‹ì’€íÔ
+  application =
+  { id        = 11290
+    name      = TECH_APP_ARMOR_115_NAME
+    desc      = TECH_APP_ARMOR_115_DESC
+    position  = { x = 160 y = 136 }
+    year      = 1960
+    # ”­“WŒ^‘ÎíÔ—U“±ƒ~ƒTƒCƒ‹
+    component = { id = 11291 name = TECH_CMP_ARMOR_115_1_NAME type = artillery difficulty = 7 }
+    # Œ»‘ãŒ^Œ^’†íÔÔ‘ä
+    component = { id = 11292 name = TECH_CMP_ARMOR_115_2_NAME type = mechanics difficulty = 7 }
+    # ”­“WŒ^‚‘¬“Ob’e
+    component = { id = 11293 name = TECH_CMP_ARMOR_115_3_NAME type = chemistry difficulty = 7 }
+    # ”­“WŒ^‰“‹——£ÔŠOüŒõŠwÆ€Ší
+    component = { id = 11294 name = TECH_CMP_ARMOR_115_4_NAME type = electronics difficulty = 7 }
+    # ”ò–ôŒ^‹ì’€íÔìŒ±
+    component = { id = 11295 name = TECH_CMP_ARMOR_115_5_NAME type = technical_efficiency difficulty = 7 }
+    required  = { 11000 11280 }
+    effects =
+    { command = { type = new_model which = tank_destroyer value = 7 }
+      command = { type = scrap_model which = tank_destroyer value = 6 }
+    }
+  }
+  # ‰ŠúŒ^©‘––C
+  application =
+  { id        = 2220
+    name      = TECH_APP_ARMOR_22_NAME
+    desc      = TECH_APP_ARMOR_22_DESC
+    position  = { x = 432 y = 199 }
+    year      = 1939
+    # 50mmŒy“ËŒ‚–C
+    component = { id = 2221 name = TECH_CMP_ARMOR_22_1_NAME type = artillery difficulty = 3 }
+    # ‰ŠúŒ^íÔ—pÔ‘Ì
+    component = { id = 2222 name = TECH_CMP_ARMOR_22_2_NAME type = mechanics difficulty = 3 }
+    # ”j•ĞÖ’e
+    component = { id = 2223 name = TECH_CMP_ARMOR_22_3_NAME type = chemistry difficulty = 3 }
+    # Šî–{“IËŒ‚“§
+    component = { id = 2224 name = TECH_CMP_ARMOR_22_4_NAME type = electronics difficulty = 3 }
+    # ‰ŠúŒ^“ËŒ‚–CìŒ±
+    component = { id = 2225 name = TECH_CMP_ARMOR_22_5_NAME type = technical_efficiency difficulty = 3 }
+    required  = { 2030 2330 }
+    effects =
+    { command = { type = activate_unit_type which = sp_artillery }
+      command = { type = new_model which = sp_artillery value = 0 }
+    }
+  }
+  # Šî–{Œ^©‘––C
+  application =
+  { id        = 2230
+    name      = TECH_APP_ARMOR_23_NAME
+    desc      = TECH_APP_ARMOR_23_DESC
+    position  = { x = 432 y = 215 }
+    year      = 1940
+    # 75mm’†“ËŒ‚–C
+    component = { id = 2231 name = TECH_CMP_ARMOR_23_1_NAME type = artillery difficulty = 3 }
+    # Šî–{Œ^ŒyíÔ—pÔ‘Ì
+    component = { id = 2232 name = TECH_CMP_ARMOR_23_2_NAME type = mechanics difficulty = 3 }
+    # ”S’…Ö’e
+    component = { id = 2233 name = TECH_CMP_ARMOR_23_3_NAME type = chemistry difficulty = 3 }
+    # ‰ü—ÇŒ^ËŒ‚“§
+    component = { id = 2234 name = TECH_CMP_ARMOR_23_4_NAME type = electronics difficulty = 3 }
+    # Šî–{Œ^“ËŒ‚–CìŒ±
+    component = { id = 2235 name = TECH_CMP_ARMOR_23_5_NAME type = technical_efficiency difficulty = 4 }
+    required  = { 2040 2220 }
+    effects =
+    { command = { type = new_model which = sp_artillery value = 1 }
+      command = { type = scrap_model which = sp_artillery value = 0 }
+    }
+  }
+  # ‰ü—ÇŒ^©‘––C
+  application =
+  { id        = 2240
+    name      = TECH_APP_ARMOR_24_NAME
+    desc      = TECH_APP_ARMOR_24_DESC
+    position  = { x = 432 y = 231 }
+    year      = 1943
+    # 105mmd“ËŒ‚–C
+    component = { id = 2241 name = TECH_CMP_ARMOR_24_1_NAME type = artillery difficulty = 4 }
+    # ‰ü—ÇŒ^ŒyíÔ—pÔ‘Ì
+    component = { id = 2242 name = TECH_CMP_ARMOR_24_2_NAME type = mechanics difficulty = 4 }
+    # ”j•ĞŒø‰ÊÖ’e
+    component = { id = 2243 name = TECH_CMP_ARMOR_24_3_NAME type = chemistry difficulty = 4 }
+    # Šî–{Œ^‘Î–C•ºƒŒ[ƒ_[
+    component = { id = 2244 name = TECH_CMP_ARMOR_24_4_NAME type = electronics difficulty = 4 }
+    # ‰ü—ÇŒ^“ËŒ‚–CìŒ±
+    component = { id = 2245 name = TECH_CMP_ARMOR_24_5_NAME type = technical_efficiency difficulty = 4 }
+    required  = { 2050 2230 }
+    effects =
+    { command = { type = new_model which = sp_artillery value = 2 }
+      command = { type = scrap_model which = sp_artillery value = 1 }
+    }
+  }
+  # ”­“WŒ^©‘––C
+  application =
+  { id        = 2250
+    name      = TECH_APP_ARMOR_25_NAME
+    desc      = TECH_APP_ARMOR_25_DESC
+    position  = { x = 432 y = 247 }
+    year      = 1945
+    # 150mmd“ËŒ‚–C
+    component = { id = 2251 name = TECH_CMP_ARMOR_25_1_NAME type = artillery difficulty = 5 }
+    # Šî–{Œ^’†íÔ—pÔ‘Ì
+    component = { id = 2252 name = TECH_CMP_ARMOR_25_2_NAME type = mechanics difficulty = 5 }
+    # ‘ÎíÔÖ’e
+    component = { id = 2253 name = TECH_CMP_ARMOR_25_3_NAME type = chemistry difficulty = 5 }
+    # ‰ü—ÇŒ^‘Î–C•ºƒŒ[ƒ_[
+    component = { id = 2254 name = TECH_CMP_ARMOR_25_4_NAME type = electronics difficulty = 5 }
+    # ”­“WŒ^“ËŒ‚–CìŒ±
+    component = { id = 2255 name = TECH_CMP_ARMOR_25_5_NAME type = technical_efficiency difficulty = 5 }
+    required  = { 2060 2240 }
+    effects =
+    { command = { type = new_model which = sp_artillery value = 3 }
+      command = { type = scrap_model which = sp_artillery value = 2 }
+    }
+  }
+  # €Œ»‘ãŒ^©‘––C
+  application =
+  { id        = 11030
+    name      = TECH_APP_ARMOR_103_NAME
+    desc      = TECH_APP_ARMOR_103_DESC
+    position  = { x = 432 y = 263 }
+    year      = 1947
+    # 152mm‘½–Ú“I“ËŒ‚–C
+    component = { id = 11031 name = TECH_CMP_ARMOR_103_1_NAME type = artillery difficulty = 5 }
+    # ‰ü—ÇŒ^’†íÔÔ‘ä
+    component = { id = 11032 name = TECH_CMP_ARMOR_103_2_NAME type = mechanics difficulty = 5 }
+    # ‰ü—ÇŒ^‘ÎíÔÖiHEATj’e
+    component = { id = 11033 name = TECH_CMP_ARMOR_103_3_NAME type = chemistry difficulty = 5 }
+    # ”­“WŒ^‘Î–C•ºƒŒ[ƒ_[
+    component = { id = 11034 name = TECH_CMP_ARMOR_103_4_NAME type = electronics difficulty = 5 }
+    # €Œ»‘ãŒ^“ËŒ‚–CìŒ±
+    component = { id = 11035 name = TECH_CMP_ARMOR_103_5_NAME type = technical_efficiency difficulty = 5 }
+    required  = { 2070 2250 }
+    effects =
+    { command = { type = new_model which = sp_artillery value = 4 }
+      command = { type = scrap_model which = sp_artillery value = 3 }
+    }
+  }
+  # –ôiŒ^©‘––C
+  application =
+  { id        = 11240
+    name      = TECH_APP_ARMOR_116_NAME
+    desc      = TECH_APP_ARMOR_116_DESC
+    position  = { x = 296 y = 247 }
+    year      = 1955
+    # Œ»‘ãŒ^‘½–Ú“I“ËŒ‚–C
+    component = { id = 11241 name = TECH_CMP_ARMOR_116_1_NAME type = artillery difficulty = 5 }
+    # Œ»‘ãŒ^’†íÔÔ‘ä
+    component = { id = 11242 name = TECH_CMP_ARMOR_116_2_NAME type = mechanics difficulty = 5 }
+    # Œ»‘ãŒ^‘ÎíÔÖiHEATj’e
+    component = { id = 11243 name = TECH_CMP_ARMOR_116_3_NAME type = chemistry difficulty = 5 }
+    # –ôiŒ^‘Î–C•ºƒŒ[ƒ_[
+    component = { id = 11244 name = TECH_CMP_ARMOR_116_4_NAME type = electronics difficulty = 5 }
+    # –ôiŒ^“ËŒ‚–CìŒ±
+    component = { id = 11245 name = TECH_CMP_ARMOR_116_5_NAME type = technical_efficiency difficulty = 5 }
+    required  = { 2090 11040 }
+    effects =
+    { command = { type = new_model which = sp_artillery value = 6 }
+      command = { type = scrap_model which = sp_artillery value = 5 }
+    }
+  }
+  # ”ò–ôŒ^©‘––C
+  application =
+  { id        = 11250
+    name      = TECH_APP_ARMOR_117_NAME
+    desc      = TECH_APP_ARMOR_117_DESC
+    position  = { x = 296 y = 263 }
+    year      = 1960
+    # –ôiŒ^‘½–Ú“I“ËŒ‚–C
+    component = { id = 11251 name = TECH_CMP_ARMOR_117_1_NAME type = artillery difficulty = 6 }
+    # –ôiŒ^’†íÔÔ‘ä
+    component = { id = 11252 name = TECH_CMP_ARMOR_117_2_NAME type = mechanics difficulty = 6 }
+    # –ôiŒ^‘ÎíÔÖiHEATj’e
+    component = { id = 11253 name = TECH_CMP_ARMOR_117_3_NAME type = chemistry difficulty = 6 }
+    # ”ò–ôŒ^‘Î–C•ºƒŒ[ƒ_[
+    component = { id = 11254 name = TECH_CMP_ARMOR_117_4_NAME type = electronics difficulty = 6 }
+    # ”ò–ôŒ^“ËŒ‚–CìŒ±
+    component = { id = 11255 name = TECH_CMP_ARMOR_117_5_NAME type = technical_efficiency difficulty = 6 }
+    required  = { 2140 11240 }
+    effects =
+    { command = { type = new_model which = sp_artillery value = 7 }
+      command = { type = scrap_model which = sp_artillery value = 6 }
+    }
+  }
+  # Œ»‘ãŒ^©‘––C
+  application =
+  { id        = 11040
+    name      = TECH_APP_ARMOR_104_NAME
+    desc      = TECH_APP_ARMOR_104_DESC
+    position  = { x = 296 y = 231 }
+    year      = 1951
+    # 152mm‘½–Ú“I“ËŒ‚–C
+    component = { id = 11041 name = TECH_CMP_ARMOR_104_1_NAME type = artillery difficulty = 7 }
+    # ”­“WŒ^’†íÔÔ‘ä
+    component = { id = 11042 name = TECH_CMP_ARMOR_104_2_NAME type = mechanics difficulty = 7 }
+    # ‰ü—ÇŒ^‘ÎíÔÖiHEATj’e
+    component = { id = 11043 name = TECH_CMP_ARMOR_104_3_NAME type = chemistry difficulty = 7 }
+    # Œ»‘ãŒ^‘Î–C•ºƒŒ[ƒ_[
+    component = { id = 11044 name = TECH_CMP_ARMOR_104_4_NAME type = electronics difficulty = 7 }
+    # Œ»‘ãŒ^“ËŒ‚–CìŒ±
+    component = { id = 11045 name = TECH_CMP_ARMOR_104_5_NAME type = technical_efficiency difficulty = 7 }
+    required  = { 2080 11030 }
+    effects =
+    { command = { type = new_model which = sp_artillery value = 5 }
+      command = { type = scrap_model which = sp_artillery value = 4 }
+    }
+  }
+  # Šî–{Œ^©‘–ƒƒPƒbƒg–C
+  application =
+  { id        = 2260
+    name      = TECH_APP_ARMOR_26_NAME
+    desc      = TECH_APP_ARMOR_26_DESC
+    position  = { x = 160 y = 168 }
+    year      = 1941
+    # 100mm©‘–ƒƒPƒbƒg–C
+    component = { id = 2261 name = TECH_CMP_ARMOR_26_1_NAME type = rocketry difficulty = 3 }
+    # Šî–{Œ^’†íÔ—pÔ‘Ì
+    component = { id = 2262 name = TECH_CMP_ARMOR_26_2_NAME type = mechanics difficulty = 3 }
+    # Ö’e
+    component = { id = 2263 name = TECH_CMP_ARMOR_26_3_NAME type = chemistry difficulty = 3 }
+    # ‘¬“x§ŒäƒVƒXƒeƒ€
+    component = { id = 2264 name = TECH_CMP_ARMOR_26_4_NAME type = electronics difficulty = 3 }
+    # Šî–{Œ^©‘–ƒƒPƒbƒg–CìŒ±
+    component = { id = 2265 name = TECH_CMP_ARMOR_26_5_NAME type = technical_efficiency difficulty = 3 }
+    required  = { 2070 2380 }
+    effects =
+    { command = { type = activate_unit_type which = sp_rct_artillery }
+      command = { type = new_model which = sp_rct_artillery value = 0 }
+    }
+  }
+  # ‰ü—ÇŒ^©‘–ƒƒPƒbƒg–C
+  application =
+  { id        = 2270
+    name      = TECH_APP_ARMOR_27_NAME
+    desc      = TECH_APP_ARMOR_27_DESC
+    position  = { x = 160 y = 184 }
+    year      = 1942
+    # 200mm©‘–ƒƒPƒbƒg–C
+    component = { id = 2271 name = TECH_CMP_ARMOR_27_1_NAME type = rocketry difficulty = 4 }
+    # ‰ü—ÇŒ^’†íÔ—pÔ‘Ì
+    component = { id = 2272 name = TECH_CMP_ARMOR_27_2_NAME type = mechanics difficulty = 4 }
+    # ”j•ĞŒø‰ÊÖ’e
+    component = { id = 2273 name = TECH_CMP_ARMOR_27_3_NAME type = chemistry difficulty = 4 }
+    # ’e“¹§ŒäƒVƒXƒeƒ€
+    component = { id = 2274 name = TECH_CMP_ARMOR_27_4_NAME type = electronics difficulty = 4 }
+    # ‰ü—ÇŒ^©‘–ƒƒPƒbƒg–CìŒ±
+    component = { id = 2275 name = TECH_CMP_ARMOR_27_5_NAME type = technical_efficiency difficulty = 4 }
+    required  = { 2080 2260 }
+    effects =
+    { command = { type = new_model which = sp_rct_artillery value = 1 }
+      command = { type = scrap_model which = sp_rct_artillery value = 0 }
+    }
+  }
+  # ”­“WŒ^©‘–ƒƒPƒbƒg–C
+  application =
+  { id        = 2280
+    name      = TECH_APP_ARMOR_28_NAME
+    desc      = TECH_APP_ARMOR_28_DESC
+    position  = { x = 160 y = 200 }
+    year      = 1944
+    # 300mm©‘–ƒƒPƒbƒg–C
+    component = { id = 2281 name = TECH_CMP_ARMOR_28_1_NAME type = rocketry difficulty = 5 }
+    # ‰ü—ÇŒ^’†íÔ—pÔ‘Ì
+    component = { id = 2282 name = TECH_CMP_ARMOR_28_2_NAME type = mechanics difficulty = 5 }
+    # ÄˆÎÖ’e
+    component = { id = 2283 name = TECH_CMP_ARMOR_28_3_NAME type = chemistry difficulty = 5 }
+    # ¼“x§ŒäƒVƒXƒeƒ€
+    component = { id = 2284 name = TECH_CMP_ARMOR_28_4_NAME type = electronics difficulty = 5 }
+    # ”­“WŒ^©‘–ƒƒPƒbƒg–CìŒ±
+    component = { id = 2285 name = TECH_CMP_ARMOR_28_5_NAME type = technical_efficiency difficulty = 5 }
+    required  = { 2080 2270 }
+    effects =
+    { command = { type = new_model which = sp_rct_artillery value = 2 }
+      command = { type = scrap_model which = sp_rct_artillery value = 1 }
+    }
+  }
+  # Œ»‘ãŒ^©‘–ƒƒPƒbƒg–C
+  application =
+  { id        = 11060
+    name      = TECH_APP_ARMOR_106_NAME
+    desc      = TECH_APP_ARMOR_106_DESC
+    position  = { x = 160 y = 232 }
+    year      = 1951
+    # ”­“WŒ^‘½˜A‘•ƒƒPƒbƒgƒ‰ƒ“ƒ`ƒƒ[
+    component = { id = 11061 name = TECH_CMP_ARMOR_106_1_NAME type = rocketry difficulty = 5 }
+    # “‹Ú—pƒgƒ‰ƒbƒN
+    component = { id = 11062 name = TECH_CMP_ARMOR_106_2_NAME type = mechanics difficulty = 5 }
+    # ‰ü—ÇŒ^ƒƒPƒbƒgÄˆÎÖ’eiHEIj
+    component = { id = 11063 name = TECH_CMP_ARMOR_106_3_NAME type = chemistry difficulty = 5 }
+    # ‰ü—ÇŒ^ˆÀ’è‰»‰Î–CƒVƒXƒeƒ€
+    component = { id = 11064 name = TECH_CMP_ARMOR_106_4_NAME type = electronics difficulty = 5 }
+    # Œ»‘ãŒ^©‘–ƒƒPƒbƒg–CìŒ±
+    component = { id = 11065 name = TECH_CMP_ARMOR_106_5_NAME type = technical_efficiency difficulty = 5 }
+    required  = { 11050 }
+    effects =
+    { command = { type = new_model which = sp_rct_artillery value = 4 }
+      command = { type = scrap_model which = sp_rct_artillery value = 3 }
+    }
+  }
+  # €Œ»‘ã©‘–ƒƒPƒbƒg–C
+  application =
+  { id        = 11050
+    name      = TECH_APP_ARMOR_105_NAME
+    desc      = TECH_APP_ARMOR_105_DESC
+    position  = { x = 160 y = 216 }
+    year      = 1947
+    # ‰ü—ÇŒ^‘½˜A‘•ƒƒPƒbƒgƒ‰ƒ“ƒ`ƒƒ[
+    component = { id = 11051 name = TECH_CMP_ARMOR_105_1_NAME type = rocketry difficulty = 5 }
+    # “‹Ú—pƒgƒ‰ƒbƒN
+    component = { id = 11052 name = TECH_CMP_ARMOR_105_2_NAME type = mechanics difficulty = 5 }
+    # ƒƒPƒbƒgÄˆÎÖ’eiHEIj
+    component = { id = 11053 name = TECH_CMP_ARMOR_105_3_NAME type = chemistry difficulty = 5 }
+    # ‰ü—ÇŒ^ˆÀ’è‰»‰Î–CƒVƒXƒeƒ€
+    component = { id = 11054 name = TECH_CMP_ARMOR_105_4_NAME type = electronics difficulty = 5 }
+    # €Œ»‘ãŒ^©‘–ƒƒPƒbƒg–CìŒ±
+    component = { id = 11055 name = TECH_CMP_ARMOR_105_5_NAME type = technical_efficiency difficulty = 5 }
+    required  = { 2090 2280 }
+    effects =
+    { command = { type = new_model which = sp_rct_artillery value = 3 }
+      command = { type = scrap_model which = sp_rct_artillery value = 2 }
+    }
+  }
+  # –ôiŒ^©‘–ƒƒPƒbƒg–C
+  application =
+  { id        = 11300
+    name      = TECH_APP_ARMOR_118_NAME
+    desc      = TECH_APP_ARMOR_118_DESC
+    position  = { x = 160 y = 248 }
+    year      = 1956
+    # Œ»‘ãŒ^‘½˜A‘•ƒƒPƒbƒgƒ‰ƒ“ƒ`ƒƒ[
+    component = { id = 11301 name = TECH_CMP_ARMOR_118_1_NAME type = rocketry difficulty = 6 }
+    # ‰ü—ÇŒ^“‹Ú—pƒgƒ‰ƒbƒN
+    component = { id = 11302 name = TECH_CMP_ARMOR_118_2_NAME type = mechanics difficulty = 6 }
+    # ”­“WŒ^ƒƒPƒbƒgÄˆÎÖ’eiHEIj
+    component = { id = 11303 name = TECH_CMP_ARMOR_118_3_NAME type = chemistry difficulty = 6 }
+    # ”­“WŒ^ˆÀ’è‰»‰Î–CƒVƒXƒeƒ€
+    component = { id = 11304 name = TECH_CMP_ARMOR_118_4_NAME type = electronics difficulty = 6 }
+    # –ôiŒ^©‘–ƒƒPƒbƒg–CìŒ±
+    component = { id = 11305 name = TECH_CMP_ARMOR_118_5_NAME type = technical_efficiency difficulty = 6 }
+    required  = { 11060 }
+    effects =
+    { command = { type = new_model which = sp_rct_artillery value = 5 }
+      command = { type = scrap_model which = sp_rct_artillery value = 4 }
+    }
+  }
+  # ”ò–ôŒ^©‘–ƒƒPƒbƒg–C
+  application =
+  { id        = 11310
+    name      = TECH_APP_ARMOR_119_NAME
+    desc      = TECH_APP_ARMOR_119_DESC
+    position  = { x = 160 y = 264 }
+    year      = 1961
+    # –ôiŒ^‘½˜A‘•ƒƒPƒbƒgƒ‰ƒ“ƒ`ƒƒ[
+    component = { id = 11311 name = TECH_CMP_ARMOR_119_1_NAME type = rocketry difficulty = 7 }
+    # ”­“WŒ^“‹Ú—pƒgƒ‰ƒbƒN
+    component = { id = 11312 name = TECH_CMP_ARMOR_119_2_NAME type = mechanics difficulty = 7 }
+    # Œ»‘ãŒ^ƒƒPƒbƒgÄˆÎÖ’eiHEIj
+    component = { id = 11313 name = TECH_CMP_ARMOR_119_3_NAME type = chemistry difficulty = 7 }
+    # Œ»‘ãŒ^ˆÀ’è‰»‰Î–CƒVƒXƒeƒ€
+    component = { id = 11314 name = TECH_CMP_ARMOR_119_4_NAME type = electronics difficulty = 7 }
+    # ”ò–ôŒ^©‘–ƒƒPƒbƒg–CìŒ±
+    component = { id = 11315 name = TECH_CMP_ARMOR_119_5_NAME type = technical_efficiency difficulty = 7 }
+    required  = { 11300 }
+    effects =
+    { command = { type = new_model which = sp_rct_artillery value = 6 }
+      command = { type = scrap_model which = sp_rct_artillery value = 5 }
+    }
+  }
+  # ‘O‘åíŒ^Œy–ì–C
+  application =
+  { id        = 2290
+    name      = TECH_APP_ARMOR_29_NAME
+    desc      = TECH_APP_ARMOR_29_DESC
+    position  = { x = 432 y = 24 }
+    year      = 1914
+    # ‘O‘åíŒ^75mm–ì–C
+    component = { id = 2291 name = TECH_CMP_ARMOR_29_1_NAME type = artillery difficulty = 3 }
+    # ‘O‘åíŒ^–C‰Ë
+    component = { id = 2292 name = TECH_CMP_ARMOR_29_2_NAME type = mechanics difficulty = 3 }
+    # ‹Œ®Ö’e
+    component = { id = 2293 name = TECH_CMP_ARMOR_29_3_NAME type = chemistry difficulty = 3 }
+    # ‘Oü’e’…ŠÏ‘ªˆõ
+    component = { id = 2294 name = TECH_CMP_ARMOR_29_4_NAME type = electronics difficulty = 3 }
+    # û‘©ËŒ‚ŒP—û
+    component = { id = 2295 name = TECH_CMP_ARMOR_29_5_NAME type = training difficulty = 3 double_time = yes }
+    required  = { }
+    effects =
+    { command = { type = activate_unit_type which = artillery }
+      command = { type = new_model which = artillery value = 0 }
+      command = { type = activate_unit_type which = naval_radar_s }
+      command = { type = new_model which = naval_radar_s value = 0 }
+    }
+  }
+  # ‘O‘åíŒ^’†–ì–C
+  application =
+  { id        = 2300
+    name      = TECH_APP_ARMOR_30_NAME
+    desc      = TECH_APP_ARMOR_30_DESC
+    position  = { x = 432 y = 40 }
+    year      = 1916
+    # ‘O‘åíŒ^150mm–ì–C
+    component = { id = 2301 name = TECH_CMP_ARMOR_30_1_NAME type = artillery difficulty = 3 }
+    # ‘O‘åíŒ^–C‰Ë
+    component = { id = 2302 name = TECH_CMP_ARMOR_30_2_NAME type = mechanics difficulty = 3 }
+    # ‹Œ®Ö’e
+    component = { id = 2303 name = TECH_CMP_ARMOR_30_3_NAME type = chemistry difficulty = 3 }
+    # ‘Oi’e’…ŠÏ‘ª”Ç
+    component = { id = 2304 name = TECH_CMP_ARMOR_30_4_NAME type = electronics difficulty = 3 }
+    # W’†ËŒ‚ŒP—û
+    component = { id = 2305 name = TECH_CMP_ARMOR_30_5_NAME type = training difficulty = 3 double_time = yes }
+    required  = { 2290 }
+    effects =
+    { command = { type = new_model which = artillery value = 1 }
+      command = { type = scrap_model which = artillery value = 0 }
+      command = { type = new_model which = naval_radar_s value = 1 }
+      command = { type = scrap_model which = naval_radar_s value = 0 }
+    }
+  }
+  # ‘O‘åíŒ^d–ì–C
+  application =
+  { id        = 2310
+    name      = TECH_APP_ARMOR_31_NAME
+    desc      = TECH_APP_ARMOR_31_DESC
+    position  = { x = 432 y = 56 }
+    year      = 1918
+    # ‘O‘åíŒ^240mmd–ì–C
+    component = { id = 2311 name = TECH_CMP_ARMOR_31_1_NAME type = artillery difficulty = 3 }
+    # ‚Šp–C‰Ë
+    component = { id = 2312 name = TECH_CMP_ARMOR_31_2_NAME type = mechanics difficulty = 3 }
+    # ‹Œ®Ö’e
+    component = { id = 2313 name = TECH_CMP_ARMOR_31_3_NAME type = chemistry difficulty = 3 }
+    # ŒõŠw‘ª‹—‹V
+    component = { id = 2314 name = TECH_CMP_ARMOR_31_4_NAME type = electronics difficulty = 3 }
+    # ‘½ƒŒƒxƒ‹˜AŒgËŒ‚ŒP—û
+    component = { id = 2315 name = TECH_CMP_ARMOR_31_5_NAME type = training difficulty = 3 double_time = yes }
+    required  = { 2300 }
+    effects =
+    { command = { type = new_model which = artillery value = 2 }
+      command = { type = scrap_model which = artillery value = 1 }
+      command = { type = new_model which = naval_radar_s value = 2 }
+      command = { type = scrap_model which = naval_radar_s value = 1 }
+    }
+  }
+  # ‰ŠúŒ^–ì–C
+  application =
+  { id        = 2320
+    name      = TECH_APP_ARMOR_32_NAME
+    desc      = TECH_APP_ARMOR_32_DESC
+    position  = { x = 432 y = 72 }
+    year      = 1936
+    # 75mm–ì–C
+    component = { id = 2321 name = TECH_CMP_ARMOR_32_1_NAME type = artillery difficulty = 3 }
+    # ‰ŠúŒ^–C‰Ë
+    component = { id = 2322 name = TECH_CMP_ARMOR_32_2_NAME type = mechanics difficulty = 3 }
+    # Ö’e
+    component = { id = 2323 name = TECH_CMP_ARMOR_32_3_NAME type = chemistry difficulty = 3 }
+    # ‘ª‹—ƒŒ[ƒ_[
+    component = { id = 2324 name = TECH_CMP_ARMOR_32_4_NAME type = electronics difficulty = 3 }
+    # Šî–{“I‘QiËŒ‚ŒP—û
+    component = { id = 2325 name = TECH_CMP_ARMOR_32_5_NAME type = training difficulty = 3 }
+    required  = { 2310 }
+    effects =
+    { command = { type = new_model which = artillery value = 3 }
+      command = { type = scrap_model which = artillery value = 2 }
+      command = { type = new_model which = naval_radar_s value = 3 }
+      command = { type = scrap_model which = naval_radar_s value = 2 }
+    }
+  }
+  # Šî–{Œ^–ì–C
+  application =
+  { id        = 2330
+    name      = TECH_APP_ARMOR_33_NAME
+    desc      = TECH_APP_ARMOR_33_DESC
+    position  = { x = 432 y = 88 }
+    year      = 1938
+    # 105mm–ì–C
+    component = { id = 2331 name = TECH_CMP_ARMOR_33_1_NAME type = artillery difficulty = 3 }
+    # Šî–{Œ^–C‰Ë
+    component = { id = 2332 name = TECH_CMP_ARMOR_33_2_NAME type = mechanics difficulty = 3 }
+    # ”j•ĞÖ’e
+    component = { id = 2333 name = TECH_CMP_ARMOR_33_3_NAME type = chemistry difficulty = 3 }
+    # Šî–{Œ^ËŒ‚“§
+    component = { id = 2334 name = TECH_CMP_ARMOR_33_4_NAME type = electronics difficulty = 3 }
+    # v‘¬‘QiËŒ‚ŒP—û
+    component = { id = 2335 name = TECH_CMP_ARMOR_33_5_NAME type = training difficulty = 3 }
+    required  = { 2320 }
+    effects =
+    { command = { type = new_model which = artillery value = 4 }
+      command = { type = scrap_model which = artillery value = 3 }
+      command = { type = new_model which = naval_radar_s value = 4 }
+      command = { type = scrap_model which = naval_radar_s value = 3 }
+    }
+  }
+  # ‰ü—ÇŒ^–ì–C
+  application =
+  { id        = 2340
+    name      = TECH_APP_ARMOR_34_NAME
+    desc      = TECH_APP_ARMOR_34_DESC
+    position  = { x = 432 y = 104 }
+    year      = 1940
+    # 120mm–ì–C
+    component = { id = 2341 name = TECH_CMP_ARMOR_34_1_NAME type = artillery difficulty = 3 }
+    # ‰ü—ÇŒ^–C‰Ë
+    component = { id = 2342 name = TECH_CMP_ARMOR_34_2_NAME type = mechanics difficulty = 3 }
+    # ”S’…Ö’e
+    component = { id = 2343 name = TECH_CMP_ARMOR_34_3_NAME type = chemistry difficulty = 3 }
+    # ‰ü—ÇŒ^ËŒ‚“§
+    component = { id = 2344 name = TECH_CMP_ARMOR_34_4_NAME type = electronics difficulty = 3 }
+    # v‘¬–Ú•WØ‚è‘Ö‚¦ŒP—û
+    component = { id = 2345 name = TECH_CMP_ARMOR_34_5_NAME type = training difficulty = 3 }
+    required  = { 2330 }
+    effects =
+    { command = { type = new_model which = artillery value = 5 }
+      command = { type = scrap_model which = artillery value = 4 }
+      command = { type = new_model which = naval_radar_s value = 5 }
+      command = { type = scrap_model which = naval_radar_s value = 4 }
+      command = { type = activate_unit_type which = d_rsv_33 }
+      command = { type = new_model which = d_rsv_33 value = 0 }
+    }
+  }
+  # €Œ»‘ãŒ^–ì–C
+  application =
+  { id        = 2360
+    name      = TECH_APP_ARMOR_36_NAME
+    desc      = TECH_APP_ARMOR_36_DESC
+    position  = { x = 432 y = 136 }
+    year      = 1945
+    # 170mm–ì–C
+    component = { id = 2361 name = TECH_CMP_ARMOR_36_1_NAME type = artillery difficulty = 5 }
+    # €Œ»‘ãŒ^–C‰Ë
+    component = { id = 2362 name = TECH_CMP_ARMOR_36_2_NAME type = mechanics difficulty = 5 }
+    # ‘ÎíÔÖ’e
+    component = { id = 2363 name = TECH_CMP_ARMOR_36_3_NAME type = chemistry difficulty = 5 }
+    # ‰ü—ÇŒ^‘Î–C•ºƒŒ[ƒ_[
+    component = { id = 2364 name = TECH_CMP_ARMOR_36_4_NAME type = electronics difficulty = 5 }
+    # —¤‹ó‹¤“¯’e–‹ŒP—û
+    component = { id = 2365 name = TECH_CMP_ARMOR_36_5_NAME type = training difficulty = 3 }
+    required  = { 2350 }
+    effects =
+    { command = { type = new_model which = artillery value = 7 }
+      command = { type = scrap_model which = artillery value = 6 }
+      command = { type = new_model which = naval_radar_s value = 7 }
+      command = { type = scrap_model which = naval_radar_s value = 6 }
+      command = { type = new_model which = d_rsv_33 value = 2 }
+      command = { type = scrap_model which = d_rsv_33 value = 1 }
+    }
+  }
+  # ”­“WŒ^–ì–C
+  application =
+  { id        = 2350
+    name      = TECH_APP_ARMOR_35_NAME
+    desc      = TECH_APP_ARMOR_35_DESC
+    position  = { x = 432 y = 120 }
+    year      = 1943
+    # 150mm–ì–C
+    component = { id = 2351 name = TECH_CMP_ARMOR_35_1_NAME type = artillery difficulty = 4 }
+    # ”­“WŒ^–C‰Ë
+    component = { id = 2352 name = TECH_CMP_ARMOR_35_2_NAME type = mechanics difficulty = 4 }
+    # ”j•ĞŒø‰ÊÖ’e
+    component = { id = 2353 name = TECH_CMP_ARMOR_35_3_NAME type = chemistry difficulty = 4 }
+    # Šî–{Œ^‘Î–C•ºƒŒ[ƒ_[
+    component = { id = 2354 name = TECH_CMP_ARMOR_35_4_NAME type = electronics difficulty = 4 }
+    # ˆÚ“®–Ú•WËŒ‚ŒP—û
+    component = { id = 2355 name = TECH_CMP_ARMOR_35_5_NAME type = training difficulty = 4 }
+    required  = { 2340 }
+    effects =
+    { command = { type = new_model which = artillery value = 6 }
+      command = { type = scrap_model which = artillery value = 5 }
+      command = { type = new_model which = naval_radar_s value = 6 }
+      command = { type = scrap_model which = naval_radar_s value = 5 }
+      command = { type = new_model which = d_rsv_33 value = 1 }
+      command = { type = scrap_model which = d_rsv_33 value = 0 }
+    }
+  }
+  # Œ»‘ãŒ^–ì–C
+  application =
+  { id        = 11200
+    name      = TECH_APP_ARMOR_123_NAME
+    desc      = TECH_APP_ARMOR_123_DESC
+    position  = { x = 432 y = 152 }
+    year      = 1949
+    # Œ»‘ãŒ^–ì–C
+    component = { id = 11201 name = TECH_CMP_ARMOR_123_1_NAME type = artillery difficulty = 5 }
+    # Œ»‘ãŒ^–C‰Ë
+    component = { id = 11202 name = TECH_CMP_ARMOR_123_2_NAME type = mechanics difficulty = 5 }
+    # ‘ÎíÔÖ’e
+    component = { id = 11203 name = TECH_CMP_ARMOR_123_3_NAME type = chemistry difficulty = 5 }
+    # ”­“WŒ^‘Î–C•ºƒŒ[ƒ_[
+    component = { id = 11204 name = TECH_CMP_ARMOR_123_4_NAME type = electronics difficulty = 5 }
+    # —¤‹ó‹¤“¯’e–‹ŒP—û
+    component = { id = 11205 name = TECH_CMP_ARMOR_123_5_NAME type = training difficulty = 3 }
+    required  = { 2360 }
+    effects =
+    { command = { type = new_model which = artillery value = 8 }
+      command = { type = scrap_model which = artillery value = 7 }
+      command = { type = new_model which = naval_radar_s value = 8 }
+      command = { type = scrap_model which = naval_radar_s value = 7 }
+      command = { type = new_model which = d_rsv_33 value = 3 }
+      command = { type = scrap_model which = d_rsv_33 value = 2 }
+    }
+  }
+  # –ôiŒ^–ì–C
+  application =
+  { id        = 11210
+    name      = TECH_APP_ARMOR_124_NAME
+    desc      = TECH_APP_ARMOR_124_DESC
+    position  = { x = 432 y = 168 }
+    year      = 1955
+    # –ôiŒ^–ì–C
+    component = { id = 11211 name = TECH_CMP_ARMOR_124_1_NAME type = artillery difficulty = 6 }
+    # –ôiŒ^–C‰Ë
+    component = { id = 11212 name = TECH_CMP_ARMOR_124_2_NAME type = mechanics difficulty = 6 }
+    # ‘ÎíÔÖ’e
+    component = { id = 11213 name = TECH_CMP_ARMOR_124_3_NAME type = chemistry difficulty = 6 }
+    # Œ»‘ãŒ^‘Î–C•ºƒŒ[ƒ_[
+    component = { id = 11214 name = TECH_CMP_ARMOR_124_4_NAME type = electronics difficulty = 6 }
+    # —¤‹ó‹¤“¯’e–‹ŒP—û
+    component = { id = 11215 name = TECH_CMP_ARMOR_124_5_NAME type = training difficulty = 5 }
+    required  = { 11200 }
+    effects =
+    { command = { type = new_model which = artillery value = 9 }
+      command = { type = scrap_model which = artillery value = 8 }
+      command = { type = new_model which = naval_radar_s value = 9 }
+      command = { type = scrap_model which = naval_radar_s value = 8 }
+      command = { type = new_model which = d_rsv_33 value = 4 }
+      command = { type = scrap_model which = d_rsv_33 value = 3 }
+    }
+  }
+  # Šî–{Œ^ƒƒPƒbƒg–C
+  application =
+  { id        = 2370
+    name      = TECH_APP_ARMOR_37_NAME
+    desc      = TECH_APP_ARMOR_37_DESC
+    position  = { x = 294 y = 168 }
+    year      = 1940
+    # 100mmƒƒPƒbƒg–C
+    component = { id = 2371 name = TECH_CMP_ARMOR_37_1_NAME type = rocketry difficulty = 3 }
+    # Šî–{Œ^ƒƒPƒbƒg”­Ë‹@
+    component = { id = 2372 name = TECH_CMP_ARMOR_37_2_NAME type = mechanics difficulty = 3 }
+    # Ö’e
+    component = { id = 2373 name = TECH_CMP_ARMOR_37_3_NAME type = chemistry difficulty = 3 }
+    # ‘¬“x§ŒäƒVƒXƒeƒ€
+    component = { id = 2374 name = TECH_CMP_ARMOR_37_4_NAME type = electronics difficulty = 3 }
+    # W’†’e–‹ŒP—û
+    component = { id = 2375 name = TECH_CMP_ARMOR_37_5_NAME type = training difficulty = 3 }
+    required  = { 2340 }
+    effects =
+    { command = { type = activate_unit_type which = rocket_artillery }
+      command = { type = new_model which = rocket_artillery value = 0 }
+    }
+  }
+  # ‰ü—ÇŒ^ƒƒPƒbƒg–C
+  application =
+  { id        = 2380
+    name      = TECH_APP_ARMOR_38_NAME
+    desc      = TECH_APP_ARMOR_38_DESC
+    position  = { x = 294 y = 184 }
+    year      = 1941
+    # 200mmƒƒPƒbƒg–C
+    component = { id = 2381 name = TECH_CMP_ARMOR_38_1_NAME type = rocketry difficulty = 3 }
+    # ‰ü—ÇŒ^ƒƒPƒbƒg”­Ë‹@
+    component = { id = 2382 name = TECH_CMP_ARMOR_38_2_NAME type = mechanics difficulty = 3 }
+    # ”j•ĞŒø‰ÊÖ’e
+    component = { id = 2383 name = TECH_CMP_ARMOR_38_3_NAME type = chemistry difficulty = 3 }
+    # ’e“¹§ŒäƒVƒXƒeƒ€
+    component = { id = 2384 name = TECH_CMP_ARMOR_38_4_NAME type = electronics difficulty = 3 }
+    # ¸–§UŒ‚ŒP—û
+    component = { id = 2385 name = TECH_CMP_ARMOR_38_5_NAME type = training difficulty = 3 }
+    required  = { 2370 }
+    effects =
+    { command = { type = new_model which = rocket_artillery value = 1 }
+      command = { type = scrap_model which = rocket_artillery value = 0 }
+    }
+  }
+  # ”­“WŒ^ƒƒPƒbƒg–C
+  application =
+  { id        = 2390
+    name      = TECH_APP_ARMOR_39_NAME
+    desc      = TECH_APP_ARMOR_39_DESC
+    position  = { x = 294 y = 200 }
+    year      = 1943
+    # 300mmƒƒPƒbƒg–C
+    component = { id = 2391 name = TECH_CMP_ARMOR_39_1_NAME type = rocketry difficulty = 4 }
+    # ”­“WŒ^ƒƒPƒbƒg”­Ë‹@
+    component = { id = 2392 name = TECH_CMP_ARMOR_39_2_NAME type = mechanics difficulty = 4 }
+    # ÄˆÎÖ’e
+    component = { id = 2393 name = TECH_CMP_ARMOR_39_3_NAME type = chemistry difficulty = 4 }
+    # ¼“x§ŒäƒVƒXƒeƒ€
+    component = { id = 2394 name = TECH_CMP_ARMOR_39_4_NAME type = electronics difficulty = 4 }
+    # ‹}‘¬Ä•ÒŒP—û
+    component = { id = 2395 name = TECH_CMP_ARMOR_39_5_NAME type = training difficulty = 4 }
+    required  = { 2380 }
+    effects =
+    { command = { type = new_model which = rocket_artillery value = 2 }
+      command = { type = scrap_model which = rocket_artillery value = 1 }
+    }
+  }
+  # ‰ŠúŒ^‘ÎíÔ–C
+  application =
+  { id        = 2400
+    name      = TECH_APP_ARMOR_40_NAME
+    desc      = TECH_APP_ARMOR_40_DESC
+    position  = { x = 296 y = 24 }
+    year      = 1936
+    # 50mm‘ÎíÔ–C
+    component = { id = 2401 name = TECH_CMP_ARMOR_40_1_NAME type = artillery difficulty = 3 }
+    # ‰ŠúŒ^–C‰Ë
+    component = { id = 2402 name = TECH_CMP_ARMOR_40_2_NAME type = mechanics difficulty = 3 }
+    # ’Êí“Ob’e
+    component = { id = 2403 name = TECH_CMP_ARMOR_40_3_NAME type = chemistry difficulty = 3 }
+    # ‰ŠúŒ^ŒõŠwÆ€Ší
+    component = { id = 2404 name = TECH_CMP_ARMOR_40_4_NAME type = electronics difficulty = 3 }
+    # Ã~–Ú•WËŒ‚ŒP—û
+    component = { id = 2405 name = TECH_CMP_ARMOR_40_5_NAME type = training difficulty = 3 }
+    required  = { 2310 }
+    effects =
+    { command = { type = activate_unit_type which = anti_tank }
+      command = { type = new_model which = anti_tank value = 0 }
+    }
+  }
+  # Šî–{Œ^‘ÎíÔ–C
+  application =
+  { id        = 2410
+    name      = TECH_APP_ARMOR_41_NAME
+    desc      = TECH_APP_ARMOR_41_DESC
+    position  = { x = 296 y = 40 }
+    year      = 1938
+    # 75mm‘ÎíÔ–C
+    component = { id = 2411 name = TECH_CMP_ARMOR_41_1_NAME type = artillery difficulty = 3 }
+    # Šî–{Œ^–C‰Ë
+    component = { id = 2412 name = TECH_CMP_ARMOR_41_2_NAME type = mechanics difficulty = 3 }
+    # ¬Œ^ày–ò’e
+    component = { id = 2413 name = TECH_CMP_ARMOR_41_3_NAME type = chemistry difficulty = 3 }
+    # Šî–{Œ^ŒõŠwÆ€Ší
+    component = { id = 2414 name = TECH_CMP_ARMOR_41_4_NAME type = electronics difficulty = 3 }
+    # ˆÚ“®–Ú•WËŒ‚ŒP—û
+    component = { id = 2415 name = TECH_CMP_ARMOR_41_5_NAME type = training difficulty = 3 }
+    required  = { 2400 }
+    effects =
+    { command = { type = new_model which = anti_tank value = 1 }
+      command = { type = scrap_model which = anti_tank value = 0 }
+    }
+  }
+  # ‰ü—ÇŒ^‘ÎíÔ–C
+  application =
+  { id        = 2420
+    name      = TECH_APP_ARMOR_42_NAME
+    desc      = TECH_APP_ARMOR_42_DESC
+    position  = { x = 296 y = 56 }
+    year      = 1940
+    # 88mm‘ÎíÔ–C
+    component = { id = 2421 name = TECH_CMP_ARMOR_42_1_NAME type = artillery difficulty = 3 }
+    # ‰ü—ÇŒ^–C‰Ë
+    component = { id = 2422 name = TECH_CMP_ARMOR_42_2_NAME type = mechanics difficulty = 3 }
+    # dcHEAT’e
+    component = { id = 2423 name = TECH_CMP_ARMOR_42_3_NAME type = chemistry difficulty = 3 }
+    # ‰ü—ÇŒ^ŒõŠwÆ€Ší
+    component = { id = 2424 name = TECH_CMP_ARMOR_42_4_NAME type = electronics difficulty = 3 }
+    # ‘½–Ú•WËŒ‚ŒP—û
+    component = { id = 2425 name = TECH_CMP_ARMOR_42_5_NAME type = training difficulty = 3 }
+    required  = { 2410 }
+    effects =
+    { command = { type = new_model which = anti_tank value = 2 }
+      command = { type = scrap_model which = anti_tank value = 1 }
+    }
+  }
+  # ”­“WŒ^‘ÎíÔ–C
+  application =
+  { id        = 2430
+    name      = TECH_APP_ARMOR_43_NAME
+    desc      = TECH_APP_ARMOR_43_DESC
+    position  = { x = 296 y = 72 }
+    year      = 1943
+    # 105mm‘ÎíÔ–C
+    component = { id = 2431 name = TECH_CMP_ARMOR_43_1_NAME type = artillery difficulty = 4 }
+    # ”­“WŒ^–C‰Ë
+    component = { id = 2432 name = TECH_CMP_ARMOR_43_2_NAME type = mechanics difficulty = 4 }
+    # —£’E‘•’e“›•t‚«HEAT’e
+    component = { id = 2433 name = TECH_CMP_ARMOR_43_3_NAME type = chemistry difficulty = 4 }
+    # ”­“WŒ^ŒõŠwÆ€Ší
+    component = { id = 2434 name = TECH_CMP_ARMOR_43_4_NAME type = electronics difficulty = 4 }
+    # v‘¬ˆÚ“®–Ú•WËŒ‚ŒP—û
+    component = { id = 2435 name = TECH_CMP_ARMOR_43_5_NAME type = training difficulty = 4 }
+    required  = { 2420 }
+    effects =
+    { command = { type = new_model which = anti_tank value = 3 }
+      command = { type = scrap_model which = anti_tank value = 2 }
+    }
+  }
+  # €Œ»‘ãŒ^‘ÎíÔ–C
+  application =
+  { id        = 2440
+    name      = TECH_APP_ARMOR_44_NAME
+    desc      = TECH_APP_ARMOR_44_DESC
+    position  = { x = 296 y = 88 }
+    year      = 1946
+    # 120mm‘ÎíÔ–C
+    component = { id = 2441 name = TECH_CMP_ARMOR_44_1_NAME type = artillery difficulty = 5 }
+    # €Œ»‘ãŒ^–C‰Ë
+    component = { id = 2442 name = TECH_CMP_ARMOR_44_2_NAME type = mechanics difficulty = 5 }
+    # ”í–X“Ob’e
+    component = { id = 2443 name = TECH_CMP_ARMOR_44_3_NAME type = chemistry difficulty = 5 }
+    # ÔŠOüŒõŠwÆ€Ší
+    component = { id = 2444 name = TECH_CMP_ARMOR_44_4_NAME type = electronics difficulty = 5 }
+    # ˆÚ“®‘½–Ú•WËŒ‚ŒP—û
+    component = { id = 2445 name = TECH_CMP_ARMOR_44_5_NAME type = training difficulty = 5 }
+    required  = { 2430 }
+    effects =
+    { command = { type = new_model which = anti_tank value = 4 }
+      command = { type = scrap_model which = anti_tank value = 3 }
+    }
+  }
+  # –ôiŒ^‘ÎíÔ–C
+  application =
+  { id        = 11260
+    name      = TECH_APP_ARMOR_120_NAME
+    desc      = TECH_APP_ARMOR_120_DESC
+    position  = { x = 296 y = 120 }
+    year      = 1955
+    # –ôiŒ^‘½˜A‘•‘ÎíÔ–C
+    component = { id = 11261 name = TECH_CMP_ARMOR_120_1_NAME type = artillery difficulty = 6 }
+    # –ôiŒ^–C‰Ë
+    component = { id = 11262 name = TECH_CMP_ARMOR_120_2_NAME type = mechanics difficulty = 6 }
+    # ‰ü—ÇŒ^”S’…Ö’eiHESHj
+    component = { id = 11263 name = TECH_CMP_ARMOR_120_3_NAME type = chemistry difficulty = 6 }
+    # ‰ü—ÇŒ^‰“‹——£ÔŠOüŒõŠwÆ€Ší
+    component = { id = 11264 name = TECH_CMP_ARMOR_120_4_NAME type = electronics difficulty = 6 }
+    # –ôiŒ^‘ÎíÔ”•º‰È˜A‡ŒP—û
+    component = { id = 11265 name = TECH_CMP_ARMOR_120_5_NAME type = training difficulty = 6 }
+    required  = { 11070 }
+    effects =
+    { command = { type = new_model which = anti_tank value = 6 }
+      command = { type = scrap_model which = anti_tank value = 5 }
+    }
+  }
+  # Œ»‘ãŒ^‘ÎíÔ–C
+  application =
+  { id        = 11070
+    name      = TECH_APP_ARMOR_107_NAME
+    desc      = TECH_APP_ARMOR_107_DESC
+    position  = { x = 296 y = 104 }
+    year      = 1950
+    # 120mm‘ÎíÔ–C
+    component = { id = 11071 name = TECH_CMP_ARMOR_44_1_NAME type = artillery difficulty = 7 }
+    # Œ»‘ãŒ^–C‰Ë
+    component = { id = 11072 name = TECH_CMP_ARMOR_107_2_NAME type = mechanics difficulty = 7 }
+    # ”S’…Ö’eiHESHj
+    component = { id = 11073 name = TECH_CMP_ARMOR_107_3_NAME type = chemistry difficulty = 7 }
+    # ‰“‹——£ÔŠOüŒõŠwÆ€Ší
+    component = { id = 11074 name = TECH_CMP_ARMOR_107_4_NAME type = electronics difficulty = 7 }
+    # ‘ÎíÔ”•º‰È˜A‡ŒP—û
+    component = { id = 11075 name = TECH_CMP_ARMOR_107_5_NAME type = training difficulty = 8 }
+    required  = { 2440 }
+    effects =
+    { command = { type = new_model which = anti_tank value = 5 }
+      command = { type = scrap_model which = anti_tank value = 4 }
+    }
+  }
+  # ”ò–ôŒ^‘ÎíÔ–C
+  application =
+  { id        = 11270
+    name      = TECH_APP_ARMOR_125_NAME
+    desc      = TECH_APP_ARMOR_125_DESC
+    position  = { x = 296 y = 136 }
+    year      = 1960
+    # ”ò–ôŒ^‘½˜A‘•‘ÎíÔ–C
+    component = { id = 11271 name = TECH_CMP_ARMOR_125_1_NAME type = artillery difficulty = 7 }
+    # ”ò–ôŒ^–C‰Ë
+    component = { id = 11272 name = TECH_CMP_ARMOR_125_2_NAME type = mechanics difficulty = 7 }
+    # ”­“WŒ^”S’…Ö’eiHESHj
+    component = { id = 11273 name = TECH_CMP_ARMOR_125_3_NAME type = chemistry difficulty = 7 }
+    # ”­“WŒ^‰“‹——£ÔŠOüŒõŠwÆ€Ší
+    component = { id = 11274 name = TECH_CMP_ARMOR_125_4_NAME type = electronics difficulty = 7 }
+    # ”ò–ôŒ^‘ÎíÔ”•º‰È˜A‡ŒP—û
+    component = { id = 11275 name = TECH_CMP_ARMOR_125_5_NAME type = training difficulty = 10 }
+    required  = { 11260 }
+    effects =
+    { command = { type = new_model which = anti_tank value = 7 }
+      command = { type = scrap_model which = anti_tank value = 6 }
+    }
+  }
+  # ‘O‘åíŒ^ŒÅ’è®‘Î‹ó–C
+  application =
+  { id        = 2450
+    name      = TECH_APP_ARMOR_45_NAME
+    desc      = TECH_APP_ARMOR_45_DESC
+    position  = { x = 160 y = 295 }
+    year      = 1918
+    # ‹Œ®75mm‘Î‹ó–C
+    component = { id = 2451 name = TECH_CMP_ARMOR_45_1_NAME type = artillery difficulty = 2 }
+    # ‘O‘åíŒ^–C‰Ë
+    component = { id = 2452 name = TECH_CMP_ARMOR_45_2_NAME type = mechanics difficulty = 2 }
+    # ‹Œ®Ö’e
+    component = { id = 2453 name = TECH_CMP_ARMOR_45_3_NAME type = chemistry difficulty = 2 }
+    # ‘ª‹—ƒŒ[ƒ_[
+    component = { id = 2454 name = TECH_CMP_ARMOR_45_4_NAME type = electronics difficulty = 2 }
+    # ’TÆ“”ÆËŒP—û
+    component = { id = 2455 name = TECH_CMP_ARMOR_45_5_NAME type = training difficulty = 2 }
+    required  = { }
+    effects =
+    { command = { type = allow_building which = flak }
+      command = { type = activate_unit_type which = naval_anti_air_l }
+      command = { type = new_model which = naval_anti_air_l value = 0 }
+    }
+  }
+  # ‰ŠúŒ^ŒÅ’è®‘Î‹ó–C
+  application =
+  { id        = 2460
+    name      = TECH_APP_ARMOR_46_NAME
+    desc      = TECH_APP_ARMOR_46_DESC
+    position  = { x = 160 y = 311 }
+    year      = 1936
+    # 75mm‘Î‹ó–C
+    component = { id = 2461 name = TECH_CMP_ARMOR_46_1_NAME type = artillery difficulty = 3 }
+    # ‰ŠúŒ^–C‰Ë
+    component = { id = 2462 name = TECH_CMP_ARMOR_46_2_NAME type = mechanics difficulty = 3 }
+    # Ö’e
+    component = { id = 2463 name = TECH_CMP_ARMOR_46_3_NAME type = chemistry difficulty = 3 }
+    # Šî–{Œ^ƒfƒVƒ[ƒgƒ‹”g‘Î‹óƒŒ[ƒ_[
+    component = { id = 2464 name = TECH_CMP_ARMOR_46_4_NAME type = electronics difficulty = 3 }
+    # ‘¬ËŒP—û
+    component = { id = 2465 name = TECH_CMP_ARMOR_46_5_NAME type = training difficulty = 3 }
+    required  = { 2450 }
+    effects =
+    { command = { type = aa_batteries value = 5 }
+      command = { type = new_model which = naval_anti_air_l value = 1 }
+      command = { type = scrap_model which = naval_anti_air_l value = 0 }
+    }
+  }
+  # Šî–{Œ^ŒÅ’è®‘Î‹ó–C
+  application =
+  { id        = 2470
+    name      = TECH_APP_ARMOR_47_NAME
+    desc      = TECH_APP_ARMOR_47_DESC
+    position  = { x = 160 y = 327 }
+    year      = 1938
+    # 88mm‘Î‹ó–C
+    component = { id = 2471 name = TECH_CMP_ARMOR_47_1_NAME type = artillery difficulty = 4 }
+    # Šî–{Œ^–C‰Ë
+    component = { id = 2472 name = TECH_CMP_ARMOR_47_2_NAME type = mechanics difficulty = 4 }
+    # ”j•ĞÖ’e
+    component = { id = 2473 name = TECH_CMP_ARMOR_47_3_NAME type = chemistry difficulty = 4 }
+    # ‰ü—ÇŒ^ƒfƒVƒ[ƒgƒ‹”g‘Î‹óƒŒ[ƒ_[
+    component = { id = 2474 name = TECH_CMP_ARMOR_47_4_NAME type = electronics difficulty = 4 }
+    # v‘¬€”õŒP—û
+    component = { id = 2475 name = TECH_CMP_ARMOR_47_5_NAME type = training difficulty = 4 }
+    required  = { 2460 }
+    effects =
+    { command = { type = aa_batteries value = 10 }
+      command = { type = new_model which = naval_anti_air_l value = 2 }
+      command = { type = scrap_model which = naval_anti_air_l value = 1 }
+    }
+  }
+  # ‰ü—ÇŒ^ŒÅ’è®‘Î‹ó–C
+  application =
+  { id        = 2480
+    name      = TECH_APP_ARMOR_48_NAME
+    desc      = TECH_APP_ARMOR_48_DESC
+    position  = { x = 160 y = 343 }
+    year      = 1941
+    # 105mm‘Î‹ó–C
+    component = { id = 2481 name = TECH_CMP_ARMOR_48_1_NAME type = artillery difficulty = 5 }
+    # ‰ü—ÇŒ^–C‰Ë
+    component = { id = 2482 name = TECH_CMP_ARMOR_48_2_NAME type = mechanics difficulty = 5 }
+    # VTMŠÇ
+    component = { id = 2483 name = TECH_CMP_ARMOR_48_3_NAME type = chemistry difficulty = 5 }
+    # Šî–{Œ^ƒZƒ“ƒ`ƒ[ƒgƒ‹”g‘Î‹óƒŒ[ƒ_[
+    component = { id = 2484 name = TECH_CMP_ARMOR_48_4_NAME type = electronics difficulty = 5 }
+    # ‘Î‹ó\š–C‰ÎŒP—û
+    component = { id = 2485 name = TECH_CMP_ARMOR_48_5_NAME type = training difficulty = 5 }
+    required  = { 2470 }
+    effects =
+    { command = { type = aa_batteries value = 15 }
+      command = { type = new_model which = naval_anti_air_l value = 3 }
+      command = { type = scrap_model which = naval_anti_air_l value = 2 }
+    }
+  }
+  # ”­“WŒ^ŒÅ’è®‘Î‹ó–C
+  application =
+  { id        = 2490
+    name      = TECH_APP_ARMOR_49_NAME
+    desc      = TECH_APP_ARMOR_49_DESC
+    position  = { x = 160 y = 359 }
+    year      = 1943
+    # 120mm‘Î‹ó–C
+    component = { id = 2491 name = TECH_CMP_ARMOR_49_1_NAME type = artillery difficulty = 6 }
+    # ”­“WŒ^–C‰Ë
+    component = { id = 2492 name = TECH_CMP_ARMOR_49_2_NAME type = mechanics difficulty = 6 }
+    # ƒŒ[ƒ_[‹ßÚMŠÇ
+    component = { id = 2493 name = TECH_CMP_ARMOR_49_3_NAME type = chemistry difficulty = 6 }
+    # ‰ü—ÇŒ^ƒZƒ“ƒ`ƒ[ƒgƒ‹”g‘Î‹óƒŒ[ƒ_[
+    component = { id = 2494 name = TECH_CMP_ARMOR_49_4_NAME type = electronics difficulty = 6 }
+    # wŠöE“§E’ÊMEî•ñ˜AŒgŒP—û
+    component = { id = 2495 name = TECH_CMP_ARMOR_49_5_NAME type = training difficulty = 6 }
+    required  = { 2480 }
+    effects =
+    { command = { type = aa_batteries value = 25 }
+      command = { type = new_model which = naval_anti_air_l value = 4 }
+      command = { type = scrap_model which = naval_anti_air_l value = 3 }
+    }
+  }
+  # Œ»‘ãŒ^ŒÅ’è®‘Î‹ó–C
+  application =
+  { id        = 11080
+    name      = TECH_APP_ARMOR_108_NAME
+    desc      = TECH_APP_ARMOR_108_DESC
+    position  = { x = 160 y = 391 }
+    year      = 1948
+    # SAMi’n‘Î‹óƒ~ƒTƒCƒ‹j
+    component = { id = 11081 name = TECH_CMP_ARMOR_108_1_NAME type = artillery difficulty = 7 }
+    # Œ»‘ãŒ^”­Ë‰Ë
+    component = { id = 11082 name = TECH_CMP_ARMOR_108_2_NAME type = mechanics difficulty = 7 }
+    # ‰ü—ÇŒ^ƒŒ[ƒ_[‹ßÚMŠÇ
+    component = { id = 11083 name = TECH_CMP_ARMOR_108_3_NAME type = chemistry difficulty = 7 }
+    # Œ»‘ãŒ^ƒZƒ“ƒ`”g–h‹óƒŒ[ƒ_[
+    component = { id = 11084 name = TECH_CMP_ARMOR_108_4_NAME type = electronics difficulty = 7 }
+    # SAM”­ËŒP—û
+    component = { id = 11085 name = TECH_CMP_ARMOR_108_5_NAME type = training difficulty = 7 }
+    required  = { 2500 }
+    effects =
+    { command = { type = aa_batteries value = 40 }
+      command = { type = new_model which = naval_anti_air_l value = 6 }
+      command = { type = scrap_model which = naval_anti_air_l value = 5 }
+      command = { type = info_may_cause which = 7270 }
+    }
+  }
+  # €Œ»‘ãŒ^ŒÅ’è®‘Î‹ó–C
+  application =
+  { id        = 2500
+    name      = TECH_APP_ARMOR_50_NAME
+    desc      = TECH_APP_ARMOR_50_DESC
+    position  = { x = 160 y = 375 }
+    year      = 1945
+    # 120mm‘¬Ë‘Î‹ó–C
+    component = { id = 2501 name = TECH_CMP_ARMOR_50_1_NAME type = artillery difficulty = 7 }
+    # €Œ»‘ãŒ^–C‰Ë
+    component = { id = 2502 name = TECH_CMP_ARMOR_50_2_NAME type = mechanics difficulty = 7 }
+    # ƒŒ[ƒ_[‹ßÚMŠÇ
+    component = { id = 2503 name = TECH_CMP_ARMOR_50_3_NAME type = chemistry difficulty = 7 }
+    # ”­“WŒ^ƒZƒ“ƒ`ƒ[ƒgƒ‹”g‘Î‹óƒŒ[ƒ_[
+    component = { id = 2504 name = TECH_CMP_ARMOR_50_4_NAME type = electronics difficulty = 7 }
+    # ƒŒ[ƒ_[–Ú•W¯•ÊŒP—û
+    component = { id = 2505 name = TECH_CMP_ARMOR_50_5_NAME type = training difficulty = 7 }
+    required  = { 2490 }
+    effects =
+    { command = { type = aa_batteries value = 35 }
+      command = { type = new_model which = naval_anti_air_l value = 5 }
+      command = { type = scrap_model which = naval_anti_air_l value = 4 }
+    }
+  }
+  # Šî–{Œ^‘Î‹ó–C—·’c
+  application =
+  { id        = 2510
+    name      = TECH_APP_ARMOR_51_NAME
+    desc      = TECH_APP_ARMOR_51_DESC
+    position  = { x = 296 y = 295 }
+    year      = 1938
+    # 20mm‘Î‹ó‹@ŠÖ–C
+    component = { id = 2511 name = TECH_CMP_ARMOR_51_1_NAME type = artillery difficulty = 3 }
+    # 75mm‘Î‹ó–C
+    component = { id = 2512 name = TECH_CMP_ARMOR_51_2_NAME type = artillery difficulty = 3 }
+    # ”j•ĞÖ’e
+    component = { id = 2513 name = TECH_CMP_ARMOR_51_3_NAME type = chemistry difficulty = 3 }
+    # ‰ü—ÇŒ^ƒfƒVƒ[ƒgƒ‹”g‘Î‹óƒŒ[ƒ_[
+    component = { id = 2514 name = TECH_CMP_ARMOR_51_4_NAME type = electronics difficulty = 3 }
+    # v‘¬€”õŒP—û
+    component = { id = 2515 name = TECH_CMP_ARMOR_51_5_NAME type = training difficulty = 3 }
+    required  = { 2460 }
+    effects =
+    { command = { type = activate_unit_type which = anti_air }
+      command = { type = new_model which = anti_air value = 0 }
+    }
+  }
+  # ‰ü—ÇŒ^‘Î‹ó–C—·’c
+  application =
+  { id        = 2520
+    name      = TECH_APP_ARMOR_52_NAME
+    desc      = TECH_APP_ARMOR_52_DESC
+    position  = { x = 296 y = 311 }
+    year      = 1941
+    # 40mm‘Î‹ó‹@ŠÖ–C
+    component = { id = 2521 name = TECH_CMP_ARMOR_52_1_NAME type = artillery difficulty = 3 }
+    # 88mm‘Î‹ó–C
+    component = { id = 2522 name = TECH_CMP_ARMOR_52_2_NAME type = artillery difficulty = 3 }
+    # VTMŠÇ
+    component = { id = 2523 name = TECH_CMP_ARMOR_52_3_NAME type = chemistry difficulty = 5 }
+    # Šî–{Œ^ƒZƒ“ƒ`ƒ[ƒgƒ‹”g‘Î‹óƒŒ[ƒ_[
+    component = { id = 2524 name = TECH_CMP_ARMOR_52_4_NAME type = electronics difficulty = 3 }
+    # ” Œ^’e–‹ŒP—û
+    component = { id = 2525 name = TECH_CMP_ARMOR_52_5_NAME type = training difficulty = 3 }
+    required  = { 2510 }
+    effects =
+    { command = { type = new_model which = anti_air value = 1 }
+      command = { type = scrap_model which = anti_air value = 0 }
+    }
+  }
+  # ”­“WŒ^‘Î‹ó–C•”‘à
+  application =
+  { id        = 2530
+    name      = TECH_APP_ARMOR_53_NAME
+    desc      = TECH_APP_ARMOR_53_DESC
+    position  = { x = 296 y = 327 }
+    year      = 1943
+    # 20mm4˜A‘•‘Î‹ó‹@ŠÖ–C
+    component = { id = 2531 name = TECH_CMP_ARMOR_53_1_NAME type = artillery difficulty = 4 }
+    # 105mm‘Î‹ó–C
+    component = { id = 2532 name = TECH_CMP_ARMOR_53_2_NAME type = artillery difficulty = 4 }
+    # ƒŒ[ƒ_[‹ßÚMŠÇ
+    component = { id = 2533 name = TECH_CMP_ARMOR_53_3_NAME type = chemistry difficulty = 6 }
+    # ‰ü—ÇŒ^ƒZƒ“ƒ`ƒ[ƒgƒ‹”g‘Î‹óƒŒ[ƒ_[
+    component = { id = 2534 name = TECH_CMP_ARMOR_53_4_NAME type = electronics difficulty = 4 }
+    # wŠöE“§E’ÊMEî•ñ˜AŒgŒP—û
+    component = { id = 2535 name = TECH_CMP_ARMOR_53_5_NAME type = training difficulty = 4 }
+    required  = { 2520 }
+    effects =
+    { command = { type = new_model which = anti_air value = 2 }
+      command = { type = scrap_model which = anti_air value = 1 }
+    }
+  }
+  # €Œ»‘ãŒ^‘Î‹ó–C—·’c
+  application =
+  { id        = 2540
+    name      = TECH_APP_ARMOR_54_NAME
+    desc      = TECH_APP_ARMOR_54_DESC
+    position  = { x = 296 y = 343 }
+    year      = 1946
+    # 40mm4˜A‘•‘Î‹ó‹@ŠÖ–C
+    component = { id = 2541 name = TECH_CMP_ARMOR_54_1_NAME type = artillery difficulty = 5 }
+    # 128mm‘Î‹ó–C
+    component = { id = 2542 name = TECH_CMP_ARMOR_54_2_NAME type = artillery difficulty = 5 }
+    # ƒŒ[ƒ_[‹ßÚMŠÇ
+    component = { id = 2543 name = TECH_CMP_ARMOR_54_3_NAME type = chemistry difficulty = 3 }
+    # ”­“WŒ^ƒZƒ“ƒ`ƒ[ƒgƒ‹”g‘Î‹óƒŒ[ƒ_[
+    component = { id = 2544 name = TECH_CMP_ARMOR_54_4_NAME type = electronics difficulty = 5 }
+    # ƒŒ[ƒ_[–Ú•W¯•ÊŒP—û
+    component = { id = 2545 name = TECH_CMP_ARMOR_54_5_NAME type = training difficulty = 5 }
+    required  = { 2530 }
+    effects =
+    { command = { type = new_model which = anti_air value = 3 }
+      command = { type = scrap_model which = anti_air value = 2 }
+    }
+  }
+  # Œ»‘ãŒ^‘Î‹ó–C—·’c
+  application =
+  { id        = 11090
+    name      = TECH_APP_ARMOR_109_NAME
+    desc      = TECH_APP_ARMOR_109_DESC
+    position  = { x = 296 y = 359 }
+    year      = 1950
+    # l˜A‘•54mm‘Î‹ó–C
+    component = { id = 11091 name = TECH_CMP_ARMOR_109_1_NAME type = artillery difficulty = 5 }
+    # 128mm‚‘¬‘Î‹ó–C
+    component = { id = 11092 name = TECH_CMP_ARMOR_109_2_NAME type = artillery difficulty = 5 }
+    # ‰ü—ÇŒ^ƒŒ[ƒ_[‹ßÚMŠÇ
+    component = { id = 11093 name = TECH_CMP_ARMOR_109_3_NAME type = chemistry difficulty = 3 }
+    # Œ»‘ãŒ^ƒZƒ“ƒ`”g–h‹óƒŒ[ƒ_[
+    component = { id = 11094 name = TECH_CMP_ARMOR_109_4_NAME type = electronics difficulty = 5 }
+    # ƒŒ[ƒ_[–Ú•W¯•ÊŒP—û
+    component = { id = 11095 name = TECH_CMP_ARMOR_109_5_NAME type = training difficulty = 5 }
+    required  = { 2540 }
+    effects =
+    { command = { type = new_model which = anti_air value = 4 }
+      command = { type = scrap_model which = anti_air value = 3 }
+    }
+  }
+  # –ôiŒ^‘Î‹ó–C—·’c
+  application =
+  { id        = 11220
+    name      = TECH_APP_ARMOR_121_NAME
+    desc      = TECH_APP_ARMOR_121_DESC
+    position  = { x = 296 y = 375 }
+    year      = 1955
+    # –ôiŒ^‘Î‹ó–C
+    component = { id = 11221 name = TECH_CMP_ARMOR_121_1_NAME type = artillery difficulty = 6 }
+    # –ôiŒ^‚‘¬‘Î‹ó–C
+    component = { id = 11222 name = TECH_CMP_ARMOR_121_2_NAME type = artillery difficulty = 6 }
+    # ”­“WŒ^ƒŒ[ƒ_[‹ßÚMŠÇ
+    component = { id = 11223 name = TECH_CMP_ARMOR_121_3_NAME type = chemistry difficulty = 5 }
+    # –ôiŒ^ƒZƒ“ƒ`”g–h‹óƒŒ[ƒ_[
+    component = { id = 11224 name = TECH_CMP_ARMOR_121_4_NAME type = electronics difficulty = 5 }
+    # –ôiŒ^ƒŒ[ƒ_[–Ú•W¯•ÊŒP—û
+    component = { id = 11225 name = TECH_CMP_ARMOR_121_5_NAME type = training difficulty = 5 }
+    required  = { 11090 }
+    effects =
+    { command = { type = new_model which = anti_air value = 5 }
+      command = { type = scrap_model which = anti_air value = 4 }
+    }
+  }
+  # ”ò–ôŒ^‘Î‹ó–C—·’c
+  application =
+  { id        = 11230
+    name      = TECH_APP_ARMOR_122_NAME
+    desc      = TECH_APP_ARMOR_122_DESC
+    position  = { x = 296 y = 391 }
+    year      = 1960
+    # ”ò–ôŒ^‘Î‹ó–C
+    component = { id = 11231 name = TECH_CMP_ARMOR_122_1_NAME type = artillery difficulty = 7 }
+    # ”ò–ôŒ^‚‘¬‘Î‹ó–C
+    component = { id = 11232 name = TECH_CMP_ARMOR_122_2_NAME type = artillery difficulty = 6 }
+    # Œ»‘ãŒ^ƒŒ[ƒ_[‹ßÚMŠÇ
+    component = { id = 11233 name = TECH_CMP_ARMOR_122_3_NAME type = chemistry difficulty = 7 }
+    # ”ò–ôŒ^ƒZƒ“ƒ`”g–h‹óƒŒ[ƒ_[
+    component = { id = 11234 name = TECH_CMP_ARMOR_122_4_NAME type = electronics difficulty = 7 }
+    # ”ò–ôŒ^ƒŒ[ƒ_[–Ú•W¯•ÊŒP—û
+    component = { id = 11235 name = TECH_CMP_ARMOR_122_5_NAME type = training difficulty = 6 }
+    required  = { 11220 }
+    effects =
+    { command = { type = new_model which = anti_air value = 6 }
+      command = { type = scrap_model which = anti_air value = 5 }
+    }
+  }
+}

@@ -1,0 +1,110 @@
+# 0 - ‰ŠúŒ^‘ÎíÔ–C
+model = {
+	cost 				= 4
+	buildtime	 		= 60
+	manpower 			= 2
+	maxspeed 			= -1
+	defensiveness 		= 1
+	hardattack			= 2
+	supplyconsumption 	= 0.12
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 2000 horses = 520 heavy_artillery = 16 anti_tank = 66 }
+}
+# 1 - Šî–{Œ^‘ÎíÔ–C
+model = {
+	cost 				= 5
+	buildtime	 		= 60
+	manpower 			= 2
+	maxspeed 			= -1
+	defensiveness 		= 2
+	softattack			= 0.5
+	hardattack			= 3
+	supplyconsumption 	= 0.14
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 2000 horses = 520 heavy_artillery = 16 anti_tank = 66 }
+}
+# 2 - ‰ü—ÇŒ^‘ÎíÔ–C
+model = {
+	cost 				= 5
+	buildtime	 		= 60
+	manpower 			= 2
+	maxspeed 			= -1
+	defensiveness 		= 3
+	softattack			= 1
+	hardattack			= 5
+	supplyconsumption 	= 0.16
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 2000 horses = 520 heavy_artillery = 16 anti_tank = 66 }
+}
+# 3 - ”­“WŒ^‘ÎíÔ–C
+model = {
+	cost 				= 5
+	buildtime	 		= 60
+	manpower 			= 2
+	maxspeed 			= -1
+	defensiveness 		= 4
+	softattack			= 1.5
+	hardattack			= 6
+	supplyconsumption 	= 0.18
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 2000 trucks = 445 heavy_artillery = 16 anti_tank = 66 }
+}
+# 4 - €Œ»‘ãŒ^‘ÎíÔ–C
+model = {
+	cost 				= 5
+	buildtime	 		= 60
+	manpower 			= 2
+	maxspeed 			= -1
+	defensiveness 		= 5
+	softattack			= 2
+	hardattack			= 7
+	supplyconsumption 	= 0.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 2000 trucks = 453 heavy_artillery = 16 anti_tank = 66 }
+}
+# 5 - Œ»‘ãŒ^‘ÎíÔ–C
+model = {
+	cost 				= 5
+	buildtime	 		= 60
+	manpower 			= 2
+	maxspeed 			= -1
+	defensiveness 		= 6
+	softattack			= 2.5
+	hardattack			= 8
+	supplyconsumption 	= 0.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 2000 trucks = 453 heavy_artillery = 16 anti_tank = 66 }
+}
+# 6 - –ôiŒ^‘ÎíÔ–C
+model = {
+	cost 				= 5
+	buildtime	 		= 60
+	manpower 			= 2
+	maxspeed 			= -1
+	defensiveness 		= 7
+	softattack			= 3
+	hardattack			= 9
+	supplyconsumption 	= 0.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 2000 trucks = 453 heavy_artillery = 16 anti_tank = 66 }
+}
+# 7 - ”ò–ôŒ^‘ÎíÔ–C
+model = {
+	cost 				= 5
+	buildtime	 		= 60
+	manpower 			= 2
+	defensiveness 		= 7
+	softattack			= 4
+	hardattack			= 10
+	supplyconsumption 	= 0.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 2000 trucks = 453 heavy_artillery = 16 anti_tank = 66 }
+}

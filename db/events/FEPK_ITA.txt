@@ -1,0 +1,3075 @@
+#########################################################################
+#	FEPK_ITA.txt
+#	イタリア関連イベント
+#########################################################################
+#id = 131400-19		イタリア対連合降伏イベント(史実ルート)
+#id = 131420-29		イタリア対ソ降伏イベント
+#id = 131430-39		イタリア対独降伏イベント
+#id = 131450-58		イタリア対仏降伏イベント
+#id = 131459		（スペイン内戦）イタリア義勇軍の帰国
+#########################################################################
+##########
+#  イタリアの対連合降伏
+##########
+
+event = {
+	id = 131400
+	random = no 
+	country = USA
+	persistent = yes
+
+	trigger = {
+		control = { province = 521 data = USA } #Naples
+		NOT = { flag = americannaples }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_131400_NAME"
+	desc = "EVT_131400_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_131400_ACTA"
+		command = { type = setflag which = americannaples }
+	}
+}
+
+event = {
+	id = 131401
+	random = no 
+	country = USA
+	persistent = yes
+
+	trigger = {
+		NOT = { control = { province = 521 data = USA } } #Naples
+		flag = americannaples
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_131401_NAME"
+	desc = "EVT_131401_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_131401_ACTA"
+		command = { type = clrflag which = americannaples }
+	}
+}
+
+event = {
+	id = 131402
+	random = no 
+	country = ENG
+	persistent = yes
+
+	trigger = {
+		control = { province = 521 data = ENG } #Naples
+		NOT = { flag = britishnaples }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_131402_NAME"
+	desc = "EVT_131402_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_131402_ACTA"
+		command = { type = setflag which = britishnaples }
+	}
+}
+
+event = {
+	id = 131403
+	random = no 
+	country = ENG
+	persistent = yes
+
+	trigger = {
+		NOT = { control = { province = 521 data = ENG } } #Naples
+		flag = britishnaples
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_131403_NAME"
+	desc = "EVT_131403_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_131403_ACTA"
+		command = { type = clrflag which = britishnaples }
+	}
+}
+
+event = {
+	id = 131404
+	random = no
+	country = ITA
+
+	trigger = {
+		alliance = { country = ITA country = GER }
+		war = { country = ITA country = USA }
+		lost_national = { country = ITA value = 20 } #italy is under attack
+		#control = { province = 370 data = ITA } #Milan controlled by Italy
+		flag = americannaples
+	}
+
+	date = { day = 1 month = january year = 1940 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_131404_NAME"
+	desc = "EVT_131404_DESC"
+
+	picture = "Ita_Surrender"
+
+	action_a = {
+		name = "EVT_131404_ACTA"
+		ai_chance = 100
+		#command = { type = sleepminister which = 3001 } #VE3
+		command = { type = sleepminister which = 3002 } #Mussolini
+		command = { type = sleepminister which = 3003 } #Ciano
+		command = { type = sleepminister which = 3004 } #Mussolini
+		command = { type = sleepminister which = 3005 } #Buffarini-Guidi
+		command = { type = sleepminister which = 3006 } #Ame
+		command = { type = sleepminister which = 3007 } #Grazioli
+		command = { type = sleepminister which = 3008 } #Pariani
+		command = { type = sleepminister which = 3010 } #Valle
+		command = { type = sleepminister which = 3034 } #Mussolini
+		command = { type = sleepminister which = 3035 } #di Revel
+		command = { type = sleepminister which = 3043 } #Mussolini
+		command = { type = sleepminister which = 3044 } #Borghese
+		command = { type = sleepminister which = 3052 } #Mussolini
+		command = { type = sleepminister which = 3053 } #Bastianini
+		command = { type = sleepminister which = 3064 } #Baistrocchi
+		command = { type = sleepminister which = 3065 } #Pariani
+		command = { type = sleepminister which = 3066 } #Soddu
+		command = { type = sleepminister which = 3067 } #Guzzoni
+		command = { type = sleepminister which = 3070 } #di Revel
+		command = { type = sleepminister which = 3071 } #Francarillo
+		command = { type = sleepminister which = 3072 } #Paladini
+		command = { type = sleepminister which = 3073 } #Acerbo
+		command = { type = sleepminister which = 3091 } #Albini
+		command = { type = sleepminister which = 3092 } #Scuero
+		command = { type = sleepminister which = 3093 } #Mussolini
+		command = { type = sleepminister which = 3094 } #Brandimarte
+		command = { type = sleepminister which = 3096 } #Farinacci
+		command = { type = sleepminister which = 3108 } #Galbiati
+		command = { type = sleepminister which = 3109 } #Grandi
+		command = { type = sleepminister which = 3110 } #de Marschio
+		command = { type = sleepminister which = 3112 } #Carboni
+		command = { type = sleepminister which = 3124 } #Cavallero
+		command = { type = sleepminister which = 3126 } #Starace
+		command = { type = sleepminister which = 3127 } #Catastini
+		command = { type = sleepminister which = 3139 } #Graziani
+		command = { type = sleepminister which = 3140 } #Roatta
+		command = { type = sleepminister which = 3141 } #Borghese
+		command = { type = sleepminister which = 3149 } #Riccardi
+		command = { type = sleepminister which = 3150 } #di Revel
+		command = { type = sleepminister which = 3151 } #Rocco
+		command = { type = sleepminister which = 3153 } #Grandi
+		command = { type = sleepminister which = 3160 } #Pricolo
+		command = { type = sleepminister which = 3161 } #Fougier
+		command = { type = sleepminister which = 3168 } #Ciano
+		command = { type = sleepleader which = 6002 } #Ago
+		command = { type = sleepleader which = 6005 } #Amico
+		command = { type = sleepleader which = 6006 } #Antonelli
+		command = { type = sleepleader which = 6008 } #Arena
+		command = { type = sleepleader which = 6010 } #Asinari di Bernezzo
+		command = { type = sleepleader which = 6014 } #Baistrocchi
+		command = { type = sleepleader which = 6015 } #Balbo
+		command = { type = sleepleader which = 6017 } #Balocco
+		command = { type = sleepleader which = 6018 } #Barbasetti di Prun
+		command = { type = sleepleader which = 6019 } #Barbieri
+		command = { type = sleepleader which = 6021 } #Bastico
+		command = { type = sleepleader which = 6022 } #Battisti
+		command = { type = sleepleader which = 6024 } #Bergonzoli
+		command = { type = sleepleader which = 6025 } #Berti
+		command = { type = sleepleader which = 6027 } #Bianchi
+		command = { type = sleepleader which = 6028 } #Bignami
+		command = { type = sleepleader which = 6029 } #Borghese
+		command = { type = sleepleader which = 6031 } #Bruno
+		command = { type = sleepleader which = 6033 } #Calvi di Bergolo
+		command = { type = sleepleader which = 6034 } #Canale
+		command = { type = sleepleader which = 6035 } #Caracciolo di Feroleto
+		command = { type = sleepleader which = 6036 } #Carboni
+		command = { type = sleepleader which = 6037 } #Carta
+		command = { type = sleepleader which = 6041 } #Cavallero
+		command = { type = sleepleader which = 6043 } #Cerio
+		command = { type = sleepleader which = 6044 } #Coppi
+		command = { type = sleepleader which = 6046 } #Cigala-Fulgosi
+		command = { type = sleepleader which = 6047 } #Clerici
+		command = { type = sleepleader which = 6048 } #Cona
+		command = { type = sleepleader which = 6049 } #cotronei
+		command = { type = sleepleader which = 6051 } #Dall'Ora
+		command = { type = sleepleader which = 6052 } #Dalmazzo
+		command = { type = sleepleader which = 6054 } #de Bono
+		command = { type = sleepleader which = 6057 } #de Cia
+		command = { type = sleepleader which = 6059 } #de Stefanis
+		command = { type = sleepleader which = 6060 } #de Vecchi di Val Cismon
+		command = { type = sleepleader which = 6061 } #d'Havet
+		command = { type = sleepleader which = 6063 } #Du Pont
+		command = { type = sleepleader which = 6065 } #Esposito
+		command = { type = sleepleader which = 6067 } #Ferrari Orsi
+		command = { type = sleepleader which = 6072 } #Fricchione
+		command = { type = sleepleader which = 6073 } #Frusci
+		command = { type = sleepleader which = 6074 } #Gambara
+		command = { type = sleepleader which = 6075 } #Gambelli
+		command = { type = sleepleader which = 6076 } #Gandin
+		command = { type = sleepleader which = 6078 } #Geloso
+		command = { type = sleepleader which = 6079 } #Gherzi
+		command = { type = sleepleader which = 6080 } #Gioda
+		command = { type = sleepleader which = 6081 } #Giovanelli
+		command = { type = sleepleader which = 6082 } #Gonzaga del Voldice
+		command = { type = sleepleader which = 6084 } #Graziani
+		command = { type = sleepleader which = 6085 } #Grazioli
+		command = { type = sleepleader which = 6086 } #Grossi
+		command = { type = sleepleader which = 6088 } #Guzzoni
+		command = { type = sleepleader which = 6092 } #Lorenzelli
+		command = { type = sleepleader which = 6093 } #Lorenzini
+		command = { type = sleepleader which = 6095 } #Maletti
+		command = { type = sleepleader which = 6097 } #Marghinotti
+		command = { type = sleepleader which = 6098 } #Marinetti
+		command = { type = sleepleader which = 6100 } #Martinat
+		command = { type = sleepleader which = 6101 } #Masina
+		command = { type = sleepleader which = 6103 } #Moizo
+		command = { type = sleepleader which = 6105 } #Molinari
+		command = { type = sleepleader which = 6108 } #Nasi
+		command = { type = sleepleader which = 6109 } #Negro
+		command = { type = sleepleader which = 6112 } #Pariani
+		command = { type = sleepleader which = 6115 } #Pescatori
+		command = { type = sleepleader which = 6117 } #Pintor
+		command = { type = sleepleader which = 6118 } #Pirzio Biroli
+		command = { type = sleepleader which = 6119 } #Pittagula
+		command = { type = sleepleader which = 6120 } #Porcinari
+		command = { type = sleepleader which = 6121 } #Rastrelli
+		command = { type = sleepleader which = 6122 } #Reverberi
+		command = { type = sleepleader which = 6123 } #Ricagno
+		command = { type = sleepleader which = 6124 } #Ricci
+		command = { type = sleepleader which = 6126 } #Roatta
+		command = { type = sleepleader which = 6127 } #Romero
+		command = { type = sleepleader which = 6132 } #Scotti
+		command = { type = sleepleader which = 6133 } #Soddu
+		command = { type = sleepleader which = 6136 } #Terziani
+		command = { type = sleepleader which = 6139 } #Tricoli
+		command = { type = sleepleader which = 6142 } #Vacca-Maggiolini
+		command = { type = sleepleader which = 6142 } #Vecchiarelli
+		command = { type = sleepleader which = 6144 } #Vercellino
+		command = { type = sleepleader which = 6146 } #Visconti Prasca
+		command = { type = sleepleader which = 6147 } #Vivaldi
+		command = { type = sleepleader which = 6150 } #Zingales
+		command = { type = sleepleader which = 6160 } #Cavagnari
+		command = { type = sleepleader which = 6161 } #Ciano
+		command = { type = sleepleader which = 6164 } #di Cossata
+		command = { type = sleepleader which = 6173 } #Gazzana
+		command = { type = sleepleader which = 6186 } #Riccardi
+		command = { type = sleepleader which = 6188 } #di Revel
+		command = { type = sleepleader which = 6194 } #Balbo
+		command = { type = sleepleader which = 6201 } #Cagna
+		command = { type = sleepleader which = 6206 } #di Ferro
+		command = { type = sleepleader which = 6218 } #Mecozzi
+		command = { type = sleepleader which = 6233 } #Santoro
+		command = { type = sleepleader which = 6237 } #Visconti
+		command = { type = sleepleader which = 6239 } #La Ferla
+		command = { type = sleepleader which = 6242 } #Priore
+		command = { type = sleepleader which = 6243 } #Bittosi
+		command = { type = sleepleader which = 6247 } #Calcagno
+		command = { type = sleepleader which = 6250 } #Crimi
+		command = { type = sleepleader which = 6251 } #D'Oro
+		command = { type = sleepleader which = 6252 } #de Pignier
+		command = { type = sleepleader which = 6253 } #del Guidice
+		command = { type = sleepleader which = 6255 } #Farinacci
+		command = { type = sleepleader which = 6256 } #Fautilli
+		command = { type = sleepleader which = 6257 } #Galbiati
+		command = { type = sleepleader which = 6262 } #Leonardi
+		command = { type = sleepleader which = 6265 } #Montagna
+		command = { type = sleepleader which = 6267 } #Navarini
+		command = { type = sleepleader which = 6271 } #Piatti del Pozzo
+		command = { type = sleepleader which = 6272 } #Pignetti
+		command = { type = sleepleader which = 6274 } #Romegialli
+		command = { type = sleepleader which = 6277 } #Tellera
+		command = { type = sleepleader which = 6278 } #Tringali
+		command = { type = sleepleader which = 6280 } #Brandimarte
+		command = { type = sleepleader which = 6281 } #Grillo
+		command = { type = sleepleader which = 6282 } #Bonomi
+		command = { type = sleepleader which = 6283 } #Tessari
+
+		command = { type = sleepteam which = 1801 } #Beretta
+		command = { type = sleepteam which = 1804 } #Cantieri Ansaldo
+		command = { type = sleepteam which = 1808 } #FIAT
+		command = { type = sleepteam which = 1810 } #Macchi
+		command = { type = sleepteam which = 1812 } #Lancia
+		command = { type = sleepteam which = 1813 } #Arturo Riccardi
+		command = { type = sleepteam which = 1814 } #Domenico Cavagnari
+		command = { type = sleepteam which = 1815 } #Italo Balbo
+		command = { type = sleepteam which = 1818 } #Rino Fougier
+		command = { type = sleepteam which = 1819 } #Rodolfo Graziani
+		command = { type = sleepteam which = 1820 } #Societa Montecatini
+
+		command = { type = construct which = land_fort where = 513 value = 4 }
+		command = { type = construct which = flak where = 513 value = 2 }
+		command = { type = construct which = land_fort where = 514 value = 4 }
+		command = { type = construct which = flak where = 514 value = 3 }
+		command = { type = construct which = land_fort where = 512 value = 4 } #1.096
+		command = { type = construct which = flak where = 512 value = 2 }
+		command = { type = construct which = land_fort where = 369 value = 4 } #1.096
+		command = { type = construct which = flak where = 369 value = 3 }
+
+		#Freeing puppets #FEPKBETA5.2
+		command = { type = end_mastery which = ALB }
+		command = { type = end_mastery which = GRE }
+		command = { type = end_mastery which = MTN }
+		command = { type = end_mastery which = CRO }
+		command = { type = end_mastery which = YUG }
+		command = { type = end_mastery which = HUN }
+		command = { type = end_mastery which = ROM }
+		command = { type = end_mastery which = BUL }
+		command = { type = end_mastery which = LBY }
+		command = { type = end_mastery which = ETH }
+		command = { type = end_mastery which = FRA }
+		command = { type = end_mastery which = VIC }
+		command = { type = end_mastery which = EGY }
+		command = { type = end_mastery which = IRQ }
+		command = { type = end_mastery which = PER }
+		command = { type = end_mastery which = SYR }
+		command = { type = end_mastery which = LEB }
+		command = { type = end_mastery which = JOR }
+		command = { type = end_mastery which = PAL }
+		command = { type = end_mastery which = ISR }
+		command = { type = end_mastery which = TUR }
+		command = { type = end_mastery which = IND }
+		command = { type = end_mastery which = PAK }
+
+		command = { type = sleepevent which = 130431 } #on the seine
+		command = { type = sleepevent which = 131200 }
+		command = { type = trigger which = 131406 } #germany annexes italy
+		command = { type = setflag which = usa_defeats_ita }
+		command = { type = sleepevent which = 131400 } #naples events
+		command = { type = sleepevent which = 131401 }
+	}
+	action_b = {
+		name = "EVT_131404_ACTB"
+		ai_chance = 0
+		command = { type = dissent value = 20 }
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = domestic which = freedom value = -1 }
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = manpowerpool value = -200 }
+
+		### Provinces seceded to Germany
+		command = { type = secedeprovince which = GER value = 371 } #Trento
+		command = { type = secedeprovince which = GER value = 527 } #Grenoble
+		command = { type = secedeprovince which = GER value = 366 } #Nice
+		### Provinces seceded to Germany from Balkans/Greece
+		command = { type = secedeprovince which = GER value = 380 } #
+		command = { type = secedeprovince which = GER value = 381 } #
+		command = { type = secedeprovince which = GER value = 382 } #
+		command = { type = secedeprovince which = GER value = 384 } #
+		command = { type = secedeprovince which = GER value = 387 } #
+		command = { type = secedeprovince which = GER value = 388 } #
+		command = { type = secedeprovince which = GER value = 389 } #
+		command = { type = secedeprovince which = GER value = 415 } #
+		command = { type = secedeprovince which = GER value = 390 } #
+		command = { type = secedeprovince which = GER value = 391 } #
+		command = { type = secedeprovince which = GER value = 392 } #
+		command = { type = secedeprovince which = GER value = 412 } #
+		command = { type = secedeprovince which = GER value = 411 } #
+		command = { type = secedeprovince which = GER value = 410 } #
+		command = { type = secedeprovince which = GER value = 403 } #
+		command = { type = secedeprovince which = GER value = 402 } #
+		command = { type = secedeprovince which = GER value = 393 } #
+		command = { type = secedeprovince which = GER value = 401 } #
+		command = { type = secedeprovince which = GER value = 394 } #
+		command = { type = secedeprovince which = GER value = 395 } #
+		command = { type = secedeprovince which = GER value = 400 } #
+		command = { type = secedeprovince which = GER value = 405 } #
+		command = { type = secedeprovince which = GER value = 396 } #
+		command = { type = secedeprovince which = GER value = 398 } #
+		command = { type = secedeprovince which = GER value = 399 } #
+
+		command = { type = construct which = land_fort where = 513 value = 4 }
+		command = { type = construct which = flak where = 513 value = 2 }
+		command = { type = construct which = land_fort where = 514 value = 4 }
+		command = { type = construct which = flak where = 514 value = 3 }
+		command = { type = construct which = land_fort where = 512 value = 4 } #1.096
+		command = { type = construct which = flak where = 512 value = 2 }
+		command = { type = construct which = land_fort where = 369 value = 4 } #1.096
+		command = { type = construct which = flak where = 369 value = 3 }
+		command = { type = sleepevent which = 130431 } #on the seine
+		command = { type = sleepevent which = 131200 } #on the seine
+	}
+}
+
+event = {
+	id = 131405
+	random = no
+	country = ITA
+
+	trigger = {
+		alliance = { country = ITA country = GER }
+		OR = {
+			AND = {
+				war = { country = ITA country = USA }
+				lost_national = { country = ITA value = 20 } #italy is under attack
+			}
+			lost_national = { country = ITA value = 60 }
+		}
+		#control = { province = 370 data = ITA } #Milan controlled by Italy
+		flag = britishnaples
+	}
+
+	date = { day = 1 month = january year = 1940 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_131405_NAME"
+	desc = "EVT_131405_DESC"
+
+	picture = "Ita_Surrender"
+
+	action_a = {
+		name = "EVT_131405_ACTA"
+		ai_chance = 100
+		#command = { type = sleepminister which = 3001 } #VE3
+		command = { type = sleepminister which = 3002 } #Mussolini
+		command = { type = sleepminister which = 3003 } #Ciano
+		command = { type = sleepminister which = 3004 } #Mussolini
+		command = { type = sleepminister which = 3005 } #Buffarini-Guidi
+		command = { type = sleepminister which = 3006 } #Ame
+		command = { type = sleepminister which = 3007 } #Grazioli
+		command = { type = sleepminister which = 3008 } #Pariani
+		command = { type = sleepminister which = 3010 } #Valle
+		command = { type = sleepminister which = 3034 } #Mussolini
+		command = { type = sleepminister which = 3035 } #di Revel
+		command = { type = sleepminister which = 3043 } #Mussolini
+		command = { type = sleepminister which = 3044 } #Borghese
+		command = { type = sleepminister which = 3052 } #Mussolini
+		command = { type = sleepminister which = 3053 } #Bastianini
+		command = { type = sleepminister which = 3064 } #Baistrocchi
+		command = { type = sleepminister which = 3065 } #Pariani
+		command = { type = sleepminister which = 3066 } #Soddu
+		command = { type = sleepminister which = 3067 } #Guzzoni
+		command = { type = sleepminister which = 3070 } #di Revel
+		command = { type = sleepminister which = 3071 } #Francarillo
+		command = { type = sleepminister which = 3072 } #Paladini
+		command = { type = sleepminister which = 3073 } #Acerbo
+		command = { type = sleepminister which = 3091 } #Albini
+		command = { type = sleepminister which = 3092 } #Scuero
+		command = { type = sleepminister which = 3093 } #Mussolini
+		command = { type = sleepminister which = 3094 } #Brandimarte
+		command = { type = sleepminister which = 3096 } #Farinacci
+		command = { type = sleepminister which = 3108 } #Galbiati
+		command = { type = sleepminister which = 3109 } #Grandi
+		command = { type = sleepminister which = 3110 } #de Marschio
+		command = { type = sleepminister which = 3112 } #Carboni
+		command = { type = sleepminister which = 3124 } #Cavallero
+		command = { type = sleepminister which = 3126 } #Starace
+		command = { type = sleepminister which = 3127 } #Catastini
+		command = { type = sleepminister which = 3139 } #Graziani
+		command = { type = sleepminister which = 3140 } #Roatta
+		command = { type = sleepminister which = 3141 } #Borghese
+		command = { type = sleepminister which = 3149 } #Riccardi
+		command = { type = sleepminister which = 3150 } #di Revel
+		command = { type = sleepminister which = 3151 } #Rocco
+		command = { type = sleepminister which = 3153 } #Grandi
+		command = { type = sleepminister which = 3160 } #Pricolo
+		command = { type = sleepminister which = 3161 } #Fougier
+		command = { type = sleepminister which = 3168 } #Ciano
+		command = { type = sleepleader which = 6002 } #Ago
+		command = { type = sleepleader which = 6005 } #Amico
+		command = { type = sleepleader which = 6006 } #Antonelli
+		command = { type = sleepleader which = 6008 } #Arena
+		command = { type = sleepleader which = 6010 } #Asinari di Bernezzo
+		command = { type = sleepleader which = 6014 } #Baistrocchi
+		command = { type = sleepleader which = 6015 } #Balbo
+		command = { type = sleepleader which = 6017 } #Balocco
+		command = { type = sleepleader which = 6018 } #Barbasetti di Prun
+		command = { type = sleepleader which = 6019 } #Barbieri
+		command = { type = sleepleader which = 6021 } #Bastico
+		command = { type = sleepleader which = 6022 } #Battisti
+		command = { type = sleepleader which = 6024 } #Bergonzoli
+		command = { type = sleepleader which = 6025 } #Berti
+		command = { type = sleepleader which = 6027 } #Bianchi
+		command = { type = sleepleader which = 6028 } #Bignami
+		command = { type = sleepleader which = 6029 } #Borghese
+		command = { type = sleepleader which = 6031 } #Bruno
+		command = { type = sleepleader which = 6033 } #Calvi di Bergolo
+		command = { type = sleepleader which = 6034 } #Canale
+		command = { type = sleepleader which = 6035 } #Caracciolo di Feroleto
+		command = { type = sleepleader which = 6036 } #Carboni
+		command = { type = sleepleader which = 6037 } #Carta
+		command = { type = sleepleader which = 6041 } #Cavallero
+		command = { type = sleepleader which = 6043 } #Cerio
+		command = { type = sleepleader which = 6044 } #Coppi
+		command = { type = sleepleader which = 6046 } #Cigala-Fulgosi
+		command = { type = sleepleader which = 6047 } #Clerici
+		command = { type = sleepleader which = 6048 } #Cona
+		command = { type = sleepleader which = 6049 } #cotronei
+		command = { type = sleepleader which = 6051 } #Dall'Ora
+		command = { type = sleepleader which = 6052 } #Dalmazzo
+		command = { type = sleepleader which = 6054 } #de Bono
+		command = { type = sleepleader which = 6057 } #de Cia
+		command = { type = sleepleader which = 6059 } #de Stefanis
+		command = { type = sleepleader which = 6060 } #de Vecchi di Val Cismon
+		command = { type = sleepleader which = 6061 } #d'Havet
+		command = { type = sleepleader which = 6063 } #Du Pont
+		command = { type = sleepleader which = 6065 } #Esposito
+		command = { type = sleepleader which = 6067 } #Ferrari Orsi
+		command = { type = sleepleader which = 6072 } #Fricchione
+		command = { type = sleepleader which = 6073 } #Frusci
+		command = { type = sleepleader which = 6074 } #Gambara
+		command = { type = sleepleader which = 6075 } #Gambelli
+		command = { type = sleepleader which = 6076 } #Gandin
+		command = { type = sleepleader which = 6078 } #Geloso
+		command = { type = sleepleader which = 6079 } #Gherzi
+		command = { type = sleepleader which = 6080 } #Gioda
+		command = { type = sleepleader which = 6081 } #Giovanelli
+		command = { type = sleepleader which = 6082 } #Gonzaga del Voldice
+		command = { type = sleepleader which = 6084 } #Graziani
+		command = { type = sleepleader which = 6085 } #Grazioli
+		command = { type = sleepleader which = 6086 } #Grossi
+		command = { type = sleepleader which = 6088 } #Guzzoni
+		command = { type = sleepleader which = 6092 } #Lorenzelli
+		command = { type = sleepleader which = 6093 } #Lorenzini
+		command = { type = sleepleader which = 6095 } #Maletti
+		command = { type = sleepleader which = 6097 } #Marghinotti
+		command = { type = sleepleader which = 6098 } #Marinetti
+		command = { type = sleepleader which = 6100 } #Martinat
+		command = { type = sleepleader which = 6101 } #Masina
+		command = { type = sleepleader which = 6103 } #Moizo
+		command = { type = sleepleader which = 6105 } #Molinari
+		command = { type = sleepleader which = 6108 } #Nasi
+		command = { type = sleepleader which = 6109 } #Negro
+		command = { type = sleepleader which = 6112 } #Pariani
+		command = { type = sleepleader which = 6115 } #Pescatori
+		command = { type = sleepleader which = 6117 } #Pintor
+		command = { type = sleepleader which = 6118 } #Pirzio Biroli
+		command = { type = sleepleader which = 6119 } #Pittagula
+		command = { type = sleepleader which = 6120 } #Porcinari
+		command = { type = sleepleader which = 6121 } #Rastrelli
+		command = { type = sleepleader which = 6122 } #Reverberi
+		command = { type = sleepleader which = 6123 } #Ricagno
+		command = { type = sleepleader which = 6124 } #Ricci
+		command = { type = sleepleader which = 6126 } #Roatta
+		command = { type = sleepleader which = 6127 } #Romero
+		command = { type = sleepleader which = 6132 } #Scotti
+		command = { type = sleepleader which = 6133 } #Soddu
+		command = { type = sleepleader which = 6136 } #Terziani
+		command = { type = sleepleader which = 6139 } #Tricoli
+		command = { type = sleepleader which = 6142 } #Vacca-Maggiolini
+		command = { type = sleepleader which = 6142 } #Vecchiarelli
+		command = { type = sleepleader which = 6144 } #Vercellino
+		command = { type = sleepleader which = 6146 } #Visconti Prasca
+		command = { type = sleepleader which = 6147 } #Vivaldi
+		command = { type = sleepleader which = 6150 } #Zingales
+		command = { type = sleepleader which = 6160 } #Cavagnari
+		command = { type = sleepleader which = 6161 } #Ciano
+		command = { type = sleepleader which = 6164 } #di Cossata
+		command = { type = sleepleader which = 6173 } #Gazzana
+		command = { type = sleepleader which = 6186 } #Riccardi
+		command = { type = sleepleader which = 6188 } #di Revel
+		command = { type = sleepleader which = 6194 } #Balbo
+		command = { type = sleepleader which = 6201 } #Cagna
+		command = { type = sleepleader which = 6206 } #di Ferro
+		command = { type = sleepleader which = 6218 } #Mecozzi
+		command = { type = sleepleader which = 6233 } #Santoro
+		command = { type = sleepleader which = 6237 } #Visconti
+		command = { type = sleepleader which = 6239 } #La Ferla
+		command = { type = sleepleader which = 6242 } #Priore
+		command = { type = sleepleader which = 6243 } #Bittosi
+		command = { type = sleepleader which = 6247 } #Calcagno
+		command = { type = sleepleader which = 6250 } #Crimi
+		command = { type = sleepleader which = 6251 } #D'Oro
+		command = { type = sleepleader which = 6252 } #de Pignier
+		command = { type = sleepleader which = 6253 } #del Guidice
+		command = { type = sleepleader which = 6255 } #Farinacci
+		command = { type = sleepleader which = 6256 } #Fautilli
+		command = { type = sleepleader which = 6257 } #Galbiati
+		command = { type = sleepleader which = 6262 } #Leonardi
+		command = { type = sleepleader which = 6265 } #Montagna
+		command = { type = sleepleader which = 6267 } #Navarini
+		command = { type = sleepleader which = 6271 } #Piatti del Pozzo
+		command = { type = sleepleader which = 6272 } #Pignetti
+		command = { type = sleepleader which = 6274 } #Romegialli
+		command = { type = sleepleader which = 6277 } #Tellera
+		command = { type = sleepleader which = 6278 } #Tringali
+		command = { type = sleepleader which = 6280 } #Brandimarte
+		command = { type = sleepleader which = 6281 } #Grillo
+		command = { type = sleepleader which = 6282 } #Bonomi
+		command = { type = sleepleader which = 6283 } #Tessari
+
+		command = { type = construct which = land_fort where = 513 value = 4 }
+		command = { type = construct which = flak where = 513 value = 2 }
+		command = { type = construct which = land_fort where = 514 value = 4 }
+		command = { type = construct which = flak where = 514 value = 3 }
+		command = { type = construct which = land_fort where = 512 value = 4 } #1.096
+		command = { type = construct which = flak where = 512 value = 2 }
+		command = { type = construct which = land_fort where = 369 value = 4 } #1.096
+		command = { type = construct which = flak where = 369 value = 3 }
+
+		#Freeing puppets #FEPKBETA5.2
+		command = { type = end_mastery which = ALB }
+		command = { type = end_mastery which = GRE }
+		command = { type = end_mastery which = MTN }
+		command = { type = end_mastery which = CRO }
+		command = { type = end_mastery which = YUG }
+		command = { type = end_mastery which = HUN }
+		command = { type = end_mastery which = ROM }
+		command = { type = end_mastery which = BUL }
+		command = { type = end_mastery which = LBY }
+		command = { type = end_mastery which = ETH }
+		command = { type = end_mastery which = FRA }
+		command = { type = end_mastery which = VIC }
+		command = { type = end_mastery which = EGY }
+		command = { type = end_mastery which = IRQ }
+		command = { type = end_mastery which = PER }
+		command = { type = end_mastery which = SYR }
+		command = { type = end_mastery which = LEB }
+		command = { type = end_mastery which = JOR }
+		command = { type = end_mastery which = PAL }
+		command = { type = end_mastery which = ISR }
+		command = { type = end_mastery which = TUR }
+		command = { type = end_mastery which = IND }
+		command = { type = end_mastery which = PAK }
+
+		command = { type = sleepevent which = 130431 } #on the seine
+		command = { type = sleepevent which = 131200 } #on the seine
+		command = { type = trigger which = 131406 } #germany annexes italy
+		command = { type = setflag which = eng_defeats_ita }
+		command = { type = sleepevent which = 131402 } #naples events
+		command = { type = sleepevent which = 131403 }
+	}
+	action_b = {
+		name = "EVT_131405_ACTB"
+		ai_chance = 0
+		command = { type = dissent value = 20 }
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = domestic which = freedom value = -1 }
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = manpowerpool value = -200 }
+
+		### Provinces seceded to Germany
+		command = { type = secedeprovince which = GER value = 371 } #Trento
+		command = { type = secedeprovince which = GER value = 527 } #Grenoble
+		command = { type = secedeprovince which = GER value = 366 } #Nice
+		### Provinces seceded to Germany from Balkans/Greece
+		command = { type = secedeprovince which = GER value = 380 } #
+		command = { type = secedeprovince which = GER value = 381 } #
+		command = { type = secedeprovince which = GER value = 382 } #
+		command = { type = secedeprovince which = GER value = 384 } #
+		command = { type = secedeprovince which = GER value = 387 } #
+		command = { type = secedeprovince which = GER value = 388 } #
+		command = { type = secedeprovince which = GER value = 389 } #
+		command = { type = secedeprovince which = GER value = 415 } #
+		command = { type = secedeprovince which = GER value = 390 } #
+		command = { type = secedeprovince which = GER value = 391 } #
+		command = { type = secedeprovince which = GER value = 392 } #
+		command = { type = secedeprovince which = GER value = 412 } #
+		command = { type = secedeprovince which = GER value = 411 } #
+		command = { type = secedeprovince which = GER value = 410 } #
+		command = { type = secedeprovince which = GER value = 403 } #
+		command = { type = secedeprovince which = GER value = 402 } #
+		command = { type = secedeprovince which = GER value = 393 } #
+		command = { type = secedeprovince which = GER value = 401 } #
+		command = { type = secedeprovince which = GER value = 394 } #
+		command = { type = secedeprovince which = GER value = 395 } #
+		command = { type = secedeprovince which = GER value = 400 } #
+		command = { type = secedeprovince which = GER value = 405 } #
+		command = { type = secedeprovince which = GER value = 396 } #
+		command = { type = secedeprovince which = GER value = 398 } #
+		command = { type = secedeprovince which = GER value = 399 } #
+
+		command = { type = construct which = land_fort where = 513 value = 4 }
+		command = { type = construct which = flak where = 513 value = 2 }
+		command = { type = construct which = land_fort where = 514 value = 4 }
+		command = { type = construct which = flak where = 514 value = 3 }
+		command = { type = construct which = land_fort where = 512 value = 4 } #1.096
+		command = { type = construct which = flak where = 512 value = 2 }
+		command = { type = construct which = land_fort where = 369 value = 4 } #1.096
+		command = { type = construct which = flak where = 369 value = 3 }
+		command = { type = sleepevent which = 130431 } #on the seine
+		command = { type = sleepevent which = 131200 } #on the seine
+	}
+}
+
+event = {
+	id = 131406
+	random = no
+	country = GER
+
+	name = "EVT_131406_NAME"
+	desc = "EVT_131406_DESC"
+
+	picture = "italy_surrenders"
+
+	action_a = {
+		name = "EVT_131406_ACTA"
+		command = { type = addcore which = 371 } #Trento
+		command = { type = inherit which = ITA }
+		command = { type = inherit which = MTN }
+		command = { type = setflag which = italydefeated }
+		command = { type = secedeprovince which = CRO value = 454 }
+		command = { type = secedeprovince which = CRO value = 455 }
+		command = { type = trigger which = 131407 } #Croatian reaction
+	}
+}
+
+event = { 
+	id = 131407
+	random = no
+	country = CRO
+
+	name = "EVT_131407_NAME"
+	desc = "EVT_131407_DESC"
+	#picture = "allied_strategic_defeat"
+
+
+	action_a = {
+		name = "EVT_131407_ACTA"
+		command = { type = sleepminister which = 30001 } #Tomislav II
+		command = { type = sleepminister which = 30021 } #Tomislav II
+		command = { type = headofstate which = 30022 } #Stepinac
+	}
+}
+
+event = {
+	id = 131408
+	random = no
+	country = GER
+
+	trigger = {
+		control = { province = 370 data = GER } #Milan controlled by Italy
+		OR = {
+			flag = italydefeated
+			AND = {
+				NOT = {
+					exists = ITA
+					exists = RSI
+				}
+				region = { region = "Italy" country = GER data = 1 value = 80 }
+			}
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_131408_NAME"
+	desc = "EVT_131408_DESC"
+
+	action_a = {
+		name = "EVT_131408_ACTA"
+		command = { type = independence which = RSI value = 1 when = 0 } #RSI created
+		command = { type = dissent value = -5 }
+		command = { type = trigger which = 131409 } #Germany puppets Salo
+	}
+}
+
+event = { 
+	id = 131409
+	random = no
+	country = GER
+
+	name = "EVT_131409_NAME"
+	desc = "EVT_131409_DESC"
+
+	action_a = {
+		name = "EVT_131409_ACTA"
+		command = { type = make_puppet which = RSI }
+		command = { type = province_revoltrisk which = 385 value = 30 } #Croatia
+		command = { type = province_revoltrisk which = 386 value = 30 } #
+		command = { type = province_revoltrisk which = 387 value = 30 } #
+		command = { type = province_revoltrisk which = 388 value = 30 } #
+		command = { type = province_revoltrisk which = 383 value = 30 } #
+		command = { type = province_revoltrisk which = 392 value = 30 } #Greece
+		command = { type = province_revoltrisk which = 402 value = 30 } #
+		command = { type = province_revoltrisk which = 403 value = 30 } #
+		command = { type = province_revoltrisk which = 401 value = 30 } #
+		command = { type = province_revoltrisk which = 395 value = 30 } #
+		command = { type = province_revoltrisk which = 394 value = 30 } #
+		command = { type = province_revoltrisk which = 381 value = 30 } #Dalmatia
+		command = { type = province_revoltrisk which = 384 value = 30 } #
+		command = { type = province_revoltrisk which = 389 value = 30 } #Monte
+		command = { type = province_revoltrisk which = 390 value = 30 } #Albania
+		command = { type = province_revoltrisk which = 391 value = 30 } #
+		command = { type = province_revoltrisk which = 415 value = 30 } #Kosovo
+		command = { type = province_revoltrisk which = 380 value = 15 } #Slovenia
+		command = { type = province_revoltrisk which = 459 value = 15 } #
+		command = { type = secedeprovince which = VIC value = 527 } #
+		command = { type = secedeprovince which = VIC value = 366 } #
+		command = { type = secedeprovince which = AUS value = 371 } #Trento
+
+		#To England
+		#Tunisia
+		command = { type = secedeprovince which = ENG value = 941 }
+		command = { type = secedeprovince which = ENG value = 940 }
+		command = { type = secedeprovince which = ENG value = 939 }
+		command = { type = secedeprovince which = ENG value = 938 }
+		command = { type = secedeprovince which = ENG value = 937 }
+		command = { type = secedeprovince which = ENG value = 936 }
+		command = { type = secedeprovince which = ENG value = 935 }
+		command = { type = secedeprovince which = ENG value = 934 }
+		#French North Africa
+		command = { type = secedeprovince which = ENG value = 966 }
+		command = { type = secedeprovince which = ENG value = 960 }
+		command = { type = secedeprovince which = ENG value = 958 }
+		command = { type = secedeprovince which = ENG value = 959 }
+		command = { type = secedeprovince which = ENG value = 968 }
+		command = { type = secedeprovince which = ENG value = 969 }
+		command = { type = secedeprovince which = ENG value = 956 }
+		command = { type = secedeprovince which = ENG value = 954 }
+		command = { type = secedeprovince which = ENG value = 953 }
+		command = { type = secedeprovince which = ENG value = 952 }
+		command = { type = secedeprovince which = ENG value = 951 }
+		command = { type = secedeprovince which = ENG value = 950 }
+		command = { type = secedeprovince which = ENG value = 949 }
+		command = { type = secedeprovince which = ENG value = 948 }
+		command = { type = secedeprovince which = ENG value = 947 }
+		command = { type = secedeprovince which = ENG value = 946 }
+		command = { type = secedeprovince which = ENG value = 945 }
+		command = { type = secedeprovince which = ENG value = 944 }
+		command = { type = secedeprovince which = ENG value = 943 }
+		command = { type = secedeprovince which = ENG value = 942 }
+		command = { type = secedeprovince which = ENG value = 970 }
+		command = { type = secedeprovince which = ENG value = 1013 }
+		command = { type = secedeprovince which = ENG value = 1014 }
+		command = { type = secedeprovince which = ENG value = 941 }
+		command = { type = secedeprovince which = ENG value = 940 }
+		command = { type = secedeprovince which = ENG value = 939 }
+		command = { type = secedeprovince which = ENG value = 938 }
+		command = { type = secedeprovince which = ENG value = 937 }
+		command = { type = secedeprovince which = ENG value = 936 }
+		command = { type = secedeprovince which = ENG value = 935 }
+		command = { type = secedeprovince which = ENG value = 934 }
+		#Ethiopia
+		command = { type = secedeprovince which = ENG value = 1051 } #Dire dawa
+		command = { type = secedeprovince which = ENG value = 1042 } #Gondar
+		command = { type = secedeprovince which = ENG value = 1047 } #Jimma
+		command = { type = secedeprovince which = ENG value = 1046 } #Addis Ababa
+		command = { type = secedeprovince which = ENG value = 1051 } #Harar
+		command = { type = secedeprovince which = ENG value = 1048 } #Adwa
+		command = { type = secedeprovince which = ENG value = 1049 } #Denakil
+		command = { type = secedeprovince which = ENG value = 1043 } #Dese
+		command = { type = secedeprovince which = ENG value = 1044 } #Debre Markos
+		command = { type = secedeprovince which = ENG value = 1045 } #Gambela
+		command = { type = secedeprovince which = ENG value = 1053 } #Moyale
+		command = { type = secedeprovince which = ENG value = 1054 } #Ogaden
+		command = { type = secedeprovince which = ENG value = 367 } #
+		#Somalia
+		command = { type = secedeprovince which = ENG value = 1034 } #Obbia
+		command = { type = secedeprovince which = ENG value = 1055 } #Bardera
+		command = { type = secedeprovince which = ENG value = 1056 } #Mogadishu
+		command = { type = secedeprovince which = ENG value = 1058 } #Kismayo
+		#Egypt
+		command = { type = secedeprovince which = ENG value = 902 } #if egypt annexed
+		command = { type = secedeprovince which = ENG value = 903 } #
+		command = { type = secedeprovince which = ENG value = 904 } #
+		#Colonial Provinces seceded to England
+		command = { type = secedeprovince which = ENG value = 931 } #Ghadames
+		command = { type = secedeprovince which = ENG value = 932 } #Tripoli
+		command = { type = secedeprovince which = ENG value = 933 } #Zuara
+		command = { type = secedeprovince which = ENG value = 918 } #Forte Maddalena
+		command = { type = secedeprovince which = ENG value = 917 } #Forte Capuzzo
+		command = { type = secedeprovince which = ENG value = 927 } #Aujila
+		command = { type = secedeprovince which = ENG value = 916 } #Bardiyah
+		command = { type = secedeprovince which = ENG value = 926 } #Al Jaghbub
+		command = { type = secedeprovince which = ENG value = 930 } #Homs
+		command = { type = secedeprovince which = ENG value = 920 } #Darnah
+		command = { type = secedeprovince which = ENG value = 919 } #Tobruk
+		command = { type = secedeprovince which = ENG value = 924 } #Benghazi
+		command = { type = secedeprovince which = ENG value = 921 } #Mechili
+		command = { type = secedeprovince which = ENG value = 922 } #Msus
+		command = { type = secedeprovince which = ENG value = 923 } #Barca
+		command = { type = secedeprovince which = ENG value = 925 } #Agedabia
+		command = { type = secedeprovince which = ENG value = 929 } #Sirte
+		command = { type = secedeprovince which = ENG value = 928 } #Socna
+		command = { type = secedeprovince which = ENG value = 1015 } #Ghat
+		command = { type = secedeprovince which = ENG value = 1016 } #Murzuk
+		command = { type = secedeprovince which = ENG value = 1017 } #Calansho Sand Sea
+		command = { type = secedeprovince which = ENG value = 1018 } #Kufra
+		command = { type = secedeprovince which = ENG value = 1036 } #Zeila
+		command = { type = secedeprovince which = ENG value = 1038 } #Asab
+		command = { type = secedeprovince which = ENG value = 1033 } #Massaua
+		command = { type = secedeprovince which = ENG value = 1039 } #Asmara
+		command = { type = secedeprovince which = ENG value = 1035 } #Berbera
+		command = { type = secedeprovince which = ENG value = 1037 } #Djibouti, should be French but let's give it to England
+		command = { type = secedeprovince which = ENG value = 1050 } #in eth was missing
+		command = { type = secedeprovince which = ENG value = 1052 } #in eth was missing
+
+		command = { type = trigger which = 131410 } #Salo Setup
+	}
+}
+
+event = {
+	id = 131410
+	random = no 
+	country = RSI
+
+	name = "EVT_131410_NAME"
+	desc = "EVT_131410_DESC"
+
+	picture = "failed_objective"
+
+	action_a = {
+		name = "EVT_131410_ACTA"
+		command = { type = set_domestic which = democratic value = 2 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = set_domestic which = freedom value = 4 }
+		command = { type = set_domestic which = free_market value = 3 }
+		command = { type = set_domestic which = professional_army value = 4 }
+		command = { type = set_domestic which = defense_lobby value = 10 }
+		command = { type = set_domestic which = interventionism value = 10 }
+
+		command = { type = headofstate which = 508001 } #Mussolini
+		command = { type = chiefofstaff which = 508031 } #Kesselring
+		command = { type = chiefofarmy which = 508032 }
+		command = { type = chiefofair which = 508033 }
+
+		command = { type = alliance which = GER }
+		command = { type = manpowerpool value = 20 } #
+        	command = { type = supplies value = 2000 }
+		command = { type = add_division value = garrison }
+		command = { type = add_division value = garrison }
+		command = { type = add_division value = garrison }
+		command = { type = add_division value = garrison }
+		command = { type = add_division value = garrison }
+		command = { type = add_division value = militia where = anti_air }
+		command = { type = add_division value = militia where = anti_air }
+		command = { type = add_division value = militia where = anti_air }
+		command = { type = add_corps value = land where = 369 } #1.096
+		command = { type = add_division value = militia where = anti_tank }
+		command = { type = add_division value = militia where = anti_tank }
+		command = { type = add_division value = militia where = anti_tank }
+		command = { type = add_corps value = land where = 512 } #1.096
+		command = { type = add_division value = militia where = anti_tank }
+		command = { type = add_division value = militia where = anti_tank }
+		command = { type = add_division value = militia where = anti_tank }
+		command = { type = add_corps value = land where = 513 } #1.096
+		command = { type = add_division value = militia where = anti_tank }
+		command = { type = add_division value = militia where = anti_tank }
+		command = { type = add_division value = militia where = anti_tank }
+		command = { type = add_corps value = land where = 514 } #1.096
+		command = { type = add_division value = militia where = anti_tank }
+		command = { type = add_division value = militia where = anti_tank }
+		command = { type = add_division value = militia where = anti_tank }
+		command = { type = dissent value = 40 }
+	}
+}
+
+event = {
+	id = 131412
+	random = no
+	country = USA
+
+	trigger = {
+		flag = usa_defeats_ita
+		control = { province = 525 data = USA } #Sicily
+		control = { province = 526 data = USA }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_131412_NAME"
+	desc = "EVT_131412_DESC"
+	picture = "allied_strategic_defeat"
+
+
+	action_a = {
+		name = "EVT_131412_ACTA"
+		command = { type = independence which = ITA value = 1 when = 0 }
+		command = { type = dissent value = -5 }
+		command = { type = trigger which = 131413 } #USA puppets Italy
+	}
+}
+
+event = {
+	id = 131413
+	random = no
+	country = USA
+
+	name = "EVT_131413_NAME"
+	desc = "EVT_131413_DESC"
+
+	picture = "war"
+
+	action_a = {
+		name = "EVT_131413_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = ITA }
+		command = { type = trigger which = 131414 } #Italian setup
+	}
+}
+
+event = {
+	id = 131414
+	random = no
+	country = ITA
+
+	name = "EVT_131414_NAME"
+	desc = "EVT_131414_DESC"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "EVT_131414_ACTA"
+		ai_chance = 100
+		#Italy
+		command = { type = secedeprovince which = USA value = 378 }
+		command = { type = secedeprovince which = USA value = 371 }
+		command = { type = secedeprovince which = USA value = 370 }
+		command = { type = secedeprovince which = USA value = 531 }
+		command = { type = secedeprovince which = USA value = 368 }
+		command = { type = secedeprovince which = USA value = 369 }
+		command = { type = secedeprovince which = USA value = 512 }
+		command = { type = secedeprovince which = USA value = 379 }
+		command = { type = secedeprovince which = USA value = 513 }
+		command = { type = secedeprovince which = USA value = 514 }
+		command = { type = secedeprovince which = USA value = 515 }
+		command = { type = secedeprovince which = USA value = 516 }
+		command = { type = secedeprovince which = USA value = 517 }
+		command = { type = secedeprovince which = USA value = 518 }
+		command = { type = secedeprovince which = USA value = 519 }
+		command = { type = secedeprovince which = USA value = 520 }
+		command = { type = secedeprovince which = USA value = 521 }
+		command = { type = secedeprovince which = USA value = 522 }
+		command = { type = secedeprovince which = USA value = 523 }
+		command = { type = secedeprovince which = USA value = 524 }
+		command = { type = secedeprovince which = USA value = 534 }
+
+		command = { type = removecore which = 515 } #southern italy
+		command = { type = removecore which = 516 }
+		command = { type = removecore which = 517 }
+		command = { type = removecore which = 518 }
+		command = { type = removecore which = 519 }
+		command = { type = removecore which = 520 }
+		command = { type = removecore which = 521 }
+		command = { type = removecore which = 522 }
+		command = { type = removecore which = 523 }
+		command = { type = removecore which = 524 }
+		command = { type = removecore which = 534 } #sardinia
+		command = { type = removecore which = 513 } #northern italy
+		command = { type = removecore which = 514 }
+		command = { type = removecore which = 512 }
+		command = { type = removecore which = 379 }
+		command = { type = removecore which = 378 }
+		command = { type = removecore which = 371 }
+		command = { type = removecore which = 370 }
+		command = { type = removecore which = 531 }
+		command = { type = removecore which = 368 }
+		command = { type = removecore which = 369 }
+		#1.09 #kakure
+		command = { type = removecore which = 527 } #Grenoble
+		command = { type = removecore which = 366 } #Nice
+		command = { type = removecore which = 367 } #Corsica
+		command = { type = removecore which = 380 } #Ljubljana
+		command = { type = removecore which = 381 } #Rijeka
+		command = { type = removecore which = 384 } #Split
+		command = { type = removecore which = 31 } #Malta
+		command = { type = removecore which = 348 } #Gibraltar
+		command = { type = removecore which = 393 } #Kefalonia
+		command = { type = removecore which = 405 } #Dardanelles
+		command = { type = removecore which = 400 } #Cyclades
+		command = { type = removecore which = 398 } #Dodecanese
+		command = { type = removecore which = 399 } #Rhodes
+		command = { type = removecore which = 396 } #Crete
+		command = { type = removecore which = 444 } #Cyprus
+		command = { type = removecore which = 410 } #Kavala
+		command = { type = removecore which = 390 } #Tirana
+		command = { type = removecore which = 391 } #Vlore
+		command = { type = removecore which = 358 } #South France
+		command = { type = removecore which = 362 }
+		command = { type = removecore which = 363 }
+		command = { type = removecore which = 364 } #Marseille
+		command = { type = removecore which = 365 }
+	}
+}
+
+event = {
+	id = 131415
+	random = no
+	country = ENG
+
+	trigger = {
+		flag = eng_defeats_ita
+		control = { province = 525 data = ENG } #Sicily
+		control = { province = 526 data = ENG }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_131415_NAME"
+	desc = "EVT_131415_DESC"
+	picture = "allied_strategic_defeat"
+
+	action_a = {
+		name = "EVT_131415_ACTA"
+		command = { type = independence which = ITA value = 1 when = 0 }
+		command = { type = dissent value = -5 }
+		command = { type = trigger which = 131416 } #UK puppets Italy
+	}
+}
+
+event = {
+	id = 131416
+	random = no
+	country = ENG
+
+	name = "EVT_131416_NAME"
+	desc = "EVT_131416_DESC"
+	picture = "war"
+
+	action_a = {
+		name = "EVT_131416_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = ITA }
+		command = { type = trigger which = 131417 } #Italian setup
+	}
+}
+
+event = {
+	id = 131417
+	random = no
+	country = ITA
+
+	name = "EVT_131417_NAME"
+	desc = "EVT_131417_DESC"
+	picture = "constitutional"
+
+	action_a = {
+		name = "EVT_131417_ACTA"
+		ai_chance = 100
+		#Italy
+		command = { type = secedeprovince which = ENG value = 378 }
+		command = { type = secedeprovince which = ENG value = 371 }
+		command = { type = secedeprovince which = ENG value = 370 }
+		command = { type = secedeprovince which = ENG value = 531 }
+		command = { type = secedeprovince which = ENG value = 368 }
+		command = { type = secedeprovince which = ENG value = 369 }
+		command = { type = secedeprovince which = ENG value = 512 }
+		command = { type = secedeprovince which = ENG value = 379 }
+		command = { type = secedeprovince which = ENG value = 513 }
+		command = { type = secedeprovince which = ENG value = 514 }
+		command = { type = secedeprovince which = ENG value = 515 }
+		command = { type = secedeprovince which = ENG value = 516 }
+		command = { type = secedeprovince which = ENG value = 517 }
+		command = { type = secedeprovince which = ENG value = 518 }
+		command = { type = secedeprovince which = ENG value = 519 }
+		command = { type = secedeprovince which = ENG value = 520 }
+		command = { type = secedeprovince which = ENG value = 521 }
+		command = { type = secedeprovince which = ENG value = 522 }
+		command = { type = secedeprovince which = ENG value = 523 }
+		command = { type = secedeprovince which = ENG value = 524 }
+		command = { type = secedeprovince which = ENG value = 534 }
+
+		command = { type = removecore which = 515 } #southern italy
+		command = { type = removecore which = 516 }
+		command = { type = removecore which = 517 }
+		command = { type = removecore which = 518 }
+		command = { type = removecore which = 519 }
+		command = { type = removecore which = 520 }
+		command = { type = removecore which = 521 }
+		command = { type = removecore which = 522 }
+		command = { type = removecore which = 523 }
+		command = { type = removecore which = 524 }
+		command = { type = removecore which = 534 } #sardinia
+		command = { type = removecore which = 513 } #northern italy
+		command = { type = removecore which = 514 }
+		command = { type = removecore which = 512 }
+		command = { type = removecore which = 379 }
+		command = { type = removecore which = 378 }
+		command = { type = removecore which = 371 }
+		command = { type = removecore which = 370 }
+		command = { type = removecore which = 531 }
+		command = { type = removecore which = 368 }
+		command = { type = removecore which = 369 }
+		#1.09 #kakure
+		command = { type = removecore which = 527 } #Grenoble
+		command = { type = removecore which = 366 } #Nice
+		command = { type = removecore which = 367 } #Corsica
+		command = { type = removecore which = 380 } #Ljubljana
+		command = { type = removecore which = 381 } #Rijeka
+		command = { type = removecore which = 384 } #Split
+		command = { type = removecore which = 31 } #Malta
+		command = { type = removecore which = 348 } #Gibraltar
+		command = { type = removecore which = 393 } #Kefalonia
+		command = { type = removecore which = 405 } #Dardanelles
+		command = { type = removecore which = 400 } #Cyclades
+		command = { type = removecore which = 398 } #Dodecanese
+		command = { type = removecore which = 399 } #Rhodes
+		command = { type = removecore which = 396 } #Crete
+		command = { type = removecore which = 444 } #Cyprus
+		command = { type = removecore which = 410 } #Kavala
+		command = { type = removecore which = 390 } #Tirana
+		command = { type = removecore which = 391 } #Vlore
+		command = { type = removecore which = 358 } #South France
+		command = { type = removecore which = 362 }
+		command = { type = removecore which = 363 }
+		command = { type = removecore which = 364 } #Marseille
+		command = { type = removecore which = 365 }
+		#command = { type = trigger which = 131418 } #Italian setup
+	}
+}
+
+event = {
+	id = 131418
+	random = no
+	country = ITA
+
+	trigger = {
+		flag = italydefeated
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_131418_NAME"
+	desc = "EVT_131418_DESC"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "EVT_131418_ACTA"
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = set_domestic which = freedom value = 5 }
+		command = { type = set_domestic which = free_market value = 4 }
+		command = { type = set_domestic which = professional_army value = 6 }
+		command = { type = set_domestic which = defense_lobby value = 7 }
+		command = { type = set_domestic which = interventionism value = 6 }
+
+		command = { type = headofstate which = 3031 } #VE3
+		command = { type = headofgovernment which = 3045 } #Badoglio
+		command = { type = foreignminister which = 3055 } #Badoglio
+		command = { type = armamentminister which = 3068 } #Sorice
+		command = { type = ministerofsecurity which = 3095 } #Ricci
+		command = { type = ministerofintelligence which = 3016 } #Ricci
+		command = { type = chiefofstaff which = 3125 } #Badoglio
+		command = { type = chiefofarmy which = 3143 } #Ambrosio
+		command = { type = chiefofnavy which = 3154 } #de Courten
+		command = { type = chiefofair which = 3163 } #Sandalli
+
+		command = { type = sleepteam which = 1801 } #Beretta
+		command = { type = sleepteam which = 1804 } #Cantieri Ansaldo
+		command = { type = sleepteam which = 1808 } #FIAT
+		command = { type = sleepteam which = 1810 } #Macchi
+		command = { type = sleepteam which = 1812 } #Lancia
+		command = { type = sleepteam which = 1813 } #Arturo Riccardi
+		command = { type = sleepteam which = 1814 } #Domenico Cavagnari
+		command = { type = sleepteam which = 1815 } #Italo Balbo
+		command = { type = sleepteam which = 1818 } #Rino Fougier
+		command = { type = sleepteam which = 1819 } #Rodolfo Graziani
+		command = { type = sleepteam which = 1820 } #Societa Montecatini
+
+		command = { type = add_division value = infantry }
+	}
+}
+
+##########
+#  イタリアの対ソ降伏
+##########
+
+event = {
+	id = 131420
+	random = no
+	country = ITA
+
+	trigger = {
+		war = { country = SOV country = ITA }
+		control = { province = 515 data = SOV } #ローマ
+		OR = {
+			NOT = {
+				#control = { province = 368 data = ITA }
+				control = { province = 370 data = ITA }
+				control = { province = 371 data = ITA }
+				control = { province = 378 data = ITA }
+				control = { province = 531 data = ITA }
+			}
+			lost_VP = { country = ITA value = 50 }	#VP50%失陥
+		}
+	}
+
+	name = "EVT_131420_NAME"
+	desc = "EVT_131420_DESC"
+	picture = "minor"
+	style = 0
+
+        date = { day = 0 month = january year = 1935 }
+        offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		ai_chance = 95
+		name = "EVT_131420_ACTA"
+		command = { type = end_puppet }
+		command = { type = leave_alliance }
+		command = { type = set_relation which = SOV value = 50 }
+		command = { type = set_relation which = GER value = -50 }
+
+		#Freeing puppets #FEPKBETA5.2
+		command = { type = end_mastery which = ALB }
+		command = { type = end_mastery which = GRE }
+		command = { type = end_mastery which = MTN }
+		command = { type = end_mastery which = CRO }
+		command = { type = end_mastery which = YUG }
+		command = { type = end_mastery which = HUN }
+		command = { type = end_mastery which = ROM }
+		command = { type = end_mastery which = BUL }
+		command = { type = end_mastery which = LBY }
+		command = { type = end_mastery which = ETH }
+		command = { type = end_mastery which = FRA }
+		command = { type = end_mastery which = VIC }
+		command = { type = end_mastery which = EGY }
+		command = { type = end_mastery which = IRQ }
+		command = { type = end_mastery which = PER }
+		command = { type = end_mastery which = SYR }
+		command = { type = end_mastery which = LEB }
+		command = { type = end_mastery which = JOR }
+		command = { type = end_mastery which = PAL }
+		command = { type = end_mastery which = ISR }
+		command = { type = end_mastery which = TUR }
+		command = { type = end_mastery which = IND }
+		command = { type = end_mastery which = PAK }
+
+		command = { type = trigger which = 131421 }
+	}
+	action_b = {
+		ai_chance = 5
+		name = "EVT_131420_ACTB"
+		command = { type = dissent value = 15 }
+		command = { type = domestic which = defense_lobby value = 1 }
+	}
+}
+
+event = {
+	id = 131421
+	random = no
+	country = SOV
+
+	name = "EVT_131421_NAME"
+	desc = "EVT_131421_DESC"
+        picture = "ussr_strategic_victory"
+	style = 0
+
+	action_a = {
+		ai_chance = 97
+		name = "EVT_131421_ACTA"
+		command = { type = make_puppet which = ITA }
+		command = { type = alliance which = ITA }
+		command = { type = money value = 500 }
+
+		command = { type = trigger which = 131422 }
+	}
+	action_b = {
+		ai_chance = 3
+		name = "EVT_131421_ACTB"
+		command = { type = dissent value = 5 }
+
+	}
+}
+
+event = {
+	id = 131422
+	random = no
+	country = ITA
+
+	name = "EVT_131422_NAME"
+	desc = "EVT_131422_DESC"
+        picture = "minor"
+	style = 0
+
+	action_a = {
+		ai_chance = 100
+		name = "EVT_131422_ACTA"
+		command = { type = dissent value = 10 }
+		command = { type = capital which = 515 } #Rome
+
+		command = { type = set_domestic which = democratic value = 2 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = set_domestic which = freedom value = 2 }
+		command = { type = set_domestic which = free_market value = 4 }
+		command = { type = set_domestic which = professional_army value = 2 }
+		command = { type = set_domestic which = defense_lobby value = 10 }
+		command = { type = set_domestic which = interventionism value = 10 }
+
+		#1.09 #kakure
+		command = { type = removecore which = 527 } #Grenoble
+		command = { type = removecore which = 366 } #Nice
+		command = { type = removecore which = 367 } #Corsica
+		command = { type = removecore which = 380 } #Ljubljana
+		command = { type = removecore which = 381 } #Rijeka
+		command = { type = removecore which = 384 } #Split
+		command = { type = removecore which = 31 } #Malta
+		command = { type = removecore which = 348 } #Gibraltar
+		command = { type = removecore which = 393 } #Kefalonia
+		command = { type = removecore which = 405 } #Dardanelles
+		command = { type = removecore which = 400 } #Cyclades
+		command = { type = removecore which = 398 } #Dodecanese
+		command = { type = removecore which = 399 } #Rhodes
+		command = { type = removecore which = 396 } #Crete
+		command = { type = removecore which = 444 } #Cyprus
+		command = { type = removecore which = 410 } #Kavala
+		command = { type = removecore which = 390 } #Tirana
+		command = { type = removecore which = 391 } #Vlore
+		command = { type = removecore which = 358 } #South France
+		command = { type = removecore which = 362 }
+		command = { type = removecore which = 363 }
+		command = { type = removecore which = 364 } #Marseille
+		command = { type = removecore which = 365 }
+
+		command = { type = sleepminister which = 3002 } #Mussolini
+		command = { type = sleepminister which = 3003 } #Ciano
+		command = { type = sleepminister which = 3004 } #Mussolini
+		command = { type = sleepminister which = 3005 } #Buffarini-Guidi
+		command = { type = sleepminister which = 3006 } #Ame
+		command = { type = sleepminister which = 3007 } #Grazioli
+		command = { type = sleepminister which = 3008 } #Pariani
+		command = { type = sleepminister which = 3010 } #Valle
+		command = { type = sleepminister which = 3034 } #Mussolini
+		command = { type = sleepminister which = 3035 } #di Revel
+		command = { type = sleepminister which = 3043 } #Mussolini
+		command = { type = sleepminister which = 3044 } #Borghese
+		command = { type = sleepminister which = 3052 } #Mussolini
+		command = { type = sleepminister which = 3053 } #Bastianini
+		command = { type = sleepminister which = 3064 } #Baistrocchi
+		command = { type = sleepminister which = 3065 } #Pariani
+		command = { type = sleepminister which = 3066 } #Soddu
+		command = { type = sleepminister which = 3067 } #Guzzoni
+		command = { type = sleepminister which = 3070 } #di Revel
+		command = { type = sleepminister which = 3071 } #Francarillo
+		command = { type = sleepminister which = 3072 } #Paladini
+		command = { type = sleepminister which = 3073 } #Acerbo
+		command = { type = sleepminister which = 3091 } #Albini
+		command = { type = sleepminister which = 3092 } #Scuero
+		command = { type = sleepminister which = 3093 } #Mussolini
+		command = { type = sleepminister which = 3094 } #Brandimarte
+		command = { type = sleepminister which = 3096 } #Farinacci
+		command = { type = sleepminister which = 3108 } #Galbiati
+		command = { type = sleepminister which = 3109 } #Grandi
+		command = { type = sleepminister which = 3110 } #de Marschio
+		command = { type = sleepminister which = 3112 } #Carboni
+		command = { type = sleepminister which = 3124 } #Cavallero
+		command = { type = sleepminister which = 3126 } #Starace
+		command = { type = sleepminister which = 3127 } #Catastini
+		command = { type = sleepminister which = 3139 } #Graziani
+		command = { type = sleepminister which = 3140 } #Roatta
+		command = { type = sleepminister which = 3141 } #Borghese
+		command = { type = sleepminister which = 3149 } #Riccardi
+		command = { type = sleepminister which = 3150 } #di Revel
+		command = { type = sleepminister which = 3151 } #Rocco
+		command = { type = sleepminister which = 3153 } #Grandi
+		command = { type = sleepminister which = 3160 } #Pricolo
+		command = { type = sleepminister which = 3161 } #Fougier
+		command = { type = sleepminister which = 3168 } #Ciano
+		command = { type = sleepleader which = 6002 } #Ago
+		command = { type = sleepleader which = 6005 } #Amico
+		command = { type = sleepleader which = 6006 } #Antonelli
+		command = { type = sleepleader which = 6008 } #Arena
+		command = { type = sleepleader which = 6010 } #Asinari di Bernezzo
+		command = { type = sleepleader which = 6014 } #Baistrocchi
+		command = { type = sleepleader which = 6015 } #Balbo
+		command = { type = sleepleader which = 6017 } #Balocco
+		command = { type = sleepleader which = 6018 } #Barbasetti di Prun
+		command = { type = sleepleader which = 6019 } #Barbieri
+		command = { type = sleepleader which = 6021 } #Bastico
+		command = { type = sleepleader which = 6022 } #Battisti
+		command = { type = sleepleader which = 6024 } #Bergonzoli
+		command = { type = sleepleader which = 6025 } #Berti
+		command = { type = sleepleader which = 6027 } #Bianchi
+		command = { type = sleepleader which = 6028 } #Bignami
+		command = { type = sleepleader which = 6029 } #Borghese
+		command = { type = sleepleader which = 6031 } #Bruno
+		command = { type = sleepleader which = 6033 } #Calvi di Bergolo
+		command = { type = sleepleader which = 6034 } #Canale
+		command = { type = sleepleader which = 6035 } #Caracciolo di Feroleto
+		command = { type = sleepleader which = 6036 } #Carboni
+		command = { type = sleepleader which = 6037 } #Carta
+		command = { type = sleepleader which = 6041 } #Cavallero
+		command = { type = sleepleader which = 6043 } #Cerio
+		command = { type = sleepleader which = 6044 } #Coppi
+		command = { type = sleepleader which = 6046 } #Cigala-Fulgosi
+		command = { type = sleepleader which = 6047 } #Clerici
+		command = { type = sleepleader which = 6048 } #Cona
+		command = { type = sleepleader which = 6049 } #cotronei
+		command = { type = sleepleader which = 6051 } #Dall'Ora
+		command = { type = sleepleader which = 6052 } #Dalmazzo
+		command = { type = sleepleader which = 6054 } #de Bono
+		command = { type = sleepleader which = 6057 } #de Cia
+		command = { type = sleepleader which = 6059 } #de Stefanis
+		command = { type = sleepleader which = 6060 } #de Vecchi di Val Cismon
+		command = { type = sleepleader which = 6061 } #d'Havet
+		command = { type = sleepleader which = 6063 } #Du Pont
+		command = { type = sleepleader which = 6065 } #Esposito
+		command = { type = sleepleader which = 6067 } #Ferrari Orsi
+		command = { type = sleepleader which = 6072 } #Fricchione
+		command = { type = sleepleader which = 6073 } #Frusci
+		command = { type = sleepleader which = 6074 } #Gambara
+		command = { type = sleepleader which = 6075 } #Gambelli
+		command = { type = sleepleader which = 6076 } #Gandin
+		command = { type = sleepleader which = 6078 } #Geloso
+		command = { type = sleepleader which = 6079 } #Gherzi
+		command = { type = sleepleader which = 6080 } #Gioda
+		command = { type = sleepleader which = 6081 } #Giovanelli
+		command = { type = sleepleader which = 6082 } #Gonzaga del Voldice
+		command = { type = sleepleader which = 6084 } #Graziani
+		command = { type = sleepleader which = 6085 } #Grazioli
+		command = { type = sleepleader which = 6086 } #Grossi
+		command = { type = sleepleader which = 6088 } #Guzzoni
+		command = { type = sleepleader which = 6092 } #Lorenzelli
+		command = { type = sleepleader which = 6093 } #Lorenzini
+		command = { type = sleepleader which = 6095 } #Maletti
+		command = { type = sleepleader which = 6097 } #Marghinotti
+		command = { type = sleepleader which = 6098 } #Marinetti
+		command = { type = sleepleader which = 6100 } #Martinat
+		command = { type = sleepleader which = 6101 } #Masina
+		command = { type = sleepleader which = 6103 } #Moizo
+		command = { type = sleepleader which = 6105 } #Molinari
+		command = { type = sleepleader which = 6108 } #Nasi
+		command = { type = sleepleader which = 6109 } #Negro
+		command = { type = sleepleader which = 6112 } #Pariani
+		command = { type = sleepleader which = 6115 } #Pescatori
+		command = { type = sleepleader which = 6117 } #Pintor
+		command = { type = sleepleader which = 6118 } #Pirzio Biroli
+		command = { type = sleepleader which = 6119 } #Pittagula
+		command = { type = sleepleader which = 6120 } #Porcinari
+		command = { type = sleepleader which = 6121 } #Rastrelli
+		command = { type = sleepleader which = 6122 } #Reverberi
+		command = { type = sleepleader which = 6123 } #Ricagno
+		command = { type = sleepleader which = 6124 } #Ricci
+		command = { type = sleepleader which = 6126 } #Roatta
+		command = { type = sleepleader which = 6127 } #Romero
+		command = { type = sleepleader which = 6132 } #Scotti
+		command = { type = sleepleader which = 6133 } #Soddu
+		command = { type = sleepleader which = 6136 } #Terziani
+		command = { type = sleepleader which = 6139 } #Tricoli
+		command = { type = sleepleader which = 6142 } #Vacca-Maggiolini
+		command = { type = sleepleader which = 6142 } #Vecchiarelli
+		command = { type = sleepleader which = 6144 } #Vercellino
+		command = { type = sleepleader which = 6146 } #Visconti Prasca
+		command = { type = sleepleader which = 6147 } #Vivaldi
+		command = { type = sleepleader which = 6150 } #Zingales
+		command = { type = sleepleader which = 6160 } #Cavagnari
+		command = { type = sleepleader which = 6161 } #Ciano
+		command = { type = sleepleader which = 6164 } #di Cossata
+		command = { type = sleepleader which = 6173 } #Gazzana
+		command = { type = sleepleader which = 6186 } #Riccardi
+		command = { type = sleepleader which = 6188 } #di Revel
+		command = { type = sleepleader which = 6194 } #Balbo
+		command = { type = sleepleader which = 6201 } #Cagna
+		command = { type = sleepleader which = 6206 } #di Ferro
+		command = { type = sleepleader which = 6218 } #Mecozzi
+		command = { type = sleepleader which = 6233 } #Santoro
+		command = { type = sleepleader which = 6237 } #Visconti
+		command = { type = sleepleader which = 6239 } #La Ferla
+		command = { type = sleepleader which = 6242 } #Priore
+		command = { type = sleepleader which = 6243 } #Bittosi
+		command = { type = sleepleader which = 6247 } #Calcagno
+		command = { type = sleepleader which = 6250 } #Crimi
+		command = { type = sleepleader which = 6251 } #D'Oro
+		command = { type = sleepleader which = 6252 } #de Pignier
+		command = { type = sleepleader which = 6253 } #del Guidice
+		command = { type = sleepleader which = 6255 } #Farinacci
+		command = { type = sleepleader which = 6256 } #Fautilli
+		command = { type = sleepleader which = 6257 } #Galbiati
+		command = { type = sleepleader which = 6262 } #Leonardi
+		command = { type = sleepleader which = 6265 } #Montagna
+		command = { type = sleepleader which = 6267 } #Navarini
+		command = { type = sleepleader which = 6271 } #Piatti del Pozzo
+		command = { type = sleepleader which = 6272 } #Pignetti
+		command = { type = sleepleader which = 6274 } #Romegialli
+		command = { type = sleepleader which = 6277 } #Tellera
+		command = { type = sleepleader which = 6278 } #Tringali
+		command = { type = sleepleader which = 6280 } #Brandimarte
+		command = { type = sleepleader which = 6281 } #Grillo
+		command = { type = sleepleader which = 6282 } #Bonomi
+		command = { type = sleepleader which = 6283 } #Tessari
+
+		command = { type = sleepteam which = 1801 } #Beretta
+		command = { type = sleepteam which = 1804 } #Cantieri Ansaldo
+		command = { type = sleepteam which = 1808 } #FIAT
+		command = { type = sleepteam which = 1810 } #Macchi
+		command = { type = sleepteam which = 1812 } #Lancia
+		command = { type = sleepteam which = 1813 } #Arturo Riccardi
+		command = { type = sleepteam which = 1814 } #Domenico Cavagnari
+		command = { type = sleepteam which = 1815 } #Italo Balbo
+		command = { type = sleepteam which = 1818 } #Rino Fougier
+		command = { type = sleepteam which = 1819 } #Rodolfo Graziani
+		command = { type = sleepteam which = 1820 } #Societa Montecatini
+
+
+		#cede
+		#France
+		command = { type = secedeprovince which = VIC value = 527 } #Grenoble
+		command = { type = secedeprovince which = VIC value = 366 } #Nice
+		command = { type = secedeprovince which = FRA value = 527 } #Grenoble
+		command = { type = secedeprovince which = FRA value = 366 } #Nice
+		command = { type = secedeprovince which = FRA value = 367 } #Corsica
+		command = { type = secedeprovince which = FRA value = 1037 } #Djibouti (East Africa)
+		#Yugoslavia
+		command = { type = secedeprovince which = YUG value = 380 }
+		command = { type = secedeprovince which = YUG value = 459 }
+		command = { type = secedeprovince which = YUG value = 455 }
+		command = { type = secedeprovince which = YUG value = 454 }
+		command = { type = secedeprovince which = YUG value = 453 }
+		command = { type = secedeprovince which = YUG value = 381 }
+		command = { type = secedeprovince which = YUG value = 382 }
+		command = { type = secedeprovince which = YUG value = 383 }
+		command = { type = secedeprovince which = YUG value = 384 }
+		command = { type = secedeprovince which = YUG value = 385 }
+		command = { type = secedeprovince which = YUG value = 386 }
+		command = { type = secedeprovince which = YUG value = 387 }
+		command = { type = secedeprovince which = YUG value = 388 }
+		command = { type = secedeprovince which = YUG value = 389 }
+		command = { type = secedeprovince which = YUG value = 451 }
+		command = { type = secedeprovince which = YUG value = 452 }
+		command = { type = secedeprovince which = YUG value = 418 }
+		command = { type = secedeprovince which = YUG value = 415 }
+		command = { type = secedeprovince which = YUG value = 493 }
+		command = { type = secedeprovince which = YUG value = 494 }
+		command = { type = secedeprovince which = YUG value = 413 }
+		command = { type = secedeprovince which = YUG value = 414 }
+				#Yugoslavia
+		command = { type = secedeprovince which = SOV value = 380 }
+		command = { type = secedeprovince which = SOV value = 459 }
+		command = { type = secedeprovince which = SOV value = 455 }
+		command = { type = secedeprovince which = SOV value = 454 }
+		command = { type = secedeprovince which = SOV value = 453 }
+		command = { type = secedeprovince which = SOV value = 381 }
+		command = { type = secedeprovince which = SOV value = 382 }
+		command = { type = secedeprovince which = SOV value = 383 }
+		command = { type = secedeprovince which = SOV value = 384 }
+		command = { type = secedeprovince which = SOV value = 385 }
+		command = { type = secedeprovince which = SOV value = 386 }
+		command = { type = secedeprovince which = SOV value = 387 }
+		command = { type = secedeprovince which = SOV value = 388 }
+		command = { type = secedeprovince which = SOV value = 389 }
+		command = { type = secedeprovince which = SOV value = 451 }
+		command = { type = secedeprovince which = SOV value = 452 }
+		command = { type = secedeprovince which = SOV value = 418 }
+		command = { type = secedeprovince which = SOV value = 415 }
+		command = { type = secedeprovince which = SOV value = 493 }
+		command = { type = secedeprovince which = SOV value = 494 }
+		command = { type = secedeprovince which = SOV value = 413 }
+		command = { type = secedeprovince which = SOV value = 414 }
+		#Greece
+		command = { type = secedeprovince which = GRE value = 392 }
+		command = { type = secedeprovince which = GRE value = 410 }
+		command = { type = secedeprovince which = GRE value = 411 }
+		command = { type = secedeprovince which = GRE value = 412 }
+		command = { type = secedeprovince which = GRE value = 403 }
+		command = { type = secedeprovince which = GRE value = 402 }
+		command = { type = secedeprovince which = GRE value = 393 }
+		command = { type = secedeprovince which = GRE value = 401 }
+		command = { type = secedeprovince which = GRE value = 400 }
+		command = { type = secedeprovince which = GRE value = 405 }
+		command = { type = secedeprovince which = GRE value = 398 }
+		command = { type = secedeprovince which = GRE value = 399 }
+		command = { type = secedeprovince which = GRE value = 394 }
+		command = { type = secedeprovince which = GRE value = 395 }
+		command = { type = secedeprovince which = GRE value = 396 }
+		#Greece
+		command = { type = secedeprovince which = SOV value = 392 }
+		command = { type = secedeprovince which = SOV value = 410 }
+		command = { type = secedeprovince which = SOV value = 411 }
+		command = { type = secedeprovince which = SOV value = 412 }
+		command = { type = secedeprovince which = SOV value = 403 }
+		command = { type = secedeprovince which = SOV value = 402 }
+		command = { type = secedeprovince which = SOV value = 393 }
+		command = { type = secedeprovince which = SOV value = 401 }
+		command = { type = secedeprovince which = SOV value = 400 }
+		command = { type = secedeprovince which = SOV value = 405 }
+		command = { type = secedeprovince which = SOV value = 398 }
+		command = { type = secedeprovince which = SOV value = 399 }
+		command = { type = secedeprovince which = SOV value = 394 }
+		command = { type = secedeprovince which = SOV value = 395 }
+		command = { type = secedeprovince which = SOV value = 396 }
+		#Persia
+		command = { type = secedeprovince which = PER value = 1859 }
+		command = { type = secedeprovince which = PER value = 1789 }
+		command = { type = secedeprovince which = PER value = 1788 }
+		command = { type = secedeprovince which = PER value = 1825 }
+		command = { type = secedeprovince which = PER value = 1826 }
+		command = { type = secedeprovince which = PER value = 1787 }
+		command = { type = secedeprovince which = PER value = 1502 }
+		command = { type = secedeprovince which = PER value = 1501 }
+		command = { type = secedeprovince which = PER value = 1500 }
+		command = { type = secedeprovince which = PER value = 1503 }
+		command = { type = secedeprovince which = PER value = 1498 }
+		command = { type = secedeprovince which = PER value = 1499 }
+		command = { type = secedeprovince which = PER value = 1497 }
+		command = { type = secedeprovince which = PER value = 1496 }
+		command = { type = secedeprovince which = PER value = 1495 }
+
+		#Romania
+		command = { type = secedeprovince which = ROM value = 496 }
+		command = { type = secedeprovince which = ROM value = 428 }
+		command = { type = secedeprovince which = ROM value = 498 }
+		command = { type = secedeprovince which = ROM value = 495 }
+		command = { type = secedeprovince which = ROM value = 496 }
+		command = { type = secedeprovince which = ROM value = 427 }
+		command = { type = secedeprovince which = ROM value = 429 }
+		command = { type = secedeprovince which = ROM value = 430 }
+		#command = { type = secedeprovince which = ROM value = 230 } #Bessarabia stays Russian
+		command = { type = secedeprovince which = ROM value = 433 }
+		#command = { type = secedeprovince which = ROM value = 434 } #Bessarabia stays Russian
+		#command = { type = secedeprovince which = ROM value = 435 } #Bessarabia stays Russian
+		command = { type = secedeprovince which = ROM value = 436 }
+		command = { type = secedeprovince which = ROM value = 432 }
+		command = { type = secedeprovince which = ROM value = 431 }
+		command = { type = secedeprovince which = ROM value = 424 }
+		command = { type = secedeprovince which = ROM value = 425 }
+		command = { type = secedeprovince which = ROM value = 426 }
+		command = { type = secedeprovince which = ROM value = 423 } #Constanta
+
+		#Bulgaria
+		command = { type = secedeprovince which = BUL value = 417 } #Sophia
+		command = { type = secedeprovince which = BUL value = 419 }
+		command = { type = secedeprovince which = BUL value = 416 }
+		command = { type = secedeprovince which = BUL value = 420 }
+		command = { type = secedeprovince which = BUL value = 422 }
+		command = { type = secedeprovince which = BUL value = 421 }
+
+		#Hungary
+		command = { type = secedeprovince which = HUN value = 457 } #Budapest
+		command = { type = secedeprovince which = HUN value = 458 }
+		command = { type = secedeprovince which = HUN value = 456 }
+		command = { type = secedeprovince which = HUN value = 491 }
+		command = { type = secedeprovince which = HUN value = 492 }
+		command = { type = secedeprovince which = HUN value = 497 }
+
+		#Czechoslovakia
+		command = { type = secedeprovince which = CZE value = 469 } #Prague
+		command = { type = secedeprovince which = CZE value = 471 }
+		command = { type = secedeprovince which = CZE value = 472 }
+		command = { type = secedeprovince which = CZE value = 470 }
+		command = { type = secedeprovince which = CZE value = 466 }
+		command = { type = secedeprovince which = CZE value = 468 }
+		command = { type = secedeprovince which = CZE value = 467 }
+		command = { type = secedeprovince which = CZE value = 474 }
+		command = { type = secedeprovince which = CZE value = 475 }
+		command = { type = secedeprovince which = CZE value = 476 }
+		command = { type = secedeprovince which = CZE value = 478 }
+		command = { type = secedeprovince which = CZE value = 477 }
+		command = { type = secedeprovince which = CZE value = 490 }
+		command = { type = secedeprovince which = CZE value = 499 } #Ruthenia
+				#Czechoslovakia
+		command = { type = secedeprovince which = SOV value = 469 } #Prague
+		command = { type = secedeprovince which = SOV value = 471 }
+		command = { type = secedeprovince which = SOV value = 472 }
+		command = { type = secedeprovince which = SOV value = 470 }
+		command = { type = secedeprovince which = SOV value = 466 }
+		command = { type = secedeprovince which = SOV value = 468 }
+		command = { type = secedeprovince which = SOV value = 467 }
+		command = { type = secedeprovince which = SOV value = 474 }
+		command = { type = secedeprovince which = SOV value = 475 }
+		command = { type = secedeprovince which = SOV value = 476 }
+		command = { type = secedeprovince which = SOV value = 478 }
+		command = { type = secedeprovince which = SOV value = 477 }
+		command = { type = secedeprovince which = SOV value = 490 }
+		command = { type = secedeprovince which = SOV value = 499 } #Ruthenia
+		#Poland, not including the east
+		command = { type = secedeprovince which = POL value = 489 }
+		command = { type = secedeprovince which = POL value = 488 }
+		command = { type = secedeprovince which = POL value = 487 }
+		command = { type = secedeprovince which = POL value = 486 }
+		command = { type = secedeprovince which = POL value = 485 } #Warsaw
+		command = { type = secedeprovince which = POL value = 305 }
+		command = { type = secedeprovince which = POL value = 306 }
+		command = { type = secedeprovince which = POL value = 303 }
+		command = { type = secedeprovince which = POL value = 307 }
+		command = { type = secedeprovince which = POL value = 483 }
+		command = { type = secedeprovince which = POL value = 484 }
+		command = { type = secedeprovince which = POL value = 481 }
+		command = { type = secedeprovince which = POL value = 480 }
+		command = { type = secedeprovince which = POL value = 479 }
+		#Poland, not including the east
+		command = { type = secedeprovince which = SOV value = 489 }
+		command = { type = secedeprovince which = SOV value = 488 }
+		command = { type = secedeprovince which = SOV value = 487 }
+		command = { type = secedeprovince which = SOV value = 486 }
+		command = { type = secedeprovince which = SOV value = 485 } #Warsaw
+		command = { type = secedeprovince which = SOV value = 305 }
+		command = { type = secedeprovince which = SOV value = 306 }
+		command = { type = secedeprovince which = SOV value = 303 }
+		command = { type = secedeprovince which = SOV value = 307 }
+		command = { type = secedeprovince which = SOV value = 483 }
+		command = { type = secedeprovince which = SOV value = 484 }
+		command = { type = secedeprovince which = SOV value = 481 }
+		command = { type = secedeprovince which = SOV value = 480 }
+		command = { type = secedeprovince which = SOV value = 479 }
+		#Iraq
+		command = { type = secedeprovince which = IRQ value = 1866 }
+		command = { type = secedeprovince which = IRQ value = 1860 }
+		command = { type = secedeprovince which = IRQ value = 1865 }
+		command = { type = secedeprovince which = IRQ value = 1790 }
+		command = { type = secedeprovince which = IRQ value = 1824 }
+		command = { type = secedeprovince which = IRQ value = 1823 }
+		command = { type = secedeprovince which = IRQ value = 1806 }
+		command = { type = secedeprovince which = IRQ value = 1791 }
+		command = { type = secedeprovince which = IRQ value = 1864 }
+				#Iraq
+		command = { type = secedeprovince which = ENG value = 1866 }
+		command = { type = secedeprovince which = ENG value = 1860 }
+		command = { type = secedeprovince which = ENG value = 1865 }
+		command = { type = secedeprovince which = ENG value = 1790 }
+		command = { type = secedeprovince which = ENG value = 1824 }
+		command = { type = secedeprovince which = ENG value = 1823 }
+		command = { type = secedeprovince which = ENG value = 1806 }
+		command = { type = secedeprovince which = ENG value = 1791 }
+		command = { type = secedeprovince which = ENG value = 1864 }
+		#Albania
+		command = { type = secedeprovince which = ALB value = 390 }
+		command = { type = secedeprovince which = ALB value = 391 }
+		command = { type = secedeprovince which = SOV value = 390 }
+		command = { type = secedeprovince which = SOV value = 391 }
+		#Austria
+		command = { type = secedeprovince which = AUS value = 373 }
+		command = { type = secedeprovince which = AUS value = 377 }
+		command = { type = secedeprovince which = AUS value = 460 }
+		command = { type = secedeprovince which = AUS value = 461 }
+		command = { type = secedeprovince which = AUS value = 462 }
+		command = { type = secedeprovince which = AUS value = 463 }
+		command = { type = secedeprovince which = AUS value = 464 }
+		command = { type = secedeprovince which = AUS value = 465 }
+				#Austria
+		command = { type = secedeprovince which = SOV value = 373 }
+		command = { type = secedeprovince which = SOV value = 377 }
+		command = { type = secedeprovince which = SOV value = 460 }
+		command = { type = secedeprovince which = SOV value = 461 }
+		command = { type = secedeprovince which = SOV value = 462 }
+		command = { type = secedeprovince which = SOV value = 463 }
+		command = { type = secedeprovince which = SOV value = 464 }
+		command = { type = secedeprovince which = SOV value = 465 }
+		#Tunisia
+		command = { type = secedeprovince which = FRA value = 941 }
+		command = { type = secedeprovince which = FRA value = 940 }
+		command = { type = secedeprovince which = FRA value = 939 }
+		command = { type = secedeprovince which = FRA value = 938 }
+		command = { type = secedeprovince which = FRA value = 937 }
+		command = { type = secedeprovince which = FRA value = 936 }
+		command = { type = secedeprovince which = FRA value = 935 }
+		command = { type = secedeprovince which = FRA value = 934 }
+		#Somalia
+		command = { type = secedeprovince which = ENG value = 1034 }
+		command = { type = secedeprovince which = ENG value = 1055 }
+		command = { type = secedeprovince which = ENG value = 1056 }
+		command = { type = secedeprovince which = ENG value = 1058 }
+		#Egypt
+		command = { type = secedeprovince which = ENG value = 902 }
+		command = { type = secedeprovince which = ENG value = 903 }
+		command = { type = secedeprovince which = ENG value = 904 }
+		#liberate
+		#Libya
+		command = { type = independence which = LBY value = 0 when = 1 }
+		#Ethiopia
+		command = { type = independence which = ETH value = 0 when = 1 } #Ethiopia liberated
+		#Yugoslavia
+		command = { type = independence which = YUG value = 0 when = 1 }
+		#Greece
+		command = { type = independence which = GRE value = 0 when = 1 }
+		#Albania
+		command = { type = independence which = ALB value = 0 when = 1 }
+		#Iraq
+		command = { type = independence which = IRQ value = 0 when = 1 }
+		#Persia
+		command = { type = independence which = PER value = 0 when = 1 }
+	}
+}
+
+##########
+#  イタリアの対独降伏
+##########
+
+event = {
+	id = 131430
+	random = no
+	country = GER
+
+	trigger = {
+		war = { country = ITA country = GER }
+		#OR = {
+		#	control = { province = 368 data = GER } #Genoa
+		#	AND = {
+		#		control = { province = 368 data = AUS }
+		#		alliance = { country = AUS country = GER }
+		#	}
+		#	AND = {
+		#		control = { province = 368 data = HUN }
+		#		alliance = { country = HUN country = GER }
+		#	}
+		#}
+		OR = {
+			control = { province = 369 data = GER } #La Spezia
+			AND = {
+				control = { province = 369 data = AUS }
+				alliance = { country = AUS country = GER }
+			}
+			AND = {
+				control = { province = 369 data = HUN }
+				alliance = { country = HUN country = GER }
+			}
+		}
+		OR = {
+			control = { province = 370 data = GER } #Milan
+			AND = {
+				control = { province = 370 data = AUS }
+				alliance = { country = AUS country = GER }
+			}
+			AND = {
+				control = { province = 370 data = HUN }
+				alliance = { country = HUN country = GER }
+			}
+		}
+		OR = {
+			control = { province = 378 data = GER } #Venice
+			AND = {
+				control = { province = 378 data = AUS }
+				alliance = { country = AUS country = GER }
+			}
+			AND = {
+				control = { province = 378 data = HUN }
+				alliance = { country = HUN country = GER }
+			}
+		}
+		OR = {
+			control = { province = 515 data = GER } #Rome
+			AND = {
+				control = { province = 515 data = AUS }
+				alliance = { country = AUS country = GER }
+			}
+			AND = {
+				control = { province = 515 data = HUN }
+				alliance = { country = HUN country = GER }
+			}
+		}
+		NOT = {
+			#war = { country = ITA country = ENG }
+			exists = RSI
+			flag = usa_defeats_ita #FEPK1.12
+			flag = eng_defeats_ita
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_131430_NAME"
+	desc = "EVT_131430_DESC"
+	picture = "surrender"
+
+	action_a = {
+		name = "EVT_131430_ACTA"
+		ai_chance = 100
+		command = { type = trigger which = 131431 }
+		command = { type = addcore which = 371 } #Trento
+	}
+	action_b = {
+		name = "EVT_131430_ACTB"
+		ai_chance = 0
+		command = { type = dissent value = 5 }
+		command = { type = addcore which = 371 } #Trento
+	}
+}
+
+event = {
+	id = 131431
+	random = no
+	country = ITA
+
+	name = "EVT_131431_NAME"
+	desc = "EVT_131431_DESC"
+	picture = "surrender"
+
+	action_a = {
+		name = "EVT_131431_ACTA"
+		ai_chance = 100
+		command = { type = leave_alliance }
+		command = { type = peace which = GER value = 1 }
+		command = { type = peace which = JAP value = 1 }
+		command = { type = peace which = U73 value = 1 }
+		command = { type = peace which = MAN value = 1 }
+		command = { type = peace which = MEN value = 1 }
+		command = { type = peace which = SIA value = 1 }
+		command = { type = peace which = PRI value = 1 }
+		command = { type = peace which = BUL value = 1 }
+		command = { type = peace which = PER value = 1 }
+		command = { type = peace which = IRQ value = 1 }
+		command = { type = peace which = SYR value = 1 }
+		command = { type = peace which = LEB value = 1 }
+		command = { type = peace which = ENG value = 1 }
+		command = { type = peace which = USA value = 1 }
+		command = { type = peace which = CAN value = 1 }
+		command = { type = peace which = MEX value = 1 }
+		command = { type = peace which = VEN value = 1 }
+		command = { type = peace which = PAN value = 1 }
+		command = { type = peace which = LIB value = 1 }
+		command = { type = peace which = PHI value = 1 }
+		command = { type = peace which = JAP value = 1 }
+		command = { type = peace which = SOV value = 1 }
+		command = { type = peace which = HOL value = 1 }
+		command = { type = peace which = BRA value = 1 }
+		command = { type = peace which = ECU value = 1 }
+		command = { type = peace which = PRU value = 1 }
+		command = { type = peace which = HON value = 1 }
+		command = { type = peace which = COL value = 1 }
+		command = { type = peace which = TUR value = 1 }
+		command = { type = peace which = SAF value = 1 }
+		command = { type = peace which = RUS value = 1 }
+		#chinas
+		command = { type = peace which = CHI value = 1 }
+		command = { type = peace which = CHC value = 1 }
+		command = { type = peace which = CSX value = 1 }
+		command = { type = peace which = CGX value = 1 }
+		command = { type = peace which = CXB value = 1 }
+		command = { type = peace which = SIK value = 1 }
+		command = { type = peace which = CYN value = 1 }
+		command = { type = peace which = U87 value = 1 }
+		command = { type = peace which = U74 value = 1 } #BETA修正パッチ
+
+		command = { type = access which = GER }
+		command = { type = access which = AUS }
+		command = { type = access which = HUN }
+
+		command = { type = sleepminister which = 3002 } #Benito
+		command = { type = sleepminister which = 3004 } #Benito
+		command = { type = sleepminister which = 3034 } #Benito
+		command = { type = sleepminister which = 3043 } #Benito
+		command = { type = sleepminister which = 3052 } #Benito
+		command = { type = sleepminister which = 3093 } #Benito
+		command = { type = sleepminister which = 3001 } #victor
+		command = { type = sleepminister which = 3031 } #victor
+		command = { type = sleepminister which = 3033 } #victor
+
+		#Freeing puppets #FEPKBETA5.2
+		command = { type = end_mastery which = ALB }
+		command = { type = end_mastery which = GRE }
+		command = { type = end_mastery which = MTN }
+		command = { type = end_mastery which = CRO }
+		command = { type = end_mastery which = YUG }
+		command = { type = end_mastery which = HUN }
+		command = { type = end_mastery which = ROM }
+		command = { type = end_mastery which = BUL }
+		command = { type = end_mastery which = LBY }
+		command = { type = end_mastery which = ETH }
+		command = { type = end_mastery which = FRA }
+		command = { type = end_mastery which = VIC }
+		command = { type = end_mastery which = EGY }
+		command = { type = end_mastery which = IRQ }
+		command = { type = end_mastery which = PER }
+		command = { type = end_mastery which = SYR }
+		command = { type = end_mastery which = LEB }
+		command = { type = end_mastery which = JOR }
+		command = { type = end_mastery which = PAL }
+		command = { type = end_mastery which = ISR }
+		command = { type = end_mastery which = TUR }
+		command = { type = end_mastery which = IND }
+		command = { type = end_mastery which = PAK }
+
+		#1.09 #kakure
+		command = { type = removecore which = 527 } #Grenoble
+		command = { type = removecore which = 366 } #Nice
+		command = { type = removecore which = 367 } #Corsica
+		command = { type = removecore which = 380 } #Ljubljana
+		command = { type = removecore which = 381 } #Rijeka
+		command = { type = removecore which = 384 } #Split
+		command = { type = removecore which = 31 } #Malta
+		command = { type = removecore which = 348 } #Gibraltar
+		command = { type = removecore which = 393 } #Kefalonia
+		command = { type = removecore which = 405 } #Dardanelles
+		command = { type = removecore which = 400 } #Cyclades
+		command = { type = removecore which = 398 } #Dodecanese
+		command = { type = removecore which = 399 } #Rhodes
+		command = { type = removecore which = 396 } #Crete
+		command = { type = removecore which = 444 } #Cyprus
+		command = { type = removecore which = 410 } #Kavala
+		command = { type = removecore which = 390 } #Tirana
+		command = { type = removecore which = 391 } #Vlore
+		command = { type = removecore which = 358 } #South France
+		command = { type = removecore which = 362 }
+		command = { type = removecore which = 363 }
+		command = { type = removecore which = 364 } #Marseille
+		command = { type = removecore which = 365 }
+
+		command = { type = setflag which = gerdefeatsita }
+	}
+	action_b = {
+		name = "EVT_131431_ACTB"
+		ai_chance = 0
+		command = { type = dissent value = 30 }
+		command = { type = sleepevent which = 131432 }
+	}
+}
+
+event = {
+	id = 131432
+	random = no
+	country = ITA
+
+	trigger = {
+		event = 131431
+		NOT = {
+			alliance = { country = AUS country = GER }
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_131432_NAME"
+	desc = "EVT_131432_DESC"
+	picture = "surrender"
+
+	action_a = {
+		name = "EVT_131432_ACTA"
+		ai_chance = 100
+		command = { type = construct which = land_fort where = 371 value = -10 }
+		command = { type = construct which = land_fort where = 378 value = -10 }
+		command = { type = secedeprovince which = GER value = 371 } #Trento
+		command = { type = sleepevent which = 131433 } #austria-included concessions
+	}
+}
+
+event = {
+	id = 131433
+	random = no
+	country = ITA
+
+	trigger = {
+		event = 131431
+		alliance = { country = AUS country = GER }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_131433_NAME"
+	desc = "EVT_131433_DESC"
+	picture = "surrender"
+
+	action_a = {
+		name = "EVT_131433_ACTA"
+		ai_chance = 100
+		command = { type = construct which = land_fort where = 371 value = -10 }
+		command = { type = construct which = land_fort where = 378 value = -10 }
+		command = { type = secedeprovince which = AUS value = 371 } #Trento
+		command = { type = secedeprovince which = AUS value = 370 } #Milano
+		command = { type = secedeprovince which = AUS value = 378 } #Venice
+		command = { type = secedeprovince which = AUS value = 380 } #Slovenia
+		command = { type = secedeprovince which = AUS value = 459 }
+		command = { type = sleepevent which = 131432 } #no-austria concessions
+	}
+}
+
+event = {
+	id = 131434
+	random = no
+	country = ITA
+
+	trigger = {
+		event = 131431
+		alliance = { country = TUR country = GER }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_131434_NAME"
+	desc = "EVT_131434_DESC"
+	picture = "surrender"
+
+	action_a = {
+		name = "EVT_131434_ACTA"
+		ai_chance = 100
+		#islands
+		command = { type = secedeprovince which = TUR value = 398 }
+		command = { type = secedeprovince which = TUR value = 399 }
+		#Libya
+		command = { type = secedeprovince which = TUR value = 933 }
+		command = { type = secedeprovince which = TUR value = 932 } #tripoli
+		command = { type = secedeprovince which = TUR value = 931 }
+		command = { type = secedeprovince which = TUR value = 930 }
+		command = { type = secedeprovince which = TUR value = 929 }
+		command = { type = secedeprovince which = TUR value = 928 }
+		command = { type = secedeprovince which = TUR value = 1015 }
+		command = { type = secedeprovince which = TUR value = 1016 }
+		command = { type = secedeprovince which = TUR value = 925 }
+		command = { type = secedeprovince which = TUR value = 927 }
+		command = { type = secedeprovince which = TUR value = 1017 }
+		command = { type = secedeprovince which = TUR value = 1018 }
+		command = { type = secedeprovince which = TUR value = 926 }
+		command = { type = secedeprovince which = TUR value = 918 }
+		command = { type = secedeprovince which = TUR value = 917 }
+		command = { type = secedeprovince which = TUR value = 916 }
+		command = { type = secedeprovince which = TUR value = 919 } #tobruk
+		command = { type = secedeprovince which = TUR value = 921 }
+		command = { type = secedeprovince which = TUR value = 920 }
+		command = { type = secedeprovince which = TUR value = 922 }
+		command = { type = secedeprovince which = TUR value = 923 }
+		command = { type = secedeprovince which = TUR value = 924 }
+	}
+}
+
+event = {
+	id = 131435
+	random = no
+	country = GER
+
+	trigger = {
+		event = 131431
+		NOT = {
+			alliance = { country = AUS country = GER }
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_131435_NAME"
+	desc = "EVT_131435_DESC"
+	picture = "surrender"
+
+	action_a = {
+		name = "EVT_131435_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = ITA }
+		command = { type = construct which = land_fort where = 371 value = -10 }
+		command = { type = construct which = land_fort where = 378 value = -10 }
+		command = { type = sleepevent which = 131437 } #austria puppets italy
+		command = { type = trigger which = 131436 } #italian government
+	}
+}
+
+
+event = {
+	id = 131436
+	random = no
+	country = ITA
+
+	name = "EVT_131436_NAME"
+	desc = "EVT_131436_DESC"
+	picture = "surrender"
+
+	action_a = {
+		name = "EVT_131436_ACTA"
+		command = { type = dissent value = 30 }
+
+		command = { type = set_domestic which = defense_lobby value = 3 }
+		command = { type = set_domestic which = interventionism value = 2 }
+
+		command = { type = headofstate which = 3036 }
+		command = { type = headofgovernment which = 3168 }
+		command = { type = foreignminister which = 3056 }
+		command = { type = armamentminister which = 3067 }
+		command = { type = ministerofsecurity which = 3094 }
+		command = { type = ministerofintelligence which = 3108 }
+		command = { type = chiefofstaff which = 3128 }
+		command = { type = chiefofarmy which = 3140 }
+		command = { type = chiefofnavy which = 3149 }
+		command = { type = chiefofair which = 3161 }
+	}
+}
+
+event = {
+	id = 131437
+	random = no
+	country = AUS
+
+	trigger = {
+		event = 131431
+		alliance = { country = AUS country = GER }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_131437_NAME"
+	desc = "EVT_131437_DESC"
+	picture = "surrender"
+
+	action_a = {
+		name = "EVT_131437_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = ITA }
+		command = { type = construct which = land_fort where = 371 value = -10 }
+		command = { type = construct which = land_fort where = 378 value = -10 }
+		command = { type = sleepevent which = 131435 } #germany puppets italy
+		command = { type = trigger which = 131438 } #italian government
+	}
+}
+
+event = {
+	id = 131438
+	random = no
+	country = ITA
+
+	name = "EVT_131438_NAME"
+	desc = "EVT_131438_DESC"
+	picture = "surrender"
+
+	action_a = {
+		name = "EVT_131438_ACTA"
+		command = { type = dissent value = 30 }
+
+		command = { type = set_domestic which = defense_lobby value = 3 }
+		command = { type = set_domestic which = interventionism value = 2 }
+
+		command = { type = headofstate which = 3036 }
+		command = { type = headofgovernment which = 3168 }
+		command = { type = foreignminister which = 3056 }
+		command = { type = armamentminister which = 3067 }
+		command = { type = ministerofsecurity which = 3094 }
+		command = { type = ministerofintelligence which = 3108 }
+		command = { type = chiefofstaff which = 3128 }
+		command = { type = chiefofarmy which = 3140 }
+		command = { type = chiefofnavy which = 3149 }
+		command = { type = chiefofair which = 3161 }
+	}
+}
+
+##########
+#  イタリア共和国による半島統一
+##########
+event = {
+	id = 131440
+	random = no
+	country = GER
+	trigger = {
+		alliance = { country = RSI country = GER }
+		NOT = { exists = ITA }
+		region = { region = "Italy" country = -3 value = 100 }
+		OR = {
+			area = { area = "Sicilian Gap" country = -1 value = 1 }	#シチリア島
+			area = { area = "South Italy" country = -1 value = 1 }	#イタリア南部
+			area = { area = "Central Italy" country = -1 value = 1 }	#イタリア中部
+			area = { area = "Appennine Ridge" country = -1 value = 1 }	#アペニノ山脈
+			control = { province = 531 data = -1 }	#トリノ
+			control = { province = 368 data = -1 }	#ジェノヴァ
+			control = { province = 370 data = -1 }	#ミラノ
+			control = { province = 378 data = -1 }	#ヴェネツィア
+		}
+	}
+	
+	picture = "german_replacements"
+	name = "EVT_131440_NAME"	#イタリア民主共和国による半島統一
+	desc = "EVT_131440_DESC"	#
+
+        date = { day = 0 month = january year = 1935 }
+        offset = 4
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "EVT_131440_ACTA"	#
+		ai_chance = 99
+		#Italy(RSI)
+		command = { type = secedeprovince which = RSI value = 378 }
+		#command = { type = secedeprovince which = RSI value = 371 }	#トレント
+		command = { type = secedeprovince which = RSI value = 370 }
+		command = { type = secedeprovince which = RSI value = 531 }
+		command = { type = secedeprovince which = RSI value = 368 }
+		command = { type = secedeprovince which = RSI value = 369 }
+		command = { type = secedeprovince which = RSI value = 512 }
+		command = { type = secedeprovince which = RSI value = 379 }
+		command = { type = secedeprovince which = RSI value = 513 }
+		command = { type = secedeprovince which = RSI value = 514 }
+		command = { type = secedeprovince which = RSI value = 515 }
+		command = { type = secedeprovince which = RSI value = 516 }
+		command = { type = secedeprovince which = RSI value = 517 }
+		command = { type = secedeprovince which = RSI value = 518 }
+		command = { type = secedeprovince which = RSI value = 519 }
+		command = { type = secedeprovince which = RSI value = 520 }
+		command = { type = secedeprovince which = RSI value = 521 }
+		command = { type = secedeprovince which = RSI value = 522 }
+		command = { type = secedeprovince which = RSI value = 523 }
+		command = { type = secedeprovince which = RSI value = 524 }
+		command = { type = secedeprovince which = RSI value = 525 }
+		command = { type = secedeprovince which = RSI value = 526 }
+		command = { type = secedeprovince which = RSI value = 534 }
+		command = { type = trigger which = 131441 }
+	}
+	action = {
+		name = "EVT_131440_ACTB"	#イタリア人に任せればまた苦労するハメになるぞ！
+		ai_chance = 1
+		command = { type = addclaim which = 378 }
+		#command = { type = addclaim which = 371 }	#トレント
+		command = { type = addclaim which = 370 }
+		command = { type = addclaim which = 531 }
+		command = { type = addclaim which = 368 }
+		command = { type = addclaim which = 369 }
+		command = { type = addclaim which = 512 }
+		command = { type = addclaim which = 379 }
+		command = { type = addclaim which = 513 }
+		command = { type = addclaim which = 514 }
+		command = { type = addclaim which = 515 }
+		command = { type = addclaim which = 516 }
+		command = { type = addclaim which = 517 }
+		command = { type = addclaim which = 518 }
+		command = { type = addclaim which = 519 }
+		command = { type = addclaim which = 520 }
+		command = { type = addclaim which = 521 }
+		command = { type = addclaim which = 522 }
+		command = { type = addclaim which = 523 }
+		command = { type = addclaim which = 524 }
+		command = { type = addclaim which = 525 }
+		command = { type = addclaim which = 526 }
+		command = { type = addclaim which = 534 }
+	}
+}
+
+event = { 
+	id = 131441
+	random = no
+	country = RSI
+
+	picture = "german_replacements"
+	name = "EVT_131441_NAME"	#イタリア半島統一
+	desc = "EVT_131441_DESC"	#
+	
+	action = {
+		name = "OK"
+		command = { type = dissent value = -5 }
+	}
+	action = {
+		name = "EVT_131441_ACTB"	#よろしい。ところで、首都はローマにあるべきであろ？
+		command = { type = dissent value = -5 }
+		command = { type = capital which = 515 }
+	}
+}
+
+
+##########
+#  イタリアの対仏降伏
+##########
+
+event = {
+	id = 131451
+	random = no
+	country = ITA
+
+	trigger = { #FEPK1.12
+		war = { country = FRA country = ITA }
+		control = { province = 56 data = FRA } #Paris
+		control = { province = 515 data = FRA }
+		control = { province = 521 data = FRA }
+		OR = {
+			NOT = {
+				control = { province = 368 data = ITA }
+				control = { province = 370 data = ITA }
+				control = { province = 371 data = ITA }
+				control = { province = 378 data = ITA }
+				control = { province = 531 data = ITA }
+			}
+			lost_VP = { country = ITA value = 50 }	#VP50%失陥
+		}
+		NOT = {
+			flag = usa_defeats_ita #FEPK1.12
+			flag = eng_defeats_ita
+		}
+	}
+
+	name = "EVT_131451_NAME"
+	desc = "EVT_131451_DESC"
+	style = 0
+	picture = "Ita_Surrender"
+
+        date = { day = 0 month = january year = 1935 }
+        offset = 4
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		ai_chance = 95
+		name = "EVT_131451_ACTA"
+		command = { type = end_puppet }
+		command = { type = leave_alliance }
+		command = { type = set_relation which = FRA value = 50 }
+		command = { type = set_relation which = GER value = -50 }
+		command = { type = access which = FRA }
+		command = { type = peace which = FRA value = 1 } #FEPKBETA5.5
+		command = { type = construct which = land_fort where = 531 value = -10 }
+		command = { type = construct which = land_fort where = 368 value = -10 }
+
+		command = { type = trigger which = 131452 }
+	}
+
+	action_b = {
+		ai_chance = 5
+		name = "EVT_131451_ACTB"
+		command = { type = dissent value = 15 }
+		command = { type = domestic which = defense_lobby value = 1 }
+	}
+}
+
+event = {
+	id = 131452
+	random = no
+	country = FRA
+
+	name = "EVT_131452_NAME"
+	desc = "EVT_131452_DESC"
+	style = 0
+	picture = "Ita_Surrender"
+
+	action_a = {
+		ai_chance = 100
+		name = "EVT_131452_ACTA"
+	#	command = { type = peace which = ITA value = 1 } #FEPKBETA5.5 #コメントアウト、-51で和平処理
+		command = { type = make_puppet which = ITA }
+		command = { type = alliance which = ITA }
+		command = { type = money value = 500 }
+
+		command = { type = trigger which = 131453 }
+	}
+	action_b = {
+		ai_chance = 0
+		name = "EVT_131452_ACTB"
+		command = { type = dissent value = 5 }
+
+	}
+}
+
+event = {
+	id = 131453
+	random = no
+	country = ITA
+
+	name = "EVT_131453_NAME"
+	desc = "EVT_131453_DESC"
+        picture = "minor"
+	style = 0
+
+	action_a = {
+		ai_chance = 100
+		name = "EVT_131453_ACTA"
+		command = { type = dissent value = 10 }
+
+		#new sliders
+		command = { type = set_domestic which = democratic value = 8 } #1.04
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = set_domestic which = freedom value = 8 }
+		command = { type = set_domestic which = free_market value = 8 }
+		command = { type = set_domestic which = professional_army value = 3 }
+		command = { type = set_domestic which = defense_lobby value = 4 }
+		command = { type = set_domestic which = interventionism value = 2 }
+
+		#1.09 #kakure
+		command = { type = removecore which = 527 } #Grenoble
+		command = { type = removecore which = 366 } #Nice
+		command = { type = removecore which = 367 } #Corsica
+		command = { type = removecore which = 380 } #Ljubljana
+		command = { type = removecore which = 381 } #Rijeka
+		command = { type = removecore which = 384 } #Split
+		command = { type = removecore which = 31 } #Malta
+		command = { type = removecore which = 348 } #Gibraltar
+		command = { type = removecore which = 393 } #Kefalonia
+		command = { type = removecore which = 405 } #Dardanelles
+		command = { type = removecore which = 400 } #Cyclades
+		command = { type = removecore which = 398 } #Dodecanese
+		command = { type = removecore which = 399 } #Rhodes
+		command = { type = removecore which = 396 } #Crete
+		command = { type = removecore which = 444 } #Cyprus
+		command = { type = removecore which = 410 } #Kavala
+		command = { type = removecore which = 390 } #Tirana
+		command = { type = removecore which = 391 } #Vlore
+		command = { type = removecore which = 358 } #South France
+		command = { type = removecore which = 362 }
+		command = { type = removecore which = 363 }
+		command = { type = removecore which = 364 } #Marseille
+		command = { type = removecore which = 365 }
+
+		command = { type = sleepminister which = 3002 } #Mussolini
+		command = { type = sleepminister which = 3003 } #Ciano
+		command = { type = sleepminister which = 3004 } #Mussolini
+		command = { type = sleepminister which = 3005 } #Buffarini-Guidi
+		command = { type = sleepminister which = 3006 } #Ame
+		command = { type = sleepminister which = 3007 } #Grazioli
+		command = { type = sleepminister which = 3008 } #Pariani
+		command = { type = sleepminister which = 3010 } #Valle
+		command = { type = sleepminister which = 3034 } #Mussolini
+		command = { type = sleepminister which = 3035 } #di Revel
+		command = { type = sleepminister which = 3043 } #Mussolini
+		command = { type = sleepminister which = 3044 } #Borghese
+		command = { type = sleepminister which = 3052 } #Mussolini
+		command = { type = sleepminister which = 3053 } #Bastianini
+		command = { type = sleepminister which = 3064 } #Baistrocchi
+		command = { type = sleepminister which = 3065 } #Pariani
+		command = { type = sleepminister which = 3066 } #Soddu
+		command = { type = sleepminister which = 3067 } #Guzzoni
+		command = { type = sleepminister which = 3070 } #di Revel
+		command = { type = sleepminister which = 3071 } #Francarillo
+		command = { type = sleepminister which = 3072 } #Paladini
+		command = { type = sleepminister which = 3073 } #Acerbo
+		command = { type = sleepminister which = 3091 } #Albini
+		command = { type = sleepminister which = 3092 } #Scuero
+		command = { type = sleepminister which = 3093 } #Mussolini
+		command = { type = sleepminister which = 3094 } #Brandimarte
+		command = { type = sleepminister which = 3096 } #Farinacci
+		command = { type = sleepminister which = 3108 } #Galbiati
+		command = { type = sleepminister which = 3109 } #Grandi
+		command = { type = sleepminister which = 3110 } #de Marschio
+		command = { type = sleepminister which = 3112 } #Carboni
+		command = { type = sleepminister which = 3124 } #Cavallero
+		command = { type = sleepminister which = 3126 } #Starace
+		command = { type = sleepminister which = 3127 } #Catastini
+		command = { type = sleepminister which = 3139 } #Graziani
+		command = { type = sleepminister which = 3140 } #Roatta
+		command = { type = sleepminister which = 3141 } #Borghese
+		command = { type = sleepminister which = 3149 } #Riccardi
+		command = { type = sleepminister which = 3150 } #di Revel
+		command = { type = sleepminister which = 3151 } #Rocco
+		command = { type = sleepminister which = 3153 } #Grandi
+		command = { type = sleepminister which = 3160 } #Pricolo
+		command = { type = sleepminister which = 3161 } #Fougier
+		command = { type = sleepminister which = 3168 } #Ciano
+		command = { type = sleepleader which = 6002 } #Ago
+		command = { type = sleepleader which = 6005 } #Amico
+		command = { type = sleepleader which = 6006 } #Antonelli
+		command = { type = sleepleader which = 6008 } #Arena
+		command = { type = sleepleader which = 6010 } #Asinari di Bernezzo
+		command = { type = sleepleader which = 6014 } #Baistrocchi
+		command = { type = sleepleader which = 6015 } #Balbo
+		command = { type = sleepleader which = 6017 } #Balocco
+		command = { type = sleepleader which = 6018 } #Barbasetti di Prun
+		command = { type = sleepleader which = 6019 } #Barbieri
+		command = { type = sleepleader which = 6021 } #Bastico
+		command = { type = sleepleader which = 6022 } #Battisti
+		command = { type = sleepleader which = 6024 } #Bergonzoli
+		command = { type = sleepleader which = 6025 } #Berti
+		command = { type = sleepleader which = 6027 } #Bianchi
+		command = { type = sleepleader which = 6028 } #Bignami
+		command = { type = sleepleader which = 6029 } #Borghese
+		command = { type = sleepleader which = 6031 } #Bruno
+		command = { type = sleepleader which = 6033 } #Calvi di Bergolo
+		command = { type = sleepleader which = 6034 } #Canale
+		command = { type = sleepleader which = 6035 } #Caracciolo di Feroleto
+		command = { type = sleepleader which = 6036 } #Carboni
+		command = { type = sleepleader which = 6037 } #Carta
+		command = { type = sleepleader which = 6041 } #Cavallero
+		command = { type = sleepleader which = 6043 } #Cerio
+		command = { type = sleepleader which = 6044 } #Coppi
+		command = { type = sleepleader which = 6046 } #Cigala-Fulgosi
+		command = { type = sleepleader which = 6047 } #Clerici
+		command = { type = sleepleader which = 6048 } #Cona
+		command = { type = sleepleader which = 6049 } #cotronei
+		command = { type = sleepleader which = 6051 } #Dall'Ora
+		command = { type = sleepleader which = 6052 } #Dalmazzo
+		command = { type = sleepleader which = 6054 } #de Bono
+		command = { type = sleepleader which = 6057 } #de Cia
+		command = { type = sleepleader which = 6059 } #de Stefanis
+		command = { type = sleepleader which = 6060 } #de Vecchi di Val Cismon
+		command = { type = sleepleader which = 6061 } #d'Havet
+		command = { type = sleepleader which = 6063 } #Du Pont
+		command = { type = sleepleader which = 6065 } #Esposito
+		command = { type = sleepleader which = 6067 } #Ferrari Orsi
+		command = { type = sleepleader which = 6072 } #Fricchione
+		command = { type = sleepleader which = 6073 } #Frusci
+		command = { type = sleepleader which = 6074 } #Gambara
+		command = { type = sleepleader which = 6075 } #Gambelli
+		command = { type = sleepleader which = 6076 } #Gandin
+		command = { type = sleepleader which = 6078 } #Geloso
+		command = { type = sleepleader which = 6079 } #Gherzi
+		command = { type = sleepleader which = 6080 } #Gioda
+		command = { type = sleepleader which = 6081 } #Giovanelli
+		command = { type = sleepleader which = 6082 } #Gonzaga del Voldice
+		command = { type = sleepleader which = 6084 } #Graziani
+		command = { type = sleepleader which = 6085 } #Grazioli
+		command = { type = sleepleader which = 6086 } #Grossi
+		command = { type = sleepleader which = 6088 } #Guzzoni
+		command = { type = sleepleader which = 6092 } #Lorenzelli
+		command = { type = sleepleader which = 6093 } #Lorenzini
+		command = { type = sleepleader which = 6095 } #Maletti
+		command = { type = sleepleader which = 6097 } #Marghinotti
+		command = { type = sleepleader which = 6098 } #Marinetti
+		command = { type = sleepleader which = 6100 } #Martinat
+		command = { type = sleepleader which = 6101 } #Masina
+		command = { type = sleepleader which = 6103 } #Moizo
+		command = { type = sleepleader which = 6105 } #Molinari
+		command = { type = sleepleader which = 6108 } #Nasi
+		command = { type = sleepleader which = 6109 } #Negro
+		command = { type = sleepleader which = 6112 } #Pariani
+		command = { type = sleepleader which = 6115 } #Pescatori
+		command = { type = sleepleader which = 6117 } #Pintor
+		command = { type = sleepleader which = 6118 } #Pirzio Biroli
+		command = { type = sleepleader which = 6119 } #Pittagula
+		command = { type = sleepleader which = 6120 } #Porcinari
+		command = { type = sleepleader which = 6121 } #Rastrelli
+		command = { type = sleepleader which = 6122 } #Reverberi
+		command = { type = sleepleader which = 6123 } #Ricagno
+		command = { type = sleepleader which = 6124 } #Ricci
+		command = { type = sleepleader which = 6126 } #Roatta
+		command = { type = sleepleader which = 6127 } #Romero
+		command = { type = sleepleader which = 6132 } #Scotti
+		command = { type = sleepleader which = 6133 } #Soddu
+		command = { type = sleepleader which = 6136 } #Terziani
+		command = { type = sleepleader which = 6139 } #Tricoli
+		command = { type = sleepleader which = 6142 } #Vacca-Maggiolini
+		command = { type = sleepleader which = 6142 } #Vecchiarelli
+		command = { type = sleepleader which = 6144 } #Vercellino
+		command = { type = sleepleader which = 6146 } #Visconti Prasca
+		command = { type = sleepleader which = 6147 } #Vivaldi
+		command = { type = sleepleader which = 6150 } #Zingales
+		command = { type = sleepleader which = 6160 } #Cavagnari
+		command = { type = sleepleader which = 6161 } #Ciano
+		command = { type = sleepleader which = 6164 } #di Cossata
+		command = { type = sleepleader which = 6173 } #Gazzana
+		command = { type = sleepleader which = 6186 } #Riccardi
+		command = { type = sleepleader which = 6188 } #di Revel
+		command = { type = sleepleader which = 6194 } #Balbo
+		command = { type = sleepleader which = 6201 } #Cagna
+		command = { type = sleepleader which = 6206 } #di Ferro
+		command = { type = sleepleader which = 6218 } #Mecozzi
+		command = { type = sleepleader which = 6233 } #Santoro
+		command = { type = sleepleader which = 6237 } #Visconti
+		command = { type = sleepleader which = 6239 } #La Ferla
+		command = { type = sleepleader which = 6242 } #Priore
+		command = { type = sleepleader which = 6243 } #Bittosi
+		command = { type = sleepleader which = 6247 } #Calcagno
+		command = { type = sleepleader which = 6250 } #Crimi
+		command = { type = sleepleader which = 6251 } #D'Oro
+		command = { type = sleepleader which = 6252 } #de Pignier
+		command = { type = sleepleader which = 6253 } #del Guidice
+		command = { type = sleepleader which = 6255 } #Farinacci
+		command = { type = sleepleader which = 6256 } #Fautilli
+		command = { type = sleepleader which = 6257 } #Galbiati
+		command = { type = sleepleader which = 6262 } #Leonardi
+		command = { type = sleepleader which = 6265 } #Montagna
+		command = { type = sleepleader which = 6267 } #Navarini
+		command = { type = sleepleader which = 6271 } #Piatti del Pozzo
+		command = { type = sleepleader which = 6272 } #Pignetti
+		command = { type = sleepleader which = 6274 } #Romegialli
+		command = { type = sleepleader which = 6277 } #Tellera
+		command = { type = sleepleader which = 6278 } #Tringali
+		command = { type = sleepleader which = 6280 } #Brandimarte
+		command = { type = sleepleader which = 6281 } #Grillo
+		command = { type = sleepleader which = 6282 } #Bonomi
+		command = { type = sleepleader which = 6283 } #Tessari
+
+		command = { type = sleepteam which = 1801 } #Beretta
+		command = { type = sleepteam which = 1804 } #Cantieri Ansaldo
+		command = { type = sleepteam which = 1808 } #FIAT
+		command = { type = sleepteam which = 1810 } #Macchi
+		command = { type = sleepteam which = 1812 } #Lancia
+		command = { type = sleepteam which = 1813 } #Arturo Riccardi
+		command = { type = sleepteam which = 1814 } #Domenico Cavagnari
+		command = { type = sleepteam which = 1815 } #Italo Balbo
+		command = { type = sleepteam which = 1818 } #Rino Fougier
+		command = { type = sleepteam which = 1819 } #Rodolfo Graziani
+		command = { type = sleepteam which = 1820 } #Societa Montecatini
+		command = { type = secedeprovince which = FRA value = 916 }
+		command = { type = secedeprovince which = FRA value = 917 }
+		command = { type = secedeprovince which = FRA value = 918 }
+		command = { type = secedeprovince which = FRA value = 919 }
+		command = { type = secedeprovince which = FRA value = 920 }
+		command = { type = secedeprovince which = FRA value = 921 }
+		command = { type = secedeprovince which = FRA value = 922 }
+		command = { type = secedeprovince which = FRA value = 923 }
+		command = { type = secedeprovince which = FRA value = 924 }
+		command = { type = secedeprovince which = FRA value = 925 }
+		command = { type = secedeprovince which = FRA value = 926 }
+		command = { type = secedeprovince which = FRA value = 927 }
+		command = { type = secedeprovince which = FRA value = 928 }
+		command = { type = secedeprovince which = FRA value = 929 }
+		command = { type = secedeprovince which = FRA value = 930 }
+		command = { type = secedeprovince which = FRA value = 931 }
+		command = { type = secedeprovince which = FRA value = 932 }
+		command = { type = secedeprovince which = FRA value = 933 }
+		command = { type = secedeprovince which = FRA value = 934 }
+		command = { type = secedeprovince which = FRA value = 935 }
+		command = { type = secedeprovince which = FRA value = 936 }
+		command = { type = secedeprovince which = FRA value = 937 }
+		command = { type = secedeprovince which = FRA value = 938 }
+		command = { type = secedeprovince which = FRA value = 939 }
+		command = { type = secedeprovince which = FRA value = 940 }
+		command = { type = secedeprovince which = FRA value = 941 }
+		command = { type = secedeprovince which = FRA value = 1015 }
+		command = { type = secedeprovince which = FRA value = 1016 }
+		command = { type = secedeprovince which = FRA value = 1017 }
+		command = { type = secedeprovince which = FRA value = 1018 }
+		command = { type = secedeprovince which = FRA value = 1033 } #1.07
+		command = { type = secedeprovince which = FRA value = 1039 } #1.07
+		command = { type = secedeprovince which = FRA value = 1038 } #1.07
+		command = { type = secedeprovince which = ENG value = 399 }
+		command = { type = secedeprovince which = ENG value = 1034 }
+		command = { type = secedeprovince which = ENG value = 1035 }
+		command = { type = secedeprovince which = ENG value = 1036 }
+		command = { type = secedeprovince which = ENG value = 1037 }
+		command = { type = secedeprovince which = ENG value = 1055 }
+		command = { type = secedeprovince which = ENG value = 1056 }
+		command = { type = secedeprovince which = ENG value = 1058 }
+		command = { type = secedeprovince which = ENG value = 1042 }
+		command = { type = secedeprovince which = ENG value = 1043 }
+		command = { type = secedeprovince which = ENG value = 1044 }
+		command = { type = secedeprovince which = ENG value = 1045 }
+		command = { type = secedeprovince which = ENG value = 1046 }
+		command = { type = secedeprovince which = ENG value = 1047 }
+		command = { type = secedeprovince which = ENG value = 1048 }
+		command = { type = secedeprovince which = ENG value = 1049 }
+		command = { type = secedeprovince which = ENG value = 1050 }
+		command = { type = secedeprovince which = ENG value = 1051 }
+		command = { type = secedeprovince which = ENG value = 1052 }
+		command = { type = secedeprovince which = ENG value = 1053 }
+		command = { type = secedeprovince which = ENG value = 1054 }
+
+
+		#cede
+		#France
+		command = { type = secedeprovince which = FRA value = 527 } #Grenoble
+		command = { type = secedeprovince which = FRA value = 366 } #Nice
+		command = { type = secedeprovince which = FRA value = 367 } #Corsica
+		command = { type = secedeprovince which = FRA value = 1037 } #Djibouti (East Africa)
+		#Yugoslavia
+		command = { type = secedeprovince which = YUG value = 380 }
+		command = { type = secedeprovince which = YUG value = 459 }
+		command = { type = secedeprovince which = YUG value = 455 }
+		command = { type = secedeprovince which = YUG value = 454 }
+		command = { type = secedeprovince which = YUG value = 453 }
+		command = { type = secedeprovince which = YUG value = 381 }
+		command = { type = secedeprovince which = YUG value = 382 }
+		command = { type = secedeprovince which = YUG value = 383 }
+		command = { type = secedeprovince which = YUG value = 384 }
+		command = { type = secedeprovince which = YUG value = 385 }
+		command = { type = secedeprovince which = YUG value = 386 }
+		command = { type = secedeprovince which = YUG value = 387 }
+		command = { type = secedeprovince which = YUG value = 388 }
+		command = { type = secedeprovince which = YUG value = 389 }
+		command = { type = secedeprovince which = YUG value = 451 }
+		command = { type = secedeprovince which = YUG value = 452 }
+		command = { type = secedeprovince which = YUG value = 418 }
+		command = { type = secedeprovince which = YUG value = 415 }
+		command = { type = secedeprovince which = YUG value = 493 }
+		command = { type = secedeprovince which = YUG value = 494 }
+		command = { type = secedeprovince which = YUG value = 413 }
+		command = { type = secedeprovince which = YUG value = 414 }
+		#Greece
+		command = { type = secedeprovince which = GRE value = 392 }
+		command = { type = secedeprovince which = GRE value = 410 }
+		command = { type = secedeprovince which = GRE value = 411 }
+		command = { type = secedeprovince which = GRE value = 412 }
+		command = { type = secedeprovince which = GRE value = 403 }
+		command = { type = secedeprovince which = GRE value = 402 }
+		command = { type = secedeprovince which = GRE value = 393 }
+		command = { type = secedeprovince which = GRE value = 401 }
+		command = { type = secedeprovince which = GRE value = 400 }
+		command = { type = secedeprovince which = GRE value = 405 }
+		command = { type = secedeprovince which = GRE value = 398 }
+		command = { type = secedeprovince which = GRE value = 399 }
+		command = { type = secedeprovince which = GRE value = 394 }
+		command = { type = secedeprovince which = GRE value = 395 }
+		command = { type = secedeprovince which = GRE value = 396 }
+		#Persia
+		command = { type = secedeprovince which = PER value = 1859 }
+		command = { type = secedeprovince which = PER value = 1789 }
+		command = { type = secedeprovince which = PER value = 1788 }
+		command = { type = secedeprovince which = PER value = 1825 }
+		command = { type = secedeprovince which = PER value = 1826 }
+		command = { type = secedeprovince which = PER value = 1787 }
+		command = { type = secedeprovince which = PER value = 1502 }
+		command = { type = secedeprovince which = PER value = 1501 }
+		command = { type = secedeprovince which = PER value = 1500 }
+		command = { type = secedeprovince which = PER value = 1503 }
+		command = { type = secedeprovince which = PER value = 1498 }
+		command = { type = secedeprovince which = PER value = 1499 }
+		command = { type = secedeprovince which = PER value = 1497 }
+		command = { type = secedeprovince which = PER value = 1496 }
+		command = { type = secedeprovince which = PER value = 1495 }
+
+		#Romania
+		command = { type = secedeprovince which = ROM value = 496 }
+		command = { type = secedeprovince which = ROM value = 428 }
+		command = { type = secedeprovince which = ROM value = 498 }
+		command = { type = secedeprovince which = ROM value = 495 }
+		command = { type = secedeprovince which = ROM value = 496 }
+		command = { type = secedeprovince which = ROM value = 427 }
+		command = { type = secedeprovince which = ROM value = 429 }
+		command = { type = secedeprovince which = ROM value = 430 }
+		#command = { type = secedeprovince which = ROM value = 230 } #Bessarabia stays Russian
+		command = { type = secedeprovince which = ROM value = 433 }
+		#command = { type = secedeprovince which = ROM value = 434 } #Bessarabia stays Russian
+		#command = { type = secedeprovince which = ROM value = 435 } #Bessarabia stays Russian
+		command = { type = secedeprovince which = ROM value = 436 }
+		command = { type = secedeprovince which = ROM value = 432 }
+		command = { type = secedeprovince which = ROM value = 431 }
+		command = { type = secedeprovince which = ROM value = 424 }
+		command = { type = secedeprovince which = ROM value = 425 }
+		command = { type = secedeprovince which = ROM value = 426 }
+		command = { type = secedeprovince which = ROM value = 423 } #Constanta
+
+		#Bulgaria
+		command = { type = secedeprovince which = BUL value = 417 } #Sophia
+		command = { type = secedeprovince which = BUL value = 419 }
+		command = { type = secedeprovince which = BUL value = 416 }
+		command = { type = secedeprovince which = BUL value = 420 }
+		command = { type = secedeprovince which = BUL value = 422 }
+		command = { type = secedeprovince which = BUL value = 421 }
+
+		#Hungary
+		command = { type = secedeprovince which = HUN value = 457 } #Budapest
+		command = { type = secedeprovince which = HUN value = 458 }
+		command = { type = secedeprovince which = HUN value = 456 }
+		command = { type = secedeprovince which = HUN value = 491 }
+		command = { type = secedeprovince which = HUN value = 492 }
+		command = { type = secedeprovince which = HUN value = 497 }
+
+		#Czechoslovakia
+		command = { type = secedeprovince which = CZE value = 469 } #Prague
+		command = { type = secedeprovince which = CZE value = 471 }
+		command = { type = secedeprovince which = CZE value = 472 }
+		command = { type = secedeprovince which = CZE value = 470 }
+		command = { type = secedeprovince which = CZE value = 466 }
+		command = { type = secedeprovince which = CZE value = 468 }
+		command = { type = secedeprovince which = CZE value = 467 }
+		command = { type = secedeprovince which = CZE value = 474 }
+		command = { type = secedeprovince which = CZE value = 475 }
+		command = { type = secedeprovince which = CZE value = 476 }
+		command = { type = secedeprovince which = CZE value = 478 }
+		command = { type = secedeprovince which = CZE value = 477 }
+		command = { type = secedeprovince which = CZE value = 490 }
+		command = { type = secedeprovince which = CZE value = 499 } #Ruthenia
+		#Poland, not including the east
+		command = { type = secedeprovince which = POL value = 489 }
+		command = { type = secedeprovince which = POL value = 488 }
+		command = { type = secedeprovince which = POL value = 487 }
+		command = { type = secedeprovince which = POL value = 486 }
+		command = { type = secedeprovince which = POL value = 485 } #Warsaw
+		command = { type = secedeprovince which = POL value = 305 }
+		command = { type = secedeprovince which = POL value = 306 }
+		command = { type = secedeprovince which = POL value = 303 }
+		command = { type = secedeprovince which = POL value = 307 }
+		command = { type = secedeprovince which = POL value = 483 }
+		command = { type = secedeprovince which = POL value = 484 }
+		command = { type = secedeprovince which = POL value = 481 }
+		command = { type = secedeprovince which = POL value = 480 }
+		command = { type = secedeprovince which = POL value = 479 }
+		#Iraq
+		command = { type = secedeprovince which = IRQ value = 1866 }
+		command = { type = secedeprovince which = IRQ value = 1860 }
+		command = { type = secedeprovince which = IRQ value = 1865 }
+		command = { type = secedeprovince which = IRQ value = 1790 }
+		command = { type = secedeprovince which = IRQ value = 1824 }
+		command = { type = secedeprovince which = IRQ value = 1823 }
+		command = { type = secedeprovince which = IRQ value = 1806 }
+		command = { type = secedeprovince which = IRQ value = 1791 }
+		command = { type = secedeprovince which = IRQ value = 1864 }
+		#Albania
+		command = { type = secedeprovince which = ALB value = 390 }
+		command = { type = secedeprovince which = ALB value = 391 }
+		#Austria
+		command = { type = secedeprovince which = AUS value = 373 }
+		command = { type = secedeprovince which = AUS value = 377 }
+		command = { type = secedeprovince which = AUS value = 460 }
+		command = { type = secedeprovince which = AUS value = 461 }
+		command = { type = secedeprovince which = AUS value = 462 }
+		command = { type = secedeprovince which = AUS value = 463 }
+		command = { type = secedeprovince which = AUS value = 464 }
+		command = { type = secedeprovince which = AUS value = 465 }
+		#Egypt
+		command = { type = secedeprovince which = ENG value = 902 }
+		command = { type = secedeprovince which = ENG value = 903 }
+		command = { type = secedeprovince which = ENG value = 904 }
+		#liberate
+		#Libya
+		command = { type = independence which = LBY value = 0 when = 1 }
+		#Ethiopia
+		command = { type = independence which = ETH value = 0 when = 1 } #Ethiopia liberated
+		#Yugoslavia
+		command = { type = independence which = YUG value = 0 when = 1 }
+		#Greece
+		command = { type = independence which = GRE value = 0 when = 1 }
+		#Albania
+		command = { type = independence which = ALB value = 0 when = 1 }
+		#Iraq
+		command = { type = independence which = IRQ value = 0 when = 1 }
+		#Persia
+		command = { type = independence which = PER value = 0 when = 1 }
+	}
+}
+
+
+##################################################  #######################
+#  Spanish Civil War ends - Corpo Truppe Volontarie returns home
+##################################################  #######################
+event = {
+	id = 131459	#2905
+	random = no
+	country = ITA
+
+	trigger = {
+		# pre-requisites for event to trigger:
+		government = fascist
+		event = 3003					# ITA intervention happened
+		
+		# Also need any of the following to be true:
+		OR = {
+			event = 3004				# Spanish Civil War - Victory!!! i.e. 'Nationalists win event' has triggered
+			AND = {
+				flag = SCW_allied_intervention	# If allies intervene then it doesnt matter which side wins 					AND = { 
+				event = 3108
+				NOT = { exists = SPA }	
+				}
+			}
+		
+		# conditions that prevent event:
+		NOT = {
+			OR = {
+			war = { country = ITA country = SPA }
+			war = { country = ITA country = SPR }
+			war = { country = ITA country = SOV }
+			war = { country = ITA country = ENG }
+			war = { country = ITA country = USA }
+			}
+		}
+	}
+
+	name = "EVT_2905_NAME"
+	desc = "EVT_2905_DESC"
+	style = 0
+	picture = "SCWita" #
+
+	date = { day = 18 month = july year = 1936 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "ACTIONNAME2905A" # Great! 
+		command = { type = relation which = SPA value = 20 }		# Franco is pleased
+		command = { type = manpowerpool value = 20 }			# Heroes return home - after heavy casualties
+		#command = { type = dissent value = -1 }
+		command = { 
+			trigger = { NOT = { technology = 2330 } }
+			type = gain_tech which = 2330 } 			# Basic Field Artillery blueprints
+        command = { 
+        	trigger = { NOT = { technology = 4030 } }
+        	type = gain_tech which = 4030 } 			# Basic Interceptor
+        command = { 
+			trigger = { technology = 2330 }
+			type = gain_tech which = -1 } 
+        command = { 
+        	trigger = { technology = 4030 }
+        	type = gain_tech which = -1 } 
+	}
+}

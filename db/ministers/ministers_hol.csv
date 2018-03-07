@@ -1,0 +1,149 @@
+HOL;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyality;Picture Name;x
+;Replacements;;;;;;;x
+8001;Head of State;ウィルヘルミナ;36;SC;Stern Imperialist;High;M8001;x
+8002;Head of Government;ヘンドリクス・コレイン;36;ML;Silent Workhorse;High;M8002;x
+8003;Foreign Minister;フランス・ファン・ブロックラント;36;SC;Ideological Crusader;Low;M8003;x
+8004;Minister of Armament;ピテール・オウド;36;ML;Submarine Proponent;Medium;M8004;x
+8005;Minister of Security;ヨセフス・ファン・スハイク;36;ML;Silent Lawyer;High;M8005;x
+8006;Head of Military Intelligence;ヨハン・W・ファン・オールスホト;36;SC;Dismal Enigma;Very High;M8006;x
+8007;Chief of Staff;エイドリアン・デイクスホールン;36;SC;School of Defence;Very High;M8007;x
+8008;Chief of Army;イザック・レインダース;36;SC;Static Defence Doctrine;Very High;M8008;x
+8009;Chief of Navy;ヨハン・フュルストナー;36;ML;Indirect Approach Doctrine;High;M8009;x
+8010;Chief of Air Force;マリウス・ラーイマーカース;36;ML;Air Superiority Doctrine;High;M8010;x
+8037;Head of State;ウィルヘルミナ;45;PA;Stern Imperialist;High;M8001;x
+8038;Head of State;アントン・ムッサート;37;NS;Barking Buffoon;High;M8011;x
+8040;Head of State;ベンヤミン・ボアズ;37;ST;Insignificant Layman;High;M8040;x
+8041;Head of State;ヤン・ディータース;40;ST;Autocratic Charmer;High;M8041;x
+8042;Head of State;サウル・デ・フロート;43;ST;Ruthless Powermonger;High;M8021;x
+8043;Head of Government;ヨハン・アルバルダ;39;SD;Happy Amateur;High;M8043;x
+8044;Head of Government;ルイス・ベール;46;ML;Smiling Oilman;High;M8044;x
+8046;Head of Government;ピテール・ヘルブランディ;39;ML;Flamboyant Tough Guy;High;M8046;x
+8047;Head of Government;ウィレム・シャーマーホーン;45;ML;Naive Optimist;High;M8047;x
+8048;Head of Government;アンドリエス・ディルク・デ・グラーフ;37;SC;Happy Amateur;High;M8048;x
+8049;Head of Government;ディレク・ヤン・デ・ヘール;39;SC;Political Protege;High;M8049;x
+8050;Head of Government;ヤン・デ・クアイ;40;SC;Happy Amateur;High;M8050;x
+8051;Head of Government;メイノート・ファン・トニンヘン;37;NS;Backroom Backstabber;High;M8012;x
+8052;Head of Government;アントン・ムッサート;40;NS;Ambitious Union Boss;High;M8011;x
+8053;Head of Government;グラーフ・デ・マルチャント・エ・ダンセンブルー;40;PA;Flamboyant Tough Guy;High;M8013;x
+8054;Head of Government;ニコラス・ブーゼンマーカー;37;ST;Happy Amateur;High;M8054;x
+8055;Head of Government;ダビッド・ウェインコープ;43;ST;Naive Optimist;High;M8022;x
+8056;Head of Government;ダニエル・フールーゼ;45;ST;Smiling Oilman;High;M8025;x
+8057;Foreign Minister;セルバティウス・バート;37;SD;Great Compromiser;Medium;M8057;x
+8058;Foreign Minister;アドルアヌス・ペルト;38;SD;Apologetic Clerk;Medium;M8058;x
+8059;Foreign Minister;ヘオルヘ・ファン・デン・ベルフ;43;SD;Iron Fisted Brute;Medium;M8059;x
+8060;Foreign Minister;ヤン・ファン・ロイエン;46;SD;Biased Intellectual;Low;M8060;x
+8061;Foreign Minister;ピム・ファン・ブッツェラー;46;ML;General Staffer;Medium;M8061;x
+8062;Foreign Minister;シャルル・ギヨーム・クラマー;47;SD;The Cloak N Dagger Schemer;Very High;M8062;x
+8063;Foreign Minister;ヘンドリクス・コレイン;37;ML;Ideological Crusader;Medium;M8002;x
+8064;Foreign Minister;ヤコブス・パテイン;37;ML;Apologetic Clerk;Medium;M8064;x
+8066;Foreign Minister;アンドリエス・ディルク・デ・グラーフ;36;SC;Great Compromiser;High;M8048;x
+8067;Foreign Minister;エルコ・ファン・クレフェンス;39;SC;Great Compromiser;Medium;M8065;x
+8068;Foreign Minister;ヤコブス・パテイン;40;PA;Apologetic Clerk;Medium;M8064;x
+8069;Foreign Minister;グラーフ・デ・マルチャント・エ・ダンセンブルー;37;FA;Ideological Crusader;Very Low;M8013;x
+8070;Foreign Minister;アントン・ムッサート;43;FA;The Cloak N Dagger Schemer;Low;M8011;x
+8071;Foreign Minister;メイノート・ファン・トニンヘン;43;NS;Iron Fisted Brute;Medium;M8012;x
+8072;Foreign Minister;ベンヤミン・ボアズ;37;ST;Great Compromiser;Medium;M8040;x
+8073;Foreign Minister;ニコラス・ブーゼンマーカー;39;ST;The Cloak N Dagger Schemer;Very High;M8054;x
+8074;Foreign Minister;ダビッド・ウェインコープ;40;ST;Biased Intellectual;Low;M8022;x
+8075;Foreign Minister;サウル・デ・フロート;41;LE;Ideological Crusader;Low;M8021;x
+8076;Foreign Minister;ウィレム・ファン・ラーフェステイン;43;LE;Apologetic Clerk;Medium;M8023;x
+8077;Minister of Armament;ヤコブ・ファン・ヘルダーレン;37;SD;laissez-faire capitalist;High;M8077;x
+8078;Minister of Armament;ランベルトゥス・H・マンスホルト;39;SD;Resource Industrialist;Medium;M8078;x
+8079;Minister of Armament;シャルル・ヴェルター;40;SD;Theoretical Scientist;Medium;M8079;x
+8080;Minister of Armament;ヨハン・アルバルダ;41;SD;laissez-faire capitalist;High;M8043;x
+8081;Minister of Armament;ヤッケス・デ・カット;42;SD;Military Entrepreneur;High;M8081;x
+8082;Minister of Armament;シャルル・ギヨーム・クラマー;44;SD;Air Superiority Proponent;Very High;M8062;x
+8083;Minister of Armament;アレクサンダー・フィーヴェズ;46;ML;Administrative Genius;Medium;M8083;x
+8084;Minister of Armament;ヤン・ティンベルゲン;47;SD;Resource Industrialist;Very High;M8084;x
+8086;Minister of Armament;ティーツェ・ピテール・セベンスマ;39;ML;laissez-faire capitalist;Medium;M8086;x
+8087;Minister of Armament;ダニエル・ファン・デル・ゼー;40;ML;Air to Sea Proponent;Medium;M8087;x
+8088;Minister of Armament;W・G・ファン・ウェットゥン;41;ML;Tank Proponent;Medium;M8088;x
+8089;Minister of Armament;ウィレム・シャーマーホーン;41;ML;Resource Industrialist;Medium;M8047;x
+8090;Minister of Armament;O・ファン・リッド・デ・ユーデ;42;ML;Administrative Genius;Medium;M8090;x
+8091;Minister of Armament;ヤーメス・デ・ボーイ;45;ML;Battle Fleet Proponent;Medium;M8091;x
+8092;Minister of Armament;ヨハネス・メイネン;45;ML;Theoretical Scientist;High;M8092;x
+8093;Minister of Armament;ヨースト・ファン・ハメル;46;ML;Military Entrepreneur;High;M8093;x
+8094;Minister of Armament;ディレク・ヤン・デ・ヘール;39;SC;Infantry Proponent;High;M8049;x
+8095;Minister of Armament;エイドリアン・デイクスホールン;40;SC;Tank Proponent;Very High;M8007;x
+8096;Minister of Armament;マクシミリアン・ステーンベルヘ;42;SC;Air to Ground Proponent;Medium;M8096;x
+8097;Minister of Armament;ヤン・デ・クアイ;44;SC;Resource Industrialist;High;M8050;x
+8098;Minister of Armament;ヤネス・ファン・ダイク;40;SC;Administrative Genius;High;M8098;x
+8099;Minister of Armament;C・J・ホイヘンス;37;NS;Administrative Genius;Very Low;M8014;x
+8100;Minister of Armament;ヘリット・ファン・ブリンク;43;NS;Infantry Proponent;Medium;M8100;x
+8101;Minister of Armament;ヘリット・ファン・ブリンク;45;PA;Infantry Proponent;Medium;M8100;x
+8102;Minister of Armament;ピテール・ベルフスマ;37;ST;laissez-faire capitalist;Medium;M8102;x
+8103;Minister of Armament;ヤッケス・デ・カット;39;LE;Military Entrepreneur;High;M8081;x
+8104;Minister of Armament;ヤン・ポストマ;40;LE;Theoretical Scientist;Low;M8024;x
+8105;Minister of Armament;ヤコブス・エンゲルス;44;LE;Strategic Air Proponent;High;M8105;x
+8106;Minister of Security;フランク・B・デル・グース;37;SD;Man of the People;Medium;M8106;x
+8107;Minister of Security;ヤン・ベルグメイヤー;39;SD;Compassionate Gentleman;Medium;M8107;x
+8108;Minister of Security;ルイス・ベール;40;SD;Man of the People;Medium;M8044;x
+8109;Minister of Security;シャルル・ギヨーム・クラマー;41;SD;Silent Lawyer;Very High;M8062;x
+8110;Minister of Security;ヨハン・ブラウティガン;45;SD;Prince of Terror;Medium;M8110;x
+8112;Minister of Security;ピテール・ヘルブランディ;39;ML;Crime Fighter;Very High;M8046;x
+8113;Minister of Security;フェッデ・シューラー;46;ML;Man of the People;Medium;M8113;x
+8114;Minister of Security;ウィルヘルムス・アンドリーセン;40;ML;Prince of Terror;Medium;M8114;x
+8115;Minister of Security;ヨーン・ラウドン;42;ML;Compassionate Gentleman;Medium;M8115;x
+8116;Minister of Security;ベルナルト・C・J・ローダー;37;SC;Back Stabber;Medium;M8116;x
+8117;Minister of Security;ルイス・エイントホーヴェン;39;SC;Crime Fighter;Very High;M8117;x
+8118;Minister of Security;ヘリト・ファン・ゲーハルト;43;SC;Compassionate Gentleman;High;M8118;x
+8119;Minister of Security;コルネリス・ファン・ヘールケルケン;37;NS;Prince of Terror;High;M8015;x
+8121;Minister of Security;コルネリス・ファン・ヘールケルケン;45;PA;Prince of Terror;High;M8015;x
+8122;Minister of Security;カレル・ホーセリング;40;PA;Compassionate Gentleman;Medium;M8122;x
+8123;Minister of Security;フォッケ・ボスマン;37;ST;Compassionate Gentleman;High;M8123;x
+8124;Minister of Security;ヘンドリクス・スネーフリート;39;ST;Man of the People;High;M8124;x
+8125;Minister of Security;ダニエル・フールーゼ;43;ST;Crime Fighter;Low;M8025;x
+8126;Head of Military Intelligence;エマヌエル・ボークマン;37;SD;Dismal Enigma;Very High;M8126;x
+8127;Head of Military Intelligence;ハルマン・デ・ボーア;39;SD;Political Specialist;Very High;M8127;x
+8128;Head of Military Intelligence;シャルル・ギヨーム・クラマー;40;SD;Technical Specialist;Very High;M8062;x
+8129;Head of Military Intelligence;ヤン・ランベルトゥス・ファバー;43;SD;Political Specialist;Very High;M8129;x
+8130;Head of Military Intelligence;ウィレム・ドレース;45;SD;Logistics Specialist;Very High;M8130;x
+8131;Head of Military Intelligence;H・A・ファン・カメベーク;37;ML;Technical Specialist;Very High;M8131;x
+8132;Head of Military Intelligence;ヤン・スローテマーケル;39;ML;Logistics Specialist;Very High;M8132;x
+8133;Head of Military Intelligence;G・J・サス;40;ML;Logistics Specialist;Very High;M8133;x
+8134;Head of Military Intelligence;フランス・フィクスホット;46;ML;Dismal Enigma;Very High;M8134;x
+8136;Head of Military Intelligence;クリストフェル・ファン・トゥイネン;39;SC;Industrial Specialist;Very High;M8136;x
+8137;Head of Military Intelligence;シモン・スポール;42;SC;Naval Intelligence Specialist;Very High;M8137;x
+8138;Head of Military Intelligence;ヘンク・フェルドメイヤー;37;NS;Political Specialist;Low;M8016;x
+8139;Head of Military Intelligence;ミハエル・デ・ブリーン;45;PA;Technical Specialist;Low;M8139;x
+8140;Head of Military Intelligence;アブラハム・メニスト;37;LE;Political Specialist;High;M8026;x
+8141;Head of Military Intelligence;イナ・ウィレケス＝マクドナルド;43;ST;Dismal Enigma;Very High;M8141;x
+8142;Chief of Staff;ベルンハルト・コルトフ;37;SD;School of Psychology;High;M8142;x
+8147;Chief of Staff;シモン・スポール;43;SC;School of Psychology;High;M8137;x
+8148;Chief of Staff;アントン・ムッサート;37;FA;School of Psychology;High;M8148;x
+8149;Chief of Staff;ヘンドリック・セイファルト;43;FA;School of Defence;Medium;M8017;x
+8151;Chief of Staff;トーマス・ストルイク;37;ST;School of Mass Combat;High;M8027;x
+8152;Chief of Staff;ヒールト・ステリンガ;40;ST;School of Defence;High;M8152;x
+8153;Chief of Staff;ヤコブス・エンゲルス;43;LE;School of Psychology;High;M8105;x
+8155;Chief of Army;ヤン・ファン・ヴォールスト・トット・ヴォールスト;37;ML;Static Defence Doctrine;High;M8155;x
+8156;Chief of Army;ヘンリ・ウィンケルマン;40;ML;Elastic Defence Doctrine;High;M8154;x
+8159;Chief of Army;アドリアヌス・ゾンダーヴァン;37;NS;Decisive Battle Doctrine;Very Low;M8018;x
+8160;Chief of Army;ヘンドリック・セイファルト;43;FA;Guns and Butter Doctrine;Very High;M8017;x
+8161;Chief of Army;ヘルマン・ファン・ヴォールスト・トット・ヴォールスト;45;PA;Elastic Defence Doctrine;Very High;M8161;x
+8162;Chief of Army;アレクサンダー・デ・レーウ;37;ST;Elastic Defence Doctrine;Very High;M8162;x
+8163;Chief of Army;ニコ・ファン・ストラーテン;43;LE;Armoured Spearhead Doctrine;Low;M8028;x
+8164;Chief of Army;アントン・クーエマンス;45;ST;Guns and Butter Doctrine;Very High;M8164;x
+8168;Chief of Navy;ピテール・クーンラード;37;FA;Base Control Doctrine;Low;M8019;x
+8170;Chief of Navy;クリスティアン・ベークマン;37;LE;Base Control Doctrine;Low;M8170;x
+8171;Chief of Navy;フォッケ・ボスマン;40;ST;Open Seas Doctrine;High;M8123;x
+8172;Chief of Air Force;ペトルス・W・ベスト;39;SD;Naval Aviation Doctrine;High;M8172;x
+8177;Chief of Air Force;クラース・ダウ・ファン・デル・クラップ;37;FA;Naval Aviation Doctrine;Low;M8020;x
+8179;Chief of Air Force;ヤン・ディータース;37;ST;Vertical Envelopment Doctrine;High;M8041;x
+8180;Chief of Air Force;ユリウス・ゼーガース;43;LE;Air Superiority Doctrine;Low;M8030;x
+8182;Chief of Army;ベルンハルト・コルトフ;39;SD;Elastic Defence Doctrine;High;M8142;x
+8183;Head of State;アレクサンダー・フォン・ファルケンハウセン;40;NS;Resigned Generalissimo;Very High;M510086;x
+8184;Head of State;アルトゥール・ザイス＝インクヴァルト;40;NS;Powerhungry Demagogue;Very High;M58;x
+8029;Chief of Navy;カレル・ドールマン;36;LWR;Open Seas Doctrine;Low;M8029;x
+8185;Head of State;ウィルヘルミナ;36;SL;Stern Imperialist;Very High;M8001;x
+8186;Head of State;ユリアナ;36;SD;Popular Figurehead;High;M8186;x
+8187;Head of State;ユリアナ;36;SC;Popular Figurehead;High;M8186;x
+8188;Head of Government;ウィレム・ドレース;48;SD;Ambitious Union Boss;High;M8130;x
+8189;Foreign Minister;ディルク・U・スティッカー;48;SL;Great Compromiser;Medium;M8189;x
+8190;Foreign Minister;ヤン・ヴィレム・ベイエン;51;SL;Apologetic Clerk;Medium;M8190;x
+8191;Minister of Armament;ヴィム・スホッキング;48;SD;Air to Ground Proponent;Medium;M8191;x
+8192;Minister of Armament;ルイ・ド・ヴィセール;50;LWR;Theoretical Scientist;Medium;M8192;x
+8193;Minister of Armament;ケース・スタフ;51;SL;Resource Industrialist;Medium;M8193;x
+8194;Minister of Security;ヨハネス・ファン・マールセヴェーン;46;ML;Silent Lawyer;Medium;M8194;x
+8195;Minister of Security;テュン・ストロイケン;48;SL;Back Stabber;Medium;M8195;x
+8196;Minister of Security;ヘンリク・ムルデライエ;51;SL;Crime Fighter;Medium;M8196;x
+8197;Minister of Security;レーンデルト・A・ドンカー;52;SD;Compassionate Gentleman;Medium;M8197;x

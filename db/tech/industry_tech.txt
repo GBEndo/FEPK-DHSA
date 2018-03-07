@@ -1,0 +1,2741 @@
+technology =
+{ id          = 5
+  category    = industry
+  name        = TECH_INDUSTRY_NAME # Localized name
+  desc        = TECH_INDUSTRY_DESC # Localized description
+  label =
+  { tag      = TECH_CAT_MANUFACTURING
+    position = { x = 24 y = 10 }
+  }
+  label =
+  { tag      = TECH_CAT_ROCKETRY
+    position = { x = 26 y = 375 }
+  }
+  label =
+  { tag      = TECH_CAT_AGRICULTURE
+    position = { x = 296 y = 223 }
+  }
+  label =
+  { tag      = TECH_CAT_RRWARNING
+    position = { x = 173 y = 191 }
+  }
+  label =
+  { tag      = TECH_CAT_CRYPTOGRAPHY
+    position = { x = 304 y = 11 }
+  }
+  label =
+  { tag      = TECH_CAT_SYNTHETICOIL
+    position = { x = 428 y = 207 }
+  }
+  label =
+  { tag      = TECH_CAT_NUCLEAR
+    position = { x = 564 y = 11 }
+  }
+  label =
+  { tag      = TECH_CAT_MATERIALS
+    position = { x = 428 y = 337 }
+  }
+  # 近代化農業
+  application =
+  { id        = 5010
+    name      = TECH_APP_INDUSTRY_1_NAME
+    desc      = TECH_APP_INDUSTRY_1_DESC
+    position  = { x = 294 y = 236 }
+    year      = 1936
+    # 科学的耕作技術
+    component = { id = 5011 name = TECH_CMP_INDUSTRY_1_1_NAME type = mechanics difficulty = 5 }
+    # 科学的播種技術
+    component = { id = 5012 name = TECH_CMP_INDUSTRY_1_2_NAME type = mechanics difficulty = 5 }
+    # 科学的草刈技術
+    component = { id = 5013 name = TECH_CMP_INDUSTRY_1_3_NAME type = mechanics difficulty = 5 }
+    # 科学的駆除技術
+    component = { id = 5014 name = TECH_CMP_INDUSTRY_1_4_NAME type = mechanics difficulty = 5 }
+    # 科学的農業手法
+    component = { id = 5015 name = TECH_CMP_INDUSTRY_1_5_NAME type = management difficulty = 6 double_time = yes }
+    required  = { }
+    effects =
+    { command = { type = relative_manpower value = 5 }
+    }
+  }
+  # 機械化農業
+  application =
+  { id        = 5020
+    name      = TECH_APP_INDUSTRY_2_NAME
+    desc      = TECH_APP_INDUSTRY_2_DESC
+    position  = { x = 294 y = 252 }
+    year      = 1936
+    # 耕運機
+    component = { id = 5021 name = TECH_CMP_INDUSTRY_2_1_NAME type = mechanics difficulty = 6 }
+    # 播種機
+    component = { id = 5022 name = TECH_CMP_INDUSTRY_2_2_NAME type = mechanics difficulty = 6 }
+    # 草刈機
+    component = { id = 5023 name = TECH_CMP_INDUSTRY_2_3_NAME type = mechanics difficulty = 6 }
+    # 洗浄機
+    component = { id = 5024 name = TECH_CMP_INDUSTRY_2_4_NAME type = mechanics difficulty = 6 }
+    # 機械化農業手法
+    component = { id = 5025 name = TECH_CMP_INDUSTRY_2_5_NAME type = management difficulty = 7 double_time = yes }
+    required  = { 5010 }
+    effects =
+    { command = { type = relative_manpower value = 5 }
+    }
+  }
+  # 農業化学
+  application =
+  { id        = 5030
+    name      = TECH_APP_INDUSTRY_3_NAME
+    desc      = TECH_APP_INDUSTRY_3_DESC
+    position  = { x = 294 y = 268 }
+    year      = 1936
+    # 化学合成肥料
+    component = { id = 5031 name = TECH_CMP_INDUSTRY_3_1_NAME type = chemistry difficulty = 7 }
+    # 化学合成殺虫剤
+    component = { id = 5032 name = TECH_CMP_INDUSTRY_3_2_NAME type = chemistry difficulty = 7 }
+    # 化学合成除草剤
+    component = { id = 5033 name = TECH_CMP_INDUSTRY_3_3_NAME type = chemistry difficulty = 7 }
+    # 化学合成殺菌剤
+    component = { id = 5034 name = TECH_CMP_INDUSTRY_3_4_NAME type = chemistry difficulty = 7 }
+    # 品種交配
+    component = { id = 5035 name = TECH_CMP_INDUSTRY_3_5_NAME type = management difficulty = 8 }
+    required  = { 5020 }
+    effects =
+    { command = { type = relative_manpower value = 5 }
+    }
+  }
+  # 基本型食品工業
+  application =
+  { id        = 5040
+    name      = TECH_APP_INDUSTRY_4_NAME
+    desc      = TECH_APP_INDUSTRY_4_DESC
+    position  = { x = 294 y = 284 }
+    year      = 1936
+    # 低温殺菌
+    component = { id = 5041 name = TECH_CMP_INDUSTRY_4_1_NAME type = chemistry difficulty = 8 }
+    # 大規模冷凍
+    component = { id = 5042 name = TECH_CMP_INDUSTRY_4_2_NAME type = industrial_engineering difficulty = 8 }
+    # 殺菌包装
+    component = { id = 5043 name = TECH_CMP_INDUSTRY_4_3_NAME type = industrial_engineering difficulty = 8 }
+    # 乾燥技術
+    component = { id = 5044 name = TECH_CMP_INDUSTRY_4_4_NAME type = industrial_engineering difficulty = 8 }
+    # 農業管理手法
+    component = { id = 5045 name = TECH_CMP_INDUSTRY_4_5_NAME type = management difficulty = 9 double_time = yes }
+    required  = { 5030 }
+    effects =
+    { command = { type = relative_manpower value = 5 }
+    }
+  }
+  # 準現代型農業生産
+  application =
+  { id        = 13000
+    name      = TECH_APP_INDUSTRY_134_NAME
+    desc      = TECH_APP_INDUSTRY_134_DESC
+    position  = { x = 294 y = 300 }
+    year      = 1945
+    # 準現代型品質均一化
+    component = { id = 13001 name = TECH_CMP_INDUSTRY_134_1_NAME type = chemistry difficulty = 8 }
+    # 初期型食品冷蔵供給管理
+    component = { id = 13002 name = TECH_CMP_INDUSTRY_134_2_NAME type = industrial_engineering difficulty = 8 }
+    # 半自動無菌包装
+    component = { id = 13003 name = TECH_CMP_INDUSTRY_134_3_NAME type = industrial_engineering difficulty = 8 }
+    # 乾燥技術
+    component = { id = 13004 name = TECH_CMP_INDUSTRY_134_4_NAME type = industrial_engineering difficulty = 8 }
+    # 準現代型農業運営手法
+    component = { id = 13005 name = TECH_CMP_INDUSTRY_134_5_NAME type = management difficulty = 9 double_time = yes }
+    required  = { 5040 }
+    effects =
+    { command = { type = relative_manpower value = 5 }
+    }
+  }
+  # 改良型機械化農業
+  application =
+  { id        = 13010
+    name      = TECH_APP_INDUSTRY_133_NAME
+    desc      = TECH_APP_INDUSTRY_133_DESC
+    position  = { x = 294 y = 316 }
+    year      = 1948
+    # 改良型トラクター
+    component = { id = 13011 name = TECH_CMP_INDUSTRY_133_1_NAME type = mechanics difficulty = 8 }
+    # 機械化コンバイン
+    component = { id = 13012 name = TECH_CMP_INDUSTRY_133_2_NAME type = mechanics difficulty = 8 }
+    # 改良型鍬・播種と草刈り器具
+    component = { id = 13013 name = TECH_CMP_INDUSTRY_133_3_NAME type = mechanics difficulty = 8 }
+    # 改良型農業技術
+    component = { id = 13014 name = TECH_CMP_INDUSTRY_133_4_NAME type = industrial_engineering difficulty = 8 }
+    # 準現代型農業手法
+    component = { id = 13015 name = TECH_CMP_INDUSTRY_133_5_NAME type = management difficulty = 9 double_time = yes }
+    required  = { 13000 }
+    effects =
+    { command = { type = relative_manpower value = 5 }
+    }
+  }
+  # 発展型農業生産
+  application =
+  { id        = 53000
+    name      = TECH_APP_INDUSTRY_100_NAME
+    position  = { x = 294 y = 332 }
+    picture   = "13010"
+    year      = 1955
+    # 品質均一化
+    component = { id = 53001 name = TECH_CMP_INDUSTRY_100_1_NAME type = chemistry difficulty = 7 }
+    # 食品冷蔵供給管理
+    component = { id = 53002 name = TECH_CMP_INDUSTRY_100_2_NAME type = industrial_engineering difficulty = 7 }
+    # 自動無菌包装
+    component = { id = 53003 name = TECH_CMP_INDUSTRY_100_3_NAME type = industrial_engineering difficulty = 7 }
+    # 急速乾燥技術
+    component = { id = 53004 name = TECH_CMP_INDUSTRY_100_4_NAME type = industrial_engineering difficulty = 7 }
+    # 改良型農業運営手法
+    component = { id = 53005 name = TECH_CMP_INDUSTRY_100_5_NAME type = management difficulty = 8 double_time = yes }
+    required  = { 13010 }
+    effects =
+    { command = { type = relative_manpower value = 5 }
+    }
+  }
+  # 現代型農業生産
+  application =
+  { id        = 53010
+    name      = TECH_APP_INDUSTRY_101_NAME
+    position  = { x = 294 y = 348 }
+    picture   = "DH53010"
+    year      = 1960
+    # 持続可能農業
+    component = { id = 53011 name = TECH_CMP_INDUSTRY_101_1_NAME type = chemistry difficulty = 8 }
+    # 現代型倉庫保管
+    component = { id = 53012 name = TECH_CMP_INDUSTRY_101_2_NAME type = industrial_engineering difficulty = 8 }
+    # 現代型包装
+    component = { id = 53013 name = TECH_CMP_INDUSTRY_101_3_NAME type = industrial_engineering difficulty = 8 }
+    # 受粉管理
+    component = { id = 53014 name = TECH_CMP_INDUSTRY_101_4_NAME type = industrial_engineering difficulty = 8 }
+    # 現代型農業生産手法
+    component = { id = 53015 name = TECH_CMP_INDUSTRY_101_5_NAME type = management difficulty = 9 double_time = yes }
+    required  = { 53000 }
+    effects =
+    { command = { type = relative_manpower value = 5 }
+    }
+  }
+  # 基本型軍事糧食
+  application =
+  { id        = 13140
+    name      = TECH_APP_INDUSTRY_119_NAME
+    desc      = TECH_APP_INDUSTRY_119_DESC
+    position  = { x = 294 y = 366 }
+    year      = 1938
+    # 乾燥食
+    component = { id = 13141 name = TECH_CMP_INDUSTRY_119_1_NAME type = industrial_engineering difficulty = 6 }
+    # 高カロリー食品
+    component = { id = 13142 name = TECH_CMP_INDUSTRY_119_2_NAME type = industrial_engineering difficulty = 6 }
+    # 高濃塩分食品
+    component = { id = 13143 name = TECH_CMP_INDUSTRY_119_3_NAME type = industrial_engineering difficulty = 6 }
+    # 品質保持技術
+    component = { id = 13144 name = TECH_CMP_INDUSTRY_119_4_NAME type = industrial_engineering difficulty = 6 }
+    # 製造試験
+    component = { id = 13145 name = TECH_CMP_INDUSTRY_119_5_NAME type = management difficulty = 6 double_time = yes }
+    required  = { 5040 }
+    effects =
+    { command = { type = morale which = land value = 5 }
+      command = { type = morale which = naval value = 5 }
+      command = { type = morale which = air value = 5 }
+    }
+  }
+  # 改善型軍事糧食
+  application =
+  { id        = 13150
+    name      = TECH_APP_INDUSTRY_120_NAME
+    desc      = TECH_APP_INDUSTRY_120_DESC
+    position  = { x = 294 y = 382 }
+    year      = 1943
+    # 缶詰
+    component = { id = 13151 name = TECH_CMP_INDUSTRY_120_1_NAME type = industrial_engineering difficulty = 6 }
+    # 栄養飲料
+    component = { id = 13152 name = TECH_CMP_INDUSTRY_120_2_NAME type = chemistry difficulty = 6 }
+    # 高栄養乾燥食品
+    component = { id = 13153 name = TECH_CMP_INDUSTRY_120_3_NAME type = industrial_engineering difficulty = 6 }
+    # 砂漠用乾燥麺
+    component = { id = 13154 name = TECH_CMP_INDUSTRY_120_4_NAME type = industrial_engineering difficulty = 6 }
+    # 製造試験
+    component = { id = 13155 name = TECH_CMP_INDUSTRY_120_5_NAME type = management difficulty = 6 double_time = yes }
+    required  = { 13140 }
+    effects =
+    { command = { type = morale which = land value = 5 }
+      command = { type = morale which = naval value = 5 }
+      command = { type = morale which = air value = 5 }
+    }
+  }
+  # 発展型軍事糧食
+  application =
+  { id        = 13160
+    name      = TECH_APP_INDUSTRY_121_NAME
+    desc      = TECH_APP_INDUSTRY_121_DESC
+    position  = { x = 294 y = 398 }
+    year      = 1948
+    # 栄養学
+    component = { id = 13161 name = TECH_CMP_INDUSTRY_121_1_NAME type = mathematics difficulty = 7 }
+    # 冷凍乾燥製法
+    component = { id = 13162 name = TECH_CMP_INDUSTRY_121_2_NAME type = industrial_engineering difficulty = 7 }
+    # 栄養価計算
+    component = { id = 13163 name = TECH_CMP_INDUSTRY_121_3_NAME type = industrial_engineering difficulty = 7 }
+    # 品質保持
+    component = { id = 13164 name = TECH_CMP_INDUSTRY_121_4_NAME type = industrial_engineering difficulty = 7 }
+    # 製造試験
+    component = { id = 13165 name = TECH_CMP_INDUSTRY_121_5_NAME type = management difficulty = 7 double_time = yes }
+    required  = { 13150 }
+    effects =
+    { command = { type = morale which = land value = 5 }
+      command = { type = morale which = naval value = 5 }
+      command = { type = morale which = air value = 5 }
+    }
+  }
+  # 基本型工作機械
+  application =
+  { id        = 5050
+    name      = TECH_APP_INDUSTRY_5_NAME
+    desc      = TECH_APP_INDUSTRY_5_DESC
+    position  = { x = 24 y = 24 }
+    year      = 1936
+    # 超硬タングステンカーバイド
+    component = { id = 5051 name = TECH_CMP_INDUSTRY_5_1_NAME type = chemistry difficulty = 5 }
+    # 精密技術
+    component = { id = 5052 name = TECH_CMP_INDUSTRY_5_2_NAME type = industrial_engineering difficulty = 5 }
+    # 基本的溶接技術
+    component = { id = 5053 name = TECH_CMP_INDUSTRY_5_3_NAME type = industrial_engineering difficulty = 5 }
+    # 耐熱技術
+    component = { id = 5054 name = TECH_CMP_INDUSTRY_5_4_NAME type = industrial_engineering difficulty = 6 }
+    # 基本型工作機械開発工程
+    component = { id = 5055 name = TECH_CMP_INDUSTRY_5_5_NAME type = industrial_engineering difficulty = 7 double_time = yes }
+    required  = { }
+    effects =
+    { command = { type = industrial_modifier which = total value = 5 }
+      command = { type = activate_unit_type which = naval_improved_hull_l }
+      command = { type = new_model which = naval_improved_hull_l value = 0 }
+    }
+  }
+  # 改良型工作機械
+  application =
+  { id        = 5060
+    name      = TECH_APP_INDUSTRY_6_NAME
+    desc      = TECH_APP_INDUSTRY_6_DESC
+    position  = { x = 24 y = 41 }
+    year      = 1937
+    # 工業セラミック
+    component = { id = 5061 name = TECH_CMP_INDUSTRY_6_1_NAME type = chemistry difficulty = 6 }
+    # センサー技術
+    component = { id = 5062 name = TECH_CMP_INDUSTRY_6_2_NAME type = industrial_engineering difficulty = 6 }
+    # 改良型溶接技術
+    component = { id = 5063 name = TECH_CMP_INDUSTRY_6_3_NAME type = industrial_engineering difficulty = 6 }
+    # 高速加工能力
+    component = { id = 5064 name = TECH_CMP_INDUSTRY_6_4_NAME type = industrial_engineering difficulty = 7 }
+    # 改良型工作機械開発工程
+    component = { id = 5065 name = TECH_CMP_INDUSTRY_6_5_NAME type = industrial_engineering difficulty = 8 double_time = yes }
+    required  = { 5050 }
+    effects =
+    { command = { type = industrial_modifier which = total value = 5 }
+      command = { type = new_model which = naval_improved_hull_l value = 1 }
+      command = { type = scrap_model which = naval_improved_hull_l value = 0 }
+    }
+  }
+  # 発展型工作機械
+  application =
+  { id        = 5070
+    name      = TECH_APP_INDUSTRY_7_NAME
+    desc      = TECH_APP_INDUSTRY_7_DESC
+    position  = { x = 24 y = 58 }
+    year      = 1938
+    # 工業用ダイヤモンド
+    component = { id = 5071 name = TECH_CMP_INDUSTRY_7_1_NAME type = chemistry difficulty = 7 }
+    # オートメーション
+    component = { id = 5072 name = TECH_CMP_INDUSTRY_7_2_NAME type = industrial_engineering difficulty = 7 }
+    # 発展型溶接技術
+    component = { id = 5073 name = TECH_CMP_INDUSTRY_7_3_NAME type = industrial_engineering difficulty = 7 }
+    # 超高速加工能力
+    component = { id = 5074 name = TECH_CMP_INDUSTRY_7_4_NAME type = industrial_engineering difficulty = 8 }
+    # 発展型工作機械開発工程
+    component = { id = 5075 name = TECH_CMP_INDUSTRY_7_5_NAME type = industrial_engineering difficulty = 9 double_time = yes }
+    required  = { 5060 }
+    effects =
+    { command = { type = industrial_modifier which = total value = 5 }
+      command = { type = new_model which = naval_improved_hull_l value = 2 }
+      command = { type = scrap_model which = naval_improved_hull_l value = 1 }
+    }
+  }
+  # 基本的建設技術
+  application =
+  { id        = 5080
+    name      = TECH_APP_INDUSTRY_8_NAME
+    desc      = TECH_APP_INDUSTRY_8_DESC
+    position  = { x = 148 y = 24 }
+    year      = 1936
+    # 基本的標準化
+    component = { id = 5081 name = TECH_CMP_INDUSTRY_8_1_NAME type = industrial_engineering difficulty = 5 }
+    # 基本的品質管理
+    component = { id = 5082 name = TECH_CMP_INDUSTRY_8_2_NAME type = management difficulty = 5 }
+    # 基礎的信頼性工学
+    component = { id = 5083 name = TECH_CMP_INDUSTRY_8_3_NAME type = industrial_engineering difficulty = 5 }
+    # 基本的試験計画
+    component = { id = 5084 name = TECH_CMP_INDUSTRY_8_4_NAME type = industrial_engineering difficulty = 6 }
+    # 基本的建設技術開発工程
+    component = { id = 5085 name = TECH_CMP_INDUSTRY_8_5_NAME type = industrial_engineering difficulty = 7 double_time = yes }
+    required  = { }
+    effects =
+    { command = { type = allow_dig_in }
+      command = { type = allow_building which = infrastructure }
+      command = { type = allow_building which = ic }
+      command = { type = allow_building which = land_fort }
+      command = { type = allow_building which = coastal_fort }
+    }
+  }
+  # 改良型建設技術
+  application =
+  { id        = 5090
+    name      = TECH_APP_INDUSTRY_9_NAME
+    desc      = TECH_APP_INDUSTRY_9_DESC
+    position  = { x = 148 y = 41 }
+    year      = 1937
+    # 実用的標準化
+    component = { id = 5091 name = TECH_CMP_INDUSTRY_9_1_NAME type = industrial_engineering difficulty = 6 }
+    # 実用的品質管理
+    component = { id = 5092 name = TECH_CMP_INDUSTRY_9_2_NAME type = management difficulty = 6 }
+    # 実用的信頼性工学
+    component = { id = 5093 name = TECH_CMP_INDUSTRY_9_3_NAME type = industrial_engineering difficulty = 6 }
+    # 実用的試験計画
+    component = { id = 5094 name = TECH_CMP_INDUSTRY_9_4_NAME type = industrial_engineering difficulty = 7 }
+    # 実用的建設技術開発工程
+    component = { id = 5095 name = TECH_CMP_INDUSTRY_9_5_NAME type = industrial_engineering difficulty = 8 double_time = yes }
+    required  = { 5080 }
+    effects =
+    { command = { type = allow_building which = air_base }
+      command = { type = allow_building which = naval_base }
+      command = { type = building_prod_mod which = land_fort value = 50 }
+      command = { type = building_prod_mod which = coastal_fort value = 50 }
+    }
+  }
+  # 発展型建設技術
+  application =
+  { id        = 5100
+    name      = TECH_APP_INDUSTRY_10_NAME
+    desc      = TECH_APP_INDUSTRY_10_DESC
+    position  = { x = 148 y = 58 }
+    year      = 1938
+    # 高度標準化
+    component = { id = 5101 name = TECH_CMP_INDUSTRY_10_1_NAME type = industrial_engineering difficulty = 7 }
+    # 高度品質管理
+    component = { id = 5102 name = TECH_CMP_INDUSTRY_10_2_NAME type = management difficulty = 7 }
+    # 先進的信頼性工学
+    component = { id = 5103 name = TECH_CMP_INDUSTRY_10_3_NAME type = industrial_engineering difficulty = 7 }
+    # 先進試験計画
+    component = { id = 5104 name = TECH_CMP_INDUSTRY_10_4_NAME type = industrial_engineering difficulty = 8 }
+    # 先進的建設技術開発工程
+    component = { id = 5105 name = TECH_CMP_INDUSTRY_10_5_NAME type = industrial_engineering difficulty = 9 double_time = yes }
+    required  = { 5090 }
+    effects =
+    { command = { type = building_prod_mod which = land_fort value = 50 }
+      command = { type = building_prod_mod which = coastal_fort value = 50 }
+    }
+  }
+  # 準現代型工作機械
+  application =
+  { id        = 13200
+    name      = TECH_APP_INDUSTRY_131_NAME
+    position  = { x = 24 y = 75 }
+    picture   = "5120"
+    year      = 1950
+    # 準現代型工業用ダイヤモンド
+    component = { id = 13201 name = TECH_CMP_INDUSTRY_131_1_NAME type = industrial_engineering difficulty = 9 }
+    # 準現代型オートメーション
+    component = { id = 13202 name = TECH_CMP_INDUSTRY_131_2_NAME type = management difficulty = 9 }
+    # 準現代型溶接技術
+    component = { id = 13203 name = TECH_CMP_INDUSTRY_131_3_NAME type = industrial_engineering difficulty = 9 }
+    # 超々高速加工能力
+    component = { id = 13204 name = TECH_CMP_INDUSTRY_131_4_NAME type = management difficulty = 10 }
+    # 準現代型工作機械開発工程
+    component = { id = 13205 name = TECH_CMP_INDUSTRY_131_5_NAME type = management difficulty = 9 double_time = yes }
+    required  = { 5070 }
+    effects =
+    { command = { type = industrial_modifier which = total value = 5 }
+    }
+  }
+  # 大量特注生産
+  application =
+  { id        = 5840
+    name      = TECH_APP_INDUSTRY_84_NAME
+    position  = { x = 24 y = 92 }
+    picture   = "DH5840"
+    year      = 1955
+    # 最適化された精密技術
+    component = { id = 5841 name = TECH_CMP_INDUSTRY_84_1_NAME type = technical_efficiency difficulty = 10 }
+    # 長期の約束
+    component = { id = 5842 name = TECH_CMP_INDUSTRY_84_2_NAME type = industrial_engineering difficulty = 10 }
+    # 最適化された勤務時間表
+    component = { id = 5843 name = TECH_CMP_INDUSTRY_84_3_NAME type = industrial_engineering difficulty = 10 }
+    # 発展型材料供給列システム
+    component = { id = 5844 name = TECH_CMP_INDUSTRY_84_4_NAME type = industrial_engineering difficulty = 10 }
+    # 最終管理
+    component = { id = 5845 name = TECH_CMP_INDUSTRY_84_5_NAME type = management difficulty = 10 double_time = yes }
+    required  = { 13200 }
+    effects =
+    { command = { type = industrial_modifier which = total value = 5 }
+    }
+  }
+  # 発展型計画立案と日程計画
+  application =
+  { id        = 5850
+    name      = TECH_APP_INDUSTRY_85_NAME
+    position  = { x = 24 y = 109 }
+    picture   = "DH5850"
+    year      = 1960
+    # 工場の電化
+    component = { id = 5871 name = TECH_CMP_INDUSTRY_85_1_NAME type = electronics difficulty = 9 }
+    # 夜間-昼間チーム
+    component = { id = 5852 name = TECH_CMP_INDUSTRY_85_2_NAME type = management difficulty = 9 }
+    # 管理者交代
+    component = { id = 5853 name = TECH_CMP_INDUSTRY_85_3_NAME type = management difficulty = 9 }
+    # 発展型在庫計画
+    component = { id = 5854 name = TECH_CMP_INDUSTRY_85_4_NAME type = industrial_engineering difficulty = 10 }
+    # チームの責任制
+    component = { id = 5855 name = TECH_CMP_INDUSTRY_85_5_NAME type = management difficulty = 10 double_time = yes }
+    required  = { 5840 }
+    effects =
+    { command = { type = industrial_modifier which = total value = 5 }
+      command = { type = industrial_modifier which = supplies value = 5 }
+    }
+  }
+  # コンピュータ統合生産
+  application =
+  { id        = 5860
+    name      = TECH_APP_INDUSTRY_86_NAME
+    position  = { x = 24 y = 126 }
+    picture   = "DH5860"
+    year      = 1964
+    # 発展型用具
+    component = { id = 5861 name = TECH_CMP_INDUSTRY_86_1_NAME type = technical_efficiency difficulty = 10 }
+    # コンピュータ在庫制御
+    component = { id = 5862 name = TECH_CMP_INDUSTRY_86_2_NAME type = electronics difficulty = 10 }
+    # コンピュータ生産制御
+    component = { id = 5863 name = TECH_CMP_INDUSTRY_86_3_NAME type = electronics difficulty = 10 }
+    # コンピュータ在庫計画
+    component = { id = 5864 name = TECH_CMP_INDUSTRY_86_4_NAME type = industrial_engineering difficulty = 10 }
+    # 現代型製造プラント
+    component = { id = 5865 name = TECH_CMP_INDUSTRY_86_5_NAME type = industrial_engineering difficulty = 10 double_time = yes }
+    required  = { 5850 }
+    effects =
+    { command = { type = industrial_modifier which = total value = 5 }
+    }
+  }
+  # 準現代型建設技術
+  application =
+  { id        = 5900
+    name      = TECH_APP_INDUSTRY_90_NAME
+    position  = { x = 148 y = 75 }
+    picture   = "DH5900"
+    year      = 1950
+    # 準現代型標準化
+    component = { id = 5901 name = TECH_CMP_INDUSTRY_90_1_NAME type = industrial_engineering difficulty = 8 }
+    # 準現代型品質管理
+    component = { id = 5902 name = TECH_CMP_INDUSTRY_90_2_NAME type = management difficulty = 8 }
+    # 準現代型信頼性技術
+    component = { id = 5903 name = TECH_CMP_INDUSTRY_90_3_NAME type = industrial_engineering difficulty = 8 }
+    # 厳正な試験計画
+    component = { id = 5904 name = TECH_CMP_INDUSTRY_90_4_NAME type = industrial_engineering difficulty = 9 }
+    # 準現代型構造技術開発手順
+    component = { id = 5905 name = TECH_CMP_INDUSTRY_90_5_NAME type = industrial_engineering difficulty = 8 double_time = yes }
+    required  = { 5100 }
+    effects =
+    { command = { type = building_prod_mod which = radar_station value = 20 }
+      command = { type = building_prod_mod which = air_base value = 20 }
+      command = { type = building_prod_mod which = naval_base value = 20 }
+      command = { type = building_prod_mod which = infrastructure value = 20 }
+    }
+  }
+  # 現代型建設技術
+  application =
+  { id        = 5910
+    name      = TECH_APP_INDUSTRY_91_NAME
+    position  = { x = 148 y = 109 }
+    picture   = "DH5910"
+    year      = 1960
+    # 現代型標準化
+    component = { id = 5911 name = TECH_CMP_INDUSTRY_91_1_NAME type = industrial_engineering difficulty = 9 }
+    # 現代型品質管理
+    component = { id = 5912 name = TECH_CMP_INDUSTRY_91_2_NAME type = management difficulty = 9 }
+    # 現代型信頼性技術
+    component = { id = 5913 name = TECH_CMP_INDUSTRY_91_3_NAME type = industrial_engineering difficulty = 9 }
+    # コンピュータ試験計画
+    component = { id = 5914 name = TECH_CMP_INDUSTRY_91_4_NAME type = industrial_engineering difficulty = 10 }
+    # 現代型構造技術開発手順
+    component = { id = 5915 name = TECH_CMP_INDUSTRY_91_5_NAME type = industrial_engineering difficulty = 9 double_time = yes }
+    required  = { 5900 }
+    effects =
+    { command = { type = building_prod_mod which = radar_station value = 20 }
+      command = { type = building_prod_mod which = air_base value = 20 }
+      command = { type = building_prod_mod which = naval_base value = 20 }
+      command = { type = building_prod_mod which = infrastructure value = 20 }
+      command = { type = building_prod_mod which = rocket_test value = 20 }
+      command = { type = building_prod_mod which = nuclear_reactor value = 20 }
+    }
+  }
+  # 生産管理
+  application =
+  { id        = 5110
+    name      = TECH_APP_INDUSTRY_11_NAME
+    desc      = TECH_APP_INDUSTRY_11_DESC
+    position  = { x = 24 y = 147 }
+    year      = 1939
+    # 大量生産
+    component = { id = 5111 name = TECH_CMP_INDUSTRY_11_1_NAME type = industrial_engineering difficulty = 7 }
+    # 科学的管理
+    component = { id = 5112 name = TECH_CMP_INDUSTRY_11_2_NAME type = management difficulty = 7 }
+    # 継続的改良
+    component = { id = 5113 name = TECH_CMP_INDUSTRY_11_3_NAME type = management difficulty = 7 }
+    # 段取り時間短縮
+    component = { id = 5114 name = TECH_CMP_INDUSTRY_11_4_NAME type = management difficulty = 7 }
+    # 生産管理開発工程
+    component = { id = 5115 name = TECH_CMP_INDUSTRY_11_5_NAME type = management difficulty = 8 double_time = yes }
+    required  = { 5070 5100 }
+    effects =
+    { command = { type = industrial_modifier which = supplies value = 5 }
+    }
+  }
+  # 発展型生産管理
+  application =
+  { id        = 13070
+    name      = TECH_APP_INDUSTRY_111_NAME
+    desc      = TECH_APP_INDUSTRY_111_DESC
+    position  = { x = 148 y = 147 }
+    year      = 1944
+    # 発展型大量生産
+    component = { id = 13071 name = TECH_CMP_INDUSTRY_111_1_NAME type = industrial_engineering difficulty = 7 }
+    # 発展型科学的管理
+    component = { id = 13072 name = TECH_CMP_INDUSTRY_111_2_NAME type = management difficulty = 7 }
+    # 発展型継続的改良
+    component = { id = 13073 name = TECH_CMP_INDUSTRY_111_3_NAME type = management difficulty = 7 }
+    # 発展型段取り時間短縮
+    component = { id = 13074 name = TECH_CMP_INDUSTRY_111_4_NAME type = management difficulty = 7 }
+    # 発展型生産管理開発工程
+    component = { id = 13075 name = TECH_CMP_INDUSTRY_111_5_NAME type = management difficulty = 8 double_time = yes }
+    required  = { 5110 5120 }
+    effects =
+    { command = { type = industrial_modifier which = supplies value = 5 }
+    }
+  }
+  # 生産計画
+  application =
+  { id        = 5120
+    name      = TECH_APP_INDUSTRY_12_NAME
+    desc      = TECH_APP_INDUSTRY_12_DESC
+    position  = { x = 24 y = 163 }
+    year      = 1939
+    # 総合生産管理
+    component = { id = 5121 name = TECH_CMP_INDUSTRY_12_1_NAME type = management difficulty = 7 }
+    # 在庫計画
+    component = { id = 5122 name = TECH_CMP_INDUSTRY_12_2_NAME type = management difficulty = 7 }
+    # 資源待ち列システム
+    component = { id = 5123 name = TECH_CMP_INDUSTRY_12_3_NAME type = management difficulty = 7 }
+    # 発展型従業員勤務表
+    component = { id = 5124 name = TECH_CMP_INDUSTRY_12_4_NAME type = management difficulty = 7 }
+    # 生産計画開発工程
+    component = { id = 5125 name = TECH_CMP_INDUSTRY_12_5_NAME type = management difficulty = 8 double_time = yes }
+    required  = { 5070 5100 }
+    effects =
+    { command = { type = industrial_modifier which = supplies value = 5 }
+      command = { type = new_model which = naval_improved_hull_l value = 3 }
+      command = { type = scrap_model which = naval_improved_hull_l value = 2 }
+    }
+  }
+  # 発展型生産計画
+  application =
+  { id        = 13080
+    name      = TECH_APP_INDUSTRY_112_NAME
+    desc      = TECH_APP_INDUSTRY_112_DESC
+    position  = { x = 148 y = 163 }
+    year      = 1944
+    # 発展型総合生産管理
+    component = { id = 13081 name = TECH_CMP_INDUSTRY_112_1_NAME type = management difficulty = 7 }
+    # 発展型在庫計画
+    component = { id = 13082 name = TECH_CMP_INDUSTRY_112_2_NAME type = management difficulty = 7 }
+    # 発展型資源待ち列システム
+    component = { id = 13083 name = TECH_CMP_INDUSTRY_112_3_NAME type = management difficulty = 7 }
+    # 発展型発展型型従業員勤務表
+    component = { id = 13084 name = TECH_CMP_INDUSTRY_112_4_NAME type = management difficulty = 7 }
+    # 発展型生産計画開発工程
+    component = { id = 13085 name = TECH_CMP_INDUSTRY_112_5_NAME type = management difficulty = 8 double_time = yes }
+    required  = { 5110 5120 }
+    effects =
+    { command = { type = industrial_modifier which = supplies value = 5 }
+    }
+  }
+  # 組立実験
+  application =
+  { id        = 5130
+    name      = TECH_APP_INDUSTRY_13_NAME
+    desc      = TECH_APP_INDUSTRY_13_DESC
+    position  = { x = 24 y = 181 }
+    year      = 1940
+    # モジュール設計
+    component = { id = 5131 name = TECH_CMP_INDUSTRY_13_1_NAME type = management difficulty = 8 }
+    # プラットフォーム開発
+    component = { id = 5132 name = TECH_CMP_INDUSTRY_13_2_NAME type = management difficulty = 8 }
+    # モジュール別組み立て
+    component = { id = 5133 name = TECH_CMP_INDUSTRY_13_3_NAME type = industrial_engineering difficulty = 8 }
+    # 破壊力学
+    component = { id = 5134 name = TECH_CMP_INDUSTRY_13_4_NAME type = industrial_engineering difficulty = 8 }
+    # 実験工程
+    component = { id = 5135 name = TECH_CMP_INDUSTRY_13_5_NAME type = management difficulty = 10 double_time = yes }
+    required  = { 5110 5120 }
+    effects =
+    { command = { type = industrial_modifier which = supplies value = 15 }
+      command = { type = new_model which = naval_improved_hull_l value = 4 }
+      command = { type = scrap_model which = naval_improved_hull_l value = 3 }
+    }
+  }
+  # 航空機組立ライン
+  application =
+  { id        = 5140
+    name      = TECH_APP_INDUSTRY_14_NAME
+    desc      = TECH_APP_INDUSTRY_14_DESC
+    position  = { x = 32 y = 201 }
+    year      = 1940
+    # 航空機モジュール
+    component = { id = 5141 name = TECH_CMP_INDUSTRY_14_1_NAME type = aeronautics difficulty = 10 }
+    # 環境試験
+    component = { id = 5142 name = TECH_CMP_INDUSTRY_14_2_NAME type = industrial_engineering difficulty = 10 }
+    # エンジン装着
+    component = { id = 5143 name = TECH_CMP_INDUSTRY_14_3_NAME type = industrial_engineering difficulty = 10 }
+    # 組立工程
+    component = { id = 5144 name = TECH_CMP_INDUSTRY_14_4_NAME type = industrial_engineering difficulty = 10 }
+    # 製造試験
+    component = { id = 5145 name = TECH_CMP_INDUSTRY_14_5_NAME type = management difficulty = 10 double_time = yes }
+    required  = { 5130 }
+    effects =
+    { command = { type = build_time which = interceptor when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = multi_role when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = escort when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = cas when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = naval_bomber when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = strategic_bomber when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = tactical_bomber when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = transport_plane when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = cag when = on_upgrade where = relative value = -20 }
+    }
+  }
+  # 造船ライン
+  application =
+  { id        = 5150
+    name      = TECH_APP_INDUSTRY_15_NAME
+    desc      = TECH_APP_INDUSTRY_15_DESC
+    position  = { x = 32 y = 233 }
+    year      = 1940
+    # 船体モジュール
+    component = { id = 5151 name = TECH_CMP_INDUSTRY_15_1_NAME type = naval_engineering difficulty = 10 }
+    # 環境試験
+    component = { id = 5152 name = TECH_CMP_INDUSTRY_15_2_NAME type = industrial_engineering difficulty = 10 }
+    # 主機搭載
+    component = { id = 5153 name = TECH_CMP_INDUSTRY_15_3_NAME type = industrial_engineering difficulty = 10 }
+    # 組立工程
+    component = { id = 5154 name = TECH_CMP_INDUSTRY_15_4_NAME type = industrial_engineering difficulty = 10 }
+    # 製造試験
+    component = { id = 5155 name = TECH_CMP_INDUSTRY_15_5_NAME type = management difficulty = 10 double_time = yes }
+    required  = { 5130 }
+    effects =
+    { command = { type = build_time which = battlecruiser when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = battleship when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = carrier when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = escort_carrier when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = destroyer when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = heavy_cruiser when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = light_cruiser when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = submarine when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = nuclear_submarine when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = transport when = on_upgrade where = relative value = -20 }
+      command = { type = convoy_prod_mod which = transports value = 20 }
+      command = { type = convoy_prod_mod which = escorts value = 20 }
+      command = { type = new_model which = naval_improved_hull_l value = 5 }
+      command = { type = scrap_model which = naval_improved_hull_l value = 4 }
+    }
+  }
+  # 車両組立ライン
+  application =
+  { id        = 5160
+    name      = TECH_APP_INDUSTRY_16_NAME
+    desc      = TECH_APP_INDUSTRY_16_DESC
+    position  = { x = 32 y = 265 }
+    year      = 1940
+    # 車両モジュール
+    component = { id = 5161 name = TECH_CMP_INDUSTRY_16_1_NAME type = mechanics difficulty = 10 }
+    # 環境試験
+    component = { id = 5162 name = TECH_CMP_INDUSTRY_16_2_NAME type = industrial_engineering difficulty = 10 }
+    # エンジン装着
+    component = { id = 5163 name = TECH_CMP_INDUSTRY_16_3_NAME type = industrial_engineering difficulty = 10 }
+    # 組立工程
+    component = { id = 5164 name = TECH_CMP_INDUSTRY_16_4_NAME type = industrial_engineering difficulty = 10 }
+    # 製造試験
+    component = { id = 5165 name = TECH_CMP_INDUSTRY_16_5_NAME type = management difficulty = 10 double_time = yes }
+    required  = { 5130 }
+    effects =
+    { command = { type = build_time which = armor when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = light_armor when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = light_armor_brigade when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = mechanized when = on_upgrade where = relative value = -13 }
+      command = { type = build_time which = motorized when = on_upgrade where = relative value = -13 }
+      command = { type = build_time which = armored_car when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = heavy_armor when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = super_heavy_armor when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = tank_destroyer when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = sp_artillery when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = sp_rct_artillery when = on_upgrade where = relative value = -20 }
+    }
+  }
+  # ロケット組立ライン
+  application =
+  { id        = 5170
+    name      = TECH_APP_INDUSTRY_17_NAME
+    desc      = TECH_APP_INDUSTRY_17_DESC
+    position  = { x = 32 y = 297 }
+    year      = 1942
+    # ロケットモジュール
+    component = { id = 5171 name = TECH_CMP_INDUSTRY_17_1_NAME type = rocketry difficulty = 10 }
+    # 環境試験
+    component = { id = 5172 name = TECH_CMP_INDUSTRY_17_2_NAME type = industrial_engineering difficulty = 10 }
+    # モーター装着
+    component = { id = 5173 name = TECH_CMP_INDUSTRY_17_3_NAME type = industrial_engineering difficulty = 10 }
+    # 組立工程
+    component = { id = 5174 name = TECH_CMP_INDUSTRY_17_4_NAME type = industrial_engineering difficulty = 10 }
+    # 製造試験
+    component = { id = 5175 name = TECH_CMP_INDUSTRY_17_5_NAME type = management difficulty = 10 double_time = yes }
+    required  = { 5130 5580 }
+    effects =
+    { command = { type = build_time which = flying_bomb when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = flying_rocket when = on_upgrade where = relative value = -20 }
+    }
+  }
+  # 小火器製造ライン
+  application =
+  { id        = 5180
+    name      = TECH_APP_INDUSTRY_18_NAME
+    desc      = TECH_APP_INDUSTRY_18_DESC
+    position  = { x = 32 y = 329 }
+    year      = 1940
+    # モジュール製造
+    component = { id = 5181 name = TECH_CMP_INDUSTRY_18_1_NAME type = general_equipment difficulty = 12 }
+    # 環境試験
+    component = { id = 5182 name = TECH_CMP_INDUSTRY_18_2_NAME type = industrial_engineering difficulty = 12 }
+    # 効率試験
+    component = { id = 5183 name = TECH_CMP_INDUSTRY_18_3_NAME type = industrial_engineering difficulty = 12 }
+    # 組立工程
+    component = { id = 5184 name = TECH_CMP_INDUSTRY_18_4_NAME type = industrial_engineering difficulty = 12 }
+    # 製造試験
+    component = { id = 5185 name = TECH_CMP_INDUSTRY_18_5_NAME type = management difficulty = 12 double_time = yes }
+    required  = { 5130 }
+    effects =
+    { command = { type = build_time which = infantry when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = cavalry when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = militia when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = garrison when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = police when = on_upgrade where = relative value = -10 }
+      command = { type = build_time which = paratrooper when = on_upgrade where = relative value = -10 }
+      command = { type = build_time which = bergsjaeger when = on_upgrade where = relative value = -10 }
+      command = { type = build_time which = marine when = on_upgrade where = relative value = -10 }
+      command = { type = build_time which = d_rsv_33 when = on_upgrade where = relative value = -10 }
+      command = { type = build_time which = engineer when = on_upgrade where = relative value = -10 }
+      command = { type = build_time which = mechanized when = on_upgrade where = relative value = -7 }
+      command = { type = build_time which = motorized when = on_upgrade where = relative value = -7 }
+      command = { type = build_time which = anti_tank when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = anti_air when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = artillery when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = rocket_artillery when = on_upgrade where = relative value = -20 }
+    }
+  }
+  # 発展型航空機組立ライン
+  application =
+  { id        = 13090
+    name      = TECH_APP_INDUSTRY_114_NAME
+    desc      = TECH_APP_INDUSTRY_114_DESC
+    position  = { x = 40 y = 217 }
+    year      = 1945
+    # 航空機モジュール
+    component = { id = 13091 name = TECH_CMP_INDUSTRY_14_1_NAME type = aeronautics difficulty = 12 }
+    # 環境試験
+    component = { id = 13092 name = TECH_CMP_INDUSTRY_14_2_NAME type = industrial_engineering difficulty = 12 }
+    # エンジン装着
+    component = { id = 13093 name = TECH_CMP_INDUSTRY_14_3_NAME type = industrial_engineering difficulty = 12 }
+    # 組立工程
+    component = { id = 13094 name = TECH_CMP_INDUSTRY_14_4_NAME type = industrial_engineering difficulty = 12 }
+    # 製造試験
+    component = { id = 13095 name = TECH_CMP_INDUSTRY_14_5_NAME type = management difficulty = 12 double_time = yes }
+    required  = { 13070 13080 5140 }
+    effects =
+    { command = { type = build_time which = interceptor when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = multi_role when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = escort when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = cas when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = naval_bomber when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = strategic_bomber when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = tactical_bomber when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = transport_plane when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = cag when = on_upgrade where = relative value = -20 }
+    }
+  }
+  # 発展型造船ライン
+  application =
+  { id        = 13100
+    name      = TECH_APP_INDUSTRY_115_NAME
+    desc      = TECH_APP_INDUSTRY_115_DESC
+    position  = { x = 40 y = 249 }
+    year      = 1945
+    # 船体モジュール
+    component = { id = 13101 name = TECH_CMP_INDUSTRY_15_1_NAME type = naval_engineering difficulty = 12 }
+    # 環境試験
+    component = { id = 13102 name = TECH_CMP_INDUSTRY_15_2_NAME type = industrial_engineering difficulty = 12 }
+    # 主機搭載
+    component = { id = 13103 name = TECH_CMP_INDUSTRY_15_3_NAME type = industrial_engineering difficulty = 12 }
+    # 組立工程
+    component = { id = 13104 name = TECH_CMP_INDUSTRY_15_4_NAME type = industrial_engineering difficulty = 12 }
+    # 製造試験
+    component = { id = 13105 name = TECH_CMP_INDUSTRY_15_5_NAME type = management difficulty = 12 double_time = yes }
+    required  = { 13070 13080 5150 }
+    effects =
+    { command = { type = build_time which = battlecruiser when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = battleship when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = carrier when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = escort_carrier when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = destroyer when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = heavy_cruiser when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = light_cruiser when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = submarine when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = nuclear_submarine when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = transport when = on_upgrade where = relative value = -20 }
+      command = { type = convoy_prod_mod which = transports value = 20 }
+      command = { type = convoy_prod_mod which = escorts value = 20 }
+      command = { type = new_model which = naval_improved_hull_l value = 6 }
+      command = { type = scrap_model which = naval_improved_hull_l value = 5 }
+    }
+  }
+  # 発展型車両組立ライン
+  application =
+  { id        = 13110
+    name      = TECH_APP_INDUSTRY_116_NAME
+    desc      = TECH_APP_INDUSTRY_116_DESC
+    position  = { x = 40 y = 281 }
+    year      = 1945
+    # 車両モジュール
+    component = { id = 13111 name = TECH_CMP_INDUSTRY_16_1_NAME type = mechanics difficulty = 12 }
+    # 環境試験
+    component = { id = 13112 name = TECH_CMP_INDUSTRY_16_2_NAME type = industrial_engineering difficulty = 12 }
+    # エンジン装着
+    component = { id = 13113 name = TECH_CMP_INDUSTRY_16_3_NAME type = industrial_engineering difficulty = 12 }
+    # 組立工程
+    component = { id = 13114 name = TECH_CMP_INDUSTRY_16_4_NAME type = industrial_engineering difficulty = 12 }
+    # 製造試験
+    component = { id = 13115 name = TECH_CMP_INDUSTRY_16_5_NAME type = management difficulty = 12 double_time = yes }
+    required  = { 13070 13080 5160 }
+    effects =
+    { command = { type = build_time which = armor when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = light_armor when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = light_armor_brigade when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = mechanized when = on_upgrade where = relative value = -13 }
+      command = { type = build_time which = motorized when = on_upgrade where = relative value = -13 }
+      command = { type = build_time which = armored_car when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = heavy_armor when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = super_heavy_armor when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = tank_destroyer when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = sp_artillery when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = sp_rct_artillery when = on_upgrade where = relative value = -20 }
+    }
+  }
+  # 発展型ロケット組立ライン
+  application =
+  { id        = 13120
+    name      = TECH_APP_INDUSTRY_117_NAME
+    desc      = TECH_APP_INDUSTRY_117_DESC
+    position  = { x = 40 y = 313 }
+    year      = 1947
+    # ロケットモジュール
+    component = { id = 13121 name = TECH_CMP_INDUSTRY_17_1_NAME type = rocketry difficulty = 12 }
+    # 環境試験
+    component = { id = 13122 name = TECH_CMP_INDUSTRY_17_2_NAME type = industrial_engineering difficulty = 12 }
+    # モーター装着
+    component = { id = 13123 name = TECH_CMP_INDUSTRY_17_3_NAME type = industrial_engineering difficulty = 12 }
+    # 組立工程
+    component = { id = 13124 name = TECH_CMP_INDUSTRY_17_4_NAME type = industrial_engineering difficulty = 12 }
+    # 製造試験
+    component = { id = 13125 name = TECH_CMP_INDUSTRY_17_5_NAME type = management difficulty = 12 double_time = yes }
+    required  = { 13070 13080 5170 }
+    effects =
+    { command = { type = build_time which = flying_bomb when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = flying_rocket when = on_upgrade where = relative value = -20 }
+    }
+  }
+  # 発展型小火器製造ライン
+  application =
+  { id        = 13130
+    name      = TECH_APP_INDUSTRY_118_NAME
+    desc      = TECH_APP_INDUSTRY_118_DESC
+    position  = { x = 40 y = 345 }
+    year      = 1945
+    # モジュール製造
+    component = { id = 13131 name = TECH_CMP_INDUSTRY_18_1_NAME type = general_equipment difficulty = 12 }
+    # 環境試験
+    component = { id = 13132 name = TECH_CMP_INDUSTRY_18_2_NAME type = industrial_engineering difficulty = 12 }
+    # 効率試験
+    component = { id = 13133 name = TECH_CMP_INDUSTRY_18_3_NAME type = industrial_engineering difficulty = 12 }
+    # 組立工程
+    component = { id = 13134 name = TECH_CMP_INDUSTRY_18_4_NAME type = industrial_engineering difficulty = 12 }
+    # 製造試験
+    component = { id = 13135 name = TECH_CMP_INDUSTRY_18_5_NAME type = management difficulty = 12 double_time = yes }
+    required  = { 13070 13080 5180 }
+    effects =
+    { command = { type = build_time which = infantry when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = cavalry when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = militia when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = garrison when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = police when = on_upgrade where = relative value = -10 }
+      command = { type = build_time which = paratrooper when = on_upgrade where = relative value = -10 }
+      command = { type = build_time which = bergsjaeger when = on_upgrade where = relative value = -10 }
+      command = { type = build_time which = marine when = on_upgrade where = relative value = -10 }
+      command = { type = build_time which = d_rsv_33 when = on_upgrade where = relative value = -10 }
+      command = { type = build_time which = engineer when = on_upgrade where = relative value = -10 }
+      command = { type = build_time which = mechanized when = on_upgrade where = relative value = -7 }
+      command = { type = build_time which = motorized when = on_upgrade where = relative value = -7 }
+      command = { type = build_time which = anti_tank when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = anti_air when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = artillery when = on_upgrade where = relative value = -20 }
+      command = { type = build_time which = rocket_artillery when = on_upgrade where = relative value = -20 }
+    }
+  }
+  # 基本的石油精製
+  application =
+  { id        = 5190
+    name      = TECH_APP_INDUSTRY_19_NAME
+    desc      = TECH_APP_INDUSTRY_19_DESC
+    position  = { x = 426 y = 220 }
+    year      = 1936
+    # 基本的蒸留
+    component = { id = 5191 name = TECH_CMP_INDUSTRY_19_1_NAME type = chemistry difficulty = 7 }
+    # 基本型原油分離装置
+    component = { id = 5192 name = TECH_CMP_INDUSTRY_19_2_NAME type = chemistry difficulty = 7 }
+    # 基本的異性化技術
+    component = { id = 5193 name = TECH_CMP_INDUSTRY_19_3_NAME type = chemistry difficulty = 7 }
+    # 基本的水素化技術
+    component = { id = 5194 name = TECH_CMP_INDUSTRY_19_4_NAME type = chemistry difficulty = 7 }
+    # 基本型試験設備
+    component = { id = 5195 name = TECH_CMP_INDUSTRY_19_5_NAME type = industrial_engineering difficulty = 8 double_time = yes }
+    required  = { }
+    effects =
+    { command = { type = industrial_multiplier which = energy_to_oil value = 0.1 }
+    }
+  }
+  # 改良型石油精製
+  application =
+  { id        = 5200
+    name      = TECH_APP_INDUSTRY_20_NAME
+    desc      = TECH_APP_INDUSTRY_20_DESC
+    position  = { x = 426 y = 236 }
+    year      = 1938
+    # 実用的蒸留
+    component = { id = 5201 name = TECH_CMP_INDUSTRY_20_1_NAME type = chemistry difficulty = 7 }
+    # 改良型原油分離装置
+    component = { id = 5202 name = TECH_CMP_INDUSTRY_20_2_NAME type = chemistry difficulty = 7 }
+    # 実用的異性化技術
+    component = { id = 5203 name = TECH_CMP_INDUSTRY_20_3_NAME type = chemistry difficulty = 7 }
+    # 実用的水素化技術
+    component = { id = 5204 name = TECH_CMP_INDUSTRY_20_4_NAME type = chemistry difficulty = 7 }
+    # 改良型試験設備
+    component = { id = 5205 name = TECH_CMP_INDUSTRY_20_5_NAME type = industrial_engineering difficulty = 8 double_time = yes }
+    required  = { 5190 }
+    effects =
+    { command = { type = industrial_multiplier which = energy_to_oil value = 0.25 }
+    }
+  }
+  # 発展型石油精製
+  application =
+  { id        = 5210
+    name      = TECH_APP_INDUSTRY_21_NAME
+    desc      = TECH_APP_INDUSTRY_21_DESC
+    position  = { x = 426 y = 252 }
+    year      = 1940
+    # 先進的蒸留
+    component = { id = 5211 name = TECH_CMP_INDUSTRY_21_1_NAME type = chemistry difficulty = 8 }
+    # 発展型原油分離装置
+    component = { id = 5212 name = TECH_CMP_INDUSTRY_21_2_NAME type = chemistry difficulty = 8 }
+    # 先進的異性化技術
+    component = { id = 5213 name = TECH_CMP_INDUSTRY_21_3_NAME type = chemistry difficulty = 8 }
+    # 先進的水素化技術
+    component = { id = 5214 name = TECH_CMP_INDUSTRY_21_4_NAME type = chemistry difficulty = 8 }
+    # 発展型試験設備
+    component = { id = 5215 name = TECH_CMP_INDUSTRY_21_5_NAME type = industrial_engineering difficulty = 9 double_time = yes }
+    required  = { 5200 }
+    effects =
+    { command = { type = industrial_multiplier which = energy_to_oil value = 0.4 }
+    }
+  }
+  # 基本型合成石油工場
+  application =
+  { id        = 5220
+    name      = TECH_APP_INDUSTRY_22_NAME
+    desc      = TECH_APP_INDUSTRY_22_DESC
+    position  = { x = 426 y = 268 }
+    year      = 1941
+    # 基本型触媒
+    component = { id = 5221 name = TECH_CMP_INDUSTRY_22_1_NAME type = chemistry difficulty = 8 }
+    # 基本型反応装置
+    component = { id = 5222 name = TECH_CMP_INDUSTRY_22_2_NAME type = chemistry difficulty = 8 }
+    # 基本的製造工程
+    component = { id = 5223 name = TECH_CMP_INDUSTRY_22_3_NAME type = chemistry difficulty = 8 }
+    # 基本的原料準備
+    component = { id = 5224 name = TECH_CMP_INDUSTRY_22_4_NAME type = chemistry difficulty = 8 }
+    # 基本型石油工場試作試験
+    component = { id = 5225 name = TECH_CMP_INDUSTRY_22_5_NAME type = industrial_engineering difficulty = 10 double_time = yes }
+    required  = { 5210 }
+    effects =
+    { command = { type = industrial_multiplier which = energy_to_oil value = 0.7 }
+    }
+  }
+  # 改良型合成石油工場
+  application =
+  { id        = 5230
+    name      = TECH_APP_INDUSTRY_23_NAME
+    desc      = TECH_APP_INDUSTRY_23_DESC
+    position  = { x = 426 y = 284 }
+    year      = 1942
+    # 改良型触媒
+    component = { id = 5231 name = TECH_CMP_INDUSTRY_23_1_NAME type = chemistry difficulty = 8 }
+    # 改良型反応装置
+    component = { id = 5232 name = TECH_CMP_INDUSTRY_23_2_NAME type = chemistry difficulty = 8 }
+    # 実用的製造工程
+    component = { id = 5233 name = TECH_CMP_INDUSTRY_23_3_NAME type = chemistry difficulty = 8 }
+    # 実用的原料準備
+    component = { id = 5234 name = TECH_CMP_INDUSTRY_23_4_NAME type = chemistry difficulty = 8 }
+    # 改良型石油工場試作試験
+    component = { id = 5235 name = TECH_CMP_INDUSTRY_23_5_NAME type = industrial_engineering difficulty = 10 double_time = yes }
+    required  = { 5220 }
+    effects =
+    { command = { type = industrial_multiplier which = energy_to_oil value = 0.9 }
+    }
+  }
+  # 発展型合成石油工場
+  application =
+  { id        = 5240
+    name      = TECH_APP_INDUSTRY_24_NAME
+    desc      = TECH_APP_INDUSTRY_24_DESC
+    position  = { x = 426 y = 300 }
+    year      = 1943
+    # 発展型触媒
+    component = { id = 5241 name = TECH_CMP_INDUSTRY_24_1_NAME type = chemistry difficulty = 8 }
+    # 発展型反応装置
+    component = { id = 5242 name = TECH_CMP_INDUSTRY_24_2_NAME type = chemistry difficulty = 8 }
+    # 発展型製造工程
+    component = { id = 5243 name = TECH_CMP_INDUSTRY_24_3_NAME type = chemistry difficulty = 8 }
+    # 先進的原料準備作業
+    component = { id = 5244 name = TECH_CMP_INDUSTRY_24_4_NAME type = chemistry difficulty = 8 }
+    # 発展型石油工場試作試験
+    component = { id = 5245 name = TECH_CMP_INDUSTRY_24_5_NAME type = industrial_engineering difficulty = 10 double_time = yes }
+    required  = { 5230 }
+    effects =
+    { command = { type = industrial_multiplier which = energy_to_oil value = 1.1 }
+    }
+  }
+  # 現代型合成石油プラント
+  application =
+  { id        = 13020
+    name      = TECH_APP_INDUSTRY_102_NAME
+    desc      = TECH_APP_INDUSTRY_102_DESC
+    position  = { x = 426 y = 316 }
+    year      = 1945
+    # 現代型触媒
+    component = { id = 13021 name = TECH_CMP_INDUSTRY_102_1_NAME type = chemistry difficulty = 8 }
+    # 現代型反応装置
+    component = { id = 13022 name = TECH_CMP_INDUSTRY_102_2_NAME type = chemistry difficulty = 8 }
+    # 現代型製造工程
+    component = { id = 13023 name = TECH_CMP_INDUSTRY_102_3_NAME type = chemistry difficulty = 8 }
+    # 現代型原料準備作業
+    component = { id = 13024 name = TECH_CMP_INDUSTRY_102_4_NAME type = chemistry difficulty = 8 }
+    # 現代型石油工場試作試験
+    component = { id = 13025 name = TECH_CMP_INDUSTRY_102_5_NAME type = industrial_engineering difficulty = 10 double_time = yes }
+    required  = { 5240 }
+    effects =
+    { command = { type = industrial_multiplier which = energy_to_oil value = 1.2 }
+    }
+  }
+  # プラスチック
+  application =
+  { id        = 13040
+    name      = TECH_APP_INDUSTRY_104_NAME
+    desc      = TECH_APP_INDUSTRY_104_DESC
+    position  = { x = 426 y = 350 }
+    year      = 1945
+    # プラスチック研究
+    component = { id = 13041 name = TECH_CMP_INDUSTRY_104_1_NAME type = mathematics difficulty = 8 }
+    # 高分子化学
+    component = { id = 13042 name = TECH_CMP_INDUSTRY_104_2_NAME type = chemistry difficulty = 8 }
+    # 実用化研究
+    component = { id = 13043 name = TECH_CMP_INDUSTRY_104_3_NAME type = chemistry difficulty = 8 }
+    # プラスチック産業育成
+    component = { id = 13044 name = TECH_CMP_INDUSTRY_104_4_NAME type = management difficulty = 8 }
+    # プラスチック製造
+    component = { id = 13045 name = TECH_CMP_INDUSTRY_104_5_NAME type = industrial_engineering difficulty = 10 double_time = yes }
+    required  = { 5240 }
+    effects =
+    { command = { type = industrial_modifier which = total value = 5 }
+    }
+  }
+  # 発展型素材化学
+  application =
+  { id        = 13050
+    name      = TECH_APP_INDUSTRY_105_NAME
+    desc      = TECH_APP_INDUSTRY_105_DESC
+    position  = { x = 426 y = 366 }
+    year      = 1948
+    # 素材研究
+    component = { id = 13051 name = TECH_CMP_INDUSTRY_105_1_NAME type = chemistry difficulty = 8 }
+    # 発展型高分子化学
+    component = { id = 13052 name = TECH_CMP_INDUSTRY_105_2_NAME type = chemistry difficulty = 8 }
+    # 実用化研究
+    component = { id = 13053 name = TECH_CMP_INDUSTRY_105_3_NAME type = chemistry difficulty = 8 }
+    # 産業育成
+    component = { id = 13054 name = TECH_CMP_INDUSTRY_105_4_NAME type = chemistry difficulty = 8 }
+    # 複合素材製造
+    component = { id = 13055 name = TECH_CMP_INDUSTRY_105_5_NAME type = industrial_engineering difficulty = 10 double_time = yes }
+    required  = { 13040 }
+    effects =
+    { command = { type = industrial_modifier which = total value = 5 }
+      command = { type = industrial_modifier which = supplies value = 5 }
+    }
+  }
+  # 人口統計作表機
+  application =
+  { id        = 5310
+    name      = TECH_APP_INDUSTRY_31_NAME
+    desc      = TECH_APP_INDUSTRY_31_DESC
+    position  = { x = 304 y = 24 }
+    year      = 1936
+    # 精密機構
+    component = { id = 5311 name = TECH_CMP_INDUSTRY_31_1_NAME type = mechanics difficulty = 8 }
+    # 手動再設定
+    component = { id = 5312 name = TECH_CMP_INDUSTRY_31_2_NAME type = mechanics difficulty = 7 }
+    # カードの収納と並び替え
+    component = { id = 5313 name = TECH_CMP_INDUSTRY_31_3_NAME type = mechanics difficulty = 7 }
+    # パンチカード
+    component = { id = 5314 name = TECH_CMP_INDUSTRY_31_4_NAME type = mechanics difficulty = 3 }
+    # 統計作表機試作試験
+    component = { id = 5315 name = TECH_CMP_INDUSTRY_31_5_NAME type = mechanics difficulty = 10 double_time = yes }
+    required  = { }
+    effects =
+    { command = { type = research_mod value = 5 }
+      command = { type = activate_unit_type which = naval_fire_controll_l }
+      command = { type = new_model which = naval_fire_controll_l value = 0 }
+    }
+  }
+  # 基本型計算機
+  application =
+  { id        = 5320
+    name      = TECH_APP_INDUSTRY_32_NAME
+    desc      = TECH_APP_INDUSTRY_32_DESC
+    position  = { x = 304 y = 40 }
+    year      = 1936
+    # 応用数学
+    component = { id = 5321 name = TECH_CMP_INDUSTRY_32_1_NAME type = mathematics difficulty = 8 }
+    # 制御装置および演算装置
+    component = { id = 5322 name = TECH_CMP_INDUSTRY_32_2_NAME type = electronics difficulty = 8 }
+    # 記録装置
+    component = { id = 5323 name = TECH_CMP_INDUSTRY_32_3_NAME type = mechanics difficulty = 8 }
+    # パンチテープと読取機
+    component = { id = 5324 name = TECH_CMP_INDUSTRY_32_4_NAME type = mechanics difficulty = 8 }
+    # 基本型計算機試作試験
+    component = { id = 5325 name = TECH_CMP_INDUSTRY_32_5_NAME type = management difficulty = 8 double_time = yes }
+    required  = { 5310 }
+    effects =
+    { command = { type = research_mod value = 5 }
+      command = { type = new_model which = naval_fire_controll_l value = 1 }
+      command = { type = scrap_model which = naval_fire_controll_l value = 0 }
+    }
+  }
+  # 改良型計算機
+  application =
+  { id        = 5330
+    name      = TECH_APP_INDUSTRY_33_NAME
+    desc      = TECH_APP_INDUSTRY_33_DESC
+    position  = { x = 304 y = 73 }
+    year      = 1938
+    # 機械コード
+    component = { id = 5331 name = TECH_CMP_INDUSTRY_33_1_NAME type = mathematics difficulty = 8 }
+    # 制御装置および演算装置
+    component = { id = 5332 name = TECH_CMP_INDUSTRY_33_2_NAME type = electronics difficulty = 8 }
+    # データ記録リレー
+    component = { id = 5333 name = TECH_CMP_INDUSTRY_33_3_NAME type = electronics difficulty = 8 }
+    # パンチテープと読取機
+    component = { id = 5334 name = TECH_CMP_INDUSTRY_33_4_NAME type = mechanics difficulty = 8 }
+    # 改良型計算機試作試験
+    component = { id = 5335 name = TECH_CMP_INDUSTRY_33_5_NAME type = management difficulty = 8 double_time = yes }
+    required  = { 5320 }
+    effects =
+    { command = { type = research_mod value = 5 }
+      command = { type = new_model which = naval_fire_controll_l value = 2 }
+      command = { type = scrap_model which = naval_fire_controll_l value = 1 }
+    }
+  }
+  # 発展型計算機
+  application =
+  { id        = 5340
+    name      = TECH_APP_INDUSTRY_34_NAME
+    desc      = TECH_APP_INDUSTRY_34_DESC
+    position  = { x = 304 y = 106 }
+    year      = 1940
+    # アセンブラ言語
+    component = { id = 5341 name = TECH_CMP_INDUSTRY_34_1_NAME type = mathematics difficulty = 8 }
+    # 制御装置および演算装置
+    component = { id = 5342 name = TECH_CMP_INDUSTRY_34_2_NAME type = electronics difficulty = 8 }
+    # 多重データ記録リレー
+    component = { id = 5343 name = TECH_CMP_INDUSTRY_34_3_NAME type = mechanics difficulty = 8 }
+    # 複数のパンチテープと読取機
+    component = { id = 5344 name = TECH_CMP_INDUSTRY_34_4_NAME type = electronics difficulty = 8 }
+    # 発展型計算機試作試験
+    component = { id = 5345 name = TECH_CMP_INDUSTRY_34_5_NAME type = management difficulty = 8 double_time = yes }
+    required  = { 5330 }
+    effects =
+    { command = { type = research_mod value = 5 }
+      command = { type = info_may_cause which = 7140 }
+      command = { type = new_model which = naval_fire_controll_l value = 3 }
+      command = { type = scrap_model which = naval_fire_controll_l value = 2 }
+    }
+  }
+  # 基本型暗号作成機
+  application =
+  { id        = 5350
+    name      = TECH_APP_INDUSTRY_35_NAME
+    desc      = TECH_APP_INDUSTRY_35_DESC
+    position  = { x = 428 y = 32 }
+    year      = 1937
+    # キーボード
+    component = { id = 5351 name = TECH_CMP_INDUSTRY_35_1_NAME type = mechanics difficulty = 7 }
+    # 携帯型バッテリー
+    component = { id = 5352 name = TECH_CMP_INDUSTRY_35_2_NAME type = electronics difficulty = 7 }
+    # 3枚ローターシステム
+    component = { id = 5353 name = TECH_CMP_INDUSTRY_35_3_NAME type = mechanics difficulty = 7 }
+    # 基本型リフレクター
+    component = { id = 5354 name = TECH_CMP_INDUSTRY_35_4_NAME type = mechanics difficulty = 7 }
+    # 基本コード
+    component = { id = 5355 name = TECH_CMP_INDUSTRY_35_5_NAME type = mathematics difficulty = 7 }
+    required  = { 5320 }
+    effects =
+    { command = { type = intelligence which = them value = -15 }
+      command = { type = surprise which = naval value = 15 }
+      command = { type = surprise which = land value = 15 }
+      command = { type = surprise which = air value = 15 }
+      command = { type = army_detection which = them value = -15 }
+    }
+  }
+  # 基本型暗号解読機
+  application =
+  { id        = 5360
+    name      = TECH_APP_INDUSTRY_36_NAME
+    desc      = TECH_APP_INDUSTRY_36_DESC
+    position  = { x = 428 y = 48 }
+    year      = 1938
+    # メッセージキーの特定
+    component = { id = 5361 name = TECH_CMP_INDUSTRY_36_1_NAME type = mathematics difficulty = 8 }
+    # クリブの特定
+    component = { id = 5362 name = TECH_CMP_INDUSTRY_36_2_NAME type = mathematics difficulty = 8 }
+    # 基本的暗号理論
+    component = { id = 5363 name = TECH_CMP_INDUSTRY_36_3_NAME type = mathematics difficulty = 8 }
+    # 特別暗号解読チーム
+    component = { id = 5364 name = TECH_CMP_INDUSTRY_36_4_NAME type = training difficulty = 8 }
+    # 基本型計算機支援
+    component = { id = 5365 name = TECH_CMP_INDUSTRY_36_5_NAME type = mechanics difficulty = 8 }
+    required  = { 5320 }
+    effects =
+    { command = { type = intelligence which = us value = 25 }
+      command = { type = surprise which = naval value = 15 }
+      command = { type = surprise which = land value = 15 }
+      command = { type = surprise which = air value = 15 }
+      command = { type = army_detection which = us value = 15 }
+    }
+  }
+  # 改良型暗号作成機
+  application =
+  { id        = 5370
+    name      = TECH_APP_INDUSTRY_37_NAME
+    desc      = TECH_APP_INDUSTRY_37_DESC
+    position  = { x = 428 y = 65 }
+    year      = 1939
+    # 二進法文字
+    component = { id = 5371 name = TECH_CMP_INDUSTRY_37_1_NAME type = mathematics difficulty = 7 }
+    # 改良型電源
+    component = { id = 5372 name = TECH_CMP_INDUSTRY_37_2_NAME type = electronics difficulty = 7 }
+    # 6枚ローターシステム
+    component = { id = 5373 name = TECH_CMP_INDUSTRY_37_3_NAME type = mechanics difficulty = 7 }
+    # ダブルテレプリンター
+    component = { id = 5374 name = TECH_CMP_INDUSTRY_37_4_NAME type = mechanics difficulty = 7 }
+    # 個別の設定
+    component = { id = 5375 name = TECH_CMP_INDUSTRY_37_5_NAME type = management difficulty = 7 }
+    required  = { 5330 }
+    effects =
+    { command = { type = intelligence which = them value = -15 }
+      command = { type = surprise which = naval value = 15 }
+      command = { type = surprise which = land value = 15 }
+      command = { type = surprise which = air value = 15 }
+      command = { type = army_detection which = them value = -15 }
+    }
+  }
+  # 改良型暗号解読機
+  application =
+  { id        = 5380
+    name      = TECH_APP_INDUSTRY_38_NAME
+    desc      = TECH_APP_INDUSTRY_38_DESC
+    position  = { x = 428 y = 81 }
+    year      = 1940
+    # 複数メッセージキー特定
+    component = { id = 5381 name = TECH_CMP_INDUSTRY_38_1_NAME type = mathematics difficulty = 8 }
+    # 反復文字の特定
+    component = { id = 5382 name = TECH_CMP_INDUSTRY_38_2_NAME type = mathematics difficulty = 8 }
+    # 理論コンピューター
+    component = { id = 5383 name = TECH_CMP_INDUSTRY_38_3_NAME type = mathematics difficulty = 8 }
+    # 特別暗号解読機能
+    component = { id = 5384 name = TECH_CMP_INDUSTRY_38_4_NAME type = training difficulty = 8 }
+    # 改良型計算機支援
+    component = { id = 5385 name = TECH_CMP_INDUSTRY_38_5_NAME type = mechanics difficulty = 8 }
+    required  = { 5330 }
+    effects =
+    { command = { type = intelligence which = us value = 25 }
+      command = { type = surprise which = naval value = 15 }
+      command = { type = surprise which = land value = 15 }
+      command = { type = surprise which = air value = 15 }
+      command = { type = army_detection which = us value = 15 }
+    }
+  }
+  # 発展型暗号作成機
+  application =
+  { id        = 5390
+    name      = TECH_APP_INDUSTRY_39_NAME
+    desc      = TECH_APP_INDUSTRY_39_DESC
+    position  = { x = 428 y = 114 }
+    year      = 1941
+    # 5バイトの組み合わせ
+    component = { id = 5391 name = TECH_CMP_INDUSTRY_39_1_NAME type = mathematics difficulty = 7 }
+    # 発展型電子機械
+    component = { id = 5392 name = TECH_CMP_INDUSTRY_39_2_NAME type = electronics difficulty = 7 }
+    # 10枚ローターシステム
+    component = { id = 5393 name = TECH_CMP_INDUSTRY_39_3_NAME type = mechanics difficulty = 7 }
+    # 並行暗号化処理
+    component = { id = 5394 name = TECH_CMP_INDUSTRY_39_4_NAME type = mathematics difficulty = 7 }
+    # 1回きりの暗号コード表
+    component = { id = 5395 name = TECH_CMP_INDUSTRY_39_5_NAME type = mathematics difficulty = 7 }
+    required  = { 5340 }
+    effects =
+    { command = { type = intelligence which = them value = -15 }
+      command = { type = surprise which = naval value = 15 }
+      command = { type = surprise which = land value = 15 }
+      command = { type = surprise which = air value = 15 }
+      command = { type = army_detection which = them value = -15 }
+    }
+  }
+  # 発展型暗号解読機
+  application =
+  { id        = 5400
+    name      = TECH_APP_INDUSTRY_40_NAME
+    desc      = TECH_APP_INDUSTRY_40_DESC
+    position  = { x = 427 y = 98 }
+    year      = 1942
+    # 並列テキストの特定
+    component = { id = 5401 name = TECH_CMP_INDUSTRY_40_1_NAME type = mathematics difficulty = 8 }
+    # 先進的再構築技術
+    component = { id = 5402 name = TECH_CMP_INDUSTRY_40_2_NAME type = mathematics difficulty = 8 }
+    # 先進的素数理論
+    component = { id = 5403 name = TECH_CMP_INDUSTRY_40_3_NAME type = mathematics difficulty = 8 }
+    # 協力型複数暗号解読装置
+    component = { id = 5404 name = TECH_CMP_INDUSTRY_40_4_NAME type = training difficulty = 8 }
+    # 発展型計算機支援
+    component = { id = 5405 name = TECH_CMP_INDUSTRY_40_5_NAME type = mechanics difficulty = 8 }
+    required  = { 5340 }
+    effects =
+    { command = { type = intelligence which = us value = 25 }
+      command = { type = surprise which = naval value = 15 }
+      command = { type = surprise which = land value = 15 }
+      command = { type = surprise which = air value = 15 }
+      command = { type = army_detection which = us value = 15 }
+    }
+  }
+  # 基本型情報理論
+  application =
+  { id        = 13060
+    name      = TECH_APP_INDUSTRY_106_NAME
+    desc      = TECH_APP_INDUSTRY_106_DESC
+    position  = { x = 428 y = 131 }
+    year      = 1947
+    # 情報伝達効率
+    component = { id = 13061 name = TECH_CMP_INDUSTRY_106_1_NAME type = mathematics difficulty = 7 }
+    # データ圧縮理論
+    component = { id = 13062 name = TECH_CMP_INDUSTRY_106_2_NAME type = mathematics difficulty = 7 }
+    # エラー訂正理論
+    component = { id = 13063 name = TECH_CMP_INDUSTRY_106_3_NAME type = mathematics difficulty = 7 }
+    # 発展型暗号解読技術
+    component = { id = 13064 name = TECH_CMP_INDUSTRY_106_4_NAME type = mathematics difficulty = 7 }
+    # 発展型確率論
+    component = { id = 13065 name = TECH_CMP_INDUSTRY_106_5_NAME type = mathematics difficulty = 7 }
+    required  = { 5390 }
+    effects =
+    { command = { type = intelligence which = them value = -15 }
+      command = { type = surprise which = naval value = 15 }
+      command = { type = surprise which = land value = 15 }
+      command = { type = surprise which = air value = 15 }
+      command = { type = army_detection which = them value = -15 }
+    }
+  }
+  # 改良型情報理論
+  application =
+  { id        = 13210
+    name      = TECH_APP_INDUSTRY_132_NAME
+    position  = { x = 428 y = 147 }
+    picture   = "DH53116"
+    year      = 1954
+    # 情報伝達効率
+    component = { id = 13211 name = TECH_CMP_INDUSTRY_132_1_NAME type = mathematics difficulty = 8 }
+    # データ圧縮理論
+    component = { id = 13212 name = TECH_CMP_INDUSTRY_132_2_NAME type = mathematics difficulty = 8 }
+    # エラー訂正理論
+    component = { id = 13213 name = TECH_CMP_INDUSTRY_132_3_NAME type = mathematics difficulty = 8 }
+    # 発展型暗号解読技術
+    component = { id = 13214 name = TECH_CMP_INDUSTRY_132_4_NAME type = mathematics difficulty = 8 }
+    # 発展型確率論
+    component = { id = 13215 name = TECH_CMP_INDUSTRY_132_5_NAME type = mathematics difficulty = 8 }
+    required  = { 13060 }
+    effects =
+    { command = { type = intelligence which = them value = -10 }
+      command = { type = surprise which = naval value = 5 }
+      command = { type = surprise which = land value = 5 }
+      command = { type = surprise which = air value = 5 }
+      command = { type = army_detection which = them value = -10 }
+    }
+  }
+  # 発展型情報理論
+  application =
+  { id        = 310030
+    name      = TECH_APP_INDUSTRY_310030_NAME
+    desc      = TECH_APP_INDUSTRY_310030_DESC
+    position  = { x = 428 y = 163 }
+    year      = 1961
+    # 高度な情報伝達効率
+    component = { id = 310031 name = TECH_CMP_INDUSTRY_310030_1_NAME type = mathematics difficulty = 9 }
+    # 高度なデータ圧縮理論
+    component = { id = 310032 name = TECH_CMP_INDUSTRY_310030_2_NAME type = mathematics difficulty = 9 }
+    # 高度な訂正理論
+    component = { id = 310033 name = TECH_CMP_INDUSTRY_310030_3_NAME type = mathematics difficulty = 9 }
+    # 現代型暗号解読技術
+    component = { id = 310034 name = TECH_CMP_INDUSTRY_310030_4_NAME type = mathematics difficulty = 9 }
+    # 現代型確率論
+    component = { id = 310035 name = TECH_CMP_INDUSTRY_310030_5_NAME type = mathematics difficulty = 9 }
+    required  = { 13210 }
+    effects =
+    { command = { type = intelligence which = them value = -15 }
+      command = { type = surprise which = naval value = 15 }
+      command = { type = surprise which = land value = 15 }
+      command = { type = surprise which = air value = 15 }
+      command = { type = army_detection which = them value = -15 }
+    }
+  }
+  # 基本型デシメートル波警戒レーダー基地
+  application =
+  { id        = 5410
+    name      = TECH_APP_INDUSTRY_71_NAME
+    #desc      = TECH_APP_INDUSTRY_71_DESC
+    position  = { x = 171 y = 204 }
+    year      = 1937
+    # 基本型アンテナ
+    component = { id = 5411 name = TECH_CMP_INDUSTRY_71_1_NAME type = mechanics difficulty = 6 }
+    # 送信周波数10m/30MHz
+    component = { id = 5412 name = TECH_CMP_INDUSTRY_71_2_NAME type = electronics difficulty = 6 }
+    # 基本型機械構造
+    component = { id = 5413 name = TECH_CMP_INDUSTRY_71_3_NAME type = electronics difficulty = 6 }
+    # 基本型手動プロッティング装置
+    component = { id = 5414 name = TECH_CMP_INDUSTRY_71_4_NAME type = electronics difficulty = 6 }
+    # 基本型統合防空システム
+    component = { id = 5415 name = TECH_CMP_INDUSTRY_71_5_NAME type = management difficulty = 6 }
+    required  = { }
+    effects =
+    { command = { type = allow_building which = radar_station }
+      command = { type = radar_eff value = 5 }
+      command = { type = activate_unit_type which = naval_radar_l }
+      command = { type = new_model which = naval_radar_l value = 0 }
+    }
+  }
+  # 初期型地表レーダー応用
+  application =
+  { id        = 5420
+    name      = TECH_APP_INDUSTRY_72_NAME
+    #desc      = TECH_APP_INDUSTRY_72_DESC
+    position  = { x = 171 y = 220 }
+    year      = 1940
+    # 初期型地表レーダーアンテナ
+    component = { id = 5421 name = TECH_CMP_INDUSTRY_72_1_NAME type = mechanics difficulty = 7 }
+    # 発信機周波数50cm/300MHz
+    component = { id = 5422 name = TECH_CMP_INDUSTRY_72_2_NAME type = electronics difficulty = 7 }
+    # 初期型機械式構造
+    component = { id = 5423 name = TECH_CMP_INDUSTRY_72_3_NAME type = electronics difficulty = 7 }
+    # 初期型手動描画装置
+    component = { id = 5424 name = TECH_CMP_INDUSTRY_72_4_NAME type = electronics difficulty = 7 }
+    # 初期型防衛統合
+    component = { id = 5425 name = TECH_CMP_INDUSTRY_72_5_NAME type = management difficulty = 7 }
+    required  = { 5410 }
+    effects =
+    { command = { type = radar_eff value = 10 }
+      command = { type = new_model which = naval_radar_l value = 1 }
+      command = { type = scrap_model which = naval_radar_l value = 0 }
+      command = { type = night_attack which = naval_radar_l value = 5 }
+      command = { type = night_defense which = naval_radar_l value = 5 }
+      command = { type = rain_attack which = naval_radar_l value = 5 }
+      command = { type = rain_defense which = naval_radar_l value = 5 }
+    }
+  }
+  # 初期型探査レーダー応用
+  application =
+  { id        = 5430
+    name      = TECH_APP_INDUSTRY_73_NAME
+    #desc      = TECH_APP_INDUSTRY_73_DESC
+    position  = { x = 171 y = 236 }
+    year      = 1942
+    # 初期型海上航空レーダーアンテナ
+    component = { id = 5431 name = TECH_CMP_INDUSTRY_73_1_NAME type = mechanics difficulty = 7 }
+    # 発信機周波数75cm/600MHz
+    component = { id = 5432 name = TECH_CMP_INDUSTRY_73_2_NAME type = electronics difficulty = 7 }
+    # 基本型機械式構造
+    component = { id = 5433 name = TECH_CMP_INDUSTRY_73_3_NAME type = electronics difficulty = 7 }
+    # 基本型手動描画装置
+    component = { id = 5434 name = TECH_CMP_INDUSTRY_73_4_NAME type = electronics difficulty = 7 }
+    # 基本型防衛統合
+    component = { id = 5435 name = TECH_CMP_INDUSTRY_73_5_NAME type = management difficulty = 7 }
+    required  = { 5420 }
+    effects =
+    { command = { type = radar_eff value = 10 }
+      command = { type = new_model which = naval_radar_l value = 2 }
+      command = { type = scrap_model which = naval_radar_l value = 1 }
+      command = { type = night_attack which = naval_radar_l when = on_upgrade value = 5 }
+      command = { type = night_defense which = naval_radar_l when = on_upgrade value = 5 }
+      command = { type = rain_attack which = naval_radar_l when = on_upgrade value = 5 }
+      command = { type = rain_defense which = naval_radar_l when = on_upgrade value = 5 }
+    }
+  }
+  # 改良型デシメートル波警戒レーダー基地
+  application =
+  { id        = 5440
+    name      = TECH_APP_INDUSTRY_74_NAME
+    #desc      = TECH_APP_INDUSTRY_74_DESC
+    position  = { x = 171 y = 252 }
+    year      = 1942
+    # 改良型アンテナ
+    component = { id = 5441 name = TECH_CMP_INDUSTRY_74_1_NAME type = mechanics difficulty = 7 }
+    # 送信周波数1.5m/200MHz
+    component = { id = 5442 name = TECH_CMP_INDUSTRY_74_2_NAME type = electronics difficulty = 9 }
+    # 改良型機械構造
+    component = { id = 5443 name = TECH_CMP_INDUSTRY_74_3_NAME type = electronics difficulty = 7 }
+    # 改良型手動プロッティング装置
+    component = { id = 5444 name = TECH_CMP_INDUSTRY_74_4_NAME type = electronics difficulty = 8 }
+    # 改良型統合防空システム
+    component = { id = 5445 name = TECH_CMP_INDUSTRY_74_5_NAME type = management difficulty = 10 }
+    required  = { 5430 }
+    effects =
+    { command = { type = radar_eff value = 15 }
+      command = { type = new_model which = naval_radar_l value = 3 }
+      command = { type = scrap_model which = naval_radar_l value = 2 }
+    }
+  }
+  # 初期型航空レーダー応用
+  application =
+  { id        = 5450
+    name      = TECH_APP_INDUSTRY_75_NAME
+    #desc      = TECH_APP_INDUSTRY_75_DESC
+    position  = { x = 172 y = 268 }
+    year      = 1943
+    # 輸送可能アンテナ
+    component = { id = 5451 name = TECH_CMP_INDUSTRY_75_1_NAME type = mechanics difficulty = 8 }
+    # 発信機周波数10cm/3GHz
+    component = { id = 5452 name = TECH_CMP_INDUSTRY_75_2_NAME type = electronics difficulty = 10 }
+    # 基本型航空レーダー構造
+    component = { id = 5453 name = TECH_CMP_INDUSTRY_75_3_NAME type = electronics difficulty = 8 }
+    # 基本型電気機械式描画装置
+    component = { id = 5454 name = TECH_CMP_INDUSTRY_75_4_NAME type = electronics difficulty = 9 }
+    # 基本型航空防衛網
+    component = { id = 5455 name = TECH_CMP_INDUSTRY_75_5_NAME type = management difficulty = 10 }
+    required  = { 5440 }
+    effects =
+    { command = { type = radar_eff value = 15 }
+      command = { type = new_model which = naval_radar_l value = 4 }
+      command = { type = scrap_model which = naval_radar_l value = 3 }
+      command = { type = night_attack which = air value = 10 }
+      command = { type = night_defense which = air value = 10 }
+      command = { type = air_detection when = on_upgrade where = air value = 1 }
+      command = { type = surface_detection when = on_upgrade where = air value = 1 }
+      command = { type = night_attack which = naval_radar_l value = 5 }
+      command = { type = night_defense which = naval_radar_l value = 5 }
+      command = { type = rain_attack which = naval_radar_l value = 5 }
+      command = { type = rain_defense which = naval_radar_l value = 5 }
+    }
+  }
+  # 発展型デシメートル波警戒レーダー基地
+  application =
+  { id        = 5460
+    name      = TECH_APP_INDUSTRY_76_NAME
+    #desc      = TECH_APP_INDUSTRY_76_DESC
+    position  = { x = 172 y = 284 }
+    year      = 1944
+    # 発展型アンテナ
+    component = { id = 5461 name = TECH_CMP_INDUSTRY_76_1_NAME type = mechanics difficulty = 9 }
+    # 送信周波数50cm/600MHz
+    component = { id = 5462 name = TECH_CMP_INDUSTRY_76_2_NAME type = electronics difficulty = 10 }
+    # 発展型機械構造
+    component = { id = 5463 name = TECH_CMP_INDUSTRY_76_3_NAME type = electronics difficulty = 9 }
+    # 発展型手動プロッティング装置
+    component = { id = 5464 name = TECH_CMP_INDUSTRY_76_4_NAME type = electronics difficulty = 9 }
+    # 発展型統合防空システム
+    component = { id = 5465 name = TECH_CMP_INDUSTRY_76_5_NAME type = management difficulty = 10 }
+    required  = { 5450 }
+    effects =
+    { command = { type = radar_eff value = 15 }
+      command = { type = new_model which = naval_radar_l value = 5 }
+      command = { type = scrap_model which = naval_radar_l value = 4 }
+    }
+  }
+  # 基本型センチメートル波警戒レーダー基地
+  application =
+  { id        = 13030
+    name      = TECH_APP_INDUSTRY_77_NAME
+    #desc      = TECH_APP_INDUSTRY_77_DESC
+    position  = { x = 172 y = 300 }
+    year      = 1944
+    # タワーアンテナ
+    component = { id = 13031 name = TECH_CMP_INDUSTRY_77_1_NAME type = mechanics difficulty = 10 }
+    # 送信周波数10cm/3GHz
+    component = { id = 13032 name = TECH_CMP_INDUSTRY_77_2_NAME type = electronics difficulty = 10 }
+    # 基本型電気的構造
+    component = { id = 13033 name = TECH_CMP_INDUSTRY_77_3_NAME type = electronics difficulty = 10 }
+    # 基本型電気機械式プロッティング装置
+    component = { id = 13034 name = TECH_CMP_INDUSTRY_77_4_NAME type = electronics difficulty = 10 }
+    # 基本型防空ネットワーク
+    component = { id = 13035 name = TECH_CMP_INDUSTRY_77_5_NAME type = management difficulty = 10 }
+    required  = { 5460 }
+    effects =
+    { command = { type = radar_eff value = 10 }
+      command = { type = new_model which = naval_radar_l value = 6 }
+      command = { type = scrap_model which = naval_radar_l value = 5 }
+      command = { type = air_detection which = air when = on_upgrade value = 1 }
+      command = { type = surface_detection which = air when = on_upgrade value = 1 }
+      command = { type = night_attack which = air value = 10 }
+      command = { type = night_defense which = air value = 10 }
+      command = { type = night_attack which = naval_radar_l value = 5 }
+      command = { type = night_defense which = naval_radar_l value = 5 }
+      command = { type = rain_attack which = naval_radar_l value = 5 }
+      command = { type = rain_defense which = naval_radar_l value = 5 }
+    }
+  }
+  # 改良型航空搭載レーダー応用
+  application =
+  { id        = 5466
+    name      = TECH_APP_INDUSTRY_78_NAME
+    position  = { x = 172 y = 316 }
+    picture   = "DH5466"
+    year      = 1945
+    # 改良型飛行技術訓練
+    component = { id = 54661 name = TECH_CMP_INDUSTRY_78_1_NAME type = mechanics difficulty = 10 }
+    # 改良型アンテナ
+    component = { id = 54662 name = TECH_CMP_INDUSTRY_78_2_NAME type = electronics difficulty = 10 }
+    # 改良型受信機
+    component = { id = 54663 name = TECH_CMP_INDUSTRY_78_3_NAME type = electronics difficulty = 10 }
+    # 改良型電子妨害装置対抗
+    component = { id = 54664 name = TECH_CMP_INDUSTRY_78_4_NAME type = electronics difficulty = 10 }
+    # 改良型航空防衛網
+    component = { id = 54665 name = TECH_CMP_INDUSTRY_78_5_NAME type = management difficulty = 10 }
+    required  = { 13030 }
+    effects =
+    { command = { type = air_detection which = air when = on_upgrade value = 1 }
+      command = { type = surface_detection which = air when = on_upgrade value = 1 }
+      command = { type = night_attack which = air value = 10 }
+      command = { type = night_defense which = air value = 10 }
+      command = { type = task_efficiency which = strategic_bombardment value = 0.1 }
+      command = { type = task_efficiency which = asw value = 0.05 }
+      command = { type = night_attack which = naval_radar_l value = 5 }
+      command = { type = night_defense which = naval_radar_l value = 5 }
+      command = { type = rain_attack which = naval_radar_l value = 5 }
+      command = { type = rain_defense which = naval_radar_l value = 5 }
+    }
+  }
+  # 改良型センチメートル波警戒レーダー基地
+  application =
+  { id        = 13220
+    name      = TECH_APP_INDUSTRY_79_NAME
+    position  = { x = 172 y = 332 }
+    picture   = "5450"
+    year      = 1946
+    # 移動式アンテナ
+    component = { id = 13221 name = TECH_CMP_INDUSTRY_79_1_NAME type = mechanics difficulty = 10 }
+    # 送信周波数12cm/4GHz
+    component = { id = 13222 name = TECH_CMP_INDUSTRY_79_2_NAME type = electronics difficulty = 10 }
+    # 改良型電気的構造
+    component = { id = 13223 name = TECH_CMP_INDUSTRY_79_3_NAME type = electronics difficulty = 10 }
+    # 改良型電気機械式プロッティング装置
+    component = { id = 13224 name = TECH_CMP_INDUSTRY_79_4_NAME type = electronics difficulty = 10 }
+    # 改良型防空ネットワーク
+    component = { id = 13225 name = TECH_CMP_INDUSTRY_79_5_NAME type = management difficulty = 10 }
+    required  = { 5466 }
+    effects =
+    { command = { type = radar_eff value = 10 }
+      command = { type = new_model which = naval_radar_l value = 7 }
+      command = { type = scrap_model which = naval_radar_l value = 6 }
+    }
+  }
+  # 発展型センチメートル波警戒レーダー基地
+  application =
+  { id        = 13230
+    name      = TECH_APP_INDUSTRY_80_NAME
+    position  = { x = 172 y = 348 }
+    picture   = "5460"
+    year      = 1949
+    # 移動式アンテナ
+    component = { id = 13231 name = TECH_CMP_INDUSTRY_80_1_NAME type = mechanics difficulty = 10 }
+    # 送信周波数15cm/5GHz
+    component = { id = 13232 name = TECH_CMP_INDUSTRY_80_2_NAME type = electronics difficulty = 10 }
+    # 発展型電気的構造
+    component = { id = 13233 name = TECH_CMP_INDUSTRY_80_3_NAME type = electronics difficulty = 10 }
+    # 発展型電気機械式プロッティング装置
+    component = { id = 13234 name = TECH_CMP_INDUSTRY_80_4_NAME type = electronics difficulty = 10 }
+    # 発展型防空ネットワーク
+    component = { id = 13235 name = TECH_CMP_INDUSTRY_80_5_NAME type = management difficulty = 10 }
+    required  = { 13220 }
+    effects =
+    { command = { type = radar_eff value = 15 }
+      command = { type = new_model which = naval_radar_l value = 8 }
+      command = { type = scrap_model which = naval_radar_l value = 7 }
+    }
+  }
+  # 現代型センチメートル波警戒レーダー基地
+  application =
+  { id        = 53030
+    name      = TECH_APP_INDUSTRY_81_NAME
+    position  = { x = 172 y = 364 }
+    picture   = "13030"
+    year      = 1952
+    # 回転型アンテナ
+    component = { id = 53031 name = TECH_CMP_INDUSTRY_81_1_NAME type = mechanics difficulty = 10 }
+    # 送信周波数18cm/6GHz
+    component = { id = 53032 name = TECH_CMP_INDUSTRY_81_2_NAME type = electronics difficulty = 10 }
+    # 現代型電気的構造
+    component = { id = 53033 name = TECH_CMP_INDUSTRY_81_3_NAME type = electronics difficulty = 10 }
+    # 現代型電気機械式プロッティング装置
+    component = { id = 53034 name = TECH_CMP_INDUSTRY_81_4_NAME type = electronics difficulty = 10 }
+    # 現代型防空ネットワーク
+    component = { id = 53035 name = TECH_CMP_INDUSTRY_81_5_NAME type = management difficulty = 10 }
+    required  = { 13230 }
+    effects =
+    { command = { type = radar_eff value = 15 }
+      command = { type = new_model which = naval_radar_l value = 9 }
+      command = { type = scrap_model which = naval_radar_l value = 8 }
+    }
+  }
+  # レーダー支援兵装システム
+  application =
+  { id        = 5476
+    name      = TECH_APP_INDUSTRY_82_NAME
+    position  = { x = 172 y = 380 }
+    picture   = "DH5476"
+    year      = 1953
+    # 発展型搭載システム
+    component = { id = 54761 name = TECH_CMP_INDUSTRY_82_1_NAME type = mechanics difficulty = 10 }
+    # 発展型地上基地システム
+    component = { id = 54762 name = TECH_CMP_INDUSTRY_82_2_NAME type = electronics difficulty = 10 }
+    # 発展型電子妨害装置システム
+    component = { id = 54763 name = TECH_CMP_INDUSTRY_82_3_NAME type = electronics difficulty = 10 }
+    # 発展型操作員演習
+    component = { id = 54764 name = TECH_CMP_INDUSTRY_82_4_NAME type = electronics difficulty = 10 }
+    # 試作試験
+    component = { id = 54765 name = TECH_CMP_INDUSTRY_82_5_NAME type = management difficulty = 10 }
+    required  = { 53030 }
+    effects =
+    { command = { type = night_attack which = air value = 15 }
+      command = { type = night_defense which = air value = 15 }
+      command = { type = task_efficiency which = strategic_bombardment value = 0.15 }
+      command = { type = task_efficiency which = asw value = 0.15 }
+      command = { type = night_attack which = naval_radar_l value = 5 }
+      command = { type = night_defense which = naval_radar_l value = 5 }
+      command = { type = rain_attack which = naval_radar_l value = 5 }
+      command = { type = rain_defense which = naval_radar_l value = 5 }
+      command = { type = new_model which = naval_radar_l value = 10 }
+      command = { type = scrap_model which = naval_radar_l value = 9 }
+    }
+  }
+  # 発展現代型センチメートル波警戒レーダー基地
+  application =
+  { id        = 53070
+    name      = TECH_APP_INDUSTRY_83_NAME
+    position  = { x = 172 y = 396 }
+    picture   = "DH53070"
+    year      = 1955
+    # 発展型移動型アンテナ
+    component = { id = 53071 name = TECH_CMP_INDUSTRY_83_1_NAME type = mechanics difficulty = 10 }
+    # 発展型発信機周波数18cm/6GHz
+    component = { id = 53072 name = TECH_CMP_INDUSTRY_83_2_NAME type = electronics difficulty = 10 }
+    # 現代型電子機構
+    component = { id = 53073 name = TECH_CMP_INDUSTRY_83_3_NAME type = electronics difficulty = 10 }
+    # 電子制御式描画装置
+    component = { id = 53074 name = TECH_CMP_INDUSTRY_83_4_NAME type = electronics difficulty = 10 }
+    # 電子航空防衛網
+    component = { id = 53075 name = TECH_CMP_INDUSTRY_83_5_NAME type = management difficulty = 10 }
+    required  = { 5476 }
+    effects =
+    { command = { type = radar_eff value = 15 }
+      command = { type = new_model which = naval_radar_l value = 11 }
+      command = { type = scrap_model which = naval_radar_l value = 10 }
+    }
+  }
+  # 原爆開発チーム
+  application =
+  { id        = 5470
+    name      = TECH_APP_INDUSTRY_47_NAME
+    desc      = TECH_APP_INDUSTRY_47_DESC
+    position  = { x = 566 y = 24 }
+    year      = 1936
+    # 原子物理部門
+    component = { id = 5471 name = TECH_CMP_INDUSTRY_47_1_NAME type = nuclear_physics difficulty = 10 }
+    # 放射能部門
+    component = { id = 5472 name = TECH_CMP_INDUSTRY_47_2_NAME type = nuclear_physics difficulty = 10 }
+    # 高等数学部門
+    component = { id = 5473 name = TECH_CMP_INDUSTRY_47_3_NAME type = mathematics difficulty = 10 }
+    # 宇宙物理学部門
+    component = { id = 5474 name = TECH_CMP_INDUSTRY_47_4_NAME type = nuclear_physics difficulty = 10 }
+    # 物理化学部門
+    component = { id = 5475 name = TECH_CMP_INDUSTRY_47_5_NAME type = chemistry difficulty = 10 }
+    required  = { }
+    effects =
+    { command = { }
+    }
+  }
+  # 原爆開発研究所
+  application =
+  { id        = 5480
+    name      = TECH_APP_INDUSTRY_48_NAME
+    desc      = TECH_APP_INDUSTRY_48_DESC
+    position  = { x = 566 y = 40 }
+    year      = 1936
+    # X線分光測定施設
+    component = { id = 5481 name = TECH_CMP_INDUSTRY_48_1_NAME type = nuclear_engineering difficulty = 10 }
+    # カソードルミネセンス分光測定施設
+    component = { id = 5482 name = TECH_CMP_INDUSTRY_48_2_NAME type = nuclear_engineering difficulty = 10 }
+    # 陽電子測定施設
+    component = { id = 5483 name = TECH_CMP_INDUSTRY_48_3_NAME type = nuclear_engineering difficulty = 10 }
+    # 放射性核種研究施設
+    component = { id = 5484 name = TECH_CMP_INDUSTRY_48_4_NAME type = nuclear_engineering difficulty = 10 }
+    # 核物質変成研究施設
+    component = { id = 5485 name = TECH_CMP_INDUSTRY_48_5_NAME type = nuclear_engineering difficulty = 10 }
+    required  = { 5470 }
+    effects =
+    { command = { }
+    }
+  }
+  # 核開発チーム
+  application =
+  { id        = 5490
+    name      = TECH_APP_INDUSTRY_49_NAME
+    desc      = TECH_APP_INDUSTRY_49_DESC
+    position  = { x = 566 y = 56 }
+    year      = 1939
+    # 核物理部門
+    component = { id = 5491 name = TECH_CMP_INDUSTRY_49_1_NAME type = nuclear_physics difficulty = 10 }
+    # 高エネルギー放射部門
+    component = { id = 5492 name = TECH_CMP_INDUSTRY_49_2_NAME type = nuclear_physics difficulty = 10 }
+    # 数理物理部門
+    component = { id = 5493 name = TECH_CMP_INDUSTRY_49_3_NAME type = mathematics difficulty = 10 }
+    # 相対論的力学部門
+    component = { id = 5494 name = TECH_CMP_INDUSTRY_49_4_NAME type = nuclear_physics difficulty = 10 }
+    # 核化学部門
+    component = { id = 5495 name = TECH_CMP_INDUSTRY_49_5_NAME type = nuclear_physics difficulty = 10 }
+    required  = { 5480 }
+    effects =
+    { command = { }
+    }
+  }
+  # 同位元素分離施設
+  application =
+  { id        = 5500
+    name      = TECH_APP_INDUSTRY_50_NAME
+    desc      = TECH_APP_INDUSTRY_50_DESC
+    position  = { x = 566 y = 72 }
+    year      = 1941
+    # 質量とエネルギーの等価性の実験的証明
+    component = { id = 5501 name = TECH_CMP_INDUSTRY_50_1_NAME type = nuclear_engineering difficulty = 10 }
+    # 放射性物質分析
+    component = { id = 5502 name = TECH_CMP_INDUSTRY_50_2_NAME type = nuclear_engineering difficulty = 10 }
+    # 研究所における核分裂反応の実施
+    component = { id = 5503 name = TECH_CMP_INDUSTRY_50_3_NAME type = nuclear_engineering difficulty = 10 }
+    # 連鎖反応の発見
+    component = { id = 5504 name = TECH_CMP_INDUSTRY_50_4_NAME type = nuclear_engineering difficulty = 10 }
+    # 同位元素分離法
+    component = { id = 5505 name = TECH_CMP_INDUSTRY_50_5_NAME type = nuclear_engineering difficulty = 10 double_time = yes }
+    required  = { 5490 }
+    effects =
+    { command = { type = allow_building which = nuclear_reactor }
+      command = { type = max_reactor_size value = 1 }
+    }
+  }
+  # 核燃料分析
+  application =
+  { id        = 5510
+    name      = TECH_APP_INDUSTRY_51_NAME
+    desc      = TECH_APP_INDUSTRY_51_DESC
+    position  = { x = 566 y = 88 }
+    year      = 1941
+    # ベータトロン加速器
+    component = { id = 5511 name = TECH_CMP_INDUSTRY_51_1_NAME type = nuclear_engineering difficulty = 10 }
+    # ウラン238
+    component = { id = 5512 name = TECH_CMP_INDUSTRY_51_2_NAME type = nuclear_physics difficulty = 10 }
+    # トリウム232
+    component = { id = 5513 name = TECH_CMP_INDUSTRY_51_3_NAME type = nuclear_physics difficulty = 10 }
+    # ウラン235
+    component = { id = 5514 name = TECH_CMP_INDUSTRY_51_4_NAME type = nuclear_physics difficulty = 10 }
+    # 物質安定度試験
+    component = { id = 5515 name = TECH_CMP_INDUSTRY_51_5_NAME type = nuclear_engineering difficulty = 10 double_time = yes }
+    required  = { 5500 }
+    effects =
+    { command = { type = max_reactor_size value = 2 }
+    }
+  }
+  # 実験用原子炉
+  application =
+  { id        = 5520
+    name      = TECH_APP_INDUSTRY_52_NAME
+    desc      = TECH_APP_INDUSTRY_52_DESC
+    position  = { x = 566 y = 104 }
+    year      = 1941
+    # 原子炉設計
+    component = { id = 5521 name = TECH_CMP_INDUSTRY_52_1_NAME type = nuclear_engineering difficulty = 10 }
+    # 反射材材質試験
+    component = { id = 5522 name = TECH_CMP_INDUSTRY_52_2_NAME type = nuclear_engineering difficulty = 10 }
+    # 減速材材質試験
+    component = { id = 5523 name = TECH_CMP_INDUSTRY_52_3_NAME type = nuclear_engineering difficulty = 10 }
+    # 重水工場
+    component = { id = 5524 name = TECH_CMP_INDUSTRY_52_4_NAME type = nuclear_engineering difficulty = 10 }
+    # 原子炉試作試験
+    component = { id = 5525 name = TECH_CMP_INDUSTRY_52_5_NAME type = management difficulty = 10 double_time = yes }
+    required  = { 5510 }
+    effects =
+    { command = { type = max_reactor_size value = 3 }
+    }
+  }
+  # 原子炉の実用化
+  application =
+  { id        = 5530
+    name      = TECH_APP_INDUSTRY_53_NAME
+    desc      = TECH_APP_INDUSTRY_53_DESC
+    position  = { x = 566 y = 120 }
+    year      = 1943
+    # 炉心構造
+    component = { id = 5531 name = TECH_CMP_INDUSTRY_53_1_NAME type = nuclear_engineering difficulty = 10 }
+    # 反射材
+    component = { id = 5532 name = TECH_CMP_INDUSTRY_53_2_NAME type = nuclear_engineering difficulty = 10 }
+    # 減速材
+    component = { id = 5533 name = TECH_CMP_INDUSTRY_53_3_NAME type = nuclear_engineering difficulty = 10 }
+    # 希少金属の応用
+    component = { id = 5534 name = TECH_CMP_INDUSTRY_53_4_NAME type = nuclear_engineering difficulty = 10 }
+    # 稼動試験
+    component = { id = 5535 name = TECH_CMP_INDUSTRY_53_5_NAME type = management difficulty = 10 double_time = yes }
+    required  = { 5520 }
+    effects =
+    { command = { type = max_reactor_size value = 4 }
+    }
+  }
+  # 原子力発電
+  application =
+  { id        = 5540
+    name      = TECH_APP_INDUSTRY_54_NAME
+    desc      = TECH_APP_INDUSTRY_54_DESC
+    position  = { x = 566 y = 136 }
+    year      = 1944
+    # 原子力発電所設計
+    component = { id = 5541 name = TECH_CMP_INDUSTRY_54_1_NAME type = nuclear_engineering difficulty = 10 }
+    # 原子力タービン設計
+    component = { id = 5542 name = TECH_CMP_INDUSTRY_54_2_NAME type = nuclear_engineering difficulty = 10 }
+    # 緊急停止システム
+    component = { id = 5543 name = TECH_CMP_INDUSTRY_54_3_NAME type = nuclear_engineering difficulty = 10 }
+    # 核廃棄物処理
+    component = { id = 5544 name = TECH_CMP_INDUSTRY_54_4_NAME type = nuclear_engineering difficulty = 10 }
+    # 発電所試作試験
+    component = { id = 5545 name = TECH_CMP_INDUSTRY_54_5_NAME type = management difficulty = 10 double_time = yes }
+    required  = { 5530 }
+    effects =
+    { command = { type = max_reactor_size value = 5 }
+      command = { type = add_prov_resource which = -4 where = energy value = 50 }
+      command = { type = info_may_cause which = 7170 }
+      command = { type = info_may_cause which = 7200 }
+      command = { type = info_may_cause which = 7210 }
+      command = { type = info_may_cause which = 7220 }
+      command = { type = info_may_cause which = 7230 }
+    }
+  }
+  # ロケット試験研究施設
+  application =
+  { id        = 5550
+    name      = TECH_APP_INDUSTRY_55_NAME
+    desc      = TECH_APP_INDUSTRY_55_DESC
+    position  = { x = 24 y = 388 }
+    year      = 1936
+    # 風洞
+    component = { id = 5551 name = TECH_CMP_INDUSTRY_55_1_NAME type = aeronautics difficulty = 7 }
+    # 発射試験場
+    component = { id = 5552 name = TECH_CMP_INDUSTRY_55_2_NAME type = rocketry difficulty = 7 }
+    # 遠隔計測施設
+    component = { id = 5553 name = TECH_CMP_INDUSTRY_55_3_NAME type = rocketry difficulty = 7 }
+    # ロケット燃料
+    component = { id = 5554 name = TECH_CMP_INDUSTRY_55_4_NAME type = chemistry difficulty = 7 }
+    # 基本型ロケット燃料試験
+    component = { id = 5555 name = TECH_CMP_INDUSTRY_55_5_NAME type = management difficulty = 7 double_time = yes }
+    required  = { }
+    effects =
+    { command = { type = allow_building which = rocket_test }
+      command = { type = activate_unit_type which = naval_torpedoes_s }
+      command = { type = new_model which = naval_torpedoes_s value = 0 }
+    }
+  }
+  # ロケットエンジン
+  application =
+  { id        = 5560
+    name      = TECH_APP_INDUSTRY_56_NAME
+    desc      = TECH_APP_INDUSTRY_56_DESC
+    position  = { x = 24 y = 408 }
+    year      = 1939
+    # 燃焼室
+    component = { id = 5561 name = TECH_CMP_INDUSTRY_56_1_NAME type = rocketry difficulty = 8 }
+    # ディフューザー
+    component = { id = 5562 name = TECH_CMP_INDUSTRY_56_2_NAME type = rocketry difficulty = 8 }
+    # ノズル
+    component = { id = 5563 name = TECH_CMP_INDUSTRY_56_3_NAME type = rocketry difficulty = 8 }
+    # 燃料噴射装置
+    component = { id = 5564 name = TECH_CMP_INDUSTRY_56_4_NAME type = rocketry difficulty = 8 }
+    # バーナー
+    component = { id = 5565 name = TECH_CMP_INDUSTRY_56_5_NAME type = rocketry difficulty = 8 }
+    required  = { 5550 }
+    effects =
+    { command = { type = info_may_cause which = 7010 }
+      command = { type = info_may_cause which = 7260 }
+      command = { type = info_may_cause which = 7270 }
+      command = { type = new_model which = naval_torpedoes_s value = 1 }
+      command = { type = scrap_model which = naval_torpedoes_s value = 0 }
+    }
+  }
+  # ターボジェットエンジン
+  application =
+  { id        = 5570
+    name      = TECH_APP_INDUSTRY_57_NAME
+    desc      = TECH_APP_INDUSTRY_57_DESC
+    position  = { x = 40 y = 428 }
+    year      = 1939
+    # 圧縮機
+    component = { id = 5571 name = TECH_CMP_INDUSTRY_57_1_NAME type = rocketry difficulty = 8 }
+    # ファン
+    component = { id = 5572 name = TECH_CMP_INDUSTRY_57_2_NAME type = rocketry difficulty = 8 }
+    # エアインテーク
+    component = { id = 5573 name = TECH_CMP_INDUSTRY_57_3_NAME type = rocketry difficulty = 8 }
+    # 燃料噴射装置
+    component = { id = 5574 name = TECH_CMP_INDUSTRY_57_4_NAME type = rocketry difficulty = 8 }
+    # バーナー
+    component = { id = 5575 name = TECH_CMP_INDUSTRY_57_5_NAME type = rocketry difficulty = 8 }
+    required  = { 5560 }
+    effects =
+    { command = { type = info_may_cause which = 15500 }
+    }
+  }
+  # 飛行爆弾開発
+  application =
+  { id        = 5580
+    name      = TECH_APP_INDUSTRY_58_NAME
+    desc      = TECH_APP_INDUSTRY_58_DESC
+    position  = { x = 40 y = 447 }
+    year      = 1940
+    # 固体燃料ロケットエンジン
+    component = { id = 5581 name = TECH_CMP_INDUSTRY_58_1_NAME type = rocketry difficulty = 6 }
+    # ジャイロスコープ自動操縦装置
+    component = { id = 5582 name = TECH_CMP_INDUSTRY_58_2_NAME type = rocketry difficulty = 6 }
+    # 射出カタパルト
+    component = { id = 5583 name = TECH_CMP_INDUSTRY_58_3_NAME type = rocketry difficulty = 6 }
+    # 改良型操舵翼
+    component = { id = 5584 name = TECH_CMP_INDUSTRY_58_4_NAME type = rocketry difficulty = 6 }
+    # 弾道試験飛行
+    component = { id = 5585 name = TECH_CMP_INDUSTRY_58_5_NAME type = management difficulty = 6 double_time = yes }
+    required  = { 5560 }
+    effects =
+    { command = { type = info_may_cause which = 7100 }
+      command = { type = new_model which = naval_torpedoes_s value = 2 }
+      command = { type = scrap_model which = naval_torpedoes_s value = 1 }
+    }
+  }
+  # 飛行ロケット開発
+  application =
+  { id        = 5590
+    name      = TECH_APP_INDUSTRY_59_NAME
+    desc      = TECH_APP_INDUSTRY_59_DESC
+    position  = { x = 40 y = 466 }
+    year      = 1941
+    # 液体燃料ロケットエンジン
+    component = { id = 5591 name = TECH_CMP_INDUSTRY_59_1_NAME type = rocketry difficulty = 7 }
+    # 発展型ジャイロスコープ自動操縦装置
+    component = { id = 5592 name = TECH_CMP_INDUSTRY_59_2_NAME type = rocketry difficulty = 7 }
+    # 移動式発射装置
+    component = { id = 5593 name = TECH_CMP_INDUSTRY_59_3_NAME type = rocketry difficulty = 7 }
+    # 強化リブ
+    component = { id = 5594 name = TECH_CMP_INDUSTRY_59_4_NAME type = rocketry difficulty = 7 }
+    # 弾道試験飛行
+    component = { id = 5595 name = TECH_CMP_INDUSTRY_59_5_NAME type = management difficulty = 7 double_time = yes }
+    required  = { 5580 }
+    effects =
+    { command = { type = info_may_cause which = 7110 }
+      command = { type = new_model which = naval_torpedoes_s value = 3 }
+      command = { type = scrap_model which = naval_torpedoes_s value = 2 }
+    }
+  }
+  # 歩兵用装備-氷点下環境
+  application =
+  { id        = 5920
+    name      = TECH_APP_INDUSTRY_92_NAME
+    position  = { x = 284 y = 449 }
+    picture   = "DH5920"
+    year      = 1939
+    # 化学調理器
+    component = { id = 5921 name = TECH_CMP_INDUSTRY_92_1_NAME type = chemistry difficulty = 6 }
+    # 耐環境温度兵装
+    component = { id = 5922 name = TECH_CMP_INDUSTRY_92_2_NAME type = mechanics difficulty = 6 }
+    # 医療物資
+    component = { id = 5923 name = TECH_CMP_INDUSTRY_92_3_NAME type = chemistry difficulty = 6 }
+    # 寒中用衣類
+    component = { id = 5924 name = TECH_CMP_INDUSTRY_92_4_NAME type = general_equipment difficulty = 6 }
+    # 寒中用装備
+    component = { id = 5925 name = TECH_CMP_INDUSTRY_92_5_NAME type = general_equipment difficulty = 6 double_time = yes }
+    required  = { 5070 }
+    effects =
+    { command = { type = frozen_move which = infantry value = 5 }
+      command = { type = frozen_move which = militia value = 5 }
+      command = { type = frozen_move which = bergsjaeger value = 5 }
+      command = { type = frozen_move which = marine value = 5 }
+      command = { type = frozen_move which = paratrooper value = 5 }
+      command = { type = frozen_move which = d_rsv_33 value = 5 }
+      command = { type = frozen_attack which = infantry value = 5 }
+      command = { type = frozen_attack which = militia value = 5 }
+      command = { type = frozen_attack which = bergsjaeger value = 5 }
+      command = { type = frozen_attack which = marine value = 5 }
+      command = { type = frozen_attack which = paratrooper value = 5 }
+      command = { type = frozen_move which = d_rsv_33 value = 5 }
+      command = { type = frozen_defense which = infantry value = 5 }
+      command = { type = frozen_defense which = militia value = 5 }
+      command = { type = frozen_defense which = bergsjaeger value = 5 }
+      command = { type = frozen_defense which = marine value = 5 }
+      command = { type = frozen_defense which = paratrooper value = 5 }
+      command = { type = frozen_defense which = d_rsv_33 value = 5 }
+      command = { type = snow_attack which = infantry value = 5 }
+      command = { type = snow_attack which = militia value = 5 }
+      command = { type = snow_attack which = bergsjaeger value = 5 }
+      command = { type = snow_attack which = marine value = 5 }
+      command = { type = snow_attack which = paratrooper value = 5 }
+      command = { type = snow_attack which = d_rsv_33 value = 5 }
+      command = { type = snow_defense which = infantry value = 5 }
+      command = { type = snow_defense which = militia value = 5 }
+      command = { type = snow_defense which = bergsjaeger value = 5 }
+      command = { type = snow_defense which = marine value = 5 }
+      command = { type = snow_defense which = paratrooper value = 5 }
+      command = { type = snow_defense which = d_rsv_33 value = 5 }
+    }
+  }
+  # 車両修正-氷点下環境適用
+  application =
+  { id        = 5930
+    name      = TECH_APP_INDUSTRY_93_NAME
+    position  = { x = 284 y = 466 }
+    picture   = "DH5930"
+    year      = 1940
+    # 耐凍結潤滑剤
+    component = { id = 5931 name = TECH_CMP_INDUSTRY_93_1_NAME type = chemistry difficulty = 6 }
+    # 氷点下用雷管
+    component = { id = 5932 name = TECH_CMP_INDUSTRY_93_2_NAME type = chemistry difficulty = 6 }
+    # 寒中用装備
+    component = { id = 5933 name = TECH_CMP_INDUSTRY_93_3_NAME type = general_equipment difficulty = 6 }
+    # 暖房機器
+    component = { id = 5934 name = TECH_CMP_INDUSTRY_93_4_NAME type = mechanics difficulty = 6 }
+    # 耐環境温度物資
+    component = { id = 5935 name = TECH_CMP_INDUSTRY_93_5_NAME type = mechanics difficulty = 6 double_time = yes }
+    required  = { 5070 5920 }
+    effects =
+    { command = { type = frozen_move which = light_armor value = 5 }
+      command = { type = frozen_move which = armor value = 5 }
+      command = { type = frozen_move which = mechanized value = 5 }
+      command = { type = frozen_move which = hq value = 5 }
+      command = { type = frozen_move which = cavalry value = 5 }
+      command = { type = frozen_move which = motorized value = 5 }
+      command = { type = frozen_attack which = light_armor value = 5 }
+      command = { type = frozen_attack which = armor value = 5 }
+      command = { type = frozen_attack which = mechanized value = 5 }
+      command = { type = frozen_attack which = hq value = 5 }
+      command = { type = frozen_attack which = cavalry value = 5 }
+      command = { type = frozen_attack which = motorized value = 5 }
+      command = { type = frozen_defense which = light_armor value = 5 }
+      command = { type = frozen_defense which = armor value = 5 }
+      command = { type = frozen_defense which = mechanized value = 5 }
+      command = { type = frozen_defense which = hq value = 5 }
+      command = { type = frozen_defense which = cavalry value = 5 }
+      command = { type = frozen_defense which = motorized value = 5 }
+      command = { type = snow_move which = light_armor value = 5 }
+      command = { type = snow_move which = armor value = 5 }
+      command = { type = snow_move which = mechanized value = 5 }
+      command = { type = snow_move which = hq value = 5 }
+      command = { type = snow_move which = cavalry value = 5 }
+      command = { type = snow_move which = motorized value = 5 }
+      command = { type = snow_attack which = light_armor value = 5 }
+      command = { type = snow_attack which = armor value = 5 }
+      command = { type = snow_attack which = mechanized value = 5 }
+      command = { type = snow_attack which = hq value = 5 }
+      command = { type = snow_attack which = cavalry value = 5 }
+      command = { type = snow_attack which = motorized value = 5 }
+      command = { type = snow_defense which = light_armor value = 5 }
+      command = { type = snow_defense which = armor value = 5 }
+      command = { type = snow_defense which = mechanized value = 5 }
+      command = { type = snow_defense which = hq value = 5 }
+      command = { type = snow_defense which = cavalry value = 5 }
+      command = { type = snow_defense which = motorized value = 5 }
+    }
+  }
+  # 歩兵用装備-熱帯気候
+  application =
+  { id        = 5940
+    name      = TECH_APP_INDUSTRY_94_NAME
+    position  = { x = 396 y = 449 }
+    picture   = "DH5940"
+    year      = 1939
+    # 水質浄化
+    component = { id = 5941 name = TECH_CMP_INDUSTRY_94_1_NAME type = chemistry difficulty = 6 }
+    # 低メンテナンスライフル
+    component = { id = 5942 name = TECH_CMP_INDUSTRY_94_2_NAME type = mechanics difficulty = 6 }
+    # 医療物資
+    component = { id = 5943 name = TECH_CMP_INDUSTRY_94_3_NAME type = chemistry difficulty = 6 }
+    # 熱中用衣類
+    component = { id = 5944 name = TECH_CMP_INDUSTRY_94_4_NAME type = general_equipment difficulty = 6 }
+    # 低メンテナンス装備
+    component = { id = 5945 name = TECH_CMP_INDUSTRY_94_5_NAME type = general_equipment difficulty = 6 double_time = yes }
+    required  = { 5070 }
+    effects =
+    { command = { type = jungle_move which = infantry value = 5 }
+      command = { type = jungle_move which = militia value = 5 }
+      command = { type = jungle_move which = bergsjaeger value = 5 }
+      command = { type = jungle_move which = marine value = 5 }
+      command = { type = jungle_move which = paratrooper value = 5 }
+      command = { type = jungle_move which = d_rsv_33 value = 5 }
+      command = { type = jungle_attack which = infantry value = 5 }
+      command = { type = jungle_attack which = militia value = 5 }
+      command = { type = jungle_attack which = bergsjaeger value = 5 }
+      command = { type = jungle_attack which = marine value = 5 }
+      command = { type = jungle_attack which = paratrooper value = 5 }
+      command = { type = jungle_attack which = d_rsv_33 value = 5 }
+      command = { type = jungle_defense which = infantry value = 5 }
+      command = { type = jungle_defense which = militia value = 5 }
+      command = { type = jungle_defense which = bergsjaeger value = 5 }
+      command = { type = jungle_defense which = marine value = 5 }
+      command = { type = jungle_defense which = paratrooper value = 5 }
+      command = { type = jungle_defense which = d_rsv_33 value = 5 }
+      command = { type = forest_move which = infantry value = 5 }
+      command = { type = forest_move which = militia value = 5 }
+      command = { type = forest_move which = bergsjaeger value = 5 }
+      command = { type = forest_move which = marine value = 5 }
+      command = { type = forest_move which = paratrooper value = 5 }
+      command = { type = forest_move which = d_rsv_33 value = 5 }
+      command = { type = forest_attack which = infantry value = 5 }
+      command = { type = forest_attack which = militia value = 5 }
+      command = { type = forest_attack which = bergsjaeger value = 5 }
+      command = { type = forest_attack which = marine value = 5 }
+      command = { type = forest_attack which = paratrooper value = 5 }
+      command = { type = forest_attack which = d_rsv_33 value = 5 }
+      command = { type = forest_defense which = infantry value = 5 }
+      command = { type = forest_defense which = militia value = 5 }
+      command = { type = forest_defense which = bergsjaeger value = 5 }
+      command = { type = forest_defense which = marine value = 5 }
+      command = { type = forest_defense which = paratrooper value = 5 }
+      command = { type = forest_defense which = d_rsv_33 value = 5 }
+    }
+  }
+  # 車両修正-密林環境適用
+  application =
+  { id        = 5950
+    name      = TECH_APP_INDUSTRY_95_NAME
+    position  = { x = 396 y = 466 }
+    picture   = "DH5950"
+    year      = 1940
+    # 殺かび剤
+    component = { id = 5951 name = TECH_CMP_INDUSTRY_95_1_NAME type = chemistry difficulty = 6 }
+    # 高信頼性雷管
+    component = { id = 5952 name = TECH_CMP_INDUSTRY_95_2_NAME type = chemistry difficulty = 6 }
+    # 低メンテナンス装備
+    component = { id = 5953 name = TECH_CMP_INDUSTRY_95_3_NAME type = general_equipment difficulty = 6 }
+    # エアフィルタ
+    component = { id = 5954 name = TECH_CMP_INDUSTRY_95_4_NAME type = mechanics difficulty = 6 }
+    # 耐環境温度物資
+    component = { id = 5955 name = TECH_CMP_INDUSTRY_95_5_NAME type = mechanics difficulty = 6 double_time = yes }
+    required  = { 5070 5940 }
+    effects =
+    { command = { type = jungle_move which = light_armor value = 5 }
+      command = { type = jungle_move which = armor value = 5 }
+      command = { type = jungle_move which = mechanized value = 5 }
+      command = { type = jungle_move which = hq value = 5 }
+      command = { type = jungle_move which = cavalry value = 5 }
+      command = { type = jungle_move which = motorized value = 5 }
+      command = { type = jungle_attack which = light_armor value = 5 }
+      command = { type = jungle_attack which = armor value = 5 }
+      command = { type = jungle_attack which = mechanized value = 5 }
+      command = { type = jungle_attack which = hq value = 5 }
+      command = { type = jungle_attack which = cavalry value = 5 }
+      command = { type = jungle_attack which = motorized value = 5 }
+      command = { type = jungle_defense which = light_armor value = 5 }
+      command = { type = jungle_defense which = armor value = 5 }
+      command = { type = jungle_defense which = mechanized value = 5 }
+      command = { type = jungle_defense which = hq value = 5 }
+      command = { type = jungle_defense which = cavalry value = 5 }
+      command = { type = jungle_defense which = motorized value = 5 }
+      command = { type = forest_move which = light_armor value = 5 }
+      command = { type = forest_move which = armor value = 5 }
+      command = { type = forest_move which = mechanized value = 5 }
+      command = { type = forest_move which = hq value = 5 }
+      command = { type = forest_move which = cavalry value = 5 }
+      command = { type = forest_move which = motorized value = 5 }
+      command = { type = forest_attack which = light_armor value = 5 }
+      command = { type = forest_attack which = armor value = 5 }
+      command = { type = forest_attack which = mechanized value = 5 }
+      command = { type = forest_attack which = hq value = 5 }
+      command = { type = forest_attack which = cavalry value = 5 }
+      command = { type = forest_attack which = motorized value = 5 }
+      command = { type = forest_defense which = light_armor value = 5 }
+      command = { type = forest_defense which = armor value = 5 }
+      command = { type = forest_defense which = mechanized value = 5 }
+      command = { type = forest_defense which = hq value = 5 }
+      command = { type = forest_defense which = cavalry value = 5 }
+      command = { type = forest_defense which = motorized value = 5 }
+    }
+  }
+  # 歩兵用装備-砂漠環境
+  application =
+  { id        = 5960
+    name      = TECH_APP_INDUSTRY_96_NAME
+    position  = { x = 508 y = 449 }
+    picture   = "DH5960"
+    year      = 1939
+    # 太陽光保護
+    component = { id = 5961 name = TECH_CMP_INDUSTRY_96_1_NAME type = chemistry difficulty = 6 }
+    # 耐環境温度兵装
+    component = { id = 5962 name = TECH_CMP_INDUSTRY_96_2_NAME type = mechanics difficulty = 6 }
+    # 医療物資
+    component = { id = 5963 name = TECH_CMP_INDUSTRY_96_3_NAME type = chemistry difficulty = 6 }
+    # 保護用衣類
+    component = { id = 5964 name = TECH_CMP_INDUSTRY_96_4_NAME type = general_equipment difficulty = 6 }
+    # 保護用装備
+    component = { id = 5965 name = TECH_CMP_INDUSTRY_96_5_NAME type = general_equipment difficulty = 6 double_time = yes }
+    required  = { 5070 }
+    effects =
+    { command = { type = desert_move which = infantry value = 5 }
+      command = { type = desert_move which = militia value = 5 }
+      command = { type = desert_move which = bergsjaeger value = 5 }
+      command = { type = desert_move which = marine value = 5 }
+      command = { type = desert_move which = paratrooper value = 5 }
+      command = { type = desert_move which = d_rsv_33 value = 5 }
+      command = { type = desert_attack which = infantry value = 5 }
+      command = { type = desert_attack which = militia value = 5 }
+      command = { type = desert_attack which = bergsjaeger value = 5 }
+      command = { type = desert_attack which = marine value = 5 }
+      command = { type = desert_attack which = paratrooper value = 5 }
+      command = { type = desert_attack which = d_rsv_33 value = 5 }
+      command = { type = desert_defense which = infantry value = 5 }
+      command = { type = desert_defense which = militia value = 5 }
+      command = { type = desert_defense which = bergsjaeger value = 5 }
+      command = { type = desert_defense which = marine value = 5 }
+      command = { type = desert_defense which = paratrooper value = 5 }
+      command = { type = desert_defense which = d_rsv_33 value = 5 }
+    }
+  }
+  # 車両修正-砂漠環境適用
+  application =
+  { id        = 5970
+    name      = TECH_APP_INDUSTRY_97_NAME
+    position  = { x = 508 y = 466 }
+    picture   = "DH5970"
+    year      = 1940
+    # 改良型潤滑剤
+    component = { id = 5971 name = TECH_CMP_INDUSTRY_97_1_NAME type = chemistry difficulty = 6 }
+    # 耐環境温度用雷管
+    component = { id = 5972 name = TECH_CMP_INDUSTRY_97_2_NAME type = chemistry difficulty = 6 }
+    # 熱中用装備
+    component = { id = 5973 name = TECH_CMP_INDUSTRY_97_3_NAME type = general_equipment difficulty = 6 }
+    # 冷却機器
+    component = { id = 5974 name = TECH_CMP_INDUSTRY_97_4_NAME type = mechanics difficulty = 6 }
+    # エアフィルタ
+    component = { id = 5975 name = TECH_CMP_INDUSTRY_97_5_NAME type = mechanics difficulty = 6 double_time = yes }
+    required  = { 5070 5960 }
+    effects =
+    { command = { type = desert_move which = light_armor value = 5 }
+      command = { type = desert_move which = armor value = 5 }
+      command = { type = desert_move which = mechanized value = 5 }
+      command = { type = desert_move which = hq value = 5 }
+      command = { type = desert_move which = cavalry value = 5 }
+      command = { type = desert_move which = motorized value = 5 }
+      command = { type = desert_attack which = light_armor value = 5 }
+      command = { type = desert_attack which = armor value = 5 }
+      command = { type = desert_attack which = mechanized value = 5 }
+      command = { type = desert_attack which = hq value = 5 }
+      command = { type = desert_attack which = cavalry value = 5 }
+      command = { type = desert_attack which = motorized value = 5 }
+      command = { type = desert_defense which = light_armor value = 5 }
+      command = { type = desert_defense which = armor value = 5 }
+      command = { type = desert_defense which = mechanized value = 5 }
+      command = { type = desert_defense which = hq value = 5 }
+      command = { type = desert_defense which = cavalry value = 5 }
+      command = { type = desert_defense which = motorized value = 5 }
+    }
+  }
+  label =
+  { tag      = TECH_CAT_INDUSTRY_2
+    position = { x = 174 y = 436 }
+  }
+  # 歩兵用装備-不整地
+  application =
+  { id        = 5980
+    name      = TECH_APP_INDUSTRY_98_NAME
+    position  = { x = 172 y = 449 }
+    picture   = "DH5980"
+    year      = 1939
+    # 専用補充品
+    component = { id = 5981 name = TECH_CMP_INDUSTRY_98_1_NAME type = chemistry difficulty = 6 }
+    # 低メンテナンスライフル
+    component = { id = 5982 name = TECH_CMP_INDUSTRY_98_2_NAME type = mechanics difficulty = 6 }
+    # 塹壕足炎治療
+    component = { id = 5983 name = TECH_CMP_INDUSTRY_98_3_NAME type = chemistry difficulty = 6 }
+    # 頑強な衣類
+    component = { id = 5984 name = TECH_CMP_INDUSTRY_98_4_NAME type = general_equipment difficulty = 6 }
+    # 耐衝撃用装備
+    component = { id = 5985 name = TECH_CMP_INDUSTRY_98_5_NAME type = general_equipment difficulty = 6 double_time = yes }
+    required  = { 5070 }
+    effects =
+    { command = { type = mountain_move which = infantry value = 5 }
+      command = { type = mountain_move which = militia value = 5 }
+      command = { type = mountain_move which = bergsjaeger value = 5 }
+      command = { type = mountain_move which = marine value = 5 }
+      command = { type = mountain_move which = paratrooper value = 5 }
+      command = { type = mountain_move which = d_rsv_33 value = 5 }
+      command = { type = mountain_attack which = infantry value = 5 }
+      command = { type = mountain_attack which = militia value = 5 }
+      command = { type = mountain_attack which = bergsjaeger value = 5 }
+      command = { type = mountain_attack which = marine value = 5 }
+      command = { type = mountain_attack which = paratrooper value = 5 }
+      command = { type = mountain_attack which = d_rsv_33 value = 5 }
+      command = { type = mountain_defense which = infantry value = 5 }
+      command = { type = mountain_defense which = militia value = 5 }
+      command = { type = mountain_defense which = bergsjaeger value = 5 }
+      command = { type = mountain_defense which = marine value = 5 }
+      command = { type = mountain_defense which = paratrooper value = 5 }
+      command = { type = mountain_defense which = d_rsv_33 value = 5 }
+      command = { type = hill_move which = land value = 5 }
+      command = { type = hill_attack which = land value = 5 }
+      command = { type = hill_defense which = land value = 5 }
+      command = { type = muddy_move which = infantry value = 5 }
+      command = { type = muddy_move which = militia value = 5 }
+      command = { type = muddy_move which = bergsjaeger value = 5 }
+      command = { type = muddy_move which = marine value = 5 }
+      command = { type = muddy_move which = paratrooper value = 5 }
+      command = { type = muddy_move which = d_rsv_33 value = 5 }
+      command = { type = muddy_attack which = infantry value = 5 }
+      command = { type = muddy_attack which = militia value = 5 }
+      command = { type = muddy_attack which = bergsjaeger value = 5 }
+      command = { type = muddy_attack which = marine value = 5 }
+      command = { type = muddy_attack which = paratrooper value = 5 }
+      command = { type = muddy_attack which = d_rsv_33 value = 5 }
+      command = { type = muddy_defense which = infantry value = 5 }
+      command = { type = muddy_defense which = militia value = 5 }
+      command = { type = muddy_defense which = bergsjaeger value = 5 }
+      command = { type = muddy_defense which = marine value = 5 }
+      command = { type = muddy_defense which = paratrooper value = 5 }
+      command = { type = muddy_defense which = d_rsv_33 value = 5 }
+    }
+  }
+  # 車両修正-不整地用
+  application =
+  { id        = 5990
+    name      = TECH_APP_INDUSTRY_99_NAME
+    position  = { x = 172 y = 466 }
+    picture   = "DH5990"
+    year      = 1940
+    # 改良型潤滑剤
+    component = { id = 5991 name = TECH_CMP_INDUSTRY_99_1_NAME type = chemistry difficulty = 6 }
+    # 耐衝撃用雷管
+    component = { id = 5992 name = TECH_CMP_INDUSTRY_99_2_NAME type = chemistry difficulty = 6 }
+    # 耐衝撃用装備
+    component = { id = 5993 name = TECH_CMP_INDUSTRY_99_3_NAME type = general_equipment difficulty = 6 }
+    # スプリング安定化装備
+    component = { id = 5994 name = TECH_CMP_INDUSTRY_99_4_NAME type = mechanics difficulty = 6 }
+    # 耐性物資
+    component = { id = 5995 name = TECH_CMP_INDUSTRY_99_5_NAME type = mechanics difficulty = 6 double_time = yes }
+    required  = { 5070 5980 }
+    effects =
+    { command = { type = mountain_move which = light_armor value = 5 }
+      command = { type = mountain_move which = armor value = 5 }
+      command = { type = mountain_move which = mechanized value = 5 }
+      command = { type = mountain_move which = hq value = 5 }
+      command = { type = mountain_move which = cavalry value = 5 }
+      command = { type = mountain_move which = motorized value = 5 }
+      command = { type = mountain_attack which = light_armor value = 5 }
+      command = { type = mountain_attack which = armor value = 5 }
+      command = { type = mountain_attack which = mechanized value = 5 }
+      command = { type = mountain_attack which = hq value = 5 }
+      command = { type = mountain_attack which = cavalry value = 5 }
+      command = { type = mountain_attack which = motorized value = 5 }
+      command = { type = mountain_defense which = light_armor value = 5 }
+      command = { type = mountain_defense which = armor value = 5 }
+      command = { type = mountain_defense which = mechanized value = 5 }
+      command = { type = mountain_defense which = hq value = 5 }
+      command = { type = mountain_defense which = cavalry value = 5 }
+      command = { type = mountain_defense which = motorized value = 5 }
+      command = { type = muddy_move which = light_armor value = 5 }
+      command = { type = muddy_move which = armor value = 5 }
+      command = { type = muddy_move which = mechanized value = 5 }
+      command = { type = muddy_move which = hq value = 5 }
+      command = { type = muddy_move which = cavalry value = 5 }
+      command = { type = muddy_move which = motorized value = 5 }
+      command = { type = muddy_attack which = light_armor value = 5 }
+      command = { type = muddy_attack which = armor value = 5 }
+      command = { type = muddy_attack which = mechanized value = 5 }
+      command = { type = muddy_attack which = hq value = 5 }
+      command = { type = muddy_attack which = cavalry value = 5 }
+      command = { type = muddy_attack which = motorized value = 5 }
+      command = { type = muddy_defense which = light_armor value = 5 }
+      command = { type = muddy_defense which = armor value = 5 }
+      command = { type = muddy_defense which = mechanized value = 5 }
+      command = { type = muddy_defense which = hq value = 5 }
+      command = { type = muddy_defense which = cavalry value = 5 }
+      command = { type = muddy_defense which = motorized value = 5 }
+    }
+  }
+  # 初期的国土開発計画
+  application =
+  { id        = 310040
+    name      = TECH_APP_INDUSTRY_310040_NAME
+    desc      = TECH_APP_INDUSTRY_310040_DESC
+    position  = { x = 304 y = 138 }
+    year      = 1940
+    # 投入構造と産出構造の把握
+    component = { id = 310041 name = TECH_CMP_INDUSTRY_310040_1_NAME type = management difficulty = 8 }
+    # 初歩的な産業組織論
+    component = { id = 310042 name = TECH_CMP_INDUSTRY_310040_2_NAME type = management difficulty = 8 }
+    # 簡易的交通網整備
+    component = { id = 310043 name = TECH_CMP_INDUSTRY_310040_3_NAME type = industrial_engineering difficulty = 8 }
+    # 初歩的な数理経済学
+    component = { id = 310044 name = TECH_CMP_INDUSTRY_310040_4_NAME type = mathematics difficulty = 8 }
+    # 初期的産業整備計画
+    component = { id = 310045 name = TECH_CMP_INDUSTRY_310040_5_NAME type = management difficulty = 8 }
+    required  = { 5070 5100 5310 }
+    effects =
+    { command = { type = building_prod_mod which = ic value = 5 }
+      command = { type = building_prod_mod which = infrastructure value = 5 }
+      command = { type = building_prod_mod which = air_base value = 5 }
+      command = { type = building_prod_mod which = naval_base value = 5 }
+      command = { type = building_prod_mod which = rocket_test value = 5 }
+      command = { type = building_prod_mod which = nuclear_reactor value = 5 }
+    }
+  }
+  # 基本的国土開発計画
+  application =
+  { id        = 310050
+    name      = TECH_APP_INDUSTRY_310050_NAME
+    desc      = TECH_APP_INDUSTRY_310050_DESC
+    position  = { x = 304 y = 154 }
+    year      = 1945
+    # 実験的産業連関分析
+    component = { id = 310051 name = TECH_CMP_INDUSTRY_310050_1_NAME type = management difficulty = 8 }
+    # 基本的な産業組織論
+    component = { id = 310052 name = TECH_CMP_INDUSTRY_310050_2_NAME type = management difficulty = 8 }
+    # 基本的交通網整備
+    component = { id = 310053 name = TECH_CMP_INDUSTRY_310050_3_NAME type = industrial_engineering difficulty = 8 }
+    # 実験的な数理経済学
+    component = { id = 310054 name = TECH_CMP_INDUSTRY_310050_4_NAME type = mathematics difficulty = 8 }
+    # 基本的産業整備計画
+    component = { id = 310055 name = TECH_CMP_INDUSTRY_310050_5_NAME type = management difficulty = 8 }
+    required  = { 310040 }
+    effects =
+    { command = { type = building_prod_mod which = ic value = 5 }
+      command = { type = building_prod_mod which = infrastructure value = 5 }
+      command = { type = building_prod_mod which = air_base value = 5 }
+      command = { type = building_prod_mod which = naval_base value = 5 }
+      command = { type = building_prod_mod which = rocket_test value = 5 }
+      command = { type = building_prod_mod which = nuclear_reactor value = 5 }
+    }
+  }
+  # 発展的国土開発計画
+  application =
+  { id        = 310060
+    name      = TECH_APP_INDUSTRY_310060_NAME
+    desc      = TECH_APP_INDUSTRY_310060_DESC
+    position  = { x = 304 y = 170 }
+    year      = 1950
+    # 基本的産業連関分析
+    component = { id = 310061 name = TECH_CMP_INDUSTRY_310060_1_NAME type = management difficulty = 9 }
+    # 高度な産業組織論
+    component = { id = 310062 name = TECH_CMP_INDUSTRY_310060_2_NAME type = management difficulty = 9 }
+    # 発展的交通網整備
+    component = { id = 310063 name = TECH_CMP_INDUSTRY_310060_3_NAME type = industrial_engineering difficulty = 9 }
+    # 高度な数理経済学
+    component = { id = 310064 name = TECH_CMP_INDUSTRY_310060_4_NAME type = mathematics difficulty = 9 }
+    # 発展的産業整備計画
+    component = { id = 310065 name = TECH_CMP_INDUSTRY_310060_5_NAME type = management difficulty = 9 }
+    required  = { 310050 }
+    effects =
+    { command = { type = building_prod_mod which = ic value = 5 }
+      command = { type = building_prod_mod which = infrastructure value = 5 }
+      command = { type = building_prod_mod which = air_base value = 5 }
+      command = { type = building_prod_mod which = naval_base value = 5 }
+      command = { type = building_prod_mod which = rocket_test value = 5 }
+      command = { type = building_prod_mod which = nuclear_reactor value = 5 }
+    }
+  }
+  # 準現代的国土開発計画
+  application =
+  { id        = 310070
+    name      = TECH_APP_INDUSTRY_310070_NAME
+    desc      = TECH_APP_INDUSTRY_310070_DESC
+    position  = { x = 304 y = 186 }
+    year      = 1955
+    # 準現代的産業連関分析
+    component = { id = 310071 name = TECH_CMP_INDUSTRY_310070_1_NAME type = management difficulty = 9 }
+    # 準現代の産業組織論
+    component = { id = 310072 name = TECH_CMP_INDUSTRY_310070_2_NAME type = management difficulty = 9 }
+    # 準現代的交通網整備
+    component = { id = 310073 name = TECH_CMP_INDUSTRY_310070_3_NAME type = industrial_engineering difficulty = 9 }
+    # 国民経済計算
+    component = { id = 310074 name = TECH_CMP_INDUSTRY_310070_4_NAME type = mathematics difficulty = 9 }
+    # 準現代的産業整備計画
+    component = { id = 310075 name = TECH_CMP_INDUSTRY_310070_5_NAME type = management difficulty = 9 }
+    required  = { 310060 }
+    effects =
+    { command = { type = building_prod_mod which = ic value = 5 }
+      command = { type = building_prod_mod which = infrastructure value = 5 }
+      command = { type = building_prod_mod which = air_base value = 5 }
+      command = { type = building_prod_mod which = naval_base value = 5 }
+      command = { type = building_prod_mod which = rocket_test value = 5 }
+      command = { type = building_prod_mod which = nuclear_reactor value = 5 }
+    }
+  }
+  # 現代的国土開発計画
+  application =
+  { id        = 310080
+    name      = TECH_APP_INDUSTRY_310080_NAME
+    desc      = TECH_APP_INDUSTRY_310080_DESC
+    position  = { x = 304 y = 202 }
+    year      = 1960
+    # 現代的産業連関分析
+    component = { id = 310081 name = TECH_CMP_INDUSTRY_310080_1_NAME type = management difficulty = 10 }
+    # 現代の産業組織論
+    component = { id = 310082 name = TECH_CMP_INDUSTRY_310080_2_NAME type = management difficulty = 10 }
+    # 現代的交通網整備
+    component = { id = 310083 name = TECH_CMP_INDUSTRY_310080_3_NAME type = industrial_engineering difficulty = 10 }
+    # 高度な国民経済計算
+    component = { id = 310084 name = TECH_CMP_INDUSTRY_310080_4_NAME type = mathematics difficulty = 10 }
+    # 現代的産業整備計画
+    component = { id = 310085 name = TECH_CMP_INDUSTRY_310080_5_NAME type = management difficulty = 10 }
+    required  = { 310070 }
+    effects =
+    { command = { type = building_prod_mod which = ic value = 5 }
+      command = { type = building_prod_mod which = infrastructure value = 5 }
+      command = { type = building_prod_mod which = air_base value = 5 }
+      command = { type = building_prod_mod which = naval_base value = 5 }
+      command = { type = building_prod_mod which = rocket_test value = 5 }
+      command = { type = building_prod_mod which = nuclear_reactor value = 5 }
+    }
+  }
+}

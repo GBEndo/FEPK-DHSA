@@ -1,0 +1,22 @@
+PRK;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+579001;Head of State;‹à“ú¬ (ƒLƒ€EƒCƒ‹ƒ\ƒ“);35;ST;Powerhungry Demagogue;Undying;M579001;x
+579002;Head of Government;‹à“ú¬ (ƒLƒ€EƒCƒ‹ƒ\ƒ“);35;ST;Backroom Backstabber;Undying;M579002;x
+579003;Foreign Minister;“ì“ú (ƒiƒ€EƒCƒ‹);35;ST;General Staffer;Medium;M579003;x
+579004;Minister of Armament;‘‚”ÓA (ƒ`ƒ‡Eƒ}ƒ“ƒVƒN);35;ST;laissez-faire capitalist;Medium;M578005;x
+579005;Minister of Security;‹à“ú¬ (ƒLƒ€EƒCƒ‹ƒ\ƒ“);35;ST;Prince of Terror;Very High;M579001;x
+579006;Head of Military Intelligence;åJ™¤Œõ (ƒVƒƒƒIEƒWƒ“ƒKƒ“);35;ST;Logistics Specialist;Very Low;M579006;x
+579007;Chief of Staff;‘v—Ö (ƒ\ƒ“EƒVƒ‹ƒ“);35;ST;School of Fire Support;Medium;M579007;x
+579008;Chief of Army;‹à“ú¬ (ƒLƒ€EƒCƒ‹ƒ\ƒ“);35;ST;Decisive Battle Doctrine;High;M579001;x
+579009;Chief of Navy;—«¼Œ³ (ƒŠƒ…[EƒVƒ…ƒAƒ“);35;ST;Indirect Approach Doctrine;Medium;M579009;x
+579010;Chief of Air Force;—›”_ (ƒŠEƒPƒmƒ“);35;ST;Carpet Bombing Doctrine;Medium;M579010;x
+579011;Head of State;—›“Œ‹P (ƒŠEƒhƒ“ƒtƒB);35;SD;Barking Buffoon;High;M578014;x
+579012;Head of Government;‹à¹•ò (ƒLƒ€Eƒ`ƒƒƒ“ƒMƒ€);35;SD;Flamboyant Tough Guy;High;M578016;x
+579013;Foreign Minister;‹à‰p“O (ƒLƒ€Eƒˆƒ“ƒ`ƒ‡ƒ‹);35;SD;Great Compromiser;Medium;M579013;x
+579014;Minister of Armament;–pŒ›‰i (ƒpƒNEƒzƒjƒ‡ƒ“);35;SD;Resource Industrialist;Medium;M578012;x
+579015;Minister of Security;’rÂ“V (ƒ`Eƒ`ƒ‡ƒ“ƒ`ƒ‡ƒ“);35;SD;Compassionate Gentleman;Very High;M578017;x
+579016;Head of Military Intelligence;ƒˆƒ“Eƒ~ƒ“ƒz;35;ST;Technical Specialist;Very Low;M579016;x
+579017;Chief of Staff;“ì“ú (ƒiƒ€EƒCƒ‹);35;SD;School of Defence;Medium;M579003;x
+579018;Chief of Navy;‹àèLíx (ƒLƒ€EƒCƒ‹ƒ`ƒ‡ƒ‹);35;ST;Indirect Approach Doctrine;Medium;M579018;x
+579019;Chief of Navy;ƒŠƒ…EƒWƒ…ƒ“ƒVƒv;35;SD;Decisive Naval Battle Doctrine;Medium;M579019;x
+579020;Chief of Air Force;–pîEŒi (ƒpƒNEƒ~ƒ“ƒMƒ‡ƒ“);35;SD;Naval Aviation Doctrine;Medium;M579020;x

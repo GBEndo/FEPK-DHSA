@@ -1,0 +1,169 @@
+# GFW ŠCŒRII
+
+max_garrison_prop = 0.50
+min_garrison_prop = 0.20
+
+###################################
+# Construction and Tech Research
+###################################
+
+military = { 
+	relative_build_scheme 	= no
+	max_batch_peace 	= 720
+	max_batch_war 		= 720
+	max_batch_home_front 	= 180
+	extra_convoys_war = 0.1000 
+	extra_convoys_peace = 0.1000 
+	#### Divisions etc...
+	infantry 		= 0 #18
+	cavalry 		= 0
+	motorized 		= 10 #8
+	mechanized 		= 0 #6
+	light_armor 		= 0
+	armor 			= 10 #9
+	paratrooper 		= 0 #2
+	marine 			= 0
+	bergsjaeger 		= 5
+	garrison		= 0
+   	hq 			= 0
+	militia 		= 0
+#					25 %
+	interceptor 		= 0
+	multi_role 		= 3
+	cas 			= 3
+	strategic_bomber 	= 0
+	tactical_bomber		= 3
+	naval_bomber 		= 6
+	transport_plane 	= 0
+	flying_bomb 		= 0
+	flying_rocket 		= 0
+#					15 %
+	battleship 		= 2
+	carrier 		= 8
+	escort_carrier		= 0
+	destroyer 		= 10
+	light_cruiser 		= 10
+	heavy_cruiser 		= 10
+	battlecruiser 		= 0
+	submarine 		= 5
+	nuclear_submarine 	= 0
+	transports 		= 15
+#					60 %
+
+	#### Brigades
+	artillery 		= 5
+	sp_artillery 		= 10
+	rocket_artillery	= 0
+	sp_rct_artillery 	= 0
+	anti_tank 		= 0
+	tank_destroyer 		= 0
+	light_armor_brigade 	= 0
+	heavy_armor 		= 10
+	super_heavy_armor 	= 0
+	armored_car 		= 0
+	anti_air 		= 0
+	police 			= 10
+	engineer 		= 15
+
+	cag = 100.000
+}
+
+technology = { 
+	endgoal 	= { } 
+	preference 	= {
+		# Tools
+		5050 5060 5070
+
+		# Engineering
+		5080 5090 5100
+		
+		# Production Control
+		5110 5120
+		
+		# Assembly Line
+		5130 5140 5150 5160 5180
+		
+		# Cryptography
+		5310 5320 5330 5340
+		
+		# Special Weapons
+		7140 7150 7160
+
+		#Infantry
+		1010 1020 1030 1040 1050 1060
+
+		# Inf support
+		1310 1320 1330 1340 1350 1360
+
+		# Motorized
+		1230 1240 1250
+
+		# CAS
+		4170 4280 4180
+
+		# Medium tanks
+		2070 2080 2090
+
+		# Light tanks
+		2020 2030 2040 2050 2060
+
+		# Carrier
+		3320 3330 3340 3350 3360 3370 3380 3390
+
+		# Submarines
+		3400 3410 3420 3430 3440 3450
+
+		# Mechanized
+		1260 1270 1280 1290
+
+		# Naval Doctrines
+		8210 8280 8290 8300
+		
+		# Air Doctrines
+		9060 9080 9100 9110 9120 9130 9190 9200 9210 9220
+		9230 9240 9250 9260 9270 9280 9290 9300 9310 9320
+		9330 9340 9350 9360 9370 9380 9390 9400 9410 9420
+
+	} 
+	ignore 		= {
+		# Strategic bombers
+		4220 4230 4240
+
+		# Battle Cruiser
+		3190 3200 3210 3220 3230 3240
+
+		# Super-heavy Battleship
+		3310 12050
+
+		# Light Carrier
+		12100 12110 12120 12130 12140 12150
+
+		# Airborne
+		1080 1090 1100
+
+		# Air Transports
+		4260 4270
+
+		# SP Rocket Artillery
+		2260 2270 2280 
+
+		# Rocket Artillery
+		2370 2380 2390
+		
+		# Armoured Cars
+		2150 2160
+		
+		# Strategic Air Doctrines
+		9140 9150 9160 9170 9180 9430 9440 9450 9460
+	}
+ 
+	armor 		= 5
+	infantry 	= 7
+	industry 	= 4
+	aircraft 	= 6
+	naval 		= 4
+	land_doctrines 	= 3
+	secret_weapons 	= 2
+	air_doctrines 	= 6
+	naval_doctrines = 5
+}

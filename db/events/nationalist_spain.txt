@@ -1,0 +1,464 @@
+#
+# HoI - Nationalist Spain Events
+#
+#		written by Henrik F乕raeus
+#
+
+#########################################################################
+#  Spanish Civil War - Fascist Nation
+#########################################################################
+event = {
+	id = 3001
+	random = no
+	country = SPA
+
+	trigger = {
+		event = 3100
+		event = 3107
+	}
+
+	name = "EVT_3001_NAME"
+	desc = "EVT_3001_DESC"
+	style = 0
+	picture = "SPA_fascist"
+
+	date = { day = 18 month = july year = 1936 }
+#	date = { day = 11 month = january year = 1936 }
+#	offset = 3
+#	deathdate = { day = 29 month = december year = 1947 }
+
+	action_a = {
+		name = "OK" # Anarchism and Communism must fall!
+
+		command = { type = set_domestic which = democratic value = 2 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = set_domestic which = freedom value = 2 }
+		command = { type = set_domestic which = free_market value = 5 }
+		command = { type = set_domestic which = professional_army value = 6 }
+		command = { type = set_domestic which = defense_lobby value = 10 }
+		command = { type = set_domestic which = interventionism value = 4 }
+
+		command = { type = headofstate which = 10001 }
+		command = { type = headofgovernment which = 10002 }
+		command = { type = foreignminister which = 10003 }
+		command = { type = armamentminister which = 10004 }
+		command = { type = ministerofsecurity which = 10005 }
+		command = { type = ministerofintelligence which = 10006 }
+		command = { type = chiefofstaff which = 10007 }
+		command = { type = chiefofarmy which = 10008 }
+		command = { type = chiefofnavy which = 10009 }
+		command = { type = chiefofair which = 10010 }
+
+		command = { type = sleepminister which = 10279 } #Jos・Sanjurjo as HoS
+		command = { type = sleepminister which = 10281 } #Jos・Sanjurjo as HoG
+		command = { type = sleepminister which = 10188 } #Jos・Sanjurjo as CoS
+		command = { type = sleepminister which = 10211 } #Jos・Sanjurjo as CoA
+		command = { type = sleepleader which = 3460 }	#Sanjurjo
+
+		command = { type = supplies value = 1500 where = 333 } #burgos
+		command = { type = supplies value = 500 where = 347 } #seville
+		command = { type = oilpool value = 2000 }
+		command = { type = metalpool value = 5000 }
+		command = { type = energypool value = 5000 }
+		command = { type = rarematerialspool value = 2000 }
+		command = { type = manpowerpool value = 30 }
+		command = { type = money value = 500 }
+
+
+		command = { type = transport_pool which = SPA value = 50 }
+		#command = { type = escort_pool which = SPA value = 50 }
+		command = { type = convoy which = 334 value = 347 when = 16 } #Supplies to Seville
+		command = { type = add_division value = transport when = 0 }
+		command = { type = add_division value = transport when = 0 }
+		command = { type = addcore which = 348 }
+
+		###################
+
+		#seville
+		command = { type = add_corps which = "アフリカ兵団" value = land when = 3467 where = 347 }
+		command = { type = add_division which = "モロッコ正規兵隊" value = infantry when = 1 }
+
+		#la coruna
+		command = { type = add_corps value = land where = 334 }
+		command = { type = add_division value = militia when = 1 }
+
+		#burgos
+		command = { type = add_corps value = land where = 333 }
+		command = { type = add_division value = militia when = 1 }
+
+		#saragossa
+		command = { type = add_corps value = land when = 3414 where = 330 }
+		command = { type = add_division value = militia when = 1 }
+
+		#huesca
+		command = { type = add_corps value = land where = 329 }
+		command = { type = add_division value = militia when = 1 }
+
+		#siguenza
+		command = { type = add_corps value = land where = 340 }
+		command = { type = add_division value = militia when = 1 }
+
+		#valla
+		command = { type = add_corps value = land where = 339 }
+		command = { type = add_division value = militia when = 1 }
+
+		#sala
+		command = { type = add_corps value = land where = 338 }
+		command = { type = add_division value = militia when = 1 }
+
+		#hue
+		command = { type = add_corps value = land where = 346 }
+		command = { type = add_division value = infantry when = 1 }
+
+		#mallorea
+		command = { type = add_corps value = land where = 535 }
+		command = { type = add_division value = militia when = 1 }
+
+		#ceuta
+		command = { type = add_corps value = land where = 957 }
+		command = { type = add_division value = militia when = 1 }
+
+		#gran canaris
+		command = { type = add_corps value = land where = 963 }
+		command = { type = add_division value = militia when = 1 }
+
+		###################
+
+		#removing claims to simiulate partisan activity
+		command = { type = removecore which = 341 } #madrid
+		command = { type = removecore which = 354 } #valencia
+		command = { type = removecore which = 356 } #tarr
+		command = { type = removecore which = 331 } #bilboa
+		#command = { type = removecore which = 330 } #saragossa
+		command = { type = removecore which = 329 } #heuvca
+		command = { type = removecore which = 357 } #barcelona
+		#command = { type = removecore which = 332 } #oviedo
+		command = { type = removecore which = 355 }
+		command = { type = removecore which = 342 }
+		command = { type = removecore which = 343 }
+		command = { type = removecore which = 353 }
+		command = { type = removecore which = 351 }
+		command = { type = removecore which = 349 }
+		command = { type = removecore which = 350 }
+		command = { type = removecore which = 352 }
+		#command = { type = removecore which = 334 } #la coruna
+		#command = { type = removecore which = 333 } #burgos
+		#command = { type = removecore which = 340 }
+		#command = { type = removecore which = 339 } #valladoid
+		#command = { type = removecore which = 338 }
+		command = { type = removecore which = 346 }
+		#command = { type = removecore which = 347 } #seville
+		command = { type = removecore which = 535 } #Mallorca (Baleric Islands)
+		command = { type = removecore which = 536 } #Menorca (Baleric Islands)
+		command = { type = removecore which = 537 } #Ibiza (Baleric Islands)
+
+		#digging in
+		command = { type = construct which = land_fort where = 333 value = 4 } #burgos
+		command = { type = construct which = land_fort where = 347 value = 4 } #seville
+		#command = { type = construct which = land_fort where = 330 value = 3 } #saragossa
+		#command = { type = construct which = land_fort where = 340 value = 2 } #sig
+
+		command = { type = war which = SPR }
+
+		command = { type = dissent value = 10 }
+
+		command = { type = set_relation which = ITA value = 50 }
+		command = { type = set_relation which = GER value = 50 }
+	}
+}
+
+
+#########################################################################
+#  Spanish Civil War - German Intervention
+#########################################################################
+event = {
+	id = 3002
+	random = no
+	country = SPA
+
+	# Triggered by GER 2023
+
+	name = "EVT_3002_NAME"
+	desc = "EVT_3002_DESC"
+	style = 0
+	picture = "SCW_German Intervention"
+
+	action_a = {
+		name = "OK" # Great!
+		command = { type = supplies value = 5000 }
+		command = { type = add_corps which = "コンドル軍団" value = air when = 3493 where = 334 } 
+		command = { type = add_division which = "コンドル軍団爆撃機隊" value = tactical_bomber when = 2 }
+		command = { type = add_division which = "コンドル軍団戦闘機隊" value = interceptor when = 1 }
+		command = { type = add_corps which = "コンドル軍団" value = land when = 3466 where = 333 } 
+		command = { type = add_division which = "コンドル軍団戦車隊" value = armor when = 1 }
+	   	command = { type = gain_tech which = 1020 } #36 inf	
+        	command = { type = gain_tech which = 9020 } #Flying circus doc
+       		command = { type = steal_tech which = GER }
+	    	command = { type = steal_tech which = GER }
+
+	}
+}
+#########################################################################
+#  Spanish Civil War - Italian Intervention
+#########################################################################
+event = {
+	id = 3003
+	random = no
+	country = SPA
+
+	# Triggered by ITA 2901
+
+	name = "EVT_3003_NAME"
+	desc = "EVT_3003_DESC"
+	style = 0
+	picture = "SCW_Italian Intervention"
+
+	action_a = {
+		name = "OK" # Great!
+		command = { type = manpowerpool value = 10 }
+		command = { type = supplies value = 5000 }
+		command = { type = add_division value = destroyer when = 0 }
+		command = { type = add_division value = submarine when = 1 }
+		command = { type = add_corps which = "イタリア義勇兵軍団" value = land when = 3427 where = 333 }
+		command = { type = add_division which = "リットリオ" value = light_armor when = 0 }
+		command = { type = add_division which = "ディオ・ロ・ヴォーレ" value = infantry when = 1 }
+		command = { type = add_division which = "フィアメ・ネーレ" value = infantry when = 1 }
+		command = { type = add_division which = "ペンネ・ネーレ" value = infantry when = 1 }
+		command = { type = add_corps which = "航空軍団" value = air where = 334 } 
+		command = { type = add_division which = "航空軍団爆撃機隊" value = naval_bomber when = 0 }
+		command = { type = add_division which = "航空軍団戦闘機隊" value = interceptor when = 0 }
+	        command = { type = gain_tech which = 2320 } #Early field arty
+               	command = { type = steal_tech which = ITA }
+#		command = { type = province_keypoints which = -1 value = 1 }
+#		command = { type = province_keypoints which = -1 value = 1 }
+
+	}
+}
+#########################################################################
+#  Spanish Civil War - Victory!!!
+#########################################################################
+event = {
+	id = 3004
+	random = no
+	country = SPA
+
+	trigger = {
+		owned = { province = 341 data = SPA }
+		NOT = {
+			exists = SPR
+	   	}
+	}
+	name = "EVT_3004_NAME"
+	desc = "EVT_3004_DESC"
+	style = 0
+	picture = "SPA_Victory"
+	date = { day = 18 month = july year = 1936 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+
+
+	action_a = {
+		name = "OK" # Great!
+		command = { type = capital which = 341 }
+		command = { type = set_domestic which = democratic value = 3 } 
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 10032 }
+		command = { type = headofgovernment which = 10046 }
+		command = { type = foreignminister which = 10057 }
+		command = { type = armamentminister which = 10090 }
+		command = { type = ministerofsecurity which = 10129 }
+		command = { type = ministerofintelligence which = 10162 }
+		command = { type = chiefofstaff which = 10183 }
+		command = { type = chiefofarmy which = 10206 }
+		command = { type = chiefofnavy which = 10230 }
+        	command = { type = sleepleader which = 3413 }
+		command = { type = sleepleader which = 3416 }
+        	command = { type = sleepleader which = 3427 }
+        	command = { type = sleepleader which = 3466 }
+		command = { type = sleepleader which = 3492 }
+		command = { type = sleepleader which = 3493 }
+		command = { type = sleepleader which = 3494 }
+#		command = { type = sleepevent which = 2155 }
+#		command = { type = sleepevent which = 2156 }
+		command = { type = belligerence which = SPA value = -10 }
+		command = { type = remove_division which = "コンドル軍団爆撃機隊" value = SPA }
+		command = { type = remove_division which = "コンドル軍団戦闘機隊" value = SPA }
+		command = { type = remove_division which = "コンドル軍団戦車隊" value = SPA }
+		command = { type = remove_division which = "リットリオ" value = SPA }
+		command = { type = remove_division which = "ディオ・ロ・ヴォーレ" value = SPA }
+		command = { type = remove_division which = "フィアメ・ネーレ" value = SPA }
+		command = { type = remove_division which = "ペンネ・ネーレ" value = SPA }
+		command = { type = remove_division which = "航空軍団爆撃機隊" value = SPA }
+		command = { type = remove_division which = "航空軍団戦闘機隊" value = SPA }
+		# New Commands removing any surviving "Soviet" Units SPA recive through Anneks of SPR 
+		command = { type = remove_division which = "ソビエト戦車隊" value = SPA }
+		command = { type = remove_division which = "国際旅団" value = SPA }
+		command = { type = remove_division which = "ソビエト戦闘機隊" value = SPA }
+		command = { type = remove_division which = "ソビエト爆撃機隊" value = SPA }
+		# New commands removing the communist and anarchist militias if SPA gets them, when they anneks SPR.
+		command = { type = remove_division which = "CNT民兵隊" value = SPA }
+		command = { type = remove_division which = "POUM民兵隊" value = SPA }
+
+		command = { type = sleepleader which = 3413 }
+		command = { type = sleepleader which = 3416 }
+		command = { type = sleepleader which = 3427 }
+		command = { type = sleepleader which = 3455 }
+		command = { type = sleepleader which = 3466 }
+		command = { type = sleepleader which = 3492 }
+		command = { type = sleepleader which = 3493 }
+		command = { type = sleepleader which = 3494 }
+		#readding claims
+		command = { type = addcore which = 341 } #madrid
+		command = { type = addcore which = 354 } #valencia
+		command = { type = addcore which = 356 } #tarr
+		command = { type = addcore which = 331 } #bilboa
+		command = { type = addcore which = 329 } #heuvca
+		command = { type = addcore which = 357 } #barcelona
+		command = { type = addcore which = 355 }
+		command = { type = addcore which = 342 }
+		command = { type = addcore which = 343 }
+		command = { type = addcore which = 353 }
+		command = { type = addcore which = 351 }
+		command = { type = addcore which = 349 }
+		command = { type = addcore which = 350 }
+		command = { type = addcore which = 352 }
+		command = { type = addcore which = 346 }
+		command = { type = addcore which = 535 } #Mallorca (Baleric Islands)
+		command = { type = addcore which = 536 } #Menorca (Baleric Islands)
+		command = { type = addcore which = 537 } #Ibiza (Baleric Islands)
+		#digging in
+		command = { type = construct which = land_fort where = 333 value = -4 } #burgos
+		command = { type = construct which = land_fort where = 347 value = -4 } #seville
+		command = { type = construct which = land_fort where = 357 value = -3 } #barcelona
+		command = { type = construct which = land_fort where = 341 value = -5 } #madrid
+
+		command = { type = sleepevent which = 3901 }	# イギリス「重要な経験」#FEPK1.11
+		command = { type = sleepevent which = 2803 }	# フランス「重要な経験」
+		command = { type = sleepevent which = 2662 }	# ソビエト「重要な経験」
+	}
+
+}
+
+event = {
+	id = 3005
+	random = no
+	country = SPA
+
+	trigger = {
+		war = { country = SPA country = SPR }
+		OR = {
+			control = { province = 331 data = SPR } #Bilboa
+			AND = {
+				control = { province = 331 data = EUS } #Bilboa
+				alliance = { country = EUS country = SPR }
+			}
+		}
+	}
+
+	date = { day = 26 month = april year = 1937 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1947 }
+
+	name = "ゲルニカ空爆"
+	desc = "1937年4月26日、バスク地方の中心地であるゲルニカが、国粋派をを支援するナチスによって空爆を受けた。これは史上初めての都市無差別空爆であった。都市無差別空爆の先例として知られるこの空爆は、民主主義国家と国粋派の関係を著しく悪化させた。"
+
+	picture = "condor"
+
+	action_a = {
+		name = "OK"
+		command = { type = relation which = ENG value = -30 }
+		command = { type = relation which = FRA value = -30 }
+		command = { type = relation which = USA value = -20 }
+		command = { type = trigger which = 3109 } #SPR
+	}
+}
+
+event = {
+	id = 3006
+	random = no
+	country = SPA
+
+	trigger = {
+		flag = royal_spain
+	}
+
+	date = { day = 28 month = february year = 1941 }
+
+	name = "アルフォンソ13世の崩御"
+	desc = "父王の死後に生まれたため、1883年の出生と同時にスペイン国王の座に就いたアルフォンソ13世の治世は波乱に満ちたものであった。アルフォンソ13世はしばしば社会改革の努力を行うものの、社会体制はテロの嵐の中で混乱し、1923年には権威主義体制に移行した。しかし1931年には反動的な共和政府の下で、アルフォンソ13世は王権中断と亡命に追い込まれた。スペイン内戦による共和政府の崩壊とともににアルフォンソ13世はフランコ将軍の手で復位した。1941年2月28日、アルフォンソ13世は崩御し王位はは息子のフアン3世が継いだ。"
+
+	action_a = {
+		name = "OK"
+		command = { type = sleepminister which = 10039 }
+		command = { type = headofstate which = 10038 } #Juan III
+	}
+}
+event = {
+	id = 3007
+	random = no
+	country = SPA
+
+	trigger = {
+		random = 35
+		control = { province = 341 data = SPA }
+		NOT = {
+			exists = SPR
+	   	}
+		event = 3004 #Nationalist Spain won the war
+	}
+
+	date = { day = 18 month = july year = 1936 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "内戦後の政治体制"
+	desc = "スペイン内戦の終結後、国粋派は内戦終結宣言を発した。これにより数十年にわたるスペインの混乱は一応の終息を迎えたが、内戦による国土の荒廃は著しかった。同年8月8日に公布された「国家元首法」によって緊急立法権が付与され、強大な権限を獲得した国家元首はスペインの「総統」として国家の再建に取り組むこととなる。"
+
+	picture = "SPA_victory"
+
+	action_a = {
+		name = "国民戦線の独裁"
+		ai_chance = 88
+		command = { type = dissent value = -10 }
+		command = { type = headofstate which = 10032 }
+		command = { type = headofgovernment which = 10046 }
+	}
+	action_b = {
+		name = "王政復古"
+		ai_chance = 10
+		command = { type = dissent value = 3 }
+
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = set_domestic which = freedom value = 3 }
+		command = { type = set_domestic which = free_market value = 6 }
+		command = { type = set_domestic which = professional_army value = 1 }
+		command = { type = set_domestic which = defense_lobby value = 5 }
+		command = { type = set_domestic which = interventionism value = 4 }
+
+		command = { type = headofstate which = 10039 } #Alfonso XIII, SC
+		command = { trigger = { NOT = { minister = 10039 } }
+			type = headofstate which = 10038 } #Juan III # if Alfonso passed away
+		command = { type = sleepminister which = 10034 }
+		command = { type = sleepminister which = 10064 }
+		command = { type = sleepminister which = 10190 }
+		command = { type = sleepevent which = 321 } #Passing of the Exiled King
+		command	= { type = setflag which = royal_spain }
+	}
+	action_c = {
+		name = "カルリスタによる統治"
+		ai_chance = 2
+		command = { type = dissent value = 10 }
+
+		command = { type = set_domestic which = democratic value = 2 }
+		command = { type = set_domestic which = political_left value = 1 }
+		command = { type = set_domestic which = freedom value = 1 }
+		command = { type = set_domestic which = free_market value = 5 } #no idea
+		command = { type = set_domestic which = professional_army value = 7 } #carlists are well-trained
+		command = { type = set_domestic which = defense_lobby value = 4 }
+		command = { type = set_domestic which = interventionism value = 2 }
+
+		command = { type = headofstate which = 10034 }
+		command	= { type = setflag which = carlistas_spain }
+	}
+}

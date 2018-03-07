@@ -1,0 +1,475 @@
+
+##############################
+# Country definition for POL #
+##############################
+
+province = { id = 208 anti_air = 1 } # ƒ”ƒBƒ‹ƒjƒX
+province =
+{ id       = 211
+  air_base = { size = 3 current_size = 3 }
+  anti_air = 3
+}            # ƒŠƒ_
+province =
+{ id       = 229
+  air_base = { size = 4 current_size = 4 }
+}            # ƒXƒ^ƒjƒXƒƒ”
+province =
+{ id         = 303
+  anti_air   = 2
+  naval_base = { size = 8 current_size = 8 }
+  air_base   = { size = 4 current_size = 4 }
+}              # ƒ_ƒ“ƒcƒBƒq
+province = { id = 305 anti_air = 1 } # ƒgƒ‹ƒ“
+province = { id = 307 anti_air = 2 } # ƒ|ƒYƒiƒ“
+province = { id = 479 anti_air = 2 } # ƒNƒ‰ƒNƒt
+province =
+{ id       = 483
+  anti_air = 4
+  air_base = { size = 4 current_size = 4 }
+}            # ƒEƒbƒ`
+province =
+{ id       = 485
+  anti_air = 2
+  air_base = { size = 6 current_size = 6 }
+}            # ƒƒ‹ƒVƒƒƒ
+province =
+{ id       = 504
+  air_base = { size = 3 current_size = 3 }
+}            # ƒuƒŒƒXƒgƒŠƒtƒgƒXƒN
+province = { id = 509 anti_air = 1 } # ƒXƒ”ƒ@ƒEƒL
+
+#####################
+# Country main data #
+#####################
+
+country =
+{ tag                    = POL
+  capital                = 485
+  manpower               = 275
+  # Resource Reserves
+  energy                 = 1000
+  metal                  = 1000
+  rare_materials         = 500
+  oil                    = 500
+  supplies               = 500
+  money                  = 20
+  policy =
+  { date              = { year = 0 month = january day = 0 }
+    democratic        = 7
+    political_left    = 1
+    freedom           = 4
+    free_market       = 5
+    professional_army = 3
+    defense_lobby     = 8
+    interventionism   = 6
+  }
+  SpyInfo                = { country = "POL" NumberOfSpies = 7 }
+  SpyInfo                = { country = "ENG" NumberOfSpies = 3 }
+  SpyInfo                = { country = "FRA" NumberOfSpies = 6 }
+  SpyInfo                = { country = "SOV" NumberOfSpies = 8 }
+  SpyInfo                = { country = "CZE" NumberOfSpies = 6 }
+  SpyInfo                = { country = "AUS" NumberOfSpies = 3 }
+  SpyInfo                = { country = "GER" NumberOfSpies = 8 }
+  SpyInfo                = { country = "LAT" NumberOfSpies = 6 }
+  SpyInfo                = { country = "SWE" NumberOfSpies = 3 }
+  SpyInfo                = { country = "FIN" NumberOfSpies = 3 }
+  SpyInfo                = { country = "YUG" NumberOfSpies = 3 }
+  SpyInfo                = { country = "HUN" NumberOfSpies = 3 }
+  SpyInfo                = { country = "BUL" NumberOfSpies = 3 }
+  SpyInfo                = { country = "EST" NumberOfSpies = 3 }
+  SpyInfo                = { country = "LIT" NumberOfSpies = 8 }
+  SpyInfo                = { country = "USA" NumberOfSpies = 3 }
+  SpyInfo                = { country = "ROM" NumberOfSpies = 6 }
+  nationalprovinces      = { 303 306 307 479 480 481 483 484 305 485 486 487 489 488 500 501 502 503 504 505 506 507 508 509 209 208 213 211 210 222
+                             229 562 214 212 221 225 226 227 228 231 218
+                           }
+  ownedprovinces         = { 303 306 307 479 480 481 483 484 305 485 486 487 489 488 500 501 502 503 504 505 506 507 508 509 209 208 213 211 210 222
+                             229 562 214
+                           }
+  controlledprovinces    = { 303 306 307 479 480 481 483 484 305 485 486 487 489 488 500 501 502 503 504 505 506 507 508 509 209 208 213 211 210 222
+                             229 562 214
+                           }
+  # Air Doctrines
+  techapps               = { 1010  1020  1110  1190  1200  1310  14000 2010  2020  2150  2290  2300  2310  2400  2450  2460  2510  3010  3020  3400 
+                             3410 3470  4010  4020  4120  4130  5010  5080  5090  5190  6010  6030  8040  8050  9010  9020 
+                           }
+  diplomacy =
+  { relation =
+    { tag        = CZE
+      value      = -1
+      guaranteed = { day = 30 month = december year = 1934 }
+    }
+    relation = { tag = ENG value = 50 }
+    relation = { tag = EST value = 75 }
+    relation = { tag = FIN value = 100 }
+    relation = { tag = FRA value = 100 }
+    relation = { tag = GER value = -10 }
+    relation = { tag = GRE value = 35 }
+    relation = { tag = HUN value = 50 }
+    relation = { tag = LAT value = 75 }
+    relation = { tag = LIT value = -75 }
+    relation =
+    { tag        = ROM
+      value      = 40
+      guaranteed = { day = 30 month = december year = 1934 }
+    }
+    relation = { tag = SOV value = -50 }
+  }
+  headofstate            = { type = 9 id = 13001 }
+  headofgovernment       = { type = 9 id = 13146 }
+  foreignminister        = { type = 9 id = 13003 }
+  armamentminister       = { type = 9 id = 13144 }
+  ministerofsecurity     = { type = 9 id = 13147 }
+  ministerofintelligence = { type = 9 id = 13006 }
+  chiefofstaff           = { type = 9 id = 13007 }
+  chiefofarmy            = { type = 9 id = 13008 }
+  chiefofnavy            = { type = 9 id = 13009 }
+  chiefofair             = { type = 9 id = 13010 }
+  landunit =
+  { id       = { type = 18600 id = 1 }
+    location = 479
+    name     = "ƒNƒ‰ƒNƒtŒR"
+    division =
+    { id   = { type = 18600 id = 2 }
+      name = "‘æ6•à•ºt’c"
+      type = infantry
+    }
+    division =
+    { id    = { type = 18600 id = 3 }
+      name  = "‘æ7•à•ºt’c"
+      type  = infantry
+      extra = artillery
+    }
+    division =
+    { id   = { type = 18600 id = 4 }
+      name = "‘æ22RŠx•à•ºt’c"
+      type = bergsjaeger
+    }
+    division =
+    { id   = { type = 18600 id = 5 }
+      name = "‘æ21RŠx•à•ºt’c"
+      type = bergsjaeger
+    }
+    division =
+    { id   = { type = 18600 id = 6 }
+      name = "‘æ23•à•ºt’c"
+      type = infantry
+    }
+  }
+  landunit =
+  { id       = { type = 18600 id = 7 }
+    location = 483
+    name     = "ƒE[ƒ`ŒR"
+    division =
+    { id   = { type = 18600 id = 8 }
+      name = "‘æ2•à•ºt’c"
+      type = infantry
+    }
+    division =
+    { id    = { type = 18600 id = 9 }
+      name  = "‘æ10•à•ºt’c"
+      type  = infantry
+      extra = anti_air
+    }
+    division =
+    { id   = { type = 18600 id = 10 }
+      name = "‘æ29•à•ºt’c"
+      type = infantry
+    }
+  }
+  landunit =
+  { id       = { type = 18600 id = 11 }
+    location = 487
+    name     = "ƒ‹ƒuƒŠƒ“ŒR"
+    division =
+    { id   = { type = 18600 id = 12 }
+      name = "‘æ18•à•ºt’c"
+      type = infantry
+    }
+    division =
+    { id   = { type = 18600 id = 13 }
+      name = "‘æ28•à•ºt’c"
+      type = infantry
+    }
+    division =
+    { id    = { type = 18600 id = 14 }
+      name  = "‘æ30•à•ºt’c"
+      type  = infantry
+      extra = anti_tank
+    }
+  }
+  landunit =
+  { id       = { type = 18600 id = 15 }
+    location = 486
+    name     = "ƒ‚ƒhƒŠƒ“ŒR"
+    division =
+    { id   = { type = 18600 id = 16 }
+      name = "‘æ8•à•ºt’c"
+      type = infantry
+    }
+    division =
+    { id    = { type = 18600 id = 17 }
+      name  = "‘æ20•à•ºt’c"
+      type  = infantry
+      extra = engineer
+    }
+  }
+  landunit =
+  { id       = { type = 18600 id = 18 }
+    location = 303
+    name     = "ƒ|ƒ‚[ƒWƒFŒR"
+    division =
+    { id   = { type = 18600 id = 19 }
+      name = "‘æ4•à•ºt’c"
+      type = infantry
+    }
+    division =
+    { id   = { type = 18600 id = 20 }
+      name = "‘æ16•à•ºt’c"
+      type = infantry
+    }
+    division =
+    { id    = { type = 18600 id = 21 }
+      name  = "‘æ9•à•ºt’c"
+      type  = infantry
+      extra = artillery
+    }
+    division =
+    { id   = { type = 18600 id = 22 }
+      name = "‘æ15•à•ºt’c"
+      type = infantry
+    }
+    division =
+    { id   = { type = 18600 id = 23 }
+      name = "‘æ27•à•ºt’c"
+      type = infantry
+    }
+    division =
+    { id   = { type = 18600 id = 58 }
+      name = "ƒmƒ”ƒHƒOƒ‹ƒcƒJ‹R•º—·’c"
+      type = cavalry
+    }
+  }
+  landunit =
+  { id       = { type = 18600 id = 24 }
+    location = 307
+    name     = "ƒ|ƒYƒiƒ“ŒR"
+    division =
+    { id   = { type = 18600 id = 25 }
+      name = "‘æ14•à•ºt’c"
+      type = infantry
+    }
+    division =
+    { id   = { type = 18600 id = 26 }
+      name = "‘æ17•à•ºt’c"
+      type = infantry
+    }
+    division =
+    { id   = { type = 18600 id = 27 }
+      name = "‘æ25•à•ºt’c"
+      type = infantry
+    }
+    division =
+    { id    = { type = 18600 id = 28 }
+      name  = "‘æ26•à•ºt’c"
+      type  = infantry
+      extra = anti_air
+    }
+    division =
+    { id   = { type = 18600 id = 57 }
+      name = "ƒNƒ‰ƒNƒtƒXƒJ‹R•º—·’c"
+      type = cavalry
+    }
+  }
+  landunit =
+  { id       = { type = 18600 id = 29 }
+    location = 305
+    name     = "ƒvƒƒVƒƒŒR"
+    division =
+    { id   = { type = 18600 id = 30 }
+      name = "ƒŒƒWƒ‡ƒmƒ”ƒH‘æ3•à•ºt’c"
+      type = infantry
+    }
+    division =
+    { id   = { type = 18600 id = 31 }
+      name = "‘æ12•à•ºt’c"
+      type = infantry
+    }
+    division =
+    { id    = { type = 18600 id = 32 }
+      name  = "‘æ13•à•ºt’c"
+      type  = infantry
+      extra = anti_tank
+    }
+    division =
+    { id   = { type = 18600 id = 33 }
+      name = "‘æ19•à•ºt’c"
+      type = infantry
+    }
+    division =
+    { id   = { type = 18600 id = 56 }
+      name = "ƒNƒŒƒ\ƒ”ƒ@‹R•º—·’c"
+      type = cavalry
+    }
+  }
+  landunit =
+  { id       = { type = 18600 id = 34 }
+    location = 485
+    name     = "ƒƒ‹ƒVƒƒƒŒR"
+    division =
+    { id       = { type = 18600 id = 1706 }
+      name     = "ŒRi—ß•”"
+      type     = hq
+      model    = 0
+      strength = 100
+    }
+    division =
+    { id    = { type = 18600 id = 35 }
+      name  = "ƒ}ƒ]ƒ”ƒBƒGƒcƒJ‹R•º—·’c"
+      type  = cavalry
+      extra = engineer
+    }
+    division =
+    { id   = { type = 18600 id = 36 }
+      name = "ƒŒƒWƒ‡ƒmƒ”ƒH‘æ1•à•ºt’cuƒsƒEƒXƒcƒLv"
+      type = infantry
+    }
+    division =
+    { id   = { type = 18600 id = 37 }
+      name = "‘æ5•à•ºt’c"
+      type = infantry
+    }
+    division =
+    { id   = { type = 18600 id = 38 }
+      name = "ƒJƒ‹ƒpƒbƒJ‘æ11•à•ºt’c"
+      type = infantry
+    }
+    division =
+    { id   = { type = 18600 id = 39 }
+      name = "‘æ24•à•ºt’c"
+      type = infantry
+    }
+  }
+  landunit =
+  { id       = { type = 18600 id = 40 }
+    name     = "—\”õŒR"
+    location = 487
+    division =
+    { id       = { type = 18600 id = 41 }
+      name     = "‘æ31•à•ºt’ci—\”õ–ğj"
+      strength = 30
+      type     = infantry
+    }
+    division =
+    { id       = { type = 18600 id = 42 }
+      name     = "‘æ33•à•ºt’ci—\”õ–ğj"
+      strength = 30
+      type     = infantry
+    }
+    division =
+    { id       = { type = 18600 id = 43 }
+      name     = "‘æ35•à•ºt’ci—\”õ–ğj"
+      strength = 30
+      type     = infantry
+      extra    = artillery
+    }
+    division =
+    { id       = { type = 18600 id = 44 }
+      name     = "‘æ36•à•ºt’ci—\”õ–ğj"
+      strength = 30
+      type     = infantry
+    }
+    division =
+    { id       = { type = 18600 id = 45 }
+      name     = "‘æ38•à•ºt’ci—\”õ–ğj"
+      strength = 30
+      type     = infantry
+    }
+    division =
+    { id       = { type = 18600 id = 46 }
+      name     = "‘æ39•à•ºt’ci—\”õ–ğj"
+      strength = 30
+      type     = infantry
+    }
+    division =
+    { id       = { type = 18600 id = 47 }
+      name     = "‘æ41•à•ºt’ci—\”õ–ğj"
+      strength = 30
+      type     = infantry
+      extra    = anti_air
+    }
+    division =
+    { id       = { type = 18600 id = 48 }
+      name     = "‘æ44•à•ºt’ci—\”õ–ğj"
+      strength = 30
+      type     = infantry
+    }
+    division =
+    { id       = { type = 18600 id = 49 }
+      name     = "‘æ45•à•ºt’ci—\”õ–ğj"
+      strength = 30
+      type     = infantry
+    }
+    division =
+    { id       = { type = 18600 id = 50 }
+      name     = "‘æ55•à•ºt’ci—\”õ–ğj"
+      strength = 30
+      type     = infantry
+    }
+    division =
+    { id       = { type = 18600 id = 51 }
+      name     = "‘æ53•à•ºt’ci—\”õ–ğj"
+      strength = 30
+      type     = infantry
+    }
+    division =
+    { id       = { type = 18600 id = 52 }
+      name     = "‘æ54•à•ºt’ci—\”õ–ğj"
+      strength = 30
+      type     = infantry
+    }
+  }
+  navalunit =
+  { id       = { type = 18600 id = 53 }
+    name     = "ƒ|[ƒ‰ƒ“ƒhŠCŒR"
+    location = 303
+    base     = 303
+    division =
+    { id       = { type = 18600 id = 54 }
+      name     = "‘æ1‹ì’€‘à"
+      type     = destroyer
+      model    = 1
+      strength = 40
+    }
+    division =
+    { id    = { type = 18600 id = 55 }
+      name  = "‘æ1ö…‘à"
+      type  = submarine
+      model = 0
+    }
+  }
+  airunit =
+  { id       = { type = 18600 id = 59 }
+    name     = "’ÇŒ‚—·’cIII/1q‹ó’c"
+    location = 485
+    base     = 485
+    division =
+    { id    = { type = 18600 id = 60 }
+      name  = "’ÇŒ‚—·’cIII/1q‹ó’c"
+      type  = interceptor
+      model = 0
+    }
+    division =
+    { id    = { type = 18600 id = 61 }
+      name  = "’ÇŒ‚—·’cIV/1q‹ó’c"
+      type  = interceptor
+      model = 0
+    }
+    division =
+    { id    = { type = 18600 id = 62 }
+      name  = "‘æ1ƒcƒBƒGƒYƒLƒt”šŒ‚q‹ó’c"
+      type  = tactical_bomber
+      model = 0
+    }
+  }
+}

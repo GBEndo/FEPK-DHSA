@@ -1,0 +1,376 @@
+# USA D-Day AI File by Lothos
+
+max_garrison_prop = 0.30
+min_garrison_prop = 0.20
+
+target = {
+	56 = 100
+	300 = 100
+	515 = 75
+	525 = 75
+	1599 = 100
+	1621 = 100
+}
+
+###################################
+# Ground Combat, Leaders and Garrisons
+###################################
+garrison = {
+	defend_overseas_beaches = yes
+	home_multiplier 	= 0.01
+	overseas_multiplier 	= 1.5
+	home_peace_cap 		= 0
+	war_zone_odds 		= 2.0 #4.0 #FEPKBETA4.9 #試験的に調整
+	key_point_prio_mult	= 1.0
+	revolt_risk_mult	= 0.3
+
+	# PRIORITIES:
+	beach			= 1	# Beach level 2
+	capital			= 1	# Our capital
+	human_border		= 0	# Ignored for allied human players
+	war_target		= 50	# The next country targeted for attack by this AI
+
+	opposing_alliance	= 20	# For neutrals, all alliances are "opposing"
+	claim_threat		= 0	# If we are neutral, countries with claims on us get this
+	unstable_border		= 0	# Bordering countries at war with someone else get this
+
+	ignore = {
+		292 # Arburg
+		92  # Arhus
+		91  # Kolding
+		90  # Kiel
+		78  # Leeweden
+		47  # Amsterdam
+		46  # Rotterdam
+		45  # Ghent
+		43  # Dunkerque
+		18  # Calais
+		42  # Dieppe
+		41  # Le Havre
+		39  # Caen
+		33  # Rennes
+		32  # Brest
+		34  # Lorient
+		35  # Nantes
+		59  # Cholet
+		325 # Bordeaux
+		326 # Dax
+		358 # Perpignan
+		362 # Montpellier
+		364 # Marseille
+		365 # Toulon
+		366 # Nice
+		
+		#China-Korea
+		1314 #寶安［パオアン］
+		1316 #Macao
+		1248 #Shantou
+		1247 #Xianen
+		1244 #Fuzhou
+		1235 #Shangai
+		1215 #Qingdao
+		1214 #Yantai
+		1204 #Tianjin
+		1202 #Dalian
+		1199 #Seoul
+		1196 #Busan
+		1219 # 南通［ナントン］
+		
+		#Primolsk
+		1372
+		1371
+		1370
+		1369
+		1367
+		1366
+		1526
+		1527
+		1525
+	}
+}
+
+front = { 
+	recklessness 		= 2 # 0-3
+	distrib_vs_ai 		= offensive
+	distrib_vs_human 	= offensive
+}
+
+###################################
+# Invasions and Naval
+###################################
+invasion = { 
+	invasion		= yes
+ 	base			= 0.1	#Relative modifier. (lower = specific targets much more important.)
+	random			= 10.0	#How big a random range.  (1.0 = 1%)
+	coastal			= 0.1	#increase to avoid coastal forts more.
+	beach			= 0.1	#higher, avoid worst beaches.
+	distance		= 0.1	#higher = avoid long distance.
+	max_distance    	= 100.0
+	max_staging_distance 	= 5.0
+	pocket			= 1.0	#prioritise pockets, ie provinces with no adjacent controlled by same.
+	island			= 0.5	#prioritise taking pure islands.
+	enemy			= 1.0	#higher = much more vary of troops in province.
+	adjacentenemy 		= 0.5	#higher = much more vary of troops nearby
+	air_base		= 0.1
+      	naval_base 		= 0.1
+      	air_support 		= 0.1
+
+	invasion		= yes
+	ignore			= yes
+	help_allies 		= yes
+      	redirect 		= nearest
+      
+	staging_province = {
+		23
+		21
+	#	949 #北アフリカ
+	#	939
+	#	958
+	#	348 #ジブラルタル
+	}
+	target = {
+		#England
+		20 = 8000 # Dover
+		17 = 6000 # Norwich
+		21 = 6000 # Portsmouth
+		23 = 6000 # Plymouth
+		13 = 6000 # Sheiffield
+		28 = 6000 # Belfast
+		22 = 6000 # Bristol
+		14 = 6000 # Liverpool
+		12 = 6000 # Blackpool
+		11 = 6000 # Sunderland
+		10 = 6000 # Edinburgh
+		9  = 6000 # Glasgow
+
+		# Atlantic Wall
+		292 = 7000 # Arburg
+		92  = 7000 # Arhus
+		91  = 7000 # Kolding
+		90  = 8000   # Kiel
+		78  = 7500 # Leeweden
+		47  = 7500 # Amsterdam
+		46  = 7500 # Rotterdam
+		45  = 7500 # Ghent
+		18  = 90000 # Calais
+		42  = 90000 # Dieppe
+		41  = 90000 # Le Havre
+		39  = 90000 # Caen
+		33  = 90000 # Rennes
+		32  = 65000 # Brest
+		34  = 7000 # Lorient
+		35  = 7000 # Nantes
+		59  = 7000 # Cholet
+		325 = 7000 # Bordeaux
+		326 = 7000 # Dax
+		358 = 60000
+		362 = 60000
+		364 = 60000
+		
+		#China & Korea
+		1314 = -1 #寶安［パオアン］
+		1316 = -1 #Macao
+		1248 = -1 #Shantou
+		1247 = -1 #Xianen
+		1244 = -1 #Fuzhou
+		1235 = -1 #Shangai
+		1215 = -1 #Qingdao
+		1214 = -1 #Yantai
+		1204 = -1 #Tianjin
+		1202 = -1 #Dalian
+		1199 = -1 #Seoul
+		1196 = -1 #Busan
+		1219 = -1 # 南通［ナントン］
+		
+		#Hainan
+		1321 = -1
+		
+		#Japan
+		1189 = -1 # Shikoku
+		1188 = -1 # Hiroshima
+		1187 = -1 # Osaka
+		1186 = -1 # Kanazawa
+		1185 = -1 # Nagoya
+		1184 = -1 # Tokyo
+		1183 = -1 # Niigata
+		1182 = -1 # Fukushima
+		1181 = -1 # Akita
+		1180 = -1 # Sendai
+		1178 = -1
+		1179 = -1
+
+		#Formose
+		1323 = -1
+		1322 = -1
+
+		#RyuKyu Islands
+		1193 = -1 #Okinawa
+		1192 = -1 #Amami
+
+		#Malaisia
+		1353 = -1 #Singapore
+		1349 = -1 #Kuala Lumpur
+		1351 = -1 #Kuanta
+		1350 = -1 #Kota Bahru
+		1348 = -1 #Singora
+
+		#Indochina
+		1345 = -1 #Thom Buri
+		1343 = -1 #Bangkok
+		1339 = -1 #Battambang
+		1338 = -1 #Rachgio
+		1337 = -1 #Saigon
+		1335 = -1 #Nha Trang
+		1334 = -1 #Qui Non
+		1333 = -1 #DaNang
+		1328 = -1 #Hanoi
+		1326 = -1 #Haiphong
+
+		#Sakhalin
+		1176 = -1 #Toyohara
+		75   = -1 #Ocha
+
+		#Primolsk
+		1372 = -1
+		1371 = -1
+		1370 = -1
+		1369 = -1
+		1367 = -1
+		1366 = -1
+		1526 = -1
+		1527 = -1
+		1525 = -1
+	}
+}
+
+admiral = { 
+	min_org			= 100	# NEW: Percent of org gained back before the unit can leave port
+	min_dmg			= 90    # NEW: Percent of dmg gained back before the unit can leave port
+	return_org 		= 70 	# NEW: PERCENT OF ORG LOST BEFORE RETURNING TO PORT applies to all fleets/ships
+	return_dmg 		= 70 	# NEW: PERCENT OF DMG LOST BEFORE RETURNING TO PORT for repairs applies to all fleets/ships
+
+
+	ignore = {
+		
+		#South Africa
+		"Coast of South Africa"
+		"Atlantic-Indian Ridge"
+		
+		#East Africa
+		"Red Sea"
+		"Horn of Africa"
+		
+		#Madagascar Coast
+		"South Mozambique Channel"
+		"North Mozambique Channel" 
+		"Northeast Coast of Madagascar"
+		"Southeast Coast of Madagascar" 
+		
+		#North Indian Ocean (Persian Gulf)
+		"Persian Gulf"
+		"North Arabian Sea"
+		"South Arabian Sea" 
+		"Coast of Ceylon"
+		
+		#Central/South Indian Ocean
+		"Mascarene Plateau"
+		"Mid-Indian Ridge" 
+		"Ninetyeast Ridge" 
+		"Southeast Indian Ocean"
+		"Southwest Indian Ocean" 
+		
+		#Bay of Bengal & West Indonesia
+		"East Bay of Bengal"
+		"West Bay of Bengal"
+		"Malacca Strait"
+		"Java Ridge"
+		"Java Trench"
+
+    		#New Guinea, East/North Australia and New Zealan
+		"Coast of New Guinea"
+		"Molucca Sea"
+		"Banda Sea"
+		"Arafura Sea"
+		"South Bismarck Sea"
+		"Solomon Sea"
+		"West Coral Sea"
+		"East Coral Sea" 
+		"North Tasman Sea"
+		"South Tasman Sea" 
+		"East Cost of New Zealand"
+		
+		# South and West Australia
+		"Timor Sea"
+		"West Coast of Australia"
+		"East Great Australian Bight"
+		"West Great Australian Bight"
+
+		#South Atlantic
+		"Argentine Plain"
+		"Angola Plain"
+
+		#Brazil and Argentina Coast
+		"Coast of Uruguay"
+		"Coast of Brazil"
+		"Coast of Argentina"
+
+		#Equitorial Africa
+		"Coast of Angola-Namibia"
+
+	}
+	#Which provinces to use as bases..
+	base = {
+		663	# Hawaii
+		# 1756	# Samoa
+		# 765	# San Francisco
+		# 633	# Norfolk
+		# 651	# Miami
+		# 600	# Boston
+		# 1613	# Truk
+		# 1670	# Rabaul
+		# 1337	# Saigon
+		# 1353	# Singapore
+		# 1628	# Batavia
+		1737	# Manila
+		1624	# Guam
+		23	# base for DDay
+		21
+	}
+	target = {
+		2352 = 50
+		2351 = 50
+		2354 = 60
+		2360 = 70
+		2359 = 80
+		2422 = 80
+		2597 = 80
+		2412 = 80
+	 	2413 = 80
+		2414 = 80
+		2415 = 80
+	} 
+	core = {
+		2412
+		2413
+		2414
+		2415
+		2416
+		2535
+		2348
+		2347
+		2346
+		2395
+		2534
+		2533
+		2531
+		2530
+		1922
+		1936
+		1937
+		1938
+		1943
+		1931
+		2564
+		2563
+	} 
+}

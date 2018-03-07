@@ -1,0 +1,86 @@
+# England ITALY befriends AI
+
+
+
+befriend = {
+	VEN = 50
+	USA = 50
+	BEL = 70
+	HOL = 70
+	SPR = 40 
+	POL = 80 
+	AUS = 30
+	CZE = 40
+	TUR = 10 
+	IRQ = 20
+	PER = 20
+	POR = 20
+	CHI = 20
+	ITA = 20
+}
+protect = {
+	FRA = 150
+	CAN = 150
+	AST = 150
+	NZL = 150
+	BEL = 150
+	HOL = 150
+	SPR = 20
+	POL = 250 
+	CZE = 250
+	TUR = 50 
+	IRQ = 10
+	PER = 10
+	POR = 10
+	CHI = 10
+	ITA = 30
+}
+
+trade = {
+	favored = {
+		VEN = 100
+		FRA = 100
+		CAN = 100
+		AST = 100
+		NZL = 100
+		USA = 100
+		SAF = 100
+		BEL = 90
+		HOL = 90
+		SPR = 30
+		POL = 20 
+		CZE = 20
+		TUR = 10
+		IRQ = 100
+		PER = 100
+		POR = 10
+		CHI = 10
+		ITA = 20
+	}
+	embargo = { }
+}
+
+tech_sharing = {
+	favored = {
+		FRA = 100
+		CAN = 100
+		AST = 100
+		NZL = 100
+		USA = 100
+		SAF = 100
+		BEL = 90
+		HOL = 90
+		SPR = 30
+		POL = 20 
+		CZE = 20
+		TUR = 10
+		IRQ = 100
+		PER = 100
+		POR = 10
+		CHI = 10
+		ITA = 20
+	}
+	embargo = {
+		GER JAP SLO HUN
+	}
+}

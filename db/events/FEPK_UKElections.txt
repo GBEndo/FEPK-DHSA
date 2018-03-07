@@ -1,0 +1,777 @@
+#########################################################################
+# The proper UK Elections, by Steven, Add this to your uk.txt
+#########################################################################
+
+########################################################################
+#Unlike the US elections, which offers lots of choice, this one is fairly easy.
+#In the UK, there are only three elections during the whole 1936 to 1953 period.
+#There had been one in 1935, which the National Conservatives won under Baldwin.
+#I'm going to do the 1945, 1950 and 1951 election. However, do note that the 1945
+#election will be delayed until Germany is defeated. If Germany never is, Britain
+#will never hold that election and hence the other two will never fire either.
+#Instead, it is possible that other elections (1940 etc) will occur, depending on
+#how the war proceeds. Let's get it underway!
+#
+#########################################################################
+# The chain operates as follows:					Event ID
+
+# Sleep all the other events						9990001
+
+# Very early election (1940 - France beats Germany(!))			9990002
+# Post war election (1943/1944 - If Allies win early,			9990003
+# Poar war election (1944 - or France beats Germany in 1940)		9990004			
+# Post war election (1945/1946) - historic				9990005
+# The 1948 election if Allies win early/France beats Ger		9990006
+# The 1950 election (historic)						9990007
+# The 1951 election (historic)						9990008
+# The 1952 election (if 1948 election happens)				9990009
+# King George VI death							9990010
+# The 1955 election (historic)						9990011
+# The 1956 election (from 1952 election)				9990012
+
+
+
+# Sleep the following events: 900006 900086 403 600010 600011 600012 600013 
+
+###################################################
+# The 1940 election
+###################################################
+
+event = {
+	id = 9990002
+	random = no
+	country = ENG
+
+	name = "EVT_9990002_NAME"
+	desc = "EVT_9990002_DESC"
+
+	picture = "churchill"
+
+	trigger = {
+		NOT = { war = { country = ENG country = GER } }
+		NOT = { war = { country = ENG country = SOV } }
+		NOT = { war = { country = FRA country = GER } }
+		government = democratic
+		random = 60
+	}
+
+        date = { day = 0 month = june year = 1940 }
+        offset = 5
+	deathdate = { day = 29 month = december year = 1940 }
+
+	action_a = {
+		ai_chance = 92
+		name = "EVT_9990002_ACTA"
+		command = { type = headofgovernment which = 1157 } #Halifax
+		command = { type = foreignminister which = 1158 } #Templewood
+		command = { type = armamentminister which = 1060 } #Simon
+		command = { type = ministerofsecurity which = 1159 } #Anderson
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = dissent value = -2 }
+		command = { type = local_setflag which = uk1940election }
+	}
+	action_b = {
+		ai_chance = 8
+		name = "EVT_9990002_ACTB"
+		command = { type = headofgovernment which = 1040 } #Attlee
+		command = { type = foreignminister which = 1048 } #Morrison
+		command = { type = armamentminister which = 1065 } #Dalton
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = dissent value = -2 }
+		command = { type = local_setflag which = uk1940election }
+	}
+}
+
+###################################################
+# The 1943/44 election after Germany was defeated
+###################################################
+
+event = {
+	id = 9990003
+	random = no
+	country = ENG
+
+	name = "EVT_9990003_NAME"
+	desc = "EVT_9990003_DESC"
+
+	picture = "churchill"
+
+	trigger = {
+		NOT = { exists = GER }
+		NOT = { war = { country = ENG country = SOV } }
+		NOT = { local_flag = uk1940election } #No election in 1940
+		government = democratic
+		NOT = { ispuppet = ENG } #I like this - Just in case
+		random = 30
+	}
+
+        date = { day = 0 month = april year = 1943 }
+        offset = 7
+	deathdate = { day = 29 month = december year = 1944 }
+
+	action_a = {
+		ai_chance = 90
+		name = "EVT_9990003_ACTA"
+		command = { type = dissent value = -3 }
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofgovernment which = 1040 } #Attlee
+		command = { type = foreignminister which = 1047 } #Bevin
+		command = { type = armamentminister which = 1067 } #Cripps
+		command = { type = ministerofsecurity which = 1088 } #Morrison
+		command = { type = ministerofintelligence which = 1106 } #Bracken
+		command = { type = local_setflag which = uk1944election }
+	}
+	action_b = {
+		ai_chance = 10
+		name = "EVT_9990003_ACTB"
+		command = { type = dissent value = -3 }
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofgovernment which = 1038 } #Churchill
+		command = { type = foreignminister which = 1003 } #Eden
+		command = { type = armamentminister which = 1063 } #Beaverbrook
+		command = { type = ministerofsecurity which = 1085 } #Fyfe
+		command = { type = ministerofintelligence which = 1103 } #Menzies
+		command = { type = local_setflag which = uk1944election }
+		}
+}
+
+###################################################
+# The 1944 election after no war with Germany
+###################################################
+
+event = {
+	id = 9990004
+	random = no
+	country = ENG
+
+	name = "EVT_9990004_NAME"
+	desc = "EVT_9990004_DESC"
+
+	picture = "churchill"
+
+	trigger = {
+		local_flag = uk1940election #An election in 1940
+		NOT = { war = { country = ENG country = SOV } }
+		government = democratic
+		NOT = { ispuppet = ENG } #I like this - Just in case
+		random = 50
+	}
+
+        date = { day = 0 month = april year = 1944 }
+        offset = 7
+	deathdate = { day = 29 month = december year = 1944 }
+
+	action_a = {
+		ai_chance = 60
+		name = "EVT_9990004_ACTA"
+		command = { type = dissent value = -3 }
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofgovernment which = 1040 } #Attlee
+		command = { type = foreignminister which = 1047 } #Bevin
+		command = { type = armamentminister which = 1067 }
+		command = { type = ministerofsecurity which = 1088 }
+		command = { type = ministerofintelligence which = 1106 }
+		command = { type = local_setflag which = uk1944election }
+		command = { type = local_clrflag which = uk1940election }
+	}
+	action_b = {
+		ai_chance = 40
+		name = "EVT_9990004_ACTB"
+		command = { type = dissent value = -3 }
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofgovernment which = 1038 } #Churchill
+		command = { type = foreignminister which = 1003 } #Eden
+		command = { type = armamentminister which = 1063 }
+		command = { type = ministerofsecurity which = 1085 } #Fyfe
+		command = { type = ministerofintelligence which = 1103 }
+		command = { type = local_setflag which = uk1944election }
+		command = { type = local_clrflag which = uk1940election }
+	}
+}
+
+######################### 
+# The historical 1945/46 election
+########################
+
+event = {
+	id = 9990005
+	random = no
+	country = ENG
+
+
+	trigger = {
+		NOT = { local_flag = uk1940election } #No election in 1940
+		NOT = { local_flag = uk1944election } #No election in 1944
+		government = democratic
+		NOT = { ispuppet = ENG } #I like this - Just in case
+		random = 25
+		}
+
+	name = "EVT_9990005_NAME"
+	desc = "EVT_9990005_DESC"
+
+	date = { day = 10 month = june year = 1945 }
+	offset = 7
+	deathdate = { day = 15 month = december year = 1946 }
+
+
+	action_a = {
+		ai_chance = 90
+		name = "EVT_9990005_ACTA"
+		command = { type = dissent value = -3 }
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofgovernment which = 1040 } #Attlee
+		command = { type = foreignminister which = 1047 }
+		command = { type = armamentminister which = 1067 }
+		command = { type = ministerofsecurity which = 1089 }
+		command = { type = ministerofintelligence which = 1106 }
+		command = { type = local_setflag which = uk1945election }
+	}
+	action_b = {
+		ai_chance = 10
+		name = "EVT_9990005_ACTB"
+		command = { type = dissent value = -3 }
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofgovernment which = 1038 } #Churchill
+		command = { type = foreignminister which = 1046 }
+		command = { type = armamentminister which = 1063 }
+		command = { type = ministerofsecurity which = 1086 }
+		command = { type = ministerofintelligence which = 1103 }
+		command = { type = local_setflag which = uk1945election }
+	}
+}
+
+######################### 
+# The ahistorical 1948 election
+########################
+
+event = {
+	id = 9990006
+	random = no
+	country = ENG
+
+
+	trigger = {
+		local_flag = uk1944election #An election in 1944
+		government = democratic
+		NOT = { ispuppet = ENG } #I like this - Just in case
+		}
+
+	name = "EVT_9990006_NAME"
+	desc = "EVT_9990006_DESC"
+
+	date = { day = 10 month = july year = 1948 }
+	offset = 1
+	deathdate = { day = 15 month = july year = 1948 }
+
+
+	action_a = {
+		ai_chance = 50
+		name = "EVT_9990006_ACTA"
+		command = { type = dissent value = -3 }
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 1040 } #Attlee
+		command = { type = foreignminister which = 1047 }
+		command = { type = armamentminister which = 1184 } #Alexander
+		command = { type = ministerofsecurity which = 1089 }
+		command = { type = ministerofintelligence which = 1106 }
+	}
+	action_b = {
+		ai_chance = 50
+		name = "EVT_9990006_ACTB"
+		command = { type = dissent value = -3 }
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofgovernment which = 1038 } #Churchill (why no alternatives?)
+		command = { type = foreignminister which = 1046 }
+		command = { type = armamentminister which = 1064 } #Rab Butler
+		command = { type = ministerofsecurity which = 1086 }
+		command = { type = ministerofintelligence which = 1105 } #Philby
+	}
+}
+
+######################### 
+# The historical 1950 election
+########################
+
+event = {
+	id = 9990007
+	random = no
+	country = ENG
+
+
+	trigger = {
+		local_flag = uk1945election #The historic election
+		government = democratic
+		NOT = { ispuppet = ENG } #I like this - Just in case
+		}
+
+	name = "EVT_9990007_NAME"
+	desc = "EVT_9990007_DESC"
+
+	date = { day = 22 month = february year = 1950 }
+	offset = 1
+	deathdate = { day = 24 month = july year = 1950 }
+
+
+	action_a = {
+		ai_chance = 70
+		name = "EVT_9990007_ACTA"
+		command = { type = dissent value = -3 }
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 1040 } #Attlee
+		command = { type = foreignminister which = 1047 } #Bevin
+		command = { type = armamentminister which = 1189 } #Gaitskell
+		command = { type = ministerofsecurity which = 1089 } #Ede
+		command = { type = ministerofintelligence which = 1106 } 
+	}
+	action_b = {
+		ai_chance = 30
+		name = "EVT_9990007_ACTB"
+		command = { type = dissent value = -3 }
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofgovernment which = 1038 }
+		command = { type = foreignminister which = 1003 }
+		command = { type = armamentminister which = 1186 }
+		command = { type = ministerofsecurity which = 1085 }
+		command = { type = ministerofintelligence which = 1105 }
+		command = { type = local_setflag which = uk1944election } #Going again in 1952
+		command = { type = local_clrflag which = uk1945election }
+	}
+}
+
+##### The 1951 Election
+
+event = {
+	id = 9990008
+	random = no
+	country = ENG
+
+
+	trigger = {
+		local_flag = uk1945election #The historic election
+		government = democratic
+		NOT = { ispuppet = ENG } #I like this - Just in case
+		}
+
+	name = "EVT_9990008_NAME"
+	desc = "EVT_9990008_DESC"
+
+	date = { day = 1 month = october year = 1951 }
+	offset = 2
+	deathdate = { day = 1 month = november year = 1951 }
+
+
+	action_a = {
+		ai_chance = 85
+		name = "EVT_9990008_ACTA"
+		command = { type = dissent value = -3 }
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofgovernment which = 1038 }
+		command = { type = foreignminister which = 1003 }
+		command = { type = armamentminister which = 1186 }
+		command = { type = ministerofsecurity which = 1085 }
+		command = { type = ministerofintelligence which = 1105 }
+	}
+	action_b = {
+		ai_chance = 15
+		name = "EVT_9990008_ACTB"
+		command = { type = dissent value = -3 }
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 1040 }
+		command = { type = foreignminister which = 1048 }
+		command = { type = armamentminister which = 1189 }
+		command = { type = ministerofsecurity which = 1089 }
+		command = { type = ministerofintelligence which = 1105 }
+	}
+}
+
+##### The 1952 Election
+
+event = {
+	id = 9990009
+	random = no
+	country = ENG
+
+
+	trigger = {
+		local_flag = uk1944election #An election in 1944 or a Con win in 1950
+		government = democratic
+		NOT = { ispuppet = ENG } #I like this - Just in case
+		}
+
+	name = "EVT_9990009_NAME"
+	desc = "EVT_9990009_DESC"
+
+	date = { day = 1 month = may year = 1952 }
+	offset = 2
+	deathdate = { day = 20 month = may year = 1952 }
+
+
+	action_a = {
+		ai_chance = 50
+		name = "EVT_9990009_ACTA"
+		command = { type = dissent value = -3 }
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofgovernment which = 1191 } # Eden
+		command = { type = foreignminister which = 1046 }
+		command = { type = armamentminister which = 1187 }
+		command = { type = ministerofsecurity which = 1086 }
+		command = { type = ministerofintelligence which = 1105 }
+	}
+	action_b = {
+		ai_chance = 50
+		name = "EVT_9990009_ACTB"
+		command = { type = dissent value = -3 }
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofgovernment which = 1253 } # Morrison
+		command = { type = foreignminister which = 1047 } #Bevin
+		command = { type = armamentminister which = 1254 } #Gaitskell
+		command = { type = ministerofsecurity which = 1089 }
+		command = { type = ministerofintelligence which = 1106 }
+	}
+}
+
+### King George VI passes away for real!
+
+event = {
+	id = 9990010
+	random = no
+	country = ENG
+	style = 0
+	
+	trigger = {
+		OR = {
+		headofstate = 1033
+		headofstate = 1245
+			} # Either of the George VI
+		random = 95
+		}
+
+	date = { day = 6 month = february year = 1952 }
+	offset = 1 
+	deathdate = { day = 7 month = february year = 1953 }
+
+	name = "EVT_403_NAME"
+	desc = "EVT_403_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = headofstate which = 1182 } # Queen Elizabeth II - The ML version
+		command = { type = sleepminister which = 1033 }
+		command = { type = sleepminister which = 1245 } #The SD version won't be coming back either!
+	}
+}
+
+
+############################################################################
+### The historic 1955 election
+############################################################################
+
+event = {
+	id = 9990011
+	random = no
+	country = ENG
+	style = 0
+
+	trigger = {
+		local_flag = uk1945election #The historic election
+		government = democratic
+		NOT = { ispuppet = ENG }
+		}
+
+	name = "EVT_9990011_NAME"
+	desc = "EVT_9990011_DESC"
+	date = { day = 25 month = may year = 1955 }
+	offset = 2
+	deathdate = { day = 29 month = may year = 1955 }
+
+
+	action_a = {
+		ai_chance = 90
+		name = "EVT_9990011_ACTA"
+		command = { type = dissent value = -13 }
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofgovernment which = 1191 } #Eden
+		command = { type = foreignminister which = 1196 } #MacMillan
+		command = { type = armamentminister which = 1064 } #Rab Butler (not Monckton!)
+		command = { type = ministerofsecurity which = 1212 } #Home Secretary
+		command = { type = ministerofintelligence which = 1217 }
+		command = { type = sleepminister which = 1038 } #Churchill retires as PM (only)
+	}
+	action_b = {
+		ai_chance = 10
+		name = "EVT_9990011_ACTB"
+		command = { type = dissent value = -12 }
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofgovernment which = 1040 } #Attlee
+		command = { type = foreignminister which = 1199 }
+		command = { type = armamentminister which = 1185 }
+		command = { type = ministerofsecurity which = 1162 }
+		command = { type = ministerofintelligence which = 1222 } #Big Jim!
+		command = { type = sleepminister which = 1038 } #Churchill retires as PM (only)
+	}
+}
+
+############################################################################
+### The ahistoric 1956 election
+############################################################################
+
+event = {
+	id = 9990012
+	random = no
+	country = ENG
+	style = 0
+
+	trigger = {
+		local_flag = uk1944election #The ahistoric election
+		government = democratic
+		NOT = { ispuppet = ENG }
+		}
+
+	name = "EVT_9990012_NAME"
+	desc = "EVT_9990012_DESC"
+
+	date = { day = 1 month = may year = 1956 }
+	offset = 2
+	deathdate = { day = 29 month = may year = 1956 }
+
+
+	action_a = {
+		ai_chance = 50
+		name = "EVT_9990012_ACTA"
+		command = { type = dissent value = -13 }
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofgovernment which = 1191 } #Eden
+		command = { type = foreignminister which = 1196 } #MacMillan
+		command = { type = armamentminister which = 1064 } #Rab Butler (not Monckton!)
+		command = { type = ministerofsecurity which = 1212 } #Home Secretary
+		command = { type = ministerofintelligence which = 1217 }
+		command = { type = sleepminister which = 1038 } #Churchill retires as PM (only)
+	}
+	action_b = {
+		ai_chance = 50
+		name = "EVT_9990012_ACTB"
+		command = { type = dissent value = -13 }
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofgovernment which = 1253 } # Morrison
+		command = { type = foreignminister which = 1200 } #Bevan
+		command = { type = armamentminister which = 1254 } #Gaitskell
+		command = { type = ministerofsecurity which = 1089 }
+		command = { type = ministerofintelligence which = 1106 }
+		command = { type = sleepminister which = 1038 } #Churchill retires as PM (only)
+	}
+}
+
+##### Eden resigns
+
+event = {
+	id = 9990013
+	random = no
+	country = ENG
+	style = 0
+
+	trigger = {#FEPKBETA3
+		government = democratic
+		control = { province = 900 data = ENG } #Suez
+		headofgovernment = 1191 # Anthony Eden in office - Anyway, he's going!
+		NOT = {
+			ispuppet = ENG
+		}
+		exists = IND
+		OR = {
+			AND = {
+				NOT = {
+					war = { country = ENG country = EGY }
+				}
+				exists = EGY
+			}
+			AND = {
+				NOT = {
+					war = { country = ENG country = ARA }
+				}
+				exists = ARA
+			}
+		}
+	}
+
+	name = "EVT_600011_NAME"
+	desc = "EVT_600011_DESC"
+
+	date = { day = 9 month = january year = 1957 }
+	offset = 2
+	deathdate = { day = 29 month = january year = 1957 }
+
+
+	action_a = {
+		ai_chance = 100
+		name = "EVT_9990013_ACTA"
+		command = { type = secedeprovince which = EGY value = 900 }
+		command = { type = secedeprovince which = ARA value = 900 } #FEPKBETA3
+		command = { type = headofgovernment which = 1192 } #MacMillian
+		command = { type = foreignminister which = 1046 } #Lloyd
+		command = { type = armamentminister which = 1207 } #Thorneycroft
+		command = { type = ministerofsecurity which = 1213 } #Rab
+		command = { type = ministerofintelligence which = 1218 }
+		command = { type = dissent value = 5 }
+	}
+	action_b = {
+		ai_chance = 0
+		name = "EVT_9990013_ACTA"
+		command = { type = dissent value = 15 }
+	}
+}
+
+##### The 1959 Election
+
+event = {
+	id = 9990014
+	random = no
+	country = ENG
+	style = 0
+
+	trigger = {
+		local_flag = uk1945election #The historic election
+		government = democratic
+		NOT = { ispuppet = ENG }
+		}
+
+	name = "EVT_9990014_NAME"
+	desc = "EVT_9990014_DESC"
+
+	date = { day = 1 month = october year = 1959 }
+	#offset = 2
+	#deathdate = { day = 2 month = october year = 1959 }
+
+
+	action_a = {
+		ai_chance = 90
+		name = "EVT_9990014_ACTA"
+		command = { type = dissent value = -13 }
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofgovernment which = 1192 } #MacMillan
+		command = { type = foreignminister which = 1046 }
+		command = { type = armamentminister which = 1254 } #Amory
+		command = { type = ministerofsecurity which = 1213 } #Butler
+		command = { type = ministerofintelligence which = 1254 } #Amory
+	}
+	action_b = {
+		ai_chance = 10
+		name = "EVT_9990014_ACTB"
+		command = { type = dissent value = -12 }
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofgovernment which = 1194 } #Gaitskell
+		command = { type = foreignminister which = 1201 } #Eyebrows
+		command = { type = armamentminister which = 1210 } #Wilson
+		command = { type = ministerofsecurity which = 1215 } #Walker
+		command = { type = ministerofintelligence which = 1222 } #Still Big Jim
+	}
+}
+
+
+##### The 1961 Election
+
+event = {
+	id = 9990015
+	random = no
+	country = ENG
+	style = 0
+
+	trigger = {
+		local_flag = uk1944election #The ahistoric election
+		government = democratic
+		NOT = { ispuppet = ENG }
+		}
+
+	name = "EVT_9990015_NAME"
+	desc = "EVT_9990015_DESC"
+
+	date = { day = 1 month = may year = 1961 }
+	offset = 2
+	deathdate = { day = 29 month = may year = 1961 }
+
+
+	action_a = {
+		ai_chance = 50
+		name = "EVT_9990015_ACTA"
+		command = { type = dissent value = -13 }
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofgovernment which = 1192 } #MacMillan
+		command = { type = foreignminister which = 1197 } #Home
+		command = { type = armamentminister which = 1257 } #Lloyd
+		command = { type = ministerofsecurity which = 1213 } #Butler
+		command = { type = ministerofintelligence which = 1254 } #Amory
+	}
+	action_b = {
+		ai_chance = 50
+		name = "EVT_9990015_ACTB"
+		command = { type = dissent value = -13 }
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofgovernment which = 1195 } #Wilson
+		command = { type = foreignminister which = 1201 } #Eyebrows
+		command = { type = armamentminister which = 1248 } #Big Jim!
+		command = { type = ministerofsecurity which = 1247 } #Castle
+	}
+}
+
+event = {
+	id = 9990016
+	random = no
+	country = ENG
+	style = 0
+
+	trigger = {
+		government = democratic
+		headofgovernment = 1192 # Harold MacMillan in office
+		NOT = { ispuppet = ENG }
+		}
+
+	name = "EVT_600013_NAME"
+	desc = "EVT_600013_DESC"
+
+	date = { day = 9 month = october year = 1963 }
+	#offset = 2
+	#deathdate = { day = 10 month = october year = 1963 }
+
+
+	action_a = {
+		ai_chance = 90
+		name = "EVT_9990016_ACTA"
+		command = { type = headofgovernment which = 1193 } #Home
+		command = { type = foreignminister which = 1198 } #Butler
+		command = { type = armamentminister which = 1255 } #Maudling
+		command = { type = ministerofsecurity which = 1214 } #Brooke
+		command = { type = ministerofintelligence which = 1221 } 
+	}
+	action_b = {
+		ai_chance = 10
+		name = "EVT_9990016_ACTB"
+		command = { type = headofgovernment which = 1256 } #Butler
+		command = { type = foreignminister which = 1197 } #Home
+		command = { type = armamentminister which = 1255 } #Maudling
+		command = { type = ministerofsecurity which = 1214 } #Brooke
+		command = { type = ministerofintelligence which = 1221 } 
+	}
+}

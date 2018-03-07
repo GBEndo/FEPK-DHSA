@@ -1,0 +1,32 @@
+CYP;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+560001;Head of State;サー・ウィリアム・D・バターシル;36;ML;Die-hard Reformer;High;M560001;x
+560002;Head of Government;レジナルド・ウィンスター卿;36;ML;Naive Optimist;High;M560002;x
+560003;Foreign Minister;サー・ハーバート・パーマー;36;ML;General Staffer;High;M560003;x
+560004;Minister of Armament;ロデリック・マクター;36;ML;Military Entrepreneur;Medium;M560004;x
+560005;Minister of Security;サー・ヒュー・マッキントッシュ・フット;36;ML;Silent Lawyer;Medium;M560005;x
+560006;Head of Military Intelligence;ロデリック・フェニック＝パーマー;36;ML;Industrial Specialist;Medium;M560006;x
+560007;Chief of Staff;アンドリュー・バークワース・ライト;36;ML;School of Mass Combat;Medium;M560007;x
+560008;Chief of Army;ジョン・ハーディング;36;ML;Decisive Battle Doctrine;Medium;M560008;x
+560009;Chief of Navy;オーモンド・ノーヴィル;36;ML;Decisive Naval Battle Doctrine;Medium;M560009;x
+560010;Chief of Air Force;サー・ウィリアム・D・バターシル;36;ML;Vertical Envelopment Doctrine;Medium;M560001;x
+560011;Head of State;大主教マカリオス3世;36;LWR;Autocratic Charmer;High;M560011;x
+560012;Head of State;ファジル・キューズク博士;36;PA;Insignificant Layman;High;M560012;x
+560013;Head of Government;エレウテリオス・コスマトポウロス;36;LWR;Corporate Suit;High;M560013;x
+560014;Head of Government;アイタク・バチュール;36;PA;Backroom Backstabber;High;M560014;x
+560015;Foreign Minister;ハリラオス・アガピアス;36;LWR;Ideological Crusader;High;M560015;x
+560016;Foreign Minister;ハリル・イナルチク;36;PA;Biased Intellectual;High;M560016;x
+560017;Minister of Armament;トライアノス・バシリアコス;36;LWR;Battle Fleet Proponent;Medium;M560017;x
+560018;Minister of Armament;ソアメス・トレヴォル＝ロプキンス;36;PA;Theoretical Scientist;Medium;M560018;x
+560019;Minister of Security;ディゲニス・グリヴァス;36;LWR;Prince of Terror;Medium;M560019;x
+560020;Minister of Security;パーマー・マキノルティ;36;PA;Compassionate Gentleman;Medium;M560020;x
+560021;Head of Military Intelligence;エレフェリデス・クレリデス;36;LWR;Dismal Enigma;Medium;M560021;x
+560022;Head of Military Intelligence;リチャード・ペトウィック;36;PA;Political Specialist;Medium;M560022;x
+560023;Chief of Staff;ギオルギオス・シラディキス;36;LWR;School of Fire Support;Medium;M560023;x
+560024;Chief of Staff;メフメト・ハラム・パシャ;36;PA;School of Manoeuvre;Medium;L549028;x
+560025;Chief of Army;ディゲニス・グリヴァス;36;LWR;Guns and Butter Doctrine;Medium;M560025;x
+560026;Chief of Army;カディル・モンセフ・ベイ;36;PA;Elastic Defence Doctrine;Medium;M549006;x
+560027;Chief of Navy;ポロ・ミルトニアデス;36;LWR;Base Control Doctrine;Medium;M560027;x
+560028;Chief of Navy;オスマン・ソロココグル;36;PA;Indirect Approach Doctrine;Medium;M560028;x
+560029;Chief of Air Force;ゲオルギオス・ヴァイエナス;36;LWR;Naval Aviation Doctrine;Medium;M560029;x
+560030;Chief of Air Force;タフ・クエルチ;36;PA;Air Superiority Doctrine;Medium;M560030;x

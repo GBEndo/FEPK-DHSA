@@ -1,0 +1,117 @@
+# Soviet Finland AI File by Lothos
+
+
+max_front_ratio = 0.8
+max_front_ratios = {
+	FIN = 8.0
+}
+
+max_garrison_prop = 0.80
+min_garrison_prop = 0.60
+
+target = { 
+	#Finland
+	145 = 100
+	142 = 100
+	101 = 50
+
+	136 = 50
+	149 = 50
+	146 = 50
+}
+
+###################################
+# Ground Combat, Leaders and Garrisons
+###################################
+garrison = {
+	defend_overseas_beaches = no
+	home_multiplier 		= 1.0
+	overseas_multiplier		= 0.5
+	home_peace_cap 			= 20
+	war_zone_odds 			= 1.0
+	key_point_prio_mult		= 0.3
+	revolt_risk_mult		= 0.3
+
+	# PRIORITIES:
+	beach				= 20	# Beach level 2
+	capital				= 40	# Our capital
+	human_border			= 0	# Ignored for allied human players
+	war_target			= 50	# The next country targeted for attack by this AI
+	reserves 			= 20	# bonus for provinces just behind a frontline.
+	
+	opposing_alliance		= 50	# For neutrals, all alliances are "opposing"
+	claim_threat			= 0	# If we are neutral, countries with claims on us get this
+	unstable_border			= 0	# Bordering countries at war with someone else get this
+
+	# Borders with specific countries
+	country_priorities = {
+		CHI = -1
+		MON = -1
+		TAN = -1
+		SIK = -1
+		AFG = -1
+		IRQ = -1
+		ENG = -1
+		PER = -1
+		TUR = -1
+
+		#JAP = -1
+		#MAN = -1
+		#MEN = -1
+
+		LIT = 25
+		EST = 25
+		LAT = 25
+
+		FIN = 150
+		ROM = 50
+		GER = 90
+		POL = 90
+		ITA = 50
+		SWE = -1
+		NOR = -1
+		HUN = 15
+		SLO = 10
+		BUL = 15
+	}
+	province_priorities = {
+		187 = 50 # Leningrad
+		238 = 50 # Kiev
+		235 = 50 # Dnepropetrovsk
+		163 = 50 # Stalingrad
+		248 = 50 # Kharkov
+		277 = 50 # Bryansk
+		1372 = 50 # Vladivostock
+		133 = 50 # Murmansk
+		
+		# Winter war buildup
+		152 = 50
+		150 = 50
+		135 = 50
+	}
+	area_multiplier = {
+		133 = 2.0 # Murmansk
+		187 = 2.0 # Leningrad
+		
+		# Winter war buildup
+		152 = 2.0
+		150 = 2.0
+		135 = 2.0
+	}
+}
+
+front = { 
+	recklessness 		= 3 # 0-3
+	distrib_vs_ai 		= offensive
+	distrib_vs_human 	= Reactive
+
+	enemy_reinf_days	= 6
+	reserve_prop		= 0.1
+	panic_ratio_vs_ai	= 2.0
+	panic_ratio_vs_human	= 2.0
+	base_attack_odds	= 1.0
+	min_attack_odds		= 0.8
+	max_attack_odds		= 3.0
+	reinforce_odds		= 1.0
+	withdraw_odds		= 0.4
+} 

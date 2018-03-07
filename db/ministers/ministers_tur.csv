@@ -1,0 +1,87 @@
+TUR;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+12001;Head of State;ムスタファ・ケマル・アタテュルク;36;PA;Kemal Ataturkr;High;M12001;x
+12002;Head of Government;イスメト・イノニュ;36;PA;Political Protege;High;M12002;x
+12003;Foreign Minister;テヴフィク・ルスタ・アラス;36;PA;Biased Intellectual;Medium;M12003;x
+12004;Minister of Armament;ゼカイ・アパイディン;36;SC;Resource Industrialist;Medium;M12004;x
+12005;Minister of Security;シュクル・カヤ;36;SC;Man of the People;Medium;M12005;x
+12006;Head of Military Intelligence;シュクル・アリ・オーゲル;36;PA;Industrial Specialist;Medium;M12006;x
+12007;Chief of Staff;フェヴズィ・チャクマク;36;PA;School of Defence;Medium;M12007;x
+12008;Chief of Army;メフメト・ヌリ・ヤムト;36;PA;Static Defence Doctrine;Medium;M12008;x
+12009;Chief of Navy;メフメト・アリ・ウンゲン;36;PA;Base Control Doctrine;Medium;M12009;x
+12010;Chief of Air Force;アリ・オルルンガト;36;PA;Army Aviation Doctrine;Medium;M12010;x
+12031;Head of State;イスメト・イノニュ;38;SC;Pig-headed Isolationist;High;M12031;x
+12032;Head of Government;ジェラール・バヤル;38;SC;Silent Workhorse;High;M12032;x
+12033;Head of Government;レフィク・サイダム;39;ML;Smiling Oilman;High;M12024;x
+12034;Head of Government;シュクリュ・サラジオウル;42;ML;Flamboyant Tough Guy;High;M12034;x
+12035;Foreign Minister;シュクリュ・サラジオウル;38;SC;Biased Intellectual;High;M12034;x
+12036;Foreign Minister;サイード・メネメンジオウル;42;ML;Great Compromiser;Medium;M12036;x
+12038;Foreign Minister;ハッサン・サカ;44;SC;Ideological Crusader;Medium;M12038;x
+12039;Foreign Minister;ネジメティン・サディク・サダク;47;SC;General Staffer;Medium;M12039;x
+12040;Foreign Minister;レフェト・ベレ;36;PA;General Staffer;Medium;M12040;x
+12041;Foreign Minister;イスメト・イノニュ;37;SC;Great Compromiser;Medium;M12002;x
+12042;Foreign Minister;フェトヒ・オクヤル;37;ML;Biased Intellectual;Medium;M12013;x
+12043;Foreign Minister;アブドゥルハリク・レンダ;43;ML;Apologetic Clerk;Medium;M12043;x
+12045;Minister of Armament;ヌルラー・エサト・スメール;43;ML;Corrupt Kleptocrat;Medium;M12045;x
+12046;Minister of Armament;アドナン・メンデレス;46;ML;Theoretical Scientist;Medium;M12046;x
+12047;Minister of Armament;イスメト・イノニュ;36;SC;Administrative Genius;Medium;M12031;x
+12048;Minister of Armament;フアド・カリスター;36;SC;Infantry Proponent;Medium;M12048;x
+12049;Minister of Armament;カジム・オザルプ;36;SC;Military Entrepreneur;Medium;M12049;x
+12050;Minister of Armament;テヴフィク・ルスタ・アラス;39;ML;Theoretical Scientist;Medium;M12050;x
+12051;Minister of Armament;メフメト・ギュナルタイ;40;SC;Tank Proponent;Medium;M12051;x
+12052;Minister of Armament;ムニル・ブルセン;46;ML;Laissez-Faire Capitalist;Medium;M12052;x
+12054;Minister of Armament;ムスタファ・レンダ;38;ML;Military Entrepreneur;Medium;M12054;x
+12056;Minister of Security;フスヌ・チャキール;43;ML;Crooked Kleptocrat;Medium;M12056;x
+12057;Minister of Security;ヒルミ・ウラン;44;ML;Crime Fighter;Medium;M12057;x
+12059;Minister of Security;メムドゥー・タグマク;46;ML;Prince of Terror;Medium;M12059;x
+12060;Minister of Security;アドナン・メンデレス;47;ML;Back Stabber;Medium;M12046;x
+12061;Minister of Security;アブドゥル・ナジ・ティナズ;38;ML;Silent Lawyer;Medium;M12061;x
+12062;Minister of Security;ジェラール・バヤル;36;SC;Back Stabber;Medium;M12032;x
+12063;Minister of Security;アッバス・セヴァト;39;SD;Crooked Kleptocrat;Medium;M12025;x
+12064;Minister of Security;サフェト・アリカン;40;SC;Crime Fighter;Medium;M12058;x
+12065;Minister of Security;アリ・リザ・トゥーレル;40;ML;Efficient Sociopath;Medium;M12065;x
+12066;Minister of Security;オルハン・ゴカイ;41;ML;Silent Lawyer;Medium;M12015;x
+12067;Minister of Security;メフメト・レジェプ・ペケル;41;SC;Compassionate Gentleman;Medium;M12067;x
+12068;Head of Military Intelligence;ムスタファ・レンダ;38;SC;Dismal Enigma;High;M12054;x
+12069;Head of Military Intelligence;アリ・ルザ・アルトゥンカル;43;ML;Logistics Specialist;Medium;M12069;x
+12070;Head of Military Intelligence;モヌターズ・オクメン;46;ML;Industrial Specialist;Medium;M12070;x
+12071;Head of Military Intelligence;メフメト・レジェプ・ペケル;47;ML;Industrial Specialist;High;M12067;x
+12072;Head of Military Intelligence;フアド・コプルル;38;ML;Naval Intelligence Specialist;Medium;M12026;x
+12073;Chief of Staff;アブドゥル・ナジ・ティナズ;38;SC;School of Fire Support;Medium;M12061;x
+12074;Chief of Staff;アリ・オルルンガト;43;ML;School of Mass Combat;Medium;M12010;x
+12075;Chief of Staff;アブドゥラーマン・ギュルマン;46;ML;School of Manoeuvre;Medium;M12075;x
+12077;Chief of Army;ムスタファ・エルデルフン;43;ML;Armoured Spearhead Doctrine;Medium;M12077;x
+12078;Chief of Army;セミル・トゥーデムル;46;ML;Decisive Battle Doctrine;Medium;M12078;x
+12079;Chief of Navy;アリ・フアト・ジェベソイ;38;SC;Indirect Approach Doctrine;Medium;M12079;x
+12080;Chief of Navy;ヴェービ・コック;43;ML;Decisive Naval Battle Doctrine;Medium;M12080;x
+12081;Chief of Navy;アフメト・エイダム・ボラク;46;ML;Base Control Doctrine;Medium;M12081;x
+12083;Chief of Air Force;エルカン・ガタリ;43;ML;Army Aviation Doctrine;Medium;M12083;x
+12084;Chief of Air Force;メムドゥー・タグマク;46;ML;Air Superiority Doctrine;Medium;M12059;x
+12011;Head of State;ニハール・アトシーズ;36;FA;Ruthless Powermonger;High;M12011;x
+12012;Head of Government;ゼキ・ヴェリディ・トガン;36;FA;Old General;High;M12012;x
+12013;Foreign Minister;フェトヒ・オクヤル;36;PA;Ideological Crusader;Medium;M12013;x
+12014;Minister of Armament;サディ・オズベク;36;FA;Air to Sea Proponent;Medium;M12014;x
+12016;Head of Military Intelligence;フェトヒ・オクヤル;36;SC;Dismal Enigma;Medium;M12013;x
+12017;Chief of Staff;イスメト・イノニュ;36;PA;School of Defence;Medium;M12002;x
+12018;Chief of Army;アルパルスラン・トゥルケス;36;FA;Guns and Butter Doctrine;Medium;M12018;x
+12019;Chief of Navy;ラウフ・オルバイ;36;FA;Base Control Doctrine;Medium;M12019;x
+12020;Chief of Air Force;サディ・オズベク;36;PA;Naval Aviation Doctrine;Medium;M12014;x
+12021;Head of State;セフィク・フスヌ;36;ST;Stern Imperialist;High;M12021;x
+12022;Head of Government;ペルテヴ・ナイリ・ボラタヴ;36;ST;Naive Optimist;High;M12022;x
+12023;Foreign Minister;ナジム・ヒクメット・ラン;36;ST;The Cloak N Dagger Schemer;Medium;M12023;x
+12024;Minister of Armament;レフィク・サイダム;36;LWR;Infantry Proponent;Medium;M12024;x
+12027;Chief of Staff;アッバス・セヴァト;36;LWR;School of Manoeuvre;Medium;M12025;x
+12028;Chief of Army;ペルテヴ・ナイリ・ボラタヴ;36;LWR;Elastic Defence Doctrine;Very Low;M12022;x
+12029;Chief of Navy;イスマエル・エリム;36;LE;Decisive Naval Battle Doctrine;Medium;M12029;x
+12030;Chief of Air Force;レフィク・サイダム;36;LE;Air Superiority Doctrine;Medium;M12024;x
+12085;Head of State;ジェラール・バヤル;50;ML;Barking Buffoon;High;M12032;x
+12086;Head of Government;メフメト・レジェプ・ペケル;46;SC;Political Protege;High;M12067;x
+12087;Head of Government;ハッサン・サカ;47;SC;Happy Amateur;High;M12038;x
+12088;Head of Government;メフメト・ギュナルタイ;49;SC;Silent Workhorse;High;M12051;x
+12089;Head of Government;アドナン・メンデレス;50;ML;Ambitious Union Boss;High;M12046;x
+12090;Foreign Minister;メフメト・フアト・キョプリュリュ;50;ML;Iron Fisted Brute;Medium;M12090;x
+12091;Minister of Armament;ファイク・アフメト・バルトチュ;47;SC;Battle Fleet Proponent;Medium;M12091;x
+12092;Minister of Armament;イスマエル・エリム;49;SC;Resource Industrialist;Medium;M12029;x
+12093;Minister of Armament;サメト・アーオルー;50;ML;Theoretical Scientist;Medium;M12093;x
+12094;Minister of Armament;ファトゥン・リュスチュ・ゾルル;52;ML;Administrative Genius;Medium;M12094;x
+12095;Minister of Security;レフク・コラルタン;50;ML;Silent Lawyer;Medium;M12095;x

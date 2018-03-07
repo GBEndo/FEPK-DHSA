@@ -1,0 +1,224 @@
+# 0 - 36”NŽ®—A‘—ŠÍ’ø
+model =
+{ cost                       = 3
+  buildtime                  = 80
+  defaultorganisation        = 30
+  morale                     = 30
+  manpower                   = 1
+  maxspeed                   = 18
+  surfacedetectioncapability = 0
+  airdetectioncapability     = 0
+  subdetectioncapability     = 0
+  visibility                 = 90
+  seadefence                 = 1
+  airdefence                 = 0
+  seaattack                  = 0
+  convoyattack               = 0
+  airattack                  = 0
+  subattack                  = 0
+  shorebombardment           = 0
+  transportcapability        = 40
+  range                      = 2000
+  supplyconsumption          = 0.3
+  fuelconsumption            = 1
+  distance                   = 0.1
+  upgrade_time_factor = 1.0
+  upgrade_cost_factor = 1.0
+  equipment = { transport = 10 manpower = 1000 }
+}
+# 1 38”NŽ®—A‘—ŠÍ’ø
+model =
+{ cost                       = 3.7
+  buildtime                  = 84
+  defaultorganisation        = 30
+  morale                     = 30
+  manpower                   = 1
+  maxspeed                   = 20
+  surfacedetectioncapability = 1
+  airdetectioncapability     = 1
+  subdetectioncapability     = 0
+  visibility                 = 90
+  seadefence                 = 2
+  airdefence                 = 1
+  seaattack                  = 0
+  convoyattack               = 0
+  airattack                  = 1
+  subattack                  = 0
+  shorebombardment           = 0
+  transportcapability        = 40
+  range                      = 2300
+  supplyconsumption          = 0.3
+  fuelconsumption            = 1
+  distance                   = 0.1
+  upgrade_time_factor = 1.0
+  upgrade_cost_factor = 1.0
+  equipment = { transport = 10 manpower = 1000 }
+}
+# 2 41”NŽ®—A‘—ŠÍ’ø
+model =
+{ cost                       = 4.2
+  buildtime                  = 90
+  defaultorganisation        = 30
+  morale                     = 30
+  manpower                   = 1.2
+  maxspeed                   = 22
+  surfacedetectioncapability = 1
+  airdetectioncapability     = 1
+  subdetectioncapability     = 0
+  visibility                 = 90
+  seadefence                 = 4
+  airdefence                 = 2
+  seaattack                  = 0
+  convoyattack               = 0
+  airattack                  = 1
+  subattack                  = 0
+  shorebombardment           = 0
+  transportcapability        = 40
+  range                      = 2800
+  supplyconsumption          = 0.3
+  fuelconsumption            = 1
+  distance                   = 0.1
+  upgrade_time_factor = 1.0
+  upgrade_cost_factor = 1.0
+  equipment = { transport = 10 manpower = 1200 }
+}
+# 3 - 43”NŽ®—A‘—ŠÍ’ø
+model =
+{ cost                       = 4.7
+  buildtime                  = 95
+  defaultorganisation        = 30
+  morale                     = 30
+  manpower                   = 1.2
+  maxspeed                   = 23
+  surfacedetectioncapability = 2
+  airdetectioncapability     = 1
+  subdetectioncapability     = 0
+  visibility                 = 90
+  seadefence                 = 5
+  airdefence                 = 3
+  seaattack                  = 0
+  convoyattack               = 0
+  airattack                  = 2
+  subattack                  = 0
+  shorebombardment           = 0
+  transportcapability        = 40
+  range                      = 3400
+  supplyconsumption          = 0.3
+  fuelconsumption            = 1
+  distance                   = 0.1
+  upgrade_time_factor = 1.0
+  upgrade_cost_factor = 1.0
+  equipment = { transport = 10 manpower = 1200 }
+}
+# 4 - 45”NŽ®—A‘—ŠÍ’ø
+model =
+{ cost                       = 5
+  buildtime                  = 100
+  defaultorganisation        = 30
+  morale                     = 30
+  manpower                   = 1.2
+  maxspeed                   = 24
+  surfacedetectioncapability = 3
+  airdetectioncapability     = 1
+  subdetectioncapability     = 0
+  visibility                 = 90
+  seadefence                 = 5
+  airdefence                 = 3
+  seaattack                  = 0
+  convoyattack               = 0
+  airattack                  = 2
+  subattack                  = 0
+  shorebombardment           = 0
+  transportcapability        = 40
+  range                      = 3700
+  supplyconsumption          = 0.5
+  fuelconsumption            = 1.2
+  distance                   = 0.1
+  upgrade_time_factor = 1.0
+  upgrade_cost_factor = 1.0
+  equipment = { transport = 10 manpower = 1200 }
+}
+# 5 - 49”NŽ®—A‘—ŠÍ’ø
+model =
+{ cost                       = 5.3
+  buildtime                  = 110
+  defaultorganisation        = 30
+  morale                     = 30
+  manpower                   = 1.3
+  maxspeed                   = 25
+  surfacedetectioncapability = 4
+  airdetectioncapability     = 2
+  subdetectioncapability     = 0
+  visibility                 = 90
+  seadefence                 = 6
+  airdefence                 = 4
+  seaattack                  = 0
+  convoyattack               = 0
+  airattack                  = 2
+  subattack                  = 0
+  shorebombardment           = 0
+  transportcapability        = 40
+  range                      = 4100
+  supplyconsumption          = 0.7
+  fuelconsumption            = 1.5
+  distance                   = 0.1
+  upgrade_time_factor = 1.0
+  upgrade_cost_factor = 1.0
+  equipment = { transport = 10 manpower = 1300 }
+}
+# 6 - 53”NŽ®—A‘—ŠÍ’ø
+model =
+{ cost                       = 5.5
+  buildtime                  = 120
+  defaultorganisation        = 30
+  morale                     = 30
+  manpower                   = 1.3
+  maxspeed                   = 28
+  surfacedetectioncapability = 4
+  airdetectioncapability     = 2
+  subdetectioncapability     = 0
+  visibility                 = 90
+  seadefence                 = 7
+  airdefence                 = 5
+  seaattack                  = 0
+  convoyattack               = 0
+  airattack                  = 3
+  subattack                  = 0
+  shorebombardment           = 0
+  transportcapability        = 40
+  range                      = 4500
+  supplyconsumption          = 0.8
+  fuelconsumption            = 1.6
+  distance                   = 0.1
+  upgrade_time_factor = 1.0
+  upgrade_cost_factor = 1.0
+  equipment = { transport = 10 manpower = 1300 }
+}
+# 7 - 58”NŽ®—g—¤ŠÍ’ø
+model =
+{ cost                       = 6
+  buildtime                  = 125
+  defaultorganisation        = 30
+  morale                     = 30
+  manpower                   = 1.4
+  maxspeed                   = 26
+  surfacedetectioncapability = 5
+  airdetectioncapability     = 2
+  subdetectioncapability     = 0
+  visibility                 = 90
+  seadefence                 = 8
+  airdefence                 = 5
+  seaattack                  = 0
+  convoyattack               = 0
+  airattack                  = 3
+  subattack                  = 0
+  shorebombardment           = 0
+  transportcapability        = 40
+  range                      = 4700
+  supplyconsumption          = 0.9
+  fuelconsumption            = 1.8
+  distance                   = 0.1
+  upgrade_time_factor = 1.0
+  upgrade_cost_factor = 1.0
+  equipment = { transport = 10 manpower = 1400 }
+}

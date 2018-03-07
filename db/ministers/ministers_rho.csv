@@ -1,0 +1,51 @@
+RHO;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+553001;Head of State;サー・ハーバート・J・スタンリー;36;ML;Insignificant Layman;High;M553001;x
+553002;Head of Government;ゴッドフライ・マーティン・ハギンズ;36;ML;Corporate Suit;High;M553002;x
+553003;Foreign Minister;サー・イヴェリン・ベアリング;36;ML;Iron Fisted Brute;High;M553003;x
+553004;Minister of Armament;サー・ロバート・J・ハドソン;36;ML;Administrative Genius;Medium;M553004;x
+553005;Minister of Security;アンソニー・シレリー;36;ML;Crime Fighter;Medium;M553005;x
+553006;Head of Military Intelligence;サー・フィリップ・W・リチャードソン;36;ML;Industrial Specialist;Medium;M553006;x
+553007;Chief of Staff;エリック・デ・バーグ;36;ML;School of Fire Support;Medium;L1094;x
+553008;Chief of Army;フィリップ・キャリントン;36;ML;Static Defence Doctrine;Medium;M553008;x
+553009;Chief of Navy;セシル・ドラモンド;36;ML;Power Projection Doctrine;Medium;M553009;x
+553010;Chief of Air Force;サー・チャールズ・アーデン＝クラーク;36;ML;Naval Aviation Doctrine;Medium;M551008;x
+553011;Head of State;リトゥンガ・イェタ3世;36;PA;Barking Buffoon;High;M553011;x
+553012;Head of State;サー・ヒューバート・ウィンスロップ＝ヤング;36;SL;Stern Imperialist;High;M553012;x
+553013;Head of State;ケネス・カウンダ;36;SD;Powerhungry Demagogue;High;M553013;x
+553014;Head of Government;ドナルド・マッケンジー＝ケネディ;36;PA;old airmarshal;High;M553014;x
+553015;Head of Government;サー・チャールズ・アーデン＝クラーク;36;SL;Old General;High;M551012;x
+553016;Head of Government;ヘイスティングズ・カムズ・バンダ;36;SD;Ambitious Union Boss;High;M553016;x
+553017;Foreign Minister;カーマ・クゴシ3世;36;PA;Biased Intellectual;High;M553017;x
+553018;Foreign Minister;サー・ハロルド・B・キターマスター;36;SL;Ideological Crusader;High;M553018;x
+553019;Foreign Minister;サー・セレツェ・カーマ;36;SD;Apologetic Clerk;High;M553019;x
+553020;Minister of Armament;サー・ロイ・ウェレンスキー;36;PA;Air to Ground Proponent;Medium;M553020;x
+553021;Minister of Armament;ムレナ・ヨモフル;36;SL;Corrupt Kleptocrat;Medium;M553021;x
+553022;Minister of Armament;ペド・オレイリー;42;SL;Tank Proponent;Medium;M553022;x
+553023;Minister of Armament;エウブル・ジェームズ・ワディントン;36;SD;Theoretical Scientist;Medium;M553023;x
+553024;Minister of Security;エンダービー・カマツェ;36;PA;Prince of Terror;Medium;M553024;x
+553025;Minister of Security;マクスウェル・マクディアミッド;41;PA;Man of the People;Medium;M553025;x
+553026;Minister of Security;ロバート・スマイス＝クレイマー;36;SL;Crooked Kleptocrat;Medium;M553026;x
+553027;Minister of Security;ヴィオレット・グリッグ;42;SL;Silent Lawyer;Medium;M553027;x
+553028;Minister of Security;ヘンリー・ヌクンブラ;36;SD;Back Stabber;Medium;M553028;x
+553029;Minister of Security;ムジ・フロングワ;43;SD;Compassionate Gentleman;Medium;M553029;x
+553030;Head of Military Intelligence;ピーター・ユーエンス;36;PA;Naval Intelligence Specialist;Medium;M553030;x
+553031;Head of Military Intelligence;ジョン・アレクサンダー・メイビン;41;PA;Political Specialist;Medium;M553031;x
+553032;Head of Military Intelligence;ダンカン・マカリスター;36;SL;Dismal Enigma;Medium;M553032;x
+553033;Head of Military Intelligence;ジョン・ムワナカツェ;36;SD;Technical Specialist;Medium;M553033;x
+553034;Head of Military Intelligence;ツェケディ・カーマ;43;SD;Logistics Specialist;Medium;M553034;x
+553035;Chief of Staff;G・W・D・ニコルソン;36;PA;School of Mass Combat;Medium;M553035;x
+553036;Chief of Staff;トーマス・リーズ;41;ML;School of Manoeuvre;Medium;L1260;x
+553037;Chief of Staff;ムレナ・ヨモフル;36;SL;School of Defence;Medium;M553021;x
+553038;Chief of Staff;C・M・グリッグ;36;SD;School of Psychology;Medium;M553038;x
+553039;Chief of Army;フェルディナンド・チャールズ・スタンリー;36;PA;Guns and Butter Doctrine;Medium;M553039;x
+553040;Chief of Army;デニス・C・カペル・デューン;41;ML;Armoured Spearhead Doctrine;Medium;M553040;x
+553041;Chief of Army;ヌブム・ワ・ルトゥンガ;36;SL;Elastic Defence Doctrine;Medium;M553041;x
+553042;Chief of Army;ヨモフル・ムブルヌ;36;SD;Decisive Battle Doctrine;Medium;M553042;x
+553043;Chief of Navy;リトゥンガ・イェタ3世;36;PA;Base Control Doctrine;Medium;M553011;x
+553044;Chief of Navy;トミー・グールド;41;ML;Indirect Approach Doctrine;Medium;M74009;x
+553045;Chief of Navy;ジョージ・スクワンス;36;SL;Open Seas Doctrine;Medium;M553045;x
+553046;Chief of Navy;ヌブム・ワ・ルトゥンガ;36;SD;Decisive Naval Battle Doctrine;Medium;M553041;x
+553047;Chief of Air Force;ドナルド・マッケンジー＝ケネディ;36;PA;Army Aviation Doctrine;Medium;M553014;x
+553048;Chief of Air Force;ハーバート・クラウチャー;36;SL;Carpet Bombing Doctrine;Medium;M553048;x
+553049;Chief of Air Force;ジョン・ムワナカツェ;36;SD;Vertical Envelopment Doctrine;Medium;M553033;x

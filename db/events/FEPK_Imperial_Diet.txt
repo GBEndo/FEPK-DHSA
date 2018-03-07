@@ -1,0 +1,1396 @@
+#########################################################################
+#	FEPK_Imperial_Diet.txt
+#	IF’é‘‹c‰ïMODEíŒã©‰q‘àƒCƒxƒ“ƒg
+#
+#	IF’é‘‹c‰ï‘I‹“MOD‚ÌƒCƒxƒ“ƒg‚ğQl‚É‚³‚¹‚Ä‚¢‚½‚¾‚«‚Ü‚µ‚½B
+#	‹–‰Â‚ğ’¸‚¢‚½ìÒ‚ÌˆêŒÀ‚Ìl—lA‚ ‚è‚ª‚Æ‚¤‚²‚´‚¢‚Ü‚·I
+#
+#########################################################################
+#id = 135400		IíéŒ¾
+#id = 135401		‘æ20‰ñO‹c‰@‹cˆõ‘‘I‹“(1940”N)
+#id = 135402		‘æ20‰ñO‹c‰@‹cˆõ‘‘I‹“(”CŠú‰„’·ƒCƒxƒ“ƒg”­¶E1941)
+#id = 135403		‘æ21‰ñO‹c‰@‹cˆõ‘‘I‹“(1944”N)
+#id = 135404		‘æ22‰ñO‹c‰@‹cˆõ‘‘I‹“(1948”N)
+#id = 135405		‘æ23‰ñO‹c‰@‹cˆõ‘‘I‹“(1952”N)
+#id = 135406		‘æ24‰ñO‹c‰@‹cˆõ‘‘I‹“(1956”N)
+#id = 135407		‘æ25‰ñO‹c‰@‹cˆõ‘‘I‹“(1960”N)
+#id = 135408		‘æ26‰ñO‹c‰@‹cˆõ‘‘I‹“(1964”N)
+#id = 135410		©‰q‘àŠÖŒWŠt—»Œğ‘ãƒCƒxƒ“ƒg
+#########################################################################
+#‚¹‚Á‚©‚­‚È‚Ì‚ÅƒfƒBƒVƒWƒ‡ƒ“‰»
+event = { 
+	id = 135400
+	random = no
+	country = JAP
+	
+	name = "EVT_135400_NAME"
+	desc = "EVT_135400_DESC"
+	style = 0
+	picture = "election"
+	decision_picture = "decision_fireside_chat"
+
+	decision = {
+		NOT = {
+			#event = 131500
+			event = 131501
+			war = { country = JAP  country = CHI }
+			war = { country = JAP  country = USA }
+			war = { country = JAP  country = ENG }
+			war = { country = JAP  country = GER }
+			war = { country = JAP  country = SOV }
+		}
+		year = 1942
+		local_flag = Yokusan
+		NOT = {
+			flag = usadefeatsjap
+			flag = sovdefeatsjap
+		}
+	}
+
+	decision_trigger = { }
+
+	trigger = {
+		NOT = {
+			#event = 131500
+			event = 131501
+			war = { country = JAP  country = CHI }
+			war = { country = JAP  country = USA }
+			war = { country = JAP  country = ENG }
+			war = { country = JAP  country = GER }
+			war = { country = JAP  country = SOV }
+		}
+		year = 1942
+		local_flag = Yokusan
+		NOT = {
+			flag = usadefeatsjap
+			flag = sovdefeatsjap
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 } # Real Date:* --
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = { # ˆê’U–¯å‰»{—ƒ^‘I‹“ƒtƒ‰ƒO‰ğœ‚Å‘I‹“‚ÌğŒ‚ğ–‚½‚³‚¹‚é
+		name = "EVT_135400_ACTA"
+		command = { type = dissent value = -1 }
+		command = { type = local_clrflag which = Yokusan } #FEPKBETA3
+		command = { type = set_domestic which = democratic value = 5 } #FEPKBETA3
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = sleepevent which = 55982 }
+		command = { type = sleepevent which = 55983 }
+	}
+}
+
+#‘æ20‰ñ‘I‹“‚ÌÀ{ƒgƒŠƒK[‚ÍA
+#• Ø‚è–â“š‚Å‰FŠ_“àŠt‚ğ¬—§‚³‚¹‚ÄŒR•”‘åbŒ»–ğ•Š¯§”p~(• Ø‚è–â“š‘j~)
+#—ƒ^‘Ì§‚ğ‹‘”Û(–¯å`PA)
+#í‘ˆIŒ‹‚©O‹c‰@”CŠú‰„’·‹‘”Û
+
+event = {
+ 	id = 135401
+	country = JAP
+	random = no
+
+	trigger = {
+		NOT = {
+			event = 131512 
+			event = 131522
+			event = 55981 #‹ò‚¢“¦‚°‰ğU
+			local_flag = Yokusan
+			flag = Nagata
+			flag = Kodoha
+			flag = usadefeatsjap
+			flag = sovdefeatsjap
+		}
+		OR = { #FEPKBETA3
+			government = democratic
+			ideology = paternal_autocrat
+		}
+		OR = { #FEPKBETA3
+			local_flag = Senkyo40
+			NOT = {
+				war = { country = JAP  country = CHI }
+				war = { country = JAP  country = USA }
+				war = { country = JAP  country = ENG }
+				war = { country = JAP  country = GER }
+				war = { country = JAP  country = SOV }
+			}
+		}
+	}
+
+	name = "EVT_135401_NAME"
+	desc = "EVT_135401_DESC"
+	style = 0
+
+	date = { day = 19 month = february year = 1940 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1940 }
+
+	action_a = {
+		name = "EVT_135401_ACTA"
+		ai_chance = 34
+		command = { type = headofgovernment which = 5024 } #’¬“c’‰¡
+		command = { type = foreignminister which = 5050 } #dŒõˆ¨
+		command = { type = armamentminister which = 5084 } #“¡Œ´‹âŸ˜Y
+		command = { type = ministerofsecurity which = 5100 } #¬Œ´’¼
+		command = { type = ministerofintelligence which = 5144 } #“y‹´—Eˆí
+		command = { type = chiefofstaff which = 5155 }#™RŒ³
+		command = { type = chiefofarmy which = 5165 } #™RŒ³
+		command = { type = chiefofnavy which = 5170 } #“ˆ“c”É‘¾˜Y
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = sleepevent which = 135402 }
+		command = { type = sleepevent which = 55987 } #—ƒ^‘I‹“
+	}
+	action_b = {
+		name = "EVT_135401_ACTB"
+		ai_chance = 33
+		command = { type = headofgovernment which = 5600 } #’†“‡’m‹v•½
+		command = { type = foreignminister which = 5060 } #¼‰ª—m‰E
+		command = { type = ministerofsecurity which = 5099 } #‰ÍŒ´“c‰Ò‹g
+		command = { type = armamentminister which = 5085 } #ŠİM‰î
+		command = { type = ministerofintelligence which = 5144 } #“y‹´—Eˆí
+		command = { type = chiefofstaff which = 5155 }#™RŒ³
+		command = { type = chiefofarmy which = 5165 } #™RŒ³
+		command = { type = chiefofnavy which = 5170 } #“ˆ“c”É‘¾˜Y
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = sleepevent which = 135402 }
+		command = { type = sleepevent which = 55987 } #—ƒ^‘I‹“
+	}
+	action_c = {
+		name = "EVT_135401_ACTC"
+		ai_chance = 33
+		command = { type = headofgovernment which = 5601 } #‹vŒ´–[”V•
+		command = { type = foreignminister which = 5065 } #“Œ‹½–Îúº
+		command = { type = ministerofsecurity which = 5105 } #’ªœ¨”V•ã
+		command = { type = armamentminister which = 5077 } #”µRˆê˜Y
+		command = { type = ministerofintelligence which = 5144 } #“y‹´—Eˆí
+		command = { type = chiefofstaff which = 5155 }#™RŒ³
+		command = { type = chiefofarmy which = 5165 } #™RŒ³
+		command = { type = chiefofnavy which = 5170 } #“ˆ“c”É‘¾˜Y
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = sleepevent which = 135402 }
+		command = { type = sleepevent which = 55987 } #—ƒ^‘I‹“
+	}
+}
+
+event = {
+ 	id = 135402
+	country = JAP
+	random = no
+
+	trigger = {
+		NOT = {
+			event = 131512 
+			event = 131522
+		#	event = 55981 #‹ò‚¢“¦‚°‰ğU #‹ò‚¢“¦‚°‰ğU‚Å‚à‚Q“x–Ú‚Ì‰„’·ƒCƒxƒ“ƒg”­¶
+			local_flag = Yokusan
+			flag = Nagata
+			flag = Kodoha
+		}
+		OR = { #FEPKBETA3
+			government = democratic
+			ideology = paternal_autocrat
+		}
+		OR = { #FEPKBETA3
+			local_flag = Senkyo41
+			NOT = {
+				war = { country = JAP  country = CHI }
+				war = { country = JAP  country = USA }
+				war = { country = JAP  country = ENG }
+				war = { country = JAP  country = GER }
+				war = { country = JAP  country = SOV }
+			}
+		}
+	}
+
+	name = "EVT_135401_NAME"
+	desc = "EVT_135401_DESC"
+	style = 0
+
+	date = { day = 19 month = february year = 1941 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1941 }
+
+	action_a = {
+		name = "EVT_135401_ACTA"
+		ai_chance = 34
+		command = { type = headofgovernment which = 5024 } #’¬“c’‰¡
+		command = { type = foreignminister which = 5050 } #dŒõˆ¨
+		command = { type = armamentminister which = 5084 } #“¡Œ´‹âŸ˜Y
+		command = { type = ministerofsecurity which = 5100 } #¬Œ´’¼
+		command = { type = ministerofintelligence which = 5144 } #“y‹´—Eˆí
+		command = { type = chiefofstaff which = 5155 }#™RŒ³
+		command = { type = chiefofarmy which = 5165 } #™RŒ³
+		command = { type = chiefofnavy which = 5170 } #“ˆ“c”É‘¾˜Y
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = sleepevent which = 135401 }
+		command = { type = sleepevent which = 55987 } #—ƒ^‘I‹“
+	}
+	action_b = {
+		name = "EVT_135401_ACTB"
+		ai_chance = 33
+		command = { type = headofgovernment which = 5600 } #’†“‡’m‹v•½
+		command = { type = foreignminister which = 5060 } #¼‰ª—m‰E
+		command = { type = ministerofsecurity which = 5099 } #‰ÍŒ´“c‰Ò‹g
+		command = { type = armamentminister which = 5085 } #ŠİM‰î
+		command = { type = ministerofintelligence which = 5144 } #“y‹´—Eˆí
+		command = { type = chiefofstaff which = 5155 }#™RŒ³
+		command = { type = chiefofarmy which = 5165 } #™RŒ³
+		command = { type = chiefofnavy which = 5170 } #“ˆ“c”É‘¾˜Y
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = sleepevent which = 135401 }
+		command = { type = sleepevent which = 55987 } #—ƒ^‘I‹“
+	}
+	action_c = {
+		name = "EVT_135401_ACTC"
+		ai_chance = 33
+		command = { type = headofgovernment which = 5601 } #‹vŒ´–[”V•
+		command = { type = foreignminister which = 5065 } #“Œ‹½–Îúº
+		command = { type = ministerofsecurity which = 5105 } #’ªœ¨”V•ã
+		command = { type = armamentminister which = 5077 } #”µRˆê˜Y
+		command = { type = ministerofintelligence which = 5144 } #“y‹´—Eˆí
+		command = { type = chiefofstaff which = 5155 }#™RŒ³
+		command = { type = chiefofarmy which = 5165 } #™RŒ³
+		command = { type = chiefofnavy which = 5170 } #“ˆ“c”É‘¾˜Y
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = sleepevent which = 135401 }
+		command = { type = sleepevent which = 55987 } #—ƒ^‘I‹“
+	}
+}
+
+event = {
+ 	id = 135403
+	country = JAP
+	random = no
+
+	trigger = {
+		NOT = {
+			event = 131512 
+			event = 131522
+			local_flag = Yokusan
+			flag = Nagata
+			flag = Kodoha
+		}
+		OR = { #FEPKBETA3
+			government = democratic
+			ideology = paternal_autocrat
+		}
+		NOT = { war = { country = JAP  country = CHI } }
+		NOT = { war = { country = JAP  country = USA } }
+		NOT = { war = { country = JAP  country = ENG } }
+		NOT = { war = { country = JAP  country = GER } }
+		NOT = { war = { country = JAP  country = SOV } }
+	}
+
+	name = "EVT_135403_NAME"
+	desc = "EVT_135403_DESC"
+	style = 0
+
+	date = { day = 19 month = february year = 1944 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1944 }
+
+	action_a = {
+		name = "EVT_135403_ACTA"
+		ai_chance = 33
+		command = { type = headofgovernment which = 5602 } #Ö“¡—²•v
+		command = { type = foreignminister which = 5003 } #œA“cO‹B
+		command = { type = armamentminister which = 5613 } #•¼Œ´Šìd˜Y
+		command = { type = ministerofsecurity which = 5097 } #Œã“¡•¶•v
+		command = { type = ministerofintelligence which = 5134 } #‚{l˜Y
+		command = { type = chiefofstaff which = 5155 }#™RŒ³
+		command = { type = chiefofarmy which = 5165 } #™RŒ³
+		command = { type = chiefofnavy which = 5537 } #•Ä“àŒõ­
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 2 }
+	}
+	action_b = {
+		name = "EVT_135403_ACTB"
+		ai_chance = 33
+		command = { type = headofgovernment which = 5600 } #’†“‡’m‹v•½
+		command = { type = foreignminister which = 5060 } #¼‰ª—m‰E
+		command = { type = ministerofsecurity which = 5099 } #‰ÍŒ´“c‰Ò‹g
+		command = { type = armamentminister which = 5085 } #ŠİM‰î
+		command = { type = ministerofintelligence which = 5135 } #–ì‘º’¼–M
+		command = { type = chiefofstaff which = 5155 }#™RŒ³
+		command = { type = chiefofarmy which = 5165 } #™RŒ³
+		command = { type = chiefofnavy which = 5537 } #•Ä“àŒõ­
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 3 }
+	}
+	action_c = {
+		name = "EVT_135403_ACTC"
+		ai_chance = 34
+		command = { type = headofgovernment which = 5601 } #‹vŒ´–[”V•
+		command = { type = foreignminister which = 5065 } #“Œ‹½–Îúº
+		command = { type = ministerofsecurity which = 5105 } #’ªœ¨”V•ã
+		command = { type = armamentminister which = 5077 } #”µRˆê˜Y
+		command = { type = ministerofintelligence which = 5144 } #“y‹´—Eˆí
+		command = { type = chiefofstaff which = 5155 }#™RŒ³
+		command = { type = chiefofarmy which = 5165 } #™RŒ³
+		command = { type = chiefofnavy which = 5537 } #•Ä“àŒõ­
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 4 }
+	}
+}
+
+event = {
+ 	id = 135404
+	country = JAP
+	random = no
+
+	trigger = {
+		NOT = {
+			event = 131512 
+			event = 131522
+			local_flag = Yokusan
+			flag = Nagata
+			flag = Kodoha
+		}
+		OR = { #FEPKBETA3
+			government = democratic
+			ideology = paternal_autocrat
+		}
+		NOT = { war = { country = JAP  country = CHI } }
+		NOT = { war = { country = JAP  country = USA } }
+		NOT = { war = { country = JAP  country = ENG } }
+		NOT = { war = { country = JAP  country = GER } }
+		NOT = { war = { country = JAP  country = SOV } }
+	}
+
+	name = "EVT_135404_NAME"
+	desc = "EVT_135404_DESC"
+	style = 0
+
+	date = { day = 19 month = february year = 1948 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1948 }
+
+	action_a = {
+		name = "EVT_135404_ACTA"
+		ai_chance = 33
+		command = { type = headofgovernment which = 5604 } #•½àV’·‹g
+		command = { type = foreignminister which = 5055 } #‰FŠ_ˆê¬
+		command = { type = armamentminister which = 5614 } #•Ä“àŒõ­
+		command = { type = ministerofsecurity which = 5111 } #¬—ÑçR‘¢
+		command = { type = ministerofintelligence which = 5130 } #‰FŠ_ˆê¬
+		command = { type = chiefofstaff which = 5154 } #OìŒRˆê
+		command = { type = chiefofarmy which = 5166 } #“ŒŠ‰p‹@
+		command = { type = chiefofnavy which = 5200 } #R–{ŒÜ\˜Z
+		command = { type = sleepminister which = 5602 } #Ö“¡—²•v
+		command = { type = sleepminister which = 5600 } #’†“‡’m‹v•½
+		command = { type = sleepminister which = 5093 } #’†“‡’m‹v•½
+		command = { type = sleepminister which = 5601 } #‹vŒ´–[”V•
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 2 }
+	}
+	action_b = {
+		name = "EVT_135404_ACTB"
+		ai_chance = 33
+		command = { type = headofgovernment which = 5603 } #‘O“c•Ä‘ 
+		command = { type = foreignminister which = 5056 } #‹ßåÊ•¶–›
+		command = { type = ministerofsecurity which = 5103 } #Rè›Ü
+		command = { type = armamentminister which = 5073 } #ŒŞ“°‘ì—Y
+		command = { type = ministerofintelligence which = 5143 } #r–Ø’å•v
+		command = { type = chiefofstaff which = 5154 } #OìŒRˆê
+		command = { type = chiefofarmy which = 5166 } #“ŒŠ‰p‹@
+		command = { type = chiefofnavy which = 5200 } #R–{ŒÜ\˜Z
+		command = { type = sleepminister which = 5602 } #Ö“¡—²•v
+		command = { type = sleepminister which = 5600 } #’†“‡’m‹v•½
+		command = { type = sleepminister which = 5093 } #’†“‡’m‹v•½
+		command = { type = sleepminister which = 5601 } #‹vŒ´–[”V•
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 3 }
+	}
+	action_c = {
+		name = "EVT_135404_ACTC"
+		ai_chance = 34
+		command = { type = headofgovernment which = 5032 } #”µRˆê˜Y
+		command = { type = foreignminister which = 5059 } #–ì‘º‹gO˜Y
+		command = { type = ministerofsecurity which = 5210 } #Î‹´’XR
+		command = { type = armamentminister which = 5079 } #¬Š}Œ´O‹ã˜Y
+		command = { type = ministerofintelligence which = 5129 } #•ĞR“N
+		command = { type = chiefofstaff which = 5154 } #OìŒRˆê
+		command = { type = chiefofarmy which = 5166 } #“ŒŠ‰p‹@
+		command = { type = chiefofnavy which = 5200 } #R–{ŒÜ\˜Z
+		command = { type = sleepminister which = 5602 } #Ö“¡—²•v
+		command = { type = sleepminister which = 5600 } #’†“‡’m‹v•½
+		command = { type = sleepminister which = 5093 } #’†“‡’m‹v•½
+		command = { type = sleepminister which = 5601 } #‹vŒ´–[”V•
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 4 }
+	}
+}
+
+event = {
+ 	id = 135405
+	country = JAP
+	random = no
+
+	trigger = {
+		NOT = {
+			event = 131512 
+			event = 131522
+			local_flag = Yokusan
+			flag = Nagata
+			flag = Kodoha
+		}
+		OR = { #FEPKBETA3
+			government = democratic
+			ideology = paternal_autocrat
+		}
+		NOT = { war = { country = JAP  country = CHI } }
+		NOT = { war = { country = JAP  country = USA } }
+		NOT = { war = { country = JAP  country = ENG } }
+		NOT = { war = { country = JAP  country = GER } }
+		NOT = { war = { country = JAP  country = SOV } }
+	}
+
+	name = "EVT_135405_NAME"
+	desc = "EVT_135405_DESC"
+	style = 0
+
+	date = { day = 19 month = february year = 1952 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1952 }
+
+	action_a = {
+		name = "EVT_135405_ACTA"
+		ai_chance = 20
+		command = { type = headofgovernment which = 5028 } #‰FŠ_ˆê¬
+		command = { type = foreignminister which = 5052 } #‹g“c–Î
+		command = { type = armamentminister which = 5221 } #Œüˆä’‰°
+		command = { type = ministerofsecurity which = 5229 } #–Ø‘º“Ä‘¾˜Y
+		command = { type = ministerofintelligence which = 5631 } #–xØ‘P¡˜Y
+		command = { type = chiefofstaff which = 5527 } #‰º‘º’è
+		command = { type = chiefofarmy which = 5535 } #‰º‘º’è
+		command = { type = chiefofnavy which = 5202 } #¬àV¡O˜Y
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 2 }
+	}
+	action_b = {
+		name = "EVT_135405_ACTB"
+		ai_chance = 40
+		command = { type = headofgovernment which = 5606 } #“Œ‹½À
+		command = { type = foreignminister which = 5047 } #–FàVŒª‹g
+		command = { type = ministerofsecurity which = 5108 } #–ØŒËKˆê
+		command = { type = armamentminister which = 5220 } #’r“c—El
+		command = { type = ministerofintelligence which = 5137 } #‰ªŒhƒ
+		command = { type = chiefofstaff which = 5527 } #‰º‘º’è
+		command = { type = chiefofarmy which = 5535 } #‰º‘º’è
+		command = { type = chiefofnavy which = 5202 } #¬àV¡O˜Y
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 3 }
+	}
+	action_c = {
+		name = "EVT_135405_ACTC"
+		ai_chance = 40
+		command = { type = headofgovernment which = 5605 } #‹àŒõ—f•v
+		command = { type = foreignminister which = 5053 } #²“¡®•
+		command = { type = ministerofsecurity which = 5230 } #Œ¢—{Œ’
+		command = { type = armamentminister which = 5079 } #¬Š}Œ´O‹ã˜Y
+		command = { type = ministerofintelligence which = 5236 } #¬Œ´’¼
+		command = { type = chiefofstaff which = 5527 } #‰º‘º’è
+		command = { type = chiefofarmy which = 5535 } #‰º‘º’è
+		command = { type = chiefofnavy which = 5202 } #¬àV¡O˜Y
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 4 }
+	}
+}
+
+event = {
+ 	id = 135406
+	country = JAP
+	random = no
+
+	trigger = {
+		NOT = {
+			event = 131512 
+			event = 131522
+			local_flag = Yokusan
+			flag = Nagata
+			flag = Kodoha
+		}
+		OR = { #FEPKBETA3
+			government = democratic
+			ideology = paternal_autocrat
+		}
+		NOT = { war = { country = JAP  country = CHI } }
+		NOT = { war = { country = JAP  country = USA } }
+		NOT = { war = { country = JAP  country = ENG } }
+		NOT = { war = { country = JAP  country = GER } }
+		NOT = { war = { country = JAP  country = SOV } }
+	}
+
+	name = "EVT_135406_NAME"
+	desc = "EVT_135406_DESC"
+	style = 0
+
+	date = { day = 19 month = february year = 1956 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1956 }
+
+	action_a = {
+		name = "EVT_135406_ACTA"
+		ai_chance = 33
+		command = { type = headofgovernment which = 5608 } #’ßŒ©—S•ã
+		command = { type = foreignminister which = 5052 } #‹g“c–Î
+		command = { type = armamentminister which = 5222 } #ˆê–œ“c®“o
+		command = { type = ministerofsecurity which = 5229 } #–Ø‘º“Ä‘¾˜Y
+		command = { type = ministerofintelligence which = 5617 } #‰Íç³ŒÕl˜Y
+		command = { type = chiefofstaff which = 5520 } #“Œ‹vç‹{–«•F‰¤
+		command = { type = chiefofarmy which = 5626 } #••”‘ìl˜Y
+		command = { type = chiefofnavy which = 5540 } #ˆäã¬”ü
+		command = { type = chiefofair which = 5180 } # ˆäã¬”ü
+		command = { type = sleepminister which = 5020 } #‰FŠ_ˆê¬
+		command = { type = sleepminister which = 5028 } #‰FŠ_ˆê¬
+		command = { type = sleepminister which = 5130 } #‰FŠ_ˆê¬
+		command = { type = sleepminister which = 5055 } #‰FŠ_ˆê¬
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 2 }
+	}
+	action_b = {
+		name = "EVT_135406_ACTB"
+		ai_chance = 34
+		command = { type = headofgovernment which = 5611 } #‹{àV—T
+		command = { type = foreignminister which = 5216 } #ŠİM‰î
+		command = { type = ministerofsecurity which = 5616 } #•½—Ñ·l
+		command = { type = armamentminister which = 5220 } #’r“c—El
+		command = { type = ministerofintelligence which = 5617 } #‰Íç³ŒÕl˜Y
+		command = { type = chiefofstaff which = 5520 } #“Œ‹vç‹{–«•F‰¤
+		command = { type = chiefofarmy which = 5626 } #••”‘ìl˜Y
+		command = { type = chiefofnavy which = 5540 } #ˆäã¬”ü
+		command = { type = chiefofair which = 5180 } # ˆäã¬”ü
+		command = { type = sleepminister which = 5020 } #‰FŠ_ˆê¬
+		command = { type = sleepminister which = 5028 } #‰FŠ_ˆê¬
+		command = { type = sleepminister which = 5130 } #‰FŠ_ˆê¬
+		command = { type = sleepminister which = 5055 } #‰FŠ_ˆê¬
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 3 }
+	}
+	action_c = {
+		name = "EVT_135406_ACTC"
+		ai_chance = 33
+		command = { type = headofgovernment which = 5607 } #‘¾“c³F
+		command = { type = foreignminister which = 5215 } #‹v•Û“cŠÑˆê˜Y
+		command = { type = ministerofsecurity which = 5210 } #Î‹´’XR
+		command = { type = armamentminister which = 5078 } #¯“‡“ñ˜Y
+		command = { type = ministerofintelligence which = 5617 } #‰Íç³ŒÕl˜Y
+		command = { type = chiefofstaff which = 5520 } #“Œ‹vç‹{–«•F‰¤
+		command = { type = chiefofarmy which = 5626 } #••”‘ìl˜Y
+		command = { type = chiefofnavy which = 5540 } #ˆäã¬”ü
+		command = { type = chiefofair which = 5180 } # ˆäã¬”ü
+		command = { type = sleepminister which = 5020 } #‰FŠ_ˆê¬
+		command = { type = sleepminister which = 5028 } #‰FŠ_ˆê¬
+		command = { type = sleepminister which = 5130 } #‰FŠ_ˆê¬
+		command = { type = sleepminister which = 5055 } #‰FŠ_ˆê¬
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 4 }
+	}
+}
+
+event = {
+ 	id = 135407
+	country = JAP
+	random = no
+
+	trigger = {
+		NOT = {
+			event = 131512 
+			event = 131522
+			local_flag = Yokusan
+			flag = Nagata
+			flag = Kodoha
+		}
+		OR = { #FEPKBETA3
+			government = democratic
+			ideology = paternal_autocrat
+		}
+		NOT = { war = { country = JAP  country = CHI } }
+		NOT = { war = { country = JAP  country = USA } }
+		NOT = { war = { country = JAP  country = ENG } }
+		NOT = { war = { country = JAP  country = GER } }
+		NOT = { war = { country = JAP  country = SOV } }
+	}
+
+	name = "EVT_135407_NAME"
+	desc = "EVT_135407_DESC"
+	style = 0
+
+	date = { day = 19 month = february year = 1960 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1960 }
+
+	action_a = {
+		name = "EVT_135407_ACTA"
+		ai_chance = 33
+		command = { type = headofgovernment which = 5610 } #¼‘ºŒªO
+		command = { type = foreignminister which = 5052 } #‹g“c–Î
+		command = { type = armamentminister which = 5615 } #Œ¹“c›‰
+		command = { type = ministerofsecurity which = 5228 } #‘å‹´••v
+		command = { type = ministerofintelligence which = 5618 } #’C–¤Äˆê
+		command = { type = chiefofstaff which = 5624 } # ’Ò­M
+		command = { type = chiefofarmy which = 5633 } # ’Ò­M
+		command = { type = chiefofnavy which = 5642 } # ‘åˆä“Ä
+		command = { type = chiefofair which = 5646 } # Œ¹“c›‰
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 2 }
+	}
+	action_b = {
+		name = "EVT_135407_ACTB"
+		ai_chance = 34
+		command = { type = headofgovernment which = 5213 } #’r“c—El
+		command = { type = foreignminister which = 5217 } #“¡Rˆ¤ˆê˜Y
+		command = { type = ministerofsecurity which = 5616 } #•½—Ñ·l
+		command = { type = armamentminister which = 5227 } #‰F²”üŸ«
+		command = { type = ministerofintelligence which = 5618 } #’C–¤Äˆê
+		command = { type = chiefofstaff which = 5624 } # ’Ò³M
+		command = { type = chiefofarmy which = 5634 } # £“‡—´O
+		command = { type = chiefofnavy which = 5642 } # ‘åˆä“Ä
+		command = { type = chiefofair which = 5648 } # ‘åˆä“Ä
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 3 }
+	}
+	action_c = {
+		name = "EVT_135407_ACTC"
+		ai_chance = 33
+		command = { type = headofgovernment which = 5607 } #‘¾“c³F
+		command = { type = foreignminister which = 5215 } #‹v•Û“cŠÑˆê˜Y
+		command = { type = ministerofsecurity which = 5231 } #’†‘º”~‹g
+		command = { type = armamentminister which = 5234 } #X‰i’åˆê˜Y
+		command = { type = ministerofintelligence which = 5618 } #’C–¤Äˆê
+		command = { type = chiefofstaff which = 5624 } # ’Ò­M
+		command = { type = chiefofarmy which = 5633 } # ’Ò­M
+		command = { type = chiefofnavy which = 5642 } # ‘åˆä“Ä
+		command = { type = chiefofair which = 5648 } # ‘åˆä“Ä
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 4 }
+	}
+}
+
+event = {
+ 	id = 135408
+	country = JAP
+	random = no
+
+	trigger = {
+		NOT = {
+			event = 131512 
+			event = 131522
+			local_flag = Yokusan
+			flag = Nagata
+			flag = Kodoha
+		}
+		OR = { #FEPKBETA3
+			government = democratic
+			ideology = paternal_autocrat
+		}
+		NOT = { war = { country = JAP  country = CHI } }
+		NOT = { war = { country = JAP  country = USA } }
+		NOT = { war = { country = JAP  country = ENG } }
+		NOT = { war = { country = JAP  country = GER } }
+		NOT = { war = { country = JAP  country = SOV } }
+	}
+
+	name = "EVT_135408_NAME"
+	desc = "EVT_135408_DESC"
+	style = 0
+
+	date = { day = 19 month = february year = 1964 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1964 }
+
+	action_a = {
+		name = "EVT_135408_ACTA"
+		ai_chance = 33
+		command = { type = headofgovernment which = 5610 } #¼‘ºŒªO
+		command = { type = foreignminister which = 5052 } #‹g“c–Î
+		command = { type = armamentminister which = 5615 } #Œ¹“c›‰
+		command = { type = ministerofsecurity which = 5228 } #‘å‹´••v
+		command = { type = ministerofintelligence which = 5619 } #–xÄO
+		command = { type = chiefofstaff which = 5625 } # –xÄO
+		command = { type = chiefofarmy which = 5635 } # –xÄO
+		command = { type = chiefofnavy which = 5642 } # ‘åˆä“Ä
+		command = { type = chiefofair which = 5646 } # Œ¹“c›‰
+		command = { type = sleepminister which = 5213 } #’r“c—El
+		command = { type = sleepminister which = 5220 } #’r“c—El
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 2 }
+	}
+	action_b = {
+		name = "EVT_135408_ACTB"
+		ai_chance = 34
+		command = { type = headofgovernment which = 5612 } #²“¡‰hì
+		command = { type = foreignminister which = 5219 } #‘å•½³–F
+		command = { type = ministerofsecurity which = 5232 } #A–ØMq˜Y
+		command = { type = armamentminister which = 5225 } #“c’†Šp‰h
+		command = { type = ministerofintelligence which = 5619 } #–xÄO
+		command = { type = chiefofstaff which = 5624 } # ’Ò³M
+		command = { type = chiefofarmy which = 5634 } # £“‡—´O
+		command = { type = chiefofnavy which = 5642 } # ‘åˆä“Ä
+		command = { type = chiefofair which = 5648 } # ‘åˆä“Ä
+		command = { type = sleepminister which = 5213 } #’r“c—El
+		command = { type = sleepminister which = 5220 } #’r“c—El
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 3 }
+	}
+	action_c = {
+		name = "EVT_135408_ACTC"
+		ai_chance = 33
+		command = { type = headofgovernment which = 5609 }#Î••d
+		command = { type = foreignminister which = 5215 } #‹v•Û“cŠÑˆê˜Y
+		command = { type = ministerofsecurity which = 5231 } #’†‘º”~‹g
+		command = { type = armamentminister which = 5234 } #X‰i’åˆê˜Y
+		command = { type = ministerofintelligence which = 5619 } #–xÄO
+		command = { type = chiefofstaff which = 5625 } # –x‰hO
+		command = { type = chiefofarmy which = 5635 } # –x‰hO
+		command = { type = chiefofnavy which = 5642 } # ‘åˆä“Ä
+		command = { type = chiefofair which = 5648 } # ‘åˆä“Ä
+		command = { type = sleepminister which = 5213 } #’r“c—El
+		command = { type = sleepminister which = 5220 } #’r“c—El
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 4 }
+	}
+}
+
+#“‡–‹—»’·
+
+event = {
+	id = 135410
+	random = no
+	country = JAP
+
+	
+	trigger = {
+		OR = {
+			event = 131500
+			event = 131501
+		}
+		OR = { #FEPKBETA3
+			government = democratic
+			ideology = paternal_autocrat
+		}
+	}
+
+	date = { day = 1 month = december year = 1946 }
+
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = chiefofstaff which = 5620 } #••”‘ìl˜Y
+		command = { type = chiefofarmy which = 5626 } #••”‘ìl˜Y
+	}
+}
+
+event = {
+	id = 135411
+	random = no
+	country = JAP
+
+	
+	trigger = {
+		OR = {
+			event = 131500
+			event = 131501
+		}
+		OR = { #FEPKBETA3
+			government = democratic
+			ideology = paternal_autocrat
+		}
+	}
+
+	date = { day = 1 month = october year = 1950 }
+
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = chiefofstaff which = 5622 } #—ÑŒhO
+		command = { type = chiefofarmy which = 5628 } #—ÑŒhO
+	}
+}
+
+event = {
+	id = 135412
+	random = no
+	country = JAP
+
+	
+	trigger = {
+		OR = {
+			event = 131500
+			event = 131501
+		}
+		OR = { #FEPKBETA3
+			government = democratic
+			ideology = paternal_autocrat
+		}
+	}
+
+	date = { day = 14 month = august year = 1964 }
+
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = chiefofstaff which = 5623 } #™]ˆêO
+		command = { type = chiefofnavy which = 5641 } # ™]ˆêO
+	}
+}
+
+#—¤ã©‰q‘à
+
+event = {
+	id = 135413
+	random = no
+	country = JAP
+
+	
+	trigger = {
+		OR = {
+			event = 131500
+			event = 131501
+		}
+		OR = { #FEPKBETA3
+			government = democratic
+			ideology = paternal_autocrat
+		}
+	}
+
+	date = { day = 1 month = july year = 1954 }
+
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = chiefofarmy which = 5629 } #“›ˆä’|—Y
+	}
+}
+
+event = {
+	id = 135414
+	random = no
+	country = JAP
+
+	
+	trigger = {
+		OR = {
+			event = 131500
+			event = 131501
+		}
+		OR = { #FEPKBETA3
+			government = democratic
+			ideology = paternal_autocrat
+		}
+	}
+
+	date = { day = 2 month = august year = 1957 }
+
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = chiefofarmy which = 5630 } #™R–Î
+	}
+}
+
+event = {
+	id = 135415
+	random = no
+	country = JAP
+
+	
+	trigger = {
+		OR = {
+			event = 131500
+			event = 131501
+		}
+		OR = { #FEPKBETA3
+			government = democratic
+			ideology = paternal_autocrat
+		}
+	}
+
+	date = { day = 11 month = march year = 1960 }
+
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = chiefofarmy which = 5631 } #™“cˆêŸ
+	}
+}
+
+event = {
+	id = 135416
+	random = no
+	country = JAP
+
+	
+	trigger = {
+		OR = {
+			event = 131500
+			event = 131501
+		}
+		OR = { #FEPKBETA3
+			government = democratic
+			ideology = paternal_autocrat
+		}
+	}
+
+	date = { day = 2 month = march year = 1962 }
+
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = chiefofarmy which = 5632 } # ‘åXŠ°
+	}
+}
+
+#ŠCã©‰q‘à
+
+event = {
+	id = 135417
+	random = no
+	country = JAP
+
+	
+	trigger = {
+		OR = {
+			event = 131500
+			event = 131501
+		}
+		OR = { #FEPKBETA3
+			government = democratic
+			ideology = paternal_autocrat
+		}
+	}
+
+	date = { day = 1 month = december year = 1946 }
+
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = chiefofnavy which = 5636 } # •Û‰È‘Pl˜Y
+		command = { type = chiefofair which = 5643 } # •Û‰È‘Pl˜Y
+	}
+}
+
+event = {
+	id = 135418
+	random = no
+	country = JAP
+
+	
+	trigger = {
+		OR = {
+			event = 131500
+			event = 131501
+		}
+		OR = { #FEPKBETA3
+			government = democratic
+			ideology = paternal_autocrat
+		}
+	}
+
+	date = { day = 1 month = july year = 1954 }
+
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = chiefofnavy which = 5637 } # Rè¬ŒÜ˜Y
+	}
+}
+
+event = {
+	id = 135419
+	random = no
+	country = JAP
+
+	
+	trigger = {
+		OR = {
+			event = 131500
+			event = 131501
+		}
+		OR = { #FEPKBETA3
+			government = democratic
+			ideology = paternal_autocrat
+		}
+	}
+
+	date = { day = 3 month = august year = 1954 }
+
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = chiefofnavy which = 5638 } # ’·àV_
+	}
+}
+
+event = {
+	id = 135420
+	random = no
+	country = JAP
+
+	
+	trigger = {
+		OR = {
+			event = 131500
+			event = 131501
+		}
+		OR = { #FEPKBETA3
+			government = democratic
+			ideology = paternal_autocrat
+		}
+	}
+
+	date = { day = 15 month = august year = 1958 }
+
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = chiefofnavy which = 5639 } # ˆÁŒ´v
+	}
+}
+
+event = {
+	id = 135421
+	random = no
+	country = JAP
+
+	
+	trigger = {
+		OR = {
+			event = 131500
+			event = 131501
+		}
+		OR = { #FEPKBETA3
+			government = democratic
+			ideology = paternal_autocrat
+		}
+	}
+
+	date = { day = 15 month = august year = 1961 }
+
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = chiefofnavy which = 5640 } # ’†R’è‹`
+	}
+}
+
+event = {
+	id = 135422
+	random = no
+	country = JAP
+
+	
+	trigger = {
+		OR = {
+			event = 131500
+			event = 131501
+		}
+		OR = { #FEPKBETA3
+			government = democratic
+			ideology = paternal_autocrat
+		}
+	}
+
+	date = { day = 1 month = july year = 1961 }
+
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = chiefofnavy which = 5641 } # ™]ˆêO
+	}
+}
+
+#q‹ó©‰q‘à
+
+event = {
+	id = 135423
+	random = no
+	country = JAP
+
+	
+	trigger = {
+		OR = {
+			event = 131500
+			event = 131501
+		}
+		OR = { #FEPKBETA3
+			government = democratic
+			ideology = paternal_autocrat
+		}
+	}
+
+	date = { day = 1 month = july year = 1954 }
+
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = chiefofnavy which = 5644 } # ã‘ºŒ’‘¾˜Y
+	}
+}
+
+event = {
+	id = 135424
+	random = no
+	country = JAP
+
+	
+	trigger = {
+		OR = {
+			event = 131500
+			event = 131501
+		}
+		OR = { #FEPKBETA3
+			government = democratic
+			ideology = paternal_autocrat
+		}
+	}
+
+	date = { day = 3 month = july year = 1956 }
+
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = chiefofnavy which = 5645 } # ²“ã‹B
+	}
+}
+
+event = {
+	id = 135425
+	random = no
+	country = JAP
+
+	
+	trigger = {
+		OR = {
+			event = 131500
+			event = 131501
+		}
+		OR = { #FEPKBETA3
+			government = democratic
+			ideology = paternal_autocrat
+		}
+	}
+
+	date = { day = 18 month = july year = 1959 }
+
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = chiefofnavy which = 5646 } # Œ¹“c›‰
+	}
+}
+
+event = {
+	id = 135426
+	random = no
+	country = JAP
+
+	
+	trigger = {
+		OR = {
+			event = 131500
+			event = 131501
+		}
+		OR = { #FEPKBETA3
+			government = democratic
+			ideology = paternal_autocrat
+		}
+	}
+
+	date = { day = 7 month = april year = 1962 }
+
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = chiefofnavy which = 5647 } # ¼“c•
+	}
+}
+
+#Chief of staff
+#úŒ´œ¨‹gŒx@—\”õ‘à–{•”’·Š¯
+event = {
+	id = 135427
+	random = no
+	country = JAP
+	trigger = {
+		OR = {
+			event = 131500
+			event = 131501
+		}
+		OR = { #FEPKBETA3
+			government = democratic
+			ideology = paternal_autocrat
+		}
+	}
+
+	date = { day = 13 month = 7 year = 1950 }
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = chiefofnavy which = 5684 } #
+	}
+}
+
+#‘å‹´••v‘–±‘åbiŒx@—\”õ‘à’S“–j
+event = {
+	id = 135428
+	random = no
+	country = JAP
+	trigger = {
+		OR = {
+			event = 131500
+			event = 131501
+		}
+		OR = { #FEPKBETA3
+			government = democratic
+			ideology = paternal_autocrat
+		}
+	}
+
+	date = { day = 15 month = 11 year = 1951 }
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = chiefofnavy which = 5685 } #
+	}
+}
+
+#‹g“c–Î‘–±‘åb•ÛˆÀ’¡’·Š¯
+event = {
+	id = 135429
+	random = no
+	country = JAP
+	trigger = {
+		OR = {
+			event = 131500
+			event = 131501
+		}
+		OR = { #FEPKBETA3
+			government = democratic
+			ideology = paternal_autocrat
+		}
+	}
+
+	date = { day = 0 month = 7 year = 1952 }
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = chiefofnavy which = 5687 } #
+	}
+}
+
+#–Ø‘º“Ä‘¾˜Y‘–±‘åb•ÛˆÀ’¡’·Š¯
+event = {
+	id = 135430
+	random = no
+	country = JAP
+	trigger = {
+		OR = {
+			event = 131500
+			event = 131501
+		}
+		OR = { #FEPKBETA3
+			government = democratic
+			ideology = paternal_autocrat
+		}
+	}
+
+	date = { day = 29 month = 9 year = 1952 }
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = chiefofnavy which = 5688 } #
+	}
+}

@@ -1,0 +1,75 @@
+
+exp_force_ratio = 0.900
+
+max_front_ratios = {
+	JAP = -1
+	PRI = -1
+	MAN = -1
+	MEN = -1
+}
+###################################
+# Diplomacy
+###################################
+
+demand_claims = {
+}
+
+target = { 
+	1280 = 50	#重慶
+	1404 = 50	#ウランバートル
+	1237 = 50	#上海
+	1205 = 50	#北京
+	1235 = 50	#南京
+	1299 = 50	#ラングーン
+	1469 = 50	#デリー
+	1457 = 50	#カルカッタ
+	1494 = 50	#カラチ
+	1455 = 50	#プナカ
+	1473 = 50	#カトマンズ
+	1328 = 50	#ハノイ
+} 
+trade = {
+	cancel_deal_threshold = 2
+
+	energy 		= -1
+	rare_materials 	= -1
+	metal 		= -1
+	oil 		= -1
+	supplies 	= -1
+	money 		= -1
+
+	favored = {
+		GER = 50
+		SWE = 20
+		ITA = 50
+		SPR = 40
+		BUL = 40
+		YUG = 40
+		TUR = 50
+		JAP = 200
+		ENG = 50
+		FRA = 50
+		POL = 50
+		ROM = 50
+	}
+}
+
+garrison = {
+		# Borders with specific countries
+	country_priorities = {
+		MON = 150
+		TAN = 150
+		CHI = 150
+		AFG = -1
+		PER = 100
+		TUR = 100
+		ITA = 50
+		JAP = -1
+		MAN = -1
+		SWE = 50
+		NOR = 20
+		HUN = 15
+		SLO = 15
+		BUL = 15
+	}
+}

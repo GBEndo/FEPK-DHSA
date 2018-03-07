@@ -1,0 +1,6979 @@
+##########
+#	FEPK_minister.txt
+#	FEPKŠt—»ƒCƒxƒ“ƒg
+##########
+#id = 73000-49	GER	28events
+#id = 73050-99	ENG	22events
+#id = 73100-49	USA	29events
+#id = 73150-99	ITA	15events
+#id = 73200-49	HUN	8events
+#id = 73250-99	ROM	8events
+#id = 73300-49	SOV	30events
+#id = 73350-99	AUS	30events
+#id = 73400-49	CHI	7events
+#id = 73450-99	FRA 12events
+#id = 73500-49	AST	5events
+#id = 73550-99	CHL	8events
+#id = 73560-49	IRE	5events
+#id = 73800-	etc
+#GRE 1
+#CAN 1
+#MEN 3
+#POL 2
+#SAF 1
+#BUL 1
+##########
+
+##########
+#  Germany Minister Event - Goring Out, Funk into Office
+##########
+event = { 
+	id = 73000
+	random = no
+
+	country = GER
+
+	trigger = {
+		InCabinet = 1 # AH
+	#	InCabinet = 79 #goring as armaments #FEPK1.12
+	}
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "minister_died"
+
+	date = { day = 4 month = july year = 1939 }
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = armamentminister which = 80 } #funk
+		command = { type = domestic which = free_market value = -1 } #more towards central planning #FEPKBETA4.9
+	}
+}
+##########
+#  Germany Minister Event - Ribbentrop into Office
+##########
+event = { 
+	id = 73001
+	random = no
+
+	country = GER
+
+	trigger = {
+		InCabinet = 1 # AH alive
+		InCabinet = 3 #neurath
+	}
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "minister_died"
+
+	date = { day = 4 month = february year = 1938 }
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = foreignminister which = 55 } #Ribbentrop
+	}
+}
+##########
+#  Germany Minister Event - Donitz into Office
+##########
+event = { 
+	id = 73002
+	random = no
+
+	country = GER
+
+	trigger = {
+		InCabinet = 1 # AH alive
+		InCabinet = 9 #raeder
+		war = { country = GER country = ENG }
+	}
+
+	date = { day = 29 month = january year = 1943 }
+
+	name = "EVT_108_NAME"
+	desc = "EVT_108_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = chiefofnavy which = 192 } #Donitz
+	}
+}
+##########
+#  Germany Minister Event - Funk Out, Todt into Office
+##########
+event = { 
+	id = 73003
+	random = no
+
+	country = GER
+
+	trigger = {
+		InCabinet = 1 #AH alive
+		InCabinet = 80 #funk
+	}
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "minister_died"
+
+	date = { day = 17 month = march year = 1940 }
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = armamentminister which = 91 } #fritz todt
+		command = { type = domestic which = free_market value = -1 } #more towards central planning
+	}
+}
+##########
+#  Germany Minister Event - Himmler into Office
+##########
+event = { 
+	id = 73004
+	random = no
+
+	country = GER
+
+	trigger = {
+		InCabinet = 1 #AH alive
+		NOT = {
+			InCabinet = 108 #himmler
+		}
+		control = { province = 485 data = GER } #Warsaw
+		NOT = {
+			exists = POL
+		}
+	}
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "minister_died"
+
+	date = { day = 1 month = january year = 1938 } #historic sept 22 1939
+	offset = 2
+	deathdate = { day = 29 month = december year = 1940 }
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = ministerofsecurity which = 108 } #Himmler
+		command = { type = dissent value = -1 }
+	}
+}
+##########
+#  Germany Minister Event - Brauchitsch sacked, Hitler into Office
+##########
+event = { 
+	id = 73005
+	random = no
+
+	country = GER
+
+	trigger = {
+		InCabinet = 1 #AH alive
+		InCabinet = 174 #brauchitsch
+		control = { province = 175 data = SOV }
+		war = { country = GER country = SOV }
+	}
+
+	date = { day = 19 month = december year = 1941 }
+
+	name = "EVT_113_NAME"
+	desc = "EVT_113_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = chiefofarmy which = 177 } #hitler
+	}
+}
+##########
+#  Germany Minister Event - Canaris Booted, Schellenberg into Office
+##########
+event = { 
+	id = 73006
+	random = no
+
+	country = GER
+
+	trigger = {
+		InCabinet = 1 # AH alive
+		OR = {
+			InCabinet = 6
+			InCabinet = 148
+		}
+	}
+
+	name = "EVT_115_NAME"
+	desc = "EVT_115_DESC"
+	picture = "minister_died"
+
+	date = { day = 14 month = february year = 1944 }
+#	offset = 1 # Check for trigger conditions day
+#	deathdate = { day = 29 month = december year = 1944 }
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepminister which = 6 } #Canaris FA
+		#command = { type = sleepminister which = 148 } #Canaris PA, needed for assassination
+		command = { type = ministerofintelligence which = 142 } #Schellenberg
+	}
+}
+##########
+#  Germany Minister Event - Goebbels as Foreign Minister
+##########
+event = { 
+	id = 73007
+	random = no
+
+	country = GER
+
+	trigger = {
+		InCabinet = 1 #AH alive
+		war = { country = GER country = ENG }
+		war = { country = GER country = SOV }
+		war = { country = GER country = USA }
+	}
+
+	date = { day = 1 month = january year = 1941 }
+	offset = 5
+	deathdate = { day = 15 month = june year = 1944 } #right before 1944 scenario
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = foreignminister which = 56 } #Goebbels
+		command = { type = dissent value = -2 }
+	}
+}
+##########
+#  Germany Minister Event - Werner von Blomberg replaced by the Führer
+##########
+event = { #FEPK1.12
+	id = 73008
+	random = no
+	country = GER
+
+
+	trigger = {
+		InCabinet = 1
+		OR = {
+			minister = 4
+			minister = 180
+		}
+	}
+
+	date = { year = 1938 month = january day = 27 }
+
+	name = "EVT_362_NAME"
+	desc = "EVT_362_DESC"
+	picture = "minister_resign"
+
+	action_a = {
+		name = "OK"
+	#	name = "‚Í‚¢"
+		ai_chance = 100
+		command = { type = dissent value = 2 } #FEPK1.12
+		command = { type = sleepminister which = 4 }
+		command = { type = sleepminister which = 180 }
+		command = { type = sleepleader which = 607 }
+		#command = { type = chiefofarmy which = 176 } #keitel
+	}
+#	action_b = {
+#		name = "‚¢‚¢‚¦"
+#		ai_chance = 0
+#		#sleep goring and/or goebbels?
+#		command = { type = dissent value = 3 } #scandal! controversy!
+#	}
+}
+##########
+#  Germany Minister Event - Hjalmar Schacht replaced by the Führer
+##########
+event = { #FEPK1.12
+	id = 73009
+	random = no
+	country = GER
+
+
+	trigger = {
+		#minister = 1 #outdated?
+		#minister = 77 #outdated?
+		InCabinet = 1
+		InCabinet = 77
+	}
+
+	date = { year = 1938 month = january day = 27 }
+
+	name = "EVT_363_NAME"
+	desc = "EVT_363_DESC"
+	picture = "minister_resign"
+
+	action_a = {
+		name = "OK"
+	#	name = "‚Í‚¢"
+		ai_chance = 100
+		command = { type = dissent value = 2 } #FEPK1.12
+		command = { type = sleepminister which = 77 } #FEPK1.12 #ƒXƒŠ[ƒv•œŠˆAƒVƒ…ƒy[ƒA‚Ì‰¿’l‚ğ‚ ‚°‚é‚½‚ß
+		command = { type = armamentminister which = 79 } #was funk 80, now goring 79
+	}
+#	action_b = {
+#		name = "‚¢‚¢‚¦" # "Keep him around"
+#		ai_chance = 0
+#		command = { type = dissent value = 2 }
+#	}
+}
+##########
+#  Germany Minister Event - Werner von Fritsch forced into retirement
+##########
+event = {
+	id = 73010
+	random = no
+	country = GER
+
+
+	trigger = {
+		InCabinet = 1
+		InCabinet = 8
+	}
+
+	date = { year = 1938 month = february day = 4 }
+
+	name = "EVT_357_NAME"
+	desc = "EVT_357_DESC"
+	picture = "minister_resign"
+
+	action_a = {
+		ai_chance = 100
+		name = "OK"
+	#	name = "‚Í‚¢" # "Do it"
+		command = { type = dissent value = 2 } #FEPK1.12
+		command = { type = sleepminister which = 8 }
+		command = { type = sleepleader which = 611 }
+		command = { type = chiefofarmy which = 174 } #brauchitsch
+	}
+#	action_b = {
+#		ai_chance = 0
+#		name = "‚¢‚¢‚¦" # "Keep him around"
+#		command = { type = dissent value = 2 }
+#	}
+}
+##########
+#  Germany Minister Event - Rudolf Hess flees to the United Kingdom
+##########
+event = {
+	id = 73011
+	random = no
+	country = GER
+
+	trigger = {
+		random = 61
+		incabinet = 1 #Hitler as HOS
+		incabinet = 2 #Hess as HOG
+		war = { country = GER country = ENG }
+		control = { province = 56 data = GER } #Paris is GER
+		OR = {
+			exists = VIC
+			control = { province = 320 data = GER } #Vichy GER
+		}
+		control = { province = 19 data = ENG } #BETAC³ƒpƒbƒ`
+		NOT = { #BETAC³ƒpƒbƒ`
+			exists = U73
+		}
+	}
+
+	date = { year = 1941 month = may day = 10 }
+	offset = 30
+	deathdate = { year = 1941 month = october day = 11 } 
+
+	name = "EVT_364_NAME"
+	desc = "EVT_364_DESC"
+	picture = "minister_resign"
+
+	action_a = {
+		name = "OK"
+		command = { type = sleepminister which = 2 }
+		command = { type = sleepminister which = 76 }
+		command = { type = headofgovernment which = 42 } #bormann
+	}
+}
+##########
+#  Germany Minister Event - Erich Ludendorff passes away
+##########
+event = {
+	id = 73012
+	random = no
+	country = GER
+
+
+	date = { year = 1937 month = september day = 20 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = sleepminister which = 179 }
+	}
+}
+##########
+#  Germany Minister Event - Fritz Todt dies in an air crash!!!
+##########
+event = {
+	id = 73013
+	random = no
+	country = GER
+
+
+	trigger = {
+		InCabinet = 91
+		OR = {
+			war = { country = GER country = SOV }
+			war = { country = GER country = ENG }
+			war = { country = GER country = USA }
+		}	
+		random = 5
+	}
+
+	date = { day = 1 month = september year = 1941 } #historically February 9, 1942
+	offset = 10
+	deathdate = { day = 15 month = june year = 1944 } #right before 1944 scenario
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = sleepminister which = 91 }
+		command = { type = armamentminister which = 86 } #Speer
+		command = { type = domestic which = free_market value = -1 } #more towards central planning
+	}
+}
+##########
+#  Germany Minister Event - Generaloberst Eduard Dietl dies in an air crash!
+##########
+event = {
+	id = 73014
+	random = no
+	country = GER
+
+
+	date = { year = 1944 month = june day = 23 }
+
+	name = "EVT_106_NAME"
+	desc = "EVT_106_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = sleepleader which = 49 }
+		command = { type = sleepleader which = 548 }	#ƒJ[ƒ‹EƒGƒOƒ‹ƒ[ƒA[
+	}
+}
+##########
+#  Germany Minister Event - Generaloberst Hans-Valentin Hube dies in an air crash!
+##########
+event = {
+	id = 73015
+	random = no
+	country = GER
+
+
+	date = { year = 1944 month = april day = 21 }
+
+	name = "EVT_106_NAME"
+	desc = "EVT_106_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = sleepleader which = 144 }
+	}
+}
+##########
+#  Germany Minister Event - Generalleutnant Wolfgang von Kluge dies in a car accident!
+# ‚¢‚âƒNƒ‹[ƒQ’í€‚ñ‚Å‚È‚¢‚©‚ç
+##########
+#event = {
+#	id = 73016
+#	random = no
+#	country = GER
+#
+#
+#	date = { year = 1944 month = november day = 27 }
+#
+#	name = "EVT_106_NAME"
+#	desc = "EVT_106_DESC"
+#	picture = "minister_died"
+#
+#	action_a = {
+#		name = "OK"
+#		command = { type = sleepleader which = 164 }
+#	}
+#}
+##########
+#  Germany Minister Event - Waffen-SS Gruppenführer Josef Fitzhum dies in a car crash!
+##########
+event = {
+	id = 73017
+	random = no
+	country = GER
+
+
+	date = { year = 1945 month = january day = 10 }
+
+	name = "EVT_106_NAME"
+	desc = "EVT_106_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = sleepleader which = 499 }
+	}
+}
+##########
+#  Germany Minister Event - Generalleutnant René Eberle dies in an allied air raid!
+##########
+event = {
+	id = 73018
+	random = no
+	country = GER
+
+
+	trigger = {
+		war = { country = GER country = ENG }
+	}
+
+	date = { year = 1945 month = march day = 21 }
+
+	name = "EVT_106_NAME"
+	desc = "EVT_106_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = sleepleader which = 689 }
+	}
+}
+##########
+#  Germany Minister Event - Carl Friedrich von Siemens passes away!
+##########
+event = {
+	id = 73019
+	random = no
+	country = GER
+
+
+	date = { year = 1941 month = january day = 1 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = sleepminister which = 208 }
+	}
+}
+##########
+#  Germany Minister Event - Ernst Toller commits suicide!
+##########
+event = {
+	id = 73020
+	random = no
+	country = GER
+
+
+	trigger = {
+		government = fascist
+	}
+
+	date = { year = 1939 month = may day = 22 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = sleepminister which = 52 }
+		command = { type = sleepminister which = 131 }
+	}
+}
+##########
+#  Germany Minister Event - Wilhelm II passes away
+##########
+event = {
+	id = 73021
+	random = no
+	country = GER
+	trigger = {
+		NOT = { headofstate = 36 }
+	}
+
+	date = { year = 1941 month = june day = 5 }
+
+	name = "EVT_73021_NAME"	#–S–½‚µ‚½Œ³‘‰¤‚Ì€‹	#ƒ”ƒBƒ‹ƒwƒ‹ƒ€2¢•öŒä
+	desc = "EVT_73021_DESC"	#
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = sleepminister which = 36 }
+	}
+}
+
+event = {
+	id = 73022
+	random = no
+	country = GER
+	trigger = {
+		headofstate = 36
+	}
+
+	date = { year = 1941 month = june day = 5 }
+
+	name = "EVT_73022_NAME"	#ƒ”ƒBƒ‹ƒwƒ‹ƒ€2¢•öŒä
+	desc = "EVT_73022_DESC"	#
+	picture = "minister_died"
+
+	action_a = {
+		name = "EVT_73022_ACTA"	#
+		command = { type = headofstate which = 37 }
+		command = { type = sleepminister which = 36 }
+	}
+}
+
+##########
+#  Germany Minister Event - Generaloberst Kurt von Hammerstein-Equord dies!
+##########
+event = {
+	id = 73023
+	random = no
+	country = GER
+
+
+	date = { year = 1943 month = april day = 18 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = sleepleader which = 116 }
+		command = { type = sleepminister which = 175 }
+	}
+}
+
+#####################################
+
+### Ernst Udet passes away
+
+event = {
+	id = 73024
+	random = no
+	country = GER
+	style = 0
+	save_date = yes
+
+	trigger = {
+		random = 80
+		war = { country = GER country = SOV }
+		war = { country = GER country = ENG }
+		Headofstate = 1
+		minister = 209
+		OR = {
+			lost_national = { country = GER value = 10 }
+            control = { province = 175 data = SOV }
+		}
+	} 
+
+	date = { year = 1941 month = november day = 17 }
+	offset = 60
+	deathdate = { year = 1947 month = december day = 29 }
+
+	name = "EVT_348_NAME"
+	desc = "EVT_348_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = sleepleader which = 473 }
+		command = { type = sleepteam which = 21 }
+		command = { type = sleepminister which = 209 }
+	}
+}
+
+#####################################
+
+### Werner Molders & Helmuth Wilberg die in a aircraft accident!
+
+event = {
+	id = 73025
+	random = no
+	country = GER
+	
+	trigger = {
+		random = 70
+		NOT = { event = { id = 73024 days = 3 } }
+	}
+
+	date = { year = 1941 month = november day = 21 }
+	offset = 1
+	deathdate = { year = 1947 month = december day = 29 }
+
+	name = "EVT_106_NAME"
+	desc = "EVT_106_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = sleepleader which = 458 }
+		command = { type = sleepteam which = 60 }
+	}
+}
+
+##########
+#  Germany Minister Event - Wilhelm III passes away
+##########
+event = {
+	id = 73026
+	random = no
+	country = GER
+
+
+	date = { year = 1951 month = 6 day = 19 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { trigger = { headofstate = 37 } type = headofstate which = 269 }
+		command = { type = sleepminister which = 37 }
+	}
+}
+
+
+##########
+#  Germany Minister Event - Generalfeldmarschall Karl Rudolf Gerd von Rundstedt passes away
+##########
+event = {
+	id = 73027
+	random = no
+	country = GER
+
+	date = { year = 1949 month = 4 day = 4 }
+
+	name = "EVT_108_NAME"
+	desc = "EVT_108_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = sleepleader which = 335 }
+		command = { type = sleepminister which = 267 }
+		command = { type = sleepteam which = 56 }
+	}
+}
+
+##########
+#  Wolfram von Richthofen retires
+##########
+event = {
+	id = 73028
+	random = no
+	country = GER
+
+	trigger = {
+		OR = {
+			leader = 479
+			tech_team = { id = 58 country = GER }
+		}
+	}
+
+	date = { year = 1944 month = 9 day = 26 }
+
+	name = "EVT_108_NAME"
+	desc = "EVT_108_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = sleepleader which = 479 }		#von Richthofen
+		command = { type = sleepteam which = 58 }	#FEPKDH
+	}
+}
+
+##########
+#  Germany Minister Event - Generalfeldmarschall Walther von Reichenau dies of a stroke!
+##########
+event = {
+	id = 73029
+	random = no
+	country = GER
+
+	trigger = {
+		OR = {
+			war = { country = SOV country = GER }
+			AND = {
+				atwar = yes
+				random = 30
+			}
+			random = 10
+		}
+		minister = 238
+	}
+
+	date = { year = 1942 month = january day = 17 }
+
+	name = "EVT_106_NAME"
+	desc = "EVT_106_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = sleepleader which = 334 }
+		command = { type = sleepminister which = 238 }
+	}
+}
+
+##########
+#  Germany Minister Event - Hans Vogel passes away
+##########
+event = {
+	id = 73030
+	random = no
+	country = GER
+
+	date = { year = 1945 month = 9 day = 5 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = sleepminister which = 276 }
+	}
+}
+
+
+##########
+#  England Minister Event - Eden back as Foreign Minister
+##########
+event = { 
+	id = 73050
+	random = no
+
+	country = ENG
+
+	trigger = {
+		InCabinet = 1038 #churchill
+		InCabinet = 1045 #halifax
+		war = { country = GER country = ENG }
+	}
+
+	date = { day = 1 month = january year = 1941 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = foreignminister which = 1003 } #Eden
+	}
+}
+##########
+#  England Minister Event - Baldwin gone, Chamberlain becomes PM
+##########
+event = {
+	id = 73051
+	random = no
+	country = ENG
+
+	
+	trigger = {
+		InCabinet = 1002 #Baldwin
+	}
+
+	date = { day = 28 month = may year = 1937 }
+#	offset = 7
+#	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepminister which = 1002 } #Baldwin
+		command = { type = sleepminister which = 1081 } #Baldwin
+
+		command = { type = headofgovernment which = 1037 } #Chamberlain
+		command = { type = armamentminister which = 1060 } #John Simon
+		command = { type = ministerofsecurity which = 1083 }#Samuel Hoare AKA Viscount Templewood
+	}
+}
+##########
+#  England Minister Event - Sir John Anderson becomes Minister of Security
+##########
+event = { 
+	id = 73052
+	random = no
+
+	country = ENG
+
+	trigger = {
+		NOT = {
+			InCabinet = 1159 #Sir John Anderson
+		}
+		war = { country = GER country = ENG }
+	}
+
+	date = { day = 1 month = january year = 1939 }
+	offset = 7
+	deathdate = { day = 3 month = october year = 1940 }
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = ministerofsecurity which = 1159 } #Sir John Anderson
+	}
+}
+##########
+#  England Minister Event - Sinclair retires, Menzies takes over as Intelligence Chief
+##########
+event = { 
+	id = 73053
+	random = no
+
+	country = ENG
+
+	trigger = {
+		InCabinet = 1006 #Hugh Sinclair
+	}
+
+	date = { day = 4 month = november year = 1939 }
+#	offset = 7
+#	deathdate = { day = 3 month = october year = 1940 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepminister which = 1006 } #Hugh Sinclair
+		command = { type = ministerofintelligence which = 1172 } #Stewart Menzies
+	}
+}
+##########
+#  England Minister Event - Montgomery-Massingberd retires, replaced by Deverell
+##########
+event = { 
+	id = 73054
+	random = no
+
+	country = ENG
+
+	trigger = {
+		OR = {
+			InCabinet = 1007 #Montgomery-Massingberd
+			InCabinet = 1008 #Montgomery-Massingberd
+		}
+	}
+
+	date = { day = 15 month = may year = 1936 }
+#	offset = 7
+#	deathdate = { day = 3 month = october year = 1940 }
+
+	name = "EVT_108_NAME"
+	desc = "EVT_108_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepminister which = 1007 } #Montgomery-Massingberd
+		command = { type = sleepminister which = 1008 } #Montgomery-Massingberd
+		command = { type = sleepleader which = 1225 } #Montgomery-Massingberd
+		command = { type = chiefofstaff which = 1116 } #Deverell
+		command = { type = chiefofarmy which = 1127 } #Deverell
+	}
+}
+##########
+#  England Minister Event - Deverell retires and is replaced by John Gort
+##########
+event = { 
+	id = 73055
+	random = no
+
+	country = ENG
+
+	trigger = {
+		OR = {
+			InCabinet = 1116 #Deverell
+			InCabinet = 1127 #Deverell
+		}
+	}
+
+	date = { day = 15 month = december year = 1937 } #this date is wrong
+#	offset = 7
+#	deathdate = { day = 3 month = october year = 1940 }
+
+	name = "EVT_108_NAME"
+	desc = "EVT_108_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepminister which = 1116 } #Deverell
+		command = { type = sleepminister which = 1127 } #Deverell
+		command = { type = sleepleader which = 1103 } #Deverell
+		command = { type = chiefofstaff which = 1117 } #Gort
+		command = { type = chiefofarmy which = 1128 } #Gort
+	}
+}
+##########
+#  England Minister Event - Gort goes to France, replaced by Ironside
+##########
+event = { 
+	id = 73056
+	random = no
+
+	country = ENG
+
+	trigger = {
+		war = { country = GER country = ENG }
+		war = { country = GER country = FRA }
+		OR = {
+			InCabinet = 1117 #Gort
+			InCabinet = 1128 #Gort
+		}
+	}
+
+	date = { day = 1 month = january year = 1938 } #
+	offset = 7
+	deathdate = { day = 3 month = october year = 1940 }
+
+	name = "EVT_108_NAME"
+	desc = "EVT_108_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepminister which = 1117 } #Gort
+		command = { type = sleepminister which = 1128 } #Gort
+		command = { type = chiefofstaff which = 1118 } #Ironside
+		command = { type = chiefofarmy which = 1129 } #Ironside
+	}
+}
+##########
+#  England Minister Event - Ironside retires, replaced by John Dill
+##########
+event = { 
+	id = 73057
+	random = no
+
+	country = ENG
+
+	trigger = {
+		war = { country = GER country = ENG }
+		war = { country = GER country = FRA }
+		OR = {
+			InCabinet = 1118 #Ironside
+			InCabinet = 1129 #Ironside
+		}
+	}
+
+	date = { day = 26 month = may year = 1940 }
+#	offset = 7
+#	deathdate = { day = 3 month = october year = 1940 }
+
+	name = "EVT_108_NAME"
+	desc = "EVT_108_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepminister which = 1118 } #Ironside
+		command = { type = sleepminister which = 1129 } #Ironside
+		command = { type = sleepleader which = 1174 } #Ironside
+		command = { type = chiefofstaff which = 1119 } #Dill
+		command = { type = chiefofarmy which = 1132 } #Dill
+	}
+}
+##########
+#  England Minister Event - Chatfield retires, replaced by Backhouse
+##########
+event = { 
+	id = 73058
+	random = no
+
+	country = ENG
+
+	trigger = {
+		InCabinet = 1009 #Chatfield
+	}
+
+	date = { day = 1 month = june year = 1938 } #not correct date AT ALL
+#	offset = 7
+#	deathdate = { day = 3 month = october year = 1940 }
+
+	name = "EVT_108_NAME"
+	desc = "EVT_108_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepminister which = 1009 } #Chatfield
+		command = { type = sleepleader which = 1333 } #Chatfield
+		command = { type = chiefofnavy which = 1137 } #Backhouse
+	}
+}
+##########
+#  England Minister Event - Backhouse disappears, replaced by Dudley Pound
+##########
+event = { 
+	id = 73059
+	random = no
+
+	country = ENG
+
+	trigger = {
+		InCabinet = 1137 #Backhouse
+	}
+
+	date = { day = 29 month = july year = 1939 } #actually 31st
+#	offset = 7
+#	deathdate = { day = 3 month = october year = 1940 }
+
+	name = "EVT_108_NAME"
+	desc = "EVT_108_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepminister which = 1137 } #Backhouse
+		command = { type = sleepleader which = 1320 } #Backhouse
+		command = { type = chiefofnavy which = 1140 } #Pound
+	}
+}
+##########
+#  England Minister Event - Ellington (for now Boyd) retires, replaced by Newall
+##########
+event = { 
+	id = 73060
+	random = no
+
+	country = ENG
+
+	trigger = {
+		InCabinet = 1010 #Boyd, since Ellington doesn't exist
+	}
+
+	date = { day = 1 month = september year = 1937 } #
+#	offset = 7
+#	deathdate = { day = 3 month = october year = 1940 }
+
+	name = "EVT_108_NAME"
+	desc = "EVT_108_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		#command = { type = sleepminister which =  } #Ellington
+		#command = { type = sleepleader which =  } #Ellington
+		command = { type = chiefofair which = 1149 } #Newall
+	}
+}
+##########
+#  England Minister Event - Newall retires, replaced by Portal
+##########
+event = { 
+	id = 73061
+	random = no
+
+	country = ENG
+
+	trigger = {
+		InCabinet = 1149 #Newall
+	}
+
+	date = { day = 25 month = october year = 1940 } #
+#	offset = 7
+#	deathdate = { day = 3 month = october year = 1940 }
+
+	name = "EVT_108_NAME"
+	desc = "EVT_108_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepminister which = 1149 } #Newall
+		command = { type = sleepleader which = 1465 } #Newall
+		command = { type = chiefofair which = 1147 } #Portal
+	}
+}
+##########
+#  England Minister Event - King George V passes away
+##########
+event = {
+	id = 73062
+	random = no
+	country = ENG
+
+
+	trigger = {
+		headofstate = 1001
+	}
+
+	date = { day = 20 month = january year = 1936 }
+
+	name = "EVT_300_NAME"
+	desc = "EVT_300_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = sleepminister which = 1001 }
+		command = { type = headofstate which = 1031 }
+	}
+}
+##########
+#  England Minister Event - Neville Chamberlain passes away
+##########
+event = {
+	id = 73063
+	random = no
+	country = ENG
+
+
+	date = { day = 9 month = november year = 1940 }
+
+	name = "EVT_301_NAME"
+	desc = "EVT_301_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = sleepminister which = 1004 }
+		command = { type = sleepminister which = 1037 }
+	}
+}
+##########
+#  England Minister Event - Austen Chamberlain passes away
+##########
+event = {
+	id = 73064
+	random = no
+	country = ENG
+
+
+	date = { year = 1937 month = march day = 17 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = sleepminister which = 1082 }
+	}
+}
+##########
+#  England Minister Event - Edward VIII abdicates!
+##########
+event = {
+	id = 73065
+	random = no
+	country = ENG
+
+	
+	trigger = {
+		headofstate = 1031 
+	}
+
+	date = { day = 11 month = december year = 1936 }
+
+	name = "EVT_358_NAME"
+	desc = "EVT_358_DESC"
+	picture = "minister_resign"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepminister which = 1031 }
+		command = { type = headofstate which = 1033 }
+	}
+}
+##########
+#  England Minister Event - Dill Goes to Washington, replaced by Brooke
+##########
+event = { 
+	id = 73066
+	random = no
+	country = ENG
+
+
+	trigger = {
+		war = { country = GER country = ENG }
+		alliance = { country = ENG country = USA }
+		OR = {
+			InCabinet = 1119 #Dill
+			InCabinet = 1132 #Dill
+		}
+	}
+
+	date = { day = 6 month = december year = 1941 } #february 42 according to wiki...
+	offset = 7
+	deathdate = { day = 29 month = december year = 1942 }
+
+	name = "EVT_108_NAME"
+	desc = "EVT_108_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepminister which = 1119 } #Dill
+		command = { type = sleepminister which = 1132 } #Dill
+		command = { type = sleepleader which = 1105 } #Dill
+		command = { type = relation which = USA value = 5 } #he does shit in washington :)
+		command = { type = chiefofstaff which = 1120 } #Brooke
+		command = { type = chiefofarmy which = 1130 } #Brooke
+	}
+}
+##########
+#  England Minister Event - Pound retires, replaced by Andrew Cunningham
+##########
+event = { 
+	id = 73067
+	random = no
+	country = ENG
+
+
+	trigger = {
+		InCabinet = 1140 #Pound
+	}
+
+	date = { day = 15 month = september year = 1943 } #close
+
+	name = "EVT_108_NAME"
+	desc = "EVT_108_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepminister which = 1140 } #Pound
+		command = { type = sleepleader which = 1381 } #Pound
+		command = { type = chiefofnavy which = 1138 } #Cunningham
+	}
+}
+##########
+#  England Minister Event - Anthony Eden resigns from Chamberlain's office!
+##########
+event = {
+	id = 73068
+	random = no
+	country = ENG
+
+
+	trigger = {
+		InCabinet = 1037
+		InCabinet = 1003
+	}
+
+	date = { year = 1938 month = february day = 20 }
+
+	name = "EVT_361_NAME"
+	desc = "EVT_361_DESC"
+	picture = "minister_resign"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = foreignminister which = 1045 } #Halifax
+	}
+}
+##########
+#  England Minister Event - Sir Kingsley Wood passes away
+##########
+event = {
+	id = 73069
+	random = no
+	country = ENG
+
+
+	trigger = {
+		InCabinet = 1062 #Kingsley Wood
+	}
+
+	date = { year = 1943 month = september day = 24 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = sleepminister which = 1062 } #Kingsley Wood
+		command = { type = armamentminister which = 1061 } #Sir John Anderson
+	}
+}
+##########
+#  England Minister Event - David Lloyd George passes away!
+##########
+event = {
+	id = 73070
+	random = no
+	country = ENG
+
+
+	date = { year = 1945 month = march day = 26 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = sleepminister which = 1160 }
+		command = { type = sleepminister which = 1251 }
+	}
+}
+
+##########
+#  England Minister Event - Hugh Dowding retires
+##########
+event = {
+	id = 73071
+	random = no
+	country = ENG
+
+	date = { year = 1940 month = November day = 23 }
+
+	name = "EVT_108_NAME"
+	desc = "EVT_108_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = sleepleader which = 1435 }
+		command = { type = sleepteam which = 324 }
+		command = { type = sleepminister which = 1168 }
+	}
+}
+
+##########
+#  England Minister Event - Edward Frederick Lindley Wood, 1st Earl of Halifax retires
+##########
+event = {
+	id = 73072
+	random = no
+	country = ENG
+
+	date = { year = 1946 month = 4 day = 0 }
+	offset = 11
+	deathdate = { year = 1946 month = 5 day = 0 }
+
+	name = "EVT_105_NAME"
+	desc = "EVT_105_NAME"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { trigger = { incabinet = 1157 } type = headofgovernment which = 1038 }	#churchill
+		command = { type = sleepminister which = 1045 }
+		command = { type = sleepminister which = 1157 }
+	}
+}
+
+
+##########
+#  USA Minister Event - Malin Craig retires, replaced by George Marshall
+##########
+event = { 
+	id = 73100
+	random = no
+
+	country = USA
+
+	trigger = {
+		OR = {
+			InCabinet = 6007 #Malin Craig
+			InCabinet = 6008 #Malin Craig
+		}
+	}
+
+	date = { day = 29 month = august year = 1939 }
+#	offset = 7
+#	deathdate = { day = 3 month = october year = 1940 }
+
+	name = "EVT_108_NAME"
+	desc = "EVT_108_DESC"
+
+	picture = "minister_died"
+	style = 0
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepminister which = 6007 } #Malin Craig
+		command = { type = sleepminister which = 6008 } #Malin Craig
+		command = { type = chiefofstaff which = 6136 } #George Marshall
+		command = { type = chiefofarmy which = 6144 } #George Marshall
+	}
+}
+##########
+#  USA Minister Event - George Marshall retires, replaced by Dwight Eisenhower
+##########
+event = { 
+	id = 73101
+	random = no
+
+	country = USA
+
+	trigger = {
+		OR = {
+			InCabinet = 6136 #George Marshall
+			InCabinet = 6144 #George Marshall
+		}
+		atwar = no
+	}
+
+	date = { day = 19 month = november year = 1945 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_108_NAME"
+	desc = "EVT_108_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepminister which = 6136 } #George Marshall
+		command = { type = sleepminister which = 6144 } #George Marshall
+		command = { type = chiefofstaff which = 6137 } #Eisenhower
+		command = { type = chiefofarmy which = 6147 } #Eisenhower
+	}
+}
+##########
+#  USA Minister Event - William H. Standley retires, replaced by William H. Leahy
+##########
+event = { 
+	id = 73102
+	random = no
+
+	country = USA
+
+	trigger = {
+		InCabinet = 6158 #Standley
+	}
+
+	date = { day = 1 month = january year = 1937 } #
+#	offset = 7 # Check for trigger conditions day
+#	deathdate = { day = 3 month = october year = 1940 }
+
+	name = "EVT_108_NAME"
+	desc = "EVT_108_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepminister which = 6158 } #Standley
+		command = { type = chiefofnavy which = 6162 } #Leahy
+	}
+}
+##########
+#  USA Minister Event - William H. Leahy retires, replaced by Harold Stark
+##########
+event = { 
+	id = 73103
+	random = no
+
+	country = USA
+
+	trigger = {
+		InCabinet = 6162 #Leahy
+	}
+
+	date = { day = 1 month = august year = 1939 } #
+#	offset = 7 # Check for trigger conditions day
+#	deathdate = { day = 3 month = october year = 1940 }
+
+	name = "EVT_108_NAME"
+	desc = "EVT_108_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepminister which = 6162 } #Leahy
+		command = { type = sleepminister which = 6176 } #Leahy
+		command = { type = chiefofnavy which = 6159 } #Stark
+	}
+}
+##########
+#  USA Minister Event - Harold Stark retires, replaced by Ernest J. King
+##########
+event = { 
+	id = 73104
+	random = no
+
+	country = USA
+
+	trigger = {
+		InCabinet = 6159 #Stark
+	}
+
+	date = { day = 2 month = march year = 1942 }
+#	offset = 7 # Check for trigger conditions day
+#	deathdate = { day = 3 month = october year = 1940 }
+
+	name = "EVT_108_NAME"
+	desc = "EVT_108_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepminister which = 6159 } #Harold Stark
+		command = { type = chiefofnavy which = 6163 } #Ernest J. King
+	}
+}
+##########
+#  USA Minister Event - Ernest J. King retires, replaced by Chester W. Nimitz
+##########
+event = { 
+	id = 73105
+	random = no
+
+	country = USA
+
+	trigger = {
+		InCabinet = 6163 #Ernest J. King
+		atwar = no
+	}
+
+	date = { day = 15 month = december year = 1945 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_108_NAME"
+	desc = "EVT_108_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepminister which = 6163 } #Ernest J. King
+		command = { type = chiefofnavy which = 6156 } #Chester W. Nimitz
+	}
+}
+##########
+#  USA Minister Event - Oscar Westover dies, replaced by Henry H. Arnold
+##########
+event = { 
+	id = 73106
+	random = no
+
+	country = USA
+
+	trigger = {
+		InCabinet = 6010 #Oscar Westover
+	}
+
+	date = { day = 21 month = september year = 1938 }
+#	offset = 7
+#	deathdate = { day = 3 month = october year = 1940 }
+
+	name = "EVT_106_NAME"
+	desc = "EVT_106_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepminister which = 6010 } #Oscar Westover
+		command = { type = chiefofair which = 6167 } #Henry H. Arnold
+	}
+}
+##########
+#  USA Minister Event - Henry H. Arnold retires, replaced by Carl Spaatz
+##########
+event = { 
+	id = 73107
+	random = no
+
+	country = USA
+
+	trigger = {
+		InCabinet = 6167 #Henry H. Arnold
+		atwar = no
+	}
+
+	date = { day = 28 month = february year = 1946 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_108_NAME"
+	desc = "EVT_108_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepminister which = 6167 } #Henry H. Arnold
+		command = { type = chiefofair which = 6179 } #Carl Spaatz
+	}
+}
+##########
+#  USA Minister Event - Cordell Hull retires, replaced by Edward Stettinius
+##########
+event = { 
+	id = 73108
+	random = no
+
+	country = USA
+
+	trigger = {
+		InCabinet = 6003 #Cordell Hull
+	}
+
+	date = { day = 29 month = november year = 1944 } #
+#	offset = 7 # Check for trigger conditions day
+#	deathdate = { day = 3 month = october year = 1940 }
+
+	name = "EVT_105_NAME"
+	desc = "EVT_105_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepminister which = 6003 } #Cordell Hull
+		command = { type = foreignminister which = 6060 } #Edward Stettinius
+	}
+}
+##########
+#  USA Minister Event - Edward Stettinius retires, replaced by James Byrnes
+##########
+event = { 
+	id = 73109
+	random = no
+
+	country = USA
+
+	trigger = {
+		InCabinet = 6060 #Edward Stettinius
+	}
+
+	date = { day = 27 month = june year = 1945 } #
+#	offset = 7 # Check for trigger conditions day
+#	deathdate = { day = 3 month = october year = 1940 }
+
+	name = "EVT_105_NAME"
+	desc = "EVT_105_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepminister which = 6060 } #Edward Stettinius
+		command = { type = foreignminister which = 6063 } #James Byrnes
+	}
+}
+##########
+#  USA Minister Event - James Byrnes retires, replaced by George Marshall
+##########
+event = { 
+	id = 73110
+	random = no
+
+	country = USA
+
+	trigger = {
+		InCabinet = 6063 #James Byrnes
+	}
+
+	date = { day = 21 month = january year = 1947 } #
+#	offset = 7 # Check for trigger conditions day
+#	deathdate = { day = 3 month = october year = 1940 }
+
+	name = "EVT_105_NAME"
+	desc = "EVT_105_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepminister which = 6063 } #James Byrnes
+		command = { type = foreignminister which = 6064 } #George Marshall
+	}
+}
+##########
+#  USA Minister Event - Henry Morgenthau retires, replaced by Fred Vinson
+##########
+event = { 
+	id = 73111
+	random = no
+
+	country = USA
+
+	trigger = {
+		InCabinet = 6077 #Henry Morgenthau
+	}
+
+	date = { day = 22 month = july year = 1945 } #
+#	offset = 7 # Check for trigger conditions day
+#	deathdate = { day = 3 month = october year = 1940 }
+
+	name = "EVT_105_NAME"
+	desc = "EVT_105_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepminister which = 6077 } #Henry Morgenthau
+		command = { type = armamentminister which = 6091 } #Fred Vinson
+	}
+}
+#########################################################################
+#  FDR dies
+#########################################################################
+event = {
+	id = 73112
+	random = no
+	country = USA
+
+	trigger = {
+		headofstate = 6001
+	}
+
+	date = { day = 12 month = april year = 1945 }
+
+	name = "EVT_3706_NAME"
+	desc = "EVT_3706_DESC"
+
+	picture = "FDR_dies"
+
+	action_a = {
+		name = "OK"
+		command = { type = sleepminister which = 6001 }
+		command = { type = headofstate which = 6034 }
+		command = { type = headofgovernment which = 6046 }
+		#command = { type = foreignminister which = 6063 }
+		#command = { type = armamentminister which = 6083 }
+		#command = { type = ministerofsecurity which = 6005 }
+		#command = { type = ministerofintelligence which = 6126 }
+		#command = { type = chiefofstaff which = 6136 }
+		#command = { type = chiefofarmy which = 6145 }
+		#command = { type = chiefofnavy which = 6156 }
+		#command = { type = chiefofair which = 6167 }
+		#command = { type = domestic which = democratic value = -1 }
+		#command = { type = domestic which = political_left value = 1 }
+	}
+}
+
+##########
+#  USA Minister Event - George Patton dies
+##########
+event = { 
+	id = 73113
+	random = no
+
+	country = USA
+
+	trigger = {
+		atwar = no
+	}
+
+	date = { day = 20 month = 11 year = 1945 }
+	offset = 11
+	deathdate = { day = 3 month = october year = 1970 }
+
+	name = "EVT_106_NAME"
+	desc = "EVT_106_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepleader which = 60294 }
+		command = { type = sleepminister which = 6275 }
+		command = { type = sleepminister which = 6280 }
+		command = { type = sleepminister which = 6281 }
+		command = { type = sleepteam which = 147 }
+	}
+}
+
+##########
+#  USA Minister Event - Preston Tucker dies
+##########
+event = { 
+	id = 73114
+	random = no
+
+	country = USA
+
+	trigger = {
+		minister = 6081
+	}
+
+	date = { day = 25 month = 11 year = 1956 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepminister which = 6081 }
+	}
+}
+
+##########
+#  USA Minister Event - Daniel Calhoun Roper dies
+##########
+event = { 
+	id = 73115
+	random = no
+
+	country = USA
+
+	trigger = {
+		minister = 6085
+	}
+
+	date = { day = 10 month = 3 year = 1943 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepminister which = 6085 }
+	}
+}
+
+##########
+#  USA Minister Event - James Middleton Cox dies
+##########
+event = { 
+	id = 73116
+	random = no
+
+	country = USA
+
+	trigger = {
+		minister = 6086
+	}
+
+	date = { day = 14 month = 6 year = 1957 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepminister which = 6086 }
+	}
+}
+
+##########
+#  USA Minister Event - John Davison Rockefeller, Jr. dies
+##########
+event = { 
+	id = 73117
+	random = no
+
+	country = USA
+
+	trigger = {
+		minister = 6090
+	}
+
+	date = { day = 10 month = 4 year = 1960 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepminister which = 6090 }
+	}
+}
+
+##########
+#  USA Minister Event - Norman Hezekiah Davis dies
+##########
+event = { 
+	id = 73118
+	random = no
+
+	country = USA
+
+	trigger = {
+		minister = 6093
+	}
+
+	date = { day = 1 month = 6 year = 1944 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepminister which = 6093 }
+	}
+}
+
+##########
+#  USA Minister Event - Frederick Moore Vinson dies
+##########
+event = { 
+	id = 73119
+	random = no
+
+	country = USA
+
+	trigger = {
+		OR = {
+			minister = 6091
+			minister = 6305
+		}
+	}
+
+	date = { day = 7 month = 8 year = 1953 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepminister which = 6091 }
+		command = { type = sleepminister which = 6305 }
+	}
+}
+
+##########
+#  USA Minister Event - Victor Selden Clark dies
+##########
+event = { 
+	id = 73120
+	random = no
+
+	country = USA
+
+	trigger = {
+		minister = 6104
+	}
+
+	date = { day = 29 month = march year = 1944 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepminister which = 6104 }
+	}
+}
+
+##########
+#  USA Minister Event - Robert Houghwout Jackson dies
+##########
+event = { 
+	id = 73121
+	random = no
+
+	country = USA
+
+	trigger = {
+		minister = 6108
+	}
+
+	date = { day = 8 month = 9 year = 1954 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepminister which = 6108 }
+	}
+}
+
+##########
+#  USA Minister Event - Hugh Simons Gibson dies
+##########
+event = { 
+	id = 73122
+	random = no
+
+	country = USA
+
+	trigger = {
+		minister = 6110
+	}
+
+	date = { day = 11 month = December year = 1954 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepminister which = 6110 }
+	}
+}
+
+##########
+#  USA Minister Event - William Vincent Astor dies
+##########
+event = { 
+	id = 73123
+	random = no
+
+	country = USA
+
+	trigger = {
+		minister = 6124
+	}
+
+	date = { day = 2 month = February year = 1959 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepminister which = 6124 }
+	}
+}
+
+##########
+#  USA Minister Event - William Joseph "Wild Bill" Donovan dies
+##########
+event = { 
+	id = 73124
+	random = no
+
+	country = USA
+
+	trigger = {
+		OR = {
+			minister = 6128
+			leader = 60643
+		}
+	}
+
+	date = { day = 7 month = 1 year = 1959 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepminister which = 6128 }
+		command = { type = sleepleader which = 60643 }
+	}
+}
+
+##########
+#  USA Minister Event - Hoyt Sanford Vandenberg dies
+##########
+event = { 
+	id = 73125
+	random = no
+
+	country = USA
+
+	trigger = {
+		OR = {
+			minister = 6130
+			leader = 60358
+		}
+	}
+
+	date = { day = 1 month = 3 year = 1954 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepminister which = 6130 }
+		command = { type = sleepleader which = 60358 }
+	}
+}
+
+##########
+#  USA Minister Event - Lloyd Fredendall retires
+##########
+event = { 
+	id = 73126
+	random = no
+
+	country = USA
+
+	trigger = {
+		OR = {
+			leader = 60159
+			minister = 6143
+		}
+		atwar = no
+	}
+
+	date = { day = 29 month = March year = 1946 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_108_NAME"
+	desc = "EVT_108_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepminister which = 6143 }
+		command = { type = sleepleader which = 60159 }
+	}
+}
+
+##########
+#  USA Minister Event - William Harrison Standley retires
+##########
+event = { 
+	id = 73127
+	random = no
+
+	country = USA
+
+	trigger = {
+		OR = {
+			minister = 6158
+			leader = 1200619
+		}
+	}
+
+	date = { day = 29 month = August year = 1945 }
+
+
+	name = "EVT_108_NAME"
+	desc = "EVT_108_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepminister which = 6158 }
+		command = { type = sleepleader which = 1200619 }
+	}
+}
+
+##########
+#  USA Minister Event - William Randolph Hearst dies
+##########
+event = { 
+	id = 73128
+	random = no
+
+	country = USA
+
+	trigger = {
+		minister = 6306
+	}
+
+	date = { day = 3 month = 7 year = 1951 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepminister which = 6306 }
+	}
+}
+
+##########
+#  USA Minister Event - Huey Pierce Long, Jr. assacinated!
+##########
+event = { 
+	id = 73129
+	random = no
+
+	country = USA
+
+	trigger = {
+		NOT = { headofstate = 6307 }
+	}
+
+	date = { day = 9 month = 8 year = 1935 }
+
+	name = "EVT_73129_NAME"	#ƒqƒ…[ƒCEƒƒ“ƒOˆÃE
+	desc = "EVT_73129_DESC"	#
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = dissent value = 2 }
+		command = { type = sleepminister which = 6307 }
+		command = { type = sleepminister which = 6308 }
+	}
+}
+
+##########
+#  USA Minister Event - Lesley J. McNair dies
+##########
+event = { 
+	id = 73130
+	random = no
+
+	country = USA
+
+	trigger = {
+		atwar = USA
+	}
+
+	date = { day = 24 month = July year = 1944 }
+#	offset = 7
+#	deathdate = { day = 3 month = october year = 1940 }
+
+	name = "EVT_106_NAME"
+	desc = "EVT_106_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepleader which = 60268 }
+		command = { type = sleepminister which = 6309 }
+	}
+}
+
+##########
+#  Italian Minister Event - Mussolini replaces Ciano as FM
+##########
+event = { 
+	id = 73150
+	random = no
+
+	country = ITA
+
+	trigger = {
+		InCabinet = 3003 #Ciano
+		NOT = {
+			control = { province = 939 data = ITA } #Tunis
+			control = { province = 932 data = ITA } #Tripoli
+			control = { province = 924 data = ITA } #Benghazi
+			control = { province = 919 data = ITA } #Tobruk
+		}
+		war = { country = ITA country = ENG }
+	}
+
+	date = { day = 1 month = january year = 1936 } #
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_117_NAME"
+	desc = "EVT_117_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepminister which = 3003 } #Ciano
+		command = { type = foreignminister which = 3052 } #Benito
+	}
+}
+##########
+#  Italian Minister Event - Badoglio resigns, replaced by Cavallero
+##########
+event = { 
+	id = 73151
+	random = no
+
+	country = ITA
+
+	trigger = {
+		InCabinet = 3125 #Badoglio
+		control = { province = 401 data = GRE } #Athens
+		war = { country = ITA country = GRE }
+	}
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 60
+	deathdate = { day = 15 month = june year = 1941 }
+
+	name = "EVT_104_NAME"
+	desc = "EVT_104_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		#not slept yet?
+		command = { type = chiefofstaff which = 3124 } #Cavallero
+	}
+}
+##########
+#  Italian Minister Event - Pariani goes to Albania, Graziani replaces him
+##########
+event = { 
+	id = 73152
+	random = no
+
+	country = ITA
+
+	trigger = {
+		InCabinet = 3008 #Pariani
+		NOT = {
+			exists = ALB
+		}
+		control = { province = 390 data = ITA } #Albania
+		control = { province = 391 data = ITA }
+	}
+
+	date = { day = 1 month = january year = 1936 } #
+	offset = 7
+	deathdate = { day = 29 month = august year = 1939 } #right before 1939 scenario
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = chiefofarmy which = 3139 } #Graziani
+	}
+}
+##########
+#  Italian Minister Event - Graziani is replaced by Roatta
+##########
+event = { 
+	id = 73153
+	random = no
+
+	country = ITA
+
+	trigger = {
+		InCabinet = 3139 #Graziani
+		NOT = {
+			control = { province = 924 data = ITA } #Benghazi
+			control = { province = 919 data = ITA } #Tobruk
+		}
+		war = { country = ITA country = ENG }
+	}
+
+	date = { day = 1 month = january year = 1936 } #
+	offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_113_NAME"
+	desc = "EVT_113_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = chiefofarmy which = 3140 } #Roatta
+	}
+}
+##########
+#  Italian Minister Event - Cavagnari is replaced by Riccardi
+##########
+event = { 
+	id = 73154
+	random = no
+
+	country = ITA
+
+	trigger = {
+		InCabinet = 3009 #Cavagnari
+		NOT = {
+			control = { province = 924 data = ITA } #Benghazi
+			control = { province = 919 data = ITA } #Tobruk
+		}
+		war = { country = ITA country = ENG }
+	}
+
+	date = { day = 1 month = january year = 1936 } #
+	offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_113_NAME"
+	desc = "EVT_113_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepminister which = 3009 } #Cavagnari
+		command = { type = chiefofnavy which = 3149 } #Riccardi
+	}
+}
+##########
+#  Italian Minister Event - Valle resigns, Pricolo replaces him
+##########
+event = { 
+	id = 73155
+	random = no
+
+	country = ITA
+
+	trigger = {
+		InCabinet = 3010 #Valle
+	}
+
+	date = { day = 10 month = september year = 1939 } #
+#	offset = 5
+#	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_105_NAME"
+	desc = "EVT_105_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepminister which = 3010 } #Valle
+		command = { type = chiefofair which = 3160 } #Pricolo
+	}
+	#any other choices?
+}
+##########
+#  Italian Minister Event - Pricolo resigns, Fougier replaces him
+##########
+event = { 
+	id = 73156
+	random = no
+
+	country = ITA
+
+	trigger = {
+		InCabinet = 3160 #Pricolo
+	}
+
+	date = { day = 15 month = november year = 1941 } #
+#	offset = 5
+#	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_105_NAME"
+	desc = "EVT_105_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepminister which = 3160 } #Pricolo
+		command = { type = chiefofair which = 3161 } #Fougier
+	}
+	#any other choices?
+}
+		
+event = {
+	id = 73157
+	country = ITA
+	random = no
+	trigger = {
+		random = 30
+		atwar = yes
+        OR = {
+        	multi_role = 1
+        	interceptor = 1
+        }
+        NOT = { event = 130621 }	#’n’†ŠC‚Ì•â‹‹ü‚ª“râ‚¦‚½I
+	}
+	
+	date = { day = 1 month = 6 year = 1943 }
+	offset = 2
+	deathdate = { day = 29 month = 6 year = 1943 }
+	
+	name = "EVT_73157_NAME"	#ƒtƒ‰ƒ“ƒREƒ‹ƒbƒL[ƒj‚Ìí€
+	desc = "EVT_73157_DESC"	#ƒCƒ^ƒŠƒAŒRÅ‚‚ÌƒG[ƒXEƒpƒCƒƒbƒg‚Å‚ ‚éƒtƒ‰ƒ“ƒREƒ‹ƒbƒL[ƒj‚ªí€‚µ‚½BƒXƒyƒCƒ““àí‚ğ‰w‚Æ‚µ‚½ƒ‹ƒbƒL[ƒj‚ÍA‚»‚ÌŒã4“xŒ‚’Ä‚³‚êA‚»‚µ‚Ä¶ŠÒ‚µ‚Ä‚¢‚éB‚¾‚ªA5‰ñ–Ú‚Í–³‚©‚Á‚½B43”NAƒVƒ`ƒŠƒA“‡’“—¯‚Ìq‹ó‘ài—ß‚Æ‚È‚Á‚½ƒ‹ƒbƒL[ƒj‚Í©‚çƒAƒƒŠƒJ‹óŒRŒ}Œ‚‚Ì‚½‚ß‚É”ò‚Ñ—§‚¿AŒ‚’Ä‚³‚ê‚½Bu‘æ“ñŸ‘åí‚Ìƒtƒ‰ƒ“ƒ`ƒFƒXƒREƒoƒ‰ƒbƒJ”Œİv‚Ææ‚í‚ê‚½”Ş‚ÍAƒoƒ‰ƒbƒJ‚Æ“¯‚¶‚æ‚¤‚Éí‚¢‚Ì’†‚Å€‚ñ‚¾‚Ì‚¾B
+	
+	action = {
+		name = "EVT_73157_ACTA"	#‚È‚ñ‚Æ‚¢‚¤‚±‚Æ‚¾
+		command = { type = sleepleader which = 6216 }
+		command = { type = sleepteam which = 1829 }
+	}
+}
+
+##### ‹Œdoomsday_election_events
+
+event = {
+	id = 73158	#900121
+	random = no
+	country = ITA
+	style = 0
+
+	trigger = {
+		government = democratic
+		NOT = { 
+			ispuppet = ITA 
+			incabinet = 3036
+			incabinet = 3037
+		}
+	}
+
+	name = "ELECTION_TITLE"
+	desc = "ELECTION_DESC"
+
+	date = { day = 1 month = january year = 1948 }
+	offset = 2
+	deathdate = { day = 1 month = february year = 1948 }
+
+
+	action_a = {
+		ai_chance = 60
+		name = "ELECT_B"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 3039 }
+		command = { type = headofgovernment which = 3047 }
+		command = { type = foreignminister which = 3060 }
+		command = { type = armamentminister which = 3083 }
+		command = { type = ministerofsecurity which = 3101 }
+		command = { type = ministerofintelligence which = 3117 }
+		}
+	action_b = {
+		ai_chance = 30
+		name = "ELECT_A"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofstate which = 3040 }
+		command = { type = headofgovernment which = 3049 }
+		command = { type = foreignminister which = 3062 }
+		command = { type = armamentminister which = 3086 }
+		command = { type = ministerofsecurity which = 3104 }
+		command = { type = ministerofintelligence which = 3119 }
+		}
+	action_c = {
+		ai_chance = 10
+		name = "KEEPCURRENT"
+		command = { type = dissent value = -1 }
+		}
+	}
+
+
+event = {
+	id = 73159	#900122
+	random = no
+	country = ITA
+	style = 0
+
+	trigger = {
+		government = democratic
+		NOT = { ispuppet = ITA }
+		}
+
+	name = "ELECTION_TITLE"
+	desc = "ELECTION_DESC"
+
+	date = { day = 1 month = august year = 1953 }
+	offset = 2
+	deathdate = { day = 1 month = september year = 1953 }
+
+
+	action_a = {
+		ai_chance = 60
+		name = "ELECT_B"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 3168 }
+		command = { type = headofgovernment which = 3170 }
+		command = { type = foreignminister which = 3171 }
+		command = { type = armamentminister which = 3173 }
+		command = { type = ministerofsecurity which = 3174 }
+		command = { type = ministerofintelligence which = 3117 }
+		}
+	action_b = {
+		ai_chance = 30
+		name = "ELECT_A"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofstate which = 3169 }
+		command = { type = headofgovernment which = 3049 }
+		command = { type = foreignminister which = 3062 }
+		command = { type = armamentminister which = 3086 }
+		command = { type = ministerofsecurity which = 3104 }
+		command = { type = ministerofintelligence which = 3119 }
+		}
+	action_c = {
+		ai_chance = 10
+		name = "KEEPCURRENT"
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Field Marshal Italo Balbo dies in a rather 'mysterious' accident
+
+event = {
+	id = 73160	#382
+	random = no
+	country = ITA
+	style = 0
+
+	trigger = {
+		OR = {
+		leader = 6194
+		leader = 6015
+		}
+		random = 80
+		atwar = yes
+		}
+
+	date = { year = 1940 month = june day = 28 }
+
+	name = "EVT_382_NAME"
+	desc = "EVT_382_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = sleepteam which = 1815 }
+		command = { type = sleepleader which = 6015 }
+		#command = { type = sleepleader which = 6194 }
+		}
+	}
+
+
+event = {
+	id = 73161
+	country = ITA
+	trigger = {
+		OR = {
+			incabinet = 3002
+			incabinet = 3004
+			incabinet = 3034
+			incabinet = 3043
+			incabinet = 3052
+			incabinet = 3093
+		}
+		random = 35
+	}
+	
+	date = { day = 1 month = august year = 1946 }
+	offset = 2
+	deathdate = { day = 1 month = september year = 1953 }
+	picture = "minister_died"
+
+	name = "EVT_73161_NAME"	#ƒhƒD[ƒ`ƒF‚Ìˆø‘Ş‚ÆŒãŒpÒ
+	desc = "EVT_73161_DESC"	#
+	
+	action = {
+		name = "EVT_73161_ACTA"	#‹óŒRŒ³ƒƒCƒ^ƒEƒoƒ‹ƒ{‚ªŒãŒpÒ‚Æ‚µ‚Äw–¼‚³‚ê‚½
+		ai_chance = 70
+		trigger = {
+			NOT = { event = 73161 }
+		}
+		command = { type = dissent value = -5 }
+		command = { type = headofgovernment which = 3176 }
+		command = { type = sleepminister which = 3002 }
+		command = { type = sleepminister which = 3004 }
+		command = { type = sleepminister which = 3034 }
+		command = { type = sleepminister which = 3043 }
+		command = { type = sleepminister which = 3052 }
+		command = { type = sleepminister which = 3093 }
+	}
+	action = {
+		name = "EVT_73161_ACTB"	#ƒOƒ‰ƒcƒBƒA[ƒj—¤ŒRŒ³ƒ‚ªŒãŒpÒ‚Æ‚µ‚Äw–¼‚³‚ê‚½
+		ai_chance = 25
+		command = { type = dissent value = -1 }
+		command = { type = headofgovernment which = 3178 }
+		command = { type = sleepminister which = 3002 }
+		command = { type = sleepminister which = 3004 }
+		command = { type = sleepminister which = 3034 }
+		command = { type = sleepminister which = 3043 }
+		command = { type = sleepminister which = 3052 }
+		command = { type = sleepminister which = 3093 }
+	}
+	action = {
+		name = "EVT_73161_ACTC"	#Œ³ƒG[ƒQŠC”“‡‘“ÂƒfEƒ”ƒFƒbƒL‚ªŒãŒpÒ‚Æ‚µ‚Äw–¼‚³‚ê‚½
+		ai_chance = 5	
+		command = { type = dissent value = -2 }
+		command = { type = headofgovernment which = 3177 }
+		command = { type = sleepminister which = 3002 }
+		command = { type = sleepminister which = 3004 }
+		command = { type = sleepminister which = 3034 }
+		command = { type = sleepminister which = 3043 }
+		command = { type = sleepminister which = 3052 }
+		command = { type = sleepminister which = 3093 }
+	}
+}
+
+
+event = {
+	id = 73162
+	country = RSI
+	trigger = {
+		minister = 508001
+		random = 35
+	}
+	
+	date = { day = 1 month = august year = 1946 }
+	offset = 2
+	deathdate = { day = 1 month = september year = 1953 }
+	picture = "minister_died"
+
+	name = "EVT_73161_NAME"	#ƒhƒD[ƒ`ƒF‚Ìˆø‘Ş‚ÆŒãŒpÒ
+	desc = "EVT_73162_DESC"	#
+	
+	action = {
+		name = "EVT_73162_ACTA"	#ƒOƒ‰ƒcƒBƒA[ƒj—¤ŒRŒ³ƒ‚ªŒãŒpÒ‚Æ‚µ‚Äw–¼‚³‚ê‚½
+		ai_chance = 80
+		command = { type = dissent value = -1 }
+		command = { type = headofstate which = 508036 }
+		command = { type = sleepminister which = 508001 }
+	}
+	action = {
+		name = "EVT_73162_ACTB"	#ŠCŒR‚Ì‰p—YƒWƒ…ƒjƒIEƒ{ƒ‹ƒQ[ƒ[’†²‚ªw–¼‚³‚ê‚½
+		ai_chance = 20	
+		command = { type = dissent value = -2 }
+		command = { type = headofstate which = 508037 }
+		command = { type = sleepminister which = 508001 }
+	}
+}
+
+##########
+#  ‘‰¤ƒ”ƒBƒbƒg[ƒŠƒIEƒGƒ}ƒkƒG[ƒŒ3¢•öŒäi”ñjÀj
+##########
+event = {
+	id = 73163
+	random = no
+	country = ITA
+	style = 0
+	
+	trigger = {
+		OR = {
+			headofstate = 3001
+			headofstate = 3031
+			headofstate = 3033
+		}
+		random = 95
+		}
+
+	date = { day = 27 month = 11 year = 1947 }
+	offset = 1 
+	deathdate = { day = 7 month = february year = 1963 }
+
+	name = "EVT_73163_NAME"
+	desc = "EVT_73163_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "EVT_73163_ACTA"
+		command = { type = headofstate which = 3036 } # ƒEƒ“ƒxƒ‹ƒg2¢iŒ ˆĞå‹`Ò”Åj
+		command = { type = sleepminister which = 3001 }
+		command = { type = sleepminister which = 3031 } 
+		command = { type = sleepminister which = 3033 } 
+		command = { type = sleepleader which = 6140 } 
+	}
+}
+
+###########################################
+# Democratic Italy By CSABadass
+###########################################
+
+event = {
+	id = 73164
+	random = no
+	country = ITA
+
+	name = "EVT_2906_NAME"
+	desc = "EVT_2906_DESC"
+	style = 0
+	picture = "constitutional"
+
+	trigger = {
+		alliance = { country = ITA country = ENG }
+		NOT = { 
+			government = democratic
+			}
+		}
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1947 }
+
+	action_a = {
+		name = "EVT_2906_ACTA"
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofstate which = 3033 }
+		command = { type = headofgovernment which = 3048 }
+		command = { type = foreignminister which = 3061 }
+		command = { type = armamentminister which = 3085 }
+		command = { type = ministerofsecurity which = 3102 }
+		command = { type = ministerofintelligence which = 3118 }
+		command = { type = chiefofstaff which = 3134 }
+		command = { type = chiefofarmy which = 3144 }
+		command = { type = chiefofnavy which = 3154 }
+		command = { type = chiefofair which = 3165 }
+		}
+} 
+
+##########
+# Hungarian Cabinet Changes
+##########
+# Hungarian Cabinet Change - 
+##########
+event = {
+	id = 73200
+	random = no
+	country = HUN
+
+	
+	trigger = {
+		NOT = {
+			ispuppet = HUN
+		}
+		headofgovernment = 21002 #Gyula Gombos
+	}
+
+	date = { day = 6 month = october year = 1936 } #October 6th, 1936
+
+	name = "EVT_102_NAME"
+	desc = "EVT_102_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = sleepminister which = 21002 } #Gyula Gombos
+		command = { type = sleepminister which = 21006 }
+		command = { type = headofgovernment which = 21053 } #Kalman Daranyi
+	}
+}
+##########
+# Hungarian Cabinet Change - 
+##########
+event = {
+	id = 73201
+	random = no
+	country = HUN
+
+	
+	trigger = {
+		NOT = {
+			ispuppet = HUN
+		}
+		headofgovernment = 21053 #Kalman Daranyi
+	}
+
+	date = { day = 14 month = may year = 1938 } #May 14th, 1938
+
+	name = "EVT_104_NAME"
+	desc = "EVT_104_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = headofgovernment which = 21054 } #Bela Imredy
+	}
+}
+##########
+# Hungarian Cabinet Change - 
+##########
+event = {
+	id = 73202
+	random = no
+	country = HUN
+
+	
+	trigger = {
+		NOT = {
+			ispuppet = HUN
+		}
+		headofgovernment = 21054 #Bela Imredy
+	}
+
+	date = { day = 16 month = february year = 1939 } #February 16th, 1939
+
+	name = "EVT_114_NAME"
+	desc = "EVT_114_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = headofgovernment which = 21055 } #Pal Teleki
+	}
+}
+##########
+# Hungarian Cabinet Change - 
+##########
+event = {
+	id = 73203
+	random = no
+	country = HUN
+
+	
+	trigger = {
+		alliance = { country = GER country = HUN }
+		NOT = {
+			ispuppet = HUN
+		}
+		war = { country = HUN country = YUG } #this was the reasoning for his suicide
+		headofgovernment = 21055 #Pal Teleki
+	}
+
+	date = { day = 3 month = april year = 1941 } #April 3rd, 1941
+	offset = 3
+	deathdate = { day = 15 month = june year = 1941 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = sleepminister which = 21055 } #Pal Teleki
+		command = { type = sleepminister which = 21099 }
+		command = { type = sleepminister which = 21176 }
+		command = { type = headofgovernment which = 21056 } #Laszlo Bardossy
+	}
+}
+##########
+# Hungarian Cabinet Change - 
+##########
+event = {
+	id = 73204
+	random = no
+	country = HUN
+
+	
+	trigger = {
+		NOT = {
+			ispuppet = HUN
+		}
+		headofgovernment = 21056 #Laszlo Bardossy
+	}
+
+	date = { day = 7 month = march year = 1942 } #March 7th, 1942
+
+	name = "EVT_104_NAME"
+	desc = "EVT_104_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = headofgovernment which = 21057 } #Miklos Kallay
+	}
+}
+##########
+# Hungarian Cabinet Change - 
+##########
+event = {
+	id = 73205
+	random = no
+	country = HUN
+
+	
+	trigger = {
+		alliance = { country = GER country = HUN }
+		NOT = {
+			ispuppet = HUN
+		}
+		headofgovernment = 21057 #Miklos Kallay
+	}
+
+	date = { day = 23 month = march year = 1944 } #March 23rd, 1944
+
+	name = "EVT_104_NAME"
+	desc = "EVT_104_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = headofgovernment which = 21051 } #Dome Sztojay
+	}
+}
+##########
+# Hungarian Cabinet Change - 
+##########
+event = {
+	id = 73206
+	random = no
+	country = HUN
+
+	
+	trigger = {
+		NOT = {
+			ispuppet = HUN
+		}
+		headofgovernment = 21051 #Dome Sztojay
+	}
+
+	date = { day = 1 month = august year = 1944 } #August 1st, 1944
+
+	name = "EVT_104_NAME"
+	desc = "EVT_104_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = headofgovernment which = 21058 } #Geza Lakatos
+	}
+}
+##########
+#  Ascent of the Arrow Cross
+##########
+event = {
+	id = 73207
+	random = no
+	country = HUN
+
+	trigger = {
+		OR = {
+			puppet = { country = HUN country = GER } #hungary is a german puppet
+			flag = romdefeatshun
+		}
+	}
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_119_NAME"
+	desc = "EVT_119_DESC"
+	picture = "eastern_europe"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		#horthies
+		#command = { type = sleepminister which = 21001 } #FEPK_minor 132134‚É•ªŠ„ #FEPKBETA4.91
+		#command = { type = sleepminister which = 21009 }
+		#command = { type = sleepminister which = 21042 }
+		#command = { type = sleepminister which = 21168 }
+		#command = { type = sleepleader which = 31189 }
+
+		#command = { type = set_domestic which = democratic value = 2 } 
+		#command = { type = set_domestic which = political_left value = 2 }
+		#command = { type = set_domestic which = free_market value = 2 }
+		#command = { type = set_domestic which = freedom value = 2 }
+		#command = { type = set_domestic which = professional_army value = 3 }
+		#command = { type = set_domestic which = defense_lobby value = 10 }
+		#command = { type = set_domestic which = interventionism value = 10 }
+
+		command = { type = headofstate which = 21041 } #Ferenc Szalasi
+		#command = { type = headofgovernment which =  } #
+		#command = { type = foreignminister which =  } #
+		#command = { type = armamentminister which =  } #
+		command = { type = ministerofsecurity which = 21096 } #Gabor Vajna
+		#command = { type = ministerofintelligence which =  } #
+		#command = { type = chiefofstaff which =  } #
+		#command = { type = chiefofarmy which =  } #
+		#command = { type = chiefofnavy which =  } #
+		#command = { type = chiefofair which =  } #
+	}
+}
+
+
+
+
+##########
+# Romanian Cabinet Changes
+##########
+# Romanian Cabinet Change - 
+##########
+event = {
+	id = 73250
+	random = no
+	country = ROM
+
+	
+	trigger = {
+		NOT = {
+			ispuppet = ROM
+		}
+	}
+
+	date = { day = 28 month = december year = 1937 } #December 28th, 1937
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = headofgovernment which = 22041 } #Octavian Goga
+	}
+}
+##########
+# Romanian Cabinet Change - 
+##########
+event = {
+	id = 73251
+	random = no
+	country = ROM
+
+	
+	trigger = {
+		NOT = {
+			ispuppet = ROM
+		}
+	}
+
+	date = { day = 11 month = february year = 1938 } #February 11th, 1938
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofstate which = 22032 }
+		command = { type = headofgovernment which = 22042 } #Miron Cristea
+		command = { type = foreignminister which = 22059 }
+		command = { type = armamentminister which = 22088 }
+		command = { type = ministerofsecurity which = 22100 }
+		command = { type = ministerofintelligence which = 22114 }
+		command = { type = chiefofstaff which = 22124 }
+		command = { type = chiefofarmy which = 22136 }
+		command = { type = chiefofnavy which = 22147 }
+		command = { type = chiefofair which = 22155 }
+		command = { type = dissent value = -3 }
+	}
+}
+##########
+# Romanian Cabinet Change - 
+##########
+event = {
+	id = 73252
+	random = no
+	country = ROM
+
+	
+	trigger = {
+		NOT = {
+			ispuppet = ROM
+		}
+	}
+
+	date = { day = 7 month = march year = 1939 } #March 7th, 1939
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = headofstate which = 22031 }
+		command = { type = headofgovernment which = 22043 } #Armand Calinescu
+		command = { type = foreignminister which = 22071 }
+		command = { type = armamentminister which = 22089 }
+		command = { type = ministerofsecurity which = 22101 }
+		command = { type = ministerofintelligence which = 22115 }
+		command = { type = chiefofstaff which = 22125 }
+		command = { type = chiefofarmy which = 22135 }
+		command = { type = chiefofnavy which = 22147 }
+		command = { type = chiefofair which = 22010 }
+		command = { type = dissent value = -1 }
+	}
+}
+##########
+# Romanian Cabinet Change - 
+##########
+event = {
+	id = 73253
+	random = no
+	country = ROM
+
+	
+	trigger = {
+		NOT = {
+			ispuppet = ROM
+		}
+	}
+
+	date = { day = 21 month = september year = 1939 } #September 21st, 1939
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = headofgovernment which = 22044 } #Gheorghe Argeseanu
+	}
+}
+##########
+# Romanian Cabinet Change - 
+##########
+event = {
+	id = 73254
+	random = no
+	country = ROM
+
+	
+	trigger = {
+		NOT = {
+			ispuppet = ROM
+		}
+	}
+
+	date = { day = 28 month = september year = 1939 } #September 28th, 1939
+
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = headofgovernment which = 22045 } #Constantin Argetoianu
+	}
+}
+##########
+# Romanian Cabinet Change - 
+##########
+event = {
+	id = 73255
+	random = no
+	country = ROM
+
+	
+	trigger = {
+		NOT = {
+			ispuppet = ROM
+		}
+	}
+
+	date = { day = 24 month = november year = 1939 } #November 24th, 1939
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofgovernment which = 22002 } #Gheorghe Tatarescu
+		command = { type = foreignminister which = 22073 }
+		command = { type = armamentminister which = 22091 }
+		command = { type = ministerofsecurity which = 22005 }
+		command = { type = ministerofintelligence which = 22117 }
+		command = { type = chiefofstaff which = 22126 }
+		command = { type = chiefofarmy which = 22138 }
+		command = { type = chiefofnavy which = 22009 }
+		command = { type = chiefofair which = 22010 }
+		command = { type = dissent value = -1 }
+	}
+}
+##########
+# Romanian Cabinet Change - 
+##########
+event = {
+	id = 73256
+	random = no
+	country = ROM
+
+	
+	trigger = {
+		NOT = {
+			ispuppet = ROM
+		}
+	}
+
+	date = { day = 4 month = july year = 1940 } #July 4th, 1940
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = headofgovernment which = 22047 } #Ion Gigurtu
+	}
+}
+##########
+# Romanian Cabinet Change - 
+##########
+event = {
+	id = 73257
+	random = no
+	country = ROM
+
+	
+	trigger = {
+		NOT = {
+			ispuppet = ROM
+		}
+		NOT = {
+			control = { province = 498 data = ROM } #Satu Mare
+			control = { province = 428 data = ROM } #Cluj
+		}
+	}
+
+	date = { day = 1 month = march year = 1940 } #historically September 4th, 1940
+	offset = 4
+	deathdate = { day = 15 month = june year = 1941 } #before 1941 scenario
+
+	name = "EVT_111_NAME"
+	desc = "EVT_111_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofstate which = 22035 } #Mihai I
+		command = { type = headofgovernment which = 22048 } #Ion Antonescu
+		command = { type = foreignminister which = 22075 }
+		command = { type = armamentminister which = 22093 }
+		command = { type = ministerofsecurity which = 22105 }
+		command = { type = ministerofintelligence which = 22118 }
+		command = { type = chiefofstaff which = 22127 }
+		command = { type = chiefofarmy which = 22139 }
+		command = { type = chiefofair which = 22158 }
+		command = { type = dissent value = -3 }
+		command = { type = sleepevent which = 2530 }
+	}
+}
+##########
+# Soviet Minister Events
+##########
+#  Yezhov disappears
+##########
+event = { 
+	id = 73300
+	random = no
+	country = SOV
+
+	date = { day = 11 month = november year = 1938 }
+
+	name = "EVT_117_NAME"
+	desc = "EVT_117_DESC"
+
+	picture = "tannu_tuva"
+
+	action_a = {
+		name = "OK"
+		command = { type = sleepminister which = 4031 } #Yezhovs
+		command = { type = sleepminister which = 4032 }
+		command = { type = sleepminister which = 4039 }
+		command = { type = sleepminister which = 4045 }
+		command = { type = ministerofsecurity which = 4041 } #Beria
+	}
+}
+##########
+#  Stalin lets his Generals take over the army
+##########
+event = { 
+	id = 73301
+	random = no
+	country = SOV
+
+	trigger = {
+		InCabinet = 4059 #Stalin, Army Chief
+		war = { country = GER country = SOV }
+		NOT = {
+			lost_national = { country = SOV value = 5 }
+		}
+	}
+
+	date = { day = 1 month = june year = 1943 }
+	offset = 7
+	deathdate = { day = 15 month = june year = 1945 }
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "tannu_tuva"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = chiefofarmy which = 4028 } #Georgiy K. Zhukov
+	}
+	#other options?
+}
+
+### Maksim Litvinov passes away
+
+event = {
+	id = 73302
+	random = no
+	country = SOV
+	style = 0
+
+	trigger = {
+		Incabinet = 4003
+		}
+
+	date = { year = 1951 month = 11 day = 29 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "YES"
+		ai_chance = 99
+		command = { type = sleepminister which = 4003 }
+		}
+	}
+
+
+##########
+#  Meretskov replaces Shaposhnikov (who was appointed when T. dies in the Purge event)
+##########
+event = { 
+	id = 73303
+	random = no
+	country = SOV
+
+	trigger = {
+		InCabinet = 4051 #Boris M. Shaposhnikov
+		event = 130583 #Winter War - Finns accept, the usual #FEPKbeta
+	}
+
+	date = { day = 1 month = may year = 1940 }
+
+	name = "EVT_113_NAME"
+	desc = "EVT_113_DESC"
+	picture = "tannu_tuva"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = chiefofstaff which = 4052 } #Kirill A. Meretskov
+		command = { type = chiefofarmy which =  4058 } #Semen K. Timoshenko
+	}
+	#other options?
+}
+##########
+#  Zhukov replaces Meretskov (who is accused of treason)
+##########
+event = { 
+	id = 73304
+	random = no
+	country = SOV
+
+	trigger = {
+		InCabinet = 4052 #Kirill A. Meretskov
+		atwar = no
+	}
+
+	date = { day = 1 month = january year = 1941 }
+
+	name = "EVT_113_NAME"
+	desc = "EVT_113_DESC"
+
+	picture = "tannu_tuva"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = chiefofstaff which = 4053 } #Georgiy K. Zhukov
+	}
+	#other options?
+}
+##########
+#  Zhukov is sacked
+##########
+event = { 
+	id = 73305
+	random = no
+	country = SOV
+
+	trigger = {
+		InCabinet = 4053 #Georgiy K. Zhukov
+		minister = 4059
+		war = { country = GER country = SOV }
+		OR = { #provinces west of Kiev
+			control = { province = 227 data = GER }
+			control = { province = 228 data = GER }
+			control = { province = 237 data = GER }
+			control = { province = 238 data = GER } #Kiev itself
+		}
+	}
+
+	date = { day = 1 month = june year = 1940 }
+	offset = 7
+	deathdate = { day = 15 month = june year = 1944 } #right before 1944 scenario
+
+	name = "EVT_114_NAME"
+	desc = "EVT_114_DESC"
+
+	picture = "tannu_tuva"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = chiefofstaff which = 4051 } #Boris M. Shaposhnikov
+		command = { type = chiefofarmy which = 4059 } #Iosif V. Stalin
+	}
+	#other options?
+}
+##########
+#  Vasilevskij replaces Shaposhnikov (who is now ill)
+##########
+event = { 
+	id = 73306
+	random = no
+	country = SOV
+
+	trigger = {
+		InCabinet = 4051 #Boris M. Shaposhnikov
+		war = { country = GER country = SOV }
+	}
+
+	date = { day = 26 month = june year = 1942 }
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+
+	picture = "tannu_tuva"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepminister which = 4051 } #Boris M. Shaposhnikov
+		command = { type = chiefofstaff which = 4054 } #Alesandr M. Vasilevskij
+	}
+	#other options?
+}
+
+##########
+#  ƒ„ƒ“Eƒxƒ‹ƒWƒ“l´‚ÆƒQƒ“ƒfƒBƒ“A”C
+##########
+event = {
+	id = 73307
+	random = no
+	country = SOV
+	trigger = {
+		local_flag = SOVPurge1
+		minister = 4201
+	}
+
+	date = { day = 26 month = 10 year = 1937 }	#1937/11/27‘ß•ß
+	
+	name = "EVT_117_NAME"
+	desc = "EVT_117_DESC"
+
+	picture = "tannu_tuva"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepminister which = 4006 }
+		command = { type = ministerofintelligence which = 4201 } 
+	}
+}
+
+##########
+#  ƒZƒ~ƒ‡[ƒ“EƒQƒ“ƒfƒBƒ“l´‚ÆƒAƒŒƒNƒTƒ“ƒhƒ‹EƒIƒ‹ƒƒtA”C
+##########
+event = {
+	id = 73308
+	random = no
+	country = SOV
+	trigger = {
+		event = 73307
+		minister = 4202
+	}
+
+	date = { day = 21 month = 9 year = 1938 }	#1938/9/22‘ß•ß
+	
+	name = "EVT_117_NAME"
+	desc = "EVT_117_DESC"
+
+	picture = "tannu_tuva"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepminister which = 4201 }
+		command = { type = ministerofintelligence which = 4202 } 
+	}
+}
+
+##########
+# ƒAƒŒƒNƒTƒ“ƒhƒ‹EƒIƒ‹ƒƒtl´‚ÆƒCƒƒ“EIEƒvƒƒXƒNƒƒtA”C
+##########
+event = {
+	id = 73309
+	random = no
+	country = SOV
+	trigger = {
+		event = 73308
+		minister = 4046
+	}
+
+	date = { day = 29 month = 3 year = 1939 }	#1939/4/30‘ß•ß
+	
+	name = "EVT_117_NAME"
+	desc = "EVT_117_DESC"
+
+	picture = "tannu_tuva"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepminister which = 4202 }
+		command = { type = ministerofintelligence which = 4046 } 
+	}
+}
+
+##########
+# ƒCƒƒ“EIEƒvƒƒXƒNƒƒtl´‚ÆƒtƒBƒŠƒbƒvEƒSƒŠƒRƒtA”C
+##########
+event = {
+	id = 73310
+	random = no
+	country = SOV
+	trigger = {
+		event = 73309
+		minister = 4047
+	}
+
+	date = { day = 26 month = 5 year = 1941 }	#1941/6/27‘ß•ß
+	
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+
+	picture = "tannu_tuva"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepminister which = 4046 }
+		command = { type = ministerofintelligence which = 4047 } 
+	}
+}
+
+##########
+# ƒtƒBƒŠƒbƒvEƒSƒŠƒRƒt“]‘®‚ÆƒAƒŒƒNƒZƒCEƒpƒ“ƒtƒB[ƒƒtA”C
+##########
+event = {
+	id = 73311
+	random = no
+	country = SOV
+	trigger = {
+		war = { country = GER country = SOV }
+		minister = 4048
+	}
+
+	date = { day = 10 month = 9 year = 1941 }	#1941/10‚É‘æ10ŒRi—ßŠ¯‚É
+	offset = 7
+	deathdate = { day = 29 month = 7 year = 1942 }
+	
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+
+	picture = "tannu_tuva"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = ministerofintelligence which = 4048 } 
+	}
+}
+
+##########
+# ƒAƒŒƒNƒZƒCEƒpƒ“ƒtƒB[ƒƒt‰ğ”C‚ÆƒCƒƒ“EƒCƒŠƒCƒ`ƒFƒtA”C
+##########
+event = {
+	id = 73312
+	random = no
+	country = SOV
+	trigger = {
+		OR = {
+			NOT = { exists = POL }
+			alliance = { country = POL country = SOV }
+		}
+		minister = 4049
+	}
+
+	date = { day = 11 month = 7 year = 1942 }	#1942/8‚É‰ğ”C
+	offset = 7
+	deathdate = { day = 29 month = 6 year = 1945 }
+	
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+
+	picture = "tannu_tuva"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = ministerofintelligence which = 4049 } 
+	}
+}
+
+##########
+# ƒCƒƒ“EƒCƒŠƒCƒ`ƒFƒtAŠO–±È‚ÖBŒã”C‚Íƒtƒ‡[ƒhƒ‹EƒNƒYƒlƒcƒHƒt
+##########
+event = {
+	id = 73313
+	random = no
+	country = SOV
+	trigger = {
+		NOT = { war = { country = GER country = SOV } }
+		minister = 4050
+	}
+
+	date = { day = 12 month = 6 year = 1945 }	#1945/7
+	offset = 7
+	deathdate = { day = 29 month = 8 year = 1947 }
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+
+	picture = "tannu_tuva"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = ministerofintelligence which = 4050 } 
+	}
+}
+
+##########
+# ƒtƒ‡[ƒhƒ‹EƒNƒYƒlƒcƒHƒtAî•ñˆÏˆõ‰ïİ—§‚É”º‚¢“]‘®BƒjƒRƒ‰ƒCEƒgƒ‹ƒ\ƒt‚ªƒwƒbƒh‚ÉB
+##########
+event = {
+	id = 73314
+	random = no
+	country = SOV
+	trigger = {
+		minister = 4034	#ƒ‚ƒƒgƒt
+		minister = 4203
+	}
+
+	date = { day = 13 month = 8 year = 1947 }	#1945/7
+	offset = 7
+	deathdate = { day = 29 month = 0 year = 1949 }
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+
+	picture = "tannu_tuva"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = ministerofintelligence which = 4203 } 
+	}
+}
+
+##########
+# ƒjƒRƒ‰ƒCEƒgƒ‹ƒ\ƒt‚©‚çƒ}ƒgƒ”ƒFƒCEƒUƒnƒƒt‚ÉŒğ‘ã
+#1949”NAƒgƒ‹ƒ\ƒt‚­‚ñ‚Íƒ`ƒFƒRƒX‚ÌŒR‘ågiHj‚É‚È‚Á‚½‚ç‚µ‚¢B
+#‚È‚ç‚ÎA“Œ‰¢‚Ì‚Ç‚Á‚©‚ğ“¯–¿“à‚É‚Á‚Ä‚¢‚é‚±‚Æ‚ªğŒ‚Æ‚µ‚Ä‚Í‘Ã“–‚¾‚ë‚¤‚©B
+##########
+event = {
+	id = 73315
+	random = no
+	country = SOV
+	trigger = {
+		OR = {
+			puppet = { country = UKR }
+			puppet = { country = BLR }
+			puppet = { country = EST }
+			puppet = { country = LAT }
+			puppet = { country = LIT }
+			puppet = { country = ALB }
+			puppet = { country = GRE }
+			puppet = { country = CRO }
+			puppet = { country = SER }
+			puppet = { country = BUL }
+			puppet = { country = BOS }
+			puppet = { country = MTN }
+			puppet = { country = ROM }
+			puppet = { country = TUR }
+			puppet = { country = SLO }
+			puppet = { country = SLV }
+			puppet = { country = CZE }
+			puppet = { country = HUN }
+			puppet = { country = POL }
+		}
+		minister = 4204
+	}
+
+	date = { day = 14 month = 0 year = 1949 }	#1949/1
+	offset = 7
+	deathdate = { day = 29 month = 5 year = 1952 }
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+
+	picture = "tannu_tuva"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = ministerofintelligence which = 4204 } 
+	}
+}
+
+##########
+# ƒ}ƒgƒ”ƒFƒCEƒUƒnƒƒt‚©‚çƒ~ƒnƒCƒ‹EƒVƒƒƒŠƒ“‚ÉŒğ‘ãi‘æ1ŠúE1952/6j
+# 1936‚©‚ç1”N‚Ù‚Ç“Œ‹‚Å‹Î–±‚µ‚Ä‚¢‚½‚Æ‚¢‚¤”Ş‚ÍA“ú–{‚É•‰‚¯‚Ä‚¢‚½‚È‚çŠÔˆá‚¢‚È‚­ƒXƒpƒCˆµ‚¢‚¾‚ë‚¤B
+##########
+event = {
+	id = 73316
+	random = no
+	country = SOV
+	trigger = {
+		NOT = { event = 135310 }	#“Æ“úvsƒ\ƒrƒ^ƒs
+		minister = 4205
+	}
+
+	date = { day = 14 month = 0 year = 1952 }	#1952/6
+	offset = 7
+	deathdate = { day = 29 month = 7 year = 1956 }
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+
+	picture = "tannu_tuva"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = ministerofintelligence which = 4205 } 	
+	}
+}
+
+##########
+# ƒ~ƒnƒCƒ‹EƒVƒƒƒŠƒ“‚©‚çƒZƒ‹ƒQƒCEƒVƒ…ƒeƒƒ“ƒR‚ÉŒğ‘ãi1956/8j
+# —á‚É‚æ‚Á‚ÄA”Ş‚à“Æƒ\í‚É•‰‚¯‚Ä‚¢‚½‚È‚ç‚Î—§ê‚Í‚ ‚é‚Ü‚¢B
+##########
+event = {
+	id = 73317
+	random = no
+	country = SOV
+	trigger = {
+		NOT = { 
+			event = 135300	#‘Î“Æƒrƒ^ƒs
+			event = 135310	#‘Î“Æ“úƒrƒ^ƒs
+			event = 135320	#‘Î”gƒrƒ^ƒs
+		 }	
+		 minister = 4206
+	}
+
+	date = { day = 15 month = 7 year = 1956 }	#1956/8
+	offset = 7
+	deathdate = { day = 29 month = 9 year = 1957 }
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+
+	picture = "tannu_tuva"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = ministerofintelligence which = 4206 } 	
+	}
+}
+
+##########
+# ƒZƒ‹ƒQƒCEƒVƒ…ƒeƒƒ“ƒR‚©‚çƒ~ƒnƒCƒ‹EƒVƒƒƒŠƒ“‚ÉŒğ‘ãi‘æ2ŠúE1957/10j
+# —á‚É‚æ‚Á‚ÄA”Ş‚à“Æƒ\í‚É•‰‚¯‚Ä‚¢‚½‚È‚ç‚Î—§ê‚Í‚ ‚é‚Ü‚¢B
+##########
+event = {
+	id = 73318
+	random = no
+	country = SOV
+	trigger = {
+		minister = 4205
+		event = 73316	#ƒVƒƒƒŠƒ“A”C
+	}
+
+	date = { day = 15 month = 7 year = 1956 }	#1956/8
+	offset = 7
+	deathdate = { day = 29 month = 9 year = 1957 }
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+
+	picture = "tannu_tuva"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = ministerofintelligence which = 4205 } 	
+	}
+}
+
+##########
+# ƒ~ƒnƒCƒ‹EƒVƒƒƒŠƒ“‚©‚çƒCƒƒ“EƒZ[ƒƒt‚ÉŒğ‘ãi1958/12j
+##########
+event = {
+	id = 73319
+	random = no
+	country = SOV
+	trigger = {
+		minister = 4080	#“Á‚Év‚¢‚Â‚©‚È‚©‚Á‚½
+	}
+
+	date = { day = 15 month = 11 year = 1958 }	#1958/12
+	offset = 7
+	deathdate = { day = 29 month = 0 year = 1963 }
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+
+	picture = "tannu_tuva"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = ministerofintelligence which = 4080 } 	
+	}
+}
+
+##########
+# ƒCƒƒ“EƒZ[ƒƒtAƒIƒŒƒOEƒyƒ“ƒRƒtƒXƒL[‚Ì“ñdƒXƒpƒC—e‹^‚É‚æ‚è‰ğ”CBŒã”C‚Íƒsƒ‡[ƒgƒ‹EƒCƒƒVƒ…ƒ`ƒ“i1963/1j
+##########
+event = {
+	id = 73320
+	random = no
+	country = SOV
+	trigger = {
+		OR = {
+			exists = USA
+			exists = ENG	#ƒXƒpƒCæ
+		}
+		minister = 4207
+	}
+
+	date = { day = 15 month = 0 year = 1963 }	#1963/1
+	offset = 7
+	deathdate = { day = 29 month = 11 year = 1963 }
+
+	name = "EVT_115_NAME"
+	desc = "EVT_115_DESC"
+
+	picture = "tannu_tuva"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepminister which = 4080 } 	
+		command = { type = ministerofintelligence which = 4207 } 	
+	}
+}
+##########
+# ¼•”íüi—ßŠ¯‚Ìl´
+# ƒhƒ~ƒgƒŠ[Eƒpƒ”ƒƒt	10173
+# A.ƒOƒŠƒSƒŠƒGƒt		111703
+# A.ƒRƒƒuƒRƒt			111704
+# V.ƒNƒŠƒ‚ƒtƒXƒL[		111705
+##########
+event = {
+	id = 73321
+	random = no
+	country = SOV
+	trigger = {
+		war = { country = GER country = SOV }
+		lost_national = { country = SOV value = 2 }
+	}
+
+	date = { day = 0 month = 6 year = 1941 }	#1941/7/22
+	offset = 7
+	deathdate = { day = 29 month = 11 year = 1941 }
+
+	name = "EVT_73321_NAME"	#ÔŒR¼•”íüi—ßŠ¯‚Ìl´
+	desc = "EVT_73321_DESC"	#
+
+	picture = "tannu_tuva"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepleader which = 10173 }
+		command = { type = sleepleader which = 111703 }
+		command = { type = sleepleader which = 111704 }
+		command = { type = sleepleader which = 111705 }
+	}
+}
+
+
+### The Death of Iosif Stalin and the Execution of Lavrenti Beria 
+
+event = {
+	id = 73322	#400
+	random = no
+	country = SOV
+	style = 0
+
+	trigger = { 
+		government = communist
+		headofgovernment = 4002 
+		OR = {	#‘ål´‚ª‹N‚±‚Á‚Ä‚¢‚é
+			event = 130148
+			event = 130149
+		}
+		random = 90
+		}
+
+	date = { year = 1953 month = march day = 5 }
+	offset = 1
+	deathdate = { year = 1954 month = march day = 5 }
+
+	name = "EVT_400_NAME"
+	desc = "EVT_400_DESC"
+	picture = "stalin"
+
+	action_a = {
+		ai_chance = 85
+		name = "EVT_400_ACTA" #Stalin dies: execute Beria!
+		command = { type = headofstate which = 4083 }
+		command = { type = headofgovernment which = 4081 }
+		command = { type = foreignminister which = 4034 }
+		command = { type = armamentminister which = 4082 }
+		command = { type = ministerofsecurity which = 4077 }
+		command = { type = ministerofintelligence which = 4080 }
+		command = { type = sleepminister which = 4002 } # Stalin (HOG)
+		#command = { type = sleepminister which = 4074 } # Stalin (HOS)
+		command = { type = sleepminister which = 4075 } # Beria (HOG)
+		command = { type = sleepminister which = 4041 } # Beria (MinSec)
+		#command = { type = sleepminister which = 4059 } # Stalin (COA)
+		#command = { type = sleepminister which = 4073 } # Stalin (MinArm)
+		}
+	action_b = {
+		ai_chance = 10
+		name = "EVT_400_ACTB" #Stalin dies: leave Beria alive
+		command = { type = headofstate which = 4083 }
+		command = { type = headofgovernment which = 4081 }
+		command = { type = foreignminister which = 4034 }
+		command = { type = armamentminister which = 4082 }
+		command = { type = ministerofsecurity which = 4041 }
+		command = { type = ministerofintelligence which = 4080 }
+		command = { type = sleepminister which = 4002 } # Stalin (HOG)
+		#command = { type = sleepminister which = 4074 } # Stalin (HOS)
+		#command = { type = sleepminister which = 4059 } # Stalin (COA)
+		#command = { type = sleepminister which = 4073 } # Stalin (MinArm)
+		}
+	action_c = {
+		ai_chance = 5
+		name = "EVT_400_ACTC" #Stalin dies: put Beria in charge
+		command = { type = headofstate which = 4083 }
+		command = { type = headofgovernment which = 4075 }
+		command = { type = foreignminister which = 4034 }
+		command = { type = armamentminister which = 4071 }
+		command = { type = ministerofsecurity which = 4041 }
+		command = { type = ministerofintelligence which = 4080 }
+		command = { type = sleepminister which = 4002 } # Stalin (HOG)
+		#command = { type = sleepminister which = 4074 } # Stalin (HOS)
+		#command = { type = sleepminister which = 4059 } # Stalin (COA)
+		#command = { type = sleepminister which = 4073 } # Stalin (MinArm)
+	}
+}
+
+event = {
+	id = 73323	#400
+	random = no
+	country = SOV
+	style = 0
+
+	trigger = { 
+		government = communist
+		headofgovernment = 4002 
+		NOT = {	#‘ål´‚ª‹N‚±‚Á‚Ä‚¢‚È‚¢
+			event = 130148
+			event = 130149
+		}
+		random = 90
+		}
+
+	date = { year = 1953 month = march day = 5 }
+	offset = 1
+	deathdate = { year = 1954 month = march day = 5 }
+
+	name = "EVT_400_NAME"
+	desc = "EVT_400_DESC"
+	picture = "stalin"
+
+	action_a = {
+		ai_chance = 30
+		name = "EVT_400_ACTA" #Stalin dies: execute Beria!
+		command = { type = headofstate which = 4083 }
+		command = { type = headofgovernment which = 4081 }
+		command = { type = foreignminister which = 4034 }
+		command = { type = armamentminister which = 4082 }
+		command = { type = ministerofsecurity which = 4077 }
+		command = { type = ministerofintelligence which = 4080 }
+		command = { type = sleepminister which = 4002 } # Stalin (HOG)
+		#command = { type = sleepminister which = 4074 } # Stalin (HOS)
+		command = { type = sleepminister which = 4075 } # Beria (HOG)
+		command = { type = sleepminister which = 4041 } # Beria (MinSec)
+		#command = { type = sleepminister which = 4059 } # Stalin (COA)
+		#command = { type = sleepminister which = 4073 } # Stalin (MinArm)
+		}
+	action_b = {
+		ai_chance = 15
+		name = "EVT_400_ACTB" #Stalin dies: leave Beria alive
+		command = { type = headofstate which = 4083 }
+		command = { type = headofgovernment which = 4081 }
+		command = { type = foreignminister which = 4034 }
+		command = { type = armamentminister which = 4082 }
+		command = { type = ministerofsecurity which = 4041 }
+		command = { type = ministerofintelligence which = 4080 }
+		command = { type = sleepminister which = 4002 } # Stalin (HOG)
+		#command = { type = sleepminister which = 4074 } # Stalin (HOS)
+		#command = { type = sleepminister which = 4059 } # Stalin (COA)
+		#command = { type = sleepminister which = 4073 } # Stalin (MinArm)
+		}
+	action_c = {
+		ai_chance = 5
+		name = "EVT_400_ACTC" #Stalin dies: put Beria in charge
+		command = { type = headofstate which = 4083 }
+		command = { type = headofgovernment which = 4075 }
+		command = { type = foreignminister which = 4034 }
+		command = { type = armamentminister which = 4071 }
+		command = { type = ministerofsecurity which = 4041 }
+		command = { type = ministerofintelligence which = 4080 }
+		command = { type = sleepminister which = 4002 } # Stalin (HOG)
+		#command = { type = sleepminister which = 4074 } # Stalin (HOS)
+		#command = { type = sleepminister which = 4059 } # Stalin (COA)
+		#command = { type = sleepminister which = 4073 } # Stalin (MinArm)
+	}
+	action_d = {
+		ai_chance = 50
+		name = "EVT_73323_ACTD" #Stalin dies: put Tukhachevsky in charge
+		command = { type = headofstate which = 4083 }
+		command = { type = headofgovernment which = 4208 }
+		command = { type = foreignminister which = 4034 }
+		command = { type = armamentminister which = 4082 }
+		command = { type = ministerofsecurity which = 4077 }
+		command = { type = ministerofintelligence which = 4080 }
+		command = { type = sleepminister which = 4002 } # Stalin (HOG)
+		command = { type = sleepminister which = 4075 } # Beria (HOG)
+		#command = { type = sleepminister which = 4074 } # Stalin (HOS)
+		#command = { type = sleepminister which = 4059 } # Stalin (COA)
+		#command = { type = sleepminister which = 4073 } # Stalin (MinArm)
+	}
+}
+
+##########
+# ƒ‚ƒXƒNƒ–h‰qí‚Ì¸”s
+# ‘i—ß
+#ƒQƒIƒ‹ƒM[EƒWƒ…[ƒRƒt
+#ƒAƒŒƒNƒTƒ“ƒhƒ‹Eƒ”ƒ@ƒVƒŒƒtƒXƒL[
+#
+# ¼•”‘O–ÊŒRF
+#ƒhƒ~ƒgƒŠ[Eƒpƒuƒƒt
+#ƒAƒ“ƒhƒŒƒCEƒGƒŠƒ‡[ƒƒ“ƒR
+#ƒZƒ~ƒ‡[ƒ“EƒeƒBƒ‚ƒVƒFƒ“ƒR
+#ƒCƒƒ“EƒR[ƒlƒt
+#—\”õíüF
+#ƒZƒ~ƒ‡[ƒ“EƒuƒWƒ‡ƒ“ƒkƒC
+#ƒuƒŠƒ„ƒ“ƒXƒNíüF
+#M.ƒyƒgƒƒt
+#ƒQƒIƒ‹ƒM[EƒUƒnƒƒt
+##########
+event = {
+	id = 73324
+	random = no
+	country = SOV
+	one_action = yes
+	trigger = {
+		control = { province = 175 data = GER }	#ƒ‚ƒXƒNƒ
+		incabinet = 4002	#Stalin
+		war = { country = SOV country = GER }
+	}
+
+	date = { day = 0 month = 9 year = 1941 }	#1941/7/22
+	offset = 7
+	deathdate = { day = 29 month = 11 year = 1943 }
+
+	name = "EVT_73324_NAME"	#ƒ‚ƒXƒNƒ–h‰qí‚Ì¸”s
+	desc = "EVT_73324_DESC"	#
+
+	picture = "tannu_tuva"
+
+	action_a = {
+		name = "EVT_73324_ACTA"	#¼•”³–ÊŒRi—ßŠ¯‚ÆQ–d‘’·‚ªl´‚³‚ê‚½I
+		ai_chance = 50
+		command = { type = sleepleader which = 10393 }	#ƒWƒ…[ƒRƒt
+		command = { type = sleepminister which = 4053 }
+		command = { type = sleepminister which = 4028 }
+		command = { type = sleepminister which = 4089 }
+		command = { type = sleepteam which = 3729 }
+		command = { type = sleepleader which = 10353 }	#ƒ”ƒ@ƒVƒŒƒtƒXƒL[
+		command = { type = sleepminister which = 4054 }
+		command = { type = sleepminister which = 4082 }
+		command = { type = sleepteam which = 3707 }
+		command = { type = sleepleader which = 10281 }	#ƒ{ƒŠƒXEƒVƒƒƒ|ƒVƒjƒRƒt
+		command = { type = sleepminister which = 4051 }
+		command = { type = sleepteam which = 3705 }
+		command = { type = dissent value = 3 }
+	}
+	action_a = {
+		name = "EVT_73324_ACTB"	#¼•”³–ÊŒRi—ßŠ¯‚ÌüˆÍ‚Ìl•¨‚ªl´‚³‚ê‚½I
+		ai_chance = 50
+		command = { type = sleepleader which = 9903 }	#ƒAƒ“ƒhƒŒƒCEƒGƒŠƒ‡[ƒƒ“ƒR
+		command = { type = sleepleader which = 10333 }	#ƒZƒ~ƒ‡[ƒ“EƒeƒBƒ‚ƒVƒFƒ“ƒR
+		command = { type = sleepteam which = 3727 }
+		command = { type = sleepleader which = 10026 }	#ƒCƒƒ“EƒR[ƒlƒt
+		command = { type = sleepteam which = 3755 }
+		command = { type = sleepleader which = 9861 }	#ƒZƒ~ƒ‡[ƒ“EƒuƒWƒ‡ƒ“ƒkƒC
+		command = { type = sleepleader which = 10180 }	#M.ƒyƒgƒƒt
+		command = { type = sleepleader which = 10377 }	#ƒQƒIƒ‹ƒM[EƒUƒnƒƒt
+		command = { type = dissent value = 3 }
+	}
+}
+
+##########
+#  Bukharin disappears
+##########
+event = { 
+	id = 73325
+	random = no
+	country = SOV
+	trigger = {
+		incabinet = 4002
+	}
+
+	date = { day = 14 month = 2 year = 1938 }
+
+	name = "EVT_117_NAME"
+	desc = "EVT_117_DESC"
+
+	picture = "tannu_tuva"
+
+	action_a = {
+		name = "OK"
+		command = { type = sleepminister which = 4209 } #Bukharin
+		command = { type = sleepminister which = 4210 }
+	}
+}
+
+##########
+#  Zinoviev disappears
+##########
+event = { 
+	id = 73326
+	random = no
+	country = SOV
+	trigger = {
+		incabinet = 4002
+	}
+
+	date = { day = 24 month = 7 year = 1936 }
+
+	name = "EVT_117_NAME"
+	desc = "EVT_117_DESC"
+
+	picture = "tannu_tuva"
+
+	action_a = {
+		name = "OK"
+		command = { type = sleepminister which = 4211 } #Zinoviev
+	}
+}
+
+##########
+#  Kamenev disappears
+##########
+event = { 
+	id = 73327
+	random = no
+	country = SOV
+	trigger = {
+		incabinet = 4002
+	}
+
+	date = { day = 24 month = 7 year = 1936 }
+
+	name = "EVT_117_NAME"
+	desc = "EVT_117_DESC"
+
+	picture = "tannu_tuva"
+
+	action_a = {
+		name = "OK"
+		command = { type = sleepminister which = 4212 } #Zinoviev
+	}
+}
+
+##########
+#  Preobrazhensky disappears
+##########
+event = { 
+	id = 73328
+	random = no
+	country = SOV
+	trigger = {
+		incabinet = 4002
+	}
+
+	date = { day = 13 month = 6 year = 1937 }
+
+	name = "EVT_117_NAME"
+	desc = "EVT_117_DESC"
+
+	picture = "tannu_tuva"
+
+	action_a = {
+		name = "OK"
+		command = { type = sleepminister which = 4213 } #Preobrazhensky
+	}
+}
+
+##########
+#  Rykov disappears
+##########
+event = { 
+	id = 73329
+	random = no
+	country = SOV
+	trigger = {
+		incabinet = 4002
+	}
+
+	date = { day = 14 month = 2 year = 1938 }
+
+	name = "EVT_117_NAME"
+	desc = "EVT_117_DESC"
+
+	picture = "tannu_tuva"
+
+	action_a = {
+		name = "OK"
+		command = { type = sleepminister which = 4214 } #Rykov
+		command = { type = sleepminister which = 4215 }
+		command = { type = sleepminister which = 4216 }  
+	}
+}
+
+##########
+#  Tomsky disappears
+##########
+event = { 
+	id = 73330
+	random = no
+	country = SOV
+	trigger = {
+		incabinet = 4002
+	}
+
+	date = { day = 21 month = 7 year = 1936 }
+
+	name = "EVT_117_NAME"
+	desc = "EVT_117_DESC"
+
+	picture = "tannu_tuva"
+
+	action_a = {
+		name = "OK"
+		command = { type = sleepminister which = 4217 } #Tomsky
+	}
+}
+
+##########
+#  Shaposhnikov dies
+##########
+event = { 
+	id = 73331
+	random = no
+	country = SOV
+
+	trigger = {
+		leader = 10281
+	}
+
+	date = { day = 25 month = 2 year = 1945 }
+
+	name = "EVT_108_NAME"
+	desc = "EVT_108_DESC"
+
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepminister which = 4051 } #Boris M. Shaposhnikov
+		command = { type = sleepleader which = 10281 }
+		command = { type = sleepteam which = 3705 }
+	}
+}
+
+##########
+#  Austrian minister events
+##########
+#  Alfred Jansa into office
+##########
+event = {
+	id = 73350
+	random = no
+	country = AUS
+	
+	date = { day = 0 month = 3 year = 1936 }
+	
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = chiefofstaff which = 23153 }
+	}
+}
+
+##########
+#  Franz Bohme into office
+##########
+event = {
+	id = 73351
+	random = no
+	country = AUS
+	
+	trigger = {
+		exists = GER
+		NOT = { war = { country = GER country = AUS } }
+		NOT = { 
+			event = 132604	#’é­•œŒÃiˆÉšÒ“¯–¿j
+			event = 132702	#’é­•œŒÃi©—Íj
+		}
+	}
+	
+	date = { day = 17 month = 0 year = 1938 }
+	
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepminister which = 23153 }
+		command = { type = chiefofstaff which = 23154 }
+	}
+}
+
+#########################################################
+event = {
+	id = 73352
+	random = no
+	country = GER
+
+	trigger = {	
+		NOT = { 
+			alliance = { country = GER country = AUS } 
+			flag = royal_vienne
+			event = 132680	#uc’é‚Ì©¡‘Ì‚©‚çv
+		}
+		exists = AUS
+		atwar = no
+	}
+
+	picture = "Kurt_Schuschnigg"
+
+	name = "EVT_73352_NAME"
+	desc = "EVT_73352_DESC"
+	style = 0
+
+	date = { day = 10 month = 6 year = 1936 }
+	offset = 1
+	deathdate = { day = 12 month = 6 year = 1936 }
+
+	action_a = {
+		name = "OK"
+		command = { type = guarantee which = GER where = AUS }
+		command = { type = relation which = AUS value = 15 }
+		#command = { type = money value = 1500 }
+		command = { type = trigger which = 73353 }
+	}
+}
+#########################################################
+event = {
+	id = 73353
+	random = no
+	country = AUS
+
+	name = "EVT_73352_NAME"
+	desc = "EVT_73352_DESC"
+	style = 0
+
+	picture = "Kurt_Schuschnigg"
+
+	action_a = {
+		name = "OK"
+		command = { type = relation which = GER value = 15 }
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = foreignminister which = 23057 }
+	}
+}
+#########################################################
+event = {
+	id = 73354
+	random = no
+	country = AUS
+
+	trigger = {	
+		incabinet = 23005
+		event = 73351 
+	}
+	
+	picture = "Kurt_Schuschnigg"
+
+	name = "EVT_73354_NAME"
+	desc = "EVT_73354_DESC"
+	style = 0
+
+        date = { day = 0 month = 10 year = 1936 }
+        offset = 3
+	deathdate = { day = 29 month = 11 year = 1936 }
+
+	action_a = {
+		name = "EVT_73354_ACTA"
+		command = { type = ministerofsecurity which = 23087 }
+	}
+}
+#########################################################
+##########
+#  Count Albert von Mensdorff-Pouilly-Dietrichstein passes away
+##########
+event = {
+	id = 73355
+	random = no
+	country = AUS
+	
+
+	date = { day = 14 month = june year = 1945 }
+	
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepminister which = 23059 }
+		command = { type = sleepminister which = 23049 }
+	}
+}
+
+##########
+#  Viktor Kienbock passes away
+##########
+event = {
+	id = 73356
+	random = no
+	country = AUS
+	
+
+	date = { day = 22 month = 10 year = 1956 }
+	
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepminister which = 23068 }
+	}
+}
+#ƒIƒbƒg[EƒtƒHƒ“EƒnƒvƒXƒuƒ‹ƒN–S–½
+event = {
+	id = 73357
+	tag = { AUS HUN }
+	trigger = {
+		NOT = { local_flag = Otto_Refuge }
+		NOT = { headofstate = 23041 }
+		NOT = { headofstate = 21044 }
+		OR = {
+			ideology = nazi
+			ideology = fascist
+		}
+		atwar = GER
+	}
+	persistent = yes
+	
+	date = { day = 0 month = january year = 1938 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	style = 0
+	picture = "anchsluss"
+	
+	name = "EVT_73357_NAME"	#ƒIƒbƒg[EƒtƒHƒ“EƒnƒvƒXƒuƒ‹ƒN–S–½
+	desc = "EVT_73357_DESC"	#
+	
+	action_a = {
+		name = "EVT_73357_ACTA"	#‚µ‚©‚µA”Ş‚É‰½‚ª‚Å‚«‚æ‚¤H
+		command = { type = sleepminister which = 23041 }
+		command = { type = sleepminister which = 21044 }
+		command = { type = sleepminister which = 21154 }
+		command = { type = local_setflag which = Otto_Refuge }
+	}
+}
+
+#c’é‚Æ‚Æ‚ ‚é‹¤Yå‹`Òiƒ`ƒg[¢Š«j
+event = {
+	id = 73358
+	country = AUS
+	trigger = {
+		flag = royal_vienne
+		event = 132630	#ƒ†[ƒSè—Ì
+		NOT = { exists = YUG }
+		control = { province = 463 data = AUS } #Vienne
+		NOT = {
+			ideology = nazi
+			ideology = fascist
+		}		
+		random = 40
+	}
+	
+	date = { day = 12 month = 2 year = 1939 }	#
+	offset = 15
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	style = 0
+	picture = "Yugoslav coup"
+	
+	name = "EVT_73358_NAME"	#c’é‚Æ‚Æ‚ ‚é‹¤Yå‹`Ò
+	desc = "EVT_73358_DESC"	#
+	
+	
+	action = {
+		ai_chance = 80
+		name = "EVT_73358_ACTA"	#Œ‹\‚È‚±‚Æ‚¾
+		#command = { type = sleepevent which = 73359 }
+		#command = { type = sleepevent which = 73360 }
+	}
+	action = {
+		ai_chance = 20
+		name = "EVT_73358_ACTB"	#”Ş‚ğƒEƒB[ƒ“‚É¢Š«‚Å‚«‚È‚¢‚¾‚ë‚¤‚©H
+		command = { type = dissent value = 1 }
+		command = { type = trigger which = 73359 }
+		
+	}
+}
+
+event = {
+	id = 73359
+	country = AUS
+	random = no
+	save_date = yes
+	
+	style = 0
+	picture = "Yugoslav coup"
+	
+	name = "EVT_73358_NAME"	#ŒR‰üŠv‚Æƒ`ƒg[¢Š«—ß
+	desc = "EVT_73358_DESC"	#
+	
+	action = {
+		name = "EVT_73359_ACTA"	#‚³‚ÄA”Ş‚Í‰‚¶‚Ä‚­‚ê‚é‚¾‚ë‚¤‚©
+	}
+}
+
+event = {
+	id = 73360
+	country = AUS
+	random = no
+	trigger = {
+		event = 73359
+		event = { id = 73359 days = 14 }
+		NOT = { event = 132698 }	#ƒ`ƒg[ŒR‚ª—ˆ‚Ä‚¢‚È‚¢
+	}
+	
+	date = { day = 12 month = 2 year = 1939 }	#
+	offset = 4
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	
+	name = "EVT_73360_NAME"	#ƒ`ƒg[A¢Š«‚É‰‚¶‚¸
+	desc = "EVT_73360_DESC"	#
+	
+	action = {
+		name = "EVT_73360_ACTA"	#•ª‚©‚Á‚Ä‚¢‚½‚±‚Æ‚¾BŒR‚Ì‰üŠv‚Í©‚ç‚Ìè‚Ås‚¨‚¤
+		command = { type = dissent value = 2 }
+	}
+}
+
+event = {
+	id = 73361
+	country = AUS
+	random = no
+	trigger = {
+		event = 73359
+		OR = {
+			AND = {
+				NOT = { event = { id = 73359 days = 14 } }
+				random = 10
+			}
+			event = 132698	#ƒ`ƒg[ŒR‚ª—ˆ‚Ä‚¢‚é
+		}
+	}
+	
+	date = { day = 12 month = 2 year = 1939 }	#
+	offset = 4
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	
+	name = "EVT_73361_NAME"	#ƒ`ƒg[AƒEƒB[ƒ“‚É¢Š«‚³‚é‚é
+	desc = "EVT_73361_DESC"	#
+	
+	action = {
+		name = "EVT_73361_ACTA"	#‹­—Í‚È•‚Ál‚¾
+		command = { type = dissent value = 2 }
+		command = { type = waketeam which = 673 }
+	}
+}
+
+event = {
+	id = 73362
+	country = AUS
+	decision = {
+		event = 73361
+		NOT = { alliance = { country = AUS country = SOV } }
+	}
+	decision_trigger = {
+		NOT = { dissent = 5 }
+		NOT = { government = fascist }
+	}
+	trigger = {
+		event = 73361
+		random = 50
+		NOT = { alliance = { country = AUS country = SOV } }
+	}
+	
+	date = { day = 12 month = 2 year = 1941 }	#
+	offset = 13
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	
+	name = "EVT_73362_NAME"	#ƒˆƒVƒbƒvEƒuƒƒY‚Ì—¤ŒR‘i—ßŠ¯A”C
+	desc = "EVT_73362_DESC"	#
+	
+	action = {
+		name = "EVT_73362_ACTA"
+		command = { type = dissent value = 3 }
+		command = { type = wakeminister which = 23155 }
+		command = { type = chiefofarmy which = 23155 }
+		command = { type = wakeleader which = 132501 }
+		command = { type = gain_tech which = 6190 }	#Z“§'43
+		command = { type = gain_tech which = 14080 }	#ƒQƒŠƒ‰í
+	}
+}
+
+##########
+#  Viktor Dankl von Krasnik dies
+##########
+event = {
+	id = 73363
+	country = AUS
+	trigger = {
+		leader = 132502
+	}
+	
+	date = { day = 7 month = January year = 1941 }	
+	
+	name = "EVT_108_NAME"
+	desc = "EVT_108_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = sleepleader which = 132502 }
+	}
+}
+
+##########
+#  Eduard Freiherr von Bohm-Ermolli dies
+##########
+event = {
+	id = 73364
+	country = AUS
+	trigger = {
+		leader = 132503
+	}
+	
+	date = { day = 8 month = 11 year = 1941 }	
+	
+	name = "EVT_108_NAME"
+	desc = "EVT_108_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = sleepleader which = 132503 }
+	}
+}
+
+##########
+#  Lehar Antal dies
+##########
+event = {
+	id = 73365
+	tag = { AUS HUN }
+	trigger = {
+		OR = {
+			leader = 132504
+			leader = 44671
+		}
+	}
+	
+	date = { day = 11 month = November year = 1962 }	
+	
+	name = "EVT_108_NAME"
+	desc = "EVT_108_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = sleepleader which = 132504 }
+		command = { type = sleepleader which = 44671 }
+	}
+}
+
+##########
+#  ƒˆ[ƒ[ƒtEƒVƒ…ƒ“ƒy[ƒ^[‹A‘
+##########
+event = {
+	id = 73366
+	country = AUS
+	trigger = {
+		OR = {
+			government = democratic
+			ideology = paternal_autocrat
+			ideology = left_wing_radical
+		}
+		NOT = { ispuppet = AUS }
+		atwar = no
+		OR = {
+			relation = { which = USA value = 0 }
+			event = 132700
+		}
+		incabinet = 23041
+	}
+	
+	date = { day = 12 month = 0 year = 1939 }	#
+	offset = 37
+	deathdate = { day = 29 month = december year = 1945 }
+		
+	name = "EVT_73366_NAME"	#ƒAƒhƒ‹ƒtEƒhƒ‰ƒbƒJ[‚ªƒˆ[ƒ[ƒtEƒVƒ…ƒ“ƒy[ƒ^[‚ğ„‹“
+	desc = "EVT_73366_DESC"	#
+	picture = "capital"
+
+	action_a = {
+		name = "EVT_73366_ACTA"	#V—˜_‚±‚»A‰ä‚ª’é‘‚ğ‹~‚¤‚¾‚ë‚¤I@‚·‚®‚ÉµãÙ‚¹‚æI
+		ai_chance = 90
+		command = { type = dissent value = 2 }
+	}
+	action_b = {
+		ai_chance = 10
+		name = "EVT_73366_ACTB"	#”Ş‚ÌŒo—ğ‚ÍM—p‚·‚é‚É‚Í‚ ‚Ü‚è‚É‘«‚è‚Ê
+		command = { type = sleepevent which = 73367 }
+	}
+}
+
+event = {
+	id = 73367
+	one_action = yes
+	trigger = {
+		atwar = no
+		random = 80
+	}
+	
+	name = "EVT_73367_NAME"	#ƒˆ[ƒ[ƒtEƒVƒ…ƒ“ƒy[ƒ^[¢Š«
+	desc = "EVT_73367_DESC"	#ƒAƒƒŠƒJ‚ÌƒVƒ…ƒ“ƒy[ƒ^[‚æ‚èAƒEƒB[ƒ“‚Ö‚Ì‰“š‚ª‚ ‚Á‚½B”Ş‚ÍƒEƒB[ƒ“‚É–ß‚é‚©‚Ç‚¤‚©‚ğŒˆ’è‚µ‚½‚æ‚¤‚¾B
+	picture = "capital"
+	
+	date = { day = 12 month = 2 year = 1939 }	#
+	offset = 23
+	deathdate = { day = 29 month = december year = 1945 }
+	
+	action = {
+		name = "EVT_73367_ACTA"	#ƒVƒ…ƒ“ƒy[ƒ^[‚ÍƒI[ƒXƒgƒŠƒA‚É‹A‚Á‚Ä‚«‚½I
+		ai_chance = 60
+		command = { type = wakeminister which = 23156 }
+		command = { type = dissent value = 1 }
+	}
+	action = { 
+		name = "EVT_73367_ACTB"	#ƒVƒ…ƒ“ƒy[ƒ^[‚Í¡‚âƒAƒƒŠƒJl‚Å‚ ‚é‚ç‚µ‚¢
+		ai_chance = 40
+		command = { }
+	}
+}
+
+#ƒQƒIƒ‹ƒOEƒcƒBƒ“ƒ}[ƒ}ƒ“	1897-1958	1945/12/20	1949/11/8	Non-partisan	–³“}”h	23157	Y	ŒRù‘åb
+#ƒJ[ƒ‹EƒOƒ‹[ƒo[	-1995	1945/12/20	1953/11/26	OVP	‘–¯“}	23062	N	ŠO–±‘åb
+#ƒIƒXƒJ[Eƒwƒ‹ƒ}[	-1963/2/13	1945/12/20	1959/5/12	SPO	Ğ–¯“}	23165	Y	“à–±‘åb
+#ƒŒƒIƒ|ƒ‹ƒhEƒtƒBƒOƒ‹		1945/12/20	1953/4/2	OVP	‘–¯“}	23170	Y	î•ñ‘åb
+#ƒŒƒIƒ|ƒ‹ƒhEƒtƒBƒOƒ‹		1945/12/20	1953/4/2	OVP	‘–¯“}	23146		­¡ñ”Ç
+event = {
+	id = 73368
+	trigger = {
+		OR = {
+			incabinet = 23044
+			incabinet = 23143
+		}
+		government = democratic
+	}	
+	
+	date = { day = 19 month = 11 year = 1945 }	
+	
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "election"
+	
+	action = {
+		name = "OK"
+		command = { type = headofgovernment which = 23146 }
+		command = { type = foreignminister which = 23062 }
+		command = { type = armamentminister which = 23157 }
+		command = { type = ministerofsecurity which = 23165 }
+		command = { type = ministerofintelligence which = 23170 }
+	}
+}
+
+event = {
+	id = 73369
+	trigger = {
+		government = democratic
+	}
+	
+	date = { day = 7 month = 10 year = 1949 }	
+	
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "election"
+	
+	action = {
+		name = "OK"
+		command = { type = armamentminister which = 23158 }
+	}
+}
+
+event = {
+	id = 73370
+	trigger = {
+		government = democratic
+	}
+	
+	date = { day = 29 month = 11 year = 1950 }	
+	
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "election"
+	
+	action = {
+		name = "OK"
+		command = { type = headofstate which = 23045 }
+	}
+}
+
+event = {
+	id = 73371
+	trigger = {
+		government = democratic
+	}
+	
+	date = { day = 20 month = 5 year = 1951 }	
+	
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "election"
+	
+	action = {
+		name = "OK"
+		command = { type = headofstate which = 23145 }
+	}
+}
+
+event = {
+	id = 73372
+	trigger = {
+		government = democratic
+	}
+	
+	date = { day = 22 month = 0 year = 1952 }	
+	
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "election"
+	
+	action = {
+		name = "OK"
+		command = { type = armamentminister which = 23159 }
+	}
+}
+
+event = {
+	id = 73373
+	trigger = {
+		government = democratic
+	}
+	
+	date = { day = 1 month = 3 year = 1953 }	
+	
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "election"
+	
+	action = {
+		name = "OK"
+		command = { type = headofgovernment which = 23147 }
+		command = { type = ministerofintelligence which = 23099 }
+	}
+}
+
+event = { 
+	id = 73374
+	trigger = {
+		government = democratic
+	}
+	
+	date = { day = 25 month = 10 year = 1953 }	
+	
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "election"
+	
+	action = {
+		name = "OK"
+		command = { type = foreignminister which = 23063 }
+	}
+}
+
+event = {
+	id = 73375
+	trigger = {
+		government = democratic
+	}
+	
+	date = { day = 14 month = 6 year = 1956 }	
+	
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "election"
+	
+	action = {
+		name = "OK"
+		command = { type = ministerofintelligence which = 23171 }
+	}
+}
+
+event = {
+	id = 73376
+	trigger = {
+		government = democratic
+	}
+	
+	date = { day = 3 month = 0 year = 1957 }	
+	
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "election"
+	
+	action = {
+		name = "OK"
+		command = { type = headofstate which = 23173 }
+	}
+}
+
+event = {
+	id = 73377
+	trigger = {
+		government = democratic
+	}
+	
+	date = { day = 21 month = 4 year = 1957 }	
+	
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "election"
+	
+	action = {
+		name = "OK"
+		command = { type = headofstate which = 23152 }
+	}
+}
+
+#ƒuƒ‹[ƒmEƒNƒŒƒCƒXƒL[	-1990	1959/7/16	1966/4/19	SPO	Ğ–¯“}	23163	Y	ŠO–±‘åb
+#ƒWƒ‡ƒZƒtEƒAƒtƒŠƒbƒ`ƒ…	-1964/8/25	1959/7/16	1962/11/20	SPO	Ğ–¯“}	23166	Y	“à–±‘åb
+event = {
+	id = 73378
+	trigger = {
+		government = democratic
+	}
+	
+	date = { day = 15 month = 6 year = 1959 }	
+	
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "election"
+	
+	action = {
+		name = "OK"
+		command = { type = foreignminister which = 23163 }
+		command = { type = ministerofsecurity which = 23166 }
+	}
+}
+
+event = {
+	id = 73379
+	trigger = {
+		government = democratic
+	}
+	
+	date = { day = 16 month = 5 year = 1960 }	
+	
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "election"
+	
+	action = {
+		name = "OK"
+		command = { type = armamentminister which = 23160 }	#I cannot find any pic about him!
+	}
+}
+
+
+#ƒWƒ‡ƒZƒtEƒNƒ‰ƒEƒX	1910-2001	1961/4/11	1963/3/27	OVP	‘–¯“}	23161	Y	ŒRù‘åb
+#ƒJ[ƒ‹EƒVƒ…ƒŒƒCƒ“ƒcƒ@[		1961/4/11	1964/4/2	OVP	‘–¯“}	23172	Y	î•ñ‘åb
+#ƒAƒ‹ƒtƒHƒ“ƒXEƒSƒ‹ƒoƒbƒn		1961/4/11	1964/4/2	OVP	‘–¯“}	23174		­¡ñ”Ç
+
+event = {
+	id = 73380
+	trigger = {
+		government = democratic
+	}
+	
+	date = { day = 10 month = 3 year = 1961 }	
+	
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "election"
+	
+	action = {
+		command = { type = armamentminister which = 23161 }
+		command = { type = ministerofintelligence which = 23172 }
+		command = { type = headofgovernment which = 23174 }
+	}
+}
+
+event = {
+	id = 73381
+	trigger = {
+		government = democratic
+	}
+	
+	date = { day = 26 month = 2 year = 1963 }	
+	
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "election"
+	
+	action = {
+		command = { type = armamentminister which = 23162 }
+		command = { type = ministerofsecurity which = 23167 }
+	}
+}
+
+
+##########
+#  Chinese minister events
+##########
+#  Lin Sen dies
+##########
+event = {
+	id = 73400
+	random = no
+	country = CHI
+
+
+	date = { day = 1 month = august year = 1943 }
+
+	name = "EVT_101_NAME"
+	desc = "EVT_101_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepminister which = 52001 } #Lin Sen HoS (PA)
+		command = { type = sleepminister which = 52023 } #Lin Sen HoS (SC)
+		command = { type = sleepminister which = 52039 } #Lin Sen ForeignMinister (SC)
+	}
+}
+##########
+#  H.H. Kung becomes Premier
+##########
+event = {
+	id = 73401
+	random = no
+	country = CHI
+
+	trigger = {
+		NOT = { puppet = { country = CHI country = JAP } }
+		NOT = { government = communist }
+	}
+
+	date = { day = 1 month = january year = 1938 }
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofgovernment which = 52030 } 
+		command = { type = foreignminister which = 52033 }
+		command = { type = armamentminister which = 52057 }
+		command = { type = ministerofsecurity which = 52157 }
+	}
+}
+##########
+#  Chiang returns as Premier
+##########
+event = {
+	id = 73402
+	random = no
+	country = CHI
+
+	trigger = {
+		NOT = { puppet = { country = CHI country = JAP } }
+		NOT = { government = communist }
+		}
+
+	date = { day = 11 month = december year = 1939 }
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofgovernment which = 52002 } 
+		command = { type = foreignminister which = 52033 }
+		command = { type = armamentminister which = 52057 }
+		command = { type = ministerofsecurity which = 52157 }
+	}
+}
+##########
+#  Dai Li becomes head of Bureau of Investigation and Statistics
+##########
+event = {
+	id = 73403
+	random = no
+	country = CHI
+
+
+	date = { day = 15 month = october year = 1938 } #random date, know it's late 1938
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = ministerofsecurity which = 52063 } #Dai Li
+		command = { type = ministerofintelligence which = 52078 } #Dai Li
+	}
+}
+##########
+#  T.V. Soong becomes Foreign Minister
+##########
+event = {
+	id = 73404
+	random = no
+	country = CHI
+
+
+	trigger = {
+		war = { country = JAP country = CHI }
+		war = { country = JAP country = USA }
+		NOT = {
+			war = { country = CHI country = USA }
+		}
+		random = 35
+		NOT = {
+			InCabinet = 52040 #T. V. Soong
+		}
+	}
+
+	date = { day = 1 month = january year = 1941 } #historically December 23, 1941
+	offset = 7
+	deathdate = { day = 15 month = june year = 1944 } #before 1944 scenario
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+
+	#picture = "tannu_tuva"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = foreignminister which = 52040 } #T. V. Soong
+	}
+}
+
+event = {
+	id = 73405
+	 random = no
+	 country = CHI
+
+	trigger = {
+		headofgovernment = 52162	#
+		NOT = { war = { country = CHI country = JAP } }
+	}
+
+	name = "EVT_73405_NAME"
+	desc = "EVT_73405_DESC"
+	style = 0
+	picture = "Wang_Jingwei_and_Chiang_Kai-shek"
+
+	date = { day = 0 month = 10 year = 1935 }
+
+	action_a = {	
+		name = "OK"
+		command = { type = headofgovernment which = 52030 }
+		command = { type = foreignminister which = 52003 }
+		command = { type = armamentminister which = 52158 }
+		command = { type = relation which = ENG value = 10 }
+		command = { type = relation which = JAP value = -50 }
+	}
+}
+
+event = {
+	id = 73406
+	 random = no
+	 country = CHI
+
+	trigger = {
+		headofgovernment = 52030
+	}
+
+	name = "EVT_73406_NAME"
+	desc = "EVT_73406_DESC"
+	style = 0
+	picture = "Wang_Jingwei_and_Chiang_Kai-shek"
+
+	date = { day = 10 month = 11 year = 1935 }
+
+	action_a = {	
+		name = "OK"
+		command = { type = headofgovernment which = 52002 }
+		command = { type = armamentminister which = 52177 }
+	}
+}
+
+##########
+#  French minister events
+##########
+#  Laval Forced to Resign
+##########
+event = {
+	id = 73450
+	random = no
+	country = FRA
+
+
+	trigger = {
+		atwar = no
+	}
+
+	date = { day = 24 month = january year = 1936 }
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		#command = { type = headofstate which =  } #
+		command = { type = headofgovernment which = 2002 } #Albert Sarraut
+		command = { type = foreignminister which = 2003 } #Pierre Etienne Flandin
+		#command = { type = armamentminister which =  } #
+		#command = { type = ministerofsecurity which =  } #
+		#command = { type = ministerofintelligence which =  } #
+		#command = { type = chiefofstaff which =  } #
+		#command = { type = chiefofarmy which =  } #
+		#command = { type = chiefofnavy which =  } #
+		#command = { type = chiefofair which =  } #
+	}
+}
+##########
+#  French Elections of June 1936
+##########
+event = {
+	id = 73451
+	random = no
+	country = FRA
+
+
+	trigger = {
+		atwar = no
+	}
+
+	date = { day = 4 month = june year = 1936 }
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 10 }
+		#command = { type = headofstate which =  } #
+		command = { type = headofgovernment which = 2033 } #Leon Blum
+		command = { type = foreignminister which = 2052 } #Yvon Delbos
+		command = { type = armamentminister which = 2004 } #Vincent Auriol
+		#command = { type = ministerofsecurity which =  } #
+		#command = { type = ministerofintelligence which = 2123 } #Roger Salengro, should he be security? not included for now
+		#command = { type = chiefofstaff which =  } #
+		#command = { type = chiefofarmy which =  } #
+		#command = { type = chiefofnavy which =  } #
+		#command = { type = chiefofair which =  } #
+	}
+}
+##########
+#  Blum's Government Falls
+##########
+event = {
+	id = 73452
+	random = no
+	country = FRA
+
+
+	trigger = {
+		atwar = no
+	}
+
+	date = { day = 22 month = june year = 1937 }
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		#command = { type = headofstate which =  } #
+		command = { type = headofgovernment which = 2036 } #Camille Chautemps
+		command = { type = foreignminister which = 2052 } #Yvon Delbos
+		#command = { type = armamentminister which =  } #
+		#command = { type = ministerofsecurity which =  } #
+		#command = { type = ministerofintelligence which =  } #
+		#command = { type = chiefofstaff which =  } #
+		#command = { type = chiefofarmy which =  } #
+		#command = { type = chiefofnavy which =  } #
+		#command = { type = chiefofair which =  } #
+	}
+}
+##########
+#  Blum's Returns
+##########
+event = {
+	id = 73453
+	random = no
+	country = FRA
+
+
+	trigger = {
+		atwar = no
+	}
+
+	date = { day = 13 month = march year = 1938 }
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		#command = { type = headofstate which =  } #
+		command = { type = headofgovernment which = 2033 } #Leon Blum
+		command = { type = foreignminister which = 2049 } #Joseph Paul Boncour
+		#command = { type = armamentminister which =  } #
+		#command = { type = ministerofsecurity which =  } #
+		#command = { type = ministerofintelligence which =  } #
+		#command = { type = chiefofstaff which =  } #
+		#command = { type = chiefofarmy which =  } #
+		#command = { type = chiefofnavy which =  } #
+		#command = { type = chiefofair which =  } #
+	}
+}
+##########
+#  Daladier Becomes Prime Minister
+##########
+event = {
+	id = 73454
+	random = no
+	country = FRA
+
+
+	trigger = {
+		atwar = no
+	}
+
+	date = { day = 10 month = april year = 1938 }
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		#command = { type = headofstate which =  } #
+		command = { type = headofgovernment which = 2037 } #Edouard Daladier
+		command = { type = foreignminister which = 2053 } #Georges Bonnet
+		#command = { type = armamentminister which =  } #
+		#command = { type = ministerofsecurity which =  } #
+		#command = { type = ministerofintelligence which =  } #
+		#command = { type = chiefofstaff which =  } #
+		#command = { type = chiefofarmy which =  } #
+		#command = { type = chiefofnavy which =  } #
+		#command = { type = chiefofair which =  } #
+	}
+}
+##########
+#  Daladier's Government Falls because of Soviet victory over the Finns
+##########
+event = {
+	id = 73455
+	random = no
+	country = FRA
+
+
+	trigger = {
+		OR = {
+			event = 130583 #winter war ended with finnish defeat #FEPKbeta
+			NOT = {
+				exists = FIN
+			}
+		}
+		headofgovernment = 2037 #Daladier
+	}
+
+	date = { day = 21 month = march year = 1940 }
+	#offset = 7
+	#deathdate = { day = 15 month = june year = 1941 }
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = headofgovernment which = 2038 } #Paul Reynaud
+	}
+}
+
+##########
+#  Reynaud's Government Falls because of Paris falls
+##########
+event = {
+	id = 73456
+	random = no
+	country = FRA
+
+
+	trigger = {
+		control = { province = 56 data = GER } #Paris
+		lost_national = { country = FRA value = 10 }
+		NOT = {
+			exists = VIC
+		}
+		war = { country = GER country = FRA }
+		war = { country = GER country = ENG }
+	}
+
+	date = { day = 1 month = september year = 1939 }
+	offset = 3
+	deathdate = { day = 8 month = may year = 1945 }
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = domestic which = political_left value = -10 }
+		command = { type = headofgovernment which = 2238 } #Philippe Petain
+	}
+}
+
+
+##########
+#  Admiral Francois Darlan is assassinated!
+##########
+event = {
+	id = 73457
+	random = no
+	country = FRA
+
+	trigger = {
+		NOT = {
+			exists = VIC
+		}
+		event = 130416 #france has annexed vichy #FEPKbeta
+		random = 10
+	}
+
+	date = { day = 1 month = january year = 1942 }
+	offset = 11
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_355_NAME"
+	desc = "EVT_355_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		#Vichy
+		command = { type = sleepminister which = 57002 } #HOG
+		command = { type = sleepminister which = 57009 } #Navy
+		command = { type = sleepminister which = 57012 } #FM
+		command = { type = sleepminister which = 57025 } #Security
+		command = { type = sleepminister which = 57033 } #Staff
+		command = { type = sleepleader which = 380034 } #Leader
+		command = { type = sleepteam which = 6617 } #Techteam
+		#France
+		command = { type = sleepminister which = 2238 } #HOG
+		command = { type = sleepminister which = 2009 } #Navy
+		command = { type = sleepleader which = 24151 } #Leader
+		command = { type = sleepteam which = 1418 } #Techteam
+		#Giraud takes over
+		command = { type = headofgovernment which = 2212 } #Giraud, PA version
+		command = { type = chiefofstaff which = 2215 } #Giraud
+	}
+}
+
+event = {
+	id = 73458 #900008
+	random = no
+	country = FRA
+	style = 0
+	picture = "election"
+
+	trigger = {
+		government = democratic
+	}
+
+	name = "EVT_73458_NAME"
+	desc = "EVT_73458_DESC"
+
+	date = { day = 4 month = 3 year = 1939 }
+
+	action_a = {
+		ai_chance = 70
+		name = "EVT_73458_ACTA"
+		command = { type = set_domestic which = democratic value = 10 } #SD
+		command = { type = set_domestic which = political_left value = 10 }
+		command = { type = headofstate which = 2001 }
+		command = { type = headofgovernment which = 2037 }
+		#command = { type = sleepevent which = 73803 }
+	}
+	action_b = {
+		ai_chance = 30
+		name = "EVT_73458_ACTB"
+		command = { type = dissent value = -5 }
+		command = { type = set_domestic which = democratic value = 7 } #PA
+		command = { type = set_domestic which = political_left value = 1 }
+		command = { type = headofstate which = 2032 }
+		command = { type = headofgovernment which = 2041 }
+		command = { type = foreignminister which = 2066 }
+		command = { type = armamentminister which = 2097 }
+		command = { type = ministerofsecurity which = 2122 }
+		command = { type = ministerofintelligence which = 2142 }
+		command = { type = event which = 73459 where = -1 when = 7 }
+	}
+}
+
+event = {
+	id = 73459
+	random = no
+	country = FRA
+	style = 0
+	picture = "6_February_1934_crisis"
+
+	trigger = {
+		event = 73458
+		headofstate = 2032
+		control = { province = 56 data = FRA } #Paris
+		owned = { province = 56 data = FRA } #Paris
+		NOT = {
+			government = democratic
+		}
+	}
+
+	name = "EVT_73459_NAME"
+	desc = "EVT_73459_DESC"
+
+	#date = { day = 17 month = june year = 1938 }
+
+	action_a = {
+		ai_chance = 100
+		name = "EVT_73459_ACTA"
+		command = { type = set_domestic which = democratic value = 8 } #SC
+		command = { type = set_domestic which = political_left value = 1 }
+		command = { type = construct which = ic where = 56 value = -1 }
+		command = { type = dissent value = 5 }
+	}
+}
+
+##########
+#  France Minister Event - Louis Renault retires
+##########
+event = {
+	id = 73460
+	random = no
+	country = FRA
+
+	date = { year = 1942 month = 2 day = 0 }
+	offset = 11
+	deathdate = { year = 1946 month = 5 day = 0 }
+
+	name = "EVT_105_NAME"
+	desc = "EVT_105_NAME"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = sleepminister which = 2239 }
+	}
+}
+
+##########
+#  (Vichy) France Minister Event - Louis Renault retires
+##########
+event = {
+	id = 73461
+	random = no
+	country = VIC
+
+	date = { year = 1942 month = 2 day = 0 }
+	offset = 11
+	deathdate = { year = 1946 month = 5 day = 0 }
+
+	name = "EVT_105_NAME"
+	desc = "EVT_105_NAME"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = sleepminister which = 57042 }
+	}
+}
+
+
+##########
+#  Admiral Francois Darlan is assassinated!(Vichy)
+##########
+event = {
+	id = 73462
+	random = no
+	country = FRA
+
+	trigger = {
+		event = 73457
+	}
+
+	date = { day = 1 month = january year = 1942 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		name = "OK"
+		#Vichy
+		command = { type = sleepminister which = 57002 } #HOG
+		command = { type = sleepminister which = 57009 } #Navy
+		command = { type = sleepminister which = 57012 } #FM
+		command = { type = sleepminister which = 57025 } #Security
+		command = { type = sleepminister which = 57033 } #Staff
+		command = { type = sleepleader which = 380034 } #Leader
+		command = { type = sleepteam which = 6617 } #Techteam
+	}
+}
+
+
+
+
+### AUSTRALIA
+event = {
+	id = 73500
+	random = no
+	country = AST
+
+	trigger = {	headofstate = 56001 }
+				
+	name = "EVT_73500_NAME"	#‘“Â‚ÌŒğ‘ã
+	desc = "EVT_73500_DESC"	#1931”N‚©‚ç5”N‚É‚í‚½‚è‘“Â‚ğ‹Î‚ß‚Ä‚¢‚½ƒAƒCƒUƒbƒNEƒAƒ‹ƒtƒŒƒbƒhEƒAƒCƒUƒbƒNƒX‚Ì”CŠú‚ª–—¹‚µ‚½BŒã”C‘“Â‚É‚ÍƒAƒŒƒNƒTƒ“ƒ_[EGEƒA[ƒNƒ‰ƒCƒg‚ª’…”C‚µ‚½B
+	style = 0
+
+        date = { day = 22 month = 0 year = 1936 }
+
+	action_a = {
+		name = "OK"
+		command = { type = headofstate which = 56031 }
+		command = { type = sleepminister which = 56001 }
+	}
+}
+
+event = {
+	id = 73501
+	random = no
+	country = AST
+
+	trigger = {	
+		headofgovernment = 56002
+	}
+				
+	name = "EVT_73501_NAME"	#ƒWƒ‡ƒZƒtEAEƒ‰ƒCƒIƒ“ƒY€–S
+	desc = "EVT_73501_DESC"	#1932”N‚©‚ç4Ÿ‚É‚í‚½‚èñ‘ŠE‚ğ‹Î‚ßã‚°‚Ä‚¢‚½ƒWƒ‡ƒZƒtEAEƒ‰ƒCƒIƒ“ƒY‚ª“Ë”@S‘Ÿ–ƒáƒ‚Å€–S‚µ‚½B—^“}‚Å‚ ‚Á‚½“ˆêƒI[ƒXƒgƒ‰ƒŠƒA“}‚ÌŸ‚Ì“}ñ‚ªŒˆ‚Ü‚é‚Ü‚Å‚Ìb’èñ‘Š‚Æ‚µ‚ÄAƒI[ƒXƒgƒ‰ƒŠƒA’n•û“}‚ÌƒA[ƒ‹EƒyƒCƒW‚ªñ‘Š‚É”C–½‚³‚ê‚½B
+	picture = "minister_died"
+
+	date = { day = 6 month = 3 year = 1939 }
+
+	action_a = {
+		name = "OK"
+		command = { type = headofgovernment which = 56139 }
+		command = { type = sleepminister which = 56002 }
+		command = { type = sleepminister which = 56007 }
+	}
+}
+
+event = {
+	id = 73502
+	random = no
+	country = AST
+
+	trigger = {	
+		event = 73501
+	}
+				
+	name = "EVT_73502_NAME"	#ƒƒ“ƒW[ƒX“àŠt‚Ì”­‘«
+	desc = "EVT_73502_DESC"	#æ‘ãñ‘ŠƒWƒ‡ƒZƒtEAEƒ‰ƒCƒIƒ“ƒY‚Ì“Ë‘R‚Ì€ŒãAb’èñ‘Š‚Æ‚µ‚ÄƒA[ƒ‹EƒyƒCƒW‚ªñ‘Š‚ğ‹Î‚ß‚Ä‚¢‚½‚ªAƒƒo[ƒgEƒƒ“ƒW[ƒX‚ª“ˆêƒI[ƒXƒgƒ‰ƒŠƒA“}‚ÌŸ‚Ì“}ñ‚ÉA”C‚µ‚½‚±‚Æ‚É”º‚¢Añ‘ŠE‚àŒğ‘ã‚·‚é‚±‚Æ‚Æ‚È‚Á‚½B
+	style = 0
+
+        date = { day = 25 month = 3 year = 1939 }
+
+	action_a = {
+		name = "OK"
+		#command = { type = headofstate which = 56031 }
+		command = { type = headofgovernment which = 56037 }
+		command = { type = foreignminister which = 56046 }
+		command = { type = armamentminister which = 56057 }
+		command = { type = ministerofsecurity which = 56081 }
+		command = { type = ministerofintelligence which = 56093 }
+	}
+}
+	
+event = {
+	id = 73503
+	random = no
+	country = AST
+
+	trigger = {
+		headofgovernment = 56037
+		war = { country = JAP country = CHI }
+		atwar = yes 
+	}
+				
+	name = "EVT_73503_NAME"	#ƒƒ“ƒW[ƒX«”C
+	desc = "EVT_73503_DESC"	#ƒƒ“ƒW[ƒX‚ªñ‘Š‚ÉA”C‚µ‚½1939”N‘OŒã‚©‚ç‘ÛŠÂ‹«‚É‚ÍˆÃ‰_‚ª—§‚¿‚ß‚Ä‚¢‚½BƒAƒWƒA‚Å‚Í“ú–{‚ª¨—Í‚ğL‚Î‚µA‰¢B‚Å‚ÍƒhƒCƒc‚ª—Ì“yŠg’£‚Ì–ìS‚ğ‰B‚»‚¤‚Æ‚à‚µ‚Ä‚¢‚È‚©‚Á‚½‚©‚ç‚Å‚ ‚éB”Ş‚Í–{‘‚ªƒhƒCƒc‚Æí’[‚ğŠJ‚¢‚½Û‚É‚Í‚·‚®‚É–{‘x‚Ìp¨‚ğ‘Å‚¿o‚µ‚½‚ªA‘¼•û“ú–{‚É‘Î‚µ‚Ä‚Í—Z˜a“I‚Èp¨‚Å—Õ‚à‚¤‚Æ‚µ‚Ä‚¢‚½B‹­‘å‚ÈŠCŒR‚ğ‚Â“ú–{‚Æ³–ÊØ‚Á‚Äí‚¤–‚ğ”ğ‚¯‚½‚©‚Á‚½‚Ì‚Å‚ ‚éB‚»‚Ìp¨‚Í–{‘‚Ö‚Ìí‘ˆ‹¦—Í‚Ìp¨‚É‚à”½‰f‚³‚êAƒAƒtƒŠƒJ“™‚Ö‚Ì‰“ªŒR‚Ì”hŒ­‚ğ’†~‚µ‚ÄAƒI[ƒXƒgƒ‰ƒŠƒA‚Ì–h”õ‚É“–‚Ä‚½‚¢‚ÆŠè‚¤‚æ‚¤‚É‚È‚Á‚½‚Ì‚Å‚ ‚éB‚µ‚©‚µAƒƒ“ƒW[ƒX‚Ì­ô‚ÍL”Í‚Èx‚ğ“¾‚é‚±‚Æ‚É¸”sA—’_‚µ‚½ƒƒ“ƒW[ƒX‚Í«E‚·‚é‚ÉŠ‚Á‚½‚Ì‚Å‚ ‚Á‚½B
+	style = 0
+
+        date = { day = 27 month = 7 year = 1941 }
+
+	action_a = {
+		name = "OK"
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofstate which = 56136 }
+		command = { type = headofgovernment which = 56140 }
+		command = { type = foreignminister which = 56148 }
+		command = { type = armamentminister which = 56056 }
+		command = { type = ministerofsecurity which = 56078 }
+		}
+	}
+
+event = {
+	id = 73504
+	random = no
+	country = AST
+
+	trigger = {
+		headofgovernment = 56140 
+	}
+				
+	name = "EVT_73504_NAME"	#ƒtƒ@ƒfƒ““àŠt“|Št
+	desc = "EVT_73504_DESC"	#ƒƒ“ƒW[ƒX‚Ì«”C‚É”º‚¢Vñ‘Š‚Æ‚È‚Á‚½‚Ì‚ÍƒI[ƒXƒgƒ‰ƒŠƒA’n•û“}‚ÌƒA[ƒT[Eƒtƒ@ƒfƒ“‚Å‚ ‚Á‚½B‚µ‚©‚µ‚È‚ª‚çƒtƒ@ƒfƒ“‚Í‹c‰ï“à‚É‚¨‚¯‚é’n”Õ‚ªã‚­A­Œ ‚Ì’·Šú‰»‚Í—]‚èŠú‘Ò‚³‚ê‚Ä‚¢‚È‚©‚Á‚½BŒ»À–â‘è‚Æ‚µ‚Äƒtƒ@ƒfƒ““àŠt‚Í’Z–½‚ÉI‚í‚Á‚½B–ì“}‚Å‚ ‚Á‚½˜J“­“}‚ª‘½””hHì‚É‚æ‚Á‚Ä˜J“­“}‚ª‰ß”¼”‚ğŠm•Û‚µ‚½‚±‚Æ‚É‚æ‚èA˜J“­“}‚Ì“}ñ‚Å‚ ‚Á‚½ƒWƒ‡ƒ“EƒJ[ƒeƒBƒ“‚É‘gŠt‚ª–½‚¶‚ç‚ê‚½‚½‚ß‚Å‚ ‚éB
+	style = 0
+
+	date = { day = 6 month = 9 year = 1941 }
+
+	action_a = {
+		name = "OK"
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 9 }
+		command = { type = headofstate which = 56132 }
+		command = { type = headofgovernment which = 56038 }
+		command = { type = foreignminister which = 56050 }
+		command = { type = armamentminister which = 56064 }
+		command = { type = ministerofsecurity which = 56086 }
+		command = { type = ministerofintelligence which = 56095 }
+	}
+}
+	
+
+event = {
+	id = 73505
+	random = no
+	country = AST
+	style = 0
+
+	trigger = {
+		NOT = { event = 73503 }
+		government = democratic
+		NOT = { ispuppet = AST }
+	}
+
+	name = "ELECTION_TITLE"
+	desc = "ELECTION_DESC"
+
+	date = { day = 10 month = november year = 1941 }
+	offset = 2
+	deathdate = { day = 15 month = november year = 1941 }
+
+
+	action_a = {
+		ai_chance = 70
+		name = "EVT_900000_ACTB"	#˜J“­“}­Œ 
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 9 }
+		command = { type = headofstate which = 56132 }
+		command = { type = headofgovernment which = 56038 }
+		command = { type = foreignminister which = 56050 }
+		command = { type = armamentminister which = 56064 }
+		command = { type = ministerofsecurity which = 56086 }
+		command = { type = ministerofintelligence which = 56095 }
+	}
+	action_b = {
+		ai_chance = 30
+		name = "EVT_900000_ACTA"	#“ˆêƒI[ƒXƒgƒ‰ƒŠƒA“}­Œ 
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 56031 }
+		command = { type = headofgovernment which = 56037 }
+		command = { type = foreignminister which = 56047 }
+		command = { type = armamentminister which = 56058 }
+		command = { type = ministerofsecurity which = 56082 }
+		command = { type = ministerofintelligence which = 56096 }
+	}
+}
+
+
+#Chile
+event = {
+	id = 73550
+	random = no
+	country = CHL
+
+	trigger = {
+		random = 20
+		war = { country = SPA country = SPR }
+	}
+
+	name = "EVT_73550_NAME"	#1937”Nƒ`ƒŠ‹c‰ï‘I‹“
+	desc = "EVT_73550_DESC"	#1936”N3ŒA‹­Œ “I‚È­¡è–@‚ğ‚Æ‚éƒAƒŒƒbƒTƒ“ƒhƒŠ­Œ ‚É‘ÎR‚·‚éˆ×Aƒ`ƒŠ‚É‚¨‚¢‚Ä‚à‹}i“}EĞ‰ï“}E–¯å“}E‹¤Y“}E¶—ƒ‹¤Y“}i‚Ü‚à‚È‚­Ğ‰ï“}‚É‡—¬jE‹}iĞ‰ï“}‚È‚Ç‚ªQ‰Á‚µAl–¯íü‚ªŒ‹¬‚³‚ê‚½B‰¢B‚É‚¨‚¯‚él–¯íü‚ÌŸ—˜‚à‚ ‚Á‚ÄA1937”N‚Ìƒ`ƒŠ‹c‰ï‘I‹“‚É‚¨‚¢‚ÄAƒ`ƒŠl–¯íü‚Í‘å•‚É‹cÈ”‚ğL‚Î‚·‚±‚Æ‚É¬Œ÷‚µ‚½B
+	style = 0
+
+	date = { day = 1 month = 3 year = 1937 }
+	offset = 2
+	deathdate = { day = 30 month = 3 year = 1937 }
+
+	action_a = { 
+		name = "EVT_73550_ACTA"
+		command = { type = domestic which = political_left value = 1 }
+	}
+}
+
+event = {
+	id = 73551
+	persistent = no
+	random = no
+	country = CHL
+
+	name = "EVT_73551_NAME"	#˜J“­•ÛŒ¯‹Ç‘O‚Ì‹sE
+	desc = "EVT_73551_DESC"	#1938”N12Œ‚Ì‘å“—Ì‘I‹“‚É‚ÍOl‚ª—§Œó•â‚ğ•\–¾‚µ‚Ä‚¢‚½B‚Ü‚¸A—^“}‚©‚çx‚ğó‚¯‚Ä‚¢‚é‰E”h‚ÌƒOƒXƒ^ƒ{EƒƒXEƒTƒ“ƒ^Eƒ}ƒŠƒABŸ‚Él–¯íü‚Ìx‚ğó‚¯‚Ä‚¢‚éƒyƒhƒEƒAƒMƒŒEƒZƒ‹ƒ_A‚»‚µ‚Äƒ`ƒŠ‘‰ÆĞ‰ïå‹`‰^“®“}‚È‚Ç‚Ìx‚ğó‚¯‚½‹É‰E‚ÌƒJƒ‹ƒƒXEƒCƒoƒjƒFƒXEƒfƒ‹EƒJƒ“ƒ|‚Å‚ ‚Á‚½B‘I‹“í‚ÍƒOƒXƒ^ƒ{EƒƒX‚Ì“–‘I‚ª—L—Í‹‚³‚ê‚Ä‚¢‚½‚ªA•s—˜‚ğŒå‚Á‚½ƒCƒoƒjƒFƒXw‰c‚ªƒ`ƒŠ‘‰ÆĞ‰ïå‹`Ò‚½‚¿‚Æ˜AŒg‚µ‚Ä•‘•–I‹N‚µ‚½‚Ì‚Å‚ ‚éB‘å“—Ì‚ÍŒx@ŒR‚É‘Î‚µ‚ÄoŒ‚‚ğ–½—ßA–I‹N‚Í’Áˆ³‚³‚ê‚½B’Áˆ³‚ÌÛAŒx@ŒR‚Íg‚ÌˆÀ‘S‚ğğŒ‚É•‘•‰ğœ‚µ‚½ƒ`ƒŠ‘‰ÆĞ‰ïå‹`‰^“®“}ˆõ‚ç–ñ60l‚ğ˜J“­•ÛŒ¯‹Ç‘O‚É˜As‚µ‚ÄˆŒY‚µ‚½B‚±‚Ì–Œ‚Í˜J“­•ÛŒ¯‹Ç‘O‚Ì‹sE‚ÆŒÄ‚Î‚ê‚½B‚È‚¨A‘ß•ß‚³‚ê‚½ƒCƒoƒjƒFƒX‚ÍA—§Œó•â‚ğ«‘Ş‚µl–¯íü‚ÌƒZƒ‹ƒ_x‚ğ•\–¾‚µ‚½B
+	style = 0
+
+	trigger = {
+		NOT = { government = fascist }
+		NOT = { ispuppet = CHL }
+	}
+
+	date = { day = 4 month = 8 year = 1938 }
+	offset = 1
+	deathdate = { day = 5 month = 8 year = 1938 }
+
+	action = {
+		ai_chance = 95
+		name = "EVT_73551_ACTA"
+		command = { type = belligerence which = CHL value = 1 }
+		command = { type = sleepminister which = 44037 }
+	}
+	action = {
+		ai_chance = 5
+		name = "EVT_73551_ACTB"
+		command = { type = dissent value = 5 }
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofstate which = 44036 }
+		command = { type = headofgovernment which = 44165 }
+		command = { type = foreignminister which = 44065 }
+		command = { type = armamentminister which = 44078 }
+		command = { type = ministerofsecurity which = 44103 }
+		command = { type = ministerofintelligence which = 44117 }
+		command = { type = sleepevent which = 900014 }
+	}
+}
+
+event = {
+	id = 73552
+	random = no
+	country = CHL
+	style = 0
+
+	trigger = {
+		NOT = { event = 73551 }
+		government = democratic
+		NOT = { ispuppet = CHL }
+	}
+
+	name = "EVT_73552_NAME"	#‘å“—Ì‘I‹“
+	desc = "EVT_73552_DESC"	#1938”N12Œ‚Ì‘å“—Ì‘I‹“‚É‚ÍOl‚ª—§Œó•â‚ğ•\–¾‚µ‚Ä‚¢‚½B‚Ü‚¸A—^“}‚©‚çx‚ğó‚¯‚Ä‚¢‚é‰E”h‚ÌƒOƒXƒ^ƒ{EƒƒXEƒTƒ“ƒ^Eƒ}ƒŠƒABŸ‚Él–¯íü‚Ìx‚ğó‚¯‚Ä‚¢‚éƒyƒhƒEƒAƒMƒŒEƒZƒ‹ƒ_A‚»‚µ‚Äƒ`ƒŠ‘‰ÆĞ‰ïå‹`‰^“®“}‚È‚Ç‚Ìx‚ğó‚¯‚½‹É‰E‚ÌƒJƒ‹ƒƒXEƒCƒoƒjƒFƒXEƒfƒ‹EƒJƒ“ƒ|‚Å‚ ‚Á‚½B‘I‹“í‚ÍƒOƒXƒ^ƒ{EƒƒX‚Ì“–‘I‚ª—L—Í‹‚³‚ê‚Ä‚¢‚½‚ªA¶”hŠe“}‚Ìx‚ğó‚¯‚Ä‚¢‚½ƒyƒhƒEƒAƒMƒŒEƒZƒ‹ƒ_‚ÉŠú‘Ò‚·‚éº‚à‘å‚«‚­A‘I‹“í‚ÍÅŒã‚ÌÅŒã‚Ü‚Å’N‚ªŸ—˜Ò‚Æ‚È‚é‚©‚à‚Â‚ê‚ñ‚¾‚Ü‚ÜŠJ•[‚ğŒ}‚¦‚½‚Ì‚Å‚ ‚Á‚½B
+
+	date = { day = 23 month = 11 year = 1938 }
+	offset = 1
+	deathdate = { day = 25 month = 11 year = 1938 }
+
+	action_a = {
+		ai_chance = 46
+		name = "EVT_73552_ACTA"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 9 }
+		command = { type = headofstate which = 44031 }
+		command = { type = headofgovernment which = 44040 }
+		command = { type = foreignminister which = 44051 }
+		command = { type = armamentminister which = 44069 }
+		command = { type = ministerofsecurity which = 44091 }
+		command = { type = ministerofintelligence which = 44106 }
+		}
+	action_b = {
+		ai_chance = 49
+		name = "EVT_73552_ACTB"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 44154 }
+		command = { type = headofgovernment which = 44163 }
+		command = { type = foreignminister which = 44059 }
+		command = { type = armamentminister which = 44077 }
+		command = { type = ministerofsecurity which = 44097 }
+		command = { type = ministerofintelligence which = 44112 }
+		}
+	action_c = {
+		ai_chance = 5
+		name = "EVT_73552_ACTC"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofstate which = 44036 }
+		command = { type = headofgovernment which = 44165 }
+		command = { type = foreignminister which = 44065 }
+		command = { type = armamentminister which = 44078 }
+		command = { type = ministerofsecurity which = 44103 }
+		command = { type = ministerofintelligence which = 44117 }
+	}
+}
+	
+event = {
+	id = 73553
+	random = no
+	country = CHL
+	style = 0
+
+	trigger = {
+		event = 73551
+		government = democratic
+		NOT = { ispuppet = CHL }
+		}
+
+	name = "EVT_73552_NAME"
+	desc = "EVT_73553_DESC"	#
+
+	date = { day = 23 month = 11 year = 1938 }
+	offset = 1
+	deathdate = { day = 25 month = 11 year = 1938 }
+
+
+	action_a = {
+		ai_chance = 80
+		name = "EVT_73552_ACTA"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 9 }
+		command = { type = headofstate which = 44031 }
+		command = { type = headofgovernment which = 44040 }
+		command = { type = foreignminister which = 44051 }
+		command = { type = armamentminister which = 44069 }
+		command = { type = ministerofsecurity which = 44091 }
+		command = { type = ministerofintelligence which = 44106 }
+		}
+	action_b = {
+		ai_chance = 20
+		name = "EVT_73552_ACTB"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 44154 }
+		command = { type = headofgovernment which = 44163 }
+		command = { type = foreignminister which = 44059 }
+		command = { type = armamentminister which = 44077 }
+		command = { type = ministerofsecurity which = 44097 }
+		command = { type = ministerofintelligence which = 44112 }
+	}
+}
+	
+event = {
+	id = 73554
+	random = no
+	country = CHL
+	style = 0
+
+	trigger = {
+		headofstate = 44031
+		}
+
+	name = "EVT_73554_NAME"	#ƒ^ƒNƒi˜A‘à–I‹N
+	desc = "EVT_73554_DESC"	#
+
+
+	date = { day = 24 month = 8 year = 1939 }
+	offset = 1
+	deathdate = { day = 26 month = 83 year = 1939 }
+
+	action = {
+		ai_chance = 99
+		name = "EVT_73554_ACTA"
+		command = { type = domestic which = freedom value = -1 }
+		command = { type = dissent value = -1 }
+	}
+	action = {
+		ai_chance = 1
+		name = "EVT_73554_ACTB"
+		command = { type = dissent value = 5 }
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofstate which = 44036 }
+		command = { type = headofgovernment which = 44165 }
+		command = { type = foreignminister which = 44065 }
+		command = { type = armamentminister which = 44078 }
+		command = { type = ministerofsecurity which = 44103 }
+		command = { type = ministerofintelligence which = 44117 }
+	}
+}
+
+### Pedro Aguirre Cerda passes away
+event = {
+	id = 73555
+	random = no
+	country = CHL
+	style = 0
+
+	trigger = {
+		random = 95
+		headofstate = 44031
+		}
+
+	date = { year = 1941 month = november day = 25 }
+	offset = 1
+	deathdate = { year = 1941 month = november day = 26 }
+
+	name = "EVT_101_NAME"
+	desc = "EVT_101_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = sleepminister which = 44031 }
+		command = { type = sleepminister which = 44040 }
+		command = { type = sleepminister which = 44071 }
+		command = { type = headofstate which = 44157 }
+		command = { type = headofgovernment which = 44158 }
+		}
+	}
+
+event = {
+	id = 73556
+	random = no
+	country = CHL
+	style = 0
+
+	trigger = {
+		headofstate = 44157
+		NOT = { ispuppet = CHL }
+		}
+
+	name = "EVT_73556_ACTA"
+	desc = "EVT_73556_DESC"	#
+
+	date = { day = 1 month = 3 year = 1942 }
+	offset = 2
+	deathdate = { day = 2 month = 3 year = 1942 }
+
+
+	action_a = {
+		ai_chance = 66
+		name = "EVT_73556_ACTA"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 9 }
+		command = { type = headofstate which = 44032 }
+		command = { type = headofgovernment which = 44041 }
+		command = { type = foreignminister which = 44056 }
+		command = { type = armamentminister which = 44073 }
+		command = { type = ministerofsecurity which = 44093 }
+		command = { type = ministerofintelligence which = 44109 }
+		}
+	action_b = {
+		ai_chance = 34
+		name = "EVT_73556_ACTB"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofstate which = 44036 }
+		command = { type = headofgovernment which = 44046 }
+		command = { type = foreignminister which = 44061 }
+		command = { type = armamentminister which = 44083 }
+		command = { type = ministerofsecurity which = 44112 }
+		command = { type = ministerofintelligence which = 44117 }
+		}
+	}
+
+
+event = {
+	id = 73557
+	random = no
+	country = CHL
+	style = 0
+
+	trigger = {
+		NOT = { event = 73556 }
+		government = democratic
+		NOT = { ispuppet = CHL }
+		}
+
+	name = "ELECTION_TITLE"
+	desc = "ELECTION_DESC"
+
+	date = { day = 23 month = 11 year = 1944 }
+	offset = 1
+	deathdate = { day = 25 month = 11 year = 1944 }
+
+
+	action_a = {
+		ai_chance = 25
+		name = "EVT_73556_ACTA"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 8 }
+		command = { type = set_domestic which = political_left value = 9 }
+		command = { type = headofstate which = 44032 }
+		command = { type = headofgovernment which = 44041 }
+		command = { type = foreignminister which = 44056 }
+		command = { type = armamentminister which = 44073 }
+		command = { type = ministerofsecurity which = 44093 }
+		command = { type = ministerofintelligence which = 44109 }
+		}
+	action_b = {
+		ai_chance = 75
+		name = "EVT_73556_ACTB"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 44036 }
+		command = { type = headofgovernment which = 44046 }
+		command = { type = foreignminister which = 44061 }
+		command = { type = armamentminister which = 44083 }
+		command = { type = ministerofsecurity which = 44112 }
+		command = { type = ministerofintelligence which = 44117 }
+		}
+	}
+	
+##########
+#  Ireland minister events
+##########
+event = {
+	id = 73600
+	random = no
+	country = IRE
+	style = 0
+
+	trigger = {
+		event = 132076
+	}
+
+	name = "EVT_73600_NAME"	#1938”N‚ÌƒAƒCƒ‹ƒ‰ƒ“ƒh‘å“—Ì‘I‹“
+	desc = "EVT_73600_DESC"	#
+
+	date = { day = 3 month = 4 year = 1938 }
+
+	action_a = {
+		ai_chance = 70
+		name = "EVT_73600_ACTA"
+		command = { type = dissent value = -1 }
+		command = { type = headofstate which = 25035 }
+	}
+	action_b = {
+		ai_chance = 30
+		name = "EVT_73600_ACTB"
+		command = { type = dissent value = -1 }
+		command = { type = headofstate which = 25038 }
+	}
+}
+	
+event = {
+	id = 73601
+	random = no
+	country = IRE
+	style = 0
+
+	trigger = {
+		event = 132076
+	}
+
+	name = "EVT_73601_NAME"	#1945”N‚ÌƒAƒCƒ‹ƒ‰ƒ“ƒh‘å“—Ì‘I‹“
+	desc = "EVT_73601_DESC"	#
+
+	date = { day = 24 month = 5 year = 1945 }
+
+	action_a = {
+		ai_chance = 70
+		name = "EVT_73601_ACTA"
+		command = { type = dissent value = -1 }
+		command = { type = headofstate which = 25036 }
+	}
+	action_b = {
+		ai_chance = 20
+		name = "EVT_73601_ACTB"
+		command = { type = dissent value = -1 }
+		command = { type = headofstate which = 25039 }
+	}
+	action_c = {
+		ai_chance = 10
+		name = "EVT_73601_ACTC"
+		command = { type = dissent value = -1 }
+		command = { type = headofstate which = 25164 }
+	}
+}
+
+event = {
+	id = 73602
+	random = no
+	country = IRE
+	style = 0
+
+	trigger = {
+		incabinet = 25038
+		government = democratic
+	}
+
+	name = "ELECTION_TITLE"
+	desc = "ELECTION_DESC"
+
+	date = { day = 10 month = december year = 1938 }
+	offset = 2
+	deathdate = { day = 15 month = december year = 1938 }
+
+
+	action_a = {
+		ai_chance = 30
+		name = "ELECT_B"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 8 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 25038 }
+		command = { type = headofgovernment which = 25002 }
+		command = { type = foreignminister which = 25003 }
+		command = { type = armamentminister which = 25073 }
+		command = { type = ministerofsecurity which = 25095 }
+		command = { type = ministerofintelligence which = 25111 }
+	}
+	action_b = {
+		ai_chance = 60
+		name = "ELECT_A"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 8 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = headofstate which = 25038 }
+		command = { type = headofgovernment which = 25043 }
+		command = { type = foreignminister which = 25053 }
+		command = { type = armamentminister which = 25067 }
+		command = { type = ministerofsecurity which = 25090 }
+		command = { type = ministerofintelligence which = 25107 }
+	}
+	action_c = {
+		ai_chance = 10
+		name = "KEEPCURRENT"
+		command = { type = dissent value = -1 }
+	}
+}
+
+event = {
+	id = 73603
+	random = no
+	country = IRE
+	style = 0
+
+	trigger = {
+		incabinet = 25038
+		government = democratic
+	}
+
+	name = "ELECTION_TITLE"
+	desc = "ELECTION_DESC"
+
+	date = { day = 10 month = december year = 1943 }
+	offset = 2
+	deathdate = { day = 15 month = december year = 1943 }
+
+
+	action_a = {
+		ai_chance = 30
+		name = "ELECT_A"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 8 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 25038 }
+		command = { type = headofgovernment which = 25002 }
+		command = { type = foreignminister which = 25003 }
+		command = { type = armamentminister which = 25074 }
+		command = { type = ministerofsecurity which = 25095 }
+		command = { type = ministerofintelligence which = 25111 }
+		}
+	action_b = {
+		ai_chance = 60
+		name = "ELECT_B"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 8 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 25038 }
+		command = { type = headofgovernment which = 25047 }
+		command = { type = foreignminister which = 25060 }
+		command = { type = armamentminister which = 25081 }
+		command = { type = ministerofsecurity which = 25100 }
+		command = { type = ministerofintelligence which = 25115 }
+		}
+	action_c = {
+		ai_chance = 10
+		name = "KEEPCURRENT"
+		command = { type = dissent value = -1 }
+	}
+}
+
+event = {
+	id = 73604
+	random = no
+	country = IRE
+	style = 0
+
+	trigger = {
+		incabinet = 25038
+		government = democratic
+	}
+
+	name = "ELECTION_TITLE"
+	desc = "ELECTION_DESC"
+
+	date = { day = 10 month = february year = 1944 }
+	offset = 2
+	deathdate = { day = 15 month = february year = 1944 }
+
+
+	action_a = {
+		ai_chance = 30
+		name = "ELECT_B"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 8 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 25038 }
+		command = { type = headofgovernment which = 25048 }
+		command = { type = foreignminister which = 25061 }
+		command = { type = armamentminister which = 25082 }
+		command = { type = ministerofsecurity which = 25101 }
+		command = { type = ministerofintelligence which = 25116 }
+	}
+	action_b = {
+		ai_chance = 60
+		name = "ELECT_A"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 8 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 25038 }
+		command = { type = headofgovernment which = 25002 }
+		command = { type = foreignminister which = 25056 }
+		command = { type = armamentminister which = 25075 }
+		command = { type = ministerofsecurity which = 25095 }
+		command = { type = ministerofintelligence which = 25112 }
+	}
+	action_c = {
+		ai_chance = 10
+		name = "KEEPCURRENT"
+		command = { type = dissent value = -1 }
+	}
+}
+
+#73800 and above will be reserved for miscellaneous countries
+##########
+#  Metaxas dies
+##########
+event = { 
+	id = 73800
+	random = no
+	country = GRE
+
+	date = { day = 29 month = january year = 1941 }
+
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+
+	#picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		command = { type = sleepminister which = 18049 }
+		command = { type = sleepminister which = 18070 }
+		command = { type = sleepleader which = 31515 } 
+		command = { type = headofgovernment which = 18050 }
+	}
+}
+
+#Sir Vere Ponsonby is replaced by Sir John Buchan as Governor General of Canada
+event = {
+	id = 73801
+	random = no
+	country = CAN
+	
+	trigger = {
+		headofstate =  45172 #Sir Vere Ponsonby
+	}
+
+	date = { day = 1 month = november year = 1935 }
+
+	name = "EVT_73500_NAME"
+	desc = "EVT_120_DESC"
+	picture = "minister_resign"
+
+	action_a = {
+		name = "OK"
+		command = { type = headofstate which = 45001 } #Sir John Buchan
+		command = { type = sleepminister which = 220182 } #Sir Vere Ponsonby
+	}
+}
+
+#Khaan in the Great Menchuko
+event = {
+	id = 73802
+	random = no
+	country = MEN 
+	
+	trigger = {
+		OR = {
+			event = 55061
+			event = 60615
+		}
+		NOT = { 
+			exists = MON 
+			exists = CHC
+		}
+		exists = TIB
+		NOT = { war = { country = MEN country = TIB } }
+		headofstate = 513001
+	}
+	
+	name = "EVT_73802_NAME"	#‘å–ÖŒÃ‚Ìˆ×­Ò
+	desc = "EVT_73802_DESC"	#
+	picture = "khaan"
+	
+	date = { day = 1 month = january year = 1939 }
+	offset = 7
+	deathdate = { day = 3 month = october year = 1950 }
+	
+	action_a = {
+		name = "EVT_73802_ACTA"	#ƒn[ƒ“‚Í–ÖŒÃ‚ÌˆÀ’è‚µ‚½“ˆê‚Ì‚½‚ß‚É•K—v‚¾
+		ai_chance = 80
+		command = { type = dissent value = 2 }
+		command = { type = trigger which = 73803 }
+	}
+	action_b = {
+		name = "EVT_73802_ACTB"	#’éˆÊ‚Í–ÖŒÃ‚É‚Í‚à‚Í‚â‘ã’x‚ê‚¾
+		ai_chance = 20
+	}
+}
+
+event = { 
+	id = 73803
+	random = no
+	country = TIB
+	
+	name = "EVT_73803_NAME"	#“]¶Ò
+	desc = "EVT_73803_DESC"	#
+	
+	picture = "khaan"
+	
+	action_a = {
+		name = "EVT_73803_ACTA"	#³“–‚ÈŒãŒpÒ‚ğ‘—‚èo‚·‚±‚Æ‚ğ‰½ŒÌçSçO‚¤H
+		ai_chance = 90
+		command = { type = relation which = MEN value = 20 }
+		command = { type = relation which = SOV value = -10 }
+		command = { type = trigger which = 73804 }
+	}
+	action_b = {
+		name = "EVT_73803_ACTB"	#ƒ_ƒ‚¾I@”Ş‚Í‚Ü‚¾‚ ‚Ü‚è‚Éá‚¢I
+		command = { type = relation which = MEN value = -10 }
+	}
+}
+
+event = {
+	id = 73804
+	random = no
+	country = MEN
+	
+	name = "EVT_73804_NAME"	#ƒ{ƒOƒhEƒn[ƒ“‚ÌÄ—Õ
+	desc = "EVT_73804_DESC"	#
+	
+	picture = "khaan"
+	
+	action = {
+		name = "EVT_73804_ACTA"	#V‘ã‚Ìn‚Ü‚è‚¾I
+		command = { type = wakeminister which = 513011 }
+		command = { type = headofstate which = 513011 }
+	}
+}
+
+event = {
+ 	id = 73805
+	random = no
+	country = POL
+
+	trigger = {	
+		headofgovernment = 13146
+	}
+
+	name = "EVT_73805_NAME"	#
+	desc = "EVT_73805_DESC"	#
+	style = 0
+
+        date = { day = 11 month = october year = 1935 }
+        offset = 1
+	deathdate = { day = 13 month = october year = 1935 }
+
+	action_a = {	
+		ai_chance = 99
+		name = "EVT_73805_ACTA"
+		command = { type = headofgovernment which = 13002 }
+		command = { type = foreignminister which = 13003 }
+		command = { type = armamentminister which = 13004 }
+		command = { type = ministerofsecurity which = 13005 }
+		command = { type = ministerofintelligence which = 13006 }
+		command = { type = dissent value = 3 }
+	}
+	action_b = {
+		ai_chance = 1
+		name = "EVT_73805_ACTB"
+		command = { type = headofstate which = 13040 }
+		command = { type = headofgovernment which = 13012 }
+		command = { type = foreignminister which = 13003 }
+		command = { type = armamentminister which = 13004 }
+		command = { type = ministerofsecurity which = 13005 }
+		command = { type = ministerofintelligence which = 13006 }
+		command = { type = dissent value = 3 }
+	}
+}
+
+##########
+#  Poland Minister Event - Juzef Beck passes away
+##########
+event = {
+	id = 73807
+	random = no
+	country = POL
+
+	date = { year = 1944 month = 5 day = 4 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = sleepminister which = 13003 }
+	}
+}
+
+event = {
+	id = 73808
+	random = no
+	country = EGY
+	style = 0
+
+	trigger = {
+		OR = { 
+			government = democratic
+			ideology = paternal_autocrat
+		}
+		atwar = no
+	}
+
+	name = "ELECTION_TITLE"
+	desc = "ELECTION_DESC"
+
+	date = { day = 1 month = 4 year = 1936 }
+	offset = 2
+	deathdate = { day = 3 month = 4 year = 1936 }
+
+	action_a = {
+		ai_chance = 90
+		name = "EVT_73808_ACTA"	#ƒƒtƒh“}i–¯‘°å‹`e‰p­“}j­Œ 
+		command = { type = dissent value = -1 }
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofgovernment which = 512014 }
+		command = { type = foreignminister which = 512028 }
+		}
+	action_b = {
+		ai_chance = 10
+		name = "EVT_73808_ACTB"	#‰¤“}”h­Œ 
+		command = { type = dissent value = -1 }
+		command = { type = headofgovernment which = 512002 }
+		command = { type = foreignminister which = 512003 }
+	}
+}
+
+### Boris III passes away
+
+event = {
+	id = 73809	#354
+	random = no
+	country = BUL
+	style = 0
+
+	trigger = { 
+		OR = {
+			headofstate = 19001
+			headofstate = 19043
+			headofstate = 19045
+			headofstate = 19049
+		     }
+		}
+
+	date = { year = 1943 month = august day = 28 }
+
+	name = "EVT_354_NAME"
+	desc = "EVT_354_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = headofstate which = 19042 }
+		command = { type = sleepleader which = 34003 }
+		command = { type = sleepminister which = 19001 }
+		command = { type = sleepminister which = 19043 }
+		command = { type = sleepminister which = 19045 }
+		command = { type = sleepminister which = 19049 }
+		}
+	}

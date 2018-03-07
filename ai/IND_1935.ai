@@ -1,0 +1,340 @@
+# インド
+# DAIM改造
+# 歩兵量産
+
+switch = no # [yes/no]
+max_front_ratio = 2.0
+max_front_ratios = { }
+max_garrison_prop = 0.25
+min_garrison_prop = 0.10
+neutrality = 90.000 
+war = 5
+strat_redeploy_threshold = 21
+exp_force_ratio = 0.90
+
+###################################
+# Diplomacy
+###################################
+combat = { 
+	PAK = 60
+}
+
+claim_acceptance = -69
+
+demand_claims = {
+	PAK
+	ENG
+}
+
+befriend = {
+	JAP = 100
+　　　　GER = 50
+	ITA = 40
+	SOV = 10
+	USA = 20
+}
+
+protect = { 
+	TIB = 80
+}
+
+target = { } 
+
+trade = {
+	cancel_deal_threshold = 2
+
+	energy 		= -1
+	rare_materials 	= -1
+	metal 		= -1
+	oil 		= -1
+	supplies 	= -1
+	money 		= -1
+
+	favored = {
+		GER = 150
+		USA = 70
+		FRA = 50
+		JAP = 200
+		ITA = 120
+		CHI = 90
+		SIA = 80
+        	SOV = 50
+	}
+	embargo = { ENG PAK }
+}
+
+tech_sharing = {
+	favored = {
+		GER = 150
+		USA = 70
+		FRA = 50
+		JAP = 200
+		ITA = 120
+		CHI = 90
+		SIA = 80
+        	SOV = 50
+ }
+	embargo = {
+		ENG 
+ }
+	not = { }
+	prioritized = {	}
+}
+###################################
+# Construction and Tech Research
+###################################
+construction = { 
+	max_factor = 0.050 
+
+	AA_batteries = no
+	max_AA_level = 0
+	AA_provs = { } 
+
+	coastal_fort = no
+	max_coastal_level = 0
+	coastal_fort_provs = { } 
+
+	radar_station = no 
+	max_radar = 0
+	radar_provs = { } 
+
+	air_base = no
+	max_air_base = 0
+	air_base_provs = { }
+
+	naval_base = no 
+	max_naval_base = 0
+	naval_base_provs = { } 
+
+	land_fort = no
+	max_land_level = 0
+	fort_borders = { } 
+
+	ic_at_war = no
+	force_ic_until = 1935
+	ic_end_year = 1941
+	IC_provs = { } 
+}
+
+military = { 
+	relative_build_scheme 	= yes
+	max_batch_peace 	= 720
+	max_batch_war 		= 400
+	max_batch_home_front 	= 200
+
+	#### Divisions etc...
+	infantry 	= 50
+	cavalry 	= 5
+	motorized 	= 0
+	mechanized 	= 0
+	light_armor 	= 0
+	armor 		= 0
+	paratrooper 	= 0
+	marine 		= 0
+	bergsjaeger 	= 5
+	garrison	= 0
+      	hq 		= 0
+	militia 	= 0
+#				60 %
+	interceptor 	= 5
+	multi_role 	= 0
+	cas 		= 0
+	strategic_bomber = 0
+	tactical_bomber = 5
+	naval_bomber 	= 0
+	transport_plane = 0
+	flying_bomb 	= 0
+	flying_rocket 	= 0
+#				10 %
+	battleship 	= 2
+	carrier 	= 2
+	destroyer 	= 10
+	light_cruiser 	= 5
+	heavy_cruiser 	= 5
+	battlecruiser 	= 0
+	submarine 	= 1
+	transport 	= 5
+#				30 %
+
+	#### Brigades
+	artillery 		= 50
+	sp_artillery 		= 0
+	rocket_artillery	= 0
+	sp_rct_artillery 	= 0
+	anti_tank 		= 0
+	tank_destroyer 		= 0
+	light_armor_brigade 	= 0
+	heavy_armor 		= 0
+	super_heavy_armor 	= 0
+	armored_car 		= 0
+	anti_air 		= 0
+	police 			= 0
+	engineer 		= 10
+
+	cag = 100.000 
+}
+
+technology = { 
+	endgoal 	= { } 
+	preference 	= {
+		#	5020 5030 5040 # Arcriculture
+			1310 1320 1330 1340 1350 1360 # Inf support		
+			5050 5060 5070 5080 5090 5100 5110 5120 5130 5150 5180 # Produktion
+					2020 2030 2040 2050 2060 # Light tanks
+			1230 1240 # motorized
+
+			 } 
+	ignore 		= {
+
+		3310
+		# Airborne
+		1080 1090 1100
+
+		2450 2460 2470 # Static AA
+
+		# Marines
+		1150 1160 1170 1180
+
+		# Air Transports
+		4250 4260 4270
+
+		# Rocketry
+		5550 5560 5570 5580 5590
+
+		# Atomic Research
+		5470 5480 5490 5500 5510 5520 5530 5540
+
+		# Bas Decimetric
+		5410 5420 5430 5440 5450 5460
+
+
+		2170 2180 2190 2200 2210 # Tank destroyers
+		2370 2380 2260 2270 2280 # SP R & Rocket Artillery
+
+		3320 3330 3340 # Aircraftcarrier
+
+		# Not necessary planes
+		4040 4070 4100	4050 4080 4110 4220 4230 
+
+		#Industry
+		5170 5150 
+
+		3200 3210 3120 3130 # Battlecruiser
+		# Air Docs
+
+		9010 9020 9030                 9140 9150 9160 9170 9180 9190 9200
+		9210 9220 9230 9240 9250 9260 9270 9280 9290 9300 9310 9320 9330 9340 9350 9360 9370 9380 9390
+		9400 9410 9420 9430 9440 9450 9460
+
+		14080 14090
+		6150 6160 6180	6190 #	landdocs
+	}
+
+	armor 		= 1
+	infantry 	= 8
+	industry 	= 8
+	aircraft 	= 3
+	naval 		= 5
+	land_doctrines 	= 3
+	secret_weapons 	= 0
+	air_doctrines 	= 1
+	naval_doctrines = 3
+}
+
+###################################
+# Ground Combat, Leaders and Garrisons
+###################################
+leader_ratio = {
+	land_field_marshal 	= 0.02
+	land_general 		= 0.031
+	land_lt_general 	= 0.41
+
+	sea_grand_admiral 	= 0.02
+	sea_admiral 		= 0.061
+	sea_vice_admiral 	= 0.401
+
+	air_marshal 		= 0.02
+	air_general 		= 0.091
+	air_lt_General 		= 0.11
+}
+
+garrison = {
+	defend_overseas_beaches = yes
+	home_multiplier 	= 1.0
+	overseas_multiplier 	= 0.5
+	home_peace_cap 		= 20
+	war_zone_odds 		= 2.0
+	key_point_prio_mult	= 1.0
+	revolt_risk_mult	= 1.0
+
+	# PRIORITIES:
+	beach			= 50	# Beach level 2
+	capital			= 75	# Our capital
+	human_border		= 100	# Ignored for allied human players
+	war_target		= 150	# The next country targeted for attack by this AI
+	
+	opposing_alliance	= 50	# For neutrals, all alliances are "opposing"
+	claim_threat		= 0	# If we are neutral, countries with claims on us get this
+	unstable_border		= 0	# Bordering countries at war with someone else get this
+
+	# Borders with specific countries
+	country_priorities = {
+		ENG = 100
+		PAK = 100
+		NEP = 25
+		BHU = 25
+		TIB = 25
+	}
+	province_priorities = {	}
+	area_multiplier = { }
+}
+
+front = { 
+	recklessness 		= 1 # 0-3
+	distrib_vs_ai 		= even
+	distrib_vs_human 	= even
+
+	enemy_reinf_days	= 6
+	reserve_prop		= 0.1
+	panic_ratio_vs_ai	= 2.5
+	panic_ratio_vs_human	= 2.5
+	base_attack_odds	= 1.75
+	min_attack_odds		= 1.5
+	max_attack_odds		= 3.0
+	reinforce_odds		= 1.333
+	withdraw_odds		= 0.9
+
+	strength 	= 1.0
+	organisation 	= 2.0
+	soft_attack 	= 1.0
+	hard_attack 	= 2.0
+	ground_defense 	= 1.0
+	dig_in 		= 1.25 # Against defender
+
+      	enemy_handicap = { } 
+      	passivity = { } 
+} 
+
+###################################
+# Invasions and Naval
+###################################
+invasion = { 
+	ignore		= no 
+	invasion	= no
+      
+	target = { } 
+} 
+
+spyprefs =
+{
+	percentage_on_spies 		= 0.2
+	percentage_foreign_mission 	= 0.5
+
+	# Used for Homeland Defense Spying
+	spyprefsdata = 
+	{
+		NumberOfSpies = 10
+		counter_espionage =  10
+		country = IND
+	}
+}

@@ -1,0 +1,252 @@
+# 0 - レーダーⅠ
+model = {
+	cost 				= 2
+	buildtime			= 140
+	manpower 			= 0.05
+	surfacedetectioncapability	= 1
+	airdetectioncapability		= 1
+	subdetectioncapability		= 0
+	airdefence			= 0
+	seaattack			= 0
+	convoyattack			= 0
+	subattack			= 0
+	airattack			= 0
+	shorebombardment		= 0
+	distance			= 0
+	supplyconsumption 		= 0.1
+	fuelconsumption			= 0
+	upgrade_time_factor 		= 0.5
+	upgrade_cost_factor 		= 0.5
+	equipment = { manpower = 50 }
+}
+# 1 - レーダーⅡ
+model = {
+	cost 				= 2.1
+	buildtime			= 140
+	manpower 			= 0.06
+	surfacedetectioncapability	= 2
+	airdetectioncapability		= 2
+	subdetectioncapability		= 0
+	airdefence			= 0
+	seaattack			= 0.5
+	convoyattack			= 0
+	subattack			= 0
+	airattack			= 0.5
+	shorebombardment		= 0
+	distance			= 0
+	supplyconsumption 		= 0.2
+	fuelconsumption			= 0
+	upgrade_time_factor 		= 0.5
+	upgrade_cost_factor 		= 0.5
+	equipment = { manpower = 60 }
+}
+# 2 - レーダーⅢ
+model = {
+	cost 				= 2.2
+	buildtime			= 140
+	manpower 			= 0.07
+	surfacedetectioncapability	= 3
+	airdetectioncapability		= 3
+	subdetectioncapability		= 0
+	airdefence			= 0
+	seaattack			= 1
+	convoyattack			= 0
+	subattack			= 0
+	airattack			= 1
+	shorebombardment		= 0
+	distance			= 0
+	supplyconsumption 		= 0.1
+	fuelconsumption			= 0
+	upgrade_time_factor 		= 0.5
+	upgrade_cost_factor 		= 0.5
+	equipment = { manpower = 70 }
+}
+# 3 - レーダーⅣ
+model = {
+	cost 				= 2.3
+	buildtime			= 140
+	manpower 			= 0.08
+	surfacedetectioncapability	= 4
+	airdetectioncapability		= 4
+	subdetectioncapability		= 0
+	airdefence			= 0
+	seaattack			= 1.5
+	convoyattack			= 0
+	subattack			= 0
+	airattack			= 1.5
+	shorebombardment		= 0
+	distance			= 0
+	supplyconsumption 		= 0.2
+	fuelconsumption			= 0
+	upgrade_time_factor 		= 0.5
+	upgrade_cost_factor 		= 0.5
+	equipment = { manpower = 80 }
+}
+# 4 - レーダーⅤ
+model = {
+	cost 				= 2.4
+	buildtime			= 140
+	manpower 			= 0.09
+	surfacedetectioncapability	= 5
+	airdetectioncapability		= 5
+	subdetectioncapability		= 0
+	airdefence			= 0
+	seaattack			= 2
+	convoyattack			= 0
+	subattack			= 0
+	airattack			= 2
+	shorebombardment		= 0
+	distance			= 0
+	supplyconsumption 		= 0.3
+	fuelconsumption			= 0
+	upgrade_time_factor 		= 0.5
+	upgrade_cost_factor 		= 0.5
+	equipment = { manpower = 90 }
+}
+# 5 - レーダーⅥ
+model = {
+	cost 				= 2.4
+	buildtime			= 140
+	manpower 			= 0.10
+	surfacedetectioncapability	= 6
+	airdetectioncapability		= 6
+	subdetectioncapability		= 0
+	airdefence			= 0
+	seaattack			= 2.5
+	convoyattack			= 0
+	subattack			= 0
+	airattack			= 2.5
+	shorebombardment		= 0
+	distance			= 0
+	supplyconsumption 		= 0.3
+	fuelconsumption			= 0
+	upgrade_time_factor 		= 0.5
+	upgrade_cost_factor 		= 0.5
+	equipment = { manpower = 100 }
+}
+# 6 - レーダーⅦ
+model = {
+	cost 				= 2.5
+	buildtime			= 140
+	manpower 			= 0.12
+	surfacedetectioncapability	= 7
+	airdetectioncapability		= 7
+	subdetectioncapability		= 0
+	airdefence			= 0
+	seaattack			= 3
+	convoyattack			= 0
+	subattack			= 0
+	airattack			= 3
+	shorebombardment		= 0
+	distance			= 0
+	supplyconsumption 		= 0.3
+	fuelconsumption			= 0
+	upgrade_time_factor 		= 0.5
+	upgrade_cost_factor 		= 0.5
+	equipment = { manpower = 120 }
+}
+# 7 - レーダーⅧ
+model = {
+	cost 				= 2.6
+	buildtime			= 160
+	manpower 			= 0.12
+	surfacedetectioncapability	= 8
+	airdetectioncapability		= 8
+	subdetectioncapability		= 0
+	airdefence			= 0
+	seaattack			= 3.5
+	convoyattack			= 0
+	subattack			= 0
+	airattack			= 3.5
+	shorebombardment		= 0
+	distance			= 0
+	supplyconsumption 		= 0.3
+	fuelconsumption			= 0
+	upgrade_time_factor 		= 0.5
+	upgrade_cost_factor 		= 0.5
+	equipment = { manpower = 120 }
+}
+# 8 - レーダーⅨ
+model = {
+	cost 				= 2.7
+	buildtime			= 160
+	manpower 			= 0.12
+	surfacedetectioncapability	= 9
+	airdetectioncapability		= 9
+	subdetectioncapability		= 0
+	airdefence			= 0
+	seaattack			= 4
+	convoyattack			= 0
+	subattack			= 0
+	airattack			= 4
+	shorebombardment		= 0
+	distance			= 0
+	supplyconsumption 		= 0.3
+	fuelconsumption			= 0
+	upgrade_time_factor 		= 0.5
+	upgrade_cost_factor 		= 0.5
+	equipment = { manpower = 120 }
+}
+# 9 - レーダーⅨ
+model = {
+	cost 				= 2.8
+	buildtime			= 180
+	manpower 			= 0.12
+	surfacedetectioncapability	= 10
+	airdetectioncapability		= 10
+	subdetectioncapability		= 0
+	airdefence			= 0
+	seaattack			= 4.5
+	convoyattack			= 0
+	subattack			= 0
+	airattack			= 4.5
+	shorebombardment		= 0
+	distance			= 0
+	supplyconsumption 		= 0.3
+	fuelconsumption			= 0
+	upgrade_time_factor 		= 0.5
+	upgrade_cost_factor 		= 0.5
+	equipment = { manpower = 120 }
+}
+# 10 - レーダーⅩ
+model = {
+	cost 				= 2.9
+	buildtime			= 180
+	manpower 			= 0.12
+	surfacedetectioncapability	= 11
+	airdetectioncapability		= 11
+	subdetectioncapability		= 0
+	airdefence			= 0
+	seaattack			= 5
+	convoyattack			= 0
+	subattack			= 0
+	airattack			= 5
+	shorebombardment		= 0
+	distance			= 0
+	supplyconsumption 		= 0.3
+	fuelconsumption			= 0
+	upgrade_time_factor 		= 0.5
+	upgrade_cost_factor 		= 0.5
+	equipment = { manpower = 120 }
+}
+# 11 - レーダーXI
+model = {
+	cost 				= 3.0
+	buildtime			= 200
+	manpower 			= 0.12
+	surfacedetectioncapability	= 12
+	airdetectioncapability		= 12
+	subdetectioncapability		= 0
+	airdefence			= 0
+	seaattack			= 5.5
+	convoyattack			= 0
+	subattack			= 0
+	airattack			= 5.5
+	shorebombardment		= 0
+	distance			= 0
+	supplyconsumption 		= 0.3
+	fuelconsumption			= 0
+	upgrade_time_factor 		= 0.5
+	upgrade_cost_factor 		= 0.5
+	equipment = { manpower = 120 }
+}

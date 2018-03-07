@@ -1,0 +1,6 @@
+# auxiliary DAIM AI file
+# reuse is welcome as long as file origin is correctly stated
+
+technology = {
+	ignore = { }
+}

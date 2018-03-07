@@ -1,0 +1,349 @@
+#########################################################################
+#
+#		日本・極東追加イベント（ai変更イベント）
+#
+#########################################################################
+###### 追加イベント一覧 ############
+#########################################################################
+##########################################################################
+# id = 59970 満州援軍 (AIイベント)
+# id = 59971 汪兆銘援軍 (AIイベント)
+# id = 59972 華北援軍 (AIイベント)
+# id = 59973 フィリピン弱体化 (AIイベント)
+# id = 59974 南アフリカ援軍 (AIイベント)
+#
+# 
+
+# id = 59990 汪兆銘政権 (AIイベント)
+# id = 59991 日米同盟ai変化 (AIイベント)
+# id = 59992 日英同盟ai変化 (AIイベント)
+# id = 59993 スペインai設定 (AIイベント)
+# id = 59994 インドネシア輸送船建造ai設定 (AIイベント)
+# id = 59995 オランダai変化 (AIイベント)
+# id = 59996 ベネズエラai変化 (AIイベント)
+# id = 59997 国民党対軍閥AI (AIイベント)Original = 27010 
+#########################################################################
+#########################################################################
+
+#########################################################################
+event = {
+	id = 59970
+	random = no 
+	country = MAN
+	
+	trigger = {
+		ai = yes
+		alliance = { country = JAP country = MAN }
+	}
+
+	name = "AI_EVENT"
+	style = 0	
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		command = { type = ai which = "switch/exp_force_ratios_JAP.ai" }
+	}
+}
+event = {
+	id = 59971
+	random = no 
+	country = U87
+	
+	trigger = {
+		ai = yes
+		alliance = { country = JAP country = U87 }
+	}
+
+	name = "AI_EVENT"
+	style = 0	
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		command = { type = ai which = "switch/exp_force_ratios_JAP.ai" }
+	}
+}
+event = {
+	id = 59972
+	random = no 
+	country = U74
+	
+	trigger = {
+		ai = yes
+		alliance = { country = JAP country = U74 }
+	}
+
+	name = "AI_EVENT"
+	style = 0	
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		command = { type = ai which = "switch/exp_force_ratios_JAP.ai" }
+	}
+}
+
+event = {
+	id = 59973
+	random = no 
+	country = PHI
+	
+	trigger = {
+		ai = yes
+		alliance = { country = USA country = PHI }
+	}
+
+	name = "AI_EVENT"
+	style = 0	
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		command = { type = manpowerpool value = -100 }
+	}
+}
+
+#########################################################################
+event = {
+	id = 59974
+	random = no 
+	country = SAF
+	
+	trigger = {
+		ai = yes
+		war = { country = SAF country = ITA }
+		alliance = { country = SAF country = ENG }
+	}
+
+	name = "AI_EVENT"
+	style = 0	
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		command = { type = ai which = "switch/exp_force_ratios_ENG.ai" }
+	}
+}
+
+
+################ Nationalist China AI change as Japanese puppet ################
+event = {
+	id = 59990
+	random = no 
+	country = U87
+	
+	trigger = {
+		ai = yes
+#		ispuppet = CHI 
+		alliance = { country = U87 country = JAP }
+	}
+
+	name = "AI_EVENT"
+	style = 0	
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		command = { type = ai which = "switch/chi_puppet.ai" }
+	}
+}
+event = {
+	id = 59991
+	random = no 
+	country = USA
+	
+	trigger = {
+		ai = yes
+		alliance = { country = USA country = JAP }
+	}
+
+	name = "AI_EVENT"
+	style = 0	
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		command = { type = ai which = "switch/USA_embargo_none.ai" }
+		command = { type = embargo which = -1 where = JAP value = 0 }
+	}
+}
+event = {
+	id = 59992
+	random = no 
+	country = ENG
+	
+	trigger = {
+		ai = yes
+		alliance = { country = ENG country = JAP }
+	}
+
+	name = "AI_EVENT"
+	style = 0	
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		command = { type = ai which = "switch/ENG_embargo_none.ai" }
+		command = { type = embargo which = -1 where = JAP value = 0 }
+	}
+}
+event = {
+	id = 59993
+	random = no 
+	country = SPA
+	
+	trigger = {
+		ai = yes
+		event = 3001
+	}
+
+	name = "AI_EVENT"
+	style = 0	
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		command = { type = ai which = "spa_1935.ai" }
+	}
+}
+event = {
+	id = 59994
+	random = no
+	country = INO
+	persistent = yes
+
+	trigger = {
+		ai = yes
+		NOT = { transport = { country = INO value = 5 } }
+	}
+
+	name = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		command = { type = build_division which = transport }
+	}
+}
+
+event = {
+	id = 59995
+	random = no 
+	country = HOL
+	#persistent = yes
+	
+	trigger = {
+		ai = yes
+		#event = 3800 		# usa.txt	Oil Embargo against Japan
+		event = 132440 		# FEPKBETA3
+		OR = {
+			event = 56085 # Hull-Notes
+			alliance = { country = HOL country = JAP }
+		}
+	}
+
+	name = "AI_EVENT"
+	style = 0	
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		command = { type = ai which = "switch/HOL_Embargo_none.ai" }
+		command = { type = embargo which = -1 where = JAP value = 0 }
+	}
+}
+event = {
+	id = 59996
+	random = no 
+	country = VEN
+	#persistent = yes
+	
+	trigger = {
+		ai = yes
+		#event = 3800 		# usa.txt	Oil Embargo against Japan
+		event = 132440 		# FEPKBETA3
+		OR = {
+			event = 56082 # Hull-Notes
+			alliance = { country = VEN country = JAP }
+		}
+	}
+
+	name = "AI_EVENT"
+	style = 0	
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		command = { type = ai which = "switch/VEN_Embargo_none.ai" }
+		command = { type = embargo which = -1 where = JAP value = 0 }
+	}
+}
+########################
+#Original event = 27010 国民党対軍閥AI
+########################
+event = {
+	id = 59997
+	random = no 
+	country = CHI
+	
+	trigger = {
+		ai = yes
+		NOT = { 
+			atwar = CHI
+			exists = CHC
+			}
+		OR = {
+			atwar = JAP
+			NOT = { exists = JAP }
+			ispuppet = JAP
+		}
+		NOT = {
+						war = { country = JAP country = CSX }
+						war = { country = JAP country = CXB }
+						war = { country = JAP country = CHC }
+						war = { country = JAP country = CGX }
+						war = { country = JAP country = CYN }
+						war = { country = JAP country = SIK }
+						war = { country = JAP country = TIB }
+					}
+	}
+
+	name = "AI_EVENT"
+	style = 0	
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		command = { type = ai which = "switch/CHI_WAR_Warlords.ai" }
+		command = { type = ai which = "Air_Ground.ai" }
+	}
+}
+

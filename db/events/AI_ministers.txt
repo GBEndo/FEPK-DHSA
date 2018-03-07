@@ -1,0 +1,3009 @@
+############# AI MINISTER SWITCHES ################
+
+# GERMANY
+
+### Martin Bormann into office
+
+event = {
+	id = 11004
+	random = no
+	country = GER
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = nazi
+		}
+
+	date = { day = 1 month = january year = 1942 }
+	#offset = 1 
+	#deathdate = { day = 2 month = january year = 1942 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = headofgovernment which = 42 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+##### AUSTRALIA
+
+### Alexander McLachlan into office
+
+event = {
+	id = 11011
+	random = no
+	country = AST
+	style = 0
+
+	trigger = {
+		ai = yes
+		government = democratic
+		}
+
+	date = { day = 1 month = january year = 1937 }
+	#offset = 1 
+	#deathdate = { day = 2 month = january year = 1937 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = ministerofsecurity which = 56079 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Cyril Bingham-White (COS) into office
+
+event = {
+	id = 11012
+	random = no
+	country = AST
+	style = 0
+
+	trigger = {
+		ai = yes
+		government = democratic
+		}
+
+	date = { day = 1 month = january year = 1939 }
+	#offset = 1 
+	#deathdate = { day = 2 month = january year = 1939 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofstaff which = 56104 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Cyril Bingham-White (COA) into office
+
+event = {
+	id = 11013
+	random = no
+	country = AST
+	style = 0
+
+	trigger = {
+		ai = yes
+		government = democratic
+		}
+
+	date = { day = 1 month = january year = 1937 }
+	#offset = 1 
+	#deathdate = { day = 2 month = january year = 1937 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofarmy which = 56110 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Leslie Morshead into office
+
+event = {
+	id = 11014
+	random = no
+	country = AST
+	style = 0
+
+	trigger = {
+		ai = yes
+		government = democratic
+		}
+
+	date = { day = 1 month = january year = 1940 }
+	#offset = 1 
+	#deathdate = { day = 2 month = january year = 1940 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofarmy which = 56111 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+
+##### CANADA
+
+### Henry Crerar into office
+
+event = {
+	id = 11015
+	random = no
+	country = CAN
+	style = 0
+
+	trigger = {
+		ai = yes
+		government = democratic
+		}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1 
+	deathdate = { day = 2 month = january year = 1936 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = ministerofsecurity which = 45070 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Kenneth Stuart into office
+
+event = {
+	id = 11016
+	random = no
+	country = CAN
+	style = 0
+
+	trigger = {
+		ai = yes
+		government = democratic
+		}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1 
+	deathdate = { day = 2 month = january year = 1936 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofstaff which = 45101 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Henry Crerar into office
+
+event = {
+	id = 11017
+	random = no
+	country = CAN
+	style = 0
+
+	trigger = {
+		ai = yes
+		government = democratic
+		}
+
+	date = { day = 1 month = january year = 1942 }
+	#offset = 1 
+	#deathdate = { day = 2 month = january year = 1942 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofstaff which = 45100 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Henry Crerar into office
+
+event = {
+	id = 11018
+	random = no
+	country = CAN
+	style = 0
+
+	trigger = {
+		ai = yes
+		government = democratic
+		}
+
+	date = { day = 1 month = january year = 1942 }
+	#offset = 1 
+	#deathdate = { day = 2 month = january year = 1942 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofstaff which = 45100 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+##### CHINA 
+
+### Chiang Kai-Shek (HOS) into office
+
+event = {
+	id = 11019
+	random = no
+	country = CHI
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = paternal_autocrat
+		}
+
+	date = { day = 1 month = january year = 1943 }
+	#offset = 1 
+	#deathdate = { day = 2 month = january year = 1943 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = headofstate which = 52022 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+##### UNITED KINGDOM
+
+##### FRANCE
+
+### Joseph Paul Boncour into office
+
+event = {
+	id = 11041
+	random = no
+	country = FRA
+	style = 0
+
+	trigger = {
+		ai = yes
+		government = democratic
+		}
+
+	date = { day = 1 month = may year = 1938 }
+	#offset = 1 
+	#deathdate = { day = 2 month = may year = 1938 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = foreignminister which = 2049 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Maxime Weygand into office
+
+event = {
+	id = 11044
+	random = no
+	country = FRA
+	style = 0
+
+	trigger = {
+		ai = yes
+		government = democratic
+		}
+
+	date = { day = 1 month = may year = 1940 }
+	#offset = 1 
+	#deathdate = { day = 2 month = may year = 1940 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofstaff which = 2146 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+
+### ITALY
+
+### Ugo Cavallero into office
+
+event = {
+	id = 11045
+	random = no
+	country = ITA
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = fascist
+		}
+
+	date = { day = 1 month = january year = 1939 }
+	#offset = 1 
+	#deathdate = { day = 2 month = january year = 1939 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofstaff which = 3124 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Pietro Badoglio into office
+
+event = {
+	id = 11046
+	random = no
+	country = ITA
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = fascist
+		}
+
+	date = { day = 1 month = january year = 1941 }
+	#offset = 1 
+	#deathdate = { day = 2 month = january year = 1941 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofstaff which = 3125 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Rodolfo Graziani into office
+
+event = {
+	id = 11047
+	random = no
+	country = ITA
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = fascist
+		}
+
+	date = { day = 1 month = january year = 1939 }
+	#offset = 1 
+	#deathdate = { day = 2 month = january year = 1939 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofarmy which = 3139 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Francesco Pricolo into office
+
+event = {
+	id = 11048
+	random = no
+	country = ITA
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = fascist
+		}
+
+	date = { day = 1 month = january year = 1939 }
+	#offset = 1 
+	#deathdate = { day = 2 month = january year = 1939 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofair which = 3160 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Rino Corso Fougier into office
+
+event = {
+	id = 11049
+	random = no
+	country = ITA
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = fascist
+		}
+
+	date = { day = 1 month = january year = 1941 }
+	#offset = 1 
+	#deathdate = { day = 2 month = january year = 1941 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofair which = 3161 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+
+### JAPAN
+
+### Kobayashi Ichizo into office
+
+event = {
+	id = 11050
+	random = no
+	country = JAP
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = fascist
+		}
+
+	date = { day = 1 month = january year = 1941 }
+	#offset = 1 
+	#deathdate = { day = 2 month = january year = 1941 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = armamentminister which = 5091 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Ushio Shigenosuke into office
+
+event = {
+	id = 11051
+	random = no
+	country = JAP
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = paternal_autocrat
+		}
+
+	date = { day = 3 month = january year = 1936 }
+	#offset = 1 
+	#deathdate = { day = 4 month = january year = 1936 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = ministerofsecurity which = 5105 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Takasu Shiro into office
+
+event = {
+	id = 11052
+	random = no
+	country = JAP
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = paternal_autocrat
+		}
+
+	date = { day = 3 month = january year = 1936 }
+	#offset = 1 
+	#deathdate = { day = 4 month = january year = 1936 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = ministerofintelligence which = 5134 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Yamamoto Isoroku into office
+
+event = {
+	id = 11053
+	random = no
+	country = JAP
+	style = 0
+
+	trigger = {
+		ai = yes
+		government = fascist
+		}
+
+	date = { day = 1 month = january year = 1938 }
+	#offset = 1 
+	#deathdate = { day = 2 month = january year = 1938 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofnavy which = 5200 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+
+##### HUNGARY
+
+### L·szlÅEB·rdossy into office
+
+event = {
+	id = 11054
+	random = no
+	country = HUN
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = fascist
+		}
+
+	date = { day = 1 month = january year = 1941 }
+	#offset = 1 
+	#deathdate = { day = 2 month = january year = 1941 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = headofgovernment which = 21056 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### BÈla ImrÈdy de Omoravia into office
+
+event = {
+	id = 11055
+	random = no
+	country = HUN
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = fascist
+		}
+
+	date = { day = 1 month = january year = 1938 }
+	#offset = 1 
+	#deathdate = { day = 2 month = january year = 1938 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = foreignminister which = 21069 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### L·szlÅEB·rdossy into office
+
+event = {
+	id = 11056
+	random = no
+	country = HUN
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = fascist
+		}
+
+	date = { day = 1 month = january year = 1941 }
+	#offset = 1 
+	#deathdate = { day = 2 month = january year = 1941 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = foreignminister which = 21071 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Bela ImrÈdy de Omoravia into office
+
+event = {
+	id = 11057
+	random = no
+	country = HUN
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = fascist
+		}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1 
+	deathdate = { day = 2 month = january year = 1936 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = armamentminister which = 21083 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Lajos RemÈnyi-Schneller into office
+
+event = {
+	id = 11058
+	random = no
+	country = HUN
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = fascist
+		}
+
+	date = { day = 1 month = january year = 1938 }
+	#offset = 1 
+	#deathdate = { day = 2 month = january year = 1938 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = armamentminister which = 21084 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### RezsÅEAndorka into office
+
+event = {
+	id = 11059
+	random = no
+	country = HUN
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = fascist
+		}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1 
+	deathdate = { day = 2 month = january year = 1936 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = ministerofintelligence which = 21117 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Ferenc Feketehalmy-Czeydner into office
+
+event = {
+	id = 11060
+	random = no
+	country = HUN
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = fascist
+		}
+
+	date = { day = 1 month = january year = 1938 }
+	#offset = 1 
+	#deathdate = { day = 2 month = january year = 1938 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofair which = 21161 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+
+##### FINLAND
+
+### Ky?sti Kallio into office
+
+event = {
+	id = 11061
+	random = no
+	country = FIN
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = social_conservative
+		}
+
+	date = { day = 1 month = january year = 1937 }
+	#offset = 1 
+	#deathdate = { day = 2 month = january year = 1937 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = headofstate which = 29043 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Risto Ryti into office
+
+event = {
+	id = 11062
+	random = no
+	country = FIN
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = social_conservative
+		}
+
+	date = { day = 1 month = january year = 1940 }
+	#offset = 1 
+	#deathdate = { day = 2 month = january year = 1940 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = headofstate which = 29044 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Risto Ryti into office
+
+event = {
+	id = 11063
+	random = no
+	country = FIN
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = social_conservative
+		}
+
+	date = { day = 1 month = january year = 1939 }
+	#offset = 1 
+	#deathdate = { day = 2 month = january year = 1939 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = headofgovernment which = 29058 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### V‰inÅEA. Tanner into office
+
+event = {
+	id = 11064
+	random = no
+	country = FIN
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = social_conservative
+		}
+
+	date = { day = 1 month = january year = 1939 }
+	#offset = 1 
+	#deathdate = { day = 2 month = january year = 1939 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = foreignminister which = 29068 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Esko Riekki into office
+
+event = {
+	id = 11065
+	random = no
+	country = FIN
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = social_conservative
+		}
+
+	date = { day = 1 month = january year = 1937 }
+	#offset = 1 
+	#deathdate = { day = 2 month = january year = 1937 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = ministerofsecurity which = 29113 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Hugo ÷sterman into office
+
+event = {
+	id = 11066
+	random = no
+	country = FIN
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = social_conservative
+		}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1 
+	deathdate = { day = 2 month = january year = 1936 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofstaff which = 29136 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Carl G. Mannerheim into office
+
+event = {
+	id = 11067
+	random = no
+	country = FIN
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = social_conservative
+		}
+
+	date = { day = 1 month = january year = 1941 }
+	#offset = 1 
+	#deathdate = { day = 2 month = january year = 1941 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofstaff which = 29137 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Carl G. Mannerheim into office
+
+event = {
+	id = 11068
+	random = no
+	country = FIN
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = social_conservative
+		}
+
+	date = { day = 1 month = january year = 1941 }
+	#offset = 1 
+	#deathdate = { day = 2 month = january year = 1941 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofarmy which = 29145 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Toivo Somerto into office
+
+event = {
+	id = 11069
+	random = no
+	country = FIN
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = social_conservative
+		}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1 
+	deathdate = { day = 2 month = january year = 1936 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofarmy which = 29155 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+
+##### MANCHURIA
+
+### Liou Tcheng-fou into office
+
+event = {
+	id = 11070
+	random = no
+	country = MAN
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = fascist
+		}
+
+	date = { day = 1 month = january year = 1937 }
+	#offset = 1 
+	#deathdate = { day = 2 month = january year = 1937 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = headofgovernment which = 58014 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Wei Cheng-chen into office
+
+event = {
+	id = 11071
+	random = no
+	country = MAN
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = fascist
+		}
+
+	date = { day = 1 month = january year = 1939 }
+	#offset = 1 
+	#deathdate = { day = 2 month = january year = 1939 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = headofgovernment which = 58015 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Soume Tcheng into office
+
+event = {
+	id = 11072
+	random = no
+	country = MAN
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = fascist
+		}
+
+	date = { day = 1 month = january year = 1939 }
+	#offset = 1 
+	#deathdate = { day = 2 month = january year = 1939 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = ministerofsecurity which = 58036 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Wei Cheng-chen into office
+
+event = {
+	id = 11073
+	random = no
+	country = MAN
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = fascist
+		}
+
+	date = { day = 1 month = january year = 1939 }
+	#offset = 1 
+	#deathdate = { day = 2 month = january year = 1939 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = ministerofintelligence which = 58043 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Hsing Shi-lien into office
+
+event = {
+	id = 11074
+	random = no
+	country = MAN
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = fascist
+		}
+
+	date = { day = 1 month = january year = 1937 }
+	#offset = 1 
+	#deathdate = { day = 2 month = january year = 1937 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofstaff which = 58049 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Kawashima Yoshiko into office
+
+event = {
+	id = 11075
+	random = no
+	country = MAN
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = fascist
+		}
+
+	date = { day = 1 month = january year = 1939 }
+	#offset = 1 
+	#deathdate = { day = 2 month = january year = 1939 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofstaff which = 58050 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Kawashima Yoshiko into office
+
+event = {
+	id = 11076
+	random = no
+	country = MAN
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = fascist
+		}
+
+	date = { day = 1 month = january year = 1939 }
+	#offset = 1 
+	#deathdate = { day = 2 month = january year = 1939 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofarmy which = 58056 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Isono Yuzo into office
+
+event = {
+	id = 11077
+	random = no
+	country = MAN
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = fascist
+		}
+
+	date = { day = 1 month = january year = 1937 }
+	#offset = 1 
+	#deathdate = { day = 2 month = january year = 1937 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofair which = 58068 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+###à»â∫ÉAÉhÉIÉì
+
+##### GERMANY
+### Joachim von Ribbentrop into office
+
+event = {
+	id = 250000
+	random = no
+	country = GER
+	style = 0
+
+	trigger = {
+		ideology = nazi
+		incabinet = 3
+		}
+
+	date = { day = 3 month = february year = 1938 }
+	#offset = 1 
+	#deathdate = { day = 4 month = february year = 1938 }
+
+	name = "EVT_104_NAME"
+	desc = "EVT_104_DESC"
+	picture = "minister_resign"
+
+	action_a = {
+		name = "YES"
+		ai_chance = 99
+		command = { type = foreignminister which = 55 }
+		command = { type = dissent value = -1 }
+		}
+	action_b = {
+		name = "NO"
+		ai_chance = 1
+		command = { type = dissent value = 1 }
+		}
+	}
+
+### Arthur Seyss-Inquart into office
+
+event = {
+	id = 250001
+	random = no
+	country = GER
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = nazi
+		}
+
+	date = { day = 0 month = may year = 1945 }
+	#offset = 1 
+	#deathdate = { day = 1 month = may year = 1945 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = foreignminister which = 58 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Hjalmar Schacht replaced by the FÅErer
+#replaced by 363
+
+event = {
+	id = 250002
+	random = no
+	country = GER
+	style = 0
+
+	trigger = {
+		minister = 77
+		random = 95
+		}
+
+	date = { year = 1937 month = november day = 15 }
+	offset = 1
+	deathdate = { year = 1937 month = november day = 17 }
+
+	name = "EVT_363_NAME"
+	desc = "EVT_363_DESC"
+	picture = "minister_resign"
+
+	action_a = {
+		name = "YES"
+		ai_chance = 98
+		command = { type = sleepminister which = 77 }
+		command = { type = armamentminister which = 79 }
+		}
+	action_b = {
+		name = "NO"
+		ai_chance = 2
+		command = { type = dissent value = 3 }
+		}
+	}
+
+### Werner von Blomberg replaced by the FÅErer
+#replaced by 362
+
+event = {
+	id = 250003
+	random = no
+	country = GER
+	style = 0
+
+	trigger = {
+		random = 95
+		OR = {
+			minister = 4
+			minister = 180
+			}
+		}
+
+	date = { year = 1938 month = january day = 6 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_362_NAME"
+	desc = "EVT_362_DESC"
+	picture = "minister_resign"
+
+	action_a = {
+		name = "YES"
+		ai_chance = 90
+		command = { type = sleepminister which = 4 }
+		command = { type = sleepminister which = 180 }
+		command = { type = sleepleader which = 607 }
+		#command = { type = armamentminister which = 77 }
+		}
+	action_b = {
+		name = "NO"
+		ai_chance = 10
+		command = { }
+		}
+	}
+
+### Walter Funk into office
+
+event = {
+	id = 250004
+	random = no
+	country = GER
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = nazi
+		}
+
+	date = { day = 14 month = january year = 1938 }
+	#offset = 1 
+	#deathdate = { day = 15 month = january year = 1938 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = armamentminister which = 80 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Fritz Todt into office
+
+event = {
+	id = 250005
+	random = no
+	country = GER
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = nazi
+		}
+
+	date = { day = 16 month = may year = 1940 }
+	#offset = 1 
+	#deathdate = { day = 17 month = may year = 1940 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = armamentminister which = 91 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Albert Speer into office
+
+event = {
+	id = 250006
+	random = no
+	country = GER
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = nazi
+		}
+
+	date = { day = 10 month = february year = 1942 }
+	#offset = 1 
+	#deathdate = { day = 11 month = february year = 1942 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = armamentminister which = 86 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Heinrich Himmler into office
+
+event = {
+	id = 250007
+	random = no
+	country = GER
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = nazi
+		}
+
+	date = { day = 24 month = august year = 1943 }
+	#offset = 1 
+	#deathdate = { day = 25 month = august year = 1943 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = ministerofsecurity which = 108 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Ernst Kaltenbrunner into office
+
+event = {
+	id = 250008
+	random = no
+	country = GER
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = nazi
+		}
+
+	date = { day = 14 month = february year = 1944 }
+	#offset = 1 
+	#deathdate = { day = 15 month = february year = 1944 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = ministerofintelligence which = 138 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Franz Halder into office
+
+event = {
+	id = 250009
+	random = no
+	country = GER
+	style = 0
+
+	trigger = {
+		ideology = nazi
+		incabinet = 7
+		#event = 2030
+		event = 130118
+	}
+
+	date = { day = 0 month = november year = 1938 }
+	offset = 1 
+	deathdate = { day = 29 month = november year = 1938 }
+
+	name = "EVT_105_NAME"
+	desc = "EVT_105_DESC"
+	picture = "minister_resign"
+
+	action_a = {
+		name = "YES"
+		ai_chance = 99
+		command = { type = chiefofstaff which = 155 }
+		command = { type = dissent value = -1 }
+		}
+	action_b = {
+		name = "NO"
+		ai_chance = 1
+		command = { type = dissent value = 1 }
+		}
+	}
+
+### Kurt Zeitzler into office
+
+event = {
+	id = 250010
+	random = no
+	country = GER
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = nazi
+		}
+
+	date = { day = 23 month = september year = 1942 }
+	#offset = 1 
+	#deathdate = { day = 24 month = september year = 1942 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofstaff which = 163 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Adolf Heusinger into office
+
+event = {
+	id = 250011
+	random = no
+	country = GER
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = nazi
+		}
+
+	date = { day = 9 month = june year = 1944 }
+	#offset = 1 
+	#deathdate = { day = 10 month = june year = 1944 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofstaff which = 168 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Heinz Guderian into office
+
+event = {
+	id = 250012
+	random = no
+	country = GER
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = nazi
+		}
+
+	date = { day = 20 month = july year = 1944 }
+	#offset = 1 
+	#deathdate = { day = 21 month = july year = 1944 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofstaff which = 157 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Hans Krebs into office
+
+event = {
+	id = 250013
+	random = no
+	country = GER
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = nazi
+		}
+
+	date = { day = 0 month = april year = 1945 }
+	#offset = 1 
+	#deathdate = { day = 1 month = april year = 1945 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofstaff which = 158 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Adolf Hitler into office
+
+event = {
+	id = 250014
+	random = no
+	country = GER
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = nazi
+		}
+
+	date = { day = 18 month = december year = 1941 } 
+	#offset = 1 
+	#deathdate = { day = 19 month = december year = 1941 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofarmy which = 177 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Ferdinand Sch?rner into office
+
+event = {
+	id = 250015
+	random = no
+	country = GER
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = nazi
+		}
+
+	date = { day = 7 month = may year = 1945 } 
+	#offset = 1 
+	#deathdate = { day = 8 month = may year = 1945 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofarmy which = 178 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Karl D?nitz into office
+
+event = {
+	id = 250016
+	random = no
+	country = GER
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = nazi
+		}
+
+	date = { day = 29 month = january year = 1943 }
+	#offset = 1 
+	#deathdate = { day = 29 month = january year = 1943 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofnavy which = 192 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### ITALY
+
+### Gian Galeazzo Ciano into office
+
+event = {
+	id = 250100
+	random = no
+	country = ITA
+	style = 0
+
+	trigger = {
+		incabinet = 3052
+		government = fascist
+		}
+
+	date = { day = 1 month = may year = 1936 }
+	#offset = 1 
+	#deathdate = { day = 2 month = may year = 1936 }
+
+	name = "EVT_5005_NAME"
+	desc = "EVT_5005_DESC"
+        picture = "foreign_policy"
+
+	action_a = {
+		name = "YES"
+		command = { type = foreignminister which = 3003 }
+		command = { type = dissent value = -1 }
+		}
+	action_b = {
+		name = "NO"
+		command = { type = dissent value = 1 }
+		}
+	}
+
+### Benito Mussolini into office
+
+event = {
+	id = 250101
+	random = no
+	country = ITA
+	style = 0
+
+	trigger = {
+		ai = yes
+		government = fascist
+		}
+
+	date = { day = 5 month = february year = 1943 }
+	#offset = 1 
+	#deathdate = { day = 6 month = february year = 1943 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = foreignminister which = 3052 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Giacomo Acerbo into office
+
+event = {
+	id = 250102
+	random = no
+	country = ITA
+	style = 0
+
+	trigger = {
+		ai = yes
+		government = fascist
+		}
+
+	date = { day = 5 month = february year = 1943 }
+	#offset = 1 
+	#deathdate = { day = 6 month = february year = 1943 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = armamentminister which = 3073 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+
+##### UNITED KINGDOM
+
+### Edward VIII abdicates!
+#replaced by 358
+
+event = {
+	id = 250200
+	random = no
+	country = ENG
+	style = 0
+	
+	trigger = {
+		headofstate = 1031 
+		random = 95
+		}
+
+	date = { day = 10 month = december year = 1936 }
+	#offset = 1 
+	#deathdate = { day = 11 month = december year = 1936 }
+
+	name = "EVT_358_NAME"
+	desc = "EVT_358_DESC"
+	picture = "minister_resign"
+
+	action_a = {
+		name = "YES"
+		ai_chance = 90
+		command = { type = sleepminister which = 1031 }
+		command = { type = headofstate which = 1033 }
+		#command = { type = headofgovernment which = 1037 } 
+		# Chamberlain - IRL 1937 though
+		#command = { type = sleepminister which = 1002 }
+		#command = { type = sleepminister which = 1081 }	
+		# both Baldwin who retired after the coronation	
+		#command = { type = armamentminister which = 1060 }
+		}
+	action_b = {
+		name = "NO"
+		ai_chance = 10
+		command = { type = sleepminister which = 1033 }
+		command = { type = dissent value = 2 }
+		}
+	}
+
+### Anthony Eden into office
+
+event = {
+	id = 250201
+	random = no
+	country = ENG
+	style = 0
+
+	trigger = {
+		ai = yes
+		government = democratic
+		}
+
+	date = { day = 17 month = december year = 1935 }
+	#offset = 1 
+	#deathdate = { day = 18 month = december year = 1935 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = foreignminister which = 1003 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Neville Chamberlain into office
+
+event = {
+	id = 250202
+	random = no
+	country = ENG
+	style = 0
+
+	trigger = {
+		government = democratic
+		}
+
+	date = { day = 27 month = may year = 1937 }
+	#offset = 1 
+	#deathdate = { day = 28 month = may year = 1937 }
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "coup"
+
+	action_a = {
+		name = "OK"
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 1 }
+		command = { type = headofgovernment which = 1037 } 
+		# Chamberlain - IRL 1937 though
+		command = { type = sleepminister which = 1002 }
+		command = { type = sleepminister which = 1081 }	
+		# both Baldwin who retired after the coronation	
+		command = { type = armamentminister which = 1060 }
+		command = { type = ministerofsecurity which = 1083 }
+		}
+	}
+
+#########################################################################
+#  Churchill becomes Prime Minister
+#########################################################################
+#replaced 65
+#replaced by 130419
+
+event = {
+	id = 250203
+	random = no
+	country = ENG
+
+	name = EVT_65_NAME
+	desc = EVT_65_DESC
+	style = 0
+	picture = "churchill"
+
+	trigger = {
+		OR = { 
+			war = { country = ENG country = GER }
+			war = { country = ENG country = SOV }
+			}
+		government = democratic
+		OR = {
+			war = { country = ENG country = SOV }
+			control = { province = 56 data = GER } #Paris in German hands
+			control = { province = 51 data = GER } #Brussels in German hands
+			control = { province = 107 data = GER } #Oslo in German hands
+		}
+	}
+
+        date = { day = 0 month = january year = 1935 }
+        offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		ai_chance = 95
+		name = "EVT_65_ACTA"
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 1 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = domestic which = defense_lobby value = 2 }
+		command = { type = headofgovernment which = 1038 } #Churchill
+		command = { type = foreignminister which = 1003 } #Eden
+		command = { type = armamentminister which = 1062 } #Wood
+		command = { type = ministerofsecurity which = 1088 } #Morrison
+		command = { type = money value = 500 }
+		command = { type = dissent value = -2 }
+	}
+	action_b = {
+		ai_chance = 3
+		name = "ELECT_UK_1A"
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 1 }
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = domestic which = defense_lobby value = -1 }
+		command = { type = headofgovernment which = 1157 } #Halifax
+		command = { type = foreignminister which = 1158 } #Templewood
+		command = { type = armamentminister which = 1060 } #Simon
+		command = { type = ministerofsecurity which = 1159 } #Anderson
+		command = { type = dissent value = 2 }
+	}
+	action_c = {
+		ai_chance = 2
+		name = "ELECT_UK_1B"
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 10 }
+		command = { type = domestic which = interventionism value = -2 }
+		command = { type = domestic which = defense_lobby value = -2 }
+		command = { type = headofgovernment which = 1040 } #Attlee
+		command = { type = foreignminister which = 1048 } #Morrison
+		command = { type = armamentminister which = 1065 } #Dalton
+		command = { type = ministerofsecurity which = 1162 } #Amery
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = domestic which = defense_lobby value = -1 }
+		command = { type = dissent value = 5 }
+	}
+}
+
+### Sir John Anderson into office
+
+event = {
+	id = 250204
+	random = no
+	country = ENG
+	style = 0
+
+	trigger = {
+		ai = yes
+		government = democratic
+		}
+
+	date = { day = 23 month = september year = 1943 }
+	#offset = 1 
+	#deathdate = { day = 24 month = september year = 1943 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = armamentminister which = 1061 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Sir Robert Menzies into office
+
+event = {
+	id = 250205
+	random = no
+	country = ENG
+	style = 0
+
+	trigger = {
+		ai = yes
+		government = democratic
+		}
+
+	date = { day = 3 month = november year = 1939 } 
+	#offset = 1 
+	#deathdate = { day = 4 month = november year = 1939 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = ministerofintelligence which = 1103 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Sir Cyril Deverell into office
+
+event = {
+	id = 250206
+	random = no
+	country = ENG
+	style = 0
+
+	trigger = {
+		ai = yes
+		government = democratic
+		}
+
+	date = { day = 6 month = april year = 1936 }
+	#offset = 1 
+	#deathdate = { day = 7 month = april year = 1936 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofstaff which = 1116 }
+		command = { type = chiefofarmy which = 1127 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Lord John Gort into office
+
+event = {
+	id = 250207
+	random = no
+	country = ENG
+	style = 0
+
+	trigger = {
+		ai = yes
+		government = democratic
+		}
+
+	date = { day = 5 month = december year = 1937 }
+	#offset = 1 
+	#deathdate = { day = 6 month = december year = 1937 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofstaff which = 1117 }
+		command = { type = chiefofarmy which = 1128 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Sir Edmund Ironside into office
+
+event = {
+	id = 250208
+	random = no
+	country = ENG
+	style = 0
+
+	trigger = {
+		ai = yes
+		government = democratic
+		}
+
+	date = { day = 3 month = september year = 1939 }
+	#offset = 1 
+	#deathdate = { day = 4 month = september year = 1939 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofstaff which = 1118 }
+		command = { type = chiefofarmy which = 1129 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Sir John Dill into office
+
+event = {
+	id = 250209
+	random = no
+	country = ENG
+	style = 0
+
+	trigger = {
+		ai = yes
+		government = democratic
+		}
+
+	date = { day = 26 month = may year = 1940 }
+	#offset = 1 
+	#deathdate = { day = 27 month = may year = 1940 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofstaff which = 1119 }
+		command = { type = chiefofarmy which = 1132 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Sir Alan Brooke into office
+
+event = {
+	id = 250210
+	random = no
+	country = ENG
+	style = 0
+
+	trigger = {
+		ai = yes
+		government = democratic
+		}
+
+	date = { day = 24 month = december year = 1941 }
+	#offset = 1 
+	#deathdate = { day = 25 month = december year = 1941 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofstaff which = 1120 }
+		command = { type = chiefofarmy which = 1130 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Sir Roger Backhouse into office
+
+event = {
+	id = 250211
+	random = no
+	country = ENG
+	style = 0
+
+	trigger = {
+		ai = yes
+		government = democratic
+		}
+
+	date = { day = 6 month = november year = 1938 }
+	#offset = 1 
+	#deathdate = { day = 7 month = november year = 1938 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofnavy which = 1137 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Sir Dudley Pound into office
+
+event = {
+	id = 250212
+	random = no
+	country = ENG
+	style = 0
+
+	trigger = {
+		ai = yes
+		government = democratic
+		}
+
+	date = { day = 14 month = june year = 1939 }
+	#offset = 1 
+	#deathdate = { day = 15 month = june year = 1939 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofnavy which = 1140 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Sir Andrew Cunningham into office
+
+event = {
+	id = 250213
+	random = no
+	country = ENG
+	style = 0
+
+	trigger = {
+		ai = yes
+		government = democratic
+		}
+
+	date = { day = 3 month = november year = 1943 }
+	#offset = 1 
+	#deathdate = { day = 4 month = november year = 1943 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofnavy which = 1138 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Sir Cyril Newall into office
+
+event = {
+	id = 250214
+	random = no
+	country = ENG
+	style = 0
+
+	trigger = {
+		ai = yes
+		government = democratic
+		}
+
+	date = { day = 1 month = september year = 1937 }
+	#offset = 1 
+	#deathdate = { day = 2 month = september year = 1937 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofair which = 1149 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Sir Charles Portal into office
+
+event = {
+	id = 250215
+	random = no
+	country = ENG
+	style = 0
+
+	trigger = {
+		ai = yes
+		government = democratic
+		}
+
+	date = { day = 24 month = october year = 1940 }
+	#offset = 1 
+	#deathdate = { day = 25 month = october year = 1940 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofair which = 1147 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Sir Arthur Tedder into office
+
+event = {
+	id = 250216
+	random = no
+	country = ENG
+	style = 0
+
+	trigger = {
+		ai = yes
+		government = democratic
+		}
+
+	date = { day = 1 month = june year = 1946 }
+	#offset = 1 
+	#deathdate = { day = 2 month = june year = 1946 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofair which = 1148 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+#####USA
+### George C. Marshall into office
+
+event = {
+	id = 250300
+	random = no
+	country = USA
+	style = 0
+
+	trigger = {
+		ai = yes
+		}
+
+	date = { day = 1 month = september year = 1939 }
+	#offset = 1 
+	#deathdate = { day = 2 month = september year = 1939 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofstaff which = 6136 }
+		command = { type = chiefofarmy which = 6144 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Dwight D. Eisenhower into office
+
+event = {
+	id = 250301
+	random = no
+	country = USA
+	style = 0
+
+	trigger = {
+		ai = yes
+		}
+
+	date = { day = 17 month = november year = 1945 }
+	#offset = 1 
+	#deathdate = { day = 18 month = november year = 1945 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofstaff which = 6137 }
+		command = { type = chiefofarmy which = 6147 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### William D. Leahy into office
+
+event = {
+	id = 250302
+	random = no
+	country = USA
+	style = 0
+
+	trigger = {
+		ai = yes
+		}
+
+	date = { day = 1 month = january year = 1937 }
+	#offset = 1 
+	#deathdate = { day = 2 month = january year = 1937 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofnavy which = 6162 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Harold R. Stark into office
+
+event = {
+	id = 250303
+	random = no
+	country = USA
+	style = 0
+
+	trigger = {
+		ai = yes
+		}
+
+	date = { day = 1 month = august year = 1939 }
+	#offset = 1 
+	#deathdate = { day = 2 month = august year = 1939 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofnavy which = 6159 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Ernest J. King into office
+
+event = {
+	id = 250304
+	random = no
+	country = USA
+	style = 0
+
+	trigger = {
+		ai = yes
+		}
+
+	date = { day = 1 month = march year = 1942 }
+	#offset = 1 
+	#deathdate = { day = 2 month = march year = 1942 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofnavy which = 6163 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Chester W. Nimitz into office
+
+event = {
+	id = 250305
+	random = no
+	country = USA
+	style = 0
+
+	trigger = {
+		ai = yes
+		}
+
+	date = { day = 14 month = december year = 1945 }
+	#offset = 1 
+	#deathdate = { day = 15 month = december year = 1945 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofnavy which = 6156 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+
+##### SOVIET UNION
+
+### Nikolai Yezhov into office
+
+event = {
+	id = 250400
+	random = no
+	country = SOV
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = stalinist
+		}
+
+	date = { day = 1 month = september year = 1936 }
+	offset = 30 
+	deathdate = { day = 2 month = october year = 1936 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = ministerofsecurity which = 4039 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Lavrenti P. Beria into office
+
+event = {
+	id = 250401
+	random = no
+	country = SOV
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = stalinist
+		}
+
+	date = { day = 1 month = november year = 1938 }
+	#offset = 1 
+	#deathdate = { day = 2 month = november year = 1938 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = ministerofsecurity which = 4041 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Igor I. Ilichev into office
+
+event = {
+	id = 250402
+	random = no
+	country = SOV
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = stalinist
+		}
+
+	date = { day = 1 month = january year = 1942 }
+	#offset = 1 
+	#deathdate = { day = 2 month = january year = 1942 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = ministerofintelligence which = 4049 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Boris M. Shaposhnikov into office
+
+event = {
+	id = 250403
+	random = no
+	country = SOV
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = stalinist
+		}
+
+	date = { day = 10 month = may year = 1937 }
+	#offset = 1 
+	#deathdate = { day = 11 month = may year = 1937 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofstaff which = 4051 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Kirill A. Meretskov into office
+
+event = {
+	id = 250404
+	random = no
+	country = SOV
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = stalinist
+		}
+
+	date = { day = 18 month = august year = 1940 }
+	#offset = 1 
+	#deathdate = { day = 19 month = august year = 1940 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofstaff which = 4052 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Georgiy K. Zhukov into office
+
+event = {
+	id = 250405
+	random = no
+	country = SOV
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = stalinist
+		}
+
+	date = { day = 1 month = february year = 1941 }
+	#offset = 1 
+	#deathdate = { day = 2 month = february year = 1941 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofstaff which = 4053 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Boris M. Shaposhnikov into office
+
+event = {
+	id = 250406
+	random = no
+	country = SOV
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = stalinist
+		}
+
+	date = { day = 28 month = july year = 1941 }
+	#offset = 1 
+	#deathdate = { day = 29 month = july year = 1941 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofstaff which = 4051 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Alesandr M. Vasilevskij into office
+
+event = {
+	id = 250407
+	random = no
+	country = SOV
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = stalinist
+		}
+
+	date = { day = 10 month = may year = 1942 }
+	#offset = 1 
+	#deathdate = { day = 11 month = may year = 1942 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofstaff which = 4054 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Aleksei I. Antonov into office
+
+event = {
+	id = 250408
+	random = no
+	country = SOV
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = stalinist
+		}
+
+	date = { day = 18 month = february year = 1945 }
+	#offset = 1 
+	#deathdate = { day = 19 month = february year = 1945 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofstaff which = 4056 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Alesandr M. Vasilevskij into office
+
+event = {
+	id = 250409
+	random = no
+	country = SOV
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = stalinist
+		}
+
+	date = { day = 24 month = march year = 1946 }
+	#offset = 1 
+	#deathdate = { day = 25 month = march year = 1946 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofstaff which = 4054 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Semen K. Timoshenko into office
+
+event = {
+	id = 250410
+	random = no
+	country = SOV
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = stalinist
+		}
+
+	date = { day = 7 month = march year = 1940 }
+	#offset = 1 
+	#deathdate = { day = 8 month = march year = 1940 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofarmy which = 4058 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Iosif V. Stalin into office
+
+event = {
+	id = 250411
+	random = no
+	country = SOV
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = stalinist
+		minister = 4059
+		}
+
+	date = { day = 18 month = july year = 1941 }
+	#offset = 1 
+	#deathdate = { day = 19 month = july year = 1941 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofarmy which = 4059 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Nikolai Kuznetsov into office
+
+event = {
+	id = 250412
+	random = no
+	country = SOV
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = stalinist
+		}
+
+	date = { day = 27 month = april year = 1939 }
+	#offset = 1 
+	#deathdate = { day = 28 month = april year = 1939 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofnavy which = 4062 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Aleksandr D. Loktionov into office
+
+event = {
+	id = 250413
+	random = no
+	country = SOV
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = stalinist
+		}
+
+	date = { day = 1 month = january year = 1937 }
+	#offset = 1 
+	#deathdate = { day = 2 month = january year = 1937 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofair which = 4064 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Alexander Novikov into office
+
+event = {
+	id = 250414
+	random = no
+	country = SOV
+	style = 0
+
+	trigger = {
+		ai = yes
+		ideology = stalinist
+		}
+
+	date = { day = 1 month = january year = 1942 }
+	#offset = 1 
+	#deathdate = { day = 2 month = january year = 1942 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofair which = 4068 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+##### CHINA 
+
+### Chiang Kai-Shek into office
+
+event = {
+	id = 250500
+	random = no
+	country = CHI
+	style = 0
+
+	trigger = {
+		NOT = { puppet = { country = CHI country = JAP } }
+		NOT = { government = communist }
+		}
+
+	date = { day = 6 month = december year = 1935 }
+	#offset = 1 
+	#deathdate = { day = 7 month = december year = 1935 }
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "coup"
+
+	action_a = {
+		name = "OK"
+		command = { type = headofgovernment which = 52002 } 
+		command = { type = foreignminister which = 52003 }
+		command = { type = armamentminister which = 52158 }
+		command = { type = ministerofsecurity which = 52157 }
+		}
+	}
+
+### Kong Xiangxi into office
+
+event = {
+	id = 250501
+	random = no
+	country = CHI
+	style = 0
+
+	trigger = {
+		NOT = { puppet = { country = CHI country = JAP } }
+		NOT = { government = communist }
+		}
+
+	date = { day = 3 month = january year = 1938 }
+	#offset = 1 
+	#deathdate = { day = 4 month = january year = 1938 }
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "coup"
+
+	action_a = {
+		name = "OK"
+		command = { type = headofgovernment which = 52030 } 
+		command = { type = foreignminister which = 52033 }
+		command = { type = armamentminister which = 52057 }
+		command = { type = ministerofsecurity which = 52157 }
+		}
+	}
+
+
+### Chiang Kai-Shek into office
+
+event = {
+	id = 250502
+	random = no
+	country = CHI
+	style = 0
+
+	trigger = {
+		NOT = { puppet = { country = CHI country = JAP } }
+		NOT = { government = communist }
+		}
+
+	date = { day = 19 month = november year = 1939 }
+	#offset = 1 
+	#deathdate = { day = 20 month = november year = 1939 }
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "coup"
+
+	action_a = {
+		name = "OK"
+		command = { type = headofgovernment which = 52002 } 
+		command = { type = foreignminister which = 52033 }
+		command = { type = armamentminister which = 52057 }
+		command = { type = ministerofsecurity which = 52157 }
+		}
+	}
+
+### T. V. Soong into office
+
+event = {
+	id = 250503
+	random = no
+	country = CHI
+	style = 0
+
+	trigger = {
+		NOT = { puppet = { country = CHI country = JAP } }
+		NOT = { government = communist }
+		}
+
+	date = { day = 24 month = june year = 1945 }
+	#offset = 1 
+	#deathdate = { day = 25 month = june year = 1945 }
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	picture = "coup"
+
+	action_a = {
+		name = "OK"
+		command = { type = headofgovernment which = 52029 } 
+		command = { type = foreignminister which = 52038 }
+		command = { type = armamentminister which = 52057 }
+		command = { type = ministerofsecurity which = 52159 }
+		}
+	}
+
+
+### T. V. Soong into office
+
+event = {
+	id = 250504
+	random = no
+	country = CHI
+	style = 0
+
+	trigger = {
+		ai = yes
+		NOT = { puppet = { country = CHI country = JAP } }
+		NOT = { government = communist }
+		}
+
+	date = { day = 29 month = october year = 1942 }
+	#offset = 1 
+	#deathdate = { day = 29 month = october year = 1942 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = foreignminister which = 52040 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+
+### Pai Chung-hsi into office
+
+event = {
+	id = 250505
+	random = no
+	country = CHI
+	style = 0
+
+	trigger = {
+		ai = yes
+		NOT = { puppet = { country = CHI country = JAP } }
+		NOT = { government = communist }
+		}
+
+	date = { day = 11 month = january year = 1938 }
+	#offset = 1 
+	#deathdate = { day = 12 month = january year = 1938 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofstaff which = 52088 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Ch'en Ch'eng into office
+
+event = {
+	id = 250506
+	random = no
+	country = CHI
+	style = 0
+
+	trigger = {
+		ai = yes
+		NOT = { puppet = { country = CHI country = JAP } }
+		NOT = { government = communist }
+		}
+
+	date = { day = 22 month = may year = 1946 }
+	#offset = 1 
+	#deathdate = { day = 23 month = may year = 1946 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofstaff which = 52160 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Li Zongren into office
+
+event = {
+	id = 250507
+	random = no
+	country = CHI
+	style = 0
+
+	trigger = {
+		ai = yes
+		NOT = { puppet = { country = CHI country = JAP } }
+		NOT = { government = communist }
+		}
+
+	date = { day = 25 month = december year = 1936 }
+	#offset = 1 
+	#deathdate = { day = 26 month = december year = 1936 }
+
+	name = "AI_EVENT"
+
+	action_a = {
+		command = { type = chiefofarmy which = 52095 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+### Wang Jingwei passes away
+
+event = {
+	id = 250508
+	random = no
+	country = U87
+	style = 0
+
+	trigger = {
+		headofstate = 59325 
+		}
+
+	date = { year = 1944 month = november day = 9 }
+	#offset = 1
+	#deathdate = { year = 1944 month = november day = 10 }
+
+	name = "EVT_101_NAME"
+	desc = "EVT_101_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = sleepminister which = 59325 }
+		command = { type = sleepminister which = 59341 }
+		command = { type = sleepminister which = 59414 }
+		command = { type = headofstate which = 59424 }
+		command = { type = headofgovernment which = 59425 }
+		}
+	}
+

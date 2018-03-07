@@ -1,0 +1,87 @@
+U17;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+595000;Head of State;イリハン・トレ;35;LE;Stern Imperialist;Very High;M595000;x
+595001;Head of Government;アフメットジャン・カスム;35;SD;Ambitious Union Boss;High;M595001;x
+595002;Foreign Minister;ファサディン・マサム;35;SD;Ideological Crusader;Medium;M595002;x
+595003;Minister of Armament;イシャクベク・モノノフ;35;LWR;Tank Proponent;High;M595003;x
+595004;Minister of Security;D・R・メシュト・サブリ・ベイコジ;35;SL;Man of the People;Medium;M595004;x
+595005;Head of Military Intelligence;ガニ・バツル;35;SD;Technical Specialist;Medium;M595005;x
+595006;Chief of Staff;イシャクベク・モノノフ;35;LWR;School of Defence;High;M595003;x
+595007;Chief of Army;マハムト・ムヒチ;35;PA;Decisive Battle Doctrine;Medium;M595007;x
+595008;Chief of Navy;薩鎭冰 (サー・ヂェンビン);35;LE;Indirect Approach Doctrine;Medium;M72009;x
+595009;Chief of Air Force;ピオトル・オルロフ;35;LE;Army Aviation Doctrine;Medium;M72010;x
+595011;Head of State;ドミトリー・スネギン;35;ML;Insignificant Layman;High;M520011;x
+595013;Head of Government;カキムベク・サリコフ;35;ML;Political Protege;High;M520013;x
+595016;Foreign Minister;カキムベク・サリコフ;35;ML;Great Compromiser;High;M520016;x
+595019;Minister of Armament;ムクタル・シャカノフ;35;ML;Military Entrepreneur;Medium;M520019;x
+595022;Minister of Security;イトガビト・ムスレポフ;35;ML;Back Stabber;Medium;M520022;x
+595026;Head of Military Intelligence;アイザト・テミルベク;35;ML;Dismal Enigma;Medium;M520026;x
+595029;Chief of Staff;ニコライ・スチュコフ;35;ML;School of Fire Support;Medium;M520029;x
+595032;Chief of Army;ニコライ・スタロスティン;35;ML;Static Defence Doctrine;Medium;M520032;x
+595035;Chief of Navy;サラフィン・サルキシアン;35;ML;Base Control Doctrine;Medium;M520035;x
+595038;Chief of Air Force;アレクサンドル・スクヴォルツォフ;35;ML;Air Superiority Doctrine;Medium;M520038;x
+595101;Head of State;イゴール・P・ドニアク;35;LE;Stern Imperialist;High;M521001;x
+595102;Head of Government;ニコライ・ボゴリュブホフ;35;LE;Corporate Suit;High;M521002;x
+595103;Foreign Minister;マクシム・アモソフ;35;LE;Ideological Crusader;High;M521003;x
+595104;Minister of Armament;カリナ・アマンクロヴァ;35;LE;Administrative Genius;Medium;M521004;x
+595105;Minister of Security;ツラベイ・クレトフ;35;LE;Man of the People;Medium;M521005;x
+595106;Head of Military Intelligence;イゴール・N・バラコフ;35;LE;Political Specialist;Medium;M521006;x
+595107;Chief of Staff;カルン・ドゥシェバエフ;35;LE;School of Psychology;Medium;M521007;x
+595108;Chief of Army;ミハイル・V・フルンゼ;35;LE;Elastic Defence Doctrine;Medium;M521008;x
+595109;Chief of Navy;エゴール・ラル;35;LE;Power Projection Doctrine;Medium;L10438;x
+595110;Chief of Air Force;トリフィル・ソコロフ;35;LE;Air Superiority Doctrine;Medium;M521010;x
+595117;Foreign Minister;アブドゥカディル・ウラズベコフ;35;LE;General Staffer;High;M521017;x
+595118;Foreign Minister;ヨシップ・アブドロカマノフ;35;LE;Great Compromiser;High;M521018;x
+595124;Minister of Armament;アブドゥルザティル・ジルディズベク;35;LE;Infantry Proponent;Medium;M521024;x
+595125;Minister of Armament;スルタンクル・シャムルジン;35;LE;Air to Ground Proponent;Medium;M521025;x
+595131;Minister of Security;アレクシー・ヴァゴフ;35;LE;Efficient Sociopath;Medium;M521031;x
+595132;Minister of Security;バヤリ・イサカイエフ;35;LE;Crime Fighter;Medium;M521032;x
+595138;Head of Military Intelligence;ミハイル・ウス;35;LE;Industrial Specialist;Medium;M521038;x
+595144;Chief of Staff;イサミル・アブジヤロフ;35;LE;School of Manoeuvre;Medium;M521044;x
+595148;Chief of Army;マラゴザ・タハバイエフ;35;LE;Static Defence Doctrine;Medium;M521048;x
+595152;Chief of Navy;アスマリ・トルボイエフ;35;LE;Base Control Doctrine;Medium;M521052;x
+595156;Chief of Air Force;ミハイル・ウス;35;LE;Naval Aviation Doctrine;Medium;M521038;x
+595211;Head of State;ガサン・アブドゥライエフ;35;SL;Stern Imperialist;High;M524011;x
+595213;Head of Government;シャダン・ラヴレネツ;35;SL;Corporate Suit;High;M524013;x
+595216;Foreign Minister;フェダ・ロンジン;35;SL;Ideological Crusader;High;M524016;x
+595217;Foreign Minister;ガリ・アベレフ;35;SL;Biased Intellectual;High;M524017;x
+595223;Minister of Armament;ザンド・コルズ;35;SL;Military Entrepreneur;Medium;M524023;x
+595224;Minister of Armament;ナズ・ギンディス;35;SL;Tank Proponent;Medium;M524024;x
+595228;Minister of Security;マムトゥン・クルバノフ;35;SL;Silent Lawyer;Medium;M524028;x
+595229;Minister of Security;グリゴリー・バランシン;35;SL;Compassionate Gentleman;Medium;M524029;x
+595234;Head of Military Intelligence;シャイアン・バリシュニコフ;35;SL;Dismal Enigma;Medium;M524034;x
+595235;Head of Military Intelligence;イゴール・バリエンコフ;35;SL;Technical Specialist;Medium;M524035;x
+595239;Chief of Staff;ユーリー・ペルミノフ;35;SL;School of Manoeuvre;Medium;M524039;x
+595242;Chief of Army;ニキータ・プロスクリャコフ;35;SL;Armoured Spearhead Doctrine;Medium;M524042;x
+595244;Chief of Navy;シアマク・シナイスキ;35;SL;Open Seas Doctrine;Medium;M524044;x
+595246;Chief of Air Force;ペンダル・リンデンコ;35;SL;Army Aviation Doctrine;Medium;M524009;x
+595312;Head of State;ヤコヴ・スリツ;35;SC;Pig-headed Isolationist;High;M525012;x
+595314;Head of Government;イヴァン・マイスキ;35;SC;Happy Amateur;High;M525014;x
+595318;Foreign Minister;イェゴール・ラヴロフ;35;SC;Apologetic Clerk;High;M525018;x
+595319;Foreign Minister;ルスラン・クヴォストフ;35;SC;Ideological Crusader;High;M525019;x
+595324;Minister of Armament;サロモン・ミコエルス;35;SC;Military Entrepreneur;Medium;M525024;x
+595325;Minister of Armament;ボリス・ヨファン;35;SC;Tank Proponent;Medium;M525025;x
+595329;Minister of Security;ルスラン・クラチャイエフ;35;SC;Prince of Terror;Medium;M525029;x
+595330;Minister of Security;ポリナ・ゼムチュジナ;35;SC;Back Stabber;Medium;M525030;x
+595331;Minister of Security;ラフマン・マリコフ;35;SC;Compassionate Gentleman;Medium;M525031;x
+595335;Head of Military Intelligence;ミハイル・コルチョフ;35;SC;Political Specialist;Medium;M525035;x
+595336;Head of Military Intelligence;ヴセヴォロド・メイエルホリド;35;SC;Logistics Specialist;Medium;M525036;x
+595340;Chief of Army;ラルヴェンティ・ベルリン;35;SC;Elastic Defence Doctrine;Medium;M525040;x
+595342;Chief of Navy;ヤグード・フィリペフ;35;SC;Indirect Approach Doctrine;Medium;M525042;x
+595343;Chief of Air Force;イスマエル・ペトリコフ;35;SC;Army Aviation Doctrine;Medium;M525043;x
+595344;Chief of Air Force;エナン・ザドロズニ;35;SC;Air Superiority Doctrine;Medium;M525044;x
+595412;Head of State;ポルヴォニツ・ユソポフ;35;PA;Weary Stiffneck;High;M526012;x
+595414;Head of Government;アブドゥラヒム・マルテミャノフ;35;PA;Silent Workhorse;High;M526014;x
+595418;Foreign Minister;ニコライ・チチャゴフ;35;PA;Apologetic Clerk;High;M526018;x
+595419;Foreign Minister;アリシェル・イヴァノフ;35;PA;Great Compromiser;High;M526019;x
+595424;Minister of Armament;バブル・イパティエフ;35;PA;Air Superiority Proponent;Medium;M526024;x
+595425;Minister of Armament;バハウディン・ゴルチャコフ;35;PA;Military Entrepreneur;Medium;M526025;x
+595430;Minister of Security;ママデュリ・ディネイ;35;PA;Silent Lawyer;Medium;M526030;x
+595431;Minister of Security;サリム・イェヴゲトフ;35;PA;Man of the People;Medium;M526031;x
+595435;Head of Military Intelligence;ハムザ・ドブリニン;35;PA;Logistics Specialist;Medium;M526035;x
+595436;Head of Military Intelligence;フェリクス・ドロジンスキ;35;PA;Dismal Enigma;Medium;M526036;x
+595438;Chief of Staff;バブル・イパティエフ;35;PA;School of Manoeuvre;Medium;M526038;x
+595440;Chief of Army;ナゼ・デュディン;35;PA;Elastic Defence Doctrine;Medium;M526040;x
+595442;Chief of Navy;サリム・イバディノフ;35;PA;Open Seas Doctrine;Medium;M526042;x
+595444;Chief of Air Force;バブル・イパティエフ;35;PA;Air Superiority Doctrine;Medium;M526038;x
+595445;Head of State;オスカー・フォン・ニーダーマイヤー;35;NS;Reichskommissar;Medium;M595445;x

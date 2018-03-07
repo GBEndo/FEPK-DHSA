@@ -1,0 +1,272 @@
+# reworked by Spocky for DAIM
+# based on the original files (HoI2 1.1) by Lothos
+# reuse is welcome as long as file origin is correctly stated
+
+switch = no # [yes/no]
+max_front_ratio = 1.5
+max_front_ratios = { }
+max_garrison_prop = 0.50
+min_garrison_prop = 0.25
+neutrality = 100.000
+war = 0
+strat_redeploy_threshold = 21
+exp_force_ratio = 0.5
+exp_force_ratios = {
+	GER = 0.6
+	ITA = 0.3
+}
+desperation = 0.50
+use_offensive_supply = no
+
+###################################
+# Diplomacy
+###################################
+claim_acceptance = -49
+
+combat = { }
+demand_claims = { }
+befriend = { }
+protect = { }
+target = { } 
+
+trade = {
+	cancel_deal_threshold = 3
+
+	energy 		= -1
+	rare_materials 	= -1
+	metal 		= -1
+	oil 		= -1
+	supplies 	= -1
+	money 		= -1
+
+	favored = {
+		GER = 100 
+		ITA = 100 
+	}
+	embargo = { }
+}
+
+tech_sharing = {
+	favored = { 
+		GER = 100 
+		ITA = 100 
+	}
+	embargo = { }
+	not = { }
+	prioritized = {	}
+}
+
+###################################
+# Construction and Tech Research
+###################################
+construction = { 
+	max_factor = 0.250
+	AA_batteries = no
+	coastal_fort = no
+	radar_station = no
+	air_base = no
+	naval_base = no
+	land_fort = no
+	ic_at_war = no
+}
+
+military = { 
+	relative_build_scheme 	= no
+	max_batch_peace 	= 540
+	max_batch_war 		= 360
+	max_batch_home_front 	= 360
+
+	#### Divisions etc...
+	infantry 	= 52
+	cavalry 	= 5
+	motorized 	= 8
+	mechanized 	= 0
+	light_armor 	= 0
+	armor 		= 0
+	paratrooper 	= 0
+	marine 		= 0
+	bergsjaeger 	= 7
+	garrison	= 0
+      	hq 		= 4
+	militia 	= 0
+#				76 %
+	interceptor 	= 7
+	multi_role 	= 0
+	cas 		= 0
+	strategic_bomber = 0
+	tactical_bomber = 6
+	naval_bomber 	= 0
+	transport_plane = 0
+	flying_bomb 	= 0
+	flying_rocket 	= 0
+#				13 %
+	battleship 	= 0
+	carrier 	= 0
+	escort_carrier	= 0
+	destroyer 	= 5
+	light_cruiser 	= 5
+	heavy_cruiser 	= 0
+	battlecruiser 	= 0
+	submarine 	= 1
+	transports 	= 0
+#				11 %
+
+	#### Brigades
+	artillery 		= 30
+	sp_artillery 		= 0
+	rocket_artillery	= 0
+	sp_rct_artillery 	= 0
+	anti_tank 		= 0
+	tank_destroyer 		= 0
+	light_armor_brigade 	= 0
+	heavy_armor 		= 0
+	super_heavy_armor 	= 0
+	armored_car 		= 0
+	anti_air 		= 0
+	police 			= 0
+	engineer 		= 20
+
+	cag = 100.000 
+}
+
+technology = {
+	endgoal 	= {
+		1010 1020 1030 1040 1050 1060 10000 10010 # Infantry
+		2290 2300 2310 2320 2330 2340 2350 2360 # Artillery
+		4010 4020 4030 4060 4090 15000 15010 15020 # Interceptors
+		4120 4130 4140 4150 4160 15100 15110 # Tac Bombers
+	}
+	preference 	= {
+		1010 1020 1030 1040 1050 1060 10000 10010 # Infantry
+		2290 2300 2310 2320 2330 2340 2350 2360 # Artillery
+		4010 4020 4030 4060 4090 15000 15010 15020 # Interceptors
+		4120 4130 4140 4150 4160 15100 15110 # Tac Bombers
+	}
+	ignore 		= {
+		1070 1080 1090 1100 10020 10030 # Paratroopers
+		1150 1160 1170 1180 10060 10070 # Marines
+		1340 1350 1360 # Repair shops
+		2170 2180 2190 2200 2210 11020 # Tank Destroyers
+		2370 2380 2390 # Rocket Artillery
+		2450 2460 2470 2480 2490 2500 11080 # Static Anti-Air
+		2510 2520 2530 2540 11090 # Anti-Air Brigades
+		4040 4070 4100 15030 15040 15050 # Fighters
+		4190 4200 4210 15140 15150 # Naval Bombers
+		4220 4230 4240 15160 15170 # Strategic Bombers
+		4250 4260 4270 15180 15190 # Air Transports
+		5150 5170 # Ship + Rocket Assembly Lines
+		5410 5420 5430 5440 5450 5460 13030 # Radar
+		5470 5480 5490 5500 5510 5520 5530 5540 # Nuclear Techs
+		5580 5590 # Flying Bomb / Flying Rocket
+		9150 9160 9170 9180 9430 9440 9450 9460 17010 # Strategic Bombardment Doctrines
+		14080 # Guerilla Warfare
+	}
+
+	armor 		= 4
+	infantry 	= 8
+	industry 	= 6
+	aircraft 	= 4
+	naval 		= 1
+	land_doctrines 	= 4
+	secret_weapons 	= 0
+	air_doctrines 	= 3
+	naval_doctrines = 0
+}
+
+###################################
+# Ground Combat, Leaders and Garrisons
+###################################
+leader_ratio = {
+	land_field_marshal	= 0.056 # = 1/18
+	land_general		= 0.074 # = 1/13.5
+	land_lt_general		= 0.333 # = 1/3
+
+	sea_grand_admiral	= 0.033 # = 1/30
+	sea_admiral		= 0.056 # = 1/18
+	sea_vice_admiral	= 0.083 # = 1/12
+
+	air_marshal		= 0.063 # = 1/16
+	air_general		= 0.125 # = 1/8
+	air_lt_General		= 0.250 # = 1/4
+}
+
+garrison = {
+	defend_overseas_beaches = yes
+	home_multiplier 	= 1.0
+	overseas_multiplier 	= 0.5
+	home_peace_cap 		= 101
+	war_zone_odds 		= 2.0
+	key_point_prio_mult	= 1.0
+	revolt_risk_mult	= 1.0
+
+	# PRIORITIES:
+	beach			= 75	# Beach level 2
+	capital			= 100	# Our capital
+	human_border		= 100	# Ignored for allied human players
+	war_target		= 150	# The next country targeted for attack by this AI
+	
+	opposing_alliance	= 50	# For neutrals, all alliances are "opposing"
+	claim_threat		= 0	# If we are neutral, countries with claims on us get this
+	unstable_border		= 0	# Bordering countries at war with someone else get this
+
+	# Borders with specific countries
+	country_priorities = { }
+	province_priorities = { }
+	area_multiplier = { }
+}
+
+front = { 
+	recklessness 		= 2 # 0-3
+	distrib_vs_ai 		= even
+	distrib_vs_human 	= even
+
+	enemy_reinf_days	= 6
+	reserve_prop		= 0.1
+	panic_ratio_vs_ai	= 2.5
+	panic_ratio_vs_human	= 2.5
+	base_attack_odds	= 1.75
+	min_attack_odds		= 1.5
+	max_attack_odds		= 3.0
+	reinforce_odds		= 1.333
+	withdraw_odds		= 0.9
+
+	strength 	= 1.0
+	organisation 	= 2.0
+	soft_attack 	= 1.0
+	hard_attack 	= 2.0
+	ground_defense 	= 1.0
+	dig_in 		= 1.25 # Against defender
+
+      	enemy_handicap = { } 
+      	passivity = { } 
+} 
+
+###################################
+# Invasions and Naval
+###################################
+invasion = { 
+	ignore		= no 
+	invasion	= no
+      
+	target = { } 
+} 
+
+###################################
+# Intelligence
+###################################
+spyprefs = {
+	percentage_on_spies = 0.2
+	percentage_foreign_mission = 0.7
+
+	spyprefsdata = {
+		country_priorities = 10
+		min_number_of_spies = 5
+		numberofspies = 10
+		counter_espionage = 10
+		country = OTT
+	}
+}
+
+air_marshal = {
+	min_mission_strength_org = 0.7
+}

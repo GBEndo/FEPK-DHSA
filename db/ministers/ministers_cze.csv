@@ -1,0 +1,132 @@
+CZE;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+24001;Head of State;エドヴァルド・ベネシュ;36;ML;Pig-headed Isolationist;High;M24001;x
+24002;Head of Government;ミラン・ホッジャ;36;ML;Naive Optimist;High;M24002;x
+24003;Foreign Minister;エドヴァルド・ベネシュ;36;ML;Biased Intellectual;High;M24001;x
+24004;Minister of Armament;ヨセフ・カルファス;36;ML;Resource Industrialist;High;M24004;x
+24005;Minister of Security;イワン・デレール;36;ML;Man of the People;Medium;M24005;x
+24006;Head of Military Intelligence;フランティセク・マフニック;36;ML;Logistics Specialist;Very High;M24006;x
+24007;Chief of Staff;フランティセク・マフニック;36;ML;School of Defence;Very High;M24006;x
+24008;Chief of Army;ルドヴィーク・クレジ;36;ML;Static Defence Doctrine;Medium;M24008;x
+24009;Chief of Navy;アントニン・ハサル;36;ML;Indirect Approach Doctrine;Medium;M24009;x
+24010;Chief of Air Force;エミール・ヤノウスカ;36;ML;Army Aviation Doctrine;Medium;M24010;x
+24031;Head of State;エミール・ハーハ;38;ML;Insignificant Layman;High;M24031;x
+24033;Head of State;エドヴァルド・ベネシュ;45;ST;Pig-headed Isolationist;High;M24001;x
+24034;Head of State;ヤン・シロヴィー;36;PA;Resigned Generalissimo;High;M24034;x
+24035;Head of State;ステファン・オサスキー;45;SC;Weary Stiffneck;High;M24035;x
+24036;Head of State;コンラート・ヘンライン;36;NS;Insignificant Layman;High;M24013;x
+24037;Head of State;ルッツ・フォン・クロージク;39;NS;Benevolent Gentleman;High;M24037;x
+24038;Head of State;クルト・ダリューゲ;41;NS;Ruthless Powermonger;High;M24038;x
+24039;Head of State;カール・ヘルマン・フランク;43;NS;Powerhungry Demagogue;High;M24011;x
+24040;Head of State;アロイス・エリアーシュ;45;NS;Resigned Generalissimo;High;M24040;x
+24041;Head of State;エリアス・コーン;36;ST;Die-hard Reformer;High;M24041;x
+24042;Head of State;クレメント・ゴットワルド;41;ST;Barking Buffoon;High;M24021;x
+24044;Head of Government;ヤン・シュラメク;39;ML;Ambitious Union Boss;High;M24044;x
+24045;Head of Government;ヤン・シロヴィー;36;SC;Old General;High;M24034;x
+24046;Head of Government;ルドルフ・ベラン;38;PA;Political Protege;High;M24012;x
+24047;Head of Government;ベドリッチ・ホマラ;45;SC;Happy Amateur;High;M24047;x
+24048;Head of Government;カレル・カレムセク;36;NS;Happy Amateur;High;M24048;x
+24049;Head of Government;アロイス・エリアーシュ;39;NS;Old General;High;M24040;x
+24050;Head of Government;ヨセフ・ジェゼク;45;NS;Flamboyant Tough Guy;High;M24016;x
+24051;Head of Government;テオドール・エシャーリッヒ;36;ST;Naive Optimist;High;M24051;x
+24052;Head of Government;グスターフ・フサーク;43;ST;Political Protege;High;M24022;x
+24053;Foreign Minister;カミル・クロフタ;36;ML;Great Compromiser;High;M24053;x
+24054;Foreign Minister;フランティシェク・フヴァルコフスキー;38;ML;Iron Fisted Brute;Very High;M24054;x
+24055;Foreign Minister;ヤン・マサリク;40;ML;Ideological Crusader;Very High;M24055;x
+24056;Foreign Minister;ステファン・オサスキー;36;SC;Great Compromiser;Very High;M24035;x
+24057;Foreign Minister;ユライ・スラヴィク;40;SC;Biased Intellectual;Medium;M24057;x
+24058;Foreign Minister;オルドリッヒ・オタミール;36;PA;Apologetic Clerk;Medium;M24058;x
+24059;Foreign Minister;ベドリッチ・ニューマン;45;PA;General Staffer;Medium;M24059;x
+24060;Foreign Minister;コンスタンティン・フォン・エコノヴェッチ;36;NS;The Cloak N Dagger Schemer;High;M24060;x
+24061;Foreign Minister;コンラート・ヘンライン;39;NS;Ideological Crusader;High;M24013;x
+24062;Foreign Minister;ヤロミール・クリカジ;45;NS;Apologetic Clerk;High;M24062;x
+24063;Foreign Minister;ウラディミール・クレメンティス;36;ST;Great Compromiser;Medium;M24023;x
+24064;Foreign Minister;グスターフ・フサーク;41;ST;Iron Fisted Brute;High;M24022;x
+24065;Foreign Minister;ルドルフ・スランスキー;43;ST;The Cloak N Dagger Schemer;High;M24024;x
+24066;Minister of Armament;エミール・フランケ;36;ML;Theoretical Scientist;High;M24066;x
+24068;Minister of Armament;カレル・バシレク;39;ML;Military Entrepreneur;High;M24068;x
+24069;Minister of Armament;フェルディナンド・ヴェヴェルカ;43;ML;Administrative Genius;Medium;M24069;x
+24070;Minister of Armament;エミール・ドブリセク;36;PA;Administrative Genius;Low;M24070;x
+24071;Minister of Armament;エミール・ハーハ;39;PA;Balanced Budget Economy;Low;M24031;x
+24072;Minister of Armament;フランティセク・ベカー;41;SC;Theoretical Scientist;Medium;M24072;x
+24073;Minister of Armament;カレル・サーニー;43;PA;Infantry Proponent;High;M24073;x
+24074;Minister of Armament;アントニン・パヴリク;45;PA;Tank Proponent;High;M24074;x
+24075;Minister of Armament;アーンスト・クント;36;NS;Resource Industrialist;High;M24014;x
+24076;Minister of Armament;オトカール・セブリン;38;NS;Laissez-Faire Capitalist;High;M24076;x
+24077;Minister of Armament;カレル・カレムセク;41;NS;Administrative Genius;Low;M24048;x
+24078;Minister of Armament;ヤン・プルクラ;45;NS;Infantry Proponent;Low;M24078;x
+24079;Minister of Armament;ボフミル・ステパネク;36;ST;Tank Proponent;Medium;M24079;x
+24080;Minister of Armament;カレル・オルマネク;41;ST;Laissez-Faire Capitalist;Medium;M24080;x
+24082;Minister of Security;ヴィクトル・フォランセク;36;ML;Crime Fighter;Medium;M24082;x
+24084;Minister of Security;ヤロミール・コペッキー;39;ML;Prince of Terror;Medium;M24084;x
+24085;Minister of Security;ヤン・シュラメク;40;ML;Silent Lawyer;Medium;M24044;x
+24086;Minister of Security;アーンスト・フライシャー;43;ML;Back Stabber;Medium;M24086;x
+24087;Minister of Security;オタカール・エイシャー;36;PA;Compassionate Gentleman;Very High;M24087;x
+24088;Minister of Security;フランソワ・ホダック;39;SC;Silent Lawyer;Medium;M24088;x
+24089;Minister of Security;ヨセフ・ジェゼク;41;SC;Crime Fighter;Medium;M24016;x
+24090;Minister of Security;ユライ・スラヴィク;43;SC;Man of the People;High;M24057;x
+24091;Minister of Security;ヤン・カプラス;45;PA;Prince of Terror;Medium;M24015;x
+24092;Minister of Security;ルッツ・フォン・クロージク;39;NS;Man of the People;NA;M24037;x
+24093;Minister of Security;クルト・ダリューゲ;41;NS;Efficient Sociopath;Very High;M24038;x
+24094;Minister of Security;カール・ヘルマン・フランク;43;NS;Crooked Kleptocrat;High;M24011;x
+24095;Minister of Security;プロコップ・ドルティナ;36;ST;Man of the People;High;M24025;x
+24096;Minister of Security;テオドール・エシャーリッヒ;39;ST;Prince of Terror;High;M24051;x
+24097;Minister of Security;クリストフ・エメリッヒ;41;ST;Silent Lawyer;Very High;M24097;x
+24098;Minister of Security;ヨセフ・ジーマン;45;ST;Back Stabber;Very High;M24098;x
+24099;Head of Military Intelligence;ボリス・トランパー;36;ML;Political Specialist;Very High;M24099;x
+24100;Head of Military Intelligence;トビアス・カーラー;38;ML;Industrial Specialist;Very High;M24100;x
+24102;Head of Military Intelligence;ボリス・コヴァンコク;43;ML;Technical Specialist;Very High;M24102;x
+24103;Head of Military Intelligence;ベドリッチ・ホマラ;36;SC;Dismal Enigma;Medium;M24047;x
+24104;Head of Military Intelligence;ボフミル・ネメク;36;PA;Industrial Specialist;High;M24104;x
+24105;Head of Military Intelligence;ルドルフ・ベラン;43;PA;Political Specialist;High;M24012;x
+24106;Head of Military Intelligence;ボフスラフ・ヴセティカ;45;PA;Logistics Specialist;High;M24106;x
+24107;Head of Military Intelligence;ヨセフ・ジェゼク;36;NS;Political Specialist;Very High;M24016;x
+24108;Head of Military Intelligence;ボフミル・クルペク;41;NS;Logistics Specialist;Very High;M24108;x
+24109;Head of Military Intelligence;エリアス・コーン;36;ST;Technical Specialist;High;M24041;x
+24110;Head of Military Intelligence;ルドルフ・スランスキー;40;ST;Political Specialist;High;M24024;x
+24111;Head of Military Intelligence;ズデニェック・フィエルリンゲル;45;ST;Dismal Enigma;Very High;M24026;x
+24112;Chief of Staff;ウラディミール・カイドシ;36;ML;School of Fire Support;Very High;M24112;x
+24114;Chief of Staff;ヤン・セルゲイ・イングル;41;ML;School of Manoeuvre;Very High;M24114;x
+24115;Chief of Staff;ヤロスラフ・チハク;43;ML;School of Mass Combat;Very High;M24115;x
+24116;Chief of Staff;ブルーノ・スクレンコフスキー;45;ML;School of Psychology;Very High;M24116;x
+24117;Chief of Staff;フェルディナンド・カトロス;36;PA;School of Defence;Medium;M24117;x
+24118;Chief of Staff;ヤン・ゴリアン;41;PA;School of Manoeuvre;Very High;M24118;x
+24119;Chief of Staff;ヨセフ・ツラネック;36;NS;School of Psychology;Very High;M24119;x
+24120;Chief of Staff;ロベルト・リクトルモク;41;NS;School of Manoeuvre;Medium;M24017;x
+24121;Chief of Staff;ルドヴィーク・スヴォボダ;36;ST;School of Mass Combat;High;M24027;x
+24123;Chief of Army;フランティセク・ザヴィスカ;38;ML;Guns and Butter Doctrine;Medium;M24123;x
+24124;Chief of Army;エミール・フィアラ;39;ML;Decisive Battle Doctrine;Medium;M24124;x
+24125;Chief of Army;ヤン・セルゲイ・イングル;41;ML;Elastic Defence Doctrine;Very High;M24114;x
+24126;Chief of Army;ボフミル・ボセク;43;ML;Armoured Spearhead Doctrine;Very High;M24126;x
+24127;Chief of Army;ヤン・シロヴィー;36;PA;Guns and Butter Doctrine;Medium;M24034;x
+24128;Chief of Army;ベドリッチ・ホマラ;39;PA;Static Defence Doctrine;Very High;M24047;x
+24129;Chief of Army;アンドレイ・ヴラソフ;43;PA;Decisive Battle Doctrine;High;M24129;x
+24130;Chief of Army;ルドルフ・ヴィースト;45;PA;Armoured Spearhead Doctrine;Medium;M24130;x
+24131;Chief of Army;ヤロスラフ・ベハク;36;NS;Elastic Defence Doctrine;Medium;M24131;x
+24132;Chief of Army;アロイス・エリアーシュ;39;NS;Static Defence Doctrine;Medium;M24040;x
+24133;Chief of Army;オットー・ブラハ;43;NS;Armoured Spearhead Doctrine;Medium;M24018;x
+24134;Chief of Army;ルドヴィーク・スヴォボダ;36;ST;Static Defence Doctrine;High;M24027;x
+24136;Chief of Navy;ヤロスラフ・チハク;39;ML;Decisive Naval Battle Doctrine;Medium;M24115;x
+24137;Chief of Navy;フェルディナンド・カトロス;36;PA;Base Control Doctrine;Medium;M24117;x
+24138;Chief of Navy;ロベルト・リクトルモク;36;NS;Open Seas Doctrine;High;M24017;x
+24139;Chief of Navy;クレメント・ゴットワルド;36;ST;Base Control Doctrine;High;M24021;x
+24140;Chief of Air Force;ヨセフ・フランティセク;36;ML;Air Superiority Doctrine;Low;M24140;x
+24142;Chief of Air Force;カレル・カッテルワッシャー;43;ML;Army Aviation Doctrine;Very High;M24142;x
+24144;Chief of Air Force;アウグスティン・マラー;36;NS;Vertical Envelopment Doctrine;High;M24020;x
+24145;Chief of Air Force;ヤン・プロコップ;36;ST;Vertical Envelopment Doctrine;High;M24030;x
+24146;Minister of Security;オタカール・エイシャー;36;NS;Compassionate Gentleman;Very High;M24087;x
+24147;Head of Government;クレメント・ゴットワルド;45;ST;Backroom Backstabber;High;M24021;x
+24148;Head of State;エドヴァルド・ベネシュ;39;ML;Pig-headed Isolationist;High;M24001;x
+24149;Head of Government;カレル・カレムセク;36;PA;Happy Amateur;High;M24048;x
+24150;Head of State;コンスタンティン・フォン・エコノヴェッチ;45;NS;Autocratic Charmer;High;M24060;x
+24024;Minister of Armament;ルドルフ・スランスキー;36;ST;Theoretical Scientist;Medium;M24024;x
+24026;Head of Military Intelligence;ズデナック・フィエルリンゲル;36;ST;Political Specialist;Very High;M24026;x
+24151;Head of State;アントニーン・ザーポトツキー;53;ST;Pig-headed Isolationist;High;M24151;x
+24152;Head of Government;アントニーン・ノヴォトニー;53;ST;Corporate Suit;High;M24152;x
+24153;Foreign Minister;ヴィリアム・シロキー;50;ST;Iron Fisted Brute;Medium;M24153;x
+24154;Minister of Armament;ルドヴィーク・スヴォボダ;36;ST;Military Entrepreneur;Medium;M24027;x
+24155;Minister of Armament;アレクセイ・ツェピツカ;50;ST;Infantry Proponent;Medium;M24155;x
+24156;Minister of Security;ヴァーツラフ・ノセク;45;ST;Efficient Sociopath;Very High;M24156;x
+24157;Head of Military Intelligence;プロコップ・ドルティナ;45;ST;Political Specialist;High;M24025;x
+24158;Head of Military Intelligence;アレクセイ・ツェピツカ;48;ST;Logistics Specialist;High;M24155;x
+24159;Head of Military Intelligence;ステファン・ライス;50;ST;Dismal Enigma;High;M24158;x

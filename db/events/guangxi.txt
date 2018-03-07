@@ -1,0 +1,580 @@
+#################################################################
+#  óºçLéñïœä÷òA	by ÇµÇ·ÇÒÇ∑Ç°
+#	guangxi.txt
+#################################################################
+#  ID			äTó™
+# 60700		å”äøñØÇÃéÄ
+# 60701		çLìåÇÃèàãˆ
+# 60702		è”âÓêŒÇÃå‹â”èåöãc
+# 60703		í¬‡Zû©ÇÃîΩâû Å\ ãëî€
+# 60704		çDã@ñKÇÈ
+# 60705		óºçLìØñø
+# 60706		çLìåãÛåRÇÃä¢â
+# 60707		â©åıâsÇÃó£îΩ
+# 60708		í¬‡Zû©é∏ãr
+# 60709		çLìåínï˚ Å\ çëñØê≠ï{ÇÃéxîzâ∫Ç…
+# 60710		çLêºåRî¥ÇÃëIë
+# 60711		óºçLéñïœ Å\ ç≈å„ÇÃåàíf
+# 60712		óºçLéñïœ Å\ çLêºåRî¥ÇÃîΩâû
+# 60713		óºçLéñïœÇÃèIåã
+# 60714		óºçLéñïœ Å\ äJêÌ
+# 60715		Åuè≈ìyçRêÌò_Åv(íçÅFéûånóÒìIÇ…àÍî‘ëÅÇ¢Åj
+# 60716		Åuè≈ìyçRêÌò_Åv
+
+event = {
+	id = 60700
+	random = no
+	country = CGX
+	style = 0
+	picture = "minister_died"
+
+	name = "EVT_60700_NAME"
+	desc = "EVT_60700_DESC"
+
+	trigger = {
+		minister = 502013
+		random = 25
+	}
+
+	date = { day = 1 month = may year = 1936 }
+	offset = 2
+	deathdate = { day = 12 month = december year = 1936 }
+
+	action_a = {
+		name = "OK" # 
+		command = { type = sleepminister which = 502013 }
+		command = { type = headofstate which = 502014 }
+		#command = { type = trigger which = 60701 }
+	}
+}
+
+event = {
+	id = 60701
+	random = no
+	country = CHI
+	style = 0
+	picture = "Sian Incident" # FEPKïœçXïîï™ #1.06	#DHSA0.42ïœçX
+
+	name = "EVT_60701_NAME"
+	desc = "EVT_60701_DESC"
+
+	trigger = {
+		event = 60700
+		NOT = {	 #1.095
+			war = { country = CGX country = CHI }
+		}
+		exists = CGX
+	}
+
+	date = { day = 1 month = may year = 1936 }
+	offset = 1
+	deathdate = { day = 12 month = december year = 1936 }
+
+	action_a = {
+		name = "ACTIONNAME60701A" #
+		ai_chance = 99
+		command = { type = relation which = CGX value = -70 }
+		command = { type = dissent value = 1 }
+		command = { type = trigger which = 60702 }
+	}
+	action_b = {
+		name = "ACTIONNAME60701B" #
+		ai_chance = 1
+		command = { type = dissent value = 2 }
+	}
+}
+
+event = {
+	id = 60702
+	random = no
+	country = CGX
+	style = 0
+	picture = "Sian Incident"
+
+	name = "EVT_60702_NAME"
+	desc = "EVT_60701_DESC"
+
+	action_a = {
+		name = "ACTIONNAME60702A" # 
+		ai_chance = 0
+		#command = { type = dissent value = 5 }
+		command = { type = sleepleader which = 502001 }
+		command = { type = sleepleader which = 502010 }
+		command = { type = sleepleader which = 502018 }
+		command = { type = sleepminister which = 502011 }
+		command = { type = sleepminister which = 502012 }
+		command = { type = sleepminister which = 502014 }
+		command = { type = sleepminister which = 502015 }
+		command = { type = removecore which = 1248 }
+		command = { type = removecore which = 1249 }
+		command = { type = removecore which = 1312 }
+		command = { type = removecore which = 1313 }
+		command = { type = removecore which = 1314 }
+		command = { type = removecore which = 1317 }
+		command = { type = removecore which = 1318 }
+		command = { type = removecore which = 1320 }
+		command = { type = removecore which = 1321 }
+		command = { type = switch_allegiance which = 22400 value = 1 where = CHI }
+		command = { type = switch_allegiance which = 22400 value = 5 where = CHI } 
+		command = { type = switch_allegiance which = 22400 value = 9 where = CHI } 
+		command = { type = switch_allegiance which = 22400 value = 13 where = CHI } 
+		command = { type = switch_allegiance which = 22400 value = 29 where = CHI }
+		command = { type = switch_allegiance which = 22400 value = 34 where = CHI }
+		command = { type = switch_allegiance which = 22000 value = 106 where = CHI } 
+		command = { type = switch_allegiance which = 22000 value = 6 where = CHI } 
+		command = { type = switch_allegiance which = 22000 value = 36 where = CHI }
+		command = { type = switch_allegiance which = 22000 value = 87 where = CHI }
+		command = { type = switch_allegiance which = 22400 value = 40 where = CHI }
+		command = { type = switch_allegiance which = 22400 value = 38 where = CHI }
+		command = { type = secedeprovince which = CHI value = 1248 }
+		command = { type = secedeprovince which = CHI value = 1249 }
+		command = { type = secedeprovince which = CHI value = 1312 }
+		command = { type = secedeprovince which = CHI value = 1313 }
+		command = { type = secedeprovince which = CHI value = 1314 }
+		command = { type = secedeprovince which = CHI value = 1315 }
+		command = { type = secedeprovince which = CHI value = 1316 }
+		command = { type = secedeprovince which = CHI value = 1317 }
+		command = { type = secedeprovince which = CHI value = 1318 }
+		command = { type = secedeprovince which = CHI value = 1320 }
+		command = { type = secedeprovince which = CHI value = 1321 }
+
+		#command = { type = sleepevent which = 27005 }
+		command = { type = sleepevent which = 60704 }
+		command = { type = trigger which = 60709 }
+	}
+	action_b = {
+		name = "ACTIONNAME60702B" # 
+		ai_chance = 100
+		#command = { type = setflag which = demands_refused }
+		command = { type = dissent value = 1 }
+		command = { type = trigger which = 60703 }
+	}
+}
+
+event = {
+	id = 60703
+	random = no
+	country = CHI
+	style = 0
+	picture = "Sian Incident"
+
+	name = "EVT_60703_NAME"
+	desc = "EVT_60703_DESC"
+	#picture = "Sian Incident"
+
+	action_a = {
+		name = "OK" #
+		command = { type = relation which = CGX value = -100 }
+	}
+}
+
+event = {
+	id = 60704
+	random = no
+	country = CHI
+	style = 0
+	picture = "Sian Incident"
+
+	name = "EVT_60704_NAME"
+	desc = "EVT_60704_DESC"
+
+	trigger = {
+		event = 60703
+		NOT = { war = { country = CGX country = CHI } }
+		exists = CGX #1.095
+		random = 25
+		}
+
+	date = { day = 1 month = may year = 1936 }
+	offset = 6
+	deathdate = { day = 12 month = december year = 1936 }
+
+	action_a = {
+		name = "ACTIONNAME60704A" #
+		ai_chance = 99
+		command = { type = money value = -50 }
+		command = { type = setflag which = Guangdong_scheme }
+	}
+	action_b = {
+		name = "ACTIONNAME60704B" #
+		ai_chance = 1
+		command = { }
+	}
+}
+
+event = {
+	id = 60705
+	random = no
+	country = CGX
+	style = 0
+	picture = "Sian Incident"
+
+	name = "EVT_60705_NAME"
+	desc = "EVT_60705_DESC"
+
+	trigger = {
+		event = 60703
+		event = 60716
+	}
+
+	date = { day = 1 month = april year = 1936 }
+	offset = 7
+	deathdate = { day = 12 month = december year = 1936 }
+
+	action_a = {
+		name = "ACTIONNAME60705A" #
+		ai_chance = 99
+		command = { type = dissent value = -2 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = addcore which = 1248 }
+		command = { type = addcore which = 1249 }
+		command = { type = addcore which = 1312 }
+		command = { type = addcore which = 1313 }
+		command = { type = addcore which = 1314 }
+		command = { type = addcore which = 1317 }
+		command = { type = addcore which = 1318 }
+		command = { type = addcore which = 1320 }
+		command = { type = addcore which = 1321 }
+	}
+	action_b = {
+		name = "ACTIONNAME60705B" # 
+		ai_chance = 1
+		command = { type = domestic which = interventionism value = -1 }
+		}
+}
+
+event = {
+	id = 60706
+	random = no
+	country = CGX
+	style = 0
+	picture = "polikarpov"
+
+	name = "EVT_60706_NAME"
+	desc = "EVT_60706_DESC"
+
+	trigger = {
+		flag = Guangdong_scheme
+		OR = {
+			AND = {
+				NOT = { war = { country = CGX country = CHI } }
+				random = 35
+				exists = CHI #1.095
+			}
+			AND = {
+				war = { country = CGX country = CHI }
+				random = 10
+			}
+		}
+	}
+
+	date = { day = 1 month = june year = 1936 }
+	offset = 5
+	deathdate = { day = 12 month = december year = 1936 }
+
+	action_a = {
+		name = "ACTIONNAME60706A" # 
+		command = { type = sleepminister which = 502015 }
+		command = { type = sleepminister which = 502012 }
+		command = { type = sleepleader which = 502010 }
+		command = { type = sleepleader which = 502018 }
+		command = { type = switch_allegiance which = 22400 value = 38 where = CHI }
+		command = { type = trigger which = 60707 }
+	}
+}
+
+event = {
+	id = 60707
+	random = no
+	country = CHI
+	style = 0
+	picture = "polikarpov"
+
+	name = "EVT_60707_NAME"
+	desc = "EVT_60706_DESC"
+
+	action_a = {
+		name = "ACTIONNAME60707A" # 
+		command = { }
+	}
+}
+
+event = {
+	id = 60708
+	random = no
+	country = CGX
+	style = 0
+	picture = "reinforcements"
+
+	name = "EVT_60708_NAME"
+	desc = "EVT_60708_DESC"
+
+	trigger = {
+		flag = Guangdong_scheme
+		event = 60707
+		exists = CHI #1.095
+	}
+
+	date = { day = 1 month = june year = 1936 }
+	offset = 1
+	deathdate = { day = 12 month = december year = 1936 }
+
+	action_a = {
+		name = "ACTIONNAME60708A"
+		ai_chance = 99
+		command = { type = sleepminister which = 502014 }
+		command = { type = sleepleader which = 502001 }
+		command = { type = switch_allegiance which = 22400 value = 1 where = CHI }
+		command = { type = switch_allegiance which = 22400 value = 5 where = CHI } 
+		command = { type = switch_allegiance which = 22400 value = 9 where = CHI } 
+		command = { type = switch_allegiance which = 22400 value = 13 where = CHI } 
+		command = { type = switch_allegiance which = 22400 value = 29 where = CHI }
+		command = { type = switch_allegiance which = 22400 value = 34 where = CHI }
+		command = { type = switch_allegiance which = 22000 value = 106 where = CHI } 
+		command = { type = switch_allegiance which = 22000 value = 6 where = CHI } 
+		command = { type = switch_allegiance which = 22000 value = 36 where = CHI }
+		command = { type = switch_allegiance which = 22000 value = 87 where = CHI }
+		command = { type = switch_allegiance which = 22400 value = 40 where = CHI }
+		command = { type = switch_allegiance which = 22400 value = 38 where = CHI }
+		command = { type = secedeprovince which = CHI value = 1248 }
+		command = { type = secedeprovince which = CHI value = 1249 }
+		command = { type = secedeprovince which = CHI value = 1312 }
+		command = { type = secedeprovince which = CHI value = 1313 }
+		command = { type = secedeprovince which = CHI value = 1314 }
+		command = { type = secedeprovince which = CHI value = 1317 }
+		command = { type = secedeprovince which = CHI value = 1318 }
+		command = { type = secedeprovince which = CHI value = 1320 }
+		command = { type = secedeprovince which = CHI value = 1321 }
+
+		command = { type = trigger which = 60709 }
+		#command = { type = sleepevent which = 27005 }
+		command = { type = clrflag which = Guangdong_scheme }
+	}
+	action_b = {
+		name = "ACTIONNAME60708B" #
+		ai_chance = 1
+		#command = { type = dissent value = 1 }
+		command = { type = war which = CHI }
+		command = { type = local_setflag which = CGXInvadeCHI }
+		#command = { type = ground_def_eff value = -0.15 } # confusion
+		command = { type = clrflag which = Guangdong_scheme }
+	}
+}
+
+event = {
+	id = 60709
+	random = no
+	country = CHI
+	style = 0
+	#picture = "KMT_LC" # FEPKïœçXïîï™ #1.06
+
+	name = "EVT_60709_NAME"
+	desc = "EVT_60709_DESC"
+
+	action_a = {
+		name = "OK" # 
+		command = { }
+		#command = { type = ai which = "switch/CHI_After_CGX.ai" }
+		#command = { type = trigger which = 60710 }
+	}
+}
+
+event = {
+	id = 60710
+	random = no
+	country = CGX
+	style = 0
+	picture = "defeat"
+
+	name = "EVT_60710_NAME"
+	desc = "EVT_60710_DESC"
+
+	trigger = {
+		NOT = { war = { country = CHI country = CGX } }
+		event = 60709
+		exists = CHI #1.095
+	}
+
+	date = { day = 1 month = june year = 1936 }
+	offset = 1
+	deathdate = { day = 12 month = december year = 1936 }
+
+	action_a = {
+		name = "ACTIONNAME60710A" #
+		ai_chance = 97
+		command = { type = setflag which = CGXAlone }
+	}
+	action_b = {
+		name = "ACTIONNAME60710B" #
+		ai_chance = 1
+		command = { type = trigger which = 59911 }		
+	}
+	action_c = {
+		name = "ACTIONNAME60710C" #
+		ai_chance = 2
+		command = { type = war which = CHI }		
+	}
+}
+
+event = {
+	id = 60711
+	random = no
+	country = CHI
+	style = 0
+	picture = "politics1"
+
+	name = "EVT_60711_NAME"
+	desc = "EVT_60711_DESC"
+
+	trigger = {
+		flag = CGXAlone
+		NOT = { war = { country = CGX country = CHI } }
+		random = 25
+		exists = CGX #1.095
+	}
+
+	date = { day = 1 month = june year = 1936 }
+	offset = 10
+	deathdate = { day = 12 month = december year = 1936 }
+
+	action_a = {
+		name = "ACTIONNAME60711A" #
+		ai_chance = 99
+		#command = { type = sleepevent which = 59910 }
+		command = { type = trigger which = 60712 }
+	}
+	action_b = {
+		name = "ACTIONNAME60711B" #
+		ai_chance = 1
+		command = { type = war which = CGX }
+		command = { type = dissent value = 2 }
+	}
+}
+
+event = {
+	id = 60712
+	random = no
+	country = CGX
+	style = 0
+	picture = "politics1"
+
+	name = "EVT_60712_NAME"
+	desc = "EVT_60712_DESC"
+
+	action_a = {
+		name = "ACTIONNAME60712A" #
+		ai_chance = 99
+		command = { type = sleepevent which = 59910 }
+		command = { type = domestic which = defense_lobby value = -3 }
+		command = { type = domestic which = interventionism value = -2 }
+		command = { type = trigger which = 60713 }
+		command = { type = clrflag which = CGXAlone }
+		command = { type = capital which = 1258 }
+	}
+	action_b = {
+		name = "ACTIONNAME60712B" #
+		ai_chance = 1
+		command = { type = setflag which = CGXFight }
+		command = { type = clrflag which = CGXAlone }
+	}
+}
+
+event = { #FEPK1.12
+	id = 60713
+	random = no
+	country = CHI
+	style = 0
+	#picture = "politics1"
+
+	name = "EVT_60713_NAME"
+	desc = "EVT_60713_DESC"
+
+	action_a = {
+		name = "OK" #FEPK1.12
+		command = { type = set_relation which = CGX value = 0 }
+	#	command = { type = ai which = "switch/CHI_After_CGX.ai" }
+	}
+}
+
+event = {
+	id = 60714
+	random = no
+	country = CHI
+	style = 0
+	picture = "war"
+
+	name = "EVT_60714_NAME"
+	desc = "EVT_60714_DESC"
+
+	trigger = {
+		flag = CGXFight
+		NOT = { war = { country = CGX country = CHI } }
+		random = 45
+		exists = CGX #1.095
+	}
+
+	date = { day = 1 month = june year = 1936 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1936 }
+
+	action_a = {
+		name = "ACTIONNAME60714A" #
+		command = { type = war which = CGX }
+		#command = { type = dissent value = 2 }
+		command = { type = clrflag which = CGXFight }
+	}
+}
+
+event = {
+	id = 60715
+	random = no
+	country = CGX
+
+	name = "EVT_60715_NAME"
+	desc = "EVT_60715_DESC"
+	
+	style = 0
+	#picture = "japanese_reinforcments"
+
+	trigger = {
+		random = 40
+		NOT = {	war = { country = JAP country = CHI } }
+		exists = JAP #1.095
+		exists = CHI #1.095
+	}
+
+	date = { day = 18 month = april year = 1936 }
+	offset = 4
+	deathdate = { day = 29 month = july year = 1936 }
+
+	action_a = {
+		name = "ACTIONNAME60715A"
+		ai_chance = 100
+		command = { type = trigger which = 60716 }
+		command = { type = dissent value = -3 }
+		command = { type = domestic which = defense_lobby value = 1 }
+	}
+	action_b = {
+		name = "ACTIONNAME60715B"
+		ai_chance = 0
+		command = { type = domestic which = defense_lobby value = -1 }
+	}
+}
+
+event = {
+	id = 60716
+	random = no
+	country = CHI
+
+	name = "EVT_60715_NAME"
+	desc = "EVT_60715_DESC"
+	
+	style = 0
+	picture = "japanese_reinforcments"
+
+	action_a = {
+		name = "ACTIONNAME60716A"
+		command = { type = relation which = CGX value = -30 }
+	}
+}

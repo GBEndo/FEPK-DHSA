@@ -1,0 +1,133 @@
+##############################
+# Country definition for DEN #
+##############################
+province = {
+  id = 1 # レイキャヴィク
+  anti_air = 1
+  air_base = { size = 4 current_size = 4 }
+  naval_base = { size = 4 current_size = 4 }
+}
+province = {
+  id = 292 # オルボア
+  anti_air = 1
+  air_base = { size = 4 current_size = 4 }
+  naval_base = { size = 1 current_size = 1 }
+}
+province = {
+  id = 294 # コペンハーゲン
+  anti_air = 2
+  air_base = { size = 10 current_size = 10 }
+  naval_base = { size = 10 current_size = 10 }
+}
+
+#####################
+# Country main data #
+#####################
+
+country = {
+  tag                = DEN
+  regular_id         = SCA
+  capital            = 294 # コペンハーゲン
+  manpower           = 3
+  # Resource Reserves
+  energy         = 1000
+  metal          = 1000
+  rare_materials = 500
+  oil            = 500
+  supplies       = 500
+  money          = 10
+
+  diplomacy = {
+    relation = { tag = BEL value = 100 }
+    relation = { tag = ENG value = 100 }
+    relation = { tag = FIN value = 75 }
+    relation = { tag = GER value = 25 }
+    relation = { tag = HOL value = 100 }
+    relation = { tag = LUX value = 100 }
+    relation = { tag = NOR value = 150 }
+    relation = { tag = PER value = 50 }
+    relation = { tag = SWE value = 75 }
+    relation = { tag = USA value = 75 }
+  }
+  SpyInfo                = { country = "ENG" NumberOfSpies = 3 }
+  SpyInfo                = { country = "FRA" NumberOfSpies = 2 }
+  SpyInfo                = { country = "SOV" NumberOfSpies = 1 }
+  SpyInfo                = { country = "POL" NumberOfSpies = 1 }
+  SpyInfo                = { country = "SWE" NumberOfSpies = 2 }
+  SpyInfo                = { country = "NOR" NumberOfSpies = 2 }
+  SpyInfo                = { country = "FIN" NumberOfSpies = 1 }
+  SpyInfo                = { country = "GER" NumberOfSpies = 3 }
+  SpyInfo                = { country = "HOL" NumberOfSpies = 1 }
+  SpyInfo                = { country = "USA" NumberOfSpies = 1 }
+
+  nationalprovinces      = { 91 92 292 293 294 295 800 1 2 }
+  ownedprovinces         = { 91 92 292 293 294 295 800 1 2 }
+  controlledprovinces    = { 91 92 292 293 294 295 800 1 2 }
+
+  techapps               = { 4010 4020 4120 2010 2290 2300 2310 2450 2460 2510 1010 1190 1110 9010 5010 5020 5080 5090 5190 5470 6010 6020 3010 3070 3130 3400 3410 8020 8040 8050 }
+
+  policy = {
+    date              = { year = 0 month = january day = 0 }
+    democratic        = 10
+    political_left    = 10
+    freedom           = 8
+    free_market       = 6
+    professional_army = 3
+    defense_lobby     = 1
+    interventionism   = 3
+  }
+  headofstate            = { type = 9 id = 16001 } # クリスティアン10世
+  headofgovernment       = { type = 9 id = 16002 } # トルヴァルト・スタウニング
+  foreignminister        = { type = 9 id = 16003 } # ペーター・ムンク
+  armamentminister       = { type = 9 id = 16004 } # アルシング・アンデルセン
+  ministerofsecurity     = { type = 9 id = 16005 } # カール・クリスティアン・ステインケ
+  ministerofintelligence = { type = 9 id = 16006 } # エリク・メルツ
+  chiefofstaff           = { type = 9 id = 16007 } # ウィリアム・ヴァイン・プリオル
+  chiefofarmy            = { type = 9 id = 16008 } # エリク・ウィット
+  chiefofnavy            = { type = 9 id = 16009 } # ヤルマル・レクニッツァー
+  chiefofair             = { type = 9 id = 16010 } # K・W・エッセマン
+
+  landunit = {
+    id       = { type = 27000 id = 40 }
+    name     = "デン・ダンスケ軍"
+    location = 92
+    division = {
+      id             = { type = 27000 id = 41 }
+      name           = "第1ユラン師団"
+      type           = infantry
+      model          = 0
+      strength       = 15
+    }
+  }
+
+  navalunit = {
+    id       = { type = 27000 id = 44 }
+    name     = "デン・ダンスケ艦隊"
+    location = 294
+    base     = 294
+    division = {
+      id             = { type = 27000 id = 45 }
+      name           = "HDMS ニルス・イウエル"
+      type           = heavy_cruiser
+      model          = 0
+    }
+    division = {
+      id             = { type = 27000 id = 46 }
+      name           = "HDMS ペデー・スクラム"
+      type           = heavy_cruiser
+      model          = 0
+    }
+    division = {
+      id             = { type = 27000 id = 47 }
+      name           = "第1潜水隊"
+      type           = submarine
+      model          = 0
+    }
+    division = {
+      id             = { type = 27000 id = 48 }
+      name           = "第2潜水隊"
+      type           = submarine
+      model          = 0
+    }
+  }
+}

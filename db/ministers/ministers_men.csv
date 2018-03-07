@@ -1,0 +1,15 @@
+MEN;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+513001;Head of State;德王 (デ・ノヤン);35;FA;Pig-headed Isolationist;High;M513001;x
+513002;Head of Government;德王 (デ・ノヤン);35;FA;Political Protege;High;M513001;x
+513003;Foreign Minister;酒井隆;35;FA;General Staffer;High;L101150;x
+513004;Minister of Armament;中島今朝吾;35;FA;Air to Ground Proponent;Medium;M58051;x
+513005;Minister of Security;ダムスリジャン;35;FA;Man of the People;Medium;M513005;x
+513006;Head of Military Intelligence;洪哲晃 (フン・チェワン);35;FA;Logistics Specialist;Medium;M513006;x
+513007;Chief of Staff;李守信;35;FA;School of Psychology;Medium;M94017;x
+513008;Chief of Army;笠原幸雄;35;FA;Guns and Butter Doctrine;Medium;L101079;x
+513009;Chief of Navy;ハインリッヒ・ハンケ;35;FA;Decisive Naval Battle Doctrine;Medium;M513009;x
+513010;Chief of Air Force;冨永恭次;35;FA;Army Aviation Doctrine;Medium;L101336;x
+513011;Head of State;ジェプツンダンパ9世;35;PA;Popular Figurehead;Medium;M513011;x
+513012;Foreign Minister;竹下義晴;40;FA;General Staffer;High;L1001705;x
+513013;Foreign Minister;岩崎民男;41;FA;General Staffer;High;L1002174;x

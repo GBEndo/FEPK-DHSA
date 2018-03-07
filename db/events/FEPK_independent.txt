@@ -1,0 +1,2922 @@
+
+###########
+#  Montenegro
+###########
+event = {
+	id = 71466
+	random = no
+	country = MTN
+
+	trigger = {
+		ai = yes
+		exists = MTN
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		command = { type = construct which = ic where = 389 value = 2 }
+
+		command = { type = construct which = naval_base where = 389 value = 2 }
+		command = { type = construct which = air_base where = 389 value = 2 }
+
+		#power for 4 IC
+		command = { type = free_energy value = 8 }
+		command = { type = free_metal value = 4 }
+		#command = { type = free_oil value = 10 }
+		command = { type = free_rare_materials value = 2 }
+
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 500 }
+		command = { type = oilpool value = 500 }
+		command = { type = rarematerialspool value = 250 }
+		command = { type = supplies value = 500 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = money value = 100 }
+
+		command = { type = add_division value = infantry }
+	}
+}
+###########
+#  Serbia
+###########
+event = {
+	id = 71467
+	random = no
+	country = SER
+
+	trigger = {
+		ai = yes
+		exists = SER
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		command = { type = capital which = 453 } #Belgrade
+
+		command = { type = construct which = naval_base where = 389 value = 2 }
+		command = { type = construct which = air_base where = 389 value = 2 }
+
+		#power for 4 IC
+		#command = { type = free_energy value = 8 }
+		#command = { type = free_metal value = 4 }
+		#command = { type = free_oil value = 10 }
+		#command = { type = free_rare_materials value = 2 }
+
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 500 }
+		command = { type = oilpool value = 500 }
+		command = { type = rarematerialspool value = 250 }
+		command = { type = supplies value = 500 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = money value = 100 }
+
+		command = { type = add_division value = infantry }
+		command = { type = add_division value = infantry }
+	}
+}
+###########
+#  Albania
+###########
+event = {
+	id = 71468
+	random = no
+	country = ALB
+
+	trigger = {
+		ai = yes
+		exists = ALB
+	}
+
+	date = { day = 1 month = january year = 1942 } #later so not to fire immediately
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		command = { type = supplies value = 1000 }
+		command = { type = oilpool value = 500 }
+		command = { type = metalpool value = 1000 }
+		command = { type = energypool value = 1000 }
+		command = { type = rarematerialspool value = 500 }
+		command = { type = manpowerpool value = 50 }
+		command = { type = money value = 100 }
+
+		command = { type = add_division value = infantry }
+	}
+}
+###########
+#  Greece
+###########
+event = {
+	id = 71469
+	random = no
+	country = GRE
+
+	trigger = {
+		ai = yes
+		exists = GRE
+	}
+
+	date = { day = 1 month = january year = 1942 } #later so not to fire immediately
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		command = { type = supplies value = 1000 }
+		command = { type = oilpool value = 500 }
+		command = { type = metalpool value = 1000 }
+		command = { type = energypool value = 1000 }
+		command = { type = rarematerialspool value = 500 }
+		command = { type = manpowerpool value = 50 }
+		command = { type = money value = 100 }
+
+		command = { type = add_division value = infantry }
+		command = { type = add_division value = infantry }
+	}
+}
+
+###########
+#  England
+###########
+event = {
+	id = 71477
+	random = no
+	country = U73
+
+	trigger = {
+		ai = yes
+		exists = U73 #was U04
+		exists = SCO
+		NOT = {
+			alliance = { country = U73 country = GER }
+			puppet = { country = U73 country = GER } 
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		command = { type = energypool value = 2000 }
+		command = { type = metalpool value = 1000 }
+		command = { type = oilpool value = 500 }
+		command = { type = rarematerialspool value = 500 }
+		command = { type = supplies value = 1000 }
+		command = { type = manpowerpool value = 20 }
+		command = { type = money value = 100 }
+
+		command = { type = free_ic value = -16 }
+
+		command = { type = add_division value = infantry }
+		command = { type = add_division value = infantry }
+		command = { type = add_division value = infantry }
+	}
+}
+###########
+#  Wales
+###########
+event = {
+	id = 71478
+	random = no
+	country = U76
+
+	trigger = {
+		ai = yes
+		exists = U76 #was U05
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		command = { type = construct which = ic where = 15 value = 7 }
+
+		#power for 8 IC
+		command = { type = free_energy value = 16 }
+		command = { type = free_metal value = 8 }
+		#command = { type = free_oil value = 10 }
+		command = { type = free_rare_materials value = 4 }
+
+		command = { type = energypool value = 2000 }
+		command = { type = metalpool value = 1000 }
+		command = { type = oilpool value = 500 }
+		command = { type = rarematerialspool value = 500 }
+		command = { type = supplies value = 1000 }
+		command = { type = manpowerpool value = 20 }
+		command = { type = money value = 100 }
+
+		command = { type = add_division value = infantry }
+	}
+}
+###########
+#  Scotland
+###########
+event = {
+	id = 71479
+	random = no
+	country = SCO
+
+	trigger = {
+		ai = yes
+		exists = SCO
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		#england loses 16 IC, put new IC in scotland to make them more even
+		command = { type = construct which = ic where = 6 value = 1 }
+		command = { type = construct which = ic where = 8 value = 3 }
+		command = { type = construct which = ic where = 9 value = 7 } #Glasgow
+		command = { type = construct which = ic where = 10 value = 5 } #Edinburgh
+
+		#power for 12 IC
+		command = { type = free_energy value = 24 }
+		command = { type = free_metal value = 12 }
+		#command = { type = free_oil value = 10 }
+		command = { type = free_rare_materials value = 6 }
+
+		command = { type = energypool value = 2000 }
+		command = { type = metalpool value = 1000 }
+		command = { type = oilpool value = 500 }
+		command = { type = rarematerialspool value = 500 }
+		command = { type = supplies value = 1000 }
+		command = { type = manpowerpool value = 20 }
+		command = { type = money value = 100 }
+
+		command = { type = add_division value = infantry }
+		command = { type = add_division value = infantry }
+	}
+}
+###########
+#  Wallonia
+###########
+event = {
+	id = 71480
+	random = no
+	country = WLL
+
+	trigger = {
+		ai = yes
+		exists = WLL
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		#power for 8 IC
+		command = { type = free_energy value = 16 }
+		command = { type = free_metal value = 8 }
+		#command = { type = free_oil value = 10 }
+		command = { type = free_rare_materials value = 4 }
+
+		command = { type = energypool value = 2000 }
+		command = { type = metalpool value = 1000 }
+		command = { type = oilpool value = 500 }
+		command = { type = rarematerialspool value = 500 }
+		command = { type = supplies value = 1000 }
+		command = { type = manpowerpool value = 20 }
+		command = { type = money value = 100 }
+
+		command = { type = add_division value = infantry }
+	}
+}
+
+###########
+#  Flanders
+###########
+event = {
+	id = 71482
+	random = no
+	country = FLA
+
+	trigger = {
+		ai = yes
+		exists = FLA
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		command = { type = energypool value = 2000 }
+		command = { type = metalpool value = 1000 }
+		command = { type = oilpool value = 500 }
+		command = { type = rarematerialspool value = 500 }
+		command = { type = supplies value = 1000 }
+		command = { type = manpowerpool value = 20 }
+		command = { type = money value = 100 }
+
+		command = { type = add_division value = infantry }
+		command = { type = add_division value = infantry }
+	}
+}
+
+###########
+#  Ho in Vietnam - necessary?
+###########
+event = {
+	id = 71486
+	random = no
+	country = VIE #u72 is communist vietnam
+
+	trigger = {
+		ai = yes
+		exists = VIE
+		OR = {
+			NOT = {
+				event = 131600
+				alliance = { country = VIE country = JAP }
+				puppet = { country = VIE country = JAP } 
+			}
+			AND = {
+				event = 131605
+				NOT = { alliance = { country = VIE country = JAP } }
+			}
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	#picture = "tannu_tuva"
+
+	action_a = {
+		name = "OK"
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = set_domestic which = defense_lobby value = 3 }
+		command = { type = set_domestic which = interventionism value = 2 }
+		command = { type = headofstate which = 542012 } #ho
+		#command = { type = headofgovernment which = 29061 }
+		#command = { type = foreignminister which = 29077 }
+		#command = { type = armamentminister which = 29096 }
+		#command = { type = ministerofsecurity which = 29115 }
+		#command = { type = ministerofintelligence which = 29128 }
+		#command = { type = chiefofstaff which = 29137 }
+		command = { type = chiefofarmy which = 542047 } #ho
+		#command = { type = chiefofnavy which = 29150 }
+		#command = { type = chiefofair which = 29155 }
+	}
+}
+
+###########
+#  Mengkukuo
+###########
+event = {
+	id = 71491
+	random = no
+	country = MEN
+
+	trigger = {
+		ai = yes
+		exists = MEN
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		#all of this free stuff is removed when the "empire" event fires
+		command = { type = free_ic value = 2 }
+		#power for 2 IC
+		command = { type = free_energy value = 4 }
+		command = { type = free_metal value = 2 }
+		#command = { type = free_oil value = 10 }
+		command = { type = free_rare_materials value = 1 }
+
+		command = { type = addcore which = 1383 } #?
+		command = { type = addcore which = 1382 } #?
+
+		#Army: (taken from "Creation of Mengkukuo" chain)
+		command = { type = add_corps which = "ñ÷å√çëåR" value = land where = 1208 } # "Mongolian Army"
+		command = { type = add_division which = "éÁîıë‡" value = infantry when = 0 } # "Garrison Corps"
+		command = { type = add_division which = "ñ÷å√ï‡ï∫ëÊ1ét" value = cavalry when = 1 } # "1st Mongolian Corps"
+		command = { type = add_division which = "êº„VâììùçáåR" value = infantry when = 0 } # "West Suiyuan United Corps"
+	}
+}
+
+
+###########
+#  Korea
+###########
+event = {
+	id = 71494
+	random = no
+	country = KOR
+
+	trigger = {
+		ai = yes
+		exists = KOR
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+
+
+		command = { type = energypool value = 2000 }
+		command = { type = metalpool value = 1000 }
+		command = { type = oilpool value = 500 }
+		command = { type = rarematerialspool value = 500 }
+		command = { type = supplies value = 1000 }
+		command = { type = manpowerpool value = 20 }
+		command = { type = money value = 100 }
+
+		command = { type = add_division value = infantry }
+		command = { type = add_division value = infantry }
+		command = { type = add_division value = infantry }
+	}
+}
+###########
+#  Korea (Communist)
+###########
+event = {
+	id = 71495
+	random = no
+	country = PRK
+
+	trigger = {
+		ai = yes
+		exists = PRK
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+
+
+		command = { type = energypool value = 2000 }
+		command = { type = metalpool value = 1000 }
+		command = { type = oilpool value = 500 }
+		command = { type = rarematerialspool value = 500 }
+		command = { type = supplies value = 1000 }
+		command = { type = manpowerpool value = 20 }
+		command = { type = money value = 100 }
+
+		command = { type = add_division value = infantry }
+		command = { type = add_division value = infantry }
+		command = { type = add_division value = infantry }
+	}
+}
+###########
+#  Indochina
+###########
+event = {
+	id = 71496
+	random = no
+	country = IDC
+
+	trigger = {
+		ai = yes
+		exists = IDC
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		command = { type = construct which = ic where = 1328 value = 2 }
+		command = { type = construct which = ic where = 1337 value = 2 }
+
+		#power for 4 IC
+		command = { type = free_energy value = 8 }
+		command = { type = free_metal value = 4 }
+		#command = { type = free_oil value = 10 }
+		command = { type = free_rare_materials value = 2 }
+
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 500 }
+		command = { type = oilpool value = 250 }
+		command = { type = rarematerialspool value = 250 }
+		command = { type = supplies value = 500 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = money value = 100 }
+
+		command = { type = add_division value = infantry }
+		command = { type = add_division value = infantry }
+		command = { type = add_division value = infantry }
+	}
+}
+###########
+#  Cambodia
+###########
+event = {
+	id = 71497
+	random = no
+	country = CMB
+
+	trigger = {
+		ai = yes
+		exists = CMB
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		command = { type = construct which = ic where = 1341 value = 1 }
+		command = { type = construct which = ic where = 1340 value = 1 }
+		command = { type = construct which = ic where = 1339 value = 1 }
+
+		#power for 4 IC
+		command = { type = free_energy value = 8 }
+		command = { type = free_metal value = 4 }
+		#command = { type = free_oil value = 10 }
+		command = { type = free_rare_materials value = 2 }
+
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 500 }
+		command = { type = oilpool value = 250 }
+		command = { type = rarematerialspool value = 250 }
+		command = { type = supplies value = 500 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = money value = 100 }
+
+		command = { type = add_division value = infantry }
+	}
+}
+###########
+#  Laos
+###########
+event = {
+	id = 71498
+	random = no
+	country = LAO
+
+	trigger = {
+		ai = yes
+		exists = LAO
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		command = { type = construct which = ic where = 1329 value = 2 }
+		command = { type = construct which = ic where = 1332 value = 1 }
+		command = { type = construct which = ic where = 1336 value = 1 }
+
+		#power for 4 IC
+		command = { type = free_energy value = 8 }
+		command = { type = free_metal value = 4 }
+		#command = { type = free_oil value = 10 }
+		command = { type = free_rare_materials value = 2 }
+
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 500 }
+		command = { type = oilpool value = 250 }
+		command = { type = rarematerialspool value = 250 }
+		command = { type = supplies value = 500 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = money value = 100 }
+
+		command = { type = add_division value = infantry }
+	}
+}
+###########
+#  Vietnam
+###########
+event = {
+	id = 71499
+	random = no
+	country = VIE
+
+	trigger = {
+		ai = yes
+		exists = VIE
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+
+		#power for 4 IC, since they have some resources already
+		command = { type = free_energy value = 8 }
+		command = { type = free_metal value = 4 }
+		#command = { type = free_oil value = 10 }
+		command = { type = free_rare_materials value = 2 }
+
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 500 }
+		command = { type = oilpool value = 250 }
+		command = { type = rarematerialspool value = 250 }
+		command = { type = supplies value = 500 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = money value = 100 }
+
+		command = { type = add_division value = infantry }
+		command = { type = add_division value = infantry }
+	}
+}
+
+###########
+#  Ukraine
+###########
+event = {
+	id = 71614
+	random = no
+	country = UKR
+
+	trigger = {
+		ai = yes
+		exists = UKR
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		command = { type = construct which = ic where = 238 value = 6 } #Kiev
+
+		##power for 12 IC, probably not needed
+		#command = { type = free_energy value = 24 }
+		#command = { type = free_metal value = 12 }
+		##command = { type = free_oil value = 10 }
+		#command = { type = free_rare_materials value = 6 }
+
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 500 }
+		command = { type = oilpool value = 250 }
+		command = { type = rarematerialspool value = 250 }
+		command = { type = supplies value = 500 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = money value = 100 }
+
+		command = { type = add_division value = infantry }
+		command = { type = add_division value = infantry }
+		command = { type = add_division value = infantry }
+		command = { type = add_division value = infantry }
+	}
+}
+###########
+#  Syria
+###########
+event = {
+	id = 71615
+	random = no
+	country = SYR
+
+	trigger = {
+		ai = yes
+		exists = SYR
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		command = { type = construct which = ic where = 1792 value = 2 } #damascus
+		command = { type = construct which = ic where = 1795 value = 1 } #
+		command = { type = construct which = ic where = 1862 value = 1 } #
+
+		#power for 4 IC
+		command = { type = free_energy value = 8 }
+		command = { type = free_metal value = 4 }
+		#command = { type = free_oil value = 10 }
+		command = { type = free_rare_materials value = 2 }
+
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 500 }
+		command = { type = oilpool value = 250 }
+		command = { type = rarematerialspool value = 250 }
+		command = { type = supplies value = 500 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = money value = 100 }
+
+		command = { type = add_division value = infantry }
+	}
+}
+###########
+#  Lebanon
+###########
+event = {
+	id = 71616
+	random = no
+	country = LEB
+
+	trigger = {
+		ai = yes
+		exists = LEB
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		#command = { type = construct which = ic where = 1794 value = 1 } #beirut
+		command = { type = construct which = ic where = 1793 value = 1 } #tripoli
+
+		#power for 2 IC
+		command = { type = free_energy value = 4 }
+		command = { type = free_metal value = 2 }
+		#command = { type = free_oil value = 10 }
+		command = { type = free_rare_materials value = 1 }
+
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 500 }
+		command = { type = oilpool value = 250 }
+		command = { type = rarematerialspool value = 250 }
+		command = { type = supplies value = 500 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = money value = 100 }
+
+		command = { type = add_division value = infantry }
+	}
+}
+###########
+#  Madagascar
+###########
+event = {
+	id = 71617
+	random = no
+	country = MAD
+
+	trigger = {
+		ai = yes
+		exists = MAD
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		command = { type = construct which = ic where = 1134 value = 1 }
+		command = { type = construct which = ic where = 1137 value = 1 }
+
+		#power for 2 IC
+		command = { type = free_energy value = 4 }
+		command = { type = free_metal value = 2 }
+		#command = { type = free_oil value = 10 }
+		command = { type = free_rare_materials value = 1 }
+
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 500 }
+		command = { type = oilpool value = 250 }
+		command = { type = rarematerialspool value = 250 }
+		command = { type = supplies value = 500 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = money value = 100 }
+
+		command = { type = add_division value = infantry }
+	}
+}
+###########
+#  Egypt
+###########
+event = {
+	id = 71618
+	random = no
+	country = EGY
+
+	trigger = {
+		ai = yes
+		exists = EGY
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		command = { type = construct which = ic where = 903 value = 2 } #cairo
+		#command = { type = construct which = ic where = 904 value = 1 } #tanta
+
+		#power for 4 IC
+		command = { type = free_energy value = 8 }
+		command = { type = free_metal value = 4 }
+		#command = { type = free_oil value = 10 }
+		command = { type = free_rare_materials value = 2 }
+
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 500 }
+		command = { type = oilpool value = 250 }
+		command = { type = rarematerialspool value = 250 }
+		command = { type = supplies value = 500 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = money value = 100 }
+
+		command = { type = add_division value = infantry }
+	}
+}
+###########
+#  Libya
+###########
+event = {
+	id = 71619
+	random = no
+	country = LBY
+
+	trigger = {
+		ai = yes
+		exists = LBY
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		command = { type = construct which = ic where = 932 value = 2 }
+		command = { type = construct which = ic where = 924 value = 2 }
+
+		#power for 4 IC
+		command = { type = free_energy value = 8 }
+		command = { type = free_metal value = 4 }
+		#command = { type = free_oil value = 10 }
+		command = { type = free_rare_materials value = 2 }
+
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 500 }
+		command = { type = oilpool value = 250 }
+		command = { type = rarematerialspool value = 250 }
+		command = { type = supplies value = 500 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = money value = 100 }
+
+		command = { type = add_division value = infantry }
+	}
+}
+###########
+#  Burma
+###########
+event = {
+	id = 71620
+	random = no
+	country = BUR
+
+	trigger = {
+		ai = yes
+		exists = BUR
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		command = { type = construct which = ic where = 1296 value = 2 } #Mandalay
+		command = { type = construct which = ic where = 1299 value = 3 } #Rangoon
+		command = { type = construct which = ic where = 1295 value = 2 } #Lashio
+
+		#power for 8 IC
+		command = { type = free_energy value = 16 }
+		command = { type = free_metal value = 8 }
+		#command = { type = free_oil value = 10 }
+		command = { type = free_rare_materials value = 4 }
+
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 500 }
+		command = { type = oilpool value = 250 }
+		command = { type = rarematerialspool value = 250 }
+		command = { type = supplies value = 500 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = money value = 100 }
+
+		command = { type = add_division value = infantry }
+		command = { type = add_division value = infantry }
+	}
+}
+###########
+#  Iceland
+###########
+event = {
+	id = 71621
+	random = no
+	country = ICL
+
+	trigger = {
+		ai = yes
+		exists = ICL
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		command = { type = construct which = ic where = 1 value = 4 }
+
+		#power for 2 IC
+		command = { type = free_energy value = 8 }
+		command = { type = free_metal value = 4 }
+		#command = { type = free_oil value = 10 }
+		command = { type = free_rare_materials value = 2 }
+
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 500 }
+		command = { type = oilpool value = 250 }
+		command = { type = rarematerialspool value = 250 }
+		command = { type = supplies value = 500 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = money value = 100 }
+
+		command = { type = add_division value = infantry }
+	}
+}
+###########
+#  Palestine
+###########
+event = {
+	id = 71622
+	random = no
+	country = PAL
+
+	trigger = {
+		ai = yes
+		exists = PAL
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		command = { type = construct which = ic where = 1799 value = 1 } #Gaza
+		#command = { type = construct which = ic where = 1798 value = 1 } #Tel Aviv
+		command = { type = construct which = ic where = 406 value = 1 } #Eilat
+
+		#power for 4 IC
+		command = { type = free_energy value = 8 }
+		command = { type = free_metal value = 4 }
+		#command = { type = free_oil value = 10 }
+		command = { type = free_rare_materials value = 2 }
+
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 500 }
+		command = { type = oilpool value = 500 }
+		command = { type = rarematerialspool value = 250 }
+		command = { type = supplies value = 500 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = money value = 100 }
+
+		command = { type = add_division value = infantry }
+		command = { type = add_division value = infantry }
+	}
+}
+###########
+#  Israel
+###########
+event = {
+	id = 71623
+	random = no
+	country = ISR
+
+	trigger = {
+		ai = yes
+		exists = ISR
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		command = { type = construct which = ic where = 404 value = 2 } #Haifa
+		command = { type = construct which = ic where = 1797 value = 1 } #Jerusalem
+
+		#power for 4 IC
+		command = { type = free_energy value = 8 }
+		command = { type = free_metal value = 4 }
+		#command = { type = free_oil value = 10 }
+		command = { type = free_rare_materials value = 2 }
+
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 500 }
+		command = { type = oilpool value = 500 }
+		command = { type = rarematerialspool value = 250 }
+		command = { type = supplies value = 500 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = money value = 10000 } #to simulate lots of influence
+
+		command = { type = add_corps value = land where = 404 }
+		command = { type = add_division value = infantry }
+		command = { type = add_corps value = land where = 1797 }
+		command = { type = add_division value = infantry }
+	}
+}
+###########
+#  Jordan
+###########
+event = {
+	id = 71624
+	random = no
+	country = JOR
+
+	trigger = {
+		ai = yes
+		exists = JOR
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		command = { type = construct which = ic where = 1796 value = 2 } #Amman
+		command = { type = construct which = ic where = 1802 value = 1 } #Akaba
+
+		#power for 4 IC
+		command = { type = free_energy value = 8 }
+		command = { type = free_metal value = 4 }
+		#command = { type = free_oil value = 10 }
+		command = { type = free_rare_materials value = 2 }
+
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 500 }
+		command = { type = oilpool value = 500 }
+		command = { type = rarematerialspool value = 250 }
+		command = { type = supplies value = 500 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = money value = 100 }
+
+		command = { type = add_division value = infantry }
+	}
+}
+
+
+###########
+#  Euskadi
+###########
+event = {
+	id = 71626
+	random = no
+	country = EUS
+
+	trigger = {
+		ai = yes
+		exists = EUS
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		command = { type = province_keypoints which = 331 value = -1 } #Bilboa
+		command = { type = province_keypoints which = 330 value = 1 } #Saragossa
+		#command = { type = construct which = ic where = 331 value = 1 } #Bilboa
+
+		#power for 2 IC
+		command = { type = free_energy value = 4 }
+		command = { type = free_metal value = 2 }
+		#command = { type = free_oil value = 10 }
+		command = { type = free_rare_materials value = 1 }
+
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 500 }
+		command = { type = oilpool value = 500 }
+		command = { type = rarematerialspool value = 250 }
+		command = { type = supplies value = 500 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = money value = 100 }
+
+		command = { type = add_division value = infantry }
+	}
+}
+
+###########
+#  Primorsk
+###########
+event = {
+	id = 71629
+	random = no
+	country = PRI
+
+	trigger = {
+		ai = yes
+		exists = PRI
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		command = { type = province_keypoints which = 1367 value = 2 }
+		command = { type = province_keypoints which = 1371 value = -2 }
+		command = { type = construct which = ic where = 1372 value = 6 }
+		command = { type = construct which = ic where = 1373 value = 2 }
+		command = { type = construct which = ic where = 1371 value = 2 }
+		command = { type = construct which = ic where = 1367 value = 2 }
+
+		#power for 16 IC
+		command = { type = free_energy value = 32 }
+		command = { type = free_metal value = 16 }
+		#command = { type = free_oil value = 10 }
+		command = { type = free_rare_materials value = 8 }
+
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 500 }
+		command = { type = oilpool value = 500 }
+		command = { type = rarematerialspool value = 250 }
+		command = { type = supplies value = 500 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = money value = 100 }
+
+		command = { type = add_division value = infantry }
+		command = { type = add_division value = infantry }
+	}
+}
+###########
+#  Turkestan
+###########
+event = {
+	id = 71630
+	random = no
+	country = U17
+
+	trigger = {
+		ai = yes
+		exists = U17
+		control = { province = 1422 data = U17 }
+		control = { province = 1490 data = U17 }
+		control = { province = 1429 data = U17 }
+		control = { province = 1427 data = U17 }
+		control = { province = 1485 data = U17 }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		command = { type = province_keypoints which = 1422 value = 1 } #kaz
+		command = { type = province_keypoints which = 1490 value = 1 } #trk
+		command = { type = province_keypoints which = 1429 value = 1 } #kyg
+		command = { type = province_keypoints which = 1427 value = 1 } #uzb
+		command = { type = province_keypoints which = 1485 value = 1 } #taj
+
+		#command = { type = free_energy value = 20 }
+		#command = { type = free_metal value = 20 }
+		##command = { type = free_oil value = 10 }
+		#command = { type = free_rare_materials value = 5 }
+
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 500 }
+		command = { type = oilpool value = 500 }
+		command = { type = rarematerialspool value = 250 }
+		command = { type = supplies value = 500 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = money value = 100 }
+
+	#	command = { type = add_division value = infantry }
+	#	command = { type = add_division value = infantry }
+	}
+}
+
+###########
+#  Belarus
+###########
+event = {
+	id = 71631
+	random = no
+	country = BLR
+
+	trigger = {
+		ai = yes
+		exists = BLR
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		command = { type = construct which = ic where = 212 value = 5 } #Minsk
+
+		#power for 12 IC
+		command = { type = free_energy value = 24 }
+		command = { type = free_metal value = 12 }
+		#command = { type = free_oil value = 10 }
+		command = { type = free_rare_materials value = 6 }
+
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 500 }
+		command = { type = oilpool value = 500 }
+		command = { type = rarematerialspool value = 250 }
+		command = { type = supplies value = 500 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = money value = 100 }
+
+		command = { type = add_division value = infantry }
+		command = { type = add_division value = infantry }
+	}
+}
+
+###########
+#  India
+###########
+event = {
+	id = 71643
+	random = no
+	country = IND
+
+	trigger = {
+		ai = yes
+		exists = IND
+		NOT = {
+			alliance = { country = IND country = GER }
+			puppet = { country = IND country = GER } 
+			alliance = { country = IND country = JAP }
+			puppet = { country = IND country = JAP } 
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		#command = { type = construct which = ic where =  value =  } #
+
+		#command = { type = free_energy value = 12 }
+		#command = { type = free_metal value = 12 }
+		##command = { type = free_oil value = 10 }
+		#command = { type = free_rare_materials value = 6 }
+
+		command = { type = energypool value = 2000 }
+		command = { type = metalpool value = 1000 }
+		command = { type = oilpool value = 500 }
+		command = { type = rarematerialspool value = 500 }
+		command = { type = supplies value = 1000 }
+		command = { type = manpowerpool value = 20 }
+		command = { type = money value = 100 }
+
+		command = { type = add_division value = infantry }
+		command = { type = add_division value = infantry }
+		command = { type = add_division value = infantry }
+		command = { type = add_division value = infantry }
+		command = { type = add_division value = infantry }
+		command = { type = add_division value = infantry }
+
+		command = { type = transport_pool which = IND value = 30 }
+	}
+}
+###########
+#  Pakistan
+###########
+event = {
+	id = 71644
+	random = no
+	country = PAK
+
+	trigger = {
+		ai = yes
+		exists = PAK
+		NOT = {
+			alliance = { country = PAK country = GER }
+			puppet = { country = PAK country = GER } 
+			alliance = { country = PAK country = JAP }
+			puppet = { country = PAK country = JAP } 
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		command = { type = capital which = 1494 } #FEPKBETA5.5
+
+		command = { type = construct which = ic where = 1494 value = 5 } #
+		command = { type = construct which = ic where = 1480 value = 2 } #
+		command = { type = construct which = ic where = 1481 value = 1 } #
+		command = { type = construct which = ic where = 1483 value = 1 } #
+		command = { type = construct which = ic where = 1475 value = 4 } #
+
+		#enough to power 16 IC every day
+		command = { type = free_energy value = 32 }
+		command = { type = free_metal value = 16 }
+		#command = { type = free_oil value = 10 }
+		command = { type = free_rare_materials value = 8 }
+
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 500 }
+		command = { type = oilpool value = 500 }
+		command = { type = rarematerialspool value = 250 }
+		command = { type = supplies value = 500 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = money value = 100 }
+
+		command = { type = add_division value = infantry }
+		command = { type = add_division value = infantry }
+		command = { type = add_division value = infantry }
+
+		command = { type = transport_pool which = PAK value = 30 } #for oversea province supply
+		command = { type = add_division value = transport } #to ferry units
+	}
+}
+###########
+#  Bangladesh
+###########
+event = {
+	id = 71645
+	random = no
+	country = U56
+
+	trigger = {
+		ai = yes
+		exists = U56
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		command = { type = construct which = ic where = 1285 value = 1 } #
+		command = { type = construct which = ic where = 1286 value = 2 } #
+		command = { type = construct which = ic where = 1288 value = 1 } #
+
+		command = { type = construct which = naval_base where = 1285 value = 2 }
+		command = { type = construct which = air_base where = 1285 value = 2 }
+
+		#enough to power 10 IC every day
+		command = { type = free_energy value = 20 }
+		command = { type = free_metal value = 10 }
+		#command = { type = free_oil value = 10 }
+		command = { type = free_rare_materials value = 5 }
+
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 500 }
+		command = { type = oilpool value = 500 }
+		command = { type = rarematerialspool value = 250 }
+		command = { type = supplies value = 500 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = money value = 100 }
+
+		command = { type = add_division value = infantry }
+		command = { type = add_division value = infantry }
+	}
+}
+###########
+#  Ceylon
+###########
+event = {
+	id = 71646
+	random = no
+	country = U83
+
+	trigger = {
+		ai = yes
+		exists = U83
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		command = { type = construct which = ic where = 1516 value = 1 } #
+
+		#They are rich in rares, no free stuff!
+		#command = { type = free_energy value = 12 }
+		#command = { type = free_metal value = 12 }
+		##command = { type = free_oil value = 10 }
+		#command = { type = free_rare_materials value = 6 }
+
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 500 }
+		command = { type = oilpool value = 250 }
+		command = { type = rarematerialspool value = 250 }
+		command = { type = supplies value = 500 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = money value = 100 }
+
+		command = { type = add_division value = infantry }
+	}
+}
+###########
+#  Singapore
+###########
+event = {
+	id = 71647
+	random = no
+	country = U75
+
+	trigger = {
+		ai = yes
+		exists = U75
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		command = { type = construct which = ic where = 1353 value = 2 } #
+
+		command = { type = construct which = naval_base where = 1353 value = 2 }
+		command = { type = construct which = air_base where = 1353 value = 2 }
+
+		#They are already rich!
+		#command = { type = free_energy value = 12 }
+		#command = { type = free_metal value = 12 }
+		##command = { type = free_oil value = 10 }
+		#command = { type = free_rare_materials value = 6 }
+
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 500 }
+		command = { type = oilpool value = 250 }
+		command = { type = rarematerialspool value = 250 }
+		command = { type = supplies value = 500 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = money value = 100 }
+
+		command = { type = add_division value = infantry }
+	}
+}
+###########
+#  Brunei
+###########
+event = {
+	id = 71648
+	random = no
+	country = BRU
+
+	trigger = {
+		ai = yes
+		exists = BRU
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		command = { type = construct which = ic where = 1646 value = 2 } #
+
+		command = { type = construct which = naval_base where = 1646 value = 2 }
+		command = { type = construct which = air_base where = 1646 value = 2 }
+
+		#power for 2 IC
+		command = { type = free_energy value = 4 }
+		command = { type = free_metal value = 2 }
+		#command = { type = free_oil value = 10 }
+		command = { type = free_rare_materials value = 1 }
+
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 500 }
+		command = { type = oilpool value = 250 }
+		command = { type = rarematerialspool value = 250 }
+		command = { type = supplies value = 500 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = money value = 100 }
+
+		command = { type = add_division value = infantry }
+	}
+}
+###########
+#  Malaysia
+###########
+event = {
+	id = 71649
+	random = no
+	country = MLY
+
+	trigger = {
+		ai = yes
+		exists = MLY
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		command = { type = construct which = ic where = 1352 value = 3 } #
+		command = { type = construct which = ic where = 1351 value = 1 } #
+
+		command = { type = construct which = naval_base where = 1352 value = 2 }
+		command = { type = construct which = air_base where = 1352 value = 2 }
+
+		#They are RICH!
+		#command = { type = free_energy value = 12 }
+		#command = { type = free_metal value = 12 }
+		##command = { type = free_oil value = 10 }
+		#command = { type = free_rare_materials value = 6 }
+
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 500 }
+		command = { type = oilpool value = 250 }
+		command = { type = rarematerialspool value = 250 }
+		command = { type = supplies value = 500 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = money value = 100 }
+
+		command = { type = add_division value = infantry }
+		command = { type = add_division value = infantry }
+
+		command = { type = transport_pool which = MLY value = 300 } #for oversea province supply
+		command = { type = add_division value = transport } #to ferry units
+	}
+}
+###########
+#  Indonesia
+###########
+event = {
+	id = 71650
+	random = no
+	country = INO
+
+	trigger = {
+		ai = yes
+		exists = INO
+		NOT = {
+			alliance = { country = INO country = GER }
+			puppet = { country = INO country = GER } 
+			alliance = { country = INO country = JAP }
+			puppet = { country = INO country = JAP } 
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		command = { type = construct which = ic where = 1631 value = 2 } #Jakarta
+
+		#command = { type = free_energy value = 12 }
+		#command = { type = free_metal value = 12 }
+		##command = { type = free_oil value = 10 }
+		#command = { type = free_rare_materials value = 6 }
+
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 500 }
+		command = { type = oilpool value = 500 }
+		command = { type = rarematerialspool value = 250 }
+		command = { type = supplies value = 500 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = money value = 100 }
+
+		command = { type = add_division value = infantry }
+		command = { type = add_division value = infantry }
+		command = { type = add_division value = infantry }
+
+		command = { type = transport_pool which = INO value = 500 } #for oversea province supply, was 30
+		command = { type = add_division value = transport } #to ferry units
+	}
+}
+###########
+#  Sarawak
+###########
+event = {
+	id = 71651
+	random = no
+	country = SAR
+
+	trigger = {
+		ai = yes
+		exists = SAR
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		command = { type = construct which = ic where = 1644 value = 2 } #
+		command = { type = construct which = ic where = 1647 value = 1 } #
+
+		command = { type = construct which = naval_base where = 1644 value = 2 }
+		#they already have airbases here I think
+
+		#no rares and only 2 IC power because they already have rares! and sometimes oil!
+		#power for 2 IC
+		command = { type = free_energy value = 4 }
+		command = { type = free_metal value = 2 }
+		#command = { type = free_oil value = 10 }
+		#command = { type = free_rare_materials value = 1 }
+
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 500 }
+		command = { type = oilpool value = 250 }
+		command = { type = rarematerialspool value = 250 }
+		command = { type = supplies value = 500 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = money value = 100 }
+
+		command = { type = add_division value = infantry }
+		command = { type = add_division value = infantry }
+
+		command = { type = transport_pool which = SAR value = 300 } #for oversea province supply
+		command = { type = add_division value = transport } #to ferry units
+	}
+}
+###########
+#  India - Independent Government
+###########
+event = {
+	id = 71652
+	random = no
+	country = IND
+
+	trigger = {
+		ai = yes
+		OR = {
+			NOT = {
+				ispuppet = IND
+			}
+			atwar = no
+		}
+		NOT = {
+			alliance = { country = IND country = GER }
+			puppet = { country = IND country = GER } 
+			alliance = { country = IND country = JAP }
+			puppet = { country = IND country = JAP } 
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = set_domestic which = free_market value = 5 }
+		command = { type = set_domestic which = freedom value = 8 }
+		command = { type = set_domestic which = professional_army value = 3 }
+		command = { type = set_domestic which = defense_lobby value = 7 }
+		command = { type = set_domestic which = interventionism value = 5 }
+
+		command = { type = headofstate which = 59031 } #Rajendra Prasad
+		command = { type = headofgovernment which = 59128 } #Jawahar Lal Nehru
+		command = { type = foreignminister which = 59046 } #Jawahar Lal Nehru
+		command = { type = armamentminister which = 59056 }#Sardar Vallabhbhai Patel
+		command = { type = ministerofsecurity which = 59069 } #Bhimrao Ramji Ambedkar
+		#command = { type = ministerofintelligence which =  } #?
+		command = { type = chiefofstaff which = 59092 } #Sardar Baldev Singh
+		command = { type = chiefofarmy which = 59101 } #Kodandera Cariappa
+		command = { type = chiefofnavy which = 59009 } #William E. Parry
+		command = { type = chiefofair which = 59115 } #Subroto Mukherjee
+
+		command = { type = access which = ENG }
+
+		command = { type = transport_pool which = IND value = 30 } #for oversea province supply
+		command = { type = add_division value = transport }
+	}
+}
+###########
+#  Pakistan - Independent Government
+###########
+event = {
+	id = 71653
+	random = no
+	country = PAK
+
+	trigger = {
+		ai = yes
+		OR = {
+			NOT = {
+				ispuppet = PAK
+			}
+			atwar = no
+		}
+		NOT = {
+			alliance = { country = PAK country = GER }
+			puppet = { country = PAK country = GER } 
+			alliance = { country = PAK country = JAP }
+			puppet = { country = PAK country = JAP } 
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = set_domestic which = free_market value = 5 }
+		command = { type = set_domestic which = freedom value = 8 }
+		command = { type = set_domestic which = professional_army value = 3 }
+		command = { type = set_domestic which = defense_lobby value = 7 }
+		command = { type = set_domestic which = interventionism value = 5 }
+
+		command = { type = headofstate which = 564039 } #Mohammad Ali Jinnah
+		command = { type = headofgovernment which = 564042 } #Liaquat Ali Khan
+		command = { type = foreignminister which = 564015 } #Liaquat Ali Khan
+		command = { type = armamentminister which = 564019 } #Zahid Hussain
+		#command = { type = ministerofsecurity which =  } #
+		#command = { type = ministerofintelligence which =  } #
+		#command = { type = chiefofstaff which =  } #
+		command = { type = chiefofarmy which = 564032 } #Muhammad Ayub Khan
+		#command = { type = chiefofnavy which =  } #
+		command = { type = chiefofair which = 564037 } #Asghar Khan
+
+		command = { type = access which = ENG }
+	}
+}
+###########
+#  Algeria
+###########
+event = {
+	id = 71654
+	random = no
+	country = ALG
+
+	trigger = {
+		ai = yes
+		exists = ALG
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		command = { type = construct which = ic where = 949 value = 3 } #
+		command = { type = construct which = ic where = 953 value = 2 } #
+
+		#power for 6 IC
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		#command = { type = free_oil value = 10 }
+		command = { type = free_rare_materials value = 3 }
+
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 500 }
+		command = { type = oilpool value = 250 }
+		command = { type = rarematerialspool value = 250 }
+		command = { type = supplies value = 500 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = money value = 100 }
+
+		command = { type = add_division value = infantry }
+		command = { type = add_division value = infantry }
+	}
+}
+###########
+#  Tunisia
+###########
+event = {
+	id = 71655
+	random = no
+	country = TUN
+
+	trigger = {
+		ai = yes
+		exists = TUN
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		command = { type = construct which = ic where = 939 value = 2 } #
+		command = { type = construct which = ic where = 940 value = 1 } #
+
+		#power for 4 IC
+		command = { type = free_energy value = 8 }
+		command = { type = free_metal value = 4 }
+		#command = { type = free_oil value = 10 }
+		command = { type = free_rare_materials value = 2 }
+
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 500 }
+		command = { type = oilpool value = 250 }
+		command = { type = rarematerialspool value = 250 }
+		command = { type = supplies value = 500 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = money value = 100 }
+
+		command = { type = add_division value = infantry }
+	}
+}
+###########
+#  Morocco
+###########
+event = {
+	id = 71656
+	random = no
+	country = MOR
+
+	trigger = {
+		ai = yes
+		exists = MOR
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		command = { type = construct which = ic where = 958 value = 1 } #
+		command = { type = construct which = ic where = 960 value = 1 } #
+
+		#power for 4 IC
+		command = { type = free_energy value = 8 }
+		command = { type = free_metal value = 4 }
+		#command = { type = free_oil value = 10 }
+		command = { type = free_rare_materials value = 2 }
+
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 500 }
+		command = { type = oilpool value = 250 }
+		command = { type = rarematerialspool value = 250 }
+		command = { type = supplies value = 500 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = money value = 100 }
+
+		command = { type = add_division value = infantry }
+	}
+}
+###########
+#  Siberia
+###########
+event = {
+	id = 71657
+	random = no
+	country = SIB
+
+	trigger = {
+		ai = yes
+		exists = SIB
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		#command = { type = province_keypoints which = 1422 value = 1 } #kaz
+
+		#command = { type = free_energy value = 20 }
+		#command = { type = free_metal value = 20 }
+		##command = { type = free_oil value = 10 }
+		#command = { type = free_rare_materials value = 5 }
+
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 500 }
+		command = { type = oilpool value = 250 }
+		command = { type = rarematerialspool value = 250 }
+		command = { type = supplies value = 500 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = money value = 100 }
+
+		command = { type = add_division value = infantry }
+		command = { type = add_division value = infantry }
+	}
+}
+###########
+#  Transural Republic
+###########
+event = {
+	id = 71658
+	random = no
+	country = TRA
+
+	trigger = {
+		ai = yes
+		exists = TRA
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		#command = { type = province_keypoints which = 1422 value = 1 } #kaz
+
+		#command = { type = free_energy value = 20 }
+		#command = { type = free_metal value = 20 }
+		##command = { type = free_oil value = 10 }
+		#command = { type = free_rare_materials value = 5 }
+
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 500 }
+		command = { type = oilpool value = 250 }
+		command = { type = rarematerialspool value = 250 }
+		command = { type = supplies value = 500 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = money value = 100 }
+
+		command = { type = add_division value = infantry }
+		command = { type = add_division value = infantry }
+	}
+}
+
+
+###########
+#  Macedonia
+###########
+event = {
+	id = 71660
+	random = no
+	country = U24
+
+	trigger = {
+		ai = yes
+		exists = U24
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		command = { type = construct which = ic where = 413 value = 1 }
+
+		command = { type = construct which = air_base where = 413 value = 2 }
+
+		#power for 2 IC
+		command = { type = free_energy value = 4 }
+		command = { type = free_metal value = 2 }
+		#command = { type = free_oil value = 10 }
+		command = { type = free_rare_materials value = 1 }
+
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 500 }
+		command = { type = oilpool value = 250 }
+		command = { type = rarematerialspool value = 250 }
+		command = { type = supplies value = 500 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = money value = 100 }
+
+		command = { type = add_division value = infantry }
+	}
+}
+###########
+#  Slovenia
+###########
+event = {
+	id = 71661
+	random = no
+	country = SLV
+
+	trigger = {
+		ai = yes
+		exists = SLV
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		#command = { type = construct which = ic where = 413 value = 1 }
+
+		command = { type = construct which = air_base where = 380 value = 2 }
+
+		#power for 2 IC
+		command = { type = free_energy value = 4 }
+		command = { type = free_metal value = 2 }
+		#command = { type = free_oil value = 10 }
+		command = { type = free_rare_materials value = 1 }
+
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 500 }
+		command = { type = oilpool value = 250 }
+		command = { type = rarematerialspool value = 250 }
+		command = { type = supplies value = 500 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = money value = 100 }
+
+		command = { type = add_division value = infantry }
+	}
+}
+###########
+#  Croatia
+###########
+event = {
+	id = 71662
+	random = no
+	country = CRO
+
+	trigger = {
+		ai = yes
+		exists = CRO
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		#command = { type = construct which = ic where = 413 value = 1 }
+
+		#power for 6 IC
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		#command = { type = free_oil value = 10 }
+		command = { type = free_rare_materials value = 3 }
+
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 500 }
+		command = { type = oilpool value = 250 }
+		command = { type = rarematerialspool value = 250 }
+		command = { type = supplies value = 500 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = money value = 100 }
+
+		command = { type = add_division value = infantry }
+		command = { type = add_division value = infantry }
+	}
+}
+###########
+#  Azerbaijan
+###########
+event = {
+	id = 71663
+	random = no
+	country = AZB
+
+	trigger = {
+		ai = yes
+		exists = AZB
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		command = { type = construct which = ic where = 1907 value = 2 }
+
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 500 }
+		command = { type = oilpool value = 250 }
+		command = { type = rarematerialspool value = 250 }
+		command = { type = supplies value = 500 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = money value = 100 }
+
+		command = { type = add_division value = infantry }
+	}
+}
+###########
+#  Armenia
+###########
+event = {
+	id = 71664
+	random = no
+	country = ARM
+
+	trigger = {
+		ai = yes
+		exists = ARM
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+
+		#power for 4 IC
+		command = { type = free_energy value = 8 }
+		command = { type = free_metal value = 4 }
+		#command = { type = free_oil value = 10 }
+		command = { type = free_rare_materials value = 2 }
+
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 500 }
+		command = { type = oilpool value = 250 }
+		command = { type = rarematerialspool value = 250 }
+		command = { type = supplies value = 500 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = money value = 100 }
+
+		command = { type = add_division value = infantry }
+	}
+}
+###########
+#  Georgia
+###########
+event = {
+	id = 71665
+	random = no
+	country = GEO
+
+	trigger = {
+		ai = yes
+		exists = GEO
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 500 }
+		command = { type = oilpool value = 250 }
+		command = { type = rarematerialspool value = 250 }
+		command = { type = supplies value = 500 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = money value = 100 }
+
+		command = { type = add_division value = infantry }
+	}
+}
+###########
+#  Kazakhstan
+###########
+event = {
+	id = 71666
+	random = no
+	country = KAZ
+
+	trigger = {
+		ai = yes
+		exists = KAZ
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 500 }
+		command = { type = oilpool value = 250 }
+		command = { type = rarematerialspool value = 250 }
+		command = { type = supplies value = 500 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = money value = 100 }
+
+		command = { type = add_division value = infantry }
+	}
+}
+###########
+#  Turkmenistan
+###########
+event = {
+	id = 71667
+	random = no
+	country = TRK
+
+	trigger = {
+		ai = yes
+		exists = TRK
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 500 }
+		command = { type = oilpool value = 250 }
+		command = { type = rarematerialspool value = 250 }
+		command = { type = supplies value = 500 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = money value = 100 }
+
+		command = { type = add_division value = infantry }
+	}
+}
+###########
+#  Kyrgyzstan
+###########
+event = {
+	id = 71668
+	random = no
+	country = KYG
+
+	trigger = {
+		ai = yes
+		exists = KYG
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 500 }
+		command = { type = oilpool value = 250 }
+		command = { type = rarematerialspool value = 250 }
+		command = { type = supplies value = 500 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = money value = 100 }
+
+		command = { type = add_division value = infantry }
+	}
+}
+###########
+#  Tajikistan
+###########
+event = {
+	id = 71669
+	random = no
+	country = TAJ
+
+	trigger = {
+		ai = yes
+		exists = TAJ
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 500 }
+		command = { type = oilpool value = 250 }
+		command = { type = rarematerialspool value = 250 }
+		command = { type = supplies value = 500 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = money value = 100 }
+
+		command = { type = add_division value = infantry }
+	}
+}
+###########
+#  Uzbekistan
+###########
+event = {
+	id = 71670
+	random = no
+	country = UZB
+
+	trigger = {
+		ai = yes
+		exists = UZB
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 500 }
+		command = { type = oilpool value = 250 }
+		command = { type = rarematerialspool value = 250 }
+		command = { type = supplies value = 500 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = money value = 100 }
+
+		command = { type = add_division value = infantry }
+	}
+}
+###########
+#  Bosnia
+###########
+event = {
+	id = 71671
+	random = no
+	country = BOS
+
+	trigger = {
+		ai = yes
+		exists = BOS
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		command = { type = construct which = ic where = 385 value = 1 }
+
+		#power for 4 IC
+		command = { type = free_energy value = 8 }
+		command = { type = free_metal value = 4 }
+		#command = { type = free_oil value = 10 }
+		command = { type = free_rare_materials value = 2 }
+
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 500 }
+		command = { type = oilpool value = 250 }
+		command = { type = rarematerialspool value = 250 }
+		command = { type = supplies value = 500 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = money value = 100 }
+
+		command = { type = add_division value = infantry }
+		command = { type = add_division value = infantry }
+	}
+}
+
+###########
+#  Burma - Independent Government
+###########
+event = {
+	id = 71679
+	random = no
+	country = BUR
+
+	trigger = {
+		ai = yes
+		OR = {
+			NOT = {
+				ispuppet = BUR
+			}
+			atwar = no
+		}
+		NOT = {
+			alliance = { country = BUR country = JAP }
+			puppet = { country = BUR country = JAP } 
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = set_domestic which = free_market value = 4 }
+		command = { type = set_domestic which = freedom value = 6 }
+		command = { type = set_domestic which = professional_army value = 4 }
+		command = { type = set_domestic which = defense_lobby value = 4 }
+		command = { type = set_domestic which = interventionism value = 2 }
+
+		command = { type = headofstate which = 563012 } #Sao Shwe Thaike
+		command = { type = headofgovernment which = 563054 } #U Nu
+		#command = { type = foreignminister which = 59046 } #Jawahar Lal Nehru
+		#command = { type = armamentminister which = 59056 }#Sardar Vallabhbhai Patel
+		#command = { type = ministerofsecurity which = 59069 } #Bhimrao Ramji Ambedkar
+		#command = { type = ministerofintelligence which =  } #?
+		#command = { type = chiefofstaff which = 59092 } #Sardar Baldev Singh
+		#command = { type = chiefofarmy which = 59101 } #Kodandera Cariappa
+		#command = { type = chiefofnavy which = 59009 } #William E. Parry
+		#command = { type = chiefofair which = 59115 } #Subroto Mukherjee
+	}
+}
+
+
+###########
+#  Kurdistan
+###########
+event = {
+	id = 71684
+	random = no
+	country = KUR
+
+	trigger = {
+		ai = yes
+		exists = KUR
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 500 }
+		command = { type = oilpool value = 250 }
+		command = { type = rarematerialspool value = 250 }
+		command = { type = supplies value = 500 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = money value = 100 }
+
+		command = { type = add_division value = infantry }
+	}
+}
+
+###########
+#  Philippine
+###########
+event = {
+	id = 71685
+	random = no
+	country = PHI
+
+	trigger = {
+		ai = yes
+		exists = PHI
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 500 }
+		command = { type = oilpool value = 250 }
+		command = { type = rarematerialspool value = 250 }
+		command = { type = supplies value = 500 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = money value = 100 }
+
+		command = { type = transport_pool which = PHI value = 500 } #for oversea province supply
+		command = { type = add_division value = transport } #to ferry units
+	}
+}
+
+###########
+#  ADDITION
+###########
+event = {
+	id = 71686
+	random = no
+	country = HUN
+
+	trigger = {
+		ai = yes
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		command = { type = province_keypoints which = 456 value = -1 }
+		command = { type = province_keypoints which = 457 value = -1 }
+		command = { type = province_keypoints which = 492 value = 1 }
+		command = { type = province_keypoints which = 491 value = 1 }
+	}
+}
+
+event = {
+	id = 71687
+	random = no
+	country = ROM
+
+	trigger = {
+		ai = yes
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		command = { type = province_keypoints which = 424 value = -3 }
+		command = { type = province_keypoints which = 431 value = -1 }
+		command = { type = province_keypoints which = 436 value = 1 }
+		command = { type = province_keypoints which = 432 value = 1 }
+		command = { type = province_keypoints which = 426 value = 1 }
+		command = { type = province_keypoints which = 425 value = 1 }
+	}
+}
+
+event = {
+	id = 71688
+	random = no
+	country = MAN
+
+	trigger = {
+		ai = yes
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		#Japanese territory initially, so also in setup events for them
+		command = { type = province_keypoints which = 1397 value = -2 } #Changde
+		command = { type = province_keypoints which = 1202 value = 1 } #Port Arthur
+		#Manchukuo territory initially
+		command = { type = province_keypoints which = 1530 value = 1 } #Heihi, northern Manchuria
+		command = { type = province_keypoints which = 1381 value = 1 } #Mohe, northern Manchuria
+		command = { type = province_keypoints which = 1379 value = -2 } #Harbin
+		command = { type = province_keypoints which = 1390 value = 1 } #Xinjing, capital
+	}
+}
+
+event = {
+	id = 71689
+	random = no
+	country = FIN
+
+	trigger = {
+		ai = yes
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		command = { type = province_keypoints which = 142 value = -2 }
+		command = { type = province_keypoints which = 143 value = 1 }
+		command = { type = province_keypoints which = 140 value = 1 }
+	}
+}

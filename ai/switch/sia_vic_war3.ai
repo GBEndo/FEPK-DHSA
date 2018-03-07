@@ -1,0 +1,17 @@
+garrison = {
+	# Borders with specific countries
+	country_priorities = {
+		SIA = 50
+		ITA = -1
+		GER = -1
+		SPA = -1
+		SPR = -1
+		SCH = -1
+		FRA = -1
+		ENG = -1
+		USA = -1
+		BEL = -1
+		LIB = -1
+	}
+}
+

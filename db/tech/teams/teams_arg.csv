@@ -1,0 +1,26 @@
+ARG;Name;Pic Name;Skill;Start Year;End Year;Speciality1;Speciality2;Speciality3;Speciality4;Speciality5;Speciality6;Speciality7;Speciality8;Speciality9;Speciality10;Speciality11;Speciality12;Speciality13;Speciality14;Speciality15;Speciality16;Speciality17;Speciality18;Speciality19;Speciality20;Speciality21;Speciality22;Speciality23;Speciality24;Speciality25;Speciality26;Speciality27;Speciality28;Speciality29;Speciality30;Speciality31;Speciality32;x
+400;リオ・サンティアーゴ造船所（AFNE）;T400;3;1930;1970;naval_engineering;electronics;naval_artillery;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+401;アリアンサ造船株式会社;T401;3;1930;1970;naval_engineering;technical_efficiency;electronics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+402;ブエノスアイレス鉄道会社;T402;4;1930;1970;industrial_engineering;mechanics;electronics;general_equipment;management;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+403;アルゼンチン商工会議所（CAC）;T403;4;1930;1970;aeronautics;electronics;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+404;エステバン・デ・ルカ兵器廠;T404;5;1930;1970;mechanics;artillery;general_equipment;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+405;造兵廠;T405;5;1941;1970;general_equipment;mechanics;chemistry;artillery;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+406;アルゼンチン軍用機製造工廠（FMA）;T406;3;1930;1970;aeronautics;electronics;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+407;レプソルYPF社;T407;5;1930;1970;industrial_engineering;chemistry;technical_efficiency;management;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+408;アントニオ・パロディ;T408;4;1930;1945;aircraft_testing;fighter_tactics;piloting;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+409;アグスティン・フスト;T409;2;1930;1938;large_unit_tactics;centralized_execution;infantry_focus;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+410;アルゼンチン海軍;T410;5;1942;1960;large_taskforce_tactics;centralized_execution;naval_training;seamanship;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+411;フランチスコ・ベレス;T411;4;1930;1941;small_unit_tactics;decentralized_execution;individual_courage;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+412;空軍大学;T412;4;1939;1970;aircraft_testing;bomber_tactics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+413;ファン・ペロン;T413;4;1941;1960;large_unit_tactics;centralized_execution;combined_arms_focus;individual_courage;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+414;ペドロ・カサル;T414;4;1930;1946;large_taskforce_tactics;centralized_execution;naval_training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+415;ルイ・F・ルロワール;T415;7;1938;1944;chemistry;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+416;ソミサ製鉄所;T416;6;1947;1970;artillery;mechanics;general_equipment;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+417;ビヤマリア造兵廠;T417;5;1937;1970;artillery;general_equipment;chemistry;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+418;原子力委員会;T418;4;1937;1970;mechanics;chemistry;technical_efficiency;management;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+419;アルゼンチン原子力委員会;T419;6;1943;1948;artillery;mechanics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+420;クルト・タンク;T420;7;1970;1955;artillery;electronics;rocketry;aeronautics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+421;国立コルドバ大学;T421;3;1930;1970;mathematics;chemistry;mechanics;management;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+422;陸軍大学;T422;3;1900;1970;training;small_unit_tactics;artillery;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+423;アドルフ・ガーラント;T18;6;1970;1956;centralized_execution;fighter_tactics;aircraft_testing;piloting;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+424;ハンス・ウルリッヒ・ルーデル;T65;7;1970;1954;aircraft_testing;bomber_tactics;piloting;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x

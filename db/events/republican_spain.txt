@@ -1,0 +1,545 @@
+#
+# HoI - Republican Spain Events
+#
+#		written by Henrik F乕raeus
+#
+
+#########################################################################
+#  Spanish Civil War
+#########################################################################
+event = {
+	id = 3100
+	random = no
+	country = SPR
+
+	trigger = {
+		NOT = {
+			exists = SPA
+		}
+		atwar = no
+		OR = {
+			government = communist
+			government = democratic
+		}
+	}
+
+	name = "EVT_3100_NAME"
+	desc = "EVT_3100_DESC"
+	style = 0
+	picture = "SCW"
+
+	date = { day = 17 month = july year = 1936 }
+
+	action_a = {
+		name = "OK" # En la Defensa de la Democracia!
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 6 }
+
+		command = { type = delete_unit which = -1 } #40 total deleted units, since lots of crap is added anyway
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 } #since lots of crap is added anyway
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 } #since lots of crap is added anyway
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 } #since lots of crap is added anyway
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+
+		command = { type = headofstate which = 11033 } #Aza
+		command = { type = headofgovernment which = 11062 } #Largo Caballero
+		command = { type = foreignminister which = 11096 } #Barcia Trelles
+		command = { type = armamentminister which = 11144 } #Giner de los Rios
+		command = { type = ministerofsecurity which = 11189 } #Azcarate
+		command = { type = ministerofintelligence which = 11217 } #Balboa
+		command = { type = chiefofstaff which = 11007 } #Miaja
+		command = { type = chiefofarmy which = 11291 } #Miaja
+		command = { type = chiefofnavy which = 11309 } #Giral
+		command = { type = chiefofair which = 11321 } #Hidalgo de Cisneros
+
+		command = { type = independence which = SPA value = 1 when = 1 }
+
+		command = { type = relation which = ENG value = 10 }
+		command = { type = relation which = FRA value = 10 }
+		command = { type = relation which = SOV value = 5 }
+		command = { type = relation which = USA value = 5 }
+		command = { type = relation which = GER value = -15 }
+		command = { type = relation which = ITA value = -10 }
+		command = { type = relation which = POR value = -10 }
+
+		###################
+
+		#madrid
+		command = { type = add_corps value = land where = 341 }
+		command = { type = add_division value = militia when = 1 }
+
+		#barcelona
+		command = { type = add_corps value = land where = 357 }
+		command = { type = add_division value = militia when = 0 }
+
+		#valencia
+		command = { type = add_corps value = land where = 354 }
+		command = { type = add_division value = militia when = 0 }
+
+		#tarra
+		command = { type = add_corps value = land where = 356 }
+		command = { type = add_division value = militia when = 0 }
+
+		#bilboa
+		command = { type = add_corps value = land where = 331 }
+		command = { type = add_division value = militia when = 1 }
+
+		#oviedo
+		command = { type = add_corps value = land where = 332 }
+		command = { type = add_division value = militia when = 0 }
+
+		#cast
+		command = { type = add_corps value = land where = 355 }
+		command = { type = add_division value = militia when = 0 }
+
+		#guadal
+		command = { type = add_corps value = land where = 342 }
+		command = { type = add_division value = militia when = 0 }
+
+		#bada
+		command = { type = add_corps value = land where = 343 }
+		command = { type = add_division value = militia when = 0 }
+
+		#alba
+		command = { type = add_corps value = land where = 353 }
+		command = { type = add_division value = militia when = 0 }
+
+		#jaen
+		command = { type = add_corps value = land where = 351 }
+		command = { type = add_division value = militia when = 0 }
+
+		#malaga
+		command = { type = add_corps value = land where = 349 }
+		command = { type = add_division value = militia when = 0 }
+
+		#alm
+		command = { type = add_corps value = land where = 350 }
+		command = { type = add_division value = militia when = 0 }
+
+		#murcia
+		command = { type = add_corps value = land where = 352 }
+		command = { type = add_division value = militia when = 0 }
+
+		###################
+
+		command = { type = supplies value = 1500 where = 341 } #madrid
+		command = { type = supplies value = 500 where = 331 } #bilboa
+
+		#removing claims to simiulate partisan activity
+		#command = { type = removecore which = 341 } #madrid
+		#command = { type = removecore which = 354 } #valencia
+		#command = { type = removecore which = 356 } #tarr
+		#command = { type = removecore which = 331 } #bilboa
+		#command = { type = removecore which = 330 } #saragossa
+		#command = { type = removecore which = 329 } #heuvca
+		#command = { type = removecore which = 357 } #barcelona
+		#command = { type = removecore which = 355 }
+		#command = { type = removecore which = 342 }
+		command = { type = removecore which = 332 }
+		command = { type = removecore which = 343 }
+		command = { type = removecore which = 353 }
+		command = { type = removecore which = 351 }
+		command = { type = removecore which = 349 }
+		command = { type = removecore which = 350 }
+		command = { type = removecore which = 352 }
+		command = { type = removecore which = 334 }
+		command = { type = removecore which = 333 }
+		command = { type = removecore which = 340 }
+		command = { type = removecore which = 339 }
+		command = { type = removecore which = 338 }
+		command = { type = removecore which = 346 }
+		command = { type = removecore which = 347 }
+
+		#digging in
+		command = { type = construct which = land_fort where = 357 value = 3 } #barcelona
+		command = { type = construct which = land_fort where = 341 value = 5 } #madrid
+
+		command = { type = dissent value = 20 }
+
+		command = { type = trigger which = 3107 }
+	}
+}
+
+#########################################################################
+#  Communist Coup - Anarchist movement crushed
+#########################################################################
+event = {
+	id = 3101
+	random = no
+	country = SPR
+
+	name = "EVT_3101_NAME"
+	desc = "EVT_3101_DESC"
+	style = 0
+	picture = "SPR_Communist_Coup"
+
+	trigger = {
+		random = 7
+		NOT = {
+			government = communist
+			exists = SPA
+			war = { country = SPA country = SPR }
+		}
+
+	}
+
+	# Note: historical date: may 3, 1937
+	date = { day = 3 month = april year = 1937 }
+	offset = 7
+	deathdate = { day = 3 month = june year = 1937 }
+
+	action_a = {
+		name = "OK"
+		command = { type = set_domestic which = democratic value = 5 } 
+		command = { type = set_domestic which = political_left value = 9 }
+		command = { type = revolt which = 357 } #Barcelona Uprising-Pending balancing
+		command = { type = headofstate which = 11046 }
+		command = { type = headofgovernment which = 11060 }
+		command = { type = foreignminister which = 11092 }
+		command = { type = armamentminister which = 11134 }
+		command = { type = ministerofsecurity which = 11176 }
+		command = { type = ministerofintelligence which = 11217 }
+		command = { type = chiefofstaff which = 11247 }
+		command = { type = chiefofarmy which = 11277 }
+		command = { type = chiefofnavy which = 11305 }
+		command = { type = chiefofair which = 11010 }
+		command = { type = domestic which = freedom value = -1 }
+		command = { type = relation which = SOV value = 20 }
+		command = { type = relation which = ENG value = -10 }
+		command = { type = relation which = FRA value = -10 }
+		command = { type = relation which = GER value = -20 }
+		command = { type = relation which = ITA value = -20 }
+		command = { type = relation which = USA value = -5 }
+		command = { type = relation which = POR value = -15 }
+		command = { type = dissent value = 10 }
+
+		command = { type = sleepleader which = 3007 }
+		command = { type = sleepleader which = 3050 }
+	}
+}
+
+
+#########################################################################
+#  Spanish Civil War - Soviet Intervention
+#########################################################################
+event = {
+	id = 3102
+	random = no
+	country = SPR
+
+	# Triggered by SOV 2623
+
+	name = "EVT_3102_NAME"
+	desc = "EVT_3102_DESC"
+	style = 0
+	picture = "SCW_Soviet Intervention"
+
+	action_a = {
+		name = "OK" # Great!
+		command = { type = money value = -100 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = supplies value = 2500 }
+		command = { type = add_division which = "ソビエト戦車隊" value = armor when = 1 }
+		command = { type = add_division which = "国際旅団" value = infantry when = 0 }
+		command = { type = add_division which = "ソビエト戦闘機隊" value = interceptor when = 1 }
+		command = { type = add_division which = "ソビエト爆撃機隊" value = tactical_bomber when = 1 }
+		command = { type = steal_tech which = SOV }
+
+		command = { type = wakeleader which = 3007 }
+		command = { type = wakeleader which = 3050 }
+	}
+}
+#########################################################################
+#  Spanish Civil War - UK Intervention
+#########################################################################
+event = {
+	id = 3103
+	random = no
+	country = SPR
+
+	# Triggered by UK
+
+	name = "EVT_3103_NAME"
+	desc = "EVT_3103_DESC"
+        picture = "spanish_civil_war_uk"
+	style = 0
+
+	action_a = {
+		name = "OK" # Great!
+		command = { type = manpowerpool value = 10 }
+		command = { type = supplies value = 1500 }
+		command = { type = add_division value = infantry when = 0 }
+	}
+}
+#########################################################################
+#  Spanish Civil War - French Intervention
+#########################################################################
+event = {
+	id = 3104
+	random = no
+	country = SPR
+
+	# Triggered by FRA
+
+	name = "EVT_3104_NAME"
+	desc = "EVT_3104_DESC"
+	style = 0
+	picture = "SCW_French Intervention"
+
+	action_a = {
+		name = "OK" # Great!
+		command = { type = manpowerpool value = 10 }
+		command = { type = supplies value = 1500 }
+		command = { type = add_division value = infantry when = 0 }
+	}
+}
+#########################################################################
+#  Democracy Defended - Germany don't support the Nationalists
+#########################################################################
+event = {
+	id = 3105
+	random = no
+	country = SPR
+
+	# Triggered by GER2023
+
+	name = "EVT_3105_NAME"
+	desc = "EVT_3105_DESC"
+	style = 0
+	picture = "SCW"
+
+	action_a = {
+		name = "OK" # Great!
+		command = { type = manpowerpool value = 40 }
+		command = { type = supplies value = 1500 }
+		command = { type = add_division value = infantry when = 0 }
+		command = { type = add_division value = infantry when = 0 }
+		command = { type = add_division value = infantry when = 0 }
+	}
+}
+#########################################################################
+#  Democracy Defended - Italy don't support the Nationalists
+#########################################################################
+event = {
+	id = 3106
+	random = no
+	country = SPR
+
+	# Triggered by ITA2901
+
+	name = "EVT_3106_NAME"
+	desc = "EVT_3105_DESC"
+	style = 0
+	picture = "SCW"
+
+	action_a = {
+		name = "OK" # Great!
+		command = { type = manpowerpool value = 40 }
+		command = { type = supplies value = 1500 }
+		command = { type = add_division value = infantry when = 0 }
+		command = { type = add_division value = infantry when = 0 }
+		command = { type = add_division value = infantry when = 0 }
+	}
+}
+
+#########################################################################
+#  Spanish Civil War - Follow up event - Ceding oversea provinces to SPA
+#########################################################################
+event = {
+	id = 3107
+	random = no
+	country = SPR
+
+	# triggered by SPR 3100
+
+	name = "EVT_3100_NAME"
+	desc = "EVT_3100_DESC"
+	style = 0
+	picture = "SCW"
+
+	action_a = {
+		name = "OK" # En la Defensa de la Democracia!
+		command = { type = secedeprovince which = SPA value = 535 } # Mallorca
+		command = { type = secedeprovince which = SPA value = 537 } # Ibiza
+		command = { type = secedeprovince which = SPA value = 954 } # Melilla
+		command = { type = secedeprovince which = SPA value = 955 } # Villa Sanjurjo
+		command = { type = secedeprovince which = SPA value = 957 } # Ceuta
+		command = { type = secedeprovince which = SPA value = 961 } # Lanzarote
+		command = { type = secedeprovince which = SPA value = 962 } # Fuerteventura
+		command = { type = secedeprovince which = SPA value = 963 } # Gran Canaria
+		command = { type = secedeprovince which = SPA value = 964 } # Tenerife
+		command = { type = secedeprovince which = SPA value = 965 } # La Palma
+		command = { type = secedeprovince which = SPA value = 967 } # Ifni
+		command = { type = secedeprovince which = SPA value = 971 } # El Aai佖
+		command = { type = secedeprovince which = SPA value = 972 } # Villa Cisneros
+		command = { type = secedeprovince which = SPA value = 1091 } # Bata
+	}
+}
+
+event = {
+	id = 3108
+	random = no
+	country = SPR
+
+	trigger = {
+		event = 3107
+		owned = { province = 341 data = SPR }
+		NOT = {
+			exists = SPA
+			event = 131301 #FEPKBETA4.7
+			event = 131302
+			event = 131303
+			event = 131304
+		}
+	}
+
+	date = { day = 1 month = august year = 1936 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1947 }
+
+	name = "スペイン内戦─勝利"
+	desc = "共和国軍が長い血みどろの闘争の果てに国粋派を破って屈服させると、共和国政府は首都をマドリードに戻した。"
+	picture = "SPA_victory"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = capital which = 341 } #Madrid
+
+		command = { type = belligerence which = SPR value = -10 }
+		# In case any Italian & German units given to SPA survives the war.
+		command = { type = remove_division which = "コンドル軍団爆撃機隊" value = SPR }
+		command = { type = remove_division which = "コンドル軍団戦闘機隊" value = SPR }
+		command = { type = remove_division which = "コンドル軍団戦車隊" value = SPR }
+		command = { type = remove_division which = "リットリオ" value = SPR }
+		command = { type = remove_division which = "ディオ・ロ・ヴォーレ" value = SPR }
+		command = { type = remove_division which = "フィアメ・ネーレ" value = SPR }
+		command = { type = remove_division which = "ペンネ・ネーレ" value = SPR }
+		command = { type = remove_division which = "航空軍団爆撃機隊" value = SPR }
+		command = { type = remove_division which = "航空軍団戦闘機隊" value = SPR }
+		# New Commands removing any surviving "Soviet" Units SPA recive through Anneks of SPR 
+		command = { type = remove_division which = "ソビエト戦車隊" value = SPR }
+		command = { type = remove_division which = "国際旅団" value = SPR }
+		command = { type = remove_division which = "ソビエト戦闘機隊" value = SPR }
+		command = { type = remove_division which = "ソビエト爆撃機隊" value = SPR }
+		# New commands removing the communist and anarchist militias if SPA gets them, when they anneks SPR.
+		command = { type = remove_division which = "CNT民兵隊" value = SPR }
+		command = { type = remove_division which = "POUM民兵隊" value = SPR }
+
+		command = { type = remove_division which = "第1ファランヘ党員隊" value = SPR }
+		command = { type = remove_division which = "第2ファランヘ党員隊" value = SPR }
+
+		#readding claims
+		command = { type = addcore which = 332 }
+		command = { type = addcore which = 343 }
+		command = { type = addcore which = 353 }
+		command = { type = addcore which = 351 }
+		command = { type = addcore which = 349 }
+		command = { type = addcore which = 350 }
+		command = { type = addcore which = 352 }
+		command = { type = addcore which = 334 }
+		command = { type = addcore which = 333 }
+		command = { type = addcore which = 340 }
+		command = { type = addcore which = 339 }
+		command = { type = addcore which = 338 }
+		command = { type = addcore which = 346 }
+		command = { type = addcore which = 347 }
+
+		#digging in
+		command = { type = construct which = land_fort where = 333 value = -4 } #burgos
+		command = { type = construct which = land_fort where = 347 value = -4 } #seville
+		command = { type = construct which = land_fort where = 357 value = -3 } #barcelona
+		command = { type = construct which = land_fort where = 341 value = -5 } #madrid
+
+		#free euskadi
+		command = { type = construct which = naval_base where = 331 value = 2 }
+		command = { type = construct which = air_base where = 331 value = 2 }
+
+		command = { type = removecore which = 331 }
+		command = { type = removecore which = 330 }
+		command = { type = secedeprovince which = EUS value = 330 }
+		command = { type = independence which = EUS value = 1 when = 1 }
+
+		command = { type = sleepevent which = 3004 } #「スペイン内戦 ― 勝利！」 #FEPK1.11
+		command = { type = sleepevent which = 2905 } # 「義勇軍団の帰国！」
+		command = { type = sleepevent which = 2034 } # 「コンドル軍団が凱旋帰国！」
+	}
+}
+
+event = {
+	id = 3109
+	random = no
+	country = SPR
+
+	name = "ゲルニカ空爆"
+	desc = "1937年4月26日、バスク地方の中心地であるゲルニカが、国粋派を支援するナチスによって空爆を受けた。これは史上初めての都市無差別空爆であった。都市無差別空爆の先例として知られるこの空爆は、民主主義国家と国粋派の関係を著しく悪化させた。"
+
+	picture = "condor"
+
+	action_a = {
+		name = "痛ましい事件だ！"
+		command = { type = dissent value = 5 }
+	}
+}
+
+event = {
+	id = 3110
+	random = no
+	country = SPR
+
+	trigger = {
+		war = { country = SPA country = SPR }
+		government = democratic
+		control = { province = 357 data = SPR } #Barcelona
+	}
+
+	name = "バルセロナ・メーデー事件"
+	desc = "1937年5月上旬、カタルーニャで共和派内の無政府主義派と共産主義派が衝突し、500名近くの死傷者を出す惨事となった。共産党側は引き締めのために反対派を暗殺で脅したが、かえって内外の反発を買ったばかりか、地域政党とも共同歩調をとることが困難であった。"
+
+	picture = "partisan_revolt"
+
+	date = { day = 3 month = may year = 1937 }
+	#offset = 2
+	#deathdate = { day = 29 month = december year = 1947 }
+
+	action_a = {
+		name = "OK"
+		command = { type = dissent value = 5 }
+		command = { type = revolt which = 357 } #Barcelona
+	}
+}

@@ -1,0 +1,2195 @@
+#########################################################################
+#
+#		日本・極東追加イベント（既存イベントリプレース）
+#
+#########################################################################
+###### 追加イベント一覧 ############
+#########################################################################
+# ※元イベントは id = 59999 でsleep設定しています
+#########################################################################
+# id = 59900(元43)	日本の降伏
+# id = 59903(元1)	2.26事件
+# id = 59904(元22002)	太平洋戦争（AIイベント）
+# id = 59905(元20)	盧溝橋事件
+# id = 59906(元21)	盧溝橋事件
+# id = 59907(元374)	林森（リン・セン）死去（南京国民政府版）
+# id = 59908(元3802)	南京大虐殺（南京のmanpower減少なし呼び出しに変更）
+# id = 59909(元4100)	南京大虐殺（南京のmanpower減少なしに変更）
+# id = 59910		広西軍閥と国民党が開戦
+# id = 59911		広西軍閥と国民党が和平
+# id = 59912(元3700)	レンドリース－英（ic増加なし版）
+# id = 59913(元3404)	レンドリース－英（ic増加なし版）
+# id = 59914(元3702)	レンドリース－英（ic増加なし版）
+# id = 59915(元3405)	レンドリース－英（ic増加なし版）
+# id = 59916(元3703)	レンドリース－ソ（ic増加なし版）
+# id = 59917(元2626)	レンドリース－ソ（ic増加なし版）
+# id = 59918(元3725)	レンドリース－支（ic増加なし版）
+# id = 59919(元4102)	レンドリース－支（ic増加なし版）
+# id = 59920(元3831)	満洲のシリンホト（錫林浩特）割譲
+# id = 59921(元90)	西安事件（トラウトマン工作イベント対応版） #FEPKBETA4でFEPK_CHIに移動
+# id = 59922(元91)	統一戦線の結成（トラウトマン工作イベント対応版）#FEPKBETA4でFEPK_CHIに移動
+
+# id = 59923		統一戦線の結成(講和処理と同盟処理を分離・FEPK追加イベント)
+
+# id = 59926(元3806)	日本がタイに圧力をかける（南京大虐殺トリガー変更版）
+# id = 59927(元3807)	日本がタイに圧力をかける（南京大虐殺トリガー変更版）
+
+# id = 59929(元345)	トルコの父が逝去した！（司令官・研究機関対応）
+# id = 59930(元22)	ノモンハン事変(支那事変中/日本AI)
+# id = 59931(元22)	ノモンハン事変(支那事変中/日本非AI)
+# id = 59932(元22)	ノモンハン事変(支那事変後/日本AI)
+# id = 59933(元22)	ノモンハン事変(支那事変後/日本非AI)
+# id = 59934(元23)	ノモンハン事変(ソ連、開戦)
+# id = 59935(元23)	ノモンハン事変(ソ連、史実通り)
+
+# id = 59936(元99)	中国内戦
+
+# id = 59938(元80)	パネイ号事件(日本側)
+# id = 59939(元24)	張鼓峰事件(ハサン湖事件)
+# id = 59940		ドイツとの講和を求める(ドイツが日本と同盟かつ日ソ非開戦)
+# id = 59941(元81)	パネイ号事件(アメリカ側)
+# id = 59942		
+# id = 59943		
+# id = 59944		パネイ号事件（賠償金を支払わない場合のアメリカの反応）
+# id = 59950(元2902)	アルバニア併合
+
+# XX = 59901(元3814)	中国降伏連鎖のはじまり＞Reorganization of Chinese Surrender.txtへ
+# XX = 59902(元3819)	傀儡国民政府の環境設定＞Reorganization of Chinese Surrender.txtへ
+# XX = 60060(元4104-9)	中国工場移転
+# XX = 60061(元4104-9)	中国工場移転（日本がプレイヤーなら移転増加）
+# XX = 60062(元4104-9)	中国工場移転（広州を国民党が支配していれば移転）この3つはChinese_Settings.txtに移転
+#
+# id = 59999		元イベントsleep
+#########################################################################
+event = { #FEPKスリープ
+	id = 59900
+	random = no
+	country = JAP
+
+	name = "EVT_43_NAME"
+	desc = "EVT_43_DESC"
+	style = 0
+	picture = "JAP_surrender"
+
+	trigger = {
+		event = 59999
+		war = { country = JAP country = USA }
+		war = { country = JAP country = SOV }
+		war = { country = JAP country = CHI }
+		OR = {
+			lost_national = { country = JAP value = 70 }
+			NOT = {
+				control = { province = 1191 data = JAP }
+				control = { province = 1190 data = JAP }
+				control = { province = 1189 data = JAP }
+				control = { province = 1188 data = JAP }
+				control = { province = 1187 data = JAP }
+				control = { province = 1186 data = JAP }
+				control = { province = 1185 data = JAP }
+				control = { province = 1184 data = JAP }
+				control = { province = 1183 data = JAP }
+				control = { province = 1182 data = JAP }
+				control = { province = 1181 data = JAP }
+				control = { province = 1180 data = JAP }
+			}
+		}
+	}
+
+        date = { day = 1 month = january year = 1939 }
+        offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		ai_chance = 90
+		name = "EVT_43_ACTA"
+		command = { type = money value = -10 }
+		command = { type = end_mastery which = CHI } 
+		command = { type = end_mastery which = U87 } 
+		command = { type = end_mastery which = U74 } 
+		command = { type = end_mastery which = MAN } 
+		command = { type = end_mastery which = MEN } 
+		command = { type = end_mastery which = PHI } 
+		command = { type = end_mastery which = INO } 
+		command = { type = end_mastery which = SIA } 
+		command = { type = end_mastery which = CSX } 
+		command = { type = end_mastery which = CGX } 
+		command = { type = end_mastery which = CXB } 
+		command = { type = end_mastery which = CYN } 
+		command = { type = end_mastery which = CHC } 
+		command = { type = end_mastery which = SIK } 
+		command = { type = end_mastery which = TIB } 
+		command = { type = secedeprovince which = USA value = 1193 } # South Korea + islands
+		command = { type = secedeprovince which = USA value = 1194 }
+		command = { type = secedeprovince which = USA value = 1195 }
+		command = { type = secedeprovince which = USA value = 1196 }
+		command = { type = secedeprovince which = USA value = 1197 }
+		command = { type = secedeprovince which = USA value = 1198 }
+		command = { type = secedeprovince which = USA value = 1199 }
+		command = { type = secedeprovince which = ENG value = 1315 } # Hong Kong
+		command = { type = secedeprovince which = CHI value = 1202 } # Dalian + Taiwan
+		command = { type = secedeprovince which = CHI value = 1322 }
+		command = { type = secedeprovince which = CHI value = 1323 }
+		command = { type = secedeprovince which = CHI value = 1324 }
+		command = { type = secedeprovince which = USA value = 1376 } # North Korea
+		command = { type = secedeprovince which = USA value = 1391 }
+		command = { type = secedeprovince which = USA value = 1392 }
+		command = { type = secedeprovince which = USA value = 1393 }
+		command = { type = secedeprovince which = USA value = 1201 }
+		command = { type = secedeprovince which = USA value = 1200 }
+		command = { type = secedeprovince which = FRA value = 1306 } #Indochina
+		command = { type = secedeprovince which = FRA value = 1326 }
+		command = { type = secedeprovince which = FRA value = 1328 }
+		command = { type = secedeprovince which = FRA value = 1329 }
+		command = { type = secedeprovince which = FRA value = 1332 }
+		command = { type = secedeprovince which = FRA value = 1333 }
+		command = { type = secedeprovince which = FRA value = 1334 }
+		command = { type = secedeprovince which = FRA value = 1335 }
+		command = { type = secedeprovince which = FRA value = 1336 }
+		command = { type = secedeprovince which = FRA value = 1337 }
+		command = { type = secedeprovince which = FRA value = 1338 }
+		command = { type = secedeprovince which = FRA value = 1339 }
+		command = { type = secedeprovince which = FRA value = 1340 }
+		command = { type = secedeprovince which = FRA value = 1341 }
+		command = { type = domestic which = political_left value = 1 }
+		command = { type = domestic which = freedom value = 1 }
+		command = { type = domestic which = democratic value = 2 }
+		command = { type = domestic which = defense_lobby value = -5 }
+		command = { type = trigger which = 44 }
+		command = { type = trigger which = 45 }
+		command = { type = secedeprovince which = HOL value = 1354 } #Indonesia
+		command = { type = secedeprovince which = HOL value = 1355 }
+		command = { type = secedeprovince which = HOL value = 1356 }
+		command = { type = secedeprovince which = HOL value = 1357 }
+		command = { type = secedeprovince which = HOL value = 1358 }
+		command = { type = secedeprovince which = HOL value = 1359 }
+		command = { type = secedeprovince which = HOL value = 1628 }
+		command = { type = secedeprovince which = HOL value = 1629 }
+		command = { type = secedeprovince which = HOL value = 1630 }
+		command = { type = secedeprovince which = HOL value = 1631 }
+		command = { type = secedeprovince which = HOL value = 1632 }
+		command = { type = secedeprovince which = HOL value = 1633 }
+		command = { type = secedeprovince which = HOL value = 1634 }
+		command = { type = secedeprovince which = HOL value = 1635 }
+		command = { type = secedeprovince which = HOL value = 1636 }
+		command = { type = secedeprovince which = HOL value = 1637 }
+		command = { type = secedeprovince which = HOL value = 1638 }
+		command = { type = secedeprovince which = HOL value = 1639 }
+		command = { type = secedeprovince which = HOL value = 1640 }
+		command = { type = secedeprovince which = HOL value = 1641 }
+		command = { type = secedeprovince which = HOL value = 1642 }
+		command = { type = secedeprovince which = HOL value = 1643 }
+		command = { type = secedeprovince which = HOL value = 1645 }
+		command = { type = secedeprovince which = HOL value = 1648 }
+		command = { type = secedeprovince which = HOL value = 1649 }
+		command = { type = secedeprovince which = HOL value = 1650 }
+		command = { type = secedeprovince which = HOL value = 1651 }
+		command = { type = secedeprovince which = HOL value = 1652 }
+		command = { type = secedeprovince which = HOL value = 1653 }
+		command = { type = secedeprovince which = HOL value = 1654 }
+		command = { type = secedeprovince which = HOL value = 1655 }
+		command = { type = secedeprovince which = HOL value = 1656 }
+		command = { type = secedeprovince which = HOL value = 1657 }
+		command = { type = secedeprovince which = HOL value = 1659 }
+		command = { type = secedeprovince which = HOL value = 1660 }
+		command = { type = secedeprovince which = HOL value = 1661 }
+		command = { type = secedeprovince which = HOL value = 1662 }
+		command = { type = secedeprovince which = HOL value = 1663 }
+		command = { type = secedeprovince which = HOL value = 1664 }
+		command = { type = secedeprovince which = HOL value = 1665 }
+		command = { type = secedeprovince which = HOL value = 1673 }
+		command = { type = secedeprovince which = HOL value = 1674 }
+		command = { type = trigger which = 55500 }
+		command = { type = trigger which = 59901 }
+
+	}
+	action_b = {
+		ai_chance = 10
+		name = "EVT_43_ACTB"
+		#command = { type = sleepevent which = 44 }
+		command = { type = sleepevent which = 131521 } # FEPK変更部分
+		#command = { type = sleepevent which = 45 }
+		command = { type = sleepevent which = 131520 } # FEPK変更部分
+		command = { type = dissent value = 5 }
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = domestic which = freedom value = -1 }
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = domestic which = defense_lobby value = 1 }
+	}
+}
+
+#########################################################################
+#  The 2-2-6 incident (Japan)
+#########################################################################
+event = {
+	id = 59903
+	random = no
+	country = JAP
+
+	name = EVT_1_NAME
+	desc = EVT_1_DESC
+	style = 0
+	picture = "226"
+
+	trigger = {
+		event = 59999
+		OR = {
+			event = 55613
+			event = 55620
+			NOT = { event = 55610 }
+		}
+		atwar = no
+		NOT = {	ispuppet = JAP }
+	}
+
+        date = { day = 25 month = february year = 1936 }
+
+	action_a = {
+		ai_chance = 90
+		name = EVT_1_ACTA
+		command = { type = dissent value = 1 }
+		command = { type = domestic which = democratic		value = -2 }
+		command = { 
+			trigger = {
+				NOT = { domestic = { type = political_left value = 5 } }
+			}
+			type = domestic which = political_left	value = 1 }
+		command = { type = domestic which = defense_lobby	value = -1 }
+		command = { type = domestic which = interventionism	value = -1 }
+		command = { type = sleepleader which = 101382 } # Nagata
+		command = { type = sleepleader which = 101386 } # Nagata
+		command = { type = sleepleader which = 101383 } # Watanabe
+		command = { type = sleepminister which = 5555 } # Nagata
+		command = { type = sleepminister which = 5556 } # Nagata
+		command = { type = sleepminister which = 5557 } # Nagata
+		command = { type = sleepminister which = 5551 } # Takahashi
+		command = { type = sleepteam which = 1938 }     # Nagata
+		command = { type = trigger which = 55400 } #->皇道派の壊滅
+		command = { type = setflag	which = Toseiha }
+		command = { type = clrflag	which = Nagata }
+	}
+	action_b = {
+		ai_chance = 10
+		name = EVT_1_ACTB
+		command = { type = dissent value = 3 }
+		command = { type = domestic which = democratic		value = -4 }	#  NOTE: The B choice effects are stronger than A by design
+		command = { type = domestic which = political_left	value = -1 }	#  This represent a greater shift towards the military and
+		command = { type = domestic which = freedom		value = -2 }	#  right wing control.
+		command = { type = domestic which = interventionism	value = 1 }
+		command = { type = domestic which = defense_lobby	value = 1 }
+		command = { type = headofstate which = 5013 }		#NS天皇
+		command = { type = headofgovernment which = 5550 }	# Masaki
+		command = { type = foreignminister which = 5053 }
+		command = { type = armamentminister which = 5080 }
+		command = { type = ministerofsecurity which = 5105 }
+		command = { type = ministerofintelligence which = 5134 }
+		command = { type = chiefofstaff which = 5523 }  	# Araki
+		command = { type = chiefofarmy which = 5531 }   	# Araki
+		command = { type = chiefofnavy which = 5172 }
+		command = { type = chiefofair which = 5183 }
+		command = { type = sleepleader which = 101382 } # Nagata
+		command = { type = sleepleader which = 101386 } # Nagata
+		command = { type = sleepleader which = 101383 } # Watanabe
+		command = { type = sleepminister which = 5555 } # Nagata
+		command = { type = sleepminister which = 5556 } # Nagata
+		command = { type = sleepminister which = 5557 } # Nagata
+		command = { type = sleepminister which = 5551 } # Takahashi
+		command = { type = waketeam which = 1937 }      # Obata
+		command = { type = sleepteam which = 1938 }     # Nagata
+		command = { type = sleepminister which = 5011 } # 大本営
+		command = { type = trigger which = 55401 } #->統制派の壊滅
+		command = { type = relation which = CHI value = 20 }
+		command = { type = relation which = SOV value = -100 }
+		command = { type = setflag	which = Kodoha }
+		command = { type = clrflag	which = Toseiha }
+		command = { type = clrflag	which = Nagata }
+	}
+}
+################
+# Pacific war
+#############################################
+event = {#FEPKシナリオファイルでスリープ済み  #138023でreplace
+	id = 59904
+	random = no 
+	country = JAP
+	
+	trigger = {
+		event = 59999
+		ai = yes
+		NOT = { ispuppet = JAP }
+		puppet = { country = MAN country = JAP }		# 満洲が日本の属国
+		carrier = 4						# 空母四隻以上残存
+		NOT = { alliance = { country = JAP country = USA } }
+		NOT = { alliance = { country = JAP country = ENG } }
+		NOT = { alliance = { country = JAP country = HOL } }
+		OR = {
+			AND = {
+				year = 1941
+				NOT = { year = 1942 }
+				event = 3800 # Oil Embargo
+				OR = {
+					AND = {
+						month = 1
+						NOT = { month = 2 }
+						random = 5
+					}
+					AND = {
+#						month = 10
+						month = 11
+						random = 20
+					}
+				}
+			}
+			AND = {
+				year = 1942
+				event = 3800 # Oil Embargo
+				OR = {
+					AND = {
+						month = 1
+						NOT = { month = 2 }
+						random = 40
+					}
+					AND = {
+#						month = 10
+						month = 11
+						random = 50
+					}
+				}
+			}
+			AND = {
+				year = 1942
+				atwar = no
+				OR = {
+					AND = {
+						month = 1
+						NOT = { month = 2 }
+						random = 15
+					}
+					AND = {
+#						month = 10
+						month = 11
+						random = 20
+					}
+				}
+			}
+			war = { country = JAP country = USA }
+			war = { country = JAP country = ENG }
+			war = { country = JAP country = AST }
+			war = { country = JAP country = NZL }
+			war = { country = JAP country = PHI }
+			war = { country = JAP country = FRA }
+		}
+	}
+
+	name = "AI_EVENT"
+	style = 0	
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		command = { type = sleepevent which = 22000 }
+		command = { type = sleepevent which = 22001 }
+		command = { type = sleepevent which = 22003 }
+		command = { type = war which = USA }
+		command = { type = war which = ENG }
+		command = { type = war which = HOL }
+	}
+}
+#########################################################################
+#  Marco Polo Bridge Incident (Japan, China)
+#########################################################################
+
+event = {
+	id = 59905
+	random = no
+	country = JAP
+
+	# Historical event july 1937
+        # http://ibiblio.org/pha/monos/144/144chap2.html
+
+	name = EVT_20_NAME
+	desc = EVT_20_DESC
+	style = 0
+	picture = "Marco_Polo"
+
+	trigger = {
+		event = 59999
+		exists = CHI
+		control = { province = 1203 data = JAP }
+		control = { province = 1397 data = JAP }
+		control = { province = 1398 data = JAP }
+		random = 50
+		NOT = {
+			war = { country = JAP country = CHI }
+			puppet = { country = JAP country = CHI }
+			war = { country = JAP country = CSX }
+			puppet = { country = JAP country = CSX }
+			war = { country = JAP country = CGX }
+			puppet = { country = JAP country = CGX }
+			alliance = { country = JAP country = CHI }
+			alliance = { country = JAP country = CSX }
+			alliance = { country = JAP country = CGX }
+			alliance = { country = CHI country = SOV }
+			alliance = { country = CHI country = USA }
+			alliance = { country = CHI country = ENG }
+			control = { province = 1205 data = JAP } 
+			war = { country = JAP country = SOV }
+		}
+	}
+
+        date = { day = 0 month = june year = 1937 }
+        offset = 10
+	deathdate = { day = 29 month = august year = 1937 }
+
+	action_a = {
+		name = EVT_20_ACTA
+		ai_chance = 99 #95
+		command = { type = dissent value = -10 }
+#		command = { type = war which = CHI }
+		command = { type = ai_prepare_war which = CHI }
+		command = { type = war which = CSX }
+#		command = { type = war which = CGX }
+		command = { type = belligerence which = JAP value = -50 } #The DoWs above is for free
+		command = { type = relation which = USA value = -10 }
+		command = { type = relation which = ENG value = -10 }
+		command = { type = relation which = SOV value = -10 }
+		command = { type = relation which = CHI value = -50 }
+		command = { type = relation which = CSX value = -50 }
+		command = { type = relation which = CGX value = -50 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = manpowerpool value = 50 }
+		command = { type = trigger which = 59906 }
+
+	}
+	action_b = {
+		name = EVT_20_ACTB
+		ai_chance = 1 #5
+	#	command = { type = dissent value = 3 }
+		command = { type = dissent value = 15 } #FEPKBETA4.6
+		command = { type = belligerence which = JAP value = -50 } #Peace, Love and Understanding
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = domestic which = defense_lobby value = -1 }
+		command = { type = sleepevent	which = 55705 }#
+		command = { type = sleepevent	which = 55706 }#
+		command = { type = sleepevent	which = 55707 }#
+	}
+}
+
+
+event = {
+	id = 59906
+	random = no
+	country = CHI
+
+	name = EVT_21_NAME
+	desc = EVT_21_DESC
+	style = 0
+	picture = "Marco_Polo"
+
+	action_a = {
+		name = EVT_21_ACTA
+		command = { type = domestic which = freedom value = -1 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = construct which = land_fort where = 1236 value = 2 }
+		command = { type = construct which = land_fort where = 1238 value = 1 }
+		command = { type = secedeprovince which = JAP value = 1237 }
+		#command = { type = ai_prepare_war	which = JAP }
+		command = { type = trigger which = 55702 }
+	}
+}
+#####################################
+	
+### Lin Sen finally dies
+event = {
+	id = 59907
+	random = no
+	country = U87
+	style = 0
+
+	trigger = {
+		event = 59999
+		OR = {
+			event = 374
+			AND = {
+				random = 95
+				headofstate = 59301
+			}
+		}
+	}
+
+	date = { day = 1 month = august year = 1943 }
+	offset = 1 
+	deathdate = { day = 29 month = august year = 1943 }
+
+	name = "EVT_101_NAME"
+	desc = "EVT_101_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = sleepminister which = 52001 } # Lin Sen HoS(PA)
+		command = { type = sleepminister which = 52023 } # Lin Sen HoS (SC)
+		command = { type = sleepminister which = 52039 } # Lin Sen ForeignMinister 
+		command = { type = sleepminister which = 59301 } # Lin Sen HoS(PA)
+		command = { type = sleepminister which = 59323 } # Lin Sen HoS (SC)
+		command = { type = sleepminister which = 59339 } # Lin Sen ForeignMinister (SC)
+	}
+}
+#########################################################################
+#  The Nanking Massacre
+#########################################################################
+event = { 
+	id = 59908
+	random = no
+	country = JAP
+	
+	trigger = {
+		event = 59999
+		war = { country = JAP country = CHI }
+		control = { province = 1235 data = -1 } # We control Nanjing
+	}
+	
+	name = "EVT_59908_NAME" #FEPKBETA4
+	desc = "EVT_3802_DESC"
+	style = 0
+	picture = "Nanking"
+	
+	date = { day = 2 month = january year = 1936 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action_a = {
+		name = "ACTIONNAME3802A" # That will hurt us more than them!
+		command = { type = relation which = CHI value = -50 }
+		command = { type = relation which = USA value = -20 }
+		command = { type = relation which = CGX value = -30 }
+		command = { type = belligerence which = JAP value = 10 }	
+		command = { type = province_manpower which = 1235 value = 15 }
+		command = { type = trigger which = 59909 } # CHI
+		command = { type = trigger which = 3724 } # USA
+	}
+}
+#########################################################################
+#  The Nanking Massacre
+#########################################################################
+event = {
+	id = 59909
+	random = no
+	country = CHI
+
+	# Triggered by JAP 3802
+
+	name = "EVT_59908_NAME" #FEPKBETA4
+	desc = "EVT_4100_DESC"
+	style = 0
+	picture = "Nanking"
+
+	action_a = {
+		name = "OK" # Tragedy!
+		command = { type = relation which = CGX value = 15 }
+		command = { type = relation which = CSX value = 20 }
+		command = { type = province_manpower which = 1235 value = 4 }
+		command = { type = dissent value = -30 } # National cementation
+		command = { type = capital which = 1280 } # Chongqing
+		command = { type = sleepevent	which = 55710 }#
+	}
+}
+################
+# Guangxi Clique vs China war
+########################################
+event = {
+	id = 59910  # This event belonged to CHI and has been moved event 35570 saved for this spot
+	random = no
+	country = CGX
+
+	trigger = {
+		ai = yes
+		exists = CHI
+		atwar = no
+		OR = {
+			AND = {
+				event = 60716
+				event = 67003
+				NOT = { 
+					event = 60705 
+					event = 67008 
+				}
+				random = 2
+			}
+			AND = {
+				event = 60716
+				event = 67003
+				event = 60705
+				NOT = { event = 67008 }
+				random = 5
+			}
+			AND = {
+				event = 60708
+				random = 1
+			}
+		}
+		NOT = { event = 21 }
+		NOT = { war = { country = JAP country = CHI } }
+		NOT = { alliance = { country = CHI country = CGX } }
+	}
+
+
+	name = "AI_EVENT"
+	style = 0
+
+	date = { day = 1 month = may year = 1936 }
+	offset = 9
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "OK"
+		command = { type = war which = CHI }
+		command = { type = local_setflag which = CGXInvadeCHI }
+	}
+}
+################
+# China offers Guangxi Clique peace
+#############################################
+event = {
+	id = 59911
+	random = no
+	country = CHI
+
+#	trigger = {
+#		war = { country = CGX country = CHI }
+#		#NOT = { war = { country = JAP country = CHI } }
+#		#NOT = { war = { country = JAP country = CGX } }
+#		lost_vp = { country = CGX value = 50 }
+#	}
+
+	name = "EVT_27008_NAME"
+	desc = "EVT_27008_DESC"
+	style = 0
+	picture = "polikarpov"
+
+#	date = { day = 0 month = january year = 1935 }
+#	offset = 1
+#	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "EVT_27008_A"
+#		ai_chance = 99
+		#command = { type = trigger which = 27009 }
+		command = { type = inherit which = CGX }
+		#CGX指揮官
+		command = { type = wakeleader which = 50000 }
+		command = { type = wakeleader which = 50031 }
+		command = { type = wakeleader which = 50186 }
+		command = { type = wakeleader which = 50374 }
+		#CGX閣僚
+		command = { type = wakeminister which = 52231 }
+		command = { type = wakeminister which = 52232 }
+		command = { type = wakeminister which = 52234 }
+		command = { type = wakeminister which = 52235 }
+		command = { type = wakeminister which = 52236 }
+		command = { type = wakeminister which = 52237 }
+		command = { type = wakeminister which = 52238 }
+		command = { type = wakeminister which = 52239 }
+		command = { type = ai which = "switch/CHI_After_CGX.ai" }
+	}
+	
+#	action_b = {
+#		name = "EVT_27008_B"
+#		ai_chance = 1
+#		command = { type = war which = CGX }
+#		command = { type = local_setflag which = CHI_Aggresion_Asia }
+#	}
+}
+
+#########################################################################
+#  The Lend-Lease Act
+#########################################################################
+event = {
+	id = 59912
+	random = no
+	country = USA
+
+	trigger = {
+		event = 59999
+                event = 32 #The Arsenal of Democracy
+		OR = {
+				war = { country = USA country = GER }
+				AND = {
+						war = { country = ENG country = GER }
+						government = democratic
+						}
+			}
+			AND = {
+					control = { province = 9 data = ENG }
+					control = { province = 10 data = ENG }
+					control = { province = 13 data = ENG }
+					control = { province = 14 data = ENG }
+					control = { province = 16 data = ENG }
+					control = { province = 19 data = ENG }
+			}
+}
+
+
+	name = "EVT_3700_NAME"
+	desc = "EVT_3700_DESC"
+	style = 0
+	picture = "lend_lease"
+
+	date = { day = 10 month = january year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "ACTIONNAME3700A" # Pass the Act
+		ai_chance = 98
+		command = { type = supplies value = -5000 }
+		command = { type = oilpool value = -2500 }
+		command = { type = metalpool value = -2500 }
+		command = { type = relation which = ENG value = 15 }
+		command = { type = relation which = FRA value = 15 }
+		command = { type = relation which = CHI value = 15 }
+		command = { type = relation which = SOV value = 10 }
+		command = { type = relation which = GER value = -15 }
+		command = { type = relation which = ITA value = -15 }
+		command = { type = relation which = JAP value = -15 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = trigger which = 59913 } # UK
+	}
+	action_b = {
+		name = "ACTIONNAME3700B" # Remain Completely Neutral
+		ai_chance = 2
+		command = { type = relation which = ENG value = -15 }
+		command = { type = relation which = FRA value = -15 }
+		command = { type = relation which = CHI value = -15 }
+		command = { type = relation which = SOV value = -10 }
+		command = { type = relation which = GER value = 15 }
+		command = { type = relation which = ITA value = 15 }
+		command = { type = relation which = JAP value = 15 }
+		command = { type = domestic which = interventionism value = -1 }
+	}
+}
+#########################################################################
+#  The Lend-Lease Act - The First Shipment
+#########################################################################
+event = {
+	id = 59913
+	random = no
+	country = ENG
+
+	# Triggered by USA 59912
+
+	name = "EVT_3404_NAME"
+	desc = "EVT_3404_DESC"
+	style = 0
+	picture = "lend_lease"
+
+	action_a = {
+		name = "OK" # Excellent!
+		command = { type = supplies value = 5000 }
+		command = { type = oilpool value = 2500 }
+		command = { type = metalpool value = 2500 }
+
+#		command = { type = construct which = ic where = 9 value = 1 } #
+#		command = { type = construct which = ic where = 10 value = 1 } #
+#		command = { type = construct which = ic where = 13 value = 1 } #
+#		command = { type = construct which = ic where = 14 value = 1 } #
+#		command = { type = construct which = ic where = 16 value = 1 } #
+#		command = { type = construct which = ic where = 19 value = 1 } #
+	}
+}
+#########################################################################
+#  Lend-Lease Shipment to the UK
+#########################################################################
+event = {
+	id = 59914
+	random = no
+	persistent = yes
+	country = USA
+
+
+	trigger = {
+		event = 59999
+		war = { country = ENG country = GER }
+                random = 4 # 4% chance every 8 days
+		NOT = { war = { country = ENG country = USA } }
+		event = 59912 # English event for Lend-Lease Act
+		AND = {
+					control = { province = 9 data = ENG }
+					control = { province = 10 data = ENG }
+					control = { province = 13 data = ENG }
+					control = { province = 14 data = ENG }
+					control = { province = 16 data = ENG }
+					control = { province = 19 data = ENG }
+			}
+	}
+
+	name = "EVT_3702_NAME"
+	desc = "EVT_3702_DESC"
+	style = 0
+	picture = "lend_lease"
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 8
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "ACTIONNAME3702A" # Send more supplies
+		ai_chance = 85
+		command = { type = supplies value = -3000 }
+		command = { type = oilpool value = -1000 }
+		command = { type = metalpool value = -1000 }
+		command = { type = relation which = ENG value = 5 }
+		command = { type = trigger which = 59915 } # UK
+	}
+	action_b = {
+		name = "ACTIONNAME3702B" # Not this time
+		ai_chance = 15
+		command = { type = relation which = ENG value = -5 }
+	}
+}
+#########################################################################
+#  A Lend-Lease Shipment Arrives from the USA
+#########################################################################
+event = {
+	id = 59915
+	random = no
+	country = ENG
+	persistent = yes
+
+	# Triggered by USA 59914. NOTE: may be triggered several times.
+
+	name = "EVT_3405_NAME"
+	desc = "EVT_3405_DESC"
+	style = 0
+	picture = "lend_lease"
+
+	action_a = {
+		name = "OK" # Excellent!
+		command = { type = supplies value = 3000 }
+		command = { type = oilpool value = 1000 }
+		command = { type = metalpool value = 1000 }
+#		command = { type = construct which = ic where = 9 value = 1 } #
+#		command = { type = construct which = ic where = 10 value = 1 } #
+#		command = { type = construct which = ic where = 13 value = 1 } #
+#		command = { type = construct which = ic where = 14 value = 1 } #
+#		command = { type = construct which = ic where = 16 value = 1 } #
+#		command = { type = construct which = ic where = 19 value = 1 } #
+	}
+}
+#########################################################################
+#  Lend-Lease Shipment to the USSR
+#########################################################################
+event = {
+	id = 59916
+	random = no
+	country = USA
+	persistent = yes
+
+	trigger = {
+		event = 59999
+		war = { country = SOV country = GER }
+                random = 5 # 5% chance every 12 days
+		event = 59912 # Lend-Lease Act passed
+                control = { province = 1416 data = SOV } #Irkutsk 
+                control = { province = 1552 data = SOV } #Omsk
+                control = { province = 1548 data = SOV } #Novosibirsk
+		OR = {
+                	control = { province = 154 data = SOV } #Archangelsk
+                	control = { province = 1789 data = ENG } #In Persia
+		}
+		NOT = {
+			war = { country = SOV country = USA }
+		}
+	}
+
+	name = "EVT_3703_NAME"
+	desc = "EVT_3703_DESC"
+	style = 0
+	picture = "Lend_Lease_SOV"
+
+	date = { day = 1 month = april year = 1941 }
+	offset = 12 # Check for trigger conditions every 12 days
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "ACTIONNAME3703A" # Send more supplies
+		ai_chance = 80
+		command = { type = supplies value = -10000 }
+		command = { type = rarematerialspool value = -500 }
+		command = { type = relation which = SOV value = 1 }
+		command = { type = trigger which = 59917 } # USSR
+	}
+	action_b = {
+		name = "ACTIONNAME3703B" # Not this time
+		ai_chance = 20
+		command = { type = relation which = SOV value = -5 }
+	}
+}
+#########################################################################
+#  A Lend-Lease Shipment Arrives from the USA
+#########################################################################
+event = {
+	id = 59917
+	random = no
+	country = SOV
+	persistent = yes
+	# Triggered by USA 59916. NOTE: may be triggered several times.
+
+	name = "EVT_2626_NAME"
+	desc = "EVT_2626_DESC"
+	style = 0
+	picture = "Lend_Lease_SOV"
+
+	action_a = {
+		name = "OK" # Excellent!
+		command = { type = supplies value = 10000 }
+		command = { type = rarematerialspool value = 500 }
+#		command = { type = construct which = ic where = 1416 value = 2 } #Irkutsk
+#		command = { type = construct which = ic where = 1552 value = 2 } #Omsk
+#		command = { type = construct which = ic where = 1548 value = 2 } #Novosibirsk
+	}
+}
+#########################################################################
+#  Lend-Lease Shipment to Nationalist China
+#########################################################################
+event = {
+	id = 59918
+	random = no
+	country = USA
+	persistent = yes
+
+	trigger = {
+		event = 59999
+		war = { country = CHI country = JAP }
+                random = 6 # 6% chance every 15 days
+		event = 59912 # Lend-Lease Act passed
+		NOT = { war = { country = CHI country = USA } }
+		NOT = { alliance = { country = GER  country = CHI } }
+		NOT = { war = { country = CHI country = ENG } }
+		NOT = { war = { country = CHI country = HOL } }
+	}
+
+	name = "EVT_3725_NAME"
+	desc = "EVT_3404_DESC"
+	style = 0
+	picture = "Lend_Lease_Chi"
+
+	date = { year = 1940 month = january day = 1 }
+	offset = 15
+	deathdate = { year = 1947 month = december day = 29 }
+
+	action_a = {
+		name = "ACTIONNAME3702A" # Send more supplies
+		ai_chance = 80
+		command = { type = supplies value = -2000 }
+		command = { type = relation which = CHI value = 1 }
+		command = { type = trigger which = 59919 } # CHI
+	}
+	action_b = {
+		name = "ACTIONNAME3702B" # Not this time
+		ai_chance = 20
+		command = { type = relation which = CHI value = -5 }
+	}
+}
+
+#########################################################################
+#  A Lend-Lease Caravan Arrives from the USA
+#########################################################################
+event = {
+	id = 59919
+	random = no
+	country = CHI
+
+	persistent = yes 
+
+	# Triggered by USA 59918. NOTE: may be triggered several times.
+
+	name = "EVT_4102_NAME"
+	desc = "EVT_3404_DESC"
+	style = 0
+	picture = "Lend_Lease_Chi"
+
+	action_a = {
+		name = "OK" # Excellent!
+		command = { type = supplies value = 1000 }
+		command = { type = rarematerialspool value = 500 }
+#		command = { type = construct which = ic where = 1361 value = 2 } #Zigong
+#		command = { type = construct which = ic where = 1360 value = 2 } #Chengdu
+#		command = { type = construct which = ic where = 1364 value = 2 } #Guiyang
+		}
+}
+######################################
+# Manchurian Land to Japan
+######################################
+event = {
+	id = 59920
+	random = no
+	country = MAN
+	style = 0
+
+	trigger = {
+		event = 59999
+		control = { province = 1203 data = JAP } # 
+		control = { province = 1397 data = JAP } # 
+		control = { province = 1398 data = JAP } # 
+		control = { province = 1386 data = MAN } # Xilinhot
+		}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 3 month = january year = 1948 }
+
+	name = "EVT_3831_NAME"
+	desc = "EVT_3831_DESC"
+
+	picture = "Nomonhan"
+
+	action_a = {
+		name = "OK" # Opportunists
+		command = { type = secedeprovince which = JAP value = 1386 } # 
+		command = { type = secedeprovince which = JAP value = 1203 } #FEPKDH
+		command = { type = secedeprovince which = JAP value = 1397 }
+		command = { type = secedeprovince which = JAP value = 1398 }
+		command = { type = trigger which = 130025 }
+	}
+}
+#########################################################################
+#  Xi'an Incident
+#########################################################################
+
+event = {
+	id = 59921
+	random = no
+	country = CHI
+
+	name = "EVT_90_NAME"
+	desc = "EVT_90_DESC"
+	picture = "chinese_incident"
+	style = 0
+
+	trigger = {
+		event = 59999
+		war = { country = CHI country = CHC }
+		headofgovernment = 52002 # both Chiang Kai Shek
+		NOT = {
+			war = { country = CHI country = JAP }
+		}
+		random = 30
+	}
+
+	date = { day = 0 month = march year = 1936 }
+	offset = 15
+	deathdate = { day = 29 month = february year = 1937 }
+
+	action_a = {
+		name = "EVT_90_ACTA"
+		ai_chance = 89
+		command = { type = dissent value = -5 }
+		command = { type = peace which = CHC value = 0 }
+		command = { type = peace which = CSX value = 0 } #just in case # FEPK変更部分 # 1.08
+		command = { type = peace which = CGX value = 0 } #just in case # FEPK変更部分 # 1.08
+		command = { type = peace which = CYN value = 0 } #just in case # FEPK変更部分 # 1.08
+		command = { type = peace which = CXB value = 0 } #just in case # FEPK変更部分 # 1.08
+		command = { type = peace which = SIK value = 0 } #just in case # FEPK変更部分 # 1.08
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = domestic which = freedom value = 1 }
+		command = { type = relation which = CHC value = 10 }
+		command = { type = relation which = CSX value = 20 }
+		command = { type = relation which = CGX value = 10 }
+		command = { type = relation which = CYN value = 5 }
+		command = { type = relation which = CXB value = 10 }
+		command = { type = relation which = SIK value = 15 }
+		command = { type = sleepleader which = 50011 } #Zhang
+		command = { type = sleepminister which = 52008 } # #Zhang
+	}
+	action_b = {
+		name = "EVT_90_ACTB"
+		ai_chance = 1
+		command = { type = dissent value = 10 } #loss of support (mainly Manchurian exiles)
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = domestic which = freedom value = 2 }
+		command = { type = relation which = CHC value = -20 }
+		command = { type = relation which = CGX value = -5 }
+		command = { type = relation which = CSX value = -10 }
+		command = { type = relation which = CYN value = -5 }
+		command = { type = relation which = CXB value = -5 }
+		command = { type = relation which = SIK value = -5 }
+		command = { type = sleepleader which = 50011 } #Zhang
+		command = { type = sleepminister which = 52008 } # #Zhang
+		command = { type = sleepevent which = 59922 } #Alt Unified Front
+	}
+	action_c = {
+		name = "EVT_90_ACTC"
+		ai_chance = 10
+		command = { type = dissent value = 15 } #anti-communist dissent
+		command = { type = peace which = CHC value = 0 }
+		command = { type = peace which = CSX value = 0 } #just in case # FEPK変更部分 # 1.08
+		command = { type = peace which = CGX value = 0 } #just in case # FEPK変更部分 # 1.08
+		command = { type = peace which = CYN value = 0 } #just in case # FEPK変更部分 # 1.08
+		command = { type = peace which = CXB value = 0 } #just in case # FEPK変更部分 # 1.08
+		command = { type = peace which = SIK value = 0 } #just in case # FEPK変更部分 # 1.08
+	#	command = { type = alliance which = CHC } #BETA修正パッチ #FEPKで講和処理分離
+	#	command = { type = alliance which = CSX }
+	#	command = { type = alliance which = CGX }
+	#	command = { type = alliance which = CYN }
+	#	command = { type = alliance which = CXB }
+	#	command = { type = alliance which = SIK }
+		command = { type = domestic which = democratic value = 2 }
+		command = { type = domestic which = political_left value = 1 }
+		command = { type = domestic which = free_market value = -1 }
+		command = { type = domestic which = interventionism value = 2 }
+		command = { type = domestic which = freedom value = 2 }
+		command = { type = sleepevent which = 59922 } #Alt Unified Front
+		command = { type = setflag	which = chiAtkJap_WithAll }
+		command = { type = trigger which = 59923 } #BETA修正パッチ
+	}
+
+}
+event = {
+	id = 59922
+	country = CHI
+	random = no
+
+	trigger = {
+		event = 59999
+		OR = {
+			AND = { 
+				war = { country = CHI country = JAP }
+				event = 59906
+			}
+			AND = {
+				OR = { # FEPK変更部分 # 1.08 #1.09でコメントアウト解除
+					war = { country = CHI country = JAP }
+					war = { country = CHC country = JAP }
+					war = { country = CSX country = JAP }
+					war = { country = CGX country = JAP }
+				}
+				NOT = { event = 59906 }
+			}
+		}
+		NOT = { alliance = { country = CHI country = JAP } }
+		NOT = { alliance = { country = CSX country = JAP } }
+		NOT = { alliance = { country = CHC country = JAP } }
+		NOT = { alliance = { country = CGX country = JAP } }
+		NOT = { alliance = { country = CYN country = JAP } }
+		NOT = { alliance = { country = CXB country = JAP } }
+		OR = {
+			NOT = { ispuppet = CSX }
+			puppet = { country = CSX country = CHI }
+			puppet = { country = CSX country = CHC }
+			puppet = { country = CSX country = CGX }
+			puppet = { country = CSX country = CYN }
+			puppet = { country = CSX country = CXB }
+		}
+		OR = {
+			NOT = { ispuppet = CHC }
+			puppet = { country = CHC country = CHI }
+			puppet = { country = CHC country = CSX }
+			puppet = { country = CHC country = CGX }
+			puppet = { country = CHC country = CYN }
+			puppet = { country = CHC country = CXB }
+		}
+		OR = {
+			NOT = { ispuppet = CGX }
+			puppet = { country = CGX country = CHI }
+			puppet = { country = CGX country = CSX }
+			puppet = { country = CGX country = CHC }
+			puppet = { country = CGX country = CYN }
+			puppet = { country = CGX country = CXB }
+		}
+		OR = {
+			NOT = { ispuppet = CYN }
+			puppet = { country = CYN country = CHI }
+			puppet = { country = CYN country = CSX }
+			puppet = { country = CYN country = CHC }
+			puppet = { country = CYN country = CGX }
+			puppet = { country = CYN country = CXB }
+		}
+		OR = {
+			NOT = { ispuppet = CXB }
+			puppet = { country = CXB country = CHI }
+			puppet = { country = CXB country = CSX }
+			puppet = { country = CXB country = CHC }
+			puppet = { country = CXB country = CGX }
+			puppet = { country = CXB country = CYN }
+		}
+
+	}
+
+	name = "EVT_91_NAME"
+	desc = "EVT_91_DESC"
+	style = 0
+
+	date = { day = 1 month = march year = 1937 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1942 }
+
+	action_a = {
+		name = "EVT_91_ACTA"
+		ai_chance = 99
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = domestic which = political_left value = 1 }
+		command = { type = domestic which = freedom value = 1 }
+		command = { type = dissent value = -5 }
+		command = { type = peace which = CHC value = 0 }
+		command = { type = peace which = CSX value = 0 } #just in case # FEPK変更部分 # 1.08
+		command = { type = peace which = CGX value = 0 } #just in case # FEPK変更部分 # 1.08
+		command = { type = peace which = CYN value = 0 } #just in case # FEPK変更部分 # 1.08
+		command = { type = peace which = CXB value = 0 } #just in case # FEPK変更部分 # 1.08
+		command = { type = peace which = SIK value = 0 }
+	#	command = { type = alliance which = CHC } #BETA修正パッチ #FEPKで講和処理分離
+	#	command = { type = alliance which = CSX }
+	#	command = { type = alliance which = CGX }
+	#	command = { type = alliance which = CYN }
+	#	command = { type = alliance which = CXB }
+	#	command = { type = alliance which = SIK }
+		command = { type = setflag	which = chiAtkJap_WithAll }
+		command = { type = trigger which = 59923 } #BETA修正パッチ
+	}
+
+	action_b = {
+		name = "EVT_91_ACTB"
+		ai_chance = 1
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = domestic which = freedom value = -1 }
+		command = { type = dissent value = 5 }
+		command = { type = relation which = CHC value = -10 }
+		command = { type = relation which = CSX value = -15 }
+		command = { type = relation which = CGX value = -10 }
+		command = { type = setflag	which = chiAtkJap_Only }
+	}
+}
+
+event = { #BETA修正パッチ #FEPK追加イベント
+	id = 59923
+	country = CHI
+	random = no
+
+	name = "EVT_91_NAME"
+	desc = "EVT_91_DESC"
+	style = 0
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = alliance which = CHC }
+		command = { type = alliance which = CSX }
+		command = { type = alliance which = CGX }
+		command = { type = alliance which = CYN }
+		command = { type = alliance which = CXB }
+#		command = { type = alliance which = SIK }
+	}
+}
+
+#########################################################################
+# Japan puts Pressure on Siam (Axis Japan)
+#########################################################################
+event = { 
+	id = 59926
+	random = no
+	country = JAP
+	
+	trigger = {
+		event = 59999
+		alliance = { country = JAP country = GER }
+		exists = VIC
+		exists = SIA
+		event = 59908
+		NOT = { 
+			war = { country = JAP country = SIA } 
+		}
+	}
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	name = "EVT_3806_NAME"
+	desc = "EVT_3806_DESC"
+       picture = "siam"
+	style = 0
+	
+	action_a = {
+		name = "ACTIONNAME3806A" # Lean on Siam
+		ai_chance = 95
+		command = { type = relation which = SIA value = 5 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = trigger which = 4500 } # Siam/Thailand
+#		command = { type = sleepevent which = 3807 }
+		command = { type = sleepevent which = 59927 }
+	}
+	action_b = {
+		name = "ACTIONNAME3806B" # Siam is Unimportant
+		ai_chance = 5
+#		command = { type = sleepevent which = 3807 }
+		command = { type = sleepevent which = 59927 }
+	}
+}
+#########################################################################
+# Japan puts Pressure on Siam ("Neutral" Japan)
+#########################################################################
+event = { 
+	id = 59927
+	random = no
+	country = JAP
+	
+	trigger = {
+		event = 59999
+		NOT = {
+			OR = {
+				alliance = { country = JAP country = GER }
+				alliance = { country = JAP country = ENG }
+				alliance = { country = JAP country = SOV }
+			}
+		}
+		war = { country = JAP country = ENG }
+		exists = VIC
+		exists = SIA
+		event = 59908
+		NOT = {
+			war = { country = JAP country = SIA }
+		}
+	}
+	
+	name = "EVT_3807_NAME"
+	desc = "EVT_3807_DESC"
+        picture = "siam"
+	style = 0
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action_a = {
+		name = "ACTIONNAME3807A" # Lean on Siam
+		ai_chance = 98
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = trigger which = 4501 } # Siam/Thailand
+#		command = { type = sleepevent which = 3806 }
+		command = { type = sleepevent which = 59926 }
+	}
+	action_b = {
+		name = "ACTIONNAME3807B" # Siam is Unimportant
+		ai_chance = 2
+		command = { type = relation which = SIA value = 10 }
+#		command = { type = sleepevent which = 3806 }
+		command = { type = sleepevent which = 59926 }
+	}
+}
+
+#########################################################################
+# トルコの父が逝去した！（司令官・研究機関対応）
+#########################################################################
+
+event = {
+	id = 59929
+	random = no
+	country = TUR
+	style = 0
+
+	trigger = {
+		event = 59999
+	}
+
+	date = { year = 1938 month = november day = 10 }
+	#offset = 1
+	#deathdate = { year = 1938 month = november day = 11 }
+
+	name = "EVT_345_NAME"
+	desc = "EVT_345_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = set_domestic which = democratic value = 8 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = sleepminister which = 12001 }
+		command = { type = headofstate which = 12031 }
+		command = { type = headofgovernment which = 12032 }
+		command = { type = foreignminister which = 12035 }
+		command = { type = armamentminister which = 12004 }
+		command = { type = ministerofsecurity which = 12005 }
+		command = { type = ministerofintelligence which = 12068 }
+		command = { type = chiefofstaff which = 12073 }
+		command = { type = chiefofarmy which = 12008 }
+		command = { type = chiefofnavy which = 12079 }
+		command = { type = chiefofair which = 12010 }
+		command = { type = sleepleader which = 61101 } # Kemal
+		command = { type = sleepteam which = 3520 } # Kemal
+	}
+}
+
+#########################################################################
+#  Nomonhan Incident / Khalkin Ghol (Japan, USSR) - JAP war in CHI
+#########################################################################
+event = {
+	id = 59930
+	random = no
+	country = JAP
+
+	# Historical event may to august 1939
+        # http://ibiblio.org/pha/monos/144/144chap4.html#Nomonham Incident (may - august 1939)
+
+	name = "EVT_22_NAME"
+	desc = "EVT_22_DESC"
+	style = 0
+	picture = "Nomonhan"
+
+	trigger = {
+		event = 59999
+		random = 10
+		exists = SOV
+		alliance = { country = MAN  country = JAP }
+		NOT = {
+			war = { country = JAP country = SOV }
+			war = { country = GER country = SOV }
+			alliance = { country = JAP country = SOV }
+		}
+		war = { country = JAP country = CHI }
+		ai = yes
+	}
+
+        date = { day = 11 month = may year = 1939 }
+        offset = 6
+	deathdate = { day = 20 month = september year = 1939 }
+
+	action_a = {
+		name = "EVT_22_ACTA"
+		ai_chance = 98
+		command = { type = non_aggression which = JAP where = SOV }
+		command = { type = dissent value = 1 }
+        	command = { type = manpowerpool value = -40 }
+        	command = { type = supplies value = -1500 }
+		command = { type = relation which = SOV value = -10 }
+		command = { type = trigger which = 59935 }
+		command = { type = sleepevent which = 59931 }
+		command = { type = sleepevent which = 59932 }
+		command = { type = sleepevent which = 59933 }
+		command = { type = domestic which = defense_lobby value = 1 } # one step Hawk intentional
+	}
+	action_b = {
+		name = "EVT_22_ACTB"
+		ai_chance = 2
+                command = { type = manpowerpool value = -40 }
+                command = { type = supplies value = -1500 }
+		command = { type = alliance which = MAN }
+		command = { type = alliance which = MEN }
+		command = { type = ai_prepare_war which = SOV }
+		command = { type = trigger which = 59934 }
+		command = { type = sleepevent which = 59931 }
+		command = { type = sleepevent which = 59932 }
+		command = { type = sleepevent which = 59933 }
+		command = { type = domestic which = defense_lobby value = 2 }  # two steps Hawk
+	}
+}
+event = {
+	id = 59931
+	random = no
+	country = JAP
+
+	# Historical event may to august 1939
+        # http://ibiblio.org/pha/monos/144/144chap4.html#Nomonham Incident (may - august 1939)
+
+	name = "EVT_22_NAME"
+	desc = "EVT_22_DESC"
+	style = 0
+	picture = "Nomonhan"
+
+	trigger = {
+		event = 59999
+		random = 10
+		exists = SOV
+		alliance = { country = MAN  country = JAP }
+		NOT = {
+			war = { country = JAP country = SOV }
+			war = { country = GER country = SOV }
+			alliance = { country = JAP country = SOV }
+		}
+		war = { country = JAP country = CHI }
+		ai = no
+	}
+
+        date = { day = 11 month = may year = 1939 }
+        offset = 6
+	deathdate = { day = 20 month = september year = 1939 }
+
+	action_a = {
+		name = "EVT_22_ACTA"
+		ai_chance = 98
+		command = { type = non_aggression which = JAP where = SOV }
+		command = { type = dissent value = 1 }
+        	command = { type = manpowerpool value = -40 }
+        	command = { type = supplies value = -1500 }
+		command = { type = relation which = SOV value = -10 }
+		command = { type = trigger which = 59935 }
+		command = { type = sleepevent which = 59930 }
+		command = { type = sleepevent which = 59932 }
+		command = { type = sleepevent which = 59933 }
+		command = { type = domestic which = defense_lobby value = 1 } # one step Hawk intentional
+	}
+	action_b = {
+		name = "EVT_22_ACTB"
+		ai_chance = 2
+                command = { type = manpowerpool value = -40 }
+                command = { type = supplies value = -1500 }
+		command = { type = alliance which = MAN }
+		command = { type = alliance which = MEN }
+		command = { type = war which = SOV }
+		command = { type = trigger which = 59934 }
+		command = { type = sleepevent which = 59930 }
+		command = { type = sleepevent which = 59932 }
+		command = { type = sleepevent which = 59933 }
+		command = { type = domestic which = defense_lobby value = 2 }  # two steps Hawk
+	}
+}
+#########################################################################
+#  Nomonhan Incident / Khalkin Ghol (Japan, USSR) - JAP not war in CHI
+#########################################################################
+event = {
+	id = 59932
+	random = no
+	country = JAP
+
+	# Historical event may to august 1939
+        # http://ibiblio.org/pha/monos/144/144chap4.html#Nomonham Incident (may - august 1939)
+
+	name = "EVT_22_NAME"
+	desc = "EVT_22_DESC"
+	style = 0
+	picture = "Nomonhan"
+
+	trigger = {
+		event = 59999
+		random = 10
+		exists = SOV
+		alliance = { country = MAN country = JAP }
+		NOT = {
+			war = { country = JAP country = SOV }
+			war = { country = GER country = SOV }
+			alliance = { country = JAP country = SOV }
+		}
+		NOT = { war = { country = JAP country = CHI } }
+		ai = yes
+	}
+
+        date = { day = 11 month = may year = 1939 }
+        offset = 6
+	deathdate = { day = 20 month = september year = 1939 }
+
+	action_a = {
+		name = "EVT_22_ACTB"
+		ai_chance = 85
+                command = { type = manpowerpool value = -40 }
+                command = { type = supplies value = -1500 }
+		command = { type = alliance which = MAN }
+		command = { type = alliance which = MEN }
+		command = { type = ai_prepare_war which = SOV }
+		command = { type = trigger which = 59934 }
+		command = { type = sleepevent which = 59930 }
+		command = { type = sleepevent which = 59931 }
+		command = { type = sleepevent which = 59933 }
+		command = { type = domestic which = defense_lobby value = 2 }  # two steps Hawk
+	}
+	action_b = {
+		name = "EVT_22_ACTA"
+		ai_chance = 15
+		command = { type = non_aggression which = JAP where = SOV }
+		command = { type = dissent value = 1 }
+        	command = { type = manpowerpool value = -40 }
+        	command = { type = supplies value = -1500 }
+		command = { type = relation which = SOV value = -10 }
+		command = { type = trigger which = 59935 }
+		command = { type = sleepevent which = 59930 }
+		command = { type = sleepevent which = 59931 }
+		command = { type = sleepevent which = 59933 }
+		command = { type = domestic which = defense_lobby value = 1 } # one step Hawk intentional
+	}
+}
+event = {
+	id = 59933
+	random = no
+	country = JAP
+
+	# Historical event may to august 1939
+        # http://ibiblio.org/pha/monos/144/144chap4.html#Nomonham Incident (may - august 1939)
+
+	name = "EVT_22_NAME"
+	desc = "EVT_22_DESC"
+	style = 0
+	picture = "Nomonhan"
+
+	trigger = {
+		event = 59999
+		random = 10
+		exists = SOV
+		alliance = { country = MAN country = JAP }
+		NOT = {
+			war = { country = JAP country = SOV }
+			war = { country = GER country = SOV }
+			alliance = { country = JAP country = SOV }
+		}
+		NOT = { war = { country = JAP country = CHI } }
+		ai = no
+	}
+
+        date = { day = 11 month = may year = 1939 }
+        offset = 6
+	deathdate = { day = 20 month = september year = 1939 }
+
+	action_a = {
+		name = "EVT_22_ACTB"
+		ai_chance = 85
+                command = { type = manpowerpool value = -40 }
+                command = { type = supplies value = -1500 }
+		command = { type = alliance which = MAN }
+		command = { type = alliance which = MEN }
+		command = { type = war which = SOV }
+		command = { type = trigger which = 59934 }
+		command = { type = sleepevent which = 59930 }
+		command = { type = sleepevent which = 59931 }
+		command = { type = sleepevent which = 59932 }
+		command = { type = domestic which = defense_lobby value = 2 }  # two steps Hawk
+	}
+	action_b = {
+		name = "EVT_22_ACTA"
+		ai_chance = 15
+		command = { type = non_aggression which = JAP where = SOV }
+		command = { type = non_aggression which = JAP where = MON }
+		command = { type = dissent value = 10 }
+        	command = { type = manpowerpool value = -40 }
+        	command = { type = supplies value = -1500 }
+		command = { type = relation which = SOV value = -10 }
+		command = { type = trigger which = 59935 }
+		command = { type = sleepevent which = 59930 }
+		command = { type = sleepevent which = 59931 }
+		command = { type = sleepevent which = 59932 }
+		command = { type = domestic which = defense_lobby value = 1 } # one step Hawk intentional
+	}
+}
+
+event = {
+	id = 59934
+	random = no
+	country = SOV
+	one_action = yes
+
+	name = "EVT_23_NAME"
+	desc = "EVT_23_DESC"
+	style = 0
+	picture = "Nomonhan"
+
+	# triggered by 22
+
+	action_a = {
+		name = "EVT_23_ACTA"
+		command = { type = ai which = "switch/SOV_Japan.ai" }
+                command = { type = manpowerpool value = -5 }
+                command = { type = supplies value = -1000 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = relation which = JAP value = -10 }
+		command = { type = trigger which = 59873 }	#篠原戦死
+	}
+	action_b = {
+		name = "EVT_23_ACTA"
+		command = { type = ai which = "switch/SOV_Japan.ai" }
+                command = { type = manpowerpool value = -5 }
+                command = { type = supplies value = -1000 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = relation which = JAP value = -10 }
+	}
+}
+event = {
+	id = 59935
+	random = no
+	country = SOV
+	one_action = yes
+
+	name = "EVT_23_NAME"
+	desc = "EVT_23_DESC"
+	style = 0
+	picture = "Nomonhan"
+
+	# triggered by 22
+
+	action_a = {
+		name = "EVT_23_ACTA"
+                command = { type = manpowerpool value = -5 }
+                command = { type = supplies value = -1000 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = relation which = JAP value = -10 }
+		command = { type = non_aggression which = SOV where = MAN }
+		command = { type = non_aggression which = SOV where = MEN }
+		command = { type = trigger which = 59873 }	#篠原戦死
+	}
+	action_b = {
+		name = "EVT_23_ACTA"
+                command = { type = manpowerpool value = -5 }
+                command = { type = supplies value = -1000 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = relation which = JAP value = -10 }
+		command = { type = non_aggression which = SOV where = MAN }
+		command = { type = non_aggression which = SOV where = MEN }
+	}
+}
+
+#########################################################################
+#  Resumption of the Chinese Civil War
+#########################################################################
+
+event = {
+	id = 59936 #id = 99
+	random = no
+	country = CHC
+
+	name = "EVT_99_NAME"
+	desc = "EVT_99_DESC"
+	style = 0
+	picture = "China_CW"
+
+	trigger = {
+		event = 59999
+		exists = CHI
+		random = 50
+		event = 55220
+		NOT = {
+			alliance = { country = CHI country = CHC }
+			war = { country = SOV country = CHC }
+			war = { country = USA country = CHC }
+			war = { country = JAP country = CHC }
+			ispuppet = CHC
+			alliance = { country = CHC country = JAP }
+			alliance = { country = CHC country = USA }
+			alliance = { country = CHC country = SOV }
+		}
+	}
+
+        date = { day = 0 month = january year = 1941 }
+        offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		ai_chance = 90
+		name = "EVT_99_ACTA"
+		command = { type = money value = 10 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = war which = CHI }
+		command = { type = dissent value = -5 } # the time is ripe for the Revolution
+		command = { type = trigger which = 100 }
+	}
+
+	action_b = {
+		ai_chance = 10
+		name = "EVT_99_ACTB"
+		command = { type = money value = -10 }
+		command = { type = dissent value = 2 }
+	}
+}
+
+#########################################################################
+#  パネイ号事件（アメリカ補完版）
+#          第百六十五次スレ 308氏
+#########################################################################
+
+event = {
+	id = 59938
+	random = no
+	country = JAP
+
+	name = EVT_80_NAME
+	desc = EVT_80_DESC
+	style = 0
+	picture = "panay"
+
+	trigger = {
+		event = 59999
+		random = 50
+		war = { country = JAP country = CHI }
+		control = { province = 1235 data = JAP }
+		exists = USA
+		NOT = {
+			war = { country = JAP country = USA }
+		}
+	}
+
+	date = { day = 5 month = may year = 1937 }
+	offset = 5
+	deathdate = { day = 29 month = august year = 1939 }
+
+	action_a = {
+		ai_chance = 90
+		name = EVT_80_ACTA
+		command = { type = domestic which = interventionism value = -1 }
+		#command = { type = relation which = USA value = -5 } #（友好度の変更をアメリカの回答後にする）
+		#command = { type = money value = -500 } #（賠償金の支払いをアメリカの回答後にする）
+		command = { type = trigger which = 59941 } #（元id = 81）
+	}
+	action_b = {
+		ai_chance = 10
+		name = EVT_80_ACTB
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = belligerence which = JAP value = 1 }
+		command = { type = relation which = USA value = -30 }
+		command = { type = dissent value = -1 } # 
+		command = { type = trigger which = 59944 } #（賠償金を支払わない場合のアメリカの反応）
+	}
+}
+
+#########################################################################
+# 張鼓峰事件(ハサン湖事件)
+#########################################################################
+
+event = {
+	id = 59939
+	random = no
+	country = JAP
+
+	name = EVT_24_NAME
+	desc = EVT_24_DESC
+	style = 0
+	picture = "chanfukeng"
+
+	trigger = {
+		random = 10
+		puppet = { country = MAN country = JAP }
+		NOT = {
+			war = { country = JAP country = SOV }
+			war = { country = GER country = SOV }
+			alliance = { country = JAP country = SOV }
+                }
+		exists = SOV #追加：ソ連が存在
+	}
+
+        date = { day = 15 month = july year = 1938 }
+        offset = 3
+	deathdate = { day = 20 month = september year = 1938 }
+
+	action_a = {
+		name = EVT_24_ACTA
+                command = { type = manpowerpool value = -3 }
+                command = { type = supplies value = -500 }
+		command = { type = relation which = SOV value = -5 }
+		command = { type = trigger which = 25 }
+		command = { type = domestic which = defense_lobby value = 1 }
+	}
+
+}
+
+#########################################################################
+#  ドイツとの講和を求める(ドイツが日本と同盟かつ日ソ非開戦)
+#########################################################################
+event = { #FEPKBETA3 シナリオファイルで停止
+	id = 59940
+	random = no
+	country = SOV
+
+	trigger = {
+		war = { country = GER country = SOV }
+		alliance = { country = GER country = JAP }
+		NOT = { event = 2624 }
+		NOT = { event = 2645 }
+		random = 35
+		OR = {
+			control = { province = 56 data = GER } # Paris is not free
+			control = { province = 56 data = VIC } # Paris is not free
+		}
+		OR = {
+			AND = {
+				lost_national = { country = SOV value = 25 } #maybe raise this number
+				NOT = {
+					war = { country = GER country = ENG }
+					war = { country = GER country = FRA }
+					war = { country = GER country = USA }
+					war = { country = SOV country = JAP }
+				}
+			}
+			AND = {
+				NOT = {
+						control = { province = 187 data = SOV } # Leningrad has fallen
+						control = { province = 163 data = SOV } # Stalingrad has fallen
+						control = { province = 175 data = SOV } # Moscow has fallen
+						control = { province = 1907 data = SOV } # Baku has fallen
+						control = { province = 1572 data = SOV } # Sverdlovsk has fallen
+						war = { country = GER country = JAP }
+						war = { country = SOV country = JAP }
+						#flag = JAPtripartite
+						war = { country = GER country = ITA } # To avoid exploits
+					}
+			   	}
+		   	}
+		}
+
+	name = "EVT_2624_NAME"
+	desc = "EVT_2624_DESC"
+	style = 0
+	picture = "Bitter_Peace"
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 10 # Check for trigger conditions every seven days
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "ACTIONNAME2624A" # We surrender! Just let us keep what we still have.
+		ai_chance = 100
+		command = { type = relation which = ENG value = -15 }
+		command = { type = relation which = FRA value = -15 }
+		command = { type = relation which = USA value = -15 }
+		command = { type = dissent value = 15 }
+		command = { type = set_domestic which = interventionism value = 3 }
+		command = { type = sleepevent which = 2645 }
+		command = { type = sleepevent which = 364 }
+		command = { type = removecore which = 231 }
+		command = { type = removecore which = 232 }
+		command = { type = removecore which = 233 }
+		command = { type = headofgovernment which = 4075 } #Beria
+		#command = { type = armamentminister which = 4014 }
+		command = { type = ministerofsecurity which = 4041 } #Beria
+		command = { type = sleepminister which = 4002 } #Stalin
+		#command = { type = sleepminister which = 4074 }
+		#command = { type = sleepminister which = 4059 }
+		#command = { type = sleepminister which = 4073 }
+		command = { type = sleepminister which = 4034 } #Molotov
+		#command = { type = sleepminister which = 4076 } 
+		#command = { type = sleepminister which = 4072 } 
+		command = { type = trigger which = 2024 } # GER
+	}
+	action_b = {
+		name = "ACTIONNAME2624B" # Fight to the bitter end!
+		ai_chance = 0
+		command = { type = dissent value = 30 }
+		command = { type = relation which = ENG value = 15 }
+		command = { type = relation which = FRA value = 15 }
+		command = { type = relation which = USA value = 15 }
+		command = { type = sleepevent which = 2624 }
+		command = { type = sleepevent which = 2645 }
+	}
+}
+
+#########################################################################
+#  パネイ号事件（アメリカの反応）
+#########################################################################
+
+event = {
+	id = 59941
+	random = no
+	country = USA
+
+	name = "EVT_59941_NAME"
+	desc = "EVT_59941_DESC"
+	style = 0
+	picture = "panay"
+
+	# Triggered by Japan event 59938
+
+	action_a = {
+		ai_chance = 90
+		name = "EVT_59941_ACTA"
+		command = { type = relation which = JAP value = -5 }
+		command = { type = money value = 500 }
+		#command = { type = dissent value = 1 } # 賠償金で和解する場合、不満度は上昇させない
+		command = { type = trigger which = 59942 } # 賠償金による和解
+	}
+	action_b = {
+		ai_chance = 10
+		name = "EVT_59941_ACTB"
+		command = { type = dissent value = 5 } # 不満度+5
+		command = { type = domestic which = interventionism value = 1 } # 干渉主義+1
+		command = { type = relation which = JAP value = -15 }
+		command = { type = trigger which = 59943 } # 日米関係の悪化
+	}
+}
+
+event = {
+	id = 59942
+	random = no
+	country = JAP
+
+	name = "EVT_59942_NAME"
+	desc = "EVT_59942_DESC"
+	style = 0
+	picture = "panay"
+
+	action_a = {
+		name = "EVT_59942_ACTA"
+		command = { type = relation which = USA value = -5 }
+		command = { type = money value = -500 }
+	}
+}
+
+event = {
+	id = 59943
+	random = no
+	country = JAP
+
+	name = "EVT_59943_NAME"
+	desc = "EVT_59943_DESC"
+	style = 0
+	picture = "panay"
+
+	action_a = {
+		name = "EVT_59942_ACTA"
+		command = { type = relation which = USA value = -15 }
+	}
+}
+
+
+#########################################################################
+#  パネイ号事件（賠償金を支払わない場合のアメリカの反応）
+#########################################################################
+
+event = {
+	id = 59944
+	random = no
+	country = USA
+
+	name = "EVT_59941_NAME"
+	desc = "EVT_59944_DESC"
+	style = 0
+	picture = "panay"
+
+	# Triggered by Japan event 59938
+
+	action_a = {
+		ai_chance = 70
+		name = "EVT_59944_ACTA"
+		command = { type = relation which = JAP value = -30 }
+	}
+	action_b = {
+		ai_chance = 30
+		name = "EVT_59944_ACTB"
+		command = { type = dissent value = 1 } # 不満度+1
+		command = { type = domestic which = interventionism value = 1 } # 干渉主義+1
+		command = { type = relation which = JAP value = -30 }
+	}
+}
+
+#########################################################################
+#  アルバニア併合
+#########################################################################
+event = { 
+	id = 59950
+	random = no
+	country = ITA
+	
+	trigger = {
+			exists = ALB
+		OR = {
+			event = 2006 # Germany annexes Bohemia and Moravia - Mussolini feels he must not be outdone...
+			event = 2011
+		}
+		NOT = {
+			OR = {
+				alliance = { country = ALB country = ITA }
+				war = { country = ALB country = ITA }
+			}
+		}
+			flag = ITA_NOT_ETH # イタリアがエチオピアへ侵攻していない。
+			OR = {
+				AND = {
+					exists = ETH
+					NOT = { puppet = { country = ETH country = ITA } }
+				}
+				NOT = { control = { province = 1046 data = ITA } } # アジスアベバ
+			}
+	}
+	name = "EVT_2902_NAME"
+	desc = "EVT_2902_DESC"
+	style = 0
+	picture = "Albania"
+	
+	date = { day = 25 month = march year = 1939 }
+	
+	action_a = {
+		name = "ACTIONNAME2902A" # Send an Ultimatum to King Zog
+		ai_chance = 25
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = trigger which = 3500 } #Alb
+		command = { type = relation which = ALB value = -20 }
+		command = { type = relation which = YUG value = -5 }
+		command = { type = relation which = GRE value = -5 }
+	}
+	action_b = {
+		name = "ACTIONNAME2902B" # We have no need of Albania
+		ai_chance = 75
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = relation which = ALB value = 20 }
+		command = { type = relation which = YUG value = 5 }
+		command = { type = relation which = GRE value = 5 }
+		command = { type = setflag which = ITA_NOT_ALB }
+	}
+}
+
+############################
+# 元イベントsleep
+############################
+event ={
+	id = 59999
+	random = no
+	country = YEM # イエメン - 
+                      # ここでプレイする人はいないだろうと思ったので。
+		      # 仮にプレイしても別に問題ない
+		      #（変なイベントメッセージが出るのを我慢さえすれば）
+	style = 0
+	trigger = {
+#		AI = yes
+	}
+
+        date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	action_a = { # 
+		command = { type = sleepevent which = 186 } # 日本政局
+		command = { type = sleepevent which = 187 } # 日本政局
+		command = { type = sleepevent which = 188 } # 日本政局
+		command = { type = sleepevent which = 189 } # 日本政局
+		command = { type = sleepevent which = 190 } # 日本政局
+		command = { type = sleepevent which = 43 }   # 日本降伏
+		command = { type = sleepevent which = 3814 } # 支那降伏
+		command = { type = sleepevent which = 3819 } # 傀儡支那
+		command = { type = sleepevent which = 1 }    # 2.26
+		command = { type = sleepevent which = 22002 }# 太平洋戦争
+		command = { type = sleepevent which = 20 }   # 盧溝橋事件
+		command = { type = sleepevent which = 21 }   # 盧溝橋事件
+
+		command = { type = sleepevent which = 3802 } # 南京大虐殺
+		command = { type = sleepevent which = 4100 } # 南京大虐殺
+		command = { type = sleepevent which = 27005 } # 広西対国民党
+		command = { type = sleepevent which = 27008 } # 広西対国民党
+		command = { type = sleepevent which = 3831 } # 錫林浩特割譲
+		command = { type = sleepevent which = 3700 } # レンドリース
+		command = { type = sleepevent which = 3404 } # レンドリース
+		command = { type = sleepevent which = 3702 } # レンドリース
+		command = { type = sleepevent which = 3405 } # レンドリース
+		command = { type = sleepevent which = 3703 } # レンドリース
+		command = { type = sleepevent which = 2626 } # レンドリース
+		command = { type = sleepevent which = 3725 } # レンドリース
+		command = { type = sleepevent which = 4102 } # レンドリース
+		command = { type = sleepevent which = 90 }   # 西安事件
+		command = { type = sleepevent which = 91 }   # 統一戦線結成
+		command = { type = sleepevent which = 345 }  # トルコの父の死
+		command = { type = sleepevent which = 22 }   # ノモンハン事件(日本)
+		command = { type = sleepevent which = 23 }   # ノモンハン事件(ソ連)
+		command = { type = sleepevent which = 99 }   # 中国内戦
+		command = { type = sleepevent which = 80 }   # パネイ号事件
+		command = { type = sleepevent which = 81 }   # パネイ号事件（アメリカの反応）
+		command = { type = sleepevent which = 24 }   # 張鼓峰事件(ハサン湖事件)
+		command = { type = sleepevent which = 4104 } # 中国工場移転
+		command = { type = sleepevent which = 4105 } # 中国工場移転
+		command = { type = sleepevent which = 4106 } # 中国工場移転
+		command = { type = sleepevent which = 4107 } # 中国工場移転
+		command = { type = sleepevent which = 4108 } # 中国工場移転
+		command = { type = sleepevent which = 4109 } # 中国工場移転
+		command = { type = sleepevent which = 2031 } # クロアチア独立
+#		command = { type = sleepevent which = 27010 } #国民党対軍閥AI
+	}
+}

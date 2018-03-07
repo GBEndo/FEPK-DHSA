@@ -1,0 +1,185 @@
+# German operation Barbarosa Invasion AI File by Lothos
+
+###################################
+# Construction and Tech Research
+###################################
+construction = { 
+	max_factor = 0.00
+
+	AA_batteries = yes
+
+	coastal_fort = atwar
+	max_coastal_level = 3
+	coastal_fort_provs = {
+		# Atlantic Wall
+		292 # Arburg
+		92  # Arhus
+		91  # Kolding
+		90  # Kiel
+		78  # Leeweden
+		47  # Amsterdam
+		46  # Rotterdam
+		45  # Ghent
+		43  # Dunkerque
+		18  # Calais
+		42  # Dieppe
+		41  # Le Havre
+		39  # Caen
+		33  # Rennes
+		32  # Brest
+		34  # Lorient
+		35  # Nantes
+		59  # Cholet
+		325 # Bordeaux
+		326 # Dax
+	} 
+
+	radar_station = yes
+	air_base = no
+	naval_base = no 
+	land_fort = no
+	fort_provs = { }
+	ic_at_war = no
+}
+
+military = { 
+	relative_build_scheme 	= no
+	max_batch_peace 	= 360
+	max_batch_war 		= 360
+	max_batch_home_front 	= 180
+
+	#### Divisions etc...
+	infantry 		= 38 #45
+	cavalry 		= 0
+	motorized 		= 10 #10
+	mechanized 		= 10
+	light_armor 		= 0
+	armor 			= 10 #20
+	paratrooper 		= 0
+	marine 			= 0
+	bergsjaeger 		= 5
+	garrison		= 10 #6
+  	hq 			= 0
+	militia 		= 0
+	d_rsv_33	= 2
+#					85 %
+	interceptor 		= 1
+	multi_role 		= 3 #4
+	cas 			= 3 #5
+	strategic_bomber 	= 0
+	tactical_bomber 	= 3 #4
+	naval_bomber 		= 0
+	transport_plane 	= 0
+	flying_bomb 		= 0
+	flying_rocket 		= 0
+#					10 %
+	battleship 		= 0
+	carrier 		= 0
+	escort_carrier		= 0
+	destroyer 		= 2
+	light_cruiser 		= 0
+	heavy_cruiser 		= 0
+	battlecruiser 		= 0
+	submarine 		= 2
+	nuclear_submarine 	= 0
+	transports 		= 1
+#					5 %
+
+	#### Brigades
+	artillery 		= 5
+	sp_artillery 		= 10
+	rocket_artillery	= 0
+	sp_rct_artillery 	= 0
+	anti_tank 		= 0
+	tank_destroyer 		= 0
+	light_armor_brigade 	= 0
+	heavy_armor 		= 10
+	super_heavy_armor 	= 0
+	armored_car 		= 0
+	anti_air 		= 0
+	police 			= 10
+	engineer 		= 15
+
+	cag = 100.000
+}
+
+###################################
+# Ground Combat, Leaders and Garrisons
+###################################
+garrison = {
+	defend_overseas_beaches = yes
+	
+	home_multiplier 	= 1.0
+	overseas_multiplier 	= 1.0
+	home_peace_cap 		= 101
+	war_zone_odds 		= 2.0
+	key_point_prio_mult	= 0.01
+	revolt_risk_mult	= 0.01
+
+	# PRIORITIES:
+	beach			= 60	# Beach level 2
+	capital			= 75	# Our capital
+	human_border		= 100	# Ignored for allied human players
+	war_target		= 150	# The next country targeted for attack by this AI
+	
+	opposing_alliance	= 50	# For neutrals, all alliances are "opposing"
+	claim_threat		= 0	# If we are neutral, countries with claims on us get this
+	unstable_border		= 0	# Bordering countries at war with someone else get this
+
+	# Borders with specific countries
+	country_priorities = {
+		VIC = -1
+		FIN = -1
+		ITA = -1
+		SCH = -1
+		AUS = -1
+		FRA = 75
+		ENG = 75
+		CAN = 75
+		AST = 75
+		NZL = 75
+		SAF = 75
+		USA = 75
+		YUG = 25
+		HOL = 25
+		BEL = 50
+		DEN = 25
+		SOV = 175
+	}
+	ignore = {
+	}
+	province_priorities = {
+	}
+	area_multiplier = {
+	}
+}
+
+front = { 
+	recklessness 		= 2 # 0-3
+	distrib_vs_ai 		= offensive
+	distrib_vs_human 	= offensive
+
+	enemy_reinf_days	= 6
+	reserve_prop		= 0.1
+	panic_ratio_vs_ai	= 2.5
+	panic_ratio_vs_human	= 2.5
+	base_attack_odds	= 1.333
+	min_attack_odds		= 1.1
+	max_attack_odds		= 3.0
+	reinforce_odds		= 1.2
+	withdraw_odds		= 0.75
+
+	strength 	= 1.0
+	organisation 	= 2.0
+	soft_attack 	= 1.0
+	hard_attack 	= 2.0
+	ground_defense 	= 1.0
+	dig_in 		= 1.25 # Against defender
+
+      	enemy_handicap = {
+	} 
+      	passivity = {
+	}
+	province_priorities = {
+	}
+} 

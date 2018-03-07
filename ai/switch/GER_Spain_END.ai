@@ -1,0 +1,9 @@
+# German End of Norway Invasion AI File by Lothos
+
+###################################
+# Invasions and Naval
+###################################
+garrison = {
+	province_priorities = {
+	}
+}

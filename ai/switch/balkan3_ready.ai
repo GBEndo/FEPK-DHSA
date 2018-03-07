@@ -1,0 +1,12 @@
+exp_force_ratio = 0.000 
+exp_force_ratios = { 
+} 
+max_front_ratio = 1.200
+max_front_ratios = {
+	GER = 0.000
+	ITA = 0.000
+}
+
+neutrality = 155
+war = 0
+#FEPKBETA4.8

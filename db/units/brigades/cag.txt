@@ -1,0 +1,212 @@
+detachable = yes
+
+# 0 - ‘æˆêŸ¢ŠE‘åíŠú‚Ì‹ó•êq‹ó‘à
+model = {
+	cost 				= 2
+	buildtime			= 190
+	manpower 			= 0.2
+	surfacedetectioncapability	= 7
+	airdetectioncapability		= 3
+	subdetectioncapability		= 1
+	airdefence			= 3
+	seaattack			= 2
+	convoyattack			= 2
+	subattack			= 0
+	airattack			= 3
+	shorebombardment		= 5
+	distance			= 1
+	supplyconsumption 		= 0.4
+	fuelconsumption			= 1
+	upgrade_time_factor 		= 0.5
+	upgrade_cost_factor 		= 1
+	equipment = { fighter = 40 bomber = 30 manpower = 200 }
+}
+# 1 - ‰ŠúŒ^‹ó•êq‹ó‘à
+model = {
+	cost 				= 2.5
+	buildtime			= 190
+	manpower 			= 0.3
+	surfacedetectioncapability	= 9
+	airdetectioncapability		= 4
+	subdetectioncapability		= 1
+	airdefence			= 5
+	seaattack			= 4
+	convoyattack			= 4
+	subattack			= 0
+	airattack			= 6
+	shorebombardment		= 7
+	distance			= 1.2
+	supplyconsumption 		= 0.4
+	fuelconsumption			= 1
+	upgrade_time_factor 		= 0.5
+	upgrade_cost_factor 		= 1
+	equipment = { fighter = 40 bomber = 30 manpower = 200 }
+}
+# 2 - Šî–{Œ^‹ó•êq‹ó‘à
+model = {
+	cost 				= 3
+	buildtime			= 190
+	manpower 			= 0.5
+	surfacedetectioncapability	= 10
+	airdetectioncapability		= 5
+	subdetectioncapability		= 1
+	airdefence			= 6
+	seaattack			= 5
+	convoyattack			= 5
+	subattack			= 0
+	airattack			= 7
+	shorebombardment		= 10
+	distance			= 1.4
+	supplyconsumption 		= 0.5
+	fuelconsumption			= 1
+	upgrade_time_factor 		= 0.5
+	upgrade_cost_factor 		= 1
+	equipment = { fighter = 40 bomber = 30 manpower = 200 }
+}
+# 3 - ‰ü—ÇŒ^‹ó•êq‹ó‘à
+model = {
+	cost 				= 3.5
+	buildtime			= 190
+	manpower 			= 0.6
+	surfacedetectioncapability	= 13
+	airdetectioncapability		= 6
+	subdetectioncapability		= 6
+	airdefence			= 6
+	seaattack			= 6
+	convoyattack			= 6
+	subattack			= 0
+	airattack			= 7
+	shorebombardment		= 11
+	distance			= 1.6
+	supplyconsumption 		= 0.5
+	fuelconsumption			= 1
+	upgrade_time_factor 		= 0.5
+	upgrade_cost_factor 		= 1
+	equipment = { fighter = 40 bomber = 30 manpower = 200 }
+}
+# 4 - ”­“WŒ^‹ó•êq‹ó‘à
+model = {
+	cost 				= 4
+	buildtime			= 190
+	manpower 			= 0.7
+	surfacedetectioncapability	= 14
+	airdetectioncapability		= 7
+	subdetectioncapability		= 7
+	airdefence			= 8
+	seaattack			= 8
+	convoyattack			= 8
+	subattack			= 1
+	airattack			= 8
+	shorebombardment		= 13
+	distance			= 1.8
+	supplyconsumption 		= 0.6
+	fuelconsumption			= 1
+	upgrade_time_factor 		= 0.5
+	upgrade_cost_factor 		= 1
+	equipment = { fighter = 40 bomber = 30 manpower = 200 }
+}
+# 5 - ”­“WŒ^‘åŒ^‹ó•êq‹ó‘à
+model = {
+	cost 				= 4.5
+	buildtime			= 190
+	manpower 			= 0.8
+	surfacedetectioncapability	= 15
+	airdetectioncapability		= 7
+	subdetectioncapability		= 7
+	airdefence			= 11
+	seaattack			= 10
+	convoyattack			= 10
+	subattack			= 3
+	airattack			= 11
+	shorebombardment		= 15
+	distance			= 2
+	supplyconsumption 		= 0.6
+	fuelconsumption			= 1
+	upgrade_time_factor 		= 0.5
+	upgrade_cost_factor 		= 1
+	equipment = { fighter = 40 bomber = 30 manpower = 200 }
+}
+# 6 - ”­“WŒ^’´‘åŒ^‹ó•êq‹ó‘à
+model = {
+	cost 				= 5
+	buildtime			= 190
+	manpower 			= 0.9
+	surfacedetectioncapability	= 16
+	airdetectioncapability		= 7
+	subdetectioncapability		= 7
+	airdefence			= 12
+	seaattack			= 11
+	convoyattack			= 11
+	subattack			= 3
+	airattack			= 14
+	shorebombardment		= 17
+	distance			= 2.2
+	supplyconsumption 		= 0.7
+	fuelconsumption			= 1
+	upgrade_time_factor 		= 0.5
+	upgrade_cost_factor 		= 1
+	equipment = { fighter = 40 bomber = 30 manpower = 200 }
+}
+# 7 - €Œ»‘ãŒ^‹ó•êq‹ó‘à
+model = {
+	cost 				= 5.5
+	buildtime			= 190
+	manpower 			= 1
+	surfacedetectioncapability	= 17
+	airdetectioncapability		= 8
+	subdetectioncapability		= 8
+	airdefence			= 14
+	seaattack			= 12
+	convoyattack			= 12
+	subattack			= 5
+	airattack			= 15
+	shorebombardment		= 17
+	distance			= 2.4
+	supplyconsumption 		= 0.7
+	fuelconsumption			= 1
+	upgrade_time_factor 		= 0.5
+	upgrade_cost_factor 		= 1
+	equipment = { fighter = 40 bomber = 30 manpower = 200 }
+}
+# 8 - ƒ^[ƒ{ƒWƒFƒbƒg‹ó•êq‹ó‘à
+model = {
+	cost 				= 6
+	buildtime			= 190
+	manpower 			= 1
+	surfacedetectioncapability	= 20
+	airdetectioncapability		= 10
+	subdetectioncapability		= 10
+	airdefence			= 17
+	seaattack			= 15
+	convoyattack			= 15
+	subattack			= 8
+	airattack			= 19
+	shorebombardment		= 21
+	distance			= 2.5
+	supplyconsumption 		= 1
+	fuelconsumption			= 1.5
+	upgrade_time_factor 		= 0.5
+	upgrade_cost_factor 		= 1
+	equipment = { fighter = 40 bomber = 30 manpower = 200 }
+}
+# 9 - ‰ü—ÇŒ^ƒ^[ƒ{ƒWƒFƒbƒg‹ó•êq‹ó‘à
+model = {
+	cost 				= 6.5
+	buildtime			= 190
+	manpower 			= 1
+	surfacedetectioncapability	= 22
+	airdetectioncapability		= 12
+	subdetectioncapability		= 12
+	airdefence			= 19
+	seaattack			= 17
+	convoyattack			= 17
+	subattack			= 8
+	airattack			= 20
+	shorebombardment		= 23
+	distance			= 2.5
+	supplyconsumption 		= 1
+	fuelconsumption			= 1.5
+	upgrade_time_factor 		= 0.5
+	upgrade_cost_factor 		= 1
+	equipment = { fighter = 40 bomber = 30 manpower = 200 }
+}

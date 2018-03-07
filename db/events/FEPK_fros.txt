@@ -1,0 +1,1654 @@
+#########################################################################
+#	FEPK_fros.txt
+#	南部戦線関連イベント
+#########################################################################
+#id = 130600-19		バルカン戦線イベント(ギリシア・ユーゴ・アルバニア)
+#id = 130620-29		イタリアによる地中海封鎖イベント
+#id = 130630-39		バルカン諸国の枢軸参加
+#id = 130640-49		アビシニア危機関連追加イベント（from HEAM）
+#id = 130650-59		枢軸国によるチェコスロバキア分割計画（ダンツィヒ後）
+#########################################################################
+event = { 
+	id = 130600
+	random = no
+	country = ITA
+	
+	trigger = {
+		exists = GRE
+		OR = {
+			control = { province = 56 data = GER } #Paris is not free
+			control = { province = 56 data = VIC } #Paris is not free
+		}
+		NOT = {
+			flag = gerdefeatsita #Germany defeated Italy
+			alliance = { country = GRE country = ITA }
+			alliance = { country = GRE country = GER }
+			war = { country = GRE country = ITA }
+			war = { country = GER country = ITA }
+			war = { country = SOV country = ITA }
+			war = { country = ALB country = ITA }
+		}
+		random = 15
+	}
+	
+	date = { day = 1 month = october year = 1940 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1943 }
+
+	name = "EVT_130600_NAME"
+	desc = "EVT_130600_DESC"
+
+	picture = "greek_soldiers"
+	
+	action_a = {
+		name = "EVT_130600_ACTA"
+		ai_chance = 99
+		command = { type = war which = GRE }
+		command = { type = relation which = YUG value = -10 }
+	}
+	action_b = {
+		name = "EVT_130600_ACTB"
+		ai_chance = 1
+		command = { type = domestic which = interventionism value = -1 }
+	}
+}
+
+##########
+# Greece gives Crete to Britain
+##########
+event = {
+	id = 130604
+	random = no 
+	country = GRE
+
+	trigger = {
+		OR = {
+			NOT = {
+				control = { province = 401 data = GRE } #Athens
+			}
+			NOT = {
+				control = { province = 402 data = GRE } #
+			}
+			NOT = {
+				control = { province = 403 data = GRE } #
+			}
+		}
+		alliance = { country = ENG country = GRE }
+		control = { province = 396 data = GRE } #Crete
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130604_NAME"
+	desc = "EVT_130604_DESC"
+
+	picture = "greek_soldiers"
+
+	action_a = {
+		name = "EVT_130604_ACTA"
+		ai_chance = 100
+		command = { type = removecore which = 396 }
+		command = { type = secedeprovince which = ENG value = 396 } #
+	}
+	action_b = {
+		name = "EVT_130604_ACTB"
+		ai_chance = 0
+		command = { }
+	}
+}
+
+##########
+#  The Yugoslavian coup d'etat (Germany, Yugoslavia)
+##########
+event = {
+	id = 130605
+	random = no
+	country = YUG
+
+	trigger = {
+		atwar = no
+		war = { country = ITA country = GRE }
+		exists = GRE
+		alliance = { country = ITA country = GER }
+		NOT = {
+			war = { country = GER country = SOV } # not if Barbarossa started
+			war = { country = GER country = YUG } # not if Barbarossa started
+			alliance = { country = YUG country = ENG }
+			alliance = { country = YUG country = SOV }
+			alliance = { country = YUG country = GER }
+		}
+	}
+
+	name = EVT_6_NAME
+	desc = EVT_6_DESC
+	picture = "Yugoslav coup"
+
+	date = { day = 1 month = march year = 1941 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = EVT_6_ACTA
+		ai_chance = 99
+		command = { type = leave_alliance }
+		command = { type = dissent value = 20 }
+
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = domestic which = freedom value = 1 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = headofstate which = 701344 }
+		command = { type = headofgovernment which = 701203 }
+		command = { type = foreignminister which = 701210 }
+		command = { type = armamentminister which = 701220 }
+		command = { type = ministerofsecurity which = 701227 }
+		command = { type = ministerofintelligence which = 701274 }
+		command = { type = chiefofstaff which = 701291 }
+		command = { type = chiefofarmy which = 701298 }
+		command = { type = chiefofnavy which = 701324 }
+		command = { type = chiefofair which = 20010 }
+
+		command = { type = set_relation which = GER value = -100 }
+		command = { type = set_relation which = ITA value = -100 }
+		command = { type = set_relation which = HUN value = -100 }
+		command = { type = set_relation which = ROM value = -100 }
+		command = { type = set_relation which = BUL value = -100 }
+
+		command = { type = manpowerpool value = -1000 } #now they cant reinforce
+
+		command = { type = trigger which = 130607 }
+		command = { type = sleepevent which = 130606 }
+	}
+	action_b = {
+		name = EVT_6_ACTB
+		ai_chance = 1
+		command = { type = alliance which = GER }
+		command = { type = dissent value = 40 }
+
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = domestic which = freedom value = -2 }
+		command = { type = headofstate which = 20001 } #
+		command = { type = headofgovernment which = 701202 }
+		command = { type = foreignminister which = 701209 }
+		command = { type = armamentminister which = 701219 }
+		command = { type = ministerofsecurity which = 701226 }
+		command = { type = ministerofintelligence which = 701273 }
+		command = { type = chiefofstaff which = 20007 }
+		command = { type = chiefofarmy which = 20008 }
+		command = { type = chiefofnavy which = 20009 }
+		command = { type = chiefofair which = 20010 }
+
+		command = { type = removecore which = 412 } #in greece
+
+	}
+}
+
+##########
+#  Yugoslavia really joins the Axis
+##########
+event = {
+	id = 130606
+	random = no
+	country = YUG
+
+	trigger = {
+		atwar = no
+		NOT = {
+			war = { country = GER country = YUG }
+			alliance = { country = AUS country = GER }
+		}
+		OR = {
+			AND = {
+				alliance = { country = GRE country = GER }
+				alliance = { country = ITA country = GER }
+				NOT = {
+					alliance = { country = YUG country = GER }
+				}
+			}
+			AND = {
+				alliance = { country = ITA country = GER }
+				NOT = {
+					alliance = { country = YUG country = GER }
+					exists = GRE
+				}
+			}
+			AND = {
+				alliance = { country = ITA country = GER }
+				NOT = {
+					alliance = { country = YUG country = GER }
+					war = { country = GER country = GRE } #
+				}
+			}
+			AND = { #NEW
+				alliance = { country = ITA country = GER }
+				war = { country = GER country = GRE }
+				NOT = {
+					alliance = { country = YUG country = GER }
+					war = { country = GER country = ENG }
+				}
+			}
+		}
+		random = 20
+	}
+
+	name = EVT_5_NAME
+	desc = EVT_5_DESC
+	picture = "yougoslavian"
+
+	date = { day = 5 month = february year = 1941 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = EVT_5_ACTA
+		ai_chance = 100
+		command = { type = alliance which = GER }
+		command = { type = dissent value = 40 } #was 60 lol
+
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = domestic which = freedom value = -2 }
+		command = { type = headofstate which = 20001 } #
+		command = { type = headofgovernment which = 701202 }
+		command = { type = foreignminister which = 701209 }
+		command = { type = armamentminister which = 701219 }
+		command = { type = ministerofsecurity which = 701226 }
+		command = { type = ministerofintelligence which = 701273 }
+		command = { type = chiefofstaff which = 20007 }
+		command = { type = chiefofarmy which = 20008 }
+		command = { type = chiefofnavy which = 20009 }
+		command = { type = chiefofair which = 20010 }
+
+		#command = { type = secedeprovince which = GER value = 380 }
+		#command = { type = secedeprovince which = GER value = 459 }
+		#command = { type = removecore which = 380 }
+		#command = { type = removecore which = 459 }
+		#command = { type = secedeprovince which = ITA value = 381 }
+		#command = { type = secedeprovince which = ITA value = 384 }
+		#command = { type = secedeprovince which = ITA value = 415 }
+		#command = { type = secedeprovince which = ITA value = 387 }
+		#command = { type = secedeprovince which = ITA value = 388 }
+		#command = { type = secedeprovince which = ITA value = 389 }
+		#command = { type = removecore which = 381 }
+		#command = { type = removecore which = 384 }
+		#command = { type = removecore which = 415 }
+		#command = { type = removecore which = 387 }
+		#command = { type = removecore which = 388 }
+		#command = { type = removecore which = 389 }
+		#command = { type = secedeprovince which = HUN value = 493 }
+		#command = { type = removecore which = 493 }
+		#command = { type = secedeprovince which = BUL value = 413 }
+		#command = { type = secedeprovince which = BUL value = 414 }
+		#command = { type = removecore which = 413 }
+		#command = { type = removecore which = 414 }
+
+		command = { type = removecore which = 412 } #in greece
+
+		command = { type = sleepevent which = 130605 }
+	}
+	action_b = {
+		name = EVT_5_ACTB
+		ai_chance = 0
+		command = { type = leave_alliance }
+		command = { type = dissent value = 20 }
+
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = domestic which = freedom value = 1 }
+		command = { type = headofstate which = 701344 }
+		command = { type = headofgovernment which = 701203 }
+		command = { type = foreignminister which = 701210 }
+		command = { type = armamentminister which = 701220 }
+		command = { type = ministerofsecurity which = 701227 }
+		command = { type = ministerofintelligence which = 701274 }
+		command = { type = chiefofstaff which = 701291 }
+		command = { type = chiefofarmy which = 701298 }
+		command = { type = chiefofnavy which = 701324 }
+		command = { type = chiefofair which = 20010 }
+
+		command = { type = set_relation which = GER value = -100 }
+		command = { type = set_relation which = ITA value = -100 }
+		command = { type = set_relation which = HUN value = -100 }
+		command = { type = set_relation which = ROM value = -100 }
+		command = { type = set_relation which = BUL value = -100 }
+
+		command = { type = trigger which = 130607 }
+		command = { type = sleepevent which = 130605 }
+	}
+}
+##########
+#  Germany prepares to invade Yugoslavia after she leaves Axis
+##########
+event = {
+	id = 130607
+	random = no
+	country = GER
+
+	name = EVT_3_NAME
+	desc = EVT_3_DESC
+	picture = "yougoslavian"
+
+	action_a = {
+		name = EVT_3_ACTA
+		ai_chance = 100
+		command = { type = set_relation which = YUG value = -50 }
+		#command = { type = relation which = BUL value = -200 } #no longer nec?
+	}
+	action_b = {
+		name = EVT_3_ACTB
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+		command = { type = relation which = ITA value = -50 }
+		command = { type = relation which = HUN value = -50 }
+		command = { type = relation which = ROM value = -50 }
+		command = { type = relation which = BUL value = -50 }
+		command = { type = sleepevent which = 130608 }
+		command = { type = sleepevent which = 138000 } #german AI event to invade yugoslavia
+	}
+}
+##########
+#  Germany declares war on Yugoslavia
+##########
+event = {
+	id = 130608
+	random = no
+	country = GER
+
+	trigger = {
+		ai = no #new
+		event = 130607
+		exists = YUG
+		NOT = {
+			war = { country = GER country = SOV } #not if Barbarossa started
+			war = { country = GER country = YUG }
+		}
+	}
+
+	name = EVT_4_NAME
+	desc = EVT_4_DESC
+	picture = "yougoslavian"
+
+	date = { day = 3 month = april year = 1941 } #5th becuz happened on 6th and is war
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = EVT_4_ACTA
+		ai_chance = 100
+		command = { type = war which = YUG }
+		#command = { type = relation which = BUL value = 200 } #no longer nec?
+	}
+}
+##########
+#  UK Guarantee of Greek independence - ENG
+##########
+event = {
+	id = 130609
+	random = no
+	country = ENG
+
+	name = EVT_94_NAME
+	desc = EVT_94_DESC
+	picture = "greek_soldiers"
+
+
+	trigger = {
+		exists = GRE
+		NOT = {
+			atwar = GRE
+		}
+		alliance = { country = ITA country = GER }
+		control = { province = 390 data = ITA }
+		war = { country = GER country = ENG }
+	}
+
+	date = { day = 1 month = january year = 1939 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		ai_chance = 95
+		name = EVT_94_ACTA
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = trigger which = 130610 }
+	}
+	action_b = {
+		ai_chance = 5
+		name = EVT_94_ACTB
+		command = { type = dissent value = 3 }
+		command = { type = relation which = GRE value = 200 }
+		command = { type = relation which = GRE value = -250 } #so max relations is -50
+		command = { type = relation which = FRA value = -50 }
+		command = { type = domestic which = interventionism value = -1 }
+	}
+}
+##########
+#  UK Guarantee of Greek independence - GRE
+##########
+event = {
+	id = 130610
+	random = no
+	country = GRE
+
+	name = EVT_95_NAME
+	desc = EVT_95_DESC
+	picture = "greek_soldiers"
+
+
+	action_a = {
+		ai_chance = 100
+		name = EVT_95_ACTA
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = guarantee which = ENG where = GRE } #should be free +50 relations
+	}
+	action_b = {
+		ai_chance = 0
+		name = EVT_95_ACTB
+		command = { type = relation which = ENG value = 200 }
+		command = { type = relation which = ENG value = -250 } #so max relations is -50
+		command = { type = end_guarantee which = ENG where = GRE }
+	}
+}
+##########
+#  Annexation of Albania
+##########
+event = { #FEPKBETA4 #シナリオファイルでスリープ #fros62040-2に統合
+	id = 130611
+	random = no
+	country = ITA
+
+	trigger = {
+		exists = ALB
+		OR = {
+			AND = {
+				NOT = {
+					exists = CZE
+				}
+				control = { province = 469 data = GER } #prague
+			}
+			event = 130127 #Germany annexes Bohemia and Moravia - Mussolini feels he must not be outdone...
+			event = 130130 #Czechs partitioned
+		}
+		NOT = {
+			flag = gerdefeatsita #Germany defeated Italy
+			alliance = { country = ENG country = ITA }
+			alliance = { country = ALB country = ITA }
+			alliance = { country = ALB country = GER }
+			war = { country = ALB country = ITA }
+		#	war = { country = GER country = ITA }
+		}
+	}
+
+	name = "EVT_2902_NAME"
+	desc = "EVT_2902_DESC"
+
+	picture = "Albania"
+
+	date = { day = 25 month = march year = 1939 }
+	offset = 1
+	deathdate = { day = 29 month = august year = 1939 }
+
+	action_a = {
+		name = "ACTIONNAME2902A" #Send an Ultimatum to King Zog
+		ai_chance = 98
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = trigger which = 3500 } #Alb
+		command = { type = relation which = ALB value = -20 }
+		command = { type = relation which = YUG value = -5 }
+		command = { type = relation which = GRE value = -5 }
+	}
+	action_b = {
+		name = "ACTIONNAME2902B" #We have no need of Albania
+		ai_chance = 2
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = relation which = ALB value = 20 }
+		command = { type = relation which = YUG value = 5 }
+		command = { type = relation which = GRE value = 5 }
+	}
+}
+
+
+event = {
+	id = 130612
+	persistent = no
+	random = no
+	country = ITA
+
+	decision = {
+		NOT = { ispuppet = ITA }
+		war = { country = GER country = YUG }
+		NOT = { alliance = { country = ITA country = GER } }
+		NOT = { alliance = { country = ITA country = YUG } }
+		NOT = { alliance = { country = ITA country = ENG } }
+		NOT = { alliance = { country = ITA country = SOV } }
+		OR = { control = { province = 381 data = YUG }	#リエカ
+			control = { province = 384 data = YUG }		#スプリト
+			control = { province = 387 data = YUG }		#モスタル
+			control = { province = 388 data = YUG }		#ドゥブロヴニク
+			control = { province = 389 data = YUG }		#ポドゴリツァ
+		}
+	}
+	decision_trigger = { }
+	trigger = {
+		war = { country = GER country = YUG }
+		NOT = { alliance = { country = ITA country = GER } }
+		NOT = { alliance = { country = ITA country = YUG } }
+		NOT = { alliance = { country = ITA country = ENG } }
+		NOT = { alliance = { country = ITA country = SOV } }
+		random = 30
+		NOT = { ispuppet = ITA }
+		OR = { control = { province = 381 data = YUG }	#リエカ
+			control = { province = 384 data = YUG }		#スプリト
+			control = { province = 387 data = YUG }		#モスタル
+			control = { province = 388 data = YUG }		#ドゥブロヴニク
+			control = { province = 389 data = YUG }		#ポドゴリツァ
+		}
+	}
+
+	name = "EVT_130612_NAME"	#ドイツのユーゴ侵攻
+	desc = "EVT_130612_DESC"	#
+	style = 0
+	picture = "VIC"
+	decision_picture = "decision_italian_mobilization"
+
+	date = { day = 0 month = 0 year = 1935 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		ai_chance = 99
+		name = "EVT_130612_ACTA"	#この機にダルマチアを回収せよ！
+		command = { type = alliance which = GER }
+	}
+	action_b = {
+		ai_chance = 1
+		name = "EVT_130612_ACTB"	#その必要は無い
+		command = { type = set_domestic which = interventionism value = -1 }
+	}
+}
+
+event = {
+	id = 130613
+	persistent = no
+	random = no
+	country = ITA
+
+	decision = {
+		NOT = { war = { country = GER country = YUG } }
+		atwar = no
+		exists = YUG
+		NOT = { alliance = { country = GER country = YUG } }
+		NOT = { alliance = { country = ITA country = GER } }
+		NOT = { alliance = { country = ITA country = YUG } }
+		NOT = { alliance = { country = ITA country = ENG } }
+		NOT = { alliance = { country = ITA country = SOV } }
+		NOT = { non_aggression = { country = ITA country = YUG } }
+		NOT = { control = { province = 56 data = FRA } }
+		OR = { control = { province = 381 data = YUG }
+			control = { province = 384 data = YUG }
+			control = { province = 387 data = YUG }
+			control = { province = 388 data = YUG }
+			control = { province = 389 data = YUG }
+		}
+	}
+	decision_trigger = { }
+
+	trigger = {
+		NOT = { war = { country = GER country = YUG } }
+		atwar = no
+		exists = YUG
+		NOT = { alliance = { country = GER country = YUG } }
+		NOT = { alliance = { country = ITA country = GER } }
+		NOT = { alliance = { country = ITA country = YUG } }
+		NOT = { alliance = { country = ITA country = ENG } }
+		NOT = { alliance = { country = ITA country = SOV } }
+		NOT = { non_aggression = { country = ITA country = YUG } }
+		NOT = { control = { province = 56 data = FRA } }
+		OR = { control = { province = 381 data = YUG }
+			control = { province = 384 data = YUG }
+			control = { province = 387 data = YUG }
+			control = { province = 388 data = YUG }
+			control = { province = 389 data = YUG }
+		}
+		random = 20
+		NOT = { ispuppet = ITA }
+	}
+
+
+	name = "EVT_130613_NAME"	#ダルマチア問題
+	desc = "EVT_130613_DESC"	#
+	style = 0
+	picture = "VIC"
+	decision_picture = "decision_italian_mobilization"
+
+	date = { day = 0 month = 0 year = 1935 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		ai_chance = 90
+		name = "EVT_130613_ACTA"	#ユーゴにダルマチアの割譲を要求する
+		command = { type = trigger which = 130614 }
+	}
+	action_b = {
+		ai_chance = 6
+		name = "EVT_130613_ACTB"	#ドイツと同盟を結び、将来に備えるのだ
+		command = { type = dissent value = 3 }
+		command = { type = alliance which = GER }
+	}
+	action_c = {
+		ai_chance = 4
+		name = "EVT_130613_ACTC"	#その必要は無い
+		command = { type = set_domestic which = interventionism value = -1 }
+	}
+}
+
+event = {
+	id = 130614
+	persistent = no
+	random = no
+	country = YUG
+
+	name = "EVT_130614_NAME"	#イタリアのダルマチア割譲要求
+	desc = "EVT_130614_DESC"	#
+	style = 0
+	picture = "VIC"
+
+	action_a = {
+		ai_chance = 90
+		name = "EVT_130614_ACTA"	#ふざけるな！
+		command = { type = trigger which = 130615 }
+	}
+	action_b = {
+		ai_chance = 10
+		name = "EVT_130614_ACTB"	#受け入れざるを得ないだろう
+		command = { type = secedeprovince which = ITA value = 381 }
+		command = { type = secedeprovince which = ITA value = 384 }
+		command = { type = secedeprovince which = ITA value = 387 }
+		command = { type = secedeprovince which = ITA value = 388 }
+		command = { type = secedeprovince which = ITA value = 389 }
+		command = { type = trigger which = 130616 }
+	}
+}
+
+event = {
+	id = 130615
+	persistent = no
+	random = no
+	country = ITA
+	
+	name = "EVT_130615_NAME"	#ユーゴが要求を拒否！
+	desc = "EVT_130615_DESC"	#
+	style = 0
+	picture = "VIC"
+
+	action_a = {
+		ai_chance = 95
+		name = "EVT_130615_ACTA"	#ならば国ごと頂こう
+		command = { type = war which = YUG }
+	}
+	action_b = {
+		ai_chance = 5
+		name = "EVT_130615_ACTB"	#仕方があるまい
+		command = { type = relation which = YUG value = 5 }
+		command = { type = dissent value = 3 }
+	}
+}
+
+event = {
+	id = 130616
+	persistent = no
+	random = no
+	country = ITA
+
+	name = "EVT_130616_NAME"	#ユーゴが要求を受諾
+	desc = "EVT_130616_DESC"	#
+	style = 0
+	picture = "VIC"
+
+	action_a = {
+		name = "EVT_130616_ACTA"	#イタリア万歳！
+		command = { type = relation which = YUG value = 10 }
+		command = { type = dissent value = -5 }
+	}
+}
+
+
+event = {
+	id = 130620
+	random = no 
+	country = ITA
+
+	trigger = {
+		random = 33
+		alliance = { country = ITA country = GER }
+		war = { country = ITA country = ENG }
+		war = { country = ITA country = FRA }
+		OR = {	
+			NOT = {
+				exists = SPA
+			}
+			NOT = {
+				war = { country = ITA country = SPA }
+			}
+		}
+		control = { province = 515 data = ITA } # Roma
+		OR = {
+			control = { province = 348 data = ITA } # Gibraltar
+			control = { province = 348 data = GER }
+			AND = {
+				control = { province = 348 data = SPA }
+				alliance = { country = ITA country = SPA }
+			}
+		}
+		OR = {
+			control = { province = 900 data = ITA } # Suez
+			control = { province = 900 data = GER }
+		}
+		OR = {
+			control = { province = 401 data = ITA } # Athens
+			control = { province = 401 data = GER }
+			AND = {
+				control = { province = 401 data = GRE }
+				alliance = { country = ITA country = GRE }
+			}
+		}
+		NOT = {
+			flag = gerdefeatsita
+			alliance = { country = ITA country = USA }
+			control = { province = 949 data = ENG } # Axis have North African VP
+			control = { province = 949 data = USA }
+			control = { province = 949 data = FRA }
+			control = { province = 939 data = ENG }
+			control = { province = 939 data = USA }
+			control = { province = 939 data = FRA }
+			control = { province = 932 data = ENG }
+			control = { province = 932 data = USA }
+			control = { province = 932 data = FRA }
+			control = { province = 924 data = ENG }
+			control = { province = 924 data = USA }
+			control = { province = 924 data = FRA }
+			control = { province = 919 data = ENG }
+			control = { province = 919 data = USA }
+			control = { province = 919 data = FRA }
+			control = { province = 906 data = ENG }
+			control = { province = 906 data = USA }
+			control = { province = 906 data = FRA }
+			control = { province = 901 data = ENG }
+			control = { province = 901 data = USA }
+			control = { province = 901 data = FRA }
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130620_NAME"
+	desc = "EVT_130620_DESC"
+
+	picture = "surrender"
+
+	action_a = {
+		name = "EVT_130620_ACTA"
+		ai_chance = 100
+		command = { type = dissent value = -10 }
+		command = { type = trigger which = 130621 }
+		command = { type = trigger which = 130622 }
+		command = { type = trigger which = 130623 }
+	}
+}
+
+event = {
+	id = 130621
+	random = no 
+	country = ENG
+
+	name = "EVT_130621_NAME"
+	desc = "EVT_130621_DESC"
+
+	picture = "surrender"
+
+	action_a = {
+		name = "EVT_130621_ACTA"
+		ai_chance = 100
+		command = { type = dissent value = 5 }
+		command = { type = secedeprovince which = ITA value = 525 }
+		command = { type = secedeprovince which = ITA value = 526 }
+		command = { type = secedeprovince which = ITA value = 534 }
+		command = { type = secedeprovince which = SPA value = 535 }
+		command = { type = secedeprovince which = SPA value = 536 }
+		command = { type = secedeprovince which = SPA value = 537 }
+		command = { type = secedeprovince which = ITA value = 367 }
+		command = { type = secedeprovince which = ITA value = 31 }
+		command = { type = secedeprovince which = ITA value = 393 }
+		command = { type = secedeprovince which = ITA value = 396 }
+		command = { type = secedeprovince which = ITA value = 398 }
+		command = { type = secedeprovince which = ITA value = 399 }
+		command = { type = secedeprovince which = ITA value = 400 }
+		command = { type = secedeprovince which = ITA value = 405 }
+		command = { type = secedeprovince which = ITA value = 444 }
+
+	}
+}
+
+event = {
+	id = 130622
+	random = no 
+	country = USA
+	trigger = {
+		atwar = yes
+	}
+
+	name = "EVT_130621_NAME"
+	desc = "EVT_130621_DESC"
+
+	picture = "surrender"
+
+	action_a = {
+		name = "EVT_130621_ACTA"
+		ai_chance = 100
+		command = { type = dissent value = 5 }
+		command = { type = secedeprovince which = ITA value = 525 }
+		command = { type = secedeprovince which = ITA value = 526 }
+		command = { type = secedeprovince which = ITA value = 534 }
+		command = { type = secedeprovince which = SPA value = 535 }
+		command = { type = secedeprovince which = SPA value = 536 }
+		command = { type = secedeprovince which = SPA value = 537 }
+		command = { type = secedeprovince which = ITA value = 367 }
+		command = { type = secedeprovince which = ITA value = 31 }
+		command = { type = secedeprovince which = ITA value = 393 }
+		command = { type = secedeprovince which = ITA value = 396 }
+		command = { type = secedeprovince which = ITA value = 398 }
+		command = { type = secedeprovince which = ITA value = 399 }
+		command = { type = secedeprovince which = ITA value = 400 }
+		command = { type = secedeprovince which = ITA value = 405 }
+		command = { type = secedeprovince which = ITA value = 444 }
+
+	}
+}
+
+event = {
+	id = 130623
+	random = no 
+	country = FRA
+	trigger = {
+		atwar = yes
+	}
+
+	name = "EVT_130621_NAME"
+	desc = "EVT_130621_DESC"
+
+	picture = "surrender"
+
+	action_a = {
+		name = "EVT_130621_ACTA"
+		ai_chance = 100
+		command = { type = dissent value = 5 }
+		command = { type = secedeprovince which = ITA value = 525 }
+		command = { type = secedeprovince which = ITA value = 526 }
+		command = { type = secedeprovince which = ITA value = 534 }
+		command = { type = secedeprovince which = SPA value = 535 }
+		command = { type = secedeprovince which = SPA value = 536 }
+		command = { type = secedeprovince which = SPA value = 537 }
+		command = { type = secedeprovince which = ITA value = 367 }
+		command = { type = secedeprovince which = ITA value = 31 }
+		command = { type = secedeprovince which = ITA value = 393 }
+		command = { type = secedeprovince which = ITA value = 396 }
+		command = { type = secedeprovince which = ITA value = 398 }
+		command = { type = secedeprovince which = ITA value = 399 }
+		command = { type = secedeprovince which = ITA value = 400 }
+		command = { type = secedeprovince which = ITA value = 405 }
+		command = { type = secedeprovince which = ITA value = 444 }
+
+	}
+}
+
+#HUN
+event = {
+	id = 130630
+	random = no 
+	country = HUN
+	
+	trigger = {
+		exists = GER
+	#	OR = { #FEPK1.12
+	#		AND = {
+	#			exists = GER
+	#			NOT = {	ai = GER }
+	#		}
+	#		NOT = {	ai = yes }
+	#	}
+	#	atwar = no
+		NOT = { alliance = { country = HUN country = SOV } }
+		NOT = { alliance = { country = HUN country = ENG } }
+		NOT = { alliance = { country = HUN country = ITA } }
+		NOT = { alliance = { country = HUN country = GER } }
+		NOT = { alliance = { country = HUN country = TUR } }
+		OR = {
+			event = 130592 # Soviets claimed Bessarabia
+			event = 130559 # Vienna Diktat
+			event = 130185 # Germans gives Slovakia to Hungary
+			war = { country = GER country = YUG }
+			war = { country = GER country = SOV }
+			alliance = { country = ROM country = GER }
+			AND = {
+				war = { country = GER country = ROM }
+				NOT = { alliance = { country = SOV country = ROM } }
+			}
+		}
+		NOT = { #1.095
+			lost_national = { country = GER value = 2 }	#DHSA0.4
+			war = { country = HUN country = BUL }
+			war = { country = HUN country = ROM }
+			war = { country = HUN country = GER }
+			war = { country = HUN country = ITA }
+			event = 60201
+		}
+	}
+
+	name = "EVT_130630_NAME"
+	desc = "EVT_130630_DESC"
+	style = 0	
+	
+	picture = "hungary"
+
+	date = { day = 20 month = november year = 1940 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1941 } #1.096
+
+	action_a = {
+		name = "EVT_130630_ACTA"
+		ai_chance = 100
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = trigger which = 130631 }
+	}
+	action_b = {
+		name = "EVT_130630_ACTB"
+		ai_chance = 0
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = dissent value = 5 }
+	}
+}
+
+event = {
+	id = 130631
+	random = no 
+	country = GER
+	
+	name = "EVT_130631_NAME"
+	desc = "EVT_130631_DESC"
+	style = 0	
+	
+	picture = "italy_surrenders"
+
+	action_a = {
+		name = "EVT_130631_ACTA"
+		ai_chance = 100
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = relation which = HUN value = 20 }
+		command = { type = alliance which = HUN }
+	}
+	action_b = {
+		name = "EVT_130631_ACTB"
+		ai_chance = 0
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = relation which = HUN value = -20 }
+		command = { type = dissent value = 5 }
+	}
+}
+
+#BUL
+event = {
+	id = 130632
+	random = no 
+	country = GER
+	
+	trigger = {
+		exists = BUL
+	#	OR = { #FEPK1.12
+	#		AND = {
+	#			exists = GER
+	#			NOT = {	ai = GER }
+	#		}
+	#		NOT = {	ai = yes }
+	#	}
+	#	atwar = no #1.096
+		NOT = { alliance = { country = BUL country = SOV } }
+		NOT = { alliance = { country = BUL country = ENG } }
+		NOT = { alliance = { country = BUL country = ITA } }
+		NOT = { alliance = { country = BUL country = GER } }
+		NOT = { alliance = { country = BUL country = TUR } }
+		OR = {
+			event = 130592 # Soviets claimed Bessarabia
+			event = 130559 # Vienna Diktat
+			event = 130566 # Claim Constanta
+			war = { country = GER country = YUG }
+			AND = {
+				war = { country = GER country = ROM }
+				NOT = { alliance = { country = SOV country = ROM } }
+			}
+		}
+		NOT = { #1.095
+			war = { country = BUL country = HUN }
+			war = { country = BUL country = ROM }
+			war = { country = BUL country = GER } #1.096
+			war = { country = BUL country = ITA } #1.096
+		}
+		NOT = {
+			event = 60209	#大ハンガリーの成立の余波（ブルガリア）
+		}
+	}
+
+	name = "EVT_130632_NAME"
+	desc = "EVT_130632_DESC"
+	style = 0	
+	
+	picture = "italy_surrenders"
+
+	date = { day = 1 month = march year = 1941 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1941 } #1.096
+
+	action_a = {
+		name = "EVT_130632_ACTA"
+		ai_chance = 100
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = trigger which = 130633 } #1.096
+	}
+	action_b = {
+		name = "EVT_130632_ACTB"
+		ai_chance = 0
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = dissent value = 5 }
+	}
+}
+
+event = {
+	id = 130633
+	random = no 
+	country = BUL
+	
+	name = "EVT_130633_NAME"
+	desc = "EVT_130633_DESC"
+	style = 0	
+	
+	picture = "italy_surrenders"
+
+	action_a = {
+		name = "EVT_130633_ACTA"
+		ai_chance = 100
+		command = { type = alliance which = GER }
+		command = { type = relation which = GER value = 20 }
+	}
+	action_b = {
+		name = "EVT_130633_ACTB"
+		ai_chance = 0
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = dissent value = 5 }
+		command = { type = relation which = GER value = -20 }
+		command = { type = trigger which = 130634 }
+	}
+}
+
+event = {
+	id = 130634
+	random = no 
+	country = GER
+	
+	name = "EVT_130634_NAME"
+	desc = "EVT_130634_DESC"
+	style = 0	
+	
+	picture = "italy_surrenders"
+
+	action_a = {
+		name = "EVT_130634_ACTA"
+		ai_chance = 100
+		command = { type = war which = BUL }
+	}
+	action_b = {
+		name = "EVT_130634_ACTB"
+		ai_chance = 0
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = dissent value = 10 }
+	}
+}
+
+#ROM
+event = {
+	id = 130635
+	random = no 
+	country = GER
+	
+	trigger = {
+		exists = ROM
+	#	OR = { #FEPK1.12
+	#		AND = {
+	#			exists = GER
+	#			NOT = {	ai = GER }
+	#		}
+	#		NOT = {	ai = yes }
+	#	}
+	#	atwar = no #1.096
+		NOT = { alliance = { country = ROM country = SOV } }
+		NOT = { alliance = { country = ROM country = ENG } }
+		NOT = { alliance = { country = ROM country = ITA } }
+		NOT = { alliance = { country = ROM country = GER } }
+		NOT = { alliance = { country = ROM country = TUR } }
+		OR = {
+			event = 130592 # Soviets claimed Bessarabia
+			event = 130565 # Vienna Diktat Denied by Germany
+			AND = {
+				owned = { province = 434 data = SOV }
+				owned = { province = 435 data = SOV }
+				owned = { province = 230 data = SOV }
+				owned = { province = 433 data = SOV }
+			}
+			alliance = { country = HUN country = GER }
+			war = { country = GER country = HUN }
+			war = { country = GER country = SOV }
+		}
+		NOT = { #1.095
+			war = { country = ROM country = HUN }
+			war = { country = ROM country = BUL }
+			war = { country = ROM country = GER } #1.096
+			war = { country = ROM country = ITA } #1.096
+			event = 60201
+		}
+	}
+
+	name = "EVT_130635_NAME"
+	desc = "EVT_130635_DESC"
+	style = 0	
+	
+	picture = "romania"
+
+	date = { day = 23 month = november year = 1940 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1941 } #1.096
+
+	action_a = {
+		name = "EVT_130635_ACTA"
+		ai_chance = 100
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = trigger which = 130636 }
+	}
+	action_b = {
+		name = "EVT_130635_ACTB"
+		ai_chance = 0
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = dissent value = 5 }
+	}
+}
+
+event = {
+	id = 130636
+	random = no 
+	country = ROM
+	
+	name = "EVT_130636_NAME"
+	desc = "EVT_130636_DESC"
+	style = 0	
+	
+	picture = "italy_surrenders"
+
+	action_a = {
+		name = "EVT_130636_ACTA"
+		ai_chance = 99
+		command = { type = alliance which = GER }
+		command = { type = relation which = GER value = 20 }
+	}
+	action_b = {
+		name = "EVT_130636_ACTB"
+		ai_chance = 1
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = dissent value = 5 }
+		command = { type = relation which = GER value = -20 }
+		command = { type = trigger which = 130637 }
+	}
+}
+
+event = {
+	id = 130637
+	random = no 
+	country = GER
+	
+	name = "EVT_130637_NAME"
+	desc = "EVT_130637_DESC"
+	style = 0	
+	
+	picture = "italy_surrenders"
+
+	action_a = {
+		name = "EVT_130637_ACTA"
+		ai_chance = 99
+		command = { type = war which = ROM }
+	}
+	action_b = {
+		name = "EVT_130637_ACTB"
+		ai_chance = 1
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = dissent value = 10 }
+	}
+}
+
+event = {
+	id = 130640
+	random = no 
+	country = ITA
+	
+	trigger = {
+		atwar = no
+		NOT = { alliance = { country = ITA country = ENG } }
+		exists = EGY
+		NOT = { alliance = { country = ITA country = EGY } }
+	}
+
+	name = "EVT_130640_NAME"
+	desc = "EVT_130640_DESC"
+	style = 0	
+	
+	date = { day = 0 month = 8 year = 1935 }
+	offset = 1
+	deathdate = { day = 2 month = 8 year = 1935 }
+
+	action_a = {	
+		ai_chance = 98
+		name = "EVT_130640_ACTA"	#
+		command = { type = dissent value = 1 } 
+	}
+	action_b = {	
+		ai_chance = 2
+		name = "EVT_130640_ACTB"	#
+		command = { type = war which = ENG } 
+	}
+}
+
+event = {
+	id = 130641
+	random = no 
+	country = ITA
+	
+	trigger = {
+		exists = ETH
+		NOT = { war = { country = ITA country = ETH } }
+		control = { province = 900 data = -3 }#スエズ制圧
+		NOT = { alliance = { country = ENG country = ITA } }
+		NOT = { ispuppet = ITA }
+		government = fascist
+		random = 40
+	}
+
+	name = "EVT_130641_NAME"
+	desc = "EVT_130641_DESC"
+	style = 0	
+	
+	date = { day = 0 month = 0 year = 1935 }
+	offset = 11
+	deathdate = { day = 29 month = 11 year = 1945 }
+
+	action_a = {	
+		ai_chance = 99
+		name = "EVT_130641_ACTA"
+		command = { type = war which = ETH } 
+	}
+	action_b = {	
+		ai_chance = 1
+		name = "EVT_130641_ACTB"
+		command = { type = domestic which = defense_lobby value = -1 } 
+	}
+}
+
+event = {
+	id = 130650
+	random = no
+	country = HUN
+	trigger = {
+		control = { province = 303 data = GER }
+		control = { province = 300 data = GER }
+		control = { province = 457 data = HUN }
+		exists = CZE
+		NOT = { 
+			alliance = { country = GER country = CZE }
+			alliance = { country = CZE country = ENG }
+		}
+		alliance = { country = HUN country = GER }
+		atwar = no
+		random = 30
+	}
+	
+	picture = "czechs_annexed"
+	
+	name = "EVT_130650_NAME"	#ハンガリーにおける旧領復古への願い
+	desc = "EVT_130650_DESC"	#ハンガリーは旧領を取り戻すためにドイツとの同盟を望み、ドイツはそれを受諾した。ダンツィヒ危機を乗り越えて奇妙な平和を享受している欧州で、ハンガリーは北方の旧領――すなわちスロヴァキアを手中に収めることを願った。そこで、ドイツにはチェコを渡すという条件で、ハンガリーはドイツと共に侵攻する事を提案した。現状ドイツ国防軍は手空きであるのだから、全方向から攻撃すれば彼らを第一次大戦以前の形に戻すのは容易なはずだ。
+	
+	date = { day = 0 month = 0 year = 1935 }
+	offset = 7
+	deathdate = { day = 29 month = 11 year = 1945 }
+	
+	action = {
+		name = "EVT_130650_ACTA"	#チェコスロバキアの分割をドイツに提案する
+		ai_chance = 95
+		command = { type = dissent value = -5 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = belligerence value = 5 }
+		command = { type = trigger which = 130651 }
+	}
+	action = { 
+		name = "EVT_130650_ACTB"	#欧州の中立国に手を出せば何が起こるか、考えれば分かることだ！
+		ai_chance = 5
+		command = { type = dissent value = 10 }
+	}
+}
+
+event = {	
+	id = 130651
+	country = GER
+	
+	picture = "czechs_annexed"
+	
+	name = "EVT_130650_NAME"	#ハンガリーにおける旧領復古への願い
+	desc = "EVT_130650_DESC"	#
+	
+	action = {
+		name = "EVT_130651_ACTA"	#よろしい……我々も連中を疎ましく思っていたところだ！
+		ai_chance = 40
+		command = { type = addcore which = 467 } # 5 Sudetenland provinces
+		command = { type = addcore which = 466 }
+		command = { type = addcore which = 471 }
+		command = { type = addcore which = 472 }
+		command = { type = addcore which = 474 }
+		command = { type = addcore which = 470 } # The rest of the Czech Republic
+		command = { type = addcore which = 468 }
+		command = { type = addcore which = 469 }
+		command = { type = addcore which = 475 }
+		command = { type = war which = CZE }
+		command = { type = trigger which = 130652 }
+	}
+	action = {
+		name = "EVT_130651_ACTB"	#まず国境沿いで示威し、彼らの反応を見よう
+		ai_chance = 59
+		command = { type = addcore which = 467 } # 5 Sudetenland provinces
+		command = { type = addcore which = 466 }
+		command = { type = addcore which = 471 }
+		command = { type = addcore which = 472 }
+		command = { type = addcore which = 474 }
+		command = { type = addcore which = 470 } # The rest of the Czech Republic
+		command = { type = addcore which = 468 }
+		command = { type = addcore which = 469 }
+		command = { type = addcore which = 475 }
+		command = { type = trigger which = 130652 }
+	}
+	action = {
+		name = "EVT_130651_ACTB"	#我々がプラハへ銃を向ければ連合軍は我々を攻撃するだろう
+		ai_chance = 1
+		command = { type = dissent value = 15 }
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = domestic which = defense_lobby value = -1 }
+	}
+}
+
+event = {
+	id = 130652
+	country = CZE
+	trigger = {
+		#NOT = { war = { country = ENG } }
+	}
+	
+	name = "EVT_130652_NAME"	#チェコスロバキア存続の危機
+	desc = "EVT_130652_DESC"	#ダンツィヒ危機を超えた枢軸国の欲望は留まることを知らない。今度こそ彼らは我々を滅ぼそうとしているのだ！　我々は取ることのできるあらゆる手段を講じて、我々と欧州の平和を守らなければならない！
+	picture = "czechs_annexed"
+
+	action = {
+		name = "EVT_130652_ACTA"	#イギリスに同盟を求める
+		ai_chance = 98
+		trigger = { NOT = { war = { country = ENG } } }
+		command = { type = trigger which = 130653 }
+	}
+	action = {
+		name = "EVT_130652_ACTB"	#自分の身は自分で守るしか無い
+		command = { type = war which = GER }
+		command = { type = war which = HUN }
+		command = { type = dissent value = 15 }
+	}
+	action = {
+		name = "EVT_130652_ACTC"	#降伏するしかない！（ゲーム終了）
+		# Slovak territory
+		command = { type = leave_alliance }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		
+		command = { type = secedeprovince which = HUN value = 476 } #Bratislava
+		command = { type = secedeprovince which = HUN value = 477 } #Banska
+		command = { type = secedeprovince which = HUN value = 478 } #Zilina
+		command = { type = secedeprovince which = HUN value = 490 } #Kosice
+		command = { type = secedeprovince which = HUN value = 499 } #Presov
+		command = { type = secederegion which = GER value = Czechoslovakia when = 0 }	#どうだろう
+		command = { type = trigger which = 130130 } # GER
+	}
+}
+
+event = {
+	id = 130653
+	country = ENG
+	
+	name = "EVT_130653_NAME"	#チェコスロバキアが同盟を求める
+	desc = "EVT_130653_DESC"	#
+	
+	picture = "czechs_annexed"
+
+	action = {
+		name = "EVT_130653_ACTA"	#チェコスロバキアは守られねばならない
+		ai_chance = 60
+		command = { type = alliance which = CZE }
+		command = { type = trigger which = 130654 }
+	}
+	action = {
+		name = "ACTIONNAME3401B"	#
+		ai_chance = 40
+		command = { type = trigger which = 130655 }
+	}
+}
+
+event = {
+	id = 130654
+	country = GER
+	trigger = {
+		NOT = { war = { country = GER country = CZE } }
+	}
+	
+	name = "EVT_130654_NAME"	#英仏軍、動員
+	desc = "EVT_130654_DESC"	#チェコスロバキアの危機を受けて、連合軍は彼らを同盟に招き入れてあくまで抵抗するつもりであるようだ。つまり、ここでなおも我々が進むならば、このハンガリーの旧領を巡る戦いは欧州全体の戦いへと変わることを意味する。……ハンガリーとの関係は、そこまでして保たねばならないものだろうか？
+	
+	picture = "czechs_annexed"
+
+	action = {
+		name = "EVT_130654_ACTA"	#大戦を起こすほどのものではない！
+		ai_chance = 50
+		command = { type = dissent value = 6 }
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = domestic which = defense_lobby value = -2 }
+		command = { type = relation which = HUN value = -150 }
+	}
+	action = {
+		name = "EVT_130654_ACTB"	#連合軍なにするものぞ
+		ai_chance = 50
+		command = { type = war which = CZE }
+	}
+}
+
+event = {
+	id = 130655
+	country = CZE
+	
+	name = "EVT_130655_NAME"	#孤立無援のチェコスロバキア
+	desc = "EVT_130655_DESC"	#今日、耳を疑うような知らせが届いた。ドイツが東欧諸国に無理な領土要求を押しつけているにもかかわらず、イギリス政府は我が国と同盟を結ぶ可能性を完全に否定した。つまりイギリスにはドイツの暴挙を止める意思がないのだ。今日は我が国にとって史上最悪の日だ。ポーランドは孤立無援となった。明日を生き残るために我々は何をすべきかよく考える必要がある。
+	
+	action = { 
+		name = "fg_actionname5A"	
+		ai_chance = 90
+		command = { type = leave_alliance }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		
+		# Slovak territory
+		command = { type = secedeprovince which = HUN value = 476 } #Bratislava
+		command = { type = secedeprovince which = HUN value = 477 } #Banska
+		command = { type = secedeprovince which = HUN value = 478 } #Zilina
+		command = { type = secedeprovince which = HUN value = 490 } #Kosice
+		command = { type = secedeprovince which = HUN value = 499 } #Presov
+		command = { type = secederegion which = GER value = Czechoslovakia when = 0 }	#どうだろう
+		command = { type = trigger which = 130130 } # GER
+	}
+	action = {
+		name = "ACTIONNAME2201B"
+		ai_chance = 10
+		command = { type = war which = GER }
+		command = { type = war which = HUN }
+	}
+}
+		

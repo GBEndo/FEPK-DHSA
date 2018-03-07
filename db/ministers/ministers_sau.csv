@@ -1,0 +1,45 @@
+SAU;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+63001;Head of State;アブドゥル・アジズ・アル・サウド;36;PA;Custodian Of The Two Holy Mosques;High;M63001;x
+63002;Head of Government;サウド・アル・サウド;36;PA;Backroom Backstabber;High;M63002;x
+63003;Foreign Minister;ファイサル・アル・サウド;36;PA;Apologetic Clerk;High;M63003;x
+63004;Minister of Armament;ファイサル・アル・サウド;36;PA;Resource Industrialist;High;M63003;x
+63005;Minister of Security;ハーリド・アル・サウド;36;PA;Crooked Kleptocrat;High;M63005;x
+63006;Head of Military Intelligence;ハーリド・アル・サウド;36;PA;Logistics Specialist;High;M63005;x
+63007;Chief of Staff;サウド・アル・サウド;36;PA;School of Manoeuvre;High;M63002;x
+63008;Chief of Army;ファイサル・アル・サウド;36;PA;Guns and Butter Doctrine;High;M63003;x
+63009;Chief of Navy;ファイサル・アル・サウド;36;PA;Open Seas Doctrine;High;M63003;x
+63010;Chief of Air Force;ファイサル・アル・サウド;36;PA;Army Aviation Doctrine;High;M63003;x
+63031;Foreign Minister;ヒューバート・スコット＝ペイン;39;SC;General Staffer;High;M63031;x
+63032;Foreign Minister;チャールズ・ロード・パルムーア;41;SC;Apologetic Clerk;High;M63032;x
+63033;Foreign Minister;ハリー・セントジョン・フィルビー;44;PA;Ideological Crusader;High;M63033;x
+63034;Foreign Minister;サウド・アル・サウド;45;PA;Biased Intellectual;Very High;M63002;x
+63035;Minister of Armament;G・G・アイメ＝ムレイ;37;SC;Administrative Genius;High;M63035;x
+63036;Minister of Armament;ハリー・セントジョン・フィルビー;38;PA;Infantry Proponent;High;M63033;x
+63037;Minister of Armament;アルトゥール・J・サルター;39;SC;Theoretical Scientist;High;M63037;x
+63038;Minister of Armament;マルコム・デ・レ・ヴィンジ;40;SC;Resource Industrialist;High;M63038;x
+63039;Minister of Armament;ジェフリー・ジョージ・ノックス;41;SC;Tank Proponent;High;M63039;x
+63040;Minister of Armament;サリー・アル・ラージー;45;PA;Laissez-Faire Capitalist;High;M63040;x
+63041;Minister of Security;ヒューバート・スコット＝ペイン;38;SC;Silent Lawyer;High;M63031;x
+63042;Minister of Security;ハリー・セントジョン・フィルビー;41;PA;Compassionate Gentleman;High;M63033;x
+63043;Minister of Security;ジェームズ・パワー・カルネ;42;SC;Efficient Sociopath;High;M63043;x
+63044;Minister of Security;アルウィン・パーカー;43;SC;Man of the People;High;M63044;x
+63045;Minister of Security;スレイマン・アル・オリャン;45;PA;Back Stabber;High;M63045;x
+63046;Head of Military Intelligence;サー・エリック・フラートン;37;SC;Naval Intelligence Specialist;High;M63046;x
+63047;Head of Military Intelligence;ハリー・セントジョン・フィルビー;39;PA;Dismal Enigma;High;M63033;x
+63048;Head of Military Intelligence;ヒューバート・スコット＝ペイン;41;SC;Political Specialist;High;M63031;x
+63049;Head of Military Intelligence;ファイサル・アル・サウド;45;PA;Industrial Specialist;High;M63003;x
+63050;Chief of Staff;サー・エリック・フラートン;36;SC;School of Psychology;High;M63046;x
+63051;Chief of Staff;ウィリアム・キャンベル＝ライス;37;SC;School of Defence;High;M63051;x
+63052;Chief of Staff;T・E・ショー;38;SC;School of Fire Support;High;M63052;x
+63053;Chief of Staff;T・R・S・スマイス＝クーパー;40;SC;School of Mass Combat;High;M63053;x
+63054;Chief of Staff;ファイサル・アル・サウド;45;PA;School of Manoeuvre;High;M63003;x
+63055;Chief of Army;ウィリアム・キャンベル＝ライス;38;SC;Static Defence Doctrine;High;M63051;x
+63056;Chief of Army;T・E・ショー;39;SC;Elastic Defence Doctrine;High;M63052;x
+63057;Chief of Army;T・R・S・スマイス＝クーパー;41;SC;Decisive Battle Doctrine;High;M63053;x
+63059;Chief of Navy;サー・エリック・フラートン;37;SC;Indirect Approach Doctrine;High;M63046;x
+63060;Chief of Navy;フィリップ・ゴードン＝リー;41;SC;Open Seas Doctrine;High;M63060;x
+63062;Chief of Air Force;サー・エリック・フラートン;38;SC;Naval Aviation Doctrine;High;M63046;x
+63063;Chief of Air Force;T・E・ショー;39;SC;Army Aviation Doctrine;High;M63052;x
+63064;Chief of Air Force;アルトゥール・ドーキンス;41;SC;Air Superiority Doctrine;High;M63064;x
+63065;Chief of Air Force;バッサム・アブ・ハーダー;45;PA;Vertical Envelopment Doctrine;High;M63065;x

@@ -1,0 +1,5356 @@
+##################第三次バルカン戦争ベータ0.7くらい
+####実装部分#############################################################
+####開戦～停戦・割譲まで
+####AIの簡易的な変更
+####枢軸ユーゴに対するイタリアの領土要求・割譲
+####ドイツからの援軍イベント
+####戦後の枢軸への復帰イベント
+####枢軸ユーゴの詳細な判定
+#
+####未実装部分###########################################################
+####枢軸ユーゴのセルビア変体判定(未実装)
+#########################################################################
+#  German new order in Eastern Europa - Great Hungary
+#########################################################################
+#id = 60200#大ハンガリーの成立(ドイツ)
+#id = 60201#大ハンガリーの成立(ハンガリー)
+#id = 60202#大ハンガリーの成立の余波(ドイツ)
+#id = 60203#大ハンガリーの成立の余波(ルーマニア)
+#id = 60204#大ハンガリーの成立の余波(クロアチア)
+#id = 60205#大ハンガリーの成立の余波(セルビア)
+#id = 60207#大ハンガリーの成立の余波(ユーゴスラビア)
+#id = 60208#大ハンガリーの成立の余波(イタリア)
+#id = 60209#大ハンガリーの成立の余波(ブルガリア)
+#########################################################################
+# 第三次ウィーン裁定
+#########################################################################
+#id = 60210#第三次ウィーン裁定(ドイツ)
+#id = 60211#第三次ウィーン裁定 - ドイツがハンガリーを支持(ルーマニア)
+#id = 60212#第三次ウィーン裁定 - ドイツがルーマニアを支持(ハンガリー)
+#id = 60213#第三次ウィーン裁定 - ドイツがルーマニアを強固に支持(ハンガリー)
+#id = 60214#第三次ウィーン裁定 - ドイツが黙認(ハンガリー)
+#id = 60215#第三次ウィーン裁定 - ドイツが黙認(ルーマニア)
+#id = 60216#第三次バルカン戦争勃発 - ウィーン裁定に基づき、ドイツがハンガリーを支持(ドイツ)
+#id = 60217#第三次バルカン戦争勃発 - ウィーン裁定に基づき、ドイツがルーマニアを支持(ドイツ)
+#id = 60218#第三次バルカン戦争勃発 - ドイツの選択(ドイツ)
+#########################################################################
+# 第三次バルカン戦争勃発 - ドイツがハンガリーを支持
+#########################################################################
+#id = 60220#第三次バルカン戦争勃発 - ドイツがハンガリーを支持(クロアチア)
+#id = 60221#第三次バルカン戦争勃発 - ドイツがハンガリーを支持(セルビア)
+#id = 60222#第三次バルカン戦争勃発 - ドイツがハンガリーを支持(ユーゴスラビア)
+#id = 60223#第三次バルカン戦争勃発 - ドイツがハンガリーを支持(ブルガリア)
+#id = 60224#第三次バルカン戦争勃発 - ドイツがハンガリーを支持(イタリア)
+#id = 60225#イタリアの提案(ハンガリー)
+#id = 60226#イタリアの提案 - ハンガリーの承認(イタリア)
+#id = 60227#イタリアの提案 - ハンガリーが拒否(イタリア)
+#id = 60228#SSハンガリー人師団の援軍(ドイツ)
+#id = 60229#SSハンガリー人師団の援軍(ハンガリー)
+#########################################################################
+# 第三次バルカン戦争勃発 - ドイツがルーマニアを支持
+#########################################################################
+#id = 60230#第三次バルカン戦争勃発 - ドイツがルーマニアを支持(クロアチア)
+#id = 60231#第三次バルカン戦争勃発 - ドイツがルーマニアを支持(セルビア)
+#id = 60232#第三次バルカン戦争勃発 - ドイツがルーマニアを支持(ユーゴスラビア)
+#id = 60233#第三次バルカン戦争勃発 - ドイツがルーマニアを支持(ブルガリア)
+#id = 60234#第三次バルカン戦争勃発 - ドイツがルーマニアを支持(イタリア)
+#id = 60235#イタリアの提案(ハンガリー)
+#id = 60236#イタリアの提案 - ハンガリーの承認(イタリア)
+#id = 60237#イタリアの提案 - ハンガリーが拒否(イタリア)
+#id = 60238#SSルーマニア人師団の派遣(ドイツ)
+#id = 60239#SSルーマニア人師団の派遣(ルーマニア)
+#########################################################################
+# 第三次バルカン戦争勃発 - ドイツの態度が不明
+#########################################################################
+#id = 60240#第三次バルカン戦争勃発 - ドイツの態度が不明(クロアチア)
+#id = 60241#第三次バルカン戦争勃発 - ドイツの態度が不明(セルビア)
+#id = 60242#第三次バルカン戦争勃発 - ドイツの態度が不明(ユーゴスラビア)
+#id = 60243#第三次バルカン戦争勃発 - ドイツの態度が不明(ブルガリア)
+#id = 60244#第三次バルカン戦争勃発 - ドイツの態度が不明(イタリア)
+#id = 60245#イタリアの提案(ハンガリー)
+#id = 60246#イタリアの提案 - ハンガリーの承認(イタリア)
+#id = 60247#イタリアの提案 - ハンガリーが拒否(イタリア)
+#########################################################################
+# トランシルバニアにおけるルーマニア人の抵抗運動
+#########################################################################
+#id = 60250#トランシルバニアにおけるルーマニア人の抵抗運動
+#id = 60251#トランシルバニアにおけるルーマニア人の抵抗運動終息
+#id = 60252#クロアチアと合従
+#########################################################################
+# ゲーム上の必要による領土移動
+#########################################################################
+#id = 60256-7#ズレンニャン(494)
+#id = 60258-9#ニース(418)
+#########################################################################
+# 第三次バルカン戦争 - 敗北イベント
+#########################################################################
+#id = 60260-1#ハンガリー敗北
+#id = 60262-3#ルーマニア敗北
+#id = 60264-5#ブルガリア(ハンガリー側)敗北
+#id = 60266-7#ブルガリア(ルーマニア側)敗北
+#id = 60268-9#セルビア敗北
+#id = 60270-11#クロアチア敗北
+#########################################################################
+#  イタリアの援軍
+#########################################################################
+#id = 60276#イタリア＞ルーマニア
+#id = 60277#ルーマニア受領
+#id = 60278#イタリア＞ハンガリー
+#id = 60279#ハンガリー受領
+#########################################################################
+# 第三次バルカン戦争 - 停戦イベント
+#########################################################################
+#id = 60280- 2#イタリア(ハンガリー側)撤退
+#id = 60283- 5#イタリア(ルーマニア側)撤退
+#id = 60286- 8#ブルガリア(ハンガリー側)撤退
+#id = 60289-91#ブルガリア(ルーマニア側)撤退
+#########################################################################
+# 第三次バルカン戦争 - 戦後処理
+#########################################################################
+#id = 60300#第三次バルカン戦争の終結 - ウィーン講和会議
+############ハンガリー・ルーマニア関連###################################
+#id = 60301#第三次バルカン戦争の終結 - ハンガリーがルーマニアに敗北
+#id = 60307#第三次バルカン戦争の終結 - ハンガリーがルーマニアに敗北(スロヴァキア保全:triggered 60301)
+#id = 60308#第三次バルカン戦争の終結 - ハンガリーがルーマニアに敗北(ドイツがスロヴァキアを傀儡化:triggered 60301)
+#id = 60302#第三次バルカン戦争の終結 - ハンガリーがルーマニアに敗北(旧ユーゴ領判定)
+#id = 60303#第三次バルカン戦争の終結 - ハンガリー・ルーマニアが痛みわけ
+#id = 60304#第三次バルカン戦争の終結 - ルーマニアがハンガリーに敗北
+#id = 60305#第三次バルカン戦争の終結 - ルーマニアがハンガリーに敗北(旧ユーゴ領判定) - ハンガリーがユーゴ勢に勝利
+#id = 60306#第三次バルカン戦争の終結 - ルーマニアがハンガリーに敗北(旧ユーゴ領判定) - ハンガリーがユーゴ勢と痛みわけ
+############ユーゴ関連###################################################
+#id = 60310#第三次バルカン戦争の終結 - クロアチアがセルビアに勝利
+#id = 60311#第三次バルカン戦争の終結 - セルビアがクロアチアに勝利
+#id = 60312#第三次バルカン戦争の終結 - ユーゴスラビアがハンガリーに敗北
+#id = 60313#第三次バルカン戦争の終結 - ユーゴスラビアがハンガリーにクロアチアを譲渡(ユーゴ非参戦)
+#id = 60314#(未実装)第三次バルカン戦争の終結 - ユーゴスラビアがセルビアに変体
+#id = 60xxx#ユーゴスラビアがハンガリーに勝利＞60306に
+############ヨーグルト関連###############################################
+#id = 60320#第三次バルカン戦争の終結 - ブルガリアがルーマニアに勝利
+#id = 60321#第三次バルカン戦争の終結 - ブルガリアがセルビアに勝利
+#id = 60322#第三次バルカン戦争の終結 - ブルガリアがユーゴに勝利
+#id = 60323#第三次バルカン戦争の終結 - ブルガリアがルーマニアに敗北
+#id = 60324#第三次バルカン戦争の終結 - ブルガリアがセルビアに敗北
+#id = 60325#第三次バルカン戦争の終結 - ブルガリアがユーゴに敗北
+#id = 60325#60320-2からブルガリア枢軸復帰イベント
+############ヘタレア関連#################################################
+#id = 60330#第三次バルカン戦争の終結 - イタリアがハンガリーに敗北
+#id = 60331#第三次バルカン戦争の終結 - イタリアがルーマニアに敗北
+
+#########################################################################
+#  German new order in Eastern Europa - Great Hungary
+#########################################################################
+event = {
+	id = 60200
+	random = no
+	country = GER
+
+	trigger = {
+		alliance = { country = GER country = HUN }
+		alliance = { country = GER country = SLO } #FEPKBETA4.5
+		event = 130910 # FEPK変更部分
+		random = 33
+	}
+
+	name = "EVT60200N"
+	desc = "EVT60200D"
+	style = 0
+	picture = "czechs_annexed"
+	
+	date = { day = 1 month = september year = 1939 }
+	offset = 100 # FEPK変更部分
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action_a = {
+		name = "ACT60200A"
+		ai_chance = 90
+		command = { type = relation which = HUN value = 300 }
+	}
+	action_b = {
+		name = "ACT60200B"
+		ai_chance = 10
+		command = { type = relation which = HUN value = -100 }
+		command = { type = relation which = SLO value = 200 }
+		command = { type = sleepevent which = 60201 }
+	}
+}
+
+event = {
+	id = 60201
+	random = no
+	country = HUN
+
+	name = "EVT60201N"
+	desc = "EVT60201D"
+	style = 2
+	decision_picture = "decision_serbian_mobilization"
+	picture = "hungary_axis"
+
+	decision = {
+		event = 130910 # FEPK変更部分
+		OR = { #FEPKBETA3
+			event = 135025 # Serbia can be exists
+			NOT = { exists = SER }
+		}
+	}
+	decision_trigger = {
+		OR = {
+			event = 60200
+			AND = {
+				owned = { province = 476 data = HUN }
+				owned = { province = 477 data = HUN }
+				owned = { province = 478 data = HUN }
+				owned = { province = 490 data = HUN }
+				owned = { province = 499 data = HUN }
+			}
+		}
+	}
+
+	trigger = {
+		event = 130910 # FEPK変更部分
+		OR = { #FEPKBETA3
+			event = 135025 # Serbia can be exists
+			NOT = { exists = SER }
+		}
+		OR = {
+			event = 60200
+			AND = {
+				owned = { province = 476 data = HUN }
+				owned = { province = 477 data = HUN }
+				owned = { province = 478 data = HUN }
+				owned = { province = 490 data = HUN }
+				owned = { province = 499 data = HUN }
+			}
+		}
+	}
+	date = { day = 1 month = september year = 1939 }
+	offset = 30 # FEPK変更部分
+	deathdate = { day = 29 month = december year = 1963 }
+
+
+	action_a = {
+		name = "ACT60201A"
+		ai_chance = 98
+		command = { type = end_puppet } #FEPKBETA4.8
+		command = { type = leave_alliance }
+		command = { type = ai which = "switch/balkan3_ready.ai" } #中立化処理追加
+		command = { type = ai which = "switch/Ferocity_Yes.ai" }
+
+		command = { type = set_domestic which = democratic value = 4 } #FEPKBETA3
+		command = { type = set_domestic which = political_left value = 1 }
+		command = { type = headofstate which = 21011 } #ハンガリー王冠
+		command = { type = headofgovernment which = 21012 } #ホルティ
+
+	#	command = { type = belligerence which = HUN value = 15 } #FEPKBETA3
+		command = { type = manpowerpool value = 150 }
+		command = { type = inherit which = SLO }
+		command = { type = waketeam which = 1615 }#C-K-D社
+		command = { type = waketeam which = 1616 }#コメニウス大学
+		command = { type = waketeam which = 1617 }#ハンガリー王立造幣局
+
+		command = { type = addcore which = 381 } #Croatia
+		command = { type = addcore which = 382 }
+		command = { type = addcore which = 383 }
+		command = { type = addcore which = 384 }
+		command = { type = addcore which = 385 }
+		command = { type = addcore which = 386 }
+		command = { type = addcore which = 387 }
+		command = { type = addcore which = 388 }
+		command = { type = addcore which = 389 }
+		command = { type = addcore which = 452 } #Serbia
+		command = { type = addcore which = 454 }
+		command = { type = addcore which = 455 }
+		command = { type = addcore which = 494 }
+		command = { type = addcore which = 493 } # FEPK変更部分 #Novisad
+		command = { type = addcore which = 495 } #Transylvania
+		command = { type = addcore which = 427 }
+		command = { type = addcore which = 429 }
+		command = { type = addcore which = 430 }
+		command = { type = relation which = ROM value = -400 }
+		command = { type = relation which = CRO value = -100 }
+		command = { type = relation which = YUG value = -100 }
+		command = { type = relation which = BOS value = -50 }
+		command = { type = relation which = ITA value = -20 }
+		command = { type = relation which = GER value = -10 }
+		command = { type = relation which = BUL value = -10 }
+		command = { type = relation which = UKR value = -10 }
+		command = { type = end_access which = CRO }
+		command = { type = end_access which = ROM }
+		command = { type = end_access which = SER }
+		command = { type = end_access which = YUG }
+		command = { type = end_access which = BUL }
+		command = { type = end_access which = ITA }
+		command = { type = access which = GER }
+		command = { type = end_guarantee which = GER where = HUN }
+		command = { type = end_guarantee which = ITA where = HUN }
+		command = { type = end_guarantee which = JAP where = HUN }
+		command = { type = end_guarantee which = ROM where = HUN }
+		command = { type = end_guarantee which = CRO where = HUN }
+		command = { type = end_guarantee which = SER where = HUN }
+		command = { type = end_guarantee which = YUG where = HUN }
+		command = { type = end_guarantee which = BUL where = HUN }
+
+		command = { type = peace which = AFG value = 1 }
+		command = { type = peace which = ALB value = 1 }
+		command = { type = peace which = ALG value = 1 }
+		command = { type = peace which = ALI value = 1 }
+		command = { type = peace which = ALS value = 1 }
+		command = { type = peace which = ANG value = 1 }
+		command = { type = peace which = ARA value = 1 }
+		command = { type = peace which = ARG value = 1 }
+		command = { type = peace which = ARM value = 1 }
+		command = { type = peace which = AST value = 1 }
+		command = { type = peace which = AUS value = 1 }
+		command = { type = peace which = AXI value = 1 }
+		command = { type = peace which = AZB value = 1 }
+		command = { type = peace which = BEL value = 1 }
+		command = { type = peace which = BEN value = 1 }
+		command = { type = peace which = BHU value = 1 }
+		command = { type = peace which = BLR value = 1 }
+		command = { type = peace which = BOL value = 1 }
+		command = { type = peace which = BOS value = 1 }
+		command = { type = peace which = BRA value = 1 }
+		command = { type = peace which = BRU value = 1 }
+		command = { type = peace which = BUL value = 1 }
+		command = { type = peace which = BUR value = 1 }
+		command = { type = peace which = CAL value = 1 }
+		command = { type = peace which = CAM value = 1 }
+		command = { type = peace which = CAN value = 1 }
+		command = { type = peace which = CGX value = 1 }
+		command = { type = peace which = CHC value = 1 }
+		command = { type = peace which = CHI value = 1 }
+		command = { type = peace which = CHL value = 1 }
+		command = { type = peace which = CMB value = 1 }
+		command = { type = peace which = COL value = 1 }
+		command = { type = peace which = CON value = 1 }
+		command = { type = peace which = COS value = 1 }
+		command = { type = peace which = CRO value = 1 }
+		command = { type = peace which = CSA value = 1 }
+		command = { type = peace which = CSX value = 1 }
+		command = { type = peace which = CUB value = 1 }
+		command = { type = peace which = CXB value = 1 }
+		command = { type = peace which = CYN value = 1 }
+		command = { type = peace which = CYP value = 1 }
+		command = { type = peace which = CZE value = 1 }
+		command = { type = peace which = DDR value = 1 }
+		command = { type = peace which = DEN value = 1 }
+		command = { type = peace which = DFR value = 1 }
+		command = { type = peace which = DOM value = 1 }
+		command = { type = peace which = EAF value = 1 }
+		command = { type = peace which = ECU value = 1 }
+		command = { type = peace which = EGY value = 1 }
+		command = { type = peace which = ENG value = 1 }
+		command = { type = peace which = EQA value = 1 }
+		command = { type = peace which = EST value = 1 }
+		command = { type = peace which = ETH value = 1 }
+		command = { type = peace which = EUS value = 1 }
+		command = { type = peace which = FIN value = 1 }
+		command = { type = peace which = FLA value = 1 }
+		command = { type = peace which = FRA value = 1 }
+		command = { type = peace which = GAB value = 1 }
+		command = { type = peace which = GEO value = 1 }
+		command = { type = peace which = GER value = 1 }
+		command = { type = peace which = GLD value = 1 }
+		command = { type = peace which = GRE value = 1 }
+		command = { type = peace which = GUA value = 1 }
+		command = { type = peace which = GUI value = 1 }
+		command = { type = peace which = GUY value = 1 }
+		command = { type = peace which = HAI value = 1 }
+		command = { type = peace which = HOL value = 1 }
+		command = { type = peace which = HON value = 1 }
+		command = { type = peace which = HUN value = 1 }
+		command = { type = peace which = ICL value = 1 }
+		command = { type = peace which = IDC value = 1 }
+		command = { type = peace which = IND value = 1 }
+		command = { type = peace which = INO value = 1 }
+		command = { type = peace which = IRE value = 1 }
+		command = { type = peace which = IRQ value = 1 }
+		command = { type = peace which = ISR value = 1 }
+		command = { type = peace which = ITA value = 1 }
+		command = { type = peace which = JAP value = 1 }
+		command = { type = peace which = JOR value = 1 }
+		command = { type = peace which = KAZ value = 1 }
+		command = { type = peace which = KOR value = 1 }
+		command = { type = peace which = KUR value = 1 }
+		command = { type = peace which = KYG value = 1 }
+		command = { type = peace which = LAO value = 1 }
+		command = { type = peace which = LAT value = 1 }
+		command = { type = peace which = LBY value = 1 }
+		command = { type = peace which = LEB value = 1 }
+		command = { type = peace which = LIB value = 1 }
+		command = { type = peace which = LIT value = 1 }
+		command = { type = peace which = LUX value = 1 }
+		command = { type = peace which = MAD value = 1 }
+		command = { type = peace which = MAL value = 1 }
+		command = { type = peace which = MAN value = 1 }
+		command = { type = peace which = MEN value = 1 }
+		command = { type = peace which = MEX value = 1 }
+		command = { type = peace which = MIN value = 1 }
+		command = { type = peace which = MLY value = 1 }
+		command = { type = peace which = MON value = 1 }
+		command = { type = peace which = MOR value = 1 }
+		command = { type = peace which = MOZ value = 1 }
+		command = { type = peace which = MTN value = 1 }
+		command = { type = peace which = NAM value = 1 }
+		command = { type = peace which = NEP value = 1 }
+		command = { type = peace which = NIC value = 1 }
+		command = { type = peace which = NIG value = 1 }
+		command = { type = peace which = NOR value = 1 }
+		command = { type = peace which = NZL value = 1 }
+		command = { type = peace which = OMN value = 1 }
+		command = { type = peace which = OTT value = 1 }
+		command = { type = peace which = PAK value = 1 }
+		command = { type = peace which = PAL value = 1 }
+		command = { type = peace which = PAN value = 1 }
+		command = { type = peace which = PAR value = 1 }
+		command = { type = peace which = PER value = 1 }
+		command = { type = peace which = PHI value = 1 }
+		command = { type = peace which = POL value = 1 }
+		command = { type = peace which = POR value = 1 }
+		command = { type = peace which = PRI value = 1 }
+		command = { type = peace which = PRK value = 1 }
+		command = { type = peace which = PRU value = 1 }
+		command = { type = peace which = QUE value = 1 }
+		command = { type = peace which = RHO value = 1 }
+		command = { type = peace which = ROM value = 1 }
+		command = { type = peace which = RSI value = 1 }
+		command = { type = peace which = RUS value = 1 }
+		command = { type = peace which = SAF value = 1 }
+		command = { type = peace which = SAL value = 1 }
+		command = { type = peace which = SAR value = 1 }
+		command = { type = peace which = SAU value = 1 }
+		command = { type = peace which = SCA value = 1 }
+		command = { type = peace which = SCH value = 1 }
+		command = { type = peace which = SCO value = 1 }
+		command = { type = peace which = SER value = 1 }
+		command = { type = peace which = SIA value = 1 }
+		command = { type = peace which = SIB value = 1 }
+		command = { type = peace which = SIE value = 1 }
+		command = { type = peace which = SIK value = 1 }
+		command = { type = peace which = SLO value = 1 }
+		command = { type = peace which = SLV value = 1 }
+		command = { type = peace which = SOM value = 1 }
+		command = { type = peace which = SOV value = 1 }
+		command = { type = peace which = SPA value = 1 }
+		command = { type = peace which = SPR value = 1 }
+		command = { type = peace which = SUD value = 1 }
+		command = { type = peace which = SWE value = 1 }
+		command = { type = peace which = SYR value = 1 }
+		command = { type = peace which = TAJ value = 1 }
+		command = { type = peace which = TAN value = 1 }
+		command = { type = peace which = TEX value = 1 }
+		command = { type = peace which = TIB value = 1 }
+		command = { type = peace which = TRA value = 1 }
+		command = { type = peace which = TRK value = 1 }
+		command = { type = peace which = TUN value = 1 }
+		command = { type = peace which = TUR value = 1 }
+		command = { type = peace which = UKR value = 1 }
+		command = { type = peace which = URU value = 1 }
+		command = { type = peace which = USA value = 1 }
+		command = { type = peace which = UZB value = 1 }
+		command = { type = peace which = VEN value = 1 }
+		command = { type = peace which = VIC value = 1 }
+		command = { type = peace which = VIE value = 1 }
+		command = { type = peace which = WLL value = 1 }
+		command = { type = peace which = YEM value = 1 }
+		command = { type = peace which = YUG value = 1 }
+		command = { type = peace which = U16 value = 1 }
+		command = { type = peace which = U73 value = 1 }
+		command = { type = peace which = U74 value = 1 }
+		command = { type = peace which = U87 value = 1 }
+
+		command = { type = sleepevent which = 60200 } #FEPKBETA4.5
+	}
+	action_b = {
+		name = "ACT60201B"
+		ai_chance = 2
+		command = { type = belligerence which = HUN value = 5 }
+		command = { type = inherit which = SLO }
+		command = { type = waketeam which = 1615 }#C-K-D社
+		command = { type = waketeam which = 1616 }#コメニウス大学
+		command = { type = waketeam which = 1617 }#ハンガリー王立造幣局
+
+		command = { type = sleepevent which = 60200 } #FEPKBETA4.5
+		command = { type = sleepevent which = 60203 } #FEPKBETA5
+		command = { type = sleepevent which = 60204 }
+		command = { type = sleepevent which = 60205 }
+		command = { type = sleepevent which = 60206 }
+		command = { type = sleepevent which = 60207 }
+		command = { type = sleepevent which = 60208 }
+		command = { type = sleepevent which = 60209 }
+	}
+}
+
+#########################################################################
+#  大ハンガリーの成立の余波
+#########################################################################
+
+event = {
+	id = 60202
+	random = no
+	country = GER
+
+	trigger = {
+		event = 60201
+		OR = {
+			event = 60203
+			NOT = { exists = ROM }
+		}
+		OR = {
+			event = 60204
+			NOT = { exists = CRO }
+		}
+		OR = {
+			event = 60205
+			NOT = { exists = SER }
+		}
+		OR = {
+			event = 60207
+			NOT = { exists = YUG }
+		}
+		OR = {
+			event = 60208
+			NOT = { exists = ITA }
+		}
+		OR = {
+			event = 60209
+			NOT = { exists = BUL }
+		}
+	}
+
+	name = "EVT60202N"
+	desc = "EVT60202D"
+	style = 0
+	picture = "hungary"
+
+	date = { day = 1 month = september year = 1939 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "ACT60202A"
+		command = { type = relation which = HUN value = -5 }
+		command = { type = secedeprovince which = HUN value = 455 } #FEPK1.096
+		command = { type = secedeprovince which = HUN value = 454 }
+		command = { type = secedeprovince which = HUN value = 418 }
+		command = { type = secedeprovince which = HUN value = 494 }
+		command = { type = secedeprovince which = CRO value = 455 }
+		command = { type = secedeprovince which = CRO value = 454 }
+		command = { type = secedeprovince which = SER value = 418 }
+		command = { type = secedeprovince which = SER value = 494 }
+	}
+}
+
+event = {
+	id = 60203
+	random = no
+	country = ROM
+
+	trigger = {
+		event = 60201
+		random = 33
+	}
+
+	name = "EVT60203N"
+	desc = "EVT60202D"
+	style = 0
+
+	date = { day = 1 month = september year = 1939 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "ACT60203A"
+		command = { type = end_puppet } #FEPKBETA4.8
+		command = { type = leave_alliance }
+		command = { type = ai which = "switch/balkan3_ready.ai" } #中立化処理追加
+		command = { type = ai which = "switch/Ferocity_Yes.ai" }
+
+		command = { type = set_domestic which = democratic value = 3 } #FEPKBETA3
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofgovernment which = 22048 } #Ion Antonescu
+		command = { type = chiefofstaff which = 22127 }
+
+		command = { type = manpowerpool value = 150 }
+		command = { type = end_access which = HUN }
+		command = { type = end_access which = CRO }
+		command = { type = end_access which = SER }
+		command = { type = end_access which = YUG }
+		command = { type = end_access which = BUL }
+		command = { type = end_access which = ITA }
+		command = { type = access which = GER }
+
+		command = { type = end_guarantee which = GER where = ROM }
+		command = { type = end_guarantee which = ITA where = ROM }
+		command = { type = end_guarantee which = JAP where = ROM }
+		command = { type = end_guarantee which = HUN where = ROM }
+		command = { type = end_guarantee which = CRO where = ROM }
+		command = { type = end_guarantee which = SER where = ROM }
+		command = { type = end_guarantee which = YUG where = ROM }
+		command = { type = end_guarantee which = BUL where = ROM }
+
+		command = { type = addcore which = 497 }
+
+		command = { type = peace which = AFG value = 1 }
+		command = { type = peace which = ALB value = 1 }
+		command = { type = peace which = ALG value = 1 }
+		command = { type = peace which = ALI value = 1 }
+		command = { type = peace which = ALS value = 1 }
+		command = { type = peace which = ANG value = 1 }
+		command = { type = peace which = ARA value = 1 }
+		command = { type = peace which = ARG value = 1 }
+		command = { type = peace which = ARM value = 1 }
+		command = { type = peace which = AST value = 1 }
+		command = { type = peace which = AUS value = 1 }
+		command = { type = peace which = AXI value = 1 }
+		command = { type = peace which = AZB value = 1 }
+		command = { type = peace which = BEL value = 1 }
+		command = { type = peace which = BEN value = 1 }
+		command = { type = peace which = BHU value = 1 }
+		command = { type = peace which = BLR value = 1 }
+		command = { type = peace which = BOL value = 1 }
+		command = { type = peace which = BOS value = 1 }
+		command = { type = peace which = BRA value = 1 }
+		command = { type = peace which = BRU value = 1 }
+		command = { type = peace which = BUL value = 1 }
+		command = { type = peace which = BUR value = 1 }
+		command = { type = peace which = CAL value = 1 }
+		command = { type = peace which = CAM value = 1 }
+		command = { type = peace which = CAN value = 1 }
+		command = { type = peace which = CGX value = 1 }
+		command = { type = peace which = CHC value = 1 }
+		command = { type = peace which = CHI value = 1 }
+		command = { type = peace which = CHL value = 1 }
+		command = { type = peace which = CMB value = 1 }
+		command = { type = peace which = COL value = 1 }
+		command = { type = peace which = CON value = 1 }
+		command = { type = peace which = COS value = 1 }
+		command = { type = peace which = CRO value = 1 }
+		command = { type = peace which = CSA value = 1 }
+		command = { type = peace which = CSX value = 1 }
+		command = { type = peace which = CUB value = 1 }
+		command = { type = peace which = CXB value = 1 }
+		command = { type = peace which = CYN value = 1 }
+		command = { type = peace which = CYP value = 1 }
+		command = { type = peace which = CZE value = 1 }
+		command = { type = peace which = DDR value = 1 }
+		command = { type = peace which = DEN value = 1 }
+		command = { type = peace which = DFR value = 1 }
+		command = { type = peace which = DOM value = 1 }
+		command = { type = peace which = EAF value = 1 }
+		command = { type = peace which = ECU value = 1 }
+		command = { type = peace which = EGY value = 1 }
+		command = { type = peace which = ENG value = 1 }
+		command = { type = peace which = EQA value = 1 }
+		command = { type = peace which = EST value = 1 }
+		command = { type = peace which = ETH value = 1 }
+		command = { type = peace which = EUS value = 1 }
+		command = { type = peace which = FIN value = 1 }
+		command = { type = peace which = FLA value = 1 }
+		command = { type = peace which = FRA value = 1 }
+		command = { type = peace which = GAB value = 1 }
+		command = { type = peace which = GEO value = 1 }
+		command = { type = peace which = GER value = 1 }
+		command = { type = peace which = GLD value = 1 }
+		command = { type = peace which = GRE value = 1 }
+		command = { type = peace which = GUA value = 1 }
+		command = { type = peace which = GUI value = 1 }
+		command = { type = peace which = GUY value = 1 }
+		command = { type = peace which = HAI value = 1 }
+		command = { type = peace which = HOL value = 1 }
+		command = { type = peace which = HON value = 1 }
+		command = { type = peace which = HUN value = 1 }
+		command = { type = peace which = ICL value = 1 }
+		command = { type = peace which = IDC value = 1 }
+		command = { type = peace which = IND value = 1 }
+		command = { type = peace which = INO value = 1 }
+		command = { type = peace which = IRE value = 1 }
+		command = { type = peace which = IRQ value = 1 }
+		command = { type = peace which = ISR value = 1 }
+		command = { type = peace which = ITA value = 1 }
+		command = { type = peace which = JAP value = 1 }
+		command = { type = peace which = JOR value = 1 }
+		command = { type = peace which = KAZ value = 1 }
+		command = { type = peace which = KOR value = 1 }
+		command = { type = peace which = KUR value = 1 }
+		command = { type = peace which = KYG value = 1 }
+		command = { type = peace which = LAO value = 1 }
+		command = { type = peace which = LAT value = 1 }
+		command = { type = peace which = LBY value = 1 }
+		command = { type = peace which = LEB value = 1 }
+		command = { type = peace which = LIB value = 1 }
+		command = { type = peace which = LIT value = 1 }
+		command = { type = peace which = LUX value = 1 }
+		command = { type = peace which = MAD value = 1 }
+		command = { type = peace which = MAL value = 1 }
+		command = { type = peace which = MAN value = 1 }
+		command = { type = peace which = MEN value = 1 }
+		command = { type = peace which = MEX value = 1 }
+		command = { type = peace which = MIN value = 1 }
+		command = { type = peace which = MLY value = 1 }
+		command = { type = peace which = MON value = 1 }
+		command = { type = peace which = MOR value = 1 }
+		command = { type = peace which = MOZ value = 1 }
+		command = { type = peace which = MTN value = 1 }
+		command = { type = peace which = NAM value = 1 }
+		command = { type = peace which = NEP value = 1 }
+		command = { type = peace which = NIC value = 1 }
+		command = { type = peace which = NIG value = 1 }
+		command = { type = peace which = NOR value = 1 }
+		command = { type = peace which = NZL value = 1 }
+		command = { type = peace which = OMN value = 1 }
+		command = { type = peace which = OTT value = 1 }
+		command = { type = peace which = PAK value = 1 }
+		command = { type = peace which = PAL value = 1 }
+		command = { type = peace which = PAN value = 1 }
+		command = { type = peace which = PAR value = 1 }
+		command = { type = peace which = PER value = 1 }
+		command = { type = peace which = PHI value = 1 }
+		command = { type = peace which = POL value = 1 }
+		command = { type = peace which = POR value = 1 }
+		command = { type = peace which = PRI value = 1 }
+		command = { type = peace which = PRK value = 1 }
+		command = { type = peace which = PRU value = 1 }
+		command = { type = peace which = QUE value = 1 }
+		command = { type = peace which = RHO value = 1 }
+		command = { type = peace which = ROM value = 1 }
+		command = { type = peace which = RSI value = 1 }
+		command = { type = peace which = RUS value = 1 }
+		command = { type = peace which = SAF value = 1 }
+		command = { type = peace which = SAL value = 1 }
+		command = { type = peace which = SAR value = 1 }
+		command = { type = peace which = SAU value = 1 }
+		command = { type = peace which = SCA value = 1 }
+		command = { type = peace which = SCH value = 1 }
+		command = { type = peace which = SCO value = 1 }
+		command = { type = peace which = SER value = 1 }
+		command = { type = peace which = SIA value = 1 }
+		command = { type = peace which = SIB value = 1 }
+		command = { type = peace which = SIE value = 1 }
+		command = { type = peace which = SIK value = 1 }
+		command = { type = peace which = SLO value = 1 }
+		command = { type = peace which = SLV value = 1 }
+		command = { type = peace which = SOM value = 1 }
+		command = { type = peace which = SOV value = 1 }
+		command = { type = peace which = SPA value = 1 }
+		command = { type = peace which = SPR value = 1 }
+		command = { type = peace which = SUD value = 1 }
+		command = { type = peace which = SWE value = 1 }
+		command = { type = peace which = SYR value = 1 }
+		command = { type = peace which = TAJ value = 1 }
+		command = { type = peace which = TAN value = 1 }
+		command = { type = peace which = TEX value = 1 }
+		command = { type = peace which = TIB value = 1 }
+		command = { type = peace which = TRA value = 1 }
+		command = { type = peace which = TRK value = 1 }
+		command = { type = peace which = TUN value = 1 }
+		command = { type = peace which = TUR value = 1 }
+		command = { type = peace which = UKR value = 1 }
+		command = { type = peace which = URU value = 1 }
+		command = { type = peace which = USA value = 1 }
+		command = { type = peace which = UZB value = 1 }
+		command = { type = peace which = VEN value = 1 }
+		command = { type = peace which = VIC value = 1 }
+		command = { type = peace which = VIE value = 1 }
+		command = { type = peace which = WLL value = 1 }
+		command = { type = peace which = YEM value = 1 }
+		command = { type = peace which = YUG value = 1 }
+		command = { type = peace which = U16 value = 1 }
+		command = { type = peace which = U73 value = 1 }
+		command = { type = peace which = U74 value = 1 }
+		command = { type = peace which = U87 value = 1 }
+	}
+}
+
+event = {
+	id = 60204
+	random = no
+	country = CRO
+
+	trigger = {
+		event = 60201
+		random = 33
+	}
+
+	name = "EVT60204N"
+	desc = "EVT60202D"
+	style = 0
+
+	date = { day = 1 month = september year = 1939 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "ACT60204A"
+		command = { type = end_puppet } #FEPKBETA4.8
+		command = { type = leave_alliance }
+		command = { type = ai which = "switch/balkan3_ready.ai" } #中立化処理追加
+		command = { type = ai which = "switch/Ferocity_Yes.ai" }
+
+		command = { type = manpowerpool value = 50 }
+		command = { type = end_access which = HUN }
+		command = { type = end_access which = ROM }
+		command = { type = end_access which = SER }
+		command = { type = end_access which = YUG }
+		command = { type = end_access which = BUL }
+		command = { type = end_access which = ITA }
+		command = { type = access which = GER }
+		command = { type = end_guarantee which = GER where = CRO }
+		command = { type = end_guarantee which = ITA where = CRO }
+		command = { type = end_guarantee which = JAP where = CRO }
+		command = { type = end_guarantee which = HUN where = CRO }
+		command = { type = end_guarantee which = ROM where = CRO }
+		command = { type = end_guarantee which = SER where = CRO }
+		command = { type = end_guarantee which = YUG where = CRO }
+		command = { type = end_guarantee which = BUL where = CRO }
+
+		command = { type = addcore which = 455 }
+		command = { type = addcore which = 454 }
+		command = { type = addcore which = 452 } #new
+		command = { type = province_keypoints which = 455 value = 1 }
+		command = { type = province_keypoints which = 454 value = 1 }
+		command = { type = province_keypoints which = 383 value = 1 }
+		command = { type = province_keypoints which = 385 value = 1 }
+		command = { type = province_keypoints which = 386 value = 1 }
+
+		command = { type = peace which = AFG value = 1 }
+		command = { type = peace which = ALB value = 1 }
+		command = { type = peace which = ALG value = 1 }
+		command = { type = peace which = ALI value = 1 }
+		command = { type = peace which = ALS value = 1 }
+		command = { type = peace which = ANG value = 1 }
+		command = { type = peace which = ARA value = 1 }
+		command = { type = peace which = ARG value = 1 }
+		command = { type = peace which = ARM value = 1 }
+		command = { type = peace which = AST value = 1 }
+		command = { type = peace which = AUS value = 1 }
+		command = { type = peace which = AXI value = 1 }
+		command = { type = peace which = AZB value = 1 }
+		command = { type = peace which = BEL value = 1 }
+		command = { type = peace which = BEN value = 1 }
+		command = { type = peace which = BHU value = 1 }
+		command = { type = peace which = BLR value = 1 }
+		command = { type = peace which = BOL value = 1 }
+		command = { type = peace which = BOS value = 1 }
+		command = { type = peace which = BRA value = 1 }
+		command = { type = peace which = BRU value = 1 }
+		command = { type = peace which = BUL value = 1 }
+		command = { type = peace which = BUR value = 1 }
+		command = { type = peace which = CAL value = 1 }
+		command = { type = peace which = CAM value = 1 }
+		command = { type = peace which = CAN value = 1 }
+		command = { type = peace which = CGX value = 1 }
+		command = { type = peace which = CHC value = 1 }
+		command = { type = peace which = CHI value = 1 }
+		command = { type = peace which = CHL value = 1 }
+		command = { type = peace which = CMB value = 1 }
+		command = { type = peace which = COL value = 1 }
+		command = { type = peace which = CON value = 1 }
+		command = { type = peace which = COS value = 1 }
+		command = { type = peace which = CRO value = 1 }
+		command = { type = peace which = CSA value = 1 }
+		command = { type = peace which = CSX value = 1 }
+		command = { type = peace which = CUB value = 1 }
+		command = { type = peace which = CXB value = 1 }
+		command = { type = peace which = CYN value = 1 }
+		command = { type = peace which = CYP value = 1 }
+		command = { type = peace which = CZE value = 1 }
+		command = { type = peace which = DDR value = 1 }
+		command = { type = peace which = DEN value = 1 }
+		command = { type = peace which = DFR value = 1 }
+		command = { type = peace which = DOM value = 1 }
+		command = { type = peace which = EAF value = 1 }
+		command = { type = peace which = ECU value = 1 }
+		command = { type = peace which = EGY value = 1 }
+		command = { type = peace which = ENG value = 1 }
+		command = { type = peace which = EQA value = 1 }
+		command = { type = peace which = EST value = 1 }
+		command = { type = peace which = ETH value = 1 }
+		command = { type = peace which = EUS value = 1 }
+		command = { type = peace which = FIN value = 1 }
+		command = { type = peace which = FLA value = 1 }
+		command = { type = peace which = FRA value = 1 }
+		command = { type = peace which = GAB value = 1 }
+		command = { type = peace which = GEO value = 1 }
+		command = { type = peace which = GER value = 1 }
+		command = { type = peace which = GLD value = 1 }
+		command = { type = peace which = GRE value = 1 }
+		command = { type = peace which = GUA value = 1 }
+		command = { type = peace which = GUI value = 1 }
+		command = { type = peace which = GUY value = 1 }
+		command = { type = peace which = HAI value = 1 }
+		command = { type = peace which = HOL value = 1 }
+		command = { type = peace which = HON value = 1 }
+		command = { type = peace which = HUN value = 1 }
+		command = { type = peace which = ICL value = 1 }
+		command = { type = peace which = IDC value = 1 }
+		command = { type = peace which = IND value = 1 }
+		command = { type = peace which = INO value = 1 }
+		command = { type = peace which = IRE value = 1 }
+		command = { type = peace which = IRQ value = 1 }
+		command = { type = peace which = ISR value = 1 }
+		command = { type = peace which = ITA value = 1 }
+		command = { type = peace which = JAP value = 1 }
+		command = { type = peace which = JOR value = 1 }
+		command = { type = peace which = KAZ value = 1 }
+		command = { type = peace which = KOR value = 1 }
+		command = { type = peace which = KUR value = 1 }
+		command = { type = peace which = KYG value = 1 }
+		command = { type = peace which = LAO value = 1 }
+		command = { type = peace which = LAT value = 1 }
+		command = { type = peace which = LBY value = 1 }
+		command = { type = peace which = LEB value = 1 }
+		command = { type = peace which = LIB value = 1 }
+		command = { type = peace which = LIT value = 1 }
+		command = { type = peace which = LUX value = 1 }
+		command = { type = peace which = MAD value = 1 }
+		command = { type = peace which = MAL value = 1 }
+		command = { type = peace which = MAN value = 1 }
+		command = { type = peace which = MEN value = 1 }
+		command = { type = peace which = MEX value = 1 }
+		command = { type = peace which = MIN value = 1 }
+		command = { type = peace which = MLY value = 1 }
+		command = { type = peace which = MON value = 1 }
+		command = { type = peace which = MOR value = 1 }
+		command = { type = peace which = MOZ value = 1 }
+		command = { type = peace which = MTN value = 1 }
+		command = { type = peace which = NAM value = 1 }
+		command = { type = peace which = NEP value = 1 }
+		command = { type = peace which = NIC value = 1 }
+		command = { type = peace which = NIG value = 1 }
+		command = { type = peace which = NOR value = 1 }
+		command = { type = peace which = NZL value = 1 }
+		command = { type = peace which = OMN value = 1 }
+		command = { type = peace which = OTT value = 1 }
+		command = { type = peace which = PAK value = 1 }
+		command = { type = peace which = PAL value = 1 }
+		command = { type = peace which = PAN value = 1 }
+		command = { type = peace which = PAR value = 1 }
+		command = { type = peace which = PER value = 1 }
+		command = { type = peace which = PHI value = 1 }
+		command = { type = peace which = POL value = 1 }
+		command = { type = peace which = POR value = 1 }
+		command = { type = peace which = PRI value = 1 }
+		command = { type = peace which = PRK value = 1 }
+		command = { type = peace which = PRU value = 1 }
+		command = { type = peace which = QUE value = 1 }
+		command = { type = peace which = RHO value = 1 }
+		command = { type = peace which = ROM value = 1 }
+		command = { type = peace which = RSI value = 1 }
+		command = { type = peace which = RUS value = 1 }
+		command = { type = peace which = SAF value = 1 }
+		command = { type = peace which = SAL value = 1 }
+		command = { type = peace which = SAR value = 1 }
+		command = { type = peace which = SAU value = 1 }
+		command = { type = peace which = SCA value = 1 }
+		command = { type = peace which = SCH value = 1 }
+		command = { type = peace which = SCO value = 1 }
+		command = { type = peace which = SER value = 1 }
+		command = { type = peace which = SIA value = 1 }
+		command = { type = peace which = SIB value = 1 }
+		command = { type = peace which = SIE value = 1 }
+		command = { type = peace which = SIK value = 1 }
+		command = { type = peace which = SLO value = 1 }
+		command = { type = peace which = SLV value = 1 }
+		command = { type = peace which = SOM value = 1 }
+		command = { type = peace which = SOV value = 1 }
+		command = { type = peace which = SPA value = 1 }
+		command = { type = peace which = SPR value = 1 }
+		command = { type = peace which = SUD value = 1 }
+		command = { type = peace which = SWE value = 1 }
+		command = { type = peace which = SYR value = 1 }
+		command = { type = peace which = TAJ value = 1 }
+		command = { type = peace which = TAN value = 1 }
+		command = { type = peace which = TEX value = 1 }
+		command = { type = peace which = TIB value = 1 }
+		command = { type = peace which = TRA value = 1 }
+		command = { type = peace which = TRK value = 1 }
+		command = { type = peace which = TUN value = 1 }
+		command = { type = peace which = TUR value = 1 }
+		command = { type = peace which = UKR value = 1 }
+		command = { type = peace which = URU value = 1 }
+		command = { type = peace which = USA value = 1 }
+		command = { type = peace which = UZB value = 1 }
+		command = { type = peace which = VEN value = 1 }
+		command = { type = peace which = VIC value = 1 }
+		command = { type = peace which = VIE value = 1 }
+		command = { type = peace which = WLL value = 1 }
+		command = { type = peace which = YEM value = 1 }
+		command = { type = peace which = YUG value = 1 }
+		command = { type = peace which = U16 value = 1 }
+		command = { type = peace which = U73 value = 1 }
+		command = { type = peace which = U74 value = 1 }
+		command = { type = peace which = U87 value = 1 }
+
+
+	}
+}
+
+event = {
+	id = 60205
+	random = no
+	country = SER
+
+	trigger = {
+		event = 60201
+		random = 33
+	}
+
+	name = "EVT60205N"
+	desc = "EVT60202D"
+	style = 0
+
+	date = { day = 1 month = september year = 1939 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "ACT60203A"
+		command = { type = end_puppet } #FEPKBETA4.8
+		command = { type = leave_alliance }
+		command = { type = ai which = "switch/balkan3_ready.ai" } #中立化処理追加
+		command = { type = ai which = "switch/Ferocity_Yes.ai" }
+
+		command = { type = manpowerpool value = 50 }
+		command = { type = province_keypoints which = 389 value = 1 }
+		command = { type = end_access which = HUN }
+		command = { type = end_access which = CRO }
+		command = { type = end_access which = ROM }
+		command = { type = end_access which = YUG }
+		command = { type = end_access which = BUL }
+		command = { type = end_access which = ITA }
+		command = { type = access which = GER }
+		command = { type = end_guarantee which = GER where = SER }
+		command = { type = end_guarantee which = ITA where = SER }
+		command = { type = end_guarantee which = JAP where = SER }
+		command = { type = end_guarantee which = HUN where = SER }
+		command = { type = end_guarantee which = ROM where = SER }
+		command = { type = end_guarantee which = CRO where = SER }
+		command = { type = end_guarantee which = YUG where = SER }
+		command = { type = end_guarantee which = BUL where = SER }
+
+		command = { type = addcore which = 386 } #new
+		command = { type = province_keypoints which = 494 value = 1 }
+		command = { type = province_keypoints which = 418 value = 1 }
+		command = { type = province_keypoints which = 451 value = 1 }
+		command = { type = province_keypoints which = 452 value = 1 }
+
+		command = { type = peace which = AFG value = 1 }
+		command = { type = peace which = ALB value = 1 }
+		command = { type = peace which = ALG value = 1 }
+		command = { type = peace which = ALI value = 1 }
+		command = { type = peace which = ALS value = 1 }
+		command = { type = peace which = ANG value = 1 }
+		command = { type = peace which = ARA value = 1 }
+		command = { type = peace which = ARG value = 1 }
+		command = { type = peace which = ARM value = 1 }
+		command = { type = peace which = AST value = 1 }
+		command = { type = peace which = AUS value = 1 }
+		command = { type = peace which = AXI value = 1 }
+		command = { type = peace which = AZB value = 1 }
+		command = { type = peace which = BEL value = 1 }
+		command = { type = peace which = BEN value = 1 }
+		command = { type = peace which = BHU value = 1 }
+		command = { type = peace which = BLR value = 1 }
+		command = { type = peace which = BOL value = 1 }
+		command = { type = peace which = BOS value = 1 }
+		command = { type = peace which = BRA value = 1 }
+		command = { type = peace which = BRU value = 1 }
+		command = { type = peace which = BUL value = 1 }
+		command = { type = peace which = BUR value = 1 }
+		command = { type = peace which = CAL value = 1 }
+		command = { type = peace which = CAM value = 1 }
+		command = { type = peace which = CAN value = 1 }
+		command = { type = peace which = CGX value = 1 }
+		command = { type = peace which = CHC value = 1 }
+		command = { type = peace which = CHI value = 1 }
+		command = { type = peace which = CHL value = 1 }
+		command = { type = peace which = CMB value = 1 }
+		command = { type = peace which = COL value = 1 }
+		command = { type = peace which = CON value = 1 }
+		command = { type = peace which = COS value = 1 }
+		command = { type = peace which = CRO value = 1 }
+		command = { type = peace which = CSA value = 1 }
+		command = { type = peace which = CSX value = 1 }
+		command = { type = peace which = CUB value = 1 }
+		command = { type = peace which = CXB value = 1 }
+		command = { type = peace which = CYN value = 1 }
+		command = { type = peace which = CYP value = 1 }
+		command = { type = peace which = CZE value = 1 }
+		command = { type = peace which = DDR value = 1 }
+		command = { type = peace which = DEN value = 1 }
+		command = { type = peace which = DFR value = 1 }
+		command = { type = peace which = DOM value = 1 }
+		command = { type = peace which = EAF value = 1 }
+		command = { type = peace which = ECU value = 1 }
+		command = { type = peace which = EGY value = 1 }
+		command = { type = peace which = ENG value = 1 }
+		command = { type = peace which = EQA value = 1 }
+		command = { type = peace which = EST value = 1 }
+		command = { type = peace which = ETH value = 1 }
+		command = { type = peace which = EUS value = 1 }
+		command = { type = peace which = FIN value = 1 }
+		command = { type = peace which = FLA value = 1 }
+		command = { type = peace which = FRA value = 1 }
+		command = { type = peace which = GAB value = 1 }
+		command = { type = peace which = GEO value = 1 }
+		command = { type = peace which = GER value = 1 }
+		command = { type = peace which = GLD value = 1 }
+		command = { type = peace which = GRE value = 1 }
+		command = { type = peace which = GUA value = 1 }
+		command = { type = peace which = GUI value = 1 }
+		command = { type = peace which = GUY value = 1 }
+		command = { type = peace which = HAI value = 1 }
+		command = { type = peace which = HOL value = 1 }
+		command = { type = peace which = HON value = 1 }
+		command = { type = peace which = HUN value = 1 }
+		command = { type = peace which = ICL value = 1 }
+		command = { type = peace which = IDC value = 1 }
+		command = { type = peace which = IND value = 1 }
+		command = { type = peace which = INO value = 1 }
+		command = { type = peace which = IRE value = 1 }
+		command = { type = peace which = IRQ value = 1 }
+		command = { type = peace which = ISR value = 1 }
+		command = { type = peace which = ITA value = 1 }
+		command = { type = peace which = JAP value = 1 }
+		command = { type = peace which = JOR value = 1 }
+		command = { type = peace which = KAZ value = 1 }
+		command = { type = peace which = KOR value = 1 }
+		command = { type = peace which = KUR value = 1 }
+		command = { type = peace which = KYG value = 1 }
+		command = { type = peace which = LAO value = 1 }
+		command = { type = peace which = LAT value = 1 }
+		command = { type = peace which = LBY value = 1 }
+		command = { type = peace which = LEB value = 1 }
+		command = { type = peace which = LIB value = 1 }
+		command = { type = peace which = LIT value = 1 }
+		command = { type = peace which = LUX value = 1 }
+		command = { type = peace which = MAD value = 1 }
+		command = { type = peace which = MAL value = 1 }
+		command = { type = peace which = MAN value = 1 }
+		command = { type = peace which = MEN value = 1 }
+		command = { type = peace which = MEX value = 1 }
+		command = { type = peace which = MIN value = 1 }
+		command = { type = peace which = MLY value = 1 }
+		command = { type = peace which = MON value = 1 }
+		command = { type = peace which = MOR value = 1 }
+		command = { type = peace which = MOZ value = 1 }
+		command = { type = peace which = MTN value = 1 }
+		command = { type = peace which = NAM value = 1 }
+		command = { type = peace which = NEP value = 1 }
+		command = { type = peace which = NIC value = 1 }
+		command = { type = peace which = NIG value = 1 }
+		command = { type = peace which = NOR value = 1 }
+		command = { type = peace which = NZL value = 1 }
+		command = { type = peace which = OMN value = 1 }
+		command = { type = peace which = OTT value = 1 }
+		command = { type = peace which = PAK value = 1 }
+		command = { type = peace which = PAL value = 1 }
+		command = { type = peace which = PAN value = 1 }
+		command = { type = peace which = PAR value = 1 }
+		command = { type = peace which = PER value = 1 }
+		command = { type = peace which = PHI value = 1 }
+		command = { type = peace which = POL value = 1 }
+		command = { type = peace which = POR value = 1 }
+		command = { type = peace which = PRI value = 1 }
+		command = { type = peace which = PRK value = 1 }
+		command = { type = peace which = PRU value = 1 }
+		command = { type = peace which = QUE value = 1 }
+		command = { type = peace which = RHO value = 1 }
+		command = { type = peace which = ROM value = 1 }
+		command = { type = peace which = RSI value = 1 }
+		command = { type = peace which = RUS value = 1 }
+		command = { type = peace which = SAF value = 1 }
+		command = { type = peace which = SAL value = 1 }
+		command = { type = peace which = SAR value = 1 }
+		command = { type = peace which = SAU value = 1 }
+		command = { type = peace which = SCA value = 1 }
+		command = { type = peace which = SCH value = 1 }
+		command = { type = peace which = SCO value = 1 }
+		command = { type = peace which = SER value = 1 }
+		command = { type = peace which = SIA value = 1 }
+		command = { type = peace which = SIB value = 1 }
+		command = { type = peace which = SIE value = 1 }
+		command = { type = peace which = SIK value = 1 }
+		command = { type = peace which = SLO value = 1 }
+		command = { type = peace which = SLV value = 1 }
+		command = { type = peace which = SOM value = 1 }
+		command = { type = peace which = SOV value = 1 }
+		command = { type = peace which = SPA value = 1 }
+		command = { type = peace which = SPR value = 1 }
+		command = { type = peace which = SUD value = 1 }
+		command = { type = peace which = SWE value = 1 }
+		command = { type = peace which = SYR value = 1 }
+		command = { type = peace which = TAJ value = 1 }
+		command = { type = peace which = TAN value = 1 }
+		command = { type = peace which = TEX value = 1 }
+		command = { type = peace which = TIB value = 1 }
+		command = { type = peace which = TRA value = 1 }
+		command = { type = peace which = TRK value = 1 }
+		command = { type = peace which = TUN value = 1 }
+		command = { type = peace which = TUR value = 1 }
+		command = { type = peace which = UKR value = 1 }
+		command = { type = peace which = URU value = 1 }
+		command = { type = peace which = USA value = 1 }
+		command = { type = peace which = UZB value = 1 }
+		command = { type = peace which = VEN value = 1 }
+		command = { type = peace which = VIC value = 1 }
+		command = { type = peace which = VIE value = 1 }
+		command = { type = peace which = WLL value = 1 }
+		command = { type = peace which = YEM value = 1 }
+		command = { type = peace which = YUG value = 1 }
+		command = { type = peace which = U16 value = 1 }
+		command = { type = peace which = U73 value = 1 }
+		command = { type = peace which = U74 value = 1 }
+		command = { type = peace which = U87 value = 1 }
+
+	}
+}
+event = {
+	id = 60207
+	random = no
+	country = YUG
+
+	trigger = {
+		event = 60201
+		random = 33
+	}
+
+	name = "EVT60207N"
+	desc = "EVT60202D"
+	style = 0
+
+	date = { day = 1 month = september year = 1939 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "ACT60203A"
+		command = { type = end_puppet } #FEPKBETA4.8
+		command = { type = leave_alliance }
+		command = { type = ai which = "switch/balkan3_ready.ai" } #中立化処理追加
+		command = { type = ai which = "switch/Ferocity_Yes.ai" }
+
+		command = { type = manpowerpool value = 100 }
+		command = { type = end_access which = HUN }
+		command = { type = end_access which = CRO }
+		command = { type = end_access which = ROM }
+		command = { type = end_access which = SER }
+		command = { type = end_access which = BUL }
+		command = { type = end_access which = ITA }
+		command = { type = access which = GER }
+		command = { type = end_guarantee which = GER where = YUG }
+		command = { type = end_guarantee which = ITA where = YUG }
+		command = { type = end_guarantee which = JAP where = YUG }
+		command = { type = end_guarantee which = HUN where = YUG }
+		command = { type = end_guarantee which = ROM where = YUG }
+		command = { type = end_guarantee which = CRO where = YUG }
+		command = { type = end_guarantee which = SER where = YUG }
+		command = { type = end_guarantee which = BUL where = YUG }
+
+		command = { type = peace which = AFG value = 1 }
+		command = { type = peace which = ALB value = 1 }
+		command = { type = peace which = ALG value = 1 }
+		command = { type = peace which = ALI value = 1 }
+		command = { type = peace which = ALS value = 1 }
+		command = { type = peace which = ANG value = 1 }
+		command = { type = peace which = ARA value = 1 }
+		command = { type = peace which = ARG value = 1 }
+		command = { type = peace which = ARM value = 1 }
+		command = { type = peace which = AST value = 1 }
+		command = { type = peace which = AUS value = 1 }
+		command = { type = peace which = AXI value = 1 }
+		command = { type = peace which = AZB value = 1 }
+		command = { type = peace which = BEL value = 1 }
+		command = { type = peace which = BEN value = 1 }
+		command = { type = peace which = BHU value = 1 }
+		command = { type = peace which = BLR value = 1 }
+		command = { type = peace which = BOL value = 1 }
+		command = { type = peace which = BOS value = 1 }
+		command = { type = peace which = BRA value = 1 }
+		command = { type = peace which = BRU value = 1 }
+		command = { type = peace which = BUL value = 1 }
+		command = { type = peace which = BUR value = 1 }
+		command = { type = peace which = CAL value = 1 }
+		command = { type = peace which = CAM value = 1 }
+		command = { type = peace which = CAN value = 1 }
+		command = { type = peace which = CGX value = 1 }
+		command = { type = peace which = CHC value = 1 }
+		command = { type = peace which = CHI value = 1 }
+		command = { type = peace which = CHL value = 1 }
+		command = { type = peace which = CMB value = 1 }
+		command = { type = peace which = COL value = 1 }
+		command = { type = peace which = CON value = 1 }
+		command = { type = peace which = COS value = 1 }
+		command = { type = peace which = CRO value = 1 }
+		command = { type = peace which = CSA value = 1 }
+		command = { type = peace which = CSX value = 1 }
+		command = { type = peace which = CUB value = 1 }
+		command = { type = peace which = CXB value = 1 }
+		command = { type = peace which = CYN value = 1 }
+		command = { type = peace which = CYP value = 1 }
+		command = { type = peace which = CZE value = 1 }
+		command = { type = peace which = DDR value = 1 }
+		command = { type = peace which = DEN value = 1 }
+		command = { type = peace which = DFR value = 1 }
+		command = { type = peace which = DOM value = 1 }
+		command = { type = peace which = EAF value = 1 }
+		command = { type = peace which = ECU value = 1 }
+		command = { type = peace which = EGY value = 1 }
+		command = { type = peace which = ENG value = 1 }
+		command = { type = peace which = EQA value = 1 }
+		command = { type = peace which = EST value = 1 }
+		command = { type = peace which = ETH value = 1 }
+		command = { type = peace which = EUS value = 1 }
+		command = { type = peace which = FIN value = 1 }
+		command = { type = peace which = FLA value = 1 }
+		command = { type = peace which = FRA value = 1 }
+		command = { type = peace which = GAB value = 1 }
+		command = { type = peace which = GEO value = 1 }
+		command = { type = peace which = GER value = 1 }
+		command = { type = peace which = GLD value = 1 }
+		command = { type = peace which = GRE value = 1 }
+		command = { type = peace which = GUA value = 1 }
+		command = { type = peace which = GUI value = 1 }
+		command = { type = peace which = GUY value = 1 }
+		command = { type = peace which = HAI value = 1 }
+		command = { type = peace which = HOL value = 1 }
+		command = { type = peace which = HON value = 1 }
+		command = { type = peace which = HUN value = 1 }
+		command = { type = peace which = ICL value = 1 }
+		command = { type = peace which = IDC value = 1 }
+		command = { type = peace which = IND value = 1 }
+		command = { type = peace which = INO value = 1 }
+		command = { type = peace which = IRE value = 1 }
+		command = { type = peace which = IRQ value = 1 }
+		command = { type = peace which = ISR value = 1 }
+		command = { type = peace which = ITA value = 1 }
+		command = { type = peace which = JAP value = 1 }
+		command = { type = peace which = JOR value = 1 }
+		command = { type = peace which = KAZ value = 1 }
+		command = { type = peace which = KOR value = 1 }
+		command = { type = peace which = KUR value = 1 }
+		command = { type = peace which = KYG value = 1 }
+		command = { type = peace which = LAO value = 1 }
+		command = { type = peace which = LAT value = 1 }
+		command = { type = peace which = LBY value = 1 }
+		command = { type = peace which = LEB value = 1 }
+		command = { type = peace which = LIB value = 1 }
+		command = { type = peace which = LIT value = 1 }
+		command = { type = peace which = LUX value = 1 }
+		command = { type = peace which = MAD value = 1 }
+		command = { type = peace which = MAL value = 1 }
+		command = { type = peace which = MAN value = 1 }
+		command = { type = peace which = MEN value = 1 }
+		command = { type = peace which = MEX value = 1 }
+		command = { type = peace which = MIN value = 1 }
+		command = { type = peace which = MLY value = 1 }
+		command = { type = peace which = MON value = 1 }
+		command = { type = peace which = MOR value = 1 }
+		command = { type = peace which = MOZ value = 1 }
+		command = { type = peace which = MTN value = 1 }
+		command = { type = peace which = NAM value = 1 }
+		command = { type = peace which = NEP value = 1 }
+		command = { type = peace which = NIC value = 1 }
+		command = { type = peace which = NIG value = 1 }
+		command = { type = peace which = NOR value = 1 }
+		command = { type = peace which = NZL value = 1 }
+		command = { type = peace which = OMN value = 1 }
+		command = { type = peace which = OTT value = 1 }
+		command = { type = peace which = PAK value = 1 }
+		command = { type = peace which = PAL value = 1 }
+		command = { type = peace which = PAN value = 1 }
+		command = { type = peace which = PAR value = 1 }
+		command = { type = peace which = PER value = 1 }
+		command = { type = peace which = PHI value = 1 }
+		command = { type = peace which = POL value = 1 }
+		command = { type = peace which = POR value = 1 }
+		command = { type = peace which = PRI value = 1 }
+		command = { type = peace which = PRK value = 1 }
+		command = { type = peace which = PRU value = 1 }
+		command = { type = peace which = QUE value = 1 }
+		command = { type = peace which = RHO value = 1 }
+		command = { type = peace which = ROM value = 1 }
+		command = { type = peace which = RSI value = 1 }
+		command = { type = peace which = RUS value = 1 }
+		command = { type = peace which = SAF value = 1 }
+		command = { type = peace which = SAL value = 1 }
+		command = { type = peace which = SAR value = 1 }
+		command = { type = peace which = SAU value = 1 }
+		command = { type = peace which = SCA value = 1 }
+		command = { type = peace which = SCH value = 1 }
+		command = { type = peace which = SCO value = 1 }
+		command = { type = peace which = SER value = 1 }
+		command = { type = peace which = SIA value = 1 }
+		command = { type = peace which = SIB value = 1 }
+		command = { type = peace which = SIE value = 1 }
+		command = { type = peace which = SIK value = 1 }
+		command = { type = peace which = SLO value = 1 }
+		command = { type = peace which = SLV value = 1 }
+		command = { type = peace which = SOM value = 1 }
+		command = { type = peace which = SOV value = 1 }
+		command = { type = peace which = SPA value = 1 }
+		command = { type = peace which = SPR value = 1 }
+		command = { type = peace which = SUD value = 1 }
+		command = { type = peace which = SWE value = 1 }
+		command = { type = peace which = SYR value = 1 }
+		command = { type = peace which = TAJ value = 1 }
+		command = { type = peace which = TAN value = 1 }
+		command = { type = peace which = TEX value = 1 }
+		command = { type = peace which = TIB value = 1 }
+		command = { type = peace which = TRA value = 1 }
+		command = { type = peace which = TRK value = 1 }
+		command = { type = peace which = TUN value = 1 }
+		command = { type = peace which = TUR value = 1 }
+		command = { type = peace which = UKR value = 1 }
+		command = { type = peace which = URU value = 1 }
+		command = { type = peace which = USA value = 1 }
+		command = { type = peace which = UZB value = 1 }
+		command = { type = peace which = VEN value = 1 }
+		command = { type = peace which = VIC value = 1 }
+		command = { type = peace which = VIE value = 1 }
+		command = { type = peace which = WLL value = 1 }
+		command = { type = peace which = YEM value = 1 }
+		command = { type = peace which = YUG value = 1 }
+		command = { type = peace which = U16 value = 1 }
+		command = { type = peace which = U73 value = 1 }
+		command = { type = peace which = U74 value = 1 }
+		command = { type = peace which = U87 value = 1 }
+	}
+}
+event = {
+	id = 60208
+	random = no
+	country = ITA
+
+	trigger = {
+		event = 60201
+		random = 25
+	}
+
+	date = { day = 1 month = september year = 1939 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT60208N"
+	desc = "EVT60202D"
+	style = 0
+
+	action_a = {
+		name = "ACT60208A"
+		command = { type = relation which = HUN value = -5 } #FEPK1.12
+		command = { type = end_access which = HUN }
+		command = { type = end_access which = CRO }
+		command = { type = end_access which = ROM }
+		command = { type = end_access which = SER }
+		command = { type = end_access which = YUG }
+		command = { type = end_access which = BUL }
+		command = { type = end_guarantee which = HUN where = ITA }
+		command = { type = end_guarantee which = ROM where = ITA }
+		command = { type = end_guarantee which = CRO where = ITA }
+		command = { type = end_guarantee which = SER where = ITA }
+		command = { type = end_guarantee which = YUG where = ITA }
+		command = { type = end_guarantee which = BUL where = ITA }
+	}
+}
+
+event = {
+	id = 60209
+	random = no
+	country = BUL
+
+	trigger = {
+		event = 60201
+		random = 33
+	}
+
+	name = "EVT60209N"
+	desc = "EVT60202D"
+	style = 0
+
+	date = { day = 1 month = september year = 1939 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "ACT60209A"
+		command = { type = end_puppet } #FEPKBETA4.8
+		command = { type = leave_alliance }
+		command = { type = ai which = "switch/balkan3_ready.ai" } #中立化処理追加
+		command = { type = ai which = "switch/Ferocity_Yes.ai" }
+
+		command = { type = end_access which = HUN }
+		command = { type = end_access which = CRO }
+		command = { type = end_access which = ROM }
+		command = { type = end_access which = SER }
+		command = { type = end_access which = YUG }
+		command = { type = end_access which = ITA }
+		command = { type = access which = GER }
+		command = { type = end_guarantee which = GER where = BUL }
+		command = { type = end_guarantee which = ITA where = BUL }
+		command = { type = end_guarantee which = JAP where = BUL }
+		command = { type = end_guarantee which = HUN where = BUL }
+		command = { type = end_guarantee which = ROM where = BUL }
+		command = { type = end_guarantee which = CRO where = BUL }
+		command = { type = end_guarantee which = SER where = BUL }
+		command = { type = end_guarantee which = YUG where = BUL }
+
+		command = { type = addcore which = 418 }
+		command = { type = addcore which = 423 }
+		command = { type = addcore which = 426 }
+
+		command = { type = peace which = AFG value = 1 }
+		command = { type = peace which = ALB value = 1 }
+		command = { type = peace which = ALG value = 1 }
+		command = { type = peace which = ALI value = 1 }
+		command = { type = peace which = ALS value = 1 }
+		command = { type = peace which = ANG value = 1 }
+		command = { type = peace which = ARA value = 1 }
+		command = { type = peace which = ARG value = 1 }
+		command = { type = peace which = ARM value = 1 }
+		command = { type = peace which = AST value = 1 }
+		command = { type = peace which = AUS value = 1 }
+		command = { type = peace which = AXI value = 1 }
+		command = { type = peace which = AZB value = 1 }
+		command = { type = peace which = BEL value = 1 }
+		command = { type = peace which = BEN value = 1 }
+		command = { type = peace which = BHU value = 1 }
+		command = { type = peace which = BLR value = 1 }
+		command = { type = peace which = BOL value = 1 }
+		command = { type = peace which = BOS value = 1 }
+		command = { type = peace which = BRA value = 1 }
+		command = { type = peace which = BRU value = 1 }
+		command = { type = peace which = BUL value = 1 }
+		command = { type = peace which = BUR value = 1 }
+		command = { type = peace which = CAL value = 1 }
+		command = { type = peace which = CAM value = 1 }
+		command = { type = peace which = CAN value = 1 }
+		command = { type = peace which = CGX value = 1 }
+		command = { type = peace which = CHC value = 1 }
+		command = { type = peace which = CHI value = 1 }
+		command = { type = peace which = CHL value = 1 }
+		command = { type = peace which = CMB value = 1 }
+		command = { type = peace which = COL value = 1 }
+		command = { type = peace which = CON value = 1 }
+		command = { type = peace which = COS value = 1 }
+		command = { type = peace which = CRO value = 1 }
+		command = { type = peace which = CSA value = 1 }
+		command = { type = peace which = CSX value = 1 }
+		command = { type = peace which = CUB value = 1 }
+		command = { type = peace which = CXB value = 1 }
+		command = { type = peace which = CYN value = 1 }
+		command = { type = peace which = CYP value = 1 }
+		command = { type = peace which = CZE value = 1 }
+		command = { type = peace which = DDR value = 1 }
+		command = { type = peace which = DEN value = 1 }
+		command = { type = peace which = DFR value = 1 }
+		command = { type = peace which = DOM value = 1 }
+		command = { type = peace which = EAF value = 1 }
+		command = { type = peace which = ECU value = 1 }
+		command = { type = peace which = EGY value = 1 }
+		command = { type = peace which = ENG value = 1 }
+		command = { type = peace which = EQA value = 1 }
+		command = { type = peace which = EST value = 1 }
+		command = { type = peace which = ETH value = 1 }
+		command = { type = peace which = EUS value = 1 }
+		command = { type = peace which = FIN value = 1 }
+		command = { type = peace which = FLA value = 1 }
+		command = { type = peace which = FRA value = 1 }
+		command = { type = peace which = GAB value = 1 }
+		command = { type = peace which = GEO value = 1 }
+		command = { type = peace which = GER value = 1 }
+		command = { type = peace which = GLD value = 1 }
+		command = { type = peace which = GRE value = 1 }
+		command = { type = peace which = GUA value = 1 }
+		command = { type = peace which = GUI value = 1 }
+		command = { type = peace which = GUY value = 1 }
+		command = { type = peace which = HAI value = 1 }
+		command = { type = peace which = HOL value = 1 }
+		command = { type = peace which = HON value = 1 }
+		command = { type = peace which = HUN value = 1 }
+		command = { type = peace which = ICL value = 1 }
+		command = { type = peace which = IDC value = 1 }
+		command = { type = peace which = IND value = 1 }
+		command = { type = peace which = INO value = 1 }
+		command = { type = peace which = IRE value = 1 }
+		command = { type = peace which = IRQ value = 1 }
+		command = { type = peace which = ISR value = 1 }
+		command = { type = peace which = ITA value = 1 }
+		command = { type = peace which = JAP value = 1 }
+		command = { type = peace which = JOR value = 1 }
+		command = { type = peace which = KAZ value = 1 }
+		command = { type = peace which = KOR value = 1 }
+		command = { type = peace which = KUR value = 1 }
+		command = { type = peace which = KYG value = 1 }
+		command = { type = peace which = LAO value = 1 }
+		command = { type = peace which = LAT value = 1 }
+		command = { type = peace which = LBY value = 1 }
+		command = { type = peace which = LEB value = 1 }
+		command = { type = peace which = LIB value = 1 }
+		command = { type = peace which = LIT value = 1 }
+		command = { type = peace which = LUX value = 1 }
+		command = { type = peace which = MAD value = 1 }
+		command = { type = peace which = MAL value = 1 }
+		command = { type = peace which = MAN value = 1 }
+		command = { type = peace which = MEN value = 1 }
+		command = { type = peace which = MEX value = 1 }
+		command = { type = peace which = MIN value = 1 }
+		command = { type = peace which = MLY value = 1 }
+		command = { type = peace which = MON value = 1 }
+		command = { type = peace which = MOR value = 1 }
+		command = { type = peace which = MOZ value = 1 }
+		command = { type = peace which = MTN value = 1 }
+		command = { type = peace which = NAM value = 1 }
+		command = { type = peace which = NEP value = 1 }
+		command = { type = peace which = NIC value = 1 }
+		command = { type = peace which = NIG value = 1 }
+		command = { type = peace which = NOR value = 1 }
+		command = { type = peace which = NZL value = 1 }
+		command = { type = peace which = OMN value = 1 }
+		command = { type = peace which = OTT value = 1 }
+		command = { type = peace which = PAK value = 1 }
+		command = { type = peace which = PAL value = 1 }
+		command = { type = peace which = PAN value = 1 }
+		command = { type = peace which = PAR value = 1 }
+		command = { type = peace which = PER value = 1 }
+		command = { type = peace which = PHI value = 1 }
+		command = { type = peace which = POL value = 1 }
+		command = { type = peace which = POR value = 1 }
+		command = { type = peace which = PRI value = 1 }
+		command = { type = peace which = PRK value = 1 }
+		command = { type = peace which = PRU value = 1 }
+		command = { type = peace which = QUE value = 1 }
+		command = { type = peace which = RHO value = 1 }
+		command = { type = peace which = ROM value = 1 }
+		command = { type = peace which = RSI value = 1 }
+		command = { type = peace which = RUS value = 1 }
+		command = { type = peace which = SAF value = 1 }
+		command = { type = peace which = SAL value = 1 }
+		command = { type = peace which = SAR value = 1 }
+		command = { type = peace which = SAU value = 1 }
+		command = { type = peace which = SCA value = 1 }
+		command = { type = peace which = SCH value = 1 }
+		command = { type = peace which = SCO value = 1 }
+		command = { type = peace which = SER value = 1 }
+		command = { type = peace which = SIA value = 1 }
+		command = { type = peace which = SIB value = 1 }
+		command = { type = peace which = SIE value = 1 }
+		command = { type = peace which = SIK value = 1 }
+		command = { type = peace which = SLO value = 1 }
+		command = { type = peace which = SLV value = 1 }
+		command = { type = peace which = SOM value = 1 }
+		command = { type = peace which = SOV value = 1 }
+		command = { type = peace which = SPA value = 1 }
+		command = { type = peace which = SPR value = 1 }
+		command = { type = peace which = SUD value = 1 }
+		command = { type = peace which = SWE value = 1 }
+		command = { type = peace which = SYR value = 1 }
+		command = { type = peace which = TAJ value = 1 }
+		command = { type = peace which = TAN value = 1 }
+		command = { type = peace which = TEX value = 1 }
+		command = { type = peace which = TIB value = 1 }
+		command = { type = peace which = TRA value = 1 }
+		command = { type = peace which = TRK value = 1 }
+		command = { type = peace which = TUN value = 1 }
+		command = { type = peace which = TUR value = 1 }
+		command = { type = peace which = UKR value = 1 }
+		command = { type = peace which = URU value = 1 }
+		command = { type = peace which = USA value = 1 }
+		command = { type = peace which = UZB value = 1 }
+		command = { type = peace which = VEN value = 1 }
+		command = { type = peace which = VIC value = 1 }
+		command = { type = peace which = VIE value = 1 }
+		command = { type = peace which = WLL value = 1 }
+		command = { type = peace which = YEM value = 1 }
+		command = { type = peace which = YUG value = 1 }
+		command = { type = peace which = U16 value = 1 }
+		command = { type = peace which = U73 value = 1 }
+		command = { type = peace which = U74 value = 1 }
+		command = { type = peace which = U87 value = 1 }
+	}
+}
+
+#########################################################################
+# 第三次ウィーン裁定
+#########################################################################
+
+event = {
+	id = 60210
+	random = no
+	country = GER
+	
+	trigger = {
+		event = 60202
+		OR = {
+			event = 60203
+			NOT = { exists = ROM }
+		}
+		OR = {
+			event = 60204
+			NOT = { exists = CRO }
+		}
+		OR = {
+			event = 60205
+			NOT = { exists = SER }
+		}
+		OR = {
+			event = 60207
+			NOT = { exists = YUG }
+		}
+		OR = {
+			event = 60208
+			NOT = { exists = ITA }
+		}
+		OR = {
+			event = 60209
+			NOT = { exists = BUL }
+		}
+		random = 50
+	}
+
+	name = "EVT60210N"
+	desc = "EVT60210D"
+	style = 0
+	picture = "Munich"
+
+	date = { day = 1 month = september year = 1939 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "ACT60210A"
+		ai_chance = 100
+		command = { type = trigger which = 60211 }
+		command = { type = setflag which = Balkan_Wars_3 }
+		command = { type = setflag which = Balkan_Wars_3_GER-HUN }
+		command = { type = sleepevent which = 60203 }
+		command = { type = sleepevent which = 60204 }
+		command = { type = sleepevent which = 60205 }
+		command = { type = sleepevent which = 60206 }
+		command = { type = sleepevent which = 60207 }
+		command = { type = sleepevent which = 60208 }
+		command = { type = sleepevent which = 60209 }
+	}
+	action_b = {
+		name = "ACT60210B"
+		ai_chance = 0
+		command = { type = trigger which = 60212 }
+		command = { type = setflag which = Balkan_Wars_3 }
+		command = { type = setflag which = Balkan_Wars_3_GER-ROM }
+		command = { type = sleepevent which = 60203 }
+		command = { type = sleepevent which = 60204 }
+		command = { type = sleepevent which = 60205 }
+		command = { type = sleepevent which = 60206 }
+		command = { type = sleepevent which = 60207 }
+		command = { type = sleepevent which = 60208 }
+		command = { type = sleepevent which = 60209 }
+	}
+	action_c = {
+		name = "ACT60210C"
+		ai_chance = 0
+		command = { type = trigger which = 60213 }
+		command = { type = setflag which = Balkan_Wars_3 }
+		command = { type = setflag which = Balkan_Wars_3_GER-ROM_2 }
+		command = { type = sleepevent which = 60203 }
+		command = { type = sleepevent which = 60204 }
+		command = { type = sleepevent which = 60205 }
+		command = { type = sleepevent which = 60206 }
+		command = { type = sleepevent which = 60207 }
+		command = { type = sleepevent which = 60208 }
+		command = { type = sleepevent which = 60209 }
+	}
+	action_d = {
+		name = "ACT60210D"
+		ai_chance = 0
+		command = { type = trigger which = 60214 }
+		command = { type = setflag which = Balkan_Wars_3 }
+		command = { type = setflag which = Balkan_Wars_3_GER-NON }
+		command = { type = sleepevent which = 60203 }
+		command = { type = sleepevent which = 60204 }
+		command = { type = sleepevent which = 60205 }
+		command = { type = sleepevent which = 60206 }
+		command = { type = sleepevent which = 60207 }
+		command = { type = sleepevent which = 60208 }
+		command = { type = sleepevent which = 60209 }
+	}
+}
+
+event = {
+	id = 60211
+	random = no
+	country = ROM
+
+	name = "EVT60211N"
+	desc = "EVT60211D"
+	style = 0
+	picture = "Munich"
+
+	action_a = {
+		name = "ACT60211A"
+		ai_chance = 0
+		command = { type = dissent value = 25 }
+		command = { type = setflag which = Balkan_Wars_3_Lose_ROM }
+	}
+	action_b = {
+		name = "ACT60211B"
+		ai_chance = 100
+		command = { type = leave_alliance }
+		command = { type = war which = HUN }
+		command = { type = trigger which = 60216 }
+	}
+}
+
+event = {
+	id = 60212
+	random = no
+	country = HUN
+
+	name = "EVT60212N"
+	desc = "EVT60212D"
+	style = 0
+	picture = "Munich"
+
+	action_a = {
+		name = "ACT60211A"
+		ai_chance = 0
+		command = { type = dissent value = 25 }
+		command = { type = setflag which = Balkan_Wars_3_Lose_HUN }
+	}
+	action_b = {
+		name = "ACT60211B"
+		ai_chance = 100
+		command = { type = leave_alliance }
+		command = { type = war which = ROM }
+		command = { type = trigger which = 60217 }
+	}
+}
+
+event = {
+	id = 60213
+	random = no
+	country = HUN
+
+	name = "EVT60213N"
+	desc = "EVT60213D"
+	style = 0
+	picture = "Munich"
+
+	action_a = {
+		name = "ACT60211A"
+		ai_chance = 0
+		command = { type = removecore which = 427 }#Transylvania
+		command = { type = removecore which = 428 }
+		command = { type = removecore which = 429 }
+		command = { type = removecore which = 495 }
+		command = { type = removecore which = 496 }
+		command = { type = removecore which = 498 }
+		command = { type = secedeprovince which = ROM value = 427 }#Transylvania
+		command = { type = secedeprovince which = ROM value = 428 }
+		command = { type = secedeprovince which = ROM value = 429 }
+		command = { type = secedeprovince which = ROM value = 495 }
+		command = { type = secedeprovince which = ROM value = 496 }
+		command = { type = secedeprovince which = ROM value = 498 }
+		command = { type = dissent value = 50 }
+		command = { type = setflag which = Balkan_Wars_3_Lose_HUN }
+	}
+	action_b = {
+		name = "ACT60211B"
+		ai_chance = 100
+		command = { type = leave_alliance }
+		command = { type = war which = ROM }
+		command = { type = trigger which = 60217 }
+	}
+}
+
+event = {
+	id = 60214
+	random = no
+	country = HUN
+
+	name = "EVT60214N"
+	desc = "EVT60214D"
+	style = 0
+	picture = "Munich"
+
+	action_a = {
+		name = "ACT60214A"
+		ai_chance = 20
+		command = { type = dissent value = 25 }
+		command = { type = trigger which = 60215 }
+		command = { type = setflag which = Balkan_Wars_3_Lose_HUN }
+	}
+	action_b = {
+		name = "ACT60214B"
+		ai_chance = 80
+		command = { type = leave_alliance }
+		command = { type = war which = ROM }
+		command = { type = trigger which = 60218 }
+	}
+}
+
+event = {
+	id = 60215
+	random = no
+	country = ROM
+
+	name = "EVT60214N"
+	desc = "EVT60214D"
+	style = 0
+	picture = "Munich"
+
+	action_a = {
+		name = "ACT60214A"
+		ai_chance = 10
+		command = { type = dissent value = 4 }
+		command = { type = setflag which = Balkan_Wars_3_Lose_ROM }
+	}
+	action_b = {
+		name = "ACT60214B"
+		ai_chance = 90
+		command = { type = leave_alliance }
+		command = { type = war which = HUN }
+		command = { type = trigger which = 60218 }
+		command = { type = clrflag which = Balkan_Wars_3_Lose_HUN }
+	}
+}
+
+#########################################################################
+# バルカン戦争
+#########################################################################
+
+event = {
+	id = 60216
+	random = no
+	country = GER
+
+	name = "EVT60216N"
+	desc = "EVT60216D"
+	style = 0
+	picture = "war"
+
+	action_a = {
+		name = "ACT60216A"
+		command = { type = setflag which = Balkan_Wars_3_ROM }
+		command = { type = setflag which = Balkan_Wars_3_HUN }
+		command = { type = trigger which = 60220 }
+		command = { type = trigger which = 60221 }
+		command = { type = trigger which = 60222 }
+		command = { type = trigger which = 60223 }
+		command = { type = trigger which = 60224 }
+		command = { type = end_access which = HUN }
+		command = { type = end_access which = ROM }
+		command = { type = end_access which = CRO }
+		command = { type = end_access which = SER }
+		command = { type = end_access which = YUG }
+		command = { type = end_access which = BUL }
+		command = { type = non_aggression which = GER where = HUN }
+		command = { type = non_aggression which = GER where = ROM }
+		command = { type = non_aggression which = GER where = CRO }
+		command = { type = non_aggression which = GER where = SER }
+		command = { type = non_aggression which = GER where = YUG }
+		command = { type = non_aggression which = GER where = BUL }
+		command = { type = end_guarantee which = GER where = HUN }
+		command = { type = end_guarantee which = GER where = ROM }
+		command = { type = end_guarantee which = GER where = CRO }
+		command = { type = end_guarantee which = GER where = SER }
+		command = { type = end_guarantee which = GER where = YUG }
+		command = { type = end_guarantee which = GER where = BUL }
+	}
+}
+event = {
+	id = 60217
+	random = no
+	country = GER
+
+	name = "EVT60217N"
+	desc = "EVT60216D"
+	style = 0
+	picture = "war"
+
+	action_a = {
+		name = "ACT60217A"
+		command = { type = setflag which = Balkan_Wars_3_ROM }
+		command = { type = setflag which = Balkan_Wars_3_HUN }
+		command = { type = trigger which = 60230 }
+		command = { type = trigger which = 60231 }
+		command = { type = trigger which = 60232 }
+		command = { type = trigger which = 60233 }
+		command = { type = trigger which = 60234 }
+		command = { type = end_access which = HUN }
+		command = { type = end_access which = ROM }
+		command = { type = end_access which = CRO }
+		command = { type = end_access which = SER }
+		command = { type = end_access which = YUG }
+		command = { type = end_access which = BUL }
+		command = { type = non_aggression which = GER where = HUN }
+		command = { type = non_aggression which = GER where = ROM }
+		command = { type = non_aggression which = GER where = CRO }
+		command = { type = non_aggression which = GER where = SER }
+		command = { type = non_aggression which = GER where = YUG }
+		command = { type = non_aggression which = GER where = BUL }
+		command = { type = end_guarantee which = GER where = HUN }
+		command = { type = end_guarantee which = GER where = ROM }
+		command = { type = end_guarantee which = GER where = CRO }
+		command = { type = end_guarantee which = GER where = SER }
+		command = { type = end_guarantee which = GER where = YUG }
+		command = { type = end_guarantee which = GER where = BUL }
+	}
+}
+event = {
+	id = 60218
+	random = no
+	country = GER
+
+	name = "EVT60218N"
+	desc = "EVT60216D"
+	style = 0
+	picture = "war"
+
+	action_a = {
+		name = "ACT60218A"
+		ai_chance = 50
+		command = { type = setflag which = Balkan_Wars_3_ROM }
+		command = { type = setflag which = Balkan_Wars_3_HUN }
+		command = { type = trigger which = 60240 }
+		command = { type = trigger which = 60241 }
+		command = { type = trigger which = 60242 }
+		command = { type = trigger which = 60243 }
+		command = { type = trigger which = 60244 }
+		command = { type = end_access which = HUN }
+		command = { type = end_access which = ROM }
+		command = { type = end_access which = CRO }
+		command = { type = end_access which = SER }
+		command = { type = end_access which = YUG }
+		command = { type = end_access which = BUL }
+		command = { type = non_aggression which = GER where = HUN }
+		command = { type = non_aggression which = GER where = ROM }
+		command = { type = non_aggression which = GER where = CRO }
+		command = { type = non_aggression which = GER where = SER }
+		command = { type = non_aggression which = GER where = YUG }
+		command = { type = non_aggression which = GER where = BUL }
+		command = { type = end_guarantee which = GER where = HUN }
+		command = { type = end_guarantee which = GER where = ROM }
+		command = { type = end_guarantee which = GER where = CRO }
+		command = { type = end_guarantee which = GER where = SER }
+		command = { type = end_guarantee which = GER where = YUG }
+		command = { type = end_guarantee which = GER where = BUL }
+	}
+	action_b = {
+		name = "ACT60218B"
+		ai_chance = 30
+		command = { type = clrflag which = Balkan_Wars_3_GER-NON }
+		command = { type = setflag which = Balkan_Wars_3_GER-HUN }
+		command = { type = setflag which = Balkan_Wars_3_ROM }
+		command = { type = setflag which = Balkan_Wars_3_HUN }
+		command = { type = trigger which = 60220 }
+		command = { type = trigger which = 60221 }
+		command = { type = trigger which = 60222 }
+		command = { type = trigger which = 60223 }
+		command = { type = trigger which = 60224 }
+		command = { type = end_access which = HUN }
+		command = { type = end_access which = ROM }
+		command = { type = end_access which = CRO }
+		command = { type = end_access which = SER }
+		command = { type = end_access which = YUG }
+		command = { type = end_access which = BUL }
+		command = { type = non_aggression which = GER where = HUN }
+		command = { type = non_aggression which = GER where = ROM }
+		command = { type = non_aggression which = GER where = CRO }
+		command = { type = non_aggression which = GER where = SER }
+		command = { type = non_aggression which = GER where = YUG }
+		command = { type = non_aggression which = GER where = BUL }
+		command = { type = end_guarantee which = GER where = HUN }
+		command = { type = end_guarantee which = GER where = ROM }
+		command = { type = end_guarantee which = GER where = CRO }
+		command = { type = end_guarantee which = GER where = SER }
+		command = { type = end_guarantee which = GER where = YUG }
+		command = { type = end_guarantee which = GER where = BUL }
+	}
+	action_c = {
+		name = "ACT60218C"
+		ai_chance = 20
+		command = { type = clrflag which = Balkan_Wars_3_GER-NON }
+		command = { type = setflag which = Balkan_Wars_3_GER-ROM }
+		command = { type = setflag which = Balkan_Wars_3_ROM }
+		command = { type = setflag which = Balkan_Wars_3_HUN }
+		command = { type = trigger which = 60230 }
+		command = { type = trigger which = 60231 }
+		command = { type = trigger which = 60232 }
+		command = { type = trigger which = 60233 }
+		command = { type = trigger which = 60234 }
+		command = { type = end_access which = HUN }
+		command = { type = end_access which = ROM }
+		command = { type = end_access which = CRO }
+		command = { type = end_access which = SER }
+		command = { type = end_access which = YUG }
+		command = { type = end_access which = BUL }
+		command = { type = non_aggression which = GER where = HUN }
+		command = { type = non_aggression which = GER where = ROM }
+		command = { type = non_aggression which = GER where = CRO }
+		command = { type = non_aggression which = GER where = SER }
+		command = { type = non_aggression which = GER where = YUG }
+		command = { type = non_aggression which = GER where = BUL }
+		command = { type = end_guarantee which = GER where = HUN }
+		command = { type = end_guarantee which = GER where = ROM }
+		command = { type = end_guarantee which = GER where = CRO }
+		command = { type = end_guarantee which = GER where = SER }
+		command = { type = end_guarantee which = GER where = YUG }
+		command = { type = end_guarantee which = GER where = BUL }
+	}
+}
+
+
+#########################################################################
+# 第三次バルカン戦争勃発 - ドイツがハンガリーを支持
+#########################################################################
+event = {
+	id = 60220
+	random = no
+	country = CRO
+
+	name = "EVT60220N"
+	desc = "EVT60220D"
+	style = 0
+	picture = "war"
+
+	action_a = {
+		name = "ACT60220A"
+		ai_chance = 100
+		command = { type = leave_alliance }
+		command = { type = peace which = USA value = 1 }
+		command = { type = peace which = ENG value = 1 }
+		command = { type = alliance which = HUN }
+		command = { type = setflag which = Balkan_Wars_3_CRO_HUN }
+	}
+	action_b = {
+		name = "ACT60220B"
+		ai_chance = 0
+		command = { type = alliance which = GER }
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = access which = HUN }
+		command = { type = access which = ROM }
+		command = { type = access which = SER }
+		command = { type = access which = YUG }
+		command = { type = access which = BUL }
+		command = { type = access which = ITA }
+
+		command = { type = ai which = "switch/EXP_Russia.ai" } #FEPKBETA4.9
+		command = { type = ai which = "Air_Ground.ai" }
+	}
+}
+
+event = {
+	id = 60221
+	random = no
+	country = SER
+
+	name = "EVT60221N"
+	desc = "EVT60221D"
+	style = 0
+	picture = "war"
+
+	action_a = {
+		name = "ACT60221A"
+		ai_chance = 10
+		command = { type = alliance which = GER }
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = access which = HUN }
+		command = { type = access which = ROM }
+		command = { type = access which = CRO }
+		command = { type = access which = YUG }
+		command = { type = access which = BUL }
+		command = { type = access which = ITA }
+
+		command = { type = ai which = "switch/EXP_Russia.ai" } #FEPKBETA4.9
+		command = { type = ai which = "Air_Ground.ai" }
+	}
+	action_b = {
+		name = "ACT60221B"
+		ai_chance = 90
+		command = { type = leave_alliance }
+		command = { type = peace which = USA value = 1 }
+		command = { type = peace which = ENG value = 1 }
+		command = { type = alliance which = ROM }
+		command = { type = setflag which = Balkan_Wars_3_SER_ROM }
+	}
+}
+
+event = {
+	id = 60222
+	random = no
+	country = YUG
+
+	name = "EVT60222N"
+	desc = "EVT60222D"
+	picture = "war"
+
+	action_a = {
+		name = "ACT60222A"
+		ai_chance = 10
+		command = { type = alliance which = GER }
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = access which = HUN }
+		command = { type = access which = ROM }
+		command = { type = access which = CRO }
+		command = { type = access which = SER }
+		command = { type = access which = BUL }
+		command = { type = access which = ITA }
+
+		command = { type = ai which = "switch/EXP_Russia.ai" } #FEPKBETA4.9
+		command = { type = ai which = "Air_Ground.ai" }
+	}
+	action_b = {
+		name = "ACT60222B"
+		ai_chance = 90
+		command = { type = leave_alliance }
+		command = { type = peace which = USA value = 1 }
+		command = { type = peace which = ENG value = 1 }
+		command = { type = alliance which = ROM }
+		command = { type = setflag which = Balkan_Wars_3_YUG_ROM }
+	}
+}
+event = {
+	id = 60223
+	random = no
+	country = BUL
+
+	name = "EVT60223N"
+	desc = "EVT60223D"
+	style = 0
+	picture = "war"
+
+	action_a = {
+		name = "ACT60223A"
+		ai_chance = 60
+		command = { type = leave_alliance }
+		command = { type = manpowerpool value = 50 }
+		command = { type = peace which = USA value = 1 }
+		command = { type = peace which = ENG value = 1 }
+		command = { type = alliance which = HUN }
+		command = { type = setflag which = Balkan_Wars_3_BUL_HUN }
+	}
+	action_b = {
+		name = "ACT60223B"
+		ai_chance = 30
+		command = { type = leave_alliance }
+		command = { type = manpowerpool value = 50 }
+		command = { type = peace which = USA value = 1 }
+		command = { type = peace which = ENG value = 1 }
+		command = { type = alliance which = ROM }
+		command = { type = setflag which = Balkan_Wars_3_BUL_ROM }
+	}
+	action_c = {
+		name = "ACT60223C"
+		ai_chance = 10
+		command = { type = alliance which = GER }
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = access which = HUN }
+		command = { type = access which = ROM }
+		command = { type = access which = CRO }
+		command = { type = access which = SER }
+		command = { type = access which = YUG }
+		command = { type = access which = ITA }
+
+		command = { type = ai which = "switch/EXP_Russia.ai" } #FEPKBETA4.9
+		command = { type = ai which = "Air_Ground.ai" }
+	}
+}
+
+event = {
+	id = 60224
+	random = no
+	country = ITA
+
+	trigger = { #FEPK #1.084
+		NOT = {
+			alliance = { country = GER country = RSI }
+			ispuppet = ITA
+		}
+	}
+
+	name = "EVT60224N"
+	desc = "EVT60224D"
+	style = 0
+	picture = "war"
+
+	action_a = {
+		name = "ACT60224A"
+		ai_chance = 85
+		command = { type = trigger which = 60225 }
+	}
+	action_b = {
+		name = "ACT60224B"
+		ai_chance = 15
+		command = { type = setflag which = Balkan_Wars_3_ITA_ROM }
+	}
+	action_c = {
+		name = "ACT60223C"
+		ai_chance = 0
+		command = { type = domestic which = interventionism value = -1 }
+	#	command = { type = access which = HUN }
+	#	command = { type = access which = CRO }
+	#	command = { type = access which = SER }
+	#	command = { type = access which = YUG }
+	#	command = { type = access which = BUL }
+	}
+}
+event = {
+	id = 60225
+	random = no
+	country = HUN
+
+	name = "EVT60225N"
+	desc = "EVT60225D"
+	style = 0
+	picture = "war"
+
+	action_a = {
+		name = "ACT60225A"
+		ai_chance = 100
+		command = { type = trigger which = 60226 }
+	}
+	action_b = {
+		name = "ACT60200B"
+		ai_chance = 0
+		command = { type = trigger which = 60227 }
+	}
+}
+event = {
+	id = 60226
+	random = no
+	country = ITA
+
+	name = "EVT60226N"
+	desc = "EVT60226D"
+	style = 0
+	picture = "war"
+
+	action_a = {
+		name = "ACT60100A"
+		ai_chance = 100
+		command = { type = setflag which = Balkan_Wars_3_ITA_HUN }
+	#	command = { type = access which = HUN }
+	#	command = { type = access which = CRO }
+	#	command = { type = access which = SER }
+	#	command = { type = access which = YUG }
+	#	command = { type = access which = BUL }
+	}
+}
+event = {
+	id = 60227
+	random = no
+	country = ITA
+
+	name = "EVT60227N"
+	desc = "EVT60227D"
+	style = 0
+	picture = "war"
+
+	action_a = {
+		name = "ACT60227A"
+		ai_chance = 75
+		command = { type = domestic which = interventionism value = -1 }
+	#	command = { type = access which = HUN }
+	#	command = { type = access which = CRO }
+	#	command = { type = access which = SER }
+	#	command = { type = access which = YUG }
+	#	command = { type = access which = BUL }
+	}
+	action_b = {
+		name = "ACT60227B"
+		ai_chance = 25
+		command = { type = setflag which = Balkan_Wars_3_ITA_ROM }
+	}
+}
+event = {
+	id = 60228
+	random = no
+	country = GER
+
+	trigger = {
+		flag = Balkan_Wars_3
+		flag = Balkan_Wars_3_GER-HUN
+		NOT = {
+			flag = Balkan_Wars_3_END
+			war = { country = GER country = HUN } #BETA修正パッチ
+		}
+	}
+
+	date = { day = 1 month = september year = 1939 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT60228N"
+	desc = "EVT60228D"
+	style = 0
+	picture = "war"
+
+	action_a = {
+		name = "ACT60228A"
+		ai_chance = 95
+		command = { type = trigger which = 60229 }
+
+	}
+	action_b  = {
+		name = "ACT60280B"
+		ai_chance = 5
+		command = { }
+	}
+}
+event = {
+	id = 60229
+	random = no
+	country = HUN
+
+	name = "EVT60229N"
+	desc = "EVT60228D"
+	style = 0
+	picture = "war"
+
+	action_a = {
+		name = "EVT60229A" # FEPK変更部分 #1.06 #修正
+		command = { type = oilpool value = 2000 }
+		command = { type = add_division which = "SSハンガリー戦車師団" value = armor when = 4 where = sp_artillery }
+		command = { type = add_division which = "SSハンガリー機械化師団" value = mechanized when = 2 where = light_armor_brigade }
+		command = { type = add_division which = "SSハンガリー自動車化師団" value = motorized when = 2 where = sp_rct_artillery }
+		command = { type = add_division which = "SSハンガリー義勇自動車化連隊" value = motorized when = 1 where = sp_rct_artillery }
+	}
+}
+
+#########################################################################
+# 第三次バルカン戦争勃発 - ドイツがルーマニアを支持
+#########################################################################
+
+event = {
+	id = 60230
+	random = no
+	country = CRO
+
+	name = "EVT60220N"
+	desc = "EVT60230D"
+	style = 0
+	picture = "war"
+
+	action_a = {
+		name = "ACT60230A"
+		ai_chance = 10
+		command = { type = alliance which = GER }
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = access which = HUN }
+		command = { type = access which = ROM }
+		command = { type = access which = SER }
+		command = { type = access which = YUG }
+		command = { type = access which = BUL }
+		command = { type = access which = ITA }
+
+		command = { type = ai which = "switch/EXP_Russia.ai" } #FEPKBETA4.9
+		command = { type = ai which = "Air_Ground.ai" }
+	}
+	action_b = {
+		name = "ACT60220A"
+		ai_chance = 90
+		command = { type = leave_alliance }
+		command = { type = peace which = USA value = 1 }
+		command = { type = peace which = ENG value = 1 }
+		command = { type = alliance which = HUN }
+		command = { type = setflag which = Balkan_Wars_3_CRO_HUN }
+	}
+}
+
+event = {
+	id = 60231
+	random = no
+	country = SER
+
+	name = "EVT60221N"
+	desc = "EVT60231D"
+
+	style = 0
+	picture = "war"
+
+	action_a = {
+		name = "ACT60231A"
+		ai_chance = 100
+		command = { type = leave_alliance }
+		command = { type = peace which = USA value = 1 }
+		command = { type = peace which = ENG value = 1 }
+		command = { type = alliance which = ROM }
+		command = { type = setflag which = Balkan_Wars_3_SER_ROM }
+	}
+	action_b = {
+		name = "ACT60231B"
+		ai_chance = 0
+		command = { type = alliance which = GER }
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = access which = HUN }
+		command = { type = access which = ROM }
+		command = { type = access which = CRO }
+		command = { type = access which = YUG }
+		command = { type = access which = BUL }
+		command = { type = access which = ITA }
+
+		command = { type = ai which = "switch/EXP_Russia.ai" } #FEPKBETA4.9
+		command = { type = ai which = "Air_Ground.ai" }
+	}
+}
+
+event = {
+	id = 60232
+	random = no
+	country = YUG
+
+	name = "EVT60222N"
+	desc = "EVT60232D"
+
+	style = 0
+	picture = "war"
+
+	action_a = {
+		name = "ACT60222B"
+		ai_chance = 100
+		command = { type = leave_alliance }
+		command = { type = peace which = USA value = 1 }
+		command = { type = peace which = ENG value = 1 }
+		command = { type = alliance which = ROM }
+		command = { type = setflag which = Balkan_Wars_3_YUG_ROM }
+	}
+	action_b = {
+		name = "ACT60222A"
+		ai_chance = 0
+		command = { type = alliance which = GER }
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = access which = HUN }
+		command = { type = access which = ROM }
+		command = { type = access which = CRO }
+		command = { type = access which = SER }
+		command = { type = access which = BUL }
+		command = { type = access which = ITA }
+
+		command = { type = ai which = "switch/EXP_Russia.ai" } #FEPKBETA4.9
+		command = { type = ai which = "Air_Ground.ai" }
+	}
+}
+event = {
+	id = 60233
+	random = no
+	country = BUL
+
+
+	name = "EVT60223N"
+	desc = "EVT60233D"
+	style = 0
+	picture = "war"
+
+	action_a = {
+		name = "ACT60223B"
+		ai_chance = 60
+		command = { type = leave_alliance }
+		command = { type = manpowerpool value = 50 }
+		command = { type = peace which = USA value = 1 }
+		command = { type = peace which = ENG value = 1 }
+		command = { type = alliance which = ROM }
+		command = { type = setflag which = Balkan_Wars_3_BUL_ROM }
+	}
+	action_b = {
+		name = "ACT60223A"
+		ai_chance = 30
+		command = { type = leave_alliance }
+		command = { type = manpowerpool value = 50 }
+		command = { type = peace which = USA value = 1 }
+		command = { type = peace which = ENG value = 1 }
+		command = { type = alliance which = HUN }
+		command = { type = setflag which = Balkan_Wars_3_BUL_HUN }
+	}
+	action_c = {
+		name = "ACT60223C"
+		ai_chance = 10
+		command = { type = alliance which = GER }
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = access which = HUN }
+		command = { type = access which = ROM }
+		command = { type = access which = CRO }
+		command = { type = access which = SER }
+		command = { type = access which = YUG }
+		command = { type = access which = ITA }
+
+		command = { type = ai which = "switch/EXP_Russia.ai" } #FEPKBETA4.9
+		command = { type = ai which = "Air_Ground.ai" }
+	}
+}
+
+event = {
+	id = 60234
+	random = no
+	country = ITA
+
+	trigger = { #FEPK #1.084
+		NOT = {
+			alliance = { country = GER country = RSI }
+			ispuppet = ITA
+		}
+	}
+
+	name = "EVT60224N"
+	desc = "EVT60234D"
+	style = 0
+	picture = "war"
+	action_a = {
+		name = "ACT60224B"
+		ai_chance = 85
+		command = { type = setflag which = Balkan_Wars_3_ITA_ROM }
+	}
+	action_b = {
+		name = "ACT60224A"
+		ai_chance = 15
+		command = { type = trigger which = 60235 }
+	}
+	action_c = {
+		name = "ACT60223C"
+		ai_chance = 0
+		command = { type = domestic which = interventionism value = -1 }
+	#	command = { type = access which = HUN }
+	#	command = { type = access which = CRO }
+	#	command = { type = access which = SER }
+	#	command = { type = access which = YUG }
+	#	command = { type = access which = BUL }
+	}
+}
+event = {
+	id = 60235
+	random = no
+	country = HUN
+
+	name = "EVT60225N"
+	desc = "EVT60235D"
+	picture = "war"
+
+	action_a = {
+		name = "ACT60225A"
+		ai_chance = 100
+		command = { type = trigger which = 60236 }
+	}
+	action_b = {
+		name = "ACT60200B"
+		ai_chance = 0
+		command = { type = trigger which = 60237 }
+	}
+}
+event = {
+	id = 60236
+	random = no
+	country = ITA
+
+	name = "EVT60226N"
+	desc = "EVT60226D"
+	picture = "war"
+
+	action_a = {
+		name = "ACT60100A"
+		ai_chance = 100
+		command = { type = setflag which = Balkan_Wars_3_ITA_HUN }
+	}
+}
+event = {
+	id = 60237
+	random = no
+	country = ITA
+
+	name = "EVT60227N"
+	desc = "EVT60227D"
+	picture = "war"
+
+	action_a = {
+		name = "ACT60227A"
+		ai_chance = 30
+		command = { type = domestic which = interventionism value = -1 }
+	#	command = { type = access which = HUN }
+	#	command = { type = access which = CRO }
+	#	command = { type = access which = SER }
+	#	command = { type = access which = YUG }
+	#	command = { type = access which = BUL }
+	}
+	action_b = {
+		name = "ACT60227B"
+		ai_chance = 70
+		command = { type = setflag which = Balkan_Wars_3_ITA_ROM }
+	}
+}
+event = {
+	id = 60238
+	random = no
+	country = GER
+
+	trigger = {
+		flag = Balkan_Wars_3
+		flag = Balkan_Wars_3_GER-ROM
+		NOT = {
+			flag = Balkan_Wars_3_END
+			war = { country = GER country = ROM } #BETA修正パッチ
+		}
+	}
+
+	date = { day = 1 month = september year = 1939 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT60238N"
+	desc = "EVT60238D"
+	style = 0
+	picture = "war"
+
+	action_a = {
+		name = "ACT60228A"
+		ai_chance = 95
+		command = { type = trigger which = 60239 }
+
+	}
+	action_b  = {
+		name = "ACT60280B"
+		ai_chance = 5
+		command = { }
+	}
+}
+event = {
+	id = 60239
+	random = no
+	country = ROM
+
+	name = "EVT60239N"
+	desc = "EVT60238D"
+	style = 0
+	picture = "war"
+
+	action_a = {
+		name = "EVT60229A" # FEPK変更部分 #1.06 #修正
+		command = { type = oilpool value = 2000 }
+		command = { type = add_division which = "SSルーマニア戦車師団" value = armor when = 4 where = sp_artillery }
+		command = { type = add_division which = "SSルーマニア機械化師団" value = mechanized when = 2 where = light_armor_brigade }
+		command = { type = add_division which = "SSルーマニア自動車化師団" value = motorized when = 2 where = sp_rct_artillery }
+		command = { type = add_division which = "SSルーマニア義勇自動車化連隊" value = motorized when = 1 where = sp_rct_artillery }
+	}
+}
+
+#########################################################################
+# 第三次バルカン戦争勃発 - ドイツの態度が不明
+#########################################################################
+event = {
+	id = 60240
+	random = no
+	country = CRO
+
+	name = "EVT60220N"
+	desc = "EVT60240D"
+	style = 0
+	picture = "war"
+
+	action_a = {
+		name = "ACT60220A"
+		ai_chance = 80
+		command = { type = leave_alliance }
+		command = { type = peace which = USA value = 1 }
+		command = { type = peace which = ENG value = 1 }
+		command = { type = alliance which = HUN }
+		command = { type = setflag which = Balkan_Wars_3_CRO_HUN }
+	}
+	action_b = {
+		name = "ACT60231B"
+		ai_chance = 20
+		command = { type = alliance which = GER }
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = access which = HUN }
+		command = { type = access which = ROM }
+		command = { type = access which = SER }
+		command = { type = access which = YUG }
+		command = { type = access which = BUL }
+		command = { type = access which = ITA }
+
+		command = { type = ai which = "switch/EXP_Russia.ai" } #FEPKBETA4.9
+		command = { type = ai which = "Air_Ground.ai" }
+	}
+}
+event = {
+	id = 60241
+	random = no
+	country = SER
+
+	name = "EVT60221N"
+	desc = "EVT60241D"
+
+	style = 0
+	picture = "war"
+
+	action_a = {
+		name = "ACT60221B"
+		ai_chance = 80
+		command = { type = leave_alliance }
+		command = { type = peace which = USA value = 1 }
+		command = { type = peace which = ENG value = 1 }
+		command = { type = alliance which = ROM }
+		command = { type = setflag which = Balkan_Wars_3_SER_ROM }
+		command = { type = secedeprovince which = ROM value = 494 }
+	}
+	action_b = {
+		name = "ACT60231B"
+		ai_chance = 20
+		command = { type = alliance which = GER }
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = access which = HUN }
+		command = { type = access which = ROM }
+		command = { type = access which = CRO }
+		command = { type = access which = YUG }
+		command = { type = access which = BUL }
+		command = { type = access which = ITA }
+		command = { type = secedeprovince which = ROM value = 494 }
+
+		command = { type = ai which = "switch/EXP_Russia.ai" } #FEPKBETA4.9
+		command = { type = ai which = "Air_Ground.ai" }
+	}
+}
+
+event = {
+	id = 60242
+	random = no
+	country = YUG
+
+	name = "EVT60222N"
+	desc = "EVT60242D"
+
+	style = 0
+	picture = "war"
+
+	action_a = {
+		name = "ACT60222B"
+		ai_chance = 80
+		command = { type = leave_alliance }
+		command = { type = peace which = USA value = 1 }
+		command = { type = peace which = ENG value = 1 }
+		command = { type = alliance which = ROM }
+		command = { type = setflag which = Balkan_Wars_3_YUG_ROM }
+	}
+	action_b = {
+		name = "ACT60222A"
+		ai_chance = 20
+		command = { type = alliance which = GER }
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = access which = HUN }
+		command = { type = access which = ROM }
+		command = { type = access which = CRO }
+		command = { type = access which = SER }
+		command = { type = access which = BUL }
+		command = { type = access which = ITA }
+
+		command = { type = ai which = "switch/EXP_Russia.ai" } #FEPKBETA4.9
+		command = { type = ai which = "Air_Ground.ai" }
+	}
+}
+event = {
+	id = 60243
+	random = no
+	country = BUL
+
+
+	name = "EVT60223N"
+	desc = "EVT60233D"
+	style = 0
+	picture = "war"
+
+	action_a = {
+		name = "ACT60243A"
+		ai_chance = 40
+		command = { type = leave_alliance }
+		command = { type = manpowerpool value = 50 }
+		command = { type = peace which = USA value = 1 }
+		command = { type = peace which = ENG value = 1 }
+		command = { type = alliance which = HUN }
+		command = { type = setflag which = Balkan_Wars_3_BUL_HUN }
+	}
+	action_b = {
+		name = "ACT60243B"
+		ai_chance = 40
+		command = { type = leave_alliance }
+		command = { type = manpowerpool value = 50 }
+		command = { type = peace which = USA value = 1 }
+		command = { type = peace which = ENG value = 1 }
+		command = { type = alliance which = ROM }
+		command = { type = setflag which = Balkan_Wars_3_BUL_ROM }
+	}
+	action_c = {
+		name = "ACT60223C"
+		ai_chance = 20
+		command = { type = alliance which = GER }
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = access which = HUN }
+		command = { type = access which = ROM }
+		command = { type = access which = CRO }
+		command = { type = access which = SER }
+		command = { type = access which = YUG }
+		command = { type = access which = ITA }
+
+		command = { type = ai which = "switch/EXP_Russia.ai" } #FEPKBETA4.9
+		command = { type = ai which = "Air_Ground.ai" }
+	}
+}
+
+event = {
+	id = 60244
+	random = no
+	country = ITA
+
+	trigger = { #FEPK #1.084
+		NOT = {
+			alliance = { country = GER country = RSI }
+			ispuppet = ITA
+		}
+	}
+
+	name = "EVT60224N"
+	desc = "EVT60244D"
+	style = 0
+	picture = "war"
+
+	action_a = {
+		name = "ACT60224A"
+		ai_chance = 60
+		command = { type = trigger which = 60245 }
+	}
+	action_b = {
+		name = "ACT60224B"
+		ai_chance = 40
+		command = { type = setflag which = Balkan_Wars_3_ITA_ROM }
+	}
+	action_c = {
+		name = "ACT60223C"
+		ai_chance = 0
+		command = { type = domestic which = interventionism value = -1 }
+	#	command = { type = access which = HUN }
+	#	command = { type = access which = CRO }
+	#	command = { type = access which = SER }
+	#	command = { type = access which = YUG }
+	#	command = { type = access which = BUL }
+	}
+}
+event = {
+	id = 60245
+	random = no
+	country = HUN
+
+	name = "EVT60225N"
+	desc = "EVT60245D"
+	picture = "war"
+
+	action_a = {
+		name = "ACT60245A"
+		ai_chance = 100
+		command = { type = trigger which = 60246 }
+	}
+	action_b = {
+		name = "ACT60200B"
+		ai_chance = 0
+		command = { type = trigger which = 60247 }
+	}
+}
+event = {
+	id = 60246
+	random = no
+	country = ITA
+
+	name = "EVT60226N"
+	desc = "EVT60226D"
+	picture = "war"
+
+	action_a = {
+		name = "ACT60100A"
+		ai_chance = 100
+		command = { type = setflag which = Balkan_Wars_3_ITA_HUN }
+	}
+}
+event = {
+	id = 60247
+	random = no
+	country = ITA
+
+	name = "EVT60227N"
+	desc = "EVT60227D"
+	picture = "war"
+
+	action_a = {
+		name = "ACT60227A"
+		ai_chance = 40
+		command = { type = domestic which = interventionism value = -1 }
+	#	command = { type = access which = HUN }
+	#	command = { type = access which = CRO }
+	#	command = { type = access which = SER }
+	#	command = { type = access which = YUG }
+	#	command = { type = access which = BUL }
+	}
+	action_b = {
+		name = "ACT60227B"
+		ai_chance = 60
+		command = { type = setflag which = Balkan_Wars_3_ITA_ROM }
+	}
+}
+#########################################################################
+# 第三次バルカン戦争 - 終結イベント
+#########################################################################
+
+#########################################################################
+# トランシルバニアにおけるルーマニア人の抵抗運動
+#########################################################################
+event = {
+	id = 60250
+	random = no
+	country = HUN
+	persistent = yes
+
+
+	trigger = {	#戦時中且つトランスバニアどれか一つを占領している
+		war = { country = HUN country = ROM }
+		flag = Balkan_Wars_3
+		NOT = { flag = Balkan_Wars_3_HUN-TRA }
+		OR = {
+			control = { province = 427 data = HUN }
+			control = { province = 428 data = HUN }
+			control = { province = 429 data = HUN }
+			control = { province = 495 data = HUN }
+			control = { province = 496 data = HUN }
+			control = { province = 498 data = HUN }
+		}
+	}
+
+	date = { day = 1 month = september year = 1939 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT60250N"
+	desc = "EVT60250D"
+	style = 0
+	picture = "VIC"
+
+	action_a = {
+		name = "ACT60250A"
+		command = { type = dissent value = 2 }
+		command = { type = extra_tc value = -10 }
+		command = { type = setflag which = Balkan_Wars_3_HUN-TRA }
+	}
+}
+
+event = {
+	id = 60251
+	random = no
+	country = HUN
+	persistent = yes
+
+	trigger = {#60250が起こっていることが前提条件で､ 平和或いはトランシルヴァニアを全て失っている
+		event = 60250
+		flag = Balkan_Wars_3_HUN-TRA
+		OR = {
+			NOT = { war = { country = HUN country = ROM } }
+			NOT = {
+				control = { province = 427 data = HUN }
+				control = { province = 428 data = HUN }
+				control = { province = 429 data = HUN }
+				control = { province = 495 data = HUN }
+				control = { province = 496 data = HUN }
+				control = { province = 498 data = HUN }
+			}
+		}
+	}
+
+	date = { day = 1 month = september year = 1939 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT60251N"
+	desc = "EVT60251D"
+	style = 0
+	picture = "VIC"
+
+	action_a = {
+		name = "ACT60251A"
+		command = { type = dissent value = -2 }
+		command = { type = extra_tc value = 10 }
+		command = { type = clrflag which = Balkan_Wars_3_HUN-TRA }
+	}
+}
+#########################################################################
+# ハンガリー＝クロアチア
+#########################################################################
+event = {
+	id = 60252
+	random = no
+	country = HUN
+
+	trigger = {
+		flag = Balkan_Wars_3_END
+		#flag = Balkan_Wars_3_CRO_HUN
+		OR = {
+			flag = Balkan_Wars_3_Lose_ROM
+			NOT = { flag = Balkan_Wars_3_Lose_HUN }
+		}
+	}
+
+	date = { day = 1 month = september year = 1939 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT60252N"
+	desc = "EVT60252D"
+	style = 0
+	picture = "VIC"
+
+	action_a = {
+		name = "ACT60252A"
+		command = { type = dissent value = -5 }
+		command = { type = add_division value = infantry when = 2 }
+		command = { type = add_division value = infantry when = 2 }
+		command = { type = add_division value = infantry when = 2 }
+		command = { type = inherit which = CRO }
+		command = { type = waketeam which = 1618 }#
+		command = { type = waketeam which = 1619 }#
+		command = { type = waketeam which = 1620 }#
+		command = { type = waketeam which = 1621 }#
+		command = { type = waketeam which = 1622 }#
+		command = { type = waketeam which = 1623 }#
+		command = { type = waketeam which = 1624 }#
+		command = { type = waketeam which = 1625 }#
+		command = { type = waketeam which = 1626 }#
+		command = { type = wakeleader which = 44640 }#クロアチア人将官
+		command = { type = wakeleader which = 44640 }
+		command = { type = wakeleader which = 44641 }
+		command = { type = wakeleader which = 44642 }
+		command = { type = wakeleader which = 44643 }
+		command = { type = wakeleader which = 44644 }
+		command = { type = wakeleader which = 44645 }
+		command = { type = wakeleader which = 44646 }
+		command = { type = wakeleader which = 44647 }
+		command = { type = wakeleader which = 44648 }
+		command = { type = wakeleader which = 44649 }
+		command = { type = wakeleader which = 44650 }
+		command = { type = wakeleader which = 44651 }
+		command = { type = wakeleader which = 44652 }
+		command = { type = wakeleader which = 44653 }
+		command = { type = wakeleader which = 44654 }
+		command = { type = wakeleader which = 44655 }
+		command = { type = wakeleader which = 44656 }
+		command = { type = wakeleader which = 44657 }
+		command = { type = wakeleader which = 44658 }
+		command = { type = wakeleader which = 44659 }
+		command = { type = wakeleader which = 44660 }
+		command = { type = wakeleader which = 44661 }
+		command = { type = wakeleader which = 44662 }
+		command = { type = wakeleader which = 44663 }
+		command = { type = wakeleader which = 44664 }
+		command = { type = wakeleader which = 44665 }
+		command = { type = wakeleader which = 44666 }
+		command = { type = wakeleader which = 44667 }
+		command = { type = wakeleader which = 44668 }
+		command = { type = wakeleader which = 44669 }
+		command = { type = wakeleader which = 44670 }
+	}
+}
+
+#########################################################################
+#  領土整理
+#########################################################################
+event = {
+	id = 60256
+	random = no
+	country = SER
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	trigger = {
+		flag = Balkan_Wars_3
+		NOT = { flag = Balkan_Wars_3_SER_ROM }
+		flag = Balkan_Wars_3_CRO_HUN
+	}
+
+	date = { day = 1 month = september year = 1939 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	style = 0
+	picture = "war"
+
+	action_a = {
+		name = "ACT60100A"
+		command = { type = secedeprovince which = ROM value = 494 }
+	}
+}
+event = {
+	id = 60257
+	random = no
+	country = ROM
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	trigger = {
+		flag = Balkan_Wars_3_END
+		event = 60256
+	}
+
+	date = { day = 1 month = september year = 1939 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	style = 0
+	picture = "war"
+
+	action_a = {
+		name = "ACT60100A"
+		command = { type = secedeprovince which = SER value = 494 }
+	}
+}
+#event = {
+#	id = 60258
+#	random = no
+#	country = SER
+#
+#	name = "AI_EVENT"
+#	desc = "AI_EVENT"
+#
+#	trigger = {
+#		flag = Balkan_Wars_3
+#		NOT = { flag = Balkan_Wars_3_SER_ROM }
+#		flag = Balkan_Wars_3_ITA_HUN
+#	}
+#
+#	date = { day = 1 month = september year = 1939 }
+#	offset = 3
+#	deathdate = { day = 29 month = december year = 1963 }
+#
+#	style = 0
+#	picture = "war"
+#
+#	action_a = {
+#		name = "ACT60100A"
+#		command = { type = secedeprovince which = ITA value = 418 }
+#	}
+#}
+#event = {
+#	id = 60259
+#	random = no
+#	country = ITA
+#
+#	name = "AI_EVENT"
+#	desc = "AI_EVENT"
+#
+#	trigger = {
+#		flag = Balkan_Wars_3_END
+#		event = 60268
+#	}
+#
+#	date = { day = 1 month = september year = 1939 }
+#	offset = 1
+#	deathdate = { day = 29 month = december year = 1963 }
+#
+#	style = 0
+#	picture = "war"
+#
+#	action_a = {
+#		name = "ACT60100A"
+#		command = { type = secedeprovince which = SER value = 418 }
+#	}
+#}
+
+#########################################################################
+# 第三次バルカン戦争 - 敗北イベント
+#########################################################################
+event = {
+	id = 60260
+	random = no
+	country = HUN
+
+	name = "EVT60260N"
+	desc = "EVT60260D"
+        picture = "minor"
+	style = 0
+
+	trigger = {
+		flag = Balkan_Wars_3
+		OR = {
+			AND = {
+				NOT = { control = { province = 457 data = -1 } } #Budapest
+				lost_national = { country = HUN value = 20 }
+			}
+			lost_national = { country = HUN value = 40 }
+		}
+	}
+
+        date = { day = 0 month = january year = 1935 }
+        offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "ACT60260A"
+		command = { type = end_puppet }
+		#command = { type = leave_alliance  }
+		command = { type = peace which = ROM value = 1 }
+		command = { type = peace which = SER value = 1 }
+		command = { type = peace which = YUG value = 1 }
+		command = { type = peace which = BUL value = 1 }
+		command = { type = peace which = ITA value = 1 }
+		command = { type = access which = CRO }
+		command = { type = access which = ROM }
+		command = { type = access which = SER }
+		command = { type = access which = YUG }
+		command = { type = access which = BUL }
+		command = { type = access which = ITA }
+		command = { type = setflag which = Balkan_Wars_3_Lose_HUN }
+		command = { type = domestic which = defense_lobby value = -1 }
+
+		#command = { type = trigger which = 60261 }
+		#command = { type = secedeprovince which = ROM value = 428 }
+		#command = { type = secedeprovince which = ROM value = 496 }
+		#command = { type = secedeprovince which = ROM value = 498 }
+		#command = { type = secedeprovince which = ROM value = 497 }
+		#command = { type = independence	which = SLO value = 1 when = 0 }
+		#command = { type = secedeprovince which = SLO value = 476 } #Bratislava
+		#command = { type = secedeprovince which = SLO value = 477 } #Banska
+		#command = { type = secedeprovince which = SLO value = 478 } #Zilina
+		#command = { type = secedeprovince which = SLO value = 490 } #Kosice
+		#command = { type = secedeprovince which = SLO value = 499 } #Presov
+		#command = { type = secedeprovince which = YUG value = 493 } #Novi Sad
+		#command = { type = secedeprovince which = SER value = 493 } #Novi Sad	
+	}
+}
+event = {
+	id = 60261
+	random = no
+	country = ROM
+
+	name = "EVT60260N"
+	desc = "EVT60260D"
+        picture = "hungarian_tank"
+	style = 0
+
+	action_a = {
+		name = "ACT60261A"
+		command = { type = make_puppet which = HUN }
+		command = { type = money value = 50 }
+	}
+}
+event = {
+	id = 60262
+	random = no
+	country = ROM
+
+	name = "EVT60262N"
+	desc = "EVT60260D"
+       picture = "minor"
+	style = 0
+
+	trigger = {
+		flag = Balkan_Wars_3
+		OR = {
+			AND = {
+				NOT = { control = { province = 424 data = -1 } } #プロエスト
+				NOT = { control = { province = 431 data = -1 } } #ブカレスト
+				lost_national = { country = ROM value = 10 }
+			}
+			lost_national = { country = ROM value = 30 }
+		}
+	}
+
+        date = { day = 0 month = january year = 1935 }
+        offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "ACT60260A"
+		command = { type = end_puppet }
+		#command = { type = leave_alliance  }
+		command = { type = peace which = HUN value = 1 }
+		command = { type = peace which = CRO value = 1 }
+		command = { type = peace which = BUL value = 1 }
+		command = { type = peace which = ITA value = 1 }
+		command = { type = access which = HUN }
+		command = { type = access which = CRO }
+		command = { type = access which = SER }
+		command = { type = access which = YUG }
+		command = { type = access which = BUL }
+		command = { type = access which = ITA }
+		command = { type = setflag which = Balkan_Wars_3_Lose_ROM }
+		command = { type = domestic which = defense_lobby value = -1 }
+
+		#command = { type = trigger which = 60263 }
+		#command = { type = secedeprovince which = HUN value = 427 }#カルパチア山脈外縁
+		#command = { type = secedeprovince which = HUN value = 429 }
+		#command = { type = secedeprovince which = HUN value = 430 }
+		#command = { type = secedeprovince which = HUN value = 493 }#旧ユーゴ北辺
+		#command = { type = secedeprovince which = HUN value = 494 }
+		#command = { type = secedeprovince which = HUN value = 495 }
+		#command = { type = secedeprovince which = HUN value = 428 }#トランシルヴァニア
+		#command = { type = secedeprovince which = HUN value = 496 }
+		#command = { type = secedeprovince which = HUN value = 498 }
+
+
+	}
+}
+event = {
+	id = 60263
+	random = no
+	country = HUN
+
+	name = "EVT60262N"
+	desc = "EVT60260D"
+         picture = "romanian_soldier"
+	style = 0
+
+	action_a = {
+		name = "ACT60261A"
+		command = { type = make_puppet which = ROM }
+		command = { type = money value = 50 }
+	}
+}
+event = {
+	id = 60264
+	random = no
+	country = BUL
+
+	name = "EVT60264N"
+	desc = "EVT60260D"
+        picture = "minor"
+	style = 0
+
+	trigger = {
+		flag = Balkan_Wars_3
+		flag = Balkan_Wars_3_BUL_HUN
+		OR = {
+			AND = {
+				NOT = { control = { province = 417 data = -1 } } #ソフィア
+				lost_national = { country = BUL value = 20 }
+			}
+			lost_national = { country = BUL value = 40 }
+		}
+	}
+
+        date = { day = 0 month = january year = 1935 }
+        offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "ACT60260A"
+		command = { type = end_puppet }
+		#command = { type = leave_alliance  }
+		#command = { type = trigger which = 60265 }
+		command = { type = peace which = ROM value = 1 }
+		command = { type = peace which = SER value = 1 }
+		command = { type = peace which = YUG value = 1 }
+		command = { type = peace which = ITA value = 1 }
+		command = { type = access which = HUN }
+		command = { type = access which = CRO }
+		command = { type = access which = ROM }
+		command = { type = access which = SER }
+		command = { type = access which = YUG }
+		command = { type = access which = ITA }
+		command = { type = setflag which = Balkan_Wars_3_Lose_BUL_HUN }
+		command = { type = domestic which = defense_lobby value = -1 }
+
+		#command = { type = secedeprovince which = ROM value = 419 }
+		#command = { type = secedeprovince which = ROM value = 420 }
+		#command = { type = secedeprovince which = ROM value = 423 } #Constanza
+		#command = { type = secedeprovince which = SER value = 418 } #
+		#command = { type = secedeprovince which = YUG value = 418 } #
+		#command = { type = secedeprovince which = YUG value = 413 } #マケドニア
+		#command = { type = secedeprovince which = YUG value = 414 } #
+		#command = { type = secedeprovince which = YUG value = 415 } #
+		
+	}
+}
+event = {
+	id = 60265
+	random = no
+	country = ROM
+
+	name = "EVT60264N"
+	desc = "EVT60260D"
+         picture = "romanian_soldier"
+	style = 0
+
+	action_a = {
+		name = "ACT60261A"
+		command = { type = make_puppet which = BUL }
+		command = { type = money value = 50 }
+	}
+}
+event = {
+	id = 60266
+	random = no
+	country = BUL
+
+	name = "EVT60266N"
+	desc = "EVT60260D"
+        picture = "minor"
+	style = 0
+
+	trigger = {
+		flag = Balkan_Wars_3
+		flag = Balkan_Wars_3_BUL_ROM
+		OR = {
+			AND = {
+				NOT = { control = { province = 417 data = -1 } } #ソフィア
+				lost_national = { country = BUL value = 20 }
+			}
+			lost_national = { country = BUL value = 40 }
+		}
+	}
+
+        date = { day = 0 month = january year = 1935 }
+        offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "ACT60260A"
+		command = { type = end_puppet }
+		#command = { type = leave_alliance  }
+		#command = { type = trigger which = 60267 }
+		command = { type = peace which = HUN value = 1 }
+		command = { type = peace which = CRO value = 1 }
+		command = { type = peace which = ITA value = 1 }
+		command = { type = access which = HUN }
+		command = { type = access which = CRO }
+		command = { type = access which = ROM }
+		command = { type = access which = SER }
+		command = { type = access which = YUG }
+		command = { type = access which = BUL }
+		command = { type = access which = ITA }
+		command = { type = setflag which = Balkan_Wars_3_Lose_BUL_ROM }
+		command = { type = domestic which = defense_lobby value = -1 }
+
+		#command = { type = secedeprovince which = SER value = 418 } #ニス
+		#command = { type = secedeprovince which = YUG value = 418 } #
+		#command = { type = secedeprovince which = YUG value = 413 } #マケドニア
+		#command = { type = secedeprovince which = YUG value = 414 } #
+		#command = { type = secedeprovince which = YUG value = 415 } #
+		
+	}
+}
+event = {
+	id = 60267
+	random = no
+	country = HUN
+
+	name = "EVT60266N"
+	desc = "EVT60260D"
+         picture = "romanian_soldier"
+	style = 0
+
+	action_a = {
+		name = "ACT60261A"
+		command = { type = make_puppet which = BUL }
+		command = { type = money value = 50 }
+	}
+}
+event = {
+	id = 60268
+	random = no
+	country = SER
+
+	name = "EVT60268N"
+	desc = "EVT60260D"
+        picture = "minor"
+	style = 0
+
+	trigger = {
+		flag = Balkan_Wars_3
+		flag = Balkan_Wars_3_SER_ROM
+		OR = {
+			AND = {
+				NOT = { control = { province = 453 data = -1 } } #ベオグラード
+				lost_national = { country = SER value = 20 }
+			}
+			lost_national = { country = SER value = 40 }
+			AND = {
+				flag = Balkan_Wars_3_Lose_ROM
+				OR = {
+					NOT = { flag = Balkan_Wars_3_ITA_ROM }
+					flag = Balkan_Wars_3_Lose_ITA_ROM
+				}
+				OR = {
+					NOT = { flag = Balkan_Wars_3_BUL_ROM }
+					flag = Balkan_Wars_3_Lose_BUL_ROM
+				}
+				random = 25
+			}
+		}
+	}
+
+        date = { day = 0 month = january year = 1935 }
+        offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "ACT60260A"
+		command = { type = end_puppet }
+		#command = { type = leave_alliance  }
+		#command = { type = trigger which = 60269 }
+		command = { type = peace which = HUN value = 1 }
+		command = { type = peace which = CRO value = 1 }
+		command = { type = peace which = BUL value = 1 }
+		command = { type = peace which = ITA value = 1 }
+		command = { type = access which = HUN }
+		command = { type = access which = CRO }
+		command = { type = access which = ROM }
+		command = { type = access which = YUG }
+		command = { type = access which = BUL }
+		command = { type = access which = ITA }
+		command = { type = setflag which = Balkan_Wars_3_Lose_SER_ROM }
+		command = { type = domestic which = defense_lobby value = -1 }
+
+		command = { type = secedeprovince which = HUN value = 493 }#旧ユーゴ北辺
+		command = { type = secedeprovince which = HUN value = 494 }
+		#command = { type = secedeprovince which = HUN value = 454 }
+
+		#command = { type = secedeprovince which = BUL value = 418 }
+
+		#command = { type = secedeprovince which = CRO value = 383 }
+		#command = { type = secedeprovince which = CRO value = 385 }
+		#command = { type = secedeprovince which = CRO value = 386 }
+		#command = { type = secedeprovince which = CRO value = 387 }
+		#command = { type = secedeprovince which = CRO value = 388 }
+		#command = { type = secedeprovince which = CRO value = 389 }
+	}
+}
+event = {
+	id = 60269
+	random = no
+	country = HUN
+
+	name = "EVT60268N"
+	desc = "EVT60260D"
+         picture = "romanian_soldier"
+	style = 0
+
+	action_a = {
+		name = "ACT60261A"
+		command = { type = make_puppet which = SER }
+		command = { type = money value = 50 }
+	}
+}
+event = {
+	id = 60270
+	random = no
+	country = CRO
+
+	name = "EVT60270N"
+	desc = "EVT60260D"
+        picture = "minor"
+	style = 0
+
+	trigger = {
+		flag = Balkan_Wars_3
+		flag = Balkan_Wars_3_CRO_HUN
+		OR = {
+			AND = {
+				NOT = { control = { province = 382 data = -1 } } #ザグレブ
+				lost_national = { country = CRO value = 20 }
+			}
+			lost_national = { country = CRO value = 40 }
+			AND = {
+				flag = Balkan_Wars_3_Lose_HUN
+				OR = {
+					NOT = { flag = Balkan_Wars_3_ITA_HUN }
+					flag = Balkan_Wars_3_Lose_ITA_HUN
+				}
+				random = 25
+			}
+		}
+	}
+
+        date = { day = 0 month = january year = 1935 }
+        offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "ACT60260A"
+		command = { type = end_puppet }
+		#command = { type = leave_alliance  }
+		#command = { type = trigger which = 60271 }
+		command = { type = peace which = ROM value = 1 }
+		command = { type = peace which = SER value = 1 }
+		command = { type = peace which = YUG value = 1 }
+		command = { type = peace which = BUL value = 1 }
+		command = { type = peace which = ITA value = 1 }
+		command = { type = access which = HUN }
+		command = { type = access which = ROM }
+		command = { type = access which = SER }
+		command = { type = access which = YUG }
+		command = { type = access which = BUL }
+		command = { type = access which = ITA }
+		command = { type = setflag which = Balkan_Wars_3_Lose_CRO_HUN }
+
+		#command = { type = secedeprovince which = YUG value = 385 } #ボスニア
+		#command = { type = secedeprovince which = YUG value = 386 } 
+		#command = { type = secedeprovince which = SER value = 385 } #ボスニア
+		#command = { type = secedeprovince which = SER value = 386 }
+		
+		command = { type = domestic which = defense_lobby value = -1 }
+	}
+}
+event = {
+	id = 60271
+	random = no
+	country = ROM
+
+	name = "EVT60270N"
+	desc = "EVT60260D"
+        picture = "hungarian_tank"
+	style = 0
+
+	action_a = {
+		name = "ACT60261A"
+		command = { type = make_puppet which = CRO }
+		command = { type = money value = 50 }
+	}
+}
+#########################################################################
+#  イタリアの援軍
+#########################################################################
+event = {
+	id = 60276
+	random = no
+	country = ITA
+
+	trigger = {
+		flag = Balkan_Wars_3
+		flag = Balkan_Wars_3_ITA_ROM
+		NOT = {
+			flag = Balkan_Wars_3_END
+			war = { country = ITA country = ROM } #BETA修正パッチ
+		}
+	}
+
+	date = { day = 1 month = september year = 1939 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_60276_NAME"
+	desc = "EVT_60276_DESC"
+	style = 0
+	picture = "war"
+
+	action_a = {
+		name = "ACT60228A"
+		ai_chance = 80
+		command = { type = trigger which = 60277 }
+
+	}
+	action_b  = {
+		name = "ACT60280B"
+		ai_chance = 20
+		command = { }
+	}
+}
+event = {
+	id = 60277
+	random = no
+	country = ROM
+
+	name = "EVT_60277_NAME"
+	desc = "EVT_60277_DESC"
+	style = 0
+	picture = "war"
+
+	action_a = {
+		name = "EVT60229A" # FEPK変更部分 #1.06 #修正
+		command = { type = oilpool value = 2000 }
+		command = { type = add_division which = "イタリア戦車師団" value = armor when = 3 where = light_armor_brigade }
+		command = { type = add_division which = "イタリア機械化師団" value = mechanized when = 1 where = light_armor_brigade }
+		command = { type = add_division which = "イタリア自動車化師団" value = motorized when = 1 where = sp_artillery }
+	}
+}
+event = {
+	id = 60278
+	random = no
+	country = ITA
+
+	trigger = {
+		flag = Balkan_Wars_3
+		flag = Balkan_Wars_3_ITA_HUN
+		NOT = {
+			flag = Balkan_Wars_3_END
+			war = { country = ITA country = HUN } #BETA修正パッチ
+		}
+	}
+
+	date = { day = 1 month = september year = 1939 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_60278_NAME"
+	desc = "EVT_60278_DESC"
+	style = 0
+	picture = "war"
+
+	action_a = {
+		name = "ACT60228A"
+		ai_chance = 80
+		command = { type = trigger which = 60279 }
+
+	}
+	action_b  = {
+		name = "ACT60280B"
+		ai_chance = 20
+		command = { }
+	}
+}
+event = {
+	id = 60279
+	random = no
+	country = HUN
+
+	name = "EVT_60279_NAME"
+	desc = "EVT_60279_DESC"
+	style = 0
+	picture = "war"
+
+	action_a = {
+		name = "EVT60229A" # FEPK変更部分 #1.06 #修正
+		command = { type = oilpool value = 2000 }
+		command = { type = add_division which = "イタリア戦車師団" value = armor when = 3 where = light_armor_brigade }
+		command = { type = add_division which = "イタリア機械化師団" value = mechanized when = 1 where = light_armor_brigade }
+		command = { type = add_division which = "イタリア自動車化師団" value = motorized when = 1 where = sp_artillery }
+	}
+}
+
+#########################################################################
+# 第三次バルカン戦争 - 停戦イベント
+#########################################################################
+event = {
+	id = 60280
+	random = no
+	country = ITA
+
+	name = "EVT60280N"
+	desc = "EVT60260D"
+        picture = "minor"
+	style = 0
+
+	trigger = {
+		flag = Balkan_Wars_3
+		flag = Balkan_Wars_3_ITA_HUN
+		OR = {
+			AND = {
+				flag = Balkan_Wars_3_Lose_HUN
+				OR = {
+					random = 33
+					flag = Balkan_Wars_3_Lose_CRO_HUN
+					flag = Balkan_Wars_3_Lose_BUL_HUN
+				}
+			}
+			AND = {
+				random = 33
+				flag = Balkan_Wars_3_Lose_CRO_HUN
+				flag = Balkan_Wars_3_Lose_BUL_HUN
+			}
+		}
+	}
+
+        date = { day = 0 month = january year = 1935 }
+        offset = 15
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "ACT60280A"
+		ai_chance = 75
+		command = { type = trigger which = 60281 }
+	}
+	action_b = {
+		name = "ACT60280B"
+		ai_chance = 25
+		command = { type = money value = 10 }
+	}
+}
+event = {
+	id = 60281
+	random = no
+	country = ROM
+	style = 0
+	picture = "war"
+
+	name = "EVT60225N"
+	desc = "EVT60281D"
+
+	action_a = {
+		name = "ACT60281A"
+		ai_chance = 90
+		command = { type = trigger which = 60282 }
+	}
+	action_b = {
+		name = "ACT60281B"
+		ai_chance = 10
+		command = { type = money value = 10 }
+	}
+}
+event = {
+	id = 60282
+	random = no
+	country = ITA
+	style = 0
+	picture = "war"
+
+	name = "EVT60282N"
+	desc = "EVT60282D"
+
+	action_a = {
+		name = "ACT60112A"
+		command = { type = clrflag which = Balkan_Wars_3_ITA_HUN }
+	}
+}
+event = {
+	id = 60283
+	random = no
+	country = ITA
+
+	name = "EVT60283N"
+	desc = "EVT60260D"
+        picture = "minor"
+	style = 0
+
+	trigger = {
+		flag = Balkan_Wars_3
+		flag = Balkan_Wars_3_ITA_ROM
+		OR = {
+			AND = {
+				flag = Balkan_Wars_3_Lose_ROM
+				OR = {
+					random = 33
+					flag = Balkan_Wars_3_Lose_SER_ROM
+					flag = Balkan_Wars_3_Lose_YUG_ROM
+					flag = Balkan_Wars_3_Lose_BUL_ROM
+				}
+			}
+			AND = {
+				random = 33
+				flag = Balkan_Wars_3_Lose_BUL_ROM
+				OR = {
+					flag = Balkan_Wars_3_Lose_SER_ROM
+					flag = Balkan_Wars_3_Lose_YUG_ROM
+				}
+			}
+		}
+	}
+
+        date = { day = 0 month = january year = 1935 }
+        offset = 15
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "ACT60280A"
+		ai_chance = 75
+		command = { type = trigger which = 60284 }
+	}
+	action_b = {
+		name = "ACT60280B"
+		ai_chance = 25
+		command = { type = money value = 10 }
+	}
+}
+event = {
+	id = 60284
+	random = no
+	country = ROM
+	style = 0
+	picture = "war"
+
+	name = "EVT60225N"
+	desc = "EVT60281D"
+
+	action_a = {
+		name = "ACT60281A"
+		ai_chance = 60
+		command = { type = trigger which = 60285 }
+	}
+	action_b = {
+		name = "ACT60281B"
+		ai_chance = 40
+		command = { type = money value = 10 }
+	}
+}
+event = {
+	id = 60285
+	random = no
+	country = ITA
+	style = 0
+	picture = "war"
+
+	name = "EVT60285N"
+	desc = "EVT60285D"
+
+	action_a = {
+		name = "ACT60112A"
+		command = { type = clrflag which = Balkan_Wars_3_ITA_ROM }
+	}
+}
+event = {
+	id = 60286
+	random = no
+	country = BUL
+
+	name = "EVT60286N"
+	desc = "EVT60260D"
+        picture = "minor"
+	style = 0
+
+	trigger = {
+		flag = Balkan_Wars_3
+		flag = Balkan_Wars_3_BUL_HUN
+		OR = {
+			AND = {
+				flag = Balkan_Wars_3_Lose_HUN
+				OR = {
+					random = 33
+					flag = Balkan_Wars_3_Lose_CRO_HUN
+					flag = Balkan_Wars_3_Lose_ITA_HUN
+				}
+			}
+			AND = {
+				random = 33
+				flag = Balkan_Wars_3_Lose_CRO_HUN
+				flag = Balkan_Wars_3_Lose_ITA_HUN
+			}
+		}
+	}
+
+        date = { day = 0 month = january year = 1935 }
+        offset = 15
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "ACT60286A"
+		ai_chance = 80
+		command = { type = trigger which = 60287 }
+	}
+	action_b = {
+		name = "ACT60280B"
+		ai_chance = 20
+		command = { type = money value = 10 }
+	}
+}
+event = {
+	id = 60287
+	random = no
+	country = ROM
+	style = 0
+	picture = "war"
+
+	name = "EVT60287N"
+	desc = "EVT60287D"
+
+	action_a = {
+		name = "ACT60287A"
+		ai_chance = 95
+		command = { type = trigger which = 60288 }
+	}
+	action_b = {
+		name = "ACT60287B"
+		ai_chance = 5
+		command = { type = money value = 10 }
+	}
+}
+event = {
+	id = 60288
+	random = no
+	country = BUL
+	style = 0
+	picture = "war"
+
+	name = "EVT60282N"
+	desc = "EVT60288D"
+
+	action_a = {
+		name = "ACT60100A"
+		#command = { type = leave_alliance }
+		command = { type = clrflag which = Balkan_Wars_3_BUL_HUN }
+		command = { type = peace which = ROM value = 1 }
+		command = { type = peace which = SER value = 1 }
+		command = { type = peace which = YUG value = 1 }
+		command = { type = peace which = BUL value = 1 }
+		command = { type = secedeprovince which = ROM value = 423 } #Constanza
+	}
+}
+event = {
+	id = 60289
+	random = no
+	country = BUL
+
+	name = "EVT60289N"
+	desc = "EVT60260D"
+        picture = "minor"
+	style = 0
+
+	trigger = {
+		flag = Balkan_Wars_3
+		flag = Balkan_Wars_3_BUL_ROM
+		OR = {
+			AND = {
+				flag = Balkan_Wars_3_Lose_ROM
+				OR = {
+					random = 33
+					flag = Balkan_Wars_3_Lose_SER_ROM
+					flag = Balkan_Wars_3_Lose_YUG_ROM
+					flag = Balkan_Wars_3_Lose_ITA_ROM
+				}
+			}
+			AND = {
+				random = 33
+				flag = Balkan_Wars_3_Lose_ITA_ROM
+				OR = {
+					flag = Balkan_Wars_3_Lose_SER_ROM
+					flag = Balkan_Wars_3_Lose_YUG_ROM
+				}
+			}
+		}
+	}
+
+        date = { day = 0 month = january year = 1935 }
+        offset = 15
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "ACT60289A"
+		ai_chance = 80
+		command = { type = trigger which = 60290 }
+	}
+	action_b = {
+		name = "ACT60280B"
+		ai_chance = 20
+		command = { type = money value = 10 }
+	}
+}
+event = {
+	id = 60290
+	random = no
+	country = HUN
+	style = 0
+	picture = "war"
+
+	name = "EVT60287N"
+	desc = "EVT60290D"
+
+	action_a = {
+		name = "ACT60281A"
+		ai_chance = 95
+		command = { type = trigger which = 60291 }
+	}
+	action_b = {
+		name = "ACT60290B"
+		ai_chance = 5
+		command = { type = money value = 10 }
+	}
+}
+event = {
+	id = 60291
+	random = no
+	country = BUL
+	style = 0
+	picture = "war"
+
+	name = "EVT60285N"
+	desc = "EVT60291D"
+
+	action_a = {
+		name = "ACT60112A"
+		#command = { type = leave_alliance }
+		command = { type = clrflag which = Balkan_Wars_3_BUL_ROM }
+		command = { type = peace which = HUN value = 1 }
+		command = { type = peace which = CRO value = 1 }
+		command = { type = peace which = ITA value = 1 }
+	}
+}
+
+#########################################################################
+# 第三次バルカン戦争 - 戦後処理
+#########################################################################
+event = {
+	id = 60300
+	random = no
+	country = GER
+
+	name = "EVT60300N"
+	desc = "EVT60300D"
+        picture = "minor"
+	style = 0
+
+	trigger = {
+		flag = Balkan_Wars_3
+		NOT = { war = { country = HUN country = ROM } }
+		NOT = { war = { country = HUN country = SER } }
+		NOT = { war = { country = HUN country = YUG } }
+		NOT = { war = { country = HUN country = BUL } }
+		NOT = { war = { country = HUN country = ITA } }
+
+		NOT = { war = { country = CRO country = ROM } }
+		NOT = { war = { country = CRO country = SER } }
+		NOT = { war = { country = CRO country = YUG } }
+		NOT = { war = { country = CRO country = BUL } }
+		NOT = { war = { country = CRO country = ITA } }
+
+		NOT = { war = { country = BUL country = ROM } }
+		NOT = { war = { country = BUL country = SER } }
+		NOT = { war = { country = BUL country = YUG } }
+		NOT = { war = { country = BUL country = HUN } }
+		NOT = { war = { country = BUL country = CRO } }
+		NOT = { war = { country = BUL country = ITA } }
+
+		NOT = { war = { country = ITA country = ROM } }
+		NOT = { war = { country = ITA country = SER } }
+		NOT = { war = { country = ITA country = YUG } }
+		NOT = { war = { country = ITA country = HUN } }
+		NOT = { war = { country = ITA country = CRO } }
+		NOT = { war = { country = ITA country = BUL } }
+	}
+
+        date = { day = 1 month = january year = 1941 }
+        offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "ACT60300A"
+		command = { type = setflag which = Balkan_Wars_3_END }
+
+		command = { type = independence	which = HUN value = 1 when = 0 } #FEPKBETA5.5
+		command = { type = independence	which = CRO value = 1 when = 0 }
+		command = { type = independence	which = ROM value = 1 when = 0 }
+		command = { type = independence	which = SER value = 1 when = 0 }
+		command = { type = independence	which = BUL value = 1 when = 0 }
+		#command = { type = independence	which = YUG value = 1 when = 0 }
+
+		command = { type = alliance which = HUN }
+		command = { type = alliance which = CRO }
+		command = { type = alliance which = ROM }
+		command = { type = alliance which = SER }
+		command = { type = alliance which = BUL }
+		command = { type = alliance which = YUG }
+		#command = { type = alliance which = ITA }
+	}
+}
+event = {
+	id = 60301
+	random = no
+	country = HUN
+
+	name = "EVT60301N"
+	desc = "EVT60300D"
+        picture = "minor"
+	style = 0
+
+	trigger = {
+		flag = Balkan_Wars_3_END
+		flag = Balkan_Wars_3_Lose_HUN
+		NOT = { flag = Balkan_Wars_3_Lose_ROM }
+	}
+
+        date = { day = 0 month = january year = 1935 }
+        offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "ACT60100A"
+		command = { type = ai which = "switch/Ferocity_No.ai" }
+		command = { type = sleepminister which = 21011 } #王冠 #FEPKBETA3
+
+		command = { type = end_puppet }
+		command = { type = secedeprovince which = ROM value = 428 }
+		command = { type = secedeprovince which = ROM value = 498 }
+		command = { type = secedeprovince which = ROM value = 496 }
+		command = { type = secedeprovince which = ROM value = 497 } #add
+		command = { type = secedeprovince which = ITA value = 381 } #FEPKBETA5
+		command = { type = secedeprovince which = ITA value = 384 }
+		command = { type = secedeprovince which = ITA value = 387 }
+		command = { type = secedeprovince which = CRO value = 387 }
+		command = { type = secedeprovince which = ITA value = 388 }
+		command = { type = secedeprovince which = CRO value = 388 }
+		command = { type = secedeprovince which = ITA value = 389 }
+		command = { type = secedeprovince which = CRO value = 389 }
+		command = { type = secedeprovince which = MTN value = 389 }
+
+		command = { type = set_domestic which = democratic value = 2 } #FEPKBETA5.2
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = set_domestic which = free_market value = 2 }
+		command = { type = set_domestic which = freedom value = 2 }
+		command = { type = set_domestic which = professional_army value = 3 }
+		command = { type = set_domestic which = defense_lobby value = 10 }
+		command = { type = set_domestic which = interventionism value = 10 }
+
+		command = { type = independence	which = SLO value = 1 when = 0 }
+		command = { type = removecore which = 454 }#CRO
+		command = { type = removecore which = 455 }
+		command = { type = removecore which = 381 }
+		command = { type = removecore which = 382 }
+		command = { type = removecore which = 383 }
+		command = { type = removecore which = 384 }
+		command = { type = removecore which = 385 }
+		command = { type = removecore which = 386 }
+		command = { type = removecore which = 387 }
+		command = { type = removecore which = 388 }
+		command = { type = removecore which = 494 }#Serbia
+		command = { type = removecore which = 452 } #1.096
+		command = { type = removecore which = 427 }#Transylvania
+		command = { type = removecore which = 428 }
+		command = { type = removecore which = 429 }
+		command = { type = removecore which = 430 }
+		command = { type = removecore which = 495 }
+		command = { type = removecore which = 496 }
+		command = { type = removecore which = 498 }
+		command = { type = removecore which = 476 } #SLO #FEPK1.096
+		command = { type = removecore which = 477 }
+		command = { type = removecore which = 478 }
+		command = { type = removecore which = 490 }
+		command = { type = removecore which = 499 }
+		command = { type = removecore which = 389 } #FEPKBETA5 #MTN
+		command = { type = removecore which = 493 } #Novisad
+
+		command = { type = setflag which = romdefeatshun } #FEPKBETA5.2
+
+		command = { type = trigger which = 60307 }
+	}
+}
+event = {
+	id = 60307
+	random = no
+	country = HUN
+
+	name = "EVT60301N"
+	desc = "EVT60300D"
+        picture = "minor"
+	style = 0
+
+	action_a = {
+		name = "ACT60100A"
+		command = { type = make_puppet which = SLO }
+		command = { type = alliance which = SLO }
+		command = { type = secedeprovince which = SLO value = 476 } #Bratislava
+		command = { type = secedeprovince which = SLO value = 477 } #Banska
+		command = { type = secedeprovince which = SLO value = 478 } #Zilina
+		command = { type = secedeprovince which = SLO value = 490 } #Kosice
+		command = { type = secedeprovince which = SLO value = 499 } #Presov
+		command = { type = sleepteam which = 1615 }#C-K-D社
+		command = { type = sleepteam which = 1616 }#コメニウス大学
+
+		command = { type = alliance which = GER }
+
+		command = { type = ai which = "switch/EXP_Russia.ai" } #FEPKBETA4.9
+		command = { type = ai which = "Air_Ground.ai" }
+	}
+}
+event = {
+	id = 60308
+	random = no
+	country = GER
+
+	name = "EVT60300N"
+	desc = "EVT60300D"
+        picture = "minor"
+	style = 0
+
+	trigger = {
+		flag = Balkan_Wars_3_END
+		OR = {
+			event = 60301
+			event = 60302
+			event = 60303
+			event = 60304
+			event = 60305
+			event = 60306
+		}
+		OR = {
+			exists = SER
+			exists = CRO
+		}
+	}
+
+        date = { day = 0 month = january year = 1935 }
+        offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "ACT60100A"
+		command = { type = make_puppet which = SER }
+		command = { type = alliance which = SER }
+		command = { type = make_puppet which = CRO }
+		command = { type = alliance which = CRO }
+	}
+}
+event = {
+	id = 60302
+	random = no
+	country = HUN
+
+	name = "EVT60302N"
+	desc = "EVT60300D"
+        picture = "minor"
+	style = 0
+
+	trigger = {
+		flag = Balkan_Wars_3_END
+		flag = Balkan_Wars_3_Lose_HUN
+		OR = {
+			AND = {
+				flag = Balkan_Wars_3_SER_ROM
+				NOT = { flag = Balkan_Wars_3_Lose_SER_ROM }
+			}
+			AND = {
+				flag = Balkan_Wars_3_SER_ROM
+				flag = Balkan_Wars_3_Lose_SER_ROM
+				NOT = { flag = Balkan_Wars_3_Lose_ROM }
+			}
+			AND = {
+				flag = Balkan_Wars_3_YUG_ROM
+				NOT = { flag = Balkan_Wars_3_Lose_YUG_ROM }
+			}
+			AND = {
+				flag = Balkan_Wars_3_YUG_ROM
+				flag = Balkan_Wars_3_Lose_YUG_ROM
+				NOT = { flag = Balkan_Wars_3_Lose_ROM }
+			}
+		}
+	}
+
+        date = { day = 0 month = january year = 1935 }
+        offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "ACT60100A"
+		command = { type = end_puppet }
+		command = { type = secedeprovince which = GER value = 493 } #Novi Sad
+		command = { type = secedeprovince which = YUG value = 493 } #Novi Sad
+		command = { type = secedeprovince which = SER value = 493 } #Novi Sad
+		command = { type = removecore which = 455 }#Serbia
+		command = { type = removecore which = 494 }
+		command = { type = removecore which = 493 }
+		command = { type = alliance which = GER }
+
+		command = { type = ai which = "switch/EXP_Russia.ai" } #FEPKBETA4.9
+		command = { type = ai which = "Air_Ground.ai" }
+		command = { type = ai which = "switch/Ferocity_No.ai" }
+	}
+}
+
+event = {
+	id = 60303
+	random = no
+	country = HUN
+
+	name = "EVT60303N"
+	desc = "EVT60300D"
+        picture = "minor"
+	style = 0
+
+	trigger = {
+		flag = Balkan_Wars_3_END
+		OR = {
+			AND = {
+				flag = Balkan_Wars_3_Lose_HUN
+				flag = Balkan_Wars_3_Lose_ROM
+			}
+			AND = {
+				NOT = { flag = Balkan_Wars_3_Lose_HUN }
+				NOT = { flag = Balkan_Wars_3_Lose_ROM }
+			}
+		}
+	}
+
+        date = { day = 0 month = january year = 1935 }
+        offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "ACT60100A"
+		command = { type = end_puppet }
+	#	command = { type = secedeprovince which = ROM value = 428 }
+	#	command = { type = secedeprovince which = ROM value = 496 }
+
+		#Romania #FEPKBETA3
+		command = { type = secedeprovince which = ROM value = 496 }
+		command = { type = secedeprovince which = ROM value = 428 }
+		command = { type = secedeprovince which = ROM value = 498 }
+		command = { type = secedeprovince which = ROM value = 495 }
+		command = { type = secedeprovince which = ROM value = 496 }
+		command = { type = secedeprovince which = ROM value = 427 }
+		command = { type = secedeprovince which = ROM value = 429 }
+		command = { type = secedeprovince which = ROM value = 430 }
+		command = { type = secedeprovince which = ROM value = 230 } #Bessarabia stays Russian
+		command = { type = secedeprovince which = ROM value = 433 }
+		command = { type = secedeprovince which = ROM value = 434 } #Bessarabia stays Russian
+		command = { type = secedeprovince which = ROM value = 435 } #Bessarabia stays Russian
+		command = { type = secedeprovince which = ROM value = 436 }
+		command = { type = secedeprovince which = ROM value = 432 }
+		command = { type = secedeprovince which = ROM value = 431 }
+		command = { type = secedeprovince which = ROM value = 424 }
+		command = { type = secedeprovince which = ROM value = 425 }
+		command = { type = secedeprovince which = ROM value = 426 }
+		command = { type = secedeprovince which = ROM value = 423 } #Constanta
+
+		command = { type = removecore which = 429 }
+		command = { type = removecore which = 430 }
+		command = { type = removecore which = 427 }
+		command = { type = removecore which = 495 }
+		command = { type = alliance which = GER }
+
+		command = { type = ai which = "switch/EXP_Russia.ai" } #FEPKBETA4.9
+		command = { type = ai which = "Air_Ground.ai" }
+		command = { type = ai which = "switch/Ferocity_No.ai" }
+	}
+}
+
+
+event = {
+	id = 60304
+	random = no
+	country = ROM
+
+	name = "EVT60304N"
+	desc = "EVT60300D"
+        picture = "minor"
+	style = 0
+
+	trigger = {
+		flag = Balkan_Wars_3_END
+		flag = Balkan_Wars_3_Lose_ROM
+		NOT = { flag = Balkan_Wars_3_Lose_HUN }
+	}
+
+        date = { day = 0 month = january year = 1935 }
+        offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "ACT60100A"
+		command = { type = end_puppet }
+
+		command = { type = secedeprovince which = HUN value = 427 }
+		command = { type = secedeprovince which = HUN value = 428 }
+		command = { type = secedeprovince which = HUN value = 429 }
+		command = { type = secedeprovince which = HUN value = 430 }
+
+		command = { type = secedeprovince which = HUN value = 495 }
+		command = { type = secedeprovince which = HUN value = 496 }
+		command = { type = secedeprovince which = HUN value = 498 }
+		command = { type = removecore which = 497 } #FEPK1.069
+		command = { type = removecore which = 498 }
+		command = { type = removecore which = 496 }
+		command = { type = removecore which = 495 }
+		command = { type = removecore which = 428 }
+		command = { type = removecore which = 427 }
+		command = { type = removecore which = 429 }
+		command = { type = removecore which = 430 }
+		command = { type = alliance which = GER }
+
+		command = { type = ai which = "switch/EXP_Russia.ai" } #FEPKBETA4.9
+		command = { type = ai which = "Air_Ground.ai" }
+		command = { type = ai which = "switch/Ferocity_No.ai" }
+
+	}
+}
+event = {
+	id = 60305
+	random = no
+	country = ROM
+
+	name = "EVT60305N"
+	desc = "EVT60300D"
+        picture = "minor"
+	style = 0
+
+	trigger = {
+		flag = Balkan_Wars_3_END
+		flag = Balkan_Wars_3_Lose_ROM
+		OR = {
+			AND = {
+				NOT = { flag = Balkan_Wars_3_SER_ROM }
+				NOT = { flag = Balkan_Wars_3_YUG_ROM }
+			}
+			flag = Balkan_Wars_3_Lose_SER_ROM
+			flag = Balkan_Wars_3_Lose_YUG_ROM
+
+		}
+	}
+
+        date = { day = 0 month = january year = 1935 }
+        offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "ACT60100A"
+		command = { type = end_puppet }	
+		command = { type = secedeprovince which = HUN value = 494 } #
+		command = { type = removecore which = 494 }
+		command = { type = alliance which = GER }
+
+		command = { type = ai which = "switch/EXP_Russia.ai" } #FEPKBETA4.9
+		command = { type = ai which = "Air_Ground.ai" }
+		command = { type = ai which = "switch/Ferocity_No.ai" }
+	}
+}
+event = {
+	id = 60306
+	random = no
+	country = ROM
+
+	name = "EVT60306N"
+	desc = "EVT60300D"
+        picture = "minor"
+	style = 0
+
+	trigger = {
+		flag = Balkan_Wars_3_END
+		flag = Balkan_Wars_3_Lose_ROM
+		OR = {
+			AND = {
+				flag = Balkan_Wars_3_SER_ROM
+				NOT = { flag = Balkan_Wars_3_Lose_SER_ROM }
+			}
+			AND = {
+				flag = Balkan_Wars_3_YUG_ROM
+				NOT = { flag = Balkan_Wars_3_Lose_YUG_ROM }
+			}
+		}
+	}
+
+        date = { day = 0 month = january year = 1935 }
+        offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "ACT60100A"
+		command = { type = end_puppet }
+		command = { type = secedeprovince which = GER value = 494 } 
+		command = { type = secedeprovince which = SER value = 494 } #
+		command = { type = secedeprovince which = YUG value = 494 } #
+		command = { type = removecore which = 494 }
+		command = { type = alliance which = GER }
+
+		command = { type = ai which = "switch/EXP_Russia.ai" } #FEPKBETA4.9
+		command = { type = ai which = "Air_Ground.ai" }
+		command = { type = ai which = "switch/Ferocity_No.ai" }
+	}
+}
+
+############ユーゴ関連###################################################
+event = {
+	id = 60310
+	random = no
+	country = SER
+
+	name = "EVT60310N"
+	desc = "EVT60300D"
+        picture = "minor"
+	style = 0
+
+	trigger = {
+		flag = Balkan_Wars_3_END
+		flag = Balkan_Wars_3_CRO_HUN
+		flag = Balkan_Wars_3_SER_ROM
+		OR = {
+			AND = {
+				NOT = { flag = Balkan_Wars_3_Lose_CRO_HUN }
+				flag = Balkan_Wars_3_Lose_SER_ROM
+			}
+			AND = {
+				NOT = { flag = Balkan_Wars_3_Lose_HUN }
+				flag = Balkan_Wars_3_Lose_ROM
+				flag = Balkan_Wars_3_Lose_CRO_HUN
+				flag = Balkan_Wars_3_Lose_SER_ROM
+			}
+		}
+	}
+
+        date = { day = 0 month = january year = 1935 }
+        offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = { #FEPKBETA3
+		name = "ACT60100A"
+	#	command = { type = end_puppet }
+		command = { type = secedeprovince which = CRO value = 452 }
+		command = { type = alliance which = GER }
+
+		command = { type = ai which = "switch/EXP_Russia.ai" } #FEPKBETA4.9
+		command = { type = ai which = "Air_Ground.ai" }
+		command = { type = ai which = "switch/Ferocity_No.ai" }
+	}
+}
+
+event = {
+	id = 60311
+	random = no
+	country = CRO
+
+	name = "EVT60311N"
+	desc = "EVT60300D"
+        picture = "minor"
+	style = 0
+
+	trigger = {
+		flag = Balkan_Wars_3_END
+		flag = Balkan_Wars_3_CRO_HUN
+		flag = Balkan_Wars_3_SER_ROM
+		OR = {
+			AND = {
+				flag = Balkan_Wars_3_Lose_CRO_HUN
+				NOT = { flag = Balkan_Wars_3_Lose_SER_ROM }
+			}
+			AND = {
+				flag = Balkan_Wars_3_Lose_HUN
+				NOT = { flag = Balkan_Wars_3_Lose_ROM }
+				flag = Balkan_Wars_3_Lose_CRO_HUN
+				flag = Balkan_Wars_3_Lose_SER_ROM
+			}
+		}
+	}
+
+        date = { day = 0 month = january year = 1935 }
+        offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = { #FEPKBETA3
+		name = "ACT60100A"
+	#	command = { type = end_puppet }
+		command = { type = secedeprovince which = SER value = 386 }
+		command = { type = access which = ITA }
+		command = { type = alliance which = GER }
+
+		command = { type = ai which = "switch/EXP_Russia.ai" } #FEPKBETA4.9
+		command = { type = ai which = "Air_Ground.ai" }
+		command = { type = ai which = "switch/Ferocity_No.ai" }
+	}
+}
+event = {
+	id = 60312
+	random = no
+	country = YUG
+
+	name = "EVT60312N"
+	desc = "EVT60300D"
+        picture = "minor"
+	style = 0
+
+	trigger = {
+		flag = Balkan_Wars_3_END
+		flag = Balkan_Wars_3_YUG_ROM
+		flag = Balkan_Wars_3_Lose_YUG_ROM
+		NOT = { flag = Balkan_Wars_3_Lose_HUN }
+		NOT = { flag = Balkan_Wars_3_Lose_CRO_HUN }
+	}
+
+        date = { day = 0 month = january year = 1935 }
+        offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "ACT60100A"
+		command = { type = end_puppet }
+		command = { type = secedeprovince which = CRO value = 381 } #
+		command = { type = secedeprovince which = CRO value = 382 } #
+		command = { type = secedeprovince which = CRO value = 383 } #
+		command = { type = secedeprovince which = CRO value = 384 } #
+		command = { type = secedeprovince which = CRO value = 385 } #
+		command = { type = secedeprovince which = CRO value = 386 } #
+		command = { type = secedeprovince which = CRO value = 387 } #
+		command = { type = secedeprovince which = CRO value = 388 } #
+		command = { type = secedeprovince which = CRO value = 389 } #
+		command = { type = secedeprovince which = CRO value = 454 } #
+		command = { type = secedeprovince which = CRO value = 455 } #
+
+		command = { type = secedeprovince which = HUN value = 381 } #
+		command = { type = secedeprovince which = HUN value = 382 } #
+		command = { type = secedeprovince which = HUN value = 383 } #
+		command = { type = secedeprovince which = HUN value = 384 } #
+		command = { type = secedeprovince which = HUN value = 385 } #
+		command = { type = secedeprovince which = HUN value = 386 } #
+		command = { type = secedeprovince which = HUN value = 387 } #
+		command = { type = secedeprovince which = HUN value = 388 } #
+		command = { type = secedeprovince which = HUN value = 389 } #
+		command = { type = secedeprovince which = HUN value = 454 } #
+		command = { type = secedeprovince which = HUN value = 455 } #
+		command = { type = alliance which = GER }
+
+		command = { type = ai which = "switch/EXP_Russia.ai" } #FEPKBETA4.9
+		command = { type = ai which = "Air_Ground.ai" }
+		command = { type = ai which = "switch/Ferocity_No.ai" }
+	}
+}
+event = {
+	id = 60313
+	random = no
+	country = YUG
+
+	name = "EVT60313N"
+	desc = "EVT60300D"
+        picture = "minor"
+	style = 0
+
+	trigger = {
+		flag = Balkan_Wars_3_END
+		NOT = { flag = Balkan_Wars_3_YUG_ROM }
+		flag = Balkan_Wars_3_Lose_ROM
+		NOT = { flag = Balkan_Wars_3_Lose_HUN }
+	}
+
+        date = { day = 0 month = january year = 1935 }
+        offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "ACT60100A"
+		command = { type = secedeprovince which = HUN value = 381 } #
+		command = { type = secedeprovince which = HUN value = 382 } #
+		command = { type = secedeprovince which = HUN value = 383 } #
+		command = { type = secedeprovince which = HUN value = 384 } #
+		command = { type = secedeprovince which = HUN value = 385 } #
+		command = { type = secedeprovince which = HUN value = 386 } #
+		command = { type = secedeprovince which = HUN value = 387 } #
+		command = { type = secedeprovince which = HUN value = 388 } #
+		command = { type = secedeprovince which = HUN value = 389 } #
+		command = { type = secedeprovince which = HUN value = 454 } #
+		command = { type = secedeprovince which = HUN value = 455 } #
+		command = { type = alliance which = GER }
+
+		command = { type = ai which = "switch/EXP_Russia.ai" } #FEPKBETA4.9
+		command = { type = ai which = "Air_Ground.ai" }
+		command = { type = ai which = "switch/Ferocity_No.ai" }
+	}
+	action_b = {
+		name = "ACT60313B"
+		command = { type = end_puppet }
+		command = { type = leave_alliance }
+
+		command = { type = peace which = AFG value = 1 }
+		command = { type = peace which = ALB value = 1 }
+		command = { type = peace which = ALG value = 1 }
+		command = { type = peace which = ALI value = 1 }
+		command = { type = peace which = ALS value = 1 }
+		command = { type = peace which = ANG value = 1 }
+		command = { type = peace which = ARA value = 1 }
+		command = { type = peace which = ARG value = 1 }
+		command = { type = peace which = ARM value = 1 }
+		command = { type = peace which = AST value = 1 }
+		command = { type = peace which = AUS value = 1 }
+		command = { type = peace which = AXI value = 1 }
+		command = { type = peace which = AZB value = 1 }
+		command = { type = peace which = BEL value = 1 }
+		command = { type = peace which = BEN value = 1 }
+		command = { type = peace which = BHU value = 1 }
+		command = { type = peace which = BLR value = 1 }
+		command = { type = peace which = BOL value = 1 }
+		command = { type = peace which = BOS value = 1 }
+		command = { type = peace which = BRA value = 1 }
+		command = { type = peace which = BRU value = 1 }
+		command = { type = peace which = BUL value = 1 }
+		command = { type = peace which = BUR value = 1 }
+		command = { type = peace which = CAL value = 1 }
+		command = { type = peace which = CAM value = 1 }
+		command = { type = peace which = CAN value = 1 }
+		command = { type = peace which = CGX value = 1 }
+		command = { type = peace which = CHC value = 1 }
+		command = { type = peace which = CHI value = 1 }
+		command = { type = peace which = CHL value = 1 }
+		command = { type = peace which = CMB value = 1 }
+		command = { type = peace which = COL value = 1 }
+		command = { type = peace which = CON value = 1 }
+		command = { type = peace which = COS value = 1 }
+		command = { type = peace which = CRO value = 1 }
+		command = { type = peace which = CSA value = 1 }
+		command = { type = peace which = CSX value = 1 }
+		command = { type = peace which = CUB value = 1 }
+		command = { type = peace which = CXB value = 1 }
+		command = { type = peace which = CYN value = 1 }
+		command = { type = peace which = CYP value = 1 }
+		command = { type = peace which = CZE value = 1 }
+		command = { type = peace which = DDR value = 1 }
+		command = { type = peace which = DEN value = 1 }
+		command = { type = peace which = DFR value = 1 }
+		command = { type = peace which = DOM value = 1 }
+		command = { type = peace which = EAF value = 1 }
+		command = { type = peace which = ECU value = 1 }
+		command = { type = peace which = EGY value = 1 }
+		command = { type = peace which = ENG value = 1 }
+		command = { type = peace which = EQA value = 1 }
+		command = { type = peace which = EST value = 1 }
+		command = { type = peace which = ETH value = 1 }
+		command = { type = peace which = EUS value = 1 }
+		command = { type = peace which = FIN value = 1 }
+		command = { type = peace which = FLA value = 1 }
+		command = { type = peace which = FRA value = 1 }
+		command = { type = peace which = GAB value = 1 }
+		command = { type = peace which = GEO value = 1 }
+		command = { type = peace which = GER value = 1 }
+		command = { type = peace which = GLD value = 1 }
+		command = { type = peace which = GRE value = 1 }
+		command = { type = peace which = GUA value = 1 }
+		command = { type = peace which = GUI value = 1 }
+		command = { type = peace which = GUY value = 1 }
+		command = { type = peace which = HAI value = 1 }
+		command = { type = peace which = HOL value = 1 }
+		command = { type = peace which = HON value = 1 }
+		command = { type = peace which = HUN value = 1 }
+		command = { type = peace which = ICL value = 1 }
+		command = { type = peace which = IDC value = 1 }
+		command = { type = peace which = IND value = 1 }
+		command = { type = peace which = INO value = 1 }
+		command = { type = peace which = IRE value = 1 }
+		command = { type = peace which = IRQ value = 1 }
+		command = { type = peace which = ISR value = 1 }
+		command = { type = peace which = ITA value = 1 }
+		command = { type = peace which = JAP value = 1 }
+		command = { type = peace which = JOR value = 1 }
+		command = { type = peace which = KAZ value = 1 }
+		command = { type = peace which = KOR value = 1 }
+		command = { type = peace which = KUR value = 1 }
+		command = { type = peace which = KYG value = 1 }
+		command = { type = peace which = LAO value = 1 }
+		command = { type = peace which = LAT value = 1 }
+		command = { type = peace which = LBY value = 1 }
+		command = { type = peace which = LEB value = 1 }
+		command = { type = peace which = LIB value = 1 }
+		command = { type = peace which = LIT value = 1 }
+		command = { type = peace which = LUX value = 1 }
+		command = { type = peace which = MAD value = 1 }
+		command = { type = peace which = MAL value = 1 }
+		command = { type = peace which = MAN value = 1 }
+		command = { type = peace which = MEN value = 1 }
+		command = { type = peace which = MEX value = 1 }
+		command = { type = peace which = MIN value = 1 }
+		command = { type = peace which = MLY value = 1 }
+		command = { type = peace which = MON value = 1 }
+		command = { type = peace which = MOR value = 1 }
+		command = { type = peace which = MOZ value = 1 }
+		command = { type = peace which = MTN value = 1 }
+		command = { type = peace which = NAM value = 1 }
+		command = { type = peace which = NEP value = 1 }
+		command = { type = peace which = NIC value = 1 }
+		command = { type = peace which = NIG value = 1 }
+		command = { type = peace which = NOR value = 1 }
+		command = { type = peace which = NZL value = 1 }
+		command = { type = peace which = OMN value = 1 }
+		command = { type = peace which = OTT value = 1 }
+		command = { type = peace which = PAK value = 1 }
+		command = { type = peace which = PAL value = 1 }
+		command = { type = peace which = PAN value = 1 }
+		command = { type = peace which = PAR value = 1 }
+		command = { type = peace which = PER value = 1 }
+		command = { type = peace which = PHI value = 1 }
+		command = { type = peace which = POL value = 1 }
+		command = { type = peace which = POR value = 1 }
+		command = { type = peace which = PRI value = 1 }
+		command = { type = peace which = PRK value = 1 }
+		command = { type = peace which = PRU value = 1 }
+		command = { type = peace which = QUE value = 1 }
+		command = { type = peace which = RHO value = 1 }
+		command = { type = peace which = ROM value = 1 }
+		command = { type = peace which = RSI value = 1 }
+		command = { type = peace which = RUS value = 1 }
+		command = { type = peace which = SAF value = 1 }
+		command = { type = peace which = SAL value = 1 }
+		command = { type = peace which = SAR value = 1 }
+		command = { type = peace which = SAU value = 1 }
+		command = { type = peace which = SCA value = 1 }
+		command = { type = peace which = SCH value = 1 }
+		command = { type = peace which = SCO value = 1 }
+		command = { type = peace which = SER value = 1 }
+		command = { type = peace which = SIA value = 1 }
+		command = { type = peace which = SIB value = 1 }
+		command = { type = peace which = SIE value = 1 }
+		command = { type = peace which = SIK value = 1 }
+		command = { type = peace which = SLO value = 1 }
+		command = { type = peace which = SLV value = 1 }
+		command = { type = peace which = SOM value = 1 }
+		command = { type = peace which = SOV value = 1 }
+		command = { type = peace which = SPA value = 1 }
+		command = { type = peace which = SPR value = 1 }
+		command = { type = peace which = SUD value = 1 }
+		command = { type = peace which = SWE value = 1 }
+		command = { type = peace which = SYR value = 1 }
+		command = { type = peace which = TAJ value = 1 }
+		command = { type = peace which = TAN value = 1 }
+		command = { type = peace which = TEX value = 1 }
+		command = { type = peace which = TIB value = 1 }
+		command = { type = peace which = TRA value = 1 }
+		command = { type = peace which = TRK value = 1 }
+		command = { type = peace which = TUN value = 1 }
+		command = { type = peace which = TUR value = 1 }
+		command = { type = peace which = UKR value = 1 }
+		command = { type = peace which = URU value = 1 }
+		command = { type = peace which = USA value = 1 }
+		command = { type = peace which = UZB value = 1 }
+		command = { type = peace which = VEN value = 1 }
+		command = { type = peace which = VIC value = 1 }
+		command = { type = peace which = VIE value = 1 }
+		command = { type = peace which = WLL value = 1 }
+		command = { type = peace which = YEM value = 1 }
+		command = { type = peace which = YUG value = 1 }
+		command = { type = peace which = U16 value = 1 }
+		command = { type = peace which = U73 value = 1 }
+		command = { type = peace which = U74 value = 1 }
+		command = { type = peace which = U87 value = 1 }
+
+		command = { type = war which = HUN } #
+		command = { type = ai which = "switch/Ferocity_No.ai" }
+	}
+}
+#event = {
+#	id = 60314
+#	random = no
+#	country = YUG
+#
+#	name = "EVT60314N"
+#	desc = "EVT60300D"
+# 	picture = "minor"
+#	style = 0
+#
+#	action_a = {
+#		name = "ACT60100A"
+#		command = { type = country which = SER }
+#	}
+#}
+event = {
+	id = 60320
+	random = no
+	country = ROM
+
+	name = "EVT60320N"
+	desc = "EVT60300D"
+        picture = "minor"
+	style = 0
+
+	trigger = {
+		flag = Balkan_Wars_3_END
+		flag = Balkan_Wars_3_BUL_HUN
+		NOT = { flag = Balkan_Wars_3_Lose_BUL_HUN }
+		flag = Balkan_Wars_3_ROM
+		flag = Balkan_Wars_3_Lose_ROM
+	}
+
+        date = { day = 0 month = january year = 1935 }
+        offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "ACT60100A"
+		command = { type = end_puppet }
+		command = { type = secedeprovince which = BUL value = 423 } #
+		command = { type = secedeprovince which = BUL value = 426 } #
+		command = { type = alliance which = GER }
+
+		command = { type = ai which = "switch/EXP_Russia.ai" } #FEPKBETA4.9
+		command = { type = ai which = "Air_Ground.ai" }
+		command = { type = ai which = "switch/Ferocity_No.ai" }
+	}
+}
+event = {
+	id = 60321
+	random = no
+	country = SER
+
+	name = "EVT60321N"
+	desc = "EVT60300D"
+        picture = "minor"
+	style = 0
+
+	trigger = {
+		flag = Balkan_Wars_3_END
+		flag = Balkan_Wars_3_BUL_HUN
+		NOT = { flag = Balkan_Wars_3_Lose_BUL_HUN }
+
+		flag = Balkan_Wars_3_SER_ROM
+		flag = Balkan_Wars_3_Lose_SER_ROM
+
+
+	}
+
+        date = { day = 0 month = january year = 1935 }
+        offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "ACT60100A"
+	#	command = { type = end_puppet }
+		command = { type = secedeprovince which = BUL value = 413 } #
+		command = { type = secedeprovince which = BUL value = 414 } #
+		command = { type = secedeprovince which = BUL value = 415 } #
+		command = { type = secedeprovince which = BUL value = 418 } #
+		command = { type = removecore which = 413 }
+		command = { type = removecore which = 414 }
+		command = { type = removecore which = 415 }
+		command = { type = alliance which = GER }
+
+		command = { type = ai which = "switch/EXP_Russia.ai" } #FEPKBETA4.9
+		command = { type = ai which = "Air_Ground.ai" }
+		command = { type = ai which = "switch/Ferocity_No.ai" }
+	}
+}
+event = {
+	id = 60322
+	random = no
+	country = YUG
+
+	name = "EVT60322N"
+	desc = "EVT60300D"
+        picture = "minor"
+	style = 0
+
+	trigger = {
+		flag = Balkan_Wars_3_END
+		flag = Balkan_Wars_3_BUL_HUN
+		NOT = { flag = Balkan_Wars_3_Lose_BUL_HUN }
+
+		flag = Balkan_Wars_3_YUG_ROM
+		flag = Balkan_Wars_3_Lose_YUG_ROM
+	}
+
+        date = { day = 0 month = january year = 1935 }
+        offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "ACT60100A"
+		command = { type = end_puppet }
+		command = { type = secedeprovince which = BUL value = 413 } #
+		command = { type = secedeprovince which = BUL value = 414 } #
+		command = { type = secedeprovince which = BUL value = 415 } #
+		command = { type = secedeprovince which = BUL value = 418 } #
+		command = { type = removecore which = 413 }
+		command = { type = removecore which = 414 }
+		command = { type = alliance which = GER }
+
+		command = { type = ai which = "switch/EXP_Russia.ai" } #FEPKBETA4.9
+		command = { type = ai which = "Air_Ground.ai" }
+		command = { type = ai which = "switch/Ferocity_No.ai" }
+	}
+}
+event = {
+	id = 60323
+	random = no
+	country = BUL
+
+	name = "EVT60323N"
+	desc = "EVT60300D"
+        picture = "minor"
+	style = 0
+
+	trigger = {
+		flag = Balkan_Wars_3_END
+		flag = Balkan_Wars_3_BUL_HUN
+		flag = Balkan_Wars_3_Lose_BUL_HUN
+		flag = Balkan_Wars_3_ROM
+		NOT = { flag = Balkan_Wars_3_Lose_ROM }
+	}
+
+        date = { day = 0 month = january year = 1935 }
+        offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "ACT60100A"
+		command = { type = end_puppet }
+		command = { type = secedeprovince which = ROM value = 423 } #
+		command = { type = removecore which = 423 }
+		command = { type = alliance which = GER }
+
+		command = { type = ai which = "switch/EXP_Russia.ai" } #FEPKBETA4.9
+		command = { type = ai which = "Air_Ground.ai" }
+		command = { type = ai which = "switch/Ferocity_No.ai" }
+	}
+}
+
+event = {
+	id = 60324
+	random = no
+	country = BUL
+
+	name = "EVT60324N"
+	desc = "EVT60300D"
+        picture = "minor"
+	style = 0
+
+	trigger = {
+		flag = Balkan_Wars_3_END
+		flag = Balkan_Wars_3_BUL_HUN
+		flag = Balkan_Wars_3_Lose_BUL_HUN
+
+		flag = Balkan_Wars_3_SER_ROM
+		NOT = { flag = Balkan_Wars_3_Lose_SER_ROM }
+
+
+	}
+
+        date = { day = 0 month = january year = 1935 }
+        offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "ACT60100A"
+		command = { type = end_puppet }
+	#	command = { type = secedeprovince which = SER value = 413 } #
+	#	command = { type = secedeprovince which = SER value = 414 } #
+	#	command = { type = secedeprovince which = SER value = 415 } #
+	#	command = { type = removecore which = 415 }
+		command = { type = alliance which = GER }
+
+		command = { type = ai which = "switch/EXP_Russia.ai" } #FEPKBETA4.9
+		command = { type = ai which = "Air_Ground.ai" }
+		command = { type = ai which = "switch/Ferocity_No.ai" }
+	}
+}
+event = {
+	id = 60325
+	random = no
+	country = BUL
+
+	name = "EVT60325N"
+	desc = "EVT60300D"
+        picture = "minor"
+	style = 0
+
+	trigger = {
+		flag = Balkan_Wars_3_END
+		flag = Balkan_Wars_3_BUL_HUN
+		flag = Balkan_Wars_3_Lose_BUL_HUN
+
+		flag = Balkan_Wars_3_YUG_ROM
+		NOT = { flag = Balkan_Wars_3_Lose_YUG_ROM }
+	}
+
+        date = { day = 0 month = january year = 1935 }
+        offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "ACT60100A"
+		command = { type = end_puppet }
+		command = { type = secedeprovince which = YUG value = 413 } #
+		command = { type = secedeprovince which = YUG value = 414 } #
+		command = { type = secedeprovince which = YUG value = 415 } #
+		command = { type = alliance which = GER }
+
+		command = { type = ai which = "switch/EXP_Russia.ai" } #FEPKBETA4.9
+		command = { type = ai which = "Air_Ground.ai" }
+		command = { type = ai which = "switch/Ferocity_No.ai" }
+	}
+}
+event = {
+	id = 60330
+	random = no
+	country = ITA
+
+	name = "EVT60330N"
+	desc = "EVT60300D"
+        picture = "minor"
+	style = 0
+
+	trigger = {
+		flag = Balkan_Wars_3_END
+		flag = Balkan_Wars_3_ITA_ROM
+		flag = Balkan_Wars_3_Lose_ROM
+		NOT = { flag = Balkan_Wars_3_Lose_HUN }
+
+	}
+
+        date = { day = 0 month = january year = 1935 }
+        offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "ACT60100A"
+		#command = { type = end_puppet }
+		command = { type = secedeprovince which = CRO value = 381 } #
+		command = { type = secedeprovince which = CRO value = 384 } #
+		command = { type = secedeprovince which = CRO value = 387 } #
+		command = { type = secedeprovince which = CRO value = 388 } #
+		command = { type = secedeprovince which = CRO value = 389 } #
+
+		command = { type = secedeprovince which = HUN value = 381 } #
+		command = { type = secedeprovince which = HUN value = 384 } #
+		command = { type = secedeprovince which = HUN value = 387 } #
+		command = { type = secedeprovince which = HUN value = 388 } #
+		command = { type = secedeprovince which = HUN value = 389 } #
+	}
+}
+event = {
+	id = 60331
+	random = no
+	country = ITA
+
+	name = "EVT60331N"
+	desc = "EVT60300D"
+        picture = "minor"
+	style = 0
+
+	trigger = {
+		flag = Balkan_Wars_3_END
+		flag = Balkan_Wars_3_ITA_HUN
+		flag = Balkan_Wars_3_Lose_HUN
+		NOT = { flag = Balkan_Wars_3_Lose_ROM }
+	}
+
+        date = { day = 0 month = january year = 1935 }
+        offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "ACT60100A"
+		#command = { type = end_puppet }
+		#command = { type = secedeprovince which = CRO value = 384 } #
+		command = { type = secedeprovince which = SER value = 388 } #
+		command = { type = secedeprovince which = SER value = 389 } #
+		command = { type = secedeprovince which = SER value = 390 } #
+		command = { type = secedeprovince which = SER value = 415 } #
+
+		command = { type = secedeprovince which = YUG value = 381 } #
+		command = { type = secedeprovince which = YUG value = 384 } #
+		command = { type = secedeprovince which = YUG value = 387 } #
+		command = { type = secedeprovince which = YUG value = 388 } #
+		command = { type = secedeprovince which = YUG value = 389 } #
+		command = { type = secedeprovince which = YUG value = 390 } #
+		command = { type = secedeprovince which = YUG value = 415 } #
+	}
+}event = {
+	id = 60326
+	random = no
+	country = BUL
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+        picture = "minor"
+	style = 0
+
+	trigger = {
+		OR = {
+			AND = {
+				event = 60320
+				flag = Balkan_Wars_3_BUL_HUN
+			}
+			AND = {
+				event = 60321
+				flag = Balkan_Wars_3_BUL_HUN
+			}
+			AND = {
+				event = 60322
+				flag = Balkan_Wars_3_BUL_HUN
+			}
+			flag = Balkan_Wars_3_BUL_ROM
+		}
+	}
+
+        date = { day = 0 month = january year = 1935 }
+        offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "ACT60100A"
+		command = { type = end_puppet }
+		command = { type = leave_alliance }
+		command = { type = alliance which = GER }
+
+		command = { type = ai which = "switch/EXP_Russia.ai" } #FEPKBETA4.9
+		command = { type = ai which = "Air_Ground.ai" }
+		command = { type = ai which = "switch/Ferocity_No.ai" }
+	}
+}
+
+
+# 60360- AI切り替えイベント削除

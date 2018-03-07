@@ -1,0 +1,3 @@
+exp_force_ratio = 0.8
+exp_force_ratios = { } 
+no_exp_forces_to = { GER ROM HUN SLO BUL ITA VIC YUG FIN CRO }

@@ -1,0 +1,88 @@
+# 0 - çHï∫ '36
+model = {
+	cost 				= 4
+	buildtime	 		= 45
+	manpower 			= 2.5
+	maxspeed 			= 0.5
+	defensiveness 		= 5
+	toughness 			= 3
+	supplyconsumption 	= 0.12
+	fuelconsumption		= 0.1
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 2500 horses = 91 trucks = 43 }
+}
+# 1 - çHï∫ '40
+model = {
+	cost 				= 4
+	buildtime	 		= 45
+	manpower 			= 2.5
+	maxspeed 			= 0.5
+	defensiveness 		= 5.5
+	toughness 			= 3.5
+	supplyconsumption 	= 0.13
+	fuelconsumption		= 0.1
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 2500 trucks = 54 horses = 46 }
+}
+# 2 - çHï∫ '43
+model = {
+	cost 				= 4
+	buildtime	 		= 45
+	manpower 			= 2.5
+	maxspeed 			= 0.5
+	defensiveness 		= 6
+	toughness 			= 4
+	supplyconsumption 	= 0.14
+	fuelconsumption		= 0.1
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	upgrade_time_boost 	= no
+	equipment = { manpower = 2500 trucks = 54 }
+}
+# 3 - çHï∫ '45
+model = {
+	cost 				= 4
+	buildtime	 		= 45
+	manpower 			= 2.5
+	maxspeed 			= 0.5
+	defensiveness 		= 7
+	toughness 			= 5
+	supplyconsumption 	= 0.16
+	fuelconsumption		= 0.1
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	upgrade_time_boost 	= no
+	equipment = { manpower = 2500 trucks = 54 }
+}
+# 4 - çHï∫ '48
+model = {
+	cost 				= 4
+	buildtime	 		= 45
+	manpower 			= 2.5
+	maxspeed 			= 0.5
+	defensiveness 		= 8
+	toughness 			= 6
+	supplyconsumption 	= 0.18
+	fuelconsumption		= 0.1
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	upgrade_time_boost 	= no
+	equipment = { manpower = 2500 trucks = 54 }
+}
+# 5 - çHï∫ '53
+model = {
+	cost 				= 4
+	buildtime	 		= 45
+	manpower 			= 2.5
+	maxspeed 			= 0.5
+	defensiveness 		= 9
+	toughness 			= 7
+	supplyconsumption 	= 0.2
+	fuelconsumption		= 0.1
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	upgrade_time_boost 	= no
+	equipment = { manpower = 2500 trucks = 54 }
+}

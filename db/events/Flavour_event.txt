@@ -1,0 +1,1822 @@
+#########################################################################
+#
+#		ヨーロッパ追加イベント改めフレーバーイベント
+#					by 小ネタMODの人（勝手に流用）
+#
+#########################################################################
+###### 追加イベント一覧 ############
+#########################################################################
+#id = 60500 スペイン内戦 ポルトガルの介入
+#id = 60501 スペイン内戦 ポルトガルからの援助
+#id = 60502 スペイン内戦にポルトガルが介入
+#id = 60503 ポルトガルが内戦不介入を決定
+#id = 60504 スペイン内戦終結（重要な経験）
+#id = 60505 スペイン内戦 メキシコの介入
+#id = 60506 スペイン内戦 メキシコからの援助
+#id = 60507 スペイン内戦にメキシコが介入
+#id = 60508 スペイン内戦終結（亡命者受け入れ）
+#id = 60509 宇宙戦争
+#id = 60510	
+#id = 60518 ペーパークリップ作戦
+#id = 60519 有能な科学者や技術者が多数亡命
+#id = 60520 ペーネミュンデ占領
+#id = 60522-3 カティンの森事件
+#id = 60524	ヒンデンブルク号爆発事故
+#id = 60525-26	スペイン義勇兵部隊 ― 青師団
+#id = 60527-28	ニューファンドランド・ラブラドル住民投票
+#id = 60529-32	アイスランドの独立
+#id = 60533	「ロサンゼルスの戦い」
+#id = 60534	ペーネミュンデ陸軍試験場
+#################################################################
+#  ユーゴスラビア変態関連	by 脳内毛沢東
+#
+############################################################
+#####
+#id = 60540-3 あるバルカン国が強大国に屈する
+#id = 60544-7 パルチザンに資金提供(バルカン諸国側)
+#id = 60548-51 パルチザンに資金提供（ドイツ側）
+#id = 60552-5 ユーゴスラビア成立
+#id = 60556-9 ユーゴスラビア セットアップ
+#id = 60560-3 ユーゴスラビア成立処理（他のバルカン諸国を独立させていた場合）
+##############################################################
+#########################################################################
+#  航空事故（おおよそ時系列順）
+#########################################################################
+#商業航空機
+#########################################################################
+#  スペイン内戦 ポルトガルの介入
+#########################################################################
+event = {
+	id = 60500
+	random = no
+	country = POR
+
+	trigger = {
+		event = 3100
+		government = fascist
+		war = { country = SPA country = SPR }
+		NOT = {
+			OR = {
+			war = { country = POR country = SPA }
+			war = { country = POR country = SOV }
+			war = { country = POR country = ENG }
+			war = { country = POR country = USA }
+			}
+	        }
+		}
+
+	name = "EVT_2023_NAME"
+	desc = "EVT_2023_DESC"
+	style = 0
+	picture = "SCW"
+
+	date = { day = 20 month = july year = 1936 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1937 }
+
+	action_a = {
+		name = "ACTIONNAME2023A" # 援助する
+		ai_chance = 95
+		command = { type = relation which = SPA value = 20 }
+		command = { type = relation which = SPR value = -20 }
+		command = { type = relation which = FRA value = -5 }
+		command = { type = relation which = ENG value = -5 }
+		command = { type = relation which = GER value = 5 }
+		command = { type = relation which = ITA value = 5 }
+		command = { type = manpowerpool value = -10 }
+		command = { type = resource which = supplies value = -1000 }
+		command = { type = money value = -100 }
+		command = { type = trigger which = 60501 } #SPA
+		command = { type = trigger which = 60502 } #USA
+		command = { type = belligerence which = POR value = 1 }
+	}
+	action_b = {
+		name = "ACTIONNAME2023B" # 援助しない
+		ai_chance = 5
+		command = { type = relation which = SPA value = -20 }
+		command = { type = relation which = SPR value = 20 }
+		command = { type = relation which = FRA value = 5 }
+		command = { type = relation which = ENG value = 5 }
+		command = { type = relation which = GER value = -5 }
+		command = { type = relation which = ITA value = -5 }
+		command = { type = dissent value = 5 }
+		command = { type = belligerence which = POR value = -1 }
+		command = { type = trigger which = 60503 } #SPR
+	}
+}
+
+#########################################################################
+#  スペイン内戦 ポルトガルからの援助
+#########################################################################
+event = {
+	id = 60501
+	random = no
+	country = SPA
+
+	# Triggered by POR 60500
+
+	name = "EVT_60501_NAME"
+	desc = "EVT_3002_DESC"
+	style = 0
+	picture = "SCW"
+
+	action_a = {
+		name = "OK" # Great!
+		command = { type = manpowerpool value = 10 }
+		command = { type = supplies value = 1500 }
+		command = { type = add_division value = infantry when = 0 }
+
+	}
+}
+#########################################################################
+#  スペイン内戦にポルトガルが介入
+#########################################################################
+event = {
+	id = 60502
+	random = no
+	country = USA
+
+	# Triggered by POR 60500
+
+	name = "EVT_60501_NAME"
+	desc = "EVT_3722_DESC"
+	style = 0
+	picture = "SCW"
+
+	action_a = {
+		name = "OK"
+		command = { type = relation which = POR value = -10 }
+	}
+}
+#########################################################################
+#  ポルトガルが内戦不介入を決定
+#########################################################################
+event = {
+	id = 60503
+	random = no
+	country = SPR
+
+	# Triggered by POR 50001
+
+	name = "EVT_60503_NAME"
+	desc = "EVT_60503_DESC"
+	style = 0
+	picture = "SCW"
+
+	action_a = {
+		name = "OK" # Great!
+		command = { type = manpowerpool value = 10 }
+		command = { type = supplies value = 500 }
+		command = { type = add_division value = infantry when = 0 }
+	}
+}
+#########################################################################
+#  スペイン内戦終結（重要な経験）
+#########################################################################
+event = {
+	id = 60504
+	random = no
+	country = POR
+
+	trigger = {
+		government = fascist
+		event = 60501
+		OR = {
+			event = 3004	# スペイン内戦勝利！（スペイン国粋派）
+			AND = {
+				flag = SCW_allied_intervention
+				OR = {
+					NOT = { exists = SPR }
+					NOT = { exists = SPA }
+				}
+			}
+		}
+		NOT = {
+			OR = {
+			war = { country = POR country = SPA }
+			war = { country = POR country = SPR }
+			war = { country = POR country = SOV }
+			war = { country = POR country = ENG }
+			war = { country = POR country = USA }
+			}
+		}
+	}
+
+	name = "EVT_3901_NAME"
+	desc = "EVT_60504_DESC"
+	style = 0
+	picture = "SCW"
+
+	date = { day = 18 month = july year = 1936 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "ACTIONNAME2034A" # Great! 
+		command = { type = relation which = SPA value = 30 }	# Franco is pleased
+		command = { type = manpowerpool value = 5 }			# Soldiers return home
+		command = { type = dissent value = -1 }
+		command = { type = steal_tech which = SPA }
+		command = { type = steal_tech which = SPR } 		# get blueprints for a random tech currently being researched
+	}
+}
+#########################################################################
+#  スペイン内戦 メキシコの介入
+#########################################################################
+event = { 
+	id = 60505
+	random = no
+	country = MEX
+	
+	trigger = {
+		AND = {
+			war = { country = SPA country = SPR }
+			event = 3100
+		NOT = {
+			OR = {
+			government = fascist
+			alliance = { country = MEX country = SPR }
+			war = { country = MEX country = SPR }
+			war = { country = MEX country = SOV }
+			war = { country = MEX country = ENG }
+			war = { country = MEX country = USA }
+			war = { country = MEX country = FRA }
+			}
+		}
+		}
+	        }
+	
+	name = "EVT_3400_NAME"
+	desc = "EVT_3400_DESC"
+	style = 0
+	picture = "SCW"
+	
+	date = { day = 20 month = july year = 1936 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1937 }
+
+	action_a = {
+		name = "ACTIONNAME3400B"
+		ai_chance = 90
+		command = { type = money value = -50 }
+		command = { type = manpowerpool value = -5 }
+		command = { type = resource which = supplies value = -500 }
+		command = { type = relation which = SPR value = 20 }
+		command = { type = relation which = SPA value = -20 }
+		command = { type = relation which = SOV value = 10 }
+		command = { type = relation which = ENG value = -5 }
+		command = { type = relation which = FRA value = -5 }
+		command = { type = relation which = GER value = -10 }
+		command = { type = relation which = ITA value = -10 }
+		command = { type = relation which = POR value = -10 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = domestic which = political_left value = 1 }
+		command = { type = trigger which = 60506 } #SPR
+		command = { type = trigger which = 60507 } #USA
+	}
+	action_b = {
+		name = "ACTIONNAME3400A"
+		ai_chance = 10
+		command = { type = dissent value = 5 }
+		command = { type = relation which = SPR value = -20 }
+		command = { type = relation which = SPA value = 20 }
+		command = { type = relation which = SOV value = -10 }
+		command = { type = relation which = ENG value = 5 }
+		command = { type = relation which = FRA value = 5 }
+		command = { type = relation which = GER value = 10 }
+		command = { type = relation which = ITA value = 10 }
+		command = { type = relation which = POR value = 10 }
+		command = { type = domestic which = interventionism value = -1 }
+	}
+}
+
+#########################################################################
+#  スペイン内戦 メキシコからの援助
+#########################################################################
+event = {
+	id = 60506
+	random = no
+	country = SPR
+
+	# Triggered by MEX 60505
+
+	name = "EVT_60506_NAME"
+	desc = "EVT_3103_DESC"
+	style = 0
+	picture = "SCW"
+
+	action_a = {
+		name = "OK" # Great!
+		command = { type = manpowerpool value = 5 }
+		command = { type = supplies value = 1000 }
+
+	}
+}
+#########################################################################
+#  スペイン内戦にメキシコが介入
+#########################################################################
+event = {
+	id = 60507
+	random = no
+	country = USA
+
+	# Triggered by MEX 50006
+
+	name = "EVT_60506_NAME"
+	desc = "EVT_3722_DESC"
+	style = 0
+	picture = "SCW"
+
+	action_a = {
+		name = "OK"
+		command = { type = relation which = MEX value = -10 }
+	}
+}
+###########################################################################
+#  スペイン内戦終結（亡命者受け入れ）
+###########################################################################
+event = {
+	id = 60508
+	random = no
+	country = MEX
+
+	trigger = {
+		AND = {
+			event = 60506
+			event = 3004
+		}
+		NOT = {
+			OR = {
+			government = fascist
+			war = { country = MEX country = SPA }
+			war = { country = MEX country = SPR }
+			war = { country = MEX country = SOV }
+			war = { country = MEX country = ENG }
+			war = { country = MEX country = USA }
+			}
+		}
+	}
+
+	name = "EVT_60508_NAME"
+	desc = "EVT_60508_DESC"
+	style = 0
+	picture = "war_refugees"
+
+	date = { day = 18 month = july year = 1936 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "OK"
+		command = { type = relation which = SPR value = 20 }
+		command = { type = dissent value = -1 }
+		command = { type = manpowerpool value = 10 }
+	}
+}
+#########################################################################
+#  宇宙戦争
+#########################################################################
+event = {
+	id = 60509
+	random = no
+	country = USA
+
+	trigger = {
+		government = democratic
+		atwar = no
+		domestic = { type = freedom value = 8 }
+	}
+
+	date = { day = 29 month = october year = 1938 }
+
+	name = "EVT_60509_NAME"
+	desc = "EVT_60509_DESC"
+	style = 0
+
+	action_a = {
+		name = "ACTIONNAME60509A"
+		command = { type = dissent value = 1 }
+	}
+}
+
+#チリ地震1939
+event = {
+	id = 60510
+	random = no
+	country = CHL
+	style = 0
+
+	name = "EVT_60510_NAME"	#チリ・チラン地震
+	desc = "EVT_60510_DESC"	#
+
+	date = { day = 24 month = 0 year = 1939 }
+	offset = 1
+	deathdate = { day = 25 month = 0 year = 1939 }
+
+	action_a = {	name = "EVT_60510_ACTA"	#復興に全力を尽くすのだ
+		command = { type = dissent value = 3 }
+		command = { type = manpowerpool value = -10 }
+	}
+}
+
+event = {
+	id = 60511
+	random = no
+	country = CHL
+	style = 0
+
+	trigger = {
+		event = 60510
+		headofstate = 44031
+	}
+
+	name = "EVT_60511_NAME"	#CORFO設立
+	desc = "EVT_60511_DESC"	#1939年4月24日、国内の工業化促進と国内経済の再構築を目的として産業開発公社（Corporacion de Fomento de la Produccion、Corfo）が設立された。CORFOは米国輸出入銀行の支援も受けながら輸入代替産業の育成に力を注ぎ、十年後には国内生産の1/4をCORFO系企業が占めるまでになった。
+
+
+	date = { day = 23 month = 3 year = 1939 }
+	offset = 1
+	deathdate = { day = 25 month = 3 year = 1939 }
+
+
+	action_a = {
+		name = "OK"
+		command = { type = waketeam which = 5104 }
+	}
+}
+
+#########################################################################
+#  ペーパークリップ作戦
+#########################################################################
+event = {
+	id = 60518
+	random = no
+	country = USA
+
+	trigger = {
+		AND = {
+			war = { country = USA country = GER }
+			war = { country = SOV country = GER }
+			lost_national = { country = GER value = 60 }
+			region = { region = "Germany" country = -3 value = 1 }
+			NOT = {
+				exists = DFR
+			}
+		}
+	}
+
+	name = "EVT_60518_NAME"
+	desc = "EVT_60518_DESC"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1957 } #FEPK変更部分 #1.09
+
+	action_a = {
+		name = "ACTIONNAME60518A"
+		ai_chance = 80
+		#command = { type = money value = -500 }
+		#command = { type = gain_tech which = 7100 } # 飛行爆弾
+		#command = { type = gain_tech which = 7110 } # 戦略ロケット
+		#command = { type = gain_tech which = 7120 } # 弾道ミサイル
+		#command = { type = gain_tech which = 15500 } # 実用エンジン
+		command = { type = waketeam which = 133 }
+		command = { type = waketeam which = 172 }	#DHSA0.4	#コンベア
+		command = { type = trigger which = 60519 } #GER
+	}
+	action_b = {
+		name = "ACTIONNAME60518B"
+		ai_chance = 20
+		command = { type = dissent value = 2 }
+	}
+}
+#########################################################################
+#  有能な科学者や技術者が多数亡命
+#########################################################################
+event = {
+	id = 60519
+	random = no
+	country = GER
+
+	# Triggered by USA 50018
+
+	name = "EVT_60519_NAME"
+	desc = "EVT_60518_DESC"
+	style = 0
+
+	action_a = {
+		name = "ACTIONNAME60519A"
+		command = { type = sleepteam which = 17 }
+	}
+}
+#########################################################################
+#  ペーネミュンデ占領
+#########################################################################
+event = {
+	id = 60520
+	random = no
+	country = SOV
+
+	trigger = {
+		control = { province = 301 data = SOV }
+	}
+
+	name = "EVT_60520_NAME"
+	desc = "EVT_60520_DESC"
+	style = 2
+	picture = "von_Braun"
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "OK"
+		command = { type = gain_tech which = 7100 } # 飛行爆弾
+		command = { type = gain_tech which = 7110 } # 戦略ロケット
+		command = { type = gain_tech which = 7120 } # 弾道ミサイル
+		command = { type = gain_tech which = 15500 } # 実用エンジン
+	}
+}
+
+#########################################################################
+#  カティンの森事件
+#########################################################################
+event = {
+	id = 60522
+	random = no
+	country = SOV
+
+	trigger = {
+		AND = {
+			government = communist
+			control = { province = 219 data = -1 } # スモレンスク
+			event = 2604
+			control = { province = 210 data = -1 } # バラノヴィチェ
+			control = { province = 562 data = -1 } # ロウネ
+			control = { province = 229 data = -1 } # スタニスワヴフ
+			NOT = {
+				war = { country = SOV country = GER }
+			}
+	        }
+	}
+
+	name = "EVT_60522_NAME"
+	desc = "EVT_60522_DESC"
+	style = 0
+	picture = "Katyn"
+	
+	date = { day = 1 month = april year = 1940 }
+	offset = 10
+	deathdate = { day = 29 month = august year = 1940 }
+
+	action_a = {
+		name = "ACTIONNAME60522A"
+		ai_chance = 90
+		command = { type = province_manpower which = 210 value = -1 }
+		command = { type = province_manpower which = 562 value = -1 }
+		command = { type = province_manpower which = 229 value = -1 }
+		command = { type = setflag which = Katyn }
+	}
+	action_b = {
+		name = "ACTIONNAME60522B"
+		ai_chance = 10
+		command = { type = dissent value = 5 }
+	}
+}
+
+event = {
+	id = 60523
+	random = no
+	country = GER
+
+	trigger = {
+		AND = {
+			flag = Katyn
+			control = { province = 219 data = -1 } # スモレンスク
+	        }
+	}
+
+	name = "EVT_60522_NAME"
+	desc = "EVT_60522_DESC"
+	style = 0
+	picture = "Katyn"
+
+	date = { day = 1 month = april year = 1940 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "OK"
+		command = { type = relation which = SOV value = -30 }
+		command = { type = belligerence which = SOV value = 10 }
+	}
+}
+#########################################################################
+#  ヒンデンブルク号爆発事故
+#########################################################################
+event = {
+	id = 60524
+	random = no
+	country = GER
+
+	trigger = {
+		NOT = {
+			OR = {
+				war = { country = GER country = USA }
+				war = { country = GER country = ENG }
+			}
+		}
+	}
+
+	name = "EVT_60524_NAME"
+	desc = "EVT_60524_DESC"
+	style = 0
+
+	date = { day = 6 month = may year = 1937 }
+
+	action_a = {
+		name = "ACTIONNAME60524A"
+		command = { type = dissent value = 2 }
+	}
+}
+#########################################################################
+#  スペイン義勇兵部隊 ― 青師団
+#########################################################################
+event = {
+	id = 60525
+	random = no
+	country = SPA
+
+	trigger = {
+		AND = {
+			event = 3002	# スペイン内戦をドイツが支援
+			war = { country = GER country = SOV }
+			government = fascist
+			NOT = {
+				OR = {
+					exists = SPR
+					alliance = { country = SPA country = GER }
+					alliance = { country = SPA country = SOV }
+					war = { country = SPA country = GER }
+				}
+			}
+		}
+	}
+
+	name = "EVT_60525_NAME"
+	desc = "EVT_60525_DESC"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 10
+	deathdate = { day = 29 month = october year = 1943 }
+
+	action_a = {
+		name = "ACTIONNAME60525A" # 義勇兵を送る
+		ai_chance = 90
+		command = { type = money value = -200 }
+		command = { type = supplies value = -1000 }
+		command = { type = manpowerpool value = -10 }
+		command = { type = relation which = SOV value = -20 }
+		command = { type = relation which = GER value = 10 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = trigger which = 60526 } # GER
+	}
+	action_b = {
+		name = "ACTIONNAME60525B" # 義勇兵を送らない
+		ai_chance = 10
+		command = { type = relation which = SOV value = 10 }
+		command = { type = relation which = GER value = -20 }
+		command = { type = domestic which = interventionism value = -1 }
+	}
+}
+
+event = {
+	id = 60526
+	random = no
+	country = GER
+
+	# Triggered by SPA event 60525
+
+	name = "EVT_60525_NAME"
+	desc = "EVT_60525_DESC"
+	style = 0
+
+	action_a = {
+		name = "OK" # Great!
+		command = { type = add_division which = "第250歩兵師団" value = infantry when = 3 where = artillery }
+	}
+}
+#########################################################################
+#  ニューファンドランド・ラブラドル住民投票
+#########################################################################
+event = {
+	id = 60527
+	random = no
+	country = ENG
+
+	trigger = {
+		AND = {
+			owned = { province = 575 data = -1 }	# ラブラドル
+			control = { province = 575 data = -1 }
+			owned = { province = 576 data = -1 }	# ニューファンドランド
+			control = { province = 576 data = -1 }
+			alliance = { country = ENG country = CAN }
+			atwar = no
+			NOT = {
+				atwar = CAN
+			}
+		}
+	}
+
+	name = "EVT_60527_NAME"
+	desc = "EVT_60527_DESC"
+	style = 0
+
+	date = { day = 1 month = march year = 1949 }	# 史実でのカナダ加入は1949/3/31
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "ACTIONNAME60527A" # カナダに加入する
+		ai_chance = 60
+		command = { type = secedeprovince which = CAN value = 575 }
+		command = { type = secedeprovince which = CAN value = 576 }
+		command = { type = trigger which = 60528 }
+	}
+	action_b = {
+		name = "ACTIONNAME60527B" # イギリスに留まる
+		ai_chance = 40
+		command = { type = dissent value = 1 }
+	}
+}
+
+event = {
+	id = 60528
+	random = no
+	country = CAN
+
+	# Triggered by ENG 60527
+
+	name = "EVT_60527_NAME"
+	desc = "EVT_60527_DESC"
+	style = 0
+
+	action_a = {
+		name = "OK"
+		command = { type = addcore which = 575 }
+		command = { type = addcore which = 576 }
+		command = { type = relation which = ENG value = 10 }
+	}
+}
+#########################################################################
+#  アイスランドの独立
+#########################################################################
+event = {
+	id = 60529
+	random = no
+	country = USA
+
+	trigger = {
+		AND = {
+			event = 3900	# アメリカのアイスランド・グリーランド保障占領イベント
+			government = democratic
+			owned = { province = 1 data = -1 }	# レイキャヴィク
+			control = { province = 1 data = -1 }
+			owned = { province = 2 data = -1 }	# ホプン
+			control = { province = 2 data = -1 }
+			NOT = {
+				OR = {
+					ispuppet = USA
+					exists = ICL
+				}
+			}
+		}
+	}
+
+	name = "EVT_60529_NAME"
+	desc = "EVT_60529_DESC"
+	style = 0
+
+	date = { day = 1 month = june year = 1944 }	# 史実での独立は1944/6/17
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "ACTIONNAME60529A"
+		ai_chance = 90
+		command = { type = independence which = ICL value = 1 }
+		command = { type = removecore which = 1 }
+		command = { type = removecore which = 2 }
+		command = { type = alliance which = ICL }
+		command = { type = guarantee which = USA where = ICL }
+		command = { type = trigger which = 60530 } #ICL
+	}
+	action_b = {
+		name = "ACTIONNAME60529B"
+		ai_chance = 10
+		command = { type = dissent value = 3 }
+	}
+}
+
+event = {
+	id = 60530
+	random = no
+	country = ICL
+
+	# Triggered by USA 60529
+
+	name = "EVT_60529_NAME"
+	desc = "EVT_60529_DESC"
+	style = 0
+
+	action_a = {
+		name = "ACTIONNAME60530A" # We got Independence!
+		command = { type = manpowerpool value = 20 }
+		command = { type = supplies value = 500 }
+		command = { type = access which = USA }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 581001 }
+		command = { type = headofgovernment which = 581002 }
+		command = { type = foreignminister which = 581003 }
+		command = { type = armamentminister which = 581004 }
+		command = { type = ministerofsecurity which = 581005 }
+		command = { type = ministerofintelligence which = 581006 }
+		command = { type = chiefofstaff which = 581007 }
+		command = { type = chiefofarmy which = 581008 }
+		command = { type = chiefofnavy which = 581009 }
+		command = { type = chiefofair which = 581010 }
+	}
+}
+
+
+event = { #FEPKBETA4.9
+	id = 60531
+	random = no 
+	tag = { GER ITA JAP HUN }
+	
+	decision = {
+		area = { area = "Eire" country = -3 value = 100 }	#（南）アイルランド
+		NOT = { alliance = { country = IRE } }
+	}
+	
+	decision_trigger = {
+		control = { province = 30 data = -1 }
+		NOT = {
+			exists = IRE
+		}
+	}
+	
+	trigger = {
+		area = { area = "Eire" country = -3 value = 100 }	#（南）アイルランド
+		control = { province = 30 data = -1 }
+		NOT = {
+			exists = IRE
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	picture = "vichy_regime"
+	decision_picture = "decision_Rhineland"
+
+	name = "EVT_60531_NAME"	#アイルランドの運命
+	desc = "EVT_60531_DESC"	#枢軸の下での参戦を拒んだアイルランドは連合につき、そして屈した。いま、我々はアイルランドをどのように扱うのか決定する。	#KRのパクリ
+	
+	action_a = {
+		name = "EVT_60531_ACTA"	#全アイルランドを独立させる
+		ai_chance = 95
+		command = { type = independence which = IRE value = 1 when = 0 }
+		command = { type = make_puppet which = IRE }
+		command = { type = alliance which = IRE }
+		command = { type = trigger which = 60532 }
+	}
+	action_b = {
+		name = "EVT_60531_ACTB"	#独立はさせるが、北アイルランドは直轄統治だ
+		ai_chance = 4
+		trigger = {
+			country = GER
+		}
+		command = { type = addclaim which = 28 }	#北アイルランド
+		command = { type = addclaim which = 29 }
+		command = { type = independence which = IRE value = 1 when = 0 }
+		command = { type = make_puppet which = IRE }
+		command = { type = alliance which = IRE }
+		command = { type = trigger which = 60532 }
+	}
+	
+	action_c = {
+		name = "EVT_60531_ACTC"	#アイルランド人は信用出来ない。全土を占領せよ
+		ai_chance = 1
+		command = { type = addclaim which = 24 }
+		command = { type = addclaim which = 25 }
+		command = { type = addclaim which = 26 }
+		command = { type = addclaim which = 27 }
+		command = { type = addclaim which = 28 }	
+		command = { type = addclaim which = 29 }
+		command = { type = addclaim which = 30 }
+	}
+}
+
+event = { #FEPKBETA4.9
+	id = 60532
+	random = no 
+	country = IRE
+	
+	name = "EVT_60532_NAME"	#アイルランド独立
+	desc = "EVT_60532_DESC"	#アイルランドは独立した。我々は枢軸国として戦うこととなる。
+	
+	action_a = {
+		command = {
+			trigger = {
+				claims = { province = 28 data = GER }
+				}
+			type = secedeprovince which = GER value = 28 }
+		command = {
+			trigger = {
+				claims = { province = 29 data = GER }
+				}
+			type = secedeprovince which = GER value = 29 }
+		command = {}
+	}
+}
+#########################################################################
+#  ロサンゼルスの戦い
+#########################################################################
+event = {
+	id = 60533
+	random = no
+	country = USA
+	#persistent = yes
+	trigger = {
+		war = { country = JAP }
+		domestic = { type = freedom value = 4 }
+		NOT = { lost_national = { country = JAP value = 10 } }
+		random = 80
+	}
+
+	date = { day = 0 month = 1 year = 1942 }
+	offset = 7
+	deathdate = { day = 0 month = 2 year = 1942 }
+	
+	style = 0
+	picture = "ussr_marginal_defeat"
+
+	name = "EVT_60533_NAME"	#「ロサンゼルスの戦い」
+	desc = "EVT_60533_DESC"	#太平洋戦争開始直後、アメリカでは日本海軍機の攻撃により一定の被害が出ていた。日本軍の実力は良くてもイタリア軍と同程度だと思っていたアメリカ市民にとってこれは予想外のことであった。開戦から1年ほどは、アメリカ西海岸が日本軍による上陸攻撃を受けている、空襲を受けた等幾度かの誤報が発生していた。その中でも代表的な誤報がこの「ロサンゼルスの戦い」である。1942年2月25日夜、未確認の飛行集団がロサンゼルス市上空に確認された。アメリカ軍はこれを戦闘機と対空砲火により迎撃したものの、誰ひとりとしてその未確認飛行物体の正体を掴むことはできず、当然何の戦果も上がらなかった。一方で、この誤報は被害を起こしている。合計6名が対空砲弾の破片に当たる、ニュースを受けてショックで心臓発作を起こすなどして死亡した。結局、何がロサンゼルスに飛来していたのかは現在でもはっきりしていない。ただ、本事件の直前に起こった日本海軍の攻撃がアメリカ人を過敏にさせ、この混乱を起こさせたのだろう……とは言われている。
+
+	action_a = {
+		name = "EVT_60533_ACTA"	#誤報だ。少なくとも今のところは
+		command = { type = dissent value = 2 }
+	}
+}
+
+#########################################################################
+#  ペーネミュンデ陸軍試験場
+#########################################################################
+event = {
+	id = 60534
+	random = no
+	country = GER
+	decision = {
+		NOT = { rocket_test = 1 }
+		incabinet = 1
+	}
+	decision_trigger = {
+		money = 300
+		control = { province = 301 data = GER }
+	}
+	trigger = {
+		NOT = { rocket_test = 1 }
+		incabinet = 1
+		#money = 300
+		control = { province = 301 data = GER }
+		year = 1936
+		month = 3
+		day = 2
+	}
+
+	date = { day = 0 month = 3 year = 1935 }
+	offset = 2
+	deathdate = { day = 0 month = 2 year = 1963 }
+	
+	name = "EVT_60534_NAME"	#ペーネミュンデ陸軍試験場
+	desc = "EVT_60534_DESC"	#ペーネミュンデ陸軍試験場は、ドイツ陸軍兵器局が設立したロケット研究施設である。本試験場はロケット、ミサイル、その他航空力学に関する研究を専門としており、当時としては突出した設備を備えていた。技術責任者はヴェルナー・フォン・ブラウンで、その他にもドイツ各地から優秀な技術スタッフが集められていた。同地は大戦末期に赤軍に占領されたものの、そのときには殆ど全ての資料や施設が事前に破壊されていたとされる。
+	style = 2
+	picture = "von_Braun"
+	decision_picture = "decision_Peenemunde"
+	
+	action = {
+		name = "EVT_60534_ACTA"	#建設を開始せよ
+		ai_chance = 99
+		command = { 
+			trigger = {
+				ai = no
+			}
+			type = money value = -250 }
+		command = { type = construct which = rocket_test where = 301 value = 1 }
+	}
+	action = {
+		name = "EVT_60534_ACTB"	#予算は他の用途に使われるべきである
+		ai_chance = 1
+		command = { type = sleepevent which = 60534 }
+	}
+}
+#################################################################
+#  ユーゴスラビア変態関連
+##############################################################
+#あるバルカン国が強大国に屈する
+#ユーゴスラビア変態の前提条件として
+#1.一度も傀儡になったことがない判定。
+#2.ベオグラード、ザグレブが一度も赤軍の手に渡ってないかどうかの判定。
+##############################################################
+event = {
+	id = 60540
+ 	random = no
+ 	country = ALB
+	trigger = {
+		ai = no
+		OR = {
+			ispuppet = ALB
+			control = { province = 453 data = SOV }#ベオグラード
+			control = { province = 382 data = SOV }#ザグレブ
+		}
+	}
+	 	
+	name = "EVT_60540_NAME"
+	desc = "EVT_60540_DESC"
+	style = 0
+	picture = "Rhineland"
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+ 	
+	action_a = {
+		name = "OK"
+		command = { type = local_setflag which = yugo_pupet }
+	}
+}
+
+event = {
+	id = 60541
+ 	random = no
+ 	country = CRO #クロアチア
+	trigger = {
+		ai = no
+		OR = {
+			ispuppet = CRO
+			control = { province = 453 data = SOV }#ベオグラード
+			control = { province = 382 data = SOV }#ザグレブ
+		}
+	}
+	name = "EVT_60540_NAME"
+	desc = "EVT_60540_DESC"
+	style = 0
+	picture = "Rhineland"
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+ 	
+	action_a = {
+		name = "OK"
+		command = { type = local_setflag which = yugo_pupet }
+	}
+}
+
+event = {
+	id = 60542
+ 	random = no
+ 	country = SER #セルビア
+	trigger = {
+		ai = no
+		OR = {
+			ispuppet = SER
+			control = { province = 453 data = SOV }#ベオグラード
+			control = { province = 382 data = SOV }#ザグレブ
+		}
+	}
+	name = "EVT_60540_NAME"
+	desc = "EVT_60540_DESC"
+	style = 0
+	picture = "Rhineland"
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+ 	
+	action_a = {
+		name = "OK"
+		command = { type = local_setflag which = yugo_pupet }
+	}
+}
+
+event = {
+	id = 60543
+ 	random = no
+ 	country = SLV #スロヴェニア
+	trigger = {
+		ai = no
+		OR = {
+			ispuppet = SLV
+			control = { province = 453 data = SOV }#ベオグラード
+			control = { province = 382 data = SOV }#ザグレブ
+		}
+	}
+	name = "EVT_60540_NAME"
+	desc = "EVT_60540_DESC"
+	style = 0
+	picture = "Rhineland"
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+ 	
+	action_a = {
+		name = "OK"
+		command = { type = local_setflag which = yugo_pupet }
+	}
+}
+
+##############################################################
+#バルチザンに資金を提供する
+#提供した場合、ユーゴ変体のフラグがたつが、ドイツと戦争になる。
+##############################################################
+event = {
+	id = 60544
+ 	random = no
+ 	country = ALB
+	trigger = {
+		ai = no
+		NOT = { local_flag = yugo_pupet }
+		NOT = { alliance = { country = GER country = ALB } }
+		NOT = { control = { province = 453 data = -1 } }
+		NOT = { control = { province = 382 data = -1 } }
+		atwar = GER
+		OR = {
+			NOT = { exists = YUG }
+			ispuppet = YUG
+		}
+	}
+	 	
+	name = "EVT_60544_NAME"
+	desc = "EVT_60544_DESC"
+	style = 0
+	picture = "Rhineland"
+
+	date = { day = 0 month = december year = 1943 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+ 	
+	action_a = {
+		name = "EVT_60544_ACTA"
+		command = { type = trigger which = 60548 }
+		command = { type = money value = -30 }
+		command = { type = local_setflag which = yugo_palti }
+		command = { type = setflag which = yugo_palti2 }
+	}
+	action_b = {
+		name = "EVT_60544_ACTB"
+		command = { }
+	}
+}
+
+event = {
+	id = 60545
+ 	random = no
+ 	country = CRO #クロアチア
+	trigger = {
+		ai = no
+		NOT = { local_flag = yugo_pupet }
+		NOT = { alliance = { country = GER country = CRO } }
+		NOT = { control = { province = 453 data = -1 } }
+		NOT = { control = { province = 382 data = -1 } }
+		atwar = GER
+		OR = {
+			NOT = { exists = YUG }
+			ispuppet = YUG
+		}
+	}
+	 	
+	name = "EVT_60544_NAME"
+	desc = "EVT_60544_DESC"
+	style = 0
+	picture = "Rhineland"
+
+	date = { day = 0 month = december year = 1943 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+ 	
+	action_a = {
+		name = "EVT_60544_ACTA"
+		command = { type = trigger which = 60549 }
+		command = { type = money value = -30 }
+		command = { type = local_setflag which = yugo_palti }
+		command = { type = setflag which = yugo_palti2 }
+	}
+	action_b = {
+		name = "EVT_60544_ACTB"
+		command = { }
+	}
+}
+
+event = {
+	id = 60546
+ 	random = no
+ 	country = SER #セルビア
+	trigger = {
+		ai = no
+		NOT = { local_flag = yugo_pupet }
+		NOT = { alliance = { country = GER country = SER } }
+		NOT = { control = { province = 453 data = -1 } }
+		NOT = { control = { province = 382 data = -1 } }
+		atwar = GER
+		OR = {
+			NOT = { exists = YUG }
+			ispuppet = YUG
+		}
+	}
+	 	
+	name = "EVT_60544_NAME"
+	desc = "EVT_60544_DESC"
+	style = 0
+	picture = "Rhineland"
+
+	date = { day = 0 month = december year = 1943 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+ 	
+	action_a = {
+		name = "EVT_60544_ACTA"
+		command = { type = trigger which = 60550 }
+		command = { type = money value = -30 }
+		command = { type = local_setflag which = yugo_palti }
+		command = { type = setflag which = yugo_palti2 }
+	}
+	action_b = {
+		name = "EVT_60544_ACTB"
+		command = { }
+	}
+}
+
+event = {
+	id = 60547
+ 	random = no
+ 	country = SLV #スロヴェニア
+	trigger = {
+		ai = no
+		NOT = { local_flag = yugo_pupet }
+		NOT = { alliance = { country = GER country = SLV } }
+		NOT = { control = { province = 453 data = -1 } }
+		NOT = { control = { province = 382 data = -1 } }
+		atwar = GER
+		OR = {
+			NOT = { exists = YUG }
+			ispuppet = YUG
+		}
+	}
+	 	
+	name = "EVT_60544_NAME"
+	desc = "EVT_60544_DESC"
+	style = 0
+	picture = "Rhineland"
+
+	date = { day = 0 month = december year = 1943 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+ 	
+	action_a = {
+		name = "EVT_60544_ACTA"
+		command = { type = trigger which = 60551 }
+		command = { type = money value = -30 }
+		command = { type = local_setflag which = yugo_palti }
+		command = { type = setflag which = yugo_palti2 }
+	}
+	action_b = {
+		name = "EVT_60544_ACTB"
+		command = { }
+	}
+}
+
+##############################################################
+#パルチザンに資金提供した場合、ドイツが宣戦布告してくる処理。
+##############################################################
+event = {
+	id = 60548
+ 	random = no
+ 	country = GER
+	 	
+	name = "EVT_60548_NAME"
+	desc = "EVT_60548_DESC"
+	style = 0
+	picture = "Rhineland"
+
+	action_a = {
+		name = "EVT_60548_ACTA"
+		ai_chance = 100
+		command = { type = war which = ALB }
+	}
+	action_b = {
+		name = "EVT_60548_ACTB"
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+	}
+}
+
+event = {
+	id = 60549
+ 	random = no
+ 	country = GER
+	 	
+	name = "EVT_60549_NAME"
+	desc = "EVT_60548_DESC"
+	style = 0
+	picture = "Rhineland"
+
+	action_a = {
+		name = "EVT_60548_ACTA"
+		ai_chance = 100
+		command = { type = war which = CRO }
+	}
+	action_b = {
+		name = "EVT_60548_ACTB"
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+	}
+}
+
+event = {
+	id = 60550
+ 	random = no
+ 	country = GER
+	 	
+	name = "EVT_60550_NAME"
+	desc = "EVT_60548_DESC"
+	style = 0
+	picture = "Rhineland"
+
+	action_a = {
+		name = "EVT_60548_ACTA"
+		ai_chance = 100
+		command = { type = war which = SER }
+	}
+	action_b = {
+		name = "EVT_60548_ACTB"
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+	}
+}
+
+event = {
+	id = 60551
+ 	random = no
+ 	country = GER
+	 	
+	name = "EVT_60551_NAME"
+	desc = "EVT_60548_DESC"
+	style = 0
+	picture = "Rhineland"
+
+	action_a = {
+		name = "EVT_60548_ACTA"
+		ai_chance = 100
+		command = { type = war which = SLV }
+	}
+	action_b = {
+		name = "EVT_60548_ACTB"
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+	}
+}
+
+##############################################################
+#ユーゴスラビア変体
+##############################################################
+event = {
+	id = 60552
+ 	random = no
+ 	country = ALB
+	trigger = {
+		ai = no
+		local_flag = yugo_palti
+		NOT = { ispuppet = ALB }
+		NOT = { local_flag = yugo_pupet }
+		NOT = { exists = YUG }
+		control = { province = 453 data = -1 }#ベオグラード
+		control = { province = 382 data = -1 }#ザグレブ
+	}
+	name = "EVT_60552_NAME"
+	desc = "EVT_60552_DESC"
+	style = 0
+	picture = "Rhineland"
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+ 	
+	action_a = {
+		name = "EVT_60552_ACTA"
+		command = { type = independence which = YUG value = 0 when = 0 }
+		command = { type = sleepevent which = 60560 }
+	}
+	action_b = {
+		name = "EVT_60552_ACTB"
+		command = { type = sleepevent which = 60556 }
+		command = { type = sleepevent which = 60557 }
+		command = { type = sleepevent which = 60558 }
+		command = { type = sleepevent which = 60559 }
+	}
+}
+
+event = {
+	id = 60553
+ 	random = no
+ 	country = CRO #クロアチア
+	trigger = {
+		ai = no
+		local_flag = yugo_palti
+		NOT = { ispuppet = CRO }
+		NOT = { local_flag = yugo_pupet }
+		NOT = { exists = YUG }
+		control = { province = 453 data = -1 }#ベオグラード
+		control = { province = 382 data = -1 }#ザグレブ
+	}
+	name = "EVT_60552_NAME"
+	desc = "EVT_60553_DESC"
+	style = 0
+	picture = "Rhineland"
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+ 	
+	action_a = {
+		name = "EVT_60552_ACTA"
+		command = { type = independence which = YUG value = 0 when = 0 }
+		command = { type = sleepevent which = 60561 }
+	}
+	action_b = {
+		name = "EVT_60552_ACTB"
+		command = { type = sleepevent which = 60556 }
+		command = { type = sleepevent which = 60557 }
+		command = { type = sleepevent which = 60558 }
+		command = { type = sleepevent which = 60559 }
+	}
+}
+
+event = {
+	id = 60554
+ 	random = no
+ 	country = SER #セルビア
+	trigger = {
+		ai = no
+		local_flag = yugo_palti
+		NOT = { ispuppet = SER }
+		NOT = { local_flag = yugo_pupet }
+		NOT = { exists = YUG }
+		control = { province = 453 data = -1 }#ベオグラード
+		control = { province = 382 data = -1 }#ザグレブ
+	}
+	name = "EVT_60552_NAME"
+	desc = "EVT_60553_DESC"
+	style = 0
+	picture = "Rhineland"
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+ 	
+	action_a = {
+		name = "EVT_60552_ACTA"
+		command = { type = independence which = YUG value = 0 when = 0 }
+		command = { type = sleepevent which = 60562 }
+	}
+	action_b = {
+		name = "EVT_60552_ACTB"
+		command = { type = sleepevent which = 60556 }
+		command = { type = sleepevent which = 60557 }
+		command = { type = sleepevent which = 60558 }
+		command = { type = sleepevent which = 60559 }
+	}
+}
+
+event = {
+	id = 60555
+ 	random = no
+ 	country = SLV #スロヴェニア
+	trigger = {
+		ai = no
+		local_flag = yugo_palti
+		NOT = { ispuppet = SLV }
+		NOT = { local_flag = yugo_pupet }
+		NOT = { exists = YUG }
+		control = { province = 453 data = -1 }#ベオグラード
+		control = { province = 382 data = -1 }#ザグレブ
+	}
+	name = "EVT_60552_NAME"
+	desc = "EVT_60553_DESC"
+	style = 0
+	picture = "Rhineland"
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+ 	
+	action_a = {
+		name = "EVT_60552_ACTA"
+		command = { type = independence which = YUG value = 0 when = 0 }
+		command = { type = sleepevent which = 60563 }
+	}
+	action_b = {
+		name = "EVT_60552_ACTB"
+		command = { type = sleepevent which = 60556 }
+		command = { type = sleepevent which = 60557 }
+		command = { type = sleepevent which = 60558 }
+		command = { type = sleepevent which = 60559 }
+	}
+}
+
+#########################################################################
+#  ユーゴスラヴィア セットアップ
+#########################################################################
+event = {
+	id = 60556
+	random = no
+	country = YUG
+	trigger = {
+		event = 60552
+		ai = no
+	}
+	
+	date = { day = 0 month = january year = 1944 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	name = "EVT_60556_NAME"
+	desc = "EVT_60552_DESC"
+	style = 0
+
+	action_a = {
+		name = "OK"
+		command = { type = inherit which = ALB }
+		command = { type = dissent value = -10 }
+		command = { type = belligerence value = -5 }
+		command = { type = addcore which = 390 } #アルバニア
+		command = { type = addcore which = 391 }
+		command = { type = sleepevent which = 60557 }
+		command = { type = sleepevent which = 60558 }
+		command = { type = sleepevent which = 60559 }
+	}
+}
+
+event = {
+	id = 60557
+	random = no
+	country = YUG
+	trigger = {
+		event = 60553
+		ai = no
+	}
+	
+	date = { day = 0 month = january year = 1944 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	name = "EVT_60556_NAME"
+	desc = "EVT_60553_DESC"
+	style = 0
+
+	action_a = {
+		name = "OK"
+		command = { type = inherit which = CRO }
+		command = { type = dissent value = -10 }
+		command = { type = belligerence value = -5 }
+		command = { type = sleepevent which = 60556 }
+		command = { type = sleepevent which = 60558 }
+		command = { type = sleepevent which = 60559 }
+	}
+}
+
+event = {
+	id = 60558
+	random = no
+	country = YUG
+	trigger = {
+		event = 60554
+		ai = no
+	}
+	
+	date = { day = 0 month = january year = 1944 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	name = "EVT_60556_NAME"
+	desc = "EVT_60553_DESC"
+	style = 0
+
+	action_a = {
+		name = "OK"
+		command = { type = inherit which = SER }
+		command = { type = dissent value = -10 }
+		command = { type = belligerence value = -5 }
+		command = { type = sleepevent which = 60556 }
+		command = { type = sleepevent which = 60557 }
+		command = { type = sleepevent which = 60559 }
+	}
+}
+
+event = {
+	id = 60559
+	random = no
+	country = YUG
+	trigger = {
+		event = 60555
+		ai = no
+	}
+	
+	date = { day = 0 month = january year = 1944 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	name = "EVT_60556_NAME"
+	desc = "EVT_60553_DESC"
+	style = 0
+
+	action_a = {
+		name = "OK"
+		command = { type = inherit which = SLV }
+		command = { type = dissent value = -10 }
+		command = { type = belligerence value = -5 }
+		command = { type = sleepevent which = 60556 }
+		command = { type = sleepevent which = 60557 }
+		command = { type = sleepevent which = 60558 }
+	}
+}
+
+##############################################################
+#ユーゴスラビア変態-他のバルカン諸国を独立させていた場合
+##############################################################
+event = {
+	id = 60560
+ 	random = no
+ 	country = YUG
+	trigger = {
+		flag = yugo_palti2
+		OR = {
+			NOT = { alliance = { country = YUG country = GER } }
+			NOT = { alliance = { country = YUG country = SOV } }
+			NOT = { ispuppet = YUG }
+		}
+		exists = ALB
+		OR = {
+			alliance = { country = YUG country = ALB }
+			puppet = { country = ALB country = YUG }
+		}
+	}
+	name = "EVT_60560_NAME"
+	desc = "EVT_60560_DESC"
+	style = 0
+	picture = "Rhineland"
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action_a = {
+		name = "EVT_60560_ACTA"
+		ai_chance = 100
+		command = { type = addcore which = 390 } #アルバニア
+		command = { type = addcore which = 391 }
+		command = { type = inherit which = ALB }
+		command = { type = belligerence value = -5 }
+	}
+	action_b = {
+		name = "EVT_60560_ACTB"
+		ai_chance = 0
+		command = {  }
+	}
+}
+
+event = {
+	id = 60561
+ 	random = no
+ 	country = YUG
+	trigger = {
+		flag = yugo_palti2
+		OR = {
+			NOT = { alliance = { country = YUG country = GER } }
+			NOT = { alliance = { country = YUG country = SOV } }
+			NOT = { ispuppet = YUG }
+		}
+		exists = CRO
+		OR = {
+			alliance = { country = YUG country = CRO }
+			puppet = { country = CRO country = YUG }
+		}
+	}
+	name = "EVT_60561_NAME"
+	desc = "EVT_60560_DESC"
+	style = 0
+	picture = "Rhineland"
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action_a = {
+		name = "EVT_60560_ACTA"
+		ai_chance = 100
+		command = { type = inherit which = CRO }
+		command = { type = belligerence value = -5 }
+	}
+	action_b = {
+		name = "EVT_60560_ACTB"
+		ai_chance = 0
+		command = {  }
+	}
+}
+
+event = {
+	id = 60562
+ 	random = no
+ 	country = YUG
+	trigger = {
+		flag = yugo_palti2
+		OR = {
+			NOT = { alliance = { country = YUG country = GER } }
+			NOT = { alliance = { country = YUG country = SOV } }
+			NOT = { ispuppet = YUG }
+		}
+		exists = SER
+		OR = {
+			alliance = { country = YUG country = SER }
+			puppet = { country = SER country = YUG }
+		}
+	}
+	name = "EVT_60562_NAME"
+	desc = "EVT_60560_DESC"
+	style = 0
+	picture = "Rhineland"
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action_a = {
+		name = "EVT_60560_ACTA"
+		ai_chance = 100
+		command = { type = inherit which = SER }
+		command = { type = belligerence value = -5 }
+	}
+	action_b = {
+		name = "EVT_60560_ACTB"
+		ai_chance = 0
+		command = {  }
+	}
+}
+
+event = {
+	id = 60563
+ 	random = no
+ 	country = YUG
+	trigger = {
+		flag = yugo_palti2
+		OR = {
+			NOT = { alliance = { country = YUG country = GER } }
+			NOT = { alliance = { country = YUG country = SOV } }
+			NOT = { ispuppet = YUG }
+		}
+		exists = SLV
+		OR = {
+			alliance = { country = YUG country = SLV }
+			puppet = { country = SLV country = YUG }
+		}
+	}
+	name = "EVT_60563_NAME"
+	desc = "EVT_60560_DESC"
+	style = 0
+	picture = "Rhineland"
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action_a = {
+		name = "EVT_60560_ACTA"
+		ai_chance = 100
+		command = { type = inherit which = SLV }
+		command = { type = belligerence value = -5 }
+	}
+	action_b = {
+		name = "EVT_60560_ACTB"
+		ai_chance = 0
+		command = {  }
+	}
+}
+

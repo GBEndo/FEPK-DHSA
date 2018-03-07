@@ -1,0 +1,151 @@
+HUN;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+21001;Head of State;ミクローシュ・ホルティ;36;FA;Resigned Grand Admiral;High;M21001;x
+21002;Head of Government;ジュラ・ゲンベシュ;36;FA;Flamboyant Tough Guy;High;M21002;x
+21003;Foreign Minister;カルマン・カンヤ;36;FA;Great Compromiser;Medium;M21003;x
+21004;Minister of Armament;ティハメル・ファビニ;36;FA;Military Entrepreneur;Medium;M21004;x
+21005;Minister of Security;ミクローシュ・コズマ;36;FA;Prince of Terror;Medium;M21005;x
+21006;Head of Military Intelligence;ジュラ・ゲンベシュ;36;FA;Political Specialist;High;M21002;x
+21007;Chief of Staff;グスタフ・ヘネイエイ;36;FA;School of Mass Combat;High;M21007;x
+21008;Chief of Army;イシュトヴァーン・シュヴォイ;36;FA;Decisive Battle Doctrine;Medium;M21008;x
+21009;Chief of Navy;ミクローシュ・ホルティ;36;FA;Decisive Naval Battle Doctrine;Medium;M21001;x
+21010;Chief of Air Force;ラースロー・トモール;36;FA;Air Superiority Doctrine;Medium;M21010;x
+21011;Head of State;ハンガリー聖王冠;41;FA;Magyar Szent Korona;High;crown;x
+21012;Head of Government;ミクローシュ・ホルティ;38;FA;Silent Workhorse;High;M21001;x
+21041;Head of State;フェレンツ・サーラシ;42;NS;Powerhungry Demagogue;High;M21021;x
+21042;Head of State;ミクローシュ・ホルティ;44;NS;Resigned Grand Admiral;High;M21001;x
+21044;Head of State;オットー2世;38;PA;The First Knight Of Modern;High;M21044;x
+21045;Head of State;カーロイ・ペイヤー;45;SD;Insignificant Layman;High;M21045;x
+21046;Head of State;ゾルターン・ティルディ;45;SC;Autocratic Charmer;High;M21011;x
+21047;Head of State;ゾルターン・ティルディ;47;ST;Autocratic Charmer;High;M21011;x
+21048;Head of State;ベラ・ゼデニ;36;ST;Stern Imperialist;High;M21031;x
+21049;Head of State;ラーソー・ライク;39;ST;Autocratic Charmer;High;M21035;x
+21050;Head of State;マーチャーシュ・ラーコシ;44;ST;Powerhungry Demagogue;High;M21032;x
+21051;Head of Government;デメ・ストーヤイ;39;NS;Happy Amateur;High;M21051;x
+21052;Head of Government;イェノ・ラチ;44;NS;Political Protege;High;M21022;x
+21053;Head of Government;カールマーン・ダラーニ;36;FA;Smiling Oilman;High;M21053;x
+21054;Head of Government;ベーラ・イムレーディ;38;FA;Corporate Suit;High;M21024;x
+21055;Head of Government;パール・テレキ伯爵;39;FA;Naive Optimist;High;M21055;x
+21056;Head of Government;ラースロー・バルドッシ;41;FA;Silent Workhorse;High;M21056;x
+21057;Head of Government;ミクローシュ・カーロイ;42;FA;Happy Amateur;High;M21057;x
+21058;Head of Government;ゲーザ・ラカトシュ;44;FA;Old General;High;M21058;x
+21059;Head of Government;ミクローシュ・ダールノキ;44;PA;Corporate Suit;High;M21059;x
+21060;Head of Government;カーロイ・バルタ;45;PA;Old General;High;M21060;x
+21061;Head of Government;アールパード・サカシチ;45;SD;Happy Amateur;High;M21061;x
+21062;Head of Government;ゾルターン・ティルディ;36;SC;Silent Workhorse;High;M21011;x
+21063;Head of Government;フェレンツ・ナジ;46;SC;Happy Amateur;High;M21012;x
+21064;Head of Government;ラースロー・ライク;36;ST;Flamboyant Tough Guy;High;M21035;x
+21065;Head of Government;マーチャーシュ・ラーコシ;44;ST;Backroom Backstabber;High;M21032;x
+21066;Foreign Minister;デメ・ストーヤイ;44;NS;Ideological Crusader;Medium;M21051;x
+21067;Foreign Minister;ガボール・ケメニ;44;NS;Great Compromiser;Medium;M21067;x
+21069;Foreign Minister;ベーラ・イムレーディ;38;FA;Ideological Crusader;Medium;M21024;x
+21070;Foreign Minister;イシュトヴァーン・チャキ;39;FA;The Cloak N Dagger Schemer;Medium;M21070;x
+21071;Foreign Minister;ラースロー・バルドッシ;41;FA;Iron Fisted Brute;Medium;M21056;x
+21072;Foreign Minister;グスタフ・ヘネイエイ;44;FA;General Staffer;High;M21007;x
+21073;Foreign Minister;エドガー・ケクシュ;44;PA;Iron Fisted Brute;Medium;M21073;x
+21074;Foreign Minister;エンドレ・バイシー＝ジリンズキ;45;PA;General Staffer;Medium;M21074;x
+21075;Foreign Minister;アールパード・サカシチ;45;SD;Biased Intellectual;High;M21061;x
+21076;Foreign Minister;フランソワ・ディーク;36;SC;Apologetic Clerk;Medium;M21076;x
+21077;Foreign Minister;フェレンツ・ナジ;39;SC;Great Compromiser;High;M21012;x
+21078;Foreign Minister;ヤノス・ギョンギョシ;44;SC;Great Compromiser;Medium;M21013;x
+21079;Foreign Minister;エリク・モルナール;36;ST;Ideological Crusader;Medium;M21079;x
+21080;Foreign Minister;マッタ・ザルカ;44;ST;General Staffer;Medium;M21037;x
+21081;Foreign Minister;ラースロー・ライク;47;ST;Iron Fisted Brute;Medium;M21035;x
+21082;Minister of Armament;イェノ・ラチ;39;NS;Laissez-Faire Capitalist;Medium;M21022;x
+21083;Minister of Armament;ベーラ・イムレーディ;36;FA;Infantry Proponent;Medium;M21024;x
+21084;Minister of Armament;ラヨス・レメニ＝シュネラー;38;FA;Administrative Genius;Medium;M21084;x
+21085;Minister of Armament;ラースロー・エンドレ;44;FA;Strategic Air Proponent;Medium;M21085;x
+21086;Minister of Armament;インレ・オルトヴァニ;44;PA;Balanced Budget Economy;Medium;M21086;x
+21087;Minister of Armament;エドガー・ケクシュ;45;PA;Corrupt Kleptocrat;Medium;M21073;x
+21088;Minister of Armament;エティエンネ・デ・ウィンチクラー;46;PA;Resource Industrialist;Medium;M21088;x
+21089;Minister of Armament;レソ・カストナー;45;SD;Administrative Genius;Medium;M21089;x
+21090;Minister of Armament;アルベルト・アポニ;36;SC;Strategic Air Proponent;Medium;M21090;x
+21091;Minister of Armament;ミクローシュ・オルジャイ;39;SC;Resource Industrialist;Medium;M21014;x
+21092;Minister of Armament;ベラ・ゼデニ;36;ST;Infantry Proponent;High;M21031;x
+21093;Minister of Armament;エルノ・ジェロ;39;ST;Resource Industrialist;Medium;M21093;x
+21094;Minister of Armament;ゾルタン・ヴァス;46;ST;Military Entrepreneur;Medium;M21034;x
+21095;Minister of Security;アンドル・ヤルコス;39;NS;Prince of Terror;Medium;M21025;x
+21096;Minister of Security;ガボール・ヴァイナ;44;NS;Man of the People;Medium;M21096;x
+21098;Minister of Security;カールマーン・ダラーニ;38;FA;Back Stabber;Medium;M21053;x
+21099;Minister of Security;パール・テレキ伯爵;39;FA;Compassionate Gentleman;Low;M21055;x
+21100;Minister of Security;フェレンツ・ケレシュテス＝フィッシャー;41;FA;Silent Lawyer;High;M21100;x
+21102;Minister of Security;ミクローシュ・カーロイ;42;FA;Man of the People;Medium;M21057;x
+21103;Minister of Security;カルマン・シェル;44;FA;Crime Fighter;Medium;M21103;x
+21104;Minister of Security;エドガー・ケクシュ;44;PA;Crooked Kleptocrat;Medium;M21073;x
+21105;Minister of Security;ラースロー・バキ;45;PA;Crime Fighter;Medium;M21105;x
+21107;Minister of Security;ヨセフ・レヴァイ;45;SD;Crime Fighter;Medium;M21107;x
+21108;Minister of Security;ヨセフ・シェル;36;SC;Efficient Sociopath;Medium;M21108;x
+21109;Minister of Security;ミクローシュ・ボンソス;44;SC;Silent Lawyer;Medium;M21109;x
+21110;Minister of Security;ミハーイ・ファルカス;36;ST;Prince of Terror;Medium;M21110;x
+21111;Minister of Security;ラースロー・ライク;39;ST;Crime Fighter;Medium;M21035;x
+21112;Minister of Security;マーチャーシュ・ラーコシ;44;ST;Crooked Kleptocrat;Very High;M21032;x
+21113;Minister of Security;イムレ・ナジ;45;ST;Back Stabber;Medium;M21113;x
+21114;Minister of Security;フェレンツ・エルデイ;47;ST;Compassionate Gentleman;Medium;M21114;x
+21115;Head of Military Intelligence;フェレンツ・ライニス;44;NS;Dismal Enigma;Medium;M21115;x
+21116;Head of Military Intelligence;アンドル・ヤルコス;44;NS;Political Specialist;Medium;M21025;x
+21117;Head of Military Intelligence;レソ・アンドルカ;36;FA;Technical Specialist;Medium;M21117;x
+21118;Head of Military Intelligence;ミハーイ・ウイヴァリ;39;FA;Logistics Specialist;High;M21118;x
+21119;Head of Military Intelligence;アンドラス・ザコ;41;FA;Political Specialist;Medium;M21119;x
+21120;Head of Military Intelligence;カダール・ギュラ;43;FA;Dismal Enigma;Medium;M21120;x
+21121;Head of Military Intelligence;エドガー・ケクシュ;44;PA;Naval Intelligence Specialist;Medium;M21073;x
+21122;Head of Military Intelligence;フェレンツ・ケレシュテス＝フィッシャー;45;PA;Industrial Specialist;Medium;M21100;x
+21123;Head of Military Intelligence;カーロイ・ペイヤー;45;SD;Industrial Specialist;Low;M21045;x
+21124;Head of Military Intelligence;ゾルターン・ティルディ;36;SC;Dismal Enigma;Medium;M21011;x
+21125;Head of Military Intelligence;ヨセフ・シェル;44;SC;Political Specialist;Medium;M21108;x
+21126;Head of Military Intelligence;エルノ・ジェロ;36;ST;Logistics Specialist;Medium;M21093;x
+21127;Head of Military Intelligence;ラースロー・ライク;46;ST;Political Specialist;Medium;M21035;x
+21128;Chief of Staff;ラヨシュ・チャタイ・フォン・チャタイ;39;NS;School of Manoeuvre;Medium;M21128;x
+21129;Chief of Staff;カーロイ・ベレグフィ;44;NS;School of Manoeuvre;Medium;M21129;x
+21131;Chief of Staff;カーロイ・バルタ;38;FA;School of Psychology;Medium;M21060;x
+21132;Chief of Staff;ヴィルモス・ナジ;42;FA;School of Defence;Medium;M21132;x
+21133;Chief of Staff;サンドール・シルマイ;44;FA;School of Fire Support;Medium;M21133;x
+21135;Chief of Staff;ヴィルモス・ロダー;45;PA;Commando Doctrine Staff;Medium;M21135;x
+21137;Chief of Staff;ヤーノシュ・ヴェレシュ;36;SC;School of Manoeuvre;Medium;M21017;x
+21138;Chief of Staff;マッタ・ザルカ;36;ST;School of Psychology;Medium;M21037;x
+21139;Chief of Army;ラヨシュ・チャタイ・フォン・チャタイ;44;NS;Armoured Spearhead Doctrine;Medium;M21128;x
+21140;Chief of Army;カーロイ・ベレグフィ;44;NS;Guns and Butter Doctrine;Medium;M21129;x
+21142;Chief of Army;ヘンリク・ヴェルト;38;FA;Static Defence Doctrine;Medium;M21142;x
+21143;Chief of Army;エドガー・ケクシュ;42;FA;Guns and Butter Doctrine;Medium;M21073;x
+21144;Chief of Army;ゲーザ・ラカトシュ;44;FA;Elastic Defence Doctrine;Low;M21058;x
+21145;Chief of Army;ミクローシュ・ダールノキ;44;PA;Static Defence Doctrine;NA;M21059;x
+21146;Chief of Army;フーゴ・ソニ;45;PA;Decisive Battle Doctrine;Medium;M21146;x
+21147;Chief of Army;ガボール・シシュカラタイ;45;SD;Guns and Butter Doctrine;Medium;M21136;x
+21148;Chief of Army;フェレンツ・ソンバトヘイ;36;SC;Static Defence Doctrine;High;M21148;x
+21149;Chief of Army;ヤーノシュ・ヴェレシュ;44;SC;Elastic Defence Doctrine;Medium;M21017;x
+21150;Chief of Army;ニコライ・ベルジン;36;ST;Decisive Battle Doctrine;Medium;M21038;x
+21151;Chief of Navy;サンドール・シア;39;NS;Base Control Doctrine;Medium;M21151;x
+21153;Chief of Navy;エドガー・ケクシュ;44;PA;Base Control Doctrine;Medium;M21073;x
+21154;Chief of Navy;オットー2世;45;PA;Power Projection Doctrine;High;M21044;x
+21155;Chief of Navy;レソ・カストナー;45;SD;Base Control Doctrine;High;M21089;x
+21156;Chief of Navy;フランソワ・ディーク;36;SC;Indirect Approach Doctrine;High;M21076;x
+21157;Chief of Navy;カルマン・ハーディ;36;ST;Decisive Naval Battle Doctrine;Medium;M21039;x
+21158;Chief of Air Force;サンドール・マグアロシ;39;NS;Army Aviation Doctrine;Medium;M21030;x
+21159;Chief of Air Force;フェレンツ・サーラシ;44;NS;Naval Aviation Doctrine;Medium;M21021;x
+21161;Chief of Air Force;フェレンツ・フェケテハルミ＝チェイドナー;38;FA;Army Aviation Doctrine;Medium;M21161;x
+21162;Chief of Air Force;ジェルジ・デブローディ;41;FA;Vertical Envelopment Doctrine;Medium;M21040;x
+21163;Chief of Air Force;カルマン・テルネグ＝ラッツ;44;PA;Army Aviation Doctrine;Medium;M21163;x
+21164;Chief of Air Force;フェレンツ・ケレシュテス＝フィッシャー;46;PA;Air Superiority Doctrine;High;M21100;x
+21165;Chief of Air Force;エドガー・ケクシュ;45;SD;Air Superiority Doctrine;Medium;M21073;x
+21166;Chief of Air Force;ベラ・ラコシ;36;SC;Vertical Envelopment Doctrine;Medium;M21020;x
+21167;Chief of Air Force;ジェルジ・デブローディ;36;ST;Air Superiority Doctrine;Medium;M21040;x
+21168;Head of State;ミクローシュ・ホルティ;36;SC;Resigned Grand Admiral;High;M21001;x
+21169;Foreign Minister;フェレンツ・サーラシ;39;NS;Iron Fisted Brute;Medium;M21021;x
+21170;Head of Military Intelligence;サンドール・シア;39;NS;Industrial Specialist;Medium;M21151;x
+21171;Chief of Army;フェレンツ・フェケテハルミ＝チェイドナー;39;NS;Elastic Defence Doctrine;Medium;M21161;x
+21172;Head of State;ゲーザ・ラカトシュ;44;PA;Resigned Generalissimo;High;M21058;x
+21174;Chief of Staff;ガボール・シシュカラタイ;47;ST;Commando Doctrine Staff;Medium;M21136;x
+21175;Head of Government;フェレンツ・ケレシュテス＝フィッシャー;42;FA;Happy Amateur;High;M21100;x
+21176;Foreign Minister;パール・テレキ伯爵;41;FA;Great Compromiser;High;M21055;x
+21177;Foreign Minister;フェレンツ・ケレシュテス＝フィッシャー;42;FA;Apologetic Clerk;High;M21100;x
+21178;Foreign Minister;ミクローシュ・カーロイ;42;FA;General Staffer;High;M21057;x
+21179;Foreign Minister;イェノ・ギチ;43;FA;Apologetic Clerk;High;M21179;x
+21180;Head of State;アールパード・サカシチ;48;ST;Insignificant Layman;High;M21061;x
+21181;Head of State;ローナイ・シャーンドル;50;ST;Popular Figurehead;High;M21181;x
+21182;Head of State;イシュトヴァーン・ドビ;52;ST;Autocratic Charmer;High;M21182;x
+21183;Head of Government;ディンニェーシュ・ラヨシュ;47;ST;Happy Amateur;High;M21183;x
+21184;Head of Government;イシュトヴァーン・ドビ;48;ST;Ambitious Union Boss;High;M21182;x
+21185;Head of Government;イムレ・ナジ;53;ST;Naive Optimist;High;M21113;x
+21186;Foreign Minister;カーライ・ジュラ;48;ST;The Cloak N Dagger Schemer;Medium;M21186;x
+21187;Foreign Minister;カーロイ・キシュ;52;ST;Apologetic Clerk;Medium;M21187;x
+21188;Minister of Armament;ホルヴァート・イムレ;52;ST;Theoretical Scientist;Medium;M21188;x
+21189;Minister of Security;カーダール・ヤーノシュ;52;ST;Back Stabber;Very High;M21189;x

@@ -1,0 +1,10 @@
+allowed_brigades = naval_asw
+allowed_brigades = naval_radar_l
+allowed_brigades = naval_improved_hull_l
+allowed_brigades = naval_anti_air_l
+max_allowed_brigades = 3
+
+# 0 - 強襲ヘリコプター母艦
+model = {
+	cost						= 0
+}

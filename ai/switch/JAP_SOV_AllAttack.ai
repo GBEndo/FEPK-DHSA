@@ -1,0 +1,14 @@
+# German End of Norway Invasion AI File by Lothos
+
+###################################
+# Invasions and Naval
+###################################
+front = { 
+	enemy_handicap = {
+		SOV = 0
+		MON = 0
+	passivity = { 
+		SOV = 0
+		MON = 0
+	}
+}

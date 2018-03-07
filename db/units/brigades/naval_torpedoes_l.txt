@@ -1,0 +1,151 @@
+# 0 - ‹›—‹‡T
+model = {
+	cost 				= 2
+	buildtime			= 130
+	manpower 			= 0.05
+	surfacedetectioncapability	= 0
+	airdetectioncapability		= 0
+	subdetectioncapability		= 0
+	airdefence			= 0
+	seaattack			= 0.5 #0
+	convoyattack			= 1
+	subattack			= 0
+	airattack			= 0
+	shorebombardment		= 0
+	distance			= 0
+	supplyconsumption 		= 0.1
+	fuelconsumption			= 0
+	upgrade_time_factor 		= 0.5
+	upgrade_cost_factor 		= 1.0
+	equipment = { manpower = 50 }
+}
+# 1 - ‹›—‹‡U
+model = {
+	cost 				= 2
+	buildtime			= 140
+	manpower 			= 0.05
+	surfacedetectioncapability	= 0
+	airdetectioncapability		= 0
+	subdetectioncapability		= 0
+	airdefence			= 0
+	seaattack			= 0
+	convoyattack			= 2
+	subattack			= 0
+	airattack			= 0
+	shorebombardment		= 0
+	distance			= 0
+	supplyconsumption 		= 0.1
+	fuelconsumption			= 0
+	upgrade_time_factor 		= 0.5
+	upgrade_cost_factor 		= 1.0
+	equipment = { manpower = 50 }
+}
+# 2 - ‹›—‹‡V
+model = {
+	cost 				= 2
+	buildtime			= 150
+	manpower 			= 0.05
+	surfacedetectioncapability	= 0
+	airdetectioncapability		= 0
+	subdetectioncapability		= 0
+	airdefence			= 0
+	seaattack			= 1.0 #0
+	convoyattack			= 3
+	subattack			= 0
+	airattack			= 0
+	shorebombardment		= 0
+	distance			= 0
+	supplyconsumption 		= 0.1
+	fuelconsumption			= 0
+	upgrade_time_factor 		= 0.5
+	upgrade_cost_factor 		= 1.0
+	equipment = { manpower = 50 }
+}
+# 3 - ‹›—‹‡W
+model = {
+	cost 				= 2.5
+	buildtime			= 150
+	manpower 			= 0.05
+	surfacedetectioncapability	= 0
+	airdetectioncapability		= 0
+	subdetectioncapability		= 0
+	airdefence			= 0
+	seaattack			= 1.5
+	convoyattack			= 4
+	subattack			= 0
+	airattack			= 0
+	shorebombardment		= 0
+	distance			= 0.08
+	supplyconsumption 		= 0
+	fuelconsumption			= 0
+	upgrade_time_factor 		= 0.5
+	upgrade_cost_factor 		= 1.0
+	equipment = { manpower = 50 }
+}
+# 4 - ‹›—‹‡X
+model = {
+	cost 				= 2.5
+	buildtime			= 160
+	manpower 			= 0.05
+	surfacedetectioncapability	= 0
+	airdetectioncapability		= 0
+	subdetectioncapability		= 0
+	airdefence			= 0
+	seaattack			= 2.0
+	convoyattack			= 5
+	subattack			= 0
+	airattack			= 0
+	shorebombardment		= 0
+	distance			= 0.01
+	supplyconsumption 		= 0.2
+	fuelconsumption			= 0
+	upgrade_time_factor 		= 0.5
+	upgrade_cost_factor 		= 1.0
+	equipment = { manpower = 50 }
+}
+# 5 - ‹›—‹‡Y
+model = {
+	cost 				= 2.5
+	buildtime			= 170
+	manpower 			= 0.05
+	surfacedetectioncapability	= 0
+	airdetectioncapability		= 0
+	subdetectioncapability		= 0
+	airdefence			= 0
+	seaattack			= 2.5 #0
+	convoyattack			= 6
+	subattack			= 0
+	airattack			= 0
+	shorebombardment		= 0
+	distance			= 0.03
+	supplyconsumption 		= 0.2
+	fuelconsumption			= 0
+	upgrade_time_factor 		= 0.5
+	upgrade_cost_factor 		= 1.0
+	equipment = { manpower = 50 }
+}
+# 6 - ‹›—‹‡Z
+model = {
+	cost 				= 2.5
+	buildtime			= 180
+	manpower 			= 0.05
+	surfacedetectioncapability	= 0
+	airdetectioncapability		= 0
+	subdetectioncapability		= 0
+	airdefence			= 0
+	seaattack			= 3.0
+	convoyattack			= 7
+	subattack			= 0
+	airattack			= 0
+	shorebombardment		= 0
+	distance			= 0.05
+	supplyconsumption 		= 0.2
+	fuelconsumption			= 0
+	upgrade_time_factor 		= 0.5
+	upgrade_cost_factor 		= 1.0
+	equipment = { manpower = 50 }
+}
+
+
+########################################
+

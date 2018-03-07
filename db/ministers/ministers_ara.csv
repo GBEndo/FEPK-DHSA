@@ -1,0 +1,44 @@
+ARA;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+558001;Head of State;ファルク1世;36;SC;Insignificant Layman;High;M512011;x
+558002;Head of Government;ムスタファ・アン＝ナース・パシャ;36;SC;Flamboyant Tough Guy;High;M512005;x
+558003;Foreign Minister;アリ・マヒール・パシャ;36;SC;Great Compromiser;High;M512002;x
+558004;Minister of Armament;ムハンマド・マフムード・パシャ;36;SC;Resource Industrialist;High;M512017;x
+558005;Minister of Security;ロマルコス・ハナ・パシャ;36;SC;Crime Fighter;Medium;M512064;x
+558006;Head of Military Intelligence;モハンメド・ヒルミ・イッサ;36;SC;Dismal Enigma;Medium;M512006;x
+558007;Chief of Staff;ハッサン・サブリ・パシャ;36;SC;School of Defence;Medium;M512007;x
+558008;Chief of Army;モハンメド・ナギブ;36;SC;Decisive Battle Doctrine;High;M512088;x
+558009;Chief of Navy;アブダラ・ジワール・パシャ;36;SC;Indirect Approach Doctrine;Medium;M512009;x
+558010;Chief of Air Force;アブデルハミド・ソリマン;36;SC;Air Superiority Doctrine;Medium;M512048;x
+558011;Head of State;エミル・エッデフ;36;PA;Pig-headed Isolationist;High;M529001;x
+558012;Head of State;アブドゥッラー1世;36;SD;Autocratic Charmer;High;M556001;x
+558013;Head of State;ムハンメド・ベイ・アル＝アビド;36;LE;Stern Imperialist;High;M528001;x
+558014;Head of Government;カイレディン・アル＝アーダブ;36;PA;Naive Optimist;High;M529006;x
+558015;Head of Government;イスマエル・ベイ・ガスピラリ;36;SD;Silent Workhorse;High;M556013;x
+558016;Head of Government;シュクリ・アル＝クウェイトリ;36;LE;Backroom Backstabber;High;M528015;x
+558017;Foreign Minister;アブダラー・アレフ・アル＝ヤフィ;36;PA;General Staffer;High;M529003;x
+558018;Foreign Minister;サミール・アル＝リファイ;36;SD;Apologetic Clerk;High;M556003;x
+558019;Foreign Minister;ファリス・アル＝クーリ;36;LE;The Cloak N Dagger Schemer;High;M528004;x
+558020;Minister of Armament;カイレディン・アル＝アーダブ;36;PA;laissez-faire capitalist;Medium;M529006;x
+558021;Minister of Armament;アフマド・カドリ;36;SD;Military Entrepreneur;Medium;M556017;x
+558022;Minister of Armament;シャイク・アブド・アル＝アリム・セリム;36;LE;Administrative Genius;Medium;M528030;x
+558023;Minister of Security;ナシム・マジュダラニ;36;PA;Compassionate Gentleman;Medium;M529039;x
+558024;Minister of Security;アウニ・アブドゥル・ハディ;36;SD;Silent Lawyer;Medium;M556020;x
+558025;Minister of Security;ファリス・アル＝クーリ;36;LE;Man of the People;Medium;M528004;x
+558026;Head of Military Intelligence;カイレディン・アル＝アーダブ;36;PA;Technical Specialist;Medium;M529006;x
+558027;Head of Military Intelligence;ルストゥム・ハイダル;36;SD;Political Specialist;Medium;M556025;x
+558028;Head of Military Intelligence;シャイク・ムハメド・アル＝ガウジ;36;LE;Industrial Specialist;Medium;M528024;x
+558029;Chief of Staff;アントワーヌ・ハルブ;36;PA;School of Mass Combat;Medium;M529052;x
+558030;Chief of Staff;ハッダド・アル＝ワリ;36;SD;School of Psychology;Medium;M556028;x
+558031;Chief of Staff;シャイク・ムハメド・アル＝ガウジ;36;LE;School of Fire Support;Medium;M528024;x
+558032;Chief of Army;ジャミ・ラフード;36;PA;Armoured Spearhead Doctrine;Medium;M529055;x
+558033;Chief of Army;ナイル・アル＝ジャファール;36;SD;Guns and Butter Doctrine;Medium;M556031;x
+558034;Chief of Army;アディブ・アル＝シシャクリ;36;LE;Elastic Defence Doctrine;Medium;M528051;x
+558035;Chief of Navy;ナビル・ジャド;36;PA;Open Seas Doctrine;Medium;M529059;x
+558036;Chief of Navy;ヒバー・アブデル・アディル;36;SD;Decisive Naval Battle Doctrine;Medium;M556034;x
+558037;Chief of Navy;シャイク・ムハメド・アル＝ガウジ;36;LE;Base Control Doctrine;Medium;M528024;x
+558038;Chief of Air Force;スリマヌ・ナウファイ;36;PA;Army Aviation Doctrine;Medium;M529045;x
+558039;Chief of Air Force;サミ・アル＝アフィズ;36;SD;Vertical Envelopment Doctrine;Medium;M556035;x
+558040;Chief of Air Force;フセイン・アル＝ザイム;36;LE;Carpet Bombing Doctrine;Medium;M528047;x
+558090;Head of State;アブドゥル・アジズ・アル・サウド;36;PA;Ruthless Powermonger;High;M63001;x
+558091;Head of Government;サウド・アル・サウド;36;PA;Backroom Backstabber;High;M63002;x

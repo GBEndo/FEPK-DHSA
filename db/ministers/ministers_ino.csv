@@ -1,0 +1,65 @@
+INO;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+577001;Head of State;ウィルヘルミナ;35;SC;Popular Figurehead;Very High;M8001;x
+577002;Head of Government;チャルダ・ヴァン・スタルケンボロー＝スタホウワー;35;SC;Flamboyant Tough Guy;Very High;M577002;x
+577003;Foreign Minister;ヒューベルトゥス・ヴァン・モーク;35;SC;Biased Intellectual;High;M577003;x
+577004;Minister of Armament;ポンティアク・ムハンマド3世;35;SC;Air Superiority Proponent;Medium;M577004;x
+577005;Minister of Security;フェッデ・シューラー;35;SC;Crime Fighter;High;M8113;x
+577006;Head of Military Intelligence;ライモント・ウェスターリング;35;SC;Naval Intelligence Specialist;Medium;M577006;x
+577007;Chief of Staff;ムルク・ボーアストラ;35;SC;School of Manoeuvre;Very High;L7802;x
+577008;Chief of Army;ヘラルドゥス・ベレンスホート;35;SC;Static Defence Doctrine;Very High;L7801;x
+577009;Chief of Navy;コンラート・ヘルフリッヒ;35;SC;Base Control Doctrine;Very High;L7839;x
+577010;Chief of Air Force;ルドルフ・ヴァン・オーイェン;35;SC;Army Aviation Doctrine;Very High;L7859;x
+577011;Head of State;アフメド・スカルノ;35;PA;Pig-headed Isolationist;Very High;M577011;x
+577012;Head of State;フェルディナンド・ルンバン・トビング;35;SD;Autocratic Charmer;Very High;M577012;x
+577013;Head of State;カワン・ムッソ;35;LE;Powerhungry Demagogue;Very High;M577013;x
+577014;Head of Government;ムハンマド・ハッタ;35;PA;Political Protege;Very High;M577014;x
+577015;Head of Government;ムハンマド・タムリン;35;SD;Smiling Oilman;Very High;M577015;x
+577016;Head of Government;アミール・シャリフディン;35;LE;Naive Optimist;Medium;M577016;x
+577017;Foreign Minister;アフマド・スバンドリオ;35;PA;Ideological Crusader;Medium;M577017;x
+577018;Foreign Minister;ヨプギャ・ハメンクブウォノ9世;43;PA;The Cloak N Dagger Schemer;Medium;M577018;x
+577019;Foreign Minister;スタン・シャフリル;35;SD;Apologetic Clerk;Low;M577019;x
+577020;Foreign Minister;スカルジョ・ウィリョプラナト;44;SD;Great Compromiser;Low;M577020;x
+577021;Foreign Minister;スリョノ・スリプノ;35;LE;Iron Fisted Brute;High;M577021;x
+577022;Minister of Armament;シャリフディン・プラウィラネガラ;35;PA;Air to Sea Proponent;Low;M577022;x
+577023;Minister of Armament;ドデチスモ・ジュアンダ;44;PA;Tank Proponent;Low;M577023;x
+577024;Minister of Armament;ハジ・アグス・サリム;45;PA;Administrative Genius;Low;M577024;x
+577025;Minister of Armament;ジョガルタ・アマング13世;43;SC;Air Superiority Proponent;Medium;M577025;x
+577026;Minister of Armament;ダヌディルジア・セティオブディ;35;SD;Infantry Proponent;Low;M577026;x
+577027;Minister of Armament;ルクマン・ダン・サルジョノ;35;LE;Military Entrepreneur;High;M577027;x
+577028;Minister of Security;D・W・コクロアミノト;35;PA;Prince of Terror;Medium;M577028;x
+577029;Minister of Security;ンガベヒ・ヴァン・ジョガカルタ;46;SC;Man of the People;High;M577029;x
+577030;Minister of Security;アリー・フレデリック・ラスト;35;SD;Back Stabber;Medium;M577030;x
+577031;Minister of Security;アダム・マリク;45;SD;Compassionate Gentleman;Medium;M577031;x
+577032;Minister of Security;S・M・カルトスウィルヨ;35;LE;Efficient Sociopath;High;M577032;x
+577033;Minister of Security;D・N・アイディット;45;LE;Silent Lawyer;High;M577033;x
+577034;Head of Military Intelligence;ベサール・スダーマン;35;PA;Logistics Specialist;High;M577034;x
+577035;Head of Military Intelligence;シプト・マングンクソモ博士;38;PA;Technical Specialist;High;M577035;x
+577036;Head of Military Intelligence;モハンメド・ヤミン;35;SD;Industrial Specialist;High;M577036;x
+577037;Head of Military Intelligence;T・N・スプラトマン;35;LE;Political Specialist;Low;M577037;x
+577038;Chief of Staff;ベサール・スダーマン;35;PA;School of Mass Combat;High;M577034;x
+577039;Chief of Staff;ヘラルドゥス・ベレンスホート;39;SC;School of Defence;Very High;L7801;x
+577040;Chief of Staff;ヘイン・テル・ポールテン;41;SC;School of Fire Support;Very High;L7819;x
+577041;Chief of Staff;ポンティアク・ハミド2世;35;SD;School of Psychology;Low;M577041;x
+577042;Chief of Staff;タン・マラカ;35;LE;School of Mass Combat;High;M577042;x
+577043;Chief of Army;アブドゥル・ハリス・ナスティオン;35;PA;Decisive Battle Doctrine;High;M577043;x
+577044;Chief of Army;ヘイン・テル・ポールテン;39;SC;Elastic Defence Doctrine;Very High;L7819;x
+577045;Chief of Army;ルドルフ・バッカー;41;SC;Armoured Spearhead Doctrine;Very High;L7800;x
+577046;Chief of Army;シモン・スポール;45;SC;Decisive Battle Doctrine;Very High;L7817;x
+577047;Chief of Army;ウィリップ・スモハルジョ;35;SD;Guns and Butter Doctrine;High;M577047;x
+577048;Chief of Army;タン・マラカ;35;LWR;Decisive Battle Doctrine;High;M577042;x
+577049;Chief of Navy;ジョガルタ・アマング9世;35;PA;Open Seas Doctrine;High;M577049;x
+577050;Chief of Navy;ウィー・ヨハンネス;35;SD;Indirect Approach Doctrine;Low;M577050;x
+577051;Chief of Navy;アフマド・アリミン;35;LE;Decisive Naval Battle Doctrine;Low;M577051;x
+577052;Chief of Air Force;アフマド・スバンドリオ;35;PA;Naval Aviation Doctrine;High;M577017;x
+577053;Chief of Air Force;モハンメド・ジャスフ;42;PA;Air Superiority Doctrine;High;M577053;x
+577054;Chief of Air Force;R・M・スルヨ;35;SD;Vertical Envelopment Doctrine;High;M577054;x
+577055;Chief of Air Force;I・M・ナジョアン;35;LE;Carpet Bombing Doctrine;Low;M577055;x
+577056;Head of Government;アブドゥル・ハリム;50;PA;Naive Optimist;Very High;M577056;x
+577057;Head of Government;モハメド・ナシール;50;PA;Corporate Suit;Very High;M577057;x
+577058;Head of Government;スコマン・ウィルヨサンドジョヨ;51;PA;Smiling Oilman;Very High;M577058;x
+577059;Head of Government;シスワント・ウィロポ;52;PA;Ambitious Union Boss;Very High;M577059;x
+577060;Head of Government;アリ・サストロミドジョヨ;53;PA;Silent Workhorse;Very High;M577060;x
+577061;Foreign Minister;ムハンマド・ハッタ;51;PA;The Cloak N Dagger Schemer;Medium;M577014;x
+577062;Minister of Security;アブドゥル・ハリム;49;PA;Crime Fighter;Medium;M577056;x
+577063;Chief of Staff;ワキル・パケメハサン;50;PA;School of Manoeuvre;Low;M577063;x

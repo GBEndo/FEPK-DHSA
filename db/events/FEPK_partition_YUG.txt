@@ -1,0 +1,2069 @@
+#########################################################################
+#	FEPK_partition_YUG.txt
+#	ユーゴ分割処理
+#########################################################################
+#id = 135000-39		ユーゴ分割処理
+#id = 135040-59		独墺ルートのユーゴ分割処理
+#id = 135060-59		ユーゴ枢軸時の枢軸国領土要求
+#########################################################################
+#  Yugo is attacked before historic date NOT by Germany
+##########
+event = {
+	id = 135000
+	random = no
+	country = GER
+
+	trigger = {
+		atwar = YUG
+		NOT = {
+			war = { country = GER country = YUG }
+			alliance = { country = GER country = YUG }
+		}
+	}
+
+        date = { day = 0 month = january year = 1935 }
+        offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135000_NAME"
+	desc = "EVT_135000_DESC"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = end_guarantee which = GER where = YUG }
+		command = { type = sleepevent which = 135001 }
+		command = { type = sleepevent which = 135002 }
+		command = { type = sleepevent which = 135003 }
+		command = { type = sleepevent which = 135004 }
+		command = { type = sleepevent which = 135005 }
+		command = { type = sleepevent which = 135006 }
+		command = { type = sleepevent which = 135007 }
+		command = { type = sleepevent which = 135008 }
+		command = { type = sleepevent which = 135010 }
+		command = { type = sleepevent which = 135019 }
+		command = { type = sleepevent which = 135020 }
+	}
+}
+##########
+#  Partition of Yugoslavia - Italy
+##########
+event = {
+	id = 135001
+	random = no 
+	country = ITA
+
+	trigger = {
+		alliance = { country = GER country = ITA }
+		NOT = { exists = YUG }
+		OR = {
+			NOT = {
+				exists = GRE
+			}
+			NOT = {
+				war = { country = GER country = GRE }
+			}
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135001_NAME"
+	desc = "EVT_135001_DESC"
+
+	picture = "failed_objective"
+
+	action_a = {
+		name = "OK"
+		command = { type = secedeprovince which = GER value = 380 } #
+		command = { type = secedeprovince which = GER value = 459 } #
+		command = { type = secedeprovince which = GER value = 455 } #
+		command = { type = secedeprovince which = GER value = 454 } #
+		command = { type = secedeprovince which = GER value = 453 } #
+		command = { type = secedeprovince which = GER value = 381 } #
+		command = { type = secedeprovince which = GER value = 382 } #
+		command = { type = secedeprovince which = GER value = 383 } #
+		command = { type = secedeprovince which = GER value = 384 } #
+		command = { type = secedeprovince which = GER value = 385 } #
+		command = { type = secedeprovince which = GER value = 386 } #
+		command = { type = secedeprovince which = GER value = 387 } #
+		command = { type = secedeprovince which = GER value = 388 } #
+		command = { type = secedeprovince which = GER value = 389 } #
+		command = { type = secedeprovince which = GER value = 451 } #
+		command = { type = secedeprovince which = GER value = 452 } #
+		command = { type = secedeprovince which = GER value = 418 } #
+		command = { type = secedeprovince which = GER value = 415 } #
+		command = { type = secedeprovince which = GER value = 493 } #
+		command = { type = secedeprovince which = GER value = 494 } #
+		command = { type = secedeprovince which = GER value = 413 } #
+		command = { type = secedeprovince which = GER value = 414 } #
+		#Albania
+		#command = { type = secedeprovince which = GER value = 390 }
+		#command = { type = secedeprovince which = GER value = 391 }
+	}
+}
+##########
+#  Partition of Yugoslavia - Hungary
+##########
+event = {
+	id = 135002
+	random = no 
+	country = HUN
+
+	trigger = {
+		alliance = { country = GER country = HUN }
+		NOT = { exists = YUG }
+		OR = {
+			NOT = {
+				exists = GRE
+			}
+			NOT = {
+				war = { country = GER country = GRE }
+			}
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135002_NAME"
+	desc = "EVT_135002_DESC"
+
+	picture = "failed_objective"
+
+	action_a = {
+		name = "OK"
+		command = { type = secedeprovince which = GER value = 380 } #
+		command = { type = secedeprovince which = GER value = 459 } #
+		command = { type = secedeprovince which = GER value = 455 } #
+		command = { type = secedeprovince which = GER value = 454 } #
+		command = { type = secedeprovince which = GER value = 453 } #
+		command = { type = secedeprovince which = GER value = 381 } #
+		command = { type = secedeprovince which = GER value = 382 } #
+		command = { type = secedeprovince which = GER value = 383 } #
+		command = { type = secedeprovince which = GER value = 384 } #
+		command = { type = secedeprovince which = GER value = 385 } #
+		command = { type = secedeprovince which = GER value = 386 } #
+		command = { type = secedeprovince which = GER value = 387 } #
+		command = { type = secedeprovince which = GER value = 388 } #
+		command = { type = secedeprovince which = GER value = 389 } #
+		command = { type = secedeprovince which = GER value = 451 } #
+		command = { type = secedeprovince which = GER value = 452 } #
+		command = { type = secedeprovince which = GER value = 418 } #
+		command = { type = secedeprovince which = GER value = 415 } #
+		#command = { type = secedeprovince which = GER value = 493 } #
+		command = { type = secedeprovince which = GER value = 494 } #
+		command = { type = secedeprovince which = GER value = 413 } #
+		command = { type = secedeprovince which = GER value = 414 } #
+		#Albania
+		command = { type = secedeprovince which = GER value = 390 }
+		command = { type = secedeprovince which = GER value = 391 }
+	}
+}
+##########
+# Partition of Yugoslavia - Romania
+##########
+event = {
+	id = 135003
+	random = no 
+	country = ROM
+
+	trigger = {
+		alliance = { country = GER country = ROM }
+		NOT = { exists = YUG }
+		OR = {
+			NOT = {
+				exists = GRE
+			}
+			NOT = {
+				war = { country = GER country = GRE }
+			}
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135003_NAME"
+	desc = "EVT_135003_DESC"
+
+	picture = "failed_objective"
+
+	action_a = {
+		name = "OK"
+		command = { type = secedeprovince which = GER value = 380 } #
+		command = { type = secedeprovince which = GER value = 459 } #
+		command = { type = secedeprovince which = GER value = 455 } #
+		command = { type = secedeprovince which = GER value = 454 } #
+		command = { type = secedeprovince which = GER value = 453 } #
+		command = { type = secedeprovince which = GER value = 381 } #
+		command = { type = secedeprovince which = GER value = 382 } #
+		command = { type = secedeprovince which = GER value = 383 } #
+		command = { type = secedeprovince which = GER value = 384 } #
+		command = { type = secedeprovince which = GER value = 385 } #
+		command = { type = secedeprovince which = GER value = 386 } #
+		command = { type = secedeprovince which = GER value = 387 } #
+		command = { type = secedeprovince which = GER value = 388 } #
+		command = { type = secedeprovince which = GER value = 389 } #
+		command = { type = secedeprovince which = GER value = 451 } #
+		command = { type = secedeprovince which = GER value = 452 } #
+		command = { type = secedeprovince which = GER value = 418 } #
+		command = { type = secedeprovince which = GER value = 415 } #
+		command = { type = secedeprovince which = GER value = 493 } #
+		command = { type = secedeprovince which = GER value = 494 } #
+		command = { type = secedeprovince which = GER value = 413 } #
+		command = { type = secedeprovince which = GER value = 414 } #
+		#Albania
+		command = { type = secedeprovince which = GER value = 390 }
+		command = { type = secedeprovince which = GER value = 391 }
+	}
+}
+##########
+# Partition of Yugoslavia - Bulgaria
+##########
+event = {
+	id = 135004
+	random = no 
+	country = BUL
+
+	trigger = {
+		alliance = { country = GER country = BUL }
+		NOT = { exists = YUG }
+		OR = {
+			NOT = {
+				exists = GRE
+			}
+			NOT = {
+				war = { country = GER country = GRE }
+			}
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135004_NAME"
+	desc = "EVT_135004_DESC"
+
+	picture = "failed_objective"
+
+	action_a = {
+		name = "OK"
+		command = { type = secedeprovince which = GER value = 380 } #
+		command = { type = secedeprovince which = GER value = 459 } #
+		command = { type = secedeprovince which = GER value = 455 } #
+		command = { type = secedeprovince which = GER value = 454 } #
+		command = { type = secedeprovince which = GER value = 453 } #
+		command = { type = secedeprovince which = GER value = 381 } #
+		command = { type = secedeprovince which = GER value = 382 } #
+		command = { type = secedeprovince which = GER value = 383 } #
+		command = { type = secedeprovince which = GER value = 384 } #
+		command = { type = secedeprovince which = GER value = 385 } #
+		command = { type = secedeprovince which = GER value = 386 } #
+		command = { type = secedeprovince which = GER value = 387 } #
+		command = { type = secedeprovince which = GER value = 388 } #
+		command = { type = secedeprovince which = GER value = 389 } #
+		command = { type = secedeprovince which = GER value = 451 } #
+		command = { type = secedeprovince which = GER value = 452 } #
+		command = { type = secedeprovince which = GER value = 418 } #
+		command = { type = secedeprovince which = GER value = 415 } #
+		command = { type = secedeprovince which = GER value = 493 } #
+		command = { type = secedeprovince which = GER value = 494 } #
+		#command = { type = secedeprovince which = GER value = 413 } #
+		#command = { type = secedeprovince which = GER value = 414 } #
+		#Albania
+		command = { type = secedeprovince which = GER value = 390 }
+		command = { type = secedeprovince which = GER value = 391 }
+	}
+}
+##########
+# Partition of Yugoslavia - Greece
+##########
+event = {
+	id = 135005
+	random = no 
+	country = GRE
+
+	trigger = {
+		alliance = { country = GER country = GRE }
+		NOT = { exists = YUG }
+		OR = {
+			NOT = {
+				exists = GRE
+			}
+			NOT = {
+				war = { country = GER country = GRE }
+			}
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135005_NAME"
+	desc = "EVT_135003_DESC"
+
+	picture = "failed_objective"
+
+	action_a = {
+		name = "OK"
+		command = { type = secedeprovince which = GER value = 380 } #
+		command = { type = secedeprovince which = GER value = 459 } #
+		command = { type = secedeprovince which = GER value = 455 } #
+		command = { type = secedeprovince which = GER value = 454 } #
+		command = { type = secedeprovince which = GER value = 453 } #
+		command = { type = secedeprovince which = GER value = 381 } #
+		command = { type = secedeprovince which = GER value = 382 } #
+		command = { type = secedeprovince which = GER value = 383 } #
+		command = { type = secedeprovince which = GER value = 384 } #
+		command = { type = secedeprovince which = GER value = 385 } #
+		command = { type = secedeprovince which = GER value = 386 } #
+		command = { type = secedeprovince which = GER value = 387 } #
+		command = { type = secedeprovince which = GER value = 388 } #
+		command = { type = secedeprovince which = GER value = 389 } #
+		command = { type = secedeprovince which = GER value = 451 } #
+		command = { type = secedeprovince which = GER value = 452 } #
+		command = { type = secedeprovince which = GER value = 418 } #
+		command = { type = secedeprovince which = GER value = 415 } #
+		command = { type = secedeprovince which = GER value = 493 } #
+		command = { type = secedeprovince which = GER value = 494 } #
+		command = { type = secedeprovince which = GER value = 413 } #
+		command = { type = secedeprovince which = GER value = 414 } #
+		#Albania
+		command = { type = secedeprovince which = GER value = 390 }
+		command = { type = secedeprovince which = GER value = 391 }
+	}
+}
+##########
+# Partition of Yugoslavia - Albania
+##########
+event = {
+	id = 135006
+	random = no 
+	country = ALB
+
+	trigger = {
+		alliance = { country = GER country = ALB }
+		NOT = { exists = YUG }
+		OR = {
+			NOT = {
+				exists = GRE
+			}
+			NOT = {
+				war = { country = GER country = GRE }
+			}
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135006_NAME"
+	desc = "EVT_135003_DESC"
+
+	picture = "failed_objective"
+
+	action_a = {
+		name = "OK"
+		command = { type = secedeprovince which = GER value = 380 } #
+		command = { type = secedeprovince which = GER value = 459 } #
+		command = { type = secedeprovince which = GER value = 455 } #
+		command = { type = secedeprovince which = GER value = 454 } #
+		command = { type = secedeprovince which = GER value = 453 } #
+		command = { type = secedeprovince which = GER value = 381 } #
+		command = { type = secedeprovince which = GER value = 382 } #
+		command = { type = secedeprovince which = GER value = 383 } #
+		command = { type = secedeprovince which = GER value = 384 } #
+		command = { type = secedeprovince which = GER value = 385 } #
+		command = { type = secedeprovince which = GER value = 386 } #
+		command = { type = secedeprovince which = GER value = 387 } #
+		command = { type = secedeprovince which = GER value = 388 } #
+		command = { type = secedeprovince which = GER value = 389 } #
+		command = { type = secedeprovince which = GER value = 451 } #
+		command = { type = secedeprovince which = GER value = 452 } #
+		command = { type = secedeprovince which = GER value = 418 } #
+		command = { type = secedeprovince which = GER value = 415 } #
+		command = { type = secedeprovince which = GER value = 493 } #
+		command = { type = secedeprovince which = GER value = 494 } #
+		command = { type = secedeprovince which = GER value = 413 } #
+		command = { type = secedeprovince which = GER value = 414 } #
+		#Albania
+		#command = { type = secedeprovince which = GER value = 390 }
+		#command = { type = secedeprovince which = GER value = 391 }
+	}
+}
+##########
+#  Partition of Yugoslavia - Austria
+##########
+event = {
+	id = 135007
+	random = no 
+	country = AUS
+
+	trigger = {
+		alliance = { country = GER country = AUS }
+		NOT = { exists = YUG }
+		OR = {
+			NOT = {
+				exists = GRE
+			}
+			NOT = {
+				war = { country = GER country = GRE }
+			}
+		}
+	}	
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135007_NAME"
+	desc = "EVT_135004_DESC"
+
+	picture = "failed_objective"
+
+	action_a = {
+		name = "OK"
+		#command = { type = addcore which = 380 }
+		#command = { type = addcore which = 459 }
+		command = { type = secedeprovince which = GER value = 380 } #
+		command = { type = secedeprovince which = GER value = 459 } #
+		command = { type = secedeprovince which = GER value = 455 } #
+		command = { type = secedeprovince which = GER value = 454 } #
+		command = { type = secedeprovince which = GER value = 453 } #
+		command = { type = secedeprovince which = GER value = 381 } #
+		command = { type = secedeprovince which = GER value = 382 } #
+		command = { type = secedeprovince which = GER value = 383 } #
+		command = { type = secedeprovince which = GER value = 384 } #
+		command = { type = secedeprovince which = GER value = 385 } #
+		command = { type = secedeprovince which = GER value = 386 } #
+		command = { type = secedeprovince which = GER value = 387 } #
+		command = { type = secedeprovince which = GER value = 388 } #
+		command = { type = secedeprovince which = GER value = 389 } #
+		command = { type = secedeprovince which = GER value = 451 } #
+		command = { type = secedeprovince which = GER value = 452 } #
+		command = { type = secedeprovince which = GER value = 418 } #
+		command = { type = secedeprovince which = GER value = 415 } #
+		command = { type = secedeprovince which = GER value = 493 } #
+		command = { type = secedeprovince which = GER value = 494 } #
+		command = { type = secedeprovince which = GER value = 413 } #
+		command = { type = secedeprovince which = GER value = 414 } #
+		#Albania
+		command = { type = secedeprovince which = GER value = 390 }
+		command = { type = secedeprovince which = GER value = 391 }
+	}
+}
+##########
+# Partition of Yugoslavia - Turkey
+##########
+event = {
+	id = 135008
+	random = no 
+	country = TUR
+
+	trigger = {
+		alliance = { country = GER country = TUR }
+		NOT = { exists = YUG }
+		OR = {
+			NOT = {
+				exists = GRE
+			}
+			NOT = {
+				war = { country = GER country = GRE }
+			}
+		}
+	}	
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135008_NAME"
+	desc = "EVT_135003_DESC"
+
+	picture = "failed_objective"
+
+	action_a = {
+		name = "OK"
+		command = { type = secedeprovince which = GER value = 380 } #
+		command = { type = secedeprovince which = GER value = 459 } #
+		command = { type = secedeprovince which = GER value = 455 } #
+		command = { type = secedeprovince which = GER value = 454 } #
+		command = { type = secedeprovince which = GER value = 453 } #
+		command = { type = secedeprovince which = GER value = 381 } #
+		command = { type = secedeprovince which = GER value = 382 } #
+		command = { type = secedeprovince which = GER value = 383 } #
+		command = { type = secedeprovince which = GER value = 384 } #
+		command = { type = secedeprovince which = GER value = 385 } #
+		command = { type = secedeprovince which = GER value = 386 } #
+		command = { type = secedeprovince which = GER value = 387 } #
+		command = { type = secedeprovince which = GER value = 388 } #
+		command = { type = secedeprovince which = GER value = 389 } #
+		command = { type = secedeprovince which = GER value = 451 } #
+		command = { type = secedeprovince which = GER value = 452 } #
+		command = { type = secedeprovince which = GER value = 418 } #
+		command = { type = secedeprovince which = GER value = 415 } #
+		command = { type = secedeprovince which = GER value = 493 } #
+		command = { type = secedeprovince which = GER value = 494 } #
+		command = { type = secedeprovince which = GER value = 413 } #
+		command = { type = secedeprovince which = GER value = 414 } #
+		#Albania
+		command = { type = secedeprovince which = GER value = 390 }
+		command = { type = secedeprovince which = GER value = 391 }
+	}
+}
+#135009 free
+##########
+#  Partition of Yugoslavia - Germany - KEY EVENT
+##########
+event = {
+	id = 135010
+	random = no 
+	country = GER
+
+	trigger = {
+		NOT = { exists = YUG }
+		NOT = {
+			war = { country = GER country = HUN }
+			war = { country = GER country = ROM }
+			war = { country = GER country = BUL }
+			war = { country = GER country = ITA }
+			war = { country = GER country = ALB }
+		}
+		control = { province = 380 data = GER } #
+		control = { province = 459 data = GER } #
+		control = { province = 455 data = GER } #
+		control = { province = 454 data = GER } #
+		control = { province = 453 data = GER } #
+		control = { province = 381 data = GER } #
+		control = { province = 382 data = GER } #
+		control = { province = 383 data = GER } #
+		control = { province = 384 data = GER } #
+		control = { province = 385 data = GER } #
+		control = { province = 386 data = GER } #
+		control = { province = 387 data = GER } #
+		control = { province = 388 data = GER } #
+		control = { province = 389 data = GER } #
+		control = { province = 451 data = GER } #
+		control = { province = 452 data = GER } #
+		control = { province = 418 data = GER } #
+		#control = { province = 415 data = GER } #Kosovo
+		#control = { province = 493 data = GER } #Novi Sad
+		control = { province = 494 data = GER } #
+		#control = { province = 413 data = GER } #Macedonia
+		#control = { province = 414 data = GER } #Macedonia
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	picture = "failed_objective"
+
+	name = "EVT_135010_NAME"
+	desc = "EVT_135003_DESC"
+
+	action_a = {
+		name = "EVT_135010_ACTA"
+		command = { type = sleepevent which = 135001 }
+		command = { type = sleepevent which = 135002 }
+		command = { type = sleepevent which = 135003 }
+		command = { type = sleepevent which = 135004 }
+		command = { type = sleepevent which = 135005 }
+		command = { type = sleepevent which = 135006 }
+		command = { type = sleepevent which = 135007 }
+		command = { type = sleepevent which = 135008 }
+		command = { type = setflag which = no_serbia }
+	}
+}
+##########
+#  Spoils from Yugoslavia to Italy, Croatia Created
+##########
+event = {
+	id = 135011
+	random = no 
+	country = GER
+
+	trigger = {
+		alliance = { country = GER country = ITA }
+		event = 135010 #german key event
+		NOT = {
+			alliance = { country = GER country = AUS }
+			ispuppet = ITA
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135011_NAME"
+	desc = "EVT_135011_DESC"
+
+	picture = "failed_objective"
+
+	action_a = {
+		name = "EVT_135011_ACTA"
+		ai_chance = 100
+		command = { type = secedeprovince which = ITA value = 415 } #Kosovo
+		command = { type = secedeprovince which = ITA value = 380 } #new
+		command = { type = secedeprovince which = ITA value = 381 } #
+		command = { type = secedeprovince which = ITA value = 384 } #
+		command = { type = secedeprovince which = ITA value = 387 } #new, for logistical reasons
+		command = { type = secedeprovince which = ITA value = 388 } #new, for logistical reasons
+		command = { type = secedeprovince which = ITA value = 389 } #new, for logistical reasons
+		command = { type = secedeprovince which = ITA value = 390 } #Albania
+		command = { type = secedeprovince which = ITA value = 391 } #
+		command = { type = construct which = ic where = 382 value = 7 }
+		command = { type = province_keypoints which = 382 value = 1 }
+		command = { type = add_prov_resource which = 382 value = 8 where = rare_materials }
+		command = { type = add_prov_resource which = 382 value = 10 where = metal }
+		command = { type = add_prov_resource which = 382 value = 15 where = energy }
+		command = { type = sleepevent which = 71662 } #independent
+		command = { type = independence which = CRO value = 1 when = 0 } #Croatia liberated
+		command = { type = dissent value = -5 }
+		command = { type = trigger which = 135016 } #Germany puppets Croatia
+	}
+	action_b = {
+		name = "EVT_135011_ACTB"
+		
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+		command = { type = secedeprovince which = ITA value = 415 } #Kosovo
+		command = { type = secedeprovince which = ITA value = 380 } #new
+		command = { type = secedeprovince which = ITA value = 381 } #
+		command = { type = secedeprovince which = ITA value = 384 } #
+		command = { type = secedeprovince which = ITA value = 387 } #new, for logistical reasons
+		command = { type = secedeprovince which = ITA value = 388 } #new, for logistical reasons
+		command = { type = secedeprovince which = ITA value = 389 } #new, for logistical reasons
+		command = { type = secedeprovince which = ITA value = 390 } #Albania
+		command = { type = secedeprovince which = ITA value = 391 } #
+	}
+}
+
+##########
+#  Spoils from Yugoslavia to Hungary
+##########
+event = {
+	id = 135012
+	random = no 
+	country = GER
+
+	trigger = {
+		alliance = { country = GER country = HUN }
+		event = 135010 #german key event
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135012_NAME"
+	desc = "EVT_135012_DESC"
+
+	picture = "failed_objective"
+
+	action_a = {
+		name = "OK"
+		command = { type = secedeprovince which = HUN value = 493 } #Hungary
+	}
+}
+##########
+#  Spoils from Yugoslavia to Bulgaria
+##########
+event = {
+	id = 135013
+	random = no 
+	country = GER
+
+	trigger = {
+		alliance = { country = GER country = BUL }
+		OR = {
+			control = { province = 413 data = GER }
+			control = { province = 414 data = GER }
+		}
+		event = 135010 #german key event
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135013_NAME"
+	desc = "EVT_135013_DESC"
+
+	picture = "failed_objective"
+
+	action_a = {
+		name = "OK"
+		command = { type = secedeprovince which = BUL value = 413 } #Bulgaria
+		command = { type = secedeprovince which = BUL value = 414 } #Bulgaria
+	}
+}
+##########
+#  Spoils from Yugoslavia to Italy
+##########
+event = {
+	id = 135014
+	random = no 
+	country = GER
+
+	trigger = {
+		alliance = { country = GER country = ITA }
+		NOT = {
+			alliance = { country = BUL country = GER }
+		}
+		event = 135010 #german key event
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135014_NAME"
+	desc = "EVT_135014_DESC"
+
+	picture = "failed_objective"
+
+	action_a = {
+		name = "OK"
+		command = { type = secedeprovince which = ITA value = 413 } #Bulgaria
+		command = { type = secedeprovince which = ITA value = 414 } #Bulgaria
+	}
+}
+##########
+#  Spoils from Yugoslavia to Austria
+##########
+event = {
+	id = 135015
+	random = no 
+	country = GER
+
+	trigger = {		
+		alliance = { country = GER country = AUS }
+		alliance = { country = GER country = ITA }
+		NOT = {
+			alliance = { country = GER country = RSI }
+			ispuppet = ITA
+		}
+		event = 135010 #german key event
+	}	
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135015_NAME"
+	desc = "EVT_135015_DESC"
+
+	picture = "failed_objective"
+
+	action_a = {
+		name = "OK"
+		command = { type = secedeprovince which = AUS value = 380 } #Austria
+		command = { type = secedeprovince which = AUS value = 459 } #Austria
+		command = { type = sleepevent which = 135050 } #another
+	}
+}
+##########
+#  Partition of Yugoslavia - Germany puppets Croatia
+##########
+event = {
+	id = 135016
+	random = no 
+	country = GER
+
+	name = "EVT_135016_NAME"
+	desc = "EVT_135016_DESC"
+	picture = "Croatia"
+
+	action_a = {
+		name = "OK"
+		command = { type = province_revoltrisk which = 455 value = 10 } #Croatia
+		command = { type = province_revoltrisk which = 454 value = 10 } #Croatia
+		command = { type = make_puppet which = CRO }
+		command = { type = secedeprovince which = CRO value = 383 }
+		command = { type = secedeprovince which = CRO value = 385 }
+		command = { type = secedeprovince which = CRO value = 386 }
+		command = { type = secedeprovince which = ITA value = 387 }
+		command = { type = secedeprovince which = ITA value = 388 }
+		command = { type = secedeprovince which = ITA value = 389 }
+		command = { type = trigger which = 135017 } #Croatian Independence
+	}
+}
+##########
+#  Croatia exists as German puppet
+##########
+event = {
+	id = 135017
+	random = no 
+	country = CRO
+
+	name = "AI_EVENT"
+	picture = "independent_croatia"
+
+	action_a = {
+		name = "OK"
+		command = { type = removecore which = 381 } #they get all these back later
+		command = { type = removecore which = 384 }
+		command = { type = removecore which = 387 }
+		command = { type = removecore which = 388 }
+		command = { type = removecore which = 383 }
+		command = { type = removecore which = 385 }
+		command = { type = removecore which = 386 }
+		command = { type = removecore which = 455 }
+		command = { type = removecore which = 454 }
+		command = { type = removecore which = 493 } #this one was missing
+
+		command = { type = secedeprovince which = GER value = 455 }
+		command = { type = secedeprovince which = GER value = 454 }
+		command = { type = secedeprovince which = ITA value = 387 }
+		command = { type = secedeprovince which = ITA value = 388 }
+		command = { type = province_revoltrisk which = 385 value = 15 } #Croatia
+		command = { type = province_revoltrisk which = 386 value = 15 } #Croatia
+		command = { type = province_revoltrisk which = 383 value = 15 } #Croatia
+
+		command = { type = access which = ITA }
+
+		#power for 6 IC
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		#command = { type = free_oil value = 10 }
+		command = { type = free_rare_materials value = 3 }
+
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 500 }
+		command = { type = oilpool value = 250 }
+		command = { type = rarematerialspool value = 250 }
+		command = { type = supplies value = 500 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = money value = 100 }
+
+		command = { type = add_corps value = land where = 382 }
+		command = { type = add_division value = garrison } 
+		command = { type = add_corps value = land where = 386 }
+		command = { type = add_division value = garrison } 
+
+		command = { type = headofstate which = 30001 }
+		command = { type = headofgovernment which = 30002 }
+		command = { type = foreignminister which = 30003 }
+		command = { type = armamentminister which = 30004 }
+		command = { type = ministerofsecurity which = 30005 }
+		command = { type = ministerofintelligence which = 30006 }
+		command = { type = chiefofstaff which = 30007 }
+		command = { type = chiefofarmy which = 30008 }
+		command = { type = chiefofnavy which = 30009 }
+		command = { type = chiefofair which = 30010 } 
+
+	}
+}
+##########
+#  Partition of Yugoslavia - Italy receives partisans
+##########
+event = {
+	id = 135018
+	random = no 
+	country = ITA
+
+	trigger = {
+		NOT = { exists = YUG }
+		OR = {
+			event = 135011 #spoils from yugo to italy
+			NOT = {
+				alliance = { country = ITA country = GER }
+			}
+		}
+		control = { province = 387 data = ITA } #
+		control = { province = 388 data = ITA } #
+		control = { province = 389 data = ITA } #
+		control = { province = 380 data = ITA } #new
+		control = { province = 381 data = ITA } #
+		control = { province = 384 data = ITA } #
+	}	
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	picture = "partisan_revolt"
+
+	name = "EVT_135018_NAME"
+	desc = "EVT_135018_DESC"
+
+	action_a = { #FEPKBETA4
+		name = "OK"
+		command = { type = province_revoltrisk which = 387 value = 50 } #Yugo
+		command = { type = province_revoltrisk which = 388 value = 50 }
+		command = { type = province_revoltrisk which = 381 value = 50 }
+		command = { type = province_revoltrisk which = 384 value = 50 }
+		command = { type = province_revoltrisk which = 389 value = 50 } #Monte
+		command = { type = province_revoltrisk which = 380 value = 50 } #Slovenia
+		command = { type = province_revoltrisk which = 413 value = 50 } #Macedonia
+		command = { type = province_revoltrisk which = 414 value = 50 } 
+		command = { type = province_revoltrisk which = 415 value = 50 } #Kosovo
+		command = { type = province_revoltrisk which = 390 value = 50 } #Albania
+		command = { type = province_revoltrisk which = 391 value = 50 }
+	}
+}
+##########
+#  Occupying Serbia (Preventing Exploit)
+##########
+event = {
+	id = 135019
+	random = no 
+	country = GER
+	persistent = yes
+
+	trigger = {
+		flag = no_serbia
+		exists = SER
+		alliance = { country = GER country = SER }
+	}
+
+        date = { day = 0 month = january year = 1935 }
+        offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135019_NAME"
+	desc = "EVT_135019_DESC"
+
+	picture = "failed_objective"
+	action_a = {
+		name = "EVT_135019_ACTA"
+		command = { type = inherit which = SER }
+		command = { type = trigger which = 135020 } # 
+	}
+}
+##########
+#  Serbian Partisans (Preventing Exploit)
+##########
+event = {
+	id = 135020
+	random = no
+	country = GER
+	persistent = yes
+
+	name = "EVT_135020_NAME"
+	desc = "EVT_135020_DESC"
+	picture = "failed_objective"
+
+	action_a = {
+		name = "OK"
+		command = { type = dissent value = 3 }
+		command = { type = province_revoltrisk which = 459 value = 50 } #Slovenia
+		command = { type = province_revoltrisk which = 455 value = 50 } #Croatia
+		command = { type = province_revoltrisk which = 454 value = 50 } #Croatia
+		command = { type = province_revoltrisk which = 453 value = 50 } #Serbia
+		command = { type = province_revoltrisk which = 451 value = 50 } #Serbia
+		command = { type = province_revoltrisk which = 452 value = 50 } #Serbia
+		command = { type = province_revoltrisk which = 418 value = 50 } #Serbia
+		command = { type = province_revoltrisk which = 494 value = 50 } #Serbia
+	}
+}
+##########
+#  Partition of Yugoslavia - Italy gives Albania Kosovo
+##########
+event = {
+	id = 135021
+	random = no 
+	country = ITA
+
+	trigger = {
+		event = 135010 #german key event
+		alliance = { country = GER country = ALB }
+		alliance = { country = GER country = ITA }
+		control = { province = 415 data = ITA }
+		control = { province = 413 data = ITA }
+		control = { province = 392 data = ITA }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135021_NAME"
+	desc = "EVT_135021_DESC"
+	picture = "failed_objective"
+
+	action_a = {
+		name = "OK"
+		command = { type = secedeprovince which = ALB value = 415 } #Kosovo (Pristina)
+	}
+}
+##########
+#  Partition of Yugoslavia - Bulgaria gives Albania Skopje
+##########
+event = {
+	id = 135022
+	random = no 
+	country = BUL
+
+	trigger = {
+		event = 135010 #german key event
+		alliance = { country = GER country = ALB }
+		alliance = { country = GER country = BUL }
+		control = { province = 413 data = BUL } #Skopje
+		OR = {
+			NOT = {
+				exists = GRE
+			}
+			ispuppet = GRE
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135022_NAME"
+	desc = "EVT_135022_DESC"
+	picture = "failed_objective"
+
+	action_a = {
+		name = "OK"
+		command = { type = secedeprovince which = ALB value = 413 } #Skopje
+	}
+}
+##########
+#  Partition of Yugoslavia - Bulgaria gives Greece Skopje
+##########
+event = {
+	id = 135023
+	random = no 
+	country = BUL
+
+	trigger = {
+		event = 135010 #german key event
+		alliance = { country = GER country = GRE }
+		alliance = { country = GER country = BUL }
+		control = { province = 413 data = BUL } #Skopje
+		NOT = {
+			ispuppet = GRE
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135023_NAME"
+	desc = "EVT_135023_DESC"
+	picture = "failed_objective"
+
+	action_a = {
+		name = "OK"
+		command = { type = secedeprovince which = GRE value = 413 } #Skopje
+	}
+}
+##########
+#  Partition of Yugoslavia - Germany receives partisans
+##########
+event = {
+	id = 135024
+	random = no
+	country = GER
+
+	trigger = {
+		NOT = { exists = YUG }
+		OR = {
+			event = 135011 #spoils from yugo to italy
+			AND = {
+				NOT = {
+					alliance = { country = ITA country = GER }
+				}
+				event = 135010 #german key event
+			}
+		}
+		control = { province = 455 data = GER }
+		control = { province = 454 data = GER }
+		control = { province = 453 data = GER }
+		control = { province = 451 data = GER }
+		control = { province = 452 data = GER }
+		control = { province = 418 data = GER }
+		control = { province = 494 data = GER }
+	}	
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135020_NAME"
+	desc = "EVT_135020_DESC"
+	picture = "partisan_revolt"
+
+	action_a = {
+		name = "OK"
+		command = { type = province_revoltrisk which = 459 value = 50 } #Slovenia
+		command = { type = province_revoltrisk which = 455 value = 50 } #Croatia
+		command = { type = province_revoltrisk which = 454 value = 50 } #Croatia
+		command = { type = province_revoltrisk which = 453 value = 50 } #Serbia
+		command = { type = province_revoltrisk which = 451 value = 50 } #Serbia
+		command = { type = province_revoltrisk which = 452 value = 50 } #Serbia
+		command = { type = province_revoltrisk which = 418 value = 50 } #Serbia
+		command = { type = province_revoltrisk which = 494 value = 50 } #Serbia
+	}
+}
+
+event = { 
+	id = 135025
+	random = no
+	country = GER
+
+	trigger = {
+		event = 130900 #Victory in the East
+		OR = {
+			NOT = {
+				war = { country = SOV country = GER }
+			}
+			NOT = {
+				exists = SOV
+			}
+		}
+		NOT = {
+			war = { country = HUN country = ROM }
+			war = { country = BUL country = ROM }
+			exists = YUG
+			exists = SER
+		}
+		OR = { #serbia
+			control = { province = 453 data = GER }
+			control = { province = 452 data = GER }
+			control = { province = 451 data = GER }
+			control = { province = 418 data = GER }
+			control = { province = 494 data = GER }
+		}
+	}
+
+	date = { day = 1 month = january year = 1939 }
+	offset = 3 #FEPK1.096
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135025_NAME"
+	desc = "EVT_135025_DESC"
+
+	picture = "german_replacements"
+
+	action_a = {
+		name = "EVT_135025_ACTA"
+		ai_chance = 100
+		command = { type = dissent value = -10 }
+		command = { type = addcore which = 459 } #eastern slovenia
+		command = { type = construct which = ic where = 453 value = 4 }
+		command = { type = add_prov_resource which = 453 value = 5 where = rare_materials }
+		command = { type = add_prov_resource which = 453 value = 7 where = metal }
+		command = { type = add_prov_resource which = 453 value = 10 where = energy }
+		#if croatia already exists
+		command = { type = secedeprovince which = CRO value = 455 }
+		command = { type = secedeprovince which = CRO value = 454 }
+		#if croatia DOESNT exist
+		command = { type = independence which = CRO value = 1 }
+		command = { type = independence which = SER value = 1 }
+		command = { type = sleepevent which = 135019 } #serbian occupation 1
+		command = { type = sleepevent which = 135020 } #serbian occupation 2
+		command = { type = trigger which = 135026 } #Germany puppets Serbia
+		command = { type = trigger which = 135027 } #Croatia simmers down
+		command = { type = trigger which = 135028 } #Croatia simmers down
+		command = { type = clrflag which = no_serbia }
+	}
+}
+
+event = { 
+	id = 135026
+	random = no
+	country = GER
+	
+	name = "EVT_135026_NAME"
+	desc = "EVT_135025_DESC"
+
+	picture = "german_replacements"
+
+	action_a = {
+		name = "OK"
+		command = { type = make_puppet which = CRO }
+		command = { type = make_puppet which = SER }
+		command = { type = secedeprovince which = CRO value = 455 }
+		command = { type = secedeprovince which = CRO value = 454 }
+		command = { type = secedeprovince which = SER value = 494 }
+	}
+}
+
+event = {
+	id = 135027
+	random = no 
+	country = CRO
+
+	name = "EVT_135026_NAME"
+	desc = "EVT_135025_DESC"
+
+	picture = "independent_croatia"
+
+	action_a = {
+		name = "OK"
+		command = { type = addcore which = 383 }
+		command = { type = addcore which = 385 }
+		command = { type = addcore which = 386 }
+		command = { type = addcore which = 387 }
+		command = { type = addcore which = 388 }
+		command = { type = addcore which = 455 }
+		command = { type = addcore which = 454 }
+	}
+}
+
+event = {
+	id = 135028
+	random = no
+	country = SER
+
+	name = "AI_EVENT"
+	style = 0
+
+	action_a = {
+		name = "OK"
+
+		command = { type = capital which = 453 } #Belgrade
+
+		command = { type = removecore which = 454 }
+		command = { type = removecore which = 493 }
+		command = { type = removecore which = 415 }
+		command = { type = removecore which = 387 } # FEPK変更部分 #1.07
+		command = { type = removecore which = 388 } # FEPK変更部分 #1.07
+		command = { type = removecore which = 389 } # FEPK変更部分 #1.07
+		command = { type = addcore which = 494 }
+		command = { type = addcore which = 453 }
+		command = { type = addcore which = 452 }
+		command = { type = addcore which = 451 }
+		command = { type = addcore which = 418 }
+
+		command = { type = secedeprovince which = CRO value = 455 }
+		command = { type = secedeprovince which = CRO value = 454 }
+
+		#power for 4 IC
+		command = { type = free_energy value = 8 }
+		command = { type = free_metal value = 4 }
+		#command = { type = free_oil value = 10 }
+		command = { type = free_rare_materials value = 2 }
+
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 500 }
+		command = { type = oilpool value = 500 }
+		command = { type = rarematerialspool value = 250 }
+		command = { type = supplies value = 500 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = money value = 100 }
+
+		command = { type = add_corps value = land where = 453 }
+		command = { type = add_division value = garrison } 
+		command = { type = add_corps value = land where = 451 }
+		command = { type = add_division value = garrison } 
+		command = { type = add_corps value = land where = 415 }
+		command = { type = add_division value = garrison } 
+
+		command = { type = headofstate which = 547001 }
+		command = { type = headofgovernment which = 547002 }
+		command = { type = foreignminister which = 547003 }
+		command = { type = armamentminister which = 547004 }
+		command = { type = ministerofsecurity which = 547005 }
+		command = { type = ministerofintelligence which = 547006 }
+		command = { type = chiefofstaff which = 547007 }
+		command = { type = chiefofarmy which = 547008 }
+		command = { type = chiefofnavy which = 547009 }
+		command = { type = chiefofair which = 547010 } 
+
+		command = { type = sleepevent which = 15056 } #AI_Event for free_stuff
+	}
+}
+
+event = {
+	id = 135029
+	random = no 
+	country = ITA
+
+	trigger = {
+		event = 135025 #germany new order in the balkans
+		control = { province = 389 data = ITA } #MTN
+		OR = {
+			minister = 3001
+			minister = 3031
+			minister = 3033
+			minister = 3036
+			minister = 3037
+		}
+		alliance = { country = GER country = ITA }
+		NOT = { #FEPKBETA4.2
+			war = { country = ITA country = TUR }
+		}
+	}
+
+	date = { day = 1 month = january year = 1939 }
+	offset = 4
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135029_NAME"
+	desc = "EVT_135029_DESC"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "EVT_135029_ACTA"
+		ai_chance = 100
+		command = { type = independence which = MTN value = 1 when = 0 }
+		command = { type = independence which = GRE value = 1 when = 0 }
+		command = { type = independence which = ALB value = 1 when = 0 }
+		command = { type = secedeprovince which = BUL value = 414 } #FEPKBETA3 ##new, for logistical reasons
+		command = { type = trigger which = 135030 } #Italy puppets them all!
+		command = { type = sleepevent which = 135064 } #FEPKBETA4.2
+	}
+	action_b = {
+		name = "EVT_135029_ACTB"
+		ai_chance = 0
+		command = { type = dissent value = 10 }
+		command = { type = sleepevent which = 135064 } #FEPKBETA4.2
+	}
+}
+
+##########
+#  Italy puppets... the puppets
+##########
+
+event = {
+	id = 135030
+	random = no 
+	country = ITA
+
+	name = "EVT_135030_NAME"
+	desc = "EVT_135030_DESC"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		command = { type = make_puppet which = MTN } #
+		command = { type = make_puppet which = ALB } #
+		command = { type = make_puppet which = GRE } #
+		command = { type = secedeprovince which = CRO value = 387 }
+		command = { type = secedeprovince which = CRO value = 388 }
+		command = { type = secedeprovince which = ALB value = 415 }
+		command = { type = trigger which = 135031 }
+		command = { type = trigger which = 135032 }
+		command = { type = trigger which = 135033 }
+	}
+}
+
+event = {
+	id = 135031
+	random = no
+	country = MTN
+	
+	name = "AI_EVENT"
+	style = 0
+
+	action_a = {
+		name = "OK"
+		command = { type = headofstate which = 544035 }
+	}
+}
+
+event = {
+	id = 135032
+	random = no
+	country = ALB
+	
+	name = "AI_EVENT"
+	style = 0
+
+	action_a = {
+		name = "OK"
+		command = { type = headofstate which = 32047 }
+		command = { type = headofgovernment which = 32058 }
+		command = { type = ministerofsecurity which = 32114 }
+		command = { type = ministerofintelligence which = 32134 }
+	}
+}
+
+event = {
+	id = 135033
+	random = no
+	country = GRE
+	
+	name = "AI_EVENT"
+	style = 0
+
+	action_a = {
+		name = "OK"
+		command = { type = headofstate which = 18042 }
+		command = { type = headofgovernment which = 18058 }
+		command = { type = foreignminister which = 18078 }
+	}
+}
+
+event = { 
+	id = 135034
+	random = no
+	country = GER
+
+	trigger = {
+		event = 135025 #germany already liberated croatia and serbia
+		alliance = { country = RSI country = GER }
+		control = { province = 390 data = GER } #tirana, albania
+		control = { province = 401 data = GER } #athens, greece
+		NOT = {
+			alliance = { country = ITA country = GER }
+			exists = ALB
+			exists = GRE
+		}
+	}
+
+	date = { day = 1 month = january year = 1939 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135029_NAME"
+	desc = "EVT_135034_DESC"
+
+	picture = "german_replacements"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = addcore which = 380 } #western slovenia
+		#since italy doesnt exist, vichy should get these, move this later?
+		command = { type = secedeprovince which = VIC value = 1036 }
+		command = { type = secedeprovince which = VIC value = 1035 }
+		#greece and albania
+		command = { type = independence which = ALB value = 1 }
+		command = { type = independence which = GRE value = 1 }
+		command = { type = trigger which = 135035 } #Germany puppets Albania and Greece
+	}
+}
+
+event = { 
+	id = 135035
+	random = no
+	country = GER
+	
+	name = "EVT_135029_NAME"
+	desc = "EVT_135034_DESC"
+
+	picture = "german_replacements"
+
+	action_a = {
+		name = "OK"
+		command = { type = make_puppet which = ALB }
+		command = { type = make_puppet which = GRE }
+	}
+}
+
+#########################################################################
+#	独墺ルートのユーゴ分割処理
+#########################################################################
+
+event = {
+	id = 135040
+	random = no 
+	country = GER
+
+	trigger = {
+		event = 135010 #german key event for partition
+		alliance = { country = HUN country = GER }
+		alliance = { country = AUS country = GER }
+	}	
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 4
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135040_NAME"
+	desc = "EVT_135040_DESC"
+	picture = "failed_objective"
+
+	action_a = { #FEPKBETA3.1
+		name = "OK"
+		command = { type = sleepevent which = 135011 } #croatia new order
+		command = { type = sleepevent which = 135019 } #serbia exploit
+		command = { type = sleepevent which = 135020 } #serbia exploit
+		command = { type = sleepevent which = 71467 } #independent
+		command = { type = sleepevent which = 71662 } #independent
+		command = { type = sleepevent which = 135015 } #another #FEPKBETA3.1
+
+		command = { type = secedeprovince which = AUS value = 380 } #Austria #FEPKBETA3.1
+		command = { type = secedeprovince which = AUS value = 459 } #Austria
+		command = { type = secedeprovince which = AUS value = 381 } #YUG
+		command = { type = secedeprovince which = AUS value = 384 }
+		command = { type = secedeprovince which = AUS value = 387 }
+		command = { type = secedeprovince which = AUS value = 388 }
+		command = { type = secedeprovince which = AUS value = 389 }
+		command = { type = secedeprovince which = HUN value = 493 } #so croatia doesnt get it
+		command = { type = secedeprovince which = HUN value = 494 } #so croatia doesnt get it
+
+		command = { type = construct which = ic where = 382 value = 7 }
+		command = { type = province_keypoints which = 382 value = 1 }
+		command = { type = add_prov_resource which = 382 value = 8 where = rare_materials }
+		command = { type = add_prov_resource which = 382 value = 10 where = metal }
+		command = { type = add_prov_resource which = 382 value = 15 where = energy }
+		command = { type = construct which = ic where = 453 value = 4 }
+		command = { type = add_prov_resource which = 453 value = 5 where = rare_materials }
+		command = { type = add_prov_resource which = 453 value = 7 where = metal }
+		command = { type = add_prov_resource which = 453 value = 10 where = energy }
+		command = { type = independence which = CRO value = 1 when = 0 } #Croatia liberated
+		command = { type = independence which = SER value = 1 when = 0 } #Serbia liberated
+
+		command = { type = secedeprovince which = CRO value = 382 }
+		command = { type = secedeprovince which = CRO value = 383 }
+		command = { type = secedeprovince which = CRO value = 385 }
+		command = { type = secedeprovince which = CRO value = 386 }
+		command = { type = secedeprovince which = CRO value = 454 }
+		command = { type = secedeprovince which = CRO value = 455 }
+		command = { type = secedeprovince which = SER value = 451 }
+		command = { type = secedeprovince which = SER value = 452 }
+		command = { type = secedeprovince which = SER value = 453 }
+		command = { type = secedeprovince which = SER value = 418 }
+		command = { type = dissent value = -10 }
+
+		command = { type = trigger which = 135041 } #Austria puppets Serbia
+		command = { type = trigger which = 135043 } #Hungary puppets Croatia
+		command = { type = trigger which = 135051 } #FEPKBETA3.1
+	}
+}
+
+event = {
+	id = 135041
+	random = no 
+	country = AUS
+
+	name = "EVT_135041_NAME"
+	desc = "EVT_135040_DESC"
+	picture = "failed_objective"
+
+	action_a = {
+		name = "OK"
+		command = { type = make_puppet which = SER } #
+		command = { type = secedeprovince which = HUN value = 493 } #so croatia doesnt get it
+		command = { type = secedeprovince which = HUN value = 494 } #so croatia doesnt get it
+		command = { type = secedeprovince which = CRO value = 382 }
+		command = { type = secedeprovince which = CRO value = 383 }
+		command = { type = secedeprovince which = CRO value = 385 }
+		command = { type = secedeprovince which = CRO value = 386 }
+		command = { type = secedeprovince which = CRO value = 454 }
+		command = { type = secedeprovince which = CRO value = 455 }
+		command = { type = secedeprovince which = SER value = 451 }
+		command = { type = secedeprovince which = SER value = 452 }
+		command = { type = secedeprovince which = SER value = 453 }
+		command = { type = secedeprovince which = SER value = 418 }
+		command = { type = trigger which = 135042 } # Serbian Independence
+	}
+}
+
+event = {
+	id = 135042
+	random = no 
+	country = SER
+
+	name = "AI_EVENT"
+
+	picture = "failed_objective"
+
+	action_a = {
+		name = "OK"
+		command = { type = capital which = 453 } #Belgrade
+
+		command = { type = secedeprovince which = AUS value = 380 } #Austria #FEPKBETA3.1
+		command = { type = secedeprovince which = AUS value = 459 } #Austria
+		command = { type = secedeprovince which = AUS value = 381 } #YUG
+		command = { type = secedeprovince which = AUS value = 384 }
+		command = { type = secedeprovince which = AUS value = 387 }
+		command = { type = secedeprovince which = AUS value = 388 }
+		command = { type = secedeprovince which = AUS value = 389 }
+		command = { type = secedeprovince which = HUN value = 493 }
+		command = { type = secedeprovince which = HUN value = 494 }
+		command = { type = secedeprovince which = CRO value = 382 }
+		command = { type = secedeprovince which = CRO value = 383 }
+		command = { type = secedeprovince which = CRO value = 385 }
+		command = { type = secedeprovince which = CRO value = 386 }
+		command = { type = secedeprovince which = CRO value = 454 }
+		command = { type = secedeprovince which = CRO value = 455 }
+
+		command = { type = removecore which = 415 }
+		command = { type = removecore which = 454 }
+		command = { type = removecore which = 493 }
+		command = { type = removecore which = 494 }
+
+		#power for 4 IC
+		command = { type = free_energy value = 8 }
+		command = { type = free_metal value = 4 }
+		#command = { type = free_oil value = 10 }
+		command = { type = free_rare_materials value = 2 }
+
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 500 }
+		command = { type = oilpool value = 500 }
+		command = { type = rarematerialspool value = 250 }
+		command = { type = supplies value = 500 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = money value = 100 }
+
+		command = { type = add_division value = infantry }
+		command = { type = add_division value = infantry }
+		command = { type = add_division value = infantry }
+
+		command = { type = add_corps value = land where = 453 }
+		command = { type = add_division value = garrison } 
+		command = { type = add_corps value = land where = 451 }
+		command = { type = add_division value = garrison } 
+		command = { type = add_corps value = land where = 415 }
+		command = { type = add_division value = garrison } 
+
+		command = { type = headofstate which = 547001 }
+		command = { type = headofgovernment which = 547002 }
+		command = { type = foreignminister which = 547003 }
+		command = { type = armamentminister which = 547004 }
+		command = { type = ministerofsecurity which = 547005 }
+		command = { type = ministerofintelligence which = 547006 }
+		command = { type = chiefofstaff which = 547007 }
+		command = { type = chiefofarmy which = 547008 }
+		command = { type = chiefofnavy which = 547009 }
+		command = { type = chiefofair which = 547010 } 
+	}
+}
+
+event = {
+	id = 135043
+	random = no 
+	country = HUN
+
+	name = "EVT_135041_NAME"
+	desc = "EVT_135040_DESC"
+	picture = "failed_objective"
+
+	action_a = {
+		name = "OK"
+		command = { type = addcore which = 494 }
+		command = { type = make_puppet which = CRO }
+		command = { type = secedeprovince which = AUS value = 380 } #Austria #FEPKBETA3.1
+		command = { type = secedeprovince which = AUS value = 459 } #Austria
+		command = { type = secedeprovince which = AUS value = 381 } #YUG
+		command = { type = secedeprovince which = AUS value = 384 }
+		command = { type = secedeprovince which = AUS value = 387 }
+		command = { type = secedeprovince which = AUS value = 388 }
+		command = { type = secedeprovince which = AUS value = 389 }
+		command = { type = secedeprovince which = CRO value = 382 }
+		command = { type = secedeprovince which = CRO value = 383 }
+		command = { type = secedeprovince which = CRO value = 385 }
+		command = { type = secedeprovince which = CRO value = 386 }
+		command = { type = secedeprovince which = CRO value = 454 }
+		command = { type = secedeprovince which = CRO value = 455 }
+		command = { type = secedeprovince which = SER value = 451 }
+		command = { type = secedeprovince which = SER value = 452 }
+		command = { type = secedeprovince which = SER value = 453 }
+		command = { type = secedeprovince which = SER value = 418 }
+		command = { type = trigger which = 135044 } #Croatian Independence
+	}
+}
+
+event = {
+	id = 135044
+	random = no 
+	country = CRO
+
+	name = "AI_EVENT"
+
+	picture = "failed_objective"
+
+	action_a = {
+		name = "OK"
+		#command = { type = construct which = ic where = 413 value = 1 }
+
+		command = { type = secedeprovince which = AUS value = 380 } #Austria #FEPKBETA3.1
+		command = { type = secedeprovince which = AUS value = 459 } #Austria
+		command = { type = secedeprovince which = AUS value = 381 } #YUG
+		command = { type = secedeprovince which = AUS value = 384 }
+		command = { type = secedeprovince which = AUS value = 387 }
+		command = { type = secedeprovince which = AUS value = 388 }
+		command = { type = secedeprovince which = AUS value = 389 }
+		command = { type = secedeprovince which = HUN value = 493 } #so croatia doesnt get it
+		command = { type = secedeprovince which = HUN value = 494 } #so croatia doesnt get it
+		command = { type = secedeprovince which = SER value = 451 }
+		command = { type = secedeprovince which = SER value = 452 }
+		command = { type = secedeprovince which = SER value = 453 }
+		command = { type = secedeprovince which = SER value = 418 }
+
+		#command = { type = addcore which = 382 }
+		command = { type = addcore which = 383 }
+		command = { type = addcore which = 385 }
+		command = { type = addcore which = 386 }
+		command = { type = addcore which = 454 }
+		command = { type = addcore which = 455 }
+
+		command = { type = removecore which = 381 } #they get all these back later
+		command = { type = removecore which = 384 }
+		command = { type = removecore which = 387 }
+		command = { type = removecore which = 388 }
+		#command = { type = removecore which = 383 }
+		#command = { type = removecore which = 385 }
+		#command = { type = removecore which = 386 }
+		#command = { type = removecore which = 455 }
+		#command = { type = removecore which = 454 }
+		command = { type = removecore which = 493 } #this one was missing
+
+		#power for 6 IC
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		#command = { type = free_oil value = 10 }
+		command = { type = free_rare_materials value = 3 }
+
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 500 }
+		command = { type = oilpool value = 250 }
+		command = { type = rarematerialspool value = 250 }
+		command = { type = supplies value = 500 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = money value = 100 }
+
+		command = { type = add_division value = infantry }
+		command = { type = add_division value = infantry }
+		command = { type = add_division value = infantry }
+
+		command = { type = add_corps value = land where = 382 }
+		command = { type = add_division value = garrison } 
+		command = { type = add_corps value = land where = 386 }
+		command = { type = add_division value = garrison } 
+
+		command = { type = headofstate which = 30001 }
+		command = { type = headofgovernment which = 30002 }
+		command = { type = foreignminister which = 30003 }
+		command = { type = armamentminister which = 30004 }
+		command = { type = ministerofsecurity which = 30005 }
+		command = { type = ministerofintelligence which = 30006 }
+		command = { type = chiefofstaff which = 30007 }
+		command = { type = chiefofarmy which = 30008 }
+		command = { type = chiefofnavy which = 30009 }
+		command = { type = chiefofair which = 30010 } 
+	}
+}
+
+#event = { #FEPKBETA3.1 #135040に統合
+#	id = 135050
+#	random = no 
+#	country = GER
+#
+#	trigger = {
+#		alliance = { country = AUS country = GER }
+#		OR = {
+#			NOT = {
+#				alliance = { country = GER country = ITA }
+#			}
+#			alliance = { country = GER country = RSI }
+#			ispuppet = ITA
+#		}
+#		event = 135010 #german key event
+#	}	
+#
+#	name = "EVT_135050_NAME"
+#	desc = "EVT_135050_DESC"
+#	style = 0
+#	picture = "czechs_annexed"
+#
+#	action_a = {
+#		name = "OK"
+#		command = { type = secedeprovince which = AUS value = 380 } #Austria
+#		command = { type = secedeprovince which = AUS value = 459 } #Austria
+#		command = { type = secedeprovince which = AUS value = 381 } #YUG
+#		command = { type = secedeprovince which = AUS value = 384 }
+#		command = { type = secedeprovince which = AUS value = 387 }
+#		command = { type = secedeprovince which = AUS value = 388 }
+#		command = { type = secedeprovince which = AUS value = 389 }
+#		command = { type = sleepevent which = 135015 } #another
+#		command = { type = trigger which = 135051 }
+#	}
+#}
+
+event = {
+	id = 135051
+	random = no 
+	country = AUS
+
+	name = "EVT_135051_NAME"
+	desc = "EVT_135051_DESC"
+
+	picture = "failed_objective"
+
+	action_a = {
+		name = "OK"
+	#	command = { type = addcore which = 380 }
+	#	command = { type = addcore which = 459 }
+		command = { type = addcore which = 381 }
+		command = { type = addcore which = 384 }
+		command = { type = addcore which = 387 }
+		command = { type = addcore which = 388 }
+		command = { type = addcore which = 389 }
+	}
+}
+
+event = { # YUG # Italy is not Axis # from FEPK_partition
+	id = 135052
+	random = no
+	country = GER
+
+	trigger = {
+		alliance = { country = TUR country = GER }
+		OR = {
+			NOT = {
+				alliance = { country = GER country = ITA }
+			}
+			alliance = { country = GER country = RSI }
+			ispuppet = ITA
+		}
+		event = 135010 #german key event
+	}
+
+	name = "EVT_135052_NAME"
+	desc = "EVT_135052_DESC"
+	style = 0
+	picture = "czechs_annexed"
+
+	action_a = {
+		name = "OK"
+		command = { type = secedeprovince which = TUR value = 413 } #Macedonia#BLU
+		command = { type = secedeprovince which = TUR value = 414 } #Macedonia#BLU
+		command = { type = secedeprovince which = TUR value = 415 } #Kosovo
+		command = { type = secedeprovince which = TUR value = 390 } #ALB
+		command = { type = secedeprovince which = TUR value = 391 } #ALB
+
+		command = { type = trigger which = 135053 }
+	}
+}
+
+event = {
+	id = 135053
+	random = no 
+	country = TUR
+
+	trigger = {
+		control = { province = 390 data = TUR } # Tirana
+	}
+
+	name = "EVT_135051_NAME"
+	desc = "EVT_135053_DESC"
+
+	picture = "failed_objective"
+
+	action_a = {
+		name = "OK"
+		command = { type = addcore which = 415 }
+		command = { type = addcore which = 390 }
+		command = { type = addcore which = 391 }
+	}
+}
+
+event = {
+	id = 135054
+	random = no 
+	country = TUR
+
+	trigger = {
+		event = 135010 #german key event
+		alliance = { country = GER country = TUR }
+		alliance = { country = GER country = BUL }
+		control = { province = 413 data = TUR }
+		control = { province = 414 data = TUR }
+		NOT = {
+			ispuppet = BUL
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135054_NAME"
+	desc = "EVT_135054_DESC"
+	picture = "failed_objective"
+
+	action_a = {
+		name = "OK"
+		command = { type = secedeprovince which = BUL value = 413 }
+		command = { type = secedeprovince which = BUL value = 414 }
+	}
+}
+
+event = {
+	id = 135060
+	random = no
+	country = ITA
+
+	trigger = {#ユーゴ・イタリアが枢軸でアルバニアとギリシャを併合済み
+		alliance = { country = YUG country = GER }
+		alliance = { country = ITA country = GER }
+		OR = {
+			NOT = { exists = ALB }
+			alliance = { country = ALB country = GER }
+			puppet = { country = ALB country = ITA } 
+			puppet = { country = ALB country = GER } 
+		}
+		OR = {
+			NOT = { exists = GRE }
+			alliance = { country = GRE country = GER }
+			puppet = { country = GRE country = ITA } 
+			puppet = { country = GRE country = GER } 
+		}
+		control = { province = 384 data = YUG }
+		control = { province = 381 data = YUG }
+	}
+
+	name = "EVT_135060_NAME"
+	desc = "EVT_135060_DESC"
+	style = 0
+	picture = "VIC"
+
+	date = { day = 1 month = september year = 1939 }
+	offset = 60
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "EVT_135060_ACTA"
+		command = { type = trigger which = 135061 } # YUG
+		command = { type = addclaim which = 380 }	#DHSA0.4
+	}
+	action_b = {
+		name = "EVT_135060_ACTB"
+		command = { type = dissent value = 3 }
+	}
+}
+
+event = {
+	id = 135061
+	random = no
+	country = YUG
+
+	name = "EVT_135060_NAME"
+	desc = "EVT_135060_DESC"
+	style = 0
+	picture = "VIC"
+
+	action_a = {
+		name = "EVT_135061_ACTA"
+		command = { type = dissent value = 5 }
+		command = { type = secedeprovince which = ITA value = 380 } #new
+		command = { type = secedeprovince which = ITA value = 381 } #
+		command = { type = secedeprovince which = ITA value = 384 } #
+	#	command = { type = secedeprovince which = ITA value = 387 } #new, for logistical reasons #FEPKBETA4.5
+	#	command = { type = secedeprovince which = ITA value = 388 } #new, for logistical reasons
+	#	command = { type = secedeprovince which = ITA value = 389 } #new, for logistical reasons
+	}
+}
+
+event = {
+	id = 135062
+	random = no
+	country = BUL
+
+	trigger = {#ユーゴ・ブルガリア・イタリアが枢軸でアルバニアとギリシャを併合済み､ アドリア海の要求が発生済み
+		event = 135060
+		alliance = { country = YUG country = GER }
+		alliance = { country = ITA country = GER }
+		alliance = { country = BUL country = GER }
+		OR = {
+			NOT = { exists = ALB }
+			alliance = { country = ALB country = GER }
+			puppet = { country = ALB country = ITA } 
+			puppet = { country = ALB country = GER } 
+		}
+		OR = {
+			NOT = { exists = GRE }
+			alliance = { country = GRE country = GER }
+			puppet = { country = GRE country = ITA } 
+			puppet = { country = GRE country = GER } 
+		}
+	}
+
+	name = "EVT_135062_NAME"
+	desc = "EVT_135062_DESC"
+	style = 0
+	picture = "VIC"
+
+	date = { day = 1 month = september year = 1939 }
+	offset = 60
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "EVT_135062_ACTA"
+		command = { type = trigger which = 135063 } # YUG
+	}
+	action_b = {
+		name = "EVT_135060_ACTB"
+		command = { type = dissent value = 3 }
+	}
+}
+event = {
+	id = 135063
+	random = no
+	country = YUG
+
+	name = "EVT_135062_NAME"
+	desc = "EVT_135062_DESC"
+	style = 0
+	picture = "VIC"
+
+	action_a = {
+		name = "OK"
+		command = { type = dissent value = 5 }
+		command = { type = secedeprovince which = ITA value = 415 }
+		command = { type = secedeprovince which = BUL value = 413 }
+		command = { type = secedeprovince which = BUL value = 414 }
+	}
+}
+
+event = { #FEPKBETA4.2 #YUG is still AXIS
+	id = 135064
+	random = no 
+	country = ITA
+
+	trigger = {
+		event = 135025 #germany new order in the balkans
+		control = { province = 389 data = YUG } #MTN
+		control = { province = 401 data = ITA } #GRE
+		control = { province = 390 data = ITA } #ALB
+		OR = {
+			minister = 3001
+			minister = 3031
+			minister = 3033
+			minister = 3036
+			minister = 3037
+		}
+		alliance = { country = GER country = ITA }
+		alliance = { country = YUG country = ITA }
+		NOT = { #FEPKBETA4.2
+			war = { country = ITA country = TUR }
+		}
+	}
+
+	date = { day = 1 month = january year = 1939 }
+	offset = 4
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135064_NAME"
+	desc = "EVT_135064_DESC"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "EVT_135029_ACTA"
+		ai_chance = 100
+		command = { type = independence which = GRE value = 1 when = 0 }
+		command = { type = independence which = ALB value = 1 when = 0 }
+		command = { type = trigger which = 135030 } #Italy puppets them all!
+		command = { type = sleepevent which = 135029 } #FEPKBETA4.2
+	}
+	action_b = {
+		name = "EVT_135029_ACTB"
+		ai_chance = 0
+		command = { type = dissent value = 10 }
+		command = { type = sleepevent which = 135029 } #FEPKBETA4.2
+	}
+}

@@ -1,0 +1,17 @@
+# 0 - í¥èdêÌé‘
+model = {
+	cost 				= 10
+	buildtime	 		= 120
+	manpower 			= 2
+	maxspeed 			= -4
+	defensiveness 		= 8
+	toughness 			= 2
+	softness			= -20
+	softattack			= 7
+	hardattack			= 8
+	supplyconsumption 	= 0.6
+	fuelconsumption		= 2
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 2000 medium_armor = 67 heavy_armor = 3 }
+}

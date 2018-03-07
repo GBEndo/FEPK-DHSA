@@ -1,0 +1,82 @@
+# Soviet Finland AI File by Lothos
+
+###################################
+# Ground Combat, Leaders and Garrisons
+###################################
+
+max_front_ratio = 1.0
+max_front_ratios = {
+}
+
+target = { 
+	#Tannu Tuva
+	1318 = 150 # Kyzyl
+
+	#Finland
+	145 = 100 # Viipur
+	146 = 100 # Sortavalo
+
+	#Estonia
+	193 = 90 # Narva
+	195 = 90 # Tartu
+	194 = 90 # Tallin
+	196 = 90 # Parnu
+
+	#Latvia
+	198 = 80 # Gulbene
+	197 = 80 # Riga
+	202 = 80 # Dagaupulis
+	203 = 80 # Jekapils
+	204 = 80 # Jelgava
+	205 = 80 # Mazirbe
+
+	#Lithuania
+	207 = 70 # Kaunas
+	577 = 70 # Siauliau
+	511 = 70 # Alytus
+
+	#Romania
+	230 = 50 # Beltsy
+	434 = 50 # Tiraspol
+}
+
+garrison = {
+	province_priorities = {
+		175 = 50 # Moscaw
+		187 = 50 # Leningrad
+		238 = 50 # Kiev
+		235 = 50 # Dnepropetrovsk
+		163 = 50 # Stalingrad
+		248 = 50 # Kharkov
+		277 = 50 # Bryansk
+		1372 = 50 # Vladivostock
+		133 = 50 # Murmansk
+	}
+	area_multiplier = {
+		133 = 1.2 # Murmansk
+	#	187 = 2.0 # Leningrad
+
+		163 = 5.0 # Moscaw
+		176 = 3.0
+		187 = 3.0 # Leningrad
+		163 = 3.0 # Stalingrad
+		1907 = 3.0 # Baku
+		1372 = 1.2 # Vladivostock
+	}
+}
+
+front = { 
+	recklessness 		= 1 # 0-3
+	distrib_vs_ai 		= defensive
+	distrib_vs_human 	= defensive
+
+	enemy_reinf_days	= 6
+	reserve_prop		= 0.1
+	panic_ratio_vs_ai	= 2.0
+	panic_ratio_vs_human	= 2.0
+	base_attack_odds	= 1.3
+	min_attack_odds		= 1.1
+	max_attack_odds		= 3.0
+	reinforce_odds		= 1.2
+	withdraw_odds		= 0.6
+} 

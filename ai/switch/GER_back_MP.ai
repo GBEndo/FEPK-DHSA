@@ -1,0 +1,40 @@
+# êlìIéëåπâÒïú
+
+upgrading = 0.2
+reinforcement = 0.08
+
+front = { 
+
+	frozen_attack 	= 0.70
+	snow_attack 	= 0.70
+	blizzard_attack = 0.75
+	storm_attack 	= 0.70
+	muddy_attack 	= 0.50
+
+	#reduces the size of odds in total.. (1.0 = no difference, 0.5 = halved.)
+	mountain_attack	= 0.75
+	swamp_attack 	= 0.80
+	forest_attack 	= 1.00
+	hill_attack 	= 0.80
+	urban_attack 	= 0.40
+
+	reserve_prop			= 	0.1	# Maximum proportion of total divisions in a front allowed to remain behind the front line ( HQs and divisions needing to recover.)
+
+	panic_ratio_vs_ai		=	1.7	# Front requests more troops if outnumbered by this factor. NOTE: this results in troops being drawn from garrison duties, etc, so set HIGH.
+	panic_ratio_vs_human		=	1.7	# Front requests more troops if outnumbered by this factor. NOTE: this results in troops being drawn from garrison duties, etc, so set HIGH.
+	enemy_reinf_days 		= 	6	# Count enemy units less than X days from a target province in odds calculations
+
+
+	recklessness 		= 2 # 0-3
+	distrib_vs_ai 		= offensive
+	distrib_vs_human 	= offensive
+
+	base_attack_odds 	= 1.25
+	min_attack_odds 	= 1.1 
+	max_attack_odds 	= 4.0 
+	reinforce_odds		= 1.3	# Send in more troops if the attacking force is at these odds
+	withdraw_odds		= 0.75	# Break off attacks and withdraw at these odds
+
+    enemy_handicap = { } 
+    passivity = { } 
+}

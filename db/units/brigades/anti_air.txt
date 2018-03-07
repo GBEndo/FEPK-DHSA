@@ -1,0 +1,16 @@
+# 0 - Basic
+model = { cost = 5 buildtime = 40 manpower = 2 defensiveness = 1 hardattack = 1 airattack = 1 airdefence = 2 maxspeed = -1 supplyconsumption = 0.12 upgrade_time_factor = 0.5 upgrade_cost_factor = 1.0 equipment = { manpower = 2000 horses = 453 anti_air = 43 } }
+# 1 - Improved
+model = { cost = 5 buildtime = 40 manpower = 2 defensiveness = 1 hardattack = 1 airattack = 2 airdefence = 3 supplyconsumption = 0.14 upgrade_time_factor = 0.5 upgrade_cost_factor = 1.0 equipment = { manpower = 2000 horses = 453 anti_air = 43 } }
+# 2 - Advanced
+model = { cost = 5 buildtime = 40 manpower = 2 defensiveness = 1 hardattack = 2 airattack = 3 airdefence = 3 supplyconsumption = 0.16 upgrade_time_factor = 0.5 upgrade_cost_factor = 1.0 equipment = { manpower = 2000 horses = 453 anti_air = 43 } }
+# 3 - Semi-Modern
+model = { cost = 5 buildtime = 40 manpower = 2 defensiveness = 2 hardattack = 3 airattack = 4 airdefence = 4 supplyconsumption = 0.18 upgrade_time_factor = 0.5 upgrade_cost_factor = 1.0 equipment = { manpower = 2000 horses = 453 anti_air = 43 } }
+# 4 - Modern
+model = { cost = 5 buildtime = 40 manpower = 2 defensiveness = 3 hardattack = 3 airattack = 5 airdefence = 5 supplyconsumption = 0.18 upgrade_time_factor = 0.5 upgrade_cost_factor = 1.0 equipment = { manpower = 2000 horses = 453 anti_air = 43 } }
+# –ôiŒ^‘Î‹ó–C
+model = { cost = 5 buildtime = 40 manpower = 2 defensiveness = 3 hardattack = 4 airattack = 6 airdefence = 6 supplyconsumption = 0.20 upgrade_time_factor = 0.5 upgrade_cost_factor = 1.0 equipment = { manpower = 2000 trucks = 453 anti_air = 43 } }
+# ”ò–ôŒ^‘Î‹ó–C
+model = { cost = 5 buildtime = 40 manpower = 2 defensiveness = 4 hardattack = 4 airattack = 7 airdefence = 7 supplyconsumption = 0.20 upgrade_time_factor = 0.5 upgrade_cost_factor = 1.0 equipment = { manpower = 2000 trucks = 453 anti_air = 43 } }
+# 7 - ’Z‹——£‘Î‹óƒ~ƒTƒCƒ‹
+model = { cost = 8 buildtime = 60 manpower = 2 defensiveness = 4 hardattack = 0 airattack = 10 airdefence = 10 supplyconsumption = 0.20 upgrade_time_factor = 0.5 upgrade_cost_factor = 1.0 equipment = { manpower = 2000 trucks = 453 anti_air = 43 } }

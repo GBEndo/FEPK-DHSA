@@ -1,0 +1,138 @@
+BUL;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+19001;Head of State;ボリス3世;36;PA;Stern Imperialist;High;M19001;x
+19002;Head of Government;ゲオルギ・キオセイヴァノフ;36;PA;Backroom Backstabber;High;M19002;x
+19003;Foreign Minister;ゲオルギ・キオセイヴァノフ;36;PA;Biased Intellectual;High;M19002;x
+19004;Minister of Armament;キリル・ゴウネフ;36;PA;Administrative Genius;Medium;M19004;x
+19005;Minister of Security;ゲオルギ・サポフ;36;PA;Crime Fighter;Low;M19005;x
+19006;Head of Military Intelligence;ディミタール・ペシェフ;36;PA;Dismal Enigma;Medium;M19006;x
+19007;Chief of Staff;フリスト・ルコフ;36;PA;School of Defence;Low;M19007;x
+19008;Chief of Army;トドール・ジョルジエフ;36;PA;Static Defence Doctrine;Medium;M19008;x
+19009;Chief of Navy;サヴァ・イヴァノフ;36;PA;Open Seas Doctrine;Medium;M19009;x
+19010;Chief of Air Force;ヴァシル・ボイデフ;36;PA;Air Superiority Doctrine;Medium;M19010;x
+19042;Head of State;プレスラフ公キリル;43;PA;Stern Imperialist;High;M19042;x
+19043;Head of State;ボリス3世;39;NS;Stern Imperialist;High;M19001;x
+19044;Head of State;アレクサンダー・ツァンコフ;43;NS;Barking Buffoon;High;M19021;x
+19045;Head of State;ボリス3世;39;SC;Stern Imperialist;High;M19001;x
+19046;Head of State;プレスラフ公キリル;43;SC;Stern Imperialist;High;M19042;x
+19047;Head of State;ニコラ・ペトコフ;45;SC;Die-hard Reformer;High;M19047;x
+19048;Head of State;プレスラフ公キリル;44;LWR;Stern Imperialist;High;M19042;x
+19049;Head of State;ボリス・サクスコブルクゴツキ;39;ST;Popular Figurehead;High;M19001;x
+19050;Head of State;ゲオルギ・ディミトロフ;43;ST;Powerhungry Demagogue;High;M19032;x
+19051;Head of State;ヴァシル・P・コラロフ;45;ST;Weary Stiffneck;High;M19031;x
+19052;Head of Government;ボグダン・フィロフ;39;PA;Political Protege;High;M19024;x
+19053;Head of Government;ドブリ・ボジロフ;43;PA;Corporate Suit;High;M19053;x
+19054;Head of Government;イワン・I・バグリアノフ;44;PA;Old General;High;M19054;x
+19055;Head of Government;アレクサンダー・ツァンコフ;39;NS;Backroom Backstabber;High;M19021;x
+19056;Head of Government;ペトゥル・ガブロフスキ;43;PA;Naive Optimist;High;M19022;x
+19057;Head of Government;コンスタンティン・ムラヴィヨフ;39;SC;Happy Amateur;High;M19012;x
+19058;Head of Government;ニコラ・ペトコフ;44;SC;Flamboyant Tough Guy;High;M19047;x
+19059;Head of Government;キモン・ゲオルギエフ;44;LWR;Naive Optimist;High;M19059;x
+19060;Head of Government;ゲオルギ・ディミトロフ;39;ST;Political Protege;High;M19032;x
+19061;Foreign Minister;イワン・ポポフ;39;PA;Biased Intellectual;Medium;M19061;x
+19062;Foreign Minister;アレクサンダー・ニコライエフ;39;PA;Ideological Crusader;Medium;M19062;x
+19063;Foreign Minister;ボグダン・フィロフ;42;PA;Biased Intellectual;Medium;M19024;x
+19064;Foreign Minister;ディミタール・シシュマノフ;43;PA;The Cloak N Dagger Schemer;Medium;M19064;x
+19065;Foreign Minister;イワン・I・バグリアノフ;44;PA;Iron Fisted Brute;Medium;M19054;x
+19066;Foreign Minister;ピルヴァン・ドラガノフ;44;FA;General Staffer;Medium;M19066;x
+19067;Foreign Minister;アレクサンダー・ツァンコフ;39;FA;Ideological Crusader;Medium;M19021;x
+19068;Foreign Minister;アタナス・ブロフ;39;SC;Great Compromiser;Low;M19068;x
+19069;Foreign Minister;ゲオルギ・ブラソフ;43;SC;Biased Intellectual;Low;M19069;x
+19070;Foreign Minister;コンスタンティン・ムラヴィヨフ;44;SC;Apologetic Clerk;Medium;M19012;x
+19071;Foreign Minister;ニコラ・ペトコフ;45;SC;The Cloak N Dagger Schemer;Medium;M19047;x
+19072;Foreign Minister;ペトコ・スタイノフ;44;LWR;Biased Intellectual;Medium;M19072;x
+19073;Foreign Minister;ゲオルギ・クリチェフ;45;LWR;The Cloak N Dagger Schemer;Very High;M19073;x
+19074;Foreign Minister;ヴァシル・コラロフ;39;ST;Ideological Crusader;High;M19031;x
+19075;Foreign Minister;ゲオルギ・ダミアノフ;44;ST;Iron Fisted Brute;Very High;M19075;x
+19076;Foreign Minister;キモン・ゲオルギエフ;45;LE;General Staffer;Medium;M19059;x
+19077;Minister of Armament;ドブリ・ボジロフ;38;PA;Infantry Proponent;Medium;M19053;x
+19078;Minister of Armament;ゲオルギ・サポフ;39;PA;Corrupt Kleptocrat;Low;M19005;x
+19079;Minister of Armament;サヴァ・キーロフ;41;PA;Laissez-Faire Capitalist;Low;M19079;x
+19080;Minister of Armament;スタンコ・ニコラドロフ;44;PA;Corrupt Kleptocrat;Low;M19080;x
+19081;Minister of Armament;ボグダン・フィロフ;39;FA;Infantry Proponent;Medium;M19024;x
+19082;Minister of Armament;アレクサンダー・ゲルギノフ;39;SC;Resource Industrialist;Medium;M19014;x
+19083;Minister of Armament;アタナス・ブロフ;43;SC;Laissez-Faire Capitalist;Low;M19083;x
+19084;Minister of Armament;ディミタール・サホフ;44;SC;Tank Proponent;Low;M19084;x
+19085;Minister of Armament;イワン・ガイディミトリフ;45;SC;Strategic Air Proponent;Low;M19085;x
+19086;Minister of Armament;ペトコ・ストヤノフ;44;LWR;Theoretical Scientist;Low;M19086;x
+19087;Minister of Armament;スタンチョ・チョラコフ;45;LWR;Administrative Genius;Medium;M19087;x
+19088;Minister of Armament;ゲオルギ・ディミトロフ;39;ST;Military Entrepreneur;Medium;M19032;x
+19089;Minister of Armament;イワン・ステファノフ;44;LE;Battle Fleet Proponent;Low;M19034;x
+19090;Minister of Armament;ペトコ・クーニン;45;ST;Air to Ground Proponent;High;M19090;x
+19091;Minister of Security;イワン・クラスノフスキ;37;PA;Efficient Sociopath;Medium;M19091;x
+19092;Minister of Security;ニコライ・ニコラエフ;38;PA;Crime Fighter;Medium;M19092;x
+19093;Minister of Security;ニコラ・ネデフ;39;PA;Silent Lawyer;Medium;M19093;x
+19094;Minister of Security;ドチョ・リストフ;43;PA;Crooked Kleptocrat;Medium;M19094;x
+19095;Minister of Security;アレクサンダー・スタニシェフ;44;PA;Prince of Terror;Medium;M19095;x
+19096;Minister of Security;ディミタール・ペシェフ;39;FA;Compassionate Gentleman;Low;M19006;x
+19097;Minister of Security;ペトゥル・ガブロフスキ;44;FA;Back Stabber;Low;M19022;x
+19098;Minister of Security;アレクサンダー・ゲルギノフ;39;SC;Silent Lawyer;Medium;M19014;x
+19099;Minister of Security;ラジチョ・ペキモフ;43;SC;Efficient Sociopath;Medium;M19099;x
+19100;Minister of Security;ヴァージル・ディモフ;44;SC;Man of the People;Medium;M19100;x
+19101;Minister of Security;ニコラ・ムシャノフ;45;SC;Compassionate Gentleman;High;M19015;x
+19102;Minister of Security;ゲオルギ・クリチェフ;44;LWR;Crime Fighter;Very High;M19073;x
+19103;Minister of Security;ヴァルコ・チェルヴェンコフ;39;ST;Prince of Terror;High;M19103;x
+19104;Minister of Security;アントン・ユーゴフ;44;ST;Secret Police Chief;High;M19035;x
+19105;Head of Military Intelligence;キリル・ゴウネフ;39;PA;Naval Intelligence Specialist;Medium;M19004;x
+19106;Head of Military Intelligence;ステファン・ノイコフ;43;PA;Political Specialist;Low;M19106;x
+19107;Head of Military Intelligence;サヴァ・キーロフ;44;PA;Industrial Specialist;Low;M19079;x
+19108;Head of Military Intelligence;キリル・スタンチェフ;39;FA;Dismal Enigma;Medium;M19026;x
+19109;Head of Military Intelligence;イワン・ロゴサルスキ;44;NS;Logistics Specialist;Medium;M19109;x
+19110;Head of Military Intelligence;ボリス・ボタン;39;SC;Naval Intelligence Specialist;Medium;M19110;x
+19111;Head of Military Intelligence;アタナス・ブロフ;43;SC;Industrial Specialist;Medium;M19016;x
+19112;Head of Military Intelligence;ゲオルギ・クリチェフ;44;LWR;Naval Intelligence Specialist;Very High;M19073;x
+19113;Head of Military Intelligence;トライチョ・コストフ;39;ST;Logistics Specialist;Medium;M19036;x
+19114;Head of Military Intelligence;ミンコ・ネイチェフ;45;ST;Political Specialist;Medium;M19114;x
+19115;Chief of Staff;テオドシ・ダスカロフ;39;PA;School of Defence;Medium;M19115;x
+19116;Chief of Staff;ニコラ・ミホフ;42;PA;School of Fire Support;Medium;M19116;x
+19117;Chief of Staff;ルッシ・ルセフ;43;PA;School of Mass Combat;High;M19117;x
+19118;Chief of Staff;トドール・ジョルジエフ;44;PA;School of Manoeuvre;Medium;M19008;x
+19119;Chief of Staff;イワン・ヴルコフ;39;FA;School of Defence;High;M19027;x
+19120;Chief of Staff;イワン・マリノフ;39;SC;School of Manoeuvre;Very Low;M19017;x
+19121;Chief of Staff;ゲオルギ・ペツォフ;43;SC;School of Defence;Medium;M19019;x
+19122;Chief of Staff;ダムジャン・ヴェルチェフ;44;LWR;School of Psychology;Medium;M19122;x
+19123;Chief of Staff;フリスト・ミハイロフ;39;ST;School of Mass Combat;Medium;M19037;x
+19124;Chief of Staff;アセン・グレコフ;45;ST;School of Manoeuvre;Medium;M19124;x
+19125;Chief of Army;イオルダン・ピーフ;37;PA;Decisive Battle Doctrine;Medium;M19125;x
+19126;Chief of Army;ニコラ・ハジペトコフ;39;PA;Static Defence Doctrine;Low;M19126;x
+19127;Chief of Army;ヴァシル・ボイデフ;41;PA;Elastic Defence Doctrine;Medium;M19127;x
+19128;Chief of Army;コンスタンティン・ルカシュ;43;PA;Guns and Butter Doctrine;Medium;M19128;x
+19129;Chief of Army;キリル・スタンチェフ;44;PA;Armoured Spearhead Doctrine;Medium;M19026;x
+19130;Chief of Army;フリスト・ルコフ;39;FA;Static Defence Doctrine;High;M19007;x
+19131;Chief of Army;トリフォン・トリフォノフ;44;FA;Elastic Defence Doctrine;Medium;M19131;x
+19132;Chief of Army;イワン・マリノフ;39;SC;Static Defence Doctrine;Low;M19017;x
+19133;Chief of Army;ラジチョ・スラヴコフ;44;SC;Guns and Butter Doctrine;Medium;M19018;x
+19134;Chief of Army;ミカイル・ミンチェフ;44;LWR;Guns and Butter Doctrine;Medium;M19134;x
+19135;Chief of Army;ツヴジャトコ・ラドジノフ;39;ST;Decisive Battle Doctrine;High;M19038;x
+19136;Chief of Army;イワン・キノフ;44;ST;Armoured Spearhead Doctrine;Medium;M19136;x
+19137;Chief of Navy;イワン・ヴァリクレチコフ;38;PA;Base Control Doctrine;High;M19137;x
+19138;Chief of Navy;アセン・トシェフ;39;PA;Open Seas Doctrine;High;M19138;x
+19139;Chief of Navy;アタナス・シャラパトフ;39;FA;Decisive Naval Battle Doctrine;Medium;M19029;x
+19141;Chief of Navy;ラチョ・バタノフ;44;LWR;Open Seas Doctrine;Medium;M19141;x
+19142;Chief of Navy;キリル・カラチェフ;39;ST;Indirect Approach Doctrine;Medium;M19039;x
+19143;Chief of Navy;ステファン・ツァーネフ;45;ST;Decisive Naval Battle Doctrine;Very Low;M19143;x
+19145;Chief of Air Force;ディミタール・アイルジャノフ;41;PA;Air Superiority Doctrine;Medium;M19145;x
+19146;Chief of Air Force;チュドミール・トプロドルスキ;39;FA;Vertical Envelopment Doctrine;Medium;M19030;x
+19147;Chief of Air Force;ストヤン・ストヤノフ;39;SC;Air Superiority Doctrine;Medium;M19020;x
+19148;Chief of Air Force;ゲオルギ・ドレニコフ;44;SC;Carpet Bombing Doctrine;Medium;M19148;x
+19149;Chief of Air Force;ヴァシル・ヴィルコフ;44;LWR;Vertical Envelopment Doctrine;Medium;M19149;x
+19150;Chief of Air Force;ザハリ・ザハリエフ;39;ST;Vertical Envelopment Doctrine;Medium;M19150;x
+19151;Head of State;ヴァージル・ディモフ;45;PA;Insignificant Layman;High;M19100;x
+19152;Head of State;ヴァージル・ディモフ;47;SC;Insignificant Layman;High;M19100;x
+19153;Head of State;ゲオルギ・クリチェフ;45;LWR;Popular Figurehead;Very High;M19073;x
+19154;Head of Government;ヴァージル・ディモフ;45;PA;Silent Workhorse;High;M19100;x
+19155;Head of Government;ヴァージル・ディモフ;47;SC;Silent Workhorse;High;M19100;x
+19156;Head of Government;ゲオルギ・クリチェフ;46;LWR;Happy Amateur;Very High;M19073;x
+19019;Chief of Navy;ゲオルギ・ペツォフ;36;SC;Base Control Doctrine;Medium;M19019;x
+19033;Foreign Minister;ヴァシル・P・コラロフ;36;ST;Ideological Crusader;High;M19031;x
+19038;Chief of Army;ツヴジャトコ・ラドジノフ;36;ST;Decisive Battle Doctrine;High;M19038;x
+19157;Head of State;ヴァルコ・チェルヴェンコフ;49;ST;Stern Imperialist;High;M19103;x
+19158;Head of Government;ヴァシル・コラロフ;49;ST;Flamboyant Tough Guy;High;M19031;x
+19166;Head of Government;ヴァルコ・チェルヴェンコフ;50;ST;Happy Amateur;High;M19103;x
+19159;Foreign Minister;ヴラディミル・ポプトモフ;49;ST;Iron Fisted Brute;High;M19159;x
+19160;Foreign Minister;ミンコ・ネイチェフ;50;ST;The Cloak N Dagger Schemer;High;M19114;x
+19161;Minister of Armament;ゲオルギ・ダミャノフ;46;ST;Tank Proponent;High;M19161;x
+19162;Minister of Armament;ペトゥル・パンチェフスキー;49;ST;Military Entrepreneur;High;M19162;x
+19163;Minister of Security;ルシ・フリストゾフ;49;ST;Back Stabber;High;M19163;x
+19164;Minister of Security;ゲオルギ・チャンコフ;51;ST;Crooked Kleptocrat;High;M19164;x
+19165;Head of Military Intelligence;ペトゥコ・クニン;50;ST;Industrial Specialist;Medium;M19165;x

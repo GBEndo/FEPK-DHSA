@@ -1,0 +1,100 @@
+LAT;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+27001;Head of State;アルバーツ・クヴィエシス;36;FA;Powerhungry Demagogue;High;M27001;x
+27002;Head of Government;カルリス・ウルマニス;36;FA;Happy Amateur;High;M27002;x
+27003;Foreign Minister;カルリス・ウルマニス;36;FA;Biased Intellectual;Undying;M27002;x
+27004;Minister of Armament;ルドヴィクス・ツティス;36;PA;Infantry Proponent;Medium;M27004;x
+27005;Minister of Security;ヴィリス・グルビス;36;FA;Crime Fighter;Medium;M27005;x
+27006;Head of Military Intelligence;ハーマニス・アプシティス;36;FA;Political Specialist;Medium;M27006;x
+27007;Chief of Staff;イルニス・バロディス;36;FA;School of Defence;Medium;M27007;x
+27008;Chief of Army;ルドルフス・バンゲルスキス;36;FA;Static Defence Doctrine;Low;M27008;x
+27009;Chief of Navy;トマス・スパーデ;36;FA;Decisive Naval Battle Doctrine;Medium;M27009;x
+27010;Chief of Air Force;ヤン・インダンス;36;FA;Army Aviation Doctrine;Medium;M27010;x
+27031;Head of State;ハンス・ハインリヒ・ローゼ;41;NS;Stern Imperialist;High;M27031;x
+27032;Head of State;カルリス・ウルマニス;36;FA;Barking Buffoon;High;M27002;x
+27033;Head of State;ヤン・アンダーソンス;45;PA;Benevolent Gentleman;High;M27033;x
+27034;Head of State;パウルス・カルニンス;36;SC;Insignificant Layman;High;M27011;x
+27035;Head of State;ヤゼプス・ランカンス;45;SC;Autocratic Charmer;High;M27035;x
+27036;Head of State;アウグスツ・キルヘンスタインス;36;LE;Weary Stiffneck;High;M27021;x
+27037;Head of State;エルネスツ・クライスマニス;45;ST;Ruthless Powermonger;High;M27037;x
+27038;Head of Government;アルフレッズ・ヴァルドマニス;41;NS;Smiling Oilman;High;M27038;x
+27039;Head of Government;オスカルス・ダンカース;41;NS;Happy Amateur;High;M27039;x
+27041;Head of Government;イルニス・カミンスキス;40;FA;Naive Optimist;High;M27041;x
+27042;Head of Government;ルドルフス・バンゲルスキス;45;PA;Flamboyant Tough Guy;High;M27008;x
+27043;Head of Government;パウルス・カルニンス;36;SC;Silent Workhorse;High;M27011;x
+27044;Head of Government;ラインホルト・K・ザリンス;40;SC;Political Protege;High;M27012;x
+27045;Head of Government;アウグスツ・キルヘンスタインス;36;LE;Silent Workhorse;High;M27021;x
+27046;Head of Government;ロベルツ・オシス;45;ST;Old General;High;M27046;x
+27047;Head of Government;ヴィリス・ルシス;46;ST;Backroom Backstabber;High;M27025;x
+27048;Foreign Minister;アルフレッズ・ヴァルドマニス;41;NS;Iron Fisted Brute;Medium;M27038;x
+27049;Foreign Minister;オスカルス・ダンカース;41;NS;General Staffer;Medium;M27039;x
+27050;Foreign Minister;ムルティンス・プルドマニス;44;NS;Ideological Crusader;Medium;M27050;x
+27051;Foreign Minister;ヴィリヘルムス・ムンタース;36;FA;Great Compromiser;Medium;M27051;x
+27052;Foreign Minister;イルニス・カミンスキス;45;PA;Iron Fisted Brute;Medium;M27041;x
+27053;Foreign Minister;ラインホルト・K・ザリンス;36;SC;Apologetic Clerk;Medium;M27012;x
+27054;Foreign Minister;アルフレッズ・ブドゥルマニス;40;SC;Biased Intellectual;Medium;M27054;x
+27055;Foreign Minister;ユリークス・ラシス;36;LE;Great Compromiser;Medium;M27029;x
+27056;Foreign Minister;アウグスツ・キルヘンスタインス;40;LE;Ideological Crusader;Undying;M27021;x
+27057;Foreign Minister;アーノルズ・スクレバース;45;ST;Great Compromiser;Medium;M27057;x
+27058;Foreign Minister;ペテリス・ヴァレスカルンス;46;ST;Ideological Crusader;Medium;M27058;x
+27059;Foreign Minister;エルネスツ・クライスマニス;47;ST;The Cloak N Dagger Schemer;Very High;M27037;x
+27060;Minister of Armament;エヴァルズ・アンダーソンス;41;NS;Military Entrepreneur;High;M27060;x
+27061;Minister of Armament;イルニス・スクイェヴィクス;41;NS;Resource Industrialist;Medium;M27061;x
+27062;Minister of Armament;イルニス・ミージス;44;NS;Infantry Proponent;Very High;M27062;x
+27063;Minister of Armament;ヴィリス・グルビス;36;FA;Air to Sea Proponent;Medium;M27005;x
+27064;Minister of Armament;コルネリース・ヴァイドニエクス;38;FA;Air Superiority Proponent;Medium;M27064;x
+27065;Minister of Armament;イルニス・カミンスキス;39;FA;Resource Industrialist;Medium;M27041;x
+27066;Minister of Armament;アルフレッズ・ヴァルドマニス;40;FA;Administrative Genius;Medium;M27038;x
+27068;Minister of Armament;ペトルス・アプスカルンス;36;SC;Infantry Proponent;Medium;M27068;x
+27069;Minister of Armament;エドガース・アンダーソンス;45;SC;Military Entrepreneur;Medium;M27014;x
+27070;Minister of Armament;ロベルツ・ダンブティス;36;LE;Resource Industrialist;Medium;M27070;x
+27071;Minister of Armament;カールリス・カールソンス;40;LE;Military Entrepreneur;Medium;M27024;x
+27072;Minister of Armament;アレクサンドルス・ブレ;45;ST;laissez-faire capitalist;Medium;M27072;x
+27073;Minister of Armament;アーノルズ・タバクス;46;ST;Resource Industrialist;Medium;M27073;x
+27074;Minister of Security;アルフレッズ・ヴァルドマニス;41;NS;Crime Fighter;Medium;M27038;x
+27075;Minister of Security;テオドールス・ズヴェイニエクス;41;NS;Efficient Sociopath;Low;M27075;x
+27076;Minister of Security;アルバーツ・クヴィエシス;43;NS;Man of the People;Low;M27001;x
+27077;Minister of Security;ハーマニス・アプシティス;36;FA;Prince of Terror;Medium;M27006;x
+27078;Minister of Security;イルニス・バロディス;40;FA;Man of the People;Medium;M27007;x
+27079;Minister of Security;ヤン・アンダーソンス;45;PA;Crooked Kleptocrat;Low;M27033;x
+27080;Minister of Security;パウルス・カルニンス;36;SC;Efficient Sociopath;High;M27011;x
+27081;Minister of Security;ヤゼプス・ランカンス;45;SC;Man of the People;Very High;M27035;x
+27082;Minister of Security;ユリース・ラベルツ;36;LE;Compassionate Gentleman;Medium;M27082;x
+27083;Minister of Security;ヴィリス・ルシス;40;LE;Efficient Sociopath;Medium;M27025;x
+27084;Minister of Security;ロドルフス・ロシン;45;ST;Silent Lawyer;Medium;M27084;x
+27085;Minister of Security;アンドレイス・ヤブロンスキス;46;ST;Prince of Terror;Medium;M27085;x
+27086;Head of Military Intelligence;ハンス・ハインリヒ・ローゼ;41;NS;Industrial Specialist;Medium;M27031;x
+27087;Head of Military Intelligence;エーリヒ・コッホ;43;NS;Logistics Specialist;Medium;M27087;x
+27089;Head of Military Intelligence;カルリス・ウルマニス;38;FA;Dismal Enigma;Undying;M27002;x
+27091;Head of Military Intelligence;フェリックス・シエレンス;36;SC;Industrial Specialist;Medium;M27091;x
+27092;Head of Military Intelligence;フリシス・セルミンス;40;SC;Dismal Enigma;Medium;M27016;x
+27093;Head of Military Intelligence;ラインホルト・K・ザリンス;45;SC;Technical Specialist;Medium;M27012;x
+27094;Head of Military Intelligence;ユリース・ラベルツ;36;LE;Technical Specialist;Medium;M27082;x
+27095;Head of Military Intelligence;テオドールス・ズヴェイニエクス;45;ST;Naval Intelligence Specialist;Low;M27075;x
+27096;Head of Military Intelligence;ヴィリス・ルシス;46;ST;Logistics Specialist;Medium;M27025;x
+27097;Chief of Staff;コンスタンティンス・カクステ;41;NS;School of Fire Support;Medium;M27097;x
+27098;Chief of Staff;アルトゥルス・M・シルガイリス;43;NS;School of Fire Support;High;M27098;x
+27100;Chief of Staff;クリシュヤーニス・ベルチス;39;FA;School of Manoeuvre;Medium;M27100;x
+27101;Chief of Staff;ルドルフス・コシンス;45;PA;School of Psychology;Medium;M27101;x
+27102;Chief of Staff;ヴェルナース・テフパース;36;SC;School of Manoeuvre;Medium;M27017;x
+27103;Chief of Staff;ヤン・ベルジンス;36;LE;School of Mass Combat;Medium;M27027;x
+27104;Chief of Staff;ロベルツ・ダンブティス;38;LE;School of Fire Support;Medium;M27070;x
+27105;Chief of Staff;イズグリティバス・タウタス;45;ST;School of Mass Combat;Medium;M27030;x
+27106;Chief of Staff;アルトゥルス・スプロギス;46;ST;School of Fire Support;High;M27106;x
+27107;Chief of Army;オットー・ヘルミヒ;41;NS;Elastic Defence Doctrine;Medium;M27107;x
+27109;Chief of Army;フリシス・セルミンス;37;FA;Elastic Defence Doctrine;Medium;M27016;x
+27110;Chief of Army;ルドルフス・コシンス;45;PA;Elastic Defence Doctrine;Medium;M27101;x
+27113;Chief of Army;ヤン・ベルジンス;36;LE;Decisive Battle Doctrine;Medium;M27027;x
+27114;Chief of Army;ロベルツ・ダンブティス;38;LE;Guns and Butter Doctrine;Medium;M27070;x
+27115;Chief of Army;アルトゥルス・スプロギス;45;ST;Decisive Battle Doctrine;High;M27106;x
+27116;Chief of Army;ロベルツ・オシス;46;ST;Guns and Butter Doctrine;Medium;M27046;x
+27117;Chief of Navy;コンスタンティンス・カクステ;41;NS;Base Control Doctrine;Medium;M27097;x
+27120;Chief of Navy;ヤン・アンダーソンス;36;SC;Base Control Doctrine;Low;M27033;x
+27121;Chief of Navy;アウグスツ・キルヘンスタインス;36;LE;Open Seas Doctrine;Medium;M27021;x
+27122;Chief of Navy;ユリークス・ラシス;40;LE;Indirect Approach Doctrine;Medium;M27029;x
+27123;Chief of Navy;テオドールス・ズヴェイニエクス;45;ST;Power Projection Doctrine;Low;M27075;x
+27124;Chief of Air Force;コンスタンティンス・カクステ;41;NS;Army Aviation Doctrine;Medium;M27097;x
+27127;Chief of Air Force;ルドルフス・バンゲルスキス;45;PA;Army Aviation Doctrine;Low;M27008;x
+27128;Chief of Air Force;ユクムス・ヴァシエティス;36;SC;Air Superiority Doctrine;Medium;M27126;x
+27129;Chief of Air Force;エドガース・アンダーソンス;45;SC;Vertical Envelopment Doctrine;Medium;M27014;x
+27130;Chief of Air Force;イズグリティバス・タウタス;36;LE;Naval Aviation Doctrine;Medium;M27030;x

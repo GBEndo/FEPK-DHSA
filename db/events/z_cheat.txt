@@ -1,0 +1,1244 @@
+##########################################
+# HoI2 DDA1.1用 チートイベント詰め合わせ #
+#                             2007.11.03 #
+# 使用ID：888000～888014                 #
+##########################################
+
+########################################
+# チート メニュー 1/3
+########################################
+
+event = {
+
+	id = 888000
+	random = no
+
+	persistent = yes # イベント再発生可
+
+	name = "各種チート メニュー 1/3"
+	desc = "研究の際などに，自己責任でご使用ください！"
+
+	style = 0
+
+	trigger = {
+		ai = no # AIでは発生しない
+		}
+
+	action_a = {
+		name = "経済チート"
+		command = { type = trigger which = 888003 }
+	}
+	action_b = {
+		name = "資源チート"
+		command = { type = trigger which = 888004 }
+	}
+	action_c = {
+		name = "技術チート"
+		command = { type = trigger which = 888005 }
+	}
+	action_d = {
+		name = "次へ"
+		command = { type = trigger which = 888001 }
+	}
+}
+
+
+########################################
+# チート メニュー 2/3
+########################################
+
+event = {
+
+	id = 888001
+	random = no
+
+	persistent = yes # イベント再発生可
+
+	name = "各種チート メニュー 2/2"
+	desc = "研究の際などに，自己責任でご使用ください！"
+
+	style = 0
+
+	trigger = {
+		ai = no # AIでは発生しない
+		}
+
+	action_a = {
+		name = "軍事チート １"
+		command = { type = trigger which = 888006 }
+	}
+	action_b = {
+		name = "軍事チート ２"
+		command = { type = trigger which = 888007 }
+	}
+	action_c = {
+		name = "軍事チート ３"
+		command = { type = trigger which = 888008 }
+	}
+	action_d = {
+		name = "次へ"
+		command = { type = trigger which = 888002 }
+	}
+}
+
+
+########################################
+# チート メニュー 3/3
+########################################
+
+event = {
+
+	id = 888002
+	random = no
+
+	persistent = yes # イベント再発生可
+
+	name = "各種チート メニュー 3/3"
+	desc = "研究の際などに，自己責任でご使用ください！"
+
+	style = 0
+
+	trigger = {
+		ai = no # AIでは発生しない
+		}
+
+	action_a = {
+		name = "内政チート"
+		command = { type = trigger which = 888009 }
+	}
+	action_b = {
+		name = "外交チート"
+		command = { type = trigger which = 888010 }
+	}
+	action_c = {
+		name = "トップメニューに戻る"
+		command = { type = trigger which = 888000 }
+	}
+	action_d = {
+		name = "何もせずに終了する"
+		command = { }
+	}
+}
+
+
+########################################
+# 経済チート
+########################################
+
+event = {
+
+	id = 888003
+	random = no
+
+	persistent = yes # イベント再発生可
+
+	name = "経済チート"
+	desc = "経済関連のチート"
+
+	style = 0
+
+	trigger = {
+		ai = no # AIでは発生しない
+		}
+
+	action_a = {
+		name = "国民不満率 -50"
+		command = { type = dissent value = -50 }
+	}
+
+	action_b = {
+		name = "マップ外IC +50"
+		command = { type = free_ic value = 50 }
+	}
+
+	action_c = {
+		name = "マップ外TC +10000"
+		command = { type = extra_tc value = 10000 }
+	}
+
+	action_d = {
+		name = "メニューに戻る"
+		command = { type = trigger which = 888000 }
+	}
+}
+
+
+########################################
+# 資源チート
+########################################
+
+event = {
+
+	id = 888004
+	random = no
+
+	persistent = yes # イベント再発生可
+
+	name = "資源チート"
+	desc = "資源関連のチート"
+
+	style = 0
+
+	trigger = {
+		ai = no # AIでは発生しない
+		}
+
+	action_a = {
+		name = "資源・物資・予算 all +5000"
+		#command = { type = energypool value = 5000 }
+		#command = { type = metalpool value = 5000 }
+		#command = { type = rarematerialspool value = 5000 }
+		#command = { type = oilpool value = 5000 }
+		#command = { type = supplies value = 5000 }
+		command = { type = money value = 80000 }
+		#command = { type = manpowerpool value = 5000 }
+	}
+
+	action_b = {
+		name = "マップ外生産：IC+資源 350"
+		command = { type = free_ic value = 350 }
+		command = { type = free_energy value = 1400 }
+		command = { type = free_metal value = 700 }
+		command = { type = free_rare_materials value = 700 }
+		command = { type = free_oil value = 700 }
+		command = { type = free_supplies value = 10 }
+		command = { type = free_money value = 10.0 }
+		command = { type = free_manpower value = 0.7 }
+	}
+
+	action_c = {
+		name = "マップ外生産：輸送船団 10"
+		command = { type = free_transport value = 10 }
+		command = { type = free_escort value = 10 }
+	}
+
+	action_d = {
+		name = "メニューに戻る"
+		command = { type = trigger which = 888000 }
+	}
+}
+
+
+########################################
+# 技術チート
+########################################
+
+event = {
+
+	id = 888005
+	random = no
+
+	persistent = yes # イベント再発生可
+
+	name = "技術チート"
+	desc = "技術関連のチート"
+
+	style = 0
+
+	trigger = {
+		ai = no # AIでは発生しない
+		}
+
+	action_a = {
+		name = "研究開発速度 +10000"
+		command = { type = research_mod value = 30000 }
+	}
+
+	action_b = {
+		name = "修理補強効率 +1000"
+		command = { type = repair_mod value = 1000 }
+	}
+
+	action_c = {
+		name = "消耗抑制率 +1000"
+		command = { type = attrition_mod value = 1000 }
+	}
+
+	action_d = {
+		name = "メニューに戻る"
+		command = { type = trigger which = 888000 }
+	}
+}
+
+
+########################################
+# 軍事チート１
+########################################
+
+event = {
+
+	id = 888006
+	random = no
+
+	persistent = yes # イベント再発生可
+
+	name = "軍事チート１"
+	desc = "軍事関連のチート"
+
+	style = 0
+
+	trigger = {
+		ai = no # AIでは発生しない
+		}
+
+	action_a = {
+		name = "44年式諸兵科連合9個師団セットを未配置プールへ追加"
+		command = { type = add_division which = "前線司令部" value = hq when = 2 where = sp_artillery }
+		command = { type = add_division which = "自動車化師団" value = motorized when = 2 where = sp_artillery }
+		command = { type = add_division which = "自動車化師団" value = motorized when = 2 where = sp_artillery }
+		command = { type = add_division which = "自動車化師団" value = motorized when = 2 where = sp_artillery }
+		command = { type = add_division which = "自動車化師団" value = motorized when = 2 where = sp_artillery }
+		command = { type = add_division which = "戦車師団" value = armor when = 4 where = sp_artillery }
+		command = { type = add_division which = "戦車師団" value = armor when = 4 where = sp_artillery }
+		command = { type = add_division which = "戦車師団" value = armor when = 4 where = sp_artillery }
+		command = { type = add_division which = "戦車師団" value = armor when = 4 where = sp_artillery }
+	}
+
+	action_b = {
+		name = "41年式歩兵(砲兵)×9，45年式歩兵(砲兵)×9を未配置プールへ追加"
+		command = { type = add_division which = "歩兵師団" value = infantry when = 3 where = artillery }
+		command = { type = add_division which = "歩兵師団" value = infantry when = 3 where = artillery }
+		command = { type = add_division which = "歩兵師団" value = infantry when = 3 where = artillery }
+		command = { type = add_division which = "歩兵師団" value = infantry when = 3 where = artillery }
+		command = { type = add_division which = "歩兵師団" value = infantry when = 3 where = artillery }
+		command = { type = add_division which = "歩兵師団" value = infantry when = 3 where = artillery }
+		command = { type = add_division which = "歩兵師団" value = infantry when = 3 where = artillery }
+		command = { type = add_division which = "歩兵師団" value = infantry when = 3 where = artillery }
+		command = { type = add_division which = "歩兵師団" value = infantry when = 3 where = artillery }
+		command = { type = add_division which = "歩兵師団" value = infantry when = 5 where = artillery }
+		command = { type = add_division which = "歩兵師団" value = infantry when = 5 where = artillery }
+		command = { type = add_division which = "歩兵師団" value = infantry when = 5 where = artillery }
+		command = { type = add_division which = "歩兵師団" value = infantry when = 5 where = artillery }
+		command = { type = add_division which = "歩兵師団" value = infantry when = 5 where = artillery }
+		command = { type = add_division which = "歩兵師団" value = infantry when = 5 where = artillery }
+		command = { type = add_division which = "歩兵師団" value = infantry when = 5 where = artillery }
+		command = { type = add_division which = "歩兵師団" value = infantry when = 5 where = artillery }
+		command = { type = add_division which = "歩兵師団" value = infantry when = 5 where = artillery }
+	}
+
+	action_c = {
+		name = "43年式守備隊(憲兵)×30，39年式騎兵(憲兵)×6を未配置プールへ追加"
+		command = { type = add_division which = "守備隊" value = garrison when = 2 where = police }
+		command = { type = add_division which = "守備隊" value = garrison when = 2 where = police }
+		command = { type = add_division which = "守備隊" value = garrison when = 2 where = police }
+		command = { type = add_division which = "守備隊" value = garrison when = 2 where = police }
+		command = { type = add_division which = "守備隊" value = garrison when = 2 where = police }
+		command = { type = add_division which = "守備隊" value = garrison when = 2 where = police }
+		command = { type = add_division which = "守備隊" value = garrison when = 2 where = police }
+		command = { type = add_division which = "守備隊" value = garrison when = 2 where = police }
+		command = { type = add_division which = "守備隊" value = garrison when = 2 where = police }
+		command = { type = add_division which = "守備隊" value = garrison when = 2 where = police }
+		command = { type = add_division which = "守備隊" value = garrison when = 2 where = police }
+		command = { type = add_division which = "守備隊" value = garrison when = 2 where = police }
+		command = { type = add_division which = "守備隊" value = garrison when = 2 where = police }
+		command = { type = add_division which = "守備隊" value = garrison when = 2 where = police }
+		command = { type = add_division which = "守備隊" value = garrison when = 2 where = police }
+		command = { type = add_division which = "守備隊" value = garrison when = 2 where = police }
+		command = { type = add_division which = "守備隊" value = garrison when = 2 where = police }
+		command = { type = add_division which = "守備隊" value = garrison when = 2 where = police }
+		command = { type = add_division which = "守備隊" value = garrison when = 2 where = police }
+		command = { type = add_division which = "守備隊" value = garrison when = 2 where = police }
+		command = { type = add_division which = "守備隊" value = garrison when = 2 where = police }
+		command = { type = add_division which = "守備隊" value = garrison when = 2 where = police }
+		command = { type = add_division which = "守備隊" value = garrison when = 2 where = police }
+		command = { type = add_division which = "守備隊" value = garrison when = 2 where = police }
+		command = { type = add_division which = "守備隊" value = garrison when = 2 where = police }
+		command = { type = add_division which = "守備隊" value = garrison when = 2 where = police }
+		command = { type = add_division which = "守備隊" value = garrison when = 2 where = police }
+		command = { type = add_division which = "守備隊" value = garrison when = 2 where = police }
+		command = { type = add_division which = "守備隊" value = garrison when = 2 where = police }
+		command = { type = add_division which = "守備隊" value = garrison when = 2 where = police }
+		command = { type = add_division which = "騎兵隊" value = cavalry when = 2 where = police }
+		command = { type = add_division which = "騎兵隊" value = cavalry when = 2 where = police }
+		command = { type = add_division which = "騎兵隊" value = cavalry when = 2 where = police }
+		command = { type = add_division which = "騎兵隊" value = cavalry when = 2 where = police }
+		command = { type = add_division which = "騎兵隊" value = cavalry when = 2 where = police }
+		command = { type = add_division which = "騎兵隊" value = cavalry when = 2 where = police }
+	}
+
+	action_d = {
+		name = "メニューに戻る"
+		command = { type = trigger which = 888001 }
+	}
+}
+
+
+########################################
+# 軍事チート２
+########################################
+
+event = {
+
+	id = 888007
+	random = no
+
+	persistent = yes # イベント再発生可
+
+	name = "軍事チート２"
+	desc = "部隊追加のチート "
+
+	style = 0
+
+	trigger = {
+		ai = no # AIでは発生しない
+		}
+
+	action_a = {
+		name = "陸軍部隊追加メニューへ"
+		command = { type = trigger which = 888012 }
+	}
+
+	action_b = {
+		name = "海軍部隊追加メニューへ"
+		command = { type = trigger which = 888013 }
+	}
+
+	action_c = {
+		name = "空軍部隊追加メニューへ"
+		command = { type = trigger which = 888014 }
+	}
+
+	action_d = {
+		name = "メニューに戻る"
+		command = { type = trigger which = 888001 }
+	}
+}
+
+
+########################################
+# 軍事チート３
+########################################
+
+event = {
+
+	id = 888008
+	random = no
+
+	persistent = yes # イベント再発生可
+
+	name = "軍事チート３"
+	desc = "軍事関連のチート"
+
+	style = 0
+
+	trigger = {
+		ai = no # AIでは発生しない
+		}
+
+	action_a = {
+		name = "ランダムで将軍のスキルを10に変更する"
+		command = { type = set_leader_skill which = -1 value = 10 }
+	}
+
+	action_b = {
+		name = "三軍ドーピング：攻撃・防御 +100"
+		command = { type = soft_attack which = land value = 100 }
+		command = { type = hard_attack which = land value = 100 }
+		command = { type = air_attack which = land value = 100 }
+		command = { type = defensiveness which = land value = 100 }
+		command = { type = air_defense which = land value = 100 }
+		command = { type = strategic_attack which = air value = 100 }
+		command = { type = soft_attack which = air value = 100 }
+		command = { type = hard_attack which = air value = 100 }
+		command = { type = naval_attack which = air value = 100 }
+		command = { type = air_attack which = air value = 100 }
+		command = { type = air_defense which = air value = 100 }
+		command = { type = naval_attack which = naval value = 100 }
+		command = { type = air_attack which = naval value = 100 }
+		command = { type = sub_attack which = naval value = 100 }
+		command = { type = convoy_attack which = naval value = 100 }
+		command = { type = naval_defense which = naval value = 100 }
+		command = { type = air_defense which = naval value = 100 }
+	}
+
+	action_c = {
+		name = "三軍ドーピング：奇襲 +100"
+		command = { type = surprise which = land value = 100 }
+		command = { type = surprise which = naval value = 100 }
+		command = { type = surprise which = air value = 100 }
+	}
+
+	action_d = {
+		name = "メニューに戻る"
+		command = { type = trigger which = 888001 }
+	}
+}
+
+
+########################################
+# 内政チート
+########################################
+
+event = {
+
+	id = 888009
+	random = no
+
+	persistent = yes # イベント再発生可
+
+	name = "内政チート"
+	desc = "内政関連のチート"
+
+	style = 0
+
+	trigger = {
+		ai = no # AIでは発生しない
+		}
+
+	action_a = {
+		name = "政体変更：国家社会主義へ"
+		command = { type = set_domestic which = democratic value = 1 }
+		command = { type = set_domestic which = political_left value = 1 }
+		command = { type = set_domestic which = freedom value = 1 }
+		command = { type = set_domestic which = free_market value = 1 }
+		command = { type = set_domestic which = defense_lobby value = 10 }
+		command = { type = set_domestic which = interventionism value = 10 }
+	}
+
+	action_b = {
+		name = "政体変更：自由市場主義へ"
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 10 }
+		command = { type = set_domestic which = freedom value = 10 }
+		command = { type = set_domestic which = free_market value = 10 }
+		command = { type = set_domestic which = defense_lobby value = 10 }
+		command = { type = set_domestic which = interventionism value = 10 }
+	}
+
+	action_c = {
+		name = "各施設の建築速度 +1000"
+		command = { type = building_prod_mod which = ic value = 1000 }
+		command = { type = building_prod_mod which = coastal_fort value = 1000 }
+		command = { type = building_prod_mod which = land_fort value = 1000 }
+		command = { type = building_prod_mod which = flak value = 1000 }
+		command = { type = building_prod_mod which = infrastructure value = 1000 }
+		command = { type = building_prod_mod which = air_base value = 1000 }
+		command = { type = building_prod_mod which = naval_base value = 1000 }
+		command = { type = building_prod_mod which = radar_station value = 1000 }
+		command = { type = building_prod_mod which = nuclear_reactor value = 1000 }
+		command = { type = building_prod_mod which = rocket_test value = 1000 }
+	}
+
+	action_d = {
+		name = "メニューに戻る"
+		command = { type = trigger which = 888002 }
+	}
+}
+
+
+########################################
+# 外交チート
+########################################
+
+event = {
+
+	id = 888010
+	random = no
+
+	persistent = yes # イベント再発生可
+
+	name = "外交チート"
+	desc = "外交関連のチート\n同盟中または自国が傀儡のとき，メニューが増えます"
+
+	style = 0
+
+	trigger = {
+		ai = no # AIでは発生しない
+		}
+
+	action_a = {
+		name = "自国が戦争中でも同盟を脱退する"
+		command = { type = leave_alliance }
+	}
+
+	action_b = {
+		name = "自国が傀儡状態のとき，宗主国から独立する"
+		command = { type = end_puppet }
+	}
+
+	action_c = {
+		name = "併合チートへ"
+		command = { type = trigger which = 888011 }
+	}
+
+	action_d = {
+		name = "メニューに戻る"
+		command = { type = trigger which = 888002 }
+	}
+}
+
+
+########################################
+# 併合チート
+########################################
+
+event = {
+
+	id = 888011
+	random = no
+
+	persistent = yes # イベント再発生可
+
+	name = "併合チート"
+	desc = "併合関連のチート"
+
+	style = 0
+
+	trigger = {
+		ai = no # AIでは発生しない
+		}
+
+	action_a = {
+		name = "アメリカ合衆国を併合する"
+		command = { type = inherit which = USA }
+	}
+
+	action_b = {
+		name = "ソビエト連邦を併合する"
+		command = { type = inherit which = SOV }
+	}
+
+	action_c = {
+		name = "イギリスを併合する"
+		command = { type = inherit which = ENG }
+	}
+
+	action_d = {
+		name = "戻る"
+		command = { type = trigger which = 888010 }
+	}
+}
+
+
+########################################
+# 陸軍部隊追加メニュー
+########################################
+
+event = {
+
+	id = 888012
+	random = no
+
+	persistent = yes # イベント再発生可
+
+	name = "陸軍部隊追加メニュー"
+	desc = "陸軍部隊追加のチート"
+
+	style = 0
+
+	trigger = {
+		ai = no # AIでは発生しない
+		}
+
+	action = {
+		name = "39年式HQ(自走砲)×3，43年式HQ(自走砲)×3を未配置プールへ追加"
+		command = { type = add_division which = "前線司令部" value = hq when = 1 where = sp_artillery }
+		command = { type = add_division which = "前線司令部" value = hq when = 1 where = sp_artillery }
+		command = { type = add_division which = "前線司令部" value = hq when = 1 where = sp_artillery }
+		command = { type = add_division which = "前線司令部" value = hq when = 2 where = sp_artillery }
+		command = { type = add_division which = "前線司令部" value = hq when = 2 where = sp_artillery }
+		command = { type = add_division which = "前線司令部" value = hq when = 2 where = sp_artillery }
+	}
+
+	action = {
+		name = "41年式山岳兵(砲兵)×6，41年式海兵(自走砲)×6を未配置プールへ追加"
+		command = { type = add_division which = "山岳師団" value = bergsjaeger when = 2 where = artillery }
+		command = { type = add_division which = "山岳師団" value = bergsjaeger when = 2 where = artillery }
+		command = { type = add_division which = "山岳師団" value = bergsjaeger when = 2 where = artillery }
+		command = { type = add_division which = "山岳師団" value = bergsjaeger when = 2 where = artillery }
+		command = { type = add_division which = "山岳師団" value = bergsjaeger when = 2 where = artillery }
+		command = { type = add_division which = "山岳師団" value = bergsjaeger when = 2 where = artillery }
+		command = { type = add_division which = "海兵師団" value = marine when = 2 where = sp_artillery }
+		command = { type = add_division which = "海兵師団" value = marine when = 2 where = sp_artillery }
+		command = { type = add_division which = "海兵師団" value = marine when = 2 where = sp_artillery }
+		command = { type = add_division which = "海兵師団" value = marine when = 2 where = sp_artillery }
+		command = { type = add_division which = "海兵師団" value = marine when = 2 where = sp_artillery }
+		command = { type = add_division which = "海兵師団" value = marine when = 2 where = sp_artillery }
+	}
+
+	action = {
+		name = "43年式空挺兵(砲兵)×3，発展型輸送機×3を未配置プールへ追加"
+		command = { type = add_division which = "空挺師団" value = paratrooper when = 2 where = artillery }
+		command = { type = add_division which = "空挺師団" value = paratrooper when = 2 where = artillery }
+		command = { type = add_division which = "空挺師団" value = paratrooper when = 2 where = artillery }
+		command = { type = add_division which = "輸送機" value = transport_plane when = 2 }
+		command = { type = add_division which = "輸送機" value = transport_plane when = 2 }
+		command = { type = add_division which = "輸送機" value = transport_plane when = 2 }
+	}
+
+	action = {
+		name = "砲兵師団と司令部を未配置プールへ追加"
+		command = { type = add_division which = "前線司令部" value = hq when = 2 where = sp_artillery }
+		command = { type = add_division which = "砲兵師団" value = d_rsv_33 when = 2 where = artillery }
+	}
+
+	action = {
+		name = "戻る"
+		command = { type = trigger which = 888007 }
+	}
+}
+
+
+########################################
+# 海軍部隊追加メニュー
+########################################
+
+event = {
+
+	id = 888013
+	random = no
+
+	persistent = yes # イベント再発生可
+
+	name = "海軍部隊追加メニュー"
+	desc = "海軍部隊追加のチート"
+
+	style = 0
+
+	trigger = {
+		ai = no # AIでは発生しない
+		}
+
+	action_a = {
+		name = "揚陸艦×12，発展型駆逐艦×6を未配置プールへ追加"
+		command = { type = add_division which = "揚陸艦" value = transport }
+		command = { type = add_division which = "揚陸艦" value = transport }
+		command = { type = add_division which = "揚陸艦" value = transport }
+		command = { type = add_division which = "揚陸艦" value = transport }
+		command = { type = add_division which = "揚陸艦" value = transport }
+		command = { type = add_division which = "揚陸艦" value = transport }
+		command = { type = add_division which = "揚陸艦" value = transport }
+		command = { type = add_division which = "揚陸艦" value = transport }
+		command = { type = add_division which = "揚陸艦" value = transport }
+		command = { type = add_division which = "揚陸艦" value = transport }
+		command = { type = add_division which = "揚陸艦" value = transport }
+		command = { type = add_division which = "揚陸艦" value = transport }
+		command = { type = add_division which = "駆逐艦" value = destroyer when = 4 }
+		command = { type = add_division which = "駆逐" value = destroyer when = 4 }
+		command = { type = add_division which = "駆逐" value = destroyer when = 4 }
+		command = { type = add_division which = "駆逐" value = destroyer when = 4 }
+		command = { type = add_division which = "駆逐" value = destroyer when = 4 }
+		command = { type = add_division which = "駆逐" value = destroyer when = 4 }
+	}
+
+	action_b = {
+		name = "発展型空母×4，発展型重巡×4，発展型駆逐×10を未配置プールへ追加"
+		command = { type = add_division which = "空母" value = carrier when = 4 where = cag }
+		command = { type = add_division which = "空母" value = carrier when = 4 where = cag }
+		command = { type = add_division which = "空母" value = carrier when = 4 where = cag }
+		command = { type = add_division which = "空母" value = carrier when = 4 where = cag }
+		command = { type = add_division which = "重巡" value = heavy_cruiser when = 4 }
+		command = { type = add_division which = "重巡" value = heavy_cruiser when = 4 }
+		command = { type = add_division which = "重巡" value = heavy_cruiser when = 4 }
+		command = { type = add_division which = "重巡" value = heavy_cruiser when = 4 }
+		command = { type = add_division which = "駆逐" value = destroyer when = 4 }
+		command = { type = add_division which = "駆逐" value = destroyer when = 4 }
+		command = { type = add_division which = "駆逐" value = destroyer when = 4 }
+		command = { type = add_division which = "駆逐" value = destroyer when = 4 }
+		command = { type = add_division which = "駆逐" value = destroyer when = 4 }
+		command = { type = add_division which = "駆逐" value = destroyer when = 4 }
+		command = { type = add_division which = "駆逐" value = destroyer when = 4 }
+		command = { type = add_division which = "駆逐" value = destroyer when = 4 }
+		command = { type = add_division which = "駆逐" value = destroyer when = 4 }
+		command = { type = add_division which = "駆逐" value = destroyer when = 4 }
+	}
+
+	action_c = {
+		name = "電気潜水艦×8，発展型軽空母×4を未配置プールへ追加"
+		command = { type = add_division which = "潜水" value = submarine when = 4 }
+		command = { type = add_division which = "潜水" value = submarine when = 4 }
+		command = { type = add_division which = "潜水" value = submarine when = 4 }
+		command = { type = add_division which = "潜水" value = submarine when = 4 }
+		command = { type = add_division which = "潜水" value = submarine when = 4 }
+		command = { type = add_division which = "潜水" value = submarine when = 4 }
+		command = { type = add_division which = "潜水" value = submarine when = 4 }
+		command = { type = add_division which = "潜水" value = submarine when = 4 }
+		command = { type = add_division which = "軽空母" value = escort_carrier when = 3 }
+		command = { type = add_division which = "軽空母" value = escort_carrier when = 3 }
+		command = { type = add_division which = "軽空母" value = escort_carrier when = 3 }
+		command = { type = add_division which = "軽空母" value = escort_carrier when = 3 }
+	}
+
+	action_d = {
+		name = "戻る"
+		command = { type = trigger which = 888007 }
+	}
+}
+
+
+########################################
+# 空軍部隊追加メニュー
+########################################
+
+event = {
+
+	id = 888014
+	random = no
+
+	persistent = yes # イベント再発生可
+
+	name = "空軍部隊追加メニュー"
+	desc = "空軍部隊追加のチート"
+
+	style = 0
+
+	trigger = {
+		ai = no # AIでは発生しない
+		}
+
+	action_a = {
+		name = "発展型近接航空支援機×16を未配置プールへ追加"
+		command = { type = add_division which = "CAS" value = cas when = 2 }
+		command = { type = add_division which = "CAS" value = cas when = 2 }
+		command = { type = add_division which = "CAS" value = cas when = 2 }
+		command = { type = add_division which = "CAS" value = cas when = 2 }
+		command = { type = add_division which = "CAS" value = cas when = 2 }
+		command = { type = add_division which = "CAS" value = cas when = 2 }
+		command = { type = add_division which = "CAS" value = cas when = 2 }
+		command = { type = add_division which = "CAS" value = cas when = 2 }
+		command = { type = add_division which = "CAS" value = cas when = 2 }
+		command = { type = add_division which = "CAS" value = cas when = 2 }
+		command = { type = add_division which = "CAS" value = cas when = 2 }
+		command = { type = add_division which = "CAS" value = cas when = 2 }
+		command = { type = add_division which = "CAS" value = cas when = 2 }
+		command = { type = add_division which = "CAS" value = cas when = 2 }
+		command = { type = add_division which = "CAS" value = cas when = 2 }
+		command = { type = add_division which = "CAS" value = cas when = 2 }
+	}
+
+	action_b = {
+		name = "発展型戦術爆撃機(護衛戦)×16を未配置プールへ追加"
+		command = { type = add_division which = "戦術爆" value = tactical_bomber when = 4 where = escort }
+		command = { type = add_division which = "戦術爆" value = tactical_bomber when = 4 where = escort }
+		command = { type = add_division which = "戦術爆" value = tactical_bomber when = 4 where = escort }
+		command = { type = add_division which = "戦術爆" value = tactical_bomber when = 4 where = escort }
+		command = { type = add_division which = "戦術爆" value = tactical_bomber when = 4 where = escort }
+		command = { type = add_division which = "戦術爆" value = tactical_bomber when = 4 where = escort }
+		command = { type = add_division which = "戦術爆" value = tactical_bomber when = 4 where = escort }
+		command = { type = add_division which = "戦術爆" value = tactical_bomber when = 4 where = escort }
+		command = { type = add_division which = "戦術爆" value = tactical_bomber when = 4 where = escort }
+		command = { type = add_division which = "戦術爆" value = tactical_bomber when = 4 where = escort }
+		command = { type = add_division which = "戦術爆" value = tactical_bomber when = 4 where = escort }
+		command = { type = add_division which = "戦術爆" value = tactical_bomber when = 4 where = escort }
+		command = { type = add_division which = "戦術爆" value = tactical_bomber when = 4 where = escort }
+		command = { type = add_division which = "戦術爆" value = tactical_bomber when = 4 where = escort }
+		command = { type = add_division which = "戦術爆" value = tactical_bomber when = 4 where = escort }
+		command = { type = add_division which = "戦術爆" value = tactical_bomber when = 4 where = escort }
+	}
+
+	action_c = {
+		name = "発展型対艦攻撃機×8，発展型迎撃機×8を未配置プールへ追加"
+		command = { type = add_division which = "対艦攻" value = naval_bomber when = 2 }
+		command = { type = add_division which = "対艦攻" value = naval_bomber when = 2 }
+		command = { type = add_division which = "対艦攻" value = naval_bomber when = 2 }
+		command = { type = add_division which = "対艦攻" value = naval_bomber when = 2 }
+		command = { type = add_division which = "対艦攻" value = naval_bomber when = 2 }
+		command = { type = add_division which = "対艦攻" value = naval_bomber when = 2 }
+		command = { type = add_division which = "対艦攻" value = naval_bomber when = 2 }
+		command = { type = add_division which = "対艦攻" value = naval_bomber when = 2 }
+		command = { type = add_division which = "迎撃" value = interceptor when = 4 }
+		command = { type = add_division which = "迎撃" value = interceptor when = 4 }
+		command = { type = add_division which = "迎撃" value = interceptor when = 4 }
+		command = { type = add_division which = "迎撃" value = interceptor when = 4 }
+		command = { type = add_division which = "迎撃" value = interceptor when = 4 }
+		command = { type = add_division which = "迎撃" value = interceptor when = 4 }
+		command = { type = add_division which = "迎撃" value = interceptor when = 4 }
+		command = { type = add_division which = "迎撃" value = interceptor when = 4 }
+	}
+
+	action_d = {
+		name = "戻る"
+		command = { type = trigger which = 888007 }
+	}
+}
+
+#対米戦後にわちゃわちゃするフランスをVICに統一
+#基本的には全面的にFEPKをパクる
+
+event = {	#遠藤マイクロ
+
+	id = 888100
+	random = no
+	country = JAP
+	persistent = no # イベント再発生可
+
+	name = "新生フランスとの同盟"
+	desc = "連合国での主戦力であるアメリカを失ったフランスは、そのアメリカを下し、今はフランス領土を実効支配する日本との同盟を求めることとした。"
+
+	style = 0
+
+	trigger = {
+		ai = no # AIでは発生しない
+		}
+	
+	action_a = {
+		ai_chance = 100
+		name = "ヴィシー・フランスへの割譲"
+		command = { type = alliance which = VIC }
+		command = { type = secedeprovince which = VIC value = 36 }
+		command = { type = secedeprovince which = VIC value = 57 }
+		command = { type = secedeprovince which = VIC value = 58 }
+		command = { type = secedeprovince which = VIC value = 60 }
+		command = { type = secedeprovince which = VIC value = 61 }
+		command = { type = secedeprovince which = VIC value = 62 }
+		command = { type = secedeprovince which = VIC value = 63 }
+		command = { type = secedeprovince which = VIC value = 318 }
+		command = { type = secedeprovince which = VIC value = 32 }
+		command = { type = secedeprovince which = VIC value = 33 }
+		command = { type = secedeprovince which = VIC value = 34 }
+		command = { type = secedeprovince which = VIC value = 35 }
+		command = { type = secedeprovince which = VIC value = 37 }
+		command = { type = secedeprovince which = VIC value = 38 }
+		command = { type = secedeprovince which = VIC value = 39 }
+		command = { type = secedeprovince which = VIC value = 40 }
+		command = { type = secedeprovince which = VIC value = 41 }
+		command = { type = secedeprovince which = VIC value = 42 }
+		command = { type = secedeprovince which = VIC value = 53 } #FEPK1.07 #Wallone #Valenciennes
+		command = { type = secedeprovince which = VIC value = 54 }
+		command = { type = secedeprovince which = VIC value = 55 }
+		command = { type = secedeprovince which = VIC value = 56 }
+		command = { type = secedeprovince which = VIC value = 59 }
+		command = { type = secedeprovince which = VIC value = 64 }
+		command = { type = secedeprovince which = VIC value = 317 }
+		command = { type = secedeprovince which = VIC value = 323 }
+		command = { type = secedeprovince which = VIC value = 325 }
+		command = { type = secedeprovince which = VIC value = 326 }
+		command = { type = trigger which = 888101 }
+	}
+}
+
+event = {
+	id = 888101
+	random = no
+	country = VIC
+	name = "EVT60150N"
+	desc = "EVT60150D"
+	style = 0
+	picture = "VIC"
+
+	action_a = {
+		name = "OK" # 1.096
+		command = { type = inherit which = FRA }
+		command = { type = dissent value = -5 }
+		command = { type = relation which = JAP value = 300 }
+		command = { type = capital which = 56 } # pari
+		command = { type = waketeam which = 6630 }
+		command = { type = waketeam which = 6631 }
+		command = { type = waketeam which = 6632 }
+		command = { type = waketeam which = 6633 }
+		command = { type = waketeam which = 6634 }
+		command = { type = addcore which = 36 }
+		command = { type = addcore which = 57 }
+		command = { type = addcore which = 58 }
+		command = { type = addcore which = 60 }
+		command = { type = addcore which = 61 }
+		command = { type = addcore which = 62 }
+		command = { type = addcore which = 63 }
+		command = { type = addcore which = 32 }
+		command = { type = addcore which = 33 }
+		command = { type = addcore which = 34 }
+		command = { type = addcore which = 35 }
+		command = { type = addcore which = 37 }
+		command = { type = addcore which = 38 }
+		command = { type = addcore which = 39 }
+		command = { type = addcore which = 40 }
+		command = { type = addcore which = 41 }
+		command = { type = addcore which = 42 }
+		command = { type = addcore which = 54 }
+		command = { type = addcore which = 55 }
+		command = { type = addcore which = 56 }
+		command = { type = addcore which = 59 }
+		command = { type = addcore which = 64 }
+		command = { type = addcore which = 317 }
+		command = { type = addcore which = 318 }
+		command = { type = addcore which = 323 }
+		command = { type = addcore which = 325 }
+		command = { type = addcore which = 326 }
+		#command = { type = removecore which = 72 }	#エルザス・ロートリンゲンをドイツの領土として認める
+		#command = { type = removecore which = 73 }
+		#command = { type = removecore which = 316 }
+		#command = { type = sleepevent which = 130802 }	# VIC
+		command = { type = alliance which = JAP } #no other choice for vichy, really
+		
+		#仏印は日本へ
+		command = { type = secedeprovince which = JAP value = 1306 } #ルアンブラバン #北部仏印 #FEPKBETA4.2
+		command = { type = secedeprovince which = JAP value = 1326 } #ハイフォン
+
+		command = { type = secedeprovince which = JAP value = 1328 } #ハノイ
+		command = { type = secedeprovince which = JAP value = 1329 } #ヴィエンチャン
+		command = { type = secedeprovince which = JAP value = 1332 } #ノーマラート
+		command = { type = secedeprovince which = JAP value = 1333 } #ダナン
+		command = { type = secedeprovince which = JAP value = 1334 } #キノン
+		command = { type = secedeprovince which = JAP value = 1335 } #ニャチャン
+		command = { type = secedeprovince which = JAP value = 1336 } #パクセ
+		command = { type = secedeprovince which = JAP value = 1337 } #サイゴン
+		command = { type = secedeprovince which = JAP value = 1338 } #ラックジャ
+		command = { type = secedeprovince which = JAP value = 1339 } #バタンバン
+		command = { type = secedeprovince which = JAP value = 1340 } #プノンペン
+		command = { type = secedeprovince which = JAP value = 1341 } #ウボンラチャタニ
+		
+		command = { type = trigger which = 888102 }
+	}
+}
+
+event = {
+	id = 888102
+	country = JAP
+	random = no
+
+	#trigger 888101
+
+	name = "EVT_60919_NAME"
+	desc = "EVT_60919_DESC"
+	picture = "VIC"
+	style = 0
+
+
+	action_a = {
+		name = "OK"
+		#command = { type = province_revoltrisk which = 1328 value = 10 } #ハノイ
+		#command = { type = province_revoltrisk which = 1329 value = 10 } #ヴィエンチャン
+		#command = { type = province_revoltrisk which = 1332 value = 10 } #ノーマラート
+		#command = { type = province_revoltrisk which = 1333 value = 10 } #ダナン
+		#command = { type = province_revoltrisk which = 1334 value = 10 } #キノン
+		#command = { type = province_revoltrisk which = 1335 value = 10 } #ニャチャン
+		#command = { type = province_revoltrisk which = 1336 value = 10 } #パクセ
+		#command = { type = province_revoltrisk which = 1337 value = 10 } #サイゴン
+		#command = { type = province_revoltrisk which = 1338 value = 10 } #ラックジャ
+		#command = { type = province_revoltrisk which = 1339 value = 10 } #バタンバン
+		#command = { type = province_revoltrisk which = 1340 value = 10 } #プノンペン
+		#command = { type = province_revoltrisk which = 1341 value = 10 } #ウボンラチャタニ
+		command = { type = add_corps which = "第10インドシナ進駐軍" value = land where = 1337 }
+		command = { type = add_division which = "第17インドシナ師団" value = infantry when = 2 } 
+		command = { type = add_corps which = "第11インドシナ進駐軍" value = land where = 1338 }
+		command = { type = add_division which = "第18インドシナ師団" value = bergsjaeger when = 1 } 
+		#command = { type = trigger which = 132435 } #FEPK_replaced.txt
+		command = { type = add_corps which = "第12インドシナ進駐軍" value = land where = 1326 }
+		command = { type = add_division which = "第15インドシナ師団" value = infantry when = 2 } 
+		command = { type = add_division which = "第16インドシナ師団" value = infantry when = 2 } 
+		command = { type = supplies value = 100 where = 1326 } 
+		command = { type = oilpool value = 20 where = 1326 } 
+	}
+}
+
+
+event = {
+	id = 138196
+	random = no
+	persistent = yes
+	name = "青写真の提供"
+	desc = "さあ、時計の針を進める時だ。"
+	style = 0
+
+	trigger = {
+		ai = no
+		ai = yes
+		NOT = {
+			technology = 4310
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 90
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "天皇陛下万歳！"
+		command = { type = headofstate which = 5652 }
+		command = { type = domestic which = free_market value = 1 }
+		command = { type = dissent value = -1 }
+		
+	}
+	action = {
+		name = "軍事演習も行おう"
+		command = { type = add_leader_skill which = -1 value = 3 }
+		command = { type = add_leader_skill which = -1 value = 3 }
+		command = { type = add_leader_skill which = -1 value = 3 }
+		command = { type = add_leader_skill which = -1 value = 3 }
+		command = { type = add_leader_skill which = -1 value = 3 }
+		command = { type = gain_tech which = -1 }
+		command = { type = gain_tech which = -1 }
+		command = { type = gain_tech which = -1 }
+		command = { type = gain_tech which = -2 }
+		command = { type = gain_tech which = -2 }
+		command = { type = research_mod value = 10 }
+		command = { type = industrial_modifier which = total value = 10 }
+		command = { type = max_organization which = land value = 1 }
+		command = { type = max_organization which = air value = 1 }
+		command = { type = max_organization which = naval value = 1 }
+		command = { type = morale which = land value = 1 }
+		command = { type = morale which = air value = 1 }
+		command = { type = morale which = naval value = 1 }
+		#command = {  type = add_division which = "Hi-W.A.V.E.S." value = mechanized when = 9 }
+		#command = {  type = add_division which = "Hi-W.A.V.E.S." value = mechanized when = 9 }
+		#command = {  type = add_division which = "Hi-W.A.V.E.S." value = mechanized when = 9 }
+		#command = {  type = add_division which = "Hi-W.A.V.E.S." value = mechanized when = 9 }
+		#command = {  type = add_division which = "Hi-W.A.V.E.S." value = mechanized when = 9 }
+		#command = {  type = add_division which = "Hi-W.A.V.E.S." value = mechanized when = 9 }
+	}
+
+	action = {
+		name = "堅牢な軍隊が必要だ"
+		command = { type = ground_def_eff value = 10000 }
+	}
+	
+	action = {
+		name = "我らの戦場は夜にこそある"
+		command = { type = night_attack which = armor value = 200 }
+		command = { type = night_move which = armor value = 200 }
+		command = { type = night_defense which = armor value = 200 }
+		command = { type = night_attack which = light_armor value = 200 }
+		command = { type = night_move which = light_armor value = 200 }
+		command = { type = night_defense which = light_armor value = 200 }
+		command = { type = night_attack which = bergsjaeger value = 200 }
+		command = { type = night_move which = bergsjaeger value = 200 }
+		command = { type = night_defense which = bergsjaeger value = 200 }
+		command = { type = night_attack which = cavalry value = 200 }
+		command = { type = night_move which = cavalry value = 200 }
+		command = { type = night_defense which = cavalry value = 200 }
+		command = { type = night_attack which = garrison value = 200 }
+		command = { type = night_move which = garrison value = 200 }
+		command = { type = night_defense which = garrison value = 200 }
+		command = { type = night_attack which = hq value = 200 }
+		command = { type = night_move which = hq value = 200 }
+		command = { type = night_defense which = hq value = 200 }
+		command = { type = night_attack which = infantry value = 200 }
+		command = { type = night_move which = infantry value = 200 }
+		command = { type = night_defense which = infantry value = 200 }
+		command = { type = night_attack which = marine value = 200 }
+		command = { type = night_move which = marine value = 200 }
+		command = { type = night_defense which = marine value = 200 }
+		command = { type = night_attack which = mechanized value = 200 }
+		command = { type = night_move which = mechanized value = 200 }
+		command = { type = night_defense which = mechanized value = 200 }
+		command = { type = night_attack which = militia value = 200 }
+		command = { type = night_move which = militia value = 200 }
+		command = { type = night_defense which = militia value = 200 }
+		command = { type = night_attack which = motorized value = 200 }
+		command = { type = night_move which = motorized value = 200 }
+		command = { type = night_defense which = motorized value = 200 }
+		command = { type = night_attack which = destroyer value = 200 }
+		command = { type = night_move which = destroyer value = 200 }
+		command = { type = night_defense which = destroyer value = 200 }
+		command = { type = night_attack which = battleship value = 200 }
+		command = { type = night_move which = battleship value = 200 }
+		command = { type = night_defense which = battleship value = 200 }
+		command = { type = night_attack which = battlecruiser value = 200 }
+		command = { type = night_move which = battlecruiser value = 200 }
+		command = { type = night_defense which = battlecruiser value = 200 }
+	}
+	
+	action = {
+		name = "もはや施しは不要"
+		command = { type = sleepevent which = 138196 }
+	}
+}
+
+event = {
+	id = 138197
+	
+	name = "不死者の軍団"
+	desc = "強力な古不死者を呼び出す。"
+	
+	action = {
+		name = "OK"
+		command = { }
+	}
+	action = {
+		name = "不要"
+		command = { type = sleepevent which = 138197 }
+	}
+}
+
+event = {
+	id = 138198
+	persistent = yes
+	decision = {
+		event = 138197
+	}
+	trigger = {
+		ai = no
+	}
+	
+	name = "不死者の軍団"
+	desc = "強力な古不死者を呼び出す。誰かが事故ったら押す。"
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "実行"
+		command = { type = wakeleader which = 101066 }
+		command = { type = wakeleader which = 101108 }
+		command = { type = wakeleader which = 101120 }
+		command = { type = wakeleader which = 101205 }
+		command = { type = wakeleader which = 101273 }
+		command = { type = wakeleader which = 101295 }
+		command = { type = wakeleader which = 101296 }
+		command = { type = wakeleader which = 101304 }
+		command = { type = wakeleader which = 101324 }
+		command = { type = wakeleader which = 101380 }
+		command = { type = wakeleader which = 101387 }
+		command = { type = wakeleader which = 101039 }
+		command = { type = wakeleader which = 101059 }
+		command = { type = wakeleader which = 101071 }
+		command = { type = wakeleader which = 101116 }
+		command = { type = wakeleader which = 101195 }
+		command = { type = wakeleader which = 101199 }
+		command = { type = wakeleader which = 101207 }
+		command = { type = wakeleader which = 101238 }
+		command = { type = wakeleader which = 101311 }
+		command = { type = wakeleader which = 101326 }
+		command = { type = wakeleader which = 101382 }
+		command = { type = wakeleader which = 101424 }
+		command = { type = wakeleader which = 101473 }
+		command = { type = wakeleader which = 101513 }
+		command = { type = wakeleader which = 101530 }
+		command = { type = wakeleader which = 101001 }
+		command = { type = wakeleader which = 101007 }
+		command = { type = wakeleader which = 101034 }
+		command = { type = wakeleader which = 101046 }
+		command = { type = wakeleader which = 101092 }
+		command = { type = wakeleader which = 101141 }
+		command = { type = wakeleader which = 101153 }
+		command = { type = wakeleader which = 101166 }
+		command = { type = wakeleader which = 101174 }
+		command = { type = wakeleader which = 101181 }
+		command = { type = wakeleader which = 101192 }
+		command = { type = wakeleader which = 101201 }
+		command = { type = wakeleader which = 101243 }
+		command = { type = wakeleader which = 101305 }
+		command = { type = wakeleader which = 101383 }
+		command = { type = wakeleader which = 101384 }
+		command = { type = wakeleader which = 101410 }
+		command = { type = wakeleader which = 101413 }
+		command = { type = wakeleader which = 101421 }
+		command = { type = wakeleader which = 101423 }
+		command = { type = wakeleader which = 101426 }
+		command = { type = wakeleader which = 101430 }
+		command = { type = wakeleader which = 101432 }
+		command = { type = wakeleader which = 101433 }
+		command = { type = wakeleader which = 101443 }
+		command = { type = wakeleader which = 101465 }
+		command = { type = wakeleader which = 101467 }
+		command = { type = wakeleader which = 101488 }
+		command = { type = wakeleader which = 101508 }
+		command = { type = wakeleader which = 101511 }
+		command = { type = wakeleader which = 101512 }
+		command = { type = wakeleader which = 101531 }
+		command = { type = wakeleader which = 101536 }
+		command = { type = wakeleader which = 101539 }
+		command = { type = wakeleader which = 101556 }
+		command = { type = wakeleader which = 101572 }
+		command = { type = wakeleader which = 101574 }
+		command = { type = wakeleader which = 101590 }
+		command = { type = wakeleader which = 101609 }
+		command = { type = wakeleader which = 101670 }
+		command = { type = wakeleader which = 101673 }
+		command = { type = wakeleader which = 101687 }
+		command = { type = wakeleader which = 1001792 }
+		command = { type = wakeleader which = 1002171 }
+		command = { type = wakeleader which = 1002241 }
+	}
+}

@@ -1,0 +1,5173 @@
+#########################################################################
+#	FEPKDH_American_continent.txt
+#	アメリカ大陸関連イベント
+#########################################################################
+##id = 65700-899	Brazil Improvement Pack
+#id = 65700-5	コーエン計画～エスタード・ノヴォ
+#id = 65710-1	ブラジル1938年民主選挙（非史実
+#id = 65720-3	ブラジル内政イベント
+#id = 65730-7	米伯金融協定
+#id = 65740-4	独伯関係強化
+#id = 65750-4	ブラジル第二次大戦初期イベント
+#id = 65755-74	南アメリカ会議（対独）
+#id = 65775-94	南アメリカ会議（対日）
+#id = 65795-814	南アメリカ会議（対ソ）
+#id = 65850-9	ブラジルの連合国参加
+#id = 65860-9	ナタウ会議
+#id = 65870-3	ブラジルの戦争参加
+#id = 65880-9	連合国の壊滅とブラジルの意向
+#id = 65890-1	ブラジルの枢軸参加
+
+#id = 65900
+#########################################################################
+# Brazil Improvement Pack - Events
+#
+#		written by Cadmiel
+#
+#translated by G.B.遠藤
+#########################################################################
+#########################################################################
+#
+#########################################################################
+#  AI Events 
+#########################################################################
+
+
+#########################################################################
+#  Initial 'Flavour' Events 
+#########################################################################
+
+#event = {
+#    id = 805001
+#	random = no
+#	country = BRA
+#	
+#	name = "The Government"
+#	desc = "From 1930 to 1936, many events happened. The situation wasn't good when the provisional government, which lasted for four years, assumed the power. In 1934, a new constitution was enacted and indirect elections were hold, resulting in Vargas' victory. In 1935, the Congress branded all leftist opposition as 'subversive', as left-wing leaders organized a violent revolt the same year. Direct elections were marked for January of 1938, but Vargas grown more powererful each day. Who knows what can happen?"
+#	
+#	style = 0
+#	picture = "brazil2"
+#	
+#	date = { day = 2 month = january year = 1936 }
+#	offset = 1
+#	deathdate = { day = 0 month = january year = 1937 }
+#	
+#	action_a = {
+#	    name = "Only the time will tell"
+#		command = { type = sleepevent which = 164 }
+#		command = { type = sleepevent which = 900038 }
+#		command = { type = sleepevent which = 900039 }
+#		command = { type = sleepevent which = 900058 }
+#	}
+#}
+
+#########################################################################
+#  The Cohen Plan
+#########################################################################
+event = {
+    id = 65700
+	random = no
+	country = BRA
+	
+	trigger = {
+	    headofstate = 34001
+		headofgovernment = 34002
+	    NOT = {
+		    OR = {
+		        ispuppet = BRA
+			    alliance = { country = SOV country = BRA }
+			}
+		}
+	}
+	
+	name = "EVT_65700_NAME"	#コーエン計画
+	desc = "EVT_65700_DESC"	#コーエン計画（Plano Cohen）とは、実在不明の共産主義者による政府転覆計画に関する詳細な書類である。1937年9月、この書類の存在が軍最高司令部に知らされ、これは本物の転覆計画であるのだとして、数日後には一般に公表された。共産主義革命の恐怖が人々の中で高まりを見せると、ヴァルガスは当該文章を根拠として権力の掌握を強めていった。
+	
+	style = 0
+	picture = "sow"
+	
+	date = { day = 7 month = september year = 1937 }
+	offset = 1
+	deathdate = { day = 0 month = october year = 1937 }
+	
+	action_a = {
+		name = "EVT_65700_ACTA"	#この計画は本物だ
+		ai_chance = 95
+		command = { type = setflag which = cohen }
+		command = { type = domestic which = freedom value = -1 }
+		command = { type = dissent value = -1 }
+	}
+	action_b = {
+		name = "EVT_65700_ACTB"	#この計画は虚偽のものだ
+		ai_chance = 5
+		command = { }
+	}
+}
+
+#########################################################################
+#  Outlaw Political Parties
+#########################################################################
+event = {
+    id = 65701
+	random = no
+	country = BRA
+	
+	trigger = {
+	    headofstate = 34001
+		headofgovernment = 34002
+		flag = estadonovo
+		NOT = { ispuppet = BRA }
+	}
+	
+	name = "EVT_65701_NAME"	#政党政治の非合法化
+	desc = "EVT_65701_DESC"	#1937年12月、大統領ジェトゥリオ・ドルネレス・ヴァルガスは、全政党を非合法化することを発表した。近年勢力を強め、ファシスト風の思想を持つブラジル統合運動（The Brazilian Integralist Action、AIB）から、エスタード・ノヴォ体制（ヴァルガスによる独裁体制）を非合法活動時代から支え続けた左派ANLまで、全ての政党が閉鎖を余儀なくされた。
+	
+	style = 0
+	picture = "outlaw_fascist_parties"
+	
+	date = { day = 0 month = december year = 1937 }
+	offset = 3
+	deathdate = { day = 0 month = january year = 1938 }
+	
+	action_a = {
+		name = "EVT_65701_ACTA"	#全て、非合法とする
+		ai_chance = 90
+		command = { type = dissent value = 3 }
+		command = { type = setflag which = outlaw_aib }
+	}
+	action_b = {
+		name = "EVT_65701_ACTB"	#AIBを除く全ての党を非合法化する
+		ai_chance = 5
+		command = { type = dissent value = 1 }
+		command = { type = ministerofsecurity which = 34091 }
+	}
+	action_c = {
+		name = "EVT_65701_ACTC"	#これは行われるべきではない
+		ai_chance = 5
+		command = { }
+	}
+}
+
+#########################################################################
+#  The Estado Novo
+#########################################################################
+event = {
+    id = 65702
+	random = no
+	country = BRA
+	
+	trigger = {
+	    headofstate = 34001
+		headofgovernment = 34002
+		flag = cohen
+		NOT = { ispuppet = BRA }
+	}
+	
+	name = "EVT_65702_NAME"	#エスタード・ノヴォ
+	desc = "EVT_65702_DESC"	#1930年よりこれまで、ブラジルでの政治状況は非常に不安定で、ボロボロであった。政治家達は左に右にと分断され、人々は共産主義者の暴動が明日にも起こるのではないかと恐れを抱いていた。1937年、「コーエン計画」が公にされると、ヴァルガスはこれをポルトガル風の権威主義的な、エスタード・ノヴォ（新国家）体制を打ち立てる機会であると見た。ヴァルガスは議会を停止し、また報道検閲を行い、市民権の多くを制限して選挙を中止した。	
+	#Since 1930, the administration of Brazil was very fragmented and unsolid, with the political rose very divided between left and right, and the fear, among people, of an imminent communist insurrection. In 1937, after the divulgation of the 'Cohen Plan', Vargas saw the opportunity to estabilish the Estado Novo (New State), an authoritarian regime inspired by the portuguese one. He would then close the parliament, censor the press, revoke many civil rights and cancel the elections.
+	
+	style = 0
+	picture = "estadonovo"
+	
+	date = { day = 9 month = november year = 1936 }
+	offset = 20
+	deathdate = { day = 0 month = january year = 1938 }
+	
+	action_a = {
+		name = "EVT_65702_ACTA"	#エスタード・ノヴォ体制を宣言する
+		ai_chance = 90
+	    command = { type = dissent value = -5 }
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = domestic which = free_market value = -1 }
+		command = { type = domestic which = freedom value = -1 }
+		command = { type = armamentminister which = 34217 }
+		command = { type = foreignminister which = 34080 }
+		command = { type = ministerofsecurity which = 34216 }
+		command = { type = chiefofarmy which = 34162 }
+		command = { type = chiefofair which = 34215 }
+		command = { type = setflag which = estadonovo }
+		command = { type = sleepevent which = 65710 }
+	}
+	action_b = {
+		name = "EVT_65702_ACTB"	#憲法を尊重する
+		ai_chance = 10
+	    command = { type = dissent value = 10 }
+		command = { type = domestic which = democratic value = 2 }
+		command = { type = domestic which = freedom value = 1 }
+	}
+}
+
+#########################################################################
+#  Integralist Revolts
+#########################################################################
+event = {
+    id = 65703
+	random = no
+	country = BRA
+	
+	trigger = {
+	    flag = outlaw_aib
+	}
+	
+	name = "EVT_65703_NAME"	#統合主義者の扇動	#Integralist Agitations
+	desc = "EVT_65703_DESC"	#ヴァルガスがAIBを非合法化すると、AIB党員は即座に政府に対する反対活動を開始した。1938年3月より、統合主義者たちは海軍を始めとしてあちらこちらで小規模なアジテーション活動を行うようになった。
+	#After Vargas had put AIB in illegality, members of the movement promptly started to plan uprisings against the government as a response. In March of 1938, the integralists deflagrated some small agitations in the Navy and in other places.
+	
+	style = 0
+	picture = "intmanif"
+	
+	date = { day = 0 month = march year = 1938 }
+	offset = 3
+	deathdate = { day = 0 month = april year = 1938 }
+	
+	action_a = {
+		name = "EVT_65703_ACTA"	#反乱分子の鎮圧に時間はかけんよ	#We can easily repress these insurgents
+		command = { type = dissent value = 7 }
+	}
+}
+
+event = {
+    id = 65704
+	random = no
+	country = BRA
+	
+	trigger = {
+	    flag = outlaw_aib
+		control = { province = 885 data = BRA }
+	}
+	
+	name = "EVT_65704_NAME"	#統合主義者による暴動	#Integralist Insurrection
+	desc = "EVT_65704_DESC"	#1938年3月、統合主義者達による反乱が計画された。彼らによる暴動としては、これが最もよく知られているものである。陸軍少尉セヴェーロ・フルニエに指揮された一団が大統領住居であるグアナバラ宮殿を襲撃し、ヴァルガスを退任させることを目論んだ。
+	
+	style = 0
+	picture = "intmanif"
+	
+	date = { day = 10 month = may year = 1938 }
+	offset = 2
+	deathdate = { day = 0 month = june year = 1938 }
+	
+	action_a = {
+		name = "EVT_65704_ACTA"	#全力を以て暴動を鎮圧せよ
+		ai_chance = 95
+		command = { type = dissent value = -2 }
+		command = { type = sleepminister which = 34068 }
+		command = { type = sleepminister which = 34111 }
+		command = { type = sleepminister which = 34112 }
+		command = { type = sleepminister which = 34228 }
+	}
+	action_b = {
+		name = "EVT_65704_ACTB"	#彼らの要求を聞く
+		ai_chance = 5
+		command = { type = dissent value = 30 }
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = sleepminister which = 34001 }
+		command = { type = headofstate which = 34068 }
+		command = { type = headofgovernment which = 34075 }
+		command = { type = foreignminister which = 34111 }
+		command = { type = armamentminister which = 34112 }
+		command = { type = ministerofsecurity which = 34227 }
+		command = { type = ministerofintelligence which = 34148 }
+		command = { type = chiefofstaff which = 34160 }
+		command = { type = chiefofarmy which = 34175 }
+		command = { type = chiefofnavy which = 34228 }
+		command = { type = chiefofair which = 34220 }
+		command = { type = clrflag which = outlaw_aib }
+		command = { type = clrflag which = estadonovo }
+		command = { type = setflag which = integralist }
+	}
+}
+
+#########################################################################
+#  Minister adjustments
+#########################################################################
+
+event = {
+    id = 65705
+	random = no
+	country = BRA
+	
+	name = "EVT_65705_NAME"	#ゴエス・モンテイロ
+	desc = "EVT_65705_DESC"	#1937年7月、ゴエス・モンテイロは参謀総長に任命された。彼はドイツ式の規律と軍運用に熱狂的な関心をいだいていた。
+	
+	style = 0
+	picture = "goes"
+	
+	date = { day = 0 month = july year = 1937 }
+	offset = 3
+	deathdate = { day = 0 month = august year = 1937 }
+	
+	action_a = {
+		name = "EVT_65705_ACTA"	#モンテイロを呼び出せ
+		ai_chance = 100
+		command = { type = chiefofstaff which = 34221 }
+		command = { type = waketeam which = 4405 }
+		command = { type = gain_tech which = 6210 }
+		command = { type = gain_tech which = 6220 }
+	}
+	action_b = {
+		name = "EVT_65705_ACTB"	#彼は不要だ
+		command = { }
+	}
+}
+
+#########################################################################
+#  Elections
+#########################################################################
+event = {
+    id = 65710
+	random = no
+	country = BRA
+	
+	trigger = {
+		NOT = {
+			flag = estadonovo 
+			flag = integralist
+		}
+	}
+	
+	name = "EVT_65710_NAME"	#1938年選挙
+	desc = "EVT_65710_DESC"	#臨時政権体制は公式に終りを迎えた。皆が待ちに待った、政府を平和的な手段でより民主主義的な存在にする時が来たのだ。
+	
+	style = 0
+	picture = "brazil2"
+	
+	date = { day = 10 month = january year = 1938 }
+	offset = 1
+	deathdate = { day = 0 month = january year = 1939 }
+	
+	action_a = {
+		name = "EVT_65710_ACTA"	#OK
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = domestic which = freedom value = 1 }
+		command = { type = trigger which = 65711 }
+	}
+}
+
+event = {
+    id = 65711
+	random = no
+	country = BRA
+	
+	# triggered by 55710
+	
+	name = "EVT_65711_NAME"	#1938年選挙結果
+	desc = "EVT_65711_DESC"	#3人の候補者が本大統領選挙に立候補した。ジュセ・デ・アルメイダは著名な作家で、また左派ながらヴァルガス政権にも参加していたことで知られている。二人目はアルマンド・デ・サレス、保守的な考えを持つ実業家で、サンパウロ州での党首争いに打ち勝った人物である。プリニオ・サルガドはブラジル統合主義運動の党首で、ファシスト活動家である。アルメイダは自身の選挙活動において、ヴァルガスからある程度支援を得ていた。
+	
+	style = 0
+	picture = "el38"
+	
+	action_a = {
+		name = "EVT_65711_ACTA"	#ジュセ・デ・アルメイダ（社会自由派）
+		ai_chance = 40
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 34222 }
+		command = { type = headofgovernment which = 34223 }
+		command = { type = foreignminister which = 34077 }
+		command = { type = armamentminister which = 34093 }
+		command = { type = ministerofsecurity which = 34119 }
+		command = { type = ministerofintelligence which = 34134 }
+		command = { type = chiefofstaff which = 34221 }
+		command = { type = chiefofarmy which = 34172 }
+		command = { type = chiefofair which = 34226 }
+		command = { type = chiefofnavy which = 34176 }
+		
+	}
+	action_b = {
+		name = "EVT_65711_ACTB"	#アルマンド・デ・サレス（自由経済派）
+		ai_chance = 40
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 34224 }
+		command = { type = headofgovernment which = 34225 }
+		command = { type = foreignminister which = 34076 }
+		command = { type = armamentminister which = 34094 }
+		command = { type = ministerofsecurity which = 34200 }
+		command = { type = ministerofintelligence which = 34141 }
+		command = { type = chiefofstaff which = 34155 }
+		command = { type = chiefofarmy which = 34170 }
+		command = { type = chiefofair which = 34229 }
+		command = { type = chiefofnavy which = 34180 }
+	}
+	action_c = {
+		name = "EVT_65711_ACTC"	#プリニオ・サルガド（ファシスト）
+		ai_chance = 20
+		command = { type = set_domestic which = political_left value = 1 }
+		command = { type = headofstate which = 34068 }
+		command = { type = headofgovernment which = 34075 }
+		command = { type = foreignminister which = 34111 }
+		command = { type = armamentminister which = 34112 }
+		command = { type = ministerofsecurity which = 34227 }
+		command = { type = ministerofintelligence which = 34148 }
+		command = { type = chiefofstaff which = 34160 }
+		command = { type = chiefofarmy which = 34175 }
+		command = { type = chiefofnavy which = 34228 }
+		command = { type = chiefofair which = 34220 }
+	}
+}
+
+#########################################################################
+#  Creation of IBGE
+#########################################################################
+event = {
+    id = 65720
+	random = no
+	country = BRA
+	
+	name = "EVT_65720_NAME"	#IBGEの創設
+	desc = "EVT_65720_DESC"	#1930年の革命から現在まで、政府は国土に関する確かな統計情報を作成・維持できる協会の創設に大きな関心を抱いていた。本協会は国土統計機構として1934年に創設され、1938年には国土地理評議会が設置された。そして、この2つの組織を統合する形でIBGE（Instituto Brasileiro de Geografia e Estatistica、ブラジル国土統計協会）が誕生することとなった。
+	#Since the 1930 Revolution, the government showed big interest in creating an institution capable of making and collecting reliable statistics about the national territory. The first steps to create that institution were made in 1934, with the creation of the National Institute of Statistics, and in 1938, with the creation of National Counsel of Geography. From the combination of these two organizations IBGE (Brazilian Institute of Geography and Statistics) was born.
+	
+	style = 0
+	picture = "reunion"
+	
+	date = { day = 0 month = february year = 1938 }
+	offset = 15
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	action_a = {
+		name = "EVT_65720_ACTA"	#よいことだ	#A good addition to our country
+		ai_chance = 100
+		command = { type = waketeam which = 4412 }
+		command = { type = gain_tech which = 5310 }
+	}
+	action_b = {
+		name = "EVT_65720_ACTB"	#必要ない	#We don't need this
+		command = { }
+	}
+}
+
+
+
+#########################################################################
+#  CNP
+#########################################################################
+event = {
+    id = 65721
+	random = no
+	country = BRA
+	
+	trigger = {
+		NOT = { ispuppet = yes }
+	}
+	
+	name = "EVT_65721_NAME"	#油田の統制
+	desc = "EVT_65721_DESC"	#法令第395の承認は、我が国の将来的な石油資源開発につながる大きな一歩となるでしょう。本法令の目標は、全ての私有油田を国有化することはもちろん、国内の石油産業を厳密な認可制とし統制することにあります。また、CNP（Conselho Nacional do Petroleo、国家石油評議会）の設立にも繋がります。CNPは我が国初の、国家の石油産業をコントロールする政府機構となるでしょう。
+	#The approval of law no.395 may be an important step for the future of oil production in our country. The main objective of the law is to nationalize all private petroliferous activities in course, granting strict control of the State over the aspects of the national oil industry. Also, it will create the CNP (National Counsel for Petroleum). This represents the first governamental initiative to regulate the oil production sector.
+	
+	style = 0
+	picture = "reunion"
+	
+	date = { day = 28 month = april year = 1938 }
+	offset = 2
+	deathdate = { day = 28 month = may year = 1938 }
+	
+	action_a = {
+		name = "EVT_65721_ACTA"	#法令第395を承認せよ
+		ai_chance = 100
+		command = { type = waketeam which = 4413 }
+		command = { type = domestic which = free_market value = -1 }
+		command = { type = dissent value = 1 }
+		command = { type = setflag which = cnp }
+	}
+	action_b = {
+		name = "EVT_65721_ACTB"	#我が国には不要だ
+		command = { type = dissent value = 1 }
+	}
+}
+
+event = {
+    id = 65722
+	random = no
+	country = BRA
+	
+	trigger = {
+		NOT = { ispuppet = yes }
+		flag = cnp
+		control = { province = 882 data = BRA }
+	}
+	
+	name = "EVT_65722_NAME"	#油井の穿孔に成功
+	desc = "EVT_65722_DESC"	#CNP（国家石油評議会）の設立以降、評議会の管理下でオスカー・コルデイロ、マノエル・イナシオという二人のパイオニアがバイーア州内で増産可能性のある油田を探索していた。この州には石油が存在することが事前調査でわかっていたからだ。本日、彼らはDNPM-16なるブラジル最初の油井が始動したことを宣言した。
+	#Since the creation of the CNP (National Counsel for Petroleum), two pioneers under the counsel's jurisdiction, Oscar Cordeiro and Manoel In當io, have been trying to find a viable oil field in the interior of the state of Bahia, a region that already had hard evidence of petroleum presence. Today, they have announced the successful perforation of DNPM-163, Brazil's first oil well.
+	
+	style = 0
+	picture = "cnpoil"
+	
+	date = { day = 20 month = january year = 1939 }
+	offset = 1
+	deathdate = { day = 0 month = february year = 1939 }
+	
+	action_a = {
+		name = "EVT_65722_ACTA"	#ここから、さらに実用的な発見が生まれることだろう
+		ai_chance = 95
+		command = { type = dissent value = -1 }
+	}
+	action_b = {
+		name = "EVT_65722_ACTB"	#バカげたことだ！　CNPのこれ以上の探索は一切中止だ！
+		command = { type = sleepteam which = 4413 }
+		command = { type = domestic which = free_market value = 1 }
+		command = { type = dissent value = 3 }
+		command = { type = clrflag which = cnp }
+	}
+}
+
+event = {
+	id = 65723
+	random = no
+	country = BRA
+	
+	trigger = {
+		NOT = { ispuppet = yes }
+		flag = cnp
+		event = 65722
+		control = { province = 882 data = BRA }
+	}
+	
+	name = "EVT_65723_NAME"	#カンデイアス油田の発見
+	desc = "EVT_65723_DESC"	#ついに、油田研究開発のための投資が功を奏した。「カンデイアス1」から発見された原油は、牛に牽かれて不整地を行き、近くの小さな町へと運ばれた。国内からまとまった量の石油とガスが発見されたのは、これが初めてであった。土地の分析を進めて、ついに商売になる規模の油田を手にすることが出来たのだ。
+	
+	style = 0
+	picture = "cnpdisc"
+	
+	date = { day = 25 month = november year = 1941 }
+	offset = 1
+	deathdate = { day = 25 month = december year = 1941 }
+	
+	action_a = {
+		name = "EVT_65723_ACTA"	#素晴らしい！
+		command = { type = dissent value = -2 }
+		command = { type = add_prov_resource which = 882 value = 1 where = oil }
+	}
+}
+
+#########################################################################
+#  Aranha Mission
+#########################################################################
+event = {
+    id = 65730
+	random = no
+	country = USA
+	
+	trigger = {
+	    exists = BRA
+		exists = GER
+		event = 65741
+		NOT = {
+		    OR = {
+			    alliance = { country = GER country = USA }
+				alliance = { country = GER country = BRA }
+				war = { country = BRA country = GER }
+				war = { country = BRA country = USA }
+				ispuppet = GER
+		        ispuppet = BRA
+			    ispuppet = USA
+			}
+		}
+	}
+	
+	name = "EVT_65730_NAME"	#ブラジルに問う	#The Brazilian Question
+	desc = "EVT_65730_DESC"	#ブラジル政府が所有している米国債の利息の支払時期が来た。これをどうするかどうかは我々次第だが、踏み倒しでブラジル経済が不安定になれば、彼らをドイツに接近させることに繋がるかもしれない。
+	
+	style = 0
+	picture = "brazil"
+	
+	date = { day = 20 month = december year = 1938 }
+	offset = 1
+	deathdate = { day = 10 month = january year = 1939 }
+	
+	action_a = {
+		name = "EVT_65730_ACTA"	#彼らをこの場に。落とし所を探そう
+		ai_chance = 85
+		command = { type = setflag which = callaranha }
+	}
+	action_c = {
+		name = "EVT_65730_ACTB"	#ブラジル？　放っておけ
+		ai_chance = 15
+		command = { type = relation which = BRA value = -10 }
+		command = { type = setflag which = bra_align2_ger }
+	}
+}
+
+event = {
+    id = 65731
+	random = no
+	country = BRA
+	
+	trigger = {
+	    exists = USA
+		exists = GER
+		flag = callaranha
+		NOT = {
+		    OR = {
+			    alliance = { country = GER country = USA }
+				alliance = { country = GER country = BRA }
+				war = { country = BRA country = GER }
+				ispuppet = GER
+		        ispuppet = BRA
+			    ispuppet = USA
+			}
+		}
+	}
+	
+	name = "EVT_65731_NAME"	#アメリカ合衆国の呼び出し
+	desc = "EVT_65731_DESC"	#アメリカ大統領は我々を非公式に招き、我々の持つ対外債務について新たな経済条約の交渉を行うことを求めてきている。彼らは、我々がドイツと経済的な繋がりを持つことも恐れているようだ。
+	
+	style = 0
+	picture = "roosevelt"
+	
+	date = { day = 0 month = january year = 1939 }
+	offset = 1
+	deathdate = { day = 0 month = february year = 1939 }
+	
+	action_a = {
+		name = "EVT_65731_ACTA"	#交渉のため、外務大臣を送れ
+		ai_chance = 90
+		command = { type = setflag which = sendaranha }
+		command = { type = clrflag which = callaranha }
+	}
+	action_b = {
+		name = "EVT_65731_ACTB"	#アメリカは役に立たん
+		ai_chance = 10
+		command = { type = relation which = USA value = -40 }
+		command = { type = clrflag which = callaranha }
+	}
+}
+
+event = {
+    id = 65732
+	random = no
+	country = USA
+	
+	trigger = {
+	    exists = BRA
+		flag = sendaranha
+		NOT = {
+		    OR = {
+			    alliance = { country = GER country = USA }
+				alliance = { country = GER country = BRA }
+				war = { country = BRA country = USA }
+		        ispuppet = BRA
+			    ispuppet = USA
+			}
+		}
+	}
+	
+	name = "EVT_65732_NAME"	#ブラジル外務大臣の到着
+	desc = "EVT_65732_DESC"	#ブラジルの外交団がワシントンに到着し、交渉は素早く開始された。大きく5つに分けられる本同意では、アメリカ側は692万ドルでブラジル内の開発に関する権利を得ることになっている。そして、アメリカの援助のもとでブラジルに産業基盤を築くのである。一方、ブラジル政府は商用目的での両替市場の開放を行い、ブラジル国内での利益を米ドルに円滑に交換し対外債務の支払いを再開する事を認めることになっている。
+	
+	style = 0
+	picture = "arami"
+	
+	date = { day = 15 month = january year = 1939 }
+	offset = 3
+	deathdate = { day = 15 month = february year = 1939 }
+	
+	action_a = {
+		name = "EVT_65732_ACTA"	#完全合意する
+		ai_chance = 85
+		command = { type = trigger which = 65733 }
+	}
+	action_b = {
+		name = "EVT_65732_ACTB"	#部分的に合意する
+		ai_chance = 10
+		command = { type = trigger which = 65735 }
+	}
+	action_c = {
+		name = "EVT_65732_ACTC"	#交渉は決裂した
+		ai_chance = 5
+		command = { type = relation which = BRA value = -40 }
+		command = { type = trigger which = 65742 }
+	}
+}
+
+event = {
+    id = 65733
+	random = no
+	country = BRA
+	
+	#triggered by 55732
+	
+	name = "EVT_65733_NAME"	#アメリカが経済協定に合意
+	desc = "EVT_65733_DESC"	#ブラジルの外交団がワシントンに到着し、交渉は素早く開始された。大きく5つに分けられる本同意では、アメリカ側は692万ドルでブラジル内の開発に関する権利を得ることになっている。そして、アメリカの援助のもとでブラジルに産業基盤を築くのである。一方、ブラジル政府は商用目的での両替市場の開放を行い、ブラジル国内での利益を米ドルに円滑に交換し対外債務の支払いを再開する事を認めることになっている。
+	
+	style = 0
+	picture = "arami"
+	
+	action_a = {
+		name = "EVT_65733_ACTA"	#アメリカ同じく、合意する
+		ai_chance = 95
+		command = { type = trigger which = 65734 }
+		command = { type = money value = 600 }
+		command = { type = gain_tech which = 5070 }
+		command = { type = domestic which = free_market value = 1 }
+	}
+	action_b = {
+		name = "EVT_65733_ACTB"	#お断りだ！
+		ai_chance = 5
+		command = { type = relation which = USA value = -40 }
+		command = { type = setflag which = bra_align2_ger }
+	}
+}
+
+event = {
+    id = 65734
+	random = no
+	country = USA
+	
+	#triggered by 55733
+	
+	name = "EVT_65734_NAME"	#合意は成された
+	desc = "EVT_65734_DESC"	#ブラジルは我々の提案に合意し、協定は成立した。
+	
+	style = 0
+	picture = "arami"
+	
+	action_a = {
+		name = "EVT_65734_ACTA"	#素晴らしい！
+		command = { type = money value = -600 }
+		command = { type = free_money value = 1 }
+		command = { type = relation which = BRA value = 20 }
+		command = { type = setflag which = bra_align1_usa }
+	}
+}
+
+event = {
+    id = 65735
+	random = no
+	country = BRA
+	
+	#triggered by 55732
+	
+	name = "EVT_65735_NAME"	#アメリカからのもう一つの提案	#USA makes another proposal
+	desc = "EVT_65735_DESC"	#ブラジルの外交団がワシントンに到着し、交渉は素早く開始された。部分合意案では、ブラジル・アメリカ両国は3つの取り決めで合計250万ドルに渡る融資をブラジル側が受け取り、この資金はブラジル中央銀行の設立に利用されることになっている。その一方で、ブラジル政府はアメリカの対外債務の支払いについては猶予を認めることになる。
+	
+	style = 0
+	picture = "arami"
+	
+	action_a = {
+		name = "EVT_65735_ACTA"	#よろしい！
+		ai_chance = 70
+		command = { type = trigger which = 65736 }
+		command = { type = money value = 200 }
+	}
+	action_b = {
+		name = "EVT_65735_ACTB"	#お断りだ！
+		ai_chance = 30
+		command = { type = relation which = USA value = -40 }
+		command = { type = setflag which = bra_align2_ger }
+	}
+}
+
+event = {
+    id = 65736
+	random = no
+	country = USA
+	
+	#triggered by 55735
+	
+	name = "EVT_65736_NAME"	#合意形成
+	desc = "EVT_65736_DESC"	#ブラジルは我々の提案を承諾した。
+	
+	style = 0
+	picture = "arami"
+	
+	action_a = {
+		name = "EVT_65736_ACTA"	#大変結構！
+		command = { type = money value = -250 }
+		command = { type = relation which = BRA value = 5 }
+		command = { type = free_money value = 1 }
+	}
+}
+
+#########################################################################
+#  Brazil Alignments - USA
+#########################################################################
+event = {
+    id = 65737
+	random = no
+	country = BRA
+	
+	trigger = {
+		exists = USA
+		flag = bra_align1_usa
+		NOT = {
+		    OR = {
+				alliance = { country = USA country = BRA }
+				war = { country = BRA country = USA }
+				ispuppet = USA
+		        ispuppet = BRA
+			}
+		}
+	}
+	
+	name = "EVT_65737_NAME"	#ブラジルとアメリカの提携
+	desc = "EVT_65737_DESC"	#昨今の情勢の変化により、アメリカとの関係は改善の兆しを見せている。	
+	style = 0
+	picture = "brazil"
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 15
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	action_a = {
+		name = "EVT_65737_ACTA"	#OK
+		command = { type = relation which = USA value = 10 }
+	}
+}
+
+#########################################################################
+#  Brazil Alignments - GER
+#########################################################################
+event = {
+    id = 65740
+	random = no
+	country = BRA
+	
+	trigger = {
+		exists = GER
+		NOT = {
+		    event = 65741
+			OR = {
+				alliance = { country = GER country = BRA }
+				war = { country = BRA country = GER }
+				war = { country = BRA country = USA }
+				ispuppet = GER
+		        ispuppet = BRA
+			}
+		}
+	}
+	
+	
+	name = "EVT_65740_NAME"	#ドイツとの外交関係	#Relations with Germany
+	desc = "EVT_65740_DESC"	#ドイツは我々のビジネスパートナーとして重要になりうる国家だ。しかしながら、ドイツと良好な経済的関係を持つことはアメリカにとっては不快なことだろう。
+	
+	style = 0
+	picture = "reunion"
+	
+	date = { day = 0 month = september year = 1938 }
+	offset = 3
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	action_a = {
+		name = "EVT_65740_ACTA"	#アメリカは我々の外交方針には今や無関係だ
+		ai_chance = 50
+		command = { type = relation which = USA value = -10 }
+	}
+	action_b = {
+		name = "EVT_65740_ACTB"	#ドイツ人は好かない
+		ai_chance = 50
+		command = { type = relation which = GER value = -10 }
+		command = { type = end_trades which = BRA where = GER }
+		command = { type = sleepevent which = 65741 }
+	}
+}
+
+event = {
+    id = 65741
+	random = no
+	country = BRA
+	
+	trigger = {
+		event = 65740
+		exists = GER
+		trade = { country = BRA country = GER }
+		NOT = {
+		    OR = {
+				alliance = { country = GER country = BRA }
+				war = { country = BRA country = GER }
+				ispuppet = GER
+		        ispuppet = BRA
+			}
+		}
+	}
+	
+	
+	name = "EVT_65741_NAME"	#ブラジルとドイツの提携(1)
+	desc = "EVT_65741_DESC"	#昨今の情勢の変化により、ドイツとの関係は改善の兆しを見せている。
+	
+	style = 0
+	picture = "brazil"
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 5
+	deathdate = { day = 0 month = january year = 1940 }
+	
+	action_a = {
+		name = "EVT_65741_ACTA"	#OK
+		command = { type = relation which = GER value = 10 }
+	}
+}
+
+event = {
+    id = 65742
+	random = no
+	country = BRA
+	
+	trigger = {
+		exists = GER
+		flag = bra_align2_ger
+		NOT = {
+		    OR = {
+				alliance = { country = GER country = BRA }
+				war = { country = BRA country = GER }
+				ispuppet = GER
+		        ispuppet = BRA
+			}
+		}
+	}
+	
+	name = "EVT_65742_NAME"	#ブラジルとドイツの提携(2)
+	desc = "EVT_65742_DESC"	#昨今の情勢の変化により、ドイツとの関係は改善の兆しを見せている。
+	
+	style = 0
+	picture = "brazil"
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 15
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	action_a = {
+		name = "EVT_65742_ACTA"	#ok
+		command = { type = relation which = GER value = 15 }
+	}
+}
+
+event = {
+    id = 65743
+	random = no
+	country = BRA
+	
+	trigger = {
+		exists = GER
+		flag = bra_align3_ger
+		NOT = {
+		    OR = {
+				alliance = { country = GER country = BRA }
+				war = { country = BRA country = GER }
+				ispuppet = GER
+		        ispuppet = BRA
+			}
+		}
+	}
+	
+	name = "EVT_65743_NAME"	#ブラジルとドイツの提携(3)
+	desc = "EVT_65743_DESC"	#昨今の情勢の変化により、ドイツとの関係は改善の兆しを見せている。
+	
+	style = 0
+	picture = "brazil"
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 15
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	action_a = {
+		name = "EVT_65743_ACTA"	#ok
+		command = { type = relation which = GER value = 25 }
+	}
+}
+
+event = {
+    id = 65744
+	random = no
+	country = BRA
+	
+	trigger = {
+		exists = GER
+		flag = bra_align4_ger
+		NOT = {
+		    OR = {
+				alliance = { country = GER country = BRA }
+				war = { country = BRA country = GER }
+				ispuppet = GER
+		        ispuppet = BRA
+			}
+		}
+	}
+	
+	name = "EVT_65744_NAME"	#ブラジルとドイツの提携(4)
+	desc = "EVT_65744_DESC"	#昨今の情勢の変化により、ドイツとの関係は改善の兆しを見せている。
+	
+	style = 0
+	picture = "brazil"
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 15
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	action_a = {
+		name = "EVT_65744_ACTA"	#ok
+		command = { type = relation which = GER value = 40 }
+	}
+}
+
+
+#########################################################################
+#  Brazil's unknown neutrality
+#########################################################################
+event = {
+    id = 65750
+	random = no
+	country = BRA
+	
+	trigger = {
+	    headofstate = 34001
+		headofgovernment = 34002
+		flag = estadonovo
+	    NOT = {
+		    OR = {
+			    ispuppet = BRA
+			    alliance = { country = GER country = USA }
+			    alliance = { country = GER country = ENG }
+			    alliance = { country = GER country = SOV }
+			    alliance = { country = GER country = BRA }
+				alliance = { country = USA country = BRA }
+				alliance = { country = ENG country = BRA }
+				alliance = { country = SOV country = BRA }
+				war = { country = BRA country = GER }
+				war = { country = BRA country = USA }
+				war = { country = BRA country = ENG }
+			}
+		}
+	    OR = {
+		    alliance = { country = GER country = JAP }
+	        war = { country = GER country = BEL } # Germany at war with any european nation or USA 
+		    war = { country = GER country = BUL }
+		    war = { country = GER country = CZE }
+		    war = { country = GER country = DEN }
+	        war = { country = GER country = ENG }
+		    war = { country = GER country = FIN }
+		    war = { country = GER country = FRA }
+		    war = { country = GER country = GRE }
+		    war = { country = GER country = HOL }
+		    war = { country = GER country = HUN }
+		    war = { country = GER country = IRE }
+		    war = { country = GER country = ITA }
+		    war = { country = GER country = LUX }
+		    war = { country = GER country = NOR }
+		    war = { country = GER country = POL }
+			war = { country = GER country = POR }
+			war = { country = GER country = ROM }
+			war = { country = GER country = SCH }
+			war = { country = GER country = SPA }
+			war = { country = GER country = SPR }
+			war = { country = GER country = SWE }
+			war = { country = GER country = YUG }
+			war = { country = GER country = USA }
+		}
+	}
+	
+	name = "EVT_65750_NAME"	#ブラジルの中立性は何処にありや	#Brazil's unknown neutrality
+	desc = "EVT_65750_DESC"	#エスタード・ノヴォと欧州で当時跋扈した警察国家は類似の体制であるとする者がいる。ヴァルガスのやっていることはファシストの1モデルであるというのだ。今、欧州が戦火に包まれ枢軸国旋風が吹き荒れる中、アメリカ政府はある疑問を抱いた。「ヴァルガスは一体どこの立場にあるというのか」と。
+	
+	style = 0
+	picture = "brazil"
+	
+	date = { day = 0 month = april year = 1936 }
+	offset = 8
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	action_a = {
+		name = "EVT_65750_ACTA"	#我らは独立ゆえに、どの政府をも支援する！
+		ai_chance = 10
+		command = { type = relation which = GER value = 50 }
+		command = { type = relation which = ENG value = -50 }
+		command = { type = relation which = USA value = -25 }
+		command = { type = setflag which = bra_align_ger }
+	}
+	action_b = {
+		name = "EVT_65750_ACTB"	#ブラジルはビジネスをしているだけだ
+		ai_chance = 70
+		command = { type = trigger which = 65751 }
+		command = { type = relation which = GER value = 20 }
+		command = { type = relation which = ENG value = -10 }
+		command = { type = setflag which = bra_do_business }
+	}
+	action_c = {
+		name = "EVT_65750_ACTC"	#我々は枢軸国に敵対する立場である
+		ai_chance = 20
+		command = { type = trigger which = 65751 }
+		command = { type = relation which = GER value = -70 }
+		command = { type = relation which = ENG value = 50 }
+		command = { type = relation which = USA value = 25 }
+	}
+}
+
+#########################################################################
+#  The Happy Birthday telegram
+#########################################################################
+event = {
+    id = 65751
+	random = no
+	country = BRA
+	
+	# triggered by 55750
+	
+	name = "EVT_65751_NAME"	#ハッピー・バースデイ電報
+	desc = "EVT_65751_DESC"	#ジェトゥリオ・ヴァルガスは、自国の立ち位置が曖昧であることを利用してアドルフ・ヒトラーに誕生日を祝う電報を送ることについて考えていた。連合国も枢軸も、第三国も全部おちょくってやろうというのである。文面は、こうだ。「貴方に、ドイツに、幸運と繁栄が訪れますように。」
+	
+	style = 0
+	picture = "telegram"
+	
+	action_a = {
+		name = "EVT_65751_ACTA"	#巨人を擽ってやるとするか！　電報送信だ
+		ai_chance = 90
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = setflag which = fuhrer_telegram }
+	}
+	action_b = {
+		name = "EVT_65751_ACTB"	#電報は送るな
+		ai_chance = 10
+		command = { type = domestic which = interventionism value = -1 }
+	}
+}
+
+event = {
+    id = 65752
+	random = no
+	country = GER
+	
+	trigger = {
+	    flag = fuhrer_telegram
+		headofstate = 1
+		NOT = {
+		    OR = {
+			    ispuppet = BRA
+			    alliance = { country = GER country = USA }
+			    alliance = { country = GER country = ENG }
+			    alliance = { country = GER country = SOV }
+			    alliance = { country = GER country = BRA }
+				alliance = { country = USA country = BRA }
+				alliance = { country = ENG country = BRA }
+				alliance = { country = SOV country = BRA }
+				war = { country = BRA country = GER }
+				war = { country = BRA country = USA }
+				war = { country = BRA country = ENG }
+			}
+		}	
+		month = 3
+		NOT = { month = 4 }
+		day = 18
+		NOT = { day = 24 }
+	}
+	
+	name = "EVT_65752_NAME"	#ハッピー・バースデイ電報 ― 総統の誕生日に宛てて
+	desc = "EVT_65752_DESC"	#ご自身の誕生日に、総統閣下はブラジル大統領ジュトリオ・ヴァルガスから電報を受け取られた。曰く、「貴方に、ドイツに、幸運と繁栄が訪れますように」。彼らに一つ、提案を持ちかけてみるのも良いかもしれない……。
+	
+	style = 0
+	picture = "telegram"
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 5
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	action_a = {
+		name = "EVT_65752_ACTA"	#ブラジルを枢軸国に招待する
+		ai_chance = 85
+		command = { type = setflag which = fuhrer_response }
+	}
+	action_b = {
+		name = "EVT_65752_ACTB"	#それが何だというのか
+		ai_chance = 15
+		command = { }
+	}
+}
+
+event = {
+    id = 65753
+	random = no
+	country = BRA
+	
+	trigger = {
+	    flag = fuhrer_response
+		headofstate = 34001
+		headofgovernment = 34002
+		NOT = {
+		    OR = {
+			    ispuppet = BRA
+			    alliance = { country = GER country = USA }
+			    alliance = { country = GER country = ENG }
+			    alliance = { country = GER country = SOV }
+			    alliance = { country = GER country = BRA }
+				alliance = { country = USA country = BRA }
+				alliance = { country = ENG country = BRA }
+				alliance = { country = SOV country = BRA }
+				war = { country = BRA country = GER }
+				war = { country = BRA country = USA }
+				war = { country = BRA country = ENG }
+			}
+		}	
+	}
+	
+	name = "EVT_65753_NAME"	#ハッピー・バースデイ電報 ― ヒトラーの返信	#The Happy Birthday telegram - Hitler's response
+	desc = "EVT_65753_DESC"	#ヴァルガスは電報の返信を受け取った。ドイツ総統自身により書かれたものであった。曰く、ブラジルはナチ党にとって重要であって、枢軸国への参加を提案するものであった。交換条件として、ドイツは軍運用のノウハウと経済的な支援を行う、ということらしい。〔史実では、ヴァルガスは自らの送った電報とその返信をルーズベルト大統領に転送し、アメリカ政府に対しブラジルへの経済的・政治的な支援を行うことを迫っている。〕
+	
+	style = 0
+	picture = "telegram"
+	
+	date = { day = 0 month = april year = 1936 }
+	offset = 5
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	action_a = {
+		name = "EVT_65753_ACTA"	#アメリカに転送して、一儲けするとしよう！
+		ai_chance = 85
+		command = { type = relation which = USA value = 30 }
+		command = { type = relation which = ENG value = 5 }
+		command = { type = relation which = GER value = -30 }
+		command = { type = relation which = SOV value = -10 }
+	}
+	action_b = {
+		name = "EVT_65753_ACTB"	#大変結構！
+		ai_chance = 15
+		command = { type = relation which = GER value = 10 }
+		command = { type = setflag which = bra_align_ger2 }
+	}
+}
+
+#########################################################################
+#  The anti-Japanese speech
+#########################################################################
+event = {
+    id = 65754
+	random = no
+	country = BRA
+	
+	trigger = {
+		war = { country = JAP country = USA }
+		NOT = {
+		    OR = {
+			    ispuppet = BRA
+			    alliance = { country = JAP country = BRA }
+			    alliance = { country = GER country = BRA }
+				alliance = { country = SOV country = BRA }
+				war = { country = BRA country = USA }
+			}
+		}
+	}
+	
+	name = "EVT_65754_NAME"	#反日スピーチ
+	desc = "EVT_65754_DESC"	#日本人とアメリカ系住民の衝突が国内外で問題となりつつある。
+	
+	style = 0
+	picture = "getulio_speech"
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 5
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	action_a = {
+		name = "EVT_65754_ACTA"	#日本人の暴虐ぶりを批判する声明を出す
+		ai_chance = 70
+		command = { type = relation which = USA value = 10 }
+		command = { type = belligerence which = JAP value = 2 }
+		command = { type = relation which = JAP value = -10 }
+	}
+	action_b = {
+		name = "EVT_65754_ACTB"	#なんだって国外のことに首を突っ込まなきゃならない？
+		ai_chance = 30
+		command = { type = setflag which = bra_no_speech }
+	}
+}
+
+#########################################################################
+#  The South American Conference - GER
+#########################################################################
+event = {
+    id = 65755
+	random = no
+	country = BRA
+	
+	trigger = {
+	    exists = GER
+		random = 30
+		OR = {
+			exists = ARG
+			exists = BOL
+			exists = CHL
+			exists = COL
+			exists = PAR
+			exists = PRU
+			exists = URU
+			exists = VEN
+		}
+		OR = {
+		    war = { country = GER country = USA } # GER against any south american nation (except guyana) + USA
+			war = { country = GER country = ARG } 
+			war = { country = GER country = BOL }
+			war = { country = GER country = BRA }
+			war = { country = GER country = CHL }
+			war = { country = GER country = COL }
+			war = { country = GER country = ECU }
+			war = { country = GER country = PAR }
+			war = { country = GER country = PRU }
+			war = { country = GER country = URU }
+			war = { country = GER country = VEN }
+		}
+	    NOT = {
+		    OR = {
+			    ispuppet = BRA
+				ispuppet = USA
+		        alliance = { country = GER country = BRA }
+			    alliance = { country = SOV country = BRA }
+				alliance = { country = USA country = GER }
+				alliance = { country = USA country = SOV }
+				war = { country = BRA country = ARG } # At war against any south american nation (except guyana) + USA
+				war = { country = BRA country = BOL }
+				war = { country = BRA country = CHL }
+				war = { country = BRA country = COL }
+				war = { country = GER country = ECU }
+				war = { country = BRA country = PAR }
+				war = { country = BRA country = PRU }
+				war = { country = BRA country = URU }
+				war = { country = BRA country = VEN }
+				war = { country = BRA country = USA }
+			}
+		}
+	}
+	
+	name = "EVT_65755_NAME"	#南アメリカ会議
+	desc = "EVT_65755_DESC"	#リオ・デ・ジャネイロで南米諸国による緊急の会議を開くことを検討している。喫緊の話題は、大陸の平和が国外からの攻勢により侵されようとしている事案についてである。
+	
+	style = 0
+	picture = "sa_conference"
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 22
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	action_a = {
+		name = "EVT_65755_ACTA"	#会議を主催する
+		ai_chance = 75
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = trigger which = 65756 }
+		command = { type = trigger which = 65757 }
+		command = { type = trigger which = 65758 }
+		command = { type = trigger which = 65759 }
+		command = { type = trigger which = 65761 }
+		command = { type = trigger which = 65762 }
+		command = { type = trigger which = 65763 }
+		command = { type = trigger which = 65764 }
+		command = { type = trigger which = 65760 }
+	}
+	action_b = {
+		name = "EVT_65755_ACTB"	#会議は中止とする！
+		ai_chance = 25
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = relation which = ARG value = -15 } # All south american nations + USA
+		command = { type = relation which = BOL value = -15 }
+		command = { type = relation which = CHL value = -15 }
+		command = { type = relation which = COL value = -15 }
+		command = { type = relation which = ECU value = -15 }
+		command = { type = relation which = PAR value = -15 }
+		command = { type = relation which = PRU value = -15 }
+		command = { type = relation which = URU value = -15 }
+		command = { type = relation which = VEN value = -15 }
+		command = { type = relation which = USA value = -25 }
+		command = { type = setflag which = bra_no_conference }
+	}
+}
+
+event = {
+    id = 65756
+	random = no
+	country = ARG
+
+	# triggered by 55755
+	
+	name = "EVT_65756_NAME"	#南アメリカ会議
+	desc = "EVT_65756_DESC"	#南米諸国による会議がブラジルはリオ・デ・ジャネイロで開催されようとしている。喫緊の話題は、大陸の平和が国外からの攻勢により侵されようとしている事案についてである。我々はこれに参加すべきだろうか？
+	
+	style = 0
+	picture = "sa_conference"
+	
+	action_a = {
+		name = "EVT_65756_ACTA"	#はい
+		ai_chance = 100
+		command = { }
+	}
+	action_b = {
+		name = "EVT_65756_ACTB"	#いいえ
+		command = { type = relation which = BRA value = -20 }
+		command = { type = sleepevent which = 65765 }
+	}
+}
+
+event = {
+    id = 65757
+	random = no
+	country = BOL
+
+	# triggered by 55755
+	
+	name = "EVT_65756_NAME"	#南アメリカ会議
+	desc = "EVT_65756_DESC"	#南米諸国による会議がブラジルはリオ・デ・ジャネイロで開催されようとしている。喫緊の話題は、大陸の平和が国外からの攻勢により侵されようとしている事案についてである。我々はこれに参加すべきだろうか？
+	
+	style = 0
+	picture = "sa_conference"
+	
+	action_a = {
+		name = "EVT_65756_ACTA"	#はい
+		ai_chance = 100
+		command = { }
+	}
+	action_b = {
+		name = "EVT_65756_ACTB"	#いいえ
+		command = { type = relation which = BRA value = -20 }
+		command = { type = sleepevent which = 65766 }
+	}
+}
+
+event = {
+    id = 65758
+	random = no
+	country = CHL
+
+	# triggered by 55755
+	
+	name = "EVT_65756_NAME"	#南アメリカ会議
+	desc = "EVT_65756_DESC"	#南米諸国による会議がブラジルはリオ・デ・ジャネイロで開催されようとしている。喫緊の話題は、大陸の平和が国外からの攻勢により侵されようとしている事案についてである。我々はこれに参加すべきだろうか？
+	
+	style = 0
+	picture = "sa_conference"
+	
+	action_a = {
+		name = "EVT_65756_ACTA"	#はい
+		ai_chance = 100
+		command = { }
+	}
+	action_b = {
+		name = "EVT_65756_ACTB"	#いいえ
+		command = { type = relation which = BRA value = -20 }
+		command = { type = sleepevent which = 65767 }
+	}
+}
+
+event = {
+    id = 65759
+	random = no
+	country = COL
+
+	# triggered by 55755
+	
+	name = "EVT_65756_NAME"	#南アメリカ会議
+	desc = "EVT_65756_DESC"	#南米諸国による会議がブラジルはリオ・デ・ジャネイロで開催されようとしている。喫緊の話題は、大陸の平和が国外からの攻勢により侵されようとしている事案についてである。我々はこれに参加すべきだろうか？
+	
+	style = 0
+	picture = "sa_conference"
+	
+	action_a = {
+		name = "EVT_65756_ACTA"	#はい
+		ai_chance = 100
+		command = { }
+	}
+	action_b = {
+		name = "EVT_65756_ACTB"	#いいえ
+		command = { type = relation which = BRA value = -20 }
+		command = { type = sleepevent which = 65768 }
+	}
+}
+
+event = {
+    id = 65760
+	random = no
+	country = ECU
+
+	# triggered by 55755
+	
+	name = "EVT_65756_NAME"	#南アメリカ会議
+	desc = "EVT_65756_DESC"	#南米諸国による会議がブラジルはリオ・デ・ジャネイロで開催されようとしている。喫緊の話題は、大陸の平和が国外からの攻勢により侵されようとしている事案についてである。我々はこれに参加すべきだろうか？
+	
+	style = 0
+	picture = "sa_conference"
+	
+	action_a = {
+		name = "EVT_65756_ACTA"	#はい
+		ai_chance = 100
+		command = { }
+	}
+	action_b = {
+		name = "EVT_65756_ACTB"	#いいえ
+		command = { type = relation which = BRA value = -20 }
+		command = { type = sleepevent which = 65769 }
+	}
+}
+
+event = {
+    id = 65761
+	random = no
+	country = PAR
+
+	# triggered by 55755
+	
+	name = "EVT_65756_NAME"	#南アメリカ会議
+	desc = "EVT_65756_DESC"	#南米諸国による会議がブラジルはリオ・デ・ジャネイロで開催されようとしている。喫緊の話題は、大陸の平和が国外からの攻勢により侵されようとしている事案についてである。我々はこれに参加すべきだろうか？
+	
+	style = 0
+	picture = "sa_conference"
+	
+	action_a = {
+		name = "EVT_65756_ACTA"	#はい
+		ai_chance = 100
+		command = { }
+	}
+	action_b = {
+		name = "EVT_65756_ACTB"	#いいえ
+		command = { type = relation which = BRA value = -20 }
+		command = { type = sleepevent which = 65770 }
+	}
+}
+
+event = {
+    id = 65762
+	random = no
+	country = PRU
+
+	# triggered by 55755
+	
+	name = "EVT_65756_NAME"	#南アメリカ会議
+	desc = "EVT_65756_DESC"	#南米諸国による会議がブラジルはリオ・デ・ジャネイロで開催されようとしている。喫緊の話題は、大陸の平和が国外からの攻勢により侵されようとしている事案についてである。我々はこれに参加すべきだろうか？
+	
+	style = 0
+	picture = "sa_conference"
+	
+	action_a = {
+		name = "EVT_65756_ACTA"	#はい
+		ai_chance = 100
+		command = { }
+	}
+	action_b = {
+		name = "EVT_65756_ACTB"	#いいえ
+		command = { type = relation which = BRA value = -20 }
+		command = { type = sleepevent which = 65771 }
+	}
+}
+
+event = {
+    id = 65763
+	random = no
+	country = URU
+
+	# triggered by 55755
+	
+	name = "EVT_65756_NAME"	#南アメリカ会議
+	desc = "EVT_65756_DESC"	#南米諸国による会議がブラジルはリオ・デ・ジャネイロで開催されようとしている。喫緊の話題は、大陸の平和が国外からの攻勢により侵されようとしている事案についてである。我々はこれに参加すべきだろうか？
+	
+	style = 0
+	picture = "sa_conference"
+	
+	action_a = {
+		name = "EVT_65756_ACTA"	#はい
+		ai_chance = 100
+		command = { }
+	}
+	action_b = {
+		name = "EVT_65756_ACTB"	#いいえ
+		command = { type = relation which = BRA value = -20 }
+		command = { type = sleepevent which = 65772 }
+	}
+}
+
+event = {
+    id = 65764
+	random = no
+	country = VEN
+
+	# triggered by 55755
+	
+	name = "EVT_65756_NAME"	#南アメリカ会議
+	desc = "EVT_65756_DESC"	#南米諸国による会議がブラジルはリオ・デ・ジャネイロで開催されようとしている。喫緊の話題は、大陸の平和が国外からの攻勢により侵されようとしている事案についてである。我々はこれに参加すべきだろうか？
+	
+	style = 0
+	picture = "sa_conference"
+	
+	action_a = {
+		name = "EVT_65756_ACTA"	#はい
+		ai_chance = 100
+		command = { }
+	}
+	action_b = {
+		name = "EVT_65756_ACTB"	#いいえ
+		command = { type = relation which = BRA value = -20 }
+		command = { type = sleepevent which = 65773 }
+	}
+}
+
+event = {
+    id = 65765
+	random = no
+	country = ARG
+
+	trigger = {
+		event = 65756
+	}
+	
+	name = "EVT_65765_NAME"	#南アメリカ会議 ― 決断
+	desc = "EVT_65765_DESC"	#長きに渡る審議を経て、我々は自らの決定を選択する時が来た。
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 5
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	style = 0
+	picture = "sa_conference"
+	
+	action_a = {
+		name = "EVT_65765_ACTA"	#敵対者との全ての貿易を中止する
+		ai_chance = 100
+		command = { type = end_trades which = -1 where = GER }
+		command = { type = relation which = GER value = -50 }
+		command = { type = relation which = USA value = 15 }
+	}
+	action_b = {
+		name = "EVT_65765_ACTB"	#敵対者とのあらゆる関係について、これを断絶する
+		command = { type = end_trades which = -1 where = GER }
+		command = { type = embargo which = -1 where = GER value = 1 }
+		command = { type = relation which = GER value = -200 }
+		command = { type = relation which = USA value = 50 }
+	}
+	action_c = {
+		name = "EVT_65765_ACTC"	#何もしない
+		command = { }
+	}
+}
+
+event = {
+    id = 65766
+	random = no
+	country = BOL
+
+	trigger = {
+		event = 65757
+	}
+	
+	name = "EVT_65765_NAME"	#南アメリカ会議 ― 決断
+	desc = "EVT_65765_DESC"	#長きに渡る審議を経て、我々は自らの決定を選択する時が来た。
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 5
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	style = 0
+	picture = "sa_conference"
+	
+	action_a = {
+		name = "EVT_65765_ACTA"	#敵対者との全ての貿易を中止する
+		ai_chance = 100
+		command = { type = end_trades which = -1 where = GER }
+		command = { type = relation which = GER value = -50 }
+		command = { type = relation which = USA value = 15 }
+	}
+	action_b = {
+		name = "EVT_65765_ACTB"	#敵対者とのあらゆる関係について、これを断絶する
+		command = { type = end_trades which = -1 where = GER }
+		command = { type = embargo which = -1 where = GER value = 1 }
+		command = { type = relation which = GER value = -200 }
+		command = { type = relation which = USA value = 50 }
+	}
+	action_c = {
+		name = "EVT_65765_ACTC"	#何もしない
+		command = { }
+	}
+}
+
+event = {
+    id = 65767
+	random = no
+	country = CHL
+
+	trigger = {
+		event = 65758
+	}
+	
+	name = "EVT_65765_NAME"	#南アメリカ会議 ― 決断
+	desc = "EVT_65765_DESC"	#長きに渡る審議を経て、我々は自らの決定を選択する時が来た。
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 5
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	style = 0
+	picture = "sa_conference"
+	
+	action_a = {
+		name = "EVT_65765_ACTA"	#敵対者との全ての貿易を中止する
+		ai_chance = 100
+		command = { type = end_trades which = -1 where = GER }
+		command = { type = relation which = GER value = -50 }
+		command = { type = relation which = USA value = 15 }
+	}
+	action_b = {
+		name = "EVT_65765_ACTB"	#敵対者とのあらゆる関係について、これを断絶する
+		command = { type = end_trades which = -1 where = GER }
+		command = { type = embargo which = -1 where = GER value = 1 }
+		command = { type = relation which = GER value = -200 }
+		command = { type = relation which = USA value = 50 }
+	}
+	action_c = {
+		name = "EVT_65765_ACTC"	#何もしない
+		command = { }
+	}
+}
+
+event = {
+    id = 65768
+	random = no
+	country = COL
+
+	trigger = {
+		event = 65759
+	}
+	
+	name = "EVT_65765_NAME"	#南アメリカ会議 ― 決断
+	desc = "EVT_65765_DESC"	#長きに渡る審議を経て、我々は自らの決定を選択する時が来た。
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 5
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	style = 0
+	picture = "sa_conference"
+	
+	action_a = {
+		name = "EVT_65765_ACTA"	#敵対者との全ての貿易を中止する
+		ai_chance = 100
+		command = { type = end_trades which = -1 where = GER }
+		command = { type = relation which = GER value = -50 }
+		command = { type = relation which = USA value = 15 }
+	}
+	action_b = {
+		name = "EVT_65765_ACTB"	#敵対者とのあらゆる関係について、これを断絶する
+		command = { type = end_trades which = -1 where = GER }
+		command = { type = embargo which = -1 where = GER value = 1 }
+		command = { type = relation which = GER value = -200 }
+		command = { type = relation which = USA value = 50 }
+	}
+	action_c = {
+		name = "EVT_65765_ACTC"	#何もしない
+		command = { }
+	}
+}
+
+event = {
+    id = 65769
+	random = no
+	country = ECU
+
+	trigger = {
+		event = 65760
+	}
+	
+	name = "EVT_65765_NAME"	#南アメリカ会議 ― 決断
+	desc = "EVT_65765_DESC"	#長きに渡る審議を経て、我々は自らの決定を選択する時が来た。
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 5
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	style = 0
+	picture = "sa_conference"
+	
+	action_a = {
+		name = "EVT_65765_ACTA"	#敵対者との全ての貿易を中止する
+		ai_chance = 100
+		command = { type = end_trades which = -1 where = GER }
+		command = { type = relation which = GER value = -50 }
+		command = { type = relation which = USA value = 15 }
+	}
+	action_b = {
+		name = "EVT_65765_ACTB"	#敵対者とのあらゆる関係について、これを断絶する
+		command = { type = end_trades which = -1 where = GER }
+		command = { type = embargo which = -1 where = GER value = 1 }
+		command = { type = relation which = GER value = -200 }
+		command = { type = relation which = USA value = 50 }
+	}
+	action_c = {
+		name = "EVT_65765_ACTC"	#何もしない
+		command = { }
+	}
+}
+
+event = {
+    id = 65770
+	random = no
+	country = PAR
+
+	trigger = {
+		event = 65761
+	}
+	
+	name = "EVT_65765_NAME"	#南アメリカ会議 ― 決断
+	desc = "EVT_65765_DESC"	#長きに渡る審議を経て、我々は自らの決定を選択する時が来た。
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 5
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	style = 0
+	picture = "sa_conference"
+	
+	action_a = {
+		name = "EVT_65765_ACTA"	#敵対者との全ての貿易を中止する
+		ai_chance = 100
+		command = { type = end_trades which = -1 where = GER }
+		command = { type = relation which = GER value = -50 }
+		command = { type = relation which = USA value = 15 }
+	}
+	action_b = {
+		name = "EVT_65765_ACTB"	#敵対者とのあらゆる関係について、これを断絶する
+		command = { type = end_trades which = -1 where = GER }
+		command = { type = embargo which = -1 where = GER value = 1 }
+		command = { type = relation which = GER value = -200 }
+		command = { type = relation which = USA value = 50 }
+	}
+	action_c = {
+		name = "EVT_65765_ACTC"	#何もしない
+		command = { }
+	}
+}
+
+event = {
+    id = 65771
+	random = no
+	country = PRU
+
+	trigger = {
+		event = 65762
+	}
+	
+	name = "EVT_65765_NAME"	#南アメリカ会議 ― 決断
+	desc = "EVT_65765_DESC"	#長きに渡る審議を経て、我々は自らの決定を選択する時が来た。
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 5
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	style = 0
+	picture = "sa_conference"
+	
+	action_a = {
+		name = "EVT_65765_ACTA"	#敵対者との全ての貿易を中止する
+		ai_chance = 100
+		command = { type = end_trades which = -1 where = GER }
+		command = { type = relation which = GER value = -50 }
+		command = { type = relation which = USA value = 15 }
+	}
+	action_b = {
+		name = "EVT_65765_ACTB"	#敵対者とのあらゆる関係について、これを断絶する
+		command = { type = end_trades which = -1 where = GER }
+		command = { type = embargo which = -1 where = GER value = 1 }
+		command = { type = relation which = GER value = -200 }
+		command = { type = relation which = USA value = 50 }
+	}
+	action_c = {
+		name = "EVT_65765_ACTC"	#何もしない
+		command = { }
+	}
+}
+
+event = {
+    id = 65772
+	random = no
+	country = URU
+
+	trigger = {
+		event = 65763
+	}
+	
+	name = "EVT_65765_NAME"	#南アメリカ会議 ― 決断
+	desc = "EVT_65765_DESC"	#長きに渡る審議を経て、我々は自らの決定を選択する時が来た。
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 5
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	style = 0
+	picture = "sa_conference"
+	
+	action_a = {
+		name = "EVT_65765_ACTA"	#敵対者との全ての貿易を中止する
+		ai_chance = 100
+		command = { type = end_trades which = -1 where = GER }
+		command = { type = relation which = GER value = -50 }
+		command = { type = relation which = USA value = 15 }
+	}
+	action_b = {
+		name = "EVT_65765_ACTB"	#敵対者とのあらゆる関係について、これを断絶する
+		command = { type = end_trades which = -1 where = GER }
+		command = { type = embargo which = -1 where = GER value = 1 }
+		command = { type = relation which = GER value = -200 }
+		command = { type = relation which = USA value = 50 }
+	}
+	action_c = {
+		name = "EVT_65765_ACTC"	#何もしない
+		command = { }
+	}
+}
+
+event = {
+    id = 65773
+	random = no
+	country = VEN
+
+	trigger = {
+		event = 65764
+	}
+	
+	name = "EVT_65765_NAME"	#南アメリカ会議 ― 決断
+	desc = "EVT_65765_DESC"	#長きに渡る審議を経て、我々は自らの決定を選択する時が来た。
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 5
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	style = 0
+	picture = "sa_conference"
+	
+	action_a = {
+		name = "EVT_65765_ACTA"	#敵対者との全ての貿易を中止する
+		ai_chance = 100
+		command = { type = end_trades which = -1 where = GER }
+		command = { type = relation which = GER value = -50 }
+		command = { type = relation which = USA value = 15 }
+	}
+	action_b = {
+		name = "EVT_65765_ACTB"	#敵対者とのあらゆる関係について、これを断絶する
+		command = { type = end_trades which = -1 where = GER }
+		command = { type = embargo which = -1 where = GER value = 1 }
+		command = { type = relation which = GER value = -200 }
+		command = { type = relation which = USA value = 50 }
+	}
+	action_c = {
+		name = "EVT_65765_ACTC"	#何もしない
+		command = { }
+	}
+}
+
+event = {
+    id = 65774
+	random = no
+	country = BRA
+
+	trigger = {
+		OR = {
+			event = 65765
+			event = 65766
+			event = 65767
+			event = 65768
+			event = 65770
+			event = 65771
+			event = 65772
+			event = 65773
+			event = 65769
+		}
+	}
+	
+	name = "EVT_65765_NAME"	#南アメリカ会議 ― 決断
+	desc = "EVT_65765_DESC"	#長きに渡る審議を経て、我々は自らの決定を選択する時が来た。
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 5
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	style = 0
+	picture = "sa_conference"
+	
+	action_a = {
+		name = "EVT_65765_ACTA"	#敵対者との全ての貿易を中止する
+		ai_chance = 100
+		command = { type = end_trades which = -1 where = GER }
+		command = { type = relation which = GER value = -50 }
+		command = { type = relation which = USA value = 15 }
+	}
+	action_b = {
+		name = "EVT_65765_ACTB"	#敵対者とのあらゆる関係について、これを断絶する
+		command = { type = end_trades which = -1 where = GER }
+		command = { type = embargo which = -1 where = GER value = 1 }
+		command = { type = relation which = GER value = -200 }
+		command = { type = relation which = USA value = 50 }
+	}
+	action_c = {
+		name = "EVT_65765_ACTC"	#何もしない
+		command = { type = setflag which = bra_no_conference }
+	}
+}
+
+#########################################################################
+#  The South American Conference - JAP
+#########################################################################
+event = {
+    id = 65775
+	random = no
+	country = BRA
+	
+	trigger = {
+	    exists = JAP
+		random = 30
+		OR = {
+			exists = ARG
+			exists = BOL
+			exists = CHL
+			exists = COL
+			exists = PAR
+			exists = PRU
+			exists = URU
+			exists = VEN
+		}
+		OR = {
+		    war = { country = JAP country = USA } # JAP against any south american nation (except guyana) + USA
+			war = { country = JAP country = ARG } 
+			war = { country = JAP country = BOL }
+			war = { country = JAP country = BRA }
+			war = { country = JAP country = CHL }
+			war = { country = JAP country = COL }
+			war = { country = JAP country = ECU }
+			war = { country = JAP country = PAR }
+			war = { country = JAP country = PRU }
+			war = { country = JAP country = URU }
+			war = { country = JAP country = VEN }
+		}
+	    NOT = {
+		    OR = {
+			    ispuppet = BRA
+				ispuppet = USA
+		        alliance = { country = JAP country = BRA }
+			    alliance = { country = SOV country = BRA }
+				alliance = { country = USA country = JAP }
+				alliance = { country = USA country = SOV }
+				war = { country = BRA country = ARG } # At war against any south american nation (except guyana) + USA
+				war = { country = BRA country = BOL }
+				war = { country = BRA country = CHL }
+				war = { country = BRA country = COL }
+				war = { country = JAP country = ECU }
+				war = { country = BRA country = PAR }
+				war = { country = BRA country = PRU }
+				war = { country = BRA country = URU }
+				war = { country = BRA country = VEN }
+				war = { country = BRA country = USA }
+			}
+		}
+	}
+	
+	name = "EVT_65775_NAME"	#南アメリカ会議
+	desc = "EVT_65775_DESC"	#リオ・デ・ジャネイロで南米諸国による緊急の会議を開くことを検討している。喫緊の話題は、大陸の平和が国外からの攻勢により侵されようとしている事案についてである。
+	
+	style = 0
+	picture = "sa_conference"
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 22
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	action_a = {
+		name = "EVT_65775_ACTA"	#会議を主催する
+		ai_chance = 75
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = trigger which = 65776 }
+		command = { type = trigger which = 65777 }
+		command = { type = trigger which = 65778 }
+		command = { type = trigger which = 65779 }
+		command = { type = trigger which = 65780 }
+		command = { type = trigger which = 65781 }
+		command = { type = trigger which = 65782 }
+		command = { type = trigger which = 65783 }
+		command = { type = trigger which = 65784 }
+	}
+	action_b = {
+		name = "EVT_65775_ACTB"	#会議は中止とする！
+		ai_chance = 25
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = relation which = ARG value = -15 } # All south american nations + USA
+		command = { type = relation which = BOL value = -15 }
+		command = { type = relation which = CHL value = -15 }
+		command = { type = relation which = COL value = -15 }
+		command = { type = relation which = ECU value = -15 }
+		command = { type = relation which = PAR value = -15 }
+		command = { type = relation which = PRU value = -15 }
+		command = { type = relation which = URU value = -15 }
+		command = { type = relation which = VEN value = -15 }
+		command = { type = relation which = USA value = -25 }
+		command = { type = setflag which = bra_no_conference }
+	}
+}
+
+event = {
+    id = 65776
+	random = no
+	country = ARG
+
+	# triggered by 55775
+	
+	name = "EVT_65776_NAME"	#南アメリカ会議
+	desc = "EVT_65776_DESC"	#南米諸国による会議がブラジルはリオ・デ・ジャネイロで開催されようとしている。喫緊の話題は、大陸の平和が国外からの攻勢により侵されようとしている事案についてである。我々はこれに参加すべきだろうか？
+	
+	style = 0
+	picture = "sa_conference"
+	
+	action_a = {
+		name = "EVT_65776_ACTA"	#はい
+		ai_chance = 100
+		command = { }
+	}
+	action_b = {
+		name = "EVT_65776_ACTB"	#いいえ
+		command = { type = relation which = BRA value = -20 }
+		command = { type = sleepevent which = 65785 }
+	}
+}
+
+event = {
+    id = 65777
+	random = no
+	country = BOL
+
+	# triggered by 55775
+	
+	name = "EVT_65776_NAME"	#南アメリカ会議
+	desc = "EVT_65776_DESC"	#南米諸国による会議がブラジルはリオ・デ・ジャネイロで開催されようとしている。喫緊の話題は、大陸の平和が国外からの攻勢により侵されようとしている事案についてである。我々はこれに参加すべきだろうか？
+	
+	style = 0
+	picture = "sa_conference"
+	
+	action_a = {
+		name = "EVT_65776_ACTA"	#はい
+		ai_chance = 100
+		command = { }
+	}
+	action_b = {
+		name = "EVT_65776_ACTB"	#いいえ
+		command = { type = relation which = BRA value = -20 }
+		command = { type = sleepevent which = 65786 }
+	}
+}
+
+event = {
+    id = 65778
+	random = no
+	country = CHL
+
+	# triggered by 55775
+	
+	name = "EVT_65776_NAME"	#南アメリカ会議
+	desc = "EVT_65776_DESC"	#南米諸国による会議がブラジルはリオ・デ・ジャネイロで開催されようとしている。喫緊の話題は、大陸の平和が国外からの攻勢により侵されようとしている事案についてである。我々はこれに参加すべきだろうか？
+	
+	style = 0
+	picture = "sa_conference"
+	
+	action_a = {
+		name = "EVT_65776_ACTA"	#はい
+		ai_chance = 100
+		command = { }
+	}
+	action_b = {
+		name = "EVT_65776_ACTB"	#いいえ
+		command = { type = relation which = BRA value = -20 }
+		command = { type = sleepevent which = 65787 }
+	}
+}
+
+event = {
+    id = 65779
+	random = no
+	country = COL
+
+	# triggered by 55775
+	
+	name = "EVT_65776_NAME"	#南アメリカ会議
+	desc = "EVT_65776_DESC"	#南米諸国による会議がブラジルはリオ・デ・ジャネイロで開催されようとしている。喫緊の話題は、大陸の平和が国外からの攻勢により侵されようとしている事案についてである。我々はこれに参加すべきだろうか？
+	
+	style = 0
+	picture = "sa_conference"
+	
+	action_a = {
+		name = "EVT_65776_ACTA"	#はい
+		ai_chance = 100
+		command = { }
+	}
+	action_b = {
+		name = "EVT_65776_ACTB"	#いいえ
+		command = { type = relation which = BRA value = -20 }
+		command = { type = sleepevent which = 65788 }
+	}
+}
+
+event = {
+    id = 65780
+	random = no
+	country = ECU
+
+	# triggered by 55775
+	
+	name = "EVT_65776_NAME"	#南アメリカ会議
+	desc = "EVT_65776_DESC"	#南米諸国による会議がブラジルはリオ・デ・ジャネイロで開催されようとしている。喫緊の話題は、大陸の平和が国外からの攻勢により侵されようとしている事案についてである。我々はこれに参加すべきだろうか？
+	
+	style = 0
+	picture = "sa_conference"
+	
+	action_a = {
+		name = "EVT_65776_ACTA"	#はい
+		ai_chance = 100
+		command = { }
+	}
+	action_b = {
+		name = "EVT_65776_ACTB"	#いいえ
+		command = { type = relation which = BRA value = -20 }
+		command = { type = sleepevent which = 65789 }
+	}
+}
+
+event = {
+    id = 65781
+	random = no
+	country = PAR
+
+	# triggered by 55775
+	
+	name = "EVT_65776_NAME"	#南アメリカ会議
+	desc = "EVT_65776_DESC"	#南米諸国による会議がブラジルはリオ・デ・ジャネイロで開催されようとしている。喫緊の話題は、大陸の平和が国外からの攻勢により侵されようとしている事案についてである。我々はこれに参加すべきだろうか？
+	
+	style = 0
+	picture = "sa_conference"
+	
+	action_a = {
+		name = "EVT_65776_ACTA"	#はい
+		ai_chance = 100
+		command = { }
+	}
+	action_b = {
+		name = "EVT_65776_ACTB"	#いいえ
+		command = { type = relation which = BRA value = -20 }
+		command = { type = sleepevent which = 65790 }
+	}
+}
+
+event = {
+    id = 65782
+	random = no
+	country = PRU
+
+	# triggered by 55775
+	
+	name = "EVT_65776_NAME"	#南アメリカ会議
+	desc = "EVT_65776_DESC"	#南米諸国による会議がブラジルはリオ・デ・ジャネイロで開催されようとしている。喫緊の話題は、大陸の平和が国外からの攻勢により侵されようとしている事案についてである。我々はこれに参加すべきだろうか？
+	
+	style = 0
+	picture = "sa_conference"
+	
+	action_a = {
+		name = "EVT_65776_ACTA"	#はい
+		ai_chance = 100
+		command = { }
+	}
+	action_b = {
+		name = "EVT_65776_ACTB"	#いいえ
+		command = { type = relation which = BRA value = -20 }
+		command = { type = sleepevent which = 65791 }
+	}
+}
+
+event = {
+    id = 65783
+	random = no
+	country = URU
+
+	# triggered by 55775
+	
+	name = "EVT_65776_NAME"	#南アメリカ会議
+	desc = "EVT_65776_DESC"	#南米諸国による会議がブラジルはリオ・デ・ジャネイロで開催されようとしている。喫緊の話題は、大陸の平和が国外からの攻勢により侵されようとしている事案についてである。我々はこれに参加すべきだろうか？
+	
+	style = 0
+	picture = "sa_conference"
+	
+	action_a = {
+		name = "EVT_65776_ACTA"	#はい
+		ai_chance = 100
+		command = { }
+	}
+	action_b = {
+		name = "EVT_65776_ACTB"	#いいえ
+		command = { type = relation which = BRA value = -20 }
+		command = { type = sleepevent which = 65792 }
+	}
+}
+
+event = {
+    id = 65784
+	random = no
+	country = VEN
+
+	# triggered by 55775
+	
+	name = "EVT_65776_NAME"	#南アメリカ会議
+	desc = "EVT_65776_DESC"	#南米諸国による会議がブラジルはリオ・デ・ジャネイロで開催されようとしている。喫緊の話題は、大陸の平和が国外からの攻勢により侵されようとしている事案についてである。我々はこれに参加すべきだろうか？
+	
+	style = 0
+	picture = "sa_conference"
+	
+	action_a = {
+		name = "EVT_65776_ACTA"	#はい
+		ai_chance = 100
+		command = { }
+	}
+	action_b = {
+		name = "EVT_65776_ACTB"	#いいえ
+		command = { type = relation which = BRA value = -20 }
+		command = { type = sleepevent which = 65793 }
+	}
+}
+
+event = {
+    id = 65785
+	random = no
+	country = ARG
+
+	trigger = {
+		event = 65776
+	}
+	
+	name = "EVT_65785_NAME"	#南アメリカ会議 ― 決断
+	desc = "EVT_65785_DESC"	#長きに渡る審議を経て、我々は自らの決定を選択する時が来た。
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 5
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	style = 0
+	picture = "sa_conference"
+	
+	action_a = {
+		name = "EVT_65785_ACTA"	#敵対者との全ての貿易を中止する
+		ai_chance = 100
+		command = { type = end_trades which = ARG where = JAP }
+		command = { type = relation which = JAP value = -50 }
+		command = { type = relation which = USA value = 15 }
+	}
+	action_b = {
+		name = "EVT_65785_ACTB"	#敵対者とのあらゆる関係について、これを断絶する
+		command = { type = end_trades which = ARG where = JAP }
+		command = { type = embargo which = -1 where = JAP value = 1 }
+		command = { type = relation which = JAP value = -200 }
+		command = { type = relation which = USA value = 50 }
+	}
+	action_c = {
+		name = "EVT_65785_ACTC"	#何もしない
+		command = { }
+	}
+}
+
+event = {
+    id = 65786
+	random = no
+	country = BOL
+
+	trigger = {
+		event = 65777
+	}
+	
+	name = "EVT_65785_NAME"	#南アメリカ会議 ― 決断
+	desc = "EVT_65785_DESC"	#長きに渡る審議を経て、我々は自らの決定を選択する時が来た。
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 5
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	style = 0
+	picture = "sa_conference"
+	
+	action_a = {
+		name = "EVT_65785_ACTA"	#敵対者との全ての貿易を中止する
+		ai_chance = 100
+		command = { type = end_trades which = ARG where = JAP }
+		command = { type = relation which = JAP value = -50 }
+		command = { type = relation which = USA value = 15 }
+	}
+	action_b = {
+		name = "EVT_65785_ACTB"	#敵対者とのあらゆる関係について、これを断絶する
+		command = { type = end_trades which = ARG where = JAP }
+		command = { type = embargo which = -1 where = JAP value = 1 }
+		command = { type = relation which = JAP value = -200 }
+		command = { type = relation which = USA value = 50 }
+	}
+	action_c = {
+		name = "EVT_65785_ACTC"	#何もしない
+		command = { }
+	}
+}
+
+event = {
+    id = 65787
+	random = no
+	country = CHL
+
+	trigger = {
+		event = 65778
+	}
+	
+	name = "EVT_65785_NAME"	#南アメリカ会議 ― 決断
+	desc = "EVT_65785_DESC"	#長きに渡る審議を経て、我々は自らの決定を選択する時が来た。
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 5
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	style = 0
+	picture = "sa_conference"
+	
+	action_a = {
+		name = "EVT_65785_ACTA"	#敵対者との全ての貿易を中止する
+		ai_chance = 100
+		command = { type = end_trades which = ARG where = JAP }
+		command = { type = relation which = JAP value = -50 }
+		command = { type = relation which = USA value = 15 }
+	}
+	action_b = {
+		name = "EVT_65785_ACTB"	#敵対者とのあらゆる関係について、これを断絶する
+		command = { type = end_trades which = ARG where = JAP }
+		command = { type = embargo which = -1 where = JAP value = 1 }
+		command = { type = relation which = JAP value = -200 }
+		command = { type = relation which = USA value = 50 }
+	}
+	action_c = {
+		name = "EVT_65785_ACTC"	#何もしない
+		command = { }
+	}
+}
+
+event = {
+    id = 65788
+	random = no
+	country = COL
+
+	trigger = {
+		event = 65779
+	}
+	
+	name = "EVT_65785_NAME"	#南アメリカ会議 ― 決断
+	desc = "EVT_65785_DESC"	#長きに渡る審議を経て、我々は自らの決定を選択する時が来た。
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 5
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	style = 0
+	picture = "sa_conference"
+	
+	action_a = {
+		name = "EVT_65785_ACTA"	#敵対者との全ての貿易を中止する
+		ai_chance = 100
+		command = { type = end_trades which = ARG where = JAP }
+		command = { type = relation which = JAP value = -50 }
+		command = { type = relation which = USA value = 15 }
+	}
+	action_b = {
+		name = "EVT_65785_ACTB"	#敵対者とのあらゆる関係について、これを断絶する
+		command = { type = end_trades which = ARG where = JAP }
+		command = { type = embargo which = -1 where = JAP value = 1 }
+		command = { type = relation which = JAP value = -200 }
+		command = { type = relation which = USA value = 50 }
+	}
+	action_c = {
+		name = "EVT_65785_ACTC"	#何もしない
+		command = { }
+	}
+}
+
+event = {
+    id = 65789
+	random = no
+	country = ECU
+
+	trigger = {
+		event = 65780
+	}
+	
+	name = "EVT_65785_NAME"	#南アメリカ会議 ― 決断
+	desc = "EVT_65785_DESC"	#長きに渡る審議を経て、我々は自らの決定を選択する時が来た。
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 5
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	style = 0
+	picture = "sa_conference"
+	
+	action_a = {
+		name = "EVT_65785_ACTA"	#敵対者との全ての貿易を中止する
+		ai_chance = 100
+		command = { type = end_trades which = ARG where = JAP }
+		command = { type = relation which = JAP value = -50 }
+		command = { type = relation which = USA value = 15 }
+	}
+	action_b = {
+		name = "EVT_65785_ACTB"	#敵対者とのあらゆる関係について、これを断絶する
+		command = { type = end_trades which = ARG where = JAP }
+		command = { type = embargo which = -1 where = JAP value = 1 }
+		command = { type = relation which = JAP value = -200 }
+		command = { type = relation which = USA value = 50 }
+	}
+	action_c = {
+		name = "EVT_65785_ACTC"	#何もしない
+		command = { }
+	}
+}
+
+event = {
+    id = 65790
+	random = no
+	country = PAR
+
+	trigger = {
+		event = 65781
+	}
+	
+	name = "EVT_65785_NAME"	#南アメリカ会議 ― 決断
+	desc = "EVT_65785_DESC"	#長きに渡る審議を経て、我々は自らの決定を選択する時が来た。
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 5
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	style = 0
+	picture = "sa_conference"
+	
+	action_a = {
+		name = "EVT_65785_ACTA"	#敵対者との全ての貿易を中止する
+		ai_chance = 100
+		command = { type = end_trades which = ARG where = JAP }
+		command = { type = relation which = JAP value = -50 }
+		command = { type = relation which = USA value = 15 }
+	}
+	action_b = {
+		name = "EVT_65785_ACTB"	#敵対者とのあらゆる関係について、これを断絶する
+		command = { type = end_trades which = ARG where = JAP }
+		command = { type = embargo which = -1 where = JAP value = 1 }
+		command = { type = relation which = JAP value = -200 }
+		command = { type = relation which = USA value = 50 }
+	}
+	action_c = {
+		name = "EVT_65785_ACTC"	#何もしない
+		command = { }
+	}
+}
+
+event = {
+    id = 65791
+	random = no
+	country = PRU
+
+	trigger = {
+		event = 65782
+	}
+	
+	name = "EVT_65785_NAME"	#南アメリカ会議 ― 決断
+	desc = "EVT_65785_DESC"	#長きに渡る審議を経て、我々は自らの決定を選択する時が来た。
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 5
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	style = 0
+	picture = "sa_conference"
+	
+	action_a = {
+		name = "EVT_65785_ACTA"	#敵対者との全ての貿易を中止する
+		ai_chance = 100
+		command = { type = end_trades which = ARG where = JAP }
+		command = { type = relation which = JAP value = -50 }
+		command = { type = relation which = USA value = 15 }
+	}
+	action_b = {
+		name = "EVT_65785_ACTB"	#敵対者とのあらゆる関係について、これを断絶する
+		command = { type = end_trades which = ARG where = JAP }
+		command = { type = embargo which = -1 where = JAP value = 1 }
+		command = { type = relation which = JAP value = -200 }
+		command = { type = relation which = USA value = 50 }
+	}
+	action_c = {
+		name = "EVT_65785_ACTC"	#何もしない
+		command = { }
+	}
+}
+
+event = {
+    id = 65792
+	random = no
+	country = URU
+
+	trigger = {
+		event = 65783
+	}
+	
+	name = "EVT_65785_NAME"	#南アメリカ会議 ― 決断
+	desc = "EVT_65785_DESC"	#長きに渡る審議を経て、我々は自らの決定を選択する時が来た。
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 5
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	style = 0
+	picture = "sa_conference"
+	
+	action_a = {
+		name = "EVT_65785_ACTA"	#敵対者との全ての貿易を中止する
+		ai_chance = 100
+		command = { type = end_trades which = ARG where = JAP }
+		command = { type = relation which = JAP value = -50 }
+		command = { type = relation which = USA value = 15 }
+	}
+	action_b = {
+		name = "EVT_65785_ACTB"	#敵対者とのあらゆる関係について、これを断絶する
+		command = { type = end_trades which = ARG where = JAP }
+		command = { type = embargo which = -1 where = JAP value = 1 }
+		command = { type = relation which = JAP value = -200 }
+		command = { type = relation which = USA value = 50 }
+	}
+	action_c = {
+		name = "EVT_65785_ACTC"	#何もしない
+		command = { }
+	}
+}
+
+event = {
+    id = 65793
+	random = no
+	country = VEN
+
+	trigger = {
+		event = 65784
+	}
+	
+	name = "EVT_65785_NAME"	#南アメリカ会議 ― 決断
+	desc = "EVT_65785_DESC"	#長きに渡る審議を経て、我々は自らの決定を選択する時が来た。
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 5
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	style = 0
+	picture = "sa_conference"
+	
+	action_a = {
+		name = "EVT_65785_ACTA"	#敵対者との全ての貿易を中止する
+		ai_chance = 100
+		command = { type = end_trades which = ARG where = JAP }
+		command = { type = relation which = JAP value = -50 }
+		command = { type = relation which = USA value = 15 }
+	}
+	action_b = {
+		name = "EVT_65785_ACTB"	#敵対者とのあらゆる関係について、これを断絶する
+		command = { type = end_trades which = ARG where = JAP }
+		command = { type = embargo which = -1 where = JAP value = 1 }
+		command = { type = relation which = JAP value = -200 }
+		command = { type = relation which = USA value = 50 }
+	}
+	action_c = {
+		name = "EVT_65785_ACTC"	#何もしない
+		command = { }
+	}
+}
+
+event = {
+    id = 65794
+	random = no
+	country = BRA
+
+	trigger = {
+		OR = {
+			event = 65785
+			event = 65786
+			event = 65787
+			event = 65788
+			event = 65789
+			event = 65790
+			event = 65791
+			event = 65792
+			event = 65793
+		}
+	}
+	
+	name = "EVT_65785_NAME"	#南アメリカ会議 ― 決断
+	desc = "EVT_65785_DESC"	#長きに渡る審議を経て、我々は自らの決定を選択する時が来た。
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 5
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	style = 0
+	picture = "sa_conference"
+	
+	action_a = {
+		name = "EVT_65785_ACTA"	#敵対者との全ての貿易を中止する
+		ai_chance = 100
+		command = { type = end_trades which = ARG where = JAP }
+		command = { type = relation which = JAP value = -50 }
+		command = { type = relation which = USA value = 15 }
+	}
+	action_b = {
+		name = "EVT_65785_ACTB"	#敵対者とのあらゆる関係について、これを断絶する
+		command = { type = end_trades which = ARG where = JAP }
+		command = { type = embargo which = -1 where = JAP value = 1 }
+		command = { type = relation which = JAP value = -200 }
+		command = { type = relation which = USA value = 50 }
+	}
+	action_c = {
+		name = "EVT_65785_ACTC"	#何もしない
+		command = { }
+	}
+}
+
+
+#########################################################################
+#  The South American Conference - USSR
+#########################################################################
+event = {
+    id = 65795
+	random = no
+	country = BRA
+	
+	trigger = {
+	    exists = SOV
+		random = 30
+		OR = {
+			exists = ARG
+			exists = BOL
+			exists = CHL
+			exists = COL
+			exists = PAR
+			exists = PRU
+			exists = URU
+			exists = VEN
+		}
+		OR = {
+		    war = { country = SOV country = USA } # SOV against any south american nation (except guyana) + USA
+			war = { country = SOV country = ARG } 
+			war = { country = SOV country = BOL }
+			war = { country = SOV country = BRA }
+			war = { country = SOV country = CHL }
+			war = { country = SOV country = COL }
+			war = { country = SOV country = ECU }
+			war = { country = SOV country = PAR }
+			war = { country = SOV country = PRU }
+			war = { country = SOV country = URU }
+			war = { country = SOV country = VEN }
+		}
+	    NOT = {
+		    OR = {
+			    ispuppet = BRA
+				ispuppet = USA
+		        alliance = { country = SOV country = BRA }
+				alliance = { country = USA country = SOV }
+				war = { country = BRA country = ARG } # At war against any south american nation (except guyana) + USA
+				war = { country = BRA country = BOL }
+				war = { country = BRA country = CHL }
+				war = { country = BRA country = COL }
+				war = { country = SOV country = ECU }
+				war = { country = BRA country = PAR }
+				war = { country = BRA country = PRU }
+				war = { country = BRA country = URU }
+				war = { country = BRA country = VEN }
+				war = { country = BRA country = USA }
+			}
+		}
+	}
+	
+	name = "EVT_65795_NAME"	#南アメリカ会議
+	desc = "EVT_65795_DESC"	#リオ・デ・ジャネイロで南米諸国による緊急の会議を開くことを検討している。喫緊の話題は、大陸の平和が国外からの攻勢により侵されようとしている事案についてである。
+	
+	style = 0
+	picture = "sa_conference"
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 22
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	action_a = {
+		name = "EVT_65795_ACTA"	#会議を主催する
+		ai_chance = 75
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = trigger which = 65796 }
+		command = { type = trigger which = 65797 }
+		command = { type = trigger which = 65798 }
+		command = { type = trigger which = 65799 }
+		command = { type = trigger which = 65800 }
+		command = { type = trigger which = 65801 }
+		command = { type = trigger which = 65802 }
+		command = { type = trigger which = 65803 }
+		command = { type = trigger which = 65804 }
+	}
+	action_b = {
+		name = "EVT_65795_ACTB"	#会議は中止とする！
+		ai_chance = 25
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = relation which = ARG value = -15 } # All south american nations + USA
+		command = { type = relation which = BOL value = -15 }
+		command = { type = relation which = CHL value = -15 }
+		command = { type = relation which = COL value = -15 }
+		command = { type = relation which = ECU value = -15 }
+		command = { type = relation which = PAR value = -15 }
+		command = { type = relation which = PRU value = -15 }
+		command = { type = relation which = URU value = -15 }
+		command = { type = relation which = VEN value = -15 }
+		command = { type = relation which = USA value = -25 }
+		command = { type = setflag which = bra_no_conference }
+	}
+}
+
+event = {
+    id = 65796
+	random = no
+	country = ARG
+
+	# triggered by 55785
+	
+	name = "EVT_65796_NAME"	#南アメリカ会議
+	desc = "EVT_65796_DESC"	#南米諸国による会議がブラジルはリオ・デ・ジャネイロで開催されようとしている。喫緊の話題は、大陸の平和が国外からの攻勢により侵されようとしている事案についてである。我々はこれに参加すべきだろうか？
+	
+	style = 0
+	picture = "sa_conference"
+	
+	action_a = {
+		name = "EVT_65796_ACTA"	#はい
+		ai_chance = 100
+		command = { }
+	}
+	action_b = {
+		name = "EVT_65796_ACTB"	#いいえ
+		command = { type = relation which = BRA value = -20 }
+		command = { type = sleepevent which = 65805 }
+	}
+}
+
+event = {
+    id = 65797
+	random = no
+	country = BOL
+
+	# triggered by 55785
+	
+	name = "EVT_65796_NAME"	#南アメリカ会議
+	desc = "EVT_65796_DESC"	#南米諸国による会議がブラジルはリオ・デ・ジャネイロで開催されようとしている。喫緊の話題は、大陸の平和が国外からの攻勢により侵されようとしている事案についてである。我々はこれに参加すべきだろうか？
+	
+	style = 0
+	picture = "sa_conference"
+	
+	action_a = {
+		name = "EVT_65796_ACTA"	#はい
+		ai_chance = 100
+		command = { }
+	}
+	action_b = {
+		name = "EVT_65796_ACTB"	#いいえ
+		command = { type = relation which = BRA value = -20 }
+		command = { type = sleepevent which = 65806 }
+	}
+}
+
+event = {
+    id = 65798
+	random = no
+	country = CHL
+
+	# triggered by 55785
+	
+	name = "EVT_65796_NAME"	#南アメリカ会議
+	desc = "EVT_65796_DESC"	#南米諸国による会議がブラジルはリオ・デ・ジャネイロで開催されようとしている。喫緊の話題は、大陸の平和が国外からの攻勢により侵されようとしている事案についてである。我々はこれに参加すべきだろうか？
+	
+	style = 0
+	picture = "sa_conference"
+	
+	action_a = {
+		name = "EVT_65796_ACTA"	#はい
+		ai_chance = 100
+		command = { }
+	}
+	action_b = {
+		name = "EVT_65796_ACTB"	#いいえ
+		command = { type = relation which = BRA value = -20 }
+		command = { type = sleepevent which = 65807 }
+	}
+}
+
+event = {
+    id = 65799
+	random = no
+	country = COL
+
+	# triggered by 55785
+	
+	name = "EVT_65796_NAME"	#南アメリカ会議
+	desc = "EVT_65796_DESC"	#南米諸国による会議がブラジルはリオ・デ・ジャネイロで開催されようとしている。喫緊の話題は、大陸の平和が国外からの攻勢により侵されようとしている事案についてである。我々はこれに参加すべきだろうか？
+	
+	style = 0
+	picture = "sa_conference"
+	
+	action_a = {
+		name = "EVT_65796_ACTA"	#はい
+		ai_chance = 100
+		command = { }
+	}
+	action_b = {
+		name = "EVT_65796_ACTB"	#いいえ
+		command = { type = relation which = BRA value = -20 }
+		command = { type = sleepevent which = 65808 }
+	}
+}
+
+event = {
+    id = 65800
+	random = no
+	country = ECU
+
+	# triggered by 55785
+	
+	name = "EVT_65796_NAME"	#南アメリカ会議
+	desc = "EVT_65796_DESC"	#南米諸国による会議がブラジルはリオ・デ・ジャネイロで開催されようとしている。喫緊の話題は、大陸の平和が国外からの攻勢により侵されようとしている事案についてである。我々はこれに参加すべきだろうか？
+	
+	style = 0
+	picture = "sa_conference"
+	
+	action_a = {
+		name = "EVT_65796_ACTA"	#はい
+		ai_chance = 100
+		command = { }
+	}
+	action_b = {
+		name = "EVT_65796_ACTB"	#いいえ
+		command = { type = relation which = BRA value = -20 }
+		command = { type = sleepevent which = 65809 }
+	}
+}
+
+event = {
+    id = 65801
+	random = no
+	country = PAR
+
+	# triggered by 55785
+	
+	name = "EVT_65796_NAME"	#南アメリカ会議
+	desc = "EVT_65796_DESC"	#南米諸国による会議がブラジルはリオ・デ・ジャネイロで開催されようとしている。喫緊の話題は、大陸の平和が国外からの攻勢により侵されようとしている事案についてである。我々はこれに参加すべきだろうか？
+	
+	style = 0
+	picture = "sa_conference"
+	
+	action_a = {
+		name = "EVT_65796_ACTA"	#はい
+		ai_chance = 100
+		command = { }
+	}
+	action_b = {
+		name = "EVT_65796_ACTB"	#いいえ
+		command = { type = relation which = BRA value = -20 }
+		command = { type = sleepevent which = 65810 }
+	}
+}
+
+event = {
+    id = 65802
+	random = no
+	country = PRU
+
+	# triggered by 55785
+	
+	name = "EVT_65796_NAME"	#南アメリカ会議
+	desc = "EVT_65796_DESC"	#南米諸国による会議がブラジルはリオ・デ・ジャネイロで開催されようとしている。喫緊の話題は、大陸の平和が国外からの攻勢により侵されようとしている事案についてである。我々はこれに参加すべきだろうか？
+	
+	style = 0
+	picture = "sa_conference"
+	
+	action_a = {
+		name = "EVT_65796_ACTA"	#はい
+		ai_chance = 100
+		command = { }
+	}
+	action_b = {
+		name = "EVT_65796_ACTB"	#いいえ
+		command = { type = relation which = BRA value = -20 }
+		command = { type = sleepevent which = 65811 }
+	}
+}
+
+event = {
+    id = 65803
+	random = no
+	country = URU
+
+	# triggered by 55785
+	
+	name = "EVT_65796_NAME"	#南アメリカ会議
+	desc = "EVT_65796_DESC"	#南米諸国による会議がブラジルはリオ・デ・ジャネイロで開催されようとしている。喫緊の話題は、大陸の平和が国外からの攻勢により侵されようとしている事案についてである。我々はこれに参加すべきだろうか？
+	
+	style = 0
+	picture = "sa_conference"
+	
+	action_a = {
+		name = "EVT_65796_ACTA"	#はい
+		ai_chance = 100
+		command = { }
+	}
+	action_b = {
+		name = "EVT_65796_ACTB"	#いいえ
+		command = { type = relation which = BRA value = -20 }
+		command = { type = sleepevent which = 65812 }
+	}
+}
+
+event = {
+    id = 65804
+	random = no
+	country = VEN
+
+	# triggered by 55785
+	
+	name = "EVT_65796_NAME"	#南アメリカ会議
+	desc = "EVT_65796_DESC"	#南米諸国による会議がブラジルはリオ・デ・ジャネイロで開催されようとしている。喫緊の話題は、大陸の平和が国外からの攻勢により侵されようとしている事案についてである。我々はこれに参加すべきだろうか？
+	
+	style = 0
+	picture = "sa_conference"
+	
+	action_a = {
+		name = "EVT_65796_ACTA"	#はい
+		ai_chance = 100
+		command = { }
+	}
+	action_b = {
+		name = "EVT_65796_ACTB"	#いいえ
+		command = { type = relation which = BRA value = -20 }
+		command = { type = sleepevent which = 65813 }
+	}
+}
+
+event = {
+    id = 65805
+	random = no
+	country = ARG
+
+	trigger = {
+		event = 65796
+	}
+	
+	name = "EVT_65805_NAME"	#南アメリカ会議 ― 決断
+	desc = "EVT_65805_NAME"	#長きに渡る審議を経て、我々は自らの決定を選択する時が来た。
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 5
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	style = 0
+	picture = "sa_conference"
+	
+	action_a = {
+		name = "EVT_65805_ACTA"	#敵対者との全ての貿易を中止する
+		ai_chance = 100
+		command = { type = end_trades which = ARG where = SOV }
+		command = { type = relation which = SOV value = -50 }
+		command = { type = relation which = USA value = 15 }
+	}
+	action_b = {
+		name = "EVT_65805_ACTB"	#敵対者とのあらゆる関係について、これを断絶する
+		command = { type = end_trades which = ARG where = SOV }
+		command = { type = embargo which = -1 where = SOV value = 1 }
+		command = { type = relation which = SOV value = -200 }
+		command = { type = relation which = USA value = 50 }
+	}
+	action_c = {
+		name = "EVT_65805_ACTC"	#何もしない
+		command = { }
+	}
+}
+
+event = {
+    id = 65806
+	random = no
+	country = BOL
+
+	trigger = {
+		event = 65797
+	}
+	
+	name = "EVT_65805_NAME"	#南アメリカ会議 ― 決断
+	desc = "EVT_65805_NAME"	#長きに渡る審議を経て、我々は自らの決定を選択する時が来た。
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 5
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	style = 0
+	picture = "sa_conference"
+	
+	action_a = {
+		name = "EVT_65805_ACTA"	#敵対者との全ての貿易を中止する
+		ai_chance = 100
+		command = { type = end_trades which = ARG where = SOV }
+		command = { type = relation which = SOV value = -50 }
+		command = { type = relation which = USA value = 15 }
+	}
+	action_b = {
+		name = "EVT_65805_ACTB"	#敵対者とのあらゆる関係について、これを断絶する
+		command = { type = end_trades which = ARG where = SOV }
+		command = { type = embargo which = -1 where = SOV value = 1 }
+		command = { type = relation which = SOV value = -200 }
+		command = { type = relation which = USA value = 50 }
+	}
+	action_c = {
+		name = "EVT_65805_ACTC"	#何もしない
+		command = { }
+	}
+}
+
+event = {
+    id = 65807
+	random = no
+	country = CHL
+
+	trigger = {
+		event = 65798
+	}
+	
+	name = "EVT_65805_NAME"	#南アメリカ会議 ― 決断
+	desc = "EVT_65805_NAME"	#長きに渡る審議を経て、我々は自らの決定を選択する時が来た。
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 5
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	style = 0
+	picture = "sa_conference"
+	
+	action_a = {
+		name = "EVT_65805_ACTA"	#敵対者との全ての貿易を中止する
+		ai_chance = 100
+		command = { type = end_trades which = ARG where = SOV }
+		command = { type = relation which = SOV value = -50 }
+		command = { type = relation which = USA value = 15 }
+	}
+	action_b = {
+		name = "EVT_65805_ACTB"	#敵対者とのあらゆる関係について、これを断絶する
+		command = { type = end_trades which = ARG where = SOV }
+		command = { type = embargo which = -1 where = SOV value = 1 }
+		command = { type = relation which = SOV value = -200 }
+		command = { type = relation which = USA value = 50 }
+	}
+	action_c = {
+		name = "EVT_65805_ACTC"	#何もしない
+		command = { }
+	}
+}
+
+event = {
+    id = 65808
+	random = no
+	country = COL
+
+	trigger = {
+		event = 65799
+	}
+	
+	name = "EVT_65805_NAME"	#南アメリカ会議 ― 決断
+	desc = "EVT_65805_NAME"	#長きに渡る審議を経て、我々は自らの決定を選択する時が来た。
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 5
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	style = 0
+	picture = "sa_conference"
+	
+	action_a = {
+		name = "EVT_65805_ACTA"	#敵対者との全ての貿易を中止する
+		ai_chance = 100
+		command = { type = end_trades which = ARG where = SOV }
+		command = { type = relation which = SOV value = -50 }
+		command = { type = relation which = USA value = 15 }
+	}
+	action_b = {
+		name = "EVT_65805_ACTB"	#敵対者とのあらゆる関係について、これを断絶する
+		command = { type = end_trades which = ARG where = SOV }
+		command = { type = embargo which = -1 where = SOV value = 1 }
+		command = { type = relation which = SOV value = -200 }
+		command = { type = relation which = USA value = 50 }
+	}
+	action_c = {
+		name = "EVT_65805_ACTC"	#何もしない
+		command = { }
+	}
+}
+
+event = {
+    id = 65809
+	random = no
+	country = ECU
+
+	trigger = {
+		event = 65800
+	}
+	
+	name = "EVT_65805_NAME"	#南アメリカ会議 ― 決断
+	desc = "EVT_65805_NAME"	#長きに渡る審議を経て、我々は自らの決定を選択する時が来た。
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 5
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	style = 0
+	picture = "sa_conference"
+	
+	action_a = {
+		name = "EVT_65805_ACTA"	#敵対者との全ての貿易を中止する
+		ai_chance = 100
+		command = { type = end_trades which = ARG where = SOV }
+		command = { type = relation which = SOV value = -50 }
+		command = { type = relation which = USA value = 15 }
+	}
+	action_b = {
+		name = "EVT_65805_ACTB"	#敵対者とのあらゆる関係について、これを断絶する
+		command = { type = end_trades which = ARG where = SOV }
+		command = { type = embargo which = -1 where = SOV value = 1 }
+		command = { type = relation which = SOV value = -200 }
+		command = { type = relation which = USA value = 50 }
+	}
+	action_c = {
+		name = "EVT_65805_ACTC"	#何もしない
+		command = { }
+	}
+}
+
+event = {
+    id = 65810
+	random = no
+	country = PAR
+
+	trigger = {
+		event = 65801
+	}
+	
+	name = "EVT_65805_NAME"	#南アメリカ会議 ― 決断
+	desc = "EVT_65805_NAME"	#長きに渡る審議を経て、我々は自らの決定を選択する時が来た。
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 5
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	style = 0
+	picture = "sa_conference"
+	
+	action_a = {
+		name = "EVT_65805_ACTA"	#敵対者との全ての貿易を中止する
+		ai_chance = 100
+		command = { type = end_trades which = ARG where = SOV }
+		command = { type = relation which = SOV value = -50 }
+		command = { type = relation which = USA value = 15 }
+	}
+	action_b = {
+		name = "EVT_65805_ACTB"	#敵対者とのあらゆる関係について、これを断絶する
+		command = { type = end_trades which = ARG where = SOV }
+		command = { type = embargo which = -1 where = SOV value = 1 }
+		command = { type = relation which = SOV value = -200 }
+		command = { type = relation which = USA value = 50 }
+	}
+	action_c = {
+		name = "EVT_65805_ACTC"	#何もしない
+		command = { }
+	}
+}
+
+event = {
+    id = 65811
+	random = no
+	country = PRU
+
+	trigger = {
+		event = 65802
+	}
+	
+	name = "EVT_65805_NAME"	#南アメリカ会議 ― 決断
+	desc = "EVT_65805_NAME"	#長きに渡る審議を経て、我々は自らの決定を選択する時が来た。
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 5
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	style = 0
+	picture = "sa_conference"
+	
+	action_a = {
+		name = "EVT_65805_ACTA"	#敵対者との全ての貿易を中止する
+		ai_chance = 100
+		command = { type = end_trades which = ARG where = SOV }
+		command = { type = relation which = SOV value = -50 }
+		command = { type = relation which = USA value = 15 }
+	}
+	action_b = {
+		name = "EVT_65805_ACTB"	#敵対者とのあらゆる関係について、これを断絶する
+		command = { type = end_trades which = ARG where = SOV }
+		command = { type = embargo which = -1 where = SOV value = 1 }
+		command = { type = relation which = SOV value = -200 }
+		command = { type = relation which = USA value = 50 }
+	}
+	action_c = {
+		name = "EVT_65805_ACTC"	#何もしない
+		command = { }
+	}
+}
+
+event = {
+    id = 65812
+	random = no
+	country = URU
+
+	trigger = {
+		event = 65803
+	}
+	
+	name = "EVT_65805_NAME"	#南アメリカ会議 ― 決断
+	desc = "EVT_65805_NAME"	#長きに渡る審議を経て、我々は自らの決定を選択する時が来た。
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 5
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	style = 0
+	picture = "sa_conference"
+	
+	action_a = {
+		name = "EVT_65805_ACTA"	#敵対者との全ての貿易を中止する
+		ai_chance = 100
+		command = { type = end_trades which = ARG where = SOV }
+		command = { type = relation which = SOV value = -50 }
+		command = { type = relation which = USA value = 15 }
+	}
+	action_b = {
+		name = "EVT_65805_ACTB"	#敵対者とのあらゆる関係について、これを断絶する
+		command = { type = end_trades which = ARG where = SOV }
+		command = { type = embargo which = -1 where = SOV value = 1 }
+		command = { type = relation which = SOV value = -200 }
+		command = { type = relation which = USA value = 50 }
+	}
+	action_c = {
+		name = "EVT_65805_ACTC"	#何もしない
+		command = { }
+	}
+}
+
+event = {
+    id = 65813
+	random = no
+	country = VEN
+
+	trigger = {
+		event = 65804
+	}
+	
+	name = "EVT_65805_NAME"	#南アメリカ会議 ― 決断
+	desc = "EVT_65805_NAME"	#長きに渡る審議を経て、我々は自らの決定を選択する時が来た。
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 5
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	style = 0
+	picture = "sa_conference"
+	
+	action_a = {
+		name = "EVT_65805_ACTA"	#敵対者との全ての貿易を中止する
+		ai_chance = 100
+		command = { type = end_trades which = ARG where = SOV }
+		command = { type = relation which = SOV value = -50 }
+		command = { type = relation which = USA value = 15 }
+	}
+	action_b = {
+		name = "EVT_65805_ACTB"	#敵対者とのあらゆる関係について、これを断絶する
+		command = { type = end_trades which = ARG where = SOV }
+		command = { type = embargo which = -1 where = SOV value = 1 }
+		command = { type = relation which = SOV value = -200 }
+		command = { type = relation which = USA value = 50 }
+	}
+	action_c = {
+		name = "EVT_65805_ACTC"	#何もしない
+		command = { }
+	}
+}
+
+event = {
+    id = 65814
+	random = no
+	country = BRA
+
+	trigger = {
+		OR = {
+			event = 65805
+			event = 65806
+			event = 65807
+			event = 65808
+			event = 65809
+			event = 65810
+			event = 65811
+			event = 65812
+			event = 65813
+		}
+	}
+	
+	name = "EVT_65805_NAME"	#南アメリカ会議 ― 決断
+	desc = "EVT_65805_NAME"	#長きに渡る審議を経て、我々は自らの決定を選択する時が来た。
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 5
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	style = 0
+	picture = "sa_conference"
+	
+	action_a = {
+		name = "EVT_65805_ACTA"	#敵対者との全ての貿易を中止する
+		ai_chance = 100
+		command = { type = end_trades which = ARG where = SOV }
+		command = { type = relation which = SOV value = -50 }
+		command = { type = relation which = USA value = 15 }
+	}
+	action_b = {
+		name = "EVT_65805_ACTB"	#敵対者とのあらゆる関係について、これを断絶する
+		command = { type = end_trades which = ARG where = SOV }
+		command = { type = embargo which = -1 where = SOV value = 1 }
+		command = { type = relation which = SOV value = -200 }
+		command = { type = relation which = USA value = 50 }
+	}
+	action_c = {
+		name = "EVT_65805_ACTC"	#何もしない
+		command = { }
+	}
+}
+
+#########################################################################
+#  Brazil needs to decide its position
+#########################################################################
+event = {
+    id = 65850
+	random = no
+	country = GER
+	
+	trigger = {
+	    headofstate = 1
+	    submarine = 1
+		random = 30
+		event = 65755
+		OR = {
+		    war = { country = GER country = ENG }
+			war = { country = GER country = USA }		
+		NOT = {
+		    OR = {
+			    AND = {
+				    flag = bra_align_ger
+					flag = bra_no_conference
+				}
+				AND = {
+				    flag = bra_align_ger
+					flag = bra_align_ger2
+					flag = bra_no_speech
+				}
+				AND = {
+				    flag = bra_do_business
+					flag = bra_no_conference
+				}
+				AND = {
+				    flag = bra_do_business
+					flag = bra_align_ger2
+					flag = bra_no_conference
+				}
+				AND = {
+				    flag = bra_align_ger2
+					flag = bra_no_conference
+				}
+			}
+		}
+		}
+	    NOT = {
+		    OR = {
+			    alliance = { country = GER country = SOV }
+				alliance = { country = GER country = ENG }
+				alliance = { country = GER country = USA }
+				alliance = { country = GER country = BRA }
+				alliance = { country = USA country = BRA }
+				alliance = { country = ENG country = BRA }
+				alliance = { country = SOV country = BRA }
+				war = { country = BRA country = GER }
+				war = { country = BRA country = USA }
+				war = { country = BRA country = ENG }
+				ispuppet = BRA
+			    ispuppet = GER
+			}
+		}
+	}
+	
+	name = "EVT_65850_NAME"	#ブラジルの決断
+	desc = "EVT_65850_DESC"	#ブラジルは日に日に連合国に接近しつつある。こちらも行動を起こさねばなるまい――少なくとも、（史実におけるスペイン、ポルトガル、アルゼンチンのように）中立を保たせるようにせねば。
+	
+	style = 0
+	picture = "brazil"
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 360
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	action_a = {
+		name = "EVT_65850_ACTA"	#Uボートによる攻撃を指示せよ――彼らに理解してもらおう
+		ai_chance = 85
+		command = { type = setflag which = uboat_attack_bra }
+	}
+	action_b = {
+		name = "EVT_65850_ACTB"	#ブラジルは好きにさせておけ
+		ai_chance = 15
+		command = { }
+	}
+}
+
+#########################################################################
+#  The Brazilian Navy is under attack!
+#########################################################################
+event = {
+    id = 65851
+	random = no
+	country = BRA
+	
+	trigger = {
+	    flag = uboat_attack_bra
+		random = 20
+		OR = {
+		    war = { country = GER country = ENG }
+			war = { country = GER country = USA }
+		}
+	    NOT = {
+			OR = {
+			    alliance = { country = GER country = SOV }
+				alliance = { country = GER country = ENG }
+				alliance = { country = GER country = USA }
+				alliance = { country = GER country = BRA }
+				alliance = { country = USA country = BRA }
+				alliance = { country = ENG country = BRA }
+				alliance = { country = SOV country = BRA }
+				war = { country = BRA country = GER }
+				war = { country = BRA country = USA }
+				war = { country = BRA country = ENG }
+				ispuppet = BRA
+			    ispuppet = GER
+			    ispuppet = USA			
+			}
+		}
+	}
+	name = "EVT_65851_NAME"	#海軍が攻撃を受けている！
+	desc = "EVT_65851_DESC"	#大西洋に展開しているドイツのUボートがブラジル沿岸の商船に攻撃を仕掛けている。なんだってこんなことを？
+	
+	style = 0
+	picture = "convoy_attack"
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 5
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	action_a = {
+		name = "EVT_65851_ACTA"	#ドイツを非難する！
+		command = { type = transport_pool which = BRA value = -10 }
+		command = { type = escort_pool which = BRA value = -2 }
+		command = { type = dissent value = -8 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = manpowerpool value = 20 }
+		command = { type = relation which = GER value = -50 }
+		command = { type = setflag which = usa_helps_bra }
+		command = { type = setflag which = uboat_attack_bra2 }
+	}
+	action_b = {
+		name = "EVT_65851_ACTB"	#アメリカを非難する！
+		command = { type = transport_pool which = BRA value = -10 }
+		command = { type = escort_pool which = BRA value = -2 }
+		command = { type = dissent value = -3 }
+		command = { type = domestic which = interventionism value = -2 }
+		command = { type = manpowerpool value = 20 }
+		command = { type = relation which = USA value = -25 }
+		command = { type = non_aggression which = BRA where = GER }
+		command = { type = sleepevent which = 65854 }
+		command = { type = sleepevent which = 65855 }
+		command = { type = sleepevent which = 65856 }
+	}
+}
+
+event = {
+    id = 65852
+	random = no
+	country = USA
+	
+	trigger = {
+	    flag = usa_helps_bra
+		exists = GER
+		random = 30
+		OR = {
+		    war = { country = GER country = ENG }
+			war = { country = GER country = USA }
+		}
+	    NOT = {
+			OR = {
+			    alliance = { country = GER country = SOV }
+				alliance = { country = GER country = ENG }
+				alliance = { country = GER country = USA }
+				alliance = { country = GER country = BRA }
+				alliance = { country = USA country = BRA }
+				alliance = { country = ENG country = BRA }
+				alliance = { country = SOV country = BRA }
+				war = { country = BRA country = GER }
+				war = { country = BRA country = USA }
+				war = { country = BRA country = ENG }
+				ispuppet = BRA
+			    ispuppet = GER
+			    ispuppet = USA			
+			}
+		}
+	}
+	
+	name = "EVT_65852_NAME"	#ブラジル海軍が攻撃を受けている！
+	desc = "EVT_65852_DESC"	#大西洋に展開しているドイツのUボートがブラジル沿岸の商船に攻撃を仕掛けている。なんだってこんなことを？
+	
+	style = 0
+	picture = "convoy_attack"
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 2
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	action_a = {
+		name = "EVT_65852_ACTA"	#OK
+		command = { type = trigger which = 65853 }
+	}
+}
+
+#########################################################################
+#  USA intervention in the Brazilian question
+#########################################################################
+event = {
+    id = 65853
+	random = no
+	country = USA
+	
+	# triggered by 55852
+	
+	name = "EVT_65853_NAME"	#ブラジルでの現況についてのアメリカの介入
+	desc = "EVT_65853_DESC"	#ドイツの潜水艦がブラジル沿岸部で行動を起こしているという事案は、我々が新たな同盟国を得る良い口実になるかもしれない。
+	
+	style = 0
+	picture = "brazil"
+	
+	action_a = {
+		name = "EVT_65853_ACTA"	#公式な援助と議員団をブラジルに送る
+		ai_chance = 80
+		command = { type = supplies value = -8000 }
+		command = { type = money value = -200 }
+		command = { type = relation which = BRA value = 30 }
+		command = { type = non_aggression which = USA where = BRA }
+		command = { type = guarantee which = USA where = BRA }
+		command = { type = setflag which = brazil_decides }
+	}
+	action_b = {
+		name = "EVT_65853_ACTB"	#腐れドイツ人どもを非難するに留める
+		ai_chance = 15
+		command = { type = relation which = BRA value = -10 }
+		command = { type = relation which = GER value = -20 }
+	}
+	action_c = {
+		name = "EVT_65853_ACTC"	#ブラジルが自ら決めることだ
+		ai_chance = 5
+		command = { type = relation which = BRA value = -20 }
+		command = { type = end_guarantee which = USA where = BRA }
+	}
+}
+
+#########################################################################
+#  Our navy is under attack!
+#########################################################################
+event = {
+    id = 65854
+	random = no
+	country = BRA
+	
+	trigger = {
+	    flag = uboat_attack_bra2
+		random = 20
+		exists = GER
+		OR = {
+		    war = { country = GER country = ENG }
+			war = { country = GER country = USA }
+		}
+	    NOT = {
+			OR = {
+			    alliance = { country = GER country = SOV }
+				alliance = { country = GER country = ENG }
+				alliance = { country = GER country = USA }
+				alliance = { country = GER country = BRA }
+				alliance = { country = USA country = BRA }
+				alliance = { country = ENG country = BRA }
+				alliance = { country = SOV country = BRA }
+				war = { country = BRA country = GER }
+				war = { country = BRA country = USA }
+				war = { country = BRA country = ENG }
+				ispuppet = BRA
+			    ispuppet = GER
+			    ispuppet = USA			
+			}
+		}
+	}
+	name = "EVT_65854_NAME"	#海軍が攻撃を受けている！
+	desc = "EVT_65854_DESC"	#卑劣な潜水艦攻撃がブラジル市民に与える被害が大きくなっていると、国内で叫ばれつつある。
+	
+	style = 0
+	picture = "convoy_attack"
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 3
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	action_a = {
+		name = "EVT_65854_ACTA"	#ただの事件にすぎない
+		ai_chance = 90
+		command = { type = transport_pool which = BRA value = -10 }
+		command = { type = escort_pool which = BRA value = -2 }
+		command = { type = dissent value = 5 }
+		command = { type = setflag which = uboat_attack_bra3 }
+	}
+	action_b = {
+		name = "EVT_65854_ACTB"	#最早我々の堪忍袋は保たんぞ！
+		ai_chance = 10
+		command = { type = transport_pool which = BRA value = -10 }
+		command = { type = escort_pool which = BRA value = -2 }
+		command = { type = sleepevent which = 65855 }
+		command = { type = trigger which = 65856 }
+	}
+}
+event = {
+    id = 65855
+	random = no
+	country = BRA
+	
+	trigger = {
+	    flag = uboat_attack_bra3
+		random = 20
+		exists = GER
+		OR = {
+		    war = { country = GER country = ENG }
+			war = { country = GER country = USA }
+		}
+	    NOT = {
+			OR = {
+			    alliance = { country = GER country = SOV }
+				alliance = { country = GER country = ENG }
+				alliance = { country = GER country = USA }
+				alliance = { country = GER country = BRA }
+				alliance = { country = USA country = BRA }
+				alliance = { country = ENG country = BRA }
+				alliance = { country = SOV country = BRA }
+				war = { country = BRA country = GER }
+				war = { country = BRA country = USA }
+				war = { country = BRA country = ENG }
+				ispuppet = BRA
+			    ispuppet = GER
+			    ispuppet = USA
+			}
+		}
+	}
+	name = "EVT_65855_NAME"	#海軍が攻撃を受けている！
+	desc = "EVT_65855_DESC"	#卑劣な潜水艦攻撃がブラジル市民に与える被害が大きくなっていると、国内で叫ばれつつある。
+	
+	style = 0
+	picture = "convoy_attack"
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 3
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	action_a = {
+		name = "EVT_65855_ACTA"	#もう一度言おう、これはただの事件だ
+		ai_chance = 10
+		command = { type = transport_pool which = BRA value = -10 }
+		command = { type = escort_pool which = BRA value = -2 }
+		command = { type = dissent value = 10 }
+		command = { type = domestic which = interventionism value = -2 }
+		command = { type = relation which = USA value = -25 }
+		command = { type = relation which = GER value = 20 }
+		command = { type = non_aggression which = BRA where = GER }
+	}
+	action_b = {
+		name = "EVT_65855_ACTB"	#堪忍袋の緒はもはや断ち切られたぞ！
+		ai_chance = 90
+		command = { type = transport_pool which = BRA value = -110 }
+		command = { type = escort_pool which = BRA value = -2 }
+		command = { type = trigger which = 65856 }
+	}
+}
+
+#########################################################################
+#  Brazil decides its fate
+#########################################################################
+event = {
+    id = 65856
+	random = no
+	country = BRA
+	
+	# triggered by 55854 or 55855
+	
+	name = "EVT_65856_NAME"	#ブラジルの運命の定まる時
+	desc = "EVT_65856_DESC"	#ドイツのUボートにより多くのブラジル商船が沈没し、ブラジルはもはや霧隠れしている訳には行かなくなった。理解し、敵対せねばならない。枢軸国の敵意を。そして今、決断せねばならない。この戦いに掲げる我らの御旗を。
+	
+	style = 0
+	picture = "getulio_speech"
+	
+	action_a = {
+		name = "EVT_65856_ACTA"	#ドイツに宣戦布告を！
+		ai_chance = 15
+		command = { type = manpowerpool value = 250 }
+		command = { type = domestic which = defense_lobby value = 2 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = dissent value = -5 }
+		command = { type = war which = GER }
+		command = { type = sleepevent which = 65857 }
+		command = { type = sleepevent which = 65858 }
+	}
+	action_b = {
+		name = "EVT_65856_ACTB"	#同盟を締結することから始めよう
+		ai_chance = 85
+		command = { type = manpowerpool value = 250 }
+		command = { type = domestic which = defense_lobby value = 2 }
+		command = { type = domestic which = interventionism value = 1 }
+	}
+}
+
+event = {
+    id = 65857
+	random = no
+	country = BRA
+	
+	trigger = {
+	    event = 65856
+		alliance = { country = USA country = ENG }
+		NOT = {
+		    OR = {
+			    alliance = { country = GER country = BRA }
+				alliance = { country = USA country = BRA }
+				alliance = { country = ENG country = BRA }
+				alliance = { country = SOV country = BRA }
+			}
+		}
+	}
+	
+	name = "EVT_65857_NAME"	#ブラジルの戦争参加
+	desc = "EVT_65857_DESC"	#アメリカ大陸諸国との大陸外からの攻撃に対する相互防衛協定は別途に存在しているものの、現在のブラジルにとっては、ドイツのUボートからの攻撃に対応する最善の方法は連合国に加盟することに思えた。だが、実際のところ、それよりより重要なのは、連合国加盟の選択肢はアメリカとブラジルの関係を深めることにあると言っても良いかもしれない。「それがブラジル人のやり方だ」、と市井でも言われるのだから。
+	
+	style = 0
+	picture = "brazil_war"
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 2
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	action_a = {
+		name = "EVT_65857_ACTA"	#連合国に加盟する
+		command = { type = alliance which = ENG }
+		command = { type = sleepevent which = 65858 }
+	}
+}
+
+event = {
+    id = 65858
+	random = no
+	country = BRA
+	
+	trigger = {
+	    event = 65856
+		NOT = {
+		    alliance = { country = USA country = ENG }
+		}
+		NOT = {
+		    OR = {
+			    alliance = { country = GER country = BRA }
+				alliance = { country = USA country = BRA }
+				alliance = { country = ENG country = BRA }
+				alliance = { country = SOV country = BRA }
+			}
+		}
+	}
+	
+	name = "EVT_65858_NAME"	#ブラジルの戦争参加
+	desc = "EVT_65858_DESC"	#アメリカ大陸諸国との大陸外からの攻撃に対する相互防衛協定は別途に存在しているものの、現在のブラジルにとっては、ドイツのUボートからの攻撃に対応する最善の方法は連合国に加盟することに思えた。だが、実際のところ、それよりより重要なのは、連合国加盟の選択肢はアメリカとブラジルの関係を深めることにあると言っても良いかもしれない。「それがブラジル人のやり方だ」、と市井でも言われるのだから。
+	
+	style = 0
+	picture = "brazil_war"
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 2
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	action_a = {
+		name = "EVT_65858_ACTA"	#アメリカ合衆国と同盟を締結する
+		command = { type = alliance which = USA }
+		command = { type = sleepevent which = 65857 }
+	}
+}
+
+
+
+#########################################################################
+#  Paradox at home
+#########################################################################
+event = {
+    id = 65859
+	random = no
+	country = BRA
+	
+	trigger = {
+	    government = fascist
+	    OR = {
+	    	alliance = { country = ENG }
+	    	alliance = { country = USA }
+	    }
+		random = 30
+	    OR = {
+		    event = 65857
+			event = 65858
+		}
+	}
+	
+	name = "EVT_65859_NAME"	#矛盾する国体
+	desc = "EVT_65859_DESC"	#民主主義勢力に付いたことが、国家のある矛盾を浮き彫りにした。一部の国民は指摘していたことではあるが、ファシスト的な政体の国家がアンチ・ファシストの同盟の同盟に入ってしまったのだ。似た政体の他の国家では、中立を保っているゆえにこのような矛盾に直面してはいない。ところがブラジルでは、その妙な感情論は急速に人々に広まりつつあり、近い将来なんらかの決着を付けねばならないことが予測された。
+	
+	style = 0
+	picture = "foreign_policy" 
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 30
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	action_a = {
+		name = "EVT_65859_ACTA"	#OK
+		command = { type = dissent value = 3 }
+	}
+}
+
+#########################################################################
+#  Natal Conference
+#########################################################################
+event = {
+    id = 65860
+	random = no
+	country = BRA
+	save_date = yes
+	
+	decision = {
+		atwar = USA
+		control = { province = 881 data = BRA }
+		control = { province = 882 data = BRA }
+		control = { province = 885 data = BRA }
+		control = { province = 886 data = BRA }
+		alliance = { country = BRA country = USA }
+	}
+	
+	decision_trigger = {
+		rare_materials = 1000
+	}
+	
+	trigger = {
+		random = 30
+		atwar = USA
+		control = { province = 881 data = BRA }
+		control = { province = 882 data = BRA }
+		control = { province = 885 data = BRA }
+		control = { province = 886 data = BRA }
+		alliance = { country = BRA country = USA }
+	}
+	
+	name = "EVT_65860_NAME"	#ナタウ会議
+	desc = "EVT_65860_DESC"	#ブラジル・アメリカ両首脳はナタウ市で行われる会談で、両国の協力について検討する予定である。話し合いに取られる時間は長くはないだろうが、ともに納得の行く結論を持ち帰ることが出来るだろうと考えられている。主な議題は、ブラジル産業をさらに発展させるための資金貸付と、希少金属の割当、技術協力、そしてアメリカ合衆国の行う戦闘をサポートするためにブラジル北東部に建設されることになる空軍・海軍基地についてである。
+	decision_desc = "EVT_65860_DECISION_DESC"	#本ディシジョンを実行すると、国内開発のために一時的に工業力・各種資源生産にペナルティが入ります。これらのペナルティは時間経過とともに全てが解除され、最終的には新しい歩兵師団・基地・インフラ・IC・青写真を最終的に手にすることが出来ます。
+	
+	style = 0
+	picture = "natal_conference"
+	
+	date = { day = 20 month = january year = 1936 }
+	offset = 30
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	action_a = {
+		name = "EVT_65860_ACTA"	#完全合意し、アメリカの必要とする全物資を提供する
+		ai_chance = 80
+		command = { type = rarematerialspool value = -1000 }
+		command = { type = sleepevent which = 65863 }
+		command = { type = sleepevent which = 65865 }
+		command = { type = sleepevent which = 65867 }
+		command = { type = construct which = ic where = 881 value = -4 }
+		command = { type = construct which = ic where = 882 value = -2 }
+		command = { type = construct which = ic where = 886 value = -4 }
+		command = { type = construct which = ic where = 885 value = -4 }
+		command = { type = free_energy value = -28 }
+		command = { type = free_metal value = -14 }
+		command = { type = free_rare_materials value = -7 }
+	}
+	action_b = {
+		name = "EVT_65860_ACTB"	#部分合意とする
+		ai_chance = 15
+		command = { type = rarematerialspool value = -500 }
+		command = { type = sleepevent which = 65861 }
+		command = { type = sleepevent which = 65862 }
+		command = { type = sleepevent which = 65864 }
+		command = { type = sleepevent which = 65866 }
+		command = { type = construct which = ic where = 881 value = -2 }
+		command = { type = construct which = ic where = 882 value = -1 }
+		command = { type = construct which = ic where = 886 value = -2 }
+		command = { type = construct which = ic where = 885 value = -2 }
+		command = { type = free_energy value = -14 }
+		command = { type = free_metal value = -7 }
+		command = { type = free_rare_materials value = -4 }
+	}
+	action_c = {
+		name = "EVT_65860_ACTC"	#この会議に意味があるとは思えない
+		ai_chance = 5
+		command = { type = relation which = USA value = -25 }
+		command = { type = sleepevent which = 65861 }
+		command = { type = sleepevent which = 65862 }
+		command = { type = sleepevent which = 65863 }
+		command = { type = sleepevent which = 65864 }
+		command = { type = sleepevent which = 65865 }
+		command = { type = sleepevent which = 65866 }
+		command = { type = sleepevent which = 65867 }
+	}
+}
+event = {
+    id = 65861
+	random = no
+	country = BRA
+	
+	trigger = {
+		event = { id = 65860 days = 81 }
+		control = { province = 881 data = BRA }
+		control = { province = 882 data = BRA }
+	}
+	
+	#（（素の値）×（1×自由経済MAX補正×タカ派MAX×技術補正））×（謎のアメリカ補正）=(180*(1*0.8*0.8*0.9))*0.9=93
+	
+	name = "EVT_65861_NAME"	#新航空基地の建設完了
+	desc = "EVT_65861_DESC"	#ナタウ、ペルナンブーコ、バイーアの新航空基地がついに完成し、作戦を実行できる状態になった。
+	
+	style = 0
+	picture = "airbase"
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 34
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	action_a = {
+		name = "EVT_65861_ACTA"	#大変結構！
+		ai_chance = 100
+		command = { type = construct which = air_base where = 881 value = 2 }
+		command = { type = construct which = air_base where = 882 value = 1 }
+		command = { type = construct which = ic where = 881 value = 2 }
+		command = { type = construct which = ic where = 882 value = 1 }
+		command = { type = free_energy value = 6 }
+		command = { type = free_metal value = 3 }
+		command = { type = free_rare_materials value = 1 }
+	}
+	action_b = {
+		name = "EVT_65861_ACTB"	#空港は受領する、だが以降の基地拡張工事はキャンセルだ
+		command = { type = relation which = USA value = -50 }
+		command = { type = construct which = air_base where = 881 value = 2 }
+		command = { type = construct which = air_base where = 882 value = 1 }
+		command = { type = construct which = ic where = 881 value = 4 }
+		command = { type = construct which = ic where = 882 value = 2 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = sleepevent which = 65862 }
+		command = { type = sleepevent which = 65864 }
+	}
+}
+event = {
+    id = 65862
+	random =  no
+	country = BRA
+	
+	trigger = {
+		event = { id = 65860 days = 93 }
+		event = 65861
+		control = { province = 881 data = BRA }
+	}
+	
+	#（（素の値）×（1×自由経済MAX補正×タカ派MAX×技術補正））×（謎のアメリカ補正）=(180*(1*0.8*0.8*0.9))*0.9=93
+	
+	name = "EVT_65862_NAME"	#新海軍基地の建設完了
+	desc = "EVT_65862_DESC"	#ナタウの新海軍基地がついに完成し、作戦を実行できる状態になった。
+	
+	style = 0
+	picture = "navalbase"
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 15
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	action_a = {
+		name = "EVT_65862_ACTA"	#大変結構！
+		ai_chance = 100
+		command = { type = construct which = naval_base where = 881 value = 1 }
+		command = { type = construct which = ic where = 881 value = 1 }
+		command = { type = free_energy value = 2 }
+		command = { type = free_metal value = 1 }
+		command = { type = free_rare_materials value = 1 }
+	}
+	action_b = {
+		name = "EVT_65862_ACTB"	#軍港は受領する、だがこれ以降の基地拡張工事はキャンセルだ
+		command = { type = relation which = USA value = -50 }
+		command = { type = construct which = naval_base where = 881 value = 1 }
+		command = { type = construct which = ic where = 881 value = 2 }
+		command = { type = construct which = ic where = 882 value = 1 }
+		command = { type = free_energy value = 6 }
+		command = { type = free_metal value = 3 }
+		command = { type = free_rare_materials value = 2 }
+		command = { type = sleepevent which = 65864 }
+	}
+}
+event = {
+    id = 65863
+	random = no
+	country = BRA
+	
+	trigger = {
+		event = { id = 65860 days = 93 }
+		control = { province = 881 data = BRA }
+		control = { province = 882 data = BRA }
+	}
+	
+	#（（素の値）×（1×自由経済MAX補正×タカ派MAX×技術補正））×（謎のアメリカ補正）=(180*(1*0.8*0.8*0.9))*0.9=93
+	
+	name = "EVT_65863_NAME"	#新航空基地の建設完了
+	desc = "EVT_65863_DESC"	#ナタウとバイーアの新航空基地がついに完成し、作戦を実行できる状態になった。
+	
+	style = 0
+	picture = "airbase"
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 34
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	action_a = {
+		name = "EVT_65863_ACTA"	#大変結構！
+		ai_chance = 100
+		command = { type = construct which = air_base where = 881 value = 1 }
+		command = { type = construct which = air_base where = 882 value = 1 }
+		command = { type = construct which = ic where = 881 value = 1 }
+		command = { type = construct which = ic where = 882 value = 1 }
+		command = { type = free_energy value = 4 }
+		command = { type = free_metal value = 2 }
+		command = { type = free_rare_materials value = 1 }
+	}
+	action_b = {
+		name = "EVT_65863_ACTB"	#空港は受領する、だが以降の基地拡張工事はキャンセルだ
+		command = { type = relation which = USA value = -50 }
+		command = { type = construct which = air_base where = 881 value = 1 }
+		command = { type = construct which = air_base where = 882 value = 1 }
+		command = { type = construct which = ic where = 881 value = 2 }
+		command = { type = construct which = ic where = 882 value = 1 }
+		command = { type = free_energy value = 6 }
+		command = { type = free_metal value = 3 }
+		command = { type = free_rare_materials value = 2 }
+		command = { type = sleepevent which = 65865 }
+	}
+}
+event = {
+    id = 65864
+	random = no
+	country = BRA
+	
+	trigger = {
+	    event = { id = 65860 days = 187 }
+		event = 65861
+		control = { province = 881 data = BRA }
+		control = { province = 882 data = BRA }
+	}
+	
+	#（（素の値）×（1×自由経済MAX補正×タカ派MAX×技術補正））×（謎のアメリカ補正）=(360*(1*0.8*0.8*0.9))*0.9=187
+	
+	name = "EVT_65864_NAME"	#インフラの改良
+	desc = "EVT_65864_DESC"	#ナタウ、ペルナンブーコ、バイーアのインフラ改良工事がついに完了した。
+	
+	style = 0
+	picture = "infrastructure"
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 29
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	action_a = {
+		name = "EVT_65864_ACTA"	#大変結構！
+	    command = { type = construct which = infrastructure where = 881 value = 10 }
+		command = { type = construct which = infrastructure where = 882 value = 10 }
+		command = { type = construct which = ic where = 881 value = 1 }
+		command = { type = construct which = ic where = 882 value = 1 }
+		command = { type = free_energy value = 4 }
+		command = { type = free_metal value = 2 }
+		command = { type = free_rare_materials value = 1 }
+	}
+}
+event = {
+    id = 65865
+	random = no
+	country = BRA
+	
+	trigger = {
+	    event = { id = 65860 days = 162 }
+		event = 65863
+		control = { province = 881 data = BRA }
+	}
+	
+	#（（素の値）×（1×自由経済MAX補正×タカ派MAX×技術補正））×（謎のアメリカ補正）=(360*(1*0.8*0.8*0.9))*0.9=187
+	
+	name = "EVT_65865_NAME"	#インフラの改良
+	desc = "EVT_65865_DESC"	#ナタウのインフラ改良工事がついに完了した。
+	
+	style = 0
+	picture = "infrastructure"
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 29
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	action_a = {
+		name = "EVT_65865_ACTA"	#大変結構！
+		command = { type = construct which = infrastructure where = 881 value = 10 }
+		command = { type = construct which = ic where = 881 value = 1 }
+		command = { type = free_energy value = 2 }
+		command = { type = free_metal value = 1 }
+		command = { type = free_rare_materials value = 1 }
+	}
+}
+event = {
+    id = 65866
+	random = no
+	country = BRA
+	
+	trigger = {
+	    event = { id = 65860 days = 49 }
+		event = 65861
+		event = 65862
+		event = 65864
+		control = { province = 885 data = BRA }
+		control = { province = 886 data = BRA }
+    }
+	
+	#（（素の値）×（1×自由経済MAX補正×タカ派MAX×技術補正））×（謎のアメリカ補正）=(95*(1*0.8*0.8*0.9))*0.9=49
+	
+	
+	name = "EVT_65866_NAME"	#新歩兵師団の配備が完了
+	desc = "EVT_65866_DESC"	#アメリカの助力と技術で訓練された歩兵師団が編成を完了し、作戦を実行できる状態になった。
+	
+	style = 0
+	picture = american_reinforcments2
+	
+	date = { day = 0 month = april year = 1936 }
+	offset = 13
+	deathdate = { day = 29 month = december year = 1964 }
+	
+	action_a = {
+		name = "EVT_65866_ACTA"	#大変結構！
+		ai_chance = 100
+		command = { type = add_corps which = "第1ブラジル陸軍" value = land where = 885 }
+		command = { type = add_division value = infantry when = 3 where = artillery }
+		command = { type = add_division value = infantry when = 3 where = artillery }
+		command = { type = add_corps which = "第2ブラジル陸軍" value = land where = 886 }
+		command = { type = add_division value = infantry when = 3 where = artillery }
+		command = { type = add_division value = infantry when = 3 where = anti_tank }
+		command = { type = construct which = ic where = 885 value = 4 }
+		command = { type = construct which = ic where = 886 value = 4 }
+		command = { type = free_energy value = 16 }
+		command = { type = free_metal value = 8 }
+		command = { type = free_rare_materials value = 4 }
+	}
+}
+event = {
+    id = 65867
+	random = no
+	country = BRA
+	
+	trigger = {
+	    event = { id = 65860 days = 49 }
+		event = 65863
+		event = 65865
+		control = { province = 885 data = BRA }
+		control = { province = 886 data = BRA }
+	}
+	
+	name = "EVT_65867_NAME"	#新歩兵師団の配備が完了
+	desc = "EVT_65867_DESC"	#アメリカの助力と技術で訓練された歩兵師団が編成を完了し、作戦を実行できる状態になった。
+	
+	style = 0
+	picture = american_reinforcments2
+	
+	date = { day = 0 month = april year = 1936 }
+	offset = 13
+	deathdate = { day = 29 month = december year = 1964 }
+	
+	action_a = {
+		name = "EVT_65867_ACTA"	#素晴らしい！	#Great!
+		ai_chance = 100
+		command = { type = add_corps which = "第1ブラジル陸軍" value = land where = 885 }
+		command = { type = add_division value = infantry when = 3 where = artillery }
+		command = { type = add_corps which = "第2ブラジル陸軍" value = land where = 886 }
+		command = { type = add_division value = infantry when = 3 where = anti_tank }
+		command = { type = construct which = ic where = 885 value = 2 }
+		command = { type = construct which = ic where = 886 value = 2 }
+		command = { type = free_energy value = 8 }
+		command = { type = free_metal value = 4 }
+		command = { type = free_rare_materials value = 2 }
+	}
+}
+event = {
+    id = 65868
+	random = no
+	country = BRA
+	
+	trigger = {
+		event = 65861
+		event = 65862
+		event = 65864
+		event = 65866
+	}
+	
+	name = "EVT_65868_NAME"	#合意内容の完遂
+	desc = "EVT_65868_DESC"	#1943年にナタウで合意された契約通りに、ブラジルは空海軍基地の建設を完了し、インフラを建設、大規模な軍を訓練することが出来た。次は、アメリカが約束を果たす時だ。
+	
+	style = 0
+	picture = "natal_conference"
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 11
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	action_a = {
+		name = "EVT_65868_ACTA"	#重畳！
+	    command = { type = relation which = USA value = 25 }
+		command = { type = dissent value = -1 }
+		command = { type = supplies value = 1500 }
+		command = { type = gain_tech which = 2430 }
+		command = { type = gain_tech which = 2350 }
+		command = { type = gain_tech which = 1050 }
+		command = { type = industrial_modifier which = total value = 2 }
+	}
+}
+event = {
+    id = 65869
+	random = no
+	country = BRA
+	
+	trigger = {
+		event = 65863
+		event = 65865
+		event = 65867
+	}
+	
+	name = "EVT_65869_NAME"	#部分合意内容の遂行
+	desc = "EVT_65869_DESC"	#ナタウでなされた合意のどおりに、ブラジルは空海軍基地の建設を完了し、インフラを建設、大規模な軍を訓練することが出来た。次は、アメリカが約束を果たす時だ。
+	
+	style = 0
+	picture = "natal_conference"
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 11
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	action_a = {
+		name = "EVT_65869_ACTA"	#重畳！
+		command = { type = relation which = USA value = 25 }
+	    command = { type = dissent value = -1 }
+		command = { type = supplies value = 500 }
+	    command = { type = gain_tech which = 2430 }
+		command = { type = gain_tech which = 2350 }
+	}
+}
+
+
+
+#########################################################################
+#  FEB events
+#########################################################################
+event = {
+    id = 65870
+	random = no
+	country = BRA
+	
+	trigger = {
+	    random = 30
+		war = { country = GER country = BRA }
+		OR = {
+			event = 65868
+			event = 65869
+		}
+	}
+	
+	name = "EVT_65870_NAME"	#ブラジル遠征軍の設立
+	desc = "EVT_65870_DESC"	#ナタウ会議でのアメリカ側の要求を完遂し、欧州での戦闘を担う遠征軍の準備が出来た。本遠征はアメリカの支援の下での大規模なものとなるだろう。厳しい目標を達成する必要があるため、軍の現代化を行わねばならない。専門家は25300人の兵を欧州戦線で使い物になるように訓練するには約2年の月日が必要であると計算している。
+	
+	style = 0
+	picture = "reunion2"
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 5
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	action_a = {
+		name = "EVT_65870_ACTA"	#輸送艦隊が3つは要るだろう
+		ai_chance = 100
+		command = { type = manpowerpool value = 30 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = build_division which = transport }
+		command = { type = build_division which = transport }
+		command = { type = build_division which = transport }
+	}
+	action_b = {
+		name = "EVT_65870_ACTB"	#輸送艦隊を最低3つ、それと護衛艦隊もいくらか必要だ
+		command = { type = manpowerpool value = 30 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = supplies value = -1000 }
+		command = { type = build_division which = transport }
+		command = { type = build_division which = transport }
+		command = { type = build_division which = heavy_cruiser }
+		command = { type = build_division which = heavy_cruiser }
+		command = { type = add_corps which = "海上輸送隊" value = naval where = 885 }
+		command = { type = add_division which = "輸送艦隊" value = transport when = 1 }
+		command = { type = add_division which = "第1護衛艦隊" value = destroyer when = 2 }
+		command = { type = add_division which = "第2護衛艦隊" value = destroyer when = 2 }
+	}
+	action_c = {
+		name = "EVT_65870_ACTC"	#船は不要だ
+		command = { type = manpowerpool value = 30 }
+		command = { type = domestic which = defense_lobby value = 1 }
+	}
+}
+
+event = {
+    id = 65871
+	random = no
+	country = BRA
+	
+	decision = {
+	    event = 65870
+	    war = { country = BRA country = GER }
+		OR = {
+		    alliance = { country = BRA country = USA }
+		    alliance = { country = BRA country = ENG }
+		}
+	    OR = {
+	        control = { province = 368 data = USA } # Any of mainland Italy provinces are controlled by USA
+			control = { province = 369 data = USA }
+			control = { province = 370 data = USA }
+			control = { province = 371 data = USA }
+			control = { province = 378 data = USA }
+			control = { province = 531 data = USA }
+			control = { province = 512 data = USA }
+			control = { province = 379 data = USA }
+			control = { province = 514 data = USA }
+			control = { province = 513 data = USA }
+			control = { province = 515 data = USA }
+			control = { province = 516 data = USA }
+			control = { province = 517 data = USA }
+			control = { province = 518 data = USA }
+			control = { province = 519 data = USA }
+			control = { province = 520 data = USA }
+			control = { province = 521 data = USA }
+			control = { province = 522 data = USA }
+			control = { province = 523 data = USA }
+			control = { province = 524 data = USA }
+			control = { province = 525 data = USA }
+			control = { province = 526 data = USA }
+			control = { province = 534 data = USA } # Sardinia
+			control = { province = 368 data = ENG } # Any of mainland Italy provinces are controlled by UK
+			control = { province = 369 data = ENG }
+			control = { province = 370 data = ENG }
+			control = { province = 371 data = ENG }
+			control = { province = 378 data = ENG }
+			control = { province = 531 data = ENG }
+			control = { province = 512 data = ENG }
+			control = { province = 379 data = ENG }
+			control = { province = 514 data = ENG }
+			control = { province = 513 data = ENG }
+			control = { province = 515 data = ENG }
+			control = { province = 516 data = ENG }
+			control = { province = 517 data = ENG }
+			control = { province = 518 data = ENG }
+			control = { province = 519 data = ENG }
+			control = { province = 520 data = ENG }
+			control = { province = 521 data = ENG }
+			control = { province = 522 data = ENG }
+			control = { province = 523 data = ENG }
+			control = { province = 524 data = ENG }
+			control = { province = 525 data = ENG }
+			control = { province = 526 data = ENG }
+			control = { province = 534 data = ENG } # Sardinia
+		}
+	}
+	
+	decision_trigger = {
+	    OR = {
+			garrison = { country = BRA province = 368 size = 3 } # Italy and Sardinia
+			garrison = { country = BRA province = 369 size = 3 }
+			garrison = { country = BRA province = 378 size = 3 }
+			garrison = { country = BRA province = 379 size = 3 }
+			garrison = { country = BRA province = 512 size = 3 }
+			garrison = { country = BRA province = 513 size = 3 }
+			garrison = { country = BRA province = 514 size = 3 }
+			garrison = { country = BRA province = 515 size = 3 }
+			garrison = { country = BRA province = 517 size = 3 }
+			garrison = { country = BRA province = 519 size = 3 }
+			garrison = { country = BRA province = 520 size = 3 }
+			garrison = { country = BRA province = 521 size = 3 }
+			garrison = { country = BRA province = 523 size = 3 }
+			garrison = { country = BRA province = 524 size = 3 }
+			garrison = { country = BRA province = 525 size = 3 }
+			garrison = { country = BRA province = 526 size = 3 }
+			garrison = { country = BRA province = 534 size = 3 }
+			garrison = { country = BRA province = 993 size = 3 } # Lybia
+			garrison = { country = BRA province = 932 size = 3 }
+			garrison = { country = BRA province = 930 size = 3 }
+			garrison = { country = BRA province = 929 size = 3 }
+			garrison = { country = BRA province = 925 size = 3 }
+			garrison = { country = BRA province = 924 size = 3 }
+			garrison = { country = BRA province = 923 size = 3 }
+			garrison = { country = BRA province = 920 size = 3 }
+			garrison = { country = BRA province = 919 size = 3 }
+			garrison = { country = BRA province = 916 size = 3 }
+			garrison = { country = BRA province = 941 size = 3 } # Tunisia
+			garrison = { country = BRA province = 940 size = 3 }
+			garrison = { country = BRA province = 939 size = 3 }
+			garrison = { country = BRA province = 938 size = 3 }
+			garrison = { country = BRA province = 936 size = 3 }
+			garrison = { country = BRA province = 935 size = 3 }
+		}
+	}
+	
+	trigger = {
+		event = 65870
+	    war = { country = BRA country = GER }
+		OR = {
+		    alliance = { country = BRA country = USA }
+		    alliance = { country = BRA country = ENG }
+		}
+	    OR = {
+	        control = { province = 368 data = USA } # Any of mainland Italy provinces are controlled by USA
+			control = { province = 369 data = USA }
+			control = { province = 370 data = USA }
+			control = { province = 371 data = USA }
+			control = { province = 378 data = USA }
+			control = { province = 531 data = USA }
+			control = { province = 512 data = USA }
+			control = { province = 379 data = USA }
+			control = { province = 514 data = USA }
+			control = { province = 513 data = USA }
+			control = { province = 515 data = USA }
+			control = { province = 516 data = USA }
+			control = { province = 517 data = USA }
+			control = { province = 518 data = USA }
+			control = { province = 519 data = USA }
+			control = { province = 520 data = USA }
+			control = { province = 521 data = USA }
+			control = { province = 522 data = USA }
+			control = { province = 523 data = USA }
+			control = { province = 524 data = USA }
+			control = { province = 525 data = USA }
+			control = { province = 526 data = USA }
+			control = { province = 534 data = USA } # Sardinia
+			control = { province = 368 data = ENG } # Any of mainland Italy provinces are controlled by UK
+			control = { province = 369 data = ENG }
+			control = { province = 370 data = ENG }
+			control = { province = 371 data = ENG }
+			control = { province = 378 data = ENG }
+			control = { province = 531 data = ENG }
+			control = { province = 512 data = ENG }
+			control = { province = 379 data = ENG }
+			control = { province = 514 data = ENG }
+			control = { province = 513 data = ENG }
+			control = { province = 515 data = ENG }
+			control = { province = 516 data = ENG }
+			control = { province = 517 data = ENG }
+			control = { province = 518 data = ENG }
+			control = { province = 519 data = ENG }
+			control = { province = 520 data = ENG }
+			control = { province = 521 data = ENG }
+			control = { province = 522 data = ENG }
+			control = { province = 523 data = ENG }
+			control = { province = 524 data = ENG }
+			control = { province = 525 data = ENG }
+			control = { province = 526 data = ENG }
+			control = { province = 534 data = ENG } # Sardinia
+		}
+		OR = {
+			garrison = { country = BRA province = 368 size = 3 } # Italy and Sardinia
+			garrison = { country = BRA province = 369 size = 3 }
+			garrison = { country = BRA province = 378 size = 3 }
+			garrison = { country = BRA province = 379 size = 3 }
+			garrison = { country = BRA province = 512 size = 3 }
+			garrison = { country = BRA province = 513 size = 3 }
+			garrison = { country = BRA province = 514 size = 3 }
+			garrison = { country = BRA province = 515 size = 3 }
+			garrison = { country = BRA province = 517 size = 3 }
+			garrison = { country = BRA province = 519 size = 3 }
+			garrison = { country = BRA province = 520 size = 3 }
+			garrison = { country = BRA province = 521 size = 3 }
+			garrison = { country = BRA province = 523 size = 3 }
+			garrison = { country = BRA province = 524 size = 3 }
+			garrison = { country = BRA province = 525 size = 3 }
+			garrison = { country = BRA province = 526 size = 3 }
+			garrison = { country = BRA province = 534 size = 3 }
+			garrison = { country = BRA province = 993 size = 3 } # Lybia
+			garrison = { country = BRA province = 932 size = 3 }
+			garrison = { country = BRA province = 930 size = 3 }
+			garrison = { country = BRA province = 929 size = 3 }
+			garrison = { country = BRA province = 925 size = 3 }
+			garrison = { country = BRA province = 924 size = 3 }
+			garrison = { country = BRA province = 923 size = 3 }
+			garrison = { country = BRA province = 920 size = 3 }
+			garrison = { country = BRA province = 919 size = 3 }
+			garrison = { country = BRA province = 916 size = 3 }
+			garrison = { country = BRA province = 941 size = 3 } # Tunisia
+			garrison = { country = BRA province = 940 size = 3 }
+			garrison = { country = BRA province = 939 size = 3 }
+			garrison = { country = BRA province = 938 size = 3 }
+			garrison = { country = BRA province = 936 size = 3 }
+			garrison = { country = BRA province = 935 size = 3 }
+		}
+	}
+	
+	name = "EVT_65871_NAME"	#侵攻作戦開始！
+	desc = "EVT_65871_DESC"	#イタリア侵攻作戦が開始した！　ブラジル遠征軍をイタリア領に送るなら、今がその時だ。
+	decision_desc = "EVT_65871_DECISION_DESC"
+	
+	style = 0
+	picture = "italy_invasion"
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 2
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	action_a = {
+		name = "EVT_65871_ACTA"	#総員戦闘用意！
+		command = { type = trigger which = 65872 }
+	}
+}
+
+event = {
+    id = 65872
+	random = no
+	country = BRA
+	
+	name = "EVT_65872_NAME"	#ブラジル遠征軍輸送完了！
+	desc = "EVT_65872_DESC"	#
+	
+	style = 0
+	picture = "feb_unload"
+	
+	#date = { day = 1 month = january year = 1936 }
+	#offset = 1
+	#deathdate = { day = 0 month = january year = 1964 }
+	
+	action_a = {
+		name = "EVT_65872_ACTA"	#幸運を！
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = relation which = USA value = 20 }
+		command = { type = relation which = ENG value = 20 }
+		command = { type = relation which = GER value = -50 }
+	}
+}
+
+event = {
+    id = 65873
+	random = no
+	country = BRA
+	
+	trigger = {
+		headofstate = 34001
+		headofgovernment = 34002
+		flag = estadonovo
+		event = 65872
+	}
+	
+	name = "EVT_65873_NAME"	#塒を巻いて紫煙に巻かれて	#And the snake smoked!
+	desc = "EVT_65873_DESC"	#
+	
+	style = 0
+	picture = "febsymbol"
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 7
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	action_a = {
+		name = "EVT_65873_ACTA"	#では、かの蛇に煙草を一本
+		command = { }
+	}
+}
+
+event = {
+	id = 65880
+	random = no
+	country = BRA
+	trigger = {
+		event = 131002	#大英帝国の黄昏
+		NOT = { war = { country = USA country = GER } }
+		war = { country = BRA country = GER }
+	}
+	
+	style = 0
+	picture = "febsymbol"
+	
+	name = "EVT_65880_NAME"	#連合国の壊滅とブラジルの動向
+	desc = "EVT_65880_DESC"	#
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 7
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	action_a = {
+		name = "EVT_65880_ACTA"	#降伏だ！　我々だけでは如何ともしがたい！
+		ai_chance = 100
+		command = { type = dissent value = 15 }
+		command = { type = domestic which = political_left value = -5 }
+		command = { type = trigger which = 65881 }
+	}
+	action_b = {
+		name = "EVT_65880_ACTB"	#ファシスト共に譲歩などするものか！
+		ai_chance = 0
+		command = { type = dissent value = 30 }
+		command = { type = domestic which = political_left value = 1 }
+	}
+}
+
+event = {
+    id = 65881
+	random = no
+	country = GER
+	
+	name = "EVT_65881_NAME"	#ブラジルが講和を求める
+	desc = "EVT_65881_DESC"	#
+	
+	action = {
+		name = "EVT_65881_ACTA"	#よろしい。講和に応じよう
+		ai_chance = 80
+		command = { type = dissent value = -5 }
+		command = { type = trigger which = 65882 }
+	}
+	action = {
+		name = "EVT_65881_ACTB"	#我々は無条件降伏以外を認めない
+		ai_chance = 20
+		command = { type = trigger which = 65883 }
+	}
+}
+
+event = {
+    id = 65882
+	random = no
+	country = BRA
+	
+	name = "EVT_65882_NAME"	#ブラジルの対独講和
+	desc = "EVT_65882_DESC"	#
+	
+	action = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = leave_alliance }
+		command = { type = peace which = JAP value = 1 } #FEPKBETA1.11
+		command = { type = peace which = GER value = 1 } #FEPKBETA1.11
+		command = { type = peace which = VIC value = 1 }
+		command = { type = peace which = U73 value = 1 }
+		command = { type = peace which = MAN value = 1 }
+		command = { type = peace which = MEN value = 1 }
+		command = { type = peace which = INO value = 1 }
+		command = { type = peace which = BUR value = 1 }
+		command = { type = peace which = MLY value = 1 }
+		command = { type = peace which = IND value = 1 }
+		command = { type = peace which = CHI value = 1 }
+		command = { type = peace which = CHC value = 1 }
+		command = { type = peace which = CSX value = 1 }
+		command = { type = peace which = CGX value = 1 }
+		command = { type = peace which = CXB value = 1 }
+		command = { type = peace which = CYN value = 1 }
+		command = { type = peace which = TIB value = 1 }
+		command = { type = peace which = SIA value = 1 }
+		command = { type = peace which = U87 value = 1 }
+		command = { type = peace which = PRI value = 1 }
+		command = { type = peace which = BUL value = 1 }
+		command = { type = peace which = PER value = 1 }
+		command = { type = peace which = IRQ value = 1 }
+		command = { type = peace which = SYR value = 1 }
+		command = { type = peace which = LEB value = 1 }
+		command = { type = peace which = U74 value = 1 } #BETA修正パッチ
+		command = { type = set_relation which = GER value = -25 }
+		command = { type = set_relation which = JAP value = -25 }
+		command = { type = set_relation which = ITA value = -25 }
+	}
+}
+
+event = {
+    id = 65883
+	random = no
+	country = BRA
+	
+	name = "EVT_65883_NAME"	#ドイツはブラジルの無条件降伏を求めている！
+	desc = "EVT_65883_DESC"	#
+	
+	action = {
+		name = "EVT_65883_ACTA"		#国が無くなるよりは、遥かにマシな選択だ……
+		ai_chance = 70
+		command = { type = dissent value = 15 }
+		command = { type = leave_alliance }
+		command = { type = peace which = JAP value = 1 } #FEPKBETA1.11
+		command = { type = peace which = GER value = 1 } #FEPKBETA1.11
+		command = { type = peace which = VIC value = 1 }
+		command = { type = peace which = U73 value = 1 }
+		command = { type = peace which = MAN value = 1 }
+		command = { type = peace which = MEN value = 1 }
+		command = { type = peace which = INO value = 1 }
+		command = { type = peace which = BUR value = 1 }
+		command = { type = peace which = MLY value = 1 }
+		command = { type = peace which = IND value = 1 }
+		command = { type = peace which = CHI value = 1 }
+		command = { type = peace which = CHC value = 1 }
+		command = { type = peace which = CSX value = 1 }
+		command = { type = peace which = CGX value = 1 }
+		command = { type = peace which = CXB value = 1 }
+		command = { type = peace which = CYN value = 1 }
+		command = { type = peace which = TIB value = 1 }
+		command = { type = peace which = SIA value = 1 }
+		command = { type = peace which = U87 value = 1 }
+		command = { type = peace which = PRI value = 1 }
+		command = { type = peace which = BUL value = 1 }
+		command = { type = peace which = PER value = 1 }
+		command = { type = peace which = IRQ value = 1 }
+		command = { type = peace which = SYR value = 1 }
+		command = { type = peace which = LEB value = 1 }
+		command = { type = peace which = U74 value = 1 } #BETA修正パッチ
+		command = { type = trigger which = 65884 }
+	}
+	action = {
+		name = "EVT_65883_ACTB"	#侮るな！　そんな条件は受け入れない！
+		ai_chance = 30
+		command = { type = domestic which = defense_lobby value = 2 }
+	}
+}
+
+event = {
+	id = 65884
+	random = no
+	country = GER
+	
+	name = "EVT_65884_NAME"	#ブラジルの降伏
+	desc = "EVT_65884_DESC"	#
+	
+	action = { 
+		name = "EVT_65884_ACTA"	#圧倒的な勝利だ！
+		command = { type = make_puppet which = BRA }
+	}
+}
+
+event = {
+	id = 65885
+	random = no
+	country = GER
+	
+	trigger = {
+		OR = {
+			AND = {
+				control = { province = 885 data = GER } #
+				OR = {
+					lost_national = { country = BRA value = 75 }
+					lost_IC = { country = BRA value = 75 }
+					lost_VP = { country = BRA value = 75 }
+				}
+			}
+		}
+		war = { country = BRA country = GER }
+	}
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 3
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	name = "EVT_65885_NAME"	#ブラジルとの和平交渉
+	desc = "EVT_65885_DESC"	#
+	
+	action_a = {
+		name = "EVT_65885_ACTA"	#講和交渉
+		ai_chance = 100
+		command = { type = dissent value = -5 }
+		command = { type = trigger which = 65886 }
+	}
+	action_b = {
+		name = "EVT_65885_ACTB"	#戦闘を継続する
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+	}
+}
+
+event = {
+	id = 65886
+	random = no
+	country = BRA
+
+	name = "EVT_65886_NAME"	#ドイツとの講和交渉
+	desc = "EVT_65886_DESC"	#
+	picture = "british_reinforcments5"
+
+	action_a = {
+		name = "EVT_65886_ACTA"	#降伏
+		ai_chance = 100
+		command = { type = leave_alliance }
+		command = { type = peace which = GER value = 1 }
+		command = { type = access which = GER }
+		command = { type = access which = ITA }
+		command = { type = access which = VIC }
+		command = { type = access which = JAP }
+		command = { type = dissent value = 20 }
+		command = { type = trigger which = 65884 }
+	}
+	action_b = {
+		name = "EVT_65886_ACTB"	#最期まで戦う！
+		ai_chance = 0
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = dissent value = 5 }
+	}
+}
+
+#########################################################################
+#  Brazil joins axis
+#########################################################################
+event = {
+	id = 65890
+	country = BRA
+	random = no
+	trigger = {
+		NOT = { 
+			event = 65850
+			alliance = { country = GER country = SOV }
+			alliance = { country = GER country = ENG }
+			alliance = { country = GER country = USA }
+			alliance = { country = GER country = BRA }
+			alliance = { country = USA country = BRA }
+			alliance = { country = ENG country = BRA }
+			alliance = { country = SOV country = BRA }
+			war = { country = BRA country = GER }
+			war = { country = BRA country = USA }
+			war = { country = BRA country = ENG }
+			ispuppet = BRA
+			ispuppet = GER
+		}
+		headofstate = 34001
+		headofgovernment = 34002
+		flag = bra_align_ger2
+		random = 20
+		#ドイツが有利を保っている
+		NOT = { lost_national = { country = GER value = 1 } }
+		NOT = { exists = SOV }
+		lost_national = { country = USA value = 5 }
+	}
+	
+	name = "EVT_65890_NAME"	#ブラジルの戦争参加
+	desc = "EVT_65890_DESC"	#
+	
+	style = 0
+	picture = "brazil_war"
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 2
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	action_a = {
+		name = "EVT_65890_ACTA"	#誕生日以来の電報を送ってみようか
+		ai_chance = 75
+		command = { type = relation which = GER value = 10 }
+		command = { type = relation which = USA value = -80 }
+		command = { type = relation which = ENG value = -80 }
+	}
+	action_b = {
+		name = "EVT_65890_ACTB"	#アメリカが負ける？　ありえないことだ
+		command = { type = relation which = USA value = 10 }
+		command = { type = sleepevent which = 65891 }
+	}
+}
+
+event = {
+	id = 65891
+	random = no
+	country = GER
+	
+	trigger = {
+		event = 65890
+	}
+	
+	name = "EVT_65891_NAME"	#ブラジルが枢軸国への参加を求める
+	desc = "EVT_65891_DESC"	#
+	style = 0
+	picture = "telegram"
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 4
+	deathdate = { day = 0 month = january year = 1964 }
+	
+	action_a = {
+		name = "EVT_65891_ACTA"	#新大陸の友人を歓迎しよう！
+		ai_chance = 85
+		command = { type = alliance which = BRA }
+		command = { type = relation which = BRA value = 100 }
+	}
+	action_b = {
+		name = "EVT_65891_ACTB"	#風見鶏は不要だ
+		ai_chance = 15
+		command = { }
+	}
+}
+
+
+
+#アメリカ大陸追加イベント
+#メキシコ
+event = {
+	id = 65900
+	random = no
+	TAG =  { GER JAP AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHI CHL CMB COL CON COS CRO CSX CUB CXB CYN CYP CZE DEN EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU UZB VEN VIE WLL YEM YUG U16 U17 U70 U71 U73 U74 U76 U77 U78 U79 U80 U81 U82 U83 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	trigger = { #beaten by force
+		NOT = { ispuppet = yes }
+		OR = { 
+			control = { province = 752 data = -1 }
+			AND = {
+				control = { province = 752 data = USA }
+				puppet = { country = USA country = -1 }
+			}
+			AND = {
+				control = { province = 752 data = TEX }
+				puppet = { country = TEX country = -1 }
+			}
+			AND = {
+				control = { province = 752 data = CAL }
+				puppet = { country = CAL country = -1 }
+			}
+			AND = {
+				control = { province = 752 data = CSA }
+				puppet = { country = CSA country = -1 }
+			}
+			AND = {
+				control = { province = 752 data = GUA }
+				puppet = { country = GUA country = -1 }
+			}
+		}
+		#region = { region = "Mexico" country = -1 value = 1 }
+		OR = {
+			lost_national = { country = MEX value = 75 }
+			lost_IC = { country = MEX value = 75 }
+			lost_VP = { country = MEX value = 75 }
+		}
+		OR = {
+			NOT = { atwar = USA }
+			war = { country = USA country = MEX }
+			ispuppet = USA
+		}
+		atwar = yes
+		war = { country = MEX country = -1 }
+	}
+	date = { day = 0 month = january year = 1935 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_65900_NAME"	#メキシコとの和平交渉
+	desc = "EVT_65900_DESC"	#
+	picture = "british_reinforcments5"
+	
+	action_a = {
+		name = "EVT_65900_ACTA"	#降伏を要求する
+		ai_chance = 100
+		command = { type = dissent value = -5 }
+		command = { type = setflag which = MEX_Conquest }
+		command = { type = trigger which = 65901 }
+		command = { type = event which = 65902 where = -1 when = 1 }
+	}
+	action_b = {
+		name = "EVT_65900_ACTB"	#戦闘を継続する
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+	}
+}
+
+event = {
+	id = 65901
+	country = MEX
+
+	name = "EVT_65901_NAME"	#メキシコ降伏交渉
+	desc = "EVT_65901_DESC"	#
+	picture = "british_reinforcments5"
+
+	action_a = {
+		name = "EVT_65901_ACTA"	#降伏
+		ai_chance = 100
+		command = { type = leave_alliance }
+		command = { type = dissent value = 20 }
+		command = { type = domestic which = democratic value = -3 }
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = domestic which = free_market value = -1 }
+		command = { type = domestic which = freedom value = -2 }
+		command = { type = domestic which = professional_army value = 1 }
+		command = { type = domestic which = defense_lobby value = -4 }
+		command = { type = set_domestic which = interventionism value = 1 }
+		#command = { type = trigger which = 65902 }
+	}
+	action_b = {
+		ai_chance = 0
+		name = "EVT_65901_ACTB"	#最期まで戦う！
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = dissent value = 5 }
+		command = { type = sleepevent which = 65902 }
+	}
+}
+
+event = {
+	id = 65902
+	TAG =  { GER JAP AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHI CHL CMB COL CON COS CRO CSX CUB CXB CYN CYP CZE DEN EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU UZB VEN VIE WLL YEM YUG U16 U17 U70 U71 U73 U74 U76 U77 U78 U79 U80 U81 U82 U83 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	
+	name = "EVT_65902_NAME"	#メキシコの降伏
+	desc = "EVT_65902_DESC"	#
+
+	picture = "japanese_reinforcments3"
+
+	action_a = {
+		name = "EVT_65902_ACTA"	#勝利
+		ai_chance = 100
+		command = { type = make_puppet which = MEX }
+		command = { type = non_aggression which = -1 where = MEX }
+		command = { type = set_relation which = MEX value = 0 }
+		command = { type = trigger which = 65903 }
+	}
+}
+
+event = {
+	id = 65903
+	country = MEX
+	trigger = {
+		OR = {
+			owned = { province = 761 data = JAP }
+			owned = { province = 761 data = CAL }
+		}
+	}
+	
+	name = "EVT_65903_NAME"	#国境線の調整
+	desc = "EVT_65903_DESC"	#
+
+	picture = "japanese_reinforcments3"
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = secedeprovince which = CAL value = 737 }
+		command = { type = secedeprovince which = CAL value = 738 }
+		command = { type = addcore which = 737 where = CAL }
+		command = { type = addcore which = 738 where = CAL }
+		command = { type = secedeprovince which = JAP value = 737 }
+		command = { type = secedeprovince which = JAP value = 738 }
+		command = { type = addcore which = 737 where = JAP }
+		command = { type = addcore which = 738 where = JAP }
+	}
+}
+

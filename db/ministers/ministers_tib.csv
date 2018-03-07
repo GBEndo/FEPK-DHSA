@@ -1,0 +1,57 @@
+TIB;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+73001;Head of State;ダライ・ラマ14世;36;PA;Dalai Lama;High;M73001;x
+73002;Head of Government;レティング・リムポシェ;36;PA;Old General;High;M73002;x
+73003;Foreign Minister;レティング・リムポシェ;36;PA;Apologetic Clerk;High;M73002;x
+73004;Minister of Armament;ツェポン・シャカブパ;36;PA;Corrupt Kleptocrat;High;M73004;x
+73005;Minister of Security;レティング・リムポシェ;36;PA;Compassionate Gentleman;High;M73002;x
+73006;Head of Military Intelligence;W・G・クンデリング;36;PA;Logistics Specialist;High;M73006;x
+73007;Chief of Staff;ギャト・ワンドゥ;36;PA;School of Manoeuvre;High;M73007;x
+73008;Chief of Army;テンパ・ジャミアング;36;PA;Elastic Defence Doctrine;High;M73008;x
+73009;Chief of Navy;チャマ・サムフェ;36;PA;Decisive Naval Battle Doctrine;High;M73009;x
+73010;Chief of Air Force;サムポ・ツェワング・リグジン;36;PA;Army Aviation Doctrine;High;M73010;x
+73041;Head of Government;タクトラ・リンポシェ;41;SC;Backroom Backstabber;Medium;M73041;x
+73042;Foreign Minister;ゲダン・チョエフェル;36;SC;Biased Intellectual;Medium;M73012;x
+73043;Foreign Minister;クンツィグ・シャマー・リムポシェ;36;PA;Ideological Crusader;Medium;M73043;x
+73044;Foreign Minister;タクトラ・リンポシェ;41;PA;Great Compromiser;Medium;M73041;x
+73045;Foreign Minister;ジグメ・タリング;43;SC;Apologetic Clerk;Medium;M73045;x
+73046;Foreign Minister;ギャト・ワンドゥ;43;PA;General Staffer;Medium;M73007;x
+73047;Foreign Minister;ガングドジョム・サルチン;44;PA;The Cloak N Dagger Schemer;Medium;M73047;x
+73048;Foreign Minister;ドゥジョム・リムポシェ;45;SC;Iron Fisted Brute;Medium;M73048;x
+73049;Minister of Armament;レティング・リムポシェ;37;PA;Laissez-Faire Capitalist;High;M73002;x
+73050;Minister of Armament;クヒルシン・チャンサル;38;PA;Theoretical Scientist;Medium;M73050;x
+73051;Minister of Armament;チャマ・サムフェ;38;PA;Battle Fleet Proponent;High;M73009;x
+73052;Minister of Armament;ラル・ツェワング・ドルジェ;39;SC;Submarine Proponent;Medium;M73019;x
+73053;Minister of Armament;サプゼン・ニンギー;40;SC;Resource Industrialist;Medium;M73014;x
+73054;Minister of Armament;テンパ・ジャミアング;41;PA;Infantry Proponent;High;M73008;x
+73055;Minister of Armament;バパ・イェシェ;42;SC;Air Superiority Proponent;Medium;M73020;x
+73056;Minister of Armament;ギャト・ワンドゥ;43;PA;Tank Proponent;High;M73007;x
+73057;Minister of Armament;ジグメ・タリング;44;SC;Military Entrepreneur;Medium;M73045;x
+73058;Minister of Armament;サムポ・ツェワング・リグジン;44;PA;Air to Ground Proponent;High;M73010;x
+73059;Minister of Armament;W・G・クンデリング;45;PA;Administrative Genius;High;M73006;x
+73060;Minister of Security;チャマ・サナムポ;36;SC;Back Stabber;Medium;M73016;x
+73061;Minister of Security;バパ・イェシェ;37;SC;Man of the People;Medium;M73020;x
+73062;Minister of Security;チャマ・サムフェ;37;PA;Efficient Sociopath;High;M73009;x
+73063;Minister of Security;タクトラ・リンポシェ;38;PA;Compassionate Gentleman;Medium;M73041;x
+73064;Minister of Security;セポン・ラナンポイ;39;PA;Crime Fighter;Medium;M73064;x
+73065;Minister of Security;ツェポン・シャカブパ;41;PA;Prince of Terror;High;M73004;x
+73066;Minister of Security;ゲダン・チョエフェル;43;SC;Silent Lawyer;Medium;M73012;x
+73067;Head of Military Intelligence;テンパ・ジャミアング;38;PA;Logistics Specialist;High;M73008;x
+73068;Head of Military Intelligence;クヒルシン・チャンサル;41;PA;Technical Specialist;Medium;M73050;x
+73069;Head of Military Intelligence;サプゼン・ニンギー;43;SC;Industrial Specialist;Medium;M73014;x
+73070;Head of Military Intelligence;チャマ・サナムポ;44;SC;Dismal Enigma;Medium;M73016;x
+73071;Head of Military Intelligence;チャマ・サムフェ;45;PA;Political Specialist;High;M73009;x
+73072;Chief of Staff;テンパ・ジャミアング;37;PA;School of Fire Support;High;M73008;x
+73073;Chief of Staff;アンドルク・ゴンポ・タシ;38;SC;School of Psychology;Medium;M73017;x
+73074;Chief of Staff;ジャムパル・ラブギエ・リンポシェ;39;SC;School of Defence;Medium;M73018;x
+73076;Chief of Staff;バパ・イェシェ;44;PA;School of Manoeuvre;High;M73020;x
+73077;Chief of Army;バパ・イェシェ;36;PA;Elastic Defence Doctrine;High;M73020;x
+73078;Chief of Army;チャグホー・ナムギャル・ドルジェ;42;PA;Decisive Battle Doctrine;Medium;M73078;x
+73079;Chief of Army;ギャト・ワンドゥ;43;PA;Armoured Spearhead Doctrine;High;M73007;x
+73080;Chief of Army;ジャムパル・ラブギエ・リンポシェ;43;SC;Static Defence Doctrine;Medium;M73018;x
+73081;Chief of Army;クヘミー・ソナム・ワングディ;43;PA;Guns and Butter Doctrine;Medium;M73081;x
+73082;Chief of Navy;ラル・ツェワング・ドルジェ;38;SC;Indirect Approach Doctrine;Medium;M73019;x
+73083;Chief of Navy;チャグホー・ナムギャル・ドルジェ;39;PA;Open Seas Doctrine;Medium;M73078;x
+73084;Chief of Air Force;ギャト・ワンドゥ;37;PA;Army Aviation Doctrine;High;M73007;x
+73085;Chief of Air Force;バパ・イェシェ;45;SC;Air Superiority Doctrine;Medium;M73020;x
+73086;Head of State;ダライ・ラマ14世;48;PA;Dalai Lama;High;M73086;x

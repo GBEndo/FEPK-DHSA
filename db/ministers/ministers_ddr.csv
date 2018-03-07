@@ -1,0 +1,46 @@
+DDR;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+507001;Head of State;ヨハネンス・ディークマン;36;ST;Pig-headed Isolationist;High;M507001;x
+507002;Head of Government;ヴァルター・ウルブリヒト;36;ST;Ambitious Union Boss;High;M53;x
+507003;Foreign Minister;ゲオルク・デルティンガー;36;ST;Ideological Crusader;High;M507003;x
+507004;Minister of Armament;ヴィリ・シュトフ;36;ST;Laissez-Faire Capitalist;High;M507004;x
+507005;Minister of Security;カール・シュタインホフ;36;ST;Crooked Kleptocrat;Low;M507005;x
+507006;Head of Military Intelligence;ヴィルヘルム・ツァイサー;36;ST;Political Specialist;Very High;M507006;x
+507007;Chief of Staff;エルンスト・ヴォルヴェーバー;36;ST;School of Mass Combat;Very High;M27;x
+507008;Chief of Army;ハンス・カーレ;36;ST;Decisive Battle Doctrine;Very High;M28;x
+507009;Chief of Navy;フリッツ・シェーレン;36;ST;Base Control Doctrine;Very High;M29;x
+507010;Chief of Air Force;ヴィリ・ブレーデル;36;ST;Carpet Bombing Doctrine;Very High;M30;x
+507011;Foreign Minister;ヴァルター・ウルブリヒト;36;ST;The Cloak N Dagger Schemer;High;M53;x
+507012;Foreign Minister;アントン・アッカーマン;36;LE;Great Compromiser;High;M507012;x
+507013;Minister of Armament;アルベルト・クンツ;36;ST;Resource Industrialist;High;M105;x
+507014;Minister of Armament;ヤコブ・カイザー;36;LE;Military Entrepreneur;High;M507014;x
+507015;Minister of Armament;アンドレアス・ヘルメス;36;LWR;Administrative Genius;High;M507015;x
+507042;Minister of Security;カール・マーロン;36;ST;Prince of Terror;High;M507042;x
+507016;Minister of Armament;ヴィルヘルム・ピーク;36;ST;Theoretical Scientist;High;M507016;x
+507017;Minister of Security;ユリウス・レーバー;36;ST;Compassionate Gentleman;High;M133;x
+507018;Minister of Security;ヴァルター・ウルブリヒト;36;ST;Prince of Terror;High;M53;x
+507019;Minister of Security;ヴィルヘルム・クルツ;36;LE;Crime Fighter;High;M507019;x
+507041;Minister of Security;ヴィリ・シュトフ;36;ST;Prince of Terror;High;M507004;x
+507020;Minister of Security;オットー・ヌシュケ;36;LE;Silent Lawyer;High;M507020;x
+507021;Minister of Security;オットー・グローテヴォール;36;ST;Efficient Sociopath;High;M507021;x
+507022;Head of Military Intelligence;ハインリヒ・ミュラー;36;ST;Dismal Enigma;Very High;M26;x
+507023;Head of Military Intelligence;エルンスト・ヴォルヴェーバー;36;ST;Industrial Specialist;Very High;M27;x
+507024;Head of Military Intelligence;エーリヒ・ミールケ;36;ST;Logistics Specialist;Very High;M507024;x
+507025;Head of Military Intelligence;フリッツ・シェーレン;36;ST;Naval Intelligence Specialist;Very High;M29;x
+507026;Chief of Staff;エーリヒ・ヴァイネルト;36;ST;School of Psychology;High;M152;x
+507027;Chief of Staff;エルヴィン・ジョラッセ;36;ST;School of Manoeuvre;High;L507120;x
+507028;Chief of Staff;クサフェル・ザトラー;36;ST;School of Fire Support;High;L507227;x
+507029;Chief of Army;オットー・コルフェス;36;LE;Elastic Defence Doctrine;Very High;L169;x
+507030;Chief of Army;ヴァルター・フライターク;36;LE;Armoured Spearhead Doctrine;Very High;L77;x
+507031;Chief of Navy;オットー・グロース;36;ST;Open Seas Doctrine;Very High;L507158;x
+507032;Chief of Air Force;フランツ・ノヴァク;36;LE;Air Superiority Doctrine;Very High;L507220;x
+507033;Chief of Air Force;ヴィルヘルム・シュパイデル;36;ST;Vertical Envelopment Doctrine;Very High;L507237;x
+507043;Minister of Armament;ハンス・ロッホ;36;ST;Military Entrepreneur;Very High;M507043;x
+507044;Minister of Armament;ヴィリー・ルンプフ;36;ST;Balanced Budget Economy;Very High;M507044;x
+507034;Head of State;ヴィルヘルム・ピーク;49;ST;Insignificant Layman;High;M507016;x
+507035;Minister of Security;エルヴィン・ピスカトール;39;LE;Media Magnate;High;M507035;x
+507036;Chief of Staff;ゲオルギー・K・ジューコフ;39;ST;School of Mass Combat;High;L10393;x
+507037;Chief of Army;ヴァシーリー・D・ソコロフスキー;39;ST;Decisive Battle Doctrine;High;L10315;x
+507038;Chief of Navy;ヴィサリオン・V・グリゴリエフ;39;ST;Base Control Doctrine;High;M507038;x
+507039;Chief of Air Force;セルゲイ・I・ルデンコ;39;ST;Army Aviation Doctrine;High;L10495;x
+507040;Foreign Minister;ロタール・ボルツ;34;LE;Biased Intellectual;High;M507040;x

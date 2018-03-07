@@ -1,0 +1,50 @@
+# Trade at Coldwar
+
+###################################
+# Diplomacy
+###################################
+befriend = {
+	ENG = 50
+	BEL = 70
+	HOL = 70
+	SPR = 40
+	POL = 80
+	AUS = 30
+	CZE = 40
+	TUR = 10
+	IRQ = 20
+	PER = 20
+	POR = 20
+	CHI = 20
+	JAP = 100
+	DFR = 100
+	MAN = 50
+	ISR = 100
+}
+trade = {
+	embargo = { }
+}
+tech_sharing = {
+	favored = {
+		FRA = 100
+		CAN = 100
+		AST = 100
+		NZL = 100
+		ENG = 100
+		BEL = 90
+		HOL = 90
+		SPR = 30
+		POL = 20 
+		CZE = 20
+		TUR = 10
+		IRQ = 100
+		PER = 100
+		POR = 10
+		CHI = 10
+		JAP = 100
+		DFR = 100
+		MAN = 50
+		ISR = 100
+	}
+	embargo = { }
+}

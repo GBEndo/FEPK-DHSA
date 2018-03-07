@@ -1,0 +1,26 @@
+SCA;Name;Pic Name;Skill;Start Year;End Year;Speciality1;Speciality2;Speciality3;Speciality4;Speciality5;Speciality6;Speciality7;Speciality8;Speciality9;Speciality10;Speciality11;Speciality12;Speciality13;Speciality14;Speciality15;Speciality16;Speciality17;Speciality18;Speciality19;Speciality20;Speciality21;Speciality22;Speciality23;Speciality24;Speciality25;Speciality26;Speciality27;Speciality28;Speciality29;Speciality30;Speciality31;Speciality32;x
+32001;スカンディナヴィア産業会社;T201;7;1970;1970;mechanics;industrial_engineering;electronics;chemistry;management;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+32002;F・L・シュミット社;T204;6;1930;1970;mechanics;industrial_engineering;electronics;management;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+32003;エリクソン社;T3207;7;1930;1970;industrial_engineering;electronics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+32004;カールグスタフ・ファクトリー社;T32004;6;1930;1970;general_equipment;artillery;training;naval_engineering;rocketry;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+32005;ティッカコスキ銃器工廠;T1303;5;1970;1970;general_equipment;training;artillery;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+32006;カールスクルーナ海軍造船所;T3204;7;1930;1970;naval_engineering;naval_artillery;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+32007;イェーテボリ海軍造船所;T3202;8;1930;1970;naval_engineering;naval_artillery;general_equipment;electronics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+32008;トゥルク海軍造船所;T1301;6;1970;1970;naval_engineering;technical_efficiency;industrial_engineering;electronics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+32009;サーブ社;T3208;6;1930;1970;aeronautics;rocketry;mechanics;technical_efficiency;electronics;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+32010;アエロ・スカンディナヴィア社;T1300;7;1970;1970;aeronautics;technical_efficiency;electronics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+32011;ボフォース・セルシウス社;T3201;7;1930;1970;mechanics;artillery;chemistry;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+32012;ボルボ・スカニア社;T3210;7;1930;1970;mechanics;artillery;electronics;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+32013;最高司令部核兵器研究機関;T32013;6;1930;1970;nuclear_physics;nuclear_engineering;mathematics;electronics;chemistry;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+32014;アルネ・ビューリング;T3200;7;1930;1970;mathematics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+32015;テオドール・スヴェドベリ;T3213;6;1930;1970;nuclear_physics;mathematics;management;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+32024;ノルスク・ハイドロ;T2509;6;1930;1970;chemistry;management;industrial_engineering;mathematics;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+32025;ニールス・ボーア;T203;8;1930;1962;nuclear_physics;nuclear_engineering;mathematics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+32016;カール・グスタフ・フライシャー;T2505;4;1930;1970;small_unit_tactics;decentralized_execution;infantry_focus;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+32017;ヘルゲ・ユング;T3212;5;1930;1970;combined_arms_focus;decentralized_execution;small_unit_tactics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+32018;カール・G・マンネルヘイム;T1305;7;1970;1970;infantry_focus;individual_courage;small_unit_tactics;centralized_execution;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+32019;ゲースタ・ヘレンスワルド;T3216;5;1939;1960;large_taskforce_tactics;centralized_execution;seamanship;naval_training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+32020;ヴァイノ・ヴァルヴ;T1309;4;1930;1970;naval_training;seamanship;centralized_execution;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+32021;クリスティアン・K・ラーケ;T2506;3;1930;1970;bomber_tactics;centralized_execution;aircraft_testing;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+32022;ベント・ノーデンフィヨルド;T3211;5;1930;1970;bomber_tactics;aircraft_testing;piloting;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+32023;リカルド・ローレンツ;T1306;6;1970;1970;fighter_tactics;aircraft_testing;piloting;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x

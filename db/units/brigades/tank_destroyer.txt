@@ -1,0 +1,16 @@
+# 0 - Early
+model = { cost = 7 buildtime = 70 manpower = 2 defensiveness = 1 toughness = 1 softness = -5 hardattack = 2 supplyconsumption = 0.2 fuelconsumption = 0.4 upgrade_time_factor = 0.5 upgrade_cost_factor = 1.0 equipment = { manpower = 2000 tank_destroyer = 77 } }
+# 1 - Basic
+model = { cost = 7 buildtime = 70 manpower = 2 defensiveness = 2 toughness = 2 softness = -6 hardattack = 3 supplyconsumption = 0.24 fuelconsumption = 0.4 upgrade_time_factor = 0.5 upgrade_cost_factor = 1.0 equipment = { manpower = 2000 tank_destroyer = 77 } }
+# 2 - Improved
+model = { cost = 7 buildtime = 70 manpower = 2 defensiveness = 3 toughness = 3 softness = -7 hardattack = 5 supplyconsumption = 0.28 fuelconsumption = 0.4 upgrade_time_factor = 0.5 upgrade_cost_factor = 1.0 equipment = { manpower = 2000 tank_destroyer = 77 } }
+# 3 - Advanced
+model = { cost = 8 buildtime = 70 manpower = 2 defensiveness = 4 toughness = 4 softness = -8 softattack = 1 hardattack = 6 supplyconsumption = 0.3 fuelconsumption = 0.4 upgrade_time_factor = 0.5 upgrade_cost_factor = 1.0 equipment = { manpower = 2000 tank_destroyer = 77 } }
+# 4 - Semi-Modern
+model = { cost = 8 buildtime = 70 manpower = 2 defensiveness = 5 toughness = 5 softness = -9 softattack = 1 hardattack = 7 supplyconsumption = 0.32 fuelconsumption = 0.4 upgrade_time_factor = 0.5 upgrade_cost_factor = 1.0 equipment = { manpower = 2000 tank_destroyer = 77 } }
+# 5 - Modern
+model = { cost = 8 buildtime = 70 manpower = 2 defensiveness = 6 toughness = 6 softness = -10 softattack = 1 hardattack = 8 supplyconsumption = 0.32 fuelconsumption = 0.4 upgrade_time_factor = 0.5 upgrade_cost_factor = 1.0 equipment = { manpower = 2000 tank_destroyer = 77 } }
+# –ôiŒ^‹ì’€íÔ
+model = { cost = 9 buildtime = 70 manpower = 2 defensiveness = 7 toughness = 7 softness = -11 softattack = 2 hardattack = 9 supplyconsumption = 0.34 fuelconsumption = 0.4 upgrade_time_factor = 0.5 upgrade_cost_factor = 1.0 equipment = { manpower = 2000 tank_destroyer = 77 } }
+# ”ò–ôŒ^‹ì’€íÔ
+model = { cost = 9 buildtime = 70 manpower = 2 defensiveness = 8 toughness = 8 softness = -11 softattack = 2 hardattack = 10 supplyconsumption = 0.34 fuelconsumption = 0.4 upgrade_time_factor = 0.5 upgrade_cost_factor = 1.0 equipment = { manpower = 2000 tank_destroyer = 77 } }

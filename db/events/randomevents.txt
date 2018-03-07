@@ -1,0 +1,2138 @@
+
+
+#
+# HoI - Random Events
+#
+#		written by Henrik F乕raeus
+#
+
+#########################################################################
+#  Research Sabotaged
+#########################################################################
+#event = {
+#	id = 1000
+#	random = yes
+#	trigger = {
+#		atwar = yes
+#		NOT = {
+#			intel_diff = -5  # Intel Diff < -5
+#		}
+#	}
+#	name = "EVT_1000R_NAME"
+#	desc = "EVT_1000R_DESC"
+#	picture = "reserch_sbotage"
+#	style = 0
+#
+#	action_a = {
+#			name = "ACTIONNAME1000A"
+#			command = { type = research_sabotaged }
+#	}
+#}
+#
+#
+#########################################################################
+#  Industry Sabotaged
+#########################################################################
+#event = {
+#	id = 1010
+#	random = yes
+#	trigger = {
+#		atwar = yes
+#		NOT = {
+#			intel_diff = -5  # Intel Diff < -5
+#		}
+#	}
+#	name = "EVT_1010R_NAME"
+#	desc = "EVT_1010R_DESC"
+#	picture = "industry_sabotaged"
+#	style = 0
+#
+#	action_a = {
+#		name = "ACTIONNAME1010A"
+#		command = { type = construct which = ic where = -1 value = -1 }
+#	}
+#}
+#
+#
+#
+#########################################################################
+#  Fort Sabotaged
+#########################################################################
+event = {
+	id = 1020
+	random = yes
+	trigger = {
+		atwar = yes
+		NOT = {
+			intel_diff = -5  # Intel Diff < -5
+		}
+	}
+	name = "EVT_1020R_NAME"
+	desc = "EVT_1020R_DESC"
+	picture = "fort_sabotaged"
+	style = 0
+
+	action_a = {
+		name = "ACTIONNAME1020A"
+		command = { type = construct which = land_fort where = -1 value = -1 }
+	}
+}
+
+#########################################################################
+#  Coastal Fort Sabotaged
+#########################################################################
+event = {
+	id = 1030
+	random = yes
+	trigger = {
+		atwar = yes
+		NOT = {
+			intel_diff = -5  # Intel Diff < -5
+		}
+	}
+	name = "EVT_1030R_NAME"
+	desc = "EVT_1030R_DESC"
+	picture = "coastal_fort"
+	style = 0
+
+	action_a = {
+			name = "ACTIONNAME1030A"
+			command = { type = construct which = coastal_fort where = -1 value = -1 }
+	}
+}
+
+#########################################################################
+#  Technology Stolen From Enemy
+#########################################################################
+#event = {
+#	id = 1040
+#	random = yes
+#	trigger = {
+#		intel_diff = 5 # intel_diff >= 5
+#	}
+#	name = "EVT_1040R_NAME"
+#	desc = "EVT_1040R_DESC"
+#	picture = "technology_stolen"
+#	style = 0
+#
+#	action_a = {
+#			name = "ACTIONNAME1040A"
+#			command = { type = steal_tech which = -1 } # Steal a tech from a random enemy or neighbor
+#	}
+#}
+#
+#########################################################################
+#  Commander Assassinated by Enemy Commandos
+#########################################################################
+event = {
+	id = 1050
+	random = yes
+	trigger = {
+		atwar = yes
+		NOT = {
+			intel_diff = -10 # intel_diff < -10
+		}
+	}
+	name = "EVT_1050R_NAME"
+	desc = "EVT_1050R_DESC"
+	picture = "comander_assasinated"
+	style = 0
+
+	action_a = {
+			name = "ACTIONNAME1050A"
+			command = { type = sleepleader which = -1 }
+	}
+}
+
+
+
+#########################################################################
+#  Parliamentary Scandal
+#########################################################################
+event = {
+	id = 1090
+	random = yes
+	trigger = {
+		government = democratic
+	}
+	name = "EVT_1090R_NAME"
+	desc = "EVT_1090R_DESC"
+	picture = "parliamentary_scandal"
+	style = 0
+
+	action_a = {
+		name = "ACTIONNAME1090A"
+		command = { type = dissent value = 5 }
+	}
+}
+
+#########################################################################
+#  Great War Manifestation
+#########################################################################
+event = {
+	id = 1110
+	random = yes
+	trigger = {
+		atwar = no
+		government = democratic
+	}
+	name = "EVT_1110R_NAME"
+	desc = "EVT_1110R_DESC"
+	picture = "great_war_manifestion"
+	style = 0
+
+	action_a = {
+		name = "ACTIONNAME1110A"
+		command = { type = domestic which = interventionism value = 1 }
+	}
+}
+#########################################################################
+#  Great Peace Manifestation
+#########################################################################
+event = {
+	id = 1120
+	random = yes
+	trigger = {
+		atwar = no
+		government = democratic
+	}
+	name = "EVT_1120R_NAME"
+	desc = "EVT_1120R_DESC"
+	picture = "peace_manifestation"
+	style = 0
+
+	action_a = {
+		name = "ACTIONNAME1120A"
+		command = { type = domestic which = interventionism value = -1 }
+	}
+}
+#########################################################################
+#  Partisan Revolt
+#########################################################################
+#event = {
+#	id = 1130
+#	random = yes
+#	trigger = {
+#		NOT = {
+#			government = democratic
+#		}
+#		dissent = 5
+#	}
+#	name = "EVT_1130R_NAME"
+#	desc = "EVT_1130R_DESC"
+#	picture = "partisan_revolt"
+#	style = 0
+#
+#	action_a = {
+#		name = "ACTIONNAME1130A"
+#		command = { type = dissent which = 2 }
+#	}
+#}
+#########################################################################
+#  Partisan Revolt
+#########################################################################
+#event = {
+#	id = 1131
+#	random = yes
+#	trigger = {
+#		NOT = {
+#			government = democratic
+#		}
+#		dissent = 15
+#	}
+#	name = "EVT_1130R_NAME"
+#	desc = "EVT_1130R_DESC"
+#	picture = "partisan_revolt"
+#	style = 0
+#
+#	action_a = {
+#		name = "ACTIONNAME1131A"
+#		command = { type = dissent which = 2 }
+#	}
+#}
+#########################################################################
+#  Partisan Revolt
+#########################################################################
+#event = {
+#	id = 1132
+#	random = yes
+#	trigger = {
+#		NOT = {
+#			government = democratic
+#		}
+#		dissent = 25
+#	}
+#	name = "EVT_1130R_NAME"
+#	desc = "EVT_1130R_DESC"
+#	picture = "partisan_revolt"
+#	style = 0
+#
+#	action_a = {
+#		name = "ACTIONNAME1132A"
+#		command = { type = dissent which = 2 }
+#	}
+#}
+#########################################################################
+#  Partisan Revolt
+#########################################################################
+#event = {
+#	id = 1133
+#	random = yes
+#	trigger = {
+#		NOT = {
+#			government = democratic
+#		}
+#		dissent = 35
+#	}
+#	name = "EVT_1130R_NAME"
+#	desc = "EVT_1130R_DESC"
+#	picture = "partisan_revolt"
+#	style = 0
+#
+#	action_a = {
+#		name = "ACTIONNAME1133A"
+#		command = { type = dissent which = 2 }
+#	}
+#}
+#########################################################################
+#  Failed Coup d'Etat - Traitors executed
+#########################################################################
+event = {
+	id = 1140
+	random = yes
+	trigger = {
+		dissent = 30 # >= 30
+	}
+	name = "EVT_1140R_NAME"
+	desc = "EVT_1140R_DESC"
+	picture = "failed_coup"
+	style = 0
+
+	action_a = {
+		name = "ACTIONNAME1140A"
+		command = { type = sleepminister which = -2 }
+		command = { type = sleepleader which = -1 }
+		command = { type = sleepleader which = -1 }
+		command = { type = sleepleader which = -1 }
+		command = { type = dissent value = -10 }
+	}
+}
+#########################################################################
+#  Successful Coup d'Etat - The Regime Falls
+#########################################################################
+event = {
+	id = 1150
+	random = yes
+	trigger = {
+		dissent = 60 # >= 60
+	}
+	name = "EVT_1150R_NAME"
+	desc = "EVT_1150R_DESC"
+	picture = "regime_falls"
+	style = 0
+
+	action_a = {
+		name = "ACTIONNAME1150A"
+		command = { type = regime_falls }
+		command = { type = dissent value = -100 }
+	}
+}
+#########################################################################
+#  Famous War Hero publishes articles critizing the Conduct of War
+#########################################################################
+event = {
+	id = 1001
+	random = yes
+	trigger = {
+				atwar = yes
+	}
+	name = "EVT_1001R_NAME"
+	desc = "EVT_1001R_DESC"
+	picture = "news_paper"
+	style = 0
+
+	action_a = {
+		name = "ACTIONNAME1001A"
+		command = { type = dissent value = 5 }
+	}
+}
+#########################################################################
+#  Womens organisations donates material to the Army
+#########################################################################
+event = {
+	id = 1002
+	random = yes
+	trigger = {
+				atwar = yes
+	}
+	name = "EVT_1002R_NAME"
+	desc = "EVT_1002R_DESC"
+	picture = "womens_organisation"
+	style = 0
+
+	action_a = {
+		name = "ACTIONNAME1002A"
+		command = { type = resource which = supplies value = 200 } # % of max daily income
+	}
+}
+#########################################################################
+#  Youth Movement provides more volunteers
+#########################################################################
+event = {
+	id = 1003
+	random = yes
+	trigger = {
+					atwar = yes
+					NOT = {
+							government = democratic
+							}
+	}
+	name = "EVT_1003R_NAME"
+	desc = "EVT_1003R_DESC"
+	picture = "youth_movment"
+	style = 0
+
+	action_a = {
+		name = "ACTIONNAME1003A"
+		command = { type = manpowerpool value = 100 }
+	}
+}
+#########################################################################
+#  Women labour force tapped for factories.
+#########################################################################
+event = {
+	id = 1004
+	random = yes
+	trigger = {
+				atwar = yes
+				government = democratic
+	}
+
+	name = "EVT_1004R_NAME"
+	desc = "EVT_1004R_DESC"
+	picture = "women_labour"
+	style = 0
+
+	action_a = {
+		name = "ACTIONNAME1004A"
+		command = { type = manpowerpool value = 100 }
+	}
+}
+#########################################################################
+#  Great Military Parade held in Capital
+#########################################################################
+event = {
+	id = 1005
+	random = yes
+	trigger = {
+
+	}
+	name = "EVT_1005R_NAME"
+	desc = "EVT_1005R_DESC"
+	picture = "military_parade"
+	style = 0
+
+	action_a = {
+		name = "ACTIONNAME1005A"
+		command = { type = resource which = supplies value = -100 } # % of max daily income
+		command = { type = dissent value = -5 }
+	}
+}
+#########################################################################
+#  Government nationalizes private sector
+#########################################################################
+event = {
+	id = 1006
+	random = yes
+	trigger = {
+				NOT = {
+							government = democratic
+							}
+	}
+	name = "EVT_1006R_NAME"
+	desc = "EVT_1006R_DESC"
+	picture = "private_sector"
+	style = 0
+
+	action_a = {
+		name = "ACTIONNAME1006A"
+		command = { type = industrial_modifier which = total value = 1 }
+		command = { type = dissent value = 1 }
+	}
+}
+#########################################################################
+#  Massflight of War Refugees
+#########################################################################
+event = {
+	id = 1007
+	random = yes
+	trigger = {
+				atwar = yes
+	}
+	name = "EVT_1007R_NAME"
+	desc = "EVT_1007R_DESC"
+	picture = "war_refugees"
+	style = 0
+
+	action_a = {
+		name = "ACTIONNAME1007A"
+		command = { type = manpowerpool value = 30 }
+	}
+}
+#########################################################################
+#  Major Worker Strike
+#########################################################################
+event = {
+	id = 1008
+	random = yes
+	trigger = {
+		NOT = {
+			ideology = nazi
+			ideology = fascist
+		}
+	}
+	name = "EVT_1008R_NAME"
+	desc = "EVT_1008R_DESC"
+	picture = "major_worker_strike"
+	style = 0
+
+	action_a = {
+		name = "放置しろ！"
+		command = { type = dissent value = 3 }
+		command = { type = resource which = supplies value = -500 }
+	}
+	action_b = {
+		name = "弾圧しろ！"
+		command = { type = dissent value = 4 }
+		command = { type = domestic which = democratic value = -1 }
+	}
+}
+#########################################################################
+#  Artist reflects popular emotions and records epic song
+#########################################################################
+event = {
+	id = 1009
+	random = yes
+	trigger = {
+					atwar = yes
+				}
+	name = "EVT_1009R_NAME"
+	desc = "EVT_1009R_DESC"
+	picture = "artist"
+	style = 0
+
+	action_a = {
+		name = "ACTIONNAME1009A"
+		command = { type = dissent value = -3 }
+	}
+}
+#########################################################################
+#  Leading scientist defects to your country
+#########################################################################
+event = {
+	id = 1011
+	random = yes
+	trigger = {
+
+	}
+	name = "EVT_1011R_NAME"
+	desc = "EVT_1011R_DESC"
+	picture = "scientist"
+	style = 0
+
+	action_a = {
+		name = "ACTIONNAME1011A"
+		command = { }
+		command = { type = steal_tech which = -1 }
+	}
+}
+#########################################################################
+#  Accidental discovery. Miracular breaktrough in research
+#########################################################################
+event = {
+	id = 1012
+	random = yes
+	trigger = {
+
+	}
+	name = "EVT_1012R_NAME"
+	desc = "EVT_1012R_DESC"
+	picture = "breaktroug_in_research"
+	style = 0
+
+	action_a = {
+		name = "ACTIONNAME1012A"
+		command = { }
+		command = { type = gain_tech which = -2 }
+	}
+}
+#########################################################################
+#  Private initiative boost production
+#########################################################################
+event = {
+	id = 1013
+	random = yes
+	trigger = {
+				NOT = {
+							government = communist
+							}
+	}
+	name = "EVT_1013R_NAME"
+	desc = "EVT_1013R_DESC"
+        picture = "private_initiative2"
+	style = 0
+
+	action_a = {
+		name = "ACTIONNAME1013A"
+
+		command = { type = industrial_modifier which = total value = 1 }
+	}
+}
+#########################################################################
+#  Rogue Politician
+#########################################################################
+event = {
+	id = 1014
+	random = yes
+	trigger = {
+		government = democratic
+	}
+	name = "EVT_1014R_NAME"
+	desc = "EVT_1014R_DESC"
+	picture = "politician"
+	style = 0
+
+	action_a = {
+		name = "ACTIONNAME1014A"
+		command = { type = domestic which = freedom value = -1 }
+		command = { type = dissent value = 1 }
+	}
+	action_b = {
+		name = "ACTIONNAME1014B"
+		command = { type = domestic which = freedom value = 1 }
+		command = { type = dissent value = 2 }
+	}
+}
+#########################################################################
+#  Rogue Politician
+#########################################################################
+event = {
+	id = 1015
+	random = yes
+	trigger = {
+		NOT = {
+			government = democratic
+		}
+	}
+	name = "EVT_1015R_NAME"
+	desc = "EVT_1015R_DESC"
+	picture = "politician"
+	style = 0
+
+	action_a = {
+		name = "ACTIONNAME1015A"
+		command = { type = sleepminister which = -1 }
+	}
+	action_b = {
+		name = "ACTIONNAME1015B"
+		command = { type = dissent value = 1 }
+	}
+}
+#########################################################################
+#  Outlaw the Communist Parties
+#########################################################################
+event = {
+	id = 1016
+	random = yes
+	trigger = {
+				government = democratic
+	}
+	name = "EVT_1016R_NAME"
+	desc = "EVT_1016R_DESC"
+	picture = "outlaw_communist_party"
+	style = 0
+
+	action_a = {
+		name = "ACTIONNAME1016A"
+		command = { type = domestic which = political_left value = 1 }
+	}
+	action_b = {
+		name = "ACTIONNAME1016B"
+		command = { type = domestic which = democratic value = -1 } #FEPKbeta
+		command = { type = domestic which = political_left value = -1 }
+	}
+}
+#########################################################################
+#  Outlaw the Fascist Parties
+#########################################################################
+event = {
+	id = 1017
+	random = yes
+	trigger = {
+				government = democratic
+	}
+	name = "EVT_1017R_NAME"
+	desc = "EVT_1017R_DESC"
+	picture = "outlaw_fascist_parties"
+	style = 0
+
+	action_a = {
+		name = "ACTIONNAME1017A"
+		command = { type = domestic which = political_left value = -1 }
+	}
+	action_b = {
+		name = "ACTIONNAME1017B"
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = domestic which = political_left value = 1 }
+	}
+}
+
+#
+event = {
+	id = 666000000
+	random = yes
+	trigger = {
+					atwar = yes
+				}
+	name = "兵士の逃亡"
+	desc = "前線の劣悪な環境に耐えかねて部隊が逃亡した。"
+	style = 0
+
+	action_a = {
+		name = "なんということだ"
+		command = { type = remove_division which =  -1 }
+	}
+}
+event = {
+	id = 666000001
+	random = yes
+	trigger = {
+			domestic = { type = free_market value = 7 }
+				}
+	name = "企業がインフラを整備する"
+	desc = "インフラは様々なものに影響を与える。中でも経済活動に与える影響は大きく、利益の増加のために企業がインフラを整えることもあった。"
+	style = 0
+
+	action_a = {
+		name = "すばらしい！"
+		command = { type = construct which = infrastructure where = -1 value = 10 }
+	}
+}
+event = {
+	id = 666000002
+	random = yes
+	trigger = {
+			domestic = { type = free_market value = 9 }
+				}
+	name = "企業がインフラを整備する"
+	desc = "インフラは様々なものに影響を与える。中でも経済活動に与える影響は大きく、利益の増加のために企業がインフラを整えることもあった。"
+	style = 0
+
+	action_a = {
+		name = "すばらしい！"
+		command = { type = construct which = infrastructure where = -1 value = 10 }
+		command = { type = construct which = infrastructure where = -1 value = 10 }
+		command = { type = construct which = infrastructure where = -1 value = 10 }
+	}
+}
+
+event = {
+	id = 666000003
+	random = yes
+	trigger = {
+			domestic = { type = interventionism value = 9 }
+				}
+	name = "不快感を表明される"
+	desc = "当国の強い介入主義に対して、各国から強い不快感が表明された。"
+	style = 0
+
+	action_a = {
+		name = "なんということだ"
+		command = { type = relation which = -1 value = -20 }
+		command = { type = relation which = -1 value = -20 }
+		command = { type = relation which = -1 value = -20 }
+	}
+}
+event = {
+	id = 666000004
+	random = yes
+	trigger = {
+			supplies = 2000
+			manpower = 5
+			not = { supplies = 10000 
+				metal = 20000	}
+				}
+	name = "鉱山の拡張"
+	desc = "鉱山の拡張計画が持ち上がった。"
+	style = 0
+	picture = "factory"
+
+	action_a = {
+		name = "投資しよう"
+		command = { type = add_prov_resource which = -1 value = 1 where = metal }
+		command = { type = supplies value = -2000 }
+		command = { type = money value = -100 }
+	}
+	action_b = {
+		name = "そんな余裕はない"
+		command = {  }
+	}
+}
+event = {
+	id = 666000005
+	random = yes
+	trigger = {
+			supplies = 10000
+			manpower = 5
+			not = { supplies = 20000 
+				metal = 30000	}
+				}
+	name = "鉱山の拡張"
+	desc = "鉱山の拡張計画が持ち上がった。"
+	style = 0
+	picture = "factory"
+
+	action_a = {
+		name = "投資しよう"
+		command = { type = add_prov_resource which = -1 value = 5 where = metal }
+		command = { type = supplies value = -10000 }
+		command = { type = money value = -500 }
+	}
+	action_b = {
+		name = "投資しよう"
+		command = { type = add_prov_resource which = -1 value = 3 where = metal }
+		command = { type = supplies value = -6000 }
+		command = { type = money value = -300 }
+	}
+	action_c = {
+		name = "投資しよう"
+		command = { type = add_prov_resource which = -1 value = 1 where = metal }
+		command = { type = supplies value = -2000 }
+		command = { type = money value = -100 }
+	}
+	action_d = {
+		name = "そんな余裕はない"
+		command = {  }
+	}
+}
+event = {
+	id = 666000006
+	random = yes
+	trigger = {
+			supplies = 20000
+			manpower = 5
+			not = { 
+				metal = 50000	}
+		}
+	name = "鉱山の拡張"
+	desc = "鉱山の拡張計画が持ち上がった。"
+	style = 0
+	picture = "factory"
+
+	action_a = {
+		name = "投資しよう"
+		command = { type = add_prov_resource which = -1 value = 10 where = metal }
+		command = { type = supplies value = -20000 }
+		command = { type = money value = -1000 }
+	}
+	action_b = {
+		name = "投資しよう"
+		command = { type = add_prov_resource which = -1 value = 5 where = metal }
+		command = { type = supplies value = -10000 }
+		command = { type = money value = -500 }
+	}
+	action_c = {
+		name = "投資しよう"
+		command = { type = add_prov_resource which = -1 value = 3 where = metal }
+		command = { type = supplies value = -6000 }
+		command = { type = money value = -300 }
+	}
+	action_d = {
+		name = "そんな余裕はない"
+		command = {  }
+	}
+}
+event = {
+	id = 666000007
+	random = yes
+	trigger = {
+			supplies = 2000
+			manpower = 5
+			not = { supplies = 10000 
+				energy = 20000	}
+				}
+	name = "発電所の建設"
+	desc = "エネルギーの不足を補うために新しい発電所の建設が計画された。"
+	style = 0
+	picture = "factory"
+
+	action_a = {
+		name = "投資しよう"
+		command = { type = add_prov_resource which = -1 value = 1 where = energy }
+		command = { type = supplies value = -2000 }
+		command = { type = money value = -100 }
+	}
+	action_b = {
+		name = "そんな余裕はない"
+		command = {  }
+	}
+}
+event = {
+	id = 666000008
+	random = yes
+	trigger = {
+			supplies = 10000
+			manpower = 5
+			not = { supplies = 20000 
+				energy = 30000	}
+				}
+	name = "発電所の建設"
+	desc = "エネルギーの不足を補うために新しい発電所の建設が計画された。"
+	style = 0
+	picture = "factory"
+
+	action_a = {
+		name = "投資しよう"
+		command = { type = add_prov_resource which = -1 value = 5 where = energy }
+		command = { type = supplies value = -10000 }
+		command = { type = money value = -500 }
+	}
+	action_b = {
+		name = "投資しよう"
+		command = { type = add_prov_resource which = -1 value = 3 where = energy }
+		command = { type = supplies value = -6000 }
+		command = { type = money value = -300 }
+	}
+	action_c = {
+		name = "投資しよう"
+		command = { type = add_prov_resource which = -1 value = 1 where = energy }
+		command = { type = supplies value = -2000 }
+		command = { type = money value = -100 }
+	}
+	action_d = {
+		name = "そんな余裕はない"
+		command = {  }
+	}
+}
+event = {
+	id = 666000009
+	random = yes
+	trigger = {
+			supplies = 20000
+			manpower = 5
+			not = { 
+				energy = 50000	}
+		}
+	name = "発電所の建設"
+	desc = "エネルギーの不足を補うために新しい発電所の建設が計画された。"
+	style = 0
+	picture = "factory"
+
+	action_a = {
+		name = "投資しよう"
+		command = { type = add_prov_resource which = -1 value = 10 where = energy }
+		command = { type = supplies value = -20000 }
+		command = { type = money value = -1000 }
+	}
+	action_b = {
+		name = "投資しよう"
+		command = { type = add_prov_resource which = -1 value = 5 where = energy }
+		command = { type = supplies value = -10000 }
+		command = { type = money value = -500 }
+	}
+	action_c = {
+		name = "投資しよう"
+		command = { type = add_prov_resource which = -1 value = 3 where = energy }
+		command = { type = supplies value = -6000 }
+		command = { type = money value = -300 }
+	}
+	action_d = {
+		name = "そんな余裕はない"
+		command = {  }
+	}
+}
+
+event = {
+	id = 666000010
+	random = yes
+	trigger = {
+			supplies = 2000
+			manpower = 5
+			not = { supplies = 10000 
+				oil = 20000	}
+				}
+	name = "燃料精製所の建設"
+	desc = "燃料の不足を補うために新しい燃料精製所の建設が計画された。"
+	style = 0
+	picture = "oil_supply"
+
+	action_a = {
+		name = "投資しよう"
+		command = { type = add_prov_resource which = -1 value = 1 where = oil }
+		command = { type = supplies value = -2000 }
+		command = { type = money value = -100 }
+	}
+	action_b = {
+		name = "そんな余裕はない"
+		command = {  }
+	}
+}
+event = {
+	id = 666000011
+	random = yes
+	trigger = {
+			supplies = 10000
+			manpower = 5
+			not = { supplies = 20000 
+				oil = 30000	}
+				}
+	name = "燃料精製所の建設"
+	desc = "燃料の不足を補うために新しい燃料精製所の建設が計画された。"
+	style = 0
+	picture = "oil_supply"
+
+	action_a = {
+		name = "投資しよう"
+		command = { type = add_prov_resource which = -1 value = 5 where = oil }
+		command = { type = supplies value = -10000 }
+		command = { type = money value = -500 }
+	}
+	action_b = {
+		name = "投資しよう"
+		command = { type = add_prov_resource which = -1 value = 3 where = oil }
+		command = { type = supplies value = -6000 }
+		command = { type = money value = -300 }
+	}
+	action_c = {
+		name = "投資しよう"
+		command = { type = add_prov_resource which = -1 value = 1 where = oil }
+		command = { type = supplies value = -2000 }
+		command = { type = money value = -100 }
+	}
+	action_d = {
+		name = "そんな余裕はない"
+		command = {  }
+	}
+}
+event = {
+	id = 666000012
+	random = yes
+	trigger = {
+			supplies = 20000
+			manpower = 5
+			not = { 
+				oil = 50000	}
+		}
+	name = "燃料精製所の建設"
+	desc = "燃料の不足を補うために新しい燃料精製所の建設が計画された。"
+	style = 0
+	picture = "oil_supply"
+
+	action_a = {
+		name = "投資しよう"
+		command = { type = add_prov_resource which = -1 value = 10 where = oil }
+		command = { type = supplies value = -20000 }
+		command = { type = money value = -1000 }
+	}
+	action_b = {
+		name = "投資しよう"
+		command = { type = add_prov_resource which = -1 value = 5 where = oil }
+		command = { type = supplies value = -10000 }
+		command = { type = money value = -500 }
+	}
+	action_c = {
+		name = "投資しよう"
+		command = { type = add_prov_resource which = -1 value = 3 where = oil }
+		command = { type = supplies value = -6000 }
+		command = { type = money value = -300 }
+	}
+	action_d = {
+		name = "そんな余裕はない"
+		command = {  }
+	}
+}
+
+event = {
+	id = 666000013
+	random = yes
+	trigger = {
+			supplies = 2000
+			manpower = 5
+			not = { supplies = 10000 
+				rare_materials = 20000	}
+				}
+	name = "希少資源加工工場の建設"
+	desc = "希少資源の不足を補うために新しい希少資源加工工場の建設が計画された。"
+	style = 0
+	picture = "oil_supply"
+
+	action_a = {
+		name = "投資しよう"
+		command = { type = add_prov_resource which = -1 value = 1 where = rare_materials }
+		command = { type = supplies value = -2000 }
+		command = { type = money value = -100 }
+	}
+	action_b = {
+		name = "そんな余裕はない"
+		command = {  }
+	}
+}
+event = {
+	id = 666000014
+	random = yes
+	trigger = {
+			supplies = 10000
+			manpower = 5
+			not = { supplies = 20000 
+				rare_materials = 30000	}
+				}
+	name = "希少資源加工工場の建設"
+	desc = "希少資源の不足を補うために新しい希少資源加工工場の建設が計画された。"
+	style = 0
+	picture = "oil_supply"
+
+	action_a = {
+		name = "投資しよう"
+		command = { type = add_prov_resource which = -1 value = 5 where = rare_materials }
+		command = { type = supplies value = -10000 }
+		command = { type = money value = -500 }
+	}
+	action_b = {
+		name = "投資しよう"
+		command = { type = add_prov_resource which = -1 value = 3 where = rare_materials }
+		command = { type = supplies value = -6000 }
+		command = { type = money value = -300 }
+	}
+	action_c = {
+		name = "投資しよう"
+		command = { type = add_prov_resource which = -1 value = 1 where = rare_materials }
+		command = { type = supplies value = -2000 }
+		command = { type = money value = -100 }
+	}
+	action_d = {
+		name = "そんな余裕はない"
+		command = {  }
+	}
+}
+event = {
+	id = 666000015
+	random = yes
+	trigger = {
+			supplies = 20000
+			manpower = 5
+			not = { 
+				rare_materials = 50000	}
+		}
+	name = "希少資源加工工場の建設"
+	desc = "希少資源の不足を補うために新しい希少資源加工工場の建設が計画された。"
+	style = 0
+	picture = "oil_supply"
+
+	action_a = {
+		name = "投資しよう"
+		command = { type = add_prov_resource which = -1 value = 10 where = rare_materials }
+		command = { type = supplies value = -20000 }
+		command = { type = money value = -1000 }
+	}
+	action_b = {
+		name = "投資しよう"
+		command = { type = add_prov_resource which = -1 value = 5 where = rare_materials }
+		command = { type = supplies value = -10000 }
+		command = { type = money value = -500 }
+	}
+	action_c = {
+		name = "投資しよう"
+		command = { type = add_prov_resource which = -1 value = 3 where = rare_materials }
+		command = { type = supplies value = -6000 }
+		command = { type = money value = -300 }
+	}
+	action_d = {
+		name = "そんな余裕はない"
+		command = {  }
+	}
+}
+
+event = {
+	id = 666000016
+	random = yes
+	trigger = {
+		}
+	name = "国立研究所の創設"
+	desc = "研究所を作るということは、優秀な科学者を育成するだけでなく国家の維新を向上させるという意味もあった。"
+	style = 0
+
+	picture = "Andrew_Carnegie"
+
+	action_a = {
+		name = "創設しよう"
+		command = { type = research_mod value = 3 }
+		command = { type = money value = -1000 }
+	}
+	action_b = {
+		name = "そんな余裕はない"
+		command = {  }
+	}
+}
+event = {
+	id = 666000017
+	random = yes
+	trigger = {
+		NOT = { government = communist }
+		}
+	name = "私立大学"
+	desc = "国内で新しい私立大学が開校した。これは国家にとって有用な人材を育てる場になるだろう。"
+	style = 0
+	
+	picture = "Andrew_Carnegie"
+
+	action_a = {
+		name = "素晴らしい"
+		command = { type = research_mod value = 1 }
+	}
+}
+event = {
+	id = 666000018
+	random = yes
+	trigger = {
+		not = { domestic = { type = democratic value = 2 } }
+		}
+	name = "EVT_118_NAME"
+	desc = "EVT_118_DESC"
+	style = 0
+
+	action_a = {
+		name = "なんということだ"
+		command = { type = sleepleader which = -1 }
+	}
+}
+event = {
+	id = 666000019
+	random = yes
+	trigger = {
+		not = {domestic = { type = democratic value = 2 }}
+		}
+	name = "EVT_117_NAME"
+	desc = "EVT_117_DESC"
+	style = 0
+
+	action_a = {
+		name = "なんということだ"
+		command = { type = sleepminister which = -1 }
+	}
+}
+event = {
+	id = 666000020
+	random = yes
+	trigger = {
+		atwar = yes
+		major = no
+		}
+	name = "義勇軍"
+	desc = "わが国の正義を信じて世界中から義勇兵が集まった。"
+	style = 0
+
+	action_a = {
+		name = "ありがたいことだ"
+		command = { type = add_division which = "義勇軍" value = infantry when = 0 }
+	}
+}
+event = {
+	id = 666000021
+	random = yes
+	trigger = {
+		atwar = yes
+		government = democratic
+		domestic = { type = defense_lobby value = 6 }
+		}
+	name = "反戦デモ"
+	desc = "平和主義者たちが大規模なデモを起こした。このままだと暴動に発展するだろう。"
+	style = 0
+
+	action_a = {
+		name = "鎮圧せよ"
+		command = { type = manpowerpool value = -10 }
+	}
+	action_b = {
+		name = "妥協しよう"
+		command = { type = domestic which = defense_lobby value = -1 }
+	}
+	action_c = {
+		name = "放っておけ"
+		command = { type = revolt which = -1 }
+	}
+}
+event = {
+	id = 666000022
+	random = yes
+	trigger = {
+		atwar = yes
+		}
+	name = "英雄"
+	desc = "救国の英雄、撃墜王などと呼ばれ、圧倒的に抜きん出た軍功を持つものを人々は英雄と呼び称えた。"
+	style = 0
+	picture = "soviet_fortunes_of_war"
+
+	action_a = {
+		name = "素晴らしい"
+		command = { type = morale which = land value = 1 }
+		command = { type = morale which = air value = 1 }
+		command = { type = morale which = naval value = 1 }
+		command = { type = dissent value = -2 }
+	}
+}
+event = {
+	id = 666000023
+	random = yes
+	trigger = {
+		atwar = yes
+		}
+	name = "嫌戦気分が漂う"
+	desc = "戦争が長引くにつれて国内では嫌戦気分が広がっている。これは少なからず軍隊の指揮にも影響を与えるだろう。"
+	style = 0
+
+	action_a = {
+		name = "早く戦争を終らせなければ"
+		command = { type = morale which = land value = -1 }
+		command = { type = morale which = air value = -1 }
+		command = { type = morale which = naval value = -1 }
+		command = { type = dissent value = 1 }
+	}
+}
+event = {
+	id = 666000024
+	random = yes
+	trigger = {
+		domestic = { type = interventionism value = 6 }
+		}
+	name = "外交問題"
+	desc = "外交官が他国の特使に無礼を働いてしまった。"
+	style = 0
+
+	action_a = {
+		name = "なんということだ"
+		command = { type = relation which = -1 value = -50 }
+	}
+}
+
+event = {
+	id = 666000025
+	random = yes
+	name = "外交問題"
+	desc = "外交官が他国の特使に無礼を働いてしまった。"
+	style = 0
+
+	action_a = {
+		name = "なんということだ"
+		command = { type = relation which = -1 value = -30 }
+	}
+}
+event = {
+	id = 666000026
+	random = yes
+
+	trigger = {
+		not = {domestic = { type = interventionism value = 6 }}
+		}
+
+	name = "外交姿勢が評価される"
+	desc = "わが国の外交姿勢が近隣の国に評価された。"
+	style = 0
+
+	action_a = {
+		name = "よくやった"
+		command = { type = relation which = -1 value = 50 }
+	}
+}
+event = {
+	id = 666000027
+	random = yes
+
+	trigger = {
+		not = {domestic = { type = interventionism value = 2 }}
+		}
+
+	name = "外交姿勢が評価される"
+	desc = "わが国の外交姿勢が近隣の国に評価された。"
+	style = 0
+
+	action_a = {
+		name = "よくやった"
+		command = { type = relation which = -1 value = 30 }
+		command = { type = relation which = -1 value = 30 }
+		command = { type = relation which = -1 value = 30 }
+	}
+}
+event = {
+	id = 666000028
+	random = yes
+
+	name = "外交姿勢が評価される"
+	desc = "わが国の外交姿勢が近隣の国に評価された。"
+	style = 0
+
+	action_a = {
+		name = "よくやった"
+		command = { type = relation which = -1 value = 20 }
+	}
+}
+event = {
+	id = 666000029
+	random = yes
+
+	name = "経済協定が結ばれる"
+	desc = "国家間の経済協定の成立に成功した。これは今後のわが国の経済にとって大きなプラス要因になるだろう。"
+	style = 0
+	trigger = {
+		atwar = no
+		}
+	action_a = {
+		name = "すばらしい！"
+		command = { type = relation which = -1 value = 30 }
+		command = { type = industrial_modifier which = total value = 1 }
+		command = { type = peacetime_ic_mod value = 5 }
+	}
+}
+#event = {
+#	id = 666000030
+#	random = yes
+#
+#	name = "経済協定が結ばれる"
+#	desc = "国家間の経済協定の成立に成功した。これは今後のわが国の経済にとって大きなプラス要因になるだろう。"
+#	style = 0
+#	action_a = {
+#		name = "すばらしい！"
+#		command = { type = relation which = -1 value = 30 }
+#		command = { type = industrial_modifier which = total value = 1 }
+#	}
+#}
+event = {
+	id = 666000031
+	random = yes
+	trigger = {
+		atwar = yes
+		}
+	name = "指揮系統の混乱"
+	desc = "戦争が続くに連れて指揮系統に乱れが生じている。"
+	style = 0
+
+	action_a = {
+		name = "早く何とかしろ"
+		command = { type = max_organization which = land value = -1 }
+		command = { type = max_organization which = air value = -1 }
+		command = { type = max_organization which = naval value = -1 }
+	}
+}
+event = {
+	id = 666000032
+	random = yes
+	trigger = {
+		atwar = no
+		}
+	name = "指揮系統の再編"
+	desc = "軍隊の指揮系統は時に悪循環に陥ることがある。それを迅速に見直すことは戦力の拡大につながる。"
+	style = 0
+
+	picture = "american_reinforcments8"
+
+	action_a = {
+		name = "急げ"
+		command = { type = max_organization which = land value = 1 }
+		command = { type = max_organization which = air value = 1 }
+		command = { type = max_organization which = naval value = 1 }
+	}
+}
+event = {
+	id = 666000033
+	random = yes
+	name = "指揮系統の再編"
+	desc = "軍隊の指揮系統は時に悪循環に陥ることがある。それを迅速に見直すことは戦力の拡大につながる。"
+	style = 0
+
+	picture = "american_reinforcments8"
+
+	action_a = {
+		name = "急げ"
+		command = { type = max_organization which = land value = 1 }
+		command = { type = max_organization which = air value = 1 }
+		command = { type = max_organization which = naval value = 1 }
+	}
+}
+#	event = {
+#		id = 666000034
+#		random = yes
+#		name = "軍事演習が企画される"
+#		desc = "大規模であれ、小規模であれ軍事演習を行うことは指揮官の能力向上に大いに役立つ。"
+#		style = 0
+#		action_a = {
+#			name = "ぜひとも行おう"
+#			ai_chance = 50
+#			command = { type = set_leader_skill which = -1 value = 5 }
+#			command = { type = supplies value = -100 }
+#		}
+#		action_b = {
+#			name = "そんな余裕は無い"
+#			ai_chance = 50
+#			command = {  }
+#		}
+#	}
+#	event = { #FEPK1.12
+#		id = 666000035
+#		random = yes
+#		trigger = {
+#			domestic = { type = defense_lobby value = 6 }
+#			}
+#		name = "軍事演習が企画される"
+#		desc = "大規模であれ、小規模であれ軍事演習を行うことは指揮官の能力向上に大いに役立つ。"
+#		style = 0
+#		action_a = {
+#			name = "ぜひとも行おう"
+#			ai_chance = 80
+#			command = { type = set_leader_skill which = -1 value = 5 }
+#			command = { type = set_leader_skill which = -1 value = 5 }
+#			command = { type = set_leader_skill which = -1 value = 5 }
+#			command = { type = supplies value = -200 }
+#		}
+#		action_b = {
+#			name = "そんな余裕は無い"
+#			ai_chance = 20
+#			command = {  }
+#		}
+#	}
+
+event = {
+	id = 666000036
+	random = yes
+	trigger = {
+		atwar = yes
+		}
+	name = "軍需景気"
+	desc = "戦争による軍需の拡大により経済が大きく活性化した。"
+	picture = "factory"
+	style = 0
+
+	action_a = {
+		name = "工場を拡大して対応しよう"
+		ai_chance = 50
+		command = { type = construct which = ic where = -4 value = 1 }
+	}
+	action_b = {
+		name = "工場稼働率を上げて対応しよう"
+		ai_chance = 50
+		command = { type = industrial_modifier which = total value = 1 }
+	}
+}
+
+event = {
+	id = 666000037
+	random = yes
+	trigger = {
+              AND = {
+		atwar = yes
+             NOT = {
+                    supplies = 1000
+				rare_materials = 2000
+				metal = 2000
+          }
+}
+		}
+	name = "原料の不足"
+	desc = "戦争による物資不足により産業によっては工場の営業がままならない所が出てきた。"
+	style = 0
+
+	action_a = {
+		name = "工場を閉鎖して対応しよう"
+		ai_chance = 50
+		command = { type = construct which = ic where = -4 value = -1 }
+	}
+	action_b = {
+		name = "工場稼働率を下げて対応しよう"
+		ai_chance = 50
+		command = { type = industrial_modifier which = total value = -1 }
+	}
+}
+event = {
+	id = 666000038
+	random = yes
+	trigger = {
+		technology = 5090
+		}
+	name = "建設技術の発達"
+	desc = "建設技術の発達によりより短い工期で建築物が作れるようになった。"
+	picture = "factory"
+	style = 0
+
+	action_a = {
+		name = "よくやった"
+		ai_chance = 100
+		command = { type = building_prod_mod which = ic value = 1 }
+		command = { type = building_prod_mod which = coastal_fort value = 1 }
+		command = { type = building_prod_mod which = land_fort value = 1 }
+		command = { type = building_prod_mod which = flak value = 1 }
+		command = { type = building_prod_mod which = infrastructure value = 1 }
+		command = { type = building_prod_mod which = air_base value = 1 }
+		command = { type = building_prod_mod which = naval_base value = 1 }
+		command = { type = building_prod_mod which = radar_station value = 1 }
+		command = { type = building_prod_mod which = nuclear_reactor value = 1 }
+		command = { type = building_prod_mod which = rocket_test value = 1 }
+	}
+}
+event = {
+	id = 666000039
+	random = yes
+	trigger = {
+		technology = 5100
+		}
+	name = "建設技術の発達"
+	desc = "建設技術の発達によりより短い工期で建築物が作れるようになった。"
+	style = 0
+	picture = "factory"
+
+	action_a = {
+		name = "よくやった"
+		ai_chance = 100
+		command = { type = building_prod_mod which = ic value = 1 }
+	}
+}
+event = {
+	id = 666000040
+	random = yes
+	trigger = {
+		technology = 5100
+		}
+	name = "建設技術の発達"
+	desc = "建設技術の発達によりより短い工期で建築物が作れるようになった。"
+	style = 0
+	picture = "fort_sabotaged"
+
+	action_a = {
+		name = "よくやった"
+		ai_chance = 100
+		command = { type = building_prod_mod which = coastal_fort value = 1 }
+	}
+}
+event = {
+	id = 666000041
+	random = yes
+	trigger = {
+		technology = 5100
+		}
+	name = "建設技術の発達"
+	desc = "建設技術の発達によりより短い工期で建築物が作れるようになった。"
+	style = 0
+	picture = "fort_sabotaged"
+
+	action_a = {
+		name = "よくやった"
+		ai_chance = 100
+		command = { type = building_prod_mod which = land_fort value = 1 }
+	}
+}
+event = {
+	id = 666000042
+	random = yes
+	trigger = {
+		technology = 5100
+		}
+	name = "建設技術の発達"
+	desc = "建設技術の発達によりより短い工期で建築物が作れるようになった。"
+	style = 0
+	picture = "fort_sabotaged"
+
+	action_a = {
+		name = "よくやった"
+		ai_chance = 100
+		command = { type = building_prod_mod which = flak value = 1 }
+	}
+}
+event = {
+	id = 666000043
+	random = yes
+	trigger = {
+		technology = 5100
+		}
+	name = "建設技術の発達"
+	desc = "建設技術の発達によりより短い工期で建築物が作れるようになった。"
+	style = 0
+	picture = "infrastructure"
+
+	action_a = {
+		name = "よくやった"
+		ai_chance = 100
+		command = { type = building_prod_mod which = infrastructure value = 1 }
+	}
+}
+event = {
+	id = 666000044
+	random = yes
+	trigger = {
+		technology = 5100
+		}
+	name = "建設技術の発達"
+	desc = "建設技術の発達によりより短い工期で建築物が作れるようになった。"
+	style = 0
+	picture = "airbase"
+
+	action_a = {
+		name = "よくやった"
+		ai_chance = 100
+		command = { type = building_prod_mod which = air_base value = 1 }
+	}
+}
+event = {
+	id = 666000045
+	random = yes
+	trigger = {
+		technology = 5100
+		}
+	name = "建設技術の発達"
+	desc = "建設技術の発達によりより短い工期で建築物が作れるようになった。"
+	style = 0
+	picture = "navalbase"
+
+	action_a = {
+		name = "よくやった"
+		ai_chance = 100
+		command = { type = building_prod_mod which = naval_base value = 1 }
+	}
+}
+event = {
+	id = 666000046
+	random = yes
+	trigger = {
+		technology = 5100
+		technology = 5410
+		}
+	name = "建設技術の発達"
+	desc = "建設技術の発達によりより短い工期で建築物が作れるようになった。"
+	style = 0
+	picture = "japan_victory"
+	
+
+	action_a = {
+		name = "よくやった"
+		ai_chance = 100
+		command = { type = building_prod_mod which = radar_station value = 1 }
+	}
+}
+event = {
+	id = 666000047
+	random = yes
+	trigger = {
+		technology = 5100
+		technology = 5500
+		}
+	name = "建設技術の発達"
+	desc = "建設技術の発達によりより短い工期で建築物が作れるようになった。"
+	picture = "Oppenheimer"
+	style = 0
+
+	action_a = {
+		name = "よくやった"
+		ai_chance = 100
+		command = { type = building_prod_mod which = nuclear_reactor value = 1 }
+	}
+}
+event = {
+	id = 666000048
+	random = yes
+	trigger = {
+		technology = 5100
+		technology = 5550
+		}
+	name = "建設技術の発達"
+	desc = "建設技術の発達によりより短い工期で建築物が作れるようになった。"
+	style = 0
+	picture = "scientist"
+
+	action_a = {
+		name = "よくやった"
+		ai_chance = 100
+		command = { type = building_prod_mod which = rocket_test value = 1 }
+	}
+}
+event = {
+	id = 666000049
+	random = yes
+	name = "偶然の発見"
+	desc = "偶然にも国内で新たに資源が発見された。微量だが、わが国にとって救いとなるだろう。"
+	style = 0
+	picture = "oil_supply"
+
+	action_a = {
+		name = "すばらしい！"
+		ai_chance = 100
+		command = { type = add_prov_resource which = -1 value = 0.5 where = oil }
+	}
+}
+event = {
+	id = 666000050
+	random = yes
+	name = "偶然の発見"
+	desc = "偶然にも国内で新たに資源が発見された。微量だが、わが国にとって救いとなるだろう。"
+	style = 0
+	picture = "oil_supply"
+
+	action_a = {
+		name = "すばらしい！"
+		ai_chance = 100
+		command = { type = add_prov_resource which = -1 value = 0.5 where = metal }
+	}
+}
+event = {
+	id = 666000051
+	random = yes
+	name = "偶然の発見"
+	desc = "偶然にも国内で新たに資源が発見された。微量だが、わが国にとって救いとなるだろう。"
+	style = 0
+	picture = "oil_supply"
+
+	action_a = {
+		name = "すばらしい！"
+		ai_chance = 100
+		command = { type = add_prov_resource which = -1 value = 0.5 where = energy }
+	}
+}
+event = {
+	id = 666000052
+	random = yes
+	name = "偶然の発見"
+	desc = "偶然にも国内で新たに資源が発見された。微量だが、わが国にとって救いとなるだろう。"
+	style = 0
+	picture = "oil_supply"
+
+	action_a = {
+		name = "すばらしい！"
+		ai_chance = 100
+		command = { type = add_prov_resource which = -1 value = 0.5 where = rare_materials }
+	}
+}
+event = {
+	id = 666000053
+	random = yes
+	trigger = {
+		technology = 14000
+		}
+	name = "人口増加率の上昇"
+	desc = "医療技術の進歩は、病気や怪我の治療、乳幼児死亡率の低下など様々な面で人口の増加に貢献する。"
+	style = 0
+	picture = "Census"
+
+	action_a = {
+		name = "すばらしい！"
+		ai_chance = 100
+		command = { type = relative_manpower value = 1 }
+	}
+}
+event = {
+	id = 666000054
+	random = yes
+	trigger = {
+		technology = 14010
+		}
+	name = "人口増加率の上昇"
+	desc = "医療技術の進歩は、病気や怪我の治療、乳幼児死亡率の低下など様々な面で人口の増加に貢献する。"
+	style = 0
+	picture = "Census"
+
+	action_a = {
+		name = "すばらしい！"
+		ai_chance = 100
+		command = { type = relative_manpower value = 1 }
+	}
+}
+event = {
+	id = 666000055
+	random = yes
+	trigger = {
+		technology = 14020
+		}
+	name = "人口増加率の上昇"
+	desc = "医療技術の進歩は、病気や怪我の治療、乳幼児死亡率の低下など様々な面で人口の増加に貢献する。"
+	style = 0
+	picture = "Census"
+
+	action_a = {
+		name = "すばらしい！"
+		ai_chance = 100
+		command = { type = relative_manpower value = 1 }
+	}
+}
+event = {
+	id = 666000056
+	random = yes
+	trigger = {
+		technology = 14030
+		}
+	name = "人口増加率の上昇"
+	desc = "医療技術の進歩は、病気や怪我の治療、乳幼児死亡率の低下など様々な面で人口の増加に貢献する。"
+	style = 0
+	picture = "Census"
+
+	action_a = {
+		name = "すばらしい！"
+		ai_chance = 100
+		command = { type = relative_manpower value = 1 }
+	}
+}
+
+event = {
+	id = 666000057
+	random = yes
+	trigger = {
+		technology = 14040
+		}
+	name = "人口増加率の上昇"
+	desc = "医療技術の進歩は、病気や怪我の治療、乳幼児死亡率の低下など様々な面で人口の増加に貢献する。"
+	style = 0
+	picture = "Census"
+
+	action_a = {
+		name = "すばらしい！"
+		ai_chance = 100
+		command = { type = relative_manpower value = 1 }
+	}
+}
+
+event = {
+	id = 666000058
+	random = yes
+
+	name = "特別援助による研究の促進"
+	desc = "我が国はある研究を促進させることを検討している。"
+	style = 0
+	picture = "scientist"
+
+	action_a = {
+		name = "援助する"
+		ai_chance = 50
+		command = { }
+		command = { type = gain_tech which = -2 }
+		command = { type = money value = -1800 }
+	}
+	action_b = {
+		name = "余裕は無い"
+		ai_chance = 50
+		command = { type = industrial_modifier which = total value = -1 }
+	}
+}
+
+event = {
+	id = 666000059
+	random = yes
+
+	name = "官僚の腐敗"
+	desc = "官僚が予算を横流しし、私腹を肥やしていることが発覚した。"
+	style = 0
+	picture = "technology_stolen"
+
+	action_a = {
+		name = "なんと言うことだ！"
+		command = { type = dissent value = 1 }
+		command = { type = money value = -17 }
+	}
+}
+event = {
+	id = 666000060
+	random = yes
+
+	trigger = {
+		NOT = { government = communist }
+	}
+
+	name = "企業が援助金を不正水増し"
+	desc = "政府が推進している企業援助資金を水増し請求していることが発覚した。"
+	style = 0
+	picture = "private_sector"
+
+	action_a = {
+		name = "なんと言うことだ！"
+		command = { type = dissent value = 1 }
+		command = { type = money value = -10 }
+	}
+}
+event = {
+	id = 666000061
+	random = yes
+
+	trigger = {
+              NOT = { ideology = nazi 
+                      ideology = fascist
+                      ideology =  stalinist
+                      ideology =  leninist
+}
+		}
+
+	name = "好景気"
+	desc = "経済学者によれば、市場の拡大によって各種生産業が好調のようです"
+	style = 0
+	picture = "news_paper"
+
+	action_a = {
+		name = "素晴らしい！"
+		command = { type = industrial_modifier which = total value = 1 }
+
+	}
+}
+
+event = {
+	id = 666000062
+	random = yes
+
+	trigger = {
+              NOT = { ideology = nazi 
+                      ideology = fascist
+                      ideology = stalinist
+                      ideology = leninist
+}
+		}
+
+	name = "不景気"
+	desc = "経済学者によれば、市場の縮小によって各種生産業が不調のようです"
+	style = 0
+	picture = "news_paper"
+
+	action_a = {
+		name = "なんという事だ"
+		command = { type = industrial_modifier which = total value = -1 }
+
+	}
+}
+
+event = {
+	id = 666000063
+	random = yes
+	trigger = {
+		atwar = yes
+		}
+	name = "ge_event53_name"
+	desc = "ge_event54_desc"
+	style = 0
+
+	action_a = {
+		name = "ge_actioname54b"
+		command = { type = supply_dist_mod value = -1 }
+	}
+}
+
+event = {
+	id = 666000064
+	random = yes
+	trigger = {
+		technology = 5310
+		}
+	name = "人口調査"
+	desc = "調査実行により、人口が初期報告より幾分か多いことが判明しました"
+	style = 0
+	
+	picture = "Census"
+
+	action_a = {
+		name = "大変結構！"
+		command = { type = manpowerpool value = 10 }
+	}
+}
+
+event = {
+	id = 666000065
+	random = yes
+	trigger = {
+		technology = 5320
+		}
+	name = "計算機導入による効率化"
+	desc = "この度開発された計算機により微力ながら効率が上昇した"
+	
+	picture = "ZuseZ1"
+	
+	style = 0
+
+	action_a = {
+		name = "大変結構！"
+		command = { type = industrial_modifier which = total value = 1 }
+	}
+}
+
+event = {
+	id = 666000066
+	random = yes
+	trigger = {
+		technology = 5330
+		}
+	name = "電子工作技術の発達"
+	desc = "改良した計算機の導入により、初期的な電子工作技術が向上した"
+	style = 0
+
+	action_a = {
+		name = "大変結構！"
+		command = { type = building_prod_mod which = radar_station value = 1 }
+	}
+}
+
+event = {
+	id = 666000067
+	random = yes
+	trigger = {
+		technology = 5340
+		}
+	name = "労働時間管理による効率化"
+	desc = "更に発展した計算機の導入による労働時間管理によって、より短い工期で建築できるようになった。"
+	style = 0
+
+	action_a = {
+		name = "大変結構！"
+		command = { type = building_prod_mod which = ic value = 1 }
+		command = { type = building_prod_mod which = coastal_fort value = 1 }
+		command = { type = building_prod_mod which = land_fort value = 1 }
+		command = { type = building_prod_mod which = flak value = 1 }
+		command = { type = building_prod_mod which = infrastructure value = 1 }
+		command = { type = building_prod_mod which = air_base value = 1 }
+		command = { type = building_prod_mod which = naval_base value = 1 }
+		command = { type = building_prod_mod which = radar_station value = 1 }
+		command = { type = building_prod_mod which = nuclear_reactor value = 1 }
+		command = { type = building_prod_mod which = rocket_test value = 1 }
+	}
+}
+
+#event = {
+#	id = 666000068
+#	random = yes
+#	name = "太陽黒点による未知なる影響"
+#	desc = "報告によりますと、太陽黒点の影響により国家の好戦性が影響を受けたとのことです"
+#	style = 0
+#
+#	action_a = {
+#		name = "何が起こっている！？"
+#		command = { type = belligerence  value = 10  }
+#	}
+#}
+
+#event = {
+#	id = 666000069
+#	random = yes
+#	name = "太陽黒点による未知なる影響"
+#	desc = "報告によりますと、太陽黒点の影響により国家の好戦性が影響を受けたとのことです"
+#	style = 0
+#
+#	action_a = {
+#		name = "何が起こっている！？"
+#		command = { type = belligerence  value = -10  }
+#	}
+#}
+
+event = {
+	id = 666000070
+	random = yes
+	trigger = {
+		atwar = yes
+	}
+	name = "戦訓"
+	desc = "往々にして戦争というものは破壊を生み出すが、まれに目に見える改善を生み出すことがある。"
+	style = 0
+	
+	picture = "Ju188"
+
+	action_a = {
+		name = "大変結構！"
+		command = { }
+		command = { type = gain_tech which = -1 }
+	}
+}

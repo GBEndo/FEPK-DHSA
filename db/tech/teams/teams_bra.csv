@@ -1,0 +1,17 @@
+BRA;Name;Pic Name;Skill;Start Year;End Year;Speciality1;Speciality2;Speciality3;Speciality4;Speciality5;Speciality6;Speciality7;Speciality8;Speciality9;Speciality10;Speciality11;Speciality12;Speciality13;Speciality14;Speciality15;Speciality16;Speciality17;Speciality18;Speciality19;Speciality20;Speciality21;Speciality22;Speciality23;Speciality24;Speciality25;Speciality26;Speciality27;Speciality28;Speciality29;Speciality30;Speciality31;Speciality32;x
+4400;CNNC;T4401;3;1930;1970;aeronautics;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+4401;ナシオナル製鉄社;T4403;5;1941;1970;industrial_engineering;general_equipment;mechanics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+4402;リオ海軍工廠;T4405;4;1930;1970;naval_engineering;technical_efficiency;naval_artillery;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+4403;IPT;T4406;3;1930;1970;management;electronics;mechanics;technical_efficiency;mathematics;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+4404;ガスパール・ドゥートラ;T4408;4;1930;1970;large_unit_tactics;centralized_execution;infantry_focus;training;individual_courage;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+4405;ゴエス・モンテイロ;goes;4;1970;1970;small_unit_tactics;decentralized_execution;combined_arms_focus;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+4406;アリスティデス・ギリェム;T4410;4;1930;1948;large_taskforce_tactics;centralized_execution;naval_training;seamanship;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+4407;エパミノンダス・ドス・サントス;T4413;3;1930;1945;fighter_tactics;centralized_execution;aircraft_testing;piloting;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+4408;ネロ・モーラ;T4416;4;1930;1970;fighter_tactics;bomber_tactics;aircraft_testing;piloting;decentralized_execution;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+4409;サンパウロ大学工学部;politec;3;1930;1970;electronics;mathematics;chemistry;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+4410;ヴォトランテ株式会社;votorantim;4;1930;1970;industrial_engineering;technical_efficiency;management;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+4411;陸軍技術学校;ete;3;1930;1970;artillery;chemistry;electronics;mechanics;general_equipment;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+4412;ブラジル国土統計協会（IBGE）;ibge;3;1970;1970;management;mathematics;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+4413;CNP;cnp;3;1970;1970;chemistry;industrial_engineering;training;management;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+4414;戦争省;mdg;3;1930;1970;artillery;general_equipment;management;large_unit_tactics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+4415;ブラジル海軍;T4411;3;1930;1970;small_taskforce_tactics;decentralized_execution;naval_training;seamanship;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x

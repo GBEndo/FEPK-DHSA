@@ -1,0 +1,1780 @@
+#########################################################################
+#
+#		日本・極東追加イベント
+#
+#########################################################################
+###### 追加イベント一覧 ############
+#########################################################################
+#id = 55000
+#id = 55002 日本国号変更
+#id = 55003 大日本帝国誕生
+#id = 55004 日本共和国問題
+#id = 55005 国際表記の中止
+#id = 55006 ヒトラー・ユーゲント来日
+#id = 55010 チャンドラ・ボースの来訪
+#id = 55020 デリー入城
+#id = 55021 インド反逆
+#id = 55030 インド独立義勇軍
+#id = 55031 ビルマ独立義勇軍
+#id = 55032	アウン・サンとの接触
+#id = 55033-6	ビルマ独立闘争
+#id = 55040	第二次日英同盟
+#id = 55041	第二次日英同盟（イギリス側）
+#id = 55042	ドイツのアジア進出（日本が連合寄り）
+#id = 55043	ドイツのアジア進出（日本が枢軸寄り）
+#id = 55044	三国同盟と対米宣戦問題
+#id = 55060 ラーマ８世謎の崩御
+#id = 55090 パキスタン政策スライダー・閣僚指定（パキスタン側）
+#id = 55091 ビルマ政策スライダー・閣僚指定（ビルマ側）
+#id = 55092 マレーシア政策スライダー・閣僚指定（マレーシア側）
+############################
+# 原作の修正点：どちらかといえばvic的なプロ野球イベントを停止し、
+#               東京オリンピックイベントを拡張しています。
+#               また、インド独立イベントの国家タグ変更がDD日本語版だと
+#		うまく動かない為、独断で改変しています。
+############################
+############################
+#資源調整MODでの修正
+#日印戦争に対応するため、デリー入城イベントのトリガーを修正しています
+#https://twitter.com/kazami896
+############################
+
+#########################################################################
+####################### 対支一撃論 ###############################
+
+event = {
+	id = 55000
+	random = no
+	country = JAP
+	
+	decision = {
+		atwar = no
+		flag = Nagata
+		exists = CHI
+		NOT = { alliance = { country = CHI } }
+	}
+	
+	trigger = {
+		ai = no
+	}
+	
+	name = "EVT_55000_NAME"	#対支一撃論と永田の近衛文麿擁立運動
+	desc = "EVT_55000_DESC"	#
+	picture = "parliamentary_scandal"
+	decision_picture = "decision_rough_terrain_equipment_start"
+	
+	date = { day = 1 month = april year = 1935 }
+	offset = 10
+	deathdate = { day = 1 month = may year = 1939 }
+	
+	action = {
+		name = "EVT_55000_ACTA"	#陸軍大臣を通じて近衛文麿による政権を擁立する
+		command = { type = dissent value = 6 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = war which = CHI }
+		command = { type = headofgovernment which = 5034 }	#近衛文麿
+		command = { type = foreignminister	which = 5003 }	#廣田 外務大臣
+		command = { type = ministerofsecurity which = 5563 }	#麻生久
+		command = { type = ministerofintelligence	which = 5006 }	#岡村 寧次
+	}
+	action = {
+		name = "EVT_55000_ACTB"	#無謀なことをするべきではない……。
+		command = { type = sleepevent which = 55000 }
+	}
+}
+####################### 日本国号変更 ###############################
+
+event = { 
+	id = 55002
+	random = no
+	country = JAP
+
+	name = "EVT_55002_NAME"
+	desc = "EVT_55002_DESC"
+	style = 0
+	picture = "anti_comitern_pact"
+
+	date = { day = 1 month = april year = 1936 }
+	offset = 10
+	deathdate = { day = 1 month = may year = 1936 }
+
+	action_a = { # Japanese Empire
+		ai_chance = 100
+		name = "EVT_55002_ACTA"
+		#command = { type = domestic which = political_left value = -1  }
+		command = { type = trigger which = 55003 }
+	}
+	action_b = { # Republic of Japan
+		ai_chance = 0
+		name = "EVT_55002_ACTB"
+		#command = { type = domestic which = democratic value = 1  }
+		#command = { type = domestic which = political_left value = 2  }
+		command = { type = trigger which = 55004 }
+	}
+	action_c = { # no need to rename
+		ai_chance = 0
+		name = "EVT_55002_ACTC"
+		command = { type = domestic which = defense_lobby value = -1  }
+		command = { type = trigger which = 55005 }
+	}
+}
+#########################################################################
+####################### 大日本帝国の誕生 ###############################
+
+event = { 
+	id = 55003
+	random = no
+	country = JAP
+
+	name = "EVT_55003_NAME"
+	desc = "EVT_55003_DESC"
+	style = 0
+	picture = "parliamentary_scandal"
+
+	action_a = { 
+		name = "EVT_55003_ACTA"
+		command = { type = dissent value = -1 }
+	}
+}
+#########################################################################
+####################### 日本共和国問題 ###############################
+
+event = { 
+	id = 55004
+	random = no
+	country = JAP
+
+	name = "EVT_55004_NAME"
+	desc = "EVT_55004_DESC"
+	style = 0
+	picture = "parliamentary_scandal"
+
+	action_a = { 
+		name = "EVT_55004_ACTA"
+		command = { type = dissent value = 6 }
+	}
+}
+#########################################################################
+################### 国際新表記の断念 ###########################
+
+event = { 
+	id = 55005
+	random = no
+	country = JAP
+
+	name = "EVT_55005_NAME"
+	desc = "EVT_55005_DESC"
+	style = 0
+	picture = "parliamentary_scandal"
+
+	action_a = { 
+		name = "EVT_55005_ACTA"
+		command = { type = dissent value = 2 }
+	}
+}
+#########################################################################
+####################### ヒトラー・ユーゲント来日 ###############################
+# Trial event for Ally Flag
+
+event = { 
+	id = 55006
+	random = no
+	country = JAP
+	trigger = {
+		alliance = { country = GER country = JAP }
+		NOT = {	#ヒトラーが暗殺されていないことを示す判定
+			event = 138141
+			event = 130203
+			event = 130213
+			event = 132732
+		}
+	} 
+
+	name = "EVT_55006_NAME"
+	desc = "EVT_55006_DESC"
+	style = 0
+	picture = "youth_movment"
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 180
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = { #
+		name = "EVT_55006_ACTA"
+		command = { type = dissent value = -5 }
+		command = { type = relation which = GER value = 30 }
+		command = { type = resource which = supplies value = -100 } # % of max daily income
+	}
+}
+
+#########################################################################
+####################### チャンドラ・ボースの来訪 ###############################
+
+event = { 
+	id = 55010
+	random = no
+	country = JAP
+
+	trigger = {
+#		leader = 101019
+		control = { province = 1518 data = JAP }
+		control = { province = 1519 data = JAP }
+		war = { country = JAP country = ENG } 
+		NOT = {
+			exists = IND
+		} 
+	} 
+
+	name = "EVT_55010_NAME"
+	desc = "EVT_55010_DESC"
+	style = 0
+	picture = "Albania"
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = { # Foundation of Free India Provisional Government
+		name = "EVT_55010_ACTA"
+		command = { type = relation which = ENG value = -50 }
+		command = { type = trigger which = 55011 }
+	}
+	action_b = { # Candra Bose be disappointed
+		name = "EVT_55010_ACTB"
+		command = { type = sleepleader which = 101019 }
+	}
+}
+#########################################################################
+####################### 自由インド仮政府樹立 ###############################
+
+event = { 
+	id = 55011
+	random = no
+	country = JAP
+
+	name = "EVT_55011_NAME"
+	desc = "EVT_55011_DESC"
+	style = 0
+	picture = "INDS"
+
+	action_a = { #
+		name = "EVT_55011_ACTA"
+		command = { type = add_division value = infantry when = 1 }
+		command = { type = add_division value = militia when = 1 }
+		command = { type = add_division value = militia when = 1 }
+	}
+}
+#########################################################################
+######################## デリー入城 ###############################
+
+event = { 
+	id = 55020
+	random = no
+	country = JAP
+
+	trigger = {
+		NOT = {	exists = IND } 
+		control = { province = 1469 data = JAP }
+		OR = {
+			NOT = { control = { province = 1457 data = -2 } }	#カルカッタ
+			NOT = { control = { province = 1505 data = -2 } }	#ボンベイ
+		}
+		NOT = { event = 90942 }	#TRAP
+	} 
+
+	name = "EVT_55020_NAME"
+	desc = "EVT_55020_DESC"
+	style = 0
+	picture = "Darinyuzyo"
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = { #
+		name = "EVT_55020_ACTA"
+		command = { type = sleepleader which = 101019 }
+		command = { type = independence which = IND value = 1 when = 0 }
+		command = { type = dissent value = -5 }
+		command = { type = sleepevent which = 60682 } # FEPK変更部分 GER-IND
+		command = { type = trigger which = 55021 }
+	}
+}
+#########################################################################
+####################### 英国インド反逆 ###############################
+event = { 
+	id = 55021
+	random = no
+	country = ENG
+
+	name = "EVT_55021_NAME"
+	desc = "EVT_55021_DESC"
+	style = 0
+	picture = "Darinyuzyo"
+
+	action_a = { #
+		name = "EVT_55021_ACTA"	
+		command = { type = independence which = PAK value = 1 when = 0 }
+		command = { type = trigger which = 55022 }
+
+		command = { type = removecore which = 1465 }
+		command = { type = removecore which = 1466 } 
+		command = { type = removecore which = 1479 }
+		command = { type = removecore which = 1478 } 
+		command = { type = removecore which = 1477 } 
+		command = { type = removecore which = 1469 }  
+		command = { type = removecore which = 1470 } 
+		command = { type = removecore which = 1471 }  
+		command = { type = removecore which = 1472 } 
+		command = { type = removecore which = 1456 } 
+		command = { type = removecore which = 1468 }  
+		command = { type = removecore which = 1467 } 
+		command = { type = removecore which = 1464 } 
+		command = { type = removecore which = 1463 }  
+		command = { type = removecore which = 1474 } 
+		command = { type = removecore which = 1460 }  
+		command = { type = removecore which = 1459 }  
+		command = { type = removecore which = 1457 } 
+		command = { type = removecore which = 1458 }  
+		command = { type = removecore which = 1461 } 
+		command = { type = removecore which = 1508 }  
+		command = { type = removecore which = 1462 }  
+		command = { type = removecore which = 1505 }  
+		command = { type = removecore which = 1506 }  
+		command = { type = removecore which = 1507 }  
+		command = { type = removecore which = 1509 } 
+		command = { type = removecore which = 1510 } 
+		command = { type = removecore which = 1511 }  
+		command = { type = removecore which = 1512 }  
+		command = { type = removecore which = 1513 }  
+		command = { type = removecore which = 1514 } 
+		command = { type = removecore which = 1515 } 
+
+		command = { type = removecore which = 1518 } 
+		command = { type = removecore which = 1519 }  
+		command = { type = removecore which = 1284 }  
+		command = { type = removecore which = 1285 } 
+		command = { type = removecore which = 1286 } 
+		command = { type = removecore which = 1287 }  
+		command = { type = removecore which = 1288 }  
+ 
+		command = { type = removecore which = 1454 } 
+		command = { type = removecore which = 1878 }  
+		command = { type = removecore which = 1494 } 
+		command = { type = removecore which = 1481 }
+		command = { type = removecore which = 1480 }
+		command = { type = removecore which = 1482 } 
+		command = { type = removecore which = 1483 }  
+		command = { type = removecore which = 1475 } 
+		command = { type = removecore which = 1476 }  
+
+		command = { type = removecore which = 1516 }
+		command = { type = removecore which = 1517 }
+		command = { type = removecore which = 1289 } 
+		command = { type = removecore which = 1290 } 
+		command = { type = removecore which = 1291 } 
+		command = { type = removecore which = 1898 } 
+		command = { type = removecore which = 1304 } 
+		command = { type = removecore which = 1295 } 
+		command = { type = removecore which = 1296 } 
+		command = { type = removecore which = 1301 } 
+		command = { type = removecore which = 1302 } 
+		command = { type = removecore which = 1346 } 
+		command = { type = removecore which = 1299 } 
+		command = { type = removecore which = 1298 } 
+		command = { type = removecore which = 1300 } 
+		command = { type = removecore which = 1292 } 
+		command = { type = removecore which = 1297 } 
+		command = { type = removecore which = 1877 } 
+	}
+}
+####################### ファシストインド独立宣言 ###############################
+event = {
+	id = 55022
+	random = no
+	country = IND
+
+	name = "EVT_55022_NAME"
+	desc = "EVT_55022_DESC"
+	style = 0
+	picture = "INDdokuritu"
+
+	action_a = { #
+		name = "EVT_55022_ACTA"
+		command = { type = ai which = "ind_1935.ai" }
+		command = { type = alliance which = JAP }
+		command = { type = money value = 200 }
+		command = { type = supplies value = 5000 where = 1469 } # 
+		command = { type = manpowerpool value = 300  } 
+# 2006.08.28 インド閣僚指定を入れました。
+# ガンジーは閣僚を首相→元首に変更した上で元首指定しています。
+# 国政スライダー設定を行っています。
+# by 統制派 
+ 		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = dissent value = -5 }
+		command = { type = ai which = "ind_1935.ai" }
+		command = { type = headofstate which = 59037 }
+		command = { type = headofgovernment which = 59160 }
+		command = { type = foreignminister which = 59043 }
+		command = { type = armamentminister which = 59056 }
+		command = { type = ministerofsecurity which = 59072 }
+		command = { type = ministerofintelligence which = 59086 }
+		command = { type = chiefofstaff which = 59088 }
+		command = { type = chiefofarmy which = 59099 }
+		command = { type = chiefofnavy which = 59107 }
+		command = { type = chiefofair which = 59116 }
+		command = { type = relation which = ENG value = -400 }
+		command = { type = relation which = JAP value = 400 }
+		command = { type = relation which = MAN value = 400 }
+		command = { type = relation which = MEN value = 400 }
+		command = { type = capital which = 1469 }	#Delhi
+
+		# 以下、インドのジョンブル閣僚を抹消
+		command = { type = sleepminister which = 59001 } # 
+		command = { type = sleepminister which = 59002 } # 
+		command = { type = sleepminister which = 59003 } # 
+		command = { type = sleepminister which = 59004 } # 
+		command = { type = sleepminister which = 59005 } # 
+		command = { type = sleepminister which = 59006 } # 
+		command = { type = sleepminister which = 59007 } # 
+		command = { type = sleepminister which = 59008 } # 
+		command = { type = sleepminister which = 59009 } # 
+		command = { type = sleepminister which = 59010 } # 
+		command = { type = sleepminister which = 59032 } # 
+		command = { type = sleepminister which = 59033 } # 
+		command = { type = sleepminister which = 59034 } # 
+		command = { type = sleepminister which = 59038 } # 
+		command = { type = sleepminister which = 59058 } # 
+		command = { type = sleepminister which = 59071 } # 
+		command = { type = sleepminister which = 59082 } # 
+		command = { type = sleepminister which = 59084 } # 
+		command = { type = sleepminister which = 59090 } # 
+		command = { type = sleepminister which = 59102 } # 
+		command = { type = sleepminister which = 59103 } # 
+		command = { type = sleepminister which = 59110 } # 
+		command = { type = sleepminister which = 59117 } # 
+
+		# 以下、インドのジョンブル司令官を抹消
+		# 名前と画像で勝手に判断したので間違いがあるかもしれないが
+		command = { type = sleepleader which = 505002 }
+		command = { type = sleepleader which = 505007 }
+		command = { type = sleepleader which = 505011 }
+		command = { type = sleepleader which = 505012 }
+		command = { type = sleepleader which = 505013 }
+		command = { type = sleepleader which = 505014 }
+		command = { type = sleepleader which = 505015 }
+		command = { type = sleepleader which = 505016 }
+		command = { type = sleepleader which = 505017 }
+		command = { type = sleepleader which = 505020 }
+		command = { type = sleepleader which = 505021 }
+		command = { type = sleepleader which = 505022 }
+		command = { type = sleepleader which = 505023 }
+		command = { type = sleepleader which = 505024 }
+		command = { type = sleepleader which = 505025 }
+		command = { type = sleepleader which = 505027 }
+		command = { type = sleepleader which = 505028 }
+		command = { type = sleepleader which = 505029 }
+		command = { type = sleepleader which = 505030 }
+		command = { type = sleepleader which = 505031 }
+		command = { type = sleepleader which = 505032 }
+		command = { type = sleepleader which = 505033 }
+		command = { type = sleepleader which = 505035 }
+		command = { type = sleepleader which = 505036 }
+		command = { type = sleepleader which = 505039 }
+		command = { type = sleepleader which = 505041 }
+		command = { type = sleepleader which = 505042 }
+		command = { type = sleepleader which = 505045 }
+		command = { type = sleepleader which = 505046 }
+		command = { type = sleepleader which = 505047 }
+		command = { type = sleepleader which = 505049 }
+		command = { type = sleepleader which = 505050 }
+		command = { type = sleepleader which = 505051 }
+		command = { type = sleepleader which = 505052 }
+		command = { type = sleepleader which = 505054 }
+		command = { type = sleepleader which = 505055 }
+		command = { type = sleepleader which = 505059 }
+		command = { type = sleepleader which = 505061 }
+		command = { type = sleepleader which = 505062 }
+		command = { type = sleepteam which = 23018 }	#ヴィクター・ロード・リンリスゴー
+		command = { type = sleepleader which = 505063 }
+		command = { type = sleepleader which = 505064 }
+		command = { type = sleepleader which = 505065 }
+		command = { type = sleepleader which = 505066 }
+		command = { type = sleepleader which = 505069 }
+		command = { type = sleepleader which = 505070 }	#メサーヴィー
+		command = { type = sleepteam which = 23017 }	#フランク・メサーヴィー
+		command = { type = sleepleader which = 505074 }
+		command = { type = sleepleader which = 505075 }
+		command = { type = sleepleader which = 505076 }
+		command = { type = sleepleader which = 505078 }
+		command = { type = sleepleader which = 505081 }
+		command = { type = sleepleader which = 505084 }
+		command = { type = sleepleader which = 505086 }
+		command = { type = sleepleader which = 505092 }
+		command = { type = sleepleader which = 505093 }
+		command = { type = sleepleader which = 505094 }
+		command = { type = sleepleader which = 505096 }
+		command = { type = sleepleader which = 505097 }
+		command = { type = sleepleader which = 505098 }
+		command = { type = sleepleader which = 505099 }
+		command = { type = sleepleader which = 505103 }
+		command = { type = sleepleader which = 505104 }
+		command = { type = sleepleader which = 505105 }	#ウェーヴェル
+		command = { type = sleepteam which = 23016 }	#アーチボルド・ウェーヴェル
+		command = { type = sleepleader which = 505106 }
+		command = { type = sleepleader which = 505107 }
+		command = { type = sleepleader which = 505112 }
+		command = { type = sleepleader which = 505113 }
+		command = { type = sleepleader which = 505114 }
+		command = { type = sleepleader which = 505117 }
+		command = { type = sleepleader which = 505118 }
+		command = { type = sleepleader which = 505119 }
+		command = { type = sleepleader which = 505121 }
+		command = { type = sleepleader which = 505122 }
+		command = { type = sleepleader which = 505123 }
+		command = { type = sleepleader which = 505125 }
+		command = { type = sleepleader which = 505126 }
+		command = { type = sleepleader which = 505127 }
+		command = { type = sleepleader which = 505128 }
+		command = { type = sleepleader which = 505129 }
+		command = { type = sleepleader which = 505130 }
+		command = { type = sleepleader which = 505133 }	#パリー
+		command = { type = sleepteam which = 23019 }	#ウィリアム・E・パリー
+		command = { type = sleepleader which = 505134 }
+		command = { type = sleepleader which = 505139 }
+		command = { type = sleepleader which = 505140 }
+		command = { type = sleepleader which = 505141 }
+		command = { type = sleepleader which = 505142 }
+		command = { type = sleepleader which = 505143 }
+		command = { type = sleepleader which = 505144 }
+		command = { type = sleepleader which = 505150 }
+		command = { type = sleepleader which = 505151 }
+		command = { type = sleepleader which = 505152 }
+		command = { type = sleepleader which = 505153 }
+		command = { type = sleepleader which = 505154 }
+		command = { type = sleepleader which = 505155 }
+		command = { type = sleepleader which = 505159 }
+		command = { type = sleepleader which = 505161 }
+		command = { type = sleepleader which = 505163 }
+		command = { type = sleepleader which = 505168 }
+		command = { type = sleepleader which = 505169 }
+		command = { type = sleepleader which = 505170 }
+		command = { type = sleepleader which = 505175 }
+		command = { type = sleepleader which = 505177 }
+
+		command = { type = secedeprovince which = PAK value = 1494 } #Pakistan #FEPKBETA5.2
+		command = { type = secedeprovince which = PAK value = 1481 }
+		command = { type = secedeprovince which = PAK value = 1482 }
+		command = { type = secedeprovince which = PAK value = 1483 }
+		command = { type = secedeprovince which = PAK value = 1475 }
+		command = { type = secedeprovince which = PAK value = 1480 }
+
+		command = { type = add_division value = hq when = 1 }
+		command = { type = add_division value = infantry when = 1 }
+		command = { type = add_division value = infantry when = 1 }
+		command = { type = add_division value = infantry when = 1 }
+		command = { type = add_division value = infantry when = 1 }
+		command = { type = add_division value = infantry when = 1 }
+		command = { type = add_division value = infantry when = 1 }
+		command = { type = add_division value = infantry when = 1 }
+		command = { type = add_division value = infantry when = 1 }
+		command = { type = add_division value = infantry when = 1 }
+		command = { type = add_division value = infantry when = 1 }
+		command = { type = add_division value = infantry when = 1 }
+		command = { type = add_division value = infantry when = 1 }
+	}
+}
+#########################################################################
+####################### インド独立義勇軍 ##########################
+
+event = { 
+	id = 55030
+	random = no
+	country = JAP
+
+	trigger = {
+		control = { province = 1353 data = -3 } 
+		war = { country = JAP country = ENG } 
+		leader = 101019
+		NOT = {
+			exists = IND
+		}
+	}
+
+	name = "EVT_55030_NAME"
+	desc = "EVT_55030_DESC"
+	style = 0
+	picture = "INDS"
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 60
+	deathdate = { day = 1 month = march year = 1945 }
+
+	action_a = { #
+		name = "EVT_55030_ACTA"
+		command = { type = add_corps value = land when = -1 where = 1353 } # 
+		command = { type = add_division value = hq when = 0 }
+		command = { type = add_division value = infantry when = 2 }
+		command = { type = add_division value = militia when = 1 }
+	}
+}
+####################### ビルマ独立義勇軍 ##########################
+
+event = { 
+	id = 55031
+	random = no
+	country = JAP
+
+	trigger = {
+		control = { province = 1299 data = -3 } 
+		war = { country = JAP country = ENG } 
+		#leader = 101015
+		event = 55032
+		NOT = {
+			exists = BUR
+		}
+	}
+
+	name = "EVT_55031_NAME"
+	desc = "EVT_55031_DESC"
+	style = 0
+	picture = "INDS"
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 60
+	deathdate = { day = 1 month = march year = 1945 }
+
+	action_a = { #
+		name = "EVT_55031_ACTA"
+		command = { type = add_corps value = land when = -1 where = 1299 } # 
+		command = { type = add_division value = hq when = 0 }
+		command = { type = add_division value = infantry when = 1 }
+		command = { type = add_division value = militia when = 1 }
+	}
+}
+
+event = {
+	id = 55032
+	random = no
+	country = JAP
+	decision = {
+		NOT = { 
+			ispuppet = JAP
+			exists = BUR
+			alliance = { country = ENG }
+		}
+	}
+	decision_trigger = {
+		NOT = { control = { province = 1245 data = -2 } }
+	}
+	trigger = {
+		year = 1941
+		month = 1
+		NOT = {
+			exists = BUR
+			alliance = { country = ENG }
+			ispuppet = JAP
+		}
+	}
+	
+	decision_picture = "decision_GEAC"
+	picture = "INDS"
+	
+	name = "EVT_55032_NAME"	#アウン・サンとの接触
+	desc = "EVT_55032_DESC"	#
+	decision_desc = "EVT_55032_DECISION_DESC"	#
+		
+	date = { day = 0 month = 9 year = 1938 }
+	offset = 16
+	deathdate = { day = 1 month = march year = 1945 }
+	
+	action = {
+		name = "EVT_55032_ACTA"	#彼と協力し、ビルマに独立をもたらそう！
+		ai_chance = 100
+		command = { type = wakeleader which = 101015 }
+		command = { type = relation which = ENG value = -15 }
+		command = { type = sleepevent which = 55033 }	
+	}
+	action = {
+		ai_chance = 0
+		name = "EVT_55032_ACTB"	#独立戦争のために彼らを全面的に支援しよう
+		command = { type = wakeleader which = 101015 }
+		command = { type = relation which = ENG value = -30 }
+		command = { type = belligerence which = JAP value = 10 } # 日本の好戦度 +10
+	}
+}
+
+event = {
+	id = 55033
+	country = JAP
+
+	decision = {
+		OR = {
+			control = { province = 1299 data = ENG }	#ラングーン
+			control = { province = 1469 data = ENG }	#デリー
+			control = { province = 1353 data = ENG }	#シンガポール
+			control = { province = 1670 data = ENG }	#ラバウル
+		}
+		NOT = {
+			atwar = JAP
+			ispuppet = JAP
+			alliance = { country = JAP country = GER }     #JAP not allied to GER
+			alliance = { country = JAP country = ENG }     #JAP not allied to ENG
+		}
+		event = 55032
+		exists = GER
+	}
+	decision_trigger = { }
+	
+	trigger = {
+		OR = {
+			control = { province = 1299 data = ENG }	#ラングーン
+			control = { province = 1469 data = ENG }	#デリー
+			control = { province = 1353 data = ENG }	#シンガポール
+			control = { province = 1670 data = ENG }	#ラバウル
+			
+		}
+		NOT = {
+			atwar = JAP
+			ispuppet = JAP
+			alliance = { country = JAP country = GER }     #JAP not allied to GER
+			alliance = { country = JAP country = ENG }     #JAP not allied to ENG
+		}
+		event = 55032
+		exists = GER
+	}
+	
+	name = "EVT_55033_NAME"	#大英帝国への最後通牒？
+	desc = "EVT_55033_DESC"	#
+	decision_picture = "decision_GEAC"
+	picture = "INDS"
+	
+	date = { day = 1 month = january year = 1937 }
+	offset = 50
+	deathdate = { day = 29 month = december year = 1950 }
+	
+	action = {
+		name = "EVT_55033_ACTA"	#今の我々には余裕はない
+		ai_chance = 13
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = dissent value = 1 }
+	}	
+	action = {
+		ai_chance = 87
+		name = "EVT_55033_ACTB"
+		command = { type = belligerence value = 10 }
+		command = { type = trigger which = 55034 }
+	}
+}
+
+event = {
+	id = 55034
+	country = ENG
+	
+	name = "EVT_55034_NAME"	#日本からの最後通牒
+	desc = "EVT_55034_DESC"	#
+	picture = "INDS"
+	
+	action = {
+		name = "EVT_55034_ACTA"	#回答することさえ煩わしい
+		ai_chance = 99
+		command = { type = trigger which = 55035 }
+	}
+	action = {
+		name = "EVT_55034_ACTB"	#日本の要求に応じる
+		ai_chance = 1
+		command = { type = dissent value = 20 }
+		command = { type = removecore which = 1494 } #India
+		command = { type = removecore which = 1481 }
+		command = { type = removecore which = 1482 }
+		command = { type = removecore which = 1483 }
+		command = { type = removecore which = 1480 }
+		command = { type = removecore which = 1479 }
+		command = { type = removecore which = 1478 }
+		command = { type = removecore which = 1475 }
+		command = { type = removecore which = 1476 }
+		command = { type = removecore which = 1474 }
+		command = { type = removecore which = 1477 }
+		command = { type = removecore which = 1469 }
+		command = { type = removecore which = 1468 }
+		command = { type = removecore which = 1466 }
+		command = { type = removecore which = 1465 }
+		command = { type = removecore which = 1467 }
+		command = { type = removecore which = 1518 }
+		command = { type = removecore which = 1519 }
+		command = { type = removecore which = 1516 }
+		command = { type = removecore which = 1517 }
+		command = { type = removecore which = 1470 }
+		command = { type = removecore which = 1471 }
+		command = { type = removecore which = 1472 }
+		command = { type = removecore which = 1460 }
+		command = { type = removecore which = 1459 }
+		command = { type = removecore which = 1457 }
+		command = { type = removecore which = 1456 }
+		command = { type = removecore which = 1285 }
+		command = { type = removecore which = 1284 }
+		command = { type = removecore which = 1454 }
+		command = { type = removecore which = 1286 }
+		command = { type = removecore which = 1288 }
+		command = { type = removecore which = 1287 }
+		command = { type = removecore which = 1878 }
+		command = { type = removecore which = 1877 }
+		command = { type = removecore which = 1464 }
+		command = { type = removecore which = 1463 }
+		command = { type = removecore which = 1458 }
+		command = { type = removecore which = 1461 }
+		command = { type = removecore which = 1462 }
+		command = { type = removecore which = 1505 }
+		command = { type = removecore which = 1506 }
+		command = { type = removecore which = 1507 }
+		command = { type = removecore which = 1508 }
+		command = { type = removecore which = 1512 }
+		command = { type = removecore which = 1513 }
+		command = { type = removecore which = 1511 }
+		command = { type = removecore which = 1510 }
+		command = { type = removecore which = 1509 }
+		command = { type = removecore which = 1514 }
+		command = { type = removecore which = 1515 }
+		command = { type = removecore which = 1898 } #Burma
+		command = { type = removecore which = 1291 }
+		command = { type = removecore which = 1292 }
+		command = { type = removecore which = 1290 }
+		command = { type = removecore which = 1289 }
+		command = { type = removecore which = 1295 }
+		command = { type = removecore which = 1296 }
+		command = { type = removecore which = 1297 }
+		command = { type = removecore which = 1300 }
+		command = { type = removecore which = 1301 }
+		command = { type = removecore which = 1298 }
+		command = { type = removecore which = 1299 }
+		command = { type = removecore which = 1302 }
+		command = { type = removecore which = 1346 }
+		command = { type = removecore which = 1303 }
+		command = { type = removecore which = 1304 }
+		command = { type = secederegion which = JAP value = "Indochine" }	#Burma
+		command = { type = inherit which = NEP }
+		command = { type = inherit which = BHU }
+		command = { type = secederegion which = JAP value = "India" }	#India
+		#To Japan, Pacific area
+		command = { type = secedeprovince which = JAP value = 1763 }
+		command = { type = secedeprovince which = JAP value = 1611 }
+		command = { type = secedeprovince which = JAP value = 1683 }
+		command = { type = secedeprovince which = JAP value = 1614 }
+		command = { type = secedeprovince which = JAP value = 1622 }
+		command = { type = secedeprovince which = JAP value = 1684 }
+		command = { type = secedeprovince which = JAP value = 1685 }
+		command = { type = secedeprovince which = JAP value = 1686 }
+		command = { type = secedeprovince which = JAP value = 1767 }
+		command = { type = secedeprovince which = JAP value = 1768 }
+		command = { type = secedeprovince which = JAP value = 1769 }
+		command = { type = secedeprovince which = JAP value = 1770 }
+		command = { type = secedeprovince which = JAP value = 1761 }
+		command = { type = secedeprovince which = JAP value = 1760 }
+		command = { type = secedeprovince which = JAP value = 1759 }
+		command = { type = secedeprovince which = JAP value = 1758 }
+		command = { type = secedeprovince which = JAP value = 1757 }
+		command = { type = secedeprovince which = JAP value = 1752 }
+		command = { type = secedeprovince which = JAP value = 1753 }
+		command = { type = secedeprovince which = JAP value = 1754 }
+		command = { type = secedeprovince which = JAP value = 1755 }
+		#To Japan, maylay area
+		command = { type = secedeprovince which = JAP value = 1349 }
+		command = { type = secedeprovince which = JAP value = 1350 }
+		command = { type = secedeprovince which = JAP value = 1315 }
+		command = { type = secedeprovince which = JAP value = 1351 }
+		command = { type = secedeprovince which = JAP value = 1352 }
+		command = { type = secedeprovince which = JAP value = 1353 }
+		command = { type = secedeprovince which = JAP value = 1644 }
+		command = { type = secedeprovince which = JAP value = 1646 }
+		command = { type = secedeprovince which = JAP value = 1647 }
+		command = { type = trigger which = 55036 }
+
+	}
+}
+
+event = {
+	id = 55035
+	country = JAP
+	
+	name = "EVT_55035_NAME"	#英国が最後通牒を拒否
+	desc = "EVT_55035_DESC"	#
+	style = 0
+	picture = "churchill"
+	
+	action_a = {
+		name = "EVT_55035_ACTA"	#宣戦布告だ！
+		ai_chance = 99
+		command = { type = war which = ENG }
+	}
+	
+	action_b = {
+		name = "EVT_55035_ACTB"	#引き下がろう、戦争の危険は冒せない
+		ai_chance = 1
+		command = { type = dissent value = 1 }
+		command = { type = domestic which = interventionism value = -1 }
+	}
+}
+
+event = {
+	id = 55036
+	country = JAP
+	
+	name = "EVT_55036_NAME"	#英国が最後通牒を受諾
+	desc = "EVT_55036_DESC"	#
+	picture = "Darinyuzyo"
+	
+	action_a = {
+		name = "EVT_55036_ACTA"	#素晴らしい！
+		command = { type = dissent value = -15 }
+	}
+}
+
+	
+
+event = {
+	id = 55040
+	 random = no
+	 country = ENG
+
+	decision = {
+		#NOT = { flag = JAPtripartite }
+		NOT = { 
+			alliance = { country = JAP country = GER }
+			alliance = { country = JAP country = ENG }
+			alliance = { country = JAP country = USA }
+			alliance = { country = JAP country = SOV }
+			puppet = { country = JAP country = USA }
+			puppet = { country = JAP country = CSA }
+			puppet = { country = JAP country = SOV }
+			war = { country = JAP country = ENG }
+			war = { country = JAP country = USA }
+			war = { country = JAP country = SOV }
+			war = { country = JAP country = CHI }
+			puppet = { country = CHI country = JAP }
+		}
+		war = { country = ENG country = GER }
+		control = { province = 1494 data = -2 }
+	}
+	
+	decision_trigger = {
+		OR = {
+			AND = { 
+				NOT = {	atwar = JAP }
+				relation = { which = JAP value = 100 }
+			}
+			AND = { 
+				NOT = {	atwar = JAP }
+				NOT = { relation = { which = JAP value = 100 } }
+				NOT = { belligerence = { country = JAP value = 1 } }
+			}
+		}
+	}
+
+	trigger = {	
+		OR = {
+			NOT = { flag = JAPtripartite }
+			event = 56011
+			event = 56051
+		}
+		random = 50 
+		NOT = { 
+			alliance = { country = JAP country = GER }
+			alliance = { country = JAP country = ENG }
+			alliance = { country = JAP country = USA }
+			alliance = { country = JAP country = SOV }
+			puppet = { country = JAP country = USA }
+			puppet = { country = JAP country = CSA }
+			puppet = { country = JAP country = SOV }
+			war = { country = JAP country = ENG }
+			war = { country = JAP country = USA }
+			war = { country = JAP country = SOV }
+			war = { country = JAP country = CHI }
+			puppet = { country = CHI country = JAP }
+		}
+		war = { country = ENG country = GER }
+		control = { province = 1494 data = -2 }
+		OR = {
+			AND = { 
+				NOT = {	atwar = JAP }
+				relation = { which = JAP value = 100 }
+			}
+			AND = { 
+				NOT = {	atwar = JAP }
+				NOT = { relation = { which = JAP value = 100 } }
+				NOT = { belligerence = { country = JAP value = 1 } }
+			}
+		}
+	}
+
+	name = "EVT_55040_NAME"	#第二次日英同盟
+	desc = "EVT_55040_DESC"	#
+	style = 0
+	picture = "anglo-japanese_alliance"
+	decision_picture = "decision_negotiaton"
+
+
+	date = { day = 0 month = 0 year = 1936 }
+	offset = 10
+	deathdate = { day = 29 month = 11 year = 1963 }
+
+	action_a = {
+		ai_chance = 70
+		name = "EVT_55040_ACTA"
+		command = { type = trigger which = 55041 }
+	}
+	action_b = {
+		ai_chance = 30
+		name = "EVT_55040_ACTB"
+		command = { }
+	}
+}
+
+event = {
+	id = 55041
+	 random = no
+	 country = JAP
+
+	name = "EVT_55041_NAME"	#英国からの同盟提案
+	desc = "EVT_55041_DESC"	#
+	style = 0
+	picture = "anglo-japanese_alliance"
+
+	action_a = {
+		ai_chance = 60
+		name = "EVT_55041_ACTA"
+		command = { type = relation which = ENG value = 100 }
+		command = { type = alliance which = ENG }
+		command = { type = sleepevent which = 55042 }
+		command = { type = sleepevent which = 55043 }
+		command = { type = domestic which = interventionism value = 1 }
+	}
+	action_b = {
+		ai_chance = 30
+		name = "EVT_55041_ACTB"
+		command = { type = relation which = ENG value = -50 }
+		command = { type = sleepevent which = 55042 }
+		command = { type = sleepevent which = 55043 }
+	}
+	action_c = {
+		ai_chance = 10
+		name = "EVT_55041_ACTC"
+		command = { type = war which = ENG }
+		command = { type = sleepevent which = 55042 }
+		command = { type = sleepevent which = 55043 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = dissent value = 5 }
+		command = { type = belligerence which = JAP value = 10 }
+	}
+}
+
+event = {
+	id = 55042
+	 random = no
+	 country = JAP
+
+	decision = {
+		atwar = no
+		exists = USA
+		NOT = { flag = JAPtripartite }
+		NOT = { 
+			alliance = { country = JAP country = SOV } 
+			alliance = { country = JAP country = GER } 
+		}
+		alliance = { country = IND country = GER }
+		control = { province = 1469 data = IND }
+		government = democratic
+	}
+	decision_trigger = {
+		NOT = { non_aggression = { country = JAP country = ENG } }
+		NOT = { non_aggression = { country = JAP country = GER } }
+	}
+
+	trigger = {
+		random = 36
+		atwar = no
+		exists = USA
+		NOT = { flag = JAPtripartite }
+		NOT = { 
+			alliance = { country = JAP country = SOV } 
+			alliance = { country = JAP country = GER } 
+		}
+		alliance = { country = IND country = GER }
+		control = { province = 1469 data = IND }
+		government = democratic
+	}
+
+	name = "EVT_55042_NAME"	#ドイツのアジア進出
+	desc = "EVT_55042_DESC"	#
+	style = 0
+	picture = "tripartite"
+	decision_picture = "decision_Pearl_Harbor"
+	
+
+	date = { day = 0 month = 0 year = 1936 }
+	offset = 10
+	deathdate = { day = 29 month = 11 year = 1963 }
+
+	action_a = {
+		ai_chance = 70
+		name = "EVT_55042_ACTA"
+		command = { type = war which = GER }
+		command = { type = sleepevent which = 55041 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = dissent value = -3 }
+	}
+	action_b = {
+		ai_chance = 10
+		name = "EVT_55042_ACTB"
+		command = { type = war which = ENG }
+		command = { type = war which = HOL }
+		command = { type = dissent value = 5 }
+		command = { type = belligerence which = JAP value = 50 }
+		command = { type = sleepevent which = 55041 }
+	}
+	action_c = {
+		ai_chance = 20
+		name = "EVT_55042_ACTC"
+		command = { }
+	}
+}
+
+event = {
+	id = 55043
+	 random = no
+	 country = JAP
+
+	decision = {
+		atwar = no
+		NOT = { alliance = { country = JAP country = SOV } }
+		NOT = { alliance = { country = JAP country = GER } }
+		alliance = { country = IND country = GER }
+		control = { province = 1469 data = IND }
+		OR = { 
+			government = fascist
+			flag = JAPtripartite
+		}
+
+	}
+	decision_trigger = {
+		NOT = { non_aggression = { country = JAP country = ENG } }
+		NOT = { non_aggression = { country = JAP country = GER } }
+	}
+
+	trigger = {
+		random = 36
+		atwar = no
+		NOT = { alliance = { country = JAP country = SOV } }
+		NOT = { alliance = { country = JAP country = GER } }
+		alliance = { country = IND country = GER }
+		control = { province = 1469 data = IND }
+		OR = { 
+			government = fascist
+			flag = JAPtripartite
+		}
+		NOT = { non_aggression = { country = JAP country = ENG } }
+		NOT = { non_aggression = { country = JAP country = GER } }
+	}
+
+	name = "EVT_55042_NAME"	#
+	desc = "EVT_55043_DESC"	#
+	style = 0
+	picture = "tripartite"
+	decision_picture = "decision_Pearl_Harbor"
+
+	date = { day = 0 month = 0 year = 1936 }
+	offset = 10
+	deathdate = { day = 29 month = 11 year = 1963 }
+
+	action_a = {
+		ai_chance = 5
+		name = "EVT_55042_ACTA"
+		command = { type = war which = GER }
+		command = { type = sleepevent which = 55041 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = dissent value = 5 }
+	}
+	action_b = {
+		ai_chance = 70
+		name = "EVT_55042_ACTB"
+		command = { type = war which = ENG }
+		command = { type = war which = HOL }		
+		command = { type = sleepevent which = 55041 }
+	}
+	action_c = {
+		ai_chance = 25
+		name = "EVT_55043_ACTC"
+		command = { }
+	}
+}
+
+
+event = {
+	id = 55044
+	 random = no
+	 country = JAP
+
+	trigger = {
+		random = 35
+		NOT = { event = 55045 }
+		atwar = no
+		flag = JAPtripartite
+		war = { country = USA country = GER }
+		NOT = { war = { country = USA country = JAP } }
+		NOT = { non_aggression = { country = JAP country = USA } }
+		#attack = USA
+		NOT = { region = { region = "Germany" country = USA value = 10 } }
+		NOT = { region = { region = "France" country = USA value = 10 } }
+		NOT = { region = { region = "Italy" country = USA value = 10 } }
+		NOT = { region = { region = "Denmark" country = USA value = 10 } }
+		NOT = { region = { region = "Spain" country = USA value = 10 } }
+	}
+
+	name = "EVT_55044_NAME"	#三国同盟と対米宣戦問題
+	desc = "EVT_55044_DESC"	#
+	style = 0
+	picture = "gozenkaigi"
+
+	date = { day = 0 month = 0 year = 1936 }
+	offset = 3
+	deathdate = { day = 29 month = 11 year = 1963 }
+
+	action_a = {	
+		ai_chance = 70
+		name = "EVT_55044_ACTA"	#同盟に基づき対米宣戦すべし
+		command = { type = war which = USA }
+		command = { type = relation which = GER value = 100 }
+		command = { type = dissent value = 3 }
+	}
+	action_b = {
+		ai_chance = 30
+		name = "EVT_55044_ACTB"	#今はまだその時ではない
+		command = { type = relation which = GER value = -50 }
+		command = { type = dissent value = 3 }
+	}
+}
+
+event = {
+	id = 55045
+	 random = no
+	 country = JAP
+
+	decision = {
+		NOT = { event = 55044 }
+		atwar = no
+		flag = JAPtripartite
+		war = { country = USA country = GER }
+		NOT = { war = { country = USA country = JAP } }
+		NOT = { non_aggression = { country = JAP country = USA } }
+		#attack = USA
+	}
+	decision_trigger = { }
+	trigger = { 
+		ai = no
+	}
+
+	name = "EVT_55044_NAME"	#三国同盟と対米宣戦問題
+	desc = "EVT_55044_DESC"	#
+	style = 0
+	picture = "gozenkaigi"
+	decision_picture = "decision_Pearl_Harbor"
+
+	date = { day = 0 month = 0 year = 1936 }
+	offset = 3
+	deathdate = { day = 29 month = 11 year = 1963 }
+
+	action_a = {	
+		ai_chance = 70
+		name = "EVT_55044_ACTA"	#同盟に基づき対米宣戦すべし
+		command = { type = war which = USA }
+		command = { type = relation which = GER value = 100 }
+		command = { type = dissent value = 3 }
+	}
+	action_b = {
+		ai_chance = 30
+		name = "EVT_55044_ACTB"	#今はまだその時ではない
+		command = { type = relation which = GER value = -50 }
+		command = { type = dissent value = 3 }
+	}
+}
+
+#枢軸国によるロシア開発
+event = {
+	id = 55050
+	random = no
+	country = GER
+	trigger = {
+		event = 55330
+		alliance = { country = GER country = RUS }
+		NOT = { exists = SOV }
+		money = 200
+		random = 40
+	}
+	decision = {
+		event = 55330
+		alliance = { country = GER country = RUS }
+		NOT = { exists = SOV }
+		#money = 200
+	}
+	decision_trigger = {
+		money = 1000
+	}
+	
+	name = "EVT_55050_NAME"	#ドイツによるロシア開発
+	desc = "EVT_55050_DESC"	#
+	style = 0
+	decision_picture = "decision_ersatz_conversion"
+	picture = "factory"
+
+	date = { day = 1 month = april year = 1943 }
+	offset = 10
+	deathdate = { day = 1 month = may year = 1964 }
+	
+	action = {
+		name = "EVT_55050_ACTA"	#
+		command = { type = relation which = RUS value = 30 } 
+		command = { type = money value = -1000 }
+		command = { type = event which = 55051 where = -1 when = 30 }
+	}
+	action = {
+		name = "EVT_55050_ACTB"	#ロシア人に出してやるような金はない
+		command = { type = relation which = RUS value = -10 } 
+	}
+}
+
+event = {
+	id = 55051
+	country = GER
+	
+	name = "EVT_55051_NAME"	#東に居場所を求める者達来たれ！
+	desc = "EVT_55051_DESC"	#
+	
+	action = {
+		name = "EVT_55051_ACTA"	#I.G.ファルベン ― ロシア人に科学技術というものをお見せしよう	#7217
+		ai_chance = 33
+		command = { type = trigger which = 55052 }
+		command = { type = relation which = RUS value = 10 }
+	}
+	action = {
+		name = "EVT_55051_ACTB"	#VW-ポルシェ ― モスクワまでベルリンまで国民車で旅しよう	#7218
+		ai_chance = 33
+		command = { type = trigger which = 55053 }
+		command = { type = relation which = RUS value = 10 }
+	}
+	action = {
+		name = "EVT_55051_ACTC"	#ユンカース ― ドイツの航空技術を東へ飛び立たせよう	#7219
+		ai_chance = 33
+		command = { type = trigger which = 55054 }
+		command = { type = relation which = RUS value = 10 }
+	}
+	action = {
+		name = "EVT_55051_ACTD"	#中止だ！　国家には私企業の欲望に加担する余裕はない！
+		ai_chance = 1
+		command = { type = dissent value = 1 }
+		command = { type = money value = 900 }
+	}
+}
+
+event = {
+	id = 55052
+	country = RUS
+	
+	name = "EVT_55052_NAME"	#ロシアにおけるI.G.ファルベン
+	desc = "EVT_55052_DESC"	#
+	
+	action = {
+		name = "EVT_55052_ACTA"	#良いことだ……少なくとも短期的には
+		command = { type = sleepteam which = 7216 }
+		command = { type = waketeam which = 7217 }
+		
+		command = { type = add_prov_resource which = 1780 value = 168 where = oil } 	#石油126＠カザン
+		command = { type = add_prov_resource which = 1780 value = 8 where = energy } 	#ガス
+		command = { type = construct which = ic where = 1782 value = 1 }	#イジェフスク
+		command = { type = construct which = ic where = 1783 value = 1 }	#キーロフ
+		command = { type = construct which = ic where = 1775 value = 1 }	#ヨシカル・オラ
+		command = { type = construct which = ic where = 1776 value = 1 }	#チェボクサリ
+	}
+}
+
+event = {
+	id = 55053
+	country = RUS
+	
+	name = "EVT_55053_NAME"	#ロシアにおけるフォルクスワーゲン
+	desc = "EVT_55053_DESC"	#戦災における産業構造の空洞化を埋めるためにロシア政府はドイツと交渉を重ね、ドイツ政府はこれに応じて我が国への企業の進出を許可した。両国政府の認可のもとでフォルクスワーゲンとポルシェの二社による合同グループがニジニ・ノヴゴロド（旧ゴーリキー）に工場を構えた。この地に元々存在していたゴーリキー自動車工場（GAZ）は内戦によって設備が破壊もしくは整備のないまま両軍により利用されて荒廃しており、構内の設備はほぼすべてを新設する必要があった。ただしもともと100万台のフォード製トラックをライセンス生産していただけの事はあり潜在能力については大陸で最大級と言って差し支えない。ドイツの指導によってここでロシア人にとっての「国民車」も出来上がるならば、ロシアの自動車の未来は明るい。
+	
+	action = {
+		name = "EVT_55053_ACTA"	#Berlin to Moscow, in one tank!
+		command = { type = waketeam which = 7218 }
+		command = { type = add_prov_resource which = 168 value = 12 where = metal } 	#鉄10＠ゴーリキー
+		command = { type = construct which = ic where = 166 value = 1 }	#ニジニ・ノヴゴロド地方
+		command = { type = construct which = ic where = 167 value = 1 }
+		command = { type = construct which = ic where = 168 value = 3 }
+		command = { type = construct which = ic where = 169 value = 1 }
+	}
+}
+
+event = {
+	id = 55054
+	country = RUS
+	
+	name = "EVT_55054_NAME"	#ロシアにおけるユンカース
+	desc = "EVT_55054_DESC"	#
+	
+	action = {
+		name = "EVT_55054_ACTA"	#彼らは何を作り出すのであろうな？
+		command = { type = waketeam which = 7219 }
+		command = { type = activate which = 15500 }
+		command = { type = gain_tech which = 15500 }
+		command = { type = gain_tech which = 15110 }
+		command = { type = construct which = ic where = 176 value = 1 }	#ルイビンスク
+		command = { type = construct which = ic where = 167 value = 1 }	#モスクワ
+	}
+}
+
+event = {
+	id = 55055
+	random = no
+	country = JAP
+	trigger = {
+		event = 55050
+		alliance = { country = JAP country = SIB }
+		NOT = { exists = SOV }
+		money = 200
+		random = 40
+	}
+	decision = {
+		event = 55050
+		alliance = { country = JAP country = SIB }
+		NOT = { exists = SOV }
+		#money = 200
+	}
+	decision_trigger = {
+		money = 1000
+	}
+	
+	name = "EVT_55055_NAME"	#日本によるシベリア開発
+	desc = "EVT_55055_DESC"	#
+	style = 0
+	decision_picture = "decision_ersatz_conversion"
+	picture = "factory"
+
+	date = { day = 1 month = april year = 1943 }
+	offset = 10
+	deathdate = { day = 1 month = may year = 1964 }
+	
+	action = {
+		name = "EVT_55050_ACTA"	#シベリアへの進出を行いたい企業を探すとしよう
+		command = { type = relation which = SIB value = 30 } 
+		command = { type = money value = -1000 }
+		command = { type = event which = 55056 where = -1 when = 30 }
+	}
+	action = {
+		name = "EVT_55050_ACTB"	#不毛の地に捨てる金はない
+		command = { type = relation which = RUS value = -10 } 
+	}
+}
+
+event = {
+	id = 55056
+	random = no
+	country = JAP
+	
+	name = "EVT_55056_NAME"	#日本企業のシベリア進出
+	desc = "EVT_55056_DESC"	#
+	
+	action = {
+		name = "EVT_55056_ACTA"	#川崎車輌 ― 「あじあ」をエカテリンブルクまで！
+		ai_chance = 33
+		command = { type = trigger which = 55057 }
+		command = { type = relation which = SIB value = 10 }
+	}
+	action = {
+		name = "EVT_55056_ACTB"	#三井造船 ― 極東の拠点港をオホーツクに
+		ai_chance = 33
+		command = { type = trigger which = 55058 }
+		command = { type = secedeprovince which = SIB value = 1525 }
+		command = { type = relation which = SIB value = 10 }
+	}
+	action = {
+		name = "EVT_55056_ACTC"	#住友鉱業 ― シベリアの宝石で億万長者になろう！
+		ai_chance = 33
+		command = { type = trigger which = 55059 }
+		command = { type = relation which = SIB value = 10 }
+	}
+	action = {
+		name = "EVT_55051_ACTD"	#中止だ！　国家には私企業の欲望に加担する余裕はない！
+		ai_chance = 1
+		command = { type = dissent value = 1 }
+		command = { type = money value = 900 }
+	}
+}
+
+event = {
+	id = 55057
+	random = no
+	country = SIB
+	
+	name = "EVT_55057_NAME"	#シベリアにおける川崎車輌
+	desc = "EVT_55057_DESC"	#
+	
+	action = {
+		name = "EVT_55057_ACTA"	#また一歩東亜が欧州に近づいてしまったな！
+		command = { type = construct which = infrastructure where = 1416 value = 10 }	#イルクーツク
+		command = { type = construct which = ic where = 1416 value = 3 }	#
+		command = { type = waketeam which = 13113 }
+		
+		#あとどうしよう
+	}
+}
+
+event = {
+	id = 55058
+	random = no
+	country = SIB
+	
+	name = "EVT_55058_NAME"	#シベリアにおける三井造船
+	desc = "EVT_55058_DESC"	#
+	
+	action = {
+		name = "EVT_55058_ACTA"	#まずは、我々の豊富な資源を外海でやり取りできることを喜ぼう！
+		command = { type = construct which = infrastructure where = 1525 value = 10 }	#イルクーツク
+		command = { type = construct which = ic where = 1525 value = 2 }	#
+		command = { type = construct which = naval_base where = 1525 value = 2 }
+		command = { type = escort_pool which = SIB value = 50 }
+		command = { type = transport_pool which = SIB value = 50 }
+		command = { type = addcore which = 1525 }
+		command = { type = waketeam which = 13114 }
+	}
+}
+
+event = {
+	id = 55059
+	random = no
+	country = SIB
+	
+	name = "EVT_55059_NAME"	#シベリアにおける住友鉱業
+	desc = "EVT_55059_DESC"	#
+	
+	action = {
+		name = "EVT_55059_ACTA"	#シベリアの豊かさを見せる時だ！
+		command = { type = construct which = infrastructure where = -1 value = 10 }
+		command = { type = construct which = infrastructure where = -1 value = 10 }
+		command = { type = construct which = infrastructure where = -1 value = 10 }
+		command = { type = construct which = infrastructure where = -1 value = 10 }
+		command = { type = add_prov_resource which = -1 value = 5 where = rare_materials }
+		command = { type = add_prov_resource which = -1 value = 4 where = rare_materials }
+		command = { type = add_prov_resource which = -1 value = 3 where = rare_materials }
+		command = { type = add_prov_resource which = -1 value = 2 where = rare_materials }
+		command = { type = add_prov_resource which = -1 value = 1 where = rare_materials }
+		
+		#ノリリスク
+		command = { type = construct which = ic where = 1531 value = 1 }
+		command = { type = add_prov_resource which = 1531 value = 37 where = rare_materials }
+		#ハンティ・マンシイスク
+		command = { type = construct which = ic where = 1597 value = 1 }
+		command = { type = add_prov_resource which = 1597 value = 52 where = oil }
+		
+		command = { type = waketeam which = 13115 }
+	}
+}
+
+#event = {
+#	id = 55060
+#	# シャム・ラーマ８世謎の崩御
+#
+#	random = no
+#	country = SIA
+#
+#	trigger = {
+#		event = 3808 # タイが日本の圧力に屈する
+#		event = 45 # 日本敗戦  アメリカ側
+#	}
+#
+#	date = { day = 9 month = june year = 1946 }
+#	offset = 1
+#	deathdate = { day = 29 month = december year = 1963 }
+#
+#	style = 0
+#
+#	picture = "rama8and9"
+#	name = "EVT_55060_NAME" 
+#	desc = "EVT_55060_DESC" 
+#
+# ラーマ８世は即位後もスイスでの学業に従事し1945年に帰国したが翌年不審な死を遂げた。
+# 1946年6月9日、ボーロマピマーン宮殿で銃声が聞こえ、駆けつけたときにはラーマ８世は死んでいた、
+# 銃の暴発事故として処理される運びだったが警察が検死結果から他殺説を示唆した。
+# 捜査本部が設置されたものの捜査は続かず未だに真相は明らかになっていない。
+# 後にラーマ９世の協力で調査したしたウィリアムスティーブンソンは著書で
+# 日本軍の参謀・辻政信の犯行の可能性が高いと示唆した。
+#
+#	action_a = {
+#		name = "EVT_55060_ACTA" #いつか真実が明らかになる事もあるだろう…
+#		command = { type = sleepminister which = 62001 }
+#		command = { type = sleepminister which = 62032 }
+#		command = { type = sleepminister which = 62112 }
+#		
+#		command = { type = headofstate which = 62033 }
+#	}
+#}
+#########################################################################
+event = {
+	id = 55090
+	random = no 
+	country = PAK
+	
+	trigger = {
+		OR = {
+			event = 55020
+			event = 60682 #FEPK変更部分
+			event = 131021 #FEPK変更部分
+			
+		}
+	}
+
+	name = "AI_EVENT"
+	style = 0	
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		command = { type = set_domestic which = democratic value = 2 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = set_domestic which = free_market value = 3 }
+		command = { type = set_domestic which = freedom value = 2 }
+		command = { type = headofstate which = 564012 }
+		command = { type = headofgovernment which = 564013 }
+		command = { type = foreignminister which = 564015 }
+		command = { type = armamentminister which = 564018 }
+		command = { type = ministerofsecurity which = 564022 }
+		command = { type = ministerofintelligence which = 564026 }
+		command = { type = chiefofstaff which = 564031 }
+		command = { type = chiefofarmy which = 564032 }
+		command = { type = chiefofnavy which = 564035 }
+		command = { type = chiefofair which = 564038 }
+
+		command = { type = add_division value = hq when = 1 }
+		command = { type = add_division value = infantry when = 2 }
+		command = { type = add_division value = infantry when = 2 }
+		command = { type = add_division value = infantry when = 1 }
+		command = { type = add_division value = infantry when = 1 }
+		command = { type = add_division value = infantry when = 1 }
+		command = { type = add_division value = militia when = 1 }
+		command = { type = add_division value = militia when = 1 }
+		command = { type = add_division value = militia when = 1 }
+		command = { type = add_division value = militia when = 1 }
+	}
+}
+event = {
+	id = 55091
+	random = no 
+	country = BUR
+	
+	trigger = {
+		ai = yes
+		OR = {
+			alliance = { country = BUR country = JAP }
+			puppet = { country = BUR country = JAP }
+		}
+	}
+
+	name = "AI_EVENT"
+	style = 0	
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofstate which = 563080 }
+		command = { type = headofgovernment which = 563082 }
+		command = { type = foreignminister which = 563021 }
+		command = { type = armamentminister which = 563024 }
+		command = { type = ministerofsecurity which = 563029 }
+		command = { type = ministerofintelligence which = 563034 }
+		command = { type = chiefofstaff which = 563035 }
+		command = { type = chiefofarmy which = 563041 }
+		command = { type = chiefofnavy which = 563048 }
+		command = { type = chiefofair which = 563051 }
+
+		# 以下、ビルマのジョンブル閣僚を抹消
+		command = { type = sleepminister which = 563001 } # 
+		command = { type = sleepminister which = 563002 } # 
+		command = { type = sleepminister which = 563003 } # 
+		command = { type = sleepminister which = 563004 } # 
+		command = { type = sleepminister which = 563005 } # 
+		command = { type = sleepminister which = 563006 } # 
+		command = { type = sleepminister which = 563007 } # 
+		command = { type = sleepminister which = 563008 } # 
+		command = { type = sleepminister which = 563009 } # 
+		command = { type = sleepminister which = 563010 } # 
+		command = { type = sleepminister which = 563025 } # 
+		command = { type = sleepminister which = 563033 } # 
+		command = { type = sleepminister which = 563036 } # 
+		command = { type = sleepminister which = 563037 } # 
+		command = { type = sleepminister which = 563042 } # 
+		command = { type = sleepminister which = 563047 } #
+		command = { type = add_division value = hq when = 1 }
+		command = { type = add_division value = infantry when = 1 }
+		command = { type = add_division value = infantry when = 1 }
+	}
+}
+event = {
+	id = 55092
+	random = no 
+	country = MLY
+	
+	trigger = {
+		ai = yes
+		OR = {
+			alliance = { country = MLY country = JAP }
+			puppet = { country = MLY country = JAP }
+		}
+	}
+
+	name = "AI_EVENT"
+	style = 0	
+	
+	date = { day = 0 month = january year = 1936 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 565101 }
+		command = { type = headofgovernment which = 565014 }
+		command = { type = foreignminister which = 565016 }
+		command = { type = armamentminister which = 565018 }
+		command = { type = ministerofsecurity which = 565023 }
+		command = { type = ministerofintelligence which = 565100 }
+		# ハリマオ(1938以降登場にした）
+		# 全く関係ないが、リー・クアン・ユーが現役で使えるのに笑った
+		command = { type = chiefofstaff which = 565031 }
+		command = { type = chiefofarmy which = 565032 }
+		command = { type = chiefofnavy which = 565036 }
+		command = { type = chiefofair which = 565038 }
+
+		# 以下、マレーシアのジョンブル閣僚を抹消
+		command = { type = sleepminister which = 565001 } # 
+		command = { type = sleepminister which = 565002 } # 
+		command = { type = sleepminister which = 565003 } # 
+		command = { type = sleepminister which = 565004 } # 
+		command = { type = sleepminister which = 565005 } # 
+		command = { type = sleepminister which = 565006 } # 
+		command = { type = sleepminister which = 565007 } # 
+		command = { type = sleepminister which = 565008 } # 
+		command = { type = sleepminister which = 565009 } # 
+		command = { type = sleepminister which = 565010 } # 
+		command = { type = sleepminister which = 565013 } # 
+		command = { type = sleepminister which = 565018 } # 
+		command = { type = sleepminister which = 565021 } # 
+		command = { type = sleepminister which = 565033 } # 
+		command = { type = sleepminister which = 565034 } # 
+	}
+}

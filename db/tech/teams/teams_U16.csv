@@ -1,0 +1,12 @@
+U16;Name;Pic Name;Skill;Start Year;End Year;Speciality1;Speciality2;Speciality3;Speciality4;Speciality5;Speciality6;Speciality7;Speciality8;Speciality9;Speciality10;Speciality11;Speciality12;Speciality13;Speciality14;Speciality15;Speciality16;Speciality17;Speciality18;Speciality19;Speciality20;Speciality21;Speciality22;Speciality23;Speciality24;Speciality25;Speciality26;Speciality27;Speciality28;Speciality29;Speciality30;Speciality31;Speciality32;x
+19000;エレヴァン国立大学;T9500;2;1930;1970;management;chemistry;mechanics;mathematics;electronics;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+19001;アントラニグ・オサニアン;T9501;5;1930;1970;large_unit_tactics;centralized_execution;individual_courage;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+19002;ハゴップ・アンドニアン;T9502;3;1940;1970;large_unit_tactics;decentralized_execution;combined_arms_focus;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+19003;ヴィルヘルム・ベチェ;T9503;4;1930;1970;small_taskforce_tactics;submarine_tactics;naval_training;seamanship;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+19004;ハンス・クライン;T9504;4;1930;1970;piloting;fighter_tactics;combined_arms_focus;aircraft_testing;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+19100;アゼルバイジャン科学技術大学;T9600;3;1930;1970;chemistry;mechanics;industrial_engineering;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+19101;アゼルバイジャン石油精製科学研究所;T9601;3;1930;1970;chemistry;industrial_engineering;management;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+19104;カリル・マメドフ;T9604;4;1930;1970;large_unit_tactics;centralized_execution;infantry_focus;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+19200;トビリシ航空工業会社;T11100;5;1930;1970;aeronautics;rocketry;technical_efficiency;aircraft_testing;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+19202;トビリシ軍事大学;T10401;3;1930;1970;large_unit_tactics;centralized_execution;infantry_focus;training;general_equipment;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+19203;バトゥーミ海軍大学;T10402;2;1930;1970;naval_artillery;small_taskforce_tactics;submarine_tactics;large_taskforce_tactics;naval_training;;;;;;;;;;;;;;;;;;;;;;;;;;;;x

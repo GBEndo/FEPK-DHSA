@@ -1,0 +1,2962 @@
+#########################################################################
+#	FEPK_Efront_Post-war.txt
+#	戦後ドイツ東方関連イベント
+#########################################################################
+#id = 130900-34		ドイツの東方勝利(SMEPベース・ビターピース後)
+#id = 130935-39		ドイツによる東方新体制イベント(極東ベース)
+#id = 130940-49		ドイツによる北欧新体制イベント(極東ベース・スカンディナヴィア形成)
+#id = 130950-59		イングリア関連イベント
+#id = 130960		ソ連の復讐戦争
+#########################################################################
+##########
+#  Victory in the East
+##########
+event = { 
+	id = 130900
+	random = no
+	country = GER
+
+	trigger = {
+	#	OR = {
+	#		event = 2625 #bitter peace with germany
+	#		event = 2646 #bitter peace with germany and japan
+	#	}
+		OR = { #FEPKBETA3
+			event = 135303 #bitter peace with germany
+			event = 135313 #bitter peace with germany and japan
+		}
+	}
+
+	date = { day = 1 month = january year = 1939 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130900_NAME"
+	desc = "EVT_130900_DESC"
+
+	picture = "german_replacements"
+
+	action_a = {
+		name = "EVT_130900_ACTA"
+		#Leningrad
+		command = { type = construct which = naval_base where = 187 value = -9 }
+		command = { type = construct which = land_fort where = 187 value = -10 }
+		command = { type = construct which = flak where = 187 value = -10 }
+		command = { type = construct which = coastal_fort where = 187 value = -10 }
+		command = { type = construct which = infrastructure where = 187 value = -60 }
+		#command = { type = province_keypoints which = 187 value = -25 }
+
+		#Moscow
+		command = { type = construct which = land_fort where = 175 value = -10 }
+		command = { type = construct which = flak where = 175 value = -10 }
+		command = { type = construct which = infrastructure where = 175 value = -50 }
+		#command = { type = province_keypoints which = 175 value = -40 }
+
+		#Stalingrad
+		command = { type = construct which = land_fort where = 163 value = -10 }
+		command = { type = construct which = flak where = 163 value = -10 }
+		command = { type = construct which = infrastructure where = 163 value = -40 }
+		#command = { type = province_keypoints which = 163 value = -25 }
+
+		#Baku
+		command = { type = construct which = land_fort where = 1907 value = -10 }
+		command = { type = construct which = flak where = 1907 value = -10 }
+		command = { type = province_keypoints which = 1907 value = 1 } #1.096
+		command = { type = province_keypoints which = 1838 value = 1 }
+		command = { type = province_keypoints which = 1844 value = -1 }
+		command = { type = province_keypoints which = 258 value = -1 }
+
+		#German cities get free relocated flak
+		command = { type = construct which = flak where = 300 value = 2 } #Berlin
+		command = { type = construct which = flak where = 88 value = 2 } #Hamburg
+		command = { type = construct which = flak where = 90 value = 2 } #Kiel
+		command = { type = construct which = flak where = 80 value = 2 } #Willhelmshaven
+		command = { type = construct which = flak where = 67 value = 1 } #Essen
+		command = { type = construct which = flak where = 296 value = 2 } #Rostok
+		command = { type = construct which = flak where = 376 value = 1 } #Munich
+		command = { type = construct which = flak where = 463 value = 1 } #Vienna
+
+		#ヴォルガ・ドイツ人の移住
+		command = { type = province_manpower which = 1829 value = -1 }	#エンゲルス→ケーニヒスベルク
+		command = { type = province_manpower which = 510 value = 1 }
+
+		#Some Partisan Activity
+		command = { type = province_revoltrisk which = 249 value = 25 } #Stalino
+		command = { type = province_revoltrisk which = 248 value = 25 } #Kharkov
+		command = { type = province_revoltrisk which = 258 value = 25 } #Rostov
+		command = { type = province_revoltrisk which = 256 value = 25 } #Krasnodar
+		command = { type = province_revoltrisk which = 235 value = 25 } #Dnepro-petrovsk
+		command = { type = province_revoltrisk which = 252 value = 10 }
+		command = { type = province_revoltrisk which = 253 value = 10 }
+		command = { type = province_revoltrisk which = 254 value = 10 }
+		command = { type = province_revoltrisk which = 250 value = 10 }
+		command = { type = province_revoltrisk which = 251 value = 10 }
+		command = { type = province_revoltrisk which = 234 value = 10 }
+		command = { type = province_revoltrisk which = 236 value = 10 }
+		command = { type = province_revoltrisk which = 246 value = 10 }
+		command = { type = province_revoltrisk which = 244 value = 10 }
+		command = { type = province_revoltrisk which = 247 value = 10 }
+		command = { type = province_revoltrisk which = 260 value = 10 }
+		command = { type = province_revoltrisk which = 259 value = 10 }
+		command = { type = province_revoltrisk which = 269 value = 10 }
+		command = { type = province_revoltrisk which = 257 value = 10 }
+		command = { type = province_revoltrisk which = 255 value = 10 }
+
+		command = { type = province_revoltrisk which = 238 value = 25 } #Kiev
+		command = { type = province_revoltrisk which = 237 value = 10 }
+		command = { type = province_revoltrisk which = 228 value = 10 }
+		command = { type = province_revoltrisk which = 227 value = 10 }
+		command = { type = province_revoltrisk which = 240 value = 10 }
+		command = { type = province_revoltrisk which = 241 value = 10 }
+		command = { type = province_revoltrisk which = 239 value = 10 }
+
+		command = { type = province_revoltrisk which = 212 value = 25 } #Minsk
+		command = { type = province_revoltrisk which = 221 value = 10 }
+		command = { type = province_revoltrisk which = 211 value = 10 }
+		command = { type = province_revoltrisk which = 213 value = 10 }
+		command = { type = province_revoltrisk which = 218 value = 10 }
+		command = { type = province_revoltrisk which = 220 value = 10 }
+
+		command = { type = province_revoltrisk which = 175 value = 25 } #Moscow
+		command = { type = province_revoltrisk which = 94 value = 10 }
+		command = { type = province_revoltrisk which = 182 value = 10 }
+		command = { type = province_revoltrisk which = 288 value = 10 }
+		command = { type = province_revoltrisk which = 174 value = 10 }
+		command = { type = province_revoltrisk which = 176 value = 10 }
+
+		command = { type = dissent value = -25 }
+		command = { type = setflag which = victory_east }
+	}
+}
+
+event = { 
+	id = 130901
+	random = no
+	country = GER
+
+	trigger = {
+		OR = {
+			NOT = {
+				war = { country = SOV country = GER }
+			}
+			NOT = {
+				exists = SOV
+			}
+		}
+		OR = {
+			NOT = { #1.096
+				exists = POL
+			}
+			NOT = {
+				alliance = { country = POL country = GER }
+			}
+			puppet = { country = POL country = GER } #poland must be a german puppet
+		}
+		event = 130900 #victory in the east
+		random = 35
+		supplies = 10000
+	}
+
+	date = { day = 1 month = march year = 1945 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130901_NAME"
+	desc = "EVT_130901_DESC"
+
+	picture = "german_replacements"
+
+	action_a = {
+		name = "EVT_130901_ACTA"
+		command = { type = ai_prepare_war which = EST }
+		command = { type = ai_prepare_war which = LAT }
+		command = { type = ai_prepare_war which = LIT }
+
+		command = { type = supplies value = -10000 } #hey, costs alot to colonize... maybe too high?
+
+		#Poland
+		command = { type = addcore which = 303 } #Danzig
+		command = { type = construct which = infrastructure where = 303 value = 100 }
+		command = { type = addcore which = 305 } #Torun
+		command = { type = construct which = infrastructure where = 305 value = 100 }
+		command = { type = addcore which = 306 } #Byd
+		command = { type = construct which = infrastructure where = 306 value = 100 }
+		command = { type = addcore which = 307 } #Poznan
+		command = { type = construct which = infrastructure where = 307 value = 100 }
+		command = { type = addcore which = 509 } #Suwalki
+		command = { type = construct which = infrastructure where = 509 value = 100 }
+		command = { type = addcore which = 214 }
+		command = { type = construct which = infrastructure where = 214 value = 100 }
+		command = { type = addcore which = 208 }
+		command = { type = construct which = infrastructure where = 208 value = 100 }
+		command = { type = addcore which = 213 }
+		command = { type = construct which = infrastructure where = 213 value = 100 }
+		command = { type = addcore which = 209 }
+		command = { type = construct which = infrastructure where = 209 value = 100 }
+		command = { type = addcore which = 211 }
+		command = { type = construct which = infrastructure where = 211 value = 100 }
+		command = { type = addcore which = 508 }
+		command = { type = construct which = infrastructure where = 508 value = 100 }
+		command = { type = addcore which = 507 }
+		command = { type = construct which = infrastructure where = 507 value = 100 }
+		command = { type = addcore which = 210 }
+		command = { type = construct which = infrastructure where = 210 value = 100 }
+		command = { type = addcore which = 486 }
+		command = { type = construct which = infrastructure where = 486 value = 100 }
+		command = { type = addcore which = 505 }
+		command = { type = construct which = infrastructure where = 505 value = 100 }
+		command = { type = addcore which = 504 }
+		command = { type = construct which = infrastructure where = 504 value = 100 }
+		command = { type = addcore which = 503 }
+		command = { type = construct which = infrastructure where = 503 value = 100 }
+		command = { type = addcore which = 222 }
+		command = { type = construct which = infrastructure where = 222 value = 100 }
+		command = { type = addcore which = 562 }
+		command = { type = construct which = infrastructure where = 562 value = 100 }
+		command = { type = addcore which = 506 }
+		command = { type = construct which = infrastructure where = 506 value = 100 }
+		command = { type = addcore which = 502 }
+		command = { type = construct which = infrastructure where = 502 value = 100 }
+		command = { type = addcore which = 501 }
+		command = { type = construct which = infrastructure where = 501 value = 100 }
+		command = { type = addcore which = 509 }
+		command = { type = construct which = infrastructure where = 509 value = 100 }
+		command = { type = addcore which = 500 }
+		command = { type = construct which = infrastructure where = 500 value = 100 }
+		command = { type = addcore which = 479 }
+		command = { type = construct which = infrastructure where = 479 value = 100 }
+		command = { type = addcore which = 489 }
+		command = { type = construct which = infrastructure where = 489 value = 100 }
+		command = { type = addcore which = 488 }
+		command = { type = construct which = infrastructure where = 488 value = 100 }
+		command = { type = addcore which = 487 }
+		command = { type = construct which = infrastructure where = 487 value = 100 }
+		command = { type = addcore which = 485 }
+		command = { type = construct which = infrastructure where = 485 value = 100 }
+		command = { type = addcore which = 484 }
+		command = { type = construct which = infrastructure where = 484 value = 100 }
+		command = { type = addcore which = 480 }
+		command = { type = construct which = infrastructure where = 480 value = 100 }
+		command = { type = addcore which = 483 }
+		command = { type = construct which = infrastructure where = 483 value = 100 }
+		command = { type = addcore which = 481 }
+		command = { type = construct which = infrastructure where = 481 value = 100 }
+
+		#Estonia
+		command = { type = addcore which = 199 }
+		command = { type = construct which = infrastructure where = 199 value = 100 }
+		command = { type = addcore which = 195 }
+		command = { type = construct which = infrastructure where = 195 value = 100 }
+		command = { type = addcore which = 194 }
+		command = { type = construct which = infrastructure where = 194 value = 100 }
+		command = { type = addcore which = 196 }
+		command = { type = construct which = infrastructure where = 196 value = 100 }
+		command = { type = addcore which = 193 }
+		command = { type = construct which = infrastructure where = 193 value = 100 }
+
+		#Latvia
+		command = { type = addcore which = 197 }
+		command = { type = construct which = infrastructure where = 197 value = 100 }
+		command = { type = addcore which = 198 }
+		command = { type = construct which = infrastructure where = 198 value = 100 }
+		command = { type = addcore which = 202 }
+		command = { type = construct which = infrastructure where = 202 value = 100 }
+		command = { type = addcore which = 203 }
+		command = { type = construct which = infrastructure where = 203 value = 100 }
+		command = { type = addcore which = 204 }
+		command = { type = construct which = infrastructure where = 204 value = 100 }
+		command = { type = addcore which = 205 }
+		command = { type = construct which = infrastructure where = 205 value = 100 }
+
+		#Lithuania
+		command = { type = addcore which = 577 }
+		command = { type = construct which = infrastructure where = 577 value = 100 }
+		command = { type = addcore which = 511 }
+		command = { type = construct which = infrastructure where = 511 value = 100 }
+		command = { type = addcore which = 207 }
+		command = { type = construct which = infrastructure where = 207 value = 100 }
+		command = { type = addcore which = 206 }
+		command = { type = construct which = infrastructure where = 206 value = 100 }
+
+		#Crimea
+		command = { type = addcore which = 252 }
+		command = { type = construct which = infrastructure where = 252 value = 100 }
+		command = { type = addcore which = 253 }
+		command = { type = construct which = infrastructure where = 253 value = 100 }
+		command = { type = addcore which = 254 }
+		command = { type = construct which = infrastructure where = 254 value = 100 }
+	}
+}
+
+event = { 
+	id = 130902
+	random = no
+	country = GER
+
+	trigger = {
+		event = 130900
+		alliance = { country = POL country = GER }
+		OR = {
+			NOT = {
+				war = { country = SOV country = GER }
+			}
+			NOT = {
+				exists = SOV
+			}
+		}
+		random = 35
+		supplies = 10000
+	}
+
+	date = { day = 1 month = march year = 1945 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130902_NAME"
+	desc = "EVT_130902_DESC"
+
+	picture = "german_replacements"
+
+	action_a = {
+		name = "EVT_130902_ACTA"
+		command = { type = ai_prepare_war which = EST }
+		command = { type = ai_prepare_war which = LAT }
+		command = { type = ai_prepare_war which = LIT }
+
+		command = { type = supplies value = -10000 } #hey, costs alot to colonize... maybe too high?
+
+		#Poland
+		command = { type = addcore which = 303 } #Danzig
+		command = { type = construct which = infrastructure where = 303 value = 100 }
+		command = { type = addcore which = 305 } #Torun
+		command = { type = construct which = infrastructure where = 305 value = 100 }
+		command = { type = addcore which = 306 } #Byd
+		command = { type = construct which = infrastructure where = 306 value = 100 }
+		command = { type = addcore which = 307 } #Poznan
+		command = { type = construct which = infrastructure where = 307 value = 100 }
+		command = { type = addcore which = 509 } #Suwalki
+		command = { type = construct which = infrastructure where = 509 value = 100 }
+
+		#Estonia
+		command = { type = addcore which = 199 }
+		command = { type = construct which = infrastructure where = 199 value = 100 }
+		command = { type = addcore which = 195 }
+		command = { type = construct which = infrastructure where = 195 value = 100 }
+		command = { type = addcore which = 194 }
+		command = { type = construct which = infrastructure where = 194 value = 100 }
+		command = { type = addcore which = 196 }
+		command = { type = construct which = infrastructure where = 196 value = 100 }
+		command = { type = addcore which = 193 }
+		command = { type = construct which = infrastructure where = 193 value = 100 }
+
+		#Latvia
+		command = { type = addcore which = 197 }
+		command = { type = construct which = infrastructure where = 197 value = 100 }
+		command = { type = addcore which = 198 }
+		command = { type = construct which = infrastructure where = 198 value = 100 }
+		command = { type = addcore which = 202 }
+		command = { type = construct which = infrastructure where = 202 value = 100 }
+		command = { type = addcore which = 203 }
+		command = { type = construct which = infrastructure where = 203 value = 100 }
+		command = { type = addcore which = 204 }
+		command = { type = construct which = infrastructure where = 204 value = 100 }
+		command = { type = addcore which = 205 }
+		command = { type = construct which = infrastructure where = 205 value = 100 }
+
+		#Lithuania
+		command = { type = addcore which = 577 }
+		command = { type = construct which = infrastructure where = 577 value = 100 }
+		command = { type = addcore which = 511 }
+		command = { type = construct which = infrastructure where = 511 value = 100 }
+		command = { type = addcore which = 207 }
+		command = { type = construct which = infrastructure where = 207 value = 100 }
+		command = { type = addcore which = 206 }
+		command = { type = construct which = infrastructure where = 206 value = 100 }
+
+
+		#Crimea
+		command = { type = addcore which = 252 }
+		command = { type = construct which = infrastructure where = 252 value = 100 }
+		command = { type = addcore which = 253 }
+		command = { type = construct which = infrastructure where = 253 value = 100 }
+		command = { type = addcore which = 254 }
+		command = { type = construct which = infrastructure where = 254 value = 100 }
+	}
+}
+
+event = {
+	id = 130903
+	random = no
+	country = UKR
+
+	trigger = {
+		OR = {
+			event = 130901
+			event = 130902
+		}
+		OR = {
+			control = { province = 252 data = UKR }
+			control = { province = 253 data = UKR }
+			control = { province = 254 data = UKR }
+		}
+		OR = {
+			alliance = { country = UKR country = GER }
+			puppet = { country = UKR country = GER }
+		}
+	}
+
+	date = { day = 1 month = january year = 1939 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130903_NAME"
+	desc = "EVT_130903_DESC"
+
+	picture = "british_reinforcments5"
+
+	action_a = {
+		name = "EVT_130903_ACTA"
+		command = { type = secedeprovince which = GER value = 252 }
+		command = { type = secedeprovince which = GER value = 253 }
+		command = { type = secedeprovince which = GER value = 254 }
+	}
+}
+
+event = {
+	id = 130904
+	random = no
+	country = BLR
+
+	trigger = {
+		OR = {
+			event = 130901
+			event = 130902
+		}
+		OR = {
+			control = { province = 214 data = BLR }
+			control = { province = 208 data = BLR }
+			control = { province = 213 data = BLR }
+			control = { province = 209 data = BLR }
+			control = { province = 211 data = BLR }
+			control = { province = 508 data = BLR }
+			control = { province = 507 data = BLR }
+			control = { province = 210 data = BLR }
+			control = { province = 505 data = BLR }
+			control = { province = 504 data = BLR }
+			control = { province = 503 data = BLR }
+			control = { province = 222 data = BLR }
+		}
+		OR = {
+			alliance = { country = BLR country = GER }
+			puppet = { country = BLR country = GER }
+		}
+	}
+
+	date = { day = 1 month = january year = 1939 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130904_NAME"
+	desc = "EVT_130904_DESC"
+
+	picture = "british_reinforcments5"
+
+	action_a = {
+		name = "EVT_130904_ACTA"
+		command = { type = secedeprovince which = GER value = 214 }
+		command = { type = secedeprovince which = GER value = 208 }
+		command = { type = secedeprovince which = GER value = 213 }
+		command = { type = secedeprovince which = GER value = 209 }
+		command = { type = secedeprovince which = GER value = 211 }
+		command = { type = secedeprovince which = GER value = 508 }
+		command = { type = secedeprovince which = GER value = 507 }
+		command = { type = secedeprovince which = GER value = 210 }
+		command = { type = secedeprovince which = GER value = 505 }
+		command = { type = secedeprovince which = GER value = 504 }
+		command = { type = secedeprovince which = GER value = 503 }
+		command = { type = secedeprovince which = GER value = 222 }
+	}
+}
+
+##########
+#  Greater Poland
+##########
+event = { 
+	id = 130905
+	random = no
+	country = GER
+
+	trigger = {
+		event = 130900 #victory in the east
+		OR = {
+			NOT = {
+				war = { country = SOV country = GER }
+			}
+			NOT = {
+				exists = SOV
+			}
+		}
+		alliance = { country = POL country = GER }
+		OR = { #this way, they can be a puppet or not a puppet...
+			NOT = {
+				ispuppet = POL
+			}
+			flag = axis_poland
+		}
+	}
+
+	date = { day = 1 month = january year = 1939 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130905_NAME"
+	desc = "EVT_130905_DESC"
+
+	picture = "romania"
+
+	action_a = {
+		name = "EVT_130905_ACTA"
+		ai_chance = 100
+		#pact poland given to SOV
+		command = { type = secedeprovince which = POL value = 500 }
+		command = { type = secedeprovince which = POL value = 501 }
+		command = { type = secedeprovince which = POL value = 502 }
+		command = { type = secedeprovince which = POL value = 503 }
+		command = { type = secedeprovince which = POL value = 504 }
+		command = { type = secedeprovince which = POL value = 505 }
+		command = { type = secedeprovince which = POL value = 506 }
+		command = { type = secedeprovince which = POL value = 507 }
+		command = { type = secedeprovince which = POL value = 508 }
+		command = { type = secedeprovince which = POL value = 562 }
+		command = { type = secedeprovince which = POL value = 229 }
+		command = { type = secedeprovince which = POL value = 222 }
+		command = { type = secedeprovince which = POL value = 210 }
+		command = { type = secedeprovince which = POL value = 209 }
+		command = { type = secedeprovince which = POL value = 211 }
+		command = { type = secedeprovince which = POL value = 213 }
+		command = { type = secedeprovince which = POL value = 214 }
+		command = { type = secedeprovince which = POL value = 208 }
+		#polish claims on soviets
+		command = { type = secedeprovince which = POL value = 218 }
+		command = { type = secedeprovince which = POL value = 212 }
+		command = { type = secedeprovince which = POL value = 221 }
+		command = { type = secedeprovince which = POL value = 225 }
+		command = { type = secedeprovince which = POL value = 226 }
+		command = { type = secedeprovince which = POL value = 227 }
+		command = { type = secedeprovince which = POL value = 228 }
+		command = { type = secedeprovince which = POL value = 231 }
+	}
+}
+##########
+#  Greater Poland
+##########
+event = { 
+	id = 130906
+	random = no
+	country = POL
+
+	trigger = {
+		event = 130905
+	}
+
+	date = { day = 1 month = january year = 1939 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	name = "EVT_130906_NAME"
+	desc = "EVT_130906_DESC"
+
+	picture = "romania"
+
+	action_a = {
+		name = "EVT_130906_ACTA"
+		ai_chance = 100
+		command = { type = removecore which = 303 } #polish lands
+		command = { type = removecore which = 305 } #
+		command = { type = removecore which = 306 } #
+		command = { type = removecore which = 307 } #
+		command = { type = removecore which = 509 } #suwalki
+		command = { type = secedeprovince which = GER value = 303 }
+		command = { type = secedeprovince which = GER value = 305 }
+		command = { type = secedeprovince which = GER value = 306 }
+		command = { type = secedeprovince which = GER value = 307 }
+		command = { type = secedeprovince which = GER value = 509 }#suwalki
+	}
+}
+##########
+#  Greater Turkey
+##########
+event = { 
+	id = 130907
+	random = no
+	country = GER
+
+	trigger = {
+		event = 130900 #victory in the east
+		flag = axis_turkey
+		OR = {
+			NOT = {
+				war = { country = SOV country = GER }
+			}
+			NOT = {
+				exists = SOV
+			}
+		}
+		OR = {
+			alliance = { country = TUR country = GER }
+			NOT = {
+				exists = TUR
+			}
+		}
+	}
+
+	date = { day = 1 month = january year = 1939 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130907_NAME"
+	desc = "EVT_130907_DESC"
+
+	#picture = "romania"
+
+	action_a = {
+		name = "EVT_130907_ACTA"
+		ai_chance = 100
+		command = { type = independence which = TUR value = 1 }
+		command = { type = dissent value = -5 }
+		command = { type = secedeprovince which = TUR value = 1856 }#armenia/azerbaijan
+		command = { type = secedeprovince which = TUR value = 1858 }
+		command = { type = secedeprovince which = TUR value = 1859 } #tabriz in persia
+
+		command = { type = secedeprovince which = TUR value = 1843 }
+		command = { type = secedeprovince which = TUR value = 1844 }
+		command = { type = secedeprovince which = TUR value = 1845 }
+		command = { type = secedeprovince which = TUR value = 1848 }
+		command = { type = secedeprovince which = TUR value = 1846 }
+		command = { type = secedeprovince which = TUR value = 1847 }
+		command = { type = secedeprovince which = TUR value = 1849 }
+		command = { type = secedeprovince which = TUR value = 1850 }
+		command = { type = secedeprovince which = TUR value = 1857 }
+		command = { type = secedeprovince which = TUR value = 1907 }
+
+	}
+}
+##########
+#  Greater Turkey
+##########
+event = { 
+	id = 130908
+	random = no
+	country = TUR
+
+	trigger = {
+		event = 130907
+	}
+
+	date = { day = 1 month = january year = 1939 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130908_NAME"
+	desc = "EVT_130908_DESC"
+
+	#picture = "romania"
+
+	action_a = {
+		name = "EVT_130908_ACTA"
+		ai_chance = 100
+
+		command = { type = addcore which = 405 } #greek stuff
+		command = { type = addcore which = 400 } #
+		command = { type = addcore which = 398 } #
+		command = { type = addcore which = 399 } #
+		command = { type = addcore which = 1858 }
+		command = { type = addcore which = 1856 }
+		command = { type = addcore which = 1859 } #tabriz
+		
+		command = { type = addclaim which = 1843 }
+		command = { type = addclaim which = 1844 }
+		command = { type = addclaim which = 1845 }
+		command = { type = addclaim which = 1848 }
+		command = { type = addclaim which = 1846 }
+		command = { type = addclaim which = 1847 }
+		command = { type = addclaim which = 1849 }
+		command = { type = addclaim which = 1850 }
+		command = { type = addclaim which = 1857 }
+		command = { type = addclaim which = 1907 }
+		
+		command = { type = alliance which = GER }
+	}
+}
+##########
+#  Spoils from Persia to Turkey
+##########
+event = {
+	id = 130909
+	random = no 
+	country = PER
+
+	trigger = {
+		flag = axis_turkey
+		alliance = { country = TUR country = GER }
+		alliance = { country = PER country = GER }
+		NOT = {
+			ispuppet = TUR
+		}
+		puppet = { country = PER country = GER } #persia is a german puppet
+		event = 130907
+	}
+
+	date = { day = 1 month = january year = 1939 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130909_NAME"
+	desc = "EVT_130909_DESC"
+
+	picture = "german_replacements"
+
+	action_a = {
+		name = "EVT_130909_ACTA"
+		ai_chance = 100
+		command = { type = removecore which = 1859 }
+		command = { type = secedeprovince which = TUR value = 1859 }
+	}
+}
+
+#########################################################################
+#  German new order in Eastern Europa
+#########################################################################
+event = {
+	id = 130910
+	random = no
+	country = GER
+
+	trigger = { #FEPKBETA5.5
+		event = 130900 #victory in the east
+	}
+
+	date = { day = 1 month = september year = 1939 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT60115N"
+	desc = "EVT60115D"
+	style = 0
+	picture = "german_marginal_victory"
+
+	action_a = {
+		name = "ACT60115A"
+		ai_chance = 80
+		command = { type = independence which = HUN value = 1 }
+		command = { type = independence which = BUL value = 1 }
+		command = { type = independence which = ROM value = 1 }
+		command = { type = independence which = FIN value = 1 }
+		command = { type = independence which = UKR value = 1 }
+		command = { type = independence which = U16 value = 1 }#カフカース連邦
+		command = { type = independence which = CRO value = 1 }
+	#	command = { type = independence which = SER value = 1 } #FEPK変更部分 #1.078
+		command = { type = independence which = BLR value = 1 } #1.096
+	#	command = { type = trigger which = 130916 } #FEPKBETA5.5 #フラグ化
+	#	command = { type = trigger which = 130917 }
+	#	command = { type = trigger which = 130918 }
+	#	command = { type = trigger which = 130919 }
+	#	command = { type = trigger which = 130920 }
+	#	command = { type = trigger which = 130921 }
+	#	command = { type = trigger which = 130922 }
+	##	command = { type = trigger which = 130923 } #1.096 #sleep
+	#	command = { type = trigger which = 130924 } #1.096
+
+		command = { type = setflag which = neworder_1 } #FEPKBETA5.5
+		command = { type = dissent value = -10 }
+	}
+	action_b = {
+		name = "ACT60115B"
+		ai_chance = 20
+		command = { type = independence which = HUN value = 1 }
+		command = { type = independence which = BUL value = 1 }
+		command = { type = independence which = ROM value = 1 }
+		command = { type = independence which = FIN value = 1 }
+		command = { type = independence which = CRO value = 1 }
+	#	command = { type = independence which = SER value = 1 } #FEPK変更部分 #1.078
+	#	command = { type = trigger which = 130916 } #FEPKBETA5.5 #フラグ化
+	#	command = { type = trigger which = 130917 }
+	#	command = { type = trigger which = 130918 }
+	#	command = { type = trigger which = 130919 }
+	#	command = { type = trigger which = 130922 }
+	##	command = { type = trigger which = 130923 } #1.096 #sleep
+
+		#UKR
+		command = { type = addclaim which = 238 }
+		command = { type = addclaim which = 239 }
+		command = { type = addclaim which = 237 }
+		command = { type = addclaim which = 245 }
+		command = { type = addclaim which = 228 }
+		command = { type = addclaim which = 227 }
+		command = { type = addclaim which = 244 }
+		command = { type = addclaim which = 242 }
+		command = { type = addclaim which = 506 }
+		command = { type = addclaim which = 501 }
+		command = { type = addclaim which = 229 }
+		command = { type = addclaim which = 502 }
+		command = { type = addclaim which = 562 }
+		command = { type = addclaim which = 500 }
+		command = { type = addclaim which = 252 }
+		command = { type = addclaim which = 254 }
+		command = { type = addclaim which = 253 }
+		command = { type = addclaim which = 499 }
+		command = { type = addclaim which = 231 }
+		command = { type = addclaim which = 232 }
+		command = { type = addclaim which = 233 }
+		command = { type = addclaim which = 234 }
+		command = { type = addclaim which = 226 }
+		command = { type = addclaim which = 260 }
+		command = { type = addclaim which = 235 }
+		command = { type = addclaim which = 236 }
+		command = { type = addclaim which = 240 }
+		command = { type = addclaim which = 246 }
+		command = { type = addclaim which = 247 }
+		command = { type = addclaim which = 248 }
+		command = { type = addclaim which = 249 }
+		command = { type = addclaim which = 250 }
+		command = { type = addclaim which = 251 }
+		command = { type = addclaim which = 241 }
+		#BLR
+		command = { type = addclaim which = 212 }
+		command = { type = addclaim which = 221 }
+		command = { type = addclaim which = 225 }
+		command = { type = addclaim which = 218 }
+		command = { type = addclaim which = 220 }
+		command = { type = addclaim which = 272 }
+		command = { type = addclaim which = 273 }
+		command = { type = addclaim which = 274 }
+		command = { type = addclaim which = 209 }
+		command = { type = addclaim which = 211 }
+		command = { type = addclaim which = 213 }
+		command = { type = addclaim which = 214 }
+		command = { type = addclaim which = 210 }
+		command = { type = addclaim which = 222 }
+		command = { type = addclaim which = 503 }
+		command = { type = addclaim which = 504 }
+		command = { type = addclaim which = 507 }
+		command = { type = addclaim which = 505 }
+		command = { type = addclaim which = 508 }
+		command = { type = addclaim which = 208 }
+
+		command = { type = setflag which = neworder_2 } #FEPKBETA5.5
+		command = { type = dissent value = -30 }
+	}
+}
+event = {
+	id = 130916
+	random = no
+	country = HUN
+
+	trigger = { #FEPKBETA5.5
+		ai = yes
+		event = 130910
+		NOT = {
+			alliance = { country = GER country = HUN }
+			alliance = { country = USA country = HUN }
+			alliance = { country = ENG country = HUN }
+			alliance = { country = FRA country = HUN }
+			alliance = { country = SOV country = HUN }
+			alliance = { country = JAP country = HUN }
+			war = { country = GER country = HUN }
+			war = { country = USA country = HUN }
+			war = { country = ENG country = HUN }
+			war = { country = FRA country = HUN }
+			war = { country = SOV country = HUN }
+			war = { country = JAP country = HUN }
+			war = { country = ITA country = HUN }
+			war = { country = VIC country = HUN }
+			war = { country = BUL country = HUN }
+			war = { country = ROM country = HUN }
+			war = { country = GRE country = HUN }
+			war = { country = YUG country = HUN }
+			war = { country = CRO country = HUN }
+			war = { country = SER country = HUN }
+			war = { country = AUS country = HUN }
+		}
+		OR = { #FEPK1.11
+			NOT = {	event = 60201 }		#「大ハンガリーの再建を！」未発生
+			AND = {				
+				event = 60201		# 大ハンガリー成立かつバルカン戦争終結済み
+				event = 60300
+			}
+		}
+	}
+
+	date = { day = 1 month = september year = 1939 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT60115N"
+	desc = "EVT60115D"
+	style = 0
+	picture = "german_marginal_victory"
+
+	action_a = {
+		name = "ACT60100A"
+		command = { type = alliance which = GER }
+	}
+}
+
+event = {
+	id = 130917
+	random = no
+	country = BUL
+
+	trigger = { #FEPKBETA5.5
+		ai = yes
+		event = 130910
+		NOT = {
+			alliance = { country = GER country = BUL }
+			alliance = { country = USA country = BUL }
+			alliance = { country = ENG country = BUL }
+			alliance = { country = FRA country = BUL }
+			alliance = { country = SOV country = BUL }
+			alliance = { country = JAP country = BUL }
+			war = { country = GER country = BUL }
+			war = { country = USA country = BUL }
+			war = { country = ENG country = BUL }
+			war = { country = FRA country = BUL }
+			war = { country = SOV country = BUL }
+			war = { country = JAP country = BUL }
+			war = { country = ITA country = BUL }
+			war = { country = VIC country = BUL }
+			war = { country = HUN country = BUL }
+			war = { country = ROM country = BUL }
+			war = { country = GRE country = BUL }
+			war = { country = YUG country = BUL }
+			war = { country = CRO country = BUL }
+			war = { country = SER country = BUL }
+			war = { country = AUS country = BUL }
+		}
+		OR = { #FEPK1.11
+			NOT = {	event = 60201 }		#「大ハンガリーの再建を！」未発生
+			AND = {				
+				event = 60201		# 大ハンガリー成立かつバルカン戦争終結済み
+				event = 60300
+			}
+		}
+	}
+
+	date = { day = 1 month = september year = 1939 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT60115N"
+	desc = "EVT60115D"
+	style = 0
+	picture = "german_marginal_victory"
+
+	action_a = {
+		name = "ACT60100A"
+		command = { type = alliance which = GER }
+	}
+}
+
+event = {
+	id = 130918
+	random = no
+	country = ROM
+
+	trigger = { #FEPKBETA5.5
+		ai = yes
+		event = 130910
+		NOT = {
+			alliance = { country = GER country = ROM }
+			alliance = { country = USA country = ROM }
+			alliance = { country = ENG country = ROM }
+			alliance = { country = FRA country = ROM }
+			alliance = { country = SOV country = ROM }
+			alliance = { country = JAP country = ROM }
+			war = { country = GER country = ROM }
+			war = { country = USA country = ROM }
+			war = { country = ENG country = ROM }
+			war = { country = FRA country = ROM }
+			war = { country = SOV country = ROM }
+			war = { country = JAP country = ROM }
+			war = { country = ITA country = ROM }
+			war = { country = VIC country = ROM }
+			war = { country = BUL country = ROM }
+			war = { country = HUN country = ROM }
+			war = { country = GRE country = ROM }
+			war = { country = YUG country = ROM }
+			war = { country = CRO country = ROM }
+			war = { country = SER country = ROM }
+			war = { country = AUS country = ROM }
+		}
+		OR = { #FEPK1.11
+			NOT = {	event = 60201 }		#「大ハンガリーの再建を！」未発生
+			AND = {				
+				event = 60201		# 大ハンガリー成立かつバルカン戦争終結済み
+				event = 60300
+			}
+		}
+	}
+
+	date = { day = 1 month = september year = 1939 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT60115N"
+	desc = "EVT60115D"
+	style = 0
+	picture = "german_marginal_victory"
+
+	action_a = {
+		name = "ACT60100A"
+		command = { type = alliance which = GER }
+	}
+}
+
+event = {
+	id = 130919
+	random = no
+	country = FIN
+
+	trigger = { #FEPKBETA5.5
+		ai = yes
+		event = 130910
+		NOT = {
+			alliance = { country = GER country = FIN }
+			alliance = { country = USA country = FIN }
+			alliance = { country = ENG country = FIN }
+			alliance = { country = FRA country = FIN }
+			alliance = { country = SOV country = FIN }
+			alliance = { country = JAP country = FIN }
+			war = { country = GER country = FIN }
+			war = { country = USA country = FIN }
+			war = { country = ENG country = FIN }
+			war = { country = FRA country = FIN }
+			war = { country = SOV country = FIN }
+			war = { country = JAP country = FIN }
+			war = { country = ITA country = FIN }
+			war = { country = VIC country = FIN }
+			war = { country = BUL country = FIN }
+			war = { country = HUN country = FIN }
+			war = { country = ROM country = FIN }
+			war = { country = GRE country = FIN }
+			war = { country = YUG country = FIN }
+			war = { country = CRO country = FIN }
+			war = { country = SER country = FIN }
+			war = { country = AUS country = FIN }
+		}
+	}
+
+	date = { day = 1 month = september year = 1939 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT60115N"
+	desc = "EVT60115D"
+	style = 0
+	picture = "german_marginal_victory"
+
+	action_a = {
+		name = "ACT60100A"
+		command = { type = alliance which = GER }
+	}
+}
+
+event = {
+	id = 130920
+	random = no
+	country = GER
+
+	trigger = { #FEPKBETA5.5
+		flag = neworder_1
+		NOT = {
+			alliance = { country = USA country = UKR }
+			alliance = { country = ENG country = UKR }
+			alliance = { country = FRA country = UKR }
+			alliance = { country = SOV country = UKR }
+			war = { country = GER country = UKR }
+			war = { country = USA country = UKR }
+			war = { country = ENG country = UKR }
+			war = { country = FRA country = UKR }
+			war = { country = SOV country = UKR }
+			war = { country = JAP country = UKR }
+			war = { country = ITA country = UKR }
+			war = { country = VIC country = UKR }
+			war = { country = BUL country = UKR }
+			war = { country = HUN country = UKR }
+			war = { country = ROM country = UKR }
+			war = { country = GRE country = UKR }
+			war = { country = YUG country = UKR }
+			war = { country = CRO country = UKR }
+			war = { country = SER country = UKR }
+			war = { country = AUS country = UKR }
+			ispuppet = UKR
+		}
+		exists = UKR
+	}
+
+	date = { day = 1 month = september year = 1939 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT60115N"
+	desc = "EVT60115D"
+	style = 0
+	picture = "german_marginal_victory"
+
+	action_a = {
+		name = "ACT60100A"
+		command = { type = make_puppet which = UKR }
+	}
+}
+
+event = {
+	id = 130921
+	random = no
+	country = GER
+
+	trigger = { #FEPKBETA5.5
+		flag = neworder_1
+		NOT = {
+			alliance = { country = USA country = U16 }
+			alliance = { country = ENG country = U16 }
+			alliance = { country = FRA country = U16 }
+			alliance = { country = SOV country = U16 }
+			war = { country = GER country = U16 }
+			war = { country = USA country = U16 }
+			war = { country = ENG country = U16 }
+			war = { country = FRA country = U16 }
+			war = { country = SOV country = U16 }
+			war = { country = JAP country = U16 }
+			war = { country = ITA country = U16 }
+			war = { country = VIC country = U16 }
+			war = { country = BUL country = U16 }
+			war = { country = HUN country = U16 }
+			war = { country = ROM country = U16 }
+			war = { country = GRE country = U16 }
+			war = { country = YUG country = U16 }
+			war = { country = CRO country = U16 }
+			war = { country = SER country = U16 }
+			war = { country = AUS country = U16 }
+			ispuppet = U16
+		}
+		exists = U16
+	}
+
+	date = { day = 1 month = september year = 1939 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT60115N"
+	desc = "EVT60115D"
+	style = 0
+	picture = "german_marginal_victory"
+
+	action_a = {
+		name = "ACT60100A"
+		ai_chance = 60
+		command = { type = make_puppet which = U16 }
+	}
+	action_b = {
+		name = "EVT_130921_ACTB"	#ザカフカース地域はトルコが責任を持つべきだ
+		ai_chance = 40
+		trigger = { 
+			alliance = { country = TUR country = GER }
+			NOT = { ispuppet = TUR }
+		}
+		command = { type = trigger which = 130925 }
+	}
+}
+
+event = {
+	id = 130922
+	random = no
+	country = GER
+
+	trigger = { #FEPKBETA5.5
+		event = 130910
+		NOT = {
+			alliance = { country = USA country = CRO }
+			alliance = { country = ENG country = CRO }
+			alliance = { country = FRA country = CRO }
+			alliance = { country = SOV country = CRO }
+			war = { country = GER country = CRO }
+			war = { country = USA country = CRO }
+			war = { country = ENG country = CRO }
+			war = { country = FRA country = CRO }
+			war = { country = SOV country = CRO }
+			war = { country = JAP country = CRO }
+			war = { country = ITA country = CRO }
+			war = { country = VIC country = CRO }
+			war = { country = BUL country = CRO }
+			war = { country = HUN country = CRO }
+			war = { country = ROM country = CRO }
+			war = { country = GRE country = CRO }
+			war = { country = YUG country = CRO }
+			war = { country = SER country = CRO }
+			war = { country = AUS country = CRO }
+			ispuppet = CRO
+		}
+		exists = CRO
+		OR = { #FEPK1.11
+			NOT = {	event = 60201 }		#「大ハンガリーの再建を！」未発生
+			AND = {				
+				event = 60201		# 大ハンガリー成立かつバルカン戦争終結済み
+				event = 60300
+			}
+		}
+	}
+
+	date = { day = 1 month = september year = 1939 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT60115N"
+	desc = "EVT60115D"
+	style = 0
+	picture = "german_marginal_victory"
+
+	action_a = {
+		name = "ACT60100A"
+		command = { type = make_puppet which = CRO }
+	}
+}
+
+event = {
+	id = 130923
+	random = no
+	country = GER
+
+	trigger = { #FEPKBETA5.5
+		NOT = {
+			alliance = { country = USA country = SER }
+			alliance = { country = ENG country = SER }
+			alliance = { country = FRA country = SER }
+			alliance = { country = SOV country = SER }
+			war = { country = GER country = SER }
+			war = { country = USA country = SER }
+			war = { country = ENG country = SER }
+			war = { country = FRA country = SER }
+			war = { country = SOV country = SER }
+			war = { country = JAP country = SER }
+			war = { country = ITA country = SER }
+			war = { country = VIC country = SER }
+			war = { country = BUL country = SER }
+			war = { country = HUN country = SER }
+			war = { country = ROM country = SER }
+			war = { country = GRE country = SER }
+			war = { country = YUG country = SER }
+			war = { country = CRO country = SER }
+			war = { country = AUS country = SER }
+			ispuppet = SER
+		}
+		exists = SER
+		OR = { #FEPK1.11
+			NOT = {	event = 60201 }		#「大ハンガリーの再建を！」未発生
+			AND = {				
+				event = 60201		# 大ハンガリー成立かつバルカン戦争終結済み
+				event = 60300
+			}
+		}
+	}
+
+	date = { day = 1 month = september year = 1939 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT60115N"
+	desc = "EVT60115D"
+	style = 0
+	picture = "german_marginal_victory"
+
+	action_a = {
+		name = "ACT60100A"
+		command = { type = make_puppet which = SER }
+	}
+}
+
+
+event = {
+	id = 130924
+	random = no
+	country = GER
+
+	trigger = { #FEPKBETA5.5
+		flag = neworder_1
+		NOT = {
+			alliance = { country = USA country = BLR }
+			alliance = { country = ENG country = BLR }
+			alliance = { country = FRA country = BLR }
+			alliance = { country = SOV country = BLR }
+			war = { country = GER country = BLR }
+			war = { country = USA country = BLR }
+			war = { country = ENG country = BLR }
+			war = { country = FRA country = BLR }
+			war = { country = SOV country = BLR }
+			war = { country = JAP country = BLR }
+			war = { country = ITA country = BLR }
+			war = { country = VIC country = BLR }
+			war = { country = BUL country = BLR }
+			war = { country = HUN country = BLR }
+			war = { country = ROM country = BLR }
+			war = { country = GRE country = BLR }
+			war = { country = YUG country = BLR }
+			war = { country = CRO country = BLR }
+			war = { country = SER country = BLR }
+			war = { country = AUS country = BLR }
+			ispuppet = BLR
+		}
+		exists = BLR
+	}
+
+	date = { day = 1 month = september year = 1939 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT60115N"
+	desc = "EVT60115D"
+	style = 0
+	picture = "german_marginal_victory"
+
+	action_a = {
+		name = "ACT60100A"
+		command = { type = make_puppet which = BLR }
+	}
+}
+
+event = {	
+	id = 130925
+	random = no
+	country = TUR
+	
+	name = "EVT_130925_NAME"	#ドイツによる東欧新体制 ― トルコのザカフカース獲得
+	desc = "EVT_130925_DESC"	#
+	style = 0
+	picture = "german_marginal_victory"
+	
+	action = {	
+		name = "OK"
+		command = { type = inherit which = U16 }
+	}
+}
+
+#########################################################################
+#  German new order in Eastern Europa / Romania spoil
+#########################################################################
+event = {
+	id = 130930
+	random = no
+	country = GER
+
+	trigger = {
+		exists = ROM
+		event = 130910
+		alliance = { country = GER country = ROM }
+		OR = {
+			alliance = { country = GER country = UKR }
+			NOT = { exists = UKR }
+		}
+	}
+
+	date = { day = 1 month = september year = 1939 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT60130N"
+	desc = "EVT60130D"
+	style = 0
+	picture = "vienna_diktat"
+
+	action_a = {
+		name = "OK"
+		command = { type = trigger which = 130931 }
+		command = { type = trigger which = 130932 }
+		command = { type = secedeprovince which = ROM value = 229 }
+		command = { type = secedeprovince which = ROM value = 230 }
+		command = { type = secedeprovince which = ROM value = 433 }
+		command = { type = secedeprovince which = ROM value = 434 }
+		command = { type = secedeprovince which = ROM value = 435 }
+		command = { type = secedeprovince which = ROM value = 231 }
+		command = { type = secedeprovince which = ROM value = 232 }
+		command = { type = secedeprovince which = ROM value = 233 }
+		command = { type = secedeprovince which = ROM value = 234 }
+		command = { type = secedeprovince which = UKR value = 243 }
+		command = { type = secedeprovince which = UKR value = 258 }#Rostov
+		command = { type = secedeprovince which = UKR value = 259 }
+		command = { type = secedeprovince which = UKR value = 261 }
+		command = { type = secedeprovince which = UKR value = 262 }
+		command = { type = secedeprovince which = UKR value = 265 }
+		command = { type = secedeprovince which = UKR value = 266 }
+		command = { type = secedeprovince which = UKR value = 267 }
+		command = { type = secedeprovince which = UKR value = 268 }
+		command = { type = secedeprovince which = UKR value = 269 }
+		command = { type = secedeprovince which = UKR value = 271 }
+		command = { type = secedeprovince which = UKR value = 161 }
+		command = { type = secedeprovince which = UKR value = 162 }
+		command = { type = secedeprovince which = UKR value = 163 }#staringrad
+		command = { type = secedeprovince which = UKR value = 164 }
+	}
+}
+
+#########################################################################
+#  German new order in Eastern Europa / Ukraine
+#########################################################################
+event = {
+	id = 130931
+	random = no
+	country = UKR
+
+	name = "EVT60130N"
+	desc = "EVT60130D"
+	style = 0
+	picture = "vienna_diktat"
+
+	action_a = {
+		name = "OK"
+		command = { type = secedeprovince which = GER value = 562 }
+		command = { type = secedeprovince which = GER value = 500 }
+		command = { type = secedeprovince which = GER value = 501 }
+		command = { type = secedeprovince which = GER value = 502 }
+		command = { type = secedeprovince which = GER value = 506 }
+		command = { type = secedeprovince which = ROM value = 229 }
+		command = { type = secedeprovince which = ROM value = 231 }
+		command = { type = secedeprovince which = ROM value = 232 }
+		command = { type = secedeprovince which = ROM value = 233 }
+		command = { type = secedeprovince which = ROM value = 234 }
+		#command = { type = secedeprovince which = ROM value = 235 }
+		#command = { type = secedeprovince which = ROM value = 236 }
+		command = { type = addcore which = 243 }
+		command = { type = addcore which = 254 }
+		command = { type = addcore which = 258 }#Rostov
+		command = { type = addcore which = 259 }
+		command = { type = addcore which = 261 }
+		command = { type = addcore which = 262 }
+		command = { type = addcore which = 265 }
+		command = { type = addcore which = 266 }
+		command = { type = addcore which = 267 }
+		command = { type = addcore which = 268 }
+		command = { type = addcore which = 269 }
+		command = { type = addcore which = 271 }
+		command = { type = addcore which = 161 }
+		command = { type = addcore which = 162 }
+		command = { type = addcore which = 163 }#staringrad
+		command = { type = addcore which = 164 }
+		command = { type = removecore which = 499 }
+		command = { type = removecore which = 500 }
+		command = { type = removecore which = 501 }
+		command = { type = removecore which = 502 }
+		command = { type = removecore which = 506 }
+		command = { type = removecore which = 229 }
+		command = { type = removecore which = 231 }
+		command = { type = removecore which = 232 }
+		command = { type = removecore which = 233 }
+		command = { type = removecore which = 234 }
+		#command = { type = removecore which = 235 }
+		#command = { type = removecore which = 236 }
+	}
+}
+
+event = {
+	id = 130932
+	random = no
+	country = ROM
+
+	name = "EVT60130N"
+	desc = "EVT60130D"
+	style = 0
+	picture = "vienna_diktat"
+
+	action_a = {
+		name = "OK"
+		#command = { type = addcore which = 502 }
+		command = { type = addcore which = 229 }
+		command = { type = addcore which = 231 }
+		command = { type = addcore which = 232 }
+		command = { type = addcore which = 233 }
+		command = { type = addcore which = 234 }
+		#command = { type = addcore which = 235 }
+		#command = { type = addcore which = 236 }
+	}
+}
+
+#########################################################################
+#  German new order in Eastern Europa - Germany win USSR / Karelia for SCA
+#########################################################################
+event = {
+	id = 130935
+	random = no
+	country = GER
+
+	trigger = {
+	#	OR = {
+	#		event = 2625
+	#		event = 2646
+	#	}
+		OR = { #FEPKBETA3
+			event = 135303 #bitter peace with germany
+			event = 135313 #bitter peace with germany and japan
+		}
+		exists = SCA
+		NOT ={ exists = FIN }
+		alliance = { country = SCA country = GER }
+	}
+
+	date = { day = 1 month = september year = 1939 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT60135N"
+	desc = "EVT60135D"
+	style = 0
+	picture = "finland_sweden"
+
+	action_a = {
+		name = "ACT60100A" # SCA
+		command = { type = trigger which = 130936 } # SCA
+		command = { type = secedeprovince which = SCA value = 130 } # Finland
+		command = { type = secedeprovince which = SCA value = 131 }
+		command = { type = secedeprovince which = SCA value = 132 }
+		command = { type = secedeprovince which = SCA value = 136 }
+		command = { type = secedeprovince which = SCA value = 137 }
+		command = { type = secedeprovince which = SCA value = 138 }
+		command = { type = secedeprovince which = SCA value = 139 }
+		command = { type = secedeprovince which = SCA value = 140 }
+		command = { type = secedeprovince which = SCA value = 141 }
+		command = { type = secedeprovince which = SCA value = 142 }
+		command = { type = secedeprovince which = SCA value = 143 }
+		command = { type = secedeprovince which = SCA value = 144 }
+		command = { type = secedeprovince which = SCA value = 147 }
+		command = { type = secedeprovince which = SCA value = 148 }
+		command = { type = secedeprovince which = SCA value = 149 }
+
+		command = { type = secedeprovince which = SCA value = 135 } # 
+		command = { type = secedeprovince which = SCA value = 145 } # 
+		command = { type = secedeprovince which = SCA value = 146 } # 
+		command = { type = secedeprovince which = SCA value = 150 } # 
+		command = { type = secedeprovince which = SCA value = 152 } # Karelia
+		command = { type = secedeprovince which = SCA value = 103 } # 
+		command = { type = secedeprovince which = SCA value = 130 } # 
+		command = { type = secedeprovince which = SCA value = 131 } # 
+		command = { type = secedeprovince which = SCA value = 132 } # 
+		command = { type = secedeprovince which = SCA value = 136 } # 
+		command = { type = secedeprovince which = SCA value = 137 } # 
+		command = { type = secedeprovince which = SCA value = 138 } # 
+		command = { type = secedeprovince which = SCA value = 139 } # 
+		command = { type = secedeprovince which = SCA value = 140 } # 
+		command = { type = secedeprovince which = SCA value = 141 } # 
+		command = { type = secedeprovince which = SCA value = 142 } # 
+		command = { type = secedeprovince which = SCA value = 143 } # 
+		command = { type = secedeprovince which = SCA value = 144 } # 
+		command = { type = secedeprovince which = SCA value = 147 } # 
+		command = { type = secedeprovince which = SCA value = 148 } # 
+		command = { type = secedeprovince which = SCA value = 149 } # 
+		command = { type = secedeprovince which = SCA value = 133 } # FEPK #1.06
+		command = { type = secedeprovince which = SCA value = 134 } #
+		command = { type = secedeprovince which = SCA value = 187 } # Leninglad
+	}
+}
+event = {
+	id = 130936
+	random = no
+	country = SCA
+	name = "EVT60135N"
+	desc = "EVT60135D"
+	style = 0
+	picture = "finland_sweden"
+
+	action_a = {
+		name = "ACT60136A" # 
+		command = { type = dissent value = -5 }
+		command = { type = addcore which = 135 } # 
+		command = { type = addcore which = 145 } # 
+		command = { type = addcore which = 146 } # 
+		command = { type = addcore which = 150 } # 
+		command = { type = addcore which = 151 } # 
+		command = { type = addcore which = 152 } # Karelia
+		command = { type = addcore which = 133 } # FEPK # 1.06
+		command = { type = addcore which = 134 }
+		command = { type = addcore which = 187 }
+	}
+}
+#########################################################################
+#  German new order in Eastern Europa - Germany win USSR / Karelia for FIN
+#########################################################################
+event = {
+	id = 130937
+	random = no
+	country = GER
+
+	trigger = {
+	#	OR = {
+	#		event = 2625
+	#		event = 2646
+	#	}
+		OR = { #FEPKBETA3
+			event = 135303 #bitter peace with germany
+			event = 135313 #bitter peace with germany and japan
+		}
+		exists = FIN
+		alliance = { country = FIN country = GER }
+	}
+	
+	date = { day = 1 month = september year = 1939 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	name = "EVT60135N"
+	desc = "EVT60137D"
+	style = 0
+	picture = "FIN_give_in"
+
+	action_a = {
+		name = "ACT60100A"
+		command = { type = secedeprovince which = FIN value = 130 } # Finland
+		command = { type = secedeprovince which = FIN value = 131 }
+		command = { type = secedeprovince which = FIN value = 132 }
+		command = { type = secedeprovince which = FIN value = 136 }
+		command = { type = secedeprovince which = FIN value = 137 }
+		command = { type = secedeprovince which = FIN value = 138 }
+		command = { type = secedeprovince which = FIN value = 139 }
+		command = { type = secedeprovince which = FIN value = 140 }
+		command = { type = secedeprovince which = FIN value = 141 }
+		command = { type = secedeprovince which = FIN value = 142 }
+		command = { type = secedeprovince which = FIN value = 143 }
+		command = { type = secedeprovince which = FIN value = 144 }
+		command = { type = secedeprovince which = FIN value = 147 }
+		command = { type = secedeprovince which = FIN value = 148 }
+		command = { type = secedeprovince which = FIN value = 149 }
+
+		command = { type = secedeprovince which = FIN value = 135 } # 
+		command = { type = secedeprovince which = FIN value = 145 } # 
+		command = { type = secedeprovince which = FIN value = 146 } # 
+		command = { type = secedeprovince which = FIN value = 150 } # 
+		command = { type = secedeprovince which = FIN value = 151 } # 
+		command = { type = secedeprovince which = FIN value = 152 } # Karelia
+		command = { type = secedeprovince which = FIN value = 133 } # FEPK #1.06
+		command = { type = secedeprovince which = FIN value = 134 }
+		command = { type = secedeprovince which = FIN value = 187 } # Leninglad
+		command = { type = trigger which = 130938 }
+	}
+}
+event = {
+	id = 130938
+	random = no
+	country = FIN
+	name = "EVT60135N"
+	desc = "EVT60137D"
+	style = 0
+	picture = "FIN_give_in"
+
+	action_a = {
+		name = "ACT60136A" # 
+		command = { type = dissent value = -5 }
+		command = { type = addcore which = 135 } # 
+		command = { type = addcore which = 145 } # 
+		command = { type = addcore which = 146 } # 
+		command = { type = addcore which = 150 } # 
+		command = { type = addcore which = 151 } # 
+		command = { type = addcore which = 152 } # Karelia
+		command = { type = addcore which = 133 } # FEPK
+		command = { type = addcore which = 134 }
+		command = { type = addcore which = 187 }
+	}
+}
+#########################################################################
+#  German new order in Northern Europa
+#########################################################################
+event = {
+	id = 130940
+	random = no
+	country = GER
+
+	trigger = {
+		NOT = { #FEPKBETA4.6
+			war = { country = GER country = SWE }
+			war = { country = GER country = NOR }
+			war = { country = GER country = DEN }
+		}
+		OR = {
+			AND = {
+				control = { province = 101 data = GER } # 
+				control = { province = 107 data = GER } # 
+				control = { province = 294 data = GER } # 
+			}
+			AND = {
+				puppet = { country = SWE country = GER }
+				control = { province = 107 data = GER } # 
+				control = { province = 294 data = GER } # 
+			}
+			AND = {
+				control = { province = 101 data = GER } # 
+				puppet = { country = NOR country = GER }
+				control = { province = 294 data = GER } # 
+			}
+			AND = {
+				control = { province = 101 data = GER } # 
+				control = { province = 107 data = GER } # 
+				puppet = { country = DEN country = GER }
+			}
+			AND = {
+				puppet = { country = SWE country = GER }
+				puppet = { country = NOR country = GER }
+				control = { province = 294 data = GER } # 
+			}
+			AND = {
+				puppet = { country = SWE country = GER }
+				control = { province = 107 data = GER } # 
+				puppet = { country = DEN country = GER }
+			}
+			AND = {
+				control = { province = 101 data = GER } # 
+				puppet = { country = NOR country = GER }
+				puppet = { country = DEN country = GER }
+			}
+			AND = {
+				puppet = { country = SWE country = GER }
+				puppet = { country = NOR country = GER }
+				puppet = { country = DEN country = GER }
+			}
+		}
+	}
+
+	name = "EVT60140N"
+	desc = "EVT60140D"
+	style = 0
+	picture = "ger_surrender"
+
+	date = { day = 1 month = september year = 1939 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "ACT60140A" # Set up SCA
+		ai_chance = 97
+		command = { type = inherit which = NOR }
+		command = { type = inherit which = SWE }
+		command = { type = inherit which = DEN }
+		command = { type = addcore which = 295 }
+		command = { type = trigger which = 130941 }
+		command = { type = clrflag which = sweden }
+		command = { type = clrflag which = norway }
+		command = { type = clrflag which = denmark }
+		command = { type = clrflag which = finland }
+		command = { type = sleepevent which = 57810 }#Back to Stormaktstiden
+		command = { type = sleepevent which = 57811 }
+		command = { type = sleepevent which = 57813 }#ポーランドの陣営変え
+		command = { type = sleepevent which = 15136 } # 植民地政策への怒り
+	}
+	action_b = {
+		name = "ACT60140B"
+		ai_chance = 2
+		command = { type = independence which = DEN value = 1 }
+		command = { type = independence which = SWE value = 1 }
+		command = { type = addcore which = 295 }
+		command = { type = trigger which = 130942 }
+		command = { type = dissent value = -5 }
+		command = { type = clrflag which = sweden }
+		command = { type = clrflag which = norway }
+		command = { type = clrflag which = denmark }
+		command = { type = clrflag which = finland }
+		command = { type = sleepevent which = 57810 }#Back to Stormaktstiden
+		command = { type = sleepevent which = 57811 }
+		command = { type = sleepevent which = 57813 }#ポーランドの陣営変え
+	}
+		action_c = {
+		name = "ACT60140C"
+		ai_chance = 1
+		command = { type = clrflag which = sweden }
+		command = { type = clrflag which = norway }
+		command = { type = clrflag which = denmark }
+		command = { type = clrflag which = finland }
+		command = { type = addcore which = 295 }
+		command = { type = sleepevent which = 57810 }#Back to Stormaktstiden
+		command = { type = sleepevent which = 57811 }
+		command = { type = sleepevent which = 57813 }#ポーランドの陣営変え
+	}
+}
+#スカンディナビアに統治させる
+event = {
+	id = 130941
+	random = no
+	country = GER
+	name = "EVT60140N"
+	desc = "EVT60141D"
+	style = 0
+	picture = "ger_surrender"
+
+	action_a = {
+		name = "ACT60100A" # 
+		command = { type = independence which = SCA value = 1 }
+		command = { type = dissent value = -5 }
+		command = { type = trigger which = 130942 } # SCA
+	}
+}
+event = {
+	id = 130942
+	random = no
+	country = GER
+	name = "EVT60140N"
+	desc = "EVT60140D"
+	style = 0
+	picture = "ger_surrender"
+
+	action_a = {
+		name = "ACT60100A" # 
+		command = { type = make_puppet which = SCA }
+		command = { type = make_puppet which = DEN }
+		command = { type = make_puppet which = SWE }
+		command = { type = trigger which = 130943 } # SCA
+	}
+}
+event = {
+	id = 130943
+	random = no
+	country = SCA
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+	picture = "ger_surrender"
+
+	action_a = {
+		name = "ACT60100A" # 
+		command = { type = sleepteam which = 32025 }
+		command = { type = sleepevent which = 15082 }
+		command = { type = free_ic value = 4 }
+		command = { type = headofstate which = 514011 }
+		command = { type = headofgovernment which = 514012 }
+		command = { type = foreignminister which = 514013 }
+		command = { type = armamentminister which = 514014 }
+		command = { type = ministerofsecurity which = 514015 }
+		command = { type = ministerofintelligence which = 514016 }
+		command = { type = chiefofstaff which = 514017 }
+		command = { type = chiefofarmy which = 514018 }
+		command = { type = chiefofnavy which = 514019 }
+		command = { type = chiefofair which = 514020 }
+		
+		command = { type = set_relation which = GER value = 200 }
+		command = { type = set_relation which = ITA value = 150 }
+		command = { type = set_relation which = SPA value = 100 }
+		command = { type = relation which = FIN value = 40 }
+		
+		command = { type = transport_pool which = SCA value = 1000 }
+		command = { type = escort_pool which = SCA value = 1000 }
+		command = { type = add_division value = transport }
+		command = { type = add_corps value = land where = 101 }
+		command = { type = add_division value = infantry when = 3 }
+		command = { type = add_division value = infantry when = 2 }
+		command = { type = add_division value = infantry when = 2 }
+		command = { type = add_corps value = land where = 107 }
+		command = { type = add_division value = bergsjaeger when = 2 }
+		command = { type = add_division value = bergsjaeger when = 1 }
+		command = { type = add_division value = bergsjaeger when = 1 }
+		command = { type = add_corps value = land where = 294 }
+		command = { type = add_division value = infantry when = 3 }
+		command = { type = add_division value = infantry when = 2 }
+		command = { type = add_division value = infantry when = 2 }
+		command = { type = add_corps value = land where = 125 }
+		command = { type = add_division value = garrison when = 1 }
+		command = { type = add_corps value = land where = 124 }
+		command = { type = add_division value = garrison when = 1 }
+		command = { type = add_corps value = land where = 118 }
+		command = { type = add_division value = garrison when = 1 }
+		command = { type = add_corps value = land where = 117 }
+		command = { type = add_division value = garrison when = 1 }
+		command = { type = add_corps value = land where = 110 }
+		command = { type = add_division value = garrison when = 1 }
+		command = { type = add_corps value = land where = 109 }
+		command = { type = add_division value = garrison when = 1 }
+		command = { type = add_corps value = land where = 108 }
+		command = { type = add_division value = garrison when = 1 }
+		command = { type = add_corps value = land where = 108 }
+		command = { type = add_division value = garrison when = 1 }
+		command = { type = add_corps value = naval where = 118 }
+		command = { type = add_division value = submarine when = 1 }
+		command = { type = add_division value = submarine when = 1 }
+		command = { type = add_division value = submarine when = 1 }
+		command = { type = add_corps value = naval where = 118 }
+		command = { type = add_division value = destroyer when = 1 }
+		command = { type = add_division value = destroyer when = 1 }
+		command = { type = add_division value = destroyer when = 1 }
+
+		command = { type = ai which = SCA.ai }
+	}
+}
+
+
+#########################################################################
+#  German new order in Northern Europa at finland
+#########################################################################
+event = {
+	id = 130944
+	random = no
+	country = GER
+
+	trigger = {
+		NOT = { war = { country = GER country = SOV } }
+	#	OR = {
+	#		event = 2625
+	#		event = 2646
+	#	}
+		OR = { #FEPKBETA3
+			event = 135303 #bitter peace with germany
+			event = 135313 #bitter peace with germany and japan
+		}
+		exists = SCA
+		NOT = { war = { country = FIN country = SOV } }
+		puppet = { country = SCA country = GER }
+		alliance = { country = SCA country = GER }
+		OR = {
+			puppet = { country = FIN country = GER }
+			alliance = { country = FIN country = GER }
+		}
+	}
+
+	name = "EVT60144N"
+	desc = "EVT60144D"
+	style = 0
+	picture = "finland_sweden"
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "ACT60144A" # Annex finland
+		ai_chance = 99
+		command = { type = trigger which = 130945 }
+
+	}
+	action_b = {
+		name = "ACT60144B"
+		ai_chance = 1
+		command = { type = dissent value = 1 }
+	}
+}
+event = {
+	id = 130945
+	random = no
+	country = FIN
+
+
+	name = "EVT60144N"
+	desc = "EVT60145D"
+	style = 0
+	picture = "finland_sweden"
+
+	action_a = {
+		name = "ACT60145A" # Annex finland
+		ai_chance = 99
+		command = { type = trigger which = 130947 }
+
+	}
+	action_b = {
+		name = "ACT60145B"
+		ai_chance = 1
+		command = { type = leave_alliance }
+		command = { type = peace which = ENG value = 1 }
+		command = { type = peace which = USA value = 1 }
+		command = { type = peace which = CHI value = 1 }
+		#command = { type = war which = SCA }
+		command = { type = trigger which = 130946 }
+	}
+}
+
+event = {
+	id = 130946
+	random = no
+	country = SCA
+	
+	name = "EVT_130945_NAME"
+	desc = "EVT_130945_DESC"
+	style = 0
+	picture = "finland_sweden"
+
+	action_a = {
+		name = "EVT_130945_ACTA"
+		command = { type = war which = FIN }
+	}
+}
+
+event = {
+	id = 130947
+	random = no
+	country = SCA
+
+	name = "EVT60144N"
+	desc = "EVT60146D"
+	style = 0
+	picture = "finland_sweden"
+
+	action_a = {
+		name = "ACT60145A" # Annex finland
+		command = { type = inherit which = FIN value = 1 }
+		command = { type = ministerofsecurity which = 514094 } #BETA修正パッチ
+		command = { type = chiefofstaff which = 514095 } # FEPK変更部分 #1.07
+		command = { type = chiefofarmy which = 514097 } #BETA修正パッチ
+		command = { type = addcore which = 135 } # Karelia
+		command = { type = addcore which = 145 }
+		command = { type = addcore which = 146 }
+		command = { type = addcore which = 150 }
+		command = { type = addcore which = 151 }
+		command = { type = addcore which = 152 }
+		command = { type = waketeam which = 32001 } #BETA修正パッチ
+		command = { type = waketeam which = 32005 }
+		command = { type = waketeam which = 32008 }
+		command = { type = waketeam which = 32010 }
+		command = { type = waketeam which = 32018 }
+		command = { type = waketeam which = 32020 }
+		command = { type = waketeam which = 32023 }
+		command = { type = dissent value = -5 }
+		command = { type = free_ic value = 4 }
+#		command = { type = add_corps value = land where = 142 }
+#		command = { type = add_division value = bergsjaeger when = 3 where = artillery }
+#		command = { type = add_division value = bergsjaeger when = 3 where = artillery }
+#		command = { type = add_division value = bergsjaeger when = 3 where = artillery }
+#		command = { type = add_corps value = land where = 132 }
+#		command = { type = add_division value = bergsjaeger when = 3 where = artillery }
+#		command = { type = add_division value = bergsjaeger when = 3 where = artillery }
+#		command = { type = add_division value = bergsjaeger when = 3 where = artillery }
+		command = { type = trigger which = 130948 } # SCA
+	}
+}
+
+event = {
+	id = 130948
+	random = no
+	country = SCA
+
+	trigger = {
+		event = 130938
+		NOT = {
+			event = 130936
+		}
+	}
+	name = "EVT60144N"
+	desc = "EVT60146D"
+	style = 0
+	#picture = "ger_surrender"
+
+	action_a = {
+		name = "OK"
+		command = { type = addcore which = 133 } # FEPK # 1.07
+		command = { type = addcore which = 134 }
+		command = { type = addcore which = 187 }
+	}
+}
+
+event = { 
+	id = 130950
+	random = no
+	country = GER
+	trigger = {
+		event = 130900
+		OR = {
+			alliance = { country = FIN country = GER }
+			alliance = { country = SCA country = GER }
+		}
+		alliance = { country = RUS country = GER }
+	}
+	date = { day = 1 month = january year = 1939 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130950_NAME"	#東部イングリアの帰属
+	desc = "EVT_130950_DESC"	#
+	
+	picture = "finish_officers"
+	style = 0
+	
+	action = {
+		name = "EVT_130950_ACTA"	#フィン人は集結すべきだ
+		ai_chance = 40
+		#command = { type = trigger which = 130951 }
+		command = { type = setflag which = FIN_Ingria }
+		command = { type = secedearea which = FIN value = "Leningrad" }
+		command = { type = secedearea which = SCA value = "Leningrad" }
+	}
+	action = {
+		name = "EVT_130950_ACTB"	#バルト海の全てを我が手に！
+		ai_chance = 10
+		command = { type = belligerence value = 15 }
+		command = { type = trigger which = 130953 }
+	}
+	action = {
+		name = "EVT_130950_ACTC"	#もはやイングリア人などいくらも存在しないのだ
+		ai_chance = 50
+		command = {}
+	}
+}
+
+event = { 
+	id = 130951
+	random = no
+	tag = { FIN SCA }
+	trigger = {
+		flag = FIN_Ingria
+		control = { province = 142 data = -1 } #Helsinki
+	}
+
+	date = { day = 1 month = january year = 1939 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130951_NAME"	#東部イングリアの帰属 ― イングリアが我が手に！
+	desc = "EVT_130951_DESC"	#
+	
+	picture = "finish_officers"
+	style = 0
+	
+	action = {
+		name = "EVT_130951_ACTA"	#統一に万歳！
+		command = { type = addcore which = 186 }
+		command = { type = addcore which = 187 }
+		command = { type = addcore which = 188 }
+		command = { type = addcore which = 192 }
+		command = { type = trigger which = 130952 }
+	}
+}
+
+event = {
+	id = 130952
+	random = no
+	country = RUS
+	
+	name = "EVT_130952_NAME"	#東部イングリアの帰属 ― ロシア人の強制退去
+	desc = "EVT_130952_DESC"	#
+	
+	picture = "finish_officers"
+	style = 0
+	
+	action = {
+		name = "EVT_130952_ACTA"	#我々に拒否権は無い……。
+		command = { type = dissent value = 5 }
+		command = { type = secedearea which = FIN value = "Leningrad" }
+		command = { type = secedearea which = SCA value = "Leningrad" }
+	}
+}
+
+event = { 
+	id = 130953
+	random = no
+	country = GER
+	
+	name = "EVT_130953_NAME"	#イングリアの帰属 ― ハンザ同盟のイングリア
+	desc = "EVT_130953_DESC"	#
+	
+	picture = "finish_officers"
+	style = 0
+	
+	action = {
+		name = "EVT_130953_ACTA"	#東部生存圏における交易の要が手に入った！
+		command = { type = addclaim which = 186 }
+		#command = { type = addclaim which = 187 }	#Leningrad
+		command = { type = addclaim which = 188 }
+		command = { type = addclaim which = 192 }
+		command = { type = trigger which = 130954 }
+	}
+}
+
+event = {
+	id = 130954
+	random = no
+	country = RUS
+	
+	name = "EVT_130954_NAME"	#東部イングリアの帰属 ― ロシア人の強制退去
+	desc = "EVT_130954_DESC"	#
+	
+	picture = "finish_officers"
+	style = 0
+	
+	action = {
+		name = "EVT_130954_ACTA"	#我々に拒否権は無い……。
+		command = { type = dissent value = 5 }
+		command = { type = secedearea which = GER value = "Leningrad" }
+	}
+}
+
+event = {
+	id = 130955
+	random = no
+	country = GER
+	trigger = {
+		event = 130953
+		OR = {
+			event = 130901
+			event = 130902
+		}
+		area = { area = "Leningrad" country = GER value = 50 }
+	}
+
+	date = { day = 1 month = january year = 1939 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130955_NAME"	#東方生存圏 ― 旧レニングラード州の統合
+	desc = "EVT_130955_DESC"	#
+	
+	picture = "finish_officers"
+	style = 0
+	
+	action = {
+		name = "EVT_130955_ACTA"	#ハンザ同盟よ永遠なれ
+		command = { type = addcore which = 186 }
+		command = { type = addcore which = 187 }
+		command = { type = addcore which = 188 }
+		command = { type = addcore which = 192 }
+	}
+}
+
+event = {
+	id = 130960
+	random = no
+	country = SOV
+	persistent = yes
+	trigger = {
+		event = 55332
+		NOT = { event = 55333 }	#シベリアが独立していない（＝ロシア内戦起こらず）
+		NOT = { exists = SIB }
+		NOT = { exists = RUS }
+		exists = GER
+		NOT = { region = { region = "Ukraine" country = -3 value = 10 } }	#ウクライナ持っていない
+		NOT = { region = { region = "China" country = -3 value = 10 } }	#一応中国でも代替できるとする
+		NOT = { control = { province = 175 data = SOV } } # モスクワ
+		ic = 30	#ICが30以上（＝国家の規模として、大規模な人民を食わせなければならない）
+		random = 30
+	}
+	
+	date = { day = 1 month = january year = 1939 }
+	offset = 16
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130960_NAME"	#食料の不足
+	desc = "EVT_130960_DESC"	#
+	picture = "soviet_mud"
+	
+	action = {
+		name = "EVT_130960_ACTA"	#国家の貯蔵を放出せよ
+		ai_chance = 100
+		trigger = { supplies = 10000 }
+		command = { type = supplies value = -10000 }
+	}
+	action = {
+		name = "EVT_130960_ACTB"	#遺憾ながら、党員すらも食うものに困る状況なのだ
+		ai_chance = 0
+		command = { type = dissent value = 10 }
+		command = { type = manpowerpool value = -10 }
+		command = { type = damage_division which = -1 value = SOV where = 20 }
+		command = { type = damage_division which = -1 value = SOV where = 20 }
+		command = { type = damage_division which = -1 value = SOV where = 10 }
+		command = { type = damage_division which = -1 value = SOV where = 10 }
+		command = { type = damage_division which = -1 value = SOV where = 10 }
+		command = { type = damage_division which = -1 value = SOV where = 10 }
+		command = { type = damage_division which = -1 value = SOV where = 5 }
+		command = { type = damage_division which = -1 value = SOV where = 5 }
+		command = { type = damage_division which = -1 value = SOV where = 5 }
+		command = { type = damage_division which = -1 value = SOV where = 5 }
+		command = { type = setflag which = Soviet_Famine }
+	}
+}
+
+event = {
+	id = 130961
+	random = no
+	country = SOV
+	trigger = {
+		flag = Soviet_Famine
+		dissent = 15
+	}
+
+	date = { day = 1 month = january year = 1939 }
+	offset = 8
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130961_NAME"	#餓死か勝利か
+	desc = "EVT_130961_DESC"	#
+	
+	picture = "soviet_mud"
+	
+	action = {
+		name = "EVT_130961_ACTA"	#勝利無くして生存なし……。
+		command = { type = dissent value = 15 }
+	}
+}
+
+event = {
+	id = 130962
+	random = no
+	country = SOV
+	trigger = {
+		event = 130961
+		random = 40
+		war = { country = ENG country = GER }
+	}
+	
+	date = { day = 1 month = january year = 1939 }
+	offset = 12
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130962_NAME"	#奪還戦争への道
+	desc = "EVT_130962_DESC"	#
+	
+	picture = "soviet_mud"
+	
+	action = {
+		name = "EVT_130962_ACTA"	#STAVKAは正しい、今は機を伺う時だ
+		command = { type = dissent value = 5 }
+	}
+	action = {
+		name = "EVT_130962_ACTB"	#待てば待つだけ人民が死するのだ！　これ以上待てない！
+		command = { type = dissent value = -5 }
+		command = [ type = war which = GER }
+		command = { type = end_non_aggression which = GER where = SOV }
+		command = { type = sleepevent which = 130963 }
+	}
+}
+	
+event = {
+	id = 130963
+	country = SOV
+	trigger = {
+		event = 130962
+		NOT = { war = { country = GER country = SOV } }
+		OR = {
+			AND = {
+				war = { country = ENG country = GER }
+				OR = {
+					region = { region = "England" country = GER value = 15 } 
+					region = { region = "Scotland" country = GER value = 15 }
+				}
+			}
+			AND = {
+				war = { country = GER country = ENG }
+				lost_national = { country = USA value = 2 }
+			}
+			lost_national = { country = GER value = 5 }
+		}
+		random = 70
+		NOT = { non_aggression = { country = GER country = SOV } }
+	}
+	
+	picture = "soviet_mud"
+
+	date = { day = 1 month = january year = 1939 }
+	offset = 19
+	deathdate = { day = 29 month = december year = 1963 }
+
+
+	name = "EVT_130963_NAME"	#ロシア奪還戦争
+	desc = "EVT_130963_DESC"	#
+	
+	action = {
+		name = "EVT_130963_ACTA"	#奪還し、解放せよ！！
+		ai_chance = 99
+		command = { type = war which = GER }
+		command = { type = end_access which = GER when = 1 }
+		command = { type = end_access which = GER }
+		#command = { type = end_non_aggression which = GER where = SOV }
+	}
+	action = {
+		name = "EVT_130963_ACTB"	#今更ドイツに勝てると……？
+		command = { type = country which = RUS }
+	}
+}
+	
+event = {
+	id = 130964
+	country = SOV
+	trigger = {
+		war = { country = SOV country = GER }
+		NOT = { control = { province = 1155 data = SOV } } #スヴェルドロフスク
+		NOT = { control = { province = 175 data = SOV } } #モスクワ
+		NOT = { control = { province = 187 data = SOV } } #レニングラード
+		NOT = { control = { province = 163 data = SOV } } #スターリングラード
+		OR = {
+			lost_VP = { country = SOV value = 70 }
+			lost_IC = { country = SOV value = 70 }
+			lost_national = { country = SOV value = 70 }
+			AND = {
+				nuked = { data = -1 where = 1155 }	#DC
+				OR = {
+					lost_VP = { country = SOV value = 65 }
+					lost_IC = { country = SOV value = 65 }
+					lost_national = { country = SOV value = 65 }
+				}
+			}	
+		}
+		NOT = { lost_national = { country = GER value = 10 } }
+		event = 130962	#奪還戦争前日譚
+	}
+
+	picture = "Bitter_Peace"
+	date = { day = 1 month = january year = 1939 }
+	offset = 4
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130964_NAME"	#革命神話の終焉
+	desc = "EVT_130964_DESC"	#
+	
+	action = {
+		name = "EVT_130964_ACTA"	#『東方政策』に欠片ほどにでも慈悲がありますように
+		ai_chance = 100
+		command = { type = peace which = GER }
+		command = { type = peace which = CHI }
+		command = { type = peace which = FIN }
+		command = { type = peace which = BUL }
+		command = { type = peace which = ITA }
+		command = { type = peace which = PER }
+		command = { type = peace which = TUR }
+		command = { type = peace which = AUS } # FEPKBETA3
+		command = { type = peace which = JAP } 
+		command = { type = peace which = USA }
+		command = { type = peace which = ENG } 
+		command = { type = peace which = FRA } 
+		command = { type = event which = 130965 where = GER when = 1 }
+	}
+	action = {
+		name = "EVT_130964_ACTB"	#我々はあのファシストには屈しないのだ、何があろうと！
+		ai_chance = 0
+		command = { type = dissent value = 75 }
+	}
+}
+
+event = {
+	id = 130965
+	country = GER
+	
+	picture = "Bitter_Peace"
+	
+	name = "EVT_130964_NAME"	#革命神話の終焉
+	desc = "EVT_130965_DESC"	#
+	
+	action = {
+		name = "EVT_130965_ACTA"	#さて、始めるか！
+		command = { type = inherit which = SOV }
+		command = { type = dissent value = -15 }
+	}
+}
+
+event = {
+	id = 130966
+	country = GER
+	trigger = {
+		NOT = { exists = SOV }
+		NOT = { exists = RUS }
+		control = { province = 175 data = GER }	#Moscow
+	}
+	
+	picture = "Bitter_Peace"
+
+	date = { day = 1 month = january year = 1939 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+
+	name = "EVT_130966_NAME"	#ロシアの運命
+	desc = "EVT_130966_DESC"	#
+
+	action = {
+		name = "EVT_130966_ACTA"	#モスクワの親独政権による統一的な支配体制を樹立する
+		ai_chance = 60
+		command = { type = independence which = RUS value = 1 }
+		command = { type = addcore which = 1155 where = RUS } #スヴェルドロフスク以東を譲渡
+		command = { type = addcore which = 1564 where = RUS }
+		command = { type = addcore which = 1565 where = RUS }
+		command = { type = addcore which = 1571 where = RUS }
+		command = { type = addcore which = 1573 where = RUS }
+		command = { type = addcore which = 1575 where = RUS }
+		command = { type = addcore which = 1597 where = RUS }
+		command = { type = addcore which = 1593 where = RUS }
+		command = { type = addcore which = 1552 where = RUS }
+		command = { type = addcore which = 1594 where = RUS }
+		command = { type = addcore which = 1596 where = RUS }
+		command = { type = addcore which = 1598 where = RUS }
+		command = { type = addcore which = 1541 where = RUS }
+		command = { type = addcore which = 1542 where = RUS }
+		command = { type = addcore which = 1154 where = RUS }
+		command = { type = addcore which = 1772 where = RUS } #スヴェルドロフスク以西を中核州化
+		command = { type = addcore which = 1773 where = RUS }
+		command = { type = addcore which = 1782 where = RUS }
+		command = { type = addcore which = 1827 where = RUS }
+		command = { type = addcore which = 1828 where = RUS }
+		command = { type = addcore which = 1149 where = RUS }
+		command = { type = addcore which = 1152 where = RUS }
+		command = { type = addcore which = 1153 where = RUS }
+		command = { type = addcore which = 1151 where = RUS }
+		command = { type = addcore which = 1566 where = RUS }
+		command = { type = addcore which = 1572 where = RUS }
+		command = { type = addcore which = 1567 where = RUS }
+		command = { type = addcore which = 1570 where = RUS }
+		command = { type = addcore which = 1574 where = RUS }
+		command = { type = addcore which = 1577 where = RUS }
+		command = { type = addcore which = 1150 where = RUS }
+		command = { type = addcore which = 1155 where = RUS } #スヴェルドロフスク以東を譲渡
+		command = { type = secedeprovince which = RUS value = 1564 }
+		command = { type = secedeprovince which = RUS value = 1565 }
+		command = { type = secedeprovince which = RUS value = 1571 }
+		command = { type = secedeprovince which = RUS value = 1573 }
+		command = { type = secedeprovince which = RUS value = 1575 }
+		command = { type = secedeprovince which = RUS value = 1597 }
+		command = { type = secedeprovince which = RUS value = 1593 }
+		command = { type = secedeprovince which = RUS value = 1552 }
+		command = { type = secedeprovince which = RUS value = 1594 }
+		command = { type = secedeprovince which = RUS value = 1596 }
+		command = { type = secedeprovince which = RUS value = 1598 }
+		command = { type = secedeprovince which = RUS value = 1541 }
+		command = { type = secedeprovince which = RUS value = 1542 }
+		command = { type = secedeprovince which = RUS value = 1154 }
+		command = { type = secedeprovince which = RUS value = 1772 } #スヴェルドロフスク以西中核州化
+		command = { type = secedeprovince which = RUS value = 1773 }
+		command = { type = secedeprovince which = RUS value = 1782 }
+		command = { type = secedeprovince which = RUS value = 1827 }
+		command = { type = secedeprovince which = RUS value = 1828 }
+		command = { type = secedeprovince which = RUS value = 1149 }
+		command = { type = secedeprovince which = RUS value = 1152 }
+		command = { type = secedeprovince which = RUS value = 1153 }
+		command = { type = secedeprovince which = RUS value = 1151 }
+		command = { type = secedeprovince which = RUS value = 1566 }
+		command = { type = secedeprovince which = RUS value = 1572 }
+		command = { type = secedeprovince which = RUS value = 1567 }
+		command = { type = secedeprovince which = RUS value = 1570 }
+		command = { type = secedeprovince which = RUS value = 1574 }
+		command = { type = secedeprovince which = RUS value = 1577 }
+		command = { type = secedeprovince which = RUS value = 1150 }
+		command = { type = make_puppet which = RUS }
+	}
+	action = {
+		name = "EVT_130966_ACTB"	#ロシア国とシベリア国に分割し、それぞれを間接的に統治する
+		ai_chance = 39
+		trigger = { control = { province = 1548 data = GER } }
+		command = { type = independence which = SIB value = 1 }
+		command = { type = make_puppet which = SIB }
+		command = { type = independence which = RUS value = 1 }
+		command = { type = make_puppet which = RUS }
+	}
+	action = {
+		name = "EVT_130966_ACTC"	#軍政を続行せよ！
+		ai_chance = 1
+		command = { type = dissent value = 1 }
+	}
+}
+
+#KAZ	1422
+#KYG	1429
+#TAJ	1485
+#TRK	1490
+#UZB	1427
+#or
+#U17	1432
+event = {
+	id = 130967
+	country = GER
+	trigger = {
+		event = 130966
+		OR = {
+			control = { province = 1422 data = -1 }
+			control = { province = 1429 data = -1 }
+			control = { province = 1485 data = -1 }
+			control = { province = 1490 data = -1 }
+			control = { province = 1427 data = -1 }
+		}
+		OR = {
+			NOT = { exists = KAZ }
+			NOT = { exists = KYG }
+			NOT = { exists = TAJ }
+			NOT = { exists = TRK }
+			NOT = { exists = UZB }
+		}
+	}
+
+	date = { day = 1 month = january year = 1939 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	picture = "Bitter_Peace"
+
+	name = "EVT_130967_NAME"	#中央アジアの運命
+	desc = "EVT_130967_DESC"	#
+	#Following our campaigns in the steppes of Central Asia, we are now controlling several territories of the former states of that region. Local leaders, and also our own politicians, are petitioning for autonomy for those areas. Several solutions have been proposed, ranging from the complete partition of the region into up to five states, up to their amalgamation into a single Central Asian Federation.
+	
+	action = {
+		name = "EVT_130967_ACTA"	#小国家群に再編し、それぞれを間接統治せよ
+		ai_chance = 30
+		command = { type = trigger which = 130968 }	#KAZ
+		command = { type = trigger which = 130969 }	#KYG
+		command = { type = trigger which = 130970 }	#TAJ
+		command = { type = trigger which = 130971 }	#TRK
+		command = { type = trigger which = 130972 }	#UZB
+	}
+	action = {
+		trigger = { control = { province = 1432 data = -1 } }
+		ai_chance = 69
+		name = "EVT_130967_ACTB"	#トルキスタン国としてこれらの地域を独立させよ
+		command = { type = independence which = U17 value = 1 }
+		command = { type = make_puppet which = U17 }
+	}
+	action = {
+		name = "EVT_130967_ACTC"	#中央アジアはロシア連邦の一管区だ！
+		ai_chance = 1
+		command = { type = dissent value = 2 }
+		command = { type = secedeprovince which = RUS value = 1422 } 
+		command = { type = secedeprovince which = RUS value = 1423 }
+		command = { type = secedeprovince which = RUS value = 1556 }
+		command = { type = secedeprovince which = RUS value = 1555 }
+		command = { type = secedeprovince which = RUS value = 1550 }
+		command = { type = secedeprovince which = RUS value = 1424 }
+		command = { type = secedeprovince which = RUS value = 1579 }
+		command = { type = secedeprovince which = RUS value = 1583 }
+		command = { type = secedeprovince which = RUS value = 1580 }
+		command = { type = secedeprovince which = RUS value = 1582 }
+		command = { type = secedeprovince which = RUS value = 1587 }
+		command = { type = secedeprovince which = RUS value = 1425 }
+		command = { type = secedeprovince which = RUS value = 1578 }
+		command = { type = secedeprovince which = RUS value = 1588 }
+		command = { type = secedeprovince which = RUS value = 1589 }
+		command = { type = secedeprovince which = RUS value = 1590 }
+		command = { type = secedeprovince which = RUS value = 1591 }
+		command = { type = secedeprovince which = RUS value = 1581 }
+		command = { type = secedeprovince which = RUS value = 1592 }
+		command = { type = secedeprovince which = RUS value = 1551 }
+		command = { type = secedeprovince which = RUS value = 1557 }
+		command = { type = secedeprovince which = RUS value = 1553 }
+		command = { type = secedeprovince which = RUS value = 1554 }
+		command = { type = secedeprovince which = RUS value = 1426 }
+		command = { type = secedeprovince which = RUS value = 1586 }
+		command = { type = secedeprovince which = RUS value = 1576 }
+		command = { type = secedeprovince which = RUS value = 1429 } 
+		command = { type = secedeprovince which = RUS value = 1428 }
+		command = { type = secedeprovince which = RUS value = 1485 } 
+		command = { type = secedeprovince which = RUS value = 1484 }
+		command = { type = secedeprovince which = TRK value = 1490 } #TRK
+		command = { type = secedeprovince which = TRK value = 1491 }
+		command = { type = secedeprovince which = RUS value = 1584 } 
+		command = { type = secedeprovince which = RUS value = 1585 }
+		command = { type = secedeprovince which = RUS value = 1489 }
+		command = { type = secedeprovince which = RUS value = 1487 }
+		command = { type = secedeprovince which = RUS value = 1427 }
+		command = { type = secedeprovince which = RUS value = 1488 }
+		command = { type = addcore which = 1422 where = RUS } #KAZ
+		command = { type = addcore which = 1423 where = RUS }
+		command = { type = addcore which = 1556 where = RUS }
+		command = { type = addcore which = 1555 where = RUS }
+		command = { type = addcore which = 1550 where = RUS }
+		command = { type = addcore which = 1424 where = RUS }
+		command = { type = addcore which = 1579 where = RUS }
+		command = { type = addcore which = 1583 where = RUS }
+		command = { type = addcore which = 1580 where = RUS }
+		command = { type = addcore which = 1582 where = RUS }
+		command = { type = addcore which = 1587 where = RUS }
+		command = { type = addcore which = 1425 where = RUS }
+		command = { type = addcore which = 1578 where = RUS }
+		command = { type = addcore which = 1588 where = RUS }
+		command = { type = addcore which = 1589 where = RUS }
+		command = { type = addcore which = 1590 where = RUS }
+		command = { type = addcore which = 1591 where = RUS }
+		command = { type = addcore which = 1581 where = RUS }
+		command = { type = addcore which = 1592 where = RUS }
+		command = { type = addcore which = 1551 where = RUS }
+		command = { type = addcore which = 1557 where = RUS }
+		command = { type = addcore which = 1553 where = RUS }
+		command = { type = addcore which = 1554 where = RUS }
+		command = { type = addcore which = 1426 where = RUS }
+		command = { type = addcore which = 1586 where = RUS }
+		command = { type = addcore which = 1576 where = RUS }
+		command = { type = addcore which = 1429 where = RUS } #KYG
+		command = { type = addcore which = 1428 where = RUS }
+		command = { type = addcore which = 1485 where = RUS } #TAJ
+		command = { type = addcore which = 1484 where = RUS }
+		command = { type = addcore which = 1490 where = RUS } #TRK
+		command = { type = addcore which = 1491 where = RUS }
+		command = { type = addcore which = 1584 where = RUS } #UZB
+		command = { type = addcore which = 1585 where = RUS }
+		command = { type = addcore which = 1489 where = RUS }
+		command = { type = addcore which = 1487 where = RUS }
+		command = { type = addcore which = 1427 where = RUS }
+		command = { type = addcore which = 1488 where = RUS }		
+	}
+	action = {
+		name = "EVT_130967_ACTD"	#当分のところ、本地域については軍政を続行するのが賢明であろう
+		command = { type = dissent value = 5 }
+		command = { type = addclaim which = 1422 } #KAZ
+		command = { type = addclaim which = 1423 }
+		command = { type = addclaim which = 1556 }
+		command = { type = addclaim which = 1555 }
+		command = { type = addclaim which = 1550 }
+		command = { type = addclaim which = 1424 }
+		command = { type = addclaim which = 1579 }
+		command = { type = addclaim which = 1583 }
+		command = { type = addclaim which = 1580 }
+		command = { type = addclaim which = 1582 }
+		command = { type = addclaim which = 1587 }
+		command = { type = addclaim which = 1425 }
+		command = { type = addclaim which = 1578 }
+		command = { type = addclaim which = 1588 }
+		command = { type = addclaim which = 1589 }
+		command = { type = addclaim which = 1590 }
+		command = { type = addclaim which = 1591 }
+		command = { type = addclaim which = 1581 }
+		command = { type = addclaim which = 1592 }
+		command = { type = addclaim which = 1551 }
+		command = { type = addclaim which = 1557 }
+		command = { type = addclaim which = 1553 }
+		command = { type = addclaim which = 1554 }
+		command = { type = addclaim which = 1426 }
+		command = { type = addclaim which = 1586 }
+		command = { type = addclaim which = 1576 }
+		command = { type = addclaim which = 1429 } #KYG
+		command = { type = addclaim which = 1428 }
+		command = { type = addclaim which = 1485 } #TAJ
+		command = { type = addclaim which = 1484 }
+		command = { type = addclaim which = 1490 } #TRK
+		command = { type = addclaim which = 1491 }
+		command = { type = addclaim which = 1584 } #UZB
+		command = { type = addclaim which = 1585 }
+		command = { type = addclaim which = 1489 }
+		command = { type = addclaim which = 1487 }
+		command = { type = addclaim which = 1427 }
+		command = { type = addclaim which = 1488 }		
+	}
+}
+
+event = {
+	id = 130968
+	country = GER
+	trigger = {
+		control = { province = 1422 data = -1 }
+		NOT = { exists = KAZ }
+	}
+	picture = "Bitter_Peace"
+
+	name = "EVT_130968_NAME"	#カザフスタン独立
+	desc = "EVT_130968_DESC"	#
+	
+	action = {
+		name = "OK"
+		command = { type = independence which = KAZ value = 1 }
+		command = { type = make_puppet which = KAZ }
+	}
+}
+
+event = {
+	id = 130969
+	country = GER
+	trigger = {
+		control = { province = 1429 data = -1 }
+		NOT = { exists = KYG }
+	}
+	picture = "Bitter_Peace"
+
+	name = "EVT_130969_NAME"	#キルギスタン独立
+	desc = "EVT_130968_DESC"	#
+	
+	action = {
+		name = "OK"
+		command = { type = independence which = KYG value = 1 }
+		command = { type = make_puppet which = KYG }
+	}
+}
+
+event = {
+	id = 130970
+	country = GER
+	trigger = {
+		control = { province = 1485 data = -1 }
+		NOT = { exists = TAJ }
+	}
+	picture = "Bitter_Peace"
+
+	name = "EVT_130970_NAME"	#タジキスタン独立
+	desc = "EVT_130968_DESC"	#
+	
+	action = {
+		name = "OK"
+		command = { type = independence which = TAJ value = 1 }
+		command = { type = make_puppet which = TAJ }
+	}
+}
+
+event = {
+	id = 130971
+	country = GER
+	trigger = {
+		control = { province = 1490 data = -1 }
+		NOT = { exists = TRK }
+	}
+	picture = "Bitter_Peace"
+
+	name = "EVT_130971_NAME"	#トルクメニスタン独立
+	desc = "EVT_130968_DESC"	#
+	
+	action = {
+		name = "OK"
+		command = { type = independence which = TRK value = 1 }
+		command = { type = make_puppet which = TRK }
+	}
+}
+
+event = {
+	id = 130972
+	country = GER
+	trigger = {
+		control = { province = 1427 data = -1 }
+		NOT = { exists = UZB }
+	}
+	picture = "Bitter_Peace"
+
+	name = "EVT_130972_NAME"	#ウズベキスタン独立
+	desc = "EVT_130968_DESC"	#
+	
+	action = {
+		name = "OK"
+		command = { type = independence which = UZB value = 1 }
+		command = { type = make_puppet which = UZB }
+	}
+}
+
+#KAZ	カール・プラウマー	520040
+#KYG	クルト・ダリューゲ	521060
+#TAJ	ヨーゼフ・ベルヒトルト	524048
+#TRK	パウル・ヒンクラー	525045
+#UZB	ジークフリート・ウイバーライター	526045
+#U17	オスカー・フォン・ニーダーマイヤー	595445
+event = {
+	id = 130973
+	country = KAZ
+	trigger = {
+		puppet = { country = -1 country = GER }
+		OR = { 
+			ideology = nazi
+			ideology = fascist
+		}
+	}
+	
+	date = { day = 1 month = january year = 1939 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	name = "EVT_130973_NAME"	#国家弁務官の就任
+	desc = "EVT_130973_DESC"	#
+	
+	action = {
+		name = "EVT_130973_ACTA"	#仕方あるまい
+		command = { type = headofstate which = 520040 }
+	}
+}
+
+event = {
+	id = 130974
+	country = KYG
+	trigger = {
+		puppet = { country = -1 country = GER }
+		OR = { 
+			ideology = nazi
+			ideology = fascist
+		}
+	}
+	
+	date = { day = 1 month = january year = 1939 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	name = "EVT_130973_NAME"	#国家弁務官の就任
+	desc = "EVT_130973_DESC"	#
+	
+	action = {
+		name = "EVT_130973_ACTA"	#仕方あるまい
+		command = { type = headofstate which = 521060 }
+	}
+}
+
+event = {
+	id = 130975
+	country = TAJ
+	trigger = {
+		puppet = { country = -1 country = GER }
+		OR = { 
+			ideology = nazi
+			ideology = fascist
+		}
+	}
+	
+	date = { day = 1 month = january year = 1939 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	name = "EVT_130973_NAME"	#国家弁務官の就任
+	desc = "EVT_130973_DESC"	#
+	
+	action = {
+		name = "EVT_130973_ACTA"	#仕方あるまい
+		command = { type = headofstate which = 524048 }
+	}
+}
+
+event = {
+	id = 130976
+	country = TRK
+	trigger = {
+		puppet = { country = -1 country = GER }
+		OR = { 
+			ideology = nazi
+			ideology = fascist
+		}
+	}
+	
+	date = { day = 1 month = january year = 1939 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	name = "EVT_130973_NAME"	#国家弁務官の就任
+	desc = "EVT_130973_DESC"	#
+	
+	action = {
+		name = "EVT_130973_ACTA"	#仕方あるまい
+		command = { type = headofstate which = 525045 }
+	}
+}
+
+event = {
+	id = 130977
+	country = UZB
+	trigger = {
+		puppet = { country = -1 country = GER }
+		OR = { 
+			ideology = nazi
+			ideology = fascist
+		}
+	}
+	
+	date = { day = 1 month = january year = 1939 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	name = "EVT_130973_NAME"	#国家弁務官の就任
+	desc = "EVT_130973_DESC"	#
+	
+	action = {
+		name = "EVT_130973_ACTA"	#仕方あるまい
+		command = { type = headofstate which = 526045 }
+	}
+}
+
+event = {
+	id = 130978
+	country = U17
+	trigger = {
+		puppet = { country = -1 country = GER }
+		OR = { 
+			ideology = nazi
+			ideology = fascist
+		}
+	}
+	
+	date = { day = 1 month = january year = 1939 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	name = "EVT_130973_NAME"	#国家弁務官の就任
+	desc = "EVT_130973_DESC"	#
+	
+	action = {
+		name = "EVT_130973_ACTA"	#仕方あるまい
+		command = { type = headofstate which = 595445 }
+	}
+}

@@ -1,0 +1,392 @@
+# ベラルーシオリジナル
+
+exp_force_ratio = 1.0
+
+max_front_ratio = 1.6
+max_front_ratios = { 
+	SOV = 4.0
+	ENG = 2.0
+	USA = 2.0
+	}
+claim_acceptance = -49
+combat = {
+SOV = 300
+}
+max_garrison_prop = 0.35 
+min_garrison_prop = 0.21 
+
+target = {
+	187 = 700 # Leningrad
+	175 = 1000 # Moscou
+	219 = 500 # Smolensk
+	212 = 500 # Minsk
+	238 = 500 # Kiev
+	239 = 200 # Priluki
+	197 = 500 # Riga
+	202 = 300 # Dagaupilus
+	194 = 200 # Tallin
+	258 = 100 # Rostov
+	233 = 100 # Odessa
+	248 = 100 # Jarkov
+	277 = 100 # Briansk
+	243 = 100 # Kursk
+	253 = 100 # Sebastopol
+	242 = 100 # Konotop
+	217 = 300 # Vitbesk
+	283 = 200 # Voronezh
+	288 = 300 # Rzhev
+	94 = 200 # Noguinsk
+	279 = 300 # Ryazan
+	289 = 300 # Demiansk
+	178 = 300 # Yaroslav
+	174 = 300 # Kalinin
+	189 = 300 # Novgorod
+	278 = 300 # Tula
+	154 = 200 # Arkhangelsk
+	163 = 100 # Stalingrad
+	1844 = 100 # Maikop
+	255 = 100 # Novorosissk
+	1848 = 100 # Batum
+	1907 = 100 # Baku
+}
+
+tech_sharing = {
+	favored = { }
+	embargo = { }
+	not = { }
+	prioritized = {
+		# Arcriculture
+		5020 = 100
+		5030 = 100
+		5040 = 100
+
+		# Inf support
+		1310 = 100
+		1320 = 100
+		1330 = 100
+		1340 = 100
+		1350 = 100
+		1360 = 100
+
+		# Production
+		5050 = 100
+		5060 = 100
+		5070 = 100
+		5080 = 100
+		5090 = 100
+		5100 = 100
+		5110 = 100
+		5120 = 100
+		5130 = 100
+		5150 = 100
+		5180 = 100
+	}
+}
+
+###################################
+# Spying
+###################################
+spyprefs =
+{
+	percentage_on_spies 		= 0.2
+	percentage_foreign_mission 	= 0.7
+
+	# Used for Homeland Defense Spying
+	spyprefsdata = 
+	{
+		NumberOfSpies = 5
+		counter_espionage =  10
+		country = BLR
+	}
+	spyprefsdata = {
+		country_priorities	= 10
+		NumberOfSpies		= 10
+		min_number_of_spies = 2
+		steal_blueprint 	= 10
+		minister_assassination = 0
+		smear_campaign 		= 4
+		coup 				= 1
+		sabotage_industry 	= 10
+		nuclear_sabotage 	= 0
+		found_partisans		= 0
+		massmedia 			= 4
+		counter_espionage 	= 5
+		disrupt_techteam 	= 4
+		country 			= SOV
+	}
+}
+###################################
+# Construction and Tech Research
+###################################
+military = { 
+	#### Divisions etc...
+	infantry 		= 75
+	cavalry 		= 5
+	motorized 	= 0
+	mechanized 	= 0
+	light_armor 	= 0
+	armor 		= 0
+	paratrooper 	= 0
+	marine 		= 0
+	bergsjaeger 	= 5
+	garrison		= 0
+	hq 		= 5
+	militia 		= 0
+#				90 %
+	interceptor 	= 5
+	multi_role 		= 0
+	cas 			= 0
+	strategic_bomber = 0
+	tactical_bomber = 5
+	naval_bomber 	= 0
+	transport_plane = 0
+	flying_bomb 	= 0
+	flying_rocket 	= 0
+#				10 %
+	battleship 		= 0
+	carrier 		= 0
+	escort_carrier	= 0
+	destroyer 		= 0
+	light_cruiser 	= 0
+	heavy_cruiser 	= 0
+	battlecruiser 	= 0
+	submarine 		= 0
+	nuclear_submarine = 0
+	transport = 0
+#				0 %
+
+	#### Brigades
+	artillery 			= 0
+	sp_artillery 		= 0
+	rocket_artillery	= 0 
+	sp_rct_artillery 	= 0
+	anti_tank 			= 0
+	tank_destroyer 		= 0
+	light_armor_brigade = 0
+	heavy_armor 		= 0
+	super_heavy_armor 	= 0
+	armored_car 		= 0
+	anti_air 			= 0
+	police 				= 100
+	engineer 			= 0 
+
+	cag = 100.000 
+}
+
+technology = { 
+	endgoal 	= { } 
+	preference 	= {
+# 農業
+5010 5020 5030 5040 13000 13010 
+# 生産技術
+5050 5060 5070 5080 5090 5100 5110 5120 
+5130 
+# 基本ドクトリン
+9010 9020 9030 
+# 歩兵
+1010 1020 1030 1040 1050 1060 10000 10010 
+	} 
+	ignore 		= {
+# 海兵
+1150 1160 1170 1180 10060 10070 
+# 装甲車
+2150 2160 11110 
+# 駆逐戦車
+2170 2180 2190 2200 2210 11020 
+# 自走砲
+2220 2230 2240 2250 11030 11040 
+# 自走ロケット
+2260 2270 2280 11050 11060 
+# ロケット
+2370 2380 2390 
+# 対戦車砲
+2400 2410 2420 2430 2440 11070 
+# 固定型対空砲
+2450 2460 2470 2480 2490 2500 11080 
+# 対空砲旅団
+2510 2520 2530 2540 11090 
+# 海軍爆撃機
+4190 4200 4210 15140 15150 
+# 駆逐艦
+3010 3020 3030 3040 3050 3060 12000 
+# 軽巡洋艦
+3070 3080 3090 3100 3110 3120 12010 
+# 重巡洋艦
+3130 3140 3150 3160 3170 3180 12020 
+# 巡洋戦艦
+3190 3200 3210 3220 3230 3240 12030 
+# 戦艦
+3250 3260 3270 3280 3290 3300 12040 3310 12050 
+# 空母
+3320 3330 3340 3350 3360 3370 3380 3390 12060 
+# 潜水艦
+3400 3410 3420 3430 3440 3450 
+# 軽空母
+12100 12110 12120 12130 12140 12150 
+# レーダー警戒
+5410 5420 5430 5440 5450 5460 13030 
+# 原子力
+5470 5480 5490 5500 5510 5520 5530 5540 
+# ロケット工学
+5550 5560 5570 5580 5590 
+# ロケット迎撃機
+7010 7020 
+# ジェット空母航空隊
+7050 
+# ジェット戦闘機 
+7280 7290 
+# ミサイルA
+7100 7110 7120 7130 
+# 核爆弾
+7170 7180 7190 16010 16020 
+# 原子力艦隊
+7200 7210 7220 7230 
+# 航空騎兵
+7240 
+# ミサイルB
+7260 7270 
+# 大陸間戦略爆
+16030
+# 火力重視
+6010 
+# 火力優勢ドクトリン
+6020
+# 消耗抑制ドクトリン
+6150
+# 段階的作戦ドクトリン
+6170
+# 人海戦術ドクトリン
+6300
+## ゲリラ戦
+14080 
+# 基本海ドク
+8010 8020 8030 8040 8050 
+# 基地空爆
+8060 8180 8230 8270 8320 8350 18000 18010 
+# 牽制艦隊
+8070 8120 8190 8200 8260 8330 8340 
+# 航路妨害
+8080 8150 8210 8220 8280 8290 8300 
+# 共通
+8090 8100 8110 8130 8140 8160 8170 8240 8250 8310 
+	}
+	armor 		= 1
+	infantry 	= 8
+	industry 	= 8
+	aircraft 	= 3
+	naval 		= 0
+	land_doctrines 	= 3
+	secret_weapons 	= 0
+	air_doctrines 	= 1
+	naval_doctrines = 0
+}  
+
+###################################
+# Ground Combat, Leaders and Garrisons
+###################################
+leader_ratio = {
+	land_field_marshal 	=0.02
+	land_general 		=0.031
+	land_lt_general 	=0.41
+
+	sea_grand_admiral 	=0.02
+	sea_admiral 		=0.061
+	sea_vice_admiral 	=0.401
+
+	air_marshal 		=0.02
+	air_general 		=0.091
+	air_lt_General 		=0.11
+}
+garrison = {
+	defend_overseas_beaches = yes
+	home_multiplier 	= 1.0
+	overseas_multiplier 	= 1.0
+	home_peace_cap 		= 20
+	war_zone_odds 		= 2.0
+	key_point_prio_mult	= 0.5
+	revolt_risk_mult	= 0.3
+
+	# PRIORITIES:
+	beach			= 0	# Beach level 2
+	capital			= 40	# Our capital
+	human_border		= 0	# Ignored for allied human players
+	war_target		= 50	# The next country targeted for attack by this AI
+	
+	opposing_alliance	= 50	# For neutrals, all alliances are "opposing"
+	claim_threat		= 0	# If we are neutral, countries with claims on us get this
+	unstable_border		= 0	# Bordering countries at war with someone else get this
+
+	# Borders with specific countries
+	country_priorities = {	}
+	ignore = {	}
+	province_priorities = {	}
+	area_multiplier = {	}
+}
+front = { 
+	recklessness 		= 2 # 0-3
+	distrib_vs_ai 		= even
+	distrib_vs_human 	= even
+
+	enemy_reinf_days	= 6
+	reserve_prop		= 0.1
+	panic_ratio_vs_ai	= 2.5
+	panic_ratio_vs_human	= 2.5
+	base_attack_odds	= 1.3
+	min_attack_odds		= 1.1
+	max_attack_odds		= 3.0
+	reinforce_odds		= 1.2
+	withdraw_odds		= 0.6
+
+	strength 	= 1.0
+	organisation 	= 2.0
+	soft_attack 	= 1.0
+	hard_attack 	= 1.0
+	ground_defense 	= 1.0
+	dig_in 		= 1.25 # Against defender
+
+	frozen_attack 	= 1.0
+	snow_attack 	= 1.0
+	blizzard_attack = 1.0
+	storm_attack 	= 1.0
+	muddy_attack 	= 1.0
+
+	
+	
+	occupied 	= 0.7
+	owned 		= 0.7
+
+	jungle_attack 	= 1.0
+	mountain_attack = 1.0
+	swamp_attack 	= 1.0
+	forest_attack 	= 1.05
+	hill_attack 	= 1.0
+	urban_attack 	= 1.15
+	river 		= 1.0
+
+      	enemy_handicap = {	} 
+      	passivity = {	}
+} 
+
+###################################
+# Invasions and Naval
+###################################
+invasion = { 
+ 	base		= 0.1	#Relative modifier. (lower = specific targets much more important.)
+	random		= 8.0	#How big a random range.  (1.0 = 1%)
+	coastal		= 0.1	#increase to avoid coastal forts more.
+	beach		= 0.1	#higher, avoid worst beaches.
+	distance	= 0.1	#higher = avoid long distance.
+	max_distance    = 20.0  #About the distance from Rostock to Narvik
+	pocket		= 20.0	#prioritise pockets, ie provinces with no adjacent controlled by same.
+	island		= 0.1	#prioritise taking pure islands.
+	enemy		= 2.0	#higher = much more vary of troops in province.
+	adjacentenemy 	= 2.0	#higher = much more vary of troops nearby
+	air_base	= 1.5 
+      	naval_base 	= 0.1 
+      	air_support 	= 3.0 
+      	redirect 	= priority
+	ignore		= no
+	help_allies 	= no
+      
+	target = { 	} 
+} 

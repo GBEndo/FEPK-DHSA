@@ -1,0 +1,42 @@
+# 0 - Šî–{Œ^ƒƒPƒbƒg–C
+model = {
+	cost 				= 4
+	buildtime	 		= 45
+	manpower 			= 2
+	maxspeed 			= -1
+	defensiveness 		= 2
+	softattack			= 7
+	hardattack			= 1
+	supplyconsumption 	= 0.6
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 2000 horses = 560 artillery = 32 heavy_artillery = 16 anti_tank = 34 }
+}
+# 1 - ‰ü—ÇŒ^ƒƒPƒbƒg–C
+model = {
+	cost 				= 5
+	buildtime	 		= 45
+	manpower 			= 2
+	maxspeed 			= -1
+	defensiveness 		= 3
+	softattack			= 8
+	hardattack			= 1
+	supplyconsumption 	= 0.6
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 2000 trucks = 332 artillery = 32 heavy_artillery = 16 anti_tank = 34 }
+}
+# 2 - ”­“WŒ^ƒƒPƒbƒg–C
+model = {
+	cost 				= 6
+	buildtime	 		= 45
+	manpower 			= 2
+	maxspeed 			= -1
+	defensiveness 		= 4
+	softattack			= 9
+	hardattack			= 3
+	supplyconsumption 	= 0.6
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 2000 trucks = 445 artillery = 32 heavy_artillery = 16 anti_tank = 34 }
+}

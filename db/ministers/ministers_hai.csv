@@ -1,0 +1,90 @@
+HAI;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+78001;Head of State;ステニオ・ヴィンセント;36;SC;Pig-headed Isolationist;High;M78001;x
+78002;Head of Government;ステニオ・ヴィンセント;36;SC;Corporate Suit;High;M78001;x
+78003;Foreign Minister;アルベール・ブランシェ;36;SC;Apologetic Clerk;High;M78003;x
+78004;Minister of Armament;エミル・レスコ;36;SC;Infantry Proponent;Medium;M78004;x
+78005;Minister of Security;ルイ・ダブテス・ベレガルド;36;SC;Crooked Kleptocrat;Medium;M78005;x
+78006;Head of Military Intelligence;セバスチャン・デ・アロンデ;36;SC;Political Specialist;Medium;M78006;x
+78007;Chief of Staff;エミル・レスコ;36;SC;School of Fire Support;Medium;M78004;x
+78008;Chief of Army;エミル・レスコ;36;SC;Static Defence Doctrine;Medium;M78004;x
+78009;Chief of Navy;アルフレッド・ネモール;36;SC;Open Seas Doctrine;Medium;M78009;x
+78010;Chief of Air Force;G・エドゥアール・ロイ;36;SC;Army Aviation Doctrine;Medium;M78010;x
+78032;Head of State;エミル・レスコ;41;SC;Resigned Generalissimo;High;M78004;x
+78033;Head of State;ルイ・デジョア;46;SC;Die-hard Reformer;High;M78033;x
+78034;Head of State;デュマルセ・エスティメ;37;SL;Popular Figurehead;High;M78034;x
+78035;Head of State;フランク・ラヴォー;46;PA;Resigned Generalissimo;High;M78035;x
+78036;Head of State;F・ドリアン・ユステ・コンスタン;37;LWR;Insignificant Layman;High;M78021;x
+78037;Head of State;デモステネス・カリクステ;46;LWR;Popular Figurehead;High;M78037;x
+78039;Head of Government;エミル・レスコ;41;SC;Old General;High;M78004;x
+78040;Head of Government;ルイ・デジョア;46;SC;Backroom Backstabber;High;M78033;x
+78041;Head of Government;アルベール・ブランシェ;37;SL;Happy Amateur;High;M78003;x
+78042;Head of Government;デュマルセ・エスティメ;41;SL;Flamboyant Tough Guy;High;M78034;x
+78043;Head of Government;ポール・マグロワール;46;PA;Old General;High;M78043;x
+78044;Head of Government;F・ドリアン・ユステ・コンスタン;37;LWR;Happy Amateur;High;M78021;x
+78045;Head of Government;ダニエル・フィノール;46;LWR;Political Protege;High;M78045;x
+78046;Foreign Minister;ジョルジュ・レジェ;36;SC;The Cloak N Dagger Schemer;High;M78046;x
+78047;Foreign Minister;マルセル・フォンブラン;41;SC;Iron Fisted Brute;High;M78013;x
+78048;Foreign Minister;エミル・レスコ;43;SC;General Staffer;Medium;M78004;x
+78049;Foreign Minister;ジョルジュ・リゴー博士;46;SC;Biased Intellectual;Medium;M78049;x
+78050;Foreign Minister;アルベール・ブランシェ;37;SL;Apologetic Clerk;High;M78003;x
+78051;Foreign Minister;ジャック・ウェイドストランド;41;SL;Great Compromiser;High;M78051;x
+78052;Foreign Minister;アンドレ・デュモン;43;SL;Iron Fisted Brute;Medium;M78052;x
+78053;Foreign Minister;ティモレオン・シーサー・ブルータス;46;SL;Ideological Crusader;Medium;M78053;x
+78054;Foreign Minister;ティモレオン・シーサー・ブルータス;46;PA;Ideological Crusader;Medium;M78053;x
+78055;Foreign Minister;ミルコ・シャンドラ;37;LWR;The Cloak N Dagger Schemer;Medium;M78023;x
+78056;Foreign Minister;F・ドリアン・ユステ・コンスタン;41;LWR;Biased Intellectual;High;M78021;x
+78057;Foreign Minister;クレメント・ジュメル;46;LWR;Apologetic Clerk;High;M78057;x
+78058;Minister of Armament;ルイ・ダブテス・ベレガルド;37;SC;Corrupt Kleptocrat;Medium;M78005;x
+78059;Minister of Armament;リュック・ドミニク;41;SC;Tank Proponent;Medium;M78014;x
+78060;Minister of Armament;ジャン・フランソワ・デュヴァリエ;45;SC;Administrative Genius;Low;M78015;x
+78061;Minister of Armament;ルイ・デジョア;46;SC;laissez-faire capitalist;Low;M78033;x
+78062;Minister of Armament;マクス・シャルメ;37;SL;Strategic Air Proponent;Low;M78062;x
+78063;Minister of Armament;フレデリック・ドレ;41;SL;Resource Industrialist;Low;M78063;x
+78064;Minister of Armament;アルマンド・オウレ;46;SL;Administrative Genius;Low;M78064;x
+78065;Minister of Armament;F・ドリアン・ユステ・コンスタン;46;PA;laissez-faire capitalist;High;M78021;x
+78066;Minister of Armament;クレメント・ジュメル;37;LWR;Air Superiority Proponent;High;M78057;x
+78067;Minister of Armament;ミシェル・コルヴィントン・レイモンド;41;LWR;Theoretical Scientist;Medium;M78024;x
+78068;Minister of Security;ステニオ・ヴィンセント;37;SC;Crooked Kleptocrat;High;M78001;x
+78069;Minister of Security;オーグスト・ボナミー;41;SC;Silent Lawyer;High;M78069;x
+78070;Minister of Security;エミル・レスコ;45;SC;Man of the People;Medium;M78004;x
+78071;Minister of Security;ガスリー・ヴィルドロイン;46;SC;Back Stabber;Low;M78071;x
+78072;Minister of Security;デュマルセ・エスティメ;37;SL;Back Stabber;High;M78034;x
+78073;Minister of Security;マクス・シャルメ;41;SL;Crooked Kleptocrat;Low;M78062;x
+78074;Minister of Security;ジャン・フランソワ・デュヴァリエ;46;SL;Efficient Sociopath;Low;M78015;x
+78075;Minister of Security;アントワーヌ・レヴェル;46;PA;Silent Lawyer;High;M78075;x
+78076;Minister of Security;ベルモー・マクス＝ピエール;37;LWR;Back Stabber;Medium;M78076;x
+78077;Minister of Security;ヴィクトル・ヴィヴィアン;41;LWR;Efficient Sociopath;Medium;M78025;x
+78078;Minister of Security;ダニエル・フィノール;46;LWR;Silent Lawyer;High;M78045;x
+78079;Head of Military Intelligence;ジョセフ・ルイ・ボルノ;37;SC;Technical Specialist;High;M78079;x
+78080;Head of Military Intelligence;ルイ・ダブテス・ベレガルド;41;SC;Industrial Specialist;Medium;M78005;x
+78081;Head of Military Intelligence;ジョルジュ・リゴー博士;45;SC;Logistics Specialist;Medium;M78049;x
+78082;Head of Military Intelligence;ガスリー・ヴィルドロイン;37;SL;Logistics Specialist;Low;M78071;x
+78083;Head of Military Intelligence;アンドレ・デュモン;41;SL;Naval Intelligence Specialist;Medium;M78052;x
+78084;Head of Military Intelligence;マクス・シャルメ;46;SL;Technical Specialist;Low;M78062;x
+78085;Head of Military Intelligence;アントワーヌ・レヴェル;46;PA;Logistics Specialist;High;M78075;x
+78086;Head of Military Intelligence;ロック・デスローセ;37;LWR;Technical Specialist;Medium;M78026;x
+78087;Head of Military Intelligence;ベルモー・マクス＝ピエール;41;LWR;Logistics Specialist;Medium;M78076;x
+78088;Head of Military Intelligence;デモステネス・カリクステ;46;LWR;Political Specialist;Medium;M78037;x
+78090;Chief of Staff;セバスチャン・デ・アロンデ;39;SC;School of Manoeuvre;Medium;M78006;x
+78091;Chief of Staff;フランク・ラヴォー;41;SC;School of Psychology;Medium;M78035;x
+78092;Chief of Staff;アントワーヌ・レヴェル;46;SC;School of Manoeuvre;High;M78075;x
+78093;Chief of Staff;アンドレ・デュモン;37;SL;School of Manoeuvre;Medium;M78052;x
+78094;Chief of Staff;ポール・マグロワール;46;SL;School of Mass Combat;Medium;M78043;x
+78096;Chief of Staff;アンティオチェ・ベノ;37;LWR;School of Defence;Medium;M78027;x
+78098;Chief of Army;フランク・ラヴォー;41;SC;Elastic Defence Doctrine;Medium;M78035;x
+78099;Chief of Army;アントワーヌ・レヴェル;46;SC;Armoured Spearhead Doctrine;High;M78075;x
+78100;Chief of Army;アンドレ・デュモン;37;SL;Decisive Battle Doctrine;Medium;M78052;x
+78101;Chief of Army;ポール・マグロワール;46;SL;Guns and Butter Doctrine;Medium;M78043;x
+78102;Chief of Army;フランク・ラヴォー;46;PA;Elastic Defence Doctrine;Medium;M78035;x
+78103;Chief of Army;アーンスト・セヴェレ;37;LWR;Guns and Butter Doctrine;Medium;M78028;x
+78104;Chief of Navy;ジョルジュ・レジェ;37;SC;Base Control Doctrine;High;M78046;x
+78106;Chief of Navy;アンドレ・サン・フレデリック;37;SL;Power Projection Doctrine;Medium;M78106;x
+78107;Chief of Navy;レイモンド・ガスナー;37;LWR;Power Projection Doctrine;Medium;M78029;x
+78109;Chief of Air Force;アンドレ・サン・フレデリック;41;SC;Naval Aviation Doctrine;Medium;M78106;x
+78110;Chief of Air Force;パスカル・B・G・ギョーム;37;SL;Vertical Envelopment Doctrine;Medium;M78020;x
+78111;Chief of Air Force;アントワーヌ・レヴェル;46;PA;Carpet Bombing Doctrine;High;M78075;x
+78112;Chief of Air Force;ベルモー・マクス＝ピエール;37;LWR;Vertical Envelopment Doctrine;Medium;M78076;x
+78113;Chief of Air Force;シャルル・H・フォルビン;46;LWR;Air Superiority Doctrine;Medium;M78030;x
+78115;Foreign Minister;レオン・ラルー;38;SC;Ideological Crusader;High;M78115;x
+78114;Head of State;ポール・マグロワール;50;PA;Ruthless Powermonger;High;M78043;x

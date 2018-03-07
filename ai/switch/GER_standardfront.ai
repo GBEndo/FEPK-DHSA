@@ -1,0 +1,71 @@
+# GFWÅ@ëŒÉ\êÌëO
+
+war = 0
+max_front_ratios = {
+	YUG = 1.0
+	GRE = 1.0
+	SOV = 3.0
+}
+
+###################################
+# Ground Combat, Leaders and Garrisons
+###################################
+garrison = {
+	beach			= 20	# Beach level 2
+	# Borders with specific countries
+	country_priorities = {
+		VIC = -1
+		SWE = -1
+		FIN = -1
+		ITA = -1
+		SCH = -1
+		AUS = -1
+		TUR = -1
+		SPR = -1
+		SPA = -1
+		SOV = 120
+		POL = 50
+		ENG = 50
+		USA = 50
+		FRA = 50
+		YUG = 60
+	}
+	province_priorities = {
+
+		56 = 20 # Paris
+
+	}
+	area_multiplier = {
+		509 = 8.0 # Suwalki
+		510 = 8.0 # Konigsberg
+		206 = 8.0 # Memel
+	}
+	ignore = {
+	297
+	}
+}
+
+
+invasion = { 
+	invasion = yes
+ 	base		= 0.1	#Relative modifier. (lower = specific targets much more important.)
+	random		= 8.0	#How big a random range.  (1.0 = 1%)
+	coastal		= 0.1	#increase to avoid coastal forts more.
+	beach		= 0.1	#higher, avoid worst beaches.
+	distance	= 20.0	#higher = avoid long distance.
+	pocket		= 20.0	#prioritise pockets, ie provinces with no adjacent controlled by same.
+	island		= 0.1	#prioritise taking pure islands.
+	enemy		= 2.0	#higher = much more vary of troops in province.
+	adjacentenemy 	= 2.0	#higher = much more vary of troops nearby
+	air_base	= 1.5 
+    naval_base 	= 0.5 
+    air_support = 3.0 
+    redirect 	= nearest
+	ignore		= no
+      
+	staging_province = {
+	}
+
+	target = { 
+	} 
+} 

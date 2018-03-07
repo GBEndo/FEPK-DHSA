@@ -1,0 +1,59 @@
+UPE;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;Country
+;Replacements;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+65801;Head of State;モハンメド・レザ・パーラヴィ;36;ST;Stern Imperialist;High;M53001;x
+65802;Head of Government;マームッド・ジャム;36;ST;Silent Workhorse;High;M53002;x
+65803;Foreign Minister;ムスタファ・アディル;36;ST;Biased Intellectual;Medium;M53042;x
+65804;Foreign Minister;ミリア・ムーシン・カーン;36;ST;Ideological Crusader;Medium;M53043;x
+65805;Foreign Minister;ムザファー・アラム;36;ST;Apologetic Clerk;Medium;M53045;x
+65806;Foreign Minister;アリ・ゾハイリ;36;ST;Iron Fisted Brute;Low;M53036;x
+65807;Foreign Minister;モハンメド・サイド・マラゲイ;36;ST;Great Compromiser;High;M53038;x
+65808;Foreign Minister;カスラタム・ナリマノフ;36;ST;General Staffer;High;M516014;x
+65809;Foreign Minister;アリ・ゾハイリ;36;ST;The Cloak N Dagger Schemer;Medium;M53036;x
+65810;Minister of Armament;アヌシャーヴァン・セパーボディ;36;ST;Administrative Genius;Medium;M53052;x
+65811;Minister of Armament;ジャファー・ピシェヴァリ;36;ST;Resource Industrialist;Medium;M53023;x
+65812;Minister of Armament;ゾカ・ドウレー;36;ST;Theoretical Scientist;Medium;M53065;x
+65813;Minister of Armament;アルフレッド・ルドルフ・ジマーマン;36;ST;laissez-faire capitalist;Medium;M53014;x
+65814;Minister of Armament;アブドレザ・アフカーミ;36;ST;Military Entrepreneur;Medium;M53008;x
+65815;Minister of Armament;サイド・サル＝ディン・タバタバイ;36;ST;Battle Fleet Proponent;Medium;M53012;x
+65816;Minister of Armament;ガビデン・ムスタフィン;36;ST;Submarine Proponent;Medium;M520020;x
+65817;Minister of Armament;モハンメド・ナクジャヴァニ;36;ST;Tank Proponent;Medium;M53062;x
+65818;Minister of Armament;ミルザ・リザ・アルファ・ドウレー;36;ST;Infantry Proponent;Medium;M53057;x
+65819;Minister of Armament;モルテザ・ヤズディ;36;ST;Air Superiority Proponent;Medium;M53024;x
+65820;Minister of Armament;ラジブ・クルベンジアン;36;ST;Corrupt Kleptocrat;High;M516011;x
+65821;Minister of Armament;アジルカン・ヌルシャコフ;36;ST;Air to Ground Proponent;Medium;M520004;x
+65822;Minister of Armament;アーマッド・カーン・ナクジャーヴァン;36;ST;Air to Sea Proponent;High;M53004;x
+65823;Minister of Armament;モハンメド・バフラミ;36;ST;Strategic Air Proponent;Medium;M53026;x
+65824;Minister of Security;フセイン・カーン・アラ;36;ST;Silent Lawyer;Medium;M53073;x
+65825;Minister of Security;モハンメド・バフラミ;36;ST;Compassionate Gentleman;Medium;M53026;x
+65826;Minister of Security;ソレイマン・ミルザ;36;ST;Crime Fighter;Medium;M53022;x
+65827;Minister of Security;エラジ・エスカンダリ;36;ST;Prince of Terror;Medium;M53025;x
+65828;Minister of Security;アボルハサン・ハキミ;36;ST;Back Stabber;Medium;M53078;x
+65829;Minister of Security;アリ・マンソウア;36;ST;Man of the People;Medium;M53034;x
+65830;Minister of Security;アレクシー・ヴァゴフ;36;ST;Efficient Sociopath;Medium;M521031;x
+65831;Minister of Security;エドワード・G・V・S・ロード・ダービー;36;ST;Crooked Kleptocrat;Medium;M53076;x
+65832;Head of Military Intelligence;ディンシャー・イラーニ;36;ST;Technical Specialist;Medium;M53021;x
+65833;Head of Military Intelligence;モハンメド・モッサデク;36;ST;Logistics Specialist;Medium;M53013;x
+65834;Head of Military Intelligence;モハンメド・レザ・パーラヴィ;36;ST;Political Specialist;Medium;M53011;x
+65835;Head of Military Intelligence;アリ・セパーボディ・カジャー;36;ST;Dismal Enigma;Medium;M53084;x
+65836;Head of Military Intelligence;サー・ネヴィル・グラントリー;36;ST;Industrial Specialist;Medium;M53085;x
+65837;Head of Military Intelligence;オヴァサク・アル＝ドレー・ノーリー;36;ST;Naval Intelligence Specialist;Medium;M53088;x
+65838;Chief of Staff;アリ・カーン・ナクジアム;36;ST;School of Manoeuvre;Medium;M53027;x
+65839;Chief of Staff;ホセイン・アフカーミ;36;ST;School of Fire Support;Medium;M53017;x
+65840;Chief of Staff;レザ・ミザニ;36;ST;School of Mass Combat;Medium;M53006;x
+65841;Chief of Staff;ハサン・マジド・フィルーズ;36;ST;School of Defence;Medium;M53028;x
+65842;Chief of Staff;アリ・アクバー・デイヴァ;36;ST;School of Psychology;Medium;M53005;x
+65843;Chief of Army;アズラム・ミア・ガーニ;36;ST;Elastic Defence Doctrine;Medium;M53098;x
+65844;Chief of Army;ハサン・マジド・フィルーズ;36;ST;Static Defence Doctrine;Medium;M53028;x
+65845;Chief of Army;ヘダヤット・ギランシャー;36;ST;Decisive Battle Doctrine;Medium;M53100;x
+65846;Chief of Army;モハンメド・ナクジャヴァニ;36;ST;Armoured Spearhead Doctrine;Medium;M53062;x
+65847;Chief of Army;マー・アフカーミ;36;ST;Guns and Butter Doctrine;Medium;M53018;x
+65848;Chief of Navy;シャプーア・キスラバディ;36;ST;Open Seas Doctrine;Medium;M53102;x
+65849;Chief of Navy;アーマッド・カーン・ナクジャーヴァン;36;ST;Decisive Naval Battle Doctrine;Medium;M53004;x
+65850;Chief of Navy;モハンメド・ミア・モハンナ;36;ST;Power Projection Doctrine;Medium;M53029;x
+65851;Chief of Navy;モハンメド・モイニ;36;ST;Indirect Approach Doctrine;Medium;M53020;x
+65852;Chief of Navy;レザ・ミザニ;36;ST;Base Control Doctrine;Medium;M53006;x
+65853;Chief of Air Force;モハンメド・ナクジャヴァニ;36;ST;Air Superiority Doctrine;Medium;M53062;x
+65854;Chief of Air Force;モハンメド・ミア・モハンナ;36;ST;Naval Aviation Doctrine;Medium;M53029;x
+65855;Chief of Air Force;サデグ・カーン・クーパル;36;ST;Army Aviation Doctrine;High;M53106;x
+65856;Chief of Air Force;ヘダヤット・ギランシャー;36;ST;Carpet Bombing Doctrine;Medium;M53100;x
+65857;Chief of Air Force;モハンメド・モイニ;36;ST;Vertical Envelopment Doctrine;Medium;M53020;x

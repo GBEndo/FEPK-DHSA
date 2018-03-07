@@ -1,0 +1,27 @@
+YEM;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+93001;Head of State;ヤヒヤ・アル・ハミド;36;PA;Stern Imperialist;High;M93001;x
+93002;Head of Government;ヤヒヤ・アル・ハミド;36;PA;Smiling Oilman;High;M93001;x
+93003;Foreign Minister;ヤヒヤ・アル・ハミド;36;PA;General Staffer;Very High;M93001;x
+93004;Minister of Armament;アフマド・アル・ハミド;36;PA;Corrupt Kleptocrat;High;M93004;x
+93005;Minister of Security;ヤヒヤ・アル・ハミド;36;PA;Prince of Terror;Very High;M93001;x
+93006;Head of Military Intelligence;アフマド・アル・ハミド;36;PA;Dismal Enigma;High;M93004;x
+93007;Chief of Staff;ヤヒヤ・アル・ハミド;36;PA;School of Defence;Very High;M93001;x
+93008;Chief of Army;アフマド・アル・ハミド;36;PA;Armoured Spearhead Doctrine;High;M93004;x
+93009;Chief of Navy;マンスール・アル・バドル;36;PA;Power Projection Doctrine;Low;M93009;x
+93010;Chief of Air Force;マンスール・アル・バドル;36;PA;Army Aviation Doctrine;Low;M93009;x
+93011;Foreign Minister;R・J・マクニール・カッシェンドゥン;39;SC;Great Compromiser;Medium;M93011;x
+93013;Minister of Armament;アレクダンドレ・ラヴデイ;40;SC;Infantry Proponent;High;M93013;x
+93014;Minister of Armament;ヘンリー・R・ドブス;41;SC;Resource Industrialist;High;M93014;x
+93015;Minister of Armament;A・H・C・リヴァース;42;SC;Administrative Genius;High;M93015;x
+93017;Minister of Security;レオナード・ライアル;38;SC;Silent Lawyer;High;M93017;x
+93018;Minister of Security;マンスール・アル・バドル;45;PA;Crooked Kleptocrat;High;M93009;x
+93019;Head of Military Intelligence;セシル・バリントン・ハースト;40;SC;Technical Specialist;High;M93019;x
+93020;Chief of Staff;R・モントゴメリー＝クリヴェス;39;SC;School of Mass Combat;Very High;M93020;x
+93021;Chief of Staff;アブド・アル・フセイニ;45;PA;School of Fire Support;Very High;M93021;x
+93022;Chief of Army;R・モントゴメリー＝クリヴェス;39;SC;Guns and Butter Doctrine;High;M93020;x
+93023;Chief of Army;テッド・ポインター;42;SC;Decisive Battle Doctrine;High;M93023;x
+93024;Chief of Army;アブド・アル・フセイニ;45;PA;Elastic Defence Doctrine;High;M93021;x
+93025;Chief of Navy;イアン・トリローニー;40;SC;Open Seas Doctrine;Low;M93025;x
+93026;Chief of Air Force;テッド・ポインター;40;SC;Air Superiority Doctrine;Low;M93023;x
+93027;Chief of Air Force;アリ・ハルケー;45;PA;Vertical Envelopment Doctrine;Low;M93027;x

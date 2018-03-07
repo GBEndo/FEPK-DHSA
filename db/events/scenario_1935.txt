@@ -1,0 +1,2057 @@
+#########################################################################
+#
+#		日本・極東追加イベントPlus（新シナリオ専用）
+#
+#########################################################################
+###### 追加イベント一覧 ############
+#########################################################################
+###### 一般史実イベント
+#id = 55590	第四艦隊事件
+#id = 55591-3	鉤十字旗が唯一の国旗と定められる
+#id = 55594	美濃部達吉告発
+#id = 55600 第二次エチオピア戦争（イタリア側）
+#id = 55601 第二次エチオピア戦争（エチオピア側）
+#id = 55602 フィリピンの独立
+#id = 55603 フィリピン・コモンウェルス
+#id = 55604 イタリアAI 対エチオピア戦準備（AI専用イベント）
+#id = 55605 第二次エチオピア戦争（AIイタリア）
+#id = 55606	ギリシア王政復古（HEAMから）
+#id = 55607	コンディリス解任（HEAMから）
+###### 昭和軍閥抗争イベント（日本）
+#id = 55610 皇道派と統制派の対立
+#id = 55611 皇道派少壮将校の反発（相澤事件不可避）
+#id = 55612 皇道派少壮将校の反発（if選択有）
+#id = 55613 相澤事件
+#id = 55614 2-2-6事件（国外滞在中）
+#id = 55615 軍国主義者のクーデター（皇道派ルートの226の代用）
+#id = 55620 永田軍政の再開(if - 2.26以前に外遊からの帰国)
+#id = 55621 永田軍政の再開(if - 2.26事件で皇道派壊滅時)
+#id = 55622 永田軍政の再開(if - 2.26事件が起こらなかった時)
+#id = 55630 満洲国創成の意義(if)
+#id = 55631 満洲の自立(if)
+#id = 55640 朝鮮経営の放棄(if)
+#id = 55641 韓国の独立（日本側）(if)
+#id = 55642 韓国の独立（韓国側）(if)
+#id = 55650	欒州事件
+#id = 55660 華北分離工作（日本側）
+#id = 55661 冀東防共自治政府の成立（日本側）
+#id = 55662 冀東防共自治政府の成立（山西軍閥側）
+#id = 55663 冀東防共自治政府の成立（中華民国側）
+#id = 55664 山西軍閥部隊のロック解除（非ai・atwar・1936年到達）
+###### 長征イベント（中国共産党メイン）
+#id = 55670-3 長征完了
+#id = 55674-8 蘭州到着
+#id = 55679 長征失敗
+#id = 55680 離反者
+#id = 55690-2 AI変更
+#id = 55693-6 蘭州到着(ai)
+#id = 55697 aiのゲタ削除
+############################
+# 第四艦隊事件
+############################
+event = {
+	id = 55590
+	random = no
+	country = JAP
+
+	trigger = {
+		NOT = {
+			atwar = JAP
+		}
+	}
+
+	name = "EVT_55590_NAME"
+	desc = "EVT_55590_DESC"
+	style = 0
+	picture = "japanese_navy"
+
+	date = { day = 26 month = september year = 1935 }
+
+	action_a = {
+		name = "EVT_55590_ACTA"
+		command = { 
+			trigger = {
+				NOT = { escortpool = 1 }
+			}
+			type = escort_pool which = JAP value = 150 }
+		command = { type = dissent value = 4 }
+		command = { type = supplies value = -400 }
+		command = { type = metalpool value = -400 }
+		command = { type = money value = -100 }
+		command = { type = manpowerpool value = -20 }
+		command = { type = gain_tech which = 3040 }
+	}
+}
+
+############################
+# 鉤十字旗が唯一の国旗と定められる
+############################
+event = {
+	id = 55591
+	random = no
+	country = GER
+	
+	trigger = {
+		atwar = no
+	}
+
+	name = "EVT_55591_NAME"
+	desc = "EVT_55591_DESC"
+	style = 0
+	picture = "furios_hitler"
+	
+	date = { day = 14 month = September year = 1935 }
+	offset = 7
+	deathdate = { day = 29 month = 11 year = 1935 }
+	
+	action_a = {
+		name = "EVT_55591_ACTA"
+		command = { type = domestic which = professional_army value = 1 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = flag_ext where = -1 which = "_Nazi" }
+		command = { type = trigger which = 55592 }
+		command = { type = trigger which = 55593 }
+	}
+}
+event = {
+	id = 55592
+	random = no
+	country = ENG
+	
+	name = "EVT_55591_NAME"
+	desc = "EVT_55591_DESC"
+	style = 0
+	picture = "furios_hitler"
+	
+	action_a = {
+		name = "EVT_55591_ACTA"
+		command = { type = domestic which = interventionism value = 1 }
+	}
+}
+event = {
+	id = 55593
+	random = no
+	country = FRA
+	
+	name = "EVT_55591_NAME"
+	desc = "EVT_55591_DESC"
+	style = 0
+	picture = "furios_hitler"
+	
+	action_a = {
+		name = "EVT_55591_ACTA"
+		command = { type = domestic which = interventionism value = 1 }
+	}
+}
+
+############################
+# 美濃部達吉告発
+############################
+event = {
+	id = 55594
+	random = no
+	country = JAP
+	
+	trigger = {
+		atwar = no
+	}
+
+	name = "EVT_55594_NAME"
+	desc = "EVT_55594_DESC"
+	style = 0
+	
+	picture = "minobe"
+	
+	date = { day = 14 month = july year = 1935 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1935 }
+	
+	action_a = {
+		name = "EVT_55594_ACTA"
+		ai_chance = 95
+		command = { type = domestic which = democratic value = -1 }
+	}
+	action_b = {
+		name = "EVT_55594_ACTB"
+		ai_chance = 5
+		command = { type = domestic which = democratic value = 1 }
+	}
+}
+
+
+############################
+# 第二次エチオピア戦争
+############################
+event ={
+	id = 55600
+	random = no
+	country = ITA
+	style = 0
+	trigger = {
+		ai = no
+		exists = ETH
+		NOT = {
+			war = { country = ITA country = ETH }
+			alliance = { country = ITA country = ETH }
+		}
+	}
+
+        date = { day = 2 month = october year = 1935 }
+
+	name = "EVT_55600_NAME"
+	desc = "EVT_55600_DESC"
+
+	picture = "war"
+
+	action_a = { # 
+		name = "EVT_55600_ACTA"
+		ai_chance = 95
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = war which = ETH }
+		command = { type = trigger which = 55601 } # ETH
+		command = { type = sleepevent which = 55605 }
+	}
+	action_b = { # 
+		name = "EVT_55600_ACTB"
+		ai_chance = 5
+		command = { type = dissent value = 2 }
+		command = { type = domestic which = political_left value = 1 }
+		command = { type = domestic which = defense_lobby value = -1 }
+		command = { type = sleepevent which = 55605 }
+		#command = { type = sleepevent which = 2902 }
+		command = { type = sleepevent which = 62010 } # FEPKBETA4
+		command = { type = setflag which = ITA_NOT_ETH }
+	}
+
+}
+############################
+# 第二次エチオピア戦争
+############################
+event ={
+	id = 55601
+	random = no
+	country = ETH
+	style = 0
+
+	name = "EVT_55600_NAME"
+	desc = "EVT_55600_DESC"
+
+	picture = "war"
+
+	action_a = { # 
+		name = "EVT_55601_ACTA"
+		command = { type = manpowerpool value = 5 }
+	}
+}
+############################
+# フィリピンの独立
+############################
+event ={
+	id = 55602
+	random = no
+	country = USA
+	style = 0
+	trigger = {
+		NOT = {	exists = PHI }
+	}
+
+        date = { day = 14 month = november year = 1935 }
+
+	name = "EVT_55602_NAME"
+	desc = "EVT_55602_DESC"
+
+	picture = "indochina_demand"
+
+	action_a = { # FEPK_independentのほうで輸送船追加
+		name = "EVT_55602_ACTA"
+		ai_chance = 95
+		command = { type = independence which = PHI value = 1 }
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = domestic which = defense_lobby value = -1 }
+		command = { type = trigger which = 55603 }
+	}
+	action_b = { # 
+		name = "EVT_55602_ACTB"
+		ai_chance = 5
+		command = { type = dissent value = 2 }
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = domestic which = defense_lobby value = 1 }
+	}
+
+}
+############################
+# フィリピン・コモンウェルス
+############################
+event ={
+	id = 55603
+	random = no
+	country = USA
+	style = 0
+
+	name = "EVT_55603_NAME"
+	desc = "EVT_55603_DESC"
+
+	picture = "indochina_demand"
+
+	action_a = { # 
+		name = "EVT_55603_ACTA"
+		command = { type = make_puppet which = PHI }
+	}
+
+}
+############################
+# イタリアAI 対エチオピア戦準備（AI専用イベント）
+############################
+event ={
+	id = 55604
+	random = no
+	country = ITA
+	style = 0
+	trigger = {
+		exists = ETH
+		ai = yes
+	}
+
+        date = { day = 0 month = september year = 1935 }
+
+	name = "AI_EVENT"
+
+	action_a = { # 
+		command = { type = ai_prepare_war which = ETH }
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = domestic which = defense_lobby value = 1 }
+	}
+}
+
+event ={
+	id = 55605
+	random = no
+	country = ITA
+	style = 0
+	trigger = {
+		ai = yes
+		exists = ETH
+		NOT = {
+			war = { country = ITA country = ETH }
+			alliance = { country = ITA country = ETH }
+		}
+	}
+
+        date = { day = 2 month = october year = 1935 }
+
+	name = "EVT_55600_NAME"
+	desc = "EVT_55600_DESC"
+
+	picture = "war"
+
+	action_a = { # 
+		name = "EVT_55600_ACTA"
+		ai_chance = 95
+		command = { type = war which = ETH }
+		command = { type = trigger which = 55601 } # ETH
+		command = { type = sleepevent which = 55600 }
+	}
+	action_b = { # 
+		name = "EVT_55600_ACTB"
+		ai_chance = 5
+		command = { type = dissent value = 2 }
+		command = { type = domestic which = political_left value = 1 }
+		command = { type = domestic which = defense_lobby value = -1 }
+		command = { type = sleepevent which = 55600 }
+		#command = { type = sleepevent which = 2902 }
+		command = { type = sleepevent which = 62040 } # FEPKBETA4
+		command = { type = setflag which = ITA_NOT_ETH }
+	}
+
+}
+
+############################
+# ギリシャ王政復古
+############################
+event = {
+ 	id = 55606
+	random = no
+	country = GRE
+
+	trigger = {	
+		NOT = { 
+			incabinet = 18001 
+			ideology = stalinist
+			ideology = leninist
+		}
+	}
+
+	name = "EVT_55606_NAME"	#ギリシャ王政復古
+	desc = "EVT_55606_DESC"	#1935年3月にエレフテリオス・ヴェニゼロスの一派がコンスタンディノス・ツァルダリスの政権に対してのクーデターに失敗すると、政府や軍から共和派が一掃された。これにより、ギリシャの王政復古は時間の問題と思われていた。しかしながら、この王政復古実現の方法については政府部内に意見の対立があった。すなわちツァルダリス首相一派の穏和派とコンディリス陸相一派の急進派とである。国民投票を以って王政復古を実現しようとするツァルダリスの姿勢に業を煮やしたコンディリスは突如としてクーデターを敢行、王政復古を認めるか辞任するかの二択をコンディリスに対して迫ったのであった。ツァルダリスは辞任を選び、後を継いだコンディリスは共和制の廃止を宣言、さらに君主制復活について（形式上）国民投票で是非を問うた。なお、この国民投票は票操作がなされており、最初から結果が決まっていたようなものであった。何はともあれ、こうしてギリシャの王政復古は追認されたのである。
+	
+	style = 0
+	date = { day = 9 month = october year = 1935 }
+
+	action_a = {	
+		ai_chance = 99
+		name = "EVT_55606_ACTA"	#国王陛下万歳！
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofstate which = 18001 }
+		command = { type = headofgovernment which = 18211 }
+		command = { type = foreignminister which = 18070 }
+		command = { type = chiefofstaff which = 18150 }
+		command = { type = chiefofarmy which = 18008 }
+		command = { type = sleepminister which = 18208 }
+		command = { type = dissent value = -5 }
+	}
+	action_b = {	
+		ai_chance = 1
+		name = "EVT_55606_ACTB"	#いまだ時期尚早である
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = dissent value = 5 }
+	}
+}
+
+event = {
+ 	id = 55607
+	random = no
+	country = GRE
+
+	trigger = {	
+		headofgovernment = 18215 
+	}
+
+	name = "EVT_55607_NAME"	#コンディリス解任
+	desc = "EVT_55607_DESC"
+	style = 0
+
+	date = { day = 29 month = 10 year = 1935 }
+
+	action_a = {	
+		name = "OK"
+		command = { type = headofstate which = 18001 }
+		command = { type = headofgovernment which = 18002 }
+		command = { type = foreignminister which = 18003 }
+		command = { type = armamentminister which = 18004 }
+		command = { type = ministerofsecurity which = 18005 }
+		command = { type = ministerofintelligence which = 18006 }
+		command = { type = chiefofstaff which = 18007 }
+		command = { type = chiefofarmy which = 18008 }
+		command = { type = chiefofnavy which = 18009 }
+		command = { type = chiefofair which = 18010 }
+		command = { type = sleepminister which = 18215 }
+	}
+}
+
+
+############################
+# 皇道派と統制派の対立
+############################
+event ={
+	id = 55610
+	random = no
+	country = JAP
+	style = 0
+	trigger = {
+	}
+
+	date = { day = 14 month = july year = 1935 }
+
+	name = "EVT_55610_NAME"
+	desc = "EVT_55610_DESC"
+
+	picture = "japanese_officers"
+
+	action_a = { # 
+		name = "EVT_55610_ACTA"
+		ai_chance = 90
+		command = { type = dissent value = 3 }
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = domestic which = political_left value = 2 }
+		command = { type = waketeam which = 1937 } # Obata
+		command = { type = waketeam which = 1938 } # Nagata
+	}
+	action_b = { # 
+		name = "EVT_55610_ACTB"
+		ai_chance = 10
+		command = { type = setflag which = Kodoha }
+		command = { type = dissent value = 7 }
+		command = { type = domestic which = democratic value = -1 } 
+		command = { type = domestic which = political_left value = -2 } 
+		command = { type = waketeam which = 1937 } 	# Obata
+		command = { type = sleepevent which = 1 }	# 2.26 
+		command = { type = sleepevent which = 59903 } 	# 2.26 
+		command = { type = sleepevent which = 55614 } 	# 2.26 
+		command = { type = sleepevent which = 20 } 	# 
+		command = { type = sleepevent which = 55612 } 	# 永田外遊
+		command = { type = sleepevent which = 55660 } 	# 華北分離工作（日本側）
+	}
+
+}
+############################
+# 皇道派少壮将校に不穏な空気
+############################
+event ={
+	id = 55611
+	random = no
+	country = JAP
+	style = 0
+	trigger = {
+		ai = yes	#DHSA0.2
+		random = 5
+	}
+
+        date = { day = 15 month = july year = 1935 }
+	offset = 5
+	deathdate = { day = 28 month = july year = 1935 } #FEPK1.12
+
+	name = "EVT_55611_NAME"
+	desc = "EVT_55611_DESC"
+
+	picture = "japanese_officers"
+
+	action_a = { # 
+		name = "EVT_55611_ACTA"
+		command = { type = dissent value = 3 }
+		command = { type = sleepevent which = 55612 }
+		#command = { type = sleepevent which = 55614 } # 2-2-6 EX
+	}
+
+}
+############################
+# 皇道派少壮将校に不穏な空気
+############################
+event ={ #FEPK1.12
+	id = 55612
+	random = no
+	country = JAP
+	style = 0
+	trigger = {
+	}
+
+	date = { day = 29 month = july year = 1935 }
+
+	name = "EVT_55611_NAME"
+	desc = "EVT_55611_DESC"
+
+	picture = "japanese_officers"
+
+	action_a = { # 
+		name = "EVT_55611_ACTA"
+		ai_chance = 70
+		command = { type = dissent value = -3 }
+		command = { type = sleepevent which = 55611 }
+		#command = { type = sleepevent which = 55614 } # 2-2-6 EX
+	}
+	action_b = { # 
+		name = "EVT_55611_ACTB"
+		ai_chance = 25
+#		ai_chance = 30
+		command = { type = dissent value = 1 }
+		command = { type = domestic which = defense_lobby value = -1 }
+		command = { type = sleepevent which = 55611 }
+		command = { type = sleepevent which = 55613 }
+	}
+	action_c = { # 
+		name = "EVT_55611_ACTC"
+		ai_chance = 5
+		command = { type = dissent value = 7 }
+		command = { type = domestic which = defense_lobby value = -2 }
+		command = { type = sleepevent which = 55611 }
+		command = { type = sleepevent which = 55613 }
+		command = { type = sleepevent which = 55620 }
+		command = { type = sleepevent which = 59903 } # NORMAL 2-2-6
+		command = { type = sleepevent which = 55615 } 	# 2.26 
+	}
+}
+############################
+# 相澤事件
+############################
+event ={
+	id = 55613
+	random = no
+	country = JAP
+	style = 0
+	trigger = {
+	}
+
+        date = { day = 11 month = august year = 1935 }
+
+	name = "EVT_55612_NAME"
+	desc = "EVT_55612_DESC"
+
+	picture = "minister_died"
+
+	action_a = { # 
+		name = "EVT_55612_ACTA"
+		command = { type = dissent value = 1 }
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = sleepminister which = 5555 } # Nagata
+		command = { type = sleepminister which = 5556 } # Nagata
+		command = { type = sleepminister which = 5557 } # Nagata
+		command = { type = sleepleader which = 101382 } # Nagata
+		command = { type = sleepleader which = 101386 } # Nagata
+		command = { type = sleepteam which = 1938 }     # Nagata
+	}
+}
+#########################################################################
+#  The 2-2-6 incident (Japan)
+#########################################################################
+event = {
+	id = 55614
+	random = no
+	country = JAP
+
+	name = EVT_1_NAME
+	desc = EVT_1_DESC
+	style = 0
+	picture = "226"
+
+	trigger = {
+		leader = 101382 # Nagata
+		NOT = { event = 55620 }
+		atwar = no
+		NOT = {
+			ispuppet = JAP
+		}
+	}
+
+        date = { day = 25 month = february year = 1936 }
+
+	action_a = {
+		ai_chance = 90
+		name = EVT_1_ACTA
+		command = { type = dissent value = 1 }
+		command = { type = domestic which = democratic		value = -2 }
+		command = { 
+			trigger = {
+				NOT = { domestic = { type = political_left value = 5 } }
+			}
+			type = domestic which = political_left	value = 1 }
+		command = { type = domestic which = defense_lobby	value = -1 }
+		command = { type = domestic which = interventionism	value = -1 }
+		command = { type = sleepleader which = 101383 } # Watanabe
+		command = { type = sleepminister which = 5551 } # Takahashi
+		command = { type = trigger which = 55400 } #->皇道派の壊滅
+		command = { type = setflag which = Toseiha }
+	}
+	action_b = {
+		ai_chance = 10
+		name = EVT_1_ACTB
+		command = { type = dissent value = 5 }
+		command = { type = domestic which = democratic		value = -4 }	#  NOTE: The B choice effects are stronger than A by design
+		command = { type = domestic which = political_left	value = -1 }	#  This represent a greater shift towards the military and
+		command = { type = domestic which = freedom		value = -2 }	#  right wing control.
+		command = { type = domestic which = defense_lobby	value = 1 }
+		command = { type = domestic which = interventionism	value = 1 }
+		command = { type = headofstate which = 5013 }		# NS天皇
+		command = { type = headofgovernment which = 5550 }	# Masaki
+		command = { type = foreignminister which = 5053 }
+		command = { type = armamentminister which = 5080 }
+		command = { type = ministerofsecurity which = 5105 }
+		command = { type = ministerofintelligence which = 5134 }
+		command = { type = chiefofstaff which = 5523 }		# Araki
+		command = { type = chiefofarmy which = 5531 }		# Araki
+		command = { type = chiefofnavy which = 5172 }
+		command = { type = chiefofair which = 5183 }
+		command = { type = waketeam which = 1937 }		# Obata
+		command = { type = sleepleader which = 101383 }		# Watanabe
+		command = { type = sleepminister which = 5555 }		# Nagata
+		command = { type = sleepminister which = 5556 }		# Nagata
+		command = { type = sleepminister which = 5557 }		# Nagata
+		command = { type = sleepminister which = 5551 }		# Takahashi
+		command = { type = sleepminister which = 5011 }		# 大本営
+		command = { type = sleepteam which = 1938 }		# Nagata
+		command = { type = trigger which = 55401 } #->統制派の壊滅
+		command = { type = relation which = CHI value = 20 }
+		command = { type = relation which = SOV value = -100 }
+		command = { type = setflag which = Kodoha }
+		command = { type = clrflag which = Toseiha }
+		command = { type = clrflag which = Nagata }
+	}
+}
+#########################################################################
+#  軍国主義者のクーデター
+#########################################################################
+event = {
+	id = 55615
+	random = no
+	country = JAP
+
+	name = EVT_111_NAME
+	desc = EVT_111_DESC
+	style = 0
+	picture = "226"
+
+	trigger = {
+		flag = Kodoha
+		atwar = no
+		NOT = {
+			ispuppet = JAP
+		}
+	}
+
+        date = { day = 25 month = february year = 1936 }
+
+	action_a = {
+		name = "OK"
+		command = { type = dissent value = 3 }
+		command = { type = domestic which = democratic		value = -4 }	#  NOTE: The B choice effects are stronger than A by design
+		command = { type = domestic which = political_left	value = -1 }	#  This represent a greater shift towards the military and
+		command = { type = domestic which = freedom		value = -2 }	#  right wing control.
+		command = { type = domestic which = defense_lobby	value = 1 }
+		command = { type = domestic which = interventionism	value = 1 }
+		command = { type = headofstate which = 5013 }		# NS天皇
+		command = { type = headofgovernment which = 5550 }	# Masaki
+		command = { type = foreignminister which = 5053 }
+		command = { type = armamentminister which = 5080 }
+		command = { type = ministerofsecurity which = 5105 }
+		command = { type = ministerofintelligence which = 5134 }
+		command = { type = chiefofstaff which = 5523 }		# Araki
+		command = { type = chiefofarmy which = 5531 }		# Araki
+		command = { type = chiefofnavy which = 5172 }
+		command = { type = chiefofair which = 5183 }
+		command = { type = waketeam which = 1937 }		# Obata
+		#command = { type = sleepleader which = 101383 }	# Watanabe
+		command = { type = sleepminister which = 5555 }		# Nagata
+		command = { type = sleepminister which = 5556 }		# Nagata
+		command = { type = sleepminister which = 5557 }		# Nagata
+		command = { type = sleepminister which = 5551 }		# Takahashi
+		command = { type = sleepminister which = 5011 }		# 大本営
+		#command = { type = sleepteam which = 1938 }		# Nagata
+		command = { type = trigger which = 55401 } #->統制派の壊滅
+		command = { type = relation which = CHI value = 20 }
+		command = { type = relation which = SOV value = -100 }
+		command = { type = clrflag	which = Toseiha }
+		command = { type = clrflag	which = Nagata }
+	}
+}
+
+############################
+# 永田軍政の再開case1（外遊）(if)
+############################
+event = { 
+	id = 55620
+	random = no
+	country = JAP
+
+	trigger = {
+		leader = 101382 # Nagata
+		random = 30
+	}
+
+        date = { day = 0 month = november year = 1935 }
+	offset = 7
+	deathdate = { day = 29 month = 	february year = 1936 }
+	
+	name = "EVT_55620_NAME"
+	desc = "EVT_55620_DESC"
+
+	style = 0
+	picture = "japanese_officers"
+
+	action_a = { #
+		name = "EVT_55620_ACTA"
+		command = { type = domestic which = freedom value = 2 }
+		command = { type = sleepevent which = 55614 } # 2-2-6 EX
+		command = { type = sleepevent which = 55621 } # 
+		command = { type = sleepevent which = 55622 } # 
+		command = { trigger = { NOT = { technology = 6020 } }
+					type = gain_tech which = 6020 }
+		command = { trigger = { NOT = { technology = 5060 } }
+					type = gain_tech which = 5060 }
+		command = { trigger = { NOT = { technology = 1340 } }
+					type = gain_tech which = 1340 }
+		command = { trigger = { technology = 6020 }
+					type = gain_tech which = -2 }
+		command = { trigger = { technology = 5060 }
+					type = gain_tech which = -1 }
+		command = { trigger = { technology = 1340 }
+					type = gain_tech which = -1 }
+		command = { type = setflag which = Nagata }
+	}
+
+}
+############################
+# 永田軍政の再開case2(if)
+############################
+event = { 
+	id = 55621
+	random = no
+	country = JAP
+
+	trigger = {
+		leader = 101382 # Nagata
+		event = 55400
+	}
+
+        date = { day = 0 month = january year = 1935 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1936 }
+	
+	name = "EVT_55620_NAME"
+	desc = "EVT_55620_DESC"
+
+	style = 0
+	picture = "japanese_officers"
+
+	action_a = { #
+		name = "EVT_55620_ACTA"
+		command = { type = domestic which = freedom value = 2 }
+		command = { type = sleepevent which = 55620 } # 
+		command = { type = sleepevent which = 55622 } # 
+		command = { type = setflag which = Nagata }
+	}
+
+}
+############################
+# 永田軍政の再開case3(if)
+############################
+event = { 
+	id = 55622
+	random = no
+	country = JAP
+
+	trigger = {
+		leader = 101382 # Nagata
+		NOT = { 
+			event = 59903 # 2-2-6
+			event = 55614 # 2-2-6 EX 
+			event = 55615
+		}
+	}
+
+        date = { day = 0 month = march year = 1936 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1936 }
+	
+	name = "EVT_55620_NAME"
+	desc = "EVT_55620_DESC"
+
+	style = 0
+	picture = "japanese_officers"
+
+	action_a = { #
+		name = "EVT_55620_ACTA"
+		command = { type = domestic which = freedom value = 2 }
+		command = { type = sleepevent which = 55620 } # 
+		command = { type = sleepevent which = 55621 } # 
+		command = { type = gain_tech which = 6020 }
+		command = { type = setflag which = Nagata }
+	}
+
+}
+############################
+# 満洲国創成の意義(if)
+############################
+event = { 
+	id = 55630
+	random = no
+	country = JAP
+
+	trigger = {
+		puppet = { country = MAN country = JAP }
+		OR = {
+			headofgovernment = 5555 # Nagata
+			headofgovernment = 5028 # Ugaki
+		}
+		#event = 55642 
+		flag = Nagata
+		random = 20
+	}
+	
+	name = "EVT_55630_NAME"
+	desc = "EVT_55630_DESC"
+
+	style = 0
+	picture = "economic"
+
+        date = { day = 0 month = january year = 1941 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = { #
+		name = "EVT_55630_ACTA"
+		ai_chance = 80
+		command = { type = domestic which = freedom value = 1 }	
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = end_mastery which = MAN }
+		command = { type = belligerence which = JAP value = -10 }
+		command = { type = belligerence which = MAN value = -10 }
+		command = { type = relation which = MAN value = 400 }
+		command = { type = relation which = SIA value = 150 }
+		command = { type = relation which = TUR value = 150 }
+		command = { type = relation which = ENG value = 10 }
+		command = { type = relation which = USA value = 10 }
+		command = { type = relation which = CAN value = 10 }
+		command = { type = relation which = AST value = 10 }
+		command = { type = relation which = NZL value = 10 }
+		command = { type = relation which = SAF value = 10 }
+		command = { type = sleepevent which = 131697 }
+		command = { type = trigger which = 55631 } # MAN
+	}
+	action_b  = { #
+		name = "EVT_55630_ACTB"
+		ai_chance = 20
+		command = { type = sleepevent which = 131697 }
+		command = { type = sleepevent which = 55631 }
+		command = { type = sleepevent which = 55640 }
+		command = { type = sleepevent which = 55641 }
+	}
+}
+############################
+# 満洲の自立(if)
+############################
+event = { 
+	id = 55631
+	random = no
+	country = MAN
+	
+	name = "EVT_55631_NAME"
+	desc = "EVT_55630_DESC"
+
+	style = 0
+	picture = "economic"
+
+	action_a = { #
+		name = "EVT_55631_ACTA"
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = domestic which = freedom value = 1 }
+		command = { type = construct which = ic where = 1390 value = 1 } # 新京
+		command = { type = construct which = ic where = 1379 value = 1 } # 哈爾濱
+		command = { type = construct which = ic where = 1389 value = 1 } # 奉天
+		command = { type = relation which = SIA value = 50 }
+		command = { type = relation which = TUR value = 50 }
+		command = { type = relation which = ENG value = 10 }
+		command = { type = relation which = USA value = 10 }
+		command = { type = relation which = CAN value = 10 }
+		command = { type = relation which = AST value = 10 }
+		command = { type = relation which = NZL value = 10 }
+		command = { type = relation which = SAF value = 10 }
+		command = { type = manpowerpool value = 50 } # manpower
+		command = { type = sleepteam which = 6404 } # Jap-TechTeam
+		command = { type = sleepteam which = 6405 } # Jap-TechTeam
+		command = { type = sleepteam which = 6406 } # Jap-TechTeam
+		command = { type = sleepteam which = 6429 } # Jap-TechTeam
+		command = { type = waketeam which = 6426 } # Man-TechTeam
+		command = { type = waketeam which = 6428 } # Man-TechTeam
+		command = { type = waketeam which = 6430 } # Man-TechTeam
+
+		command = { type = sleepminister which = 58010 } # 
+		command = { type = sleepminister which = 58016 } # 
+		command = { type = sleepminister which = 58017 } # 
+		command = { type = sleepminister which = 58018 } # 
+		command = { type = sleepminister which = 58023 } # 
+		command = { type = sleepminister which = 58024 } # 
+		command = { type = sleepminister which = 58029 } # 
+		command = { type = sleepminister which = 58030 } # 
+		command = { type = sleepminister which = 58031 } # 
+		command = { type = sleepminister which = 58032 } # 
+		command = { type = sleepminister which = 58037 } # 
+		command = { type = sleepminister which = 58038 } # 
+		command = { type = sleepminister which = 58039 } # 
+		command = { type = sleepminister which = 58044 } # 
+		command = { type = sleepminister which = 58045 } # 
+		command = { type = sleepminister which = 58046 } # 
+		command = { type = sleepminister which = 58051 } # 
+		command = { type = sleepminister which = 58052 } # 
+		command = { type = sleepminister which = 58057 } # 
+		command = { type = sleepminister which = 58058 } # 
+		command = { type = sleepminister which = 58061 } # 
+		command = { type = sleepminister which = 58063 } # 
+		command = { type = sleepminister which = 58064 } # 
+		command = { type = sleepminister which = 58065 } # 
+		command = { type = sleepminister which = 58068 } # 
+		command = { type = sleepminister which = 58069 } # 
+		command = { type = sleepminister which = 58070 } # 
+		command = { type = sleepminister which = 58071 } # 
+		command = { type = sleepminister which = 58072 } # 
+		command = { type = sleepminister which = 58111 } # 
+		command = { type = sleepleader which = 250008 } # 
+		command = { type = sleepleader which = 250010 } # 
+		command = { type = sleepleader which = 250018 } # 
+		command = { type = sleepleader which = 250026 } # 
+		command = { type = sleepleader which = 250029 } # 
+		command = { type = sleepleader which = 250034 } # 
+		command = { type = sleepleader which = 250038 } # 
+		command = { type = sleepleader which = 250087 } # 
+		command = { type = sleepleader which = 250088 } # 
+		command = { type = sleepleader which = 250089 } # 
+		command = { type = sleepleader which = 250090 } # 
+		command = { type = sleepleader which = 250093 } # 
+		command = { type = sleepleader which = 250096 } # 
+		command = { type = sleepleader which = 250097 } # 
+	}
+}
+############################
+# 朝鮮経営の放棄(if)
+############################
+event = { 
+	id = 55640
+	random = no
+	country = JAP
+
+	trigger = {
+		OR = {
+			headofgovernment = 5555 # Nagata
+			headofgovernment = 5028 # Ugaki
+		}
+		NOT = {	exists = KOR }
+		flag = Nagata
+		event = 55631
+		random = 20
+	}
+	
+	name = "EVT_55640_NAME"
+	desc = "EVT_55640_DESC"
+
+	style = 0
+
+	picture = "korea_independent"
+
+        date = { day = 0 month = august year = 1940 }
+	offset = 4
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = { #
+		name = "EVT_55640_ACTA"
+		ai_chance = 80
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = removecore which = 1194 } # 済州島
+		command = { type = removecore which = 1195 } # 光州
+		command = { type = removecore which = 1196 } # 釜山
+		command = { type = removecore which = 1197 } # 大邱
+		command = { type = removecore which = 1198 } # 春州
+		command = { type = removecore which = 1199 } # 京城
+		command = { type = removecore which = 1393 } # 新義州
+		command = { type = removecore which = 1391 } # 惠山
+		command = { type = removecore which = 1376 } # 清津
+		command = { type = removecore which = 1392 } # 咸興
+		command = { type = removecore which = 1200 } # 元山
+		command = { type = removecore which = 1201 } # 平壌
+
+		command = { type = independence which = KOR value = 1 }
+		command = { type = trigger which = 55641 } # 
+		command = { type = sleepleader which = 101045 } # 
+		command = { type = sleepleader which = 101092 } # 
+		command = { type = sleepleader which = 101111 } # 
+		command = { type = sleepleader which = 101320 } # 
+		command = { type = sleepleader which = 101325 } # 
+	}
+	action_b  = { #
+		name = "EVT_55640_ACTB"
+		ai_chance = 20
+		command = { type = dissent value = 1 }
+	}
+}
+############################
+# 韓国の独立(if)
+############################
+event = { 
+	id = 55641
+	random = no
+	country = JAP
+
+	name = "EVT_55641_NAME"
+	desc = "EVT_55641_DESC"
+
+	style = 0
+
+	picture = "korea_independent"
+
+	action_a = { #
+		name = "EVT_55641_ACTA"
+#		command = { type = sleepevent which = 1 }  # 2.26 sleep
+		command = { type = belligerence which = JAP value = -10 }
+		command = { type = make_puppet which = KOR }
+		command = { type = relation which = MAN value = 400 }
+		command = { type = relation which = SIA value = 10 }
+		command = { type = relation which = TUR value = 10 }
+		command = { type = relation which = ENG value = 5 }
+		command = { type = relation which = USA value = 5 }
+		command = { type = relation which = CAN value = 5 }
+		command = { type = relation which = AST value = 5 }
+		command = { type = relation which = NZL value = 5 }
+		command = { type = relation which = SAF value = 5 }
+		command = { type = construct which = ic where = 1179 value = 2 } # 札幌
+		command = { type = construct which = ic where = 1180 value = 1 } # 名古屋
+		command = { type = construct which = ic where = 1180 value = 2 } # 仙台
+		command = { type = construct which = ic where = 1182 value = 1 } # 福島
+		command = { type = construct which = ic where = 1186 value = 1 } # 金沢
+		command = { type = construct which = ic where = 1187 value = 2 } # 大阪
+		command = { type = construct which = ic where = 1184 value = 2 } # 東京
+		command = { type = construct which = ic where = 1190 value = 1 } # 福岡
+		command = { type = construct which = ic where = 1390 value = 2 } # 新京
+	        command = { type = construct which = ic where = 1199 value = -1 } # 京城
+	        command = { type = construct which = ic where = 1195 value = -1 } # 光洲
+	        command = { type = construct which = ic where = 1196 value = -1 } # 釜山
+	        command = { type = construct which = ic where = 1197 value = -1 } # 大邱
+		command = { type = construct which = infrastructure where = 1180 value = 40 } # 仙台
+		command = { type = construct which = infrastructure where = 1181 value = 10 } # 秋田
+		command = { type = construct which = infrastructure where = 1185 value = 20 } # 名古屋
+		command = { type = construct which = infrastructure where = 1390 value = 10 } # 新京
+		command = { type = construct which = infrastructure where = 1389 value = 10 } # 奉天
+		command = { type = construct which = infrastructure where = 1379 value = 10 } # 哈爾濱
+		command = { type = province_manpower which = 1178 value = 1 } # 旭川
+		command = { type = province_manpower which = 1179 value = 1 } # 札幌
+		command = { type = province_manpower which = 1180 value = 1 } # 仙台
+		command = { type = province_manpower which = 1184 value = 1 } # 東京
+		command = { type = province_manpower which = 1187 value = 1 } # 大阪
+		command = { type = manpowerpool value = 5 } # manpower
+		command = { type = industrial_modifier which = total value = 5 }	#遠藤マイクロ
+		command = { type = morale which = land value = 2 }
+		
+		command = { type = trigger which = 55642 } # 		
+	}
+}
+############################
+# 韓国の独立(if)
+############################
+event = { 
+	id = 55642
+	random = no
+	country = KOR
+
+	name = "EVT_55641_NAME"
+	desc = "EVT_55641_DESC"
+
+	style = 0
+
+	picture = "korea_independent"
+
+	action_a = { #
+		name = "EVT_55641_ACTA"
+		command = { type = dissent value = 70 }
+		command = { type = set_domestic which = democratic value = 2 }
+		command = { type = set_domestic which = freedom value = 0 }
+		command = { type = set_domestic which = political_left value = 4 }
+
+		command = { type = headofstate which = 578038 }
+		command = { type = headofgovernment which = 578046 }
+		command = { type = foreignminister which = 578050 }
+		command = { type = armamentminister which = 578047 }
+		command = { type = ministerofsecurity which = 578054 }
+		command = { type = ministerofintelligence which = 578055 }
+		command = { type = chiefofstaff which = 578040 } 
+		command = { type = chiefofarmy which = 578041 } 
+		command = { type = chiefofair which = 578045 } 
+		command = { type = add_division which = "韓国陸軍総司令部" value = hq when = 1 }
+		command = { type = ai which = "kor_1935.ai" }
+		command = { type = waketeam which = 13509 }
+		command = { type = waketeam which = 13510 }
+		command = { type = sleepevent which = 15032 } # 
+	}
+}
+
+event = {
+	id = 55643
+	random = no
+	country = KOR 
+	
+	trigger = {
+		NOT = { puppet = { country = KOR country = JAP } }
+		tech_team = 13510
+	}
+	
+	date = { day = 0 month = august year = 1940 }
+	offset = 4
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	name = "EVT_55643_NAME"	#東洋拓殖會社の解散
+	desc = "EVT_55643_DESC"	#日本が韓国への干渉を段階的に中止していく中で、これまで官民の合弁企業として朝鮮半島の経済に支配的立場を築いていた東洋拓殖会社の朝鮮部門は解散することになった。子会社の多くは自立経営か韓国政府への統合を迫られることとなる。
+
+	style = 0
+
+	picture = "korea_independent"
+	
+	action = {
+		name = "EVT_55643_NAME"	#よろしい
+		command = { type = sleepteam which = 13510 }
+	}
+}
+
+
+############################
+# 欒州事件
+# AI戦争確率：0【55650C】+0.2【55650B】*(0.55【55651A】*0.5【55652A】*0.5【55654B】*0.35【55656B】+0.45【55651B】*(0.35【55653B】+0.65【55653A】*0.2【55657A】))＝5.2825％
+############################
+event = {
+	id = 55650
+	random = no
+	country = JAP
+	style = 0
+	trigger = {
+		NOT = { 
+			ispuppet = CHI
+			war = { country = CHI }
+			war = { country = CSX }
+			alliance = { country = ENG }
+			alliance = { country = SOV }
+			alliance = { country = GER }
+		}
+		OR = {
+			control = { province = 1203 data = JAP }
+			control = { province = 1203 data = CHI }
+			control = { province = 1203 data = MAN }
+			control = { province = 1203 data = CSX }
+		}
+	}
+	
+	date = { day = 3 month = 7 year = 1935 }
+	
+	name = "EVT_55650_NAME"	#欒州事件
+	desc = "EVT_55650_DESC"	#1935年8月4日、北支停戦協定地区である河北省欒州で、保安総隊長劉佐周と警備中の歩哨が銃撃される事件があった。日本側の主張によればこの事件は南京政府の直系機関たる北平軍事分会によるものである、とのことであった。支那駐屯軍当局は北支当局に対して厳重な抗議を行い、永田鉄山の指示のもとでこの事件は一応の収束を見せた。更に、永田はこれを見て外務省と協議し「対北支政策」を策定し、北支の安定のための方策を打ち出していた。しかしながら、後の盧溝橋事件に見られるように、この方針が完徹されることはなかった。
+	
+	picture = "Marco_Polo"
+
+	action_a = { # 
+		name = "EVT_55650_ACTA"	#再発防止に努めねば
+		ai_chance = 80
+		command = { type = relation which = CHI value = -10 }
+	}
+	action_b = {	
+		name = "EVT_55650_ACTB"	#南京の政府に正式な謝罪を求める
+		ai_chance = 20
+		command = { type = dissent value = 1 }
+		command = { type = relation which = CHI value = -20 }
+		command = { type = sleepevent which = 55613 }
+		command = { type = setflag which = Nagata }
+		command = { type = sleepevent which = 55620 }
+		command = { type = sleepevent which = 55621 }
+		command = { type = sleepevent which = 55622 }
+		command = { type = trigger which = 55651 }
+	}
+	action_c = {
+		name = "EVT_55650_ACTC"	#これは戦争を意味する！
+		command = { trigger = { ai = no } type = war which = CHI }
+		command = { trigger = { ai = yes } type = ai_prepare_war which = CHI }
+		command = { type = dissent value = 5 }
+		command = { type = sleepevent which = 55613 }
+		command = { type = setflag which = Nagata }
+		command = { type = trigger which = 55661 }
+	}
+}
+
+
+#id = 55651 欒州事件―国民党政府の対応
+event = {
+	id = 55651
+	random = no
+	country = CHI
+	
+	picture = "Marco_Polo"
+	style = 0
+	
+	name = "EVT_55651_NAME"	#欒州事件―国民党政府の対応
+	desc = "EVT_55651_DESC"	#河北省での事件――中国から奪い取った北支での銃撃事件――について、日本政府はふてぶてしくも、我々に対して公式に謝罪することを求めてきた。これにより事態は北支の一部における情勢不安ではなく、日中政府レベルでの敵対的な外交状況となり国境では一気に緊張感が増している。当然多くのものは日本の拡大姿勢に対して大いに不満をいだいており、日本側のこの姿勢に我らが譲歩するならば、国民は憤慨するだろう。しかし、今ここで日本にそれを承服できぬと伝えれば、国境紛争は全面戦争に発展しかねない。
+	
+	action = {
+		name = "EVT_55651_ACTA"	#政府公式の謝罪を送れ
+		ai_chance = 65
+		command = { type = dissent value = 2 }
+		command = { type = trigger which = 55652 }
+	}
+	action = {
+		name = "EVT_55651_ACTB"	#はらわたが煮える思いだ！　全軍戦闘用意！
+		ai_chance = 35
+		command = { type = dissent value = 1 }
+		command = { type = trigger which = 55653 }
+	}
+}
+
+#id = 55652 国民党が欒州事件について謝罪
+event = {
+	id = 55652
+	random = no
+	country = JAP
+	
+	picture = "Marco_Polo"
+	style = 0
+	
+	name = "EVT_55652_NAME"	#国民党が欒州事件について謝罪
+	desc = "EVT_55652_DESC"	#永田鉄山は天津にわたり、現地で支那駐屯軍・外務省そして政府の調整役を担い、辛うじて中国国民党から謝罪の言葉を引き出すことに成功した。中国での情勢をこれ以上ややこしくしたくない参謀本部としては万々歳の結果であって、事態はこれで収束出来るだろうという考えであった。しかし、海軍と外務省の事務方、そして国民の多くはどうもそうは思っていない。このような事件を繰り返さぬ為として、中国には物的・経済的な賠償を行うよう求めるべきだというのだ。これ以上の日中関係の悪化を取るか、それとも矛を収めることで海軍や国民の不満を受け入れるか、選択せねばならない。
+	
+	action_a = {
+		ai_chance = 50
+		name = "EVT_55652_ACTA"	#謝罪を受け入れよう
+		command = { type = dissent value = 1 }
+	}
+	action_b = {
+		ai_chance = 50
+		name = "EVT_55652_ACTB"	#謝罪だけでは足りぬな、賠償を要求する！
+		command = { type = trigger which = 55654 }
+	}
+}
+
+#id = 55653 国民党が動員令を発動！
+event = {
+	id = 55653
+	random = no
+	country = JAP
+	
+	picture = "Marco_Polo"
+	style = 0
+	
+	name = "EVT_55653_NAME"	#国民党が動員令を発動！
+	desc = "EVT_55653_DESC"	#欒州事件の責任について中国政府に求めた謝罪は、予想していたより大きな事態になりつつある。情報によれば、国民革命軍は動員令を発動し共産党との戦いに繰り出していた戦力の一部を満洲方面に向けつつあるという。もし我々がこの姿勢を維持するならば、もはや全面衝突は避けられないだろう。
+	
+	action_a = {
+		ai_chance = 65	
+		name = "EVT_55653_ACTA"	#これ以上の緊張は避けよう、ここは引き下がるべきだ
+		command = { type = dissent value = 2 }
+		command = { type = trigger which = 55657 }
+	}
+	action_b = {
+		ai_chance = 35
+		name = "EVT_55653_ACTB"		#これは戦争を意味する！
+		command = { trigger = { ai = no } type = war which = CHI }
+		command = { trigger = { ai = yes } type = ai_prepare_war which = CHI }
+		command = { type = trigger which = 55661 }
+		command = { type = dissent value = 1 }
+	}
+}
+
+#id = 55654 大日本帝国が賠償を要求
+event = {
+	id = 55654
+	random = no
+	country = CHI
+	
+	picture = "Marco_Polo"
+	style = 0
+	
+	name = "EVT_55654_NAME"	#大日本帝国が賠償を要求
+	desc = "EVT_55654_DESC"	#ここ半世紀で分かっていたように、いま、日本人というのは一歩譲ると二歩踏み込んでくる。あの匪賊は、我々の謝罪という譲歩を見て、モノとカネによる賠償を要求してきた。これに応じるならば、おそらく当分の平和は守られるだろう。だが、これに気を良くして近いうちに更なる要求を突きつけてくることもないとはいえない。また、外交的に我々が敗北を喫したとなれば、国民からは更に不満の声が挙がるだろう。もともと統治への不満が国家を不安定にしている以上、出来ればそれも避けたいが……。
+	
+	action_a = {
+		ai_chance = 50
+		name = "EVT_55654_ACTA"	#受け入れるしかあるまい
+		command = { type = dissent value = 3 }
+		command = { type = money value = -100 }
+		command = { type = supplies value = -300 }
+		command = { type = trigger which = 55655 }
+	}
+	action_b = {
+		ai_chance = 50
+		name = "EVT_55654_ACTB"	#断る！
+		command = { type = trigger which = 55656 }
+		command = { type = dissent value = 1 }
+	}
+}
+
+#id = 55655 国民党による欒州事件の賠償
+event = {
+	id = 55655
+	random = no
+	country = JAP
+	
+	picture = "Marco_Polo"
+	style = 0
+	
+	name = "EVT_55655_NAME"	#国民党による欒州事件の賠償
+	desc = "EVT_55655_DESC"	#支那駐屯軍と中華民国政府との交渉により彼らから謝罪を引き出すと、外務省はこれに乗る形で中華民国に賠償を求め、これに成功した。内地の陸・海軍の了承を経てのこの賠償要求は無事通り、廣田外相と中華民国政府の親日派が5月から協議を始めていた日中での和平の交渉、そして満洲の承認についての殆どが日本側の要求どおりに通った形になった。当然中華民国にとっては納得の行く内容ではないが、ここから戦争の始まることは避けねばならなかった彼らは究極の選択を行い、そしてこれを呑んだのだった。
+	action_a = {
+		name = "EVT_55655_ACTA"	#よろしい
+		command = { type = money value = 100 }
+		command = { type = supplies value = 300 }
+		command = { type = relation which = CHI value = 20 }
+	}
+}
+
+
+#id = 55656 国民党が賠償を拒絶！
+event = {
+	id = 55656
+	random = no
+	country = JAP
+	
+	picture = "Marco_Polo"
+	style = 0
+
+	name = "EVT_55656_NAME"	#国民党が賠償を拒絶！
+	desc = "EVT_55656_DESC"	#我々の賠償要求に対する中華民国の答えは、北支における更なる不安定と緊張の高まりという形で帰ってきた。南京政府は好戦的な帝国主義の日本人に支払う金はどこにも無く、国民革命軍は今や日本人の圧政のもとに苦しむ華北と満洲の同胞たちを救い、自らの旗を満洲の端まで揚げに往かねばならぬのだと語った。一方東京では、今再び支那を討つべき時であるとそれぞれが煽り合い、参謀本部と宮城の意向とは全く関係なしに、ことが動き出そうとしていた。我々に残された選択肢はただ２つだけだ。北支におけるテロ、混乱を許容するか……それとも、中華民国との戦に出向くか。
+	
+	action_a = {
+		name = "EVT_55656_ACTA"	#今中国と事を構えるのは得策ではない
+		ai_chance = 65
+		command = { type = dissent value = 2 }
+	}
+	action_b = {
+		name = "EVT_55656_ACTB"	#ならばその身で支払ってもらう！
+		ai_chance = 35
+		command = { trigger = { ai = no } type = war which = CHI }
+		command = { trigger = { ai = yes } type = ai_prepare_war which = CHI }
+		command = { type = trigger which = 55661 }
+		command = { type = dissent value = 2 }
+	}
+}
+
+#id = 55657	大日本帝国との調停交渉
+event = {
+	id = 55657
+	country = CHI
+	
+	picture = "Marco_Polo"
+	style = 0
+	
+	name = "EVT_55657_NAME"	#大日本帝国との調停交渉
+	desc = "EVT_55657_DESC"	#非武装中立地域での銃撃事件により、支那駐屯軍は安全確保の名目で増派を受け展開を続けた。一方の中国軍もそれに呼応して国境警備のためにと部隊の展開を進めた。ついに部分的に戦闘が始まってしまっているという報告を受けると、日本政府はこれ以上の緊張は高めるべきでないとしてついにその挑発的な方針を改め、国境線からの日本軍の撤退を以って、あくまで外交レベルでこの事件を終息させようと交渉を要求してきた。これは我々にとって、帝国主義に対する一つの勝利であると言えるだろうが、彼らの軍が再びこの地を脅かす可能性は十分にあった。まだ、警戒を解くことができるとは、到底言えないのだ……。
+	
+	action_a = {
+		name = "EVT_55657_ACTA"	#調停内容を受諾する
+		ai_chance = 80
+		command = { type = dissent value = 1 }
+		command = { type = relation which = JAP value = 20 }
+	}
+	action_b = {
+		name = "EVT_55657_ACTB"	#断る！　連中には今までのツケを払ってもらわなくては！
+		ai_chance = 20
+		command = { type = dissent value = 3 }
+		command = { type = trigger which = 55661 }
+		command = { type = war which = JAP }
+	}
+}
+		
+
+############################
+# 華北分離工作
+############################
+event ={
+	id = 55660
+	random = no
+	country = JAP
+	style = 0
+	trigger = {
+		atwar = no
+		exists = CSX #
+	}
+
+        date = { day = 24 month = december year = 1935 }
+
+	name = "EVT_55660_NAME"
+	desc = "EVT_55660_DESC"
+
+	picture = "japanese_reinforcments2"
+
+	action_a = { # 
+		name = "EVT_55660_ACTA"
+		ai_chance = 100 # 99 #1.095
+		command = { type = belligerence which = JAP value = 5 }
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = trigger which = 55661 } # 
+	}
+	action_b = { # 
+		name = "EVT_55660_ACTB"
+		ai_chance = 0 # 1 #1.095
+		command = { type = dissent value = 5 } #1.095
+		command = { type = domestic which = defense_lobby value = -1 }
+		command = { type = sleepevent which = 55661 }
+		command = { type = sleepevent which = 59905 } # 
+	}
+
+}
+############################
+# 冀東防共自治政府の成立
+############################
+event ={
+	id = 55661
+	random = no
+	country = JAP
+	style = 0
+
+	name = "EVT_55661_NAME"
+	desc = "EVT_55661_DESC"
+
+	picture = "japanese_reinforcments2"
+
+	action_a = { # 
+		name = "EVT_55662_ACTA"
+		command = { type = relation which = CSX value = -50 }
+		command = { type = relation which = CHI value = -50 }
+		command = { type = relation which = ENG value = -10 }
+		command = { type = relation which = USA value = -10 }
+		command = { type = trigger which = 55662 } # 
+	}
+
+}
+############################
+# 冀東防共自治政府の成立
+############################
+event ={
+	id = 55662
+	random = no
+	country = CSX
+	style = 0
+
+	name = "EVT_55661_NAME"
+	desc = "EVT_55661_DESC"
+
+	picture = "japanese_reinforcments2"
+
+	action_a = { # 
+		name = "EVT_55661_ACTA"
+		command = { type = dissent value = 3 }
+		command = { type = removecore which = 1203 }
+		command = { type = removecore which = 1397 }
+		command = { type = removecore which = 1398 }
+		command = { type = secedeprovince which = JAP value = 1203 }
+		command = { type = secedeprovince which = JAP value = 1397 }
+		command = { type = secedeprovince which = JAP value = 1398 }
+		command = { type = trigger which = 55663 } # 
+		command = { type = unlock_division which = 22300 value =   2 }
+		command = { type = unlock_division which = 22300 value =   7 }
+		command = { type = unlock_division which = 22300 value =  10 }
+		command = { type = unlock_division which = 22300 value =  12 }
+		command = { type = unlock_division which = 22300 value =  14 }
+		command = { type = unlock_division which = 22300 value =  17 }
+		command = { type = unlock_division which = 22300 value =  19 }
+		command = { type = unlock_division which = 22300 value =  20 }
+		command = { type = unlock_division which = 22300 value =  21 }
+		command = { type = unlock_division which = 22300 value =  22 }
+		command = { type = unlock_division which = 22300 value =  23 }
+		command = { type = unlock_division which = 22300 value =  24 }
+		command = { type = unlock_division which = 22300 value =  27 }
+		command = { type = unlock_division which = 22300 value =  29 }
+		command = { type = unlock_division which = 22300 value =  31 }
+		command = { type = unlock_division which = 22300 value =  32 }
+		command = { type = unlock_division which = 22300 value =  36 }
+		command = { type = unlock_division which = 22300 value =  37 }
+		command = { type = unlock_division which = 22300 value =  39 }
+		command = { type = unlock_division which = 22300 value =  41 }
+		command = { type = unlock_division which = 22300 value =  44 }
+		command = { type = unlock_division which = 22300 value =  80 }
+		command = { type = unlock_division which = 22300 value =  84 }
+		command = { type = unlock_division which = 22300 value = 104 }
+		command = { type = unlock_division which = 22300 value = 129 }
+		command = { type = unlock_division which = 22300 value = 137 }
+		command = { type = unlock_division which = 22300 value = 146 }
+		command = { type = unlock_division which = 22300 value = 206 }
+		command = { type = unlock_division which = 22300 value = 267 }
+		command = { type = sleepevent which = 55664 } # 
+	}
+
+}
+############################
+# 冀東防共自治政府の成立
+############################
+event ={
+	id = 55663
+	random = no
+	country = CHI
+	style = 0
+
+	name = "EVT_55661_NAME"
+	desc = "EVT_55661_DESC"
+
+	picture = "japanese_reinforcments2"
+
+	action_a = { # 
+		name = "EVT_55661_ACTA"
+		command = { type = dissent value = 5 }
+		command = { type = relation which = ENG value = 10 }
+		command = { type = relation which = USA value = 10 }
+	}
+
+}
+event ={
+	id = 55664
+	random = no
+	country = CSX
+	style = 0
+	trigger = {
+		OR = {
+			atwar = yes
+			ai = no
+			year = 1936
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	action_a = { # 
+		name = "OK" 
+		command = { type = unlock_division which = 22300 value =   2 }
+		command = { type = unlock_division which = 22300 value =   7 }
+		command = { type = unlock_division which = 22300 value =  10 }
+		command = { type = unlock_division which = 22300 value =  12 }
+		command = { type = unlock_division which = 22300 value =  14 }
+		command = { type = unlock_division which = 22300 value =  17 }
+		command = { type = unlock_division which = 22300 value =  19 }
+		command = { type = unlock_division which = 22300 value =  20 }
+		command = { type = unlock_division which = 22300 value =  21 }
+		command = { type = unlock_division which = 22300 value =  22 }
+		command = { type = unlock_division which = 22300 value =  23 }
+		command = { type = unlock_division which = 22300 value =  24 }
+		command = { type = unlock_division which = 22300 value =  27 }
+		command = { type = unlock_division which = 22300 value =  29 }
+		command = { type = unlock_division which = 22300 value =  31 }
+		command = { type = unlock_division which = 22300 value =  32 }
+		command = { type = unlock_division which = 22300 value =  36 }
+		command = { type = unlock_division which = 22300 value =  37 }
+		command = { type = unlock_division which = 22300 value =  39 }
+		command = { type = unlock_division which = 22300 value =  41 }
+		command = { type = unlock_division which = 22300 value =  44 }
+		command = { type = unlock_division which = 22300 value =  80 }
+		command = { type = unlock_division which = 22300 value =  84 }
+		command = { type = unlock_division which = 22300 value = 104 }
+		command = { type = unlock_division which = 22300 value = 129 }
+		command = { type = unlock_division which = 22300 value = 137 }
+		command = { type = unlock_division which = 22300 value = 146 }
+		command = { type = unlock_division which = 22300 value = 206 }
+		command = { type = unlock_division which = 22300 value = 267 }
+	}
+}
+
+############################
+# 長征完了
+############################
+event ={
+	id = 55670
+	random = no
+	country = CHC
+	style = 0
+	trigger = {
+		OR = {
+			control = { province = 1270 data = CHC } # Xianyang
+			control = { province = 1271 data = CHC } # Yan'an
+			control = { province = 1275 data = CHC } # Pingliang
+		}	
+	}
+
+	date = { day = 1 month = july year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1936 }
+
+	name = "EVT_55670_NAME"
+	desc = "EVT_55670_DESC"
+
+	picture = "China_CW"
+
+	action_a = { # 
+		name = "EVT_55670_ACTA"
+		command = { type = trigger which = 55671 } # CXB give provinces to CHC
+		command = { type = sleepevent which = 55673 }
+	}
+}
+event ={
+	id = 55671
+	random = no
+	country = CXB
+	style = 0
+
+	name = "EVT_55671_NAME"
+	desc = "EVT_55671_DESC"
+
+	action_a = { # 
+		name = "EVT_55671_ACTA"
+		command = { type = peace which = CHC value = 1 }
+		command = { type = secedeprovince which = CHC value = 1270 } # Xianyang
+		command = { type = secedeprovince which = CHC value = 1271 } # Yan'an
+		command = { type = secedeprovince which = CHC value = 1275 } # Pingliang
+		command = { type = trigger which = 55672 } # CHC setup
+	}
+}
+event ={
+	id = 55672
+	random = no
+	country = CHC
+	style = 0
+
+	name = "EVT_55672_NAME"
+	desc = "EVT_55672_DESC"
+
+	picture = "China_CW"
+
+	action_a = { # 
+		name = "EVT_55672_ACTA"
+		command = { type = capital which = 1271 } # Yan'an
+		command = { type = money value = 100 }
+		command = { type = manpowerpool value = 350 }
+		command = { type = gain_tech which = 1030 } # Early Infantry
+		command = { type = sleepevent which = 55679 } # failure event
+		command = { type = sleepevent which = 55680 } # revolter event
+
+		command = { type = construct which = land_fort where = 1270 value = 6 } # Xianyang # FEPK変更部分 #1.06
+		command = { type = construct which = land_fort where = 1271 value = 7 } # Yan'an # FEPK変更部分 #1.06
+		command = { type = construct which = land_fort where = 1275 value = 5 } # Pingliang # FEPK変更部分 #1.06
+
+		command = { type = add_corps value = land when = -1 where = 1270 } # Xianyang guards
+		command = { type = add_division value = militia when = 0 }
+		command = { type = add_corps value = land when = -1 where = 1271 } # Yan'an guards
+		command = { type = add_division value = militia when = 0 }
+		command = { type = add_corps value = land when = -1 where = 1275 } # Pingliang guards
+		command = { type = add_division value = militia when = 0 }
+
+		command = { type = secedeprovince which = CYN value = 1282 } # Kangding
+		command = { type = secedeprovince which = CHI value = 1276 } # Lanzhou #FEPKBETA3 #元からあったコメントアウトを削除
+		command = { type = secedeprovince which = CXB value = 1273 } # All Xibei Area
+		command = { type = secedeprovince which = CXB value = 1274 }
+		command = { type = secedeprovince which = CXB value = 1439 }
+		command = { type = secedeprovince which = CXB value = 1440 }
+		command = { type = secedeprovince which = CXB value = 1441 }
+		command = { type = secedeprovince which = CXB value = 1442 }
+		command = { type = secedeprovince which = CXB value = 1443 }
+
+	}
+}
+event ={
+	id = 55673
+	random = no
+	country = CHC
+	style = 0
+	trigger = {
+		random = 50
+		ai = yes	
+	}
+
+        date = { day = 15 month = december year = 1935 }
+	offset = 2
+	deathdate = { day = 29 month = july year = 1936 }
+
+	name = "EVT_55670_NAME"
+	desc = "AI_EVENT"
+
+	picture = "China_CW"
+
+	action_a = { # 
+		name = "EVT_55670_ACTA"
+		command = { type = trigger which = 55671 } # CXB give provinces to CHC
+		command = { type = sleepevent which = 55670 }
+	}
+}
+############################
+# 蘭州進出
+############################
+event ={
+	id = 55674
+	random = no
+	country = CHI
+	style = 0
+	trigger = {
+		NOT = { event = 55671 }
+		control = { province = 1276 data = CHC } # Lanzhou
+	}
+
+	date = { day = 1 month = july year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1936 }
+
+	name = "EVT_55674_NAME"
+	desc = "EVT_55674_DESC"
+
+	action_a = { # 
+		name = "EVT_55674_ACTA"
+		command = { type = secedeprovince which = CHC value = 1276 } # Lanzhou to CHC
+		command = { type = trigger which = 55678 } # CHC moves capital
+	}
+}
+
+event ={
+	id = 55678
+	random = no
+	country = CHC
+	style = 0
+
+	name = "EVT_55678_NAME"
+	desc = "EVT_55678_DESC"
+
+	picture = "China_CW"
+
+	action_a = { # 
+		name = "EVT_55678_ACTA"
+		command = { type = capital which = 1276 } # Lanzhou
+		command = { type = add_corps value = land when = -1 where = 1276 } # Lanzhou guards
+		command = { type = add_division value = militia when = 0 }
+		command = { type = supplies value = 100 where = 1276 } # 
+		command = { type = secedeprovince which = CYN value = 1282 } # Kangding
+	}
+}
+############################
+# 長征の失敗
+############################
+event ={
+	id = 55679
+	random = no
+	country = CHC
+	style = 0
+
+	trigger = {
+		ai = no
+		NOT = { event = 55672 }
+	}
+
+	date = { day = 1 month = october year = 1936 }
+
+	name = "EVT_55679_NAME"
+	desc = "EVT_55679_DESC"
+
+	action_a = { # 
+		name = "EVT_55679_ACTA"
+		command = { type = endgame value = 1 } # eliminated
+	}
+}
+############################
+# 離反者
+############################
+event ={
+	id = 55680
+	random = no
+	country = CHC
+	style = 0
+
+	trigger = {
+		ai = no
+		army = 12
+		random = 30
+		NOT = { event = 90 }
+	}
+
+	date = { day = 1 month = july year = 1935 }
+	offset = 10
+	deathdate = { day = 1 month = april year = 1937 }
+
+	name = "EVT_55680_NAME"
+	desc = "EVT_55680_DESC"
+
+	action_a = { # 
+		name = "EVT_55680_ACTA"
+		command = { type = remove_division which = 24000 value = 11 } #第4方面軍第4軍
+		command = { type = remove_division which = 24000 value = 12 } #第4方面軍第9軍
+		command = { type = remove_division which = 24000 value = 13 } #第4方面軍第30軍
+	}
+}
+############################
+# AI変更(長征完了／中共がプレイヤー)
+############################
+event = {
+	id = 55690
+	random = no 
+	country = CHI
+	
+	trigger = {
+		ai = yes
+		OR = {
+			event = 55672
+			NOT = { exists = CHC }
+			NOT = { ai = CHC }
+		}
+	}
+
+	name = "AI_EVENT"
+	style = 0	
+	
+	date = { day = 1 month = july year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1936 }
+
+	action_a = {
+		command = { type = construct which = land_fort where = 1278 value = 4 } # FEPK1.06
+		command = { type = construct which = land_fort where = 1268 value = 4 } # FEPK1.06
+		command = { type = construct which = land_fort where = 1265 value = 4 } # FEPK1.06
+		command = { type = construct which = land_fort where = 1264 value = 4 } # FEPK1.06
+		command = { type = construct which = land_fort where = 1261 value = 4 } # FEPK1.06
+		command = { type = construct which = land_fort where = 1259 value = 4 } # FEPK1.06
+		command = { type = ai which = "chi_1935.ai" }
+		command = { type = sleepevent which = 138110 } # FEPK1.06
+	}
+}
+event = {
+	id = 55691
+	random = no 
+	country = CXB
+	
+	trigger = {
+		ai = yes
+		OR = {
+			event = 55672
+			NOT = { exists = CHC }
+			NOT = { ai = CHC }
+		}
+	}
+
+	name = "AI_EVENT"
+	style = 0	
+	
+	date = { day = 1 month = july year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1936 }
+
+	action_a = {
+		command = { type = ai which = "cxb_1936.ai" }
+	}
+}
+event = {
+	id = 55692
+	random = no 
+	country = CHC
+	
+	trigger = {
+		ai = yes
+		event = 55672
+	}
+
+	name = "AI_EVENT"
+	style = 0	
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1936 }
+
+	action_a = {
+		command = { type = ai which = "chc_1935.ai" }
+	}
+}
+############################
+# 蘭州進出(ai長征支援用）
+############################
+# DDでは部隊が存在するPROVが他国に譲渡されると当該部隊は戦略再配置状態になる。
+# この時、ターゲットは元PROVになるが本国と飛び地になってしまう場合、aiはうまく処理してくれない様だ。（配置できるのにプールに永遠に留まってしまう）
+# 其の為、開始時の康定と蘭州の間の西寧も中共に渡すことにする。
+event ={
+	id = 55693
+	random = no
+	country = CHC
+	style = 0
+	trigger = {
+		ai = yes
+		NOT = { event = 55674 }	
+		random = 50
+	}
+
+	date = { day = 20 month = august year = 1935 }
+	offset = 6
+	deathdate = { day = 29 month = december year = 1935 }
+
+	name = "蘭州進出"
+	desc = "AI_EVENT"
+
+	picture = "China_CW"
+
+	action_a = { # 
+		name = "EVT_55674_ACTA"
+		command = { type = peace which = CHI value = 0 }	# 遠藤マイクロ
+		command = { type = trigger which = 55694 } # 
+		command = { type = sleepevent which = 55674 }
+	}
+}
+event ={
+	id = 55694
+	random = no
+	country = CHI
+	style = 0
+
+	name = "EVT_55674_NAME"
+	desc = "EVT_55674_DESC"
+
+	action_a = { # 
+		name = "EVT_55674_ACTA"
+		command = { type = secedeprovince which = CHC value = 1276 } # Lanzhou to CHC
+		command = { type = trigger which = 55695 } # capital
+	}
+}
+event ={
+	id = 55695
+	random = no
+	country = CXB
+	style = 0
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+
+	action_a = { # 
+		name = "EVT_55674_ACTA"
+		command = { type = secedeprovince which = CHC value = 1443 }
+		#command = { type = trigger which = 55696 } # CHC moves capital	#遠藤マイクロ	#発動タイミング変更
+	}
+}
+######################
+# AI中共の戦力支援
+#（あまりにも貧弱で抵抗できないので下駄を履かせてみる）
+######################
+event ={
+	id = 55696
+	random = no
+	country = CHC
+	style = 0
+	trigger = {
+		control = { province = 1276 data = CHC } # Lanzhou
+		event = 55695 
+	}
+
+	date = { day = 20 month = august year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1935 }
+
+	name = "EVT_55678_NAME"
+	desc = "EVT_55678_DESC"
+
+	picture = "China_CW"
+
+	action_a = { # 
+		name = "EVT_55678_ACTA"
+		command = { type = capital which = 1276 } # Lanzhou
+		command = { type = province_keypoints which = 1276 value = 1 }
+		command = { type = add_corps value = land when = -1 where = 1276 } # 
+		command = { type = activate_division which = 24000 value = 20 }
+		command = { type = activate_division which = 24000 value = 21 }
+		command = { type = activate_division which = 24000 value = 22 }
+		command = { type = activate_division which = 24000 value = 23 }
+		command = { type = activate_division which = 24000 value = 24 }
+		command = { type = activate_division which = 24000 value = 25 }
+		command = { type = add_corps value = land when = -1 where = 1443 } # 
+		command = { type = activate_division which = 24000 value = 26 }
+		command = { type = activate_division which = 24000 value = 27 }
+		command = { type = activate_division which = 24000 value = 28 }
+		command = { type = activate_division which = 24000 value = 29 }
+		command = { type = activate_division which = 24000 value = 30 }
+		command = { type = activate_division which = 24000 value = 31 }
+		command = { type = supplies value = 2000 where = 1276 } # 
+		command = { type = secedeprovince which = CYN value = 1282 } # Kangding
+		command = { type = war which = CHI }	# 遠藤マイクロ
+	}
+}
+event ={
+	id = 55697
+	random = no
+	country = CHC
+	style = 0
+
+	trigger = {
+		ai = yes
+		control = { province = 1275 data = CHC } # Pingliang
+		control = { province = 1270 data = CHC } # Xianyang
+		control = { province = 1271 data = CHC } # Yan'an
+		NOT = { war = { country = CHC country = CHI } }
+	}
+
+	name = "AI_EVENT"
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1936 }
+
+	picture = "China_CW"
+
+	action_a = { # 
+		name = "OK"
+		command = { type = remove_division which = 24000 value = 20 }
+		command = { type = remove_division which = 24000 value = 21 }
+		command = { type = remove_division which = 24000 value = 22 }
+		command = { type = remove_division which = 24000 value = 23 }
+		command = { type = remove_division which = 24000 value = 24 }
+		command = { type = remove_division which = 24000 value = 25 }
+		command = { type = remove_division which = 24000 value = 26 }
+		command = { type = remove_division which = 24000 value = 27 }
+		command = { type = remove_division which = 24000 value = 28 }
+		command = { type = remove_division which = 24000 value = 29 }
+		command = { type = remove_division which = 24000 value = 30 }
+		command = { type = remove_division which = 24000 value = 31 }
+	}
+}

@@ -1,0 +1,136 @@
+AUS;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+23001;Head of State;ヴィルヘルム・ミクラス;35;FA;Weary Stiffneck;High;M23001;x
+23002;Head of Government;クルト・シュシュニック;35;FA;Silent Workhorse;High;M23002;x
+23003;Foreign Minister;エゴン・ベルガー＝ヴァルデネック;35;FA;Apologetic Clerk;High;M23003;x
+23004;Minister of Armament;ユリウス・ラープ;35;FA;Resource Industrialist;Medium;M23004;x
+23005;Minister of Security;エドゥアルト・バール＝バーレンフェルス;35;FA;Man of the People;High;M23005;x
+23006;Head of Military Intelligence;ヴィルヘルム・ゲバウアー;35;FA;Logistics Specialist;Medium;M23006;x
+23007;Chief of Staff;クルト・フォン・ヤンザ;35;FA;School of Defence;Medium;M23007;x
+23008;Chief of Army;ウィルヘルム・ツェーナー;35;FA;Elastic Defence Doctrine;High;M23008;x
+23009;Chief of Navy;パウル・フォン・ヘゲデュス;35;FA;Decisive Naval Battle Doctrine;High;M23009;x
+23010;Chief of Air Force;アレクサンダー・レーア;35;NS;Army Aviation Doctrine;Medium;M23010;x
+23156;Minister of Armament;ヨーゼフ・シュンペーター;19;SC;Godfather Of Innovation;Medium;M23156;x
+23041;Head of State;オットー1世;36;SC;The First Knight Of Modern;High;M23041;x
+23042;Head of State;ヨーゼフ・ビュルケル;38;FA;Insignificant Layman;High;M23042;x
+23043;Head of State;アルトゥール・ザイス＝インクヴァルト;38;NS;Die-hard Reformer;High;M23011;x
+23044;Head of State;カール・レンナー;38;SD;Benevolent Gentleman;High;M23021;x
+23168;Head of Government;カール・レンナー;38;SD;Ambitious Union Boss;High;M23021;x
+23169;Head of Military Intelligence;カール・レンナー;38;SD;Political Specialist;High;M23021;x
+23045;Head of State;レオポルト・フィグル;45;SC;Pig-headed Isolationist;High;M23045;x
+23046;Head of State;オットー・バウアー;38;LE;Insignificant Layman;High;M23031;x
+23047;Head of State;ヨーゼフ・トイフル;45;ST;Barking Buffoon;High;M23047;x
+23048;Head of Government;O・レーヴェンフェルス＝アーレンガウ;45;PA;Smiling Oilman;High;M23048;x
+23049;Head of Government;アルベルト・メンツドルフ＝プイイ;38;FA;Happy Amateur;High;M23049;x
+23050;Head of Government;エドムント・グライゼ＝ホルステナウ;38;NS;Old General;High;M23050;x
+23051;Head of Government;ヴィルヘルム・ヴォルフ;42;NS;Flamboyant Tough Guy;High;M23013;x
+23052;Head of Government;ルートヴィヒ・ヒュルゲルト;38;SC;Corporate Suit;High;M23052;x
+23053;Head of Government;アドルフ・シャルフ;45;SD;Naive Optimist;High;M23022;x
+23054;Head of Government;ヴィリ・フランク;38;LE;Happy Amateur;High;M23035;x
+23055;Head of Government;ヨーゼフ・トイフル;45;ST;Backroom Backstabber;High;M23047;x
+23056;Foreign Minister;O・レーヴェンフェルス＝アーレンガウ;45;PA;General Staffer;High;M23048;x
+23057;Foreign Minister;グイド・シュミット;36;FA;The Cloak N Dagger Schemer;High;M23057;x
+23058;Foreign Minister;エドゥアルト・バール＝バーレンフェルス;38;FA;Iron Fisted Brute;High;M23005;x
+23059;Foreign Minister;アルベルト・メンツドルフ＝プイイ;39;FA;Apologetic Clerk;Medium;M23049;x
+23060;Foreign Minister;ヴィルヘルム・ヴォルフ;38;NS;Ideological Crusader;High;M23013;x
+23061;Foreign Minister;エドムント・グライゼ＝ホルステナウ;42;NS;General Staffer;Medium;M23061;x
+23062;Foreign Minister;カール・グルーバー;38;SC;Biased Intellectual;Low;M23023;x
+23063;Foreign Minister;レオポルト・フィグル;45;ML;Great Compromiser;Medium;M23045;x
+23064;Foreign Minister;アドルフ・シャルフ;45;ML;Biased Intellectual;Medium;M23022;x
+23065;Foreign Minister;アルフレート・クラー;38;LE;Ideological Crusader;High;M23033;x
+23066;Foreign Minister;ヴィリ・フランク;45;ST;Iron Fisted Brute;Medium;M23035;x
+23067;Minister of Armament;T・ヴィンクラー＝クロイト＝マウトナー;45;PA;Laissez-Faire Capitalist;High;M23067;x
+23068;Minister of Armament;ヴィクトル・キーンベック;32;SC;Bank President;Medium;M23068;x
+23069;Minister of Armament;ヨーゼフ・ドプレツベルガー;36;FA;Laissez-Faire Capitalist;High;M23069;x
+23070;Minister of Armament;パウル・フォン・ヘゲデュス;38;FA;Battle Fleet Proponent;High;M23009;x
+23071;Minister of Armament;ルドルフ・ノイマイヤー;38;NS;Resource Industrialist;Medium;M23014;x
+23072;Minister of Armament;ハンス・フィッシュボック;42;NS;Military Entrepreneur;High;M23072;x
+23073;Minister of Armament;アルフレート・メレタ;44;NS;Tank Proponent;Medium;M23073;x
+23074;Minister of Armament;エドゥアルト・ハイヌル;38;ML;Theoretical Scientist;Medium;M23024;x
+23075;Minister of Armament;カール・グルーバー;42;ML;Air Superiority Proponent;Low;M23023;x
+23076;Minister of Armament;カール・レンナー;45;SC;Strategic Air Proponent;Low;M23021;x
+23077;Minister of Armament;カール・テュピー;45;SD;Corrupt Kleptocrat;Low;M23077;x
+23078;Minister of Armament;フリッツ・シュトッキンガー;46;SD;Air to Ground Proponent;High;M23078;x
+23079;Minister of Armament;ルートヴィヒ・ヒュルゲルト;46;SD;Air to Sea Proponent;Medium;M23052;x
+23080;Minister of Armament;ロベルト・ヴィンターシュタイン;38;LE;Submarine Proponent;Medium;M23025;x
+23081;Minister of Armament;エルヴィン・プッシュマン;45;ST;Infantry Proponent;Medium;M23034;x
+23082;Minister of Security;W・エーレンブルク・フォン・ルティッツ;45;PA;Efficient Sociopath;High;M23082;x
+23083;Minister of Security;クルト・シュシュニック;37;FA;Compassionate Gentleman;High;M23002;x
+23084;Minister of Security;コンスタンティン・ドゥンバ;38;FA;Man of the People;Medium;M23084;x
+23085;Minister of Security;アルトゥール・ザイス＝インクヴァルト;38;NS;Silent Lawyer;High;M23011;x
+23086;Minister of Security;ハンス・ロイター;42;NS;Man of the People;High;M23086;x
+23087;Minister of Security;エドムント・グライゼ＝ホルステナウ;36;NS;Prince of Terror;Medium;M23050;x
+23088;Minister of Security;ロベルト・ヴィンターシュタイン;38;SC;Crooked Kleptocrat;Medium;M23025;x
+23089;Minister of Security;カール・テュピー;45;SC;Efficient Sociopath;Low;M23077;x
+23090;Minister of Security;フランツ・ゼーベク;45;SD;Compassionate Gentleman;High;M23036;x
+23091;Minister of Security;オットー・バウアー;38;LE;Back Stabber;Very Low;M23031;x
+23092;Minister of Security;ヴィリ・フランク;45;ST;Crime Fighter;Medium;M23035;x
+23093;Head of Military Intelligence;カルマン・セール;45;PA;Political Specialist;Medium;M23093;x
+23094;Head of Military Intelligence;コンスタンティン・ドゥンバ;36;FA;Naval Intelligence Specialist;Medium;M23084;x
+23095;Head of Military Intelligence;カルマン・エグルゼアー;38;FA;Logistics Specialist;High;M23095;x
+23096;Head of Military Intelligence;ヴィルヘルム・ヴォルフ;38;NS;Technical Specialist;High;M23013;x
+23097;Head of Military Intelligence;アレクサンダー・レーア;42;NS;Dismal Enigma;Medium;M23010;x
+23098;Head of Military Intelligence;ロベルト・ヴィンターシュタイン;38;SC;Technical Specialist;High;M23025;x
+23099;Head of Military Intelligence;ユリウス・ラープ;45;SC;Industrial Specialist;Medium;M23004;x
+23173;Head of State;ユリウス・ラープ;51;SC;Die-hard Reformer;Medium;M23004;x
+23174;Head of Government;アルフォンス・ゴルバッハ;53;SC;Flamboyant Tough Guy;Medium;M23174;x
+23100;Head of Military Intelligence;フランツ・ゼーベク;45;SD;Political Specialist;High;M23036;x
+23102;Head of Military Intelligence;リヒャルト・ベルナシェク;45;ST;Technical Specialist;High;M23038;x
+23103;Chief of Staff;O・マイクスナー・フォン・ツヴァイエンシュタム;45;PA;School of Defence;Medium;M23103;x
+23104;Chief of Staff;ヴァルター・エルンスト;36;FA;School of Defence;High;M23104;x
+23105;Chief of Staff;ルドルフ・フォン・ブルダーマン;41;FA;School of Manoeuvre;High;M23105;x
+23106;Chief of Staff;エミール・ヒックマン;38;NS;School of Manoeuvre;High;M23017;x
+23107;Chief of Staff;アルフレート・フービキ;40;NS;School of Psychology;Medium;M23107;x
+23108;Chief of Staff;オイゲン・バイヤー;42;NS;School of Fire Support;Medium;M23018;x
+23109;Chief of Staff;ウィルヘルム・ツェーナー;38;SC;School of Mass Combat;High;M23008;x
+23110;Chief of Staff;エリック・フォン・クロップフェンベルク;45;SC;School of Defence;High;M23039;x
+23111;Chief of Staff;アドルフ・シャルフ;45;SD;School of Fire Support;Medium;M23022;x
+23112;Chief of Staff;フェルディナント・シュトラッサー;38;LE;School of Manoeuvre;High;M23037;x
+23114;Chief of Army;エリック・フォン・クロップフェンベルク;45;PA;Static Defence Doctrine;High;M23039;x
+23115;Chief of Army;O・マイクスナー・フォン・ツヴァイエンシュタム;38;FA;Guns and Butter Doctrine;Medium;M23103;x
+23116;Chief of Army;リヒャルト・マルティネク;41;FA;Elastic Defence Doctrine;Medium;M23116;x
+23117;Chief of Army;オイゲン・バイヤー;38;NS;Elastic Defence Doctrine;High;M23018;x
+23118;Chief of Army;ロタール・レンデュリック;42;NS;Armoured Spearhead Doctrine;Medium;M23118;x
+23119;Chief of Army;ヘンリヒ・グライスナー;38;SC;Decisive Battle Doctrine;Very Low;M23028;x
+23121;Chief of Army;リヒャルト・ベルナシェク;38;LE;Static Defence Doctrine;Medium;M23038;x
+23123;Chief of Navy;オットー・I・フォン・ハプスブルク;45;PA;Indirect Approach Doctrine;Very High;M23041;x
+23125;Chief of Navy;エミール・ヒックマン;38;NS;Open Seas Doctrine;Low;M23017;x
+23126;Chief of Navy;ロベルト・ヴィンターシュタイン;38;SC;Indirect Approach Doctrine;Medium;M23025;x
+23128;Chief of Navy;エリック・フォン・クロップフェンベルク;38;LE;Open Seas Doctrine;High;M23039;x
+23129;Chief of Navy;ヨーゼフ・トイフル;45;ST;Base Control Doctrine;Medium;M23047;x
+23130;Chief of Air Force;W・エーレンブルク・フォン・ルティッツ;45;PA;Army Aviation Doctrine;High;M23082;x
+23131;Chief of Air Force;オットー・ショーベル;38;FA;Vertical Envelopment Doctrine;High;M23030;x
+23133;Chief of Air Force;ヨーゼフ・ビュルケル;42;NS;Carpet Bombing Doctrine;High;M23042;x
+23134;Chief of Air Force;ユリウス・イーラム;38;SC;Air Superiority Doctrine;Low;M23040;x
+23135;Chief of Air Force;エゴン・ベルガー＝ヴァルデネック;42;SC;Carpet Bombing Doctrine;High;M23003;x
+23139;Head of Military Intelligence;クルト・シュシュニック;37;FA;Political Specialist;Undying;M23002;x
+23140;Chief of Staff;クルト・シュシュニック;36;FA;School of Fire Support;Undying;M23002;x
+23141;Head of State;アルフレート・フービキ;45;NS;Stern Imperialist;High;M23107;x
+23142;Chief of Air Force;アルトゥール・ブライシャ＝ヴォーティエ;42;LE;Naval Aviation Doctrine;Low;M23136;x
+23143;Head of State;カール・レンナー;38;SC;Benevolent Gentleman;High;M23021;x
+23144;Head of State;テオドール・ケルナー;51;SC;Weary Stiffneck;High;M23144;x
+23145;Head of State;テオドール・ケルナー;51;SD;Weary Stiffneck;High;M23144;x
+23146;Head of Government;レオポルト・フィグル;45;SC;Happy Amateur;High;M23045;x
+23170;Head of Military Intelligence;レオポルト・フィグル;45;SC;Industrial Specialist;High;M23045;x
+23147;Head of Government;ユリウス・ラープ;35;SC;Corporate Suit;Medium;M23004;x
+23148;Minister of Armament;フェルディナント・グラーフ;45;SC;Laissez-Faire Capitalist;Medium;M23148;x
+23171;Head of Military Intelligence;フェルディナント・グラーフ;53;SC;Political Specialist;Medium;M23148;x
+23172;Head of Military Intelligence;カール・シュレインツァー;61;SC;Dismal Enigma;Medium;;x
+23149;Minister of Security;ヨゼフ・ゲレ;45;SC;Silent Lawyer;Low;M23149;x
+23155;Chief of Army;ヨシップ・ブロズ;42;SL;Doctrine of Autonomy;Low;M20021;x
+23150;Minister of Security;オットー・チャベック;49;SC;Man of the People;Low;M23150;x
+23151;Head of Military Intelligence;オスカル・ヘルマー;45;ML;Dismal Enigma;High;M23151;x
+23165;Minister of Security;オスカル・ヘルマー;45;ML;Secret Police Chief;High;M23151;x
+23166;Minister of Security;ジョセフ・アフリッチュ;45;SL;Man of the People;High;;x
+23167;Minister of Security;フランツ・オラー;59;SL;Crooked Kleptocrat;High;;x
+23152;Head of State;アドルフ・シャルフ;45;SD;Pig-headed Isolationist;Very High;M23022;x
+23153;Chief of Staff;アルフレート・フォン・ヤンザ;33;PA;School of Defence;Very High;M23007;x
+23154;Chief of Staff;フランツ・ベーメ;38;NS;School of Manoeuvre;Very High;L36;x
+23157;Minister of Armament;ゲオルグ・ツィンマーマン;38;SC;Bank President;Very High;M23157;x
+23158;Minister of Armament;オイゲン・マルガレータ;45;SC;Planned Economy Proponent;Very High;M23158;x
+23159;Minister of Armament;ラインハルト・カーミッツ;49;PA;Laissez-Faire Capitalist;Very High;M23159;x
+23160;Minister of Armament;エドゥアルド・ヘイリンセッツァー;52;SC;Construction Magnate;Very High;;x
+23161;Minister of Armament;ジョセフ・クラウス;-840;SC;Military Entrepreneur;Very High;M23161;x
+23162;Minister of Armament;フランツ・コリネック;61;SC;Resource Industrialist;Very High;M23162;x
+23163;Foreign Minister;ブルーノ・クレイスキー;53;SL;Great Compromiser;Very High;M23163;x
+23164;Minister of Security;フランツ・ホナー;40;LWR;Efficient Sociopath;Very High;M23164;x

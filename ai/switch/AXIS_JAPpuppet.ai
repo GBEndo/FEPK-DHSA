@@ -1,0 +1,29 @@
+###################################
+# Diplomacy
+###################################
+
+befriend = {
+	JAP = 50
+}
+
+trade = {
+	favored = {
+		JAP = 150
+		MAN = 50
+		SIA = 50
+		MEN = 50
+		ITA = 20
+		GER = 20
+	}
+	embargo = { }
+}
+
+tech_sharing = {
+	favored = {
+		JAP = 100
+		MAN = 50
+		ITA = 20
+		GER = 20
+	}
+	embargo = { }
+}

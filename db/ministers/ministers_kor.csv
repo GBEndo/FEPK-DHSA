@@ -1,0 +1,55 @@
+KOR;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+578001;Head of State;—›³”Ó (ƒCEƒXƒ“ƒ}ƒ“);35;FA;Stern Imperialist;Medium;M578001;x
+578002;Head of Government;‹à‹ã (ƒLƒ€EƒO);35;FA;Flamboyant Tough Guy;Medium;M578002;x
+578003;Foreign Minister;‹àšõA (ƒLƒ€EƒMƒ…ƒVƒN);35;SC;Great Compromiser;Medium;M578003;x
+578004;Minister of Armament;‹à¹i (ƒLƒ€Eƒ`ƒƒƒ“ƒXƒN);35;FA;Military Entrepreneur;Medium;M578004;x
+578005;Minister of Security;‘‚”ÓA (ƒ`ƒ‡Eƒ}ƒ“ƒVƒN);35;FA;Prince of Terror;Medium;M578005;x
+578006;Head of Military Intelligence;æâ‘fã (ƒ`ƒ‡Eƒ\ƒAƒ“);35;FA;Logistics Specialist;Medium;M578006;x
+578007;Chief of Staff;äïâ\“¿ (ƒ`ƒFEƒrƒ‡ƒ“ƒhƒDƒN);35;PA;School of Defence;Medium;M578007;x
+578008;Chief of Army;—›Â“V (ƒCEƒ`ƒ‡ƒ“ƒ`ƒ‡ƒ“);35;PA;Elastic Defence Doctrine;Medium;M578008;x
+578009;Chief of Navy;‘·Œ³ˆê (ƒ\ƒ“EƒEƒHƒjƒ‹);35;PA;Decisive Naval Battle Doctrine;Medium;M578009;x
+578010;Chief of Air Force;—›”Í‘u (ƒCEƒ{ƒ“ƒ\ƒN);35;PA;Army Aviation Doctrine;Medium;M578010;x
+578011;Head of State;˜C‰^‹œ (ƒˆEƒEƒjƒ‡ƒ“);35;LWR;Weary Stiffneck;Medium;M578011;x
+578012;Head of Government;–pŒ›‰i (ƒpƒNEƒzƒjƒ‡ƒ“);35;LWR;Ambitious Union Boss;Medium;M578012;x
+578013;Foreign Minister;‹àOšã (ƒLƒ€EƒMƒ…ƒWƒ‡ƒ“);35;LWR;Apologetic Clerk;Medium;M578013;x
+578014;Minister of Armament;—›“Œ‹P (ƒCEƒhƒ“ƒtƒB);35;LWR;Infantry Proponent;Medium;M578014;x
+578015;Minister of Security;’£Œš‘Š (ƒ`ƒƒƒ“EƒRƒ“ƒTƒ“);35;LWR;Efficient Sociopath;Medium;M578015;x
+578016;Head of Military Intelligence;‹à¹•ò (ƒLƒ€Eƒ`ƒƒƒ“ƒMƒ€);35;LWR;Technical Specialist;Medium;M578016;x
+578017;Chief of Staff;’rÂ“V (ƒ`Eƒ`ƒ‡ƒ“ƒ`ƒ‡ƒ“);35;LWR;School of Psychology;Medium;M578017;x
+578018;Chief of Army;‹àŒ³–P (ƒLƒ€EƒEƒHƒ“ƒ{ƒ“);35;LWR;Guns and Butter Doctrine;Medium;M578018;x
+578019;Chief of Navy;“A™]æ• (ƒ`ƒ‡ƒ“EƒOƒ“ƒ‚);35;LWR;Open Seas Doctrine;Medium;M578019;x
+578020;Chief of Air Force;—›’î~ (ƒCEƒWƒFƒXƒ“);35;LWR;Naval Aviation Doctrine;Medium;M578020;x
+578021;Minister of Armament;‹à“x‰‰ (ƒLƒ€Eƒhƒˆƒ“);44;PA;Military Entrepreneur;Medium;M578021;x
+578022;Minister of Security;›š’vó (ƒ†ƒ“Eƒ`ƒˆƒ“);45;SC;Silent Lawyer;Medium;M578022;x
+578023;Head of Military Intelligence;–p³à† (ƒpƒNEƒ`ƒ‡ƒ“ƒq);45;SC;Political Specialist;Medium;M578023;x
+578024;Head of Government;—›”Í‘u (ƒCEƒ{ƒ“ƒ\ƒN);36;SC;old airmarshal;Medium;M578010;x
+578025;Head of Government;\«–Í (ƒVƒ“Eƒ\ƒ“ƒ‚);50;SC;Happy Amateur;Medium;M578025;x
+578026;Head of Government;’£•× (ƒ`ƒƒƒ“Eƒ~ƒ‡ƒ“);50;SC;Silent Workhorse;Medium;M578026;x
+578027;Head of Government;’£àV‘Š (ƒ`ƒƒƒ“EƒeƒNƒTƒ“);52;SC;Corporate Suit;Medium;M578027;x
+578028;Head of Government;”’“l’Á (ƒyƒNEƒgƒDƒWƒ“);52;SC;Backroom Backstabber;Medium;M578028;x
+578029;Foreign Minister;’£•× (ƒ`ƒƒƒ“Eƒ~ƒ‡ƒ“);36;SC;Apologetic Clerk;Medium;M578026;x
+578030;Foreign Minister;’£“só (ƒ`ƒƒƒ“Eƒgƒˆƒ“);50;SC;Iron Fisted Brute;Medium;M578030;x
+578031;Minister of Armament;”’Š¿¬ (ƒnƒ“Eƒ\ƒ“ƒyƒN);51;SC;laissez-faire capitalist;Medium;M578031;x
+578033;Minister of Security;™Ä‰h‘× (ƒsƒ‡ƒ“Eƒˆƒ“ƒe);49;SC;Efficient Sociopath;Medium;M578033;x
+578034;Minister of Security;\«–Í (ƒVƒ“Eƒ\ƒ“ƒ‚);52;SC;Crime Fighter;Medium;M578025;x
+578035;Head of Military Intelligence;”’“l’Á (ƒyƒNEƒgƒDƒWƒ“);49;SC;Political Specialist;Medium;M578028;x
+578036;Foreign Minister;’£àV‘Š (ƒ`ƒƒƒ“EƒeƒNƒTƒ“);52;SC;Biased Intellectual;Medium;M578027;x
+578037;Head of Government;–p³à† (ƒpƒNEƒ`ƒ‡ƒ“ƒq);45;SC;Naive Optimist;Medium;M578023;x
+578038;Head of State;—›‰¤šµ (ƒCƒƒ“EƒEƒ“);35;PA;Popular Figurehead;High;L101320;x
+578039;Head of Government;—›‰¤šµ (ƒCƒƒ“EƒEƒ“);35;PA;Happy Amateur;High;L101320;x
+578040;Chief of Staff;^vãÂ (ƒzƒ“EƒTƒCƒN);35;PA;School of Psychology;Medium;L101045;x
+578041;Chief of Army;^vãÂ (ƒzƒ“EƒTƒCƒN);35;PA;Guns and Butter Doctrine;Medium;L101045;x
+578042;Chief of Staff;‹ààŒ¹ (ƒLƒ€Eƒ\ƒNƒEƒHƒ“);35;PA;School of Defence;Very Low;L101092;x
+578043;Chief of Army;‹ààŒ¹ (ƒLƒ€Eƒ\ƒNƒEƒHƒ“);35;PA;Static Defence Doctrine;Very Low;L101092;x
+578044;Chief of Staff;”’‘Píú (ƒyƒNEƒ\ƒ“ƒˆƒv);45;SC;School of Mass Combat;Very Low;L578010;x
+578045;Chief of Air Force;—›‰¤šµ (ƒCƒƒ“EƒEƒ“);35;PA;Army Aviation Doctrine;Medium;L101320;x
+578046;Head of Government;–p‰jF (ƒpƒNEƒˆƒ“ƒqƒ‡);35;PA;Naive Optimist;High;M578046;x
+578047;Minister of Armament;–pt‹Õ (ƒpƒNEƒ`ƒ…ƒ“ƒOƒ€);35;SC;laissez-faire capitalist;High;M578047;x
+578048;Head of Government;–pt‹Õ (ƒpƒNEƒ`ƒ…ƒ“ƒOƒ€);35;SC;Naive Optimist;High;M578046;x
+578049;Head of State;™Ú•J (ƒ\EƒWƒFƒsƒ‹);35;PA;Stern Imperialist;Medium;M578049;x
+578050;Foreign Minister;™Ú•J (ƒ\EƒWƒFƒsƒ‹);35;PA;Biased Intellectual;High;M578049;x
+578052;Head of Government;^vãÂ (ƒzƒ“EƒTƒCƒN);35;PA;Old General;High;L101045;x
+578053;Foreign Minister;–p‰jF (ƒpƒNEƒˆƒ“ƒqƒ‡);35;PA;Ideological Crusader;High;M578046;x
+578054;Minister of Security;‹ààŒ¹ (ƒLƒ€Eƒ\ƒNƒEƒHƒ“);35;PA;Crime Fighter;Very High;L101092;x
+578055;Head of Military Intelligence;^vãÂ (ƒzƒ“EƒTƒCƒN);35;PA;Logistics Specialist;Medium;L101045;x

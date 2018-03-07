@@ -1,0 +1,70 @@
+U73;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+700300;Head of State;エドワード8世;35;FA;Restoration King;High;M1011;x
+700301;Head of Government;オズワルド・モーズリー;35;FA;Flamboyant Tough Guy;High;M1012;x
+700302;Foreign Minister;アーサー・ウェレズレー卿;35;FA;Great Compromiser;Low;M1050;x
+700303;Minister of Armament;オズワルド・モーズリー;35;FA;Resource Industrialist;Undying;M1012;x
+700304;Minister of Security;アーノルド・スペンサー＝リース;35;FA;Prince of Terror;Low;M1015;x
+700305;Head of Military Intelligence;S・P・ジェームス;35;FA;Industrial Specialist;High;M1016;x
+700306;Chief of Staff;J・F・C・フラー;35;FA;School of Manoeuvre;Medium;M1017;x
+700307;Chief of Army;J・F・C・フラー;35;FA;Crowley's Soldier;Medium;M1017;x
+700308;Chief of Navy;サー・バリー・E・ドムヴィル;35;FA;Power Projection Doctrine;High;M1019;x
+700309;Chief of Air Force;サー・ジョン・チャミエール;35;FA;Vertical Envelopment Doctrine;High;M1020;x
+700310;Head of State;アニューリン・ベヴァン;35;LWR;Pig-headed Isolationist;High;M1021;x
+700311;Head of Government;ハリー・ポリット;35;LWR;Ambitious Union Boss;High;M1022;x
+700312;Foreign Minister;ラジャニ・パルメ・ダット;35;LWR;Biased Intellectual;Medium;M1023;x
+700313;Minister of Armament;スタッフォード・クリップス;35;LWR;Theoretical Scientist;Medium;M1024;x
+700314;Minister of Security;ジョン・プラッツ＝ミルズ;35;LWR;Silent Lawyer;Medium;M1097;x
+700315;Head of Military Intelligence;ウィリアム・ギャラハー;35;LWR;Industrial Specialist;High;M1111;x
+700316;Chief of Staff;トム・ウィントリンガム;35;ST;School of Mass Combat;High;M1027;x
+700317;Chief of Army;ビル・アレクサンダー;35;ST;Static Defence Doctrine;High;M1028;x
+700318;Chief of Navy;フレッド・コープマン;35;ST;Indirect Approach Doctrine;High;M1029;x
+700319;Chief of Air Force;ジョン・ストラッチー;35;ST;Carpet Bombing Doctrine;High;M1030;x
+700320;Foreign Minister;ウィリアム・ジョイス;35;FA;General Staffer;Low;M1013;x
+700321;Foreign Minister;ジョスリン・エロール卿;40;FA;The Cloak N Dagger Schemer;Medium;M1051;x
+700322;Foreign Minister;ヘンリー・ウィリアムソン;41;FA;Biased Intellectual;Medium;M1052;x
+700323;Foreign Minister;ウェストミンスター公爵;42;FA;Apologetic Clerk;Medium;M1053;x
+700324;Foreign Minister;アーチボルド・ラムゼー;43;FA;Iron Fisted Brute;Medium;M1054;x
+700325;Foreign Minister;フィル・ピラティン;40;ST;The Cloak N Dagger Schemer;Medium;M1056;x
+700326;Foreign Minister;D・N・プリット;43;ST;Apologetic Clerk;Medium;M1057;x
+700327;Foreign Minister;デイヴ・スプリングホール;44;LWR;Iron Fisted Brute;Medium;M1058;x
+700328;Foreign Minister;イアン・ミカルド;45;LWR;Ideological Crusader;Medium;M1059;x
+700329;Minister of Armament;アリオット・ヴァーノン＝ロー;38;FA;Air to Ground Proponent;High;M1069;x
+700330;Minister of Armament;ニール・フランシス＝ホーキンス;39;FA;Submarine Proponent;High;M1070;x
+700331;Minister of Armament;アレクサンダー・レイヴン＝トムソン;41;FA;Strategic Air Proponent;High;M1071;x
+700332;Minister of Armament;ジョリアン・ジェンクス;42;FA;Battle Fleet Proponent;High;M1072;x
+700333;Minister of Armament;A・J・P・テイラー;44;FA;Laissez-Faire Capitalist;High;M1073;x
+700334;Minister of Armament;レスリー・ソーリー;38;ST;Resource Industrialist;Medium;M1075;x
+700366;Head of Government;ウィリアム・フォーブス＝センピル;42;FA;Old Airmarshal;Medium;M700366;x
+700335;Minister of Armament;アーサー・ホーナー;40;ST;Administrative Genius;Medium;M1076;x
+700336;Minister of Armament;ジャック・ガスター;41;ST;Submarine Proponent;Medium;M1077;x
+700337;Minister of Armament;アベ・モファット;42;LWR;Tank Proponent;Medium;M1078;x
+700338;Minister of Armament;ウィリアム・ラスト;44;ST;Infantry Proponent;Medium;M1079;x
+700339;Minister of Armament;コニー・ジラカス;45;LWR;Air Superiority Proponent;Medium;M1080;x
+700340;Minister of Security;アーノルド・スペンサー＝リース;35;FA;Prince of Terror;Low;M1015;x
+700341;Minister of Security;ジョン・ベケット;40;FA;Compassionate Gentleman;Medium;M1091;x
+700342;Minister of Security;アーサー・チェスタートン;41;FA;Back Stabber;Medium;M1092;x
+700343;Minister of Security;ジェフリー・ハム;42;FA;Crime Fighter;Medium;M1093;x
+700344;Minister of Security;マクスウェル・ナイト;43;FA;Man of the People;Medium;M1094;x
+700345;Minister of Security;レスター・ハッチンソン;38;ST;Back Stabber;Medium;M1096;x
+700346;Minister of Security;ジョン・プラッツ＝ミルズ;35;LWR;Silent Lawyer;Medium;M1097;x
+700347;Minister of Security;シドニー・シルヴァーマン;41;ST;Man of the People;Medium;M1098;x
+700348;Minister of Security;バーバラ・キャッスル;45;LWR;Crime Fighter;Medium;M1099;x
+700349;Minister of Security;キム・フィルビー;46;ST;Compassionate Gentleman;Very High;M1025;x
+700350;Head of Military Intelligence;サー・バリー・E・ドムヴィル;40;FA;Naval Intelligence Specialist;High;M1019;x
+700351;Head of Military Intelligence;マクスウェル・ナイト;42;FA;Logistics Specialist;Medium;M1094;x
+700352;Head of Military Intelligence;ジョン・アメリー;44;FA;Dismal Enigma;Medium;M1110;x
+700353;Head of Military Intelligence;クリストファー・ヒル;41;ST;Naval Intelligence Specialist;High;M1112;x
+700354;Head of Military Intelligence;アニューリン・ベヴァン;43;LWR;Dismal Enigma;High;M1021;x
+700355;Head of Military Intelligence;アンソニー・ブラント;45;LWR;Political Specialist;Very High;M1026;x
+700356;Head of Military Intelligence;キム・フィルビー;46;ST;Technical Specialist;Very High;M1105;x
+700357;Chief of Staff;サー・バリー・E・ドムヴィル;39;FA;School of Psychology;High;M1019;x
+700358;Chief of Navy;E・H・コール;42;NS;Open Seas Doctrine;High;M1143;x
+700359;Chief of Navy;ハリー・ポリット;39;ST;Decisive Naval Battle Doctrine;High;M1022;x
+700360;Chief of Air Force;ドナルド・マレンダ;41;FA;Air Superiority Doctrine;High;M1153;x
+700361;Chief of Air Force;ライルトン・フリーマン;43;FA;Naval Aviation Doctrine;High;M1154;x
+700362;Chief of Staff;ハロルド・フランクリン;36;PA;School of Defence;Medium;L1127;x
+700363;Chief of Army;アンドリュー・マックローチ;36;PA;Static Defence Doctrine;Medium;L1217;x
+700364;Chief of Navy;ジオフライ・レイトン;36;PA;Decisive Naval Battle Doctrine;Medium;L1364;x
+700365;Chief of Air Force;ペリー・ケーネ;36;PA;Naval Aviation Doctrine;Medium;L1453;x
+700367;Head of Government;ウィンストン・チャーチル;35;PA;Flamboyant Tough Guy;Medium;M1038;x

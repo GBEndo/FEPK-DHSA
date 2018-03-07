@@ -1,0 +1,44 @@
+# ÉXÉCÉXÇÃñΩÇ™ÇØÇÃñhâq
+
+max_garrison_prop = 0.20
+min_garrison_prop = 0.10
+max_front_ratio = 1.2
+max_front_ratios = { 
+	GER = 2.0
+	}
+upgrading = 0.01
+reinforcement = 0.20	
+###################################
+# Ground Combat, Leaders and Garrisons
+###################################
+front = { 
+
+	frozen_attack 	= 0.70
+	snow_attack 	= 0.70
+	blizzard_attack = 0.75
+	storm_attack 	= 0.60
+	muddy_attack 	= 0.50
+
+	mountain_attack	= 0.75
+	swamp_attack 	= 0.60
+	forest_attack 	= 0.85
+	hill_attack 	= 0.75
+	urban_attack 	= 0.40
+
+	recklessness 		= 1 # 0-3
+	distrib_vs_ai 		= op_defensive
+	distrib_vs_human 	= op_defensive
+
+	enemy_reinf_days	= 6
+	reserve_prop		= 0.1
+	panic_ratio_vs_ai	= 1.7
+	panic_ratio_vs_human	= 1.7
+	base_attack_odds	= 1.3
+	min_attack_odds		= 1.1
+	max_attack_odds		= 3.0
+	reinforce_odds		= 1.2
+	withdraw_odds		= 0.6
+
+      	enemy_handicap = { } 
+      	passivity = { } 
+} 

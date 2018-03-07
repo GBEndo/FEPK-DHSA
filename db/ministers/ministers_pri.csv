@@ -1,0 +1,48 @@
+PRI;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+527001;Head of State;コンラディン・アシモフ;36;LE;Barking Buffoon;High;M527001;x
+527002;Head of Government;アレクセイ・シプノフ;36;LE;Happy Amateur;High;M527002;x
+527003;Foreign Minister;ズレタフ・バランスキ;36;LE;Apologetic Clerk;High;M527003;x
+527004;Minister of Armament;ピョートル・シュピタルニー;36;LE;Resource Industrialist;Medium;M527004;x
+527005;Minister of Security;セルゲイ・トレチャコフ;36;LE;Prince of Terror;Medium;M527005;x
+527006;Head of Military Intelligence;イヴァン・シェレスト;36;LE;Logistics Specialist;Medium;M527006;x
+527007;Chief of Staff;アントン・シポフ;36;LE;School of Fire Support;Medium;M527007;x
+527008;Chief of Army;トリフィル・シマンスキ;36;LE;Elastic Defence Doctrine;Medium;M527008;x
+527009;Chief of Navy;ヴィタルモ・パノフ;36;LE;Open Seas Doctrine;Medium;M527009;x
+527010;Chief of Air Force;ニコライ・シュット;36;LE;Vertical Envelopment Doctrine;Medium;M527010;x
+527011;Head of State;ニコライ・スミルノフ;36;ML;Ruthless Powermonger;High;M527011;x
+527012;Head of State;ミルシャ・ヴチルコフ;36;PA;Insignificant Layman;High;M527012;x
+527013;Head of Government;ミハイル・アクセイモフ;36;ML;Flamboyant Tough Guy;High;M527013;x
+527014;Head of Government;ゲンナジ・シヤノフ;36;PA;Old Admiral;High;M527014;x
+527015;Foreign Minister;マフムード・ガイダル;36;LE;Ideological Crusader;High;M527015;x
+527016;Foreign Minister;イエゴル・K・チャヒネ;36;ML;Biased Intellectual;High;M527016;x
+527017;Foreign Minister;アレクセイ・シドレンコ;36;ML;Great Compromiser;High;M527017;x
+527018;Foreign Minister;ピョートル・シュルギン;36;PA;Great Compromiser;High;M527018;x
+527019;Foreign Minister;マゴメド・ガサノヴィッチ;36;PA;Iron Fisted Brute;High;M527019;x
+527020;Minister of Armament;シラズディン・カブレイエフ;36;LE;Military Entrepreneur;Medium;M527020;x
+527021;Minister of Armament;トリン・トリュバチェフ;36;ML;Administrative Genius;Medium;M527021;x
+527022;Minister of Armament;ゲンナジ・セレズネフ;36;ML;Air to Ground Proponent;Medium;M527022;x
+527023;Minister of Armament;ウラジミール・ボルシャニン;36;PA;Tank Proponent;Medium;M527023;x
+527024;Minister of Armament;ロマン・バシレフスキ;36;PA;Air to Ground Proponent;Medium;M527024;x
+527025;Minister of Security;ゲンナジ・ブカエフ;36;LE;Man of the People;Medium;M527025;x
+527026;Minister of Security;ヴィトル・クリステンコ;36;ML;Compassionate Gentleman;Medium;M527026;x
+527027;Minister of Security;ウラジミール・ケヴォルコフ;36;ML;Back Stabber;Medium;M527027;x
+527028;Minister of Security;ゲオルギ・ガポン神父;36;PA;Silent Lawyer;Medium;M527028;x
+527029;Minister of Security;アレクサンディル・ダヴィデンコ;36;PA;Compassionate Gentleman;Medium;M527029;x
+527030;Head of Military Intelligence;ジェレナ・シュヴァノヴァ;36;LE;Industrial Specialist;Medium;M527030;x
+527031;Head of Military Intelligence;ヴィクトール・A・シャニン;36;ML;Industrial Specialist;Medium;M527031;x
+527032;Head of Military Intelligence;イエゴル・コプテフ;36;ML;Technical Specialist;Medium;M527032;x
+527033;Head of Military Intelligence;ヴィクトール・カレリン;36;PA;Dismal Enigma;Medium;M527033;x
+527034;Head of Military Intelligence;ウィルフレッド・フィロン;36;PA;Logistics Specialist;Medium;M527034;x
+527035;Chief of Staff;ヴォルダル・シャリモフ;36;LE;School of Mass Combat;Medium;M527035;x
+527036;Chief of Staff;ヴァシーリー・A・シリャエフ;36;ML;School of Defence;Medium;M527036;x
+527037;Chief of Staff;イヴァン・ヴィソイツキ;36;PA;School of Psychology;Medium;M527037;x
+527038;Chief of Army;イヴァン・トレチャク;36;LE;Static Defence Doctrine;Medium;M527038;x
+527039;Chief of Army;パヴェル・シェイン;36;ML;Static Defence Doctrine;Medium;M527039;x
+527040;Chief of Army;パヴェル・パノフ;36;PA;Decisive Battle Doctrine;Medium;M527040;x
+527041;Chief of Navy;ドミトリー・クリク;36;LE;Indirect Approach Doctrine;Medium;M527041;x
+527042;Chief of Navy;イゴール・ケッペンルス;36;ML;Power Projection Doctrine;Medium;M527042;x
+527043;Chief of Navy;セルゲイ・ビチュコフ;36;PA;Decisive Naval Battle Doctrine;Medium;M527043;x
+527044;Chief of Air Force;ヴィクトール・シャヴロフ;36;LE;Army Aviation Doctrine;Medium;M527044;x
+527045;Chief of Air Force;ミハイ・シェヴリギン;36;ML;Naval Aviation Doctrine;Medium;M527045;x
+527046;Chief of Air Force;グリゴリー・シュビン;36;PA;Air Superiority Doctrine;Medium;M527046;x

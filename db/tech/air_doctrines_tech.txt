@@ -1,0 +1,2495 @@
+technology =
+{ id          = 9
+  category    = air_doctrines
+  name        = TECH_AD_NAME # Localized name
+  desc        = TECH_AD_DESC # Localized description
+  # 制空権ドクトリン
+  application =
+  { id        = 9010
+    name      = TECH_APP_AD_1_NAME
+    desc      = TECH_APP_AD_1_DESC
+    position  = { x = 224 y = 10 }
+    year      = 1936
+    # 戦術単位：航空団
+    component = { id = 9011 name = TECH_CMP_AD_1_1_NAME type = aircraft_testing difficulty = 5 }
+    # 戦闘空中哨戒試験
+    component = { id = 9012 name = TECH_CMP_AD_1_2_NAME type = aircraft_testing difficulty = 5 }
+    # 爆撃行試験
+    component = { id = 9013 name = TECH_CMP_AD_1_3_NAME type = aircraft_testing difficulty = 5 }
+    # 地上軍航空支援
+    component = { id = 9014 name = TECH_CMP_AD_1_4_NAME type = combined_arms_focus difficulty = 5 }
+    # 対航空戦術
+    component = { id = 9015 name = TECH_CMP_AD_1_5_NAME type = aircraft_testing difficulty = 5 }
+    required  = { }
+    effects =
+    { command = { type = max_organization which = interceptor value = 2 }
+      command = { type = morale which = interceptor value = 2 }
+      command = { type = max_organization which = multi_role value = 2 }
+      command = { type = morale which = multi_role value = 2 }
+      command = { type = max_organization which = cag value = 2 }
+      command = { type = morale which = cag value = 2 }
+      command = { type = enable_task which = ground_attack }
+      command = { type = enable_task which = interdiction }
+      command = { type = enable_task which = naval_strike }
+      command = { type = enable_task which = logistical_strike }
+      command = { type = enable_task which = strategic_bombardment }
+      command = { type = enable_task which = port_strike }
+      command = { type = enable_task which = installation_strike }
+      command = { type = enable_task which = runway_cratering }
+      command = { type = enable_task which = convoy_air_raiding }
+    }
+  }
+  # フライングサーカスドクトリン
+  application =
+  { id        = 9020
+    name      = TECH_APP_AD_2_NAME
+    desc      = TECH_APP_AD_2_DESC
+    position  = { x = 48 y = 10 }
+    year      = 1936
+    # 全金属製機体
+    component = { id = 9021 name = TECH_CMP_AD_2_1_NAME type = aeronautics difficulty = 5 }
+    # 平時訓練
+    component = { id = 9022 name = TECH_CMP_AD_2_2_NAME type = aircraft_testing difficulty = 5 }
+    # 限界性能試験
+    component = { id = 9023 name = TECH_CMP_AD_2_3_NAME type = aircraft_testing difficulty = 5 }
+    # 小編隊訓練
+    component = { id = 9024 name = TECH_CMP_AD_2_4_NAME type = fighter_tactics difficulty = 5 }
+    # 基本的飛行経験
+    component = { id = 9025 name = TECH_CMP_AD_2_5_NAME type = piloting difficulty = 5 }
+    required  = { 9010 }
+    effects =
+    { command = { type = max_organization which = interceptor value = 2 }
+      command = { type = morale which = interceptor value = 2 }
+      command = { type = max_organization which = multi_role value = 2 }
+      command = { type = morale which = multi_role value = 2 }
+      command = { type = max_organization which = cag value = 2 }
+      command = { type = morale which = cag value = 2 }
+    }
+  }
+  # 戦力交代ドクトリン
+  application =
+  { id        = 9030
+    name      = TECH_APP_AD_3_NAME
+    desc      = TECH_APP_AD_3_DESC
+    position  = { x = 399 y = 10 }
+    year      = 1936
+    # 戦術単位：飛行中隊
+    component = { id = 9031 name = TECH_CMP_AD_3_1_NAME type = aircraft_testing difficulty = 5 }
+    # 戦闘機戦術
+    component = { id = 9032 name = TECH_CMP_AD_3_2_NAME type = fighter_tactics difficulty = 5 }
+    # 専用照準器
+    component = { id = 9033 name = TECH_CMP_AD_3_3_NAME type = mechanics difficulty = 5 }
+    # 制空思考
+    component = { id = 9034 name = TECH_CMP_AD_3_4_NAME type = piloting difficulty = 5 }
+    # 戦闘機部隊特化
+    component = { id = 9035 name = TECH_CMP_AD_3_5_NAME type = aircraft_testing difficulty = 5 }
+    required  = { 9010 }
+    effects =
+    { command = { type = max_organization which = interceptor value = 2 }
+      command = { type = morale which = interceptor value = 2 }
+      command = { type = max_organization which = multi_role value = 2 }
+      command = { type = morale which = multi_role value = 2 }
+      command = { type = max_organization which = cag value = 2 }
+      command = { type = morale which = cag value = 2 }
+    }
+  }
+  # 戦場破壊ドクトリン
+  application =
+  { id        = 9040
+    name      = TECH_APP_AD_4_NAME
+    desc      = TECH_APP_AD_4_DESC
+    position  = { x = 48 y = 40 }
+    year      = 1936
+    # 小型爆弾倉
+    component = { id = 9041 name = TECH_CMP_AD_4_1_NAME type = aeronautics difficulty = 3 }
+    # 対戦車爆弾
+    component = { id = 9042 name = TECH_CMP_AD_4_2_NAME type = general_equipment difficulty = 3 }
+    # 基本的前進航空管制
+    component = { id = 9043 name = TECH_CMP_AD_4_3_NAME type = combined_arms_focus difficulty = 3 }
+    # 戦場航空支援
+    component = { id = 9044 name = TECH_CMP_AD_4_4_NAME type = aircraft_testing difficulty = 3 }
+    # 緊急機動部隊的思考
+    component = { id = 9045 name = TECH_CMP_AD_4_5_NAME type = piloting difficulty = 3 }
+    required  = { 9020 9030 }
+    effects =
+    { command = { type = max_organization which = cas value = 10 }
+      command = { type = morale which = cas value = 10 }
+      command = { type = task_efficiency which = ground_attack value = 0.5 }
+    }
+  }
+  # 急降下爆撃ドクトリン
+  application =
+  { id        = 9050
+    name      = TECH_APP_AD_5_NAME
+    desc      = TECH_APP_AD_5_DESC
+    position  = { x = 50 y = 60 }
+    year      = 1937
+    # 初期型精密爆撃行
+    component = { id = 9051 name = TECH_CMP_AD_5_1_NAME type = aircraft_testing difficulty = 3 }
+    # 攻撃航空支援
+    component = { id = 9052 name = TECH_CMP_AD_5_2_NAME type = combined_arms_focus difficulty = 3 }
+    # 急降下能力
+    component = { id = 9053 name = TECH_CMP_AD_5_3_NAME type = aeronautics difficulty = 3 }
+    # 急降下訓練
+    component = { id = 9054 name = TECH_CMP_AD_5_4_NAME type = aircraft_testing difficulty = 3 }
+    # 近接航空支援思考
+    component = { id = 9055 name = TECH_CMP_AD_5_5_NAME type = piloting difficulty = 3 }
+    required  = { 9040 }
+    effects =
+    { command = { type = max_organization which = cas value = 5 }
+      command = { type = morale which = cas value = 5 }
+    }
+  }
+  # 直接地上支援ドクトリン
+  application =
+  { id        = 9060
+    name      = TECH_APP_AD_6_NAME
+    desc      = TECH_APP_AD_6_DESC
+    position  = { x = 50 y = 76 }
+    year      = 1938
+    # 初期型前線航空管制
+    component = { id = 9061 name = TECH_CMP_AD_6_1_NAME type = combined_arms_focus difficulty = 3 }
+    # 戦闘支援哨戒
+    component = { id = 9062 name = TECH_CMP_AD_6_2_NAME type = bomber_tactics difficulty = 3 }
+    # 緊急任務思考
+    component = { id = 9063 name = TECH_CMP_AD_6_3_NAME type = piloting difficulty = 3 }
+    # 初期型専用爆撃照準器
+    component = { id = 9064 name = TECH_CMP_AD_6_4_NAME type = mechanics difficulty = 3 }
+    # 基本型地上攻撃兵器
+    component = { id = 9065 name = TECH_CMP_AD_6_5_NAME type = general_equipment difficulty = 3 }
+    required  = { 9040 }
+    effects =
+    { command = { type = max_organization which = cas value = 5 }
+      command = { type = morale which = cas value = 5 }
+    }
+  }
+  # ベテラン爆撃手の主導
+  application =
+  { id        = 9070
+    name      = TECH_APP_AD_7_NAME
+    desc      = TECH_APP_AD_7_DESC
+    position  = { x = 50 y = 92 }
+    year      = 1938
+    # 精神的優位思考
+    component = { id = 9071 name = TECH_CMP_AD_7_1_NAME type = piloting difficulty = 3 }
+    # 全天候対応
+    component = { id = 9072 name = TECH_CMP_AD_7_2_NAME type = aeronautics difficulty = 3 }
+    # 専用爆撃訓練
+    component = { id = 9073 name = TECH_CMP_AD_7_3_NAME type = aircraft_testing difficulty = 3 }
+    # パイロットの慣熟飛行
+    component = { id = 9074 name = TECH_CMP_AD_7_4_NAME type = aircraft_testing difficulty = 3 }
+    # 地上攻撃戦術
+    component = { id = 9075 name = TECH_CMP_AD_7_5_NAME type = aircraft_testing difficulty = 3 }
+    required  = { 9040 }
+    effects =
+    { command = { type = max_organization which = cas value = 5 }
+      command = { type = morale which = cas value = 5 }
+      command = { type = snow_attack which = cas value = 10 }
+      command = { type = rain_attack which = cas value = 10 }
+      command = { type = snow_attack which = cag value = 10 }
+      command = { type = rain_attack which = cag value = 10 }
+    }
+  }
+  # 夜間攻撃ドクトリン
+  application =
+  { id        = 9080
+    name      = TECH_APP_AD_8_NAME
+    desc      = TECH_APP_AD_8_DESC
+    position  = { x = 48 y = 112 }
+    year      = 1939
+    # 原始的爆弾照明器
+    component = { id = 9081 name = TECH_CMP_AD_8_1_NAME type = chemistry difficulty = 3 }
+    # 基本型夜間爆撃照準器
+    component = { id = 9082 name = TECH_CMP_AD_8_2_NAME type = mechanics difficulty = 3 }
+    # 基本的夜間飛行訓練
+    component = { id = 9083 name = TECH_CMP_AD_8_3_NAME type = aircraft_testing difficulty = 3 }
+    # 夜間飛行経験
+    component = { id = 9084 name = TECH_CMP_AD_8_4_NAME type = piloting difficulty = 3 }
+    # 小規模航空部隊戦術
+    component = { id = 9085 name = TECH_CMP_AD_8_5_NAME type = bomber_tactics difficulty = 3 }
+    required  = { 9050 9060 9070 }
+    effects =
+    { command = { type = night_attack which = cas value = 10 }
+      command = { type = night_defense which = cas value = 50 }
+      command = { type = max_organization which = cas value = 5 }
+      command = { type = morale which = cas value = 5 }
+    }
+  }
+  # 作戦的破壊ドクトリン
+  application =
+  { id        = 9090
+    name      = TECH_APP_AD_9_NAME
+    desc      = TECH_APP_AD_9_DESC
+    position  = { x = 220 y = 40 }
+    year      = 1937
+    # 徹甲爆弾
+    component = { id = 9091 name = TECH_CMP_AD_9_1_NAME type = general_equipment difficulty = 3 }
+    # 絨毯爆撃
+    component = { id = 9092 name = TECH_CMP_AD_9_2_NAME type = bomber_tactics difficulty = 3 }
+    # 爆撃訓練
+    component = { id = 9093 name = TECH_CMP_AD_9_3_NAME type = aircraft_testing difficulty = 3 }
+    # 初期型航空作戦管理
+    component = { id = 9094 name = TECH_CMP_AD_9_4_NAME type = centralized_execution difficulty = 3 }
+    # 中型爆弾倉
+    component = { id = 9095 name = TECH_CMP_AD_9_5_NAME type = aeronautics difficulty = 3 }
+    required  = { 9020 9030 }
+    effects =
+    { command = { type = max_organization which = tactical_bomber value = 10 }
+      command = { type = morale which = tactical_bomber value = 10 }
+      command = { type = max_organization which = naval_bomber value = 10 }
+      command = { type = morale which = naval_bomber value = 10 }
+    }
+  }
+  # 戦場阻止ドクトリン
+  application =
+  { id        = 9100
+    name      = TECH_APP_AD_10_NAME
+    desc      = TECH_APP_AD_10_DESC
+    position  = { x = 222 y = 60 }
+    year      = 1938
+    # 機会攻撃連携
+    component = { id = 9101 name = TECH_CMP_AD_10_1_NAME type = decentralized_execution difficulty = 3 }
+    # 阻止哨戒
+    component = { id = 9102 name = TECH_CMP_AD_10_2_NAME type = aircraft_testing difficulty = 3 }
+    # 空挺部隊強襲戦術
+    component = { id = 9103 name = TECH_CMP_AD_10_3_NAME type = aircraft_testing difficulty = 3 }
+    # 空挺部隊降下技術
+    component = { id = 9104 name = TECH_CMP_AD_10_4_NAME type = combined_arms_focus difficulty = 3 }
+    # 兵站攻撃戦術
+    component = { id = 9105 name = TECH_CMP_AD_10_5_NAME type = bomber_tactics difficulty = 3 }
+    required  = { 9090 }
+    effects =
+    { command = { type = max_organization which = tactical_bomber value = 5 }
+      command = { type = morale which = tactical_bomber value = 5 }
+      command = { type = max_organization which = naval_bomber value = 5 }
+      command = { type = morale which = naval_bomber value = 5 }
+      command = { type = enable_task which = airborne_assault }
+      command = { type = task_efficiency which = airborne_assault value = 0.3 }
+    }
+  }
+  # 機銃掃射ドクトリン
+  application =
+  { id        = 9110
+    name      = TECH_APP_AD_11_NAME
+    desc      = TECH_APP_AD_11_DESC
+    position  = { x = 222 y = 76 }
+    year      = 1938
+    # 徹甲弾
+    component = { id = 9111 name = TECH_CMP_AD_11_1_NAME type = general_equipment difficulty = 3 }
+    # 大規模弾薬集積所
+    component = { id = 9112 name = TECH_CMP_AD_11_2_NAME type = aeronautics difficulty = 3 }
+    # 機銃掃射訓練
+    component = { id = 9113 name = TECH_CMP_AD_11_3_NAME type = aircraft_testing difficulty = 3 }
+    # 機体の防弾化
+    component = { id = 9114 name = TECH_CMP_AD_11_4_NAME type = aeronautics difficulty = 3 }
+    # 複数爆撃行
+    component = { id = 9115 name = TECH_CMP_AD_11_5_NAME type = piloting difficulty = 3 }
+    required  = { 9090 }
+    effects =
+    { command = { type = max_organization which = tactical_bomber value = 5 }
+      command = { type = morale which = tactical_bomber value = 5 }
+      command = { type = max_organization which = naval_bomber value = 5 }
+      command = { type = morale which = naval_bomber value = 5 }
+      command = { type = task_efficiency which = interdiction value = 0.5 }
+      command = { type = task_efficiency which = naval_strike value = 0.5 }
+      command = { type = task_efficiency which = convoy_air_raiding value = 0.5 }
+    }
+  }
+  # 兵站攻撃ドクトリン
+  application =
+  { id        = 9120
+    name      = TECH_APP_AD_12_NAME
+    desc      = TECH_APP_AD_12_DESC
+    position  = { x = 222 y = 92 }
+    year      = 1938
+    # 兵站拠点爆撃
+    component = { id = 9121 name = TECH_CMP_AD_12_1_NAME type = bomber_tactics difficulty = 3 }
+    # 後方連絡線阻止
+    component = { id = 9122 name = TECH_CMP_AD_12_2_NAME type = centralized_execution difficulty = 3 }
+    # 基本的精密爆撃訓練
+    component = { id = 9123 name = TECH_CMP_AD_12_3_NAME type = aircraft_testing difficulty = 3 }
+    # 初期型空中散布地雷
+    component = { id = 9124 name = TECH_CMP_AD_12_4_NAME type = general_equipment difficulty = 3 }
+    # 地域阻止
+    component = { id = 9125 name = TECH_CMP_AD_12_5_NAME type = piloting difficulty = 3 }
+    required  = { 9090 }
+    effects =
+    { command = { type = max_organization which = tactical_bomber value = 5 }
+      command = { type = morale which = tactical_bomber value = 5 }
+      command = { type = max_organization which = naval_bomber value = 5 }
+      command = { type = morale which = naval_bomber value = 5 }
+      command = { type = task_efficiency which = logistical_strike value = 0.5 }
+    }
+  }
+  # 夜間機銃掃射ドクトリン
+  application =
+  { id        = 9130
+    name      = TECH_APP_AD_13_NAME
+    desc      = TECH_APP_AD_13_DESC
+    position  = { x = 220 y = 112 }
+    year      = 1939
+    # 初期型夜間照準器
+    component = { id = 9131 name = TECH_CMP_AD_13_1_NAME type = mechanics difficulty = 3 }
+    # 基本型地上照明器
+    component = { id = 9132 name = TECH_CMP_AD_13_2_NAME type = chemistry difficulty = 3 }
+    # 夜間機銃掃射訓練
+    component = { id = 9133 name = TECH_CMP_AD_13_3_NAME type = aircraft_testing difficulty = 3 }
+    # 曳光弾
+    component = { id = 9134 name = TECH_CMP_AD_13_4_NAME type = general_equipment difficulty = 3 }
+    # 夜間制空権思考
+    component = { id = 9135 name = TECH_CMP_AD_13_5_NAME type = piloting difficulty = 3 }
+    required  = { 9100 9110 9120 }
+    effects =
+    { command = { type = night_attack which = tactical_bomber value = 10 }
+      command = { type = night_defense which = tactical_bomber value = 50 }
+      command = { type = night_attack which = naval_bomber value = 10 }
+      command = { type = night_defense which = naval_bomber value = 50 }
+      command = { type = max_organization which = tactical_bomber value = 5 }
+      command = { type = morale which = tactical_bomber value = 5 }
+      command = { type = max_organization which = naval_bomber value = 5 }
+      command = { type = morale which = naval_bomber value = 5 }
+    }
+  }
+  # 戦略的破壊ドクトリン
+  application =
+  { id        = 9140
+    name      = TECH_APP_AD_14_NAME
+    desc      = TECH_APP_AD_14_DESC
+    position  = { x = 392 y = 40 }
+    year      = 1937
+    # 初期型大規模爆撃戦術
+    component = { id = 9141 name = TECH_CMP_AD_14_1_NAME type = bomber_tactics difficulty = 3 }
+    # 爆撃機防御編隊
+    component = { id = 9142 name = TECH_CMP_AD_14_2_NAME type = aircraft_testing difficulty = 3 }
+    # 高々度爆撃照準器
+    component = { id = 9143 name = TECH_CMP_AD_14_3_NAME type = mechanics difficulty = 3 }
+    # 大型爆弾倉
+    component = { id = 9144 name = TECH_CMP_AD_14_4_NAME type = aeronautics difficulty = 3 }
+    # 地域目標爆撃
+    component = { id = 9145 name = TECH_CMP_AD_14_5_NAME type = aircraft_testing difficulty = 3 }
+    required  = { 9020 9030 }
+    effects =
+    { command = { type = max_organization which = strategic_bomber value = 10 }
+      command = { type = morale which = strategic_bomber value = 10 }
+      command = { type = morale which = transport_plane value = 10 }
+      command = { type = task_efficiency which = strategic_bombardment value = 0.5 }
+    }
+  }
+  # 箱型護衛編隊ドクトリン
+  application =
+  { id        = 9150
+    name      = TECH_APP_AD_15_NAME
+    desc      = TECH_APP_AD_15_DESC
+    position  = { x = 394 y = 60 }
+    year      = 1938
+    # 爆撃機護衛戦術
+    component = { id = 9151 name = TECH_CMP_AD_15_1_NAME type = bomber_tactics difficulty = 3 }
+    # 護衛戦術訓練
+    component = { id = 9152 name = TECH_CMP_AD_15_2_NAME type = fighter_tactics difficulty = 3 }
+    # 外部燃料タンク
+    component = { id = 9153 name = TECH_CMP_AD_15_3_NAME type = aeronautics difficulty = 3 }
+    # 初期的戦闘機制圧思考
+    component = { id = 9154 name = TECH_CMP_AD_15_4_NAME type = piloting difficulty = 3 }
+    # 爆撃機護衛連携
+    component = { id = 9155 name = TECH_CMP_AD_15_5_NAME type = centralized_execution difficulty = 3 }
+    required  = { 9140 }
+    effects =
+    { command = { type = max_organization which = strategic_bomber value = 5 }
+      command = { type = morale which = strategic_bomber value = 5 }
+      command = { type = morale which = transport_plane value = 5 }
+      command = { type = build_cost which = escort when = on_upgrade where = relative value = -2 }
+    }
+  }
+  # 戦闘爆撃集団ドクトリン
+  application =
+  { id        = 9160
+    name      = TECH_APP_AD_16_NAME
+    desc      = TECH_APP_AD_16_DESC
+    position  = { x = 394 y = 76 }
+    year      = 1939
+    # 合同指揮網
+    component = { id = 9161 name = TECH_CMP_AD_16_1_NAME type = combined_arms_focus difficulty = 3 }
+    # 基本型絨毯爆撃戦術
+    component = { id = 9162 name = TECH_CMP_AD_16_2_NAME type = bomber_tactics difficulty = 3 }
+    # 低空爆撃照準器
+    component = { id = 9163 name = TECH_CMP_AD_16_3_NAME type = mechanics difficulty = 3 }
+    # 初期型防空制圧戦術
+    component = { id = 9164 name = TECH_CMP_AD_16_4_NAME type = aircraft_testing difficulty = 3 }
+    # 戦闘爆撃思考
+    component = { id = 9165 name = TECH_CMP_AD_16_5_NAME type = piloting difficulty = 3 }
+    required  = { 9140 }
+    effects =
+    { command = { type = max_organization which = strategic_bomber value = 5 }
+      command = { type = morale which = strategic_bomber value = 5 }
+      command = { type = morale which = transport_plane value = 5 }
+    }
+  }
+  # 推定爆撃ドクトリン
+  application =
+  { id        = 9170
+    name      = TECH_APP_AD_17_NAME
+    desc      = TECH_APP_AD_17_DESC
+    position  = { x = 394 y = 92 }
+    year      = 1939
+    # 精密航法機器
+    component = { id = 9171 name = TECH_CMP_AD_17_1_NAME type = electronics difficulty = 3 }
+    # 航法訓練
+    component = { id = 9172 name = TECH_CMP_AD_17_2_NAME type = aircraft_testing difficulty = 3 }
+    # 連携爆撃の事前計画
+    component = { id = 9173 name = TECH_CMP_AD_17_3_NAME type = centralized_execution difficulty = 3 }
+    # 初期型敵防空砲撃回避戦術
+    component = { id = 9174 name = TECH_CMP_AD_17_4_NAME type = aircraft_testing difficulty = 3 }
+    # 戦術単位：爆撃中隊
+    component = { id = 9175 name = TECH_CMP_AD_17_5_NAME type = bomber_tactics difficulty = 3 }
+    required  = { 9140 }
+    effects =
+    { command = { type = max_organization which = strategic_bomber value = 5 }
+      command = { type = morale which = strategic_bomber value = 5 }
+      command = { type = morale which = transport_plane value = 5 }
+    }
+  }
+  # 夜間爆撃ドクトリン
+  application =
+  { id        = 9180
+    name      = TECH_APP_AD_18_NAME
+    desc      = TECH_APP_AD_18_DESC
+    position  = { x = 392 y = 112 }
+    year      = 1939
+    # 夜間爆撃照準器
+    component = { id = 9181 name = TECH_CMP_AD_18_1_NAME type = mechanics difficulty = 3 }
+    # 先導機
+    component = { id = 9182 name = TECH_CMP_AD_18_2_NAME type = aeronautics difficulty = 3 }
+    # 改良型地上照明器
+    component = { id = 9183 name = TECH_CMP_AD_18_3_NAME type = chemistry difficulty = 3 }
+    # 夜間爆撃訓練
+    component = { id = 9184 name = TECH_CMP_AD_18_4_NAME type = aircraft_testing difficulty = 3 }
+    # 計画爆撃行
+    component = { id = 9185 name = TECH_CMP_AD_18_5_NAME type = centralized_execution difficulty = 3 }
+    required  = { 9150 9160 9170 }
+    effects =
+    { command = { type = night_attack which = strategic_bomber value = 10 }
+      command = { type = night_defense which = strategic_bomber value = 50 }
+      command = { type = max_organization which = strategic_bomber value = 5 }
+      command = { type = morale which = strategic_bomber value = 5 }
+      command = { type = morale which = transport_plane value = 5 }
+    }
+  }
+  # 先制攻撃ドクトリン
+  application =
+  { id        = 9190
+    name      = TECH_APP_AD_19_NAME
+    desc      = TECH_APP_AD_19_DESC
+    position  = { x = 8 y = 226 }
+    year      = 1939
+    # 敵航空兵力制圧戦術
+    component = { id = 9191 name = TECH_CMP_AD_19_1_NAME type = centralized_execution difficulty = 4 }
+    # 前線空域支配
+    component = { id = 9192 name = TECH_CMP_AD_19_2_NAME type = centralized_execution difficulty = 4 }
+    # 初期的戦闘機レーダー誘導
+    component = { id = 9193 name = TECH_CMP_AD_19_3_NAME type = electronics difficulty = 4 }
+    # 戦闘哨戒戦術
+    component = { id = 9194 name = TECH_CMP_AD_19_4_NAME type = fighter_tactics difficulty = 4 }
+    # 絶対制空権思考
+    component = { id = 9195 name = TECH_CMP_AD_19_5_NAME type = piloting difficulty = 4 }
+    required  = { }
+    or_required = { 9080 9130 }
+    effects =
+    { command = { type = night_attack which = interceptor value = 10 }
+      command = { type = night_attack which = multi_role value = 5 }
+      command = { type = max_organization which = interceptor value = 3 }
+      command = { type = morale which = interceptor value = 3 }
+      command = { type = max_organization which = multi_role value = 3 }
+      command = { type = morale which = multi_role value = 3 }
+      command = { type = max_organization which = cag value = 3 }
+      command = { type = morale which = cag value = 3 }
+    }
+  }
+  # 分散戦闘ドクトリン
+  application =
+  { id        = 9200
+    name      = TECH_APP_AD_20_NAME
+    desc      = TECH_APP_AD_20_DESC
+    position  = { x = 10 y = 246 }
+    year      = 1939
+    # 前進航空司令部
+    component = { id = 9201 name = TECH_CMP_AD_20_1_NAME type = decentralized_execution difficulty = 4 }
+    # 個別戦闘機掃討
+    component = { id = 9202 name = TECH_CMP_AD_20_2_NAME type = fighter_tactics difficulty = 4 }
+    # 前線航空基地使用
+    component = { id = 9203 name = TECH_CMP_AD_20_3_NAME type = aircraft_testing difficulty = 4 }
+    # 不整地離着陸能力
+    component = { id = 9204 name = TECH_CMP_AD_20_4_NAME type = aeronautics difficulty = 4 }
+    # 分散戦闘訓練
+    component = { id = 9205 name = TECH_CMP_AD_20_5_NAME type = aircraft_testing difficulty = 4 }
+    required  = { 9190 }
+    effects =
+    { command = { type = max_organization which = interceptor value = 3 }
+      command = { type = morale which = interceptor value = 3 }
+      command = { type = max_organization which = multi_role value = 3 }
+      command = { type = morale which = multi_role value = 3 }
+      command = { type = max_organization which = cag value = 3 }
+      command = { type = morale which = cag value = 3 }
+    }
+  }
+  # 前線飛行任務ドクトリン
+  application =
+  { id        = 9210
+    name      = TECH_APP_AD_21_NAME
+    desc      = TECH_APP_AD_21_DESC
+    position  = { x = 10 y = 262 }
+    year      = 1939
+    # 前線空中哨戒
+    component = { id = 9211 name = TECH_CMP_AD_21_1_NAME type = fighter_tactics difficulty = 4 }
+    # 陸空軍通信網
+    component = { id = 9212 name = TECH_CMP_AD_21_2_NAME type = electronics difficulty = 4 }
+    # 戦闘機の要請出撃
+    component = { id = 9213 name = TECH_CMP_AD_21_3_NAME type = aircraft_testing difficulty = 4 }
+    # 近接戦闘機援護
+    component = { id = 9214 name = TECH_CMP_AD_21_4_NAME type = combined_arms_focus difficulty = 4 }
+    # 戦闘機掃討訓練
+    component = { id = 9215 name = TECH_CMP_AD_21_5_NAME type = fighter_tactics difficulty = 4 }
+    required  = { 9190 }
+    effects =
+    { command = { type = max_organization which = interceptor value = 3 }
+      command = { type = morale which = interceptor value = 3 }
+      command = { type = max_organization which = multi_role value = 3 }
+      command = { type = morale which = multi_role value = 3 }
+      command = { type = max_organization which = cag value = 3 }
+      command = { type = morale which = cag value = 3 }
+    }
+  }
+  # ベテラン戦闘機乗りの主導
+  application =
+  { id        = 9220
+    name      = TECH_APP_AD_22_NAME
+    desc      = TECH_APP_AD_22_DESC
+    position  = { x = 10 y = 278 }
+    year      = 1939
+    # 全天候対応能力
+    component = { id = 9221 name = TECH_CMP_AD_22_1_NAME type = aeronautics difficulty = 4 }
+    # 全天候訓練
+    component = { id = 9222 name = TECH_CMP_AD_22_2_NAME type = aircraft_testing difficulty = 4 }
+    # 各自の訓練思考
+    component = { id = 9223 name = TECH_CMP_AD_22_3_NAME type = piloting difficulty = 4 }
+    # 戦闘機部隊特化
+    component = { id = 9224 name = TECH_CMP_AD_22_4_NAME type = aircraft_testing difficulty = 4 }
+    # 全天候照準器
+    component = { id = 9225 name = TECH_CMP_AD_22_5_NAME type = mechanics difficulty = 4 }
+    required  = { 9190 }
+    effects =
+    { command = { type = max_organization which = interceptor value = 3 }
+      command = { type = morale which = interceptor value = 3 }
+      command = { type = max_organization which = multi_role value = 3 }
+      command = { type = morale which = multi_role value = 3 }
+      command = { type = max_organization which = cag value = 3 }
+      command = { type = morale which = cag value = 3 }
+      command = { type = snow_attack which = interceptor value = 5 }
+      command = { type = rain_attack which = interceptor value = 5 }
+      command = { type = snow_attack which = multi_role value = 10 }
+      command = { type = rain_attack which = multi_role value = 10 }
+      command = { type = snow_attack which = cag value = 10 }
+      command = { type = rain_attack which = cag value = 10 }
+    }
+  }
+  # 周辺防衛ドクトリン
+  application =
+  { id        = 9230
+    name      = TECH_APP_AD_23_NAME
+    desc      = TECH_APP_AD_23_DESC
+    position  = { x = 268 y = 226 }
+    year      = 1939
+    # 目標までのレーダーによる戦闘機誘導
+    component = { id = 9231 name = TECH_CMP_AD_23_1_NAME type = electronics difficulty = 4 }
+    # 前進航空管制訓練
+    component = { id = 9232 name = TECH_CMP_AD_23_2_NAME type = aircraft_testing difficulty = 4 }
+    # 戦闘機の個別誘導
+    component = { id = 9233 name = TECH_CMP_AD_23_3_NAME type = fighter_tactics difficulty = 4 }
+    # 局地防衛戦術
+    component = { id = 9234 name = TECH_CMP_AD_23_4_NAME type = decentralized_execution difficulty = 4 }
+    # 戦闘機部隊連携訓練
+    component = { id = 9235 name = TECH_CMP_AD_23_5_NAME type = aircraft_testing difficulty = 4 }
+    required  = { }
+    or_required = { 9130 9180 }
+    effects =
+    { command = { type = night_defense which = escort value = 50 }
+      command = { type = night_defense which = multi_role value = 25 }
+      command = { type = max_organization which = interceptor value = 3 }
+      command = { type = morale which = interceptor value = 3 }
+      command = { type = max_organization which = multi_role value = 3 }
+      command = { type = morale which = multi_role value = 3 }
+      command = { type = max_organization which = cag value = 3 }
+      command = { type = morale which = cag value = 3 }
+    }
+  }
+  # 編隊戦闘ドクトリン
+  application =
+  { id        = 9240
+    name      = TECH_APP_AD_24_NAME
+    desc      = TECH_APP_AD_24_DESC
+    position  = { x = 270 y = 246 }
+    year      = 1939
+    # 近接護衛戦術
+    component = { id = 9241 name = TECH_CMP_AD_24_1_NAME type = large_unit_tactics difficulty = 4 }
+    # 航空団間の連携
+    component = { id = 9242 name = TECH_CMP_AD_24_2_NAME type = fighter_tactics difficulty = 4 }
+    # 計画飛行任務
+    component = { id = 9243 name = TECH_CMP_AD_24_3_NAME type = centralized_execution difficulty = 4 }
+    # 編隊飛行
+    component = { id = 9244 name = TECH_CMP_AD_24_4_NAME type = aircraft_testing difficulty = 4 }
+    # 集中飛行試験
+    component = { id = 9245 name = TECH_CMP_AD_24_5_NAME type = aircraft_testing difficulty = 4 }
+    required  = { 9230 }
+    effects =
+    { command = { type = max_organization which = interceptor value = 3 }
+      command = { type = morale which = interceptor value = 3 }
+      command = { type = max_organization which = multi_role value = 3 }
+      command = { type = morale which = multi_role value = 3 }
+      command = { type = max_organization which = cag value = 3 }
+      command = { type = morale which = cag value = 3 }
+      command = { type = build_cost which = escort when = on_upgrade where = relative value = -10 }
+    }
+  }
+  # 国土防衛ドクトリン
+  application =
+  { id        = 9250
+    name      = TECH_APP_AD_25_NAME
+    desc      = TECH_APP_AD_25_DESC
+    position  = { x = 270 y = 262 }
+    year      = 1940
+    # 戦闘機隊展開の中央管理
+    component = { id = 9251 name = TECH_CMP_AD_25_1_NAME type = centralized_execution difficulty = 4 }
+    # 基本的戦闘機集中
+    component = { id = 9252 name = TECH_CMP_AD_25_2_NAME type = fighter_tactics difficulty = 4 }
+    # 基本的レーダー誘導迎撃
+    component = { id = 9253 name = TECH_CMP_AD_25_3_NAME type = electronics difficulty = 4 }
+    # 連携迎撃訓練
+    component = { id = 9254 name = TECH_CMP_AD_25_4_NAME type = aircraft_testing difficulty = 4 }
+    # 地域防衛訓練
+    component = { id = 9255 name = TECH_CMP_AD_25_5_NAME type = aircraft_testing difficulty = 4 }
+    required  = { 9230 }
+    effects =
+    { command = { type = max_organization which = interceptor value = 3 }
+      command = { type = morale which = interceptor value = 3 }
+      command = { type = max_organization which = multi_role value = 3 }
+      command = { type = morale which = multi_role value = 3 }
+      command = { type = max_organization which = cag value = 3 }
+      command = { type = morale which = cag value = 3 }
+    }
+  }
+  # 偵察戦闘ドクトリン
+  application =
+  { id        = 9260
+    name      = TECH_APP_AD_26_NAME
+    desc      = TECH_APP_AD_26_DESC
+    position  = { x = 270 y = 278 }
+    year      = 1940
+    # 戦闘偵察戦術
+    component = { id = 9261 name = TECH_CMP_AD_26_1_NAME type = fighter_tactics difficulty = 4 }
+    # 機会攻撃戦術
+    component = { id = 9262 name = TECH_CMP_AD_26_2_NAME type = aircraft_testing difficulty = 4 }
+    # 広域戦闘機連携
+    component = { id = 9263 name = TECH_CMP_AD_26_3_NAME type = centralized_execution difficulty = 4 }
+    # 戦闘偵察機
+    component = { id = 9264 name = TECH_CMP_AD_26_4_NAME type = aeronautics difficulty = 4 }
+    # 敵機遭遇訓練
+    component = { id = 9265 name = TECH_CMP_AD_26_5_NAME type = aircraft_testing difficulty = 4 }
+    required  = { 9230 }
+    effects =
+    { command = { type = max_organization which = interceptor value = 3 }
+      command = { type = morale which = interceptor value = 3 }
+      command = { type = max_organization which = multi_role value = 3 }
+      command = { type = morale which = multi_role value = 3 }
+      command = { type = max_organization which = cag value = 3 }
+      command = { type = morale which = cag value = 3 }
+    }
+  }
+  # 戦闘部隊破壊ドクトリン
+  application =
+  { id        = 9270
+    name      = TECH_APP_AD_27_NAME
+    desc      = TECH_APP_AD_27_DESC
+    position  = { x = 48 y = 128 }
+    year      = 1941
+    # 部隊集結地域爆撃
+    component = { id = 9271 name = TECH_CMP_AD_27_1_NAME type = aircraft_testing difficulty = 4 }
+    # 敵司令部破壊攻撃
+    component = { id = 9272 name = TECH_CMP_AD_27_2_NAME type = bomber_tactics difficulty = 4 }
+    # 基本的対空砲撃回避戦術
+    component = { id = 9273 name = TECH_CMP_AD_27_3_NAME type = aircraft_testing difficulty = 4 }
+    # 戦闘部隊制圧
+    component = { id = 9274 name = TECH_CMP_AD_27_4_NAME type = aircraft_testing difficulty = 4 }
+    # 地域別航空攻撃司令部
+    component = { id = 9275 name = TECH_CMP_AD_27_5_NAME type = decentralized_execution difficulty = 4 }
+    required  = { 9080 }
+    effects =
+    { command = { type = max_organization which = cas value = 10 }
+      command = { type = morale which = cas value = 10 }
+    }
+  }
+  # 索敵撃破集団ドクトリン
+  application =
+  { id        = 9280
+    name      = TECH_APP_AD_28_NAME
+    desc      = TECH_APP_AD_28_DESC
+    position  = { x = 50 y = 148 }
+    year      = 1941
+    # 前線戦闘哨戒
+    component = { id = 9281 name = TECH_CMP_AD_28_1_NAME type = bomber_tactics difficulty = 4 }
+    # 機会攻撃ドクトリン
+    component = { id = 9282 name = TECH_CMP_AD_28_2_NAME type = aircraft_testing difficulty = 4 }
+    # 地域空爆作戦
+    component = { id = 9283 name = TECH_CMP_AD_28_3_NAME type = centralized_execution difficulty = 4 }
+    # 連携攻勢爆撃
+    component = { id = 9284 name = TECH_CMP_AD_28_4_NAME type = combined_arms_focus difficulty = 4 }
+    # 射程外砲撃思考
+    component = { id = 9285 name = TECH_CMP_AD_28_5_NAME type = piloting difficulty = 4 }
+    required  = { 9270 }
+    effects =
+    { command = { type = max_organization which = cas value = 10 }
+      command = { type = morale which = cas value = 10 }
+      command = { type = build_cost which = cas when = on_upgrade where = relative value = -10 }
+    }
+  }
+  # 下級部隊向け近接航空支援ドクトリン
+  application =
+  { id        = 9290
+    name      = TECH_APP_AD_29_NAME
+    desc      = TECH_APP_AD_29_DESC
+    position  = { x = 50 y = 164 }
+    year      = 1942
+    # 師団直属航空支援
+    component = { id = 9291 name = TECH_CMP_AD_29_1_NAME type = combined_arms_focus difficulty = 4 }
+    # 現地航空作戦
+    component = { id = 9292 name = TECH_CMP_AD_29_2_NAME type = decentralized_execution difficulty = 4 }
+    # 基本的小規模爆撃行
+    component = { id = 9293 name = TECH_CMP_AD_29_3_NAME type = bomber_tactics difficulty = 4 }
+    # 連携空陸作戦
+    component = { id = 9294 name = TECH_CMP_AD_29_4_NAME type = aircraft_testing difficulty = 4 }
+    # 近接航空支援訓練
+    component = { id = 9295 name = TECH_CMP_AD_29_5_NAME type = aircraft_testing difficulty = 4 }
+    required  = { 9270 }
+    effects =
+    { command = { type = max_organization which = cas value = 10 }
+      command = { type = morale which = cas value = 10 }
+      command = { type = build_cost which = cas when = on_upgrade where = relative value = -10 }
+    }
+  }
+  # 爆撃機エースの主導
+  application =
+  { id        = 9300
+    name      = TECH_APP_AD_30_NAME
+    desc      = TECH_APP_AD_30_DESC
+    position  = { x = 50 y = 180 }
+    year      = 1942
+    # 個別訓練
+    component = { id = 9301 name = TECH_CMP_AD_30_1_NAME type = aircraft_testing difficulty = 4 }
+    # 各自の精神的優位
+    component = { id = 9302 name = TECH_CMP_AD_30_2_NAME type = piloting difficulty = 4 }
+    # 部隊の長期的団結力
+    component = { id = 9303 name = TECH_CMP_AD_30_3_NAME type = bomber_tactics difficulty = 4 }
+    # 専用爆撃機
+    component = { id = 9304 name = TECH_CMP_AD_30_4_NAME type = aeronautics difficulty = 4 }
+    # 教官交代制度
+    component = { id = 9305 name = TECH_CMP_AD_30_5_NAME type = aircraft_testing difficulty = 4 }
+    required  = { 9270 }
+    effects =
+    { command = { type = max_organization which = cas value = 10 }
+      command = { type = morale which = cas value = 10 }
+      command = { type = build_cost which = cas when = on_upgrade where = relative value = -10 }
+      command = { type = snow_attack which = cas value = 10 }
+      command = { type = rain_attack which = cas value = 10 }
+      command = { type = snow_attack which = cag value = 10 }
+      command = { type = rain_attack which = cag value = 10 }
+    }
+  }
+  # 箱形陣形の戦闘機隊による攻勢ドクトリン
+  application =
+  { id        = 9310
+    name      = TECH_APP_AD_31_NAME
+    desc      = TECH_APP_AD_31_DESC
+    position  = { x = 138 y = 226 }
+    year      = 1942
+    # 戦闘機の攻勢戦術
+    component = { id = 9311 name = TECH_CMP_AD_31_1_NAME type = fighter_tactics difficulty = 4 }
+    # 基本的戦闘機集中
+    component = { id = 9312 name = TECH_CMP_AD_31_2_NAME type = fighter_tactics difficulty = 4 }
+    # 前進航空管制施設
+    component = { id = 9313 name = TECH_CMP_AD_31_3_NAME type = decentralized_execution difficulty = 4 }
+    # 外部燃料タンク
+    component = { id = 9314 name = TECH_CMP_AD_31_4_NAME type = aeronautics difficulty = 4 }
+    # 戦闘機制圧訓練
+    component = { id = 9315 name = TECH_CMP_AD_31_5_NAME type = aircraft_testing difficulty = 4 }
+    required  = { 9200 9210 9220 }
+    effects =
+    { command = { type = max_organization which = interceptor value = 5 }
+      command = { type = morale which = interceptor value = 5 }
+      command = { type = max_organization which = multi_role value = 5 }
+      command = { type = morale which = multi_role value = 5 }
+      command = { type = max_organization which = cag value = 5 }
+      command = { type = morale which = cag value = 5 }
+    }
+  }
+  # 敵戦闘機誘出ドクトリン
+  application =
+  { id        = 9320
+    name      = TECH_APP_AD_32_NAME
+    desc      = TECH_APP_AD_32_DESC
+    position  = { x = 140 y = 246 }
+    year      = 1943
+    # 空中待ち伏せ戦術
+    component = { id = 9321 name = TECH_CMP_AD_32_1_NAME type = fighter_tactics difficulty = 4 }
+    # 囮行動
+    component = { id = 9322 name = TECH_CMP_AD_32_2_NAME type = fighter_tactics difficulty = 4 }
+    # 敵の情報制圧
+    component = { id = 9323 name = TECH_CMP_AD_32_3_NAME type = aircraft_testing difficulty = 4 }
+    # 長距離レーダー探知
+    component = { id = 9324 name = TECH_CMP_AD_32_4_NAME type = electronics difficulty = 4 }
+    # 作戦計画の立案
+    component = { id = 9325 name = TECH_CMP_AD_32_5_NAME type = centralized_execution difficulty = 4 }
+    required  = { 9310 }
+    effects =
+    { command = { type = max_organization which = interceptor value = 5 }
+      command = { type = morale which = interceptor value = 5 }
+      command = { type = max_organization which = multi_role value = 5 }
+      command = { type = morale which = multi_role value = 5 }
+      command = { type = max_organization which = cag value = 5 }
+      command = { type = morale which = cag value = 5 }
+      command = { type = build_cost which = interceptor when = on_upgrade where = relative value = -10 }
+    }
+  }
+  # 格闘戦実験ドクトリン
+  application =
+  { id        = 9330
+    name      = TECH_APP_AD_33_NAME
+    desc      = TECH_APP_AD_33_DESC
+    position  = { x = 140 y = 262 }
+    year      = 1943
+    # 改良型格闘戦訓練
+    component = { id = 9331 name = TECH_CMP_AD_33_1_NAME type = aircraft_testing difficulty = 4 }
+    # 改良型対戦闘機戦闘
+    component = { id = 9332 name = TECH_CMP_AD_33_2_NAME type = fighter_tactics difficulty = 4 }
+    # 風洞試験
+    component = { id = 9333 name = TECH_CMP_AD_33_3_NAME type = aeronautics difficulty = 4 }
+    # 格闘戦用照準器
+    component = { id = 9334 name = TECH_CMP_AD_33_4_NAME type = mechanics difficulty = 4 }
+    # 格闘戦準備戦術
+    component = { id = 9335 name = TECH_CMP_AD_33_5_NAME type = fighter_tactics difficulty = 4 }
+    required  = { 9310 }
+    effects =
+    { command = { type = max_organization which = interceptor value = 5 }
+      command = { type = morale which = interceptor value = 5 }
+      command = { type = max_organization which = multi_role value = 5 }
+      command = { type = morale which = multi_role value = 5 }
+      command = { type = max_organization which = cag value = 5 }
+      command = { type = morale which = cag value = 5 }
+      command = { type = build_cost which = interceptor when = on_upgrade where = relative value = -10 }
+    }
+  }
+  # 戦闘機エースの主導
+  application =
+  { id        = 9340
+    name      = TECH_APP_AD_34_NAME
+    desc      = TECH_APP_AD_34_DESC
+    position  = { x = 140 y = 278 }
+    year      = 1943
+    # エースの戦闘経験
+    component = { id = 9341 name = TECH_CMP_AD_34_1_NAME type = piloting difficulty = 4 }
+    # 専門部隊
+    component = { id = 9342 name = TECH_CMP_AD_34_2_NAME type = aircraft_testing difficulty = 4 }
+    # 個別戦闘機
+    component = { id = 9343 name = TECH_CMP_AD_34_3_NAME type = aeronautics difficulty = 4 }
+    # 部隊の長期的団結力
+    component = { id = 9344 name = TECH_CMP_AD_34_4_NAME type = fighter_tactics difficulty = 4 }
+    # 教官交代制度
+    component = { id = 9345 name = TECH_CMP_AD_34_5_NAME type = aircraft_testing difficulty = 4 }
+    required  = { 9310 }
+    effects =
+    { command = { type = max_organization which = interceptor value = 5 }
+      command = { type = morale which = interceptor value = 5 }
+      command = { type = max_organization which = multi_role value = 5 }
+      command = { type = morale which = multi_role value = 5 }
+      command = { type = max_organization which = cag value = 5 }
+      command = { type = morale which = cag value = 5 }
+      command = { type = build_cost which = interceptor when = on_upgrade where = relative value = -10 }
+      command = { type = snow_attack which = interceptor value = 5 }
+      command = { type = rain_attack which = interceptor value = 5 }
+      command = { type = snow_attack which = multi_role value = 10 }
+      command = { type = rain_attack which = multi_role value = 10 }
+      command = { type = snow_attack which = cag value = 10 }
+      command = { type = rain_attack which = cag value = 10 }
+    }
+  }
+  # インフラ破壊ドクトリン
+  application =
+  { id        = 9350
+    name      = TECH_APP_AD_35_NAME
+    desc      = TECH_APP_AD_35_DESC
+    position  = { x = 220 y = 128 }
+    year      = 1941
+    # 精密爆撃の正確化
+    component = { id = 9351 name = TECH_CMP_AD_35_1_NAME type = aircraft_testing difficulty = 4 }
+    # 輸送中枢攻撃
+    component = { id = 9352 name = TECH_CMP_AD_35_2_NAME type = bomber_tactics difficulty = 4 }
+    # 空中散布地雷
+    component = { id = 9353 name = TECH_CMP_AD_35_3_NAME type = general_equipment difficulty = 4 }
+    # 大規模空爆作戦
+    component = { id = 9354 name = TECH_CMP_AD_35_4_NAME type = centralized_execution difficulty = 4 }
+    # 低空爆撃行
+    component = { id = 9355 name = TECH_CMP_AD_35_5_NAME type = aircraft_testing difficulty = 4 }
+    required  = { 9130 }
+    effects =
+    { command = { type = max_organization which = tactical_bomber value = 10 }
+      command = { type = morale which = tactical_bomber value = 10 }
+      command = { type = max_organization which = naval_bomber value = 10 }
+      command = { type = morale which = naval_bomber value = 10 }
+      command = { type = task_efficiency which = port_strike value = 0.5 }
+      command = { type = task_efficiency which = installation_strike value = 0.5 }
+      command = { type = task_efficiency which = runway_cratering value = 0.5 }
+    }
+  }
+  # 浸透爆撃ドクトリン
+  application =
+  { id        = 9360
+    name      = TECH_APP_AD_36_NAME
+    desc      = TECH_APP_AD_36_DESC
+    position  = { x = 222 y = 148 }
+    year      = 1942
+    # 電撃攻撃
+    component = { id = 9361 name = TECH_CMP_AD_36_1_NAME type = bomber_tactics difficulty = 4 }
+    # 精密航法機器
+    component = { id = 9362 name = TECH_CMP_AD_36_2_NAME type = electronics difficulty = 4 }
+    # 上級航法訓練
+    component = { id = 9363 name = TECH_CMP_AD_36_3_NAME type = aircraft_testing difficulty = 4 }
+    # 正確な任務遂行
+    component = { id = 9364 name = TECH_CMP_AD_36_4_NAME type = aircraft_testing difficulty = 4 }
+    # 低空レーダー回避
+    component = { id = 9365 name = TECH_CMP_AD_36_5_NAME type = aeronautics difficulty = 4 }
+    required  = { 9350 }
+    effects =
+    { command = { type = max_organization which = tactical_bomber value = 10 }
+      command = { type = morale which = tactical_bomber value = 10 }
+      command = { type = max_organization which = naval_bomber value = 10 }
+      command = { type = morale which = naval_bomber value = 10 }
+      command = { type = build_cost which = tactical_bomber when = on_upgrade where = relative value = -10 }
+      command = { type = build_cost which = naval_bomber when = on_upgrade where = relative value = -5 }
+      command = { type = task_efficiency which = airborne_assault value = 0.1 }
+    }
+  }
+  # 回転木馬爆撃ドクトリン
+  application =
+  { id        = 9370
+    name      = TECH_APP_AD_37_NAME
+    desc      = TECH_APP_AD_37_DESC
+    position  = { x = 222 y = 164 }
+    year      = 1942
+    # 大規模任務計画立案
+    component = { id = 9371 name = TECH_CMP_AD_37_1_NAME type = centralized_execution difficulty = 4 }
+    # 反復爆撃作戦
+    component = { id = 9372 name = TECH_CMP_AD_37_2_NAME type = aircraft_testing difficulty = 4 }
+    # 小型爆撃機攻撃
+    component = { id = 9373 name = TECH_CMP_AD_37_3_NAME type = bomber_tactics difficulty = 4 }
+    # 昼夜兼行爆撃思考
+    component = { id = 9374 name = TECH_CMP_AD_37_4_NAME type = piloting difficulty = 4 }
+    # 防空制圧
+    component = { id = 9375 name = TECH_CMP_AD_37_5_NAME type = aircraft_testing difficulty = 4 }
+    required  = { 9350 }
+    effects =
+    { command = { type = max_organization which = tactical_bomber value = 10 }
+      command = { type = morale which = tactical_bomber value = 10 }
+      command = { type = max_organization which = naval_bomber value = 10 }
+      command = { type = morale which = naval_bomber value = 10 }
+      command = { type = build_cost which = tactical_bomber when = on_upgrade where = relative value = -10 }
+      command = { type = build_cost which = naval_bomber when = on_upgrade where = relative value = -5 }
+      command = { type = task_efficiency which = airborne_assault value = 0.1 }
+    }
+  }
+  # 重点爆撃ドクトリン
+  application =
+  { id        = 9380
+    name      = TECH_APP_AD_38_NAME
+    desc      = TECH_APP_AD_38_DESC
+    position  = { x = 222 y = 180 }
+    year      = 1943
+    # 精密爆撃行
+    component = { id = 9381 name = TECH_CMP_AD_38_1_NAME type = aircraft_testing difficulty = 4 }
+    # 精密爆撃照準器
+    component = { id = 9382 name = TECH_CMP_AD_38_2_NAME type = mechanics difficulty = 4 }
+    # 深度貫通爆弾
+    component = { id = 9383 name = TECH_CMP_AD_38_3_NAME type = general_equipment difficulty = 4 }
+    # 一撃離脱思考
+    component = { id = 9384 name = TECH_CMP_AD_38_4_NAME type = piloting difficulty = 4 }
+    # 小規模爆撃行
+    component = { id = 9385 name = TECH_CMP_AD_38_5_NAME type = bomber_tactics difficulty = 4 }
+    required  = { 9350 }
+    effects =
+    { command = { type = max_organization which = tactical_bomber value = 10 }
+      command = { type = morale which = tactical_bomber value = 10 }
+      command = { type = max_organization which = naval_bomber value = 10 }
+      command = { type = morale which = naval_bomber value = 10 }
+      command = { type = build_cost which = tactical_bomber when = on_upgrade where = relative value = -10 }
+      command = { type = build_cost which = naval_bomber when = on_upgrade where = relative value = -5 }
+      command = { type = task_efficiency which = airborne_assault value = 0.1 }
+    }
+  }
+  # 箱型陣形戦闘機隊による防空ドクトリン
+  application =
+  { id        = 9390
+    name      = TECH_APP_AD_39_NAME
+    desc      = TECH_APP_AD_39_DESC
+    position  = { x = 398 y = 226 }
+    year      = 1942
+    # 空域内での戦闘機連携
+    component = { id = 9391 name = TECH_CMP_AD_39_1_NAME type = centralized_execution difficulty = 4 }
+    # 防衛戦闘機戦術
+    component = { id = 9392 name = TECH_CMP_AD_39_2_NAME type = fighter_tactics difficulty = 4 }
+    # 戦闘機と対空砲の連携
+    component = { id = 9393 name = TECH_CMP_AD_39_3_NAME type = aircraft_testing difficulty = 4 }
+    # 戦闘機集中
+    component = { id = 9394 name = TECH_CMP_AD_39_4_NAME type = fighter_tactics difficulty = 4 }
+    # 敵味方識別装置
+    component = { id = 9395 name = TECH_CMP_AD_39_5_NAME type = electronics difficulty = 4 }
+    required  = { 9240 9250 9260 }
+    effects =
+    { command = { type = max_organization which = interceptor value = 5 }
+      command = { type = morale which = interceptor value = 5 }
+      command = { type = max_organization which = multi_role value = 5 }
+      command = { type = morale which = multi_role value = 5 }
+      command = { type = max_organization which = cag value = 5 }
+      command = { type = morale which = cag value = 5 }
+    }
+  }
+  # 複数高度展開ドクトリン
+  application =
+  { id        = 9400
+    name      = TECH_APP_AD_40_NAME
+    desc      = TECH_APP_AD_40_DESC
+    position  = { x = 400 y = 246 }
+    year      = 1942
+    # 多層戦闘機防衛
+    component = { id = 9401 name = TECH_CMP_AD_40_1_NAME type = fighter_tactics difficulty = 4 }
+    # 大規模戦闘機掃討
+    component = { id = 9402 name = TECH_CMP_AD_40_2_NAME type = fighter_tactics difficulty = 4 }
+    # 大集団戦術
+    component = { id = 9403 name = TECH_CMP_AD_40_3_NAME type = aircraft_testing difficulty = 4 }
+    # 突破絶対阻止の思考
+    component = { id = 9404 name = TECH_CMP_AD_40_4_NAME type = piloting difficulty = 4 }
+    # 各作戦高度に適応した戦闘機
+    component = { id = 9405 name = TECH_CMP_AD_40_5_NAME type = aeronautics difficulty = 4 }
+    required  = { 9390 }
+    effects =
+    { command = { type = max_organization which = interceptor value = 5 }
+      command = { type = morale which = interceptor value = 5 }
+      command = { type = max_organization which = multi_role value = 5 }
+      command = { type = morale which = multi_role value = 5 }
+      command = { type = max_organization which = cag value = 5 }
+      command = { type = morale which = cag value = 5 }
+      command = { type = build_cost which = multi_role when = on_upgrade where = relative value = -10 }
+      command = { type = build_cost which = escort when = on_upgrade where = relative value = -5 }
+    }
+  }
+  # 防空情報選別システムドクトリン
+  application =
+  { id        = 9410
+    name      = TECH_APP_AD_41_NAME
+    desc      = TECH_APP_AD_41_DESC
+    position  = { x = 400 y = 262 }
+    year      = 1943
+    # 多層レーダー網
+    component = { id = 9411 name = TECH_CMP_AD_41_1_NAME type = electronics difficulty = 4 }
+    # 戦闘機軍団司令部
+    component = { id = 9412 name = TECH_CMP_AD_41_2_NAME type = centralized_execution difficulty = 4 }
+    # 多段階戦闘機防衛
+    component = { id = 9413 name = TECH_CMP_AD_41_3_NAME type = fighter_tactics difficulty = 4 }
+    # 部隊連携訓練
+    component = { id = 9414 name = TECH_CMP_AD_41_4_NAME type = aircraft_testing difficulty = 4 }
+    # 情報選別型通信網
+    component = { id = 9415 name = TECH_CMP_AD_41_5_NAME type = electronics difficulty = 4 }
+    required  = { 9390 }
+    effects =
+    { command = { type = max_organization which = interceptor value = 5 }
+      command = { type = morale which = interceptor value = 5 }
+      command = { type = max_organization which = multi_role value = 5 }
+      command = { type = morale which = multi_role value = 5 }
+      command = { type = max_organization which = cag value = 5 }
+      command = { type = morale which = cag value = 5 }
+      command = { type = build_cost which = multi_role when = on_upgrade where = relative value = -10 }
+      command = { type = build_cost which = escort when = on_upgrade where = relative value = -5 }
+    }
+  }
+  # 航空予備兵力ドクトリン
+  application =
+  { id        = 9420
+    name      = TECH_APP_AD_42_NAME
+    desc      = TECH_APP_AD_42_DESC
+    position  = { x = 400 y = 278 }
+    year      = 1943
+    # 警戒戦闘航空団
+    component = { id = 9421 name = TECH_CMP_AD_42_1_NAME type = aircraft_testing difficulty = 4 }
+    # 最終防衛思考
+    component = { id = 9422 name = TECH_CMP_AD_42_2_NAME type = piloting difficulty = 4 }
+    # ブースター付き離陸能力
+    component = { id = 9423 name = TECH_CMP_AD_42_3_NAME type = aeronautics difficulty = 4 }
+    # 迎撃訓練
+    component = { id = 9424 name = TECH_CMP_AD_42_4_NAME type = aircraft_testing difficulty = 4 }
+    # 戦闘航空団連携
+    component = { id = 9425 name = TECH_CMP_AD_42_5_NAME type = aircraft_testing difficulty = 4 }
+    required  = { 9390 }
+    effects =
+    { command = { type = max_organization which = interceptor value = 5 }
+      command = { type = morale which = interceptor value = 5 }
+      command = { type = max_organization which = multi_role value = 5 }
+      command = { type = morale which = multi_role value = 5 }
+      command = { type = max_organization which = cag value = 5 }
+      command = { type = morale which = cag value = 5 }
+      command = { type = build_cost which = multi_role when = on_upgrade where = relative value = -10 }
+      command = { type = build_cost which = escort when = on_upgrade where = relative value = -5 }
+    }
+  }
+  # 大量破壊ドクトリン
+  application =
+  { id        = 9430
+    name      = TECH_APP_AD_43_NAME
+    desc      = TECH_APP_AD_43_DESC
+    position  = { x = 392 y = 128 }
+    year      = 1942
+    # 部隊集結地域爆撃
+    component = { id = 9431 name = TECH_CMP_AD_43_1_NAME type = bomber_tactics difficulty = 4 }
+    # 大規模爆撃行連携
+    component = { id = 9432 name = TECH_CMP_AD_43_2_NAME type = bomber_tactics difficulty = 4 }
+    # 爆弾搭載量の増大
+    component = { id = 9433 name = TECH_CMP_AD_43_3_NAME type = aeronautics difficulty = 4 }
+    # 前線爆撃
+    component = { id = 9434 name = TECH_CMP_AD_43_4_NAME type = aircraft_testing difficulty = 4 }
+    # 爆撃機連携の中央化
+    component = { id = 9435 name = TECH_CMP_AD_43_5_NAME type = centralized_execution difficulty = 4 }
+    required  = { 9180 }
+    effects =
+    { command = { type = max_organization which = strategic_bomber value = 10 }
+      command = { type = morale which = strategic_bomber value = 10 }
+      command = { type = morale which = transport_plane value = 10 }
+    }
+  }
+  # 護衛中継システムドクトリン
+  application =
+  { id        = 9440
+    name      = TECH_APP_AD_44_NAME
+    desc      = TECH_APP_AD_44_DESC
+    position  = { x = 394 y = 148 }
+    year      = 1942
+    # 爆撃機護衛通信網
+    component = { id = 9441 name = TECH_CMP_AD_44_1_NAME type = electronics difficulty = 4 }
+    # 護衛交代訓練
+    component = { id = 9442 name = TECH_CMP_AD_44_2_NAME type = aircraft_testing difficulty = 4 }
+    # 制空戦術思考
+    component = { id = 9443 name = TECH_CMP_AD_44_3_NAME type = piloting difficulty = 4 }
+    # ボマーストリーム訓練
+    component = { id = 9444 name = TECH_CMP_AD_44_4_NAME type = aircraft_testing difficulty = 4 }
+    # 大量爆撃機戦術
+    component = { id = 9445 name = TECH_CMP_AD_44_5_NAME type = bomber_tactics difficulty = 4 }
+    required  = { 9430 }
+    effects =
+    { command = { type = max_organization which = strategic_bomber value = 10 }
+      command = { type = morale which = strategic_bomber value = 10 }
+      command = { type = morale which = transport_plane value = 10 }
+      command = { type = build_cost which = strategic_bomber when = on_upgrade where = relative value = -10 }
+      command = { type = build_cost which = escort when = on_upgrade where = relative value = -10 }
+    }
+  }
+  # 絨毯爆撃ドクトリン
+  application =
+  { id        = 9450
+    name      = TECH_APP_AD_45_NAME
+    desc      = TECH_APP_AD_45_DESC
+    position  = { x = 394 y = 164 }
+    year      = 1942
+    # ボマーストリーム戦術
+    component = { id = 9451 name = TECH_CMP_AD_45_1_NAME type = bomber_tactics difficulty = 4 }
+    # 大規模爆撃行
+    component = { id = 9452 name = TECH_CMP_AD_45_2_NAME type = bomber_tactics difficulty = 4 }
+    # 地域絨毯爆撃
+    component = { id = 9453 name = TECH_CMP_AD_45_3_NAME type = aircraft_testing difficulty = 4 }
+    # 大規模部隊訓練
+    component = { id = 9454 name = TECH_CMP_AD_45_4_NAME type = aircraft_testing difficulty = 4 }
+    # 爆撃機間防御連携の高度化
+    component = { id = 9455 name = TECH_CMP_AD_45_5_NAME type = piloting difficulty = 4 }
+    required  = { 9430 }
+    effects =
+    { command = { type = max_organization which = strategic_bomber value = 10 }
+      command = { type = morale which = strategic_bomber value = 10 }
+      command = { type = morale which = transport_plane value = 10 }
+      command = { type = build_cost which = strategic_bomber when = on_upgrade where = relative value = -10 }
+    }
+  }
+  # 航空無敵艦隊ドクトリン
+  application =
+  { id        = 9460
+    name      = TECH_APP_AD_46_NAME
+    desc      = TECH_APP_AD_46_DESC
+    position  = { x = 394 y = 180 }
+    year      = 1943
+    # 絶対的優位思考
+    component = { id = 9461 name = TECH_CMP_AD_46_1_NAME type = piloting difficulty = 4 }
+    # 大量防御武装
+    component = { id = 9462 name = TECH_CMP_AD_46_2_NAME type = artillery difficulty = 4 }
+    # 大規模爆撃作戦
+    component = { id = 9463 name = TECH_CMP_AD_46_3_NAME type = bomber_tactics difficulty = 4 }
+    # ボマーストリーム戦術の高度化
+    component = { id = 9464 name = TECH_CMP_AD_46_4_NAME type = bomber_tactics difficulty = 4 }
+    # 爆撃集団司令部
+    component = { id = 9465 name = TECH_CMP_AD_46_5_NAME type = centralized_execution difficulty = 4 }
+    required  = { 9430 }
+    effects =
+    { command = { type = max_organization which = strategic_bomber value = 10 }
+      command = { type = morale which = strategic_bomber value = 10 }
+      command = { type = morale which = transport_plane value = 10 }
+      command = { type = build_cost which = strategic_bomber when = on_upgrade where = relative value = -10 }
+    }
+  }
+  # 一体化攻勢ドクトリン
+  application =
+  { id        = 17000
+    name      = TECH_APP_AD_100_NAME
+    desc      = TECH_APP_AD_100_DESC
+    position  = { x = 394 y = 196 }
+    year      = 1947
+    # 共同プロッティング
+    component = { id = 17001 name = TECH_CMP_AD_100_1_NAME type = piloting difficulty = 4 }
+    # 共同プロッティング訓練
+    component = { id = 17002 name = TECH_CMP_AD_100_2_NAME type = training difficulty = 4 }
+    # 戦闘機爆撃機連合戦術
+    component = { id = 17003 name = TECH_CMP_AD_100_3_NAME type = bomber_tactics difficulty = 4 }
+    # 戦闘機爆撃機連合戦術
+    component = { id = 17004 name = TECH_CMP_AD_100_4_NAME type = fighter_tactics difficulty = 4 }
+    # 中央指揮権
+    component = { id = 17005 name = TECH_CMP_AD_100_5_NAME type = centralized_execution difficulty = 4 }
+    required  = { 9460 }
+    effects =
+    { command = { type = max_organization which = strategic_bomber value = 10 }
+      command = { type = morale which = strategic_bomber value = 10 }
+    }
+  }
+  # 戦域体制ドクトリン
+  application =
+  { id        = 17010
+    name      = TECH_APP_AD_101_NAME
+    desc      = TECH_APP_AD_101_DESC
+    position  = { x = 222 y = 196 }
+    year      = 1947
+    # 接近プロッティング
+    component = { id = 17011 name = TECH_CMP_AD_101_1_NAME type = piloting difficulty = 4 }
+    # 爆撃効率
+    component = { id = 17012 name = TECH_CMP_AD_101_2_NAME type = artillery difficulty = 4 }
+    # 固定目標照準技術
+    component = { id = 17013 name = TECH_CMP_AD_101_3_NAME type = bomber_tactics difficulty = 4 }
+    # 修正爆撃戦術（空母）
+    component = { id = 17014 name = TECH_CMP_AD_101_4_NAME type = carrier_tactics difficulty = 4 }
+    # 作戦指揮所
+    component = { id = 17015 name = TECH_CMP_AD_101_5_NAME type = centralized_execution difficulty = 4 }
+    required  = { 9380 }
+    effects =
+    { command = { type = task_efficiency which = ground_attack value = 0.1 }
+      command = { type = task_efficiency which = interdiction value = 0.1 }
+      command = { type = task_efficiency which = naval_strike value = 0.1 }
+      command = { type = task_efficiency which = convoy_air_raiding value = 0.1 }
+      command = { type = task_efficiency which = logistical_strike value = 0.1 }
+      command = { type = task_efficiency which = strategic_bombardment value = 0.1 }
+      command = { type = task_efficiency which = port_strike value = 0.1 }
+      command = { type = task_efficiency which = installation_strike value = 0.1 }
+      command = { type = task_efficiency which = runway_cratering value = 0.1 }
+      command = { type = task_efficiency which = airborne_assault value = 0.1 }
+    }
+  }
+  # 現代型空戦理論
+  application =
+  { id        = 27000
+    name      = TECH_APP_AD_50_NAME
+    position  = { x = 554 y = 92 }
+    picture   = "DH27000"
+    year      = 1947
+    # 戦闘エース経験
+    component = { id = 27001 name = TECH_CMP_AD_50_1_NAME type = piloting difficulty = 4 }
+    # 海軍航空理論
+    component = { id = 27002 name = TECH_CMP_AD_50_2_NAME type = carrier_tactics difficulty = 4 }
+    # 爆撃損害評価
+    component = { id = 27003 name = TECH_CMP_AD_50_3_NAME type = bomber_tactics difficulty = 4 }
+    # 戦闘機戦術経験
+    component = { id = 27004 name = TECH_CMP_AD_50_4_NAME type = fighter_tactics difficulty = 4 }
+    # 中央戦域司令
+    component = { id = 27005 name = TECH_CMP_AD_50_5_NAME type = centralized_execution difficulty = 4 }
+    required  = { 9380 9420 }
+    or_required = { 17010 17000 }
+    effects =
+    { command = { }
+    }
+  }
+  # 防衛的航空優勢
+  application =
+  { id        = 27010
+    name      = TECH_APP_AD_51_NAME
+    position  = { x = 572 y = 370 }
+    picture   = "DH27010"
+    year      = 1947
+    # 本土防衛の意欲
+    component = { id = 27011 name = TECH_CMP_AD_51_1_NAME type = piloting difficulty = 4 }
+    # 初期型冷戦期迎撃戦術
+    component = { id = 27012 name = TECH_CMP_AD_51_2_NAME type = fighter_tactics difficulty = 4 }
+    # 迎撃機最適化
+    component = { id = 27013 name = TECH_CMP_AD_51_3_NAME type = aircraft_testing difficulty = 4 }
+    # 小規模部隊訓練
+    component = { id = 27014 name = TECH_CMP_AD_51_4_NAME type = fighter_tactics difficulty = 4 }
+    # 航空優勢の精神
+    component = { id = 27015 name = TECH_CMP_AD_51_5_NAME type = piloting difficulty = 4 }
+    required  = { 27000 }
+    effects =
+    { command = { type = deactivate which = 27070 }
+      command = { type = max_organization which = air value = 2 }
+      command = { type = morale which = interceptor value = 5 }
+      command = { type = aa_batteries value = 5 }
+      command = { type = task_efficiency which = air_scramble value = 0.25 }
+    }
+  }
+  # 迎撃機重視
+  application =
+  { id        = 27020
+    name      = TECH_APP_AD_52_NAME
+    position  = { x = 572 y = 387 }
+    picture   = "DH27020"
+    year      = 1949
+    # 初期型冷戦期迎撃機戦術
+    component = { id = 27021 name = TECH_CMP_AD_52_1_NAME type = fighter_tactics difficulty = 5 }
+    # 初期型冷戦期空戦訓練
+    component = { id = 27022 name = TECH_CMP_AD_52_2_NAME type = piloting difficulty = 5 }
+    # 最適化された迎撃機システム
+    component = { id = 27023 name = TECH_CMP_AD_52_3_NAME type = aircraft_testing difficulty = 5 }
+    # 航空戦隊連携
+    component = { id = 27024 name = TECH_CMP_AD_52_4_NAME type = aircraft_testing difficulty = 5 }
+    # 初期型爆撃機迎撃任務戦術
+    component = { id = 27025 name = TECH_CMP_AD_52_5_NAME type = fighter_tactics difficulty = 5 }
+    required  = { 27010 }
+    effects =
+    { command = { type = max_organization which = interceptor value = 5 }
+      command = { type = morale which = interceptor value = 5 }
+    }
+  }
+  # 対空砲支援
+  application =
+  { id        = 27030
+    name      = TECH_APP_AD_53_NAME
+    position  = { x = 572 y = 404 }
+    picture   = "DH27030"
+    year      = 1951
+    # 改良型対空砲銃座
+    component = { id = 27031 name = TECH_CMP_AD_53_1_NAME type = mechanics difficulty = 7 }
+    # 対空砲/迎撃機通信
+    component = { id = 27032 name = TECH_CMP_AD_53_2_NAME type = electronics difficulty = 7 }
+    # 対空砲/迎撃機連携
+    component = { id = 27033 name = TECH_CMP_AD_53_3_NAME type = piloting difficulty = 7 }
+    # 改良型標的追尾
+    component = { id = 27034 name = TECH_CMP_AD_53_4_NAME type = aircraft_testing difficulty = 7 }
+    # 友軍誤射予防
+    component = { id = 27035 name = TECH_CMP_AD_53_5_NAME type = fighter_tactics difficulty = 7 }
+    required  = { 27020 }
+    effects =
+    { command = { type = max_organization which = interceptor value = 5 }
+      command = { type = morale which = interceptor value = 5 }
+      command = { type = building_prod_mod which = flak value = 50 }
+    }
+  }
+  # 常時待機ドクトリン
+  application =
+  { id        = 27040
+    name      = TECH_APP_AD_54_NAME
+    position  = { x = 572 y = 421 }
+    picture   = "DH27040"
+    year      = 1953
+    # 改良型空陸共同
+    component = { id = 27041 name = TECH_CMP_AD_54_1_NAME type = centralized_execution difficulty = 7 }
+    # 改良型空陸連携
+    component = { id = 27042 name = TECH_CMP_AD_54_2_NAME type = combined_arms_focus difficulty = 7 }
+    # 時限計画目標
+    component = { id = 27043 name = TECH_CMP_AD_54_3_NAME type = fighter_tactics difficulty = 7 }
+    # 改良型ブリーフィング手法
+    component = { id = 27044 name = TECH_CMP_AD_54_4_NAME type = piloting difficulty = 7 }
+    # 改良型任務準備
+    component = { id = 27045 name = TECH_CMP_AD_54_5_NAME type = fighter_tactics difficulty = 7 }
+    required  = { 27030 }
+    effects =
+    { command = { type = max_organization which = interceptor value = 2 }
+      command = { type = morale which = interceptor value = 3 }
+      command = { type = aa_batteries value = 5 }
+    }
+  }
+  # 集中的な空中監視
+  application =
+  { id        = 27050
+    name      = TECH_APP_AD_55_NAME
+    position  = { x = 572 y = 438 }
+    picture   = "DH27050"
+    year      = 1956
+    # 改良型レーダーと通信機器
+    component = { id = 27051 name = TECH_CMP_AD_55_1_NAME type = technical_efficiency difficulty = 8 }
+    # 防衛的巡回隊
+    component = { id = 27052 name = TECH_CMP_AD_55_2_NAME type = decentralized_execution difficulty = 7 }
+    # 夜間監視
+    component = { id = 27053 name = TECH_CMP_AD_55_3_NAME type = aircraft_testing difficulty = 7 }
+    # 全天候訓練
+    component = { id = 27054 name = TECH_CMP_AD_55_4_NAME type = aircraft_testing difficulty = 7 }
+    # 迅速対応訓練
+    component = { id = 27055 name = TECH_CMP_AD_55_5_NAME type = piloting difficulty = 10 }
+    required  = { 27040 }
+    effects =
+    { command = { type = night_attack which = interceptor value = 15 }
+      command = { type = night_defense which = interceptor value = 15 }
+      command = { type = rain_attack which = interceptor value = 10 }
+      command = { type = rain_defense which = interceptor value = 10 }
+      command = { type = snow_attack which = interceptor value = 10 }
+      command = { type = snow_defense which = interceptor value = 10 }
+      command = { type = storm_attack which = interceptor value = 10 }
+      command = { type = storm_defense which = interceptor value = 10 }
+      command = { type = max_organization which = interceptor value = 2 }
+      command = { type = morale which = interceptor value = 5 }
+    }
+  }
+  # 敵空軍消耗
+  application =
+  { id        = 27060
+    name      = TECH_APP_AD_56_NAME
+    position  = { x = 572 y = 455 }
+    picture   = "DH27060"
+    year      = 1959
+    # 多航空隊連携
+    component = { id = 27061 name = TECH_CMP_AD_56_1_NAME type = aircraft_testing difficulty = 9 }
+    # 高速爆撃機中和化
+    component = { id = 27062 name = TECH_CMP_AD_56_2_NAME type = fighter_tactics difficulty = 9 }
+    # 厳密な責任
+    component = { id = 27063 name = TECH_CMP_AD_56_3_NAME type = centralized_execution difficulty = 7 }
+    # 発展型迎撃任務訓練
+    component = { id = 27064 name = TECH_CMP_AD_56_4_NAME type = piloting difficulty = 9 }
+    # 航空機破壊重視
+    component = { id = 27065 name = TECH_CMP_AD_56_5_NAME type = fighter_tactics difficulty = 8 }
+    required  = { 27050 }
+    effects =
+    { command = { type = morale which = air value = 5 }
+      command = { type = max_organization which = air value = 5 }
+    }
+  }
+  # 攻撃的航空優勢
+  application =
+  { id        = 27070
+    name      = TECH_APP_AD_57_NAME
+    position  = { x = 460 y = 370 }
+    picture   = "DH27070"
+    year      = 1947
+    # 戦術部隊-航空隊
+    component = { id = 27071 name = TECH_CMP_AD_57_1_NAME type = aircraft_testing difficulty = 5 }
+    # 初期型冷戦期戦闘機戦術
+    component = { id = 27072 name = TECH_CMP_AD_57_2_NAME type = fighter_tactics difficulty = 5 }
+    # 戦闘機特殊化
+    component = { id = 27073 name = TECH_CMP_AD_57_3_NAME type = aircraft_testing difficulty = 5 }
+    # 攻撃的任務訓練
+    component = { id = 27074 name = TECH_CMP_AD_57_4_NAME type = piloting difficulty = 5 }
+    # 航空優勢の精神
+    component = { id = 27075 name = TECH_CMP_AD_57_5_NAME type = piloting difficulty = 5 }
+    required  = { 27000 }
+    effects =
+    { command = { type = deactivate which = 27010 }
+      command = { type = max_organization which = multi_role value = 10 }
+      command = { type = morale which = air value = 2 }
+      command = { type = task_efficiency which = air_superiority value = 0.25 }
+    }
+  }
+  # 戦闘機重視
+  application =
+  { id        = 27080
+    name      = TECH_APP_AD_58_NAME
+    position  = { x = 460 y = 387 }
+    picture   = "DH27080"
+    year      = 1949
+    # 初期型戦闘機戦術
+    component = { id = 27081 name = TECH_CMP_AD_58_1_NAME type = fighter_tactics difficulty = 5 }
+    # 初期型冷戦期空戦訓練
+    component = { id = 27082 name = TECH_CMP_AD_58_2_NAME type = piloting difficulty = 5 }
+    # 最適化された戦闘機システム
+    component = { id = 27083 name = TECH_CMP_AD_58_3_NAME type = aircraft_testing difficulty = 5 }
+    # 長距離航空機
+    component = { id = 27084 name = TECH_CMP_AD_58_4_NAME type = aircraft_testing difficulty = 5 }
+    # 初期型対迎撃機戦術
+    component = { id = 27085 name = TECH_CMP_AD_58_5_NAME type = fighter_tactics difficulty = 5 }
+    required  = { 27070 }
+    effects =
+    { command = { type = task_efficiency which = ground_attack value = 0.1 }
+      command = { type = task_efficiency which = interdiction value = 0.1 }
+      command = { type = max_organization which = multi_role value = 5 }
+      command = { type = morale which = multi_role value = 5 }
+    }
+  }
+  # 事前計画航空作戦
+  application =
+  { id        = 27090
+    name      = TECH_APP_AD_59_NAME
+    position  = { x = 460 y = 404 }
+    picture   = "DH27090"
+    year      = 1951
+    # 中央戦闘機司令
+    component = { id = 27091 name = TECH_CMP_AD_59_1_NAME type = centralized_execution difficulty = 5 }
+    # 諜報活動用航空機
+    component = { id = 27092 name = TECH_CMP_AD_59_2_NAME type = fighter_tactics difficulty = 5 }
+    # 目標選択
+    component = { id = 27093 name = TECH_CMP_AD_59_3_NAME type = aircraft_testing difficulty = 5 }
+    # 任務ブリーフィング
+    component = { id = 27094 name = TECH_CMP_AD_59_4_NAME type = piloting difficulty = 5 }
+    # 任務準備
+    component = { id = 27095 name = TECH_CMP_AD_59_5_NAME type = aircraft_testing difficulty = 6 }
+    required  = { 27080 }
+    effects =
+    { command = { type = max_organization which = multi_role value = 5 }
+      command = { type = morale which = multi_role value = 5 }
+    }
+  }
+  # 迅速航空優勢
+  application =
+  { id        = 27100
+    name      = TECH_APP_AD_60_NAME
+    position  = { x = 460 y = 421 }
+    picture   = "17000"
+    year      = 1953
+    # 改良型搭載型レーダー装置
+    component = { id = 27101 name = TECH_CMP_AD_60_1_NAME type = technical_efficiency difficulty = 5 }
+    # 個別標的追尾
+    component = { id = 27102 name = TECH_CMP_AD_60_2_NAME type = individual_courage difficulty = 5 }
+    # 戦闘機幻惑戦術
+    component = { id = 27103 name = TECH_CMP_AD_60_3_NAME type = fighter_tactics difficulty = 5 }
+    # 集中的空戦訓練
+    component = { id = 27104 name = TECH_CMP_AD_60_4_NAME type = piloting difficulty = 5 }
+    # 迎撃機破壊
+    component = { id = 27105 name = TECH_CMP_AD_60_5_NAME type = fighter_tactics difficulty = 5 }
+    required  = { 27090 }
+    effects =
+    { command = { type = max_organization which = multi_role value = 10 }
+    }
+  }
+  # 悪天候下戦闘
+  application =
+  { id        = 27110
+    name      = TECH_APP_AD_61_NAME
+    position  = { x = 460 y = 438 }
+    picture   = "DH27110"
+    year      = 1956
+    # 現代型搭載計器
+    component = { id = 27111 name = TECH_CMP_AD_61_1_NAME type = technical_efficiency difficulty = 6 }
+    # 悪天候飛行試験
+    component = { id = 27112 name = TECH_CMP_AD_61_2_NAME type = piloting difficulty = 6 }
+    # 集中訓練
+    component = { id = 27113 name = TECH_CMP_AD_61_3_NAME type = piloting difficulty = 6 }
+    # 防水航空機設計
+    component = { id = 27114 name = TECH_CMP_AD_61_4_NAME type = aeronautics difficulty = 6 }
+    # 現代型通信
+    component = { id = 27115 name = TECH_CMP_AD_61_5_NAME type = technical_efficiency difficulty = 6 }
+    required  = { 27100 }
+    effects =
+    { command = { type = night_attack which = multi_role value = 15 }
+      command = { type = night_defense which = multi_role value = 15 }
+      command = { type = rain_attack which = multi_role value = 10 }
+      command = { type = rain_defense which = multi_role value = 10 }
+      command = { type = snow_attack which = multi_role value = 10 }
+      command = { type = snow_defense which = multi_role value = 10 }
+      command = { type = storm_attack which = multi_role value = 10 }
+      command = { type = storm_defense which = multi_role value = 10 }
+      command = { type = blizzard_attack which = multi_role value = 10 }
+      command = { type = blizzard_defense which = multi_role value = 10 }
+      command = { type = morale which = multi_role value = 5 }
+      command = { type = max_organization which = multi_role value = 5 }
+    }
+  }
+  # 先制攻撃ドクトリン
+  application =
+  { id        = 27120
+    name      = TECH_APP_AD_62_NAME
+    position  = { x = 460 y = 455 }
+    picture   = "DH27120"
+    year      = 1959
+    # 発展型諜報活動
+    component = { id = 27121 name = TECH_CMP_AD_62_1_NAME type = individual_courage difficulty = 8 }
+    # 対レーダー航空機設計
+    component = { id = 27122 name = TECH_CMP_AD_62_2_NAME type = aircraft_testing difficulty = 7 }
+    # 敵滑走路破壊
+    component = { id = 27123 name = TECH_CMP_AD_62_3_NAME type = fighter_tactics difficulty = 7 }
+    # 敵航空防衛制圧
+    component = { id = 27124 name = TECH_CMP_AD_62_4_NAME type = fighter_tactics difficulty = 7 }
+    # 低高度接近訓練
+    component = { id = 27125 name = TECH_CMP_AD_62_5_NAME type = piloting difficulty = 8 }
+    required  = { 27110 }
+    effects =
+    { command = { type = task_efficiency which = ground_attack value = 0.1 }
+      command = { type = task_efficiency which = interdiction value = 0.1 }
+      command = { type = task_efficiency which = naval_strike value = 0.1 }
+      command = { type = task_efficiency which = logistical_strike value = 0.2 }
+      command = { type = task_efficiency which = strategic_bombardment value = 0.1 }
+      command = { type = task_efficiency which = port_strike value = 0.15 }
+      command = { type = task_efficiency which = installation_strike value = 0.2 }
+      command = { type = task_efficiency which = runway_cratering value = 0.3 }
+    }
+  }
+  # 弾力的対応ドクトリン
+  application =
+  { id        = 27130
+    name      = TECH_APP_AD_63_NAME
+    position  = { x = 516 y = 472 }
+    picture   = "DH27130"
+    year      = 1961
+    # 空軍徴募
+    component = { id = 27131 name = TECH_CMP_AD_63_1_NAME type = management difficulty = 9 }
+    # 縦深航空防御
+    component = { id = 27132 name = TECH_CMP_AD_63_2_NAME type = fighter_tactics difficulty = 9 }
+    # 報復的攻撃計画
+    component = { id = 27133 name = TECH_CMP_AD_63_3_NAME type = bomber_tactics difficulty = 9 }
+    # ミサイル対応
+    component = { id = 27134 name = TECH_CMP_AD_63_4_NAME type = decentralized_execution difficulty = 9 }
+    # 軍種間連携
+    component = { id = 27135 name = TECH_CMP_AD_63_5_NAME type = centralized_execution difficulty = 9 }
+    required  = { }
+    or_required = { 27060 27120 }
+    effects =
+    { command = { type = max_organization which = multi_role value = 5 }
+      command = { type = morale which = multi_role value = 15 }
+      command = { type = task_efficiency which = logistical_strike value = 0.1 }
+      command = { type = task_efficiency which = strategic_bombardment value = 0.1 }
+      command = { type = task_efficiency which = port_strike value = 0.1 }
+      command = { type = task_efficiency which = installation_strike value = 0.1 }
+      command = { type = task_efficiency which = runway_cratering value = 0.1 }
+    }
+  }
+  # 大型標的破壊優先
+  application =
+  { id        = 27140
+    name      = TECH_APP_AD_64_NAME
+    position  = { x = 231 y = 370 }
+    picture   = "DH27140"
+    year      = 1948
+    # 深部カバーする諜報活動
+    component = { id = 27141 name = TECH_CMP_AD_64_1_NAME type = individual_courage difficulty = 5 }
+    # 中型爆撃機設計経験
+    component = { id = 27142 name = TECH_CMP_AD_64_2_NAME type = aircraft_testing difficulty = 5 }
+    # 中距離爆撃機経験
+    component = { id = 27143 name = TECH_CMP_AD_64_3_NAME type = piloting difficulty = 5 }
+    # 大型兵器破壊優先
+    component = { id = 27144 name = TECH_CMP_AD_64_4_NAME type = bomber_tactics difficulty = 5 }
+    # 兵站破壊優先
+    component = { id = 27145 name = TECH_CMP_AD_64_5_NAME type = centralized_execution difficulty = 5 }
+    required  = { 27000 }
+    effects =
+    { command = { type = deactivate which = 27210 }
+      command = { type = task_efficiency which = interdiction value = 0.1 }
+      command = { type = max_organization which = tactical_bomber value = 5 }
+      command = { type = morale which = tactical_bomber value = 5 }
+    }
+  }
+  # 戦術爆撃機重視
+  application =
+  { id        = 27150
+    name      = TECH_APP_AD_65_NAME
+    position  = { x = 231 y = 387 }
+    picture   = "2510"
+    year      = 1950
+    # 初期型中距離爆撃機-活用
+    component = { id = 27151 name = TECH_CMP_AD_65_1_NAME type = aircraft_testing difficulty = 5 }
+    # 地上攻撃任務
+    component = { id = 27152 name = TECH_CMP_AD_65_2_NAME type = aircraft_testing difficulty = 5 }
+    # 兵站攻撃
+    component = { id = 27153 name = TECH_CMP_AD_65_3_NAME type = centralized_execution difficulty = 5 }
+    # 下級地上軍支援
+    component = { id = 27154 name = TECH_CMP_AD_65_4_NAME type = combined_arms_focus difficulty = 5 }
+    # 事前計画任務
+    component = { id = 27155 name = TECH_CMP_AD_65_5_NAME type = centralized_execution difficulty = 5 }
+    required  = { 27140 }
+    effects =
+    { command = { type = max_organization which = tactical_bomber value = 5 }
+      command = { type = morale which = tactical_bomber value = 5 }
+    }
+  }
+  # 戦車破壊ドクトリン
+  application =
+  { id        = 27160
+    name      = TECH_APP_AD_66_NAME
+    position  = { x = 231 y = 404 }
+    picture   = "DH27160"
+    year      = 1952
+    # 初期型ミサイル防衛回避
+    component = { id = 27161 name = TECH_CMP_AD_66_1_NAME type = piloting difficulty = 5 }
+    # 精密な爆撃と離脱
+    component = { id = 27162 name = TECH_CMP_AD_66_2_NAME type = aircraft_testing difficulty = 5 }
+    # 戦車優先爆撃と離脱
+    component = { id = 27163 name = TECH_CMP_AD_66_3_NAME type = bomber_tactics difficulty = 5 }
+    # 標的接近訓練
+    component = { id = 27164 name = TECH_CMP_AD_66_4_NAME type = piloting difficulty = 5 }
+    # 偶発的目標選択
+    component = { id = 27165 name = TECH_CMP_AD_66_5_NAME type = decentralized_execution difficulty = 5 }
+    required  = { 27150 }
+    effects =
+    { command = { type = max_organization which = tactical_bomber value = 5 }
+      command = { type = morale which = tactical_bomber value = 5 }
+    }
+  }
+  # 現代型インフラ破壊ドクトリン
+  application =
+  { id        = 27170
+    name      = TECH_APP_AD_67_NAME
+    position  = { x = 231 y = 421 }
+    picture   = "DH27170"
+    year      = 1952
+    # 長距離戦闘迎撃機
+    component = { id = 27171 name = TECH_CMP_AD_67_1_NAME type = fighter_tactics difficulty = 5 }
+    # 地上レーダー回避
+    component = { id = 27172 name = TECH_CMP_AD_67_2_NAME type = aircraft_testing difficulty = 5 }
+    # 深部攻撃原理
+    component = { id = 27173 name = TECH_CMP_AD_67_3_NAME type = bomber_tactics difficulty = 5 }
+    # 迎撃機回避
+    component = { id = 27174 name = TECH_CMP_AD_67_4_NAME type = piloting difficulty = 5 }
+    # 高々度偵察任務
+    component = { id = 27175 name = TECH_CMP_AD_67_5_NAME type = aircraft_testing difficulty = 5 }
+    required  = { 27160 }
+    effects =
+    { command = { type = max_organization which = tactical_bomber value = 5 }
+      command = { type = morale which = tactical_bomber value = 5 }
+    }
+  }
+  # 空対艦ミサイル重視
+  application =
+  { id        = 27180
+    name      = TECH_APP_AD_68_NAME
+    position  = { x = 231 y = 438 }
+    picture   = "DH27180"
+    year      = 1957
+    # 改良型ミサイル防衛回避
+    component = { id = 27181 name = TECH_CMP_AD_68_1_NAME type = piloting difficulty = 6 }
+    # 初期型深部攻撃戦術
+    component = { id = 27182 name = TECH_CMP_AD_68_2_NAME type = bomber_tactics difficulty = 6 }
+    # 初期型深部攻撃訓練
+    component = { id = 27183 name = TECH_CMP_AD_68_3_NAME type = piloting difficulty = 6 }
+    # 操縦席ミサイル制御後発射
+    component = { id = 27184 name = TECH_CMP_AD_68_4_NAME type = aircraft_testing difficulty = 6 }
+    # 目標選択
+    component = { id = 27185 name = TECH_CMP_AD_68_5_NAME type = centralized_execution difficulty = 6 }
+    required  = { }
+    or_required = { 27170 27260 }
+    effects =
+    { command = { type = max_organization which = tactical_bomber value = 5 }
+      command = { type = morale which = tactical_bomber value = 5 }
+    }
+  }
+  # 精密誘導兵器重視
+  application =
+  { id        = 27190
+    name      = TECH_APP_AD_69_NAME
+    position  = { x = 231 y = 455 }
+    picture   = "DH27190"
+    year      = 1959
+    # 精密ミサイル誘導
+    component = { id = 27191 name = TECH_CMP_AD_69_1_NAME type = electronics difficulty = 6 }
+    # 発展型深部攻撃戦術
+    component = { id = 27192 name = TECH_CMP_AD_69_2_NAME type = bomber_tactics difficulty = 6 }
+    # 発展型深部攻撃訓練
+    component = { id = 27193 name = TECH_CMP_AD_69_3_NAME type = piloting difficulty = 6 }
+    # スタンドオフミサイル発射
+    component = { id = 27194 name = TECH_CMP_AD_69_4_NAME type = aircraft_testing difficulty = 6 }
+    # 発展型損害評価
+    component = { id = 27195 name = TECH_CMP_AD_69_5_NAME type = centralized_execution difficulty = 6 }
+    required  = { 27180 }
+    effects =
+    { command = { type = task_efficiency which = logistical_strike value = 0.1 }
+      command = { type = task_efficiency which = naval_strike value = 0.1 }
+      command = { type = max_organization which = tactical_bomber value = 5 }
+      command = { type = morale which = tactical_bomber value = 5 }
+    }
+  }
+  # 現代型砂漠作戦
+  application =
+  { id        = 27200
+    name      = TECH_APP_AD_70_NAME
+    position  = { x = 231 y = 472 }
+    picture   = "DH27200"
+    year      = 1964
+    # 砂漠用兵器最適化
+    component = { id = 27201 name = TECH_CMP_AD_70_1_NAME type = general_equipment difficulty = 6 }
+    # 精密な深部攻撃戦術
+    component = { id = 27202 name = TECH_CMP_AD_70_2_NAME type = bomber_tactics difficulty = 6 }
+    # 精密な深部攻撃訓練
+    component = { id = 27203 name = TECH_CMP_AD_70_3_NAME type = piloting difficulty = 6 }
+    # 現代型航空機待機
+    component = { id = 27204 name = TECH_CMP_AD_70_4_NAME type = aircraft_testing difficulty = 6 }
+    # 精密な深部攻撃計画
+    component = { id = 27205 name = TECH_CMP_AD_70_5_NAME type = centralized_execution difficulty = 6 }
+    required  = { 27190 }
+    effects =
+    { command = { type = max_organization which = tactical_bomber value = 5 }
+      command = { type = desert_attack which = tactical_bomber value = 10 }
+      command = { type = desert_attack which = cas value = 10 }
+      command = { type = hill_attack which = tactical_bomber value = 10 }
+      command = { type = mountain_attack which = tactical_bomber value = 10 }
+    }
+  }
+  # 歩兵破壊重視
+  application =
+  { id        = 27210
+    name      = TECH_APP_AD_71_NAME
+    position  = { x = 343 y = 370 }
+    picture   = "DH27210"
+    year      = 1948
+    # 地上/航空連携
+    component = { id = 27211 name = TECH_CMP_AD_71_1_NAME type = combined_arms_focus difficulty = 5 }
+    # 地上/航空通信
+    component = { id = 27212 name = TECH_CMP_AD_71_2_NAME type = aircraft_testing difficulty = 5 }
+    # 地上/航空連携
+    component = { id = 27213 name = TECH_CMP_AD_71_3_NAME type = piloting difficulty = 5 }
+    # 間断のない爆撃
+    component = { id = 27214 name = TECH_CMP_AD_71_4_NAME type = bomber_tactics difficulty = 5 }
+    # 地上支援優先
+    component = { id = 27215 name = TECH_CMP_AD_71_5_NAME type = centralized_execution difficulty = 5 }
+    required  = { 27000 }
+    effects =
+    { command = { type = deactivate which = 27140 }
+      command = { type = task_efficiency which = ground_attack value = 0.1 }
+      command = { type = max_organization which = cas value = 5 }
+      command = { type = morale which = cas value = 5 }
+    }
+  }
+  # 戦闘航空支援重視
+  application =
+  { id        = 27220
+    name      = TECH_APP_AD_72_NAME
+    position  = { x = 343 y = 387 }
+    picture   = "DH27220"
+    year      = 1950
+    # 近接航空支援機活用
+    component = { id = 27221 name = TECH_CMP_AD_72_1_NAME type = aircraft_testing difficulty = 5 }
+    # 迅速対応地上支援ドクトリン
+    component = { id = 27222 name = TECH_CMP_AD_72_2_NAME type = bomber_tactics difficulty = 5 }
+    # 阻止攻撃任務
+    component = { id = 27223 name = TECH_CMP_AD_72_3_NAME type = centralized_execution difficulty = 5 }
+    # 地上支援優先
+    component = { id = 27224 name = TECH_CMP_AD_72_4_NAME type = combined_arms_focus difficulty = 5 }
+    # 個別部隊破壊
+    component = { id = 27225 name = TECH_CMP_AD_72_5_NAME type = decentralized_execution difficulty = 5 }
+    required  = { 27210 }
+    effects =
+    { command = { type = max_organization which = cas value = 5 }
+      command = { type = morale which = cas value = 5 }
+    }
+  }
+  # 固定翼ガンシップドクトリン
+  application =
+  { id        = 27230
+    name      = TECH_APP_AD_73_NAME
+    position  = { x = 343 y = 404 }
+    picture   = "DH27230"
+    year      = 1952
+    # 敵地上火力無効
+    component = { id = 27231 name = TECH_CMP_AD_73_1_NAME type = piloting difficulty = 5 }
+    # 低速航空機演習能力
+    component = { id = 27232 name = TECH_CMP_AD_73_2_NAME type = aircraft_testing difficulty = 5 }
+    # 最大時間標的ドクトリン
+    component = { id = 27233 name = TECH_CMP_AD_73_3_NAME type = bomber_tactics difficulty = 5 }
+    # 広域ロケット開発
+    component = { id = 27234 name = TECH_CMP_AD_73_4_NAME type = rocketry difficulty = 5 }
+    # 航空優勢仮説
+    component = { id = 27235 name = TECH_CMP_AD_73_5_NAME type = centralized_execution difficulty = 5 }
+    required  = { }
+    or_required = { 27200 27220 }
+    effects =
+    { command = { type = max_organization which = cas value = 5 }
+      command = { type = morale which = cas value = 5 }
+    }
+  }
+  # 枯れ葉剤
+  application =
+  { id        = 27240
+    name      = TECH_APP_AD_74_NAME
+    position  = { x = 343 y = 421 }
+    picture   = "DH27240"
+    year      = 1953
+    # 化学除草剤生産
+    component = { id = 27241 name = TECH_CMP_AD_74_1_NAME type = chemistry difficulty = 8 }
+    # 枯れ葉剤取り扱い手順
+    component = { id = 27242 name = TECH_CMP_AD_74_2_NAME type = centralized_execution difficulty = 6 }
+    # 枯れ葉剤開発手順
+    component = { id = 27243 name = TECH_CMP_AD_74_3_NAME type = bomber_tactics difficulty = 5 }
+    # 枯れ葉剤開発手順
+    component = { id = 27244 name = TECH_CMP_AD_74_4_NAME type = piloting difficulty = 6 }
+    # 枯れ葉剤使用許可手順
+    component = { id = 27245 name = TECH_CMP_AD_74_5_NAME type = centralized_execution difficulty = 5 }
+    required  = { 27230 }
+    effects =
+    { command = { type = jungle_attack which = cas value = 5 }
+      command = { type = swamp_attack which = cas value = 5 }
+      command = { type = forest_attack which = cas value = 5 }
+      command = { type = hill_attack which = cas value = 5 }
+      command = { type = jungle_attack which = tactical_bomber value = 5 }
+      command = { type = swamp_attack which = tactical_bomber value = 5 }
+      command = { type = forest_attack which = tactical_bomber value = 5 }
+      command = { type = hill_attack which = tactical_bomber value = 5 }
+      command = { type = jungle_attack which = cavalry value = 10 }
+      command = { type = jungle_move which = cavalry value = 10 }
+      command = { type = swamp_attack which = cavalry value = 10 }
+      command = { type = swamp_move which = cavalry value = 10 }
+      command = { type = forest_move which = cavalry value = 5 }
+      command = { type = hill_attack which = cavalry value = 10 }
+      command = { type = hill_move which = cavalry value = 5 }
+      command = { type = jungle_attack which = infantry value = 10 }
+      command = { type = jungle_move which = infantry value = 5 }
+      command = { type = swamp_attack which = infantry value = 5 }
+      command = { type = swamp_move which = infantry value = 5 }
+      command = { type = forest_attack which = infantry value = 5 }
+      command = { type = forest_move which = infantry value = 5 }
+      command = { type = hill_attack which = infantry value = 5 }
+      command = { type = hill_move which = infantry value = 5 }
+      command = { type = jungle_attack which = marine value = 5 }
+      command = { type = jungle_move which = marine value = 5 }
+      command = { type = forest_attack which = marine value = 5 }
+      command = { type = jungle_move which = marine value = 5 }
+      command = { type = hill_attack which = marine value = 5 }
+      command = { type = hill_move which = marine value = 5 }
+      command = { type = jungle_attack which = bergsjaeger value = 5 }
+      command = { type = jungle_move which = bergsjaeger value = 5 }
+      command = { type = swamp_attack which = bergsjaeger value = 5 }
+      command = { type = swamp_move which = bergsjaeger value = 5 }
+    }
+  }
+  # クラスター爆弾使用
+  application =
+  { id        = 27250
+    name      = TECH_APP_AD_75_NAME
+    position  = { x = 343 y = 438 }
+    picture   = "DH27250"
+    year      = 1954
+    # 高性能爆薬
+    component = { id = 27251 name = TECH_CMP_AD_75_1_NAME type = chemistry difficulty = 8 }
+    # 破裂システム
+    component = { id = 27252 name = TECH_CMP_AD_75_2_NAME type = artillery difficulty = 6 }
+    # クラスター爆弾開発
+    component = { id = 27253 name = TECH_CMP_AD_75_3_NAME type = bomber_tactics difficulty = 5 }
+    # クラスター爆弾開発
+    component = { id = 27254 name = TECH_CMP_AD_75_4_NAME type = piloting difficulty = 4 }
+    # クラスター爆弾使用許可手順
+    component = { id = 27255 name = TECH_CMP_AD_75_5_NAME type = centralized_execution difficulty = 5 }
+    required  = { 27240 }
+    effects =
+    { command = { type = max_organization which = cas value = 10 }
+      command = { type = task_efficiency which = ground_attack value = 0.1 }
+      command = { type = task_efficiency which = interdiction value = 0.1 }
+    }
+  }
+  # 武装ヘリコプタードクトリン
+  application =
+  { id        = 27260
+    name      = TECH_APP_AD_76_NAME
+    position  = { x = 343 y = 455 }
+    picture   = "DH27260"
+    year      = 1959
+    # 攻撃ヘリコプター
+    component = { id = 27261 name = TECH_CMP_AD_76_1_NAME type = aeronautics difficulty = 6 }
+    # 広域ロケット開発
+    component = { id = 27262 name = TECH_CMP_AD_76_2_NAME type = rocketry difficulty = 6 }
+    # 敵火力制圧
+    component = { id = 27263 name = TECH_CMP_AD_76_3_NAME type = bomber_tactics difficulty = 6 }
+    # ヘリコプターパイロット訓練
+    component = { id = 27264 name = TECH_CMP_AD_76_4_NAME type = piloting difficulty = 6 }
+    # 活動の軍事自由権
+    component = { id = 27265 name = TECH_CMP_AD_76_5_NAME type = decentralized_execution difficulty = 6 }
+    required  = { 27230 }
+    or_required = { 27240 27250 }
+    effects =
+    { command = { type = jungle_attack which = land value = 15 }
+      command = { type = jungle_move which = land value = 15 }
+      command = { type = desert_attack which = land value = 25 }
+      command = { type = desert_move which = land value = 25 }
+      command = { type = swamp_attack which = land value = 15 }
+      command = { type = swamp_defense which = land value = 15 }
+      command = { type = forest_attack which = land value = 5 }
+      command = { type = forest_defense which = land value = 5 }
+      command = { type = hill_attack which = land value = 5 }
+      command = { type = hill_defense which = land value = 5 }
+    }
+  }
+  # 現代型密林作戦
+  application =
+  { id        = 27270
+    name      = TECH_APP_AD_77_NAME
+    position  = { x = 343 y = 472 }
+    picture   = "DH27270"
+    year      = 1964
+    # 改良型武装ヘリコプター
+    component = { id = 27271 name = TECH_CMP_AD_77_1_NAME type = aeronautics difficulty = 7 }
+    # 迅速対応パイロット訓練
+    component = { id = 27272 name = TECH_CMP_AD_77_2_NAME type = bomber_tactics difficulty = 7 }
+    # トンネル貫通弾頭
+    component = { id = 27273 name = TECH_CMP_AD_77_3_NAME type = rocketry difficulty = 7 }
+    # 交戦ルール
+    component = { id = 27274 name = TECH_CMP_AD_77_4_NAME type = centralized_execution difficulty = 7 }
+    # サーモバリック兵器
+    component = { id = 27275 name = TECH_CMP_AD_77_5_NAME type = chemistry difficulty = 7 double_time = yes }
+    required  = { 27260 }
+    effects =
+    { command = { type = jungle_attack which = cas value = 5 }
+      command = { type = swamp_attack which = cas value = 5 }
+      command = { type = forest_attack which = cas value = 5 }
+      command = { type = hill_attack which = cas value = 5 }
+      command = { type = jungle_attack which = tactical_bomber value = 5 }
+      command = { type = swamp_attack which = tactical_bomber value = 5 }
+      command = { type = forest_attack which = tactical_bomber value = 5 }
+      command = { type = hill_attack which = tactical_bomber value = 5 }
+      command = { type = jungle_attack which = strategic_bomber value = 10 }
+      command = { type = swamp_attack which = strategic_bomber value = 10 }
+      command = { type = forest_attack which = strategic_bomber value = 10 }
+      command = { type = hill_attack which = strategic_bomber value = 10 }
+      command = { type = max_organization which = cas value = 10 }
+      command = { type = max_organization which = tactical_bomber value = 5 }
+      command = { type = max_organization which = strategic_bomber value = 5 }
+    }
+  }
+  # ヘリコプター空挺強襲
+  application =
+  { id        = 27280
+    name      = TECH_APP_AD_78_NAME
+    position  = { x = 570 y = 244 }
+    picture   = "DH27280"
+    year      = 1952
+    # 戦闘ヘリコプター
+    component = { id = 27281 name = TECH_CMP_AD_78_1_NAME type = aeronautics difficulty = 7 }
+    # 補給ヘリコプター
+    component = { id = 27282 name = TECH_CMP_AD_78_2_NAME type = aeronautics difficulty = 7 }
+    # 事前爆撃手順
+    component = { id = 27283 name = TECH_CMP_AD_78_3_NAME type = bomber_tactics difficulty = 7 }
+    # ヘリコプター離陸訓練
+    component = { id = 27284 name = TECH_CMP_AD_78_4_NAME type = training difficulty = 7 }
+    # 空挺戦闘戦術
+    component = { id = 27285 name = TECH_CMP_AD_78_5_NAME type = small_unit_tactics difficulty = 7 }
+    required  = { 27000 }
+    effects =
+    { command = { type = morale which = transport_plane value = 10 }
+      command = { type = max_organization which = paratrooper value = 5 }
+      command = { type = morale which = paratrooper value = 15 }
+      command = { type = task_efficiency which = airborne_assault value = 0.1 }
+    }
+  }
+  # 全地形空挺強襲
+  application =
+  { id        = 27290
+    name      = TECH_APP_AD_79_NAME
+    position  = { x = 570 y = 261 }
+    picture   = "1070"
+    year      = 1957
+    # 現代型ヘリコプター
+    component = { id = 27291 name = TECH_CMP_AD_79_1_NAME type = aeronautics difficulty = 7 }
+    # 現代型予備爆撃
+    component = { id = 27292 name = TECH_CMP_AD_79_2_NAME type = bomber_tactics difficulty = 7 }
+    # 現代型サバイバル装備
+    component = { id = 27293 name = TECH_CMP_AD_79_3_NAME type = general_equipment difficulty = 7 }
+    # 現代型サバイバル訓練
+    component = { id = 27294 name = TECH_CMP_AD_79_4_NAME type = training difficulty = 7 }
+    # 詳細な地形の知識
+    component = { id = 27295 name = TECH_CMP_AD_79_5_NAME type = centralized_execution difficulty = 7 }
+    required  = { 27280 }
+    effects =
+    { command = { type = jungle_attack which = paratrooper value = 15 }
+      command = { type = swamp_attack which = paratrooper value = 15 }
+      command = { type = snow_attack which = paratrooper value = 5 }
+      command = { type = rain_attack which = paratrooper value = 5 }
+      command = { type = desert_attack which = paratrooper value = 20 }
+      command = { type = hill_attack which = paratrooper value = 5 }
+      command = { type = task_efficiency which = airborne_assault value = 0.05 }
+    }
+  }
+  # ステルス空挺強襲
+  application =
+  { id        = 27300
+    name      = TECH_APP_AD_80_NAME
+    position  = { x = 570 y = 278 }
+    picture   = "DH27300"
+    year      = 1962
+    # グライダー設計
+    component = { id = 27301 name = TECH_CMP_AD_80_1_NAME type = general_equipment difficulty = 7 }
+    # グライダー試験
+    component = { id = 27302 name = TECH_CMP_AD_80_2_NAME type = training difficulty = 7 }
+    # 動力航空機騒音低減
+    component = { id = 27303 name = TECH_CMP_AD_80_3_NAME type = aeronautics difficulty = 7 }
+    # 降下点訓練
+    component = { id = 27304 name = TECH_CMP_AD_80_4_NAME type = piloting difficulty = 7 }
+    # 特別空挺兵訓練
+    component = { id = 27305 name = TECH_CMP_AD_80_5_NAME type = small_unit_tactics difficulty = 7 }
+    required  = { 27290 }
+    effects =
+    { command = { type = max_organization which = transport_plane value = 20 }
+      command = { type = task_efficiency which = airborne_assault value = 0.1 }
+    }
+  }
+  # 戦略爆撃機重視
+  application =
+  { id        = 27310
+    name      = TECH_APP_AD_81_NAME
+    position  = { x = 3 y = 336 }
+    picture   = "DH27310"
+    year      = 1951
+    # 基本型爆撃機-乗員訓練
+    component = { id = 27311 name = TECH_CMP_AD_81_1_NAME type = piloting difficulty = 5 }
+    # 長距離爆撃任務
+    component = { id = 27312 name = TECH_CMP_AD_81_2_NAME type = bomber_tactics difficulty = 5 }
+    # 大規模爆撃艦隊
+    component = { id = 27313 name = TECH_CMP_AD_81_3_NAME type = large_unit_tactics difficulty = 5 }
+    # 大規模防衛的兵装
+    component = { id = 27314 name = TECH_CMP_AD_81_4_NAME type = aircraft_testing difficulty = 5 }
+    # 初期型攻撃的編成
+    component = { id = 27315 name = TECH_CMP_AD_81_5_NAME type = bomber_tactics difficulty = 5 }
+    required  = { 27000 17000 }
+    effects =
+    { command = { type = deactivate which = 27320 }
+      command = { type = max_organization which = strategic_bomber value = 5 }
+      command = { type = morale which = strategic_bomber value = 15 }
+    }
+  }
+  # 戦略ミサイル重視
+  application =
+  { id        = 27320
+    name      = TECH_APP_AD_82_NAME
+    position  = { x = 115 y = 336 }
+    picture   = "DH27320"
+    year      = 1951
+    # 無人訓練の必要性
+    component = { id = 27321 name = TECH_CMP_AD_82_1_NAME type = centralized_execution difficulty = 5 }
+    # 無人車両の精神
+    component = { id = 27322 name = TECH_CMP_AD_82_2_NAME type = piloting difficulty = 5 }
+    # 長距離ICBM
+    component = { id = 27323 name = TECH_CMP_AD_82_3_NAME type = rocketry difficulty = 5 }
+    # 迅速発射待機
+    component = { id = 27324 name = TECH_CMP_AD_82_4_NAME type = aircraft_testing difficulty = 5 }
+    # ロケット発射試験
+    component = { id = 27325 name = TECH_CMP_AD_82_5_NAME type = aircraft_testing difficulty = 5 }
+    required  = { 27000 7100 }
+    effects =
+    { command = { type = deactivate which = 27310 }
+      command = { type = morale which = flying_bomb value = 30 }
+      command = { type = morale which = flying_rocket value = 30 }
+    }
+  }
+  # 市民防衛主導
+  application =
+  { id        = 27330
+    name      = TECH_APP_AD_83_NAME
+    position  = { x = 65 y = 353 }
+    picture   = "DH27330"
+    year      = 1952
+    # 初期型警戒レーダー施設
+    component = { id = 27331 name = TECH_CMP_AD_83_1_NAME type = electronics difficulty = 5 }
+    # 前進航空基地建設
+    component = { id = 27332 name = TECH_CMP_AD_83_2_NAME type = industrial_engineering difficulty = 5 }
+    # ミサイル待機
+    component = { id = 27333 name = TECH_CMP_AD_83_3_NAME type = training difficulty = 5 }
+    # 航空機待機
+    component = { id = 27334 name = TECH_CMP_AD_83_4_NAME type = training difficulty = 5 }
+    # 脅威と対応分析
+    component = { id = 27335 name = TECH_CMP_AD_83_5_NAME type = centralized_execution difficulty = 5 double_time = yes }
+    required  = { 16020 }
+    or_required = { 27310 27320 }
+    effects =
+    { command = { type = building_prod_mod which = radar_station value = 25 }
+    }
+  }
+  # 戦略航空司令
+  application =
+  { id        = 27340
+    name      = TECH_APP_AD_84_NAME
+    position  = { x = 3 y = 370 }
+    picture   = "17010"
+    year      = 1953
+    # 冷戦期乗員訓練
+    component = { id = 27341 name = TECH_CMP_AD_84_1_NAME type = piloting difficulty = 5 }
+    # 時限計画目標
+    component = { id = 27342 name = TECH_CMP_AD_84_2_NAME type = centralized_execution difficulty = 5 }
+    # 厳格な手順
+    component = { id = 27343 name = TECH_CMP_AD_84_3_NAME type = centralized_execution difficulty = 5 }
+    # 高々度飛行
+    component = { id = 27344 name = TECH_CMP_AD_84_4_NAME type = aircraft_testing difficulty = 5 }
+    # レーダー誘導爆弾
+    component = { id = 27345 name = TECH_CMP_AD_84_5_NAME type = electronics difficulty = 5 }
+    required  = { 27330 }
+    or_required = { 27310 27350 }
+    effects =
+    { command = { type = max_organization which = strategic_bomber value = 5 }
+      command = { type = morale which = strategic_bomber value = 10 }
+    }
+  }
+  # ミサイル司令
+  application =
+  { id        = 27350
+    name      = TECH_APP_AD_85_NAME
+    position  = { x = 115 y = 370 }
+    picture   = "DH27350"
+    year      = 1953
+    # ロケット基地組織
+    component = { id = 27351 name = TECH_CMP_AD_85_1_NAME type = centralized_execution difficulty = 5 }
+    # ロケット基地司令部
+    component = { id = 27352 name = TECH_CMP_AD_85_2_NAME type = centralized_execution difficulty = 5 }
+    # 人材育成
+    component = { id = 27353 name = TECH_CMP_AD_85_3_NAME type = aircraft_testing difficulty = 5 }
+    # 航空攻撃保護
+    component = { id = 27354 name = TECH_CMP_AD_85_4_NAME type = technical_efficiency difficulty = 5 }
+    # 発射試験
+    component = { id = 27355 name = TECH_CMP_AD_85_5_NAME type = aircraft_testing difficulty = 5 }
+    required  = { 27330 }
+    or_required = { 27320 27340 }
+    effects =
+    { command = { type = industrial_modifier which = total value = -2 }
+      command = { type = morale which = flying_bomb value = 15 }
+      command = { type = morale which = flying_rocket value = 15 }
+      command = { type = building_prod_mod which = flak value = 50 }
+    }
+  }
+  # 核拡散
+  application =
+  { id        = 27360
+    name      = TECH_APP_AD_86_NAME
+    position  = { x = 3 y = 438 }
+    picture   = "DH27360"
+    year      = 1956
+    # 戦略航空司令
+    component = { id = 27361 name = TECH_CMP_AD_86_1_NAME type = training difficulty = 7 }
+    # 戦略ミサイル司令
+    component = { id = 27362 name = TECH_CMP_AD_86_2_NAME type = training difficulty = 7 }
+    # 弾道ミサイル原子力潜水艦
+    component = { id = 27363 name = TECH_CMP_AD_86_3_NAME type = submarine_tactics difficulty = 7 }
+    # 弾道ミサイル
+    component = { id = 27364 name = TECH_CMP_AD_86_4_NAME type = training difficulty = 7 }
+    # 緊急政府組織
+    component = { id = 27365 name = TECH_CMP_AD_86_5_NAME type = centralized_execution difficulty = 7 double_time = yes }
+    required  = { 27340 27350 7230 7270 }
+    effects =
+    { command = { type = nuke_damage value = 40 }
+    }
+  }
+  # 防衛システム重視
+  application =
+  { id        = 27370
+    name      = TECH_APP_AD_87_NAME
+    position  = { x = 115 y = 404 }
+    picture   = "DH27370"
+    year      = 1956
+    # 弾道ミサイル
+    component = { id = 27371 name = TECH_CMP_AD_87_1_NAME type = rocketry difficulty = 8 }
+    # 戦闘機改良
+    component = { id = 27372 name = TECH_CMP_AD_87_2_NAME type = aeronautics difficulty = 8 }
+    # 爆撃機迎撃訓練
+    component = { id = 27373 name = TECH_CMP_AD_87_3_NAME type = fighter_tactics difficulty = 8 }
+    # 初期型警戒レーダー改良
+    component = { id = 27374 name = TECH_CMP_AD_87_4_NAME type = electronics difficulty = 8 }
+    # 迅速対応訓練
+    component = { id = 27375 name = TECH_CMP_AD_87_5_NAME type = centralized_execution difficulty = 8 double_time = yes }
+    required  = { 27360 }
+    effects =
+    { command = { type = deactivate which = 27380 }
+      command = { type = deactivate which = 27390 }
+      command = { type = deactivate which = 27400 }
+      command = { type = building_prod_mod which = flak value = 50 }
+      command = { type = max_organization which = interceptor value = 5 }
+      command = { type = morale which = interceptor value = 10 }
+      command = { type = max_organization which = multi_role value = 5 }
+      command = { type = morale which = multi_role value = 10 }
+    }
+  }
+  # 戦略爆撃機による抑止力
+  application =
+  { id        = 27380
+    name      = TECH_APP_AD_88_NAME
+    position  = { x = 115 y = 421 }
+    picture   = "DH27380"
+    year      = 1956
+    # 爆撃機大量生産
+    component = { id = 27381 name = TECH_CMP_AD_88_1_NAME type = industrial_engineering difficulty = 8 }
+    # 護衛戦闘機大量生産
+    component = { id = 27382 name = TECH_CMP_AD_88_2_NAME type = industrial_engineering difficulty = 8 }
+    # 核兵器使用許可手順
+    component = { id = 27383 name = TECH_CMP_AD_88_3_NAME type = centralized_execution difficulty = 8 }
+    # 共同保証的破壊原理
+    component = { id = 27384 name = TECH_CMP_AD_88_4_NAME type = individual_courage difficulty = 8 }
+    # 事前計画的報復
+    component = { id = 27385 name = TECH_CMP_AD_88_5_NAME type = bomber_tactics difficulty = 8 double_time = yes }
+    required  = { 27360 }
+    effects =
+    { command = { type = deactivate which = 27370 }
+      command = { type = deactivate which = 27390 }
+      command = { type = deactivate which = 27400 }
+      command = { type = max_organization which = strategic_bomber value = 5 }
+      command = { type = morale which = strategic_bomber value = 10 }
+    }
+  }
+  # 地上基地ICBMによる抑止力
+  application =
+  { id        = 27390
+    name      = TECH_APP_AD_89_NAME
+    position  = { x = 115 y = 455 }
+    picture   = "DH27390"
+    year      = 1956
+    # 堅牢地下サイロ
+    component = { id = 27391 name = TECH_CMP_AD_89_1_NAME type = mechanics difficulty = 8 }
+    # ロケット整備
+    component = { id = 27392 name = TECH_CMP_AD_89_2_NAME type = technical_efficiency difficulty = 8 }
+    # 核兵器使用許可手順
+    component = { id = 27393 name = TECH_CMP_AD_89_3_NAME type = centralized_execution difficulty = 8 }
+    # 共同保証的破壊原理
+    component = { id = 27394 name = TECH_CMP_AD_89_4_NAME type = individual_courage difficulty = 8 }
+    # ロケット発射連携
+    component = { id = 27395 name = TECH_CMP_AD_89_5_NAME type = centralized_execution difficulty = 8 double_time = yes }
+    required  = { 27360 }
+    effects =
+    { command = { type = deactivate which = 27370 }
+      command = { type = deactivate which = 27380 }
+      command = { type = deactivate which = 27400 }
+      command = { type = morale which = flying_bomb value = 15 }
+      command = { type = morale which = flying_rocket value = 15 }
+      command = { type = building_prod_mod which = flak value = 50 }
+    }
+  }
+  # 潜水艦発射ミサイルによる抑止力
+  application =
+  { id        = 27400
+    name      = TECH_APP_AD_90_NAME
+    position  = { x = 115 y = 472 }
+    picture   = "DH27400"
+    year      = 1956
+    # ミサイル整備
+    component = { id = 27401 name = TECH_CMP_AD_90_1_NAME type = technical_efficiency difficulty = 8 }
+    # 暗号通信
+    component = { id = 27402 name = TECH_CMP_AD_90_2_NAME type = mathematics difficulty = 8 }
+    # 核兵器使用許可手順
+    component = { id = 27403 name = TECH_CMP_AD_90_3_NAME type = centralized_execution difficulty = 8 }
+    # 共同保証的破壊原理
+    component = { id = 27404 name = TECH_CMP_AD_90_4_NAME type = individual_courage difficulty = 8 }
+    # 有機的潜水艦対応
+    component = { id = 27405 name = TECH_CMP_AD_90_5_NAME type = submarine_tactics difficulty = 8 double_time = yes }
+    required  = { 27360 }
+    effects =
+    { command = { type = deactivate which = 27370 }
+      command = { type = deactivate which = 27380 }
+      command = { type = deactivate which = 27390 }
+      command = { type = morale which = flying_bomb value = 15 }
+      command = { type = morale which = flying_rocket value = 15 }
+      command = { type = morale which = nuclear_submarine value = 15 }
+    }
+  }
+  # 海軍爆撃機対水上艦隊任務
+  application =
+  { id        = 27410
+    name      = TECH_APP_AD_91_NAME
+    position  = { x = 570 y = 127 }
+    picture   = "DH27410"
+    year      = 1948
+    # 初期型冷戦期艦船探知
+    component = { id = 27411 name = TECH_CMP_AD_91_1_NAME type = bomber_tactics difficulty = 5 }
+    # 空対艦ミサイル
+    component = { id = 27412 name = TECH_CMP_AD_91_2_NAME type = general_equipment difficulty = 5 }
+    # 改良型魚雷
+    component = { id = 27413 name = TECH_CMP_AD_91_3_NAME type = general_equipment difficulty = 5 }
+    # 海上警戒集団
+    component = { id = 27414 name = TECH_CMP_AD_91_4_NAME type = decentralized_execution difficulty = 5 }
+    # 長距離任務
+    component = { id = 27415 name = TECH_CMP_AD_91_5_NAME type = aircraft_testing difficulty = 5 }
+    required  = { 27000 }
+    effects =
+    { command = { type = max_organization which = naval_bomber value = 5 }
+      command = { type = morale which = naval_bomber value = 5 }
+    }
+  }
+  # 海軍爆撃機対潜水艦任務
+  application =
+  { id        = 27420
+    name      = TECH_APP_AD_92_NAME
+    position  = { x = 570 y = 144 }
+    picture   = "DH27420"
+    year      = 1952
+    # 対潜水艦ロケット試験
+    component = { id = 27421 name = TECH_CMP_AD_92_1_NAME type = aircraft_testing difficulty = 6 }
+    # 現代型魚雷
+    component = { id = 27422 name = TECH_CMP_AD_92_2_NAME type = general_equipment difficulty = 6 }
+    # 改良型深海攻撃装置
+    component = { id = 27423 name = TECH_CMP_AD_92_3_NAME type = general_equipment difficulty = 6 }
+    # 低空接近飛行
+    component = { id = 27424 name = TECH_CMP_AD_92_4_NAME type = bomber_tactics difficulty = 6 }
+    # 戦闘試験
+    component = { id = 27425 name = TECH_CMP_AD_92_5_NAME type = aircraft_testing difficulty = 6 double_time = yes }
+    required  = { 27410 }
+    effects =
+    { command = { type = max_organization which = naval_bomber value = 5 }
+    }
+  }
+  # 海軍爆撃機対空母任務
+  application =
+  { id        = 27430
+    name      = TECH_APP_AD_93_NAME
+    position  = { x = 570 y = 195 }
+    picture   = "DH27430"
+    year      = 1959
+    # 改良型空対艦ミサイル
+    component = { id = 27431 name = TECH_CMP_AD_93_1_NAME type = aircraft_testing difficulty = 7 }
+    # スタンドオフミサイル発射
+    component = { id = 27432 name = TECH_CMP_AD_93_2_NAME type = bomber_tactics difficulty = 7 }
+    # 低高度戦術
+    component = { id = 27433 name = TECH_CMP_AD_93_3_NAME type = bomber_tactics difficulty = 7 }
+    # 対空母航空隊戦術
+    component = { id = 27434 name = TECH_CMP_AD_93_4_NAME type = fighter_tactics difficulty = 7 }
+    # 戦闘試験
+    component = { id = 27435 name = TECH_CMP_AD_93_5_NAME type = aircraft_testing difficulty = 7 double_time = yes }
+    required  = { 27450 }
+    effects =
+    { command = { type = max_organization which = naval_bomber value = 5 }
+    }
+  }
+  # 海軍爆撃機対港湾攻撃任務
+  application =
+  { id        = 27440
+    name      = TECH_APP_AD_94_NAME
+    position  = { x = 570 y = 161 }
+    picture   = "DH27440"
+    year      = 1954
+    # 海軍諜報
+    component = { id = 27441 name = TECH_CMP_AD_94_1_NAME type = centralized_execution difficulty = 6 }
+    # 魚雷発射手順
+    component = { id = 27442 name = TECH_CMP_AD_94_2_NAME type = bomber_tactics difficulty = 6 }
+    # 接近戦術
+    component = { id = 27443 name = TECH_CMP_AD_94_3_NAME type = bomber_tactics difficulty = 6 }
+    # 長距離任務
+    component = { id = 27444 name = TECH_CMP_AD_94_4_NAME type = aircraft_testing difficulty = 6 }
+    # 戦闘試験
+    component = { id = 27445 name = TECH_CMP_AD_94_5_NAME type = aircraft_testing difficulty = 6 double_time = yes }
+    required  = { 27420 }
+    effects =
+    { command = { type = task_efficiency which = port_strike value = 0.15 }
+    }
+  }
+  # 海軍爆撃機全天候任務
+  application =
+  { id        = 27450
+    name      = TECH_APP_AD_95_NAME
+    position  = { x = 570 y = 178 }
+    picture   = "DH27450"
+    year      = 1957
+    # 熱帯低気圧飛行研究
+    component = { id = 27451 name = TECH_CMP_AD_95_1_NAME type = piloting difficulty = 7 }
+    # 発展型ソノブイ
+    component = { id = 27452 name = TECH_CMP_AD_95_2_NAME type = electronics difficulty = 7 }
+    # 改良型計器飛行
+    component = { id = 27453 name = TECH_CMP_AD_95_3_NAME type = piloting difficulty = 7 }
+    # 改良型ミサイル追尾
+    component = { id = 27454 name = TECH_CMP_AD_95_4_NAME type = piloting difficulty = 7 }
+    # 悪天候戦闘試験
+    component = { id = 27455 name = TECH_CMP_AD_95_5_NAME type = aircraft_testing difficulty = 7 double_time = yes }
+    required  = { 27440 }
+    effects =
+    { command = { type = snow_attack which = naval_bomber value = 10 }
+      command = { type = snow_defense which = naval_bomber value = 10 }
+      command = { type = rain_attack which = naval_bomber value = 10 }
+      command = { type = rain_defense which = naval_bomber value = 10 }
+      command = { type = storm_attack which = naval_bomber value = 10 }
+      command = { type = storm_defense which = naval_bomber value = 10 }
+      command = { type = blizzard_attack which = naval_bomber value = 10 }
+      command = { type = blizzard_defense which = naval_bomber value = 10 }
+    }
+  }
+}

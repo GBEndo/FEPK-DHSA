@@ -1,0 +1,2434 @@
+#########################################################################
+#	FEPK_screwsoviets.txt
+#	ソ連崩壊関連イベント
+#########################################################################
+#id = 133500-49		英米による旧ソ連共和国傀儡化
+#id = 133550-99		構成国脱退に伴うソ連中核州処理
+#id = 133600-99		西側諸国による東欧新体制
+#########################################################################
+##########
+#  Liberation of Belarus - Liberation
+##########
+event = {
+	id = 133501
+	random = no 
+	tag = { USA ENG FRA ITA }
+
+	trigger = {
+		control = { province = 212 data = -1 } #Minsk
+		NOT = { exists = BLR }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133501_NAME"
+	desc = "EVT_133501_DESC"
+
+	picture = "american_assistance"
+
+	action_a = {
+		name = "EVT_133501_ACTA"
+		ai_chance = 100
+		command = { type = independence which = BLR value = 1 when = 1 }
+		command = { type = dissent value = -5 }
+		command = { type = trigger which = 133502 } #
+		command = { type = relation which = SOV value = -20 }
+	}
+	action_b = {
+		name = "EVT_133501_ACTB"
+		ai_chance = 0
+		command = { type = dissent value = 1 }
+	}
+}
+##########
+#  Liberation of Belarus - Alliance
+##########
+event = {
+	id = 133502
+	random = no 
+	tag = { USA ENG FRA ITA }
+
+	name = "EVT_133502_NAME"
+	desc = "EVT_133502_DESC"
+
+	picture = "american_assistance"
+
+	action_a = {
+		name = "EVT_133502_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = BLR }
+	}
+}
+
+##########
+#  Liberation of Germany - Liberation
+##########
+event = {
+	id = 133503
+	random = no 
+	tag = { USA ENG FRA ITA }
+
+	trigger = {
+		control = { province = 300 data = -1 } #Berlin
+		NOT = { 
+			exists = DFR
+			exists = DDR
+			exists = GER
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133503_NAME"
+	desc = "EVT_133503_DESC"
+
+	picture = "american_assistance"
+
+	action_a = {
+		name = "EVT_133503_ACTA"
+		ai_chance = 100
+		command = { type = independence which = DFR value = 1 when = 0 }
+		command = { type = trigger which = 133536 } #
+		command = { type = relation which = SOV value = -20 }
+	}
+	action_b = {
+		name = "EVT_133503_ACTB"
+		ai_chance = 0
+		command = { type = dissent value = 1 }
+	}
+}
+##########
+#  Liberation of Germany - Alliance
+##########
+event = {
+	id = 133504
+	random = no 
+	tag = { USA ENG FRA ITA }
+
+	name = "EVT_133504_NAME"
+	desc = "EVT_133504_DESC"
+
+	picture = "american_assistance"
+
+	action_a = {
+		name = "EVT_133504_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = DFR }
+	}
+}
+
+##########
+#  Liberation of Estonia - Liberation
+##########
+event = {
+	id = 133505
+	random = no 
+	tag = { USA ENG FRA ITA }
+
+	trigger = {
+		control = { province = 194 data = -1 } #Estonia
+		control = { province = 193 data = -3 } #
+		control = { province = 195 data = -3 } #
+		control = { province = 196 data = -3 } #
+		control = { province = 199 data = -3 } #
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133505_NAME"
+	desc = "EVT_133505_DESC"
+
+	picture = "american_assistance"
+
+	action_a = {
+		name = "EVT_133505_ACTA"
+		ai_chance = 100
+		command = { type = independence which = EST value = 1 when = 1 }
+		command = { type = dissent value = -5 }
+		command = { type = trigger which = 133506 } #
+		command = { type = relation which = SOV value = -20 }
+	}
+	action_b = {
+		name = "EVT_133505_ACTB"
+		ai_chance = 0
+		command = { type = dissent value = 1 }
+	}
+}
+##########
+#  Liberation of Estonia - Alliance
+##########
+event = {
+	id = 133506
+	random = no 
+	tag = { USA ENG FRA ITA }
+
+	name = "EVT_133506_NAME"
+	desc = "EVT_133506_DESC"
+
+	picture = "american_assistance"
+
+	action_a = {
+		name = "EVT_133506_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = EST }
+	}
+}
+##########
+#  Liberation of Ukraine - Liberation
+##########
+event = {
+	id = 133509
+	random = no 
+	tag = { USA ENG FRA ITA }
+
+	trigger = {
+		#control = { province = 260 data = -1 } #Ukraine
+		control = { province = 238 data = -1 } #Kiev
+		#control = { province = 239 data = -3 }
+		#control = { province = 240 data = -3 }
+		#control = { province = 242 data = -3 }
+		#control = { province = 244 data = -3 }
+		#control = { province = 245 data = -3 }
+		#control = { province = 246 data = -3 }
+		#control = { province = 247 data = -3 }
+		#control = { province = 248 data = -3 }
+		#control = { province = 249 data = -3 }
+		#control = { province = 250 data = -3 }
+		#control = { province = 251 data = -3 }
+		#control = { province = 241 data = -3 }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133509_NAME"
+	desc = "EVT_133509_DESC"
+
+	picture = "american_assistance"
+
+	action_a = {
+		name = "EVT_133509_ACTA"
+		ai_chance = 100
+		command = { type = independence which = UKR value = 1 when = 1 }
+		command = { type = dissent value = -5 }
+		command = { type = trigger which = 133510 } #
+		command = { type = relation which = SOV value = -20 }
+	}
+	action_b = {
+		name = "EVT_133509_ACTB"
+		ai_chance = 0
+		command = { type = dissent value = 1 }
+	}
+}
+##########
+#  Liberation of Ukraine - Alliance
+##########
+event = {
+	id = 133510
+	random = no 
+	tag = { USA ENG FRA ITA }
+
+	name = "EVT_133510_NAME"
+	desc = "EVT_133510_DESC"
+
+	picture = "american_assistance"
+
+	action_a = {
+		name = "EVT_133510_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = UKR }
+	}
+}
+##########
+#  Liberation of Georgia - Liberation
+##########
+event = {
+	id = 133513
+	random = no 
+	tag = { USA ENG FRA ITA }
+
+	trigger = {
+		control = { province = 1845 data = -1 } #Georgia
+		control = { province = 1844 data = -3 }
+		control = { province = 1848 data = -3 }
+		control = { province = 1849 data = -3 }
+		control = { province = 1850 data = -3 }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133513_NAME"
+	desc = "EVT_133513_DESC"
+
+	picture = "american_assistance"
+
+	action_a = {
+		name = "EVT_133513_ACTA"
+		ai_chance = 100
+		command = { type = independence which = GEO value = 1 when = 1 }
+		command = { type = dissent value = -5 }
+		command = { type = trigger which = 133514 } #
+		command = { type = relation which = SOV value = -20 }
+	}
+	action_b = {
+		name = "EVT_133513_ACTB"
+		ai_chance = 0
+		command = { type = dissent value = 1 }
+	}
+}
+##########
+#  Liberation of Georgia - Alliance
+##########
+event = {
+	id = 133514
+	random = no 
+	tag = { USA ENG FRA ITA }
+
+	name = "EVT_133514_NAME"
+	desc = "EVT_133514_DESC"
+
+	picture = "american_assistance"
+
+	action_a = {
+		name = "EVT_133514_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = GEO }
+	}
+}
+##########
+#  Liberation of Latvia - Liberation
+##########
+event = {
+	id = 133516
+	random = no 
+	tag = { USA ENG FRA ITA }
+
+	trigger = {
+		control = { province = 197 data = -1 } #Latvia
+		control = { province = 198 data = -3 } #
+		control = { province = 202 data = -3 } #
+		control = { province = 203 data = -3 } #
+		control = { province = 204 data = -3 } #
+		control = { province = 205 data = -3 } #
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133516_NAME"
+	desc = "EVT_133516_DESC"
+
+	picture = "american_assistance"
+
+	action_a = {
+		name = "EVT_133516_ACTA"
+		ai_chance = 100
+		command = { type = independence which = LAT value = 1 when = 1 }
+		command = { type = dissent value = -5 }
+		command = { type = trigger which = 133517 } #
+		command = { type = relation which = SOV value = -20 }
+	}
+	action_b = {
+		name = "EVT_133516_ACTB"
+		ai_chance = 0
+		command = { type = dissent value = 1 }
+	}
+}
+##########
+#  Liberation of Latvia - Alliance
+##########
+event = {
+	id = 133517
+	random = no 
+	tag = { USA ENG FRA ITA }
+
+	name = "EVT_133517_NAME"
+	desc = "EVT_133517_DESC"
+
+	picture = "american_assistance"
+
+	action_a = {
+		name = "EVT_133517_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = LAT }
+	}
+}
+##########
+#  Liberation of Lithuania - Liberation
+##########
+event = {
+	id = 133521
+	random = no 
+	tag = { USA ENG FRA ITA }
+
+	trigger = {
+		control = { province = 207 data = -1 } #Lithuania
+		control = { province = 511 data = -3 } #
+		control = { province = 577 data = -3 } #
+		NOT = { exists = LIT }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133521_NAME"
+	desc = "EVT_133521_DESC"
+
+	picture = "american_assistance"
+
+	action_a = {
+		name = "EVT_133521_ACTA"
+		ai_chance = 100
+		command = { type = independence which = LIT value = 1 when = 1 }
+		command = { type = dissent value = -5 }
+		command = { type = trigger which = 133522 } #
+		command = { type = relation which = SOV value = -20 }
+	}
+	action_b = {
+		name = "EVT_133521_ACTB"
+		ai_chance = 0
+		command = { type = dissent value = 1 }
+	}
+}
+##########
+#  Liberation of Lithuania - Alliance
+##########
+event = {
+	id = 133522
+	random = no 
+	tag = { USA ENG FRA ITA }
+
+	name = "EVT_133522_NAME"
+	desc = "EVT_133522_DESC"
+
+	picture = "american_assistance"
+
+	action_a = {
+		name = "EVT_133522_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = LIT }
+	}
+}
+##########
+#  Liberation of Armenia - Liberation
+##########
+event = {
+	id = 133525
+	random = no 
+	tag = { USA ENG FRA ITA }
+
+	trigger = {
+		control = { province = 1856 data = -1 } #Armenia
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133525_NAME"
+	desc = "EVT_133525_DESC"
+
+	picture = "american_assistance"
+
+	action_a = {
+		name = "EVT_133525_ACTA"
+		ai_chance = 100
+		command = { type = independence which = ARM value = 1 when = 1 }
+		command = { type = dissent value = -5 }
+		command = { type = trigger which = 133526 } #
+		command = { type = relation which = SOV value = -20 }
+	}
+	action_b = {
+		name = "EVT_133525_ACTB"
+		ai_chance = 0
+		command = { type = dissent value = 1 }
+	}
+}
+##########
+#  Liberation of Armenia - Alliance
+##########
+event = {
+	id = 133526
+	random = no 
+	tag = { USA ENG FRA ITA }
+
+	name = "EVT_133526_NAME"
+	desc = "EVT_133526_DESC"
+
+	picture = "american_assistance"
+
+	action_a = {
+		name = "EVT_133526_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = ARM }
+	}
+}
+##########
+#  Liberation of Azerbaijan - Liberation
+##########
+event = {
+	id = 133529
+	random = no 
+	tag = { USA ENG FRA ITA }
+
+	trigger = {
+		control = { province = 1858 data = -1 } #Azerbaijan
+		control = { province = 1907 data = -3 }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133529_NAME"
+	desc = "EVT_133529_DESC"
+
+	picture = "american_assistance"
+
+	action_a = {
+		name = "EVT_133529_ACTA"
+		ai_chance = 100
+		command = { type = independence which = AZB value = 1 when = 1 }
+		command = { type = make_puppet which = AZB }
+		command = { type = alliance which = AZB }
+		command = { type = dissent value = -5 }
+		#command = { type = trigger which = 133530 } #
+		command = { type = relation which = SOV value = -20 }
+	}
+	action_b = {
+		name = "EVT_133529_ACTB"
+		ai_chance = 0
+		command = { type = dissent value = 1 }
+	}
+}
+##########
+#  Liberation of Poland - Liberation
+##########
+event = {
+	id = 133530
+	random = no 
+	tag = { USA ENG FRA ITA }
+
+	trigger = {
+		control = { province = 485 data = -1 } #Warsaw
+		war = { country = -1 country = SOV }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133530_NAME"
+	desc = "EVT_133530_DESC"
+
+	picture = "american_assistance"
+
+	action_a = {
+		name = "EVT_133530_ACTA"
+		ai_chance = 100
+		command = { type = independence which = POL value = 1 when = 0 }
+	#	command = { type = independence which = DFR value = 1 when = 0 } #BETA修正パッチ
+	#	command = { type = independence which = GER value = 1 when = 0 } #FEPKBETA3
+	#	command = { type = independence which = AUS value = 1 when = 0 } #FEPKBETA3
+		command = { type = make_puppet which = POL }
+		command = { type = relation which = SOV value = -20 }
+		command = { type = local_setflag which = LiberatePolandWW3 }
+	}
+	action_b = {
+		name = "EVT_133530_ACTB"
+		ai_chance = 0
+		command = { type = dissent value = 1 }
+	}
+}
+
+##########
+#	133531	ポーランドの国境線
+#A：空白地帯ケーニヒスベルクとスヴァウキだけをポーランドに回収させる
+#B：第二共和国の国境を復旧させる
+#C：「大ポーランド」の国境を生成する
+##########
+event = {
+	id = 133531
+	random = no
+	tag = { USA ENG FRA ITA }
+	
+	trigger = {
+		local_flag = LiberatePolandWW3
+		alliance = { country = POL }
+		exists = UKR
+		exists = BLR
+	}
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133531_NAME"	#第二次リガ条約 ― 国境線の回復
+	desc = "EVT_133531_DESC"	#ポーランドは2つの、いや3つの大戦を通じて最も翻弄された国家である。第一次大戦のドイツの敗戦によってなんとか主権を取り戻した彼らは、東西の超大国の脅威に晒され続け、第二次大戦では独ソの二国により再びその国土を失った。第三次大戦になって、また彼らは最前線になった。そして、連合国の圧倒的な侵攻を経て、ウクライナとベラルーシという2つの主権国家がソビエトから取り出された。ポーランドが今望むのは、彼らの領土の復活である。政治的な理由により彼らの国土は再々独立後西にシフトしている。第二次大戦以前の東方向の国境線を取り戻すことを彼らは熱望している。しかし、言うまでもなく、それらの土地は今別の2国――ウクライナとベラルーシ――の領土である。我々は、ポーランドと旧ソビエトの2国のどちらを優先するべきだろうか？
+
+	picture = "american_assistance"
+
+	action_a = {
+		name = "EVT_133531_ACTA"	#スヴァウキとクルレヴィエツ（旧ケーニヒスベルク）のみ回収させる
+		ai_chance = 50
+		command = { type = relation which = POL value = -10 }
+		command = { type = secedeprovince which = POL value = 509 }
+		command = { type = secedeprovince which = POL value = 510 }
+		command = { type = sleepevent which = 133532 }
+		command = { type = trigger which = 133535 }
+	}
+	action_b = {
+		name = "EVT_133531_ACTB"	#加えて、（第一次）リガ条約の東部国境を復旧させる
+		ai_chance = 30
+		#214 213 211 209 208 210 222 and Region"Poland"
+		command = { type = relation which = POL value = 20 }
+		command = { type = trigger which = 133533 }
+		command = { type = trigger which = 133535 }
+		command = { type = setflag which = RestorePoland value = 1 }
+	}
+	action_c = {
+		name = "EVT_133531_ACTC"	#ポーランド人の居住しうる全ての地域をポーランドに与える
+		ai_chance = 20
+		command = { type = relation which = POL value = 30 }
+		command = { type = dissent value = 3 }
+		command = { type = belligerence which = POL value = 20 }
+		command = { type = belligerence which = -1 value = 5 }
+		command = { type = setflag which = RestorePoland value = 2 }
+		command = { type = sleepevent which = 133532 }
+		command = { type = trigger which = 133535 }
+	}
+}
+
+##########
+#	133532	ポーランドの国境線（ベラルーシ・ウクライナ側）
+##########
+event = {
+	id = 133532
+	random = no
+	tag = { UKR BLR }
+	persistent = yes
+	trigger = {
+		event = 133531
+		NOT = { local_flag = PeaceOfRiga2nd }
+	}
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	picture = "american_assistance"
+		
+	name = "EVT_133532_NAME"	#第二次リガ条約 ― 西部割譲
+	desc = "EVT_133532_DESC"	#ポーランドは連合国側として優先的な待遇を受けることとなり、ソビエト連邦の構成国の一員であって現在立場の低い我が国は、ポーランドに国土を割譲せねばならない。
+	
+	action_a = {
+		name = "EVT_133532_ACTA"	#我々に選択権はない
+		command = { type = secedeprovince which = POL value = 214 }
+		command = { type = secedeprovince which = POL value = 213 }
+		command = { type = secedeprovince which = POL value = 211 }
+		command = { type = secedeprovince which = POL value = 209 }
+		command = { type = secedeprovince which = POL value = 208 }
+		command = { type = secedeprovince which = POL value = 210 }
+		command = { type = secedeprovince which = POL value = 222 }
+		command = { type = secederegion which = POL value = "Poland" }
+		command = { type = local_setflag which = PeaceOfRiga2nd }
+	}
+}
+
+##########
+#	133533	ポーランドの国境線（リトアニア側）
+##########
+event = {
+	id = 133533
+	random = no
+	country = LIT
+	trigger = {
+		event = 133521
+	}
+	
+	picture = "american_assistance"
+	
+	name = "EVT_133533_NAME"	#第二次リガ条約 ― ヴィリニュス割譲
+	desc = "EVT_133533_DESC"	#ポーランドは連合国側として優先的な待遇を受けることとなり、ソビエト連邦の構成国の一員であって現在立場の低いリトアニアは、ポーランドに国土を割譲せねばならない。
+	
+	action_a = {
+		name = "EVT_133533_ACTA"	#我々に選択権はない
+		
+		command = { type = secedeprovince which = POL value = 214 }
+		command = { type = secedeprovince which = POL value = 213 }
+		command = { type = secedeprovince which = POL value = 211 }
+		command = { type = secedeprovince which = POL value = 209 }
+		command = { type = secedeprovince which = POL value = 208 }
+		command = { type = secedeprovince which = POL value = 210 }
+		command = { type = secedeprovince which = POL value = 222 }
+		command = { type = capital which = 207 }
+		command = { type = secederegion which = POL value = "Poland" }
+	}
+}
+
+##########
+#	133534	ポーランドの国境線（ポーランドの拡大）
+##########
+event = {
+	id = 133534
+	random = no
+	tag = { USA FRA ITA ENG LIT EST LAT RUS DFR ROM BLR UKR }
+	persistent = yes	
+	trigger = {
+		flag = { which = RestorePoland when = 0 value = 2 }
+		NOT = { local_flag = PeaceOfRiga2nd }
+		alliance = { country = POL }
+		OR = {	#大ポーランド地域のいずれかを領有
+			control = { province = 510 data = -1 } #east prussia
+			control = { province = 304 data = -1 }
+			control = { province = 500 data = -1 } #eastern poland #FEPK #1.07
+			control = { province = 501 data = -1 }
+			control = { province = 502 data = -1 }
+			control = { province = 503 data = -1 }
+			control = { province = 504 data = -1 }
+			control = { province = 505 data = -1 }
+			control = { province = 506 data = -1 }
+			control = { province = 507 data = -1 }
+			control = { province = 508 data = -1 }
+			control = { province = 509 data = -1 } # FEPK # 1.09 # スヴァルキ
+			control = { province = 562 data = -1 }
+			control = { province = 229 data = -1 }
+			control = { province = 222 data = -1 }
+			control = { province = 210 data = -1 }
+			control = { province = 209 data = -1 }
+			control = { province = 211 data = -1 }
+			control = { province = 213 data = -1 }
+			control = { province = 214 data = -1 }
+			control = { province = 208 data = -1 }
+			control = { province = 206 data = -1 } #memel
+			control = { province = 302 data = -1 } #Ziemie Odzyskane
+			control = { province = 308 data = -1 }
+			control = { province = 473 data = -1 }
+			control = { province = 482 data = -1 }
+			control = { province = 218 data = -1 } #SOV
+			control = { province = 212 data = -1 }
+			control = { province = 221 data = -1 }
+			control = { province = 225 data = -1 }
+			control = { province = 226 data = -1 }
+			control = { province = 227 data = -1 }
+			control = { province = 228 data = -1 }
+			control = { province = 231 data = -1 }
+			control = { province = 511 data = -1 } #LAT
+			control = { province = 577 data = -1 }
+			control = { province = 207 data = -1 }
+			control = { province = 197 data = -1 } #LIT
+			control = { province = 198 data = -1 }
+			control = { province = 202 data = -1 }
+			control = { province = 203 data = -1 }
+			control = { province = 204 data = -1 }
+			control = { province = 205 data = -1 }
+			control = { province = 193 data = -1 } #EST
+			control = { province = 194 data = -1 }
+			control = { province = 195 data = -1 }
+			control = { province = 196 data = -1 }
+			control = { province = 199 data = -1 }
+			control = { province = 205 data = -1 }
+			control = { province = 220 data = -1 } #new
+			control = { province = 272 data = -1 }
+			control = { province = 240 data = -1 }
+			control = { province = 238 data = -1 }
+			control = { province = 237 data = -1 }
+			control = { province = 232 data = -1 }
+			control = { province = 233 data = -1 }
+			control = { province = 234 data = -1 }
+			control = { province = 235 data = -1 }
+			control = { province = 236 data = -1 }
+		}
+	}
+	
+	picture = "american_assistance"
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133534_NAME"	#第二次リガ条約 ― ポーランドの全面的な優先権
+	desc = "EVT_133534_DESC"	#ポーランドは連合国側として優先的な待遇を受けることとなり、歴史上類を見ないほどの版図がこれにより決定された。ポーランドの強い希望はもちろんだが、この取り決めにとってより大事なのは、東欧の安定した支配を行うために、連合国がポーランドを通して影響力を発揮し続けるためであった。これらの地域全てがポーランド人の生存域であると言う主張は無理があるもので、ルーズベルトが大西洋憲章の真意として語った「白人地域のための自由」もこの日完全に形骸化したのである。
+	
+	action_a = {
+		name = "EVT_133534_ACTA"	#欧州の安定のために必要なことだ……
+		command = { type = secedeprovince which = POL value = 510 } #east prussia
+		command = { type = secedeprovince which = POL value = 304 }
+		command = { type = secedeprovince which = POL value = 500 } #eastern poland #FEPK #1.07
+		command = { type = secedeprovince which = POL value = 501 }
+		command = { type = secedeprovince which = POL value = 502 }
+		command = { type = secedeprovince which = POL value = 503 }
+		command = { type = secedeprovince which = POL value = 504 }
+		command = { type = secedeprovince which = POL value = 505 }
+		command = { type = secedeprovince which = POL value = 506 }
+		command = { type = secedeprovince which = POL value = 507 }
+		command = { type = secedeprovince which = POL value = 508 }
+		command = { type = secedeprovince which = POL value = 509 } # FEPK # 1.09 # スヴァルキ
+		command = { type = secedeprovince which = POL value = 562 }
+		command = { type = secedeprovince which = POL value = 229 }
+		command = { type = secedeprovince which = POL value = 222 }
+		command = { type = secedeprovince which = POL value = 210 }
+		command = { type = secedeprovince which = POL value = 209 }
+		command = { type = secedeprovince which = POL value = 211 }
+		command = { type = secedeprovince which = POL value = 213 }
+		command = { type = secedeprovince which = POL value = 214 }
+		command = { type = secedeprovince which = POL value = 208 }
+		command = { type = secedeprovince which = POL value = 206 } #memel
+		command = { type = secedeprovince which = POL value = 302 } #Ziemie Odzyskane
+		command = { type = secedeprovince which = POL value = 308 }
+		command = { type = secedeprovince which = POL value = 473 }
+		command = { type = secedeprovince which = POL value = 482 }
+		command = { type = secedeprovince which = POL value = 218 } #SOV
+		command = { type = secedeprovince which = POL value = 212 }
+		command = { type = secedeprovince which = POL value = 221 }
+		command = { type = secedeprovince which = POL value = 225 }
+		command = { type = secedeprovince which = POL value = 226 }
+		command = { type = secedeprovince which = POL value = 227 }
+		command = { type = secedeprovince which = POL value = 228 }
+		command = { type = secedeprovince which = POL value = 231 }
+		command = { type = secedeprovince which = POL value = 511 } #LAT
+		command = { type = secedeprovince which = POL value = 577 }
+		command = { type = secedeprovince which = POL value = 207 }
+		command = { type = secedeprovince which = POL value = 197 } #LIT
+		command = { type = secedeprovince which = POL value = 198 }
+		command = { type = secedeprovince which = POL value = 202 }
+		command = { type = secedeprovince which = POL value = 203 }
+		command = { type = secedeprovince which = POL value = 204 }
+		command = { type = secedeprovince which = POL value = 205 }
+		command = { type = secedeprovince which = POL value = 193 } #EST
+		command = { type = secedeprovince which = POL value = 194 }
+		command = { type = secedeprovince which = POL value = 195 }
+		command = { type = secedeprovince which = POL value = 196 }
+		command = { type = secedeprovince which = POL value = 199 }
+		command = { type = secedeprovince which = POL value = 205 }
+		command = { type = secedeprovince which = POL value = 220 } #new
+		command = { type = secedeprovince which = POL value = 272 }
+		command = { type = secedeprovince which = POL value = 240 }
+		command = { type = secedeprovince which = POL value = 238 }
+		command = { type = secedeprovince which = POL value = 237 }
+		command = { type = secedeprovince which = POL value = 232 }
+		command = { type = secedeprovince which = POL value = 233 }
+		command = { type = secedeprovince which = POL value = 234 }
+		command = { type = secedeprovince which = POL value = 235 }
+		command = { type = secedeprovince which = POL value = 236 }
+		command = { type = local_setflag which = PeaceOfRiga2nd }
+	}
+}		
+
+##########
+#	133535	ポーランドの国境線（ポーランド側）
+##########
+event = {
+	id = 133535
+	random = no
+	country = POL
+	
+	name = "EVT_133535_NAME"	#第二次リガ条約 ― 東欧の要としてのポーランド
+	desc = "EVT_133535_DESC"	#戦乱に惑わされ続けたポーランドは、連合国のもとで新たな形を迎える。我々は今や東欧を支えるための柱であり、我々の安定が欧州の安定に寄与することは間違いない。隔たれた国境線を開き、離れ離れになっていた同胞とともに、今この良き日をワルシャワで祝おう！
+
+	picture = "Danzig"
+	
+	action = {
+		name = "EVT_133535_ACTA"	#民主主義に乾杯！	#Hura dla demokracji!
+		command = { type = addcore which = 509 }
+		command = { type = addcore which = 510 }
+		       
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 1 value = 1 }
+			}
+			type = addcore which = 214 }
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 1 value = 1 }
+			}
+			type = addcore which = 213 }
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 1 value = 1 }
+			}
+			type = addcore which = 211 }
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 1 value = 1 }
+			}
+			type = addcore which = 209 }
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 1 value = 1 }
+			}
+			type = addcore which = 208 }
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 1 value = 1 }
+			}
+			type = addcore which = 222 }
+		#ブレスト・リトフスク
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 1 value = 1 }
+			}
+			type = addcore which = 503 }
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 1 value = 1 }
+			}
+			type = addcore which = 504 }
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 1 value = 1 }
+			}
+			type = addcore which = 505 }
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 1 value = 1 }
+			}
+			type = addcore which = 507 }
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 1 value = 1 }
+			}
+			type = addcore which = 508 }
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 1 value = 1 }
+			}
+			type = addcore which = 562 }
+		#リヴォフ
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 1 value = 1 }
+			}
+			type = addcore which = 488 }
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 1 value = 1 }
+			}
+			type = addcore which = 500 }
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 1 value = 1 }
+			}
+			type = addcore which = 501 }
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 1 value = 1 }
+			}
+			type = addcore which = 502 }
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 1 value = 1 }
+			}
+			type = addcore which = 506 }
+		#スタニスワヴフ
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 1 value = 1 }
+			}
+			type = addcore which = 229 }
+		
+		#Great Poland
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 0 value = 2 }
+			}
+			type = addcore which = 510 } #east prussia
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 0 value = 2 }
+			}
+			type = addcore which = 304 }
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 0 value = 2 }
+			}
+			type = addcore which = 562 }
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 0 value = 2 }
+			}
+			type = addcore which = 206 } #memel
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 0 value = 2 }
+			}
+			type = addcore which = 302 } #Ziemie Odzyskane
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 0 value = 2 }
+			}
+			type = addcore which = 308 }
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 0 value = 2 }
+			}
+			type = addcore which = 473 }
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 0 value = 2 }
+			}
+			type = addcore which = 482 }
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 0 value = 2 }
+			}
+			type = addcore which = 218 } #SOV
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 0 value = 2 }
+			}
+			type = addcore which = 212 }
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 0 value = 2 }
+			}
+			type = addcore which = 221 }
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 0 value = 2 }
+			}
+			type = addcore which = 225 }
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 0 value = 2 }
+			}
+			type = addcore which = 226 }
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 0 value = 2 }
+			}
+			type = addcore which = 227 }
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 0 value = 2 }
+			}
+			type = addcore which = 228 }
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 0 value = 2 }
+			}
+			type = addcore which = 231 }
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 0 value = 2 }
+			}
+			type = addcore which = 511 } #LAT
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 0 value = 2 }
+			}
+			type = addcore which = 577 }
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 0 value = 2 }
+			}
+			type = addcore which = 207 }
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 0 value = 2 }
+			}
+			type = addcore which = 197 } #LIT
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 0 value = 2 }
+			}
+			type = addcore which = 198 }
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 0 value = 2 }
+			}
+			type = addcore which = 202 }
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 0 value = 2 }
+			}
+			type = addcore which = 203 }
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 0 value = 2 }
+			}
+			type = addcore which = 204 }
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 0 value = 2 }
+			}
+			type = addcore which = 205 }
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 0 value = 2 }
+			}
+			type = addcore which = 193 } #EST
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 0 value = 2 }
+			}
+			type = addcore which = 194 }
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 0 value = 2 }
+			}
+			type = addcore which = 195 }
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 0 value = 2 }
+			}
+			type = addcore which = 196 }
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 0 value = 2 }
+			}
+			type = addcore which = 199 }
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 0 value = 2 }
+			}
+			type = addcore which = 205 }
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 0 value = 2 }
+			}
+			type = addcore which = 220 } #new
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 0 value = 2 }
+			}
+			type = addcore which = 272 }
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 0 value = 2 }
+			}
+			type = addcore which = 240 }
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 0 value = 2 }
+			}
+			type = addcore which = 238 }
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 0 value = 2 }
+			}
+			type = addcore which = 237 }
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 0 value = 2 }
+			}
+			type = addcore which = 232 }
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 0 value = 2 }
+			}
+			type = addcore which = 233 }
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 0 value = 2 }
+			}
+			type = addcore which = 234 }
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 0 value = 2 }
+			}
+			type = addcore which = 235 }
+		command = {
+			trigger = {
+				flag = { which = RestorePoland when = 0 value = 2 }
+			}
+			type = addcore which = 236 }
+		
+	}
+}
+
+##########
+#	133536	ウクライナの国境線
+#A：1919年当時の国境とする
+#B：現状のままとする
+##########
+
+##########
+#	133537	ウクライナの国境線（ロシア側）
+##########
+
+##########
+#	133538	ウクライナの国境線（ウクライナ側）
+##########
+
+##########
+#  Liberation of Russia - Liberation
+##########
+event = {
+	id = 133539
+	random = no 
+	tag = { USA ENG FRA ITA }
+
+	trigger = {
+		control = { province = 175 data = -1 } #Moscow
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133539_NAME"
+	desc = "EVT_133539_DESC"
+
+	picture = "american_assistance"
+
+	action_a = {
+		name = "EVT_133539_ACTA"
+		ai_chance = 100
+		command = { type = independence which = RUS value = 1 when = 1 }
+		command = { type = dissent value = -5 }
+		#command = { type = trigger which = 133540 } #
+		command = { type = alliance which = RUS } #BETA修正パッチ
+		command = { type = relation which = SOV value = -20 }
+	}
+	action_b = {
+		name = "EVT_133539_ACTB"
+		ai_chance = 0
+		command = { type = dissent value = 1 }
+	}
+}
+##########
+#  Liberation of Russia - Alliance
+##########
+#event = {
+#	id = 133540
+#	random = no 
+#	tag = { USA ENG FRA ITA }
+#
+#	name = "EVT_133540_NAME"
+#	desc = "EVT_133540_DESC"
+#
+#	picture = "american_assistance"
+#
+#	action_a = {
+#		name = "EVT_133540_ACTA"
+#		ai_chance = 100
+#		#command = { type = make_puppet which = RUS }
+#		
+#	}
+#}
+##########
+#  Liberation of Austria - Liberation
+##########
+event = {
+	id = 133541
+	random = no 
+	tag = { USA ENG FRA ITA }
+
+	trigger = {
+		control = { province = 463 data = -1 } #Vienne
+		war = { country = -1 country = SOV }
+		NOT = { exists = AUS }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133541_NAME"
+	desc = "EVT_133541_DESC"
+
+	picture = "american_assistance"
+
+	action_a = {
+		name = "EVT_133541_ACTA"
+		ai_chance = 100
+		command = { type = independence which = AUS value = 1 when = 1 }
+		command = { type = dissent value = -5 }
+		command = { type = trigger which = 133542 } #
+		command = { type = relation which = SOV value = -20 }
+	}
+	action_b = {
+		name = "EVT_133541_ACTB"
+		ai_chance = 0
+		command = { type = dissent value = 1 }
+	}
+}
+##########
+#  Liberation of Austria - Alliance
+##########
+event = {
+	id = 133542
+	random = no 
+	tag = { USA ENG FRA ITA }
+
+	name = "EVT_133542_NAME"
+	desc = "EVT_133542_DESC"
+
+	picture = "american_assistance"
+
+	action_a = {
+		name = "EVT_133542_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = AUS }
+	}
+}
+##########
+#  Liberation of Czechoslovakia - Liberation
+##########
+event = {
+	id = 133543
+	random = no 
+	tag = { USA ENG FRA ITA }
+
+	trigger = {
+		control = { province = 469 data = -1 } #Prague
+		control = { province = 476 data = -1 } #Bratislava
+		NOT = { 
+			exists = CZE 
+			exists = SLO
+			exists = GER
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133543_NAME"
+	desc = "EVT_133543_DESC"
+
+	picture = "american_assistance"
+
+	action_a = {
+		name = "EVT_133543_ACTA"
+		ai_chance = 100
+		command = { type = independence which = CZE value = 1 when = 1 }
+		command = { type = dissent value = -5 }
+		command = { type = trigger which = 133544 } #
+		command = { type = relation which = SOV value = -20 }
+	}
+	action_b = {
+		name = "EVT_133543_ACTB"
+		ai_chance = 0
+		command = { type = dissent value = 1 }
+	}
+}
+##########
+#  Liberation of Czechoslovakia - Alliance
+##########
+event = {
+	id = 133544
+	random = no 
+	tag = { USA ENG FRA ITA }
+
+	name = "EVT_133544_NAME"
+	desc = "EVT_133544_DESC"
+
+	picture = "american_assistance"
+
+	action_a = {
+		name = "EVT_133544_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = CZE }
+	}
+}
+
+##########
+#  Liberation of Transural Republic - Liberation?
+##########
+event = {
+	id = 133545
+	random = no
+	tag = { USA ENG FRA ITA }
+
+	trigger = {
+		NOT = { 
+			exists = SOV
+			exists = TRA
+		}
+		alliance = { country = RUS }
+		control = { province = 1572 data = -1 }	#スヴェルドロフスク
+		control = { province = 1573 data = -1 }	#ニジニ・タギル
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	name = "EVT_133545_NAME"	#トランスウラル解放
+	desc = "EVT_133545_DESC"	#ウラル地域で最大の都市であるスヴェルドロフスク、そして同地域の最大の重工業地域であるニジニ・タギルは我々により占領された。ソビエト連邦の影響を完全に無くすためにはこの地域をトランスウラル共和国として独立させるのが一般的な考え方だが、もう一つ方法がある。同盟国である新生ロシアにこの地の管理を任せることだ。いくらかの例外はあるが、ウラルに住む人間は殆どが間違いなくロシア人で、文化的には彼らを分離しなくてはならないという理由は存在しないのだ。
+
+	picture = "american_assistance"
+
+	action_a = {
+		name = "EVT_133545_ACTA"	#トランスウラル共和国を独立させ、属国とせよ
+		ai_chance = 50
+		command = { type = independence which = TRA value = 1 when = 1 }
+		command = { type = dissent value = -5 }
+		command = { type = relation which = RUS value = -10 }
+		command = { type = make_puppet which = TRA }
+	}
+	action_b = {
+		name = "EVT_133545_ACTB"	#ウラル地域はロシアに統合させよう
+		ai_chance = 50
+		command = { type = dissent value = 1 }
+		command = { type = relation which = RUS value = 10 }
+		command = { type = secedeprovince which = RUS value = 1572 }
+		command = { type = secedeprovince which = RUS value = 1573 }
+		command = { type = secedeprovince which = RUS value = 1567 }
+		command = { type = secedeprovince which = RUS value = 1151 }
+		command = { type = secedeprovince which = RUS value = 1574 }
+		command = { type = secedeprovince which = RUS value = 1827 }
+		command = { type = secedeprovince which = RUS value = 1828 }
+		command = { type = secedeprovince which = RUS value = 1150 }
+		command = { type = secedeprovince which = RUS value = 1566 }
+		command = { type = secedeprovince which = RUS value = 1152 }
+		command = { type = secedeprovince which = RUS value = 1153 }
+		command = { type = secedeprovince which = RUS value = 1149 }
+		command = { type = secedeprovince which = RUS value = 1154 }
+		command = { type = secedeprovince which = RUS value = 1155 }
+		command = { type = secedeprovince which = RUS value = 1564 }
+		command = { type = secedeprovince which = RUS value = 1565 }
+		command = { type = secedeprovince which = RUS value = 1571 }
+		command = { type = secedeprovince which = RUS value = 1575 }
+		command = { type = secedeprovince which = RUS value = 1570 }
+		command = { type = secedeprovince which = RUS value = 1577 }
+		command = { type = secedeprovince which = RUS value = 1593 }
+		command = { type = secedeprovince which = RUS value = 1594 }
+		command = { type = secedeprovince which = RUS value = 1596 }
+		command = { type = secedeprovince which = RUS value = 1597 }
+		command = { type = secedeprovince which = RUS value = 1598 }
+		command = { type = secedeprovince which = RUS value = 1541 }
+		command = { type = secedeprovince which = RUS value = 1542 }
+		command = { type = secedeprovince which = RUS value = 1552 }
+		command = { type = secedeprovince which = RUS value = 1772 }
+		command = { type = secedeprovince which = RUS value = 1773 }
+		command = { type = secedeprovince which = RUS value = 1782 }
+		
+		command = { type = addcore which = 1572 where = RUS }
+		command = { type = addcore which = 1573 where = RUS }
+		command = { type = addcore which = 1567 where = RUS }
+		command = { type = addcore which = 1151 where = RUS }
+		command = { type = addcore which = 1574 where = RUS }
+		command = { type = addcore which = 1827 where = RUS }
+		command = { type = addcore which = 1828 where = RUS }
+		command = { type = addcore which = 1150 where = RUS }
+		command = { type = addcore which = 1566 where = RUS }
+		command = { type = addcore which = 1152 where = RUS }
+		command = { type = addcore which = 1153 where = RUS }
+		command = { type = addcore which = 1149 where = RUS }
+		command = { type = addcore which = 1154 where = RUS }
+		command = { type = addcore which = 1155 where = RUS }
+		command = { type = addcore which = 1564 where = RUS }
+		command = { type = addcore which = 1565 where = RUS }
+		command = { type = addcore which = 1571 where = RUS }
+		command = { type = addcore which = 1575 where = RUS }
+		command = { type = addcore which = 1570 where = RUS }
+		command = { type = addcore which = 1577 where = RUS }
+		command = { type = addcore which = 1593 where = RUS }
+		command = { type = addcore which = 1594 where = RUS }
+		command = { type = addcore which = 1596 where = RUS }
+		command = { type = addcore which = 1597 where = RUS }
+		command = { type = addcore which = 1598 where = RUS }
+		command = { type = addcore which = 1541 where = RUS }
+		command = { type = addcore which = 1542 where = RUS }
+		command = { type = addcore which = 1552 where = RUS }
+		command = { type = addcore which = 1772 where = RUS }
+		command = { type = addcore which = 1773 where = RUS }
+		command = { type = addcore which = 1782 where = RUS }
+	}
+	action_c = {
+		name = "EVT_133545_ACTC"	#軍政を続行せよ
+		ai_chance = 0
+		command = { type = dissent value = 2 }
+	}
+}
+
+##########
+#  Liberation of Mongolia - Liberation?
+##########
+event = {
+	id = 133546
+	random = no
+	tag = { USA ENG FRA ITA }
+
+	trigger = {
+		NOT = { 
+			exists = MON
+		}
+		control = { province = 1420 data = -3 }
+		control = { province = 1419 data = -3 }
+		control = { province = 1434 data = -3 }
+		control = { province = 1436 data = -3 }
+		control = { province = 1437 data = -3 }
+		control = { province = 1438 data = -3 }
+		control = { province = 1399 data = -3 }
+		control = { province = 1404 data = -1 } 	#ウランバートル
+		control = { province = 1385 data = -3 }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	name = "EVT_133546_NAME"	#モンゴル解放
+	desc = "EVT_133546_DESC"	#西側諸国によるソビエト侵攻はついにアジアに及び、ついにモンゴル全域が連合軍の軍政下に入った。モンゴルを解放し、ソ連から守ってやろう！
+
+	picture = "american_assistance"
+
+	action_a = {
+		name = "EVT_133546_ACTA"	#よろしい
+		ai_chance = 50
+		command = { type = independence which = MON value = 1 when = 1 }
+		command = { type = dissent value = -5 }
+		command = { type = make_puppet which = MON }
+		command = { type = relation which = SOV value = -20 }
+	}
+	action_b = {
+		name = "EVT_133546_ACTB"	#満洲国が外蒙古を統治するべきだ
+		trigger = {
+			alliance = { country = MAN }
+		}
+		ai_chance = 25
+		command = { type = relation which = SOV value = -20 }
+		
+		command = { type = secedeprovince which = MAN value = 1420 }
+		command = { type = secedeprovince which = MAN value = 1419 }
+		command = { type = secedeprovince which = MAN value = 1434 }
+		command = { type = secedeprovince which = MAN value = 1436 }
+		command = { type = secedeprovince which = MAN value = 1437 }
+		command = { type = secedeprovince which = MAN value = 1438 }
+		command = { type = secedeprovince which = MAN value = 1399 }
+		command = { type = secedeprovince which = MAN value = 1404 }
+		command = { type = secedeprovince which = MAN value = 1385 }
+		command = { type = secedeprovince which = MAN value = 1206 }
+		command = { type = secedeprovince which = MAN value = 1208 }
+		command = { type = secedeprovince which = MAN value = 1209 }
+		command = { type = secedeprovince which = MAN value = 1207 }
+		command = { type = secedeprovince which = MAN value = 1272 }
+		command = { type = secedeprovince which = MAN value = 1273 }
+		command = { type = secedeprovince which = MAN value = 1274 }
+		command = { type = secedeprovince which = MAN value = 1386 }
+		command = { type = secedeprovince which = MAN value = 1398 }
+		command = { type = secedeprovince which = MAN value = 1439 }
+		command = { type = secedeprovince which = MAN value = 1418 }
+		command = { type = secedeprovince which = MAN value = 1520 }
+		command = { type = secedeprovince which = MAN value = 1384 }
+		command = { type = secedeprovince which = MAN value = 1382 }
+		command = { type = secedeprovince which = MAN value = 1387 }
+		command = { type = secedeprovince which = MAN value = 1388 }
+		command = { type = secedeprovince which = MAN value = 1397 }
+		
+		command = { type = addcore which = 1420 where = MAN }
+		command = { type = addcore which = 1419 where = MAN }
+		command = { type = addcore which = 1434 where = MAN }
+		command = { type = addcore which = 1436 where = MAN }
+		command = { type = addcore which = 1437 where = MAN }
+		command = { type = addcore which = 1438 where = MAN }
+		command = { type = addcore which = 1399 where = MAN }
+		command = { type = addcore which = 1404 where = MAN }
+		command = { type = addcore which = 1385 where = MAN }
+		command = { type = addcore which = 1206 where = MAN }
+		command = { type = addcore which = 1208 where = MAN }
+		command = { type = addcore which = 1209 where = MAN }
+		command = { type = addcore which = 1207 where = MAN }
+		command = { type = addcore which = 1272 where = MAN }
+		command = { type = addcore which = 1273 where = MAN }
+		command = { type = addcore which = 1274 where = MAN }
+		command = { type = addcore which = 1386 where = MAN }
+		command = { type = addcore which = 1398 where = MAN }
+		command = { type = addcore which = 1439 where = MAN }
+		command = { type = addcore which = 1418 where = MAN }
+		command = { type = addcore which = 1520 where = MAN }
+		command = { type = addcore which = 1384 where = MAN }
+		command = { type = addcore which = 1382 where = MAN }
+		command = { type = addcore which = 1387 where = MAN }
+		command = { type = addcore which = 1388 where = MAN }
+		command = { type = addcore which = 1397 where = MAN }
+	}
+	action_c = {
+		name = "EVT_133546_ACTC"	#蒙古国は全蒙古について責任を持つべきだ
+		trigger = {
+			alliance = { country = MEN }
+		}
+		ai_chance = 25
+		command = { type = relation which = SOV value = -20 }
+		
+		command = { type = secedeprovince which = MEN value = 1420 }
+		command = { type = secedeprovince which = MEN value = 1419 }
+		command = { type = secedeprovince which = MEN value = 1434 }
+		command = { type = secedeprovince which = MEN value = 1436 }
+		command = { type = secedeprovince which = MEN value = 1437 }
+		command = { type = secedeprovince which = MEN value = 1438 }
+		command = { type = secedeprovince which = MEN value = 1399 }
+		command = { type = secedeprovince which = MEN value = 1404 }
+		command = { type = secedeprovince which = MEN value = 1385 }
+		command = { type = secedeprovince which = MEN value = 1206 }
+		command = { type = secedeprovince which = MEN value = 1208 }
+		command = { type = secedeprovince which = MEN value = 1209 }
+		command = { type = secedeprovince which = MEN value = 1207 }
+		command = { type = secedeprovince which = MEN value = 1272 }
+		command = { type = secedeprovince which = MEN value = 1273 }
+		command = { type = secedeprovince which = MEN value = 1274 }
+		command = { type = secedeprovince which = MEN value = 1386 }
+		command = { type = secedeprovince which = MEN value = 1398 }
+		command = { type = secedeprovince which = MEN value = 1439 }
+		command = { type = secedeprovince which = MEN value = 1418 }
+		command = { type = secedeprovince which = MEN value = 1520 }
+		command = { type = secedeprovince which = MEN value = 1384 }
+		command = { type = secedeprovince which = MEN value = 1382 }
+		command = { type = secedeprovince which = MEN value = 1387 }
+		command = { type = secedeprovince which = MEN value = 1388 }
+		command = { type = secedeprovince which = MEN value = 1397 }
+	}
+	action_d = {
+		name = "EVT_133546_ACTD"	#ソ連を刺激するのは避けよう
+		ai_chance = 0
+		command = { type = dissent value = 2 }
+	}
+}
+
+
+
+##########
+#  Liberation of Transural Republic - Liberation?
+##########
+event = {
+	id = 133547
+	random = no
+	tag = { USA ENG FRA ITA }
+
+	trigger = {
+		NOT = {
+			ispuppet = yes 
+			exists = PRI 
+			war = { country = JAP }
+		}
+		OR = {
+			war = { country = SOV }
+			NOT = { exists = SOV }
+		}
+		control = { province = 1371 data = -3 } #
+		control = { province = 1372 data = -1 } #ウラジオストク
+		control = { province = 1373 data = -3 } #
+		control = { province = 1369 data = -3 } #
+		control = { province = 1368 data = -3 } #
+		control = { province = 1367 data = -3 } #
+		control = { province = 1370 data = -3 } #
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	name = "EVT_133547_NAME"	#ロシア沿海地方（プリモルスキー）解放
+	desc = "EVT_133547_DESC"	#連合国はロシア極東沿海地方全域を占領した。ロシア革命のときに白軍による臨時全ロシア政府が建てられて以来のことである。彼らを解放し、今度こそソ連から守ってやろう！
+
+	picture = "american_assistance"
+
+	action_a = {
+		name = "EVT_133547_ACTA"	#よろしい
+		ai_chance = 40
+		command = { type = independence which = PRI value = 1 when = 1 }
+		command = { type = dissent value = -5 }
+		command = { type = relation which = RUS value = -10 }
+		command = { type = make_puppet which = PRI }
+	}
+	action_b = {
+		name = "EVT_133547_ACTB"	#沿海州地域はロシアに統合させよう
+		trigger = {
+			alliance = { country = RUS }
+		}
+		ai_chance = 40
+		command = { type = dissent value = 1 }
+		command = { type = relation which = RUS value = 10 }
+		command = { type = secedeprovince which = RUS value = 1371 }
+		command = { type = secedeprovince which = RUS value = 1372 }
+		command = { type = secedeprovince which = RUS value = 1373 }
+		command = { type = secedeprovince which = RUS value = 1369 }
+		command = { type = secedeprovince which = RUS value = 1368 }
+		command = { type = secedeprovince which = RUS value = 1367 }
+		command = { type = secedeprovince which = RUS value = 1370 }
+		command = { type = secedeprovince which = RUS value = 1366 }
+		command = { type = secedeprovince which = RUS value = 1526 }
+		command = { type = secedeprovince which = RUS value = 1527 }
+		command = { type = secedeprovince which = RUS value = 1528 }
+		command = { type = secedeprovince which = RUS value = 1529 }
+		command = { type = secedeprovince which = RUS value = 1523 }
+		command = { type = secedeprovince which = RUS value = 1410 }
+		command = { type = secedeprovince which = RUS value = 1409 }
+		command = { type = secedeprovince which = RUS value = 1164 }
+		command = { type = secedeprovince which = RUS value = 1524 }
+		command = { type = secedeprovince which = RUS value = 1525 }
+		command = { type = secedeprovince which = RUS value = 1165 }
+		command = { type = secedeprovince which = RUS value = 1166 }
+		command = { type = secedeprovince which = RUS value = 1167 }
+		command = { type = secedeprovince which = RUS value = 1170 }
+		command = { type = secedeprovince which = RUS value = 1171 }
+		command = { type = secedeprovince which = RUS value = 1172 }
+		command = { type = secedeprovince which = RUS value = 1405 }
+		command = { type = secedeprovince which = RUS value = 1411 }
+		
+		command = { type = addcore which = 1371 where = RUS }
+		command = { type = addcore which = 1372 where = RUS }
+		command = { type = addcore which = 1373 where = RUS }
+		command = { type = addcore which = 1369 where = RUS }
+		command = { type = addcore which = 1368 where = RUS }
+		command = { type = addcore which = 1367 where = RUS }
+		command = { type = addcore which = 1370 where = RUS }
+		command = { type = addcore which = 1366 where = RUS }
+		command = { type = addcore which = 1526 where = RUS }
+		command = { type = addcore which = 1527 where = RUS }
+		command = { type = addcore which = 1528 where = RUS }
+		command = { type = addcore which = 1529 where = RUS }
+		command = { type = addcore which = 1523 where = RUS }
+		command = { type = addcore which = 1410 where = RUS }
+		command = { type = addcore which = 1409 where = RUS }
+		command = { type = addcore which = 1164 where = RUS }
+		command = { type = addcore which = 1524 where = RUS }
+		command = { type = addcore which = 1525 where = RUS }
+		command = { type = addcore which = 1165 where = RUS }
+		command = { type = addcore which = 1166 where = RUS }
+		command = { type = addcore which = 1167 where = RUS }
+		command = { type = addcore which = 1170 where = RUS }
+		command = { type = addcore which = 1171 where = RUS }
+		command = { type = addcore which = 1172 where = RUS }
+		command = { type = addcore which = 1405 where = RUS }
+		command = { type = addcore which = 1411 where = RUS }
+	}
+	action_c = {
+		name = "EVT_133547_ACTC"	#外満州は満州国へ、それ以外の地域はロシアに統合せよ
+		trigger = {
+			alliance = { country = RUS }
+			alliance = { country = MAN }
+		}
+		ai_chance = 20
+		
+		command = { type = dissent value = 1 }
+		command = { type = relation which = RUS value = 10 }
+
+		command = { type = secedearea which = MAN value = "Primorski" }
+		command = { type = secedearea which = MAN value = "Khabarovsk" }
+		command = { type = secedeprovince which = MAN value = 1528 }
+		command = { type = secedeprovince which = MAN value = 1529 }
+
+		command = { type = secedeprovince which = RUS value = 1371 }
+		command = { type = secedeprovince which = RUS value = 1372 }
+		command = { type = secedeprovince which = RUS value = 1373 }
+		command = { type = secedeprovince which = RUS value = 1369 }
+		command = { type = secedeprovince which = RUS value = 1368 }
+		command = { type = secedeprovince which = RUS value = 1367 }
+		command = { type = secedeprovince which = RUS value = 1370 }
+		command = { type = secedeprovince which = RUS value = 1366 }
+		command = { type = secedeprovince which = RUS value = 1526 }
+		command = { type = secedeprovince which = RUS value = 1527 }
+		command = { type = secedeprovince which = RUS value = 1528 }
+		command = { type = secedeprovince which = RUS value = 1529 }
+		command = { type = secedeprovince which = RUS value = 1523 }
+		command = { type = secedeprovince which = RUS value = 1410 }
+		command = { type = secedeprovince which = RUS value = 1409 }
+		command = { type = secedeprovince which = RUS value = 1164 }
+		command = { type = secedeprovince which = RUS value = 1524 }
+		command = { type = secedeprovince which = RUS value = 1525 }
+		command = { type = secedeprovince which = RUS value = 1165 }
+		command = { type = secedeprovince which = RUS value = 1166 }
+		command = { type = secedeprovince which = RUS value = 1167 }
+		command = { type = secedeprovince which = RUS value = 1170 }
+		command = { type = secedeprovince which = RUS value = 1171 }
+		command = { type = secedeprovince which = RUS value = 1172 }
+		command = { type = secedeprovince which = RUS value = 1405 }
+		command = { type = secedeprovince which = RUS value = 1411 }
+		
+		command = { type = addcore which = 1371 where = RUS }
+		command = { type = addcore which = 1372 where = RUS }
+		command = { type = addcore which = 1373 where = RUS }
+		command = { type = addcore which = 1369 where = RUS }
+		command = { type = addcore which = 1368 where = RUS }
+		command = { type = addcore which = 1367 where = RUS }
+		command = { type = addcore which = 1370 where = RUS }
+		command = { type = addcore which = 1366 where = RUS }
+		command = { type = addcore which = 1526 where = RUS }
+		command = { type = addcore which = 1527 where = RUS }
+		command = { type = addcore which = 1528 where = RUS }
+		command = { type = addcore which = 1529 where = RUS }
+		command = { type = addcore which = 1523 where = RUS }
+		command = { type = addcore which = 1410 where = RUS }
+		command = { type = addcore which = 1409 where = RUS }
+		command = { type = addcore which = 1164 where = RUS }
+		command = { type = addcore which = 1524 where = RUS }
+		command = { type = addcore which = 1525 where = RUS }
+		command = { type = addcore which = 1165 where = RUS }
+		command = { type = addcore which = 1166 where = RUS }
+		command = { type = addcore which = 1167 where = RUS }
+		command = { type = addcore which = 1170 where = RUS }
+		command = { type = addcore which = 1171 where = RUS }
+		command = { type = addcore which = 1172 where = RUS }
+		command = { type = addcore which = 1405 where = RUS }
+		command = { type = addcore which = 1411 where = RUS }
+	}
+	action_d = {
+		name = "EVT_133547_ACTD"	#軍政を続行せよ
+		ai_chance = 0
+		command = { type = dissent value = 2 }
+	}
+}
+
+##########
+#  Liberation of Kazakstan
+##########
+event = {
+	id = 133548
+	random = no 
+	tag = { USA ENG FRA ITA }
+
+	trigger = {
+		control = { province = 1422 data = -1 }	#アルアマタ
+		control = { province = 1423 data = -3 }
+		control = { province = 1556 data = -3 }
+		control = { province = 1555 data = -3 }
+		control = { province = 1550 data = -3 }
+		control = { province = 1424 data = -3 }
+		NOT = { 
+			exists = KAZ
+			exists = GER
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133548_NAME"	#カザフスタン解放
+	desc = "EVT_133548_DESC"	#
+
+	picture = "american_assistance"
+
+	action_a = {
+		name = "EVT_133543_ACTA"
+		ai_chance = 100
+		command = { type = independence which = KAZ value = 1 when = 1 }
+		command = { type = dissent value = -5 }
+		command = { type = relation which = SOV value = -20 }
+		command = { type = make_puppet which = KAZ }
+	}
+	action_b = {
+		name = "EVT_133543_ACTB"
+		ai_chance = 0
+		command = { type = dissent value = 1 }
+	}
+}
+
+##########
+#  Liberation of Kirgizistan
+##########
+event = {
+	id = 133549
+	random = no 
+	tag = { USA ENG FRA ITA }
+
+	trigger = {
+		control = { province = 1428 data = -1 }	#オシュ
+		control = { province = 1429 data = -3 }
+		NOT = { 
+			exists = KYG 
+			exists = GER
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133549_NAME"	#キルギスタン解放
+	desc = "EVT_133549_DESC"	#
+
+	picture = "american_assistance"
+
+	action_a = {
+		name = "EVT_133543_ACTA"
+		ai_chance = 100
+		command = { type = independence which = KYG value = 1 when = 1 }
+		command = { type = dissent value = -5 }
+		command = { type = relation which = SOV value = -20 }
+		command = { type = make_puppet which = KYG }
+	}
+	action_b = {
+		name = "EVT_133543_ACTB"
+		ai_chance = 0
+		command = { type = dissent value = 1 }
+	}
+}
+
+##########
+#  Liberation of Tadzjikistan
+##########
+event = {
+	id = 133550
+	random = no 
+	tag = { USA ENG FRA ITA }
+
+	trigger = {
+		control = { province = 1485 data = -1 }	#スターリナバード
+		NOT = { 
+			exists = TAJ 
+			exists = GER
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133550_NAME"	#タジキスタン解放
+	desc = "EVT_133550_DESC"	#
+
+	picture = "american_assistance"
+
+	action_a = {
+		name = "EVT_133543_ACTA"
+		ai_chance = 100
+		command = { type = independence which = TAJ value = 1 when = 1 }
+		command = { type = dissent value = -5 }
+		command = { type = relation which = SOV value = -20 }
+		command = { type = make_puppet which = TAJ }
+	}
+	action_b = {
+		name = "EVT_133543_ACTB"
+		ai_chance = 0
+		command = { type = dissent value = 1 }
+	}
+}
+
+##########
+#  Liberation of Turkmenistan
+##########
+event = {
+	id = 133551
+	random = no 
+	tag = { USA ENG FRA ITA }
+
+	trigger = {
+		control = { province = 1490 data = -1 }	#アシガバード
+		control = { province = 1491 data = -3 }	
+		NOT = { 
+			exists = TRK 
+			exists = GER
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133551_NAME"	#トルクメニスタン解放
+	desc = "EVT_133551_DESC"	#
+
+	picture = "american_assistance"
+
+	action_a = {
+		name = "EVT_133543_ACTA"
+		ai_chance = 100
+		command = { type = independence which = TRK value = 1 when = 1 }
+		command = { type = dissent value = -5 }
+		command = { type = relation which = SOV value = -20 }
+		command = { type = make_puppet which = TRK }
+	}
+	action_b = {
+		name = "EVT_133543_ACTB"
+		ai_chance = 0
+		command = { type = dissent value = 1 }
+	}
+}
+
+##########
+#  Liberation of Uzbekistan
+##########
+event = {
+	id = 133552
+	random = no 
+	tag = { USA ENG FRA ITA }
+
+	trigger = {
+		control = { province = 1584 data = -3 }	
+		control = { province = 1585 data = -3 }	
+		control = { province = 1489 data = -3 }	
+		control = { province = 1487 data = -3 }	
+		control = { province = 1427 data = -1 }	#タシュケント
+		control = { province = 1488 data = -3 }	
+		NOT = { 
+			exists = UZB 
+			exists = GER
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133552_NAME"	#ウズベキスタン解放
+	desc = "EVT_133552_DESC"	#
+
+	picture = "american_assistance"
+
+	action_a = {
+		name = "EVT_133543_ACTA"
+		ai_chance = 100
+		command = { type = independence which = UZB value = 1 when = 1 }
+		command = { type = dissent value = -5 }
+		command = { type = relation which = SOV value = -20 }
+		command = { type = make_puppet which = UZB }
+	}
+	action_b = {
+		name = "EVT_133543_ACTB"
+		ai_chance = 0
+		command = { type = dissent value = 1 }
+	}
+}
+
+###########
+#  Poland is Allied puppet
+###########
+event = {
+	id = 133553
+	random = no
+	country = SOV
+
+	trigger = {
+		atwar = no
+		OR = {
+			puppet = { country = POL country = USA }
+			puppet = { country = POL country = ENG }
+			puppet = { country = POL country = FRA }
+			puppet = { country = POL country = ITA }
+		}
+		OR = {
+			event = 133553 #belarus already got soviet land
+			NOT = {
+				exists = BLR
+			}
+		}
+		OR = {
+			event = 133554 #ukraine already got soviet land
+			NOT = {
+				exists = UKR
+			}
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133553_NAME"
+	desc = "EVT_133553_DESC"
+
+	action_a = {
+		name = "EVT_133553_ACTA"
+		command = { type = secedeprovince which = POL value = 510 } #Konigsberg
+
+		command = { type = secedeprovince which = POL value = 486 }
+		command = { type = secedeprovince which = POL value = 485 }
+		command = { type = secedeprovince which = POL value = 483 }
+		command = { type = secedeprovince which = POL value = 484 }
+		command = { type = secedeprovince which = POL value = 487 }
+		command = { type = secedeprovince which = POL value = 481 }
+		command = { type = secedeprovince which = POL value = 480 }
+		command = { type = secedeprovince which = POL value = 488 }
+		command = { type = secedeprovince which = POL value = 479 }
+		command = { type = secedeprovince which = POL value = 489 }
+
+		command = { type = secedeprovince which = POL value = 509 }
+		command = { type = secedeprovince which = POL value = 305 }
+		command = { type = secedeprovince which = POL value = 306 }
+		command = { type = secedeprovince which = POL value = 307 }
+		command = { type = secedeprovince which = POL value = 214 }
+		command = { type = secedeprovince which = POL value = 208 }
+		command = { type = secedeprovince which = POL value = 213 }
+		command = { type = secedeprovince which = POL value = 209 }
+		command = { type = secedeprovince which = POL value = 211 }
+		command = { type = secedeprovince which = POL value = 508 }
+		command = { type = secedeprovince which = POL value = 507 }
+		command = { type = secedeprovince which = POL value = 210 }
+		command = { type = secedeprovince which = POL value = 505 }
+		command = { type = secedeprovince which = POL value = 222 }
+		command = { type = secedeprovince which = POL value = 504 }
+		command = { type = secedeprovince which = POL value = 503 }
+		command = { type = secedeprovince which = POL value = 562 }
+		command = { type = secedeprovince which = POL value = 506 }
+		command = { type = secedeprovince which = POL value = 502 }
+		command = { type = secedeprovince which = POL value = 229 }
+		command = { type = secedeprovince which = POL value = 500 }
+		command = { type = secedeprovince which = POL value = 501 }
+		command = { type = secedeprovince which = POL value = 303 }
+
+		command = { type = removecore which = 510 } #Konigsberg
+
+		command = { type = removecore which = 486 }
+		command = { type = removecore which = 485 }
+		command = { type = removecore which = 483 }
+		command = { type = removecore which = 484 }
+		command = { type = removecore which = 487 }
+		command = { type = removecore which = 481 }
+		command = { type = removecore which = 480 }
+		command = { type = removecore which = 488 }
+		command = { type = removecore which = 479 }
+		command = { type = removecore which = 489 }
+
+		command = { type = removecore which = 509 }
+		command = { type = removecore which = 305 }
+		command = { type = removecore which = 306 }
+		command = { type = removecore which = 307 }
+		command = { type = removecore which = 214 }
+		command = { type = removecore which = 208 }
+		command = { type = removecore which = 213 }
+		command = { type = removecore which = 209 }
+		command = { type = removecore which = 211 }
+		command = { type = removecore which = 508 }
+		command = { type = removecore which = 507 }
+		command = { type = removecore which = 210 }
+		command = { type = removecore which = 505 }
+		command = { type = removecore which = 222 }
+		command = { type = removecore which = 504 }
+		command = { type = removecore which = 503 }
+		command = { type = removecore which = 562 }
+		command = { type = removecore which = 506 }
+		command = { type = removecore which = 502 }
+		command = { type = removecore which = 229 }
+		command = { type = removecore which = 500 }
+		command = { type = removecore which = 501 }
+		command = { type = removecore which = 303 }
+	}
+}
+###########
+#  Belarus is Allied puppet
+###########
+event = {
+	id = 133554
+	random = no
+	country = SOV
+
+	trigger = {
+		atwar = no
+		OR = {
+			puppet = { country = BLR country = USA }
+			puppet = { country = BLR country = ENG }
+			puppet = { country = BLR country = FRA }
+			puppet = { country = BLR country = ITA }
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133554_NAME"
+	desc = "EVT_133554_DESC"
+
+	action_a = {
+		name = "EVT_133554_ACTA"
+		command = { type = secedeprovince which = BLR value = 273 }
+		command = { type = secedeprovince which = BLR value = 274 }
+		command = { type = secedeprovince which = BLR value = 212 }
+		command = { type = secedeprovince which = BLR value = 221 }
+		command = { type = secedeprovince which = BLR value = 225 }
+		command = { type = secedeprovince which = BLR value = 218 }
+		command = { type = secedeprovince which = BLR value = 220 }
+		command = { type = secedeprovince which = BLR value = 272 }
+
+		command = { type = secedeprovince which = BLR value = 209 }
+		command = { type = secedeprovince which = BLR value = 211 }
+		command = { type = secedeprovince which = BLR value = 213 }
+		command = { type = secedeprovince which = BLR value = 214 }
+		command = { type = secedeprovince which = BLR value = 210 }
+		command = { type = secedeprovince which = BLR value = 222 }
+		command = { type = secedeprovince which = BLR value = 503 }
+		command = { type = secedeprovince which = BLR value = 504 }
+		command = { type = secedeprovince which = BLR value = 507 }
+		command = { type = secedeprovince which = BLR value = 505 }
+		command = { type = secedeprovince which = BLR value = 508 }
+		command = { type = secedeprovince which = BLR value = 208 }
+
+		command = { type = removecore which = 273 }
+		command = { type = removecore which = 274 }
+		command = { type = removecore which = 212 }
+		command = { type = removecore which = 221 }
+		command = { type = removecore which = 225 }
+		command = { type = removecore which = 218 }
+		command = { type = removecore which = 220 }
+		command = { type = removecore which = 272 }
+
+		command = { type = removecore which = 209 }
+		command = { type = removecore which = 211 }
+		command = { type = removecore which = 213 }
+		command = { type = removecore which = 214 }
+		command = { type = removecore which = 210 }
+		command = { type = removecore which = 222 }
+		command = { type = removecore which = 503 }
+		command = { type = removecore which = 504 }
+		command = { type = removecore which = 507 }
+		command = { type = removecore which = 505 }
+		command = { type = removecore which = 508 }
+		command = { type = removecore which = 208 }
+	}
+}
+###########
+#  Ukraine is Allied puppet
+###########
+event = {
+	id = 133555
+	random = no
+	country = SOV
+
+	trigger = {
+		atwar = no
+		OR = {
+			puppet = { country = UKR country = USA }
+			puppet = { country = UKR country = ENG }
+			puppet = { country = UKR country = FRA }
+			puppet = { country = UKR country = ITA }
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133555_NAME"
+	desc = "EVT_133555_DESC"
+
+	action_a = {
+		name = "EVT_133555_ACTA"
+		command = { type = secedeprovince which = UKR value = 260 }
+		command = { type = secedeprovince which = UKR value = 238 }
+		command = { type = secedeprovince which = UKR value = 239 }
+		command = { type = secedeprovince which = UKR value = 240 }
+		command = { type = secedeprovince which = UKR value = 242 }
+		command = { type = secedeprovince which = UKR value = 244 }
+		command = { type = secedeprovince which = UKR value = 245 }
+		command = { type = secedeprovince which = UKR value = 246 }
+		command = { type = secedeprovince which = UKR value = 247 }
+		command = { type = secedeprovince which = UKR value = 248 }
+		command = { type = secedeprovince which = UKR value = 249 }
+		command = { type = secedeprovince which = UKR value = 250 }
+		command = { type = secedeprovince which = UKR value = 251 }
+		command = { type = secedeprovince which = UKR value = 241 }
+
+		command = { type = secedeprovince which = UKR value = 506 }
+		command = { type = secedeprovince which = UKR value = 501 }
+		command = { type = secedeprovince which = UKR value = 229 }
+		command = { type = secedeprovince which = UKR value = 502 }
+		command = { type = secedeprovince which = UKR value = 562 }
+		command = { type = secedeprovince which = UKR value = 231 }
+		command = { type = secedeprovince which = UKR value = 232 }
+		command = { type = secedeprovince which = UKR value = 233 }
+		command = { type = secedeprovince which = UKR value = 234 }
+		command = { type = secedeprovince which = UKR value = 235 }
+		command = { type = secedeprovince which = UKR value = 236 }
+		command = { type = secedeprovince which = UKR value = 237 }
+		command = { type = secedeprovince which = UKR value = 227 }
+		command = { type = secedeprovince which = UKR value = 228 }
+		command = { type = secedeprovince which = UKR value = 226 }
+		command = { type = secedeprovince which = UKR value = 500 }
+		command = { type = secedeprovince which = UKR value = 252 }
+		command = { type = secedeprovince which = UKR value = 254 }
+		command = { type = secedeprovince which = UKR value = 253 }
+		command = { type = secedeprovince which = UKR value = 499 }
+
+		command = { type = secedeprovince which = ROM value = 230 } #if USSR cant hold ukraine they cant hold bessarabia
+		command = { type = secedeprovince which = ROM value = 434 }
+		command = { type = secedeprovince which = ROM value = 435 }
+
+		command = { type = removecore which = 260 }
+		command = { type = removecore which = 238 }
+		command = { type = removecore which = 239 }
+		command = { type = removecore which = 240 }
+		command = { type = removecore which = 242 }
+		command = { type = removecore which = 244 }
+		command = { type = removecore which = 245 }
+		command = { type = removecore which = 246 }
+		command = { type = removecore which = 247 }
+		command = { type = removecore which = 248 }
+		command = { type = removecore which = 249 }
+		command = { type = removecore which = 250 }
+		command = { type = removecore which = 251 }
+		command = { type = removecore which = 241 }
+
+		command = { type = removecore which = 506 }
+		command = { type = removecore which = 501 }
+		command = { type = removecore which = 229 }
+		command = { type = removecore which = 502 }
+		command = { type = removecore which = 562 }
+		command = { type = removecore which = 231 }
+		command = { type = removecore which = 232 }
+		command = { type = removecore which = 233 }
+		command = { type = removecore which = 234 }
+		command = { type = removecore which = 235 }
+		command = { type = removecore which = 236 }
+		command = { type = removecore which = 237 }
+		command = { type = removecore which = 227 }
+		command = { type = removecore which = 228 }
+		command = { type = removecore which = 226 }
+		command = { type = removecore which = 500 }
+		command = { type = removecore which = 252 }
+		command = { type = removecore which = 254 }
+		command = { type = removecore which = 253 }
+		command = { type = removecore which = 499 }
+
+		command = { type = removecore which = 230 } #bessarabia
+		command = { type = removecore which = 434 }
+		command = { type = removecore which = 435 }
+	}
+}
+###########
+#  Lithuania is Allied puppet
+###########
+event = {
+	id = 133556
+	random = no
+	country = SOV
+
+	trigger = {
+		atwar = no
+		OR = {
+			puppet = { country = LIT country = USA }
+			puppet = { country = LIT country = ENG }
+			puppet = { country = LIT country = FRA }
+			puppet = { country = LIT country = ITA }
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133556_NAME"
+	desc = "EVT_133556_DESC"
+
+	action_a = {
+		name = "EVT_133556_ACTA"
+		command = { type = secedeprovince which = LIT value = 207 }
+		command = { type = secedeprovince which = LIT value = 511 }
+		command = { type = secedeprovince which = LIT value = 577 }
+		command = { type = secedeprovince which = LIT value = 208 }
+		command = { type = secedeprovince which = LIT value = 206 }
+
+		command = { type = removecore which = 207 }
+		command = { type = removecore which = 511 }
+		command = { type = removecore which = 577 }
+		command = { type = removecore which = 208 }
+		command = { type = removecore which = 206 }
+	}
+}
+###########
+#  Latvia is Allied puppet
+###########
+event = {
+	id = 133557
+	random = no
+	country = SOV
+
+	trigger = {
+		atwar = no
+		OR = {
+			puppet = { country = LAT country = USA }
+			puppet = { country = LAT country = ENG }
+			puppet = { country = LAT country = FRA }
+			puppet = { country = LAT country = ITA }
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133557_NAME"
+	desc = "EVT_133557_DESC"
+
+	action_a = {
+		name = "EVT_133557_ACTA"
+		command = { type = secedeprovince which = LAT value = 203 }
+		command = { type = secedeprovince which = LAT value = 204 }
+		command = { type = secedeprovince which = LAT value = 205 }
+		command = { type = secedeprovince which = LAT value = 197 }
+		command = { type = secedeprovince which = LAT value = 202 }
+		command = { type = secedeprovince which = LAT value = 198 }
+
+		command = { type = removecore which = 203 }
+		command = { type = removecore which = 204 }
+		command = { type = removecore which = 205 }
+		command = { type = removecore which = 197 }
+		command = { type = removecore which = 202 }
+		command = { type = removecore which = 198 }
+	}
+}
+###########
+#  Estonia is Allied puppet
+###########
+event = {
+	id = 133558
+	random = no
+	country = SOV
+
+	trigger = {
+		atwar = no
+		OR = {
+			puppet = { country = EST country = USA }
+			puppet = { country = EST country = ENG }
+			puppet = { country = POL country = FRA }
+			puppet = { country = POL country = ITA }
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133558_NAME"
+	desc = "EVT_133558_DESC"
+
+	action_a = {
+		name = "EVT_133558_ACTA"
+		command = { type = secedeprovince which = EST value = 193 }
+		command = { type = secedeprovince which = EST value = 194 }
+		command = { type = secedeprovince which = EST value = 195 }
+		command = { type = secedeprovince which = EST value = 196 }
+		command = { type = secedeprovince which = EST value = 199 }
+
+		command = { type = removecore which = 193 }
+		command = { type = removecore which = 194 }
+		command = { type = removecore which = 195 }
+		command = { type = removecore which = 196 }
+		command = { type = removecore which = 199 }
+	}
+} 
+
+###########
+#  東欧返還要求
+###########
+event = {
+	id = 133560
+	random = no
+	country = SOV
+	trigger = {
+		OR = {
+			participant = { country = LIT value = 1 }
+			participant = { country = LAT value = 1 }
+			participant = { country = EST value = 1 }
+			participant = { country = POL value = 1 }
+			participant = { country = UKR value = 1 }
+			participant = { country = BLR value = 1 }
+			participant = { country = RUS value = 1 }
+		}
+		atwar = no
+		random = 30
+	}
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133560_NAME"	#東欧のゆくえ
+	desc = "EVT_133560_DESC"	#
+}

@@ -1,0 +1,52 @@
+EAF;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+550001;Head of State;サー・フィリップ・ユーアン・ミッチェル;36;ML;Die-hard Reformer;High;M550001;x
+550002;Head of Government;サー・ジョン・ハットホーン・ホール;36;ML;Flamboyant Tough Guy;High;M550002;x
+550003;Foreign Minister;ロバート・ブルック＝ポファム;36;ML;General Staffer;High;L1051;x
+550004;Minister of Armament;ヘンリー・モンク＝メイソン・ムーア;36;ML;Battle Fleet Proponent;Medium;M550004;x
+550005;Minister of Security;サー・ハロルド・マクミカエル;36;ML;Efficient Sociopath;Medium;M550005;x
+550006;Head of Military Intelligence;マーク・ヤング;36;ML;Industrial Specialist;Medium;M550006;x
+550007;Chief of Staff;ヘンリー・ダンダス・スティーヴンソン;36;ML;School of Defence;Medium;M550007;x
+550008;Chief of Army;ロバート・ブルック＝ポファム;36;ML;Decisive Battle Doctrine;Medium;L1051;x
+550009;Chief of Navy;ウィリアム・ディーマス・バターシル;36;ML;Open Seas Doctrine;Medium;M550009;x
+550010;Chief of Air Force;チャールズ・ファーカーソン・ダンダス;36;ML;Air Superiority Doctrine;Medium;M550010;x
+550011;Head of State;サイード・カリファ・イブン・カルブ;36;PA;Powerhungry Demagogue;High;M550011;x
+550012;Head of State;エドワード・ムテサ2世;36;SD;Popular Figurehead;High;M550012;x
+550013;Head of State;ジュリアス・ニエレレ;36;LWR;Pig-headed Isolationist;High;M550013;x
+550014;Head of Government;ジョスリン・エロール卿;36;PA;Naive Optimist;High;M1051;x
+550015;Head of Government;ジョモ・ケニヤッタ;36;SD;Silent Workhorse;High;M550015;x
+550016;Head of Government;アポロ・ミルトン・オボテ;36;LWR;Happy Amateur;High;M550016;x
+550017;Foreign Minister;ピオ・ガマ・ピント;36;PA;Great Compromiser;High;M550017;x
+550018;Foreign Minister;ヘンリー・G・ピリング;41;ML;Iron Fisted Brute;High;M550018;x
+550019;Foreign Minister;ケテルネ・ユイフ;36;SD;Biased Intellectual;High;M550019;x
+550020;Foreign Minister;ジョゼフ・ムルンビ;36;LWR;The Cloak N Dagger Schemer;High;M550020;x
+550021;Minister of Armament;アレクシウス・デ・ラズロ;36;PA;Infantry Proponent;Medium;M550021;x
+550022;Minister of Armament;チャンドラカント・メータ;42;PA;laissez-faire capitalist;Medium;M550022;x
+550023;Minister of Armament;チャールズ・ファーカーソン・ダンダス;40;ML;Air Superiority Proponent;Medium;M550010;x
+550024;Minister of Armament;ロナルド・ヌガラ;36;SD;Tank Proponent;Medium;M550024;x
+550025;Minister of Armament;ナシルダス・メータ;42;SD;Resource Industrialist;Medium;M550025;x
+550026;Minister of Armament;ドラヴィ・カナパトゥヤ;36;LWR;Theoretical Scientist;Medium;M550026;x
+550027;Minister of Security;マーカン・シング;36;PA;Crooked Kleptocrat;Medium;M550027;x
+550028;Minister of Security;イド・ドリール;42;PA;Back Stabber;Medium;M550028;x
+550029;Minister of Security;ヴィンセント・ゴンカルヴェス・グレンデイ;40;ML;Crime Fighter;Medium;M550029;x
+550030;Minister of Security;ベネディクト・キワヌカ;36;SD;Man of the People;Medium;M550030;x
+550031;Minister of Security;デダン・キマジ;36;LWR;Prince of Terror;Medium;M550031;x
+550032;Head of Military Intelligence;チャールズ・ウィザースプーン;36;PA;Logistics Specialist;Medium;M550032;x
+550033;Head of Military Intelligence;タルチシウス・ヌガガレクムトワ;36;SD;Naval Intelligence Specialist;Medium;M550033;x
+550034;Head of Military Intelligence;アーネスト・ヘミングウェイ;43;SD;Dismal Enigma;Medium;M550034;x
+550035;Head of Military Intelligence;ラシド・カワワ;36;LWR;Technical Specialist;Medium;M550035;x
+550036;Chief of Staff;リチャード・カーヴァー;36;PA;School of Manoeuvre;Medium;L1069;x
+550037;Chief of Staff;ジェレミー・J・ピアソン;41;ML;School of Psychology;Medium;M550037;x
+550038;Chief of Staff;エドワード・ムテサ;36;SD;School of Mass Combat;Medium;M550038;x
+550039;Chief of Staff;ヘンリー・ジュマラ;36;LWR;School of Fire Support;Medium;M550039;x
+550040;Chief of Army;ピーター・ミルズ;36;PA;Guns and Butter Doctrine;Medium;M550040;x
+550041;Chief of Army;ヘンリー・G・ピリング;41;ML;Static Defence Doctrine;Medium;M550018;x
+550042;Chief of Army;オンゲリ・ボギタ;36;SD;Armoured Spearhead Doctrine;Medium;M550042;x
+550043;Chief of Army;ジュマ・ダタウィ;36;LWR;Elastic Defence Doctrine;Medium;M550043;x
+550044;Chief of Navy;ダウディ・チャワ;36;PA;Indirect Approach Doctrine;Medium;M550044;x
+550045;Chief of Navy;ナシュルディン・メータ;36;SD;Power Projection Doctrine;Medium;M550045;x
+550046;Chief of Navy;エドワード・モントフォード;36;LWR;Decisive Naval Battle Doctrine;Medium;M550046;x
+550047;Chief of Air Force;マーカン・シング;36;PA;Naval Aviation Doctrine;Medium;M550027;x
+550048;Chief of Air Force;ジェームズ・ハウ＝ドブソン;41;ML;Army Aviation Doctrine;Medium;M550048;x
+550049;Chief of Air Force;ナシルダス・メータ;36;SD;Carpet Bombing Doctrine;Medium;M550025;x
+550050;Chief of Air Force;エドワード・モントフォード;36;LWR;Vertical Envelopment Doctrine;Medium;M550046;x

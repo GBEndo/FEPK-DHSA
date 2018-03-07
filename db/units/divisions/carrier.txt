@@ -1,0 +1,286 @@
+allowed_brigades = cag
+allowed_brigades = naval_radar_l
+allowed_brigades = naval_improved_hull_l
+allowed_brigades = naval_anti_air_l
+max_allowed_brigades = 4
+
+# 0 - ‘æˆêŸ¢ŠE‘åíŠúŒ^‹ó•ê
+model = {
+	cost						= 5
+	buildtime 					= 547
+	defaultorganisation 		= 20
+	morale						= 30
+	manpower					= 0.6
+	maxspeed					= 18
+	surfacedetectioncapability	= 1
+	airdetectioncapability		= 2
+	subdetectioncapability		= 1
+	visibility					= 100
+	seadefence					= 8
+	airdefence					= 0
+	seaattack					= 0
+	airattack					= 0
+	subattack					= 1
+	convoyattack					= 0
+	shorebombardment			= 0
+	transportcapability			= 0
+	range						= 2000
+	supplyconsumption			= 0.9
+	fuelconsumption				= 1
+	distance					= 0.05
+	upgrade_time_factor = 1
+	upgrade_cost_factor = 1
+	equipment = { carrier = 1 manpower = 600 }
+}
+# 1 - ‰ŠúŒ^‹ó•ê
+model = {
+	cost						= 5
+	buildtime 					= 650
+	defaultorganisation 		= 20
+	morale						= 30
+	manpower					= 2
+	maxspeed					= 18
+	surfacedetectioncapability	= 1
+	airdetectioncapability		= 2
+	subdetectioncapability		= 1
+	visibility					= 100
+	seadefence					= 9
+	airdefence					= 0
+	seaattack					= 0
+	airattack					= 1
+	subattack					= 1
+	convoyattack					= 0
+	shorebombardment			= 0
+	transportcapability			= 0
+	range						= 2500
+	supplyconsumption			= 1.1
+	fuelconsumption				= 1
+	distance					= 0.05
+	upgrade_time_factor = 1
+	upgrade_cost_factor = 1
+	equipment = { carrier = 1 manpower = 2000 }
+}
+# 2 - Šî–{Œ^‹ó•ê
+model = {
+	cost						= 6
+	buildtime 					= 730
+	defaultorganisation 		= 25
+	morale						= 30
+	manpower					= 1.4
+	maxspeed					= 22
+	surfacedetectioncapability	= 1
+	airdetectioncapability		= 2
+	subdetectioncapability		= 1
+	visibility					= 100
+	seadefence					= 10
+	airdefence					= 2
+	seaattack					= 1
+	airattack					= 1
+	subattack					= 1
+	convoyattack					= 1
+	shorebombardment			= 0
+	transportcapability			= 0
+	range						= 3000
+	supplyconsumption			= 1.3
+	fuelconsumption				= 1
+	distance					= 0.05
+	upgrade_time_factor = 1
+	upgrade_cost_factor = 1
+	equipment = { carrier = 1 manpower = 1400 }
+}
+# 3 - ‰ü—ÇŒ^‹ó•ê
+model = {
+	cost						= 7
+	buildtime 					= 730
+	defaultorganisation 		= 30
+	morale						= 30
+	manpower					= 1.7
+	maxspeed					= 28
+	surfacedetectioncapability	= 1
+	airdetectioncapability		= 2
+	subdetectioncapability		= 1
+	visibility					= 100
+	seadefence					= 12
+	airdefence					= 4
+	seaattack					= 2
+	airattack					= 3
+	subattack					= 2
+	convoyattack					= 2
+	shorebombardment			= 1
+	transportcapability			= 0
+	range						= 3500
+	supplyconsumption			= 1.5
+	fuelconsumption				= 1
+	distance					= 0.05
+	upgrade_time_factor = 1
+	upgrade_cost_factor = 1
+	equipment = { carrier = 1 manpower = 1700 }
+}
+# 4 - ”­“WŒ^‹ó•ê
+model = {
+	cost						= 8
+	buildtime 					= 730
+	defaultorganisation 		= 30
+	morale						= 30
+	manpower					= 2.2
+	maxspeed					= 30
+	surfacedetectioncapability	= 1
+	airdetectioncapability		= 3
+	subdetectioncapability		= 1
+	visibility					= 100
+	seadefence					= 15
+	airdefence					= 5
+	seaattack					= 3
+	airattack					= 4
+	subattack					= 2
+	convoyattack					= 3
+	shorebombardment			= 1
+	transportcapability			= 0
+	range						= 4000
+	supplyconsumption			= 1.7
+	fuelconsumption				= 1
+	distance					= 0.05
+	upgrade_time_factor = 1
+	upgrade_cost_factor = 1
+	equipment = { carrier = 1 manpower = 2200 }
+}
+# 5 - ”­“WŒ^‘åŒ^‹ó•ê
+model = {
+	cost						= 10
+	buildtime 					= 810
+	defaultorganisation 		= 30
+	morale						= 30
+	manpower					= 3
+	maxspeed					= 30
+	surfacedetectioncapability	= 1
+	airdetectioncapability		= 4
+	subdetectioncapability		= 1
+	visibility					= 100
+	seadefence					= 18
+	airdefence					= 6
+	seaattack					= 4
+	airattack					= 5
+	subattack					= 2
+	convoyattack					= 4
+	shorebombardment			= 1
+	transportcapability			= 0
+	range						= 4000
+	supplyconsumption			= 2
+	fuelconsumption				= 1.5
+	distance					= 0.05
+	upgrade_time_factor = 1
+	upgrade_cost_factor = 1
+	equipment = { carrier = 1 manpower = 3000 }
+}
+# 6 - ”­“WŒ^’´‘åŒ^‹ó•ê
+model = {
+	cost						= 11
+	buildtime 					= 920
+	defaultorganisation 		= 30
+	morale						= 30
+	manpower					= 3
+	maxspeed					= 30
+	surfacedetectioncapability	= 1
+	airdetectioncapability		= 4
+	subdetectioncapability		= 1
+	visibility					= 100
+	seadefence					= 22
+	airdefence					= 7
+	seaattack					= 5
+	airattack					= 5
+	subattack					= 2
+	convoyattack					= 5
+	shorebombardment			= 1
+	transportcapability			= 0
+	range						= 4000
+	supplyconsumption			= 2.3
+	fuelconsumption				= 2
+	distance					= 0.05
+	upgrade_time_factor = 1
+	upgrade_cost_factor = 1
+	equipment = { carrier = 1 manpower = 3000 }
+}
+# 7 - €Œ»‘ãŒ^‹ó•ê
+model = {
+	cost						= 12
+	buildtime 					= 920
+	defaultorganisation 		= 30
+	morale						= 30
+	manpower					= 3
+	maxspeed					= 32
+	surfacedetectioncapability	= 1
+	airdetectioncapability		= 5
+	subdetectioncapability		= 1
+	visibility					= 100
+	seadefence					= 24
+	airdefence					= 7
+	seaattack					= 5
+	airattack					= 6
+	subattack					= 3
+	convoyattack					= 5
+	shorebombardment			= 2
+	transportcapability			= 0
+	range						= 4500
+	supplyconsumption			= 2.5
+	fuelconsumption				= 2
+	distance					= 0.05
+	upgrade_time_factor = 1
+	upgrade_cost_factor = 1
+	equipment = { carrier = 1 manpower = 3000 }
+}
+# 8 - Œ»‘ãŒ^‹ó•ê
+model = {
+	cost						= 13
+	buildtime 					= 930
+	defaultorganisation 		= 30
+	morale						= 30
+	manpower					= 4
+	maxspeed					= 34
+	surfacedetectioncapability	= 1
+	airdetectioncapability		= 5
+	subdetectioncapability		= 1
+	visibility					= 100
+	seadefence					= 26
+	airdefence					= 9
+	seaattack					= 6
+	airattack					= 6
+	subattack					= 3
+	convoyattack					= 6
+	shorebombardment			= 2
+	transportcapability			= 0
+	range						= 4500
+	supplyconsumption			= 2.5
+	fuelconsumption				= 2
+	distance					= 0.05
+	upgrade_time_factor = 1
+	upgrade_cost_factor = 1
+	equipment = { carrier = 1 manpower = 4000 }
+}
+# 9 - Œ´q—Í‹ó•ê
+model = {
+	cost						= 14
+	buildtime 					= 950
+	defaultorganisation 		= 30
+	morale						= 30
+	manpower					= 3.5
+	maxspeed					= 34
+	surfacedetectioncapability	= 1
+	airdetectioncapability		= 5
+	subdetectioncapability		= 1
+	visibility					= 100
+	seadefence					= 26
+	airdefence					= 9
+	seaattack					= 6
+	airattack					= 6
+	subattack					= 3
+	convoyattack					= 6
+	shorebombardment			= 2
+	transportcapability			= 0
+	range						= 8000
+	supplyconsumption			= 3.5
+	fuelconsumption				= 0
+	distance					= 0.05
+	upgrade_time_factor = 1
+	upgrade_cost_factor = 1
+	equipment = { carrier = 1 manpower = 3500 }
+}

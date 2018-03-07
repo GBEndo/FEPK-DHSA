@@ -1,0 +1,33 @@
+GUY;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+562001;Head of State;サー・ゴードン・J・レセム;36;ML;Die-hard Reformer;High;M562001;x
+562002;Head of Government;サー・フランシス・スタンリー・ジャクソン;36;ML;Happy Amateur;High;M562002;x
+562003;Foreign Minister;サー・ジェフリー・スタンフォード・ノースコート;36;ML;Apologetic Clerk;High;M562003;x
+562004;Minister of Armament;サー・ラルフ・アルンウィック・グレイ;36;ML;Administrative Genius;Medium;M562004;x
+562005;Minister of Security;チャールズ・キャンベル・ウーリー;36;ML;Compassionate Gentleman;Medium;M562005;x
+562006;Head of Military Intelligence;エドワード・F・コリングウッド;36;ML;Industrial Specialist;Medium;M562006;x
+562007;Chief of Staff;チャールズ・バーチウッド;36;ML;School of Defence;Medium;M562007;x
+562008;Chief of Army;フレデリック・アウグスティス;36;ML;Armoured Spearhead Doctrine;Medium;M562008;x
+562009;Chief of Navy;H・C・ビゲロー;36;ML;Indirect Approach Doctrine;Medium;M562009;x
+562010;Chief of Air Force;H・F・バーネット;36;ML;Naval Aviation Doctrine;Medium;M562010;x
+562011;Head of State;セヴェロ・マレ＝プレヴォー;36;PA;Benevolent Gentleman;High;M562011;x
+562012;Head of State;チェディ・ジャーガン博士;36;LWR;Popular Figurehead;High;M562012;x
+562013;Head of Government;フレデリック・デレコート;36;PA;Corporate Suit;High;M562013;x
+562014;Head of Government;フォーブス・バーナム;36;LWR;Political Protege;High;M562014;x
+562015;Foreign Minister;シャルル・ジョセフ・ロジー;36;PA;The Cloak N Dagger Schemer;High;M562015;x
+562016;Foreign Minister;ラズレイ・ジャクソン;36;LWR;Great Compromiser;High;M562016;x
+562017;Minister of Armament;モーリス・ゴードン;36;PA;Resource Industrialist;Medium;M562017;x
+562018;Minister of Armament;ゴビンダ・ギャンガ博士;36;LWR;Theoretical Scientist;Medium;M562018;x
+562019;Minister of Security;ジェームズ・クリストカーク;36;PA;Crime Fighter;Medium;M562019;x
+562020;Minister of Security;リン・ジェームズ;40;ML;Prince of Terror;Medium;M562020;x
+562021;Minister of Security;ヴィベール・パルヴァサン;36;LWR;Silent Lawyer;Medium;M562021;x
+562022;Head of Military Intelligence;ウィリアム・J・フェザーストーン;36;PA;Dismal Enigma;Medium;M562022;x
+562023;Head of Military Intelligence;C・L・R・ジェームズ;36;LWR;Political Specialist;Medium;M562023;x
+562024;Chief of Staff;C・F・ドリュー;36;PA;School of Psychology;Medium;L1111;x
+562025;Chief of Staff;キングズリー・フォレスター;36;LWR;School of Manoeuvre;Medium;M562025;x
+562026;Chief of Army;H・F・L・ヒルトン＝グリーン;36;PA;Decisive Battle Doctrine;Medium;L1164;x
+562027;Chief of Army;クリストファー・ロバン;36;LWR;Guns and Butter Doctrine;Medium;M562027;x
+562028;Chief of Navy;ヘンリー・ウィンズロー;36;PA;Base Control Doctrine;Medium;M562028;x
+562029;Chief of Navy;トーマス・マギャリティ;36;LWR;Power Projection Doctrine;Medium;M562029;x
+562030;Chief of Air Force;モーティマー・チェスウッド;36;PA;Army Aviation Doctrine;Medium;M562030;x
+562031;Chief of Air Force;カイル・ライトフット;36;LWR;Air Superiority Doctrine;Medium;M562031;x

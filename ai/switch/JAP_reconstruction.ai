@@ -1,0 +1,12 @@
+
+upgrading = 0.4 #Ç±ÇÃã@Ç…çXâ¸
+reinforcement = 0.10	
+
+construction = { 
+	max_factor = 1.000
+
+	ic_at_war = yes
+	force_ic_until = 1935
+	ic_end_year = 1963
+	IC_provs = { 1178 1179 1180 1181 1182 1183 1184 1185 1186 1187 1188 1189 1190 1191 } 
+}

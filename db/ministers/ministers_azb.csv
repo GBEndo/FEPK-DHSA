@@ -1,0 +1,39 @@
+AZB;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+516001;Head of State;ニザム・ナリマノフ;36;LWR;Stern Imperialist;High;M516001;x
+516002;Head of Government;ファラズ・グゼイノフ;36;LWR;Backroom Backstabber;High;M516002;x
+516003;Foreign Minister;スレイマン・ルスタム;36;LWR;The Cloak N Dagger Schemer;High;M516003;x
+516004;Minister of Armament;イリアス・アファンディエフ;36;LWR;Theoretical Scientist;Medium;M516004;x
+516005;Minister of Security;アラシュ・ブルブル;36;LWR;Compassionate Gentleman;Medium;M516005;x
+516006;Head of Military Intelligence;ラスル・レザ;36;LWR;Industrial Specialist;Medium;M516006;x
+516007;Chief of Staff;マフムド・ヌリ・ベルケズ;36;LWR;School of Mass Combat;Medium;M516007;x
+516008;Chief of Army;カリル・マメドフ;36;LWR;Elastic Defence Doctrine;Medium;M516008;x
+516009;Chief of Navy;カンビズ・クラスノシャプカ;36;LWR;Open Seas Doctrine;High;M516009;x
+516010;Chief of Air Force;グルゲン・ヴォスカン・カマリアン;36;LWR;Air Superiority Doctrine;Medium;M516010;x
+516011;Head of State;ラジブ・クルベンジアン;36;ML;Barking Buffoon;High;M516011;x
+516012;Head of Government;スレイマン・ルスタム;36;SD;Smiling Oilman;High;M516003;x
+516013;Head of Government;アラシュ・ブルブル;36;ML;Flamboyant Tough Guy;Medium;M516005;x
+516014;Foreign Minister;カスラタム・ナリマノフ;36;LWR;General Staffer;High;M516014;x
+516015;Foreign Minister;ママド・アミン・ラスルザード;36;LWR;Biased Intellectual;High;M516015;x
+516016;Foreign Minister;アラシュ・ブルブル;36;SD;Great Compromiser;Medium;M516005;x
+516017;Foreign Minister;マハマド・ラフマン;36;ML;Iron Fisted Brute;Medium;M516017;x
+516018;Minister of Armament;メフディ・フセイン;36;LWR;Tank Proponent;Medium;M516018;x
+516019;Minister of Armament;マフムード・ガスバラタム博士;36;LWR;laissez-faire capitalist;Medium;M516019;x
+516020;Minister of Armament;アミン・アジズ;36;LWR;Infantry Proponent;Medium;M516020;x
+516021;Minister of Armament;ラジブ・クルベンジアン;36;SD;Corrupt Kleptocrat;High;M516011;x
+516022;Minister of Armament;イスマイル・シクハリ;36;ML;Military Entrepreneur;High;M516022;x
+516023;Minister of Security;ニガル・ラフィベリ;36;LWR;Crime Fighter;Medium;M516023;x
+516024;Minister of Security;サバト・ラフマン;36;LWR;Silent Lawyer;Medium;M516024;x
+516025;Minister of Security;ラスル・レザ;36;SD;Man of the People;Medium;M516006;x
+516026;Minister of Security;ミルザ・イブラヒモフ;36;ML;Back Stabber;Medium;M516026;x
+516027;Head of Military Intelligence;ナリマン・ナリマノフ;36;LWR;Naval Intelligence Specialist;Medium;M516027;x
+516028;Head of Military Intelligence;スルタノフ・コスロフ・エブク;36;SD;Logistics Specialist;Medium;M516028;x
+516029;Head of Military Intelligence;ラフムド・アジジバヨブ;36;ML;Dismal Enigma;Medium;M516029;x
+516030;Chief of Staff;サメド・ベイ・メフマンダロフ;36;SD;School of Defence;Medium;M516030;x
+516031;Chief of Staff;カリル・マメドフ;36;ML;School of Fire Support;Medium;M516008;x
+516032;Chief of Army;マフムド・ヌリ・ベルケズ;36;SD;Elastic Defence Doctrine;Medium;M516007;x
+516033;Chief of Army;スーレブ・ハコプ・ガスパリアン;36;ML;Armoured Spearhead Doctrine;Medium;M516033;x
+516034;Chief of Navy;サメド・ベイ・メフマンダロフ;36;SD;Base Control Doctrine;High;M516030;x
+516035;Chief of Navy;イスマイル・マコフ;36;ML;Indirect Approach Doctrine;High;M516035;x
+516036;Chief of Air Force;カンビズ・クラスノシャプカ;36;SD;Naval Aviation Doctrine;High;M516009;x
+516037;Chief of Air Force;アンドロニク・アブラム・カザリアン;36;ML;Army Aviation Doctrine;High;M516037;x

@@ -1,0 +1,6 @@
+# トルキスタンオリジナル
+
+max_front_ratio = 0.1
+max_front_ratios = {
+	ENG = 5.0 
+}

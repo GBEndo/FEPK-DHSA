@@ -1,0 +1,499 @@
+#########################################################################
+#	FEPK_fallsafe.txt
+#	ダンツィヒ非開戦ルートイベント
+#########################################################################
+#id = 132300-19		ダンツィヒ非開戦時のドイツの領土要求
+#########################################################################
+event = {
+	id = 132300
+	random = no
+	country = GER
+
+	trigger = {
+		incabinet = 1 # ヒトラー
+		#atwar = no #FEPK1.085
+		NOT = {
+			war = { country = GER country = DEN } #FEPK1.085
+			war = { country = GER country = ENG }
+			war = { country = GER country = FRA }
+			war = { country = GER country = SOV }
+			alliance = { country = GER country = DEN }
+			alliance = { country = SOV country = DEN }
+		}
+		control = { province = 91 data = DEN } #Kolding
+		control = { province = 303 data = GER } #ポーランドがダンツィヒで屈する
+		NOT = { lost_national = { country = GER value = 5 } } #FEPKBETA5.2
+		random = 20
+	}
+
+	date = { day = 1 month = october year = 1939 }
+	offset = 7
+	deathdate = { day = 1 month = october year = 1941 }
+
+	name = "EVT_132300_NAME"
+	desc = "EVT_132300_DESC"
+
+	picture = "furios_hitler"
+
+	action_a = {
+		name = "EVT_132300_ACTA"
+		ai_chance = 100
+		command = { type = addcore which = 91 } #Kolding
+		command = { type = belligerence which = GER value = 10 }
+		command = { type = relation which = DEN value = -30 }
+		command = { type = trigger which = 132302 } #シュレースヴィヒ＝ホルシュタインの割譲要求(DEN)
+	}
+	action_b = {
+		name = "EVT_132300_ACTB"
+		ai_chance = 0
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = removecore which = 91 } #Kolding
+		command = { type = relation which = DEN value = 10 }
+		command = { type = dissent value = 2 }
+	}
+}
+
+event = {
+	id = 132301
+	random = no
+	country = GER
+
+	trigger = {
+		incabinet = 1 # ヒトラー
+		#atwar = no #FEPK1.085
+		NOT = {
+			war = { country = GER country = DEN } #FEPK1.085
+			war = { country = GER country = ENG }
+			war = { country = GER country = FRA }
+			war = { country = GER country = SOV }
+			alliance = { country = GER country = DEN }
+			alliance = { country = SOV country = DEN }
+			control = { province = 303 data = GER } # ドイツがダンツィヒを断念している
+		}
+		control = { province = 91 data = DEN } #Kolding
+		NOT = { lost_national = { country = GER value = 5 } } #FEPKBETA5.2
+		random = 20
+	}
+
+	date = { day = 1 month = october year = 1939 }
+	offset = 7
+	deathdate = { day = 1 month = october year = 1941 }
+
+	name = "EVT_132301_NAME"
+	desc = "EVT_132301_DESC"
+
+	picture = "furios_hitler"
+
+	action_a = {
+		name = "EVT_132301_ACTA"
+		ai_chance = 99
+		command = { type = addcore which = 91 } #Kolding
+		command = { type = belligerence which = GER value = 10 }
+		command = { type = relation which = DEN value = -30 }
+		command = { type = trigger which = 132302 } #シュレースヴィヒ＝ホルシュタインの割譲要求(DEN)
+	}
+	action_b = {
+		name = "EVT_132301_ACTB"
+		ai_chance = 1
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = removecore which = 91 } #Kolding
+		command = { type = relation which = DEN value = 10 }
+		command = { type = dissent value = 2 }
+	}
+}
+
+event = {
+	id = 132302
+	random = no
+	country = DEN
+
+	name = "EVT_132302_NAME"
+	desc = "EVT_132302_DESC"
+
+	picture = "furios_hitler"
+
+	action_a = {
+		name = "EVT_132302_ACTA"
+		ai_chance = 80
+		command = { type = dissent value = 20 }
+		command = { type = trigger which = 132303 }
+		command = { type = domestic which = defense_lobby value = -1 }
+		command = { type = domestic which = interventionism value = -2 }
+		command = { type = removecore which = 91 } #Kolding
+		command = { type = secedeprovince which = GER value = 91 } #Kolding
+		command = { type = sleepevent which = 93 } #ドイツが降伏を求める
+		command = { type = sleepevent which = 132300 }
+		command = { type = sleepevent which = 132301 }
+	}
+	action_b = {
+		name = "EVT_132302_ACTB"
+		ai_chance = 20
+		command = { type = relation which = GER value = -100 }
+		command = { type = trigger which = 132304 }
+		command = { type = sleepevent which = 93 } #ドイツが降伏を求める
+		command = { type = sleepevent which = 132300 }
+		command = { type = sleepevent which = 132301 }
+	}
+}
+
+event = {
+	id = 132303
+	random = no
+	country = GER
+
+	name = "EVT_132303_NAME"
+	desc = "EVT_132303_DESC"
+
+	picture = "parliamentary_scandal"
+
+	action_a = {
+		name = "EVT_132303_ACTA"
+		command = { type = money value = 200 }
+		command = { type = dissent value = -5 }
+	}
+}
+
+event = {
+	id = 132304
+	random = no
+	country = GER
+
+	name = "EVT_132304_NAME"
+	desc = "EVT_132304_DESC"
+
+	picture = "german_air_reinforcments"
+
+	action_a = {
+		name = "EVT_132304_ACTA"
+		command = { type = war which = DEN }
+	}
+}
+
+event = {
+	id = 132305
+	random = no
+	country = GER
+
+	trigger = {
+		incabinet = 1 # AH
+		#atwar = no #FEPK1.09
+		NOT = {
+			war = { country = GER country = FRA }
+			war = { country = GER country = SOV }
+			alliance = { country = GER country = FRA } #wont attack an ally
+			alliance = { country = SOV country = FRA } #not likely but hey
+		}
+		control = { province = 72 data = FRA } #Metz
+		control = { province = 73 data = FRA } #Strasbourg
+		control = { province = 316 data = FRA } #Mulhouse
+		control = { province = 91 data = GER } #Kolding
+		NOT = { lost_national = { country = GER value = 5 } } #FEPKBETA5.2
+	#	random = 20 #FEPKBETA4.5
+	}
+
+	name = "EVT_132305_NAME"
+	desc = "EVT_132305_DESC"
+
+	picture = "furios_hitler"
+
+	date = { day = 0 month = march year = 1940 } #FEPKBETA4.5
+	offset = 1
+	deathdate = { day = 0 month = march year = 1942 }
+
+	action_a = {
+		name = "EVT_132305_ACTA"
+		ai_chance = 97
+		command = { type = addcore which = 72 } #Metz
+		command = { type = addcore which = 73 } #Strasbourg
+		command = { type = addcore which = 316 } #Mulhouse
+		command = { type = belligerence which = GER value = 10 }
+		command = { type = relation which = FRA value = -30 }
+		command = { type = trigger which = 132306 } #エルザス＝ロードリンゲンの割譲要求
+	}
+	action_b = {
+		name = "EVT_132305_ACTB"
+		ai_chance = 3
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = removecore which = 72 } #Metz
+		command = { type = removecore which = 73 } #Strasbourg
+		command = { type = removecore which = 316 } #Mulhouse
+		command = { type = relation which = FRA value = 10 }
+		command = { type = dissent value = 15 }
+	}
+}
+
+event = {
+	id = 132306
+	random = no
+	country = FRA
+
+	name = "EVT_132306_NAME"
+	desc = "EVT_132306_DESC"
+
+	picture = "furios_hitler"
+                        
+	action_a = {
+		name = "EVT_132306_ACTA"
+		ai_chance = 97
+		command = { type = relation which = GER value = -20 }
+		command = { type = dissent value = -5 }
+		command = { type = trigger which = 132308 } #エルザス＝ロードリンゲンの割譲要求 - 戦争だ！(GER)
+	}
+	action_b = {
+		name = "EVT_132306_ACTB"
+		ai_chance = 3
+		command = { type = dissent value = 50 }
+		command = { type = trigger which = 132307 } #エルザス＝ロードリンゲンの割譲要求 - フランスが合意した！(GER)
+		command = { type = domestic which = defense_lobby value = -1 }
+		command = { type = domestic which = interventionism value = -2 }
+		command = { type = removecore which = 72 } #Metz
+		command = { type = removecore which = 73 } #Strasbourg
+		command = { type = removecore which = 316 } #Mulhouse
+		command = { type = secedeprovince which = GER value = 72 } #Metz
+		command = { type = secedeprovince which = GER value = 73 } #Strasbourg
+		command = { type = secedeprovince which = GER value = 316 } #Mulhouse
+	}
+}
+
+event = {
+	id = 132307
+	random = no
+	country = GER
+
+	name = "EVT_132307_NAME"
+	desc = "EVT_132307_DESC"
+
+	picture = "fort_sabotaged"
+
+	action_a = {
+		name = "EVT_132307_ACTA"
+		command = { type = addcore which = 72 } #Metz
+		command = { type = addcore which = 73 } #Strasbourg
+		command = { type = addcore which = 316 } #Mulhouse
+		command = { type = money value = 200 }
+		command = { type = dissent value = -20 }
+	}
+}
+
+event = {
+	id = 132308
+	random = no
+	country = GER
+
+	name = "EVT_132308_NAME"
+	desc = "EVT_132308_DESC"
+
+	picture = "german_marginal_victory2"
+
+	action_a = {
+		name = "EVT_132308_ACTA"
+		command = { type = war which = FRA }
+	}
+}
+
+event = {
+	id = 132309
+	random = no
+	country = GER
+
+	trigger = {
+		incabinet = 1 # AH
+		NOT = {
+			war = { country = GER country = FRA } #FEPK1.09
+			war = { country = GER country = SOV }
+			war = { country = GER country = POL }
+			owned = { province = 303 data = GER } # Danzig
+			alliance = { country = GER country = POL }
+			puppet = { country = POL country = GER }
+			ispuppet = GER
+			#atwar = GER #FEPK1.09
+		}
+		exists = POL
+		government = fascist
+		control = { province = 72 data = GER } #Metz
+		control = { province = 73 data = GER } #Strasbourg
+		control = { province = 316 data = GER } #Mulhouse
+		control = { province = 91 data = GER } #Kolding
+		NOT = { lost_national = { country = GER value = 5 } } #FEPKBETA5.2
+		random = 20
+	}
+
+	name = "EVT_132309_NAME"
+	desc = "EVT_132309_DESC"
+
+	picture = "Danzig"
+
+	date = { day = 1 month = april year = 1941 }
+	offset = 7
+	deathdate = { day = 1 month = april year = 1943 }
+
+	action_a = {
+		name = "EVT_132309_ACTA"
+		ai_chance = 100
+		command = { type = trigger which = 132310 }
+		command = { type = relation which = ENG value = -10 }
+		command = { type = relation which = FRA value = -10 }
+		command = { type = addcore which = 303 }
+	}
+	action_b = {
+		name = "EVT_132309_ACTB"
+		ai_chance = 0
+		command = { type = dissent value = 10 }
+		command = { type = domestic which = defense_lobby value = -1 }
+		command = { type = domestic which = interventionism value = -1 }
+	}
+}
+
+event = {
+	id = 132310
+	random = no
+	country = POL
+
+	name = "EVT_132310_NAME"
+	desc = "EVT_132310_DESC"
+
+	picture = "Danzig"
+
+	action_a = {
+		name = "EVT_132310_ACTA"
+		ai_chance = 50
+		command = { type = trigger which = 132311 } #ダンツィヒ再要求 - ポーランドが屈した
+		command = { type = non_aggression which = GER where = POL }
+		command = { type = relation which = GER value = 30 }
+		command = { type = relation which = SOV value = -50 }
+		command = { type = relation which = ENG value = -50 }
+		command = { type = relation which = FRA value = -50 }
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = secedeprovince which = GER value = 303 }
+		command = { type = dissent value = 25 }
+	}
+	action_b = {
+		name = "EVT_132310_ACTB"
+		ai_chance = 50
+		command = { type = trigger which = 132312 } #ダンツィヒ再要求 - 戦争だ！
+		command = { type = domestic which = political_left value = 1 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = dissent value = -5 }
+	}
+}
+
+event = {
+	id = 132311
+	random = no
+	country = GER
+
+	name = "EVT_132311_NAME"
+	desc = "EVT_132311_DESC"
+
+	picture = "Danzig"
+
+	action_a = {
+		name = "EVT_132311_ACTA"
+		command = { type = money value = 200 }
+		command = { type = dissent value = -30 }
+	}
+}
+
+event = {
+	id = 132312
+	random = no
+	country = GER
+
+	name = "EVT_132312_NAME"
+	desc = "EVT_132312_DESC"
+
+	picture = "Danzig"
+
+	action_a = {
+		name = "EVT_132312_ACTA"
+		command = { type = war which = POL }
+	}
+}
+
+event = {
+	id = 132313
+	random = no
+	country = GER
+
+	trigger = {
+		InCabinet = 1 # AH
+		OR = {
+			event = 130113 #Poland declines proposal
+			event = 130114 #UK abandones Poland
+			AND = {
+				NOT = {
+					event = 130112 #poland guaranteed and allied with england
+				}
+				NOT = {
+					alliance = { country = ENG country = POL }
+				}
+			}
+		}
+		exists = POL
+		government = fascist
+		NOT = {
+			owned = { province = 303 data = GER } # Danzig
+			alliance = { country = GER country = POL }
+			puppet = { country = POL country = GER }
+			ispuppet = GER
+			atwar = GER
+		}
+	}
+
+	name = "EVT_2027_NAME"
+	desc = "EVT_2027_DESC"
+
+	picture = "Danzig"
+
+	date = { day = 29 month = august year = 1939 }
+
+	action_a = {
+		name = "ACTIONNAME2027A" # Final Ultimatum - Danzig or War
+		ai_chance = 100
+		command = { type = trigger which = 132314 }
+		command = { type = relation which = ENG value = -10 }
+		command = { type = relation which = FRA value = -10 }
+		command = { type = addcore which = 303 }
+	}
+	action_b = {
+		name = "ACTIONNAME2027B" # Time to back down
+		ai_chance = 0
+		command = { type = domestic which = defense_lobby value = -1 }
+		command = { type = domestic which = interventionism value = -1 }
+	}
+}
+
+event = { 
+	id = 132314
+	random = no
+	country = POL
+
+	name = "EVT_3601_NAME"
+	desc = "EVT_3601_DESC"
+
+	picture = "Danzig"
+
+	action_a = {
+		name = "ACTIONNAME3601A" #Then it is War
+		ai_chance = 60
+		command = { type = domestic which = political_left value = 1 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = trigger which = 2028 } #
+		command = { type = dissent value = -5 }
+	}
+	action_b = {
+		name = "ACTIONNAME3601B" #Fold
+		ai_chance = 40
+		command = { type = non_aggression which = GER where = POL }
+		command = { type = relation which = GER value = 30 }
+		command = { type = relation which = SOV value = -50 }
+		command = { type = relation which = ENG value = -50 }
+		command = { type = relation which = FRA value = -50 }
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = secedeprovince which = GER value = 303 }
+		command = { type = trigger which = 2029 } #
+		command = { type = dissent value = 25 }
+	}
+}

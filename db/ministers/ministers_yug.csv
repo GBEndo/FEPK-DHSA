@@ -1,0 +1,88 @@
+YUG;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+20001;Head of State;パヴレ・カラジョルジェヴィチ;35;PA;Benevolent Gentleman;High;M20001;x
+20002;Head of Government;ミラン・ストジャディノヴィッチ;35;PA;Silent Workhorse;High;M20002;x
+20003;Foreign Minister;ミラン・ストジャディノヴィッチ;35;PA;The Cloak N Dagger Schemer;Medium;M20002;x
+20004;Minister of Armament;ボガルジャブ・ジェヴティク;35;PA;Corrupt Kleptocrat;Medium;M20004;x
+20005;Minister of Security;パヴレ・カラジョルジェヴィチ;35;PA;Prince of Terror;High;M20001;x
+20006;Head of Military Intelligence;ボリヴォジェ・ヨシモヴィッチ;35;PA;Political Specialist;Medium;L46013;x
+20007;Chief of Staff;ペータル・コシック;35;PA;School of Mass Combat;Medium;L46015;x
+20008;Chief of Army;アレクサンダー・シンカー＝マルコヴィッチ;35;PA;Decisive Battle Doctrine;Very High;L46005;x
+20009;Chief of Navy;ボゴルジャブ・イリッチ;35;PA;Base Control Doctrine;Very High;L46043;x
+20010;Chief of Air Force;デュサン・シモヴィッチ;35;PA;Army Aviation Doctrine;Medium;L46060;x
+20031;Head of State;ヨシップ・ブロズ;36;LWR;Powerhungry Demagogue;High;M20021;x
+20032;Head of Government;ドラギサ・ツヴェトコヴィッチ;39;PA;Naive Optimist;High;M20032;x
+20033;Head of Government;デュサン・シモヴィッチ;41;SC;Happy Amateur;High;M20033;x
+20034;Head of Government;スロボダン・ヨヴァノヴィッチ;42;FA;Political Protege;High;M20034;x
+20035;Head of Government;ミロス・トリフノヴィッチ;43;NS;Old General;High;M20035;x
+20036;Head of Government;イワン・スバシチ;44;ML;Corporate Suit;High;M20014;x
+20037;Head of Government;ヨシップ・ブロズ;36;LWR;Tito;High;M20021;x
+20038;Head of Government;ヴラトコ・マチェク;36;SD;Old Airmarshal;High;M20038;x
+20039;Foreign Minister;アレクサンダー・シンカー＝マルコヴィッチ;39;PA;General Staffer;Very High;L46005;x
+20040;Foreign Minister;モムチロ・ニンシク;41;SC;Great Compromiser;Medium;M20013;x
+20041;Foreign Minister;スロボダン・ヨヴァノヴィッチ;43;FA;Biased Intellectual;High;M20034;x
+20042;Foreign Minister;ミラン・グロル;43;NS;Apologetic Clerk;High;M20042;x
+20043;Foreign Minister;ボジダル・プリック;43;NS;Ideological Crusader;High;M20043;x
+20044;Foreign Minister;イワン・スバシチ;44;ML;Apologetic Clerk;Medium;M20014;x
+20045;Foreign Minister;スタノイェ・シミッチ;36;LWR;Great Compromiser;Medium;M20023;x
+20046;Foreign Minister;ヴラトコ・マセック;36;SD;Apologetic Clerk;Medium;M20038;x
+20047;Foreign Minister;エドヴァルド・カルデリ;41;SD;Ideological Crusader;Very High;M20047;x
+20048;Foreign Minister;ディミトリー・ロティッチ;43;NS;Iron Fisted Brute;Medium;M20048;x
+20049;Minister of Armament;エド・ボグダン・マルコヴィッチ;39;PA;Resource Industrialist;Medium;M20049;x
+20050;Minister of Armament;ラディスラフ・ポリッチ;41;SC;Laissez-Faire Capitalist;Medium;M20050;x
+20051;Minister of Armament;アントン・コザレフ;42;FA;Tank Proponent;Medium;M20051;x
+20052;Minister of Armament;タナシジェ・タサ・ディニック;43;NS;Corrupt Kleptocrat;Medium;M20052;x
+20053;Minister of Armament;ペータル・イヴェリッチ;44;ML;Theoretical Scientist;Medium;M20053;x
+20054;Minister of Armament;ミレンティ・ポポヴィッチ;36;LWR;Resource Industrialist;High;M20024;x
+20055;Minister of Armament;ドラザ・ミハイロヴィッチ;36;SD;Tank Proponent;Medium;M20055;x
+20056;Minister of Security;ミシェル・ヨヴァノヴィッチ;39;PA;Compassionate Gentleman;Low;M20056;x
+20057;Minister of Security;モムチロ・ドゥジク;41;SC;Silent Lawyer;Low;M20015;x
+20058;Minister of Security;ペータル・グラボフスキ;42;FA;Efficient Sociopath;Low;M20058;x
+20059;Minister of Security;ミラン・ネディク;43;NS;Prince of Terror;Medium;M20059;x
+20060;Minister of Security;スピロ・キティンチェフ;44;NS;Back Stabber;Medium;M20060;x
+20061;Minister of Security;ドラゴルジャブ・ステファニッチ;44;ML;Crime Fighter;Medium;M20061;x
+20062;Minister of Security;コカ・ポポヴィッチ;36;SD;Silent Lawyer;Medium;M20025;x
+20063;Head of Military Intelligence;アンドリジャ・スタムパー;39;PA;Technical Specialist;Medium;M20063;x
+20064;Head of Military Intelligence;ジョルデ・ペトレリッチ;41;SC;Industrial Specialist;Medium;M20064;x
+20065;Head of Military Intelligence;ディミタル・カトロフ;42;FA;Dismal Enigma;Medium;M20065;x
+20066;Head of Military Intelligence;コスタ・エカネク;43;NS;Logistics Specialist;Medium;M20066;x
+20067;Head of Military Intelligence;ドラゴルジャブ・ヨヴァノヴィッチ;43;NS;Political Specialist;Medium;M20067;x
+20068;Head of Military Intelligence;ミハイル・ミロサジェヴィッチ;44;ML;Technical Specialist;Medium;M20068;x
+20069;Head of Military Intelligence;アレクサンダー・ランコヴィッチ;36;SD;Dismal Enigma;High;M20026;x
+20071;Chief of Staff;ラディヴォジェ・ヤンコヴィッチ;41;SC;School of Fire Support;Low;L46012;x
+20072;Chief of Staff;ディミタル・ドゥゼロフ;42;FA;School of Manoeuvre;Low;M20072;x
+20073;Chief of Staff;マルコ・ボゾヴィッチ;43;NS;School of Mass Combat;Low;L46002;x
+20074;Chief of Staff;ヨヴァン・ニコリッチ;44;ML;School of Psychology;Low;M20074;x
+20075;Chief of Staff;アルサ・ヨヴァノヴィッチ;36;LWR;School of Mass Combat;Medium;M20075;x
+20076;Chief of Staff;ドラザ・ミハイロヴィッチ;36;SD;School of Defence;Medium;M20012;x
+20078;Chief of Army;ミルティン・ネディッチ;41;SC;Decisive Battle Doctrine;Very High;L46026;x
+20079;Chief of Army;ディミタル・ドゥゼロフ;42;FA;Armoured Spearhead Doctrine;Very High;M20072;x
+20080;Chief of Army;マルコ・ボゾヴィッチ;43;NS;Elastic Defence Doctrine;Very High;L46002;x
+20081;Chief of Army;ヨヴァン・ニコリッチ;44;ML;Guns and Butter Doctrine;Very High;M20074;x
+20082;Chief of Army;ドラザ・ミハイロヴィッチ;36;SD;Static Defence Doctrine;Medium;M20012;x
+20084;Chief of Navy;ミルティン・ネディッチ;41;SC;Decisive Naval Battle Doctrine;High;L46026;x
+20085;Chief of Navy;ペトラ・デュメフ;42;FA;Indirect Approach Doctrine;High;M20085;x
+20086;Chief of Navy;ニコラ・マンディッチ;43;NS;Base Control Doctrine;High;M20086;x
+20087;Chief of Navy;パヴレ・カラジョルジェヴィチ;44;ML;Power Projection Doctrine;Very High;M20001;x
+20090;Chief of Air Force;ペトラ・デュメフ;42;FA;Vertical Envelopment Doctrine;Medium;M20085;x
+20091;Chief of Air Force;アデマガ・メシック;43;NS;Army Aviation Doctrine;Medium;M20091;x
+20092;Chief of Air Force;ペータル・ヴケヴィッチ;44;ML;Naval Aviation Doctrine;Medium;L46062;x
+20093;Chief of Air Force;イワン・リバル;36;LWR;Air Superiority Doctrine;High;M20093;x
+20094;Head of State;ペータル2世;41;SC;Popular Figurehead;High;M20011;x
+20095;Head of State;ペータル2世;41;FA;Popular Figurehead;High;M20011;x
+20096;Head of State;ペータル2世;41;NS;Popular Figurehead;High;M20011;x
+20097;Foreign Minister;モムチロ・ニンシク;41;FA;The Cloak N Dagger Schemer;Medium;M20013;x
+20100;Chief of Staff;コカ・ポポヴィッチ;36;LWR;School of Mass Combat;High;M20025;x
+20101;Chief of Army;ヨシップ・ブロズ;36;LWR;Armoured Spearhead Doctrine;High;M20028;x
+20102;Chief of Navy;ヨシップ・ブロズ;36;LWR;Indirect Approach Doctrine;High;M20029;x
+20011;Head of State;ペータル2世;36;ML;Popular Figurehead;High;M20011;x
+20012;Head of Government;ドラザ・ミハイロヴィッチ;36;ML;Naive Optimist;High;M20012;x
+20014;Minister of Armament;イワン・スバシチ;36;ML;Infantry Proponent;Medium;M20014;x
+20016;Head of Military Intelligence;ミロスラフ・スパライコヴィッチ;36;ML;Technical Specialist;High;M20016;x
+20017;Chief of Staff;ミハイロ・ルキッチ;36;ML;School of Manoeuvre;High;L46020;x
+20030;Chief of Air Force;ヨシップ・ブロズ;36;LWR;Army Aviation Doctrine;Medium;M20028;x
+20103;Foreign Minister;コカ・ポポヴィッチ;53;LWR;The Cloak N Dagger Schemer;Very High;M20025;x
+20104;Minister of Armament;イヴァン・ゴスニャク;53;LWR;Infantry Proponent;High;M20104;x
+20105;Minister of Security;ヴラディミル・シミチ;53;LWR;Compassionate Gentleman;Medium;M20105;x
+20106;Head of Military Intelligence;ミロヴァン・ジラス;53;SD;Political Specialist;High;M20106;x
+20107;Head of State;ミラン・ゴルキッチ;35;LE;Die-hard Reformer;High;M20107;x

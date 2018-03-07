@@ -1,0 +1,141 @@
+BRA;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+34001;Head of State;ジェトゥリオ・ヴァルガス;36;LWR;Gege;High;M34001;x
+34002;Head of Government;ジェトゥリオ・ヴァルガス;36;LWR;Naive Optimist;High;M34001;x
+34003;Foreign Minister;ホセ・デ・マセド・ソアレス;36;LWR;Iron Fisted Brute;Medium;M34003;x
+34004;Minister of Armament;カフェ・フィルホ;36;SD;Resource Industrialist;Low;M34004;x
+34005;Minister of Security;マルコンデス・フィルホ;36;SD;Crime Fighter;High;M34005;x
+34006;Head of Military Intelligence;フィリント・ムーラー;36;SD;Logistics Specialist;Very High;M34006;x
+34007;Chief of Staff;エウリコ・ガスパル・ドゥトラ;36;LWR;School of Fire Support;Medium;M34007;x
+34009;Chief of Navy;アリステイデス・ギレム;36;SD;Open Seas Doctrine;Medium;M34009;x
+34010;Chief of Air Force;サルガド・フィルホ;36;LWR;Air Superiority Doctrine;Medium;M34010;x
+34063;Head of State;ルイス・カルロス・プレステス;36;ST;Die-hard Reformer;High;M34051;x
+34064;Head of State;ネロ・フィウザ・デ・カストロ;45;SD;Benevolent Gentleman;High;M34031;x
+34065;Head of State;エドゥアルド・ゴメス;37;ML;Stern Imperialist;High;M34021;x
+34067;Head of State;エウリコ・ガスパル・ドゥトラ;45;SC;Weary Stiffneck;High;M34011;x
+34068;Head of State;プリニオ・サルガド;36;FA;Barking Buffoon;High;M34041;x
+34070;Head of Government;ルイス・カルロス・プレステス;36;ST;Ambitious Union Boss;High;M34051;x
+34071;Head of Government;ネロ・フィウザ・デ・カストロ;45;SD;Naive Optimist;High;M34031;x
+34072;Head of Government;エドゥアルド・ゴメス;37;ML;Old Airmarshal;High;M34021;x
+34074;Head of Government;エウリコ・ガスパル・ドゥトラ;45;PA;Old General;High;M34011;x
+34075;Head of Government;プリニオ・サルガド;36;FA;Silent Workhorse;High;M34041;x
+34076;Foreign Minister;オズヴァルド・アラニャ;38;LWR;Biased Intellectual;Medium;M34076;x
+34077;Foreign Minister;ペドロ・レオン・ヴェロソ;44;LWR;Great Compromiser;Medium;M34077;x
+34078;Foreign Minister;ヘンリー・バーガー;39;ST;Ideological Crusader;Very Low;M34053;x
+34079;Foreign Minister;オスカー・ワインシェンク;42;LE;The Cloak N Dagger Schemer;High;M34079;x
+34080;Foreign Minister;マリオ・ピメンテル・ブランダオ;37;SD;The Cloak N Dagger Schemer;High;M34080;x
+34081;Foreign Minister;オタヴィオ・マンガベイラ;45;SD;Great Compromiser;High;M34033;x
+34083;Foreign Minister;アフラニオ・デ・メロ・フランコ;39;ML;Great Compromiser;High;M34083;x
+34084;Foreign Minister;アキル・デ・ナシメント・パエス;43;ML;Biased Intellectual;Low;M34084;x
+34086;Foreign Minister;パソ・フェルナンデス・モラ;43;SC;Ideological Crusader;High;M34086;x
+34087;Foreign Minister;S・デ・ソウサ・レオン・グレイシー;46;SC;Biased Intellectual;High;M34087;x
+34088;Foreign Minister;ラウル・フェルナンデス;47;SC;Great Compromiser;High;M34013;x
+34089;Foreign Minister;ジョアオ・ネヴェス・ダ・フォントゥーラ;45;SC;Biased Intellectual;High;M34008;x
+34090;Foreign Minister;ミグエル・コスタス;37;FA;Iron Fisted Brute;Low;M34043;x
+34091;Minister of Security;プリニオ・サルガド;38;FA;Man of the People;Medium;M34041;x
+34092;Foreign Minister;ニュートン・キャヴァルキャンティ;44;FA;General Staffer;Medium;M34047;x
+34093;Minister of Armament;ジャヌアリオ・コエルホ・ネト;37;LWR;Tank Proponent;High;M34093;x
+34094;Minister of Armament;ホセ・デ・マセド・ソアレス;39;LWR;Laissez-Faire Capitalist;Medium;M34003;x
+34095;Minister of Armament;ジェトゥリオ・ヴァルガス;41;LWR;Administrative Genius;High;M34001;x
+34096;Minister of Armament;アグスティン・ジュアレズ・フォルハ;43;LWR;Corrupt Kleptocrat;Medium;M34096;x
+34098;Minister of Armament;ヘンリー・バーガー;41;ST;Air Superiority Proponent;Very Low;M34053;x
+34103;Minister of Armament;ガスタオ・ダ・クンハ・バヒアナ;39;ML;Theoretical Scientist;Medium;M34103;x
+34104;Minister of Armament;ジョゼ・リニャレス;40;ML;Laissez-Faire Capitalist;High;M34104;x
+34105;Minister of Armament;エドゥアルド・ゴメス;43;ML;Air to Ground Proponent;Medium;M34021;x
+34106;Minister of Armament;エリセウ・F・デ・モンタロヨス;45;ML;Air Superiority Proponent;High;M34106;x
+34108;Minister of Armament;アフラニオ・デ・メロ・フランコ;42;SC;Battle Fleet Proponent;High;M34083;x
+34109;Minister of Armament;ガスタオ・ヴィディガル;45;SC;Resource Industrialist;High;M34014;x
+34111;Foreign Minister;グスタヴォ・バロッソ;36;FA;Iron Fisted Brute;Medium;M34044;x
+34112;Minister of Armament;ワルデマール・コスタ・ネト;41;FA;Infantry Proponent;High;M34112;x
+34113;Minister of Armament;カルロス・フェレイラ・デ・カマルゴ;43;FA;Laissez-Faire Capitalist;High;M34113;x
+34114;Minister of Security;ペドロ・レオン・ヴェロソ;37;LWR;Compassionate Gentleman;Medium;M34077;x
+34116;Minister of Security;マリオ・ピメンテル・ブランダオ;43;LWR;Crooked Kleptocrat;High;M34080;x
+34117;Minister of Security;カルロス・アブグア・バストス;39;ST;Prince of Terror;High;M34055;x
+34119;Minister of Security;アデマル・デ・カルヴァルホ・ゴメス;44;ST;Man of the People;High;M34119;x
+34120;Minister of Security;ギルヘルメ・グインル・デ・シルヴィオ;39;SD;Efficient Sociopath;High;M34118;x
+34121;Minister of Security;オスカー・ワインシェンク;41;SD;Silent Lawyer;High;M34079;x
+34122;Minister of Security;カルロス・アブグア・バストス;45;SD;Back Stabber;Low;M34055;x
+34124;Minister of Security;コスタ・ネト;37;ML;Compassionate Gentleman;Medium;M34015;x
+34125;Minister of Security;メスキート・ダ・コスタ;39;ML;Silent Lawyer;High;M34025;x
+34126;Minister of Security;テオトニオ・ダ・フォンセカ;43;ML;Prince of Terror;High;M34126;x
+34127;Minister of Security;ラウル・フェルナンデス;43;SC;Back Stabber;High;M34013;x
+34128;Foreign Minister;エピタシオ・ダ・シルヴァ・ペソア;36;SC;Great Compromiser;Medium;M34128;x
+34129;Minister of Security;テオトニオ・ダ・フォンセカ;46;SC;Prince of Terror;High;M34126;x
+34130;Minister of Security;カルロス・アルメイダ・ネト;47;SC;Efficient Sociopath;High;M34130;x
+34132;Minister of Security;カルロス・フェレイラ・デ・カマルゴ;40;FA;Prince of Terror;High;M34113;x
+34133;Minister of Security;カルロス・アルメイダ・ネト;43;FA;Back Stabber;High;M34130;x
+34134;Head of Military Intelligence;ロウリーノ・ヴォルタ・レドンド;39;LWR;Logistics Specialist;High;M34134;x
+34135;Head of Military Intelligence;アウスト・デ・ソウザ・エ・シルヴァ;43;LWR;Political Specialist;High;M34056;x
+34137;Head of Military Intelligence;アデマル・デ・カルヴァルホ・ゴメス;43;ST;Naval Intelligence Specialist;High;M34119;x
+34140;Head of Military Intelligence;コスタ・ネト;37;ML;Naval Intelligence Specialist;Medium;M34015;x
+34141;Head of Military Intelligence;メスキート・ダ・コスタ;39;ML;Dismal Enigma;High;M34025;x
+34143;Head of Military Intelligence;ロドリゴ・オクタヴィオ;45;ML;Political Specialist;High;M34143;x
+34144;Head of Military Intelligence;ペドロ・ペロッティ;43;SC;Dismal Enigma;Medium;M34144;x
+34148;Head of Military Intelligence;カルロス・アルメイダ・ネト;44;FA;Logistics Specialist;High;M34130;x
+34149;Chief of Staff;マガルハエス・バラタ・デ・アゼヴェド;43;LWR;School of Manoeuvre;Medium;M34037;x
+34150;Chief of Staff;ルイス・カルロス・プレステス;39;ST;School of Mass Combat;Undying;M34051;x
+34152;Chief of Staff;ネロ・フィウザ・デ・カストロ;45;SD;School of Mass Combat;Medium;M34031;x
+34153;Chief of Staff;エンリケ・テイシェイラ・ロット;37;ML;School of Fire Support;Medium;M34027;x
+34154;Chief of Staff;アルジェミロ・アシス;39;ML;School of Defence;Medium;M34154;x
+34155;Chief of Staff;アウグスト・ダ・ガマ・レイロス;43;ML;School of Manoeuvre;Medium;M34155;x
+34156;Chief of Staff;メスキート・ダ・コスタ;45;ML;School of Mass Combat;Medium;M34025;x
+34160;Chief of Staff;ニュートン・キャヴァルキャンティ;37;FA;School of Psychology;Medium;M34047;x
+34161;Chief of Staff;トマス・セビスタオ・デ・メンドンサ;43;FA;School of Mass Combat;Medium;M34161;x
+34162;Chief of Army;エウリコ・ガスパル・ドゥトラ;37;LWR;Decisive Battle Doctrine;Medium;M34011;x
+34163;Chief of Army;シロ・メイアレズ;43;LWR;Elastic Defence Doctrine;Very Low;M34058;x
+34165;Chief of Army;マリオ・ダ・シルヴァ・カマルゴ;41;ST;Guns and Butter Doctrine;High;M34165;x
+34166;Chief of Army;マガルハエス・バラタ・デ・アゼヴェド;39;SD;Armoured Spearhead Doctrine;Medium;M34037;x
+34167;Chief of Army;ネロ・フィウザ・デ・カストロ;45;SD;Elastic Defence Doctrine;Medium;M34031;x
+34168;Chief of Army;エンリケ・テイシェイラ・ロット;37;ML;Decisive Battle Doctrine;Medium;M34027;x
+34169;Chief of Army;アルジェミロ・アシス;39;ML;Static Defence Doctrine;Medium;M34154;x
+34170;Chief of Army;アウグスト・ダ・ガマ・レイロス;43;ML;Armoured Spearhead Doctrine;Medium;M34155;x
+34171;Chief of Army;メスキート・ダ・コスタ;45;ML;Elastic Defence Doctrine;Medium;M34025;x
+34172;Chief of Army;ゴエス・モンテイロ;43;SC;Guns and Butter Doctrine;High;M34018;x
+34174;Chief of Army;トマス・セビスタオ・デ・メンドンサ;37;FA;Guns and Butter Doctrine;Medium;M34161;x
+34175;Chief of Army;ニュートン・キャヴァルキャンティ;43;FA;Decisive Battle Doctrine;Medium;M34047;x
+34176;Chief of Navy;アルヴァロ・デ・ソウザ;37;LWR;Indirect Approach Doctrine;Very Low;M34059;x
+34179;Chief of Navy;モレイラ・リマ;39;SD;Power Projection Doctrine;Low;M34039;x
+34180;Chief of Navy;ホルヘ・マーティンズ;37;ML;Base Control Doctrine;Medium;M34029;x
+34181;Chief of Navy;シルヴィオ・デ・ノローナ;43;SC;Open Seas Doctrine;High;M34019;x
+34185;Chief of Air Force;エパミノンダス・ドス・サントス;43;LWR;Naval Aviation Doctrine;Medium;M34040;x
+34186;Chief of Air Force;アグリベルト・ヴィエイラ;39;ST;Naval Aviation Doctrine;Very High;M34060;x
+34187;Chief of Air Force;レオネル・ベネヴィデス・デ・レゼンデ;44;ST;Vertical Envelopment Doctrine;Very High;M34187;x
+34190;Chief of Air Force;ネロ・モウラ;37;ML;Air Superiority Doctrine;Medium;M34030;x
+34191;Chief of Air Force;フィゲイラ・デ・アルメイダ;43;SC;Army Aviation Doctrine;Medium;M34020;x
+34192;Chief of Air Force;エドゥアルド・ゴメス;45;SC;Carpet Bombing Doctrine;Medium;M34021;x
+34194;Head of State;ジョゼ・リニャレス;45;SC;Popular Figurehead;High;M34104;x
+34013;Foreign Minister;ラオウル・フェルナンデス;36;SC;Great Compromiser;Medium;M34013;x
+34195;Head of State;ジェトゥリオ・ヴァルガス;51;SC;Gege;High;M34001;x
+34196;Head of State;アフラニオ・デ・メロ・フランコ;51;SD;Benevolent Gentleman;High;M34083;x
+34197;Head of Government;カフェ・フィリォ;51;SC;Silent Workhorse;High;M34004;x
+34198;Head of Government;アフラニオ・デ・メロ・フランコ;51;SD;Naive Optimist;High;M34083;x
+34200;Minister of Security;ヴィンセント・ラオン;36;ML;Silent Lawyer;Medium;M34200;x
+34201;Minister of Armament;S・ラウリオーノ・デ・オリヴィエラ;51;SD;Resource Industrialist;Medium;M34201;x
+34202;Minister of Security;ホセ・デ・マセド・ソアレス;51;SC;Compassionate Gentleman;Medium;M34202;x
+34203;Minister of Security;オラシオ・ラフェル;51;SD;Crime Fighter;Medium;M34203;x
+34204;Head of Military Intelligence;ラオウル・フェルナンデス;51;SC;Political Specialist;High;M34013;x
+34205;Head of Military Intelligence;オラシオ・ラフェル;51;SD;Dismal Enigma;High;M34203;x
+34206;Chief of Staff;アマウリ・クルエル;51;SC;School of Manoeuvre;Medium;L31091;x
+34207;Chief of Army;アルトゥール・タ・コスタ・エ・シルヴァ;51;SC;Decisive Battle Doctrine;Medium;L31012;x
+34208;Chief of Air Force;イスマエル・モッタ・パエス;45;SC;Air Superiority Doctrine;Medium;L31078;x
+34209;Chief of Staff;ジョアオ・ゴメス;36;SC;School of Defence;Low;M34209;x
+34210;Chief of Army;ジョアオ・ゴメス;36;SC;Static Defence Doctrine;Low;M34209;x
+34211;Minister of Armament;アガメノン・マガリャンイス;36;SC;Resource Industrialist;High;M34211;x
+34212;Chief of Air Force;ジョアオ・ゴメス;36;SC;Army Aviation Doctrine;Low;M34209;x
+34213;Head of Government;ジェトゥリオ・ヴァルガス;36;SD;Naive Optimist;High;M34001;x
+34214;Minister of Security;アガメノン・マガリャンイス;36;SC;Silent Lawyer;High;M34211;x
+34215;Chief of Air Force;エウリコ・ガスパル・ドゥトラ;36;PA;Army Aviation Doctrine;High;M34007;x
+34216;Minister of Security;フランシスコ・カンポス;37;PA;Prince of Terror;High;M34216;x
+34217;Minister of Armament;ワルデマール・ファルカン;37;PA;Administrative Genius;High;M34217;x
+34218;Minister of Armament;マルコンデス・フィルホ;41;SC;Resource Industrialist;High;M34005;x
+34219;Chief of Air Force;アリステイデス・ギレム;36;PA;Naval Aviation Doctrine;Medium;M34009;x
+34220;Chief of Air Force;ニュートン・キャヴァルキャンティ;38;FA;Army Aviation Doctrine;Medium;M34047;x
+34221;Chief of Staff;ゴエス・モンテイロ;37;PA;School of Manoeuvre;Medium;M34018;x
+34222;Head of State;アメリコ・デ・アルメイダ;37;SL;Insignificant Layman;Medium;M34024;x
+34223;Head of Government;アメリコ・デ・アルメイダ;37;SL;Naive Optimist;Medium;M34024;x
+34224;Head of State;アルマンド・デ・サレス・オリヴェイラ;37;ML;Benevolent Gentleman;Medium;M34224;x
+34225;Head of Government;アルマンド・デ・サレス・オリヴェイラ;37;ML;Flamboyant Tough Guy;Medium;M34224;x
+34226;Chief of Air Force;ゴエス・モンテイロ;37;PA;Army Aviation Doctrine;High;M34018;x
+34227;Minister of Security;ミグエル・リール;38;FA;Compassionate Gentleman;High;M34227;x
+34228;Chief of Navy;ジョアオ・カンディード;38;PA;Decisive Naval Battle Doctrine;High;M34228;x
+34229;Chief of Air Force;アウグスト・ダ・ガマ・レイロス;38;ML;Army Aviation Doctrine;Medium;M34155;x

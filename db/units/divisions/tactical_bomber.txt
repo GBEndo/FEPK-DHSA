@@ -1,0 +1,245 @@
+allowed_brigades = escort
+
+upgrade = { type = naval_bomber upgrade_time_factor = 0.54 upgrade_cost_factor = 1.4 }
+upgrade = { type = strategic_bomber upgrade_time_factor = 1.08 upgrade_cost_factor = 0.7 }
+
+# 0 - ‘åíŠÔŠúŒ^íp”šŒ‚‹@
+model = {
+	cost 					= 11
+	buildtime	 			= 160
+	defaultorganisation 		= 30
+	morale					= 30
+	manpower				= 0.6
+	maxspeed				= 180
+	surfacedetectioncapability	= 1
+	airdetectioncapability		= 0
+	surfacedefence				= 4
+	airdefence				= 1
+	airattack				= 1
+	strategicattack				= 5
+	softattack				= 5
+	hardattack				= 1
+	navalattack				= 1
+	range					= 400
+	supplyconsumption 			= 1.5
+	fuelconsumption				= 3
+	upgrade_time_factor = 1
+	upgrade_cost_factor = 1
+	equipment = { bomber = 100 manpower = 600 }
+}
+# 1 - ‰ŠúŒ^íp”šŒ‚‹@
+model = {
+	cost 					= 13
+	buildtime	 			= 180
+	defaultorganisation 		= 30
+	morale					= 30
+	manpower				= 0.6
+	maxspeed				= 200
+	surfacedetectioncapability	= 1
+	airdetectioncapability		= 0
+	surfacedefence				= 5
+	airdefence				= 2
+	airattack				= 1
+	strategicattack				= 5
+	softattack				= 7
+	hardattack				= 2
+	navalattack				= 2
+	range					= 500
+	supplyconsumption 			= 1.7
+	fuelconsumption				= 3
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { bomber = 100 manpower = 600 }
+}
+# 2 - Šî–{Œ^íp”šŒ‚‹@
+model = {
+	cost 					= 15
+	buildtime	 			= 180
+	defaultorganisation 		= 30
+	morale					= 30
+	manpower				= 0.4
+	maxspeed				= 300
+	surfacedetectioncapability	= 2
+	airdetectioncapability		= 1
+	surfacedefence				= 7
+	airdefence				= 4
+	airattack				= 2
+	strategicattack				= 7
+	softattack				= 9
+	hardattack				= 3
+	navalattack				= 3
+	range					= 600
+	supplyconsumption 			= 1.5
+	fuelconsumption				= 2.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { bomber = 100 manpower = 400 }
+}
+# 3 - ‰ü—ÇŒ^íp”šŒ‚‹@
+model = {
+	cost 					= 18
+	buildtime	 			= 180
+	defaultorganisation 		= 30
+	morale					= 30
+	manpower				= 0.5
+	maxspeed				= 350
+	surfacedetectioncapability	= 2
+	airdetectioncapability		= 1
+	surfacedefence				= 10
+	airdefence				= 5
+	airattack				= 3
+	strategicattack				= 10
+	softattack				= 11
+	hardattack				= 4
+	navalattack				= 4
+	range					= 700
+	supplyconsumption 			= 1.6
+	fuelconsumption				= 2.6
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { bomber = 100 manpower = 500 }
+}
+# 4 - ”­“WŒ^íp”šŒ‚‹@
+model = {
+	cost 					= 21
+	buildtime	 			= 180
+	defaultorganisation 		= 30
+	morale					= 30
+	manpower				= 0.5
+	maxspeed				= 400
+	surfacedetectioncapability	= 2
+	airdetectioncapability		= 1
+	surfacedefence				= 14
+	airdefence				= 6
+	airattack				= 3
+	strategicattack				= 14
+	softattack				= 12
+	hardattack				= 6
+	navalattack				= 5
+	range					= 800
+	supplyconsumption 			= 1.7
+	fuelconsumption				= 2.7
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { bomber = 100 manpower = 500 }
+}
+# 5 - Šî–{Œ^ƒWƒFƒbƒgíp”šŒ‚‹@
+model = {
+	cost 					= 25
+	buildtime	 			= 180
+	defaultorganisation 		= 30
+	morale					= 20
+	manpower				= 0.2
+	maxspeed				= 650
+	surfacedetectioncapability	= 2
+	airdetectioncapability		= 1
+	surfacedefence				= 18
+	airdefence				= 10
+	airattack				= 6
+	strategicattack				= 16
+	softattack				= 14
+	hardattack				= 8
+	navalattack				= 6
+	range					= 1100
+	supplyconsumption 			= 2
+	fuelconsumption				= 3
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { bomber = 100 manpower = 200 }
+}
+# 6 - ‰ü—ÇŒ^ƒWƒFƒbƒgíp”šŒ‚‹@
+model = {
+	cost 					= 28
+	buildtime	 			= 180
+	defaultorganisation 		= 30
+	morale					= 25
+	manpower				= 0.3
+	maxspeed				= 750
+	surfacedetectioncapability	= 2
+	airdetectioncapability		= 1
+	surfacedefence				= 20
+	airdefence				= 11
+	airattack				= 7
+	strategicattack				= 18
+	softattack				= 18
+	hardattack				= 10
+	navalattack				= 7
+	range					= 1100
+	supplyconsumption 			= 2.2
+	fuelconsumption				= 3
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { bomber = 100 manpower = 300 }
+}
+# 7 - ”­“WŒ^ƒWƒFƒbƒgíp”šŒ‚‹@
+model = {
+	cost 					= 31
+	buildtime	 			= 180
+	defaultorganisation 		= 30
+	morale					= 30
+	manpower				= 0.3
+	maxspeed				= 850
+	surfacedetectioncapability	= 2
+	airdetectioncapability		= 1
+	surfacedefence				= 22
+	airdefence				= 11
+	airattack				= 8
+	strategicattack				= 20
+	softattack				= 20
+	hardattack				= 14
+	navalattack				= 8
+	range					= 1300
+	supplyconsumption 			= 2.2
+	fuelconsumption				= 3
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { bomber = 100 manpower = 300 }
+}
+# 8 - €Œ»‘ãŒ^ƒWƒFƒbƒgíp”šŒ‚‹@
+model = {
+	cost 					= 33
+	buildtime	 			= 180
+	defaultorganisation 		= 30
+	morale					= 30
+	manpower				= 0.3
+	maxspeed				= 950
+	surfacedetectioncapability	= 2
+	airdetectioncapability		= 1
+	surfacedefence				= 24
+	airdefence				= 12
+	airattack				= 9
+	strategicattack				= 22
+	softattack				= 22
+	hardattack				= 18
+	navalattack				= 9
+	range					= 1500
+	supplyconsumption 			= 2.4
+	fuelconsumption				= 3
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { bomber = 100 manpower = 300 }
+}
+# 9 - Œ»‘ãŒ^ƒWƒFƒbƒgíp”šŒ‚‹@
+model = {
+	cost 					= 35
+	buildtime	 			= 180
+	defaultorganisation 		= 30
+	morale					= 30
+	manpower				= 0.3
+	maxspeed				= 1050
+	surfacedetectioncapability	= 2
+	airdetectioncapability		= 1
+	surfacedefence				= 26
+	airdefence				= 13
+	airattack				= 10
+	strategicattack				= 24
+	softattack				= 24
+	hardattack				= 22
+	navalattack				= 11
+	range					= 1700
+	supplyconsumption 			= 2.4
+	fuelconsumption				= 3
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { bomber = 100 manpower = 300 }
+}

@@ -1,0 +1,175 @@
+GRE;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+18001;Head of State;ゲオルギオス2世;36;PA;Insignificant Layman;High;M18001;x
+18002;Head of Government;コンスタンティノス・デメルチス;36;PA;Naive Optimist;NA;M18002;x
+18003;Foreign Minister;コンスタンティノス・デメルチス;36;PA;Biased Intellectual;Very High;M18002;x
+18004;Minister of Armament;ゲオルギオス・マントザヴィノス;36;PA;Military Entrepreneur;Medium;M18004;x
+18005;Minister of Security;ゲオルギオス・ロゴセティス;36;PA;Crime Fighter;Medium;M18005;x
+18006;Head of Military Intelligence;ゲオルギオス・ロゴセティス;36;PA;Dismal Enigma;Medium;M18005;x
+18007;Chief of Staff;テオドール・パンガロス;36;PA;School of Defence;Low;M18007;x
+18008;Chief of Army;アレクサンドロス・パパゴス;35;PA;Elastic Defence Doctrine;Low;M18008;x
+18009;Chief of Navy;アナスタシオ・サケラリオウ;36;PA;Open Seas Doctrine;Medium;M18009;x
+18010;Chief of Air Force;エレフテリオス・ヴェネゼロス;36;PA;Army Aviation Doctrine;Medium;M18010;x
+18031;Head of State;ゲオルギオス2世;36;SL;Insignificant Layman;High;M18001;x
+18032;Head of State;大主教ダマスキノス;41;SL;Barking Buffoon;High;M18032;x
+18033;Head of State;パヴロス1世;47;SL;Die-hard Reformer;High;M18033;x
+18034;Head of State;ゲオルギオス2世;36;SC;Insignificant Layman;High;M18001;x
+18035;Head of State;大主教ダマスキノス;41;SC;Barking Buffoon;High;M18032;x
+18036;Head of State;パヴロス1世;47;SC;Die-hard Reformer;High;M18033;x
+18037;Head of State;ゲオルギオス2世;36;FA;Insignificant Layman;High;M18001;x
+18039;Head of State;大主教ダマスキノス;41;PA;Barking Buffoon;High;M18032;x
+18040;Head of State;グリゴリエフ・ムルノフ;41;NS;Weary Stiffneck;High;M18040;x
+18041;Head of State;マリオ・ヴェルセリノ;42;NS;Resigned Generalissimo;High;M18041;x
+18042;Head of State;ギュンター・アルテンベルグ;43;NS;Autocratic Charmer;High;M18042;x
+18043;Head of State;パヴロス1世;47;PA;Die-hard Reformer;High;M18033;x
+18044;Head of State;ゲオルギオス・シアントス;36;ST;Popular Figurehead;High;M18021;x
+18045;Head of State;ニコス・ザハリアディス;44;ST;Autocratic Charmer;High;M18022;x
+18046;Head of Government;テミストクレス・ソフォウリス;36;SL;Flamboyant Tough Guy;High;M18014;x
+18047;Head of Government;ゲオルギオス・パパンドレウ;44;SL;Silent Workhorse;High;M18015;x
+18048;Head of Government;パナジオリス・ポウリトサス;46;SL;Smiling Oilman;High;M18048;x
+18049;Head of Government;イオアニス・メタクサス;36;SC;Old General;High;M18049;x
+18050;Head of Government;アレクサンドロス・コリジス;41;SC;Political Protege;High;M18050;x
+18051;Head of Government;エマヌエル・ツデロス;41;SC;Happy Amateur;High;M18051;x
+18052;Head of Government;ソフォクレス・ヴェニゼロス;44;SC;Naive Optimist;High;M18012;x
+18053;Head of Government;コンスタンティノス・ツァルダリス;46;SC;Old General;High;M18053;x
+18054;Head of Government;ディミトリオス・マキシモス;47;SC;Political Protege;High;M18054;x
+18055;Head of Government;パナジス・ツァルダリス;36;FA;Flamboyant Tough Guy;High;M18055;x
+18056;Head of Government;ゲオルギアス・ツォラコグロウ;41;NS;Old General;High;M18056;x
+18057;Head of Government;コンスタンティノス・ロゴセトポウロス;42;NS;Corporate Suit;High;M18057;x
+18058;Head of Government;イオアニス・ラリス;43;NS;Naive Optimist;High;M18058;x
+18059;Head of Government;大主教ダマスキノス;45;PA;Flamboyant Tough Guy;High;M18032;x
+18060;Head of Government;ニコラオス・プラスティラス;45;PA;Old General;High;M18060;x
+18061;Head of Government;ペトロス・ヴォウルガリス;45;PA;Naive Optimist;High;M18061;x
+18062;Head of Government;パナギオティス・カネロプーロス;45;PA;Smiling Oilman;High;M18062;x
+18063;Head of Government;ミリティアデス・ポルフィロギンス;36;ST;Ambitious Union Boss;High;M18029;x
+18064;Head of Government;ニコス・ザハリアディス;41;ST;Smiling Oilman;High;M18022;x
+18065;Head of Government;エヴリピディス・バキルトリス;44;ST;Happy Amateur;High;M18065;x
+18066;Head of Government;マルコス・ヴァフィアディス;46;ST;Backroom Backstabber;High;M18066;x
+18067;Foreign Minister;ゲオルギオス・パパンドレウ;44;SL;Biased Intellectual;Very High;M18015;x
+18068;Foreign Minister;イオアニス・サフィアノポウロス;45;SL;Great Compromiser;Medium;M18068;x
+18069;Foreign Minister;コンスタンティノス・レンティス;46;SL;Apologetic Clerk;Medium;M18069;x
+18070;Foreign Minister;イオアニス・メタクサス;36;SC;General Staffer;Very High;M18049;x
+18071;Foreign Minister;アレクサンドロス・コリジス;41;SC;Great Compromiser;Medium;M18050;x
+18072;Foreign Minister;エマヌエル・ツデロス;41;SC;Apologetic Clerk;Medium;M18051;x
+18073;Foreign Minister;ソフォクレス・ヴェニゼロス;44;SC;Great Compromiser;Very High;M18012;x
+18074;Foreign Minister;コンスタンティノス・ツァルダリス;46;ML;The Cloak N Dagger Schemer;Very High;M18053;x
+18075;Foreign Minister;デモステネス・ニコラディス;36;FA;Ideological Crusader;Very High;M18075;x
+18076;Foreign Minister;ゲオルギアス・ツォラコグロウ;41;NS;General Staffer;Very High;M18056;x
+18077;Foreign Minister;コンスタンティノス・ロゴセトポウロス;42;NS;Biased Intellectual;High;M18057;x
+18078;Foreign Minister;イオアニス・ラリス;43;NS;The Cloak N Dagger Schemer;Very High;M18058;x
+18079;Foreign Minister;ゲオルギオス・パパンドレウ;45;PA;Biased Intellectual;Very High;M18015;x
+18080;Foreign Minister;イオアネス・ソクラテス・ポリティス;45;PA;Apologetic Clerk;Very High;M18080;x
+18081;Foreign Minister;パナギオティス・カネロプーロス;45;PA;Great Compromiser;Medium;M18062;x
+18082;Foreign Minister;パナジオティオス・デメスティカス;46;PA;General Staffer;Very High;M18082;x
+18083;Foreign Minister;ニコス・ザハリアディス;36;ST;Ideological Crusader;Very High;M18022;x
+18084;Foreign Minister;ミリティアデス・ポルフィロギンス;46;ST;General Staffer;Very High;M18029;x
+18085;Foreign Minister;ペトロス・ロウソス;47;ST;Biased Intellectual;Very High;M18085;x
+18086;Minister of Armament;マルコス・アガノソス;36;SL;Corrupt Kleptocrat;Medium;M18086;x
+18087;Minister of Armament;テオドロス・マーサル;37;SL;Resource Industrialist;Medium;M18087;x
+18088;Minister of Armament;テミストクレス・ソフォウリス;41;SL;Administrative Genius;High;M18014;x
+18089;Minister of Armament;アレクサンドロス・スヴォロス;44;SL;Resource Industrialist;High;M18089;x
+18090;Minister of Armament;デメトリオス・ゴウシス;45;SL;Battle Fleet Proponent;High;M18090;x
+18091;Minister of Armament;アレクショー・ツァモトス;36;SC;Submarine Proponent;High;M18091;x
+18092;Minister of Armament;アントワーヌ・フラングリ;38;SC;Air Superiority Proponent;Medium;M18092;x
+18093;Minister of Armament;タナソス・エクサハリス;39;SC;Laissez-Faire Capitalist;Medium;M18093;x
+18094;Minister of Armament;タキス・ピペネリス;40;SC;Theoretical Scientist;Medium;M18094;x
+18095;Minister of Armament;エレフテリオス・ヴェネゼロス;41;SC;Air to Ground Proponent;Medium;M18010;x
+18096;Minister of Armament;ガエシア・ギアナドス;42;SC;Strategic Air Proponent;Medium;M18096;x
+18097;Minister of Armament;アナスタシオス・バルディヴィリアス;43;SC;Air to Sea Proponent;Medium;M18097;x
+18098;Minister of Armament;アナタシオス・カネロポウロス;44;SC;Administrative Genius;Very High;M18098;x
+18099;Minister of Armament;ギオルギオス・ラヴダス;45;SC;Tank Proponent;Very High;M18099;x
+18100;Minister of Armament;アルチビアデス・ステファノポウロス;46;SC;Laissez-Faire Capitalist;Medium;M18100;x
+18102;Minister of Armament;パナジス・ツァルダリス;38;FA;Air to Sea Proponent;High;M18055;x
+18103;Minister of Armament;パヴロス・ミルジアディス;41;NS;Resource Industrialist;Medium;M18103;x
+18104;Minister of Armament;クリストス・チガンテス;42;NS;Resource Industrialist;Medium;M18104;x
+18105;Minister of Armament;ニコラオス・ヴォウツィナリス;43;NS;Theoretical Scientist;High;M18105;x
+18106;Minister of Armament;イオアニス・ヴェニゼロス;44;PA;Military Entrepreneur;Medium;M18106;x
+18107;Minister of Armament;ニコラオス・プラスティラス;45;PA;Infantry Proponent;Very High;M18060;x
+18108;Minister of Armament;ゲオルギオス・シアントス;36;ST;Resource Industrialist;High;M18021;x
+18109;Minister of Security;ゲオルギオス・パパンドレウ;36;SL;Efficient Sociopath;High;M18015;x
+18110;Minister of Security;マルコス・アガノソス;41;SL;Silent Lawyer;Medium;M18086;x
+18111;Minister of Security;エリアス・パナキリス;44;SL;Crime Fighter;Medium;M18111;x
+18112;Minister of Security;エヴァンジェロス・パパノウトソス;45;SL;Compassionate Gentleman;Medium;M18112;x
+18113;Minister of Security;パナジオリス・ポウリトサス;46;SL;Prince of Terror;High;M18048;x
+18114;Minister of Security;ギオルギオス・ニコライデス;36;SC;Back Stabber;Medium;M18114;x
+18115;Minister of Security;ラウル・ビビカ・ロセッティ;41;SC;Compassionate Gentleman;Medium;M18115;x
+18116;Minister of Security;ディミトリオス・マキシモス;44;SC;Crime Fighter;High;M18054;x
+18117;Minister of Security;コンスタンティノス・ツァルダリス;44;SC;Man of the People;Medium;M18117;x
+18118;Minister of Security;タナシス・アグニデス;45;SC;Efficient Sociopath;Medium;M18118;x
+18119;Minister of Security;パナジオティス・カファンタリス;46;SC;Silent Lawyer;Medium;M18119;x
+18120;Minister of Security;ステファノス・ラキアントス;47;SC;Crooked Kleptocrat;Medium;M18120;x
+18122;Minister of Security;クリストス・チガンテス;38;FA;Prince of Terror;Medium;M18104;x
+18123;Minister of Security;グリゴリエフ・ムルノフ;41;NS;Crime Fighter;Low;M18040;x
+18124;Minister of Security;マリオ・ヴェルセリノ;42;NS;Back Stabber;Low;M18041;x
+18125;Minister of Security;ギュンター・アルテンベルグ;43;NS;Crooked Kleptocrat;High;M18042;x
+18126;Minister of Security;大主教ダマスキノス;44;PA;Efficient Sociopath;Very High;M18032;x
+18127;Minister of Security;アルチビアデス・ステファノポウロス;44;PA;Compassionate Gentleman;Medium;M18100;x
+18128;Minister of Security;クリストス・トリアンタフィリディス;46;PA;Man of the People;Medium;M18128;x
+18129;Minister of Security;ギアネス・イオアニデス;36;ST;Prince of Terror;High;M18025;x
+18130;Minister of Security;マルコス・ヴァフィアディス;41;ST;Silent Lawyer;High;M18066;x
+18131;Minister of Security;ストラトス・パイオムチス;45;ST;Efficient Sociopath;Medium;M18131;x
+18132;Head of Military Intelligence;ゲオルギオス・パパンドレウ;36;SL;Political Specialist;High;M18015;x
+18133;Head of Military Intelligence;コスタス・モウラス;44;SL;Naval Intelligence Specialist;Medium;M18133;x
+18134;Head of Military Intelligence;アナスタシオス・バルディヴィリアス;36;SC;Naval Intelligence Specialist;Medium;M18097;x
+18135;Head of Military Intelligence;ゲオルギオス・ドロソポウロス;41;SC;Technical Specialist;High;M18135;x
+18136;Head of Military Intelligence;ゲオルギオス・ストレイト;44;SC;Industrial Specialist;High;M18136;x
+18137;Head of Military Intelligence;アナタシオス・カネロポウロス;46;SC;Dismal Enigma;Very High;M18098;x
+18138;Head of Military Intelligence;アレクサンドロス・プロパニス;47;SC;Logistics Specialist;Medium;M18138;x
+18139;Head of Military Intelligence;クリストス・トリアンタフィリディス;36;FA;Dismal Enigma;Medium;M18128;x
+18140;Head of Military Intelligence;アルチビアデス・ステファノポウロス;37;FA;Industrial Specialist;Medium;M18100;x
+18141;Head of Military Intelligence;クリストス・チガンテス;41;NS;Industrial Specialist;Medium;M18104;x
+18142;Head of Military Intelligence;セヴァスティアノス・フォウリディス;42;NS;Logistics Specialist;High;M18142;x
+18143;Head of Military Intelligence;ナポレオン・ゼルヴァス;44;PA;Logistics Specialist;Low;M18143;x
+18145;Head of Military Intelligence;ギアネス・イオアニデス;36;ST;Political Specialist;High;M18025;x
+18146;Head of Military Intelligence;エヴリピディス・バキルトリス;41;ST;Industrial Specialist;High;M18065;x
+18150;Chief of Staff;アレクサンドロス・パパゴス;36;SC;School of Defence;Medium;M18007;x
+18151;Chief of Staff;ギオルギオス・ラヴダス;39;SC;School of Manoeuvre;Medium;M18099;x
+18152;Chief of Staff;パラスコス・メリッシノス;40;SC;School of Mass Combat;Medium;M18152;x
+18153;Chief of Staff;ヴァシリオス・ツォウノウカス;44;SC;School of Fire Support;Medium;M18153;x
+18154;Chief of Staff;アナスタシオス・サケラリオウ;46;SC;School of Psychology;Medium;M18009;x
+18155;Chief of Staff;ギオルギオス・コンディリス;36;FA;School of Manoeuvre;Medium;M18155;x
+18157;Chief of Staff;ゲオルギアス・ツォラコグロウ;41;NS;School of Manoeuvre;Very High;M18056;x
+18158;Chief of Staff;ニコラオス・プラスティラス;44;PA;School of Psychology;Very High;M18060;x
+18159;Chief of Staff;レオニダス・パラスケヴォポウロス;46;PA;School of Mass Combat;Medium;M18159;x
+18160;Chief of Staff;ステファノス・サラフィス;36;ST;School of Mass Combat;High;M18027;x
+18162;Chief of Army;ギオルギオス・ロウソウポウロス;41;SL;Elastic Defence Doctrine;Low;M18162;x
+18165;Chief of Army;ヴァシリオス・ツォウノウカス;41;SC;Decisive Battle Doctrine;Low;M18153;x
+18166;Chief of Army;ゲオルギオス・ストレイト;44;SC;Guns and Butter Doctrine;Low;M18136;x
+18167;Chief of Army;ギオルギオス・ラヴダス;45;SC;Armoured Spearhead Doctrine;Low;M18099;x
+18169;Chief of Army;テオドール・パンガロス;38;FA;Static Defence Doctrine;Low;M18008;x
+18170;Chief of Army;ゲオルギアス・ツォラコグロウ;41;NS;Decisive Battle Doctrine;Very High;M18056;x
+18171;Chief of Army;ニコラオス・プラスティラス;44;PA;Guns and Butter Doctrine;Very High;M18060;x
+18172;Chief of Army;アリス・ヴェロウヒオティス;36;ST;Decisive Battle Doctrine;High;M18028;x
+18173;Chief of Navy;ニコラオス・ヴォトシス;36;SL;Base Control Doctrine;High;M18019;x
+18174;Chief of Navy;デメトリオス・ゴウシス;41;SL;Decisive Naval Battle Doctrine;High;M18090;x
+18176;Chief of Navy;アレクショー・ツァモトス;41;SC;Decisive Naval Battle Doctrine;High;M18091;x
+18177;Chief of Navy;ペトロス・ヴォウルガリス;44;SC;Indirect Approach Doctrine;Low;M18061;x
+18179;Chief of Navy;アレクサンドロス・オイコノモー;41;NS;Open Seas Doctrine;Very Low;M18179;x
+18181;Chief of Navy;ミリティアデス・ポルフィロギンス;36;ST;Decisive Naval Battle Doctrine;High;M18029;x
+18183;Chief of Air Force;ガエシア・ギアナドス;41;SL;Carpet Bombing Doctrine;Medium;M18096;x
+18184;Chief of Air Force;ユウタナソス・ペリコス;44;SL;Vertical Envelopment Doctrine;Medium;M18184;x
+18185;Chief of Air Force;パナゴティス・パパニコラオ;36;SC;Carpet Bombing Doctrine;Medium;M18182;x
+18186;Chief of Air Force;アントワーヌ・フラングリ;41;SC;Air Superiority Doctrine;Medium;M18092;x
+18187;Chief of Air Force;アナスタシオス・バルディヴィリアス;44;SC;Naval Aviation Doctrine;Medium;M18097;x
+18191;Chief of Air Force;ニコス・ベロヤニス;36;ST;Naval Aviation Doctrine;High;M18030;x
+18192;Foreign Minister;テミストクレス・ソフォウリス;36;SL;The Cloak N Dagger Schemer;High;M18014;x
+18194;Head of State;大主教ダマスキノス;46;SL;Barking Buffoon;High;M18032;x
+18195;Head of State;大主教ダマスキノス;46;SC;Barking Buffoon;High;M18032;x
+18196;Head of State;ゲオルギオス2世;46;SL;Insignificant Layman;High;M18001;x
+18197;Head of State;ゲオルギオス2世;46;SC;Insignificant Layman;High;M18001;x
+18198;Head of Government;テミストクレス・ソフォウリス;46;SL;Flamboyant Tough Guy;High;M18014;x
+18199;Head of Government;コンスタンティノス・ツァルダリス;47;SC;Corporate Suit;NA;M18053;x
+18200;Foreign Minister;イオアニス・サフィアノポウロス;45;PA;The Cloak N Dagger Schemer;Medium;M18068;x
+18201;Foreign Minister;ペトロス・ヴォウルガリス;45;PA;Biased Intellectual;High;M18061;x
+18202;Head of Government;アレクサンドロス・ディオミディス;49;SL;Political Protege;High;M18202;x
+18203;Head of Government;イオアニス・テオトキス;50;SL;Happy Amateur;High;M18203;x
+18204;Head of Government;ディミトリオス・キウソプロス;52;SC;Smiling Oilman;High;M18204;x
+18205;Head of Government;アレクサンドロス・パパゴス;52;SC;Old General;High;M18007;x
+18206;Foreign Minister;パナイオティス・ピペネリス;50;SC;Apologetic Clerk;Very High;M18206;x
+18207;Foreign Minister;ステファノス・ステファノプロス;52;SC;Biased Intellectual;Very High;M18207;x
+18208;Head of State;アレクサンドロス・ザイミス;35;SC;Popular Figurehead;Medium;M18208;x
+18209;Head of Government;パナギス・ツァルダリス;35;SC;Backroom Backstabber;Medium;M18209;x
+18210;Foreign Minister;ディミトリオス・マキシモス;35;SC;Iron Fisted Brute;Medium;M18054;x
+18211;Head of Government;ギオルギオス・コンディリス;35;PA;Old General;Medium;M18155;x
+18212;Chief of Army;ギオルギオス・コンディリス;35;PA;Elastic Defence Doctrine;Medium;M18155;x
+18213;Chief of Navy;アレクサンドロス・ハチキリアコス;35;SC;Decisive Naval Battle Doctrine;Medium;M18213;x

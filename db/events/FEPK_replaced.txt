@@ -1,0 +1,1075 @@
+#########################################################################
+#	FEPK_raplaced.txt
+#	FEPK改定版イベント
+#########################################################################
+#id = 132400-99		改定イベント
+#########################################################################
+##########
+#  Japan puts Pressure on Siam
+##########
+event = { 
+	id = 132428
+	random = no
+	country = JAP
+
+	trigger = {
+		NOT = {
+			alliance = { country = JAP country = ENG }
+			alliance = { country = JAP country = USA }
+			alliance = { country = JAP country = SOV }
+		}
+		OR = {
+			war = { country = JAP country = ENG }
+			war = { country = JAP country = USA }
+		}
+		exists = SIA
+		NOT = {
+			war = { country = JAP country = SIA }
+			alliance = { country = JAP country = SIA }
+			puppet = { country = SIA country = JAP } #Siam must NOT be JAP puppet
+			atwar = SIA
+		}
+		event = 59908 # 極東南京事件
+		OR = { #FEPKBETA5.5
+			event = 130424 #フランス降伏
+			lost_national = { country = FRA value = 90 }
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_3807_NAME"
+	desc = "EVT_3807_DESC"
+	picture = "siam"
+
+
+	action_a = {
+		name = "ACTIONNAME3807A"
+		ai_chance = 98
+		command = { type = trigger which = 132429 }
+		command = { type = end_non_aggression which = JAP where = SIA }
+	}
+	action_b = {
+		name = "ACTIONNAME3807B"
+		ai_chance = 2
+		command = { }
+	}
+}
+##########
+#  Siam responds to Japanese pressure
+##########
+event = { 
+	id = 132429
+	random = no
+	country = SIA
+
+	name = "EVT_4501_NAME"
+	desc = "EVT_4501_DESC"
+	picture = "siam"
+
+
+	action_a = {
+		name = "ACTIONNAME4501A" # "Cooperate with Japan"
+		ai_chance = 98
+		command = { type = alliance which = JAP }
+		command = { type = set_relation which = ENG value = -200 }
+		command = { type = set_relation which = FRA value = -200 }
+		command = { type = set_domestic which = democratic value = 2 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofstate which = 62001 }
+		command = { type = headofgovernment which = 62035 }
+		command = { type = foreignminister which = 62043 }
+		command = { type = armamentminister which = 62059 }
+		command = { type = ministerofsecurity which = 62073 }
+		command = { type = ministerofintelligence which = 62085 }
+		command = { type = chiefofstaff which = 62091 }
+		command = { type = chiefofarmy which = 62097 }
+		command = { type = chiefofnavy which = 62102 }
+		command = { type = chiefofair which = 62107 }
+		command = { type = trigger which = 132430 } #Japan is happy
+	}
+	action_b = {
+		name = "ACTIONNAME4501B" # "We are tired of imperialism, no matter from where!"
+		ai_chance = 2
+		command = { type = relation which = JAP value = -50 }
+		command = { type = trigger which = 132431 } #Japan is sad
+	}
+}
+##########
+#  Siam Accepts
+##########
+event = { 
+	id = 132430
+	random = no
+	country = JAP
+
+	trigger = {
+		alliance = { country = JAP country = SIA }
+		OR = {
+			war = { country = JAP country = ENG }
+			war = { country = JAP country = FRA }
+		}
+		NOT = {
+			puppet = { country = SIA country = JAP } #Siam must NOT be JAP puppet
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_3808_NAME"
+	desc = "EVT_3808_DESC"
+	picture = "siam"
+
+
+	action_a = {
+		name = "OK"
+		command = { type = make_puppet which = SIA }
+  		command = { type = secedeprovince which = SIA value = 1341 }
+  		command = { type = secedeprovince which = SIA value = 1340 }
+  		command = { type = secedeprovince which = SIA value = 1339 }
+  	}
+}
+##########
+#  Siam Refuses
+##########
+event = { 
+	id = 132431
+	random = no
+	country = JAP
+
+	name = "EVT_3809_NAME"
+	desc = "EVT_3809_DESC"
+	picture = "siam"
+
+
+	action_a = {
+		name = "ACTIONNAME3809A" #Declare War!
+		ai_chance = 98
+		command = { type = war which = SIA }
+	}
+	action_b = {
+		name = "ACTIONNAME3809B" #Their Loss!
+		ai_chance = 2
+		command = { type = dissent value = 2 }
+	}
+}
+
+##########
+#  USA demands Japan evacuate French Indochina
+##########
+event = {
+	id = 132435
+	random = no
+	country = USA
+
+
+	#trigger 60921 統合極東
+
+	trigger = {
+		NOT = {
+			war = { country = USA country = JAP }
+			alliance = { country = JAP country = ENG }
+			alliance = { country = JAP country = USA }
+			alliance = { country = JAP country = FRA }
+		}
+		government = democratic
+	}
+
+	name = "EVT_132435_NAME"
+	desc = "EVT_132435_DESC"
+
+	picture = "asian_colonies"
+
+	action_a = {
+		name = "EVT_132435_ACTA"
+		ai_chance = 99 #FEPKBETA4
+		command = { type = trigger which = 132436 }
+	}
+	action_b = {
+		name = "EVT_132435_ACTB"
+		ai_chance = 1 #FEPKBETA4
+		command = { type = dissent value = 2 } #FEPKBETA4
+	}
+}
+##########
+#  Japan responds to American demands
+##########
+event = { 
+	id = 132436
+	random = no
+	country = JAP
+
+	name = "EVT_132436_NAME"
+	desc = "EVT_132436_DESC"
+	picture = "asian_colonies"
+
+
+	action_a = {
+		name = "EVT_132436_ACTA"
+		ai_chance = 99
+		command = { type = trigger which = 132437 } #japan is sad
+	}
+	action_b = {
+		name = "EVT_132436_ACTB"
+		ai_chance = 1
+		command = { type = dissent value = 15 }
+		command = { type = secedeprovince which = VIC value = 1326 } #phase 1
+		command = { type = secedeprovince which = VIC value = 1338 }
+		command = { type = secedeprovince which = VIC value = 1335 }
+		command = { type = secedeprovince which = VIC value = 1306 } #phase 2
+		command = { type = secedeprovince which = VIC value = 1329 }
+		command = { type = secedeprovince which = VIC value = 1328 }
+		command = { type = secedeprovince which = VIC value = 1332 }
+		command = { type = secedeprovince which = VIC value = 1333 }
+		command = { type = secedeprovince which = VIC value = 1334 }
+		command = { type = secedeprovince which = VIC value = 1336 }
+		command = { type = secedeprovince which = VIC value = 1337 }
+		command = { type = secedeprovince which = VIC value = 1339 } #cambodia
+		command = { type = secedeprovince which = VIC value = 1340 }
+		command = { type = secedeprovince which = VIC value = 1341 }
+		command = { type = secedeprovince which = FRA value = 1326 } #phase 1
+		command = { type = secedeprovince which = FRA value = 1338 }
+		command = { type = secedeprovince which = FRA value = 1335 }
+		command = { type = secedeprovince which = FRA value = 1306 } #phase 2
+		command = { type = secedeprovince which = FRA value = 1329 }
+		command = { type = secedeprovince which = FRA value = 1328 }
+		command = { type = secedeprovince which = FRA value = 1332 }
+		command = { type = secedeprovince which = FRA value = 1333 }
+		command = { type = secedeprovince which = FRA value = 1334 }
+		command = { type = secedeprovince which = FRA value = 1336 }
+		command = { type = secedeprovince which = FRA value = 1337 }
+		command = { type = secedeprovince which = FRA value = 1339 } #cambodia
+		command = { type = secedeprovince which = FRA value = 1340 }
+		command = { type = secedeprovince which = FRA value = 1341 }
+		command = { type = trigger which = 132438 } #fdr is sad :(
+	}
+}
+##########
+#  Japan refuses to evacuate French Indochina
+##########
+event = { 
+	id = 132437
+	random = no
+	country = USA
+
+	name = "EVT_132437_NAME"
+	desc = "EVT_132437_DESC"
+	picture = "asian_colonies"
+
+
+	action_a = {
+		name = "EVT_132437_ACTA"
+		ai_chance = 100
+		command = { type = relation which = JAP value = -10 }
+	}
+}
+##########
+#  Japan evacuates French Indochina
+##########
+event = { 
+	id = 132438
+	random = no
+	country = USA
+
+	name = "EVT_132438_NAME"
+	desc = "EVT_132438_DESC"
+	picture = "asian_colonies"
+
+
+	action_a = {
+		name = "EVT_132438_ACTA"
+		ai_chance = 100
+		command = { type = relation which = JAP value = 10 }
+	}
+}
+
+##########
+#  Oil Embargo against Japan
+##########
+event = {
+	id = 132439
+	random = no
+	country = USA
+
+	trigger = {
+		OR = {
+			event = 132437 #Japan refuses to evacuate French Indochina
+			#belligerence = { country = JAP value = 40 } #no idea if 40 is good or bad
+			#war = { country = ENG country = JAP }
+			AND = { #FEPKBETA3
+				war = { country = ENG country = JAP }
+				NOT = {
+					war = { country = ENG country = USA }
+				}
+			}
+			#war = { country = HOL country = JAP }
+			AND = { #FEPKBETA3
+				war = { country = HOL country = JAP }
+				NOT = {
+					war = { country = HOL country = USA }
+				}
+			}
+		}
+		NOT = {
+			event = 132440 #FEPK1.12 #すでに禁輸
+			war = { country = USA country = JAP }
+			alliance = { country = JAP country = ENG }
+			alliance = { country = JAP country = USA }
+			alliance = { country = JAP country = FRA }
+			alliance = { country = JAP country = SOV } #FEPKBETA5.5
+			puppet = { country = JAP country = ENG }
+			puppet = { country = JAP country = USA }
+			puppet = { country = JAP country = FRA }
+			puppet = { country = JAP country = SOV }
+		}
+		OR = {
+			AND = {
+				NOT = { flag = Chinese_unification_war } #FEPK1.12 #国民党から宣戦布告してきた場合は除外する
+				war = { country = JAP country = CHI }
+			}
+			AND = {
+				NOT = { flag = Chinese_unification_war } #FEPK1.12 #国民党から宣戦布告してきた場合は除外する
+				NOT = {	exists = CHI }
+			}
+			alliance = { country = JAP country = CHI }
+			alliance = { country = JAP country = U87 } #puppet china
+			alliance = { country = JAP country = U74 } #puppet china
+		}
+		OR = { #FEPK1.12
+			government = democratic
+			ideology = paternal_autocrat 
+			ideology = left_wing_radical
+		} 
+	}
+
+	date = { day = 1 month = january year = 1941 } #historically august 1 1941
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_3701_NAME"
+	desc = "EVT_3701_DESC"
+
+	picture = "Oil_Embargo"
+
+	action_a = {
+		name = "ACTIONNAME3701A" #Pass the Embargo
+		ai_chance = 97 #BETA修正パッチ
+		command = { type = relation which = JAP value = -250 }
+		command = { type = relation which = MAN value = -250 }
+		command = { type = relation which = MEN value = -250 }
+		command = { type = relation which = U87 value = -250 }
+		command = { type = relation which = U74 value = -250 }
+		command = { type = end_trades which = USA where = JAP } #pushin'
+		command = { type = end_trades which = USA where = MAN } #pushin'
+		command = { type = end_trades which = USA where = MEN } #pushin'
+		command = { type = end_trades which = USA where = U87 } #pushin'
+		command = { type = end_trades which = USA where = U74 } #pushin'
+		command = { type = sleepevent which = 55290 } #BETA修正パッチ
+		command = { type = trigger which = 132440 } #japan ends trades :(
+	}
+	action_b = {
+		name = "ACTIONNAME3701B"
+		ai_chance = 3 #BETA修正パッチ
+		command = { type = relation which = CHI value = -200 }
+		command = { type = relation which = CSX value = -200 }
+		command = { type = relation which = CYN value = -200 }
+		command = { type = relation which = CGX value = -200 }
+		command = { type = relation which = CXB value = -200 }
+		command = { type = relation which = CHC value = -200 }
+		command = { type = relation which = SIK value = -200 }
+		command = { type = relation which = TIB value = -200 }
+		command = { type = end_trades which = USA where = CHI } #not pushin'
+		command = { type = end_trades which = USA where = CSX } #not pushin'
+		command = { type = end_trades which = USA where = CYN } #not pushin'
+		command = { type = end_trades which = USA where = CGX } #not pushin'
+		command = { type = end_trades which = USA where = CXB } #not pushin'
+		command = { type = end_trades which = USA where = CHC } #not pushin'
+		command = { type = end_trades which = USA where = SIK } #not pushin'
+		command = { type = end_trades which = USA where = TIB } #not pushin'
+		command = { type = dissent value = 3 } #US loves China for some reason
+		command = { type = sleepevent which = 55290 } #BETA修正パッチ
+	}
+}
+##########
+#  US Oil Embargo
+##########
+event = { 
+	id = 132440
+	random = no
+	country = JAP
+
+	name = "EVT_3800_NAME"
+	desc = "EVT_3800_DESC"
+
+	picture = "Oil_Embargo"
+
+	action_a = {
+		name = "OK"
+		command = { type = end_trades which = JAP where = USA }
+		command = { type = end_trades which = JAP where = VEN }
+		command = { type = end_trades which = JAP where = ENG }
+		command = { type = end_trades which = JAP where = CAN }
+		command = { type = end_trades which = JAP where = SAF }
+		command = { type = end_trades which = JAP where = AST }
+		command = { type = end_trades which = JAP where = NZL }
+		command = { type = end_trades which = JAP where = HOL }
+		command = { type = end_trades which = JAP where = BEL }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = peacetime_ic_mod value = -10 }
+	}
+}
+##########
+#  Assassination of Yamamoto
+##########
+event = {
+	id = 132441
+	random = no
+	country = USA
+
+	trigger = {
+		war = { country = USA country = JAP }
+		control = { province = 663 data = USA } #1.04
+		tech_team = { id = 1916 country = JAP }
+		OR = {
+			NOT = {
+				control = { province = 1685 data = -2 } #1.04
+			}
+			NOT = {
+				control = { province = 1684 data = -2 } #1.04
+			}
+			NOT = {
+				control = { province = 1622 data = -2 } #1.04
+			}
+			NOT = {
+				control = { province = 1614 data = -2 } #1.04
+			}
+			NOT = {
+				control = { province = 1683 data = -2 } #1.04
+			}
+		}
+		OR = {
+			NOT = { event = 132464 }
+			event = 132466
+		}
+	}
+
+	name = "EVT_3704_NAME"
+	desc = "EVT_3704_DESC"
+
+	picture = "Yamamoto_Assesination"
+
+	date = { day = 18 month = april year = 1943 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1944 }
+
+	action_a = {
+		name = "ACTIONNAME3704A" # Assassinate him
+		ai_chance = 97
+		command = { type = trigger which = 132442 } #yamamoto is killed
+		command = { type = dissent value = -1 }
+	}
+	action_b = {
+		name = "ACTIONNAME3704B" # That would be low
+		ai_chance = 3
+		command = { }
+	}
+}
+##########
+#  The USA Assassinates Admiral Isoroku Yamamoto
+##########
+event = { 
+	id = 132442
+	random = no
+	country = JAP
+
+	name = "EVT_3801_NAME"
+	desc = "EVT_3801_DESC"
+
+	picture = "Yamamoto_Assesination"
+
+	action_a = {
+		name = "OK"
+		command = { type = sleepleader which = 101296 }
+		command = { type = sleepleader which = 101387 } # 1.08
+		command = { type = sleepminister which = 5010 }
+		command = { type = sleepminister which = 5200 }
+		command = { type = sleepminister which = 5575 } # 1.04
+		command = { type = sleepteam which = 1916 } #was 1917, wrong team
+		command = { type = chiefofnavy which = 5201 } #Koga, 43
+	}
+}
+##########
+#  Pearl Harbor - JAP
+##########
+event = {
+	id = 132464
+	random = no
+	country = JAP
+
+	trigger = {
+		war = { country = JAP country = USA }
+	}
+
+        date = { day = 1 month = january year = 1939 }
+        offset = 1
+	deathdate = { day = 15 month = june year = 1944 }
+
+	name = "EVT_17_NAME"
+	desc = "EVT_17_DESC"
+
+	picture = "Pearl_harbor"
+
+	action_a = {
+		name = "EVT_17_ACTA"
+		ai_chance = 100
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = ambush value = 30 }
+		command = { type = surprise which = land value = 20 }
+		command = { type = surprise which = air value = 40 }
+		command = { type = surprise which = naval value = 40 }
+		command = { type = shore_attack which = infantry value = 20 } #FEPKBETA3
+		command = { type = shore_attack which = bergsjaeger value = 20 }
+		command = { type = shore_attack which = marine value = 20 }
+		command = { type = trigger which = 132465 }
+	}
+}
+##########
+#  Pearl Harbor - USA
+##########
+event = {
+	id = 132465
+	random = no
+	country = USA
+
+	name = "EVT_18_NAME"
+	desc = "EVT_18_DESC"
+
+	picture = "Pearl_harbor"
+
+	action_a = {
+		name = "EVT_18_ACTA"
+		command = { type = dissent value = -20 } # united against an enemy
+		command = { type = set_domestic which = defense_lobby value = 10 } #furious
+		command = { type = set_domestic which = interventionism value = 6 } #to get into an alliance
+		command = { type = manpowerpool value = 250 }
+		command = { type = relation which = ENG value = 50 }
+	}
+}
+##########
+#  Surprise Attack wears off
+##########
+event = {
+	id = 132466
+	random = no
+	country = JAP
+
+	trigger = {
+		event = 132464 #pearl harbor
+		random = 25 #35 #FEPKBETA3
+	}
+
+        date = { day = 1 month = january year = 1939 }
+        offset = 60
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_19_NAME"
+	desc = "EVT_19_DESC"
+
+	picture = "Pearl_harbor"
+
+	action_a = { #FEPK1.12
+		name = "EVT_19_ACTA"
+		command = { type = ambush value = -30 }
+		command = { type = surprise which = land value = -20 }
+		command = { type = surprise which = air value = -40 }
+		command = { type = surprise which = naval value = -40 }
+		command = { type = shore_attack which = infantry value = -20 } #FEPKBETA3
+		command = { type = shore_attack which = bergsjaeger value = -20 }
+		command = { type = shore_attack which = marine value = -20 }
+	}
+}
+##########
+#  Operation Zet - SOV
+##########
+event = {
+	id = 132469
+	random = no
+	country = SOV
+
+	trigger = {
+		control = { province = 1276 data = CHI } #Lanzhou, where the planes spawn
+		war = { country = CHI country = JAP }
+		NOT = {
+			war = { country = CHI country = SOV }
+			alliance = { country = JAP country = SOV }
+		}
+		random = 20
+		supplies = 3000 #new
+	}
+
+        date = { day = 7 month = september year = 1938 } #historically september 1938
+        offset = 5
+	deathdate = { day = 29 month = august year = 1939 } #before 1939 scenario
+
+	name = "EVT_82_NAME"
+	desc = "EVT_82_DESC"
+	picture = "assistance"
+
+
+	action_a = {
+		ai_chance = 95
+		name = "EVT_82_ACTA"
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = manpowerpool value = -3 } #did the math
+		command = { type = supplies value = -3000 } #1000 real supplies, 2000 for planes
+		command = { type = oilpool value = -500 }
+		command = { type = trigger which = 132470 }
+	}
+	action_b = {
+		ai_chance = 5
+		name = "EVT_82_ACTB"
+		command = { type = domestic which = interventionism value = -1 }
+	}
+}
+##########
+#  Operation Zet - CHI
+##########
+event = {
+	id = 132470
+	random = no
+	country = CHI
+
+	name = "EVT_83_NAME"
+	desc = "EVT_83_DESC"
+	picture = "assistance"
+
+
+	action_a = {
+		name = "EVT_83_ACTA"
+		command = { type = construct which = air_base where = 1276 value = 2 } #was 1360, idk why, Lanzhou is historical
+		command = { type = construct which = flak where = 1276 value = 1 }
+		command = { type = add_corps which = "ゼット作戦派遣第1部隊" value = air where = 1276 } # "Op Zet Exp. Force 1"
+		command = { type = add_division which = "ゼット作戦派遣第1部隊" value = interceptor when = 0 } # "Interceptor Force"
+		command = { type = add_corps which = "ゼット作戦派遣第2部隊" value = air where = 1276 } # "Op Zet Exp. Force 2"
+		command = { type = add_division which = "ゼット作戦派遣第2部隊" value = tactical_bomber when = 0 } # "Bomber Force"
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = supplies value = 1000 where = 1276 }
+		command = { type = oilpool value = 500 where = 1276 }
+
+		command = { type = non_aggression which = SOV where = CHI } #auto +50 relations, i think
+		command = { type = wakeleader which = 50377 } #Khryukin
+		command = { type = gain_tech which = 4010 } #interwar fighter
+		command = { type = gain_tech which = 4020 } #early fighter
+		command = { type = gain_tech which = 4120 } #interwar bomber
+		command = { type = gain_tech which = 4130 } #early bomber
+		command = { type = gain_tech which = 6310 } #landdoc #FEPKBETA3
+	}
+}
+##########
+#  The Flying Tigers
+##########
+event = {
+	id = 132471
+	random = no
+	country = USA
+
+	trigger = {
+		OR = { #Access through Kunming, center of US operations IRL
+			control = { province = 1307 data = CHI } #Kunming
+			AND = {
+				control = { province = 1307 data = CYN } #Kunming
+				alliance = { country = CYN country = CHI }
+			}
+		}
+		war = { country = CHI country = JAP }
+		war = { country = USA country = JAP }
+		NOT = {
+			war = { country = USA country = CHI }
+			alliance = { country = CHI country = USA }
+		}
+		random = 30
+	}
+
+	date = { day = 1 month = january year = 1941 } #historically december 20, 1941
+	offset = 8
+	deathdate = { day = 15 month = june year = 1944 } #before 1944 scenario
+
+	name = "EVT_132471_NAME"
+	desc = "EVT_132471_DESC"
+	picture = "american_assistance"
+
+	action_a = {
+		name = "EVT_132471_ACTA"
+		ai_chance = 100
+		command = { type = relation which = CHI value = 20 }
+		command = { type = trigger which = 132472 }
+		command = { type = sleepleader which = 60497 } #Chennault
+		#command = { type = domestic which = interventionism value = 1 } #maybe
+		command = { type = supplies value = -3000 }
+		command = { type = oilpool value = -500 }
+	}
+	action_b = {
+		name = "EVT_132471_ACTB"
+		ai_chance = 0
+		command = { type = relation which = CHI value = -30 }
+	}
+}
+##########
+#  The Flying Tigers
+##########
+event = {
+	id = 132472
+	random = no
+	country = CHI
+
+	name = "EVT_132471_NAME"
+	desc = "EVT_132471_DESC"
+	picture = "american_assistance"
+
+
+	action_a = {
+		name = "EVT_132472_ACTA"
+		command = { type = wakeleader which = 50370 } #Chennault
+		command = { type = waketeam which = 1007 } #Chennault
+		command = { type = gain_tech which = 9010 } #air superiority
+		command = { type = gain_tech which = 9020 } #flying circus
+		command = { type = gain_tech which = 9030 } #force substitution
+		command = { type = construct which = air_base where = 1307 value = 2 }
+		command = { type = add_corps which = "飛虎隊" value = air when = 50370 where = 1307 }
+		command = { type = add_division which = "第一戦隊「アダムアンドイヴ」" value = interceptor when = 2 }
+		command = { type = add_division which = "第二戦隊「パンダ・ベアーズ」" value = interceptor when = 2 }
+		command = { type = add_division which = "第三戦隊「ヘルエンジェルズ」" value = interceptor when = 2 }
+		command = { type = supplies value = 2000 where = 1307 }
+		command = { type = oilpool value = 1000 where = 1307 }
+	}
+}
+##########
+#  Japan Pressures Germany over Manchukuo
+##########
+event = { 
+	id = 132478
+	random = no
+	country = JAP
+
+	trigger = {
+		exists = CHI
+		alliance = { country = JAP country = MAN }
+		OR = {
+			war = { country = JAP country = CHI }
+			alliance = { country = GER country = JAP }
+			event = 21 #???
+		}
+		NOT = {
+			alliance = { country = GER country = CHI }
+			alliance = { country = GER country = CYN }
+			alliance = { country = GER country = CSX }
+			alliance = { country = GER country = CXB }
+			alliance = { country = GER country = SIK }
+			war = { country = GER country = JAP }
+		}
+	}
+
+	date = { day = 1 month = february year = 1938 }
+	offset = 14
+	deathdate = { day = 29 month = august year = 1938 } #right before 1938 scenario
+
+	name = "EVT_132478_NAME" # "Recognition of Manchukuo" #"EVT_3835_NAME" 
+	desc = "EVT_3835_DESC"
+
+	action_a = {
+		name ="EVT_132478_ACTA" #  "Seek German support"
+		ai_chance = 100
+		command = { type = trigger which = 132479 } #GER response
+		#command = { type = money value = -50 } #Expenditure
+		command = { type = relation which = MAN value = 20 }
+		command = { type = relation which = CHI value = -10 }
+	}
+	action_b = {
+		name = "EVT_3835_ACTB"
+		ai_chance = 0
+		#command = { type = dissent value = 1 }
+		command = { type = relation which = MAN value = -50 }
+		command = { type = relation which = CHI value = 20 }
+	}
+}
+##########
+#  German response to Japanese pressure over Manchuria
+##########
+event = {
+	id = 132479
+	random = no
+	country = GER
+
+	name = "EVT_2035B_NAME" # "Recognition of Manchukuo" 
+	desc = "EVT_2035B_DESC" # "Amid the international non-recognition of her Manchurian puppet, Japan requested that the German government, as a show of friendship, recognize the State of Manchukuo and establish formal diplomatic relations with her. Germany saw that such a move would be a serious blow to her relations with Nationalist China, who considered Manchukuo a violation of her national sovereignty. As such, German advisors in China would likely be expelled and German assistance no longer welcome."
+
+	action_a = {
+		name = "EVT_2035_ACTA" # "Recognize Manchukuo, recall Von Falkenhausen"
+		command = { type = relation which = JAP value = 25 }
+		command = { type = relation which = MAN value = 20 }
+		command = { type = relation which = CHI value = -15 }
+		command = { type = end_trades which = GER where = CHI }
+		#command = { type = trigger which = 132480 } #CHI Event
+		command = { type = setflag which = recall_von_falkenhausen }
+	}
+	action_b = {
+		name = "EVT_2035_ACTB" # "Ignore the Japanese demands"
+		command = { type = relation which = JAP value = -15 }
+		command = { type = relation which = MAN value = -20 }
+		command = { type = relation which = CHI value = 20 }
+		command = { type = sleepleader which = 293 } #Von Falkenhausen
+		command = { type = sleepevent which = 71 } # Anti-Comintern Pact
+		command = { type = sleepevent which = 130104 } # Anti-Comintern Pact(FEPK)
+		command = { type = sleepevent which = 74 } # Tri-Partite Pact
+		command = { type = sleepevent which = 130107 } #Tri-Partite Pact
+	}
+}
+##########
+#  Recall of German Mission to China
+##########
+event = {
+	id = 132480
+	random = no
+	country = CHI
+
+	trigger = {
+		OR = {
+			war = { country = GER country = CHI }
+			flag = recall_von_falkenhausen
+		}
+	}
+
+	date = { day = 1 month = february year = 1938 }
+	offset = 3
+	deathdate = { day = 29 month = august year = 1953 } #right before 1938 scenario
+
+	name = "EVT_4103_NAME"
+	desc = "EVT_4103_DESC"
+	action_a = {
+		name = "OK"
+		command = { type = dissent value = 1 }
+		command = { type = sleepleader which = 50304 } #Von Falkenhausen
+		command = { type = sleepteam which = 1005 } #Von Falkenhausen
+		command = { type = relation which = GER value = -10 }
+		command = { type = relation which = JAP value = -10 }
+		command = { type = relation which = MAN value = -50 }
+	}
+}
+##########
+#  The Capture of the Automedon
+##########
+event = {
+	id = 132494
+	random = no
+	country = JAP
+
+	trigger = {
+		war = { country = ENG country = GER }
+		NOT = {
+			war = { country = ENG country = JAP }
+		}
+	}
+
+	date = { day = 5 month = december year = 1940 }
+	#offset = 5
+	#deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_89_NAME"
+	desc = "EVT_89_DESC"
+
+	picture = "automedon"
+
+	action_a = {
+		name = "EVT_89_ACTA"
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = oilpool value = 1000 }
+		command = { type = relation which = GER value = 10 }
+		command = { type = relation which = ENG value = -10 }
+	}
+}
+
+event = { #BETA修正パッチ
+	id = 132498
+	random = no
+	country = SOV
+	style = 0
+
+	trigger = {
+		exists = PER
+		OR = {
+			owned = { province = 1859 data = SOV } #Northern Iran
+			owned = { province = 1787 data = SOV }
+			owned = { province = 1503 data = SOV }
+			owned = { province = 1500 data = SOV }
+			owned = { province = 1789 data = SOV } #Southern Iran
+			owned = { province = 1825 data = SOV }
+			owned = { province = 1498 data = SOV }
+			owned = { province = 1497 data = SOV }
+			owned = { province = 1496 data = SOV }
+			owned = { province = 1495 data = SOV }
+			owned = { province = 1788 data = SOV } #newly added
+			owned = { province = 1826 data = SOV }
+			owned = { province = 1499 data = SOV }
+			owned = { province = 1501 data = SOV }
+		}
+		event = 130765 # Persia ceded provinces to USSR and became an English puppet
+		war = { country = GER country = SOV }
+		NOT = {
+			war = { country = SOV country = PER }
+			war = { country = SOV country = ENG }
+		}
+		OR = {
+			NOT = {
+				control = { province = 1907 data = SOV } #Baku
+			}
+			NOT = {
+				control = { province = 1848 data = SOV } #Batum
+				control = { province = 1372 data = SOV } #Vladivostok
+			}
+		}
+	}
+
+	name = "EVT_132499_NAME" # needs text
+	desc = "EVT_132499_DESC" 
+	picture = "reinforcements"
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "OK"
+		#Iran
+		command = { type = secedeprovince which = PER value = 1859 } #Northern Iran
+		command = { type = secedeprovince which = PER value = 1787 }
+		command = { type = secedeprovince which = PER value = 1503 }
+		command = { type = secedeprovince which = PER value = 1500 }
+		command = { type = secedeprovince which = PER value = 1789 } #Southern Iran
+		command = { type = secedeprovince which = PER value = 1825 }
+		command = { type = secedeprovince which = PER value = 1498 }
+		command = { type = secedeprovince which = PER value = 1497 }
+		command = { type = secedeprovince which = PER value = 1496 }
+		command = { type = secedeprovince which = PER value = 1495 }
+		command = { type = secedeprovince which = PER value = 1788 } #newly added
+		command = { type = secedeprovince which = PER value = 1826 }
+		command = { type = secedeprovince which = PER value = 1499 }
+		command = { type = secedeprovince which = PER value = 1501 }
+		#Iraq, incase Iran annexed them
+		command = { type = secedeprovince which = PER value = 1866 }
+		command = { type = secedeprovince which = PER value = 1860 }
+		command = { type = secedeprovince which = PER value = 1865 }
+		command = { type = secedeprovince which = PER value = 1790 }
+		command = { type = secedeprovince which = PER value = 1824 }
+		command = { type = secedeprovince which = PER value = 1823 }
+		command = { type = secedeprovince which = PER value = 1806 }
+		command = { type = secedeprovince which = PER value = 1791 }
+		command = { type = secedeprovince which = PER value = 1864 }
+		#Iraq
+		command = { type = secedeprovince which = IRQ value = 1866 }
+		command = { type = secedeprovince which = IRQ value = 1860 }
+		command = { type = secedeprovince which = IRQ value = 1865 }
+		command = { type = secedeprovince which = IRQ value = 1790 }
+		command = { type = secedeprovince which = IRQ value = 1824 }
+		command = { type = secedeprovince which = IRQ value = 1823 }
+		command = { type = secedeprovince which = IRQ value = 1806 }
+		command = { type = secedeprovince which = IRQ value = 1791 }
+		command = { type = secedeprovince which = IRQ value = 1864 }
+	}
+}
+
+event = { #BETA修正パッチ
+	id = 132499 # 700000
+	random = no
+	country = ENG
+	style = 0
+
+	trigger = {
+		exists = PER
+		OR = {
+			owned = { province = 1859 data = ENG } #Northern Iran
+			owned = { province = 1787 data = ENG }
+			owned = { province = 1503 data = ENG }
+			owned = { province = 1500 data = ENG }
+			owned = { province = 1789 data = ENG } #Southern Iran
+			owned = { province = 1825 data = ENG }
+			owned = { province = 1498 data = ENG }
+			owned = { province = 1497 data = ENG }
+			owned = { province = 1496 data = ENG }
+			owned = { province = 1495 data = ENG }
+			owned = { province = 1788 data = ENG } #newly added
+			owned = { province = 1826 data = ENG }
+			owned = { province = 1499 data = ENG }
+			owned = { province = 1501 data = ENG }
+		}
+		event = 130765 # Persia ceded provinces to USSR and became an English puppet
+		war = { country = GER country = SOV }
+		NOT = {
+			war = { country = ENG country = PER }
+			war = { country = ENG country = IRQ }
+			war = { country = SOV country = ENG }
+		}
+		OR = {
+			NOT = {
+				control = { province = 1907 data = SOV } #Baku
+			}
+			NOT = {
+				control = { province = 1848 data = SOV } #Batum
+				control = { province = 1372 data = SOV } #Vladivostok
+			}
+		}
+	}
+
+	name = "EVT_132499_NAME" # needs text
+	desc = "EVT_132499_DESC" 
+	picture = "reinforcements"
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "OK"
+		#Iran
+		command = { type = secedeprovince which = PER value = 1859 } #Northern Iran
+		command = { type = secedeprovince which = PER value = 1787 }
+		command = { type = secedeprovince which = PER value = 1503 }
+		command = { type = secedeprovince which = PER value = 1500 }
+		command = { type = secedeprovince which = PER value = 1789 } #Southern Iran
+		command = { type = secedeprovince which = PER value = 1825 }
+		command = { type = secedeprovince which = PER value = 1498 }
+		command = { type = secedeprovince which = PER value = 1497 }
+		command = { type = secedeprovince which = PER value = 1496 }
+		command = { type = secedeprovince which = PER value = 1495 }
+		command = { type = secedeprovince which = PER value = 1788 } #newly added
+		command = { type = secedeprovince which = PER value = 1826 }
+		command = { type = secedeprovince which = PER value = 1499 }
+		command = { type = secedeprovince which = PER value = 1501 }
+		#Iraq, incase Iran annexed them
+		command = { type = secedeprovince which = PER value = 1866 }
+		command = { type = secedeprovince which = PER value = 1860 }
+		command = { type = secedeprovince which = PER value = 1865 }
+		command = { type = secedeprovince which = PER value = 1790 }
+		command = { type = secedeprovince which = PER value = 1824 }
+		command = { type = secedeprovince which = PER value = 1823 }
+		command = { type = secedeprovince which = PER value = 1806 }
+		command = { type = secedeprovince which = PER value = 1791 }
+		command = { type = secedeprovince which = PER value = 1864 }
+		#Iraq
+		command = { type = secedeprovince which = IRQ value = 1866 }
+		command = { type = secedeprovince which = IRQ value = 1860 }
+		command = { type = secedeprovince which = IRQ value = 1865 }
+		command = { type = secedeprovince which = IRQ value = 1790 }
+		command = { type = secedeprovince which = IRQ value = 1824 }
+		command = { type = secedeprovince which = IRQ value = 1823 }
+		command = { type = secedeprovince which = IRQ value = 1806 }
+		command = { type = secedeprovince which = IRQ value = 1791 }
+		command = { type = secedeprovince which = IRQ value = 1864 }
+	}
+}
+

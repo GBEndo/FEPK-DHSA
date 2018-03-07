@@ -1,0 +1,2745 @@
+#########################################################################
+#	FEPK_sovpuppet.txt
+#	ソ連傀儡国関連イベント
+#########################################################################
+#id = 133100-59		ソ連の傀儡国成立処理
+#id = 133160-99		ソ連の傀儡国判定消失処理
+#########################################################################
+##########
+#  Soviet Capture and Puppet Events
+##########
+##########
+#  USSR captures Warsaw
+##########
+event = {
+	id = 133100
+	random = no 
+	country = SOV
+	persistent = yes
+
+	trigger = {
+		control = { province = 485 data = SOV } #Warsaw
+		NOT = { flag = sovietpoland }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133100_NAME"
+	desc = "EVT_133100_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133100_ACTA"
+		command = { type = setflag which = sovietpoland }
+	}
+}
+##########
+#  USSR puppets Poland
+##########
+event = {
+	id = 133101
+	random = no
+	country = SOV
+
+	trigger = {
+		exists = POL
+		flag = sovietpoland
+		NOT = { exists = GER }
+		NOT = { alliance = { country = SOV country = POL } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133101_NAME"
+	desc = "EVT_133101_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133101_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = POL } #
+		command = { type = clrflag which = sovietpoland }
+		command = { type = secedeprovince which = POL value = 302 }	#シュテッティン
+		command = { type = secedeprovince which = POL value = 304 }	#エルビング
+	}
+	action_b = {
+		name = "EVT_133101_ACTB"
+		ai_chance = 0
+		command = { type = belligerence which = SOV value = -1 }
+		command = { type = clrflag which = sovietpoland }
+		command = { type = secedeprovince which = POL value = 302 }	#シュテッティン
+		command = { type = secedeprovince which = POL value = 304 }	#エルビング
+	}
+	action_c = {
+		name = "EVT_133101_ACTC"
+		ai_chance = 0
+		command = { type = inherit which = POL }
+		command = { type = dissent value = 3 }
+		command = { type = clrflag which = sovietpoland }
+	}
+}
+##########
+#  USSR captures Prague
+##########
+event = {
+	id = 133102
+	random = no 
+	country = SOV
+	persistent = yes
+
+	trigger = {
+		control = { province = 469 data = SOV } #Prague
+		NOT = { flag = sovietczechoslovakia }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133102_NAME"
+	desc = "EVT_133102_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133102_ACTA"
+        	command = { type = setflag which = sovietczechoslovakia }
+	}
+}
+##########
+#  USSR puppets Czechoslovakia
+##########
+event = {
+	id = 133103
+	random = no 
+	country = SOV
+
+	trigger = {
+		exists = CZE
+		flag = sovietczechoslovakia
+		NOT = { exists = GER }
+		NOT = { alliance = { country = SOV country = CZE } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133103_NAME"
+	desc = "EVT_133103_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133103_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = CZE } #
+		command = { type = clrflag which = sovietczechoslovakia }
+	}
+	action_b = {
+		name = "EVT_133103_ACTB"
+		ai_chance = 0
+		command = { type = belligerence which = SOV value = -1 }
+		command = { type = clrflag which = sovietczechoslovakia }
+	}
+	action_c = {
+		name = "EVT_133103_ACTC"
+		ai_chance = 0
+		command = { type = inherit which = CZE }
+		command = { type = dissent value = 3 }
+		command = { type = clrflag which = sovietczechoslovakia }
+	}
+}
+##########
+#  USSR captures Budapest
+##########
+event = {
+	id = 133104
+	random = no 
+	country = SOV
+	persistent = yes
+
+	trigger = {
+		control = { province = 457 data = SOV } #Budapest
+		NOT = { flag = soviethungary }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133104_NAME"
+	desc = "EVT_133104_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133104_ACTA"
+        	command = { type = setflag which = soviethungary }
+	}
+}
+##########
+#  USSR puppets Hungary
+##########
+event = {
+	id = 133105
+	random = no 
+	country = SOV
+
+	trigger = {
+		exists = HUN
+		flag = soviethungary
+		NOT = { exists = GER }
+		NOT = { alliance = { country = SOV country = HUN } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133105_NAME"
+	desc = "EVT_133105_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133105_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = HUN } #
+		command = { type = clrflag which = soviethungary }
+	}
+	action_b = {
+		name = "EVT_133105_ACTB"
+		ai_chance = 0
+		command = { type = belligerence which = SOV value = -1 }
+		command = { type = clrflag which = soviethungary }
+	}
+	action_c = {
+		name = "EVT_133105_ACTC"
+		ai_chance = 0
+		command = { type = inherit which = HUN }
+		command = { type = dissent value = 3 }
+		command = { type = clrflag which = soviethungary }
+	}
+}
+##########
+#  USSR captures Bucharest
+##########
+event = {
+	id = 133106
+	random = no 
+	country = SOV
+	persistent = yes
+
+	trigger = {
+		control = { province = 424 data = SOV } #Bucharest
+		NOT = { flag = sovietromania }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133106_NAME"
+	desc = "EVT_133106_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133106_ACTA"
+        	command = { type = setflag which = sovietromania }
+	}
+}
+##########
+#  USSR puppets Romania
+##########
+event = {
+	id = 133107
+	random = no 
+	country = SOV
+
+	trigger = {
+		exists = ROM
+		flag = sovietromania
+		NOT = { exists = GER }
+		NOT = { alliance = { country = SOV country = ROM } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133107_NAME"
+	desc = "EVT_133107_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133107_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = ROM } #
+		command = { type = clrflag which = sovietromania }
+	}
+	action_b = {
+		name = "EVT_133107_ACTB"
+		ai_chance = 0
+		command = { type = belligerence which = SOV value = -1 }
+		command = { type = clrflag which = sovietromania }
+	}
+	action_c = {
+		name = "EVT_133107_ACTC"
+		ai_chance = 0
+		command = { type = inherit which = ROM }
+		command = { type = dissent value = 3 }
+		command = { type = clrflag which = sovietromania }
+	}
+}
+##########
+#  USSR captures Sofia
+##########
+event = {
+	id = 133108
+	random = no 
+	country = SOV
+	persistent = yes
+
+	trigger = {
+		control = { province = 417 data = SOV } #Sofia
+		NOT = { flag = sovietbulgaria }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133108_NAME"
+	desc = "EVT_133108_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133108_ACTA"
+        	command = { type = setflag which = sovietbulgaria }
+	}
+}
+##########
+#  USSR puppets Bulgaria
+##########
+event = {
+	id = 133109
+	random = no 
+	country = SOV
+
+	trigger = {
+		exists = BUL
+		flag = sovietbulgaria
+		NOT = { exists = GER }
+		NOT = { alliance = { country = SOV country = BUL } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133109_NAME"
+	desc = "EVT_133109_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133109_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = BUL } #
+		command = { type = clrflag which = sovietbulgaria }
+	}
+	action_b = {
+		name = "EVT_133109_ACTB"
+		ai_chance = 0
+		command = { type = belligerence which = SOV value = -1 }
+		command = { type = clrflag which = sovietbulgaria }
+	}
+	action_c = {
+		name = "EVT_133109_ACTC"
+		ai_chance = 0
+		command = { type = inherit which = BUL }
+		command = { type = dissent value = 3 }
+		command = { type = clrflag which = sovietbulgaria }
+	}
+}
+##########
+#  USSR captures Oslo
+##########
+event = {
+	id = 133110
+	random = no 
+	country = SOV
+	persistent = yes
+
+	trigger = {
+		control = { province = 107 data = SOV } #Oslo
+		NOT = { flag = sovietnorway }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133110_NAME"
+	desc = "EVT_133110_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133110_ACTA"
+        	command = { type = setflag which = sovietnorway }
+	}
+}
+##########
+#  USSR puppets Norway
+##########
+event = {
+	id = 133111
+	random = no 
+	country = SOV
+
+	trigger = {
+		exists = NOR
+		flag = sovietnorway
+		NOT = { exists = GER }
+		NOT = { alliance = { country = SOV country = NOR } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133111_NAME"
+	desc = "EVT_133111_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133111_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = NOR } #
+		command = { type = clrflag which = sovietnorway }
+	}
+	action_b = {
+		name = "EVT_133111_ACTB"
+		ai_chance = 0
+		command = { type = belligerence which = SOV value = -1 }
+		command = { type = clrflag which = sovietnorway }
+	}
+	action_c = {
+		name = "EVT_133111_ACTC"
+		ai_chance = 0
+		command = { type = inherit which = NOR }
+		command = { type = dissent value = 3 }
+		command = { type = clrflag which = sovietnorway }
+	}
+}
+##########
+#  USSR captures Stockholm
+##########
+event = {
+	id = 133112
+	random = no 
+	country = SOV
+	persistent = yes
+
+	trigger = {
+		control = { province = 101 data = SOV } #Stockholm
+		NOT = { flag = sovietsweden }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133112_NAME"
+	desc = "EVT_133112_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133112_ACTA"
+        	command = { type = setflag which = sovietsweden }
+	}
+}
+##########
+#  USSR puppets Sweden
+##########
+event = {
+	id = 133113
+	random = no 
+	country = SOV
+
+	trigger = {
+		exists = SWE
+		flag = sovietsweden
+		NOT = { exists = GER }
+		NOT = { alliance = { country = SOV country = SWE } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133113_NAME"
+	desc = "EVT_133113_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133113_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = SWE } #
+		command = { type = clrflag which = sovietsweden }
+	}
+	action_b = {
+		name = "EVT_133113_ACTB"
+		ai_chance = 0
+		command = { type = belligerence which = SOV value = -1 }
+		command = { type = clrflag which = sovietsweden }
+	}
+	action_c = {
+		name = "EVT_133113_ACTC"
+		ai_chance = 0
+		command = { type = inherit which = SWE }
+		command = { type = dissent value = 3 }
+		command = { type = clrflag which = sovietsweden }
+	}
+}
+##########
+#  USSR captures Copenhagen
+##########
+event = {
+	id = 133114
+	random = no 
+	country = SOV
+	persistent = yes
+
+	trigger = {
+		control = { province = 294 data = SOV } #Copenhagen
+		NOT = { flag = sovietdenmark }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133114_NAME"
+	desc = "EVT_133114_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133114_ACTA"
+        	command = { type = setflag which = sovietdenmark }
+	}
+}
+##########
+#  USSR puppets Denmark
+##########
+event = {
+	id = 133115
+	random = no 
+	country = SOV
+
+	trigger = {
+		exists = DEN
+		flag = sovietdenmark
+		NOT = { exists = GER }
+		NOT = { alliance = { country = SOV country = DEN } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133115_NAME"
+	desc = "EVT_133115_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133115_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = DEN } #
+		command = { type = clrflag which = sovietdenmark }
+	}
+	action_b = {
+		name = "EVT_133115_ACTB"
+		ai_chance = 0
+		command = { type = belligerence which = SOV value = -1 }
+		command = { type = clrflag which = sovietdenmark }
+	}
+	action_c = {
+		name = "EVT_133115_ACTC"
+		ai_chance = 0
+		command = { type = inherit which = DEN }
+		command = { type = dissent value = 3 }
+		command = { type = clrflag which = sovietdenmark }
+	}
+}
+##########
+#  USSR captures Vienna
+##########
+event = {
+	id = 133116
+	random = no 
+	country = SOV
+	persistent = yes
+
+	trigger = {
+		control = { province = 463 data = SOV } #Vienna
+		NOT = { flag = sovietaustria }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133116_NAME"
+	desc = "EVT_133116_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133116_ACTA"
+        	command = { type = setflag which = sovietaustria }
+	}
+}
+##########
+#  USSR puppets Austria
+##########
+event = {
+	id = 133117
+	random = no 
+	country = SOV
+
+	trigger = {
+		exists = AUS
+		flag = sovietaustria
+		NOT = { exists = GER }
+		NOT = { alliance = { country = SOV country = AUS } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133117_NAME"
+	desc = "EVT_133117_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133117_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = AUS } #
+		command = { type = clrflag which = sovietaustria }
+	}
+	action_b = {
+		name = "EVT_133117_ACTB"
+		ai_chance = 0
+		command = { type = belligerence which = SOV value = -1 }
+		command = { type = clrflag which = sovietaustria }
+	}
+	action_c = {
+		name = "EVT_133117_ACTC"
+		ai_chance = 0
+		command = { type = inherit which = AUS }
+		command = { type = dissent value = 3 }
+		command = { type = clrflag which = sovietaustria }
+	}
+}
+##########
+#  USSR captures Athens
+##########
+event = {
+	id = 133118
+	random = no 
+	country = SOV
+	persistent = yes
+
+	trigger = {
+		control = { province = 401 data = SOV } #Athens
+		NOT = { flag = sovietgreece }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133118_NAME"
+	desc = "EVT_133118_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133118_ACTA"
+        	command = { type = setflag which = sovietgreece }
+	}
+}
+##########
+#  USSR puppets Greece
+##########
+event = {
+	id = 133119
+	random = no 
+	country = SOV
+
+	trigger = {
+		exists = GRE
+		flag = sovietgreece
+		NOT = { exists = GER }
+		NOT = { alliance = { country = SOV country = GRE } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133119_NAME"
+	desc = "EVT_133119_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133119_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = GRE } #
+		command = { type = clrflag which = sovietgreece }
+	}
+	action_b = {
+		name = "EVT_133119_ACTB"
+		ai_chance = 0
+		command = { type = belligerence which = SOV value = -1 }
+		command = { type = clrflag which = sovietgreece }
+	}
+	action_c = {
+		name = "EVT_133119_ACTC"
+		ai_chance = 0
+		command = { type = inherit which = GRE }
+		command = { type = dissent value = 3 }
+		command = { type = clrflag which = sovietgreece }
+	}
+}
+##########
+#  USSR captures Brussels
+##########
+event = {
+	id = 133120
+	random = no 
+	country = SOV
+	persistent = yes
+
+	trigger = {
+		control = { province = 51 data = SOV } #Brussels
+		NOT = { flag = sovietbelgium }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133120_NAME"
+	desc = "EVT_133120_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133120_ACTA"
+        	command = { type = setflag which = sovietbelgium }
+	}
+}
+##########
+#  USSR puppets Belgium
+##########
+event = {
+	id = 133121
+	random = no 
+	country = SOV
+
+	trigger = {
+		exists = BEL
+		flag = sovietbelgium
+		NOT = { exists = GER }
+		NOT = { alliance = { country = SOV country = BEL } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133121_NAME"
+	desc = "EVT_133121_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133121_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = BEL } #
+		command = { type = clrflag which = sovietbelgium }
+	}
+	action_b = {
+		name = "EVT_133121_ACTB"
+		ai_chance = 0
+		command = { type = belligerence which = SOV value = -1 }
+		command = { type = clrflag which = sovietbelgium }
+	}
+#option C not included because of overseas colonies
+}
+##########
+#  USSR captures Amsterdam
+##########
+event = {
+	id = 133122
+	random = no 
+	country = SOV
+	persistent = yes
+
+	trigger = {
+		control = { province = 47 data = SOV } #Amsterdam
+		NOT = { flag = sovietholland }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133122_NAME"
+	desc = "EVT_133122_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133122_ACTA"
+        	command = { type = setflag which = sovietholland }
+	}
+}
+##########
+#  USSR puppets Holland
+##########
+event = {
+	id = 133123
+	random = no 
+	country = SOV
+
+	trigger = {
+		exists = HOL
+		flag = sovietholland
+		NOT = { exists = GER }
+		NOT = { alliance = { country = SOV country = HOL } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133123_NAME"
+	desc = "EVT_133123_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133123_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = HOL } #
+		command = { type = clrflag which = sovietholland }
+	}
+	action_b = {
+		name = "EVT_133123_ACTB"
+		ai_chance = 0
+		command = { type = belligerence which = SOV value = -1 }
+		command = { type = clrflag which = sovietholland }
+	}
+#option C not included because of overseas colonies
+}
+##########
+#  USSR captures Luxembourg
+##########
+event = {
+	id = 133124
+	random = no 
+	country = SOV
+	persistent = yes
+
+	trigger = {
+		control = { province = 71 data = SOV } #Luxembourg
+		NOT = { flag = sovietluxembourg }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133124_NAME"
+	desc = "EVT_133124_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133124_ACTA"
+        	command = { type = setflag which = sovietluxembourg }
+	}
+}
+##########
+#  USSR puppets Luxembourg
+##########
+event = {
+	id = 133125
+	random = no 
+	country = SOV
+
+	trigger = {
+		exists = LUX
+		flag = sovietluxembourg
+		NOT = { exists = GER }
+		NOT = { alliance = { country = SOV country = LUX } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133125_NAME"
+	desc = "EVT_133125_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133125_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = LUX } #
+		command = { type = clrflag which = sovietluxembourg }
+	}
+	action_b = {
+		name = "EVT_133125_ACTB"
+		ai_chance = 0
+		command = { type = belligerence which = SOV value = -1 }
+		command = { type = clrflag which = sovietluxembourg }
+	}
+	action_c = {
+		name = "EVT_133125_ACTC"
+		ai_chance = 0
+		command = { type = inherit which = LUX }
+		command = { type = dissent value = 3 }
+		command = { type = clrflag which = sovietluxembourg }
+	}
+}
+##########
+#  USSR captures Paris
+##########
+event = {
+	id = 133126
+	random = no 
+	country = SOV
+	persistent = yes
+
+	trigger = {
+		control = { province = 56 data = SOV } #Paris
+		NOT = { flag = sovietfrance }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133126_NAME"
+	desc = "EVT_133126_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133126_ACTA"
+        	command = { type = setflag which = sovietfrance }
+	}
+}
+##########
+#  USSR puppets France
+##########
+event = {
+	id = 133127
+	random = no 
+	country = SOV
+
+	trigger = {
+		exists = FRA
+		flag = sovietfrance
+		NOT = { exists = GER }
+		NOT = { alliance = { country = SOV country = FRA } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133127_NAME"
+	desc = "EVT_133127_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133127_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = FRA } #
+		command = { type = clrflag which = sovietfrance }
+	}
+	action_b = {
+		name = "EVT_133127_ACTB"
+		ai_chance = 0
+		command = { type = belligerence which = SOV value = -1 }
+		command = { type = clrflag which = sovietfrance }
+	}
+#option C not included because of overseas colonies
+}
+
+##########
+#  USSR captures Belgrade
+##########
+event = {
+	id = 133130
+	random = no 
+	country = SOV
+	persistent = yes
+
+	trigger = {
+		control = { province = 453 data = SOV } #Belgrade
+		NOT = { flag = sovietyugoslavia }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133130_NAME"
+	desc = "EVT_133130_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133130_ACTA"
+        	command = { type = setflag which = sovietyugoslavia }
+	}
+}
+##########
+#  USSR puppets Yugoslavia
+##########
+event = {
+	id = 133131
+	random = no 
+	country = SOV
+
+	trigger = {
+		exists = YUG
+		flag = sovietyugoslavia
+		NOT = { exists = GER }
+		NOT = { alliance = { country = SOV country = YUG } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133131_NAME"
+	desc = "EVT_133131_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133131_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = YUG } #
+		command = { type = clrflag which = sovietyugoslavia }
+	}
+	action_b = {
+		name = "EVT_133131_ACTB"
+		ai_chance = 0
+		command = { type = belligerence which = SOV value = -1 }
+		command = { type = clrflag which = sovietyugoslavia }
+	}
+	action_c = {
+		name = "EVT_133131_ACTC"
+		ai_chance = 0
+		command = { type = inherit which = YUG }
+		command = { type = dissent value = 3 }
+		command = { type = clrflag which = sovietyugoslavia }
+	}
+}
+##########
+#  USSR captures Tirana
+##########
+event = {
+	id = 133132
+	random = no 
+	country = SOV
+	persistent = yes
+
+	trigger = {
+		control = { province = 390 data = SOV } #Tirana
+		NOT = { flag = sovietalbania }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133132_NAME"
+	desc = "EVT_133132_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133132_ACTA"
+        	command = { type = setflag which = sovietalbania }
+	}
+}
+##########
+#  USSR puppets Albania
+##########
+event = {
+	id = 133133
+	random = no 
+	country = SOV
+
+	trigger = {
+		exists = ALB
+		flag = sovietalbania
+		NOT = { exists = GER }
+		NOT = { alliance = { country = SOV country = ALB } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133133_NAME"
+	desc = "EVT_133133_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133133_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = ALB } #
+		command = { type = clrflag which = sovietalbania }
+	}
+	action_b = {
+		name = "EVT_133133_ACTB"
+		ai_chance = 0
+		command = { type = belligerence which = SOV value = -1 }
+		command = { type = clrflag which = sovietalbania }
+	}
+	action_c = {
+		name = "EVT_133133_ACTC"
+		ai_chance = 0
+		command = { type = inherit which = ALB }
+		command = { type = dissent value = 3 }
+		command = { type = clrflag which = sovietalbania }
+	}
+}
+##########
+#  USSR captures Madrid
+##########
+event = {
+	id = 133134
+	random = no 
+	country = SOV
+	persistent = yes
+
+	trigger = {
+		control = { province = 341 data = SOV } #Madrid
+		NOT = { flag = sovietspain }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133134_NAME"
+	desc = "EVT_133134_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133134_ACTA"
+        	command = { type = setflag which = sovietspain }
+	}
+}
+##########
+#  USSR puppets Republican Spain
+##########
+event = {
+	id = 133135
+	random = no 
+	country = SOV
+
+	trigger = {
+		exists = SPR
+		flag = sovietspain
+		NOT = { exists = GER }
+		NOT = { alliance = { country = SOV country = SPR } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133135_NAME"
+	desc = "EVT_133135_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133135_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = SPR } #
+		command = { type = clrflag which = sovietspain }
+	}
+	action_b = {
+		name = "EVT_133135_ACTB"
+		ai_chance = 0
+		command = { type = belligerence which = SOV value = -1 }
+		command = { type = clrflag which = sovietspain }
+	}
+}
+##########
+#  USSR captures Lisbon
+##########
+event = {
+	id = 133136
+	random = no 
+	country = SOV
+	persistent = yes
+
+	trigger = {
+		control = { province = 336 data = SOV } #Lisbon
+		NOT = { flag = sovietportugal }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133136_NAME"
+	desc = "EVT_133136_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133136_ACTA"
+        	command = { type = setflag which = sovietportugal }
+	}
+}
+##########
+#  USSR puppets Portugal
+##########
+event = {
+	id = 133137
+	random = no 
+	country = SOV
+
+	trigger = {
+		exists = POR
+		flag = sovietportugal
+		NOT = { exists = GER }
+		NOT = { alliance = { country = SOV country = POR } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133137_NAME"
+	desc = "EVT_133137_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133137_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = POR } #
+		command = { type = clrflag which = sovietportugal }
+	}
+	action_b = {
+		name = "EVT_133137_ACTB"
+		ai_chance = 0
+		command = { type = belligerence which = SOV value = -1 }
+		command = { type = clrflag which = sovietportugal }
+	}
+}
+##########
+#  USSR captures Bern
+##########
+event = {
+	id = 133138
+	random = no 
+	country = SOV
+	persistent = yes
+
+	trigger = {
+		control = { province = 532 data = SOV } #Bern
+		NOT = { flag = sovietswitzerland }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133138_NAME"
+	desc = "EVT_133138_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133138_ACTA"
+        	command = { type = setflag which = sovietswitzerland }
+	}
+}
+##########
+#  USSR puppets Switzerland
+##########
+event = {
+	id = 133139
+	random = no 
+	country = SOV
+
+	trigger = {
+		exists = SCH
+		flag = sovietswitzerland
+		NOT = { exists = GER }
+		NOT = { alliance = { country = SOV country = SCH } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133139_NAME"
+	desc = "EVT_133139_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133139_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = SCH } #
+		command = { type = clrflag which = sovietswitzerland }
+	}
+	action_b = {
+		name = "EVT_133139_ACTB"
+		ai_chance = 0
+		command = { type = belligerence which = SOV value = -1 }
+		command = { type = clrflag which = sovietswitzerland }
+	}
+	action_c = {
+		name = "EVT_133139_ACTC"
+		ai_chance = 0
+		command = { type = inherit which = SCH }
+		command = { type = dissent value = 3 }
+		command = { type = clrflag which = sovietswitzerland }
+	}
+}
+##########
+#  USSR captures Ankara
+##########
+event = {
+	id = 133140
+	random = no 
+	country = SOV
+	persistent = yes
+
+	trigger = {
+		control = { province = 448 data = SOV } #Ankara
+		NOT = { flag = sovietturkey }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133140_NAME"
+	desc = "EVT_133140_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133140_ACTA"
+        	command = { type = setflag which = sovietturkey }
+	}
+}
+##########
+#  USSR puppets Turkey
+##########
+event = {
+	id = 133141
+	random = no 
+	country = SOV
+
+	trigger = {
+		exists = TUR
+		flag = sovietturkey
+		NOT = { exists = GER }
+		NOT = { alliance = { country = SOV country = TUR } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133141_NAME"
+	desc = "EVT_133141_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133141_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = TUR } #
+		command = { type = clrflag which = sovietturkey }
+	}
+	action_b = {
+		name = "EVT_133141_ACTB"
+		ai_chance = 0
+		command = { type = belligerence which = SOV value = -1 }
+		command = { type = clrflag which = sovietturkey }
+	}
+	action_c = {
+		name = "EVT_133141_ACTC"
+		ai_chance = 0
+		command = { type = inherit which = TUR }
+		command = { type = dissent value = 3 }
+		command = { type = clrflag which = sovietturkey }
+	}
+}
+##########
+#  Soviets in Korea
+##########
+event = {
+	id = 133142
+	random = no 
+	country = SOV
+
+	trigger = {
+		OR = {
+		#any korean national province
+			control = { province = 1194 data = SOV }
+			control = { province = 1195 data = SOV }
+			control = { province = 1196 data = SOV }
+			control = { province = 1197 data = SOV }
+			control = { province = 1198 data = SOV }
+			control = { province = 1199 data = SOV }
+			control = { province = 1393 data = SOV }
+			control = { province = 1391 data = SOV }
+			control = { province = 1376 data = SOV }
+			control = { province = 1392 data = SOV }
+			control = { province = 1200 data = SOV }
+			control = { province = 1201 data = SOV }
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133142_NAME"
+	desc = "EVT_133142_DESC"
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133142_ACTA"
+		command = { type = setflag which = sovietkorea }
+	}
+}
+##########
+#  Soviets puppet People's Republic of Korea
+##########
+event = {
+	id = 133143
+	random = no
+	country = SOV
+
+	trigger = {
+		exists = PRK
+		OR = {
+			flag = sovietkorea
+			event = 131531
+		}
+		NOT = { alliance = { country = SOV country = PRK } }
+		NOT = { event = 131583 }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133143_NAME"
+	desc = "EVT_133143_DESC"
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133143_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = PRK }
+		command = { type = clrflag which = sovietkorea }
+	}
+	action_b = {
+		name = "EVT_133143_ACTB"
+		ai_chance = 0
+		command = { type = belligerence which = SOV value = -1 }
+		command = { type = clrflag which = sovietkorea }
+	}
+}
+
+##########
+#  ソ連と
+##########
+
+
+##########
+#  USSR captures Rangoon
+##########
+event = {
+	id = 133150
+	random = no 
+	country = SOV
+	persistent = yes
+
+	trigger = {
+		control = { province = 1299 data = SOV } #Rangoon
+		NOT = { flag = sovietburma }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133150_NAME"
+	desc = "EVT_133150_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133150_ACTA"
+		ai_chance = 100
+		command = { type = setflag which = sovietburma }
+	}
+}
+##########
+#  USSR puppets Burma
+##########
+event = {
+	id = 133151
+	random = no 
+	country = SOV
+
+	trigger = {
+		exists = BUR
+		flag = sovietburma
+		#placeholdre
+		NOT = { alliance = { country = SOV country = BUR } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133151_NAME"
+	desc = "EVT_133151_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133151_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = BUR }
+		command = { type = clrflag which = sovietburma }
+	}
+	action_b = {
+		name = "EVT_133151_ACTB"
+		ai_chance = 0
+		command = { type = belligerence which = SOV value = -1 }
+		command = { type = clrflag which = sovietburma }
+	}
+}
+##########
+#  USSR captures Delhi
+##########
+event = {
+	id = 133152
+	random = no 
+	country = SOV
+	persistent = yes
+
+	trigger = {
+		control = { province = 1469 data = SOV } #Delhi
+		NOT = { flag = sovietindia }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133152_NAME"
+	desc = "EVT_133152_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133152_ACTA"
+		ai_chance = 100
+		command = { type = setflag which = sovietindia }
+	}
+}
+##########
+#  USSR puppets India
+##########
+event = {
+	id = 133153
+	random = no 
+	country = SOV
+
+	trigger = {
+		exists = IND
+		flag = sovietindia
+		#placeholdre
+		NOT = { alliance = { country = SOV country = IND } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133153_NAME"
+	desc = "EVT_133153_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133153_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = IND }
+		command = { type = secedeprovince which = IND value = 1473 }
+		command = { type = secedeprovince which = IND value = 1455 }
+		command = { type = clrflag which = sovietindia }
+	}
+	action_b = {
+		name = "EVT_133153_ACTB"
+		ai_chance = 0
+		command = { type = belligerence which = SOV value = -1 }
+		command = { type = clrflag which = sovietindia }
+	}
+}
+##########
+#  USSR captures Bangkok
+##########
+event = {
+	id = 133154
+	random = no 
+	country = SOV
+	persistent = yes
+
+	trigger = {
+		control = { province = 1343 data = SOV } #Bangkok
+		NOT = { flag = sovietsiam }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133154_NAME"
+	desc = "EVT_133154_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133154_ACTA"
+		ai_chance = 100
+		command = { type = setflag which = sovietsiam }
+	}
+}
+##########
+#  USSR puppets Siam
+##########
+event = {
+	id = 133155
+	random = no 
+	country = SOV
+
+	trigger = {
+		exists = SIA
+		flag = sovietsiam
+		flag = usadefeatsjap #Japan defeated
+		NOT = { alliance = { country = SOV country = SIA } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133155_NAME"
+	desc = "EVT_133155_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133155_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = SIA }
+		command = { type = clrflag which = sovietsiam }
+	}
+	action_b = {
+		name = "EVT_133155_ACTB"
+		ai_chance = 0
+		command = { type = belligerence which = SOV value = -1 }
+		command = { type = clrflag which = sovietsiam }
+	}
+}
+##########
+#  USSR captures Kabul
+##########
+event = {
+	id = 133156
+	random = no 
+	country = SOV
+	persistent = yes
+
+	trigger = {
+		control = { province = 1486 data = SOV } #Kabul
+		NOT = { flag = sovietafghanistan }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133156_NAME"
+	desc = "EVT_133156_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133156_ACTA"
+		ai_chance = 100
+		command = { type = setflag which = sovietafghanistan }
+	}
+}
+##########
+#  USSR puppets Afghanistan
+##########
+event = {
+	id = 133157
+	random = no 
+	country = SOV
+
+	trigger = {
+		exists = AFG
+		flag = sovietafghanistan
+		#placeholdre
+		NOT = { alliance = { country = SOV country = AFG } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133157_NAME"
+	desc = "EVT_133157_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133157_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = AFG }
+		command = { type = clrflag which = sovietafghanistan }
+	}
+	action_b = {
+		name = "EVT_133157_ACTB"
+		ai_chance = 0
+		command = { type = belligerence which = SOV value = -1 }
+		command = { type = clrflag which = sovietafghanistan }
+	}
+	action_c = {
+		name = "EVT_133157_ACTC"
+		ai_chance = 0
+		command = { type = inherit which = AFG }
+		command = { type = dissent value = 3 }
+		command = { type = clrflag which = sovietafghanistan }
+	}
+}
+
+event = {
+	id = 133158
+	random = no
+	country = SOV
+
+	trigger = {
+		exists = ITA
+		event = 131420
+		NOT = { exists = GER }
+		NOT = { alliance = { country = SOV country = ITA } }
+		NOT = { alliance = { country = USA country = ITA } }
+		NOT = { alliance = { country = ENG country = ITA } }
+	}
+
+	name = "EVT_131421_NAME"
+	desc = "EVT_131421_DESC"
+        picture = "ussr_strategic_victory"
+	style = 0
+
+	action_a = {
+		ai_chance = 97
+		name = "EVT_131421_ACTA"
+		command = { type = make_puppet which = ITA }
+		command = { type = alliance which = ITA }
+		command = { type = money value = 500 }
+
+		command = { type = trigger which = 131422 }
+	}
+	action_b = {
+		ai_chance = 3
+		name = "EVT_131421_ACTB"
+		command = { type = dissent value = 5 }
+
+	}
+}
+
+#########################################################################
+#  USSR Loses Warsaw
+#########################################################################
+event = {
+	id = 133160
+	random = no 
+	country = SOV
+	persistent = yes
+
+	trigger = {
+		flag = sovietpoland
+		NOT = { control = { province = 485 data = SOV } }#Warsaw
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133160_NAME"
+	desc = "EVT_133160_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133160_ACTA"
+		command = { type = clrflag which = sovietpoland }
+	}
+}
+#########################################################################
+#  USSR Loses Prague
+#########################################################################
+event = {
+	id = 133161
+	random = no 
+	country = SOV
+	persistent = yes
+
+	trigger = {
+		flag = sovietczechoslovakia
+		NOT = {	control = { province = 469 data = SOV } } #Prague
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133161_NAME"
+	desc = "EVT_133161_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133161_ACTA"
+        	command = { type = clrflag which = sovietczechoslovakia }
+	}
+}
+#########################################################################
+#  USSR Loses Budapest
+#########################################################################
+event = {
+	id = 133162
+	random = no 
+	country = SOV
+	persistent = yes
+
+	trigger = {
+		flag = soviethungary
+		NOT = {	control = { province = 457 data = SOV } } #Budapest
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133162_NAME"
+	desc = "EVT_133162_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133162_ACTA"
+        	command = { type = clrflag which = soviethungary }
+	}
+}
+#########################################################################
+#  USSR Loses Bucharest
+#########################################################################
+event = {
+	id = 133163
+	random = no 
+	country = SOV
+	persistent = yes
+
+	trigger = {
+		flag = sovietromania
+		NOT = { control = { province = 424 data = SOV } } #Bucharest
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133163_NAME"
+	desc = "EVT_133163_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133163_ACTA"
+        	command = { type = clrflag which = sovietromania }
+	}
+}
+#########################################################################
+#  USSR Loses Sofia
+#########################################################################
+event = {
+	id = 133164
+	random = no 
+	country = SOV
+	persistent = yes
+
+	trigger = {
+		flag = sovietbulgaria
+		NOT = { control = { province = 417 data = SOV } } #Sofia
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133164_NAME"
+	desc = "EVT_133164_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133164_ACTA"
+        	command = { type = clrflag which = sovietbulgaria }
+	}
+}
+#########################################################################
+#  USSR Loses Oslo
+#########################################################################
+event = {
+	id = 133165
+	random = no 
+	country = SOV
+	persistent = yes
+
+	trigger = {
+		flag = sovietnorway
+		NOT = { control = { province = 107 data = SOV } } #Oslo
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133165_NAME"
+	desc = "EVT_133165_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133165_ACTA"
+        	command = { type = clrflag which = sovietnorway }
+	}
+}
+#########################################################################
+#  USSR Loses Stockholm
+#########################################################################
+event = {
+	id = 133166
+	random = no 
+	country = SOV
+	persistent = yes
+
+	trigger = {
+		flag = sovietsweden
+		NOT = { control = { province = 101 data = SOV } } #Stockholm
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133166_NAME"
+	desc = "EVT_133166_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133166_ACTA"
+        	command = { type = clrflag which = sovietsweden }
+	}
+}
+#########################################################################
+#  USSR Loses Copenhagen
+#########################################################################
+event = {
+	id = 133167
+	random = no 
+	country = SOV
+	persistent = yes
+
+	trigger = {
+		flag = sovietdenmark
+		NOT = {	control = { province = 294 data = SOV } } #Copenhagen
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133167_NAME"
+	desc = "EVT_133167_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133167_ACTA"
+        	command = { type = clrflag which = sovietdenmark }
+	}
+}
+#########################################################################
+#  USSR Loses Vienna
+#########################################################################
+event = {
+	id = 133168
+	random = no 
+	country = SOV
+	persistent = yes
+
+	trigger = {
+		flag = sovietaustria
+		NOT = { control = { province = 463 data = SOV } } #Vienna
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133168_NAME"
+	desc = "EVT_133168_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133168_ACTA"
+        	command = { type = clrflag which = sovietaustria }
+	}
+}
+#########################################################################
+#  USSR Loses Athens
+#########################################################################
+event = {
+	id = 133169
+	random = no 
+	country = SOV
+	persistent = yes
+
+	trigger = {
+		flag = sovietgreece
+		NOT = { control = { province = 401 data = SOV } } #Athens
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133169_NAME"
+	desc = "EVT_133169_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133169_ACTA"
+        	command = { type = clrflag which = sovietgreece }
+	}
+}
+#########################################################################
+#  USSR Loses Brussels
+#########################################################################
+event = {
+	id = 133170
+	random = no 
+	country = SOV
+	persistent = yes
+
+	trigger = {
+		flag = sovietbelgium
+		NOT = {	control = { province = 51 data = SOV } } #Brussels
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133170_NAME"
+	desc = "EVT_133170_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133170_ACTA"
+        	command = { type = clrflag which = sovietbelgium }
+	}
+}
+#########################################################################
+#  USSR Loses Amsterdam
+#########################################################################
+event = {
+	id = 133171
+	random = no 
+	country = SOV
+	persistent = yes
+
+	trigger = {
+		flag = sovietholland
+		NOT = {	control = { province = 47 data = SOV } } #Amsterdam
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133171_NAME"
+	desc = "EVT_133171_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133171_ACTA"
+        	command = { type = clrflag which = sovietholland }
+	}
+}
+#########################################################################
+#  USSR Loses Luxembourg
+#########################################################################
+event = {
+	id = 133172
+	random = no 
+	country = SOV
+	persistent = yes
+
+	trigger = {
+		flag = sovietluxembourg
+		NOT = {	control = { province = 71 data = SOV } } #Luxembourg
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133172_NAME"
+	desc = "EVT_133172_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133172_ACTA"
+        	command = { type = clrflag which = sovietluxembourg }
+	}
+}
+#########################################################################
+#  USSR Loses Paris
+#########################################################################
+event = {
+	id = 133173
+	random = no 
+	country = SOV
+	persistent = yes
+
+	trigger = {
+		flag = sovietfrance
+		NOT = {	control = { province = 56 data = SOV } } #Paris
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133173_NAME"
+	desc = "EVT_133173_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133173_ACTA"
+        	command = { type = clrflag which = sovietfrance }
+	}
+}
+#########################################################################
+#  USSR Loses Rome
+#########################################################################
+event = {
+	id = 133174
+	random = no 
+	country = SOV
+	persistent = yes
+
+	trigger = {
+		flag = sovietitaly
+		NOT = {	control = { province = 515 data = SOV } } #Rome
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133174_NAME"
+	desc = "EVT_133174_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133174_ACTA"
+        	command = { type = clrflag which = sovietitaly }
+	}
+}
+#########################################################################
+#  USSR Loses Belgrade
+#########################################################################
+event = {
+	id = 133175
+	random = no 
+	country = SOV
+	persistent = yes
+
+	trigger = {
+		flag = sovietyugoslavia
+		NOT = {	control = { province = 453 data = SOV } } #Belgrade
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133175_NAME"
+	desc = "EVT_133175_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133175_ACTA"
+        	command = { type = clrflag which = sovietyugoslavia }
+	}
+}
+#########################################################################
+#  USSR Loses Tirana
+#########################################################################
+event = {
+	id = 133176
+	random = no 
+	country = SOV
+	persistent = yes
+
+	trigger = {
+		flag = sovietalbania
+		NOT = {	control = { province = 390 data = SOV } } #Tirana
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133176_NAME"
+	desc = "EVT_133176_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133176_ACTA"
+        	command = { type = clrflag which = sovietalbania }
+	}
+}
+#########################################################################
+#  USSR Loses Madrid
+#########################################################################
+event = {
+	id = 133177
+	random = no 
+	country = SOV
+	persistent = yes
+
+	trigger = {
+		flag = sovietspain
+		NOT = {	control = { province = 341 data = SOV } } #Madrid
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133177_NAME"
+	desc = "EVT_133177_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133177_ACTA"
+        	command = { type = clrflag which = sovietspain }
+	}
+}
+#########################################################################
+#  USSR Loses Lisbon
+#########################################################################
+event = {
+	id = 133178
+	random = no 
+	country = SOV
+	persistent = yes
+
+	trigger = {
+		flag = sovietportugal
+		NOT = {	control = { province = 336 data = SOV } } #Lisbon
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133178_NAME"
+	desc = "EVT_133178_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133178_ACTA"
+        	command = { type = clrflag which = sovietportugal }
+	}
+}
+#########################################################################
+#  SOV Loses Bern
+#########################################################################
+event = {
+	id = 133179
+	random = no 
+	country = SOV
+	persistent = yes
+
+	trigger = {
+		flag = sovietswitzerland
+		NOT = {	control = { province = 532 data = SOV } } #Bern
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133179_NAME"
+	desc = "EVT_133179_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133179_ACTA"
+        	command = { type = clrflag which = sovietswitzerland }
+	}
+}
+#########################################################################
+#  USSR Loses Ankara
+#########################################################################
+event = {
+	id = 133180
+	random = no 
+	country = SOV
+	persistent = yes
+
+	trigger = {
+		flag = sovietturkey
+		NOT = {	control = { province = 448 data = SOV } } #Ankara
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133180_NAME"
+	desc = "EVT_133180_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133180_ACTA"
+        	command = { type = clrflag which = sovietturkey }
+	}
+}
+#########################################################################
+#  USSR Loses Rangoon
+#########################################################################
+event = {
+	id = 133181
+	random = no 
+	country = SOV
+	persistent = yes
+
+	trigger = {
+		NOT = { control = { province = 1299 data = SOV } } #Rangoon
+		flag = sovietburma
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133181_NAME"
+	desc = "EVT_133181_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133181_ACTA"
+		ai_chance = 100
+		command = { type = clrflag which = sovietburma }
+	}
+}
+#########################################################################
+#  USSR Loses Delhi
+#########################################################################
+event = {
+	id = 133182
+	random = no 
+	country = SOV
+	persistent = yes
+
+	trigger = {
+		NOT = { control = { province = 1469 data = SOV } } #Delhi
+		flag = sovietindia
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133182_NAME"
+	desc = "EVT_133182_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133182_ACTA"
+		ai_chance = 100
+		command = { type = clrflag which = sovietindia }
+	}
+}
+#########################################################################
+#  USSR Loses Bangkok
+#########################################################################
+event = {
+	id = 133183
+	random = no 
+	country = SOV
+	persistent = yes
+
+	trigger = {
+		NOT = { control = { province = 1343 data = SOV } } #Bangkok
+		flag = sovietsiam 
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133183_NAME"
+	desc = "EVT_133183_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133183_ACTA"
+		ai_chance = 100
+		command = { type = clrflag which = sovietsiam }
+	}
+}
+#########################################################################
+#  USSR Loses Kabul
+#########################################################################
+event = {
+	id = 133184
+	random = no 
+	country = SOV
+	persistent = yes
+
+	trigger = {
+		NOT = { control = { province = 1486 data = SOV } } #Kabul
+		flag = sovietafghanistan
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133184_NAME"
+	desc = "EVT_133184_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133184_ACTA"
+		ai_chance = 100
+		command = { type = clrflag which = sovietafghanistan }
+	}
+}
+
+event = {
+	id = 133185
+	random = no 
+	country = SOV
+	persistent = yes
+
+	trigger = {
+		control = { province = 98 data = SOV }
+		NOT = { flag = sovietsca }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133185_NAME"
+	desc = "EVT_133185_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133185_ACTA"
+		command = { type = setflag which = sovietsca }
+	}
+}
+
+event = {
+	id = 133186
+	random = no
+	country = SOV
+
+	trigger = {
+		exists = SCA
+		flag = sovietsca
+		NOT = { exists = GER }
+		NOT = { alliance = { country = SOV country = SCA } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133186_NAME"
+	desc = "EVT_133186_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133186_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = SCA } #
+		command = { type = clrflag which = sovietsca }
+	}
+	action_b = {
+		name = "EVT_133186_ACTB"
+		ai_chance = 0
+		command = { type = belligerence which = SOV value = -1 }
+		command = { type = clrflag which = sovietsca }
+	}
+	action_c = {
+		name = "EVT_133186_ACTC"
+		ai_chance = 0
+		command = { type = inherit which = SCA }
+		command = { type = dissent value = 3 }
+		command = { type = clrflag which = sovietsca }
+	}
+}
+
+event = {
+	id = 133187
+	random = no 
+	country = SOV
+	persistent = yes
+
+	trigger = {
+		flag = sovietsca
+		NOT = { control = { province = 98 data = SOV } }
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133187_NAME"
+	desc = "EVT_133187_DESC"
+
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133187_ACTA"
+		command = { type = clrflag which = sovietsca }
+	}
+}

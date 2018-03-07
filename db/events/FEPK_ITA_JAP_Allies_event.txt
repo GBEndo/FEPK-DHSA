@@ -1,0 +1,1318 @@
+#########################################################################
+#	FEPK_ITA_JAP_Allies_event.txt
+#	日伊連合ルートイベント
+#########################################################################
+#id = 62000-03	イタリアの北チロル要求
+#id = 62010-12	アルバニア併合
+#id = 62020		防共協定（イタリアがエチオピアに侵攻しない）
+#id = 62030-32	英仏伊中立条約
+#id = 62033-39	イタリアの連合入り
+#id = 62040-43	ハンガリーの対伊降伏
+#id = 62050-59	日本の連合入り
+#########################################################################
+#	イタリア連合ルートイベント
+#########################################################################
+
+event = {
+	id = 62000
+ 	random = no
+ 	country = ITA
+	trigger = {
+		flag = ITA_NOT_ETH
+		random = 35
+		event = 132500 #アンシュルス #FEPK
+		NOT = { exists = AUS }
+		NOT = { alliance = { country = ITA country = GER } }
+	}
+	name = "EVT_62000_NAME"
+	desc = "EVT_62000_DESC"
+	style = 0
+	picture = "anchsluss"
+
+	date = { day = 0 month = march year = 1938 }
+	offset = 3
+	deathdate = { day = 29 month = may year = 1938 }
+	
+	action_a = {
+		name = "EVT_62000_ACTA"
+		ai_chance = 70
+		command = { type = relation which = GER value = -20 }
+		command = { type = relation which = ENG value = -20 }
+		command = { type = relation which = FRA value = -20 }
+		command = { type = relation which = USA value = -20 }
+		command = { type = belligerence value = 3 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = trigger which = 62001 }
+	}
+	action_b = {
+		name = "EVT_62000_ACTB"
+		ai_chance = 30
+		command = { type = dissent value = 4 }
+	}
+}
+
+event = {
+	id = 62001
+ 	random = no
+ 	country = GER
+
+	name = "EVT_62001_NAME"
+	desc = "EVT_62001_DESC"
+	style = 0
+	picture = "anchsluss"
+
+	
+	action_a = {
+		name = "EVT_62001_ACTA"
+		ai_chance = 90
+		command = { type = relation which = ITA value = -20 }
+		command = { type = trigger which = 62002 }
+	}
+	action_b = {
+		name = "EVT_62001_ACTB"
+		ai_chance = 10
+		command = { type = removecore which = 373 }
+		command = { type = removecore which = 377 }
+		command = { type = secedeprovince which = ITA value = 373 }
+		command = { type = secedeprovince which = ITA value = 377 }
+		command = { type = dissent value = 4 }
+		command = { type = relation which = ITA value = 20 }
+		command = { type = domestic which = defense_lobby value = -1 }
+		command = { type = belligerence value = -2 }
+		command = { type = trigger which = 62003 }
+	}
+}
+
+event = {
+	id = 62002
+ 	random = no
+ 	country = ITA
+
+	name = "EVT_62002_NAME"
+	desc = "EVT_62002_DESC"
+	style = 0
+	picture = "anchsluss"
+
+	
+	action_a = {
+		name = "EVT_62002_ACTA"
+		command = { type = relation which = GER value = -20 }
+		command = { type = domestic which = defense_lobby value = -1 }
+		command = { type = dissent value = 2 }
+	}
+}
+
+event = {
+	id = 62003
+ 	random = no
+ 	country = ITA
+
+	name = "EVT_62003_NAME"
+	desc = "EVT_62003_DESC"
+	style = 0
+	picture = "anchsluss"
+
+	
+	action_a = {
+		name = "EVT_62003_ACTA"
+		command = { type = clrflag which = ITA_NOT_ETH }
+		command = { type = setflag which = ITA_GET_AUS }
+		command = { type = addcore which = 373 } #レヒ
+		command = { type = addcore which = 377 } #インスブルック
+		command = { type = relation which = GER value = 20 }
+		command = { type = relation which = ENG value = -20 }
+		command = { type = relation which = FRA value = -20 }
+		command = { type = relation which = USA value = -20 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = dissent value = -4 }
+	}
+}
+
+#########################################################################
+#  アルバニア併合
+#########################################################################
+event = { #fros 130611 の本来のイベントもこちらに統合 #FEPKBETA4
+	id = 62010
+	random = no
+	country = ITA
+	
+	trigger = {
+		exists = ALB
+		OR = {
+			AND = {
+				NOT = {
+					exists = CZE
+				}
+				control = { province = 469 data = GER } #prague
+			}
+			event = 130127 #Germany annexes Bohemia and Moravia - Mussolini feels he must not be outdone...
+			event = 130130 #Czechs partitioned
+		}
+		NOT = {
+			flag = gerdefeatsita #Germany defeated Italy
+			alliance = { country = ENG country = ITA }
+			alliance = { country = ALB country = ITA }
+			alliance = { country = ALB country = GER }
+			war = { country = ALB country = ITA }
+		#	war = { country = GER country = ITA }
+		}
+		NOT = {
+			flag = ITA_NOT_ETH
+			flag = ITA_GET_AUS
+		}
+	}
+
+	name = "EVT_2902_NAME"
+	desc = "EVT_2902_DESC"
+	style = 0
+	picture = "Albania"
+	
+	date = { day = 25 month = march year = 1939 }
+	offset = 1
+	deathdate = { day = 29 month = august year = 1939 }
+	
+	action_a = {
+		name = "ACTIONNAME2902A" # Send an Ultimatum to King Zog
+		ai_chance = 98
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = trigger which = 3500 } #Alb
+		command = { type = relation which = ALB value = -20 }
+		command = { type = relation which = YUG value = -5 }
+		command = { type = relation which = GRE value = -5 }
+		command = { type = sleepevent which = 62011 }
+		command = { type = sleepevent which = 62012 }
+	}
+	action_b = {
+		name = "ACTIONNAME2902B" # We have no need of Albania
+		ai_chance = 2
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = relation which = ALB value = 20 }
+		command = { type = relation which = YUG value = 5 }
+		command = { type = relation which = GRE value = 5 }
+		command = { type = sleepevent which = 62011 }
+		command = { type = sleepevent which = 62012 }
+	}
+}
+
+event = { #FEPKBETA4 #連合寄り
+	id = 62011
+	random = no
+	country = ITA
+	
+	trigger = {
+		exists = ALB
+		OR = {
+			AND = {
+				NOT = {
+					exists = CZE
+				}
+				control = { province = 469 data = GER } #prague
+			}
+			event = 130127 #Germany annexes Bohemia and Moravia - Mussolini feels he must not be outdone...
+			event = 130130 #Czechs partitioned
+		}
+		NOT = {
+			flag = gerdefeatsita #Germany defeated Italy
+			alliance = { country = ENG country = ITA }
+			alliance = { country = ALB country = ITA }
+			alliance = { country = ALB country = GER }
+			war = { country = ALB country = ITA }
+		#	war = { country = GER country = ITA }
+		}
+		flag = ITA_NOT_ETH
+		#NOT = { flag = ITA_NOT_ETH }
+		OR = {
+			AND = {
+				exists = ETH
+				NOT = { puppet = { country = ETH country = ITA } }
+			}
+			NOT = { control = { province = 1046 data = ITA } } # アジスアベバ
+		}
+	}
+
+	name = "EVT_2902_NAME"
+	desc = "EVT_2902_DESC"
+	style = 0
+	picture = "Albania"
+	
+	date = { day = 25 month = march year = 1939 }
+	offset = 1
+	deathdate = { day = 29 month = august year = 1939 }
+	 
+	action_a = {
+		name = "ACTIONNAME2902B" # We have no need of Albania
+		ai_chance = 80
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = relation which = ALB value = 20 }
+		command = { type = relation which = YUG value = 5 }
+		command = { type = relation which = GRE value = 5 }
+		command = { type = setflag which = ITA_NOT_ALB }
+		command = { type = sleepevent which = 62010 }
+		command = { type = sleepevent which = 62012 }
+	}
+	action_b = {
+		name = "ACTIONNAME2902A" # Send an Ultimatum to King Zog
+		ai_chance = 20
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = trigger which = 3500 } #Alb
+		command = { type = relation which = ALB value = -20 }
+		command = { type = relation which = YUG value = -5 }
+		command = { type = relation which = GRE value = -5 }
+		command = { type = sleepevent which = 62010 }
+		command = { type = sleepevent which = 62012 }
+	}
+}
+
+event = { #FEPKBETA4 #オーストリア割譲によりより親ドイツ
+	id = 62012
+	random = no
+	country = ITA
+	
+	trigger = {
+		exists = ALB
+		OR = {
+			AND = {
+				NOT = {
+					exists = CZE
+				}
+				control = { province = 469 data = GER } #prague
+			}
+			event = 130127 #Germany annexes Bohemia and Moravia - Mussolini feels he must not be outdone...
+			event = 130130 #Czechs partitioned
+		}
+		NOT = {
+			flag = gerdefeatsita #Germany defeated Italy
+			alliance = { country = ENG country = ITA }
+			alliance = { country = ALB country = ITA }
+			alliance = { country = ALB country = GER }
+			war = { country = ALB country = ITA }
+		#	war = { country = GER country = ITA }
+		}
+		NOT = {	flag = ITA_NOT_ETH }
+		flag = ITA_GET_AUS
+	}
+
+	name = "EVT_2902_NAME"
+	desc = "EVT_2902_DESC"
+	style = 0
+	picture = "Albania"
+	
+	date = { day = 25 month = march year = 1939 }
+	offset = 1
+	deathdate = { day = 29 month = august year = 1939 }
+	
+	action_a = {
+		name = "ACTIONNAME2902A" # Send an Ultimatum to King Zog
+		ai_chance = 100
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = trigger which = 3500 } #Alb
+		command = { type = relation which = ALB value = -20 }
+		command = { type = relation which = YUG value = -5 }
+		command = { type = relation which = GRE value = -5 }
+		command = { type = sleepevent which = 62010 }
+		command = { type = sleepevent which = 62011 }
+	}
+	action_b = {
+		name = "ACTIONNAME2902B" # We have no need of Albania
+		ai_chance = 0
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = relation which = ALB value = 20 }
+		command = { type = relation which = YUG value = 5 }
+		command = { type = relation which = GRE value = 5 }
+		command = { type = sleepevent which = 62010 }
+		command = { type = sleepevent which = 62011 }
+	}
+}
+
+#########################################################################
+#  防共協定
+#########################################################################
+event = {
+	id = 62020
+	random = no
+	country = GER
+
+	name = "EVT_71_NAME"
+	desc = "EVT_71_DESC"
+        picture = "anti_comitern_pact"
+	style = 0
+
+	trigger = { #FEPKBETA4
+		exists = JAP
+		exists = ITA
+		exists = SOV
+		NOT = {
+			war = { country = GER country = ITA }
+			war = { country = GER country = JAP }
+			war = { country = JAP country = ITA }
+			alliance = { country = GER country = ENG }
+			alliance = { country = GER country = SOV }
+		#	alliance = { country = ITA country = ENG }
+			alliance = { country = ITA country = SOV }
+			alliance = { country = JAP country = ENG }
+			alliance = { country = JAP country = SOV }
+		}
+		flag = ITA_NOT_ETH
+	}
+
+	date = { day = 6 month = november year = 1937 } #FEPKBETA4
+
+	action_a = {
+		ai_chance = 75
+		name = "EVT_71_ACTC"
+		command = { type = domestic which = freedom value = -1 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = relation which = SOV value = -10 }
+		command = { type = trigger which = 130106 } # Japan only
+		command = { type = sleepevent which = 130104 } #FEPK_fordanzig #FEPKBETA4
+	}
+	action_b = {
+		ai_chance = 22
+		name = "EVT_71_ACTA"
+		command = { type = domestic which = freedom value = -1 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = relation which = SOV value = -10 }
+		command = { type = trigger which = 130105 }
+		command = { type = trigger which = 130106 }
+		command = { type = sleepevent which = 130104 } #FEPK_fordanzig #FEPKBETA4
+	}
+	action_c = {
+		ai_chance = 1
+		name = "EVT_71_ACTB"
+		command = { type = domestic which = freedom value = -1 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = relation which = SOV value = -10 }
+		command = { type = trigger which = 130105 } # Italy only
+		#command = { type = sleepevent which = 70479 } #Recall of German mission in China
+		command = { type = sleepevent which = 130104 } #FEPK_fordanzig #FEPKBETA4
+	}
+	action_d = {
+		ai_chance = 2
+		name = "EVT_71_ACTD"
+		command = { type = domestic which = interventionism value = -1 }
+		#command = { type = sleepevent which = 70479 } #Recall of German mission in China
+		command = { type = sleepevent which = 130104 } #FEPK_fordanzig #FEPKBETA4
+	}
+}
+
+event = {
+	id = 62030
+	random = no
+	country = ITA
+
+	name = "EVT_62030_NAME"
+	desc = "EVT_62030_DESC"
+        picture = "anti_comitern_pact"
+	style = 0
+
+	trigger = {
+		flag = ITA_NOT_ETH
+		exists = ITA
+		exists = ENG
+		exists = FRA
+		atwar = no
+		random = 20
+		NOT = {
+			war = { country = ENG country = ITA }
+			war = { country = FRA country = ITA }
+			alliance = { country = ENG country = ITA }
+			alliance = { country = FRA country = ITA }
+			alliance = { country = GER country = ITA }	#DHSA0.42
+		}
+	}
+
+        date = { day = 0 month = june year = 1938 }
+        offset = 3
+	deathdate = { day = 29 month = august year = 1963 }
+
+	action_a = {
+		ai_chance = 96
+		name = "EVT_62030_ACTA"
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = relation which = ENG value = 30 }
+		command = { type = relation which = FRA value = 30 }
+		command = { type = relation which = GER value = -30 }
+		command = { type = relation which = AST value = 10 }
+		command = { type = relation which = CAN value = 10 }
+		command = { type = relation which = NZL value = 10 }
+		command = { type = relation which = SAF value = 10 }
+		command = { type = trigger which = 62031 }
+		command = { type = trigger which = 62032 }
+	}
+	action_b = {
+		ai_chance = 4
+		name = "EVT_62030_ACTB"
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = relation which = ENG value = -20 }
+		command = { type = relation which = FRA value = -20 }
+		command = { type = relation which = GER value = 10 }
+	}
+}
+
+event = {
+	id = 62031
+	random = no
+	country = ENG
+
+	name = "EVT_62030_NAME"
+	desc = "EVT_62030_DESC"
+        picture = "anti_comitern_pact"
+	style = 0
+
+	action_a = {
+		ai_chance = 100
+		name = "EVT_62031_ACTA"
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = relation which = ITA value = 40 }
+		command = { type = relation which = GER value = -30 }
+		command = { type = non_aggression which = ITA where = ENG }
+		command = { type = setflag which = ITA_ENG_pact }
+	}
+	action_b = {
+		ai_chance = 0
+		name = "EVT_62031_ACTB"
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = relation which = ITA value = -50 }
+	}
+}
+
+event = {
+	id = 62032
+	random = no
+	country = FRA
+
+	name = "EVT_62030_NAME"
+	desc = "EVT_62030_DESC"
+        picture = "anti_comitern_pact"
+	style = 0
+
+	action_a = {
+		ai_chance = 100
+		name = "EVT_62031_ACTA"
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = relation which = ITA value = 40 }
+		command = { type = relation which = GER value = -30 }
+		command = { type = non_aggression which = ITA where = FRA }
+		command = { type = setflag which = ITA_FRA_pact }
+	}
+	action_b = {
+		ai_chance = 0
+		name = "EVT_62031_ACTB"
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = relation which = ITA value = -50 }
+	}
+}
+
+event = {
+	id = 62033
+	random = no
+	country = ITA
+
+	name = "EVT_62033_NAME"
+	desc = "EVT_62033_DESC"
+
+        picture = "german_reinforcment"
+	style = 0
+
+	trigger = {
+		flag = ITA_NOT_ETH
+		flag = ITA_ENG_pact
+		flag = ITA_FRA_pact
+		exists = POL
+		war = { country = POL country = GER }
+		war = { country = ENG country = GER }
+		war = { country = FRA country = GER }
+		NOT = {
+			war = { country = GER country = ITA }
+			war = { country = ENG country = ITA }
+			war = { country = FRA country = ITA }
+			alliance = { country = ENG country = ITA }
+			alliance = { country = FRA country = ITA }
+		}
+	}
+
+        date = { day = 0 month = june year = 1938 }
+        offset = 7
+	deathdate = { day = 29 month = august year = 1963 }
+
+	action_a = {
+		ai_chance = 99
+		name = "EVT_62033_ACTA"
+		command = { type = setflag which = ITA_ALLIED }
+		command = { type = domestic which = interventionism value = 3 }
+		command = { type = end_non_aggression which = ITA where = GER }
+		command = { type = end_trades which = ITA where = GER }
+		command = { type = supplies value = 3000 }
+		command = { type = relation which = ENG value = 30 }
+		command = { type = relation which = FRA value = 30 }
+		command = { type = relation which = GER value = -30 }
+		command = { type = relation which = AST value = 10 }
+		command = { type = relation which = CAN value = 10 }
+		command = { type = relation which = NZL value = 10 }
+		command = { type = relation which = SAF value = 10 }
+	}
+	action_b = {
+		ai_chance = 1
+		name = "EVT_62033_ACTB"
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = relation which = ENG value = -20 }
+		command = { type = relation which = FRA value = -20 }
+		command = { type = relation which = GER value = 10 }
+		command = { type = sleepevent which = 62034 }
+		command = { type = sleepevent which = 62035 }
+		command = { type = sleepevent which = 62036 }
+	}
+}
+
+event = {
+	id = 62034
+	random = no 
+	country = ITA
+
+	trigger = {
+		ai = yes
+		control = { province = 371 data = ITA }
+		control = { province = 378 data = ITA }
+		OR = {
+			war = { country = GER country = ITA }
+			event = 62033
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	style = 0
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = ai_prepare_war which = GER }
+	#	command = { type = construct which = land_fort where = 371 value = 5 }
+	#	command = { type = construct which = land_fort where = 378 value = 5 }
+		command = { type = add_corps value = land where = 371 }
+		command = { type = add_division value = infantry when = 2 }
+		command = { type = add_division value = infantry when = 2 }
+		command = { type = add_division value = infantry when = 2 }
+		command = { type = add_corps value = land where = 378 }
+		command = { type = add_division value = infantry when = 2 }
+		command = { type = add_division value = infantry when = 2 }
+		command = { type = add_division value = infantry when = 2 }
+		command = { type = supplies value = 6000 }
+	}
+}
+
+event = {
+	id = 62035
+	random = no 
+	country = GER
+
+	trigger = {
+		ai = yes
+		event = 62033
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	style = 0
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = ai_prepare_war which = ITA }
+	}
+}
+
+event = {
+	id = 62036
+	random = no
+	country = ITA
+
+	name = "EVT_62036_NAME"
+	desc = "EVT_62036_DESC"
+
+        picture = "german_reinforcment_2"
+	style = 0
+
+	trigger = {
+		flag = ITA_ALLIED
+		war = { country = ENG country = GER }
+		war = { country = FRA country = GER }
+		NOT = {
+			exists = POL
+		}
+		OR = {
+			war = { country = GER country = HOL }
+			war = { country = GER country = BEL }
+			war = { country = GER country = LUX }
+			control = { province = 56 data = GER } #Paris
+			NOT = {	control = { province = 72 data = FRA } } # MaginotLine
+			NOT = {	control = { province = 73 data = FRA } }
+			NOT = {	control = { province = 316 data = FRA } }
+			lost_national = { country = FRA value = 15 }
+			random = 1 #早期参戦
+		}
+	}
+
+        date = { day = 0 month = june year = 1938 }
+        offset = 3
+	deathdate = { day = 29 month = august year = 1963 }
+
+	action_a = {
+		ai_chance = 95
+		name = "EVT_62036_ACTA"
+		command = { type = domestic which = defense_lobby value = 3 }
+		command = { type = domestic which = interventionism value = 3 }
+		command = { type = alliance which = ENG }
+		command = { type = war which = GER }
+		command = { type = sleepevent which = 73160 } #1.06 # DeathOfBalbo!!
+	}
+	action_b = {
+		ai_chance = 5
+		name = "EVT_62036_ACTB"
+		command = { type = domestic which = interventionism value = -3 }
+		command = { type = relation which = ENG value = -100 }
+		command = { type = relation which = FRA value = -100 }
+		command = { type = relation which = GER value = 10 }
+	}
+}
+
+#62040～
+##########
+#	ハンガリーがイタリアに敗北！
+##########
+event = {
+	id = 62040
+	random = no
+	country = ITA
+	
+	trigger = {
+		war = { country = ITA country = HUN }
+		region = { region = "Hungary" country = ITA value = 1 }
+		NOT = {
+			alliance = { country = ENG country = HUN }
+			alliance = { country = SOV country = HUN }
+			alliance = { country = GER country = HUN }
+			ispuppet = ITA
+		}
+		OR = {
+			lost_national = { country = HUN value = 80 }
+			lost_IC = { country = HUN value = 80 }
+			AND = {
+				control = { province = 457 data = ITA }
+				OR = {
+					lost_national = { country = HUN value = 50 }
+					lost_IC = { country = HUN value = 50 }
+				}
+			}
+		}
+	}
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 7
+	deathdate = { day = 15 month = june year = 1963 }
+
+	name = "EVT_62040_NAME"	#ハンガリーとの降伏交渉
+	desc = "EVT_62040_DESC"	#
+	
+	action = {
+		name = "EVT_62040_ACTA"	#属国とせよ！
+		ai_chance = 80
+		command = { type = setflag which = Ita_Hun_puppet }	#イタリアはハンガリーに属国化を要求
+		command = { type = trigger which = 62041 }
+	}
+	action = {
+		name = "EVT_62040_ACTB"	#白紙和平で充分だ
+		ai_chance = 20
+		command = { type = dissent value = 1 }
+		command = { type = trigger which = 62041 }
+	}
+	action = {
+		name = "EVT_62040_ACTC"	#完全制圧せよ！
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+		command = { type = belligerence which = ITA value = 10 }
+	}
+}
+
+event = {
+	id = 62041
+	random = no
+	country = HUN
+	
+	name = "EVT_62041_NAME"	#ハンガリーの回答
+	desc = "EVT_62041_DESC"	#イタリアは我々に対し講和のための条件を突きつけてきた。我々は……
+	
+	action = {
+		trigger = {
+			NOT = { flag = Ita_Hun_puppet }
+		}
+		ai_chance = 55
+		name = "EVT_62041_ACTA"	#よろしい、白紙和平ならば文句のつけようもない
+		command = { type = peace which = ITA value = 0 }
+		command = { type = dissent value = 5 }
+	}
+	action = {
+		trigger = {
+			flag = Ita_Hun_puppet
+		}
+		ai_chance = 40
+		name = "EVT_62041_ACTB"	#仕方があるまい、イタリアに降伏しよう
+		command = { type = peace which = ITA value = 0 }
+		command = { type = trigger which = 62042 }
+		command = { type = dissent value = 15 }
+	}
+	action = {
+		ai_chance = 1
+		name = "EVT_62041_ACTC"	#何を！　まだまだ戦える！
+		command = { type = dissent value = 25 }
+	}
+}
+
+event = {
+	id = 62042
+	random = no
+	country = ITA
+	
+	name = "EVT_62042_NAME"	#ハンガリー、屈服！
+	desc = "EVT_62042_DESC"	#ハンガリーが降伏したことで、彼らは我らの勢力圏に組み込まれることとなる。中欧の支配者の片割れであったところのハンガリーを手中に収めたことは、中欧情勢に大きな影響を与えるだろう。
+	
+	action = {
+		name = "OK"
+		command = { type = make_puppet which = HUN }
+		command = { type = dissent value = -5 }
+	}
+}
+
+event = {
+	id = 62043
+	random = no
+	country = ITA
+	trigger = {
+		region = { region = "Hungary" country = ITA value = 50 }
+		control = { province = 457 data = ITA }
+		NOT = { exists = HUN }
+	}
+	
+	name = "EVT_62043_NAME"	#ハンガリーの運命
+	desc = "EVT_62043_DESC"	#ハンガリーはその国土、政府を失った。我々に敵対した彼らについて、我々はあらゆる処遇を下すことが出来る。
+	
+	action = {
+		name = "EVT_62043_ACTA"	#傀儡政権を樹立せよ
+		ai_chance = 80
+		command = { type = independence which = HUN value = 1 }
+		command = { type = alliance which = HUN }
+		command = { type = make_puppet which = HUN }
+	}
+	action = {
+		name = "EVT_62043_ACTB"	#そのまま制圧せよ
+		ai_chance = 0
+		command = { type = dissent value = 2 }
+		command = { type = belligerence which = ITA value = 5 }
+	}
+	action = {
+		trigger = {
+			puppet = { country = AUS country = ITA }
+		}
+		name = "EVT_62043_ACTC"	#オーストリアに押し付けてしまえ！
+		ai_chance = 20
+		command = { type = dissent value = 1 }
+		command = { type = secederegion which = AUS value = "Hungary" when = 0 }
+	}
+}
+
+
+#########################################################################
+#	日本連合ルートイベント
+#########################################################################
+event = {
+	id = 62050
+	country = JAP
+	trigger = {
+		OR = {	#中国に完全勝利、もしくは中国に完全敗北
+			event = 55110
+			event = 131570
+			event = 131580
+		}
+		NOT = { 
+			war = { country = USA country = JAP }
+			war = { country = ENG country = JAP }
+			war = { country = SOV country = JAP }
+			alliance = { country = USA country = JAP }
+			alliance = { country = ENG country = JAP }
+			alliance = { country = SOV country = JAP }
+			ispuppet = JAP
+			ispuppet = ENG
+			ideology = nazi
+			ideology = fascist
+		}
+		war = { country = ENG country = GER }
+		war = { country = JAP country = GER }
+		OR = {
+			NOT = { war = { country = JAP country = CHI } }
+			alliance = { country = JAP country = CHI }
+		}
+	}
+	
+	style = 0
+	picture = "anglo-japanese_alliance"
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 7
+	deathdate = { day = 15 month = june year = 1963 }
+
+
+	name = "EVT_62050_NAME"	#第二次日英同盟への道 
+	desc = "EVT_62050_DESC"	#
+	
+	action = {
+		name = "EVT_62050_ACTA"	#連合国との協調は皆の利益になるぞ！
+		ai_chance = 70
+		command = { type = dissent value = 5 }
+		command = { type = trigger which = 62051 }	#英国へ（米が非連合）
+		command = { type = trigger which = 62052 }	#米国へ（米が連合）
+	}
+	action = {
+		name = "EVT_62050_ACTB"	#今更白人に頭を下げろというのか！
+		ai_chance = 30
+		command = { type = domestic which = defense_lobby value = 1 }
+	}
+}
+
+event = {
+	id = 62051
+	country = ENG
+	trigger = {
+		NOT = { alliance = { country = ENG country = USA } }
+	}
+	
+	style = 0
+	picture = "anglo-japanese_alliance"
+	
+	name = "EVT_62050_NAME"	#第二次日英同盟への道 
+	desc = "EVT_62051_DESC"	#
+	
+	action = {
+		name = "EVT_62051_ACTA"	#何が我らの間に必要だろうか！　同盟に乾杯！
+		ai_chance = 40
+		command = { type = relation which = JAP value = 200 }
+		command = { type = trigger which = 62060 }	#日英同盟
+	}
+	action = {
+		name = "EVT_62051_ACTB"	#インドシナの自由フランスへの返還を条件とする
+		trigger = {
+			control = { province = 1326 data = JAP } #ハイフォン
+			alliance = { country = ENG country = FRA }
+		}
+		ai_chance = 20
+		command = { type = relation which = FRA value = 20 }
+		command = { type = trigger which = 62062 }
+	}
+	action = {
+		name = "EVT_62051_ACTC"	#満洲の門戸開放を求める
+		trigger = {
+			puppet = { country = MAN country = JAP }
+		}
+		ai_chance = 10
+		command = { type = trigger which = 62063 }
+	}
+	action = {
+		name = "EVT_62051_ACTD"	#満洲とインドシナの利権についての譲歩を求める
+		trigger = {
+			control = { province = 1326 data = JAP } #ハイフォン
+			alliance = { country = ENG country = FRA }
+			puppet = { country = MAN country = JAP }
+		}
+		ai_chance = 10
+		command = { type = relation which = FRA value = 20 }
+		command = { type = trigger which = 62064 }
+	}
+	action = {
+		name = "EVT_62051_ACTE"	#日本人と手を組む必要は我々にはない
+		ai_chance = 20
+		command = { type = relation which = JAP value = -30 }
+		command = { type = dissent value = 3 }
+		command = { type = trigger which = 62061 }
+	}
+}
+
+event = {
+	id = 62052
+	country = USA
+	trigger = {
+		alliance = { country = ENG country = USA }
+	}
+	
+	style = 0
+	picture = "anglo-japanese_alliance"
+	
+	name = "EVT_62052_NAME"	#日米同盟への道 
+	desc = "EVT_62051_DESC"	#日本は枢軸国との同盟を諦め、彼らと敵対する道を選んだ。日本が同盟という形でアジアにおける拡大の野望を取り下げてくれるならそれに越したことはないが、アジアの伸長を食い止めるために同盟の前提条件を追加することも出来るだろう。その上で、彼らに同盟を求めるかどうかを決めさせよう。
+	
+	action = {
+		name = "EVT_62052_ACTA"	#何が我らの間に必要だろうか！　同盟に乾杯！
+		ai_chance = 15
+		command = { type = relation which = JAP value = 200 }
+		command = { type = trigger which = 62060 }	#日本の連合国参加
+	}
+	action = {
+		name = "EVT_62052_ACTB"	#インドシナの自由フランスへの返還を条件とする
+		trigger = {
+			control = { province = 1326 data = JAP } #ハイフォン
+			alliance = { country = USA country = FRA }
+		}
+		ai_chance = 10
+		command = { type = relation which = FRA value = 20 }
+		command = { type = trigger which = 62062 }
+	}
+	action = {
+		name = "EVT_62052_ACTC"	#満洲の門戸開放を求める
+		trigger = {
+			puppet = { country = MAN country = JAP }
+		}
+		ai_chance = 10
+		command = { type = trigger which = 62063 }
+	}
+	action = {
+		name = "EVT_62052_ACTD"	#満洲とインドシナの利権についての譲歩を求める
+		trigger = {
+			control = { province = 1326 data = JAP } #ハイフォン
+			alliance = { country = USA country = FRA }
+			puppet = { country = MAN country = JAP }
+		}
+		ai_chance = 10
+		command = { type = relation which = FRA value = 20 }
+		command = { type = trigger which = 62064 }
+	}
+	action = {
+		name = "EVT_62052_ACTE"	#日本軍の中華民国からの撤兵と蒋介石の国政参加を求める
+		trigger = {
+			alliance = { country = JAP country = U87 }
+			NOT = { exists = CHI }
+			headofstate = 6001	#ル
+		}
+		ai_chance = 10
+		command = { type = trigger which = 62065 }
+	}
+	action = {
+		name = "EVT_62052_ACTF"	#インドシナの返還と中華民国の復元を求める
+		trigger = {
+			alliance = { country = JAP country = U87 }
+			NOT = { exists = CHI }
+			headofstate = 6001	#ル
+			control = { province = 1326 data = JAP } #ハイフォン
+			alliance = { country = USA country = FRA }
+		}
+		ai_chance = 10
+		command = { type = trigger which = 62066 }
+	}
+	action = {
+		name = "EVT_62052_ACTG"	#満洲の門戸開放と中華民国の復元を求める
+		trigger = {
+			alliance = { country = JAP country = U87 }
+			NOT = { exists = CHI }
+			headofstate = 6001	#ル
+			puppet = { country = MAN country = JAP }
+		}
+		ai_chance = 10
+		command = { type = trigger which = 62067 }
+	}
+	action = {
+		name = "EVT_62052_ACTH"	#満洲開放、インドシナ返還、中華民国の復元の全てを要求
+		trigger = {
+			alliance = { country = JAP country = U87 }
+			NOT = { exists = CHI }
+			headofstate = 6001	#ル
+			control = { province = 1326 data = JAP } #ハイフォン
+			alliance = { country = USA country = FRA }
+			puppet = { country = MAN country = JAP }
+		}
+		ai_chance = 10
+		command = { type = trigger which = 62068 }
+		command = { type = belligerence value = 10 }
+	}
+	action = {
+		name = "EVT_62052_ACTI"	#日本人と手を組む必要は我々にはない
+		ai_chance = 20
+		command = { type = relation which = JAP value = -30 }
+		command = { type = dissent value = 3 }
+		command = { type = trigger which = 62061 }
+	}
+}
+
+event = {
+	id = 62060
+	country = JAP
+	
+	style = 0
+	picture = "anglo-japanese_alliance"
+	
+	name = "EVT_62060_NAME"	#日本の連合国参加 
+	desc = "EVT_62060_DESC"	#
+	
+	action = {
+		name = "OK"
+		command = { type = alliance which = ENG }
+	}
+}
+
+event = {
+	id = 62061
+	country = JAP
+	
+	style = 0
+	picture = "failed_objective"
+	
+	name = "EVT_62061_NAME"	#第二次日英同盟成らず！ 
+	desc = "EVT_62061_DESC"	#
+	
+	action = {
+		name = "EVT_62061_ACTA"	#ろくな結果ではない！
+		command = { type = dissent value = 6 }
+	}
+}
+
+event = {
+	id = 62062
+	country = JAP
+	
+	style = 0
+	picture = "indochina_demand"
+	
+	name = "EVT_62062_NAME"	#連合国は同盟条件としてインドシナの返還を要求
+	desc = "EVT_62062_DESC"	#
+	
+	action = {
+		name = "EVT_62062_ACTA"	#よかろう
+		ai_chance = 80
+		command = { type = secedearea which = FRA value = "Indochine" }
+		command = { type = dissent value = 4 }
+		command = { type = trigger which = 62060 }
+	}
+	action = {
+		name = "EVT_62062_ACTB"	#受諾可能な条件ではない！
+		ai_chance = 20
+		command = { type = trigger which = 62061 }
+	}
+}
+
+event = {
+	id = 62063
+	country = JAP
+	
+	style = 0
+	picture = "shanghai"
+	
+	name = "EVT_62063_NAME"	#連合国は満洲の門戸開放を要求
+	desc = "EVT_62063_DESC"	#
+	
+	action = {
+		ai_chance = 70
+		name = "EVT_62063_ACTA"	#関東軍を段階的に解消し、満洲を自立させる
+		command = { type = end_mastery which = MAN }
+		command = { type = trigger which = 131698 }
+		command = { type = dissent value = 6 }
+		command = { type = trigger which = 62060 }
+		command = { type = trigger which = 62070 }	#満州国の連合参加
+	}
+	action = {
+		ai_chance = 30
+		name = "EVT_62063_ACTB"	#
+		command = { type = trigger which = 62061 }
+	}
+}
+
+event = {
+	id = 62064
+	country = JAP
+	
+	style = 0
+	picture = "shanghai"
+	
+	name = "EVT_62064_NAME"	#連合国は満洲の門戸開放とインドシナの返還を要求
+	desc = "EVT_62064_DESC"	#
+	
+	action = {
+		ai_chance = 30
+		name = "EVT_62064_ACTA"	#連合国の要求を受諾し、同盟を締結する
+		command = { type = secedearea which = FRA value = "Indochine" }
+		command = { type = end_mastery which = MAN }
+		command = { type = trigger which = 131698 }
+		command = { type = dissent value = 10 }
+		command = { type = trigger which = 62060 }
+		command = { type = trigger which = 62070 }	#満州国の連合参加
+	}
+	action = {
+		ai_chance = 70
+		name = "EVT_62064_ACTB"	#こんな条件が呑めるはずがなかろう！
+		command = { type = trigger which = 62061 }
+	}
+}
+
+event = {	
+	id = 62065
+	country = JAP
+	
+	style = 0
+	picture = "hull-note"
+	
+	name = "EVT_62065_NAME"	#米国は旧態の中華民国を求める
+	desc = "EVT_62065_DESC"	#
+	
+	action = {
+		ai_chance = 30
+		name = "EVT_62065_ACTA"	#連合国の要求を受諾し、同盟を締結する
+		command = { type = end_mastery which = U87 }
+		command = { type = dissent value = 10 }
+		command = { type = trigger which = 62060 }
+		command = { type = trigger which = 62070 }
+	}
+	action = {
+		ai_chance = 70
+		name = "EVT_62065_ACTB"	#こんな条件が呑めるはずがなかろう！
+		command = { type = trigger which = 62061 }
+	}
+}
+
+event = {
+	id = 62066
+	country = JAP
+	style = 0
+	picture = "hull-note"
+	
+	name = "EVT_62066_NAME"	#米国は中華民国の復元とインドシナの返還を求める
+	desc = "EVT_62066_DESC"	#
+	
+	action = {
+		name = "EVT_62066_ACTA"	#高い買い物だが、仕方があるまい
+		ai_chance = 20
+		command = { type = secedearea which = FRA value = "Indochine" }
+		command = { type = end_mastery which = U87 }
+		command = { type = dissent value = 14 }
+		command = { type = trigger which = 62060 }
+		command = { type = trigger which = 62070 }
+	}
+	action = {
+		name = "EVT_62066_ACTB"	#吹っかけやがって！
+		ai_chance = 80
+		command = { type = trigger which = 62061 }
+	}
+}
+
+event = {
+	id = 62067
+	country = JAP
+	style = 0
+	picture = "hull-note"
+	
+	name = "EVT_62067_NAME"	#米国は中華民国の復元と満洲の門戸開放を求める
+	desc = "EVT_62067_DESC"	#
+	
+	action = {
+		name = "EVT_62067_ACTA"	#高い買い物だが、仕方があるまい
+		ai_chance = 15
+		command = { type = end_mastery which = U87 }
+		command = { type = end_mastery which = MAN }
+		command = { type = trigger which = 131698 }
+		command = { type = dissent value = 10 }
+		command = { type = trigger which = 62060 }	#同盟
+		command = { type = trigger which = 62070 }	#満州国の連合参加
+		command = { type = trigger which = 62071 }	#U87->CH
+	}
+	action = {
+		name = "EVT_62067_ACTB"	#吹っかけやがって！
+		ai_chance = 80
+		command = { type = trigger which = 62061 }
+	}
+}
+
+event = {
+	id = 62068
+	country = JAP
+	style = 0
+	picture = "hull-note"
+	
+	name = "EVT_62068_NAME"	#米国は中華民国の復元・満洲の門戸開放・インドシナの返還を求める
+	desc = "EVT_62068_DESC"	#
+	
+	action = {
+		name = "EVT_62068_ACTA"	#高い買い物だが、仕方があるまい
+		ai_chance = 10
+		command = { type = secedearea which = FRA value = "Indochine" }
+		command = { type = end_mastery which = U87 }
+		command = { type = end_mastery which = MAN }
+		command = { type = trigger which = 131698 }
+		command = { type = dissent value = 20 }
+		command = { type = trigger which = 62060 }	#同盟
+		command = { type = trigger which = 62070 }	#満州国の連合参加
+		command = { type = trigger which = 62071 }	#U87->CH
+	}
+	action = {
+		name = "EVT_62068_ACTB"	#成る程、彼らは我々を敵に回したくて仕方がないのだな
+		ai_chance = 90
+		command = { type = trigger which = 62061 }
+	}
+}
+
+event = {
+	id = 62070
+	country = MAN
+	
+	picture = "japan_celebrating"
+	
+	name = "EVT_62070_NAME"	#満州国の連合参加
+	desc = "EVT_62070_DESC"	#
+	
+	action = {
+		name = "EVT_62070_ACTA"	#連合国に参加
+		ai_chance = 100
+		command = { type = alliance which = ENG }
+	}
+	action = {
+		name = "EVT_62070_ACTB"	#我々は独自に対独戦争に参加する
+		ai_chance = 0
+	}
+}
+
+event = {
+	id = 62071
+	country = U87
+	
+	picture = "japan_celebrating"
+	
+	name = "EVT_62071_NAME"	#南京政府体制の終わり
+	desc = "EVT_62071_DESC"	#
+	action = {
+		name = "EVT_62071_ACTA"	#大国というのはいつも身勝手なものだな……。
+		command = { type = country which = CHI }
+		command = { type = trigger which = 62072 }
+	}
+}
+
+event = {
+	id = 62072
+	country = CHI
+	
+	picture = "japan_celebrating"
+	
+	name = "EVT_62072_NAME"	#連合国による中国新体制
+	desc = "EVT_62072_DESC"	#
+	
+	action = {
+		name = "EVT_62072_ACTA"	#馴染むまでの辛抱だ
+		command = { type = dissent value = 45 }
+		command = { type = wakeleader which = 50048 }
+		command = { type = wakeminister which = 52002 }
+		command = { type = wakeminister which = 52007 }
+		command = { type = wakeminister which = 52022 }
+		command = { type = waketeam which = 1006 } 
+		command = { type = headofstate which = 52022 } #Chiang #FEPKBETA4.2
+		command = { type = headofgovernment which = 52115 }
+		command = { type = alliance which = ENG }
+	}
+}

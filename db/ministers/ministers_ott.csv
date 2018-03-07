@@ -1,0 +1,51 @@
+OTT;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+549001;Head of State;アブドゥル・ハミト2世;36;PA;Pig-headed Isolationist;High;M549001;x
+549002;Head of Government;アブドゥルハミト・タラート・パシャ;36;PA;Political Protege;High;M549002;x
+549003;Foreign Minister;サイド・ハリム・パシャ;36;PA;The Cloak N Dagger Schemer;High;M549003;x
+549004;Minister of Armament;ケディル・エンヴェル・パシャ;36;PA;Corrupt Kleptocrat;Medium;M549004;x
+549005;Minister of Security;ハスリム・ナジム・パシャ;36;PA;Back Stabber;Medium;M549005;x
+549006;Head of Military Intelligence;カディル・モンセフ・ベイ;36;PA;Logistics Specialist;Medium;M549006;x
+549007;Chief of Staff;カヒト・ヴェダト・パシャ;36;PA;School of Fire Support;Medium;M549007;x
+549008;Chief of Army;ムスタファ・ケマル・パシャ;36;PA;Elastic Defence Doctrine;Medium;M549008;x
+549009;Chief of Navy;フセイン・ラウフ;36;PA;Indirect Approach Doctrine;Medium;M549009;x
+549010;Chief of Air Force;ケディル・エンヴェル・パシャ;36;PA;Vertical Envelopment Doctrine;Medium;M549010;x
+549011;Head of State;ムハンメド・カーン6世;36;SC;Weary Stiffneck;High;M549011;x
+549012;Head of State;アフマド・ニカド;36;ML;Autocratic Charmer;High;M549012;x
+549013;Head of State;オスマン・フアド;36;SD;Die-hard Reformer;High;M549013;x
+549014;Head of Government;フセイン・アヴニ・パシャ;36;SC;Old General;High;M549014;x
+549015;Head of Government;レフィク・セミル・ベイ;36;ML;Smiling Oilman;High;M549015;x
+549016;Head of Government;アフメト・ツィリ・ベイ;36;SD;Corporate Suit;High;M549016;x
+549017;Foreign Minister;オマル・ラタス・パシャ;40;PA;General Staffer;High;M549017;x
+549018;Foreign Minister;アブドゥル・マジド・カーン;41;PA;Apologetic Clerk;High;M549018;x
+549019;Foreign Minister;メフメト・ナミド・ケマル・ベイ;36;SC;Biased Intellectual;High;M549019;x
+549020;Foreign Minister;バシル・ラミ・ベイ;36;ML;Iron Fisted Brute;High;M549020;x
+549021;Foreign Minister;ガーファル・ワリ・パシャ;36;SD;Great Compromiser;High;M549021;x
+549022;Foreign Minister;アリ・ヴィサブ;43;SD;Ideological Crusader;High;M549022;x
+549023;Minister of Armament;アリ・エミン・パシャ;42;PA;Theoretical Scientist;Medium;M549023;x
+549024;Minister of Armament;フセイン・カミル;36;SC;Air to Ground Proponent;Medium;M549024;x
+549025;Minister of Armament;エルカン・ジャヴィド・パシャ;39;SC;Administrative Genius;Medium;M549025;x
+549026;Minister of Armament;ユセフ・ハミド・ベイ;36;ML;Military Entrepreneur;Medium;M549026;x
+549027;Minister of Armament;イブラヒム・シナシ;36;SD;Submarine Proponent;Medium;M549027;x
+549028;Minister of Armament;ウディ・セミル・ベイ;41;SD;Infantry Proponent;Medium;M549028;x
+549029;Minister of Security;ラマザン・ドグラマシ;41;PA;Efficient Sociopath;Medium;M549029;x
+549030;Minister of Security;エスキバスカン・ダフメト・ベイ;36;SC;Prince of Terror;Medium;M549030;x
+549031;Minister of Security;フルピト・ゲリク;41;SC;Silent Lawyer;Medium;M549031;x
+549032;Minister of Security;アリフ・ダジャニ・パシャ;36;ML;Crime Fighter;Medium;M549032;x
+549033;Minister of Security;オメル・セヴキ・ベイ;36;SD;Compassionate Gentleman;Medium;M549033;x
+549034;Head of Military Intelligence;ハミト・サハプ・ベイ;36;SC;Technical Specialist;Medium;M549034;x
+549035;Head of Military Intelligence;オクタン・ハリス;36;ML;Naval Intelligence Specialist;Medium;M549035;x
+549036;Head of Military Intelligence;モハンメド・セラゲディン・パシャ;36;SD;Dismal Enigma;Medium;M549036;x
+549037;Chief of Staff;イスメト・イノニュー・パシャ;41;PA;School of Defence;Medium;M549037;x
+549038;Chief of Staff;トパル・オスマン;36;SC;School of Psychology;Medium;M549038;x
+549039;Chief of Staff;メフメト・キアミル・パシャ;36;ML;School of Mass Combat;Medium;M549039;x
+549040;Chief of Staff;オスマン・フアド;36;SD;School of Manoeuvre;Medium;M549013;x
+549041;Chief of Army;フセイン・アヴニ・パシャ;36;SC;Static Defence Doctrine;Medium;M549014;x
+549042;Chief of Army;エクメレディン・ウルク;36;ML;Decisive Battle Doctrine;Medium;M549042;x
+549043;Chief of Army;フェヴシ・トゥリン;36;SD;Armoured Spearhead Doctrine;Medium;M549043;x
+549044;Chief of Navy;アブドゥル・ハミド・ジア・パシャ;36;SC;Decisive Naval Battle Doctrine;Medium;M549044;x
+549045;Chief of Navy;アフマド・ニカド;36;ML;Base Control Doctrine;Medium;M549012;x
+549046;Chief of Navy;ハミト・ペリカノヴル;36;SD;Power Projection Doctrine;Medium;M549046;x
+549047;Chief of Air Force;ムハンメド・カーン6世;36;SC;Air Superiority Doctrine;Medium;M549011;x
+549048;Chief of Air Force;デニズ・ウチェ;36;ML;Army Aviation Doctrine;Medium;M549048;x
+549049;Chief of Air Force;メシュト・セリフ・パシャ;36;SD;Carpet Bombing Doctrine;Medium;M549049;x

@@ -1,0 +1,3474 @@
+#########################################################################
+#	FEPK_additional_events.txt
+#	verBETA3追加・刷新イベント
+#########################################################################
+#id = 135200-09		フランス非降伏時の仏印占領イベント
+#id = 135210-19		ベネズエラクーデターイベント
+#id = 135220-29		領土調整追加イベント
+#id = 135230-39		独ソ戦後の北欧独立イベント
+#id = 135240-59		ドイツによる中立国侵攻イベントreplace
+#id = 135260-69		独伊敵対時の三国同盟フラグ成立用イベント
+#id = 135270-79		枢軸国離脱イベントreplace
+#id = 135280-89		史実戦後東欧内閣
+#########################################################################
+#  仏印占領
+##########
+
+event = {
+	id = 135200
+	country = JAP
+	random = no
+
+	trigger = {
+		event = 130439 #Algiers
+		owned = { province = 1328 data = FRA } #ハノイ
+		owned = { province = 1337 data = FRA } #サイゴン
+		war = { country = GER country = FRA }
+		OR = {
+			war = { country = JAP country = CHI }
+			war = { country = JAP country = CHC }
+		}
+		NOT = {
+			exists = VIC
+			war = { country = CHI country = ENG }
+		}
+		random = 50
+	}
+
+	name = "EVT_135200_NAME"
+	desc = "EVT_135200_DESC"
+	picture = "VIC"
+	style = 0
+
+	date = { day = 1 month = january year = 1939 }
+	offset = 7
+	deathdate = { day = 20 month = june year = 1941 }
+
+	action_a = {
+		ai_chance = 100
+		name = "EVT_135200_ACTA"
+		command = { type = relation which = FRA value = -100 }
+		command = { type = relation which = USA value = -50 }
+		command = { type = belligerence value = 20 }
+		command = { type = domestic which = defense_lobby value = 2 }
+		command = { type = trigger which = 135201 }
+		command = { type = sleepevent which = 60911 }
+		command = { type = sleepevent which = 60913 }
+		command = { type = sleepevent which = 60914 }
+		command = { type = sleepevent which = 60915 }
+		command = { type = sleepevent which = 60919 }
+		command = { type = sleepevent which = 60927 }
+	}
+	action_b = {
+		ai_chance = 0
+		name = "EVT_135200_ACTB"
+		command = { type = sleepevent which = 60911 }
+		command = { type = sleepevent which = 60913 }
+		command = { type = sleepevent which = 60914 }
+		command = { type = sleepevent which = 60915 }
+		command = { type = sleepevent which = 60919 }
+		command = { type = sleepevent which = 60927 }
+	}
+}
+
+event = {
+	id = 135201
+	country = FRA
+	random = no
+
+	name = "EVT_135201_NAME"
+	desc = "EVT_135201_DESC"
+	picture = "VIC"
+	style = 0
+
+
+	action_a = {
+		name = "EVT_135201_ACTA"
+		command = { type = secedeprovince which = JAP value = 1326 } #phase 1
+		command = { type = secedeprovince which = JAP value = 1338 }
+		command = { type = secedeprovince which = JAP value = 1335 }
+		command = { type = secedeprovince which = JAP value = 1306 } #phase 2
+		command = { type = secedeprovince which = JAP value = 1329 }
+		command = { type = secedeprovince which = JAP value = 1328 }
+		command = { type = secedeprovince which = JAP value = 1332 }
+		command = { type = secedeprovince which = JAP value = 1333 }
+		command = { type = secedeprovince which = JAP value = 1334 }
+		command = { type = secedeprovince which = JAP value = 1336 }
+		command = { type = secedeprovince which = JAP value = 1337 }
+		command = { type = secedeprovince which = JAP value = 1339 } #cambodia
+		command = { type = secedeprovince which = JAP value = 1340 }
+		command = { type = secedeprovince which = JAP value = 1341 }
+		command = { type = trigger which = 135202 }
+	}
+}
+
+event = {
+	id = 135202
+	country = FRA
+	random = no
+
+	name = "EVT_135202_NAME"
+	desc = "EVT_135202_DESC"
+	picture = "VIC"
+	style = 0
+
+
+	action_a = {
+		name = "OK"
+		command = { type = province_revoltrisk which = 1306 value = 50 } #ルアンブラバン
+		command = { type = province_revoltrisk which = 1326 value = 50 } #ハイフォン
+		command = { type = province_revoltrisk which = 1328 value = 50 } #ハノイ
+		command = { type = province_revoltrisk which = 1329 value = 50 } #ヴィエンチャン
+		command = { type = province_revoltrisk which = 1332 value = 50 } #ノーマラート
+		command = { type = province_revoltrisk which = 1333 value = 50 } #ダナン
+		command = { type = province_revoltrisk which = 1334 value = 50 } #キノン
+		command = { type = province_revoltrisk which = 1335 value = 50 } #ニャチャン
+		command = { type = province_revoltrisk which = 1336 value = 50 } #パクセ
+		command = { type = province_revoltrisk which = 1337 value = 50 } #サイゴン
+		command = { type = province_revoltrisk which = 1338 value = 50 } #ラックジャ
+		command = { type = province_revoltrisk which = 1339 value = 50 } #バタンバン
+		command = { type = province_revoltrisk which = 1340 value = 50 } #プノンペン
+		command = { type = province_revoltrisk which = 1341 value = 50 } #ウボンラチャタニ
+		command = { type = add_corps which = "第1インドシナ進駐軍" value = land where = 1326 }
+		command = { type = add_division which = "第1インドシナ師団" value = infantry when = 2 } 
+		command = { type = add_division which = "第2インドシナ師団" value = infantry when = 2 } 
+		command = { type = add_corps which = "第2インドシナ進駐軍" value = land where = 1337 }
+		command = { type = add_division which = "第3インドシナ師団" value = infantry when = 2 } 
+		command = { type = add_corps which = "第3インドシナ進駐軍" value = land where = 1338 }
+		command = { type = add_division which = "第4インドシナ師団" value = bergsjaeger when = 1 }
+		command = { type = trigger which = 132435 } #FEPK_replaced.txt
+	}
+}
+
+##########
+#  ベネズエラクーデターイベント
+##########
+
+event = {
+	id = 135210
+	country = USA
+	random = no
+
+	trigger = {
+		NOT = {
+			war = { country = USA country = VEN }
+			war = { country = GER country = USA }
+			alliance = { country = USA country = VEN }
+			alliance = { country = ENG country = VEN }
+			alliance = { country = GER country = USA }
+		}
+		alliance = { country = GER country = VEN }
+	}
+
+	name = "EVT_135210_NAME"
+	desc = "EVT_135210_DESC"
+
+	picture = "peru"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		ai_chance = 100
+		name = "EVT_135210_ACTA"
+		command = { type = setflag which = usa_invade_ven_ger }
+		command = { type = domestic which = interventionism value = 2 }
+	}
+	action_b = {
+		ai_chance = 10
+		name = "EVT_135210_ACTB"
+		command = { type = domestic which = interventionism value = -1 }
+	}
+}
+
+event = {
+	id = 135211
+	country = VEN
+	random = no
+
+	trigger = {
+		flag = usa_invade_ven_ger
+		NOT = {
+			war = { country = USA country = VEN }
+			war = { country = GER country = USA }
+			alliance = { country = USA country = VEN }
+			alliance = { country = ENG country = VEN }
+			alliance = { country = GER country = USA }
+		}
+		alliance = { country = GER country = VEN }
+		random = 20
+	}
+
+	name = "EVT_135211_NAME"
+	desc = "EVT_135211_DESC"
+
+	picture = "peru"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "OK"
+		command = { type = end_puppet }
+		command = { type = leave_alliance }
+		command = { type = dissent value = -100 }
+
+		command = { type = peace which = AFG value = 1 }
+		command = { type = peace which = ALB value = 1 }
+		command = { type = peace which = ALG value = 1 }
+		command = { type = peace which = ALI value = 1 }
+		command = { type = peace which = ALS value = 1 }
+		command = { type = peace which = ANG value = 1 }
+		command = { type = peace which = ARA value = 1 }
+		command = { type = peace which = ARG value = 1 }
+		command = { type = peace which = ARM value = 1 }
+		command = { type = peace which = AST value = 1 }
+		command = { type = peace which = AUS value = 1 }
+		command = { type = peace which = AXI value = 1 }
+		command = { type = peace which = AZB value = 1 }
+		command = { type = peace which = BEL value = 1 }
+		command = { type = peace which = BEN value = 1 }
+		command = { type = peace which = BHU value = 1 }
+		command = { type = peace which = BLR value = 1 }
+		command = { type = peace which = BOL value = 1 }
+		command = { type = peace which = BOS value = 1 }
+		command = { type = peace which = BRA value = 1 }
+		command = { type = peace which = BRU value = 1 }
+		command = { type = peace which = BUL value = 1 }
+		command = { type = peace which = BUR value = 1 }
+		command = { type = peace which = CAL value = 1 }
+		command = { type = peace which = CAM value = 1 }
+		command = { type = peace which = CAN value = 1 }
+		command = { type = peace which = CGX value = 1 }
+		command = { type = peace which = CHC value = 1 }
+		command = { type = peace which = CHI value = 1 }
+		command = { type = peace which = CHL value = 1 }
+		command = { type = peace which = CMB value = 1 }
+		command = { type = peace which = COL value = 1 }
+		command = { type = peace which = CON value = 1 }
+		command = { type = peace which = COS value = 1 }
+		command = { type = peace which = CRO value = 1 }
+		command = { type = peace which = CSA value = 1 }
+		command = { type = peace which = CSX value = 1 }
+		command = { type = peace which = CUB value = 1 }
+		command = { type = peace which = CXB value = 1 }
+		command = { type = peace which = CYN value = 1 }
+		command = { type = peace which = CYP value = 1 }
+		command = { type = peace which = CZE value = 1 }
+		command = { type = peace which = DDR value = 1 }
+		command = { type = peace which = DEN value = 1 }
+		command = { type = peace which = DFR value = 1 }
+		command = { type = peace which = DOM value = 1 }
+		command = { type = peace which = EAF value = 1 }
+		command = { type = peace which = ECU value = 1 }
+		command = { type = peace which = EGY value = 1 }
+		command = { type = peace which = ENG value = 1 }
+		command = { type = peace which = EQA value = 1 }
+		command = { type = peace which = EST value = 1 }
+		command = { type = peace which = ETH value = 1 }
+		command = { type = peace which = EUS value = 1 }
+		command = { type = peace which = FIN value = 1 }
+		command = { type = peace which = FLA value = 1 }
+		command = { type = peace which = FRA value = 1 }
+		command = { type = peace which = GAB value = 1 }
+		command = { type = peace which = GEO value = 1 }
+		command = { type = peace which = GER value = 1 }
+		command = { type = peace which = GLD value = 1 }
+		command = { type = peace which = GRE value = 1 }
+		command = { type = peace which = GUA value = 1 }
+		command = { type = peace which = GUI value = 1 }
+		command = { type = peace which = GUY value = 1 }
+		command = { type = peace which = HAI value = 1 }
+		command = { type = peace which = HOL value = 1 }
+		command = { type = peace which = HON value = 1 }
+		command = { type = peace which = HUN value = 1 }
+		command = { type = peace which = ICL value = 1 }
+		command = { type = peace which = IDC value = 1 }
+		command = { type = peace which = IND value = 1 }
+		command = { type = peace which = INO value = 1 }
+		command = { type = peace which = IRE value = 1 }
+		command = { type = peace which = IRQ value = 1 }
+		command = { type = peace which = ISR value = 1 }
+		command = { type = peace which = ITA value = 1 }
+		command = { type = peace which = JAP value = 1 }
+		command = { type = peace which = JOR value = 1 }
+		command = { type = peace which = KAZ value = 1 }
+		command = { type = peace which = KOR value = 1 }
+		command = { type = peace which = KUR value = 1 }
+		command = { type = peace which = KYG value = 1 }
+		command = { type = peace which = LAO value = 1 }
+		command = { type = peace which = LAT value = 1 }
+		command = { type = peace which = LBY value = 1 }
+		command = { type = peace which = LEB value = 1 }
+		command = { type = peace which = LIB value = 1 }
+		command = { type = peace which = LIT value = 1 }
+		command = { type = peace which = LUX value = 1 }
+		command = { type = peace which = MAD value = 1 }
+		command = { type = peace which = MAL value = 1 }
+		command = { type = peace which = MAN value = 1 }
+		command = { type = peace which = MEN value = 1 }
+		command = { type = peace which = MEX value = 1 }
+		command = { type = peace which = MIN value = 1 }
+		command = { type = peace which = MLY value = 1 }
+		command = { type = peace which = MON value = 1 }
+		command = { type = peace which = MOR value = 1 }
+		command = { type = peace which = MOZ value = 1 }
+		command = { type = peace which = MTN value = 1 }
+		command = { type = peace which = NAM value = 1 }
+		command = { type = peace which = NEP value = 1 }
+		command = { type = peace which = NIC value = 1 }
+		command = { type = peace which = NIG value = 1 }
+		command = { type = peace which = NOR value = 1 }
+		command = { type = peace which = NZL value = 1 }
+		command = { type = peace which = OMN value = 1 }
+		command = { type = peace which = OTT value = 1 }
+		command = { type = peace which = PAK value = 1 }
+		command = { type = peace which = PAL value = 1 }
+		command = { type = peace which = PAN value = 1 }
+		command = { type = peace which = PAR value = 1 }
+		command = { type = peace which = PER value = 1 }
+		command = { type = peace which = PHI value = 1 }
+		command = { type = peace which = POL value = 1 }
+		command = { type = peace which = POR value = 1 }
+		command = { type = peace which = PRI value = 1 }
+		command = { type = peace which = PRK value = 1 }
+		command = { type = peace which = PRU value = 1 }
+		command = { type = peace which = QUE value = 1 }
+		command = { type = peace which = RHO value = 1 }
+		command = { type = peace which = ROM value = 1 }
+		command = { type = peace which = RSI value = 1 }
+		command = { type = peace which = RUS value = 1 }
+		command = { type = peace which = SAF value = 1 }
+		command = { type = peace which = SAL value = 1 }
+		command = { type = peace which = SAR value = 1 }
+		command = { type = peace which = SAU value = 1 }
+		command = { type = peace which = SCA value = 1 }
+		command = { type = peace which = SCH value = 1 }
+		command = { type = peace which = SCO value = 1 }
+		command = { type = peace which = SER value = 1 }
+		command = { type = peace which = SIA value = 1 }
+		command = { type = peace which = SIB value = 1 }
+		command = { type = peace which = SIE value = 1 }
+		command = { type = peace which = SIK value = 1 }
+		command = { type = peace which = SLO value = 1 }
+		command = { type = peace which = SLV value = 1 }
+		command = { type = peace which = SOM value = 1 }
+		command = { type = peace which = SOV value = 1 }
+		command = { type = peace which = SPA value = 1 }
+		command = { type = peace which = SPR value = 1 }
+		command = { type = peace which = SUD value = 1 }
+		command = { type = peace which = SWE value = 1 }
+		command = { type = peace which = SYR value = 1 }
+		command = { type = peace which = TAJ value = 1 }
+		command = { type = peace which = TAN value = 1 }
+		command = { type = peace which = TEX value = 1 }
+		command = { type = peace which = TIB value = 1 }
+		command = { type = peace which = TRA value = 1 }
+		command = { type = peace which = TRK value = 1 }
+		command = { type = peace which = TUN value = 1 }
+		command = { type = peace which = TUR value = 1 }
+		command = { type = peace which = UKR value = 1 }
+		command = { type = peace which = URU value = 1 }
+		command = { type = peace which = USA value = 1 }
+		command = { type = peace which = UZB value = 1 }
+		command = { type = peace which = VEN value = 1 }
+		command = { type = peace which = VIC value = 1 }
+		command = { type = peace which = VIE value = 1 }
+		command = { type = peace which = WLL value = 1 }
+		command = { type = peace which = YEM value = 1 }
+		command = { type = peace which = YUG value = 1 }
+		command = { type = peace which = U16 value = 1 }
+		command = { type = peace which = U73 value = 1 }
+		command = { type = peace which = U74 value = 1 }
+		command = { type = peace which = U87 value = 1 }
+
+		command = { type = set_relation which = GER value = 0 }
+		command = { type = set_relation which = JAP value = 0 }
+		command = { type = set_relation which = USA value = 200 }
+
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = headofstate which = 38032 }
+		command = { type = headofgovernment which = 38034 }
+
+		command = { type = trigger which = 135212 }
+		command = { type = trigger which = 135213 }
+		command = { type = clrflag which = usa_invade_ven_ger }
+	}
+}
+
+event = {
+	id = 135212
+	country = USA
+	random = no
+
+	name = "EVT_135212_NAME"
+	desc = "EVT_135212_DESC"
+
+	picture = "peru"
+	style = 0
+
+	action_a = {
+		name = "OK"
+		command = { type = make_puppet which = VEN }
+	}
+}
+
+event = {
+	id = 135213
+	country = GER
+	random = no
+
+	name = "EVT_135213_NAME"
+	desc = "EVT_135213_DESC"
+
+	picture = "peru"
+	style = 0
+
+	action_a = {
+		name = "EVT_135213_ACTA"
+		command = { type = dissent value = 3 }
+		command = { type = relation which = USA value = -30 }
+	}
+}
+
+
+event = {
+	id = 135214
+	country = USA
+	random = no
+
+	trigger = {
+		NOT = {
+			war = { country = USA country = VEN }
+			war = { country = JAP country = USA }
+			alliance = { country = USA country = VEN }
+			alliance = { country = ENG country = VEN }
+			alliance = { country = JAP country = USA }
+		}
+		alliance = { country = JAP country = VEN }
+	}
+
+	name = "EVT_135214_NAME"
+	desc = "EVT_135214_DESC"
+
+	picture = "peru"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		ai_chance = 90
+		name = "EVT_135214_ACTA"
+		command = { type = setflag which = usa_invade_ven_JAP }
+		command = { type = domestic which = interventionism value = 2 }
+	}
+	action_b = {
+		ai_chance = 10
+		name = "EVT_135214_ACTB"
+		command = { type = domestic which = interventionism value = -1 }
+	}
+}
+
+event = {
+	id = 135215
+	country = VEN
+	random = no
+
+	trigger = {
+		flag = usa_invade_ven_JAP
+		NOT = {
+			war = { country = USA country = VEN }
+			war = { country = JAP country = USA }
+			alliance = { country = USA country = VEN }
+			alliance = { country = ENG country = VEN }
+			alliance = { country = JAP country = USA }
+		}
+		alliance = { country = JAP country = VEN }
+		random = 20
+	}
+
+	name = "EVT_135215_NAME"
+	desc = "EVT_135215_DESC"
+
+	picture = "peru"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "OK"
+		command = { type = end_puppet }
+		command = { type = leave_alliance }
+		command = { type = dissent value = -100 }
+
+		command = { type = peace which = AFG value = 1 }
+		command = { type = peace which = ALB value = 1 }
+		command = { type = peace which = ALG value = 1 }
+		command = { type = peace which = ALI value = 1 }
+		command = { type = peace which = ALS value = 1 }
+		command = { type = peace which = ANG value = 1 }
+		command = { type = peace which = ARA value = 1 }
+		command = { type = peace which = ARG value = 1 }
+		command = { type = peace which = ARM value = 1 }
+		command = { type = peace which = AST value = 1 }
+		command = { type = peace which = AUS value = 1 }
+		command = { type = peace which = AXI value = 1 }
+		command = { type = peace which = AZB value = 1 }
+		command = { type = peace which = BEL value = 1 }
+		command = { type = peace which = BEN value = 1 }
+		command = { type = peace which = BHU value = 1 }
+		command = { type = peace which = BLR value = 1 }
+		command = { type = peace which = BOL value = 1 }
+		command = { type = peace which = BOS value = 1 }
+		command = { type = peace which = BRA value = 1 }
+		command = { type = peace which = BRU value = 1 }
+		command = { type = peace which = BUL value = 1 }
+		command = { type = peace which = BUR value = 1 }
+		command = { type = peace which = CAL value = 1 }
+		command = { type = peace which = CAM value = 1 }
+		command = { type = peace which = CAN value = 1 }
+		command = { type = peace which = CGX value = 1 }
+		command = { type = peace which = CHC value = 1 }
+		command = { type = peace which = CHI value = 1 }
+		command = { type = peace which = CHL value = 1 }
+		command = { type = peace which = CMB value = 1 }
+		command = { type = peace which = COL value = 1 }
+		command = { type = peace which = CON value = 1 }
+		command = { type = peace which = COS value = 1 }
+		command = { type = peace which = CRO value = 1 }
+		command = { type = peace which = CSA value = 1 }
+		command = { type = peace which = CSX value = 1 }
+		command = { type = peace which = CUB value = 1 }
+		command = { type = peace which = CXB value = 1 }
+		command = { type = peace which = CYN value = 1 }
+		command = { type = peace which = CYP value = 1 }
+		command = { type = peace which = CZE value = 1 }
+		command = { type = peace which = DDR value = 1 }
+		command = { type = peace which = DEN value = 1 }
+		command = { type = peace which = DFR value = 1 }
+		command = { type = peace which = DOM value = 1 }
+		command = { type = peace which = EAF value = 1 }
+		command = { type = peace which = ECU value = 1 }
+		command = { type = peace which = EGY value = 1 }
+		command = { type = peace which = ENG value = 1 }
+		command = { type = peace which = EQA value = 1 }
+		command = { type = peace which = EST value = 1 }
+		command = { type = peace which = ETH value = 1 }
+		command = { type = peace which = EUS value = 1 }
+		command = { type = peace which = FIN value = 1 }
+		command = { type = peace which = FLA value = 1 }
+		command = { type = peace which = FRA value = 1 }
+		command = { type = peace which = GAB value = 1 }
+		command = { type = peace which = GEO value = 1 }
+		command = { type = peace which = GER value = 1 }
+		command = { type = peace which = GLD value = 1 }
+		command = { type = peace which = GRE value = 1 }
+		command = { type = peace which = GUA value = 1 }
+		command = { type = peace which = GUI value = 1 }
+		command = { type = peace which = GUY value = 1 }
+		command = { type = peace which = HAI value = 1 }
+		command = { type = peace which = HOL value = 1 }
+		command = { type = peace which = HON value = 1 }
+		command = { type = peace which = HUN value = 1 }
+		command = { type = peace which = ICL value = 1 }
+		command = { type = peace which = IDC value = 1 }
+		command = { type = peace which = IND value = 1 }
+		command = { type = peace which = INO value = 1 }
+		command = { type = peace which = IRE value = 1 }
+		command = { type = peace which = IRQ value = 1 }
+		command = { type = peace which = ISR value = 1 }
+		command = { type = peace which = ITA value = 1 }
+		command = { type = peace which = JAP value = 1 }
+		command = { type = peace which = JOR value = 1 }
+		command = { type = peace which = KAZ value = 1 }
+		command = { type = peace which = KOR value = 1 }
+		command = { type = peace which = KUR value = 1 }
+		command = { type = peace which = KYG value = 1 }
+		command = { type = peace which = LAO value = 1 }
+		command = { type = peace which = LAT value = 1 }
+		command = { type = peace which = LBY value = 1 }
+		command = { type = peace which = LEB value = 1 }
+		command = { type = peace which = LIB value = 1 }
+		command = { type = peace which = LIT value = 1 }
+		command = { type = peace which = LUX value = 1 }
+		command = { type = peace which = MAD value = 1 }
+		command = { type = peace which = MAL value = 1 }
+		command = { type = peace which = MAN value = 1 }
+		command = { type = peace which = MEN value = 1 }
+		command = { type = peace which = MEX value = 1 }
+		command = { type = peace which = MIN value = 1 }
+		command = { type = peace which = MLY value = 1 }
+		command = { type = peace which = MON value = 1 }
+		command = { type = peace which = MOR value = 1 }
+		command = { type = peace which = MOZ value = 1 }
+		command = { type = peace which = MTN value = 1 }
+		command = { type = peace which = NAM value = 1 }
+		command = { type = peace which = NEP value = 1 }
+		command = { type = peace which = NIC value = 1 }
+		command = { type = peace which = NIG value = 1 }
+		command = { type = peace which = NOR value = 1 }
+		command = { type = peace which = NZL value = 1 }
+		command = { type = peace which = OMN value = 1 }
+		command = { type = peace which = OTT value = 1 }
+		command = { type = peace which = PAK value = 1 }
+		command = { type = peace which = PAL value = 1 }
+		command = { type = peace which = PAN value = 1 }
+		command = { type = peace which = PAR value = 1 }
+		command = { type = peace which = PER value = 1 }
+		command = { type = peace which = PHI value = 1 }
+		command = { type = peace which = POL value = 1 }
+		command = { type = peace which = POR value = 1 }
+		command = { type = peace which = PRI value = 1 }
+		command = { type = peace which = PRK value = 1 }
+		command = { type = peace which = PRU value = 1 }
+		command = { type = peace which = QUE value = 1 }
+		command = { type = peace which = RHO value = 1 }
+		command = { type = peace which = ROM value = 1 }
+		command = { type = peace which = RSI value = 1 }
+		command = { type = peace which = RUS value = 1 }
+		command = { type = peace which = SAF value = 1 }
+		command = { type = peace which = SAL value = 1 }
+		command = { type = peace which = SAR value = 1 }
+		command = { type = peace which = SAU value = 1 }
+		command = { type = peace which = SCA value = 1 }
+		command = { type = peace which = SCH value = 1 }
+		command = { type = peace which = SCO value = 1 }
+		command = { type = peace which = SER value = 1 }
+		command = { type = peace which = SIA value = 1 }
+		command = { type = peace which = SIB value = 1 }
+		command = { type = peace which = SIE value = 1 }
+		command = { type = peace which = SIK value = 1 }
+		command = { type = peace which = SLO value = 1 }
+		command = { type = peace which = SLV value = 1 }
+		command = { type = peace which = SOM value = 1 }
+		command = { type = peace which = SOV value = 1 }
+		command = { type = peace which = SPA value = 1 }
+		command = { type = peace which = SPR value = 1 }
+		command = { type = peace which = SUD value = 1 }
+		command = { type = peace which = SWE value = 1 }
+		command = { type = peace which = SYR value = 1 }
+		command = { type = peace which = TAJ value = 1 }
+		command = { type = peace which = TAN value = 1 }
+		command = { type = peace which = TEX value = 1 }
+		command = { type = peace which = TIB value = 1 }
+		command = { type = peace which = TRA value = 1 }
+		command = { type = peace which = TRK value = 1 }
+		command = { type = peace which = TUN value = 1 }
+		command = { type = peace which = TUR value = 1 }
+		command = { type = peace which = UKR value = 1 }
+		command = { type = peace which = URU value = 1 }
+		command = { type = peace which = USA value = 1 }
+		command = { type = peace which = UZB value = 1 }
+		command = { type = peace which = VEN value = 1 }
+		command = { type = peace which = VIC value = 1 }
+		command = { type = peace which = VIE value = 1 }
+		command = { type = peace which = WLL value = 1 }
+		command = { type = peace which = YEM value = 1 }
+		command = { type = peace which = YUG value = 1 }
+		command = { type = peace which = U16 value = 1 }
+		command = { type = peace which = U73 value = 1 }
+		command = { type = peace which = U74 value = 1 }
+		command = { type = peace which = U87 value = 1 }
+
+		command = { type = set_relation which = GER value = 0 }
+		command = { type = set_relation which = JAP value = 0 }
+		command = { type = set_relation which = USA value = 200 }
+
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = headofstate which = 38032 }
+		command = { type = headofgovernment which = 38034 }
+
+		command = { type = trigger which = 135216 }
+		command = { type = trigger which = 135217 }
+		command = { type = clrflag which = usa_invade_ven_JAP }
+	}
+}
+
+event = {
+	id = 135216
+	country = USA
+	random = no
+
+	name = "EVT_135216_NAME"
+	desc = "EVT_135216_DESC"
+
+	picture = "peru"
+	style = 0
+
+	action_a = {
+		name = "OK"
+		command = { type = make_puppet which = VEN }
+	}
+}
+
+event = {
+	id = 135217
+	country = JAP
+	random = no
+
+	name = "EVT_135217_NAME"
+	desc = "EVT_135217_DESC"
+
+	picture = "peru"
+	style = 0
+
+	action_a = {
+		name = "EVT_135217_ACTA"
+		command = { type = dissent value = 3 }
+		command = { type = relation which = USA value = -30 }
+	}
+}
+
+
+
+event = {
+	id = 135220
+	country = ITA
+	random = no
+
+	trigger = {
+		war = { country = ENG country = ITA }
+		OR = {
+			puppet = { country = EGY country = ITA }
+			AND = {
+				alliance = { country = GER country = ITA }
+				puppet = { country = EGY country = GER }
+			}
+		}
+		control = { province = 903 data = EGY }
+		NOT = {
+			control = { province = 915 data = ENG } #Egypt
+			control = { province = 914 data = ENG }
+			control = { province = 913 data = ENG }
+			control = { province = 912 data = ENG }
+			control = { province = 911 data = ENG }
+			control = { province = 910 data = ENG }
+			control = { province = 909 data = ENG }
+			control = { province = 908 data = ENG }
+			control = { province = 907 data = ENG }
+			control = { province = 906 data = ENG }
+			control = { province = 905 data = ENG }
+			control = { province = 1023 data = ENG }
+			control = { province = 1024 data = ENG }
+			control = { province = 1025 data = ENG }
+			control = { province = 1026 data = ENG }
+			control = { province = 1027 data = ENG }
+			control = { province = 1020 data = ENG }
+		#	control = { province = 1019 data = ENG }
+			control = { province = 1021 data = ENG }
+			control = { province = 1022 data = ENG }
+			control = { province = 901 data = ENG }
+			control = { province = 4 data = ENG }
+			control = { province = 902 data = ENG }
+			control = { province = 904 data = ENG }
+			control = { province = 900 data = ENG }
+			control = { province = 1028 data = ENG } #near
+			control = { province = 1029 data = ENG }
+			control = { province = 1800 data = ENG }
+			control = { province = 1801 data = ENG }
+		}
+	}
+
+	name = "EVT_135220_NAME"
+	desc = "EVT_135220_DESC"
+	picture = "crusader"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "EVT_135220_ACTA"
+		command = { type = relation which = EGY value = 20 }
+		command = { type = secedeprovince which = EGY value = 902 } #1.06
+		command = { type = secedeprovince which = EGY value = 904 }
+		#command = { type = secedeprovince which = EGY value = 900 }
+		command = { type = secedeprovince which = EGY value = 915 }
+		command = { type = secedeprovince which = EGY value = 914 }
+		command = { type = secedeprovince which = EGY value = 913 }
+		command = { type = secedeprovince which = EGY value = 912 }
+		command = { type = secedeprovince which = EGY value = 911 }
+		command = { type = secedeprovince which = EGY value = 910 }
+		command = { type = secedeprovince which = EGY value = 909 }
+		command = { type = secedeprovince which = EGY value = 908 }
+		command = { type = secedeprovince which = EGY value = 907 }
+		command = { type = secedeprovince which = EGY value = 906 }
+		command = { type = secedeprovince which = EGY value = 905 }
+		command = { type = secedeprovince which = EGY value = 1023 }
+		command = { type = secedeprovince which = EGY value = 1024 }
+		command = { type = secedeprovince which = EGY value = 1025 }
+		command = { type = secedeprovince which = EGY value = 1026 }
+		command = { type = secedeprovince which = EGY value = 1027 }
+		command = { type = secedeprovince which = EGY value = 1020 }
+		command = { type = secedeprovince which = EGY value = 1019 }
+		command = { type = secedeprovince which = EGY value = 1021 }
+		command = { type = secedeprovince which = EGY value = 1022 }
+		command = { type = secedeprovince which = EGY value = 901 }
+		command = { type = secedeprovince which = EGY value = 4 }
+	}
+}
+
+event = {
+	id = 135221
+	country = GER
+	random = no
+
+	trigger = {
+		war = { country = ENG country = GER }
+		OR = {
+			puppet = { country = EGY country = GER }
+			AND = {
+				alliance = { country = GER country = ITA }
+				puppet = { country = EGY country = ITA }
+			}
+		}
+		control = { province = 903 data = EGY }
+		NOT = {
+			control = { province = 915 data = ENG } #Egypt
+			control = { province = 914 data = ENG }
+			control = { province = 913 data = ENG }
+			control = { province = 912 data = ENG }
+			control = { province = 911 data = ENG }
+			control = { province = 910 data = ENG }
+			control = { province = 909 data = ENG }
+			control = { province = 908 data = ENG }
+			control = { province = 907 data = ENG }
+			control = { province = 906 data = ENG }
+			control = { province = 905 data = ENG }
+			control = { province = 1023 data = ENG }
+			control = { province = 1024 data = ENG }
+			control = { province = 1025 data = ENG }
+			control = { province = 1026 data = ENG }
+			control = { province = 1027 data = ENG }
+			control = { province = 1020 data = ENG }
+		#	control = { province = 1019 data = ENG }
+			control = { province = 1021 data = ENG }
+			control = { province = 1022 data = ENG }
+			control = { province = 901 data = ENG }
+			control = { province = 4 data = ENG }
+			control = { province = 902 data = ENG }
+			control = { province = 904 data = ENG }
+			control = { province = 900 data = ENG }
+			control = { province = 1028 data = ENG } #near
+			control = { province = 1029 data = ENG }
+			control = { province = 1800 data = ENG }
+			control = { province = 1801 data = ENG }
+		}
+	}
+
+	name = "EVT_135221_NAME"
+	desc = "EVT_135221_DESC"
+	picture = "crusader"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "EVT_135221_ACTA"
+		command = { type = relation which = EGY value = 20 }
+		command = { type = secedeprovince which = EGY value = 902 } #1.06
+		command = { type = secedeprovince which = EGY value = 904 }
+		#command = { type = secedeprovince which = EGY value = 900 }
+		command = { type = secedeprovince which = EGY value = 915 }
+		command = { type = secedeprovince which = EGY value = 914 }
+		command = { type = secedeprovince which = EGY value = 913 }
+		command = { type = secedeprovince which = EGY value = 912 }
+		command = { type = secedeprovince which = EGY value = 911 }
+		command = { type = secedeprovince which = EGY value = 910 }
+		command = { type = secedeprovince which = EGY value = 909 }
+		command = { type = secedeprovince which = EGY value = 908 }
+		command = { type = secedeprovince which = EGY value = 907 }
+		command = { type = secedeprovince which = EGY value = 906 }
+		command = { type = secedeprovince which = EGY value = 905 }
+		command = { type = secedeprovince which = EGY value = 1023 }
+		command = { type = secedeprovince which = EGY value = 1024 }
+		command = { type = secedeprovince which = EGY value = 1025 }
+		command = { type = secedeprovince which = EGY value = 1026 }
+		command = { type = secedeprovince which = EGY value = 1027 }
+		command = { type = secedeprovince which = EGY value = 1020 }
+		command = { type = secedeprovince which = EGY value = 1019 }
+		command = { type = secedeprovince which = EGY value = 1021 }
+		command = { type = secedeprovince which = EGY value = 1022 }
+		command = { type = secedeprovince which = EGY value = 901 }
+		command = { type = secedeprovince which = EGY value = 4 }
+	}
+}
+
+event = {
+	id = 135222
+	random = no
+	country = RUS
+
+	trigger = {
+		event = 130935
+		alliance = { country = RUS country = GER }
+	}
+
+	date = { day = 1 month = september year = 1939 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT60135N"
+	desc = "EVT60135D"
+	style = 0
+	picture = "finland_sweden"
+
+	action_a = {
+		name = "OK" # SCA
+		command = { type = secedeprovince which = SCA value = 130 } # Finland
+		command = { type = secedeprovince which = SCA value = 131 }
+		command = { type = secedeprovince which = SCA value = 132 }
+		command = { type = secedeprovince which = SCA value = 136 }
+		command = { type = secedeprovince which = SCA value = 137 }
+		command = { type = secedeprovince which = SCA value = 138 }
+		command = { type = secedeprovince which = SCA value = 139 }
+		command = { type = secedeprovince which = SCA value = 140 }
+		command = { type = secedeprovince which = SCA value = 141 }
+		command = { type = secedeprovince which = SCA value = 142 }
+		command = { type = secedeprovince which = SCA value = 143 }
+		command = { type = secedeprovince which = SCA value = 144 }
+		command = { type = secedeprovince which = SCA value = 147 }
+		command = { type = secedeprovince which = SCA value = 148 }
+		command = { type = secedeprovince which = SCA value = 149 }
+
+		command = { type = secedeprovince which = SCA value = 135 } # 
+		command = { type = secedeprovince which = SCA value = 145 } # 
+		command = { type = secedeprovince which = SCA value = 146 } # 
+		command = { type = secedeprovince which = SCA value = 150 } # 
+		command = { type = secedeprovince which = SCA value = 152 } # Karelia
+		command = { type = secedeprovince which = SCA value = 103 } # 
+		command = { type = secedeprovince which = SCA value = 130 } # 
+		command = { type = secedeprovince which = SCA value = 131 } # 
+		command = { type = secedeprovince which = SCA value = 132 } # 
+		command = { type = secedeprovince which = SCA value = 136 } # 
+		command = { type = secedeprovince which = SCA value = 137 } # 
+		command = { type = secedeprovince which = SCA value = 138 } # 
+		command = { type = secedeprovince which = SCA value = 139 } # 
+		command = { type = secedeprovince which = SCA value = 140 } # 
+		command = { type = secedeprovince which = SCA value = 141 } # 
+		command = { type = secedeprovince which = SCA value = 142 } # 
+		command = { type = secedeprovince which = SCA value = 143 } # 
+		command = { type = secedeprovince which = SCA value = 144 } # 
+		command = { type = secedeprovince which = SCA value = 147 } # 
+		command = { type = secedeprovince which = SCA value = 148 } # 
+		command = { type = secedeprovince which = SCA value = 149 } # 
+		command = { type = secedeprovince which = SCA value = 133 } # FEPK #1.06
+		command = { type = secedeprovince which = SCA value = 134 } #
+		command = { type = secedeprovince which = SCA value = 187 } # Leninglad
+	}
+}
+
+event = {
+	id = 135223
+	random = no
+	country = RUS
+
+	trigger = {
+		event = 130937
+		alliance = { country = RUS country = GER }
+	}
+	
+	date = { day = 1 month = september year = 1939 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	name = "EVT60135N"
+	desc = "EVT60137D"
+	style = 0
+	picture = "FIN_give_in"
+
+	action_a = {
+		name = "OK"
+		command = { type = secedeprovince which = FIN value = 130 } # Finland
+		command = { type = secedeprovince which = FIN value = 131 }
+		command = { type = secedeprovince which = FIN value = 132 }
+		command = { type = secedeprovince which = FIN value = 136 }
+		command = { type = secedeprovince which = FIN value = 137 }
+		command = { type = secedeprovince which = FIN value = 138 }
+		command = { type = secedeprovince which = FIN value = 139 }
+		command = { type = secedeprovince which = FIN value = 140 }
+		command = { type = secedeprovince which = FIN value = 141 }
+		command = { type = secedeprovince which = FIN value = 142 }
+		command = { type = secedeprovince which = FIN value = 143 }
+		command = { type = secedeprovince which = FIN value = 144 }
+		command = { type = secedeprovince which = FIN value = 147 }
+		command = { type = secedeprovince which = FIN value = 148 }
+		command = { type = secedeprovince which = FIN value = 149 }
+
+		command = { type = secedeprovince which = FIN value = 135 } # 
+		command = { type = secedeprovince which = FIN value = 145 } # 
+		command = { type = secedeprovince which = FIN value = 146 } # 
+		command = { type = secedeprovince which = FIN value = 150 } # 
+		command = { type = secedeprovince which = FIN value = 151 } # 
+		command = { type = secedeprovince which = FIN value = 152 } # Karelia
+		command = { type = secedeprovince which = FIN value = 133 } # FEPK #1.06
+		command = { type = secedeprovince which = FIN value = 134 }
+		command = { type = secedeprovince which = FIN value = 187 } # Leninglad
+	}
+}
+
+event = { 
+	id = 135230
+	random = no
+	country = GER
+
+	trigger = {
+		OR = {
+			NOT = {
+				control = { province = 3 data = ENG } # Stornoway
+				control = { province = 5 data = ENG } # Scapaflow
+				control = { province = 6 data = ENG } # Inverness
+				control = { province = 7 data = ENG } # Aberdeen
+				control = { province = 8 data = ENG } # Dunfermline
+				control = { province = 9 data = ENG } # Glasgor
+				control = { province = 10 data = ENG } # Edinburgh
+				control = { province = 11 data = ENG } # Sunderland
+				control = { province = 12 data = ENG } # Blackpool
+				control = { province = 13 data = ENG } # Sheffield
+				control = { province = 14 data = ENG } # Liverpool
+				control = { province = 15 data = ENG } # Cardiff
+				control = { province = 17 data = ENG } # Norwich
+				control = { province = 20 data = ENG } # Dover
+				control = { province = 21 data = ENG } # Portsmouth
+				control = { province = 22 data = ENG } # Bristol
+				control = { province = 23 data = ENG } # Plymouth
+				control = { province = 16 data = ENG } # Birmingham
+				control = { province = 19 data = ENG } # London
+			}
+			event = 130850 #Victory in the West
+		}
+		event = 130900 #Victory in the East
+		OR = {
+			NOT = {
+				war = { country = SOV country = GER }
+			}
+			NOT = {
+				exists = SOV
+			}
+		}
+		NOT = {
+			exists = NOR
+			exists = DEN
+			exists = SCA
+		}
+		alliance = { country = GER country = SWE } #meaning sweden accepted german pressure or died and this event wont even fire
+		random = 35
+	}
+
+	date = { day = 1 month = january year = 1939 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135230_NAME"
+	desc = "EVT_135230_DESC"
+
+	picture = "german_replacements"
+
+	action_a = {
+		name = "EVT_135230_ACTA"
+		ai_chance = 75
+		command = { type = independence which = NOR value = 1 }
+		command = { type = trigger which = 135231 } #norway
+	}
+	action_b = {
+		name = "EVT_135230_ACTB"
+		ai_chance = 22
+		command = { type = independence which = NOR value = 1 }
+		command = { type = addcore which = 91 }
+		command = { type = addcore which = 295 }
+		command = { type = independence which = DEN value = 1 }
+		command = { type = trigger which = 135231 } #norway
+		command = { type = trigger which = 135232 } #denmark
+	}
+	action_c = {
+		name = "EVT_135230_ACTC"
+		ai_chance = 0
+		command = { type = addcore which = 91 }
+		command = { type = addcore which = 295 }
+		command = { type = independence which = DEN value = 1 }
+		command = { type = trigger which = 135232 } #denmark
+	}
+	action_d = {
+		name = "EVT_135230_ACTD"
+		ai_chance = 3
+		command = { type = dissent value = 3 }
+	}
+}
+
+event = { 
+	id = 135231
+	random = no
+	country = GER
+
+	name = "EVT_135231_NAME"
+	desc = "EVT_135231_DESC"
+
+	picture = "german_replacements"
+
+	action_a = {
+		name = "OK"
+		command = { type = make_puppet which = NOR }
+	}
+}
+
+event = { 
+	id = 135232
+	random = no
+	country = GER
+
+	name = "EVT_135232_NAME"
+	desc = "EVT_135232_DESC"
+
+	picture = "german_replacements"
+
+	action_a = {
+		name = "OK"
+		command = { type = make_puppet which = DEN }
+	}
+}
+
+##########
+#  中立国侵攻
+##########
+#トルコ
+#FEPK_Wfront_Post-war.txt 130830-6をreplace
+#  DHFEPK：作者の趣味によりディシジョン化
+##########
+
+event = {
+	id = 135240
+	random = no 
+	country = GER
+
+	decision = {
+		NOT = {	lost_national = { country = GER value = 2 } } #so if they are in trouble, they wont get this event
+		OR = {
+			NOT = {
+				war = { country = SOV country = GER }
+			}
+			NOT = {
+				exists = SOV
+			}
+		}
+		OR = {	
+			event = 130900 #Victory in the East
+			AND = {
+				control = { province = 1907 data = GER }	#バクー
+				control = { province = 1848 data = GER }	#バトゥーミ	#ブラウ作戦成功時風味
+			}
+		}
+		NOT = {
+			alliance = { country = TUR country = GER }
+			alliance = { country = TUR country = SOV }
+			alliance = { country = TUR country = ENG }
+			war = { country = TUR country = GER }
+			war = { country = PER country = GER } #one at a time
+		}
+		OR = {
+			NOT = {
+				alliance = { country = ITA country = GER }
+			}
+			control = { province = 932 data = ITA } #Tripoli
+			control = { province = 932 data = GER }
+			AND = {
+				control = { province = 932 data = LBY }
+				alliance = { country = LBY country = ITA }
+			}
+		}
+		exists = TUR
+		NOT = { event = 132522 }
+	}
+	
+	decision_trigger = {}
+	
+	trigger = {
+		AND = {
+			month = 2 #March
+			NOT = { month = 8 } #September
+		}
+		NOT = {	lost_national = { country = GER value = 2 } } #so if they are in trouble, they wont get this event
+		OR = {
+			NOT = {
+				war = { country = SOV country = GER }
+			}
+			NOT = {
+				exists = SOV
+			}
+		}
+		OR = {	
+			event = 130900 #Victory in the East
+			AND = {
+				control = { province = 1907 data = GER }	#バクー
+				control = { province = 1848 data = GER }	#バトゥーミ	#ブラウ作戦成功時風味
+			}
+		}
+		NOT = {
+			alliance = { country = TUR country = GER }
+			alliance = { country = TUR country = SOV }
+			alliance = { country = TUR country = ENG }
+			war = { country = TUR country = GER }
+			war = { country = PER country = GER } #one at a time
+		}
+		OR = {
+			NOT = {
+				alliance = { country = ITA country = GER }
+			}
+			control = { province = 932 data = ITA } #Tripoli
+			control = { province = 932 data = GER }
+			AND = {
+				control = { province = 932 data = LBY }
+				alliance = { country = LBY country = ITA }
+			}
+		}
+		exists = TUR
+		NOT = { event = 132522 }
+		random = 15
+	}
+
+	date = { day = 1 month = march year = 1940 }
+	offset = 13 #changing it up
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135240_NAME"
+	desc = "EVT_135240_DESC"
+	picture = "soviet_strategic_victory"
+	decision_picture = "decision_german_military_mission"
+
+	action_a = {
+		name = "EVT_135240_ACTA"
+		ai_chance = 99
+		command = { type = end_access which = TUR }
+		command = { type = end_non_aggression which = GER where = TUR }
+		command = { type = end_non_aggression which = ITA where = TUR }
+		command = { type = end_non_aggression which = SOV where = TUR }
+		command = { type = end_guarantee which = GER where = TUR }
+		command = { type = end_guarantee which = ITA where = TUR }
+		command = { type = end_guarantee which = SOV where = TUR }
+		command = { type = relation which = TUR value = -150 }
+		command = { type = ai_prepare_war which = TUR }
+		command = { type = trigger which = 135241 } #turkey responds
+	}
+	action_b = {
+		name = "EVT_135240_ACTB"
+		ai_chance = 1
+		command = { type = relation which = TUR value = 20 }
+		command = { type = relation which = ITA value = -30 }
+		command = { type = relation which = BUL value = -30 }
+	}
+}
+##########
+#  Turkish Negotiations with the Axis
+##########
+event = {
+	id = 135241
+	random = no
+	country = TUR
+
+	name = "EVT_135241_NAME"
+	desc = "EVT_135241_DESC"
+
+	#picture = "crusader"
+
+	action_a = {
+		name = "EVT_135241_ACTA"
+		ai_chance = 90
+		command = { type = end_access which = GER }
+		command = { type = end_access which = ITA }
+		command = { type = end_access which = BUL }
+		command = { type = ai_prepare_war which = ITA }
+		command = { type = ai_prepare_war which = GER }
+		command = { type = dissent value = -20 }
+	}
+	action_b = {
+		name = "EVT_135241_ACTB"
+		ai_chance = 10
+		command = { type = peace which = GER value = 1 }
+		command = { type = access which = GER }
+		command = { type = peace which = ITA value = 1 }
+		command = { type = access which = ITA }
+		command = { type = peace which = BUL value = 1 }
+		command = { type = access which = BUL }
+		command = { type = dissent value = 15 }
+		command = { type = alliance which = GER }
+	}
+}
+##########
+#  Turkey defeated
+##########
+event = {
+	id = 135242
+	random = no
+	country = GER
+
+	trigger = {
+		OR = {
+			lost_national = { country = TUR value = 60 }
+			lost_VP = { country = TUR value = 60 }
+		}
+		war = { country = TUR country = GER }
+	}
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135242_NAME"
+	desc = "EVT_135242_DESC"
+
+	picture = "defeat"
+
+	action_a = {
+		name = "EVT_135242_ACTA"
+		ai_chance = 100
+		command = { type = dissent value = -3 }
+		command = { type = trigger which = 135243 } #turkey responds
+	}
+	action_b = {
+		name = "EVT_135242_ACTB"
+		ai_chance = 0
+		command = { type = dissent value = 1 }
+	}
+}
+##########
+#  Turkey defeated
+##########
+event = {
+	id = 135243
+	random = no
+	country = TUR
+
+	name = "EVT_135243_NAME"
+	desc = "EVT_135243_DESC"
+
+	picture = "defeat"
+
+	action_a = {
+		name = "EVT_135243_ACTA"
+		ai_chance = 100
+		command = { type = leave_alliance }
+		command = { type = peace which = GER value = 1 }
+		command = { type = peace which = JAP value = 1 }
+		command = { type = access which = GER }
+		command = { type = access which = ITA }
+		command = { type = access which = BUL }
+		command = { type = dissent value = 10 }
+
+		command = { type = secedeprovince which = U16 value = 1856 }#armenia/azerbaijan
+		command = { type = secedeprovince which = U16 value = 1858 }
+		command = { type = secedeprovince which = U16 value = 1859 } #tabriz in persia
+		command = { type = secedeprovince which = U16 value = 1843 }
+		command = { type = secedeprovince which = U16 value = 1844 }
+		command = { type = secedeprovince which = U16 value = 1845 }
+		command = { type = secedeprovince which = U16 value = 1848 }
+		command = { type = secedeprovince which = U16 value = 1846 }
+		command = { type = secedeprovince which = U16 value = 1847 }
+		command = { type = secedeprovince which = U16 value = 1849 }
+		command = { type = secedeprovince which = U16 value = 1850 }
+		command = { type = secedeprovince which = U16 value = 1857 }
+		command = { type = secedeprovince which = U16 value = 1907 }
+
+		command = { type = secedeprovince which = PER value = 1859 } #tabriz in persia
+		command = { type = secedeprovince which = AZB value = 1907 }
+		command = { type = secedeprovince which = AZB value = 1859 }
+		command = { type = secedeprovince which = AZB value = 1858 }
+		command = { type = secedeprovince which = AZB value = 1857 }
+		command = { type = secedeprovince which = GEO value = 1848 }
+		command = { type = secedeprovince which = GEO value = 1850 }
+		command = { type = secedeprovince which = GEO value = 1844 }
+		command = { type = secedeprovince which = GEO value = 1845 }
+		command = { type = secedeprovince which = GEO value = 1849 }
+		command = { type = secedeprovince which = ARM value = 1856 }
+		command = { type = secedeprovince which = ARM value = 1858 }
+		command = { type = secedeprovince which = ARM value = 1851 }
+
+		command = { type = secedeprovince which = GER value = 1856 }#armenia/azerbaijan
+		command = { type = secedeprovince which = GER value = 1858 }
+		command = { type = secedeprovince which = GER value = 1859 } #tabriz in persia
+		command = { type = secedeprovince which = GER value = 1843 }
+		command = { type = secedeprovince which = GER value = 1844 }
+		command = { type = secedeprovince which = GER value = 1845 }
+		command = { type = secedeprovince which = GER value = 1848 }
+		command = { type = secedeprovince which = GER value = 1846 }
+		command = { type = secedeprovince which = GER value = 1847 }
+		command = { type = secedeprovince which = GER value = 1849 }
+		command = { type = secedeprovince which = GER value = 1850 }
+		command = { type = secedeprovince which = GER value = 1857 }
+		command = { type = secedeprovince which = GER value = 1907 }
+
+		command = { type = trigger which = 135244 } #germany puppets turkey
+	}
+	action_b = {
+		name = "EVT_135243_ACTB"
+		ai_chance = 0
+		command = { type = dissent value = -20 }
+	}
+}
+##########
+#  Germany puppets Turkey
+##########
+event = {
+	id = 135244
+	random = no 
+	country = GER
+
+	name = "EVT_135244_NAME"
+	desc = "EVT_135244_DESC"
+
+	#picture = "uprising"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = make_puppet which = TUR }
+	}
+}
+
+event = {
+	id = 135245
+	random = no 
+	country = TUR
+
+	trigger = {
+		event = 135243 #turkey has been defeated, which leads to the next event
+		event = 135244 #germany puppeted turkey
+		puppet = { country = TUR country = GER } #turkey is a german puppet
+		alliance = { country = ITA country = GER }
+		alliance = { country = TUR country = GER }
+		NOT = {
+			ispuppet = ITA
+			lost_national = { country = TUR value = 2 }
+		}
+	}
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 4
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135245_NAME"
+	desc = "EVT_135245_DESC"
+
+	picture = "constitutional"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = secedeprovince which = ITA value = 409 } # 
+		command = { type = removecore which = 409 }
+		command = { type = secedeprovince which = ITA value = 408 } # 
+		command = { type = removecore which = 408 }
+		command = { type = secedeprovince which = ITA value = 437 } # 
+		command = { type = removecore which = 407 }
+		command = { type = secedeprovince which = ITA value = 438 } # 
+		command = { type = secedeprovince which = ITA value = 443 } # 
+		command = { type = secedeprovince which = ITA value = 445 } # 
+		command = { type = secedeprovince which = ITA value = 405 } #random islands
+		command = { type = removecore which = 405 }
+		command = { type = secedeprovince which = ITA value = 398 } #
+		command = { type = removecore which = 398 }
+		command = { type = secedeprovince which = ITA value = 399 } #
+		command = { type = removecore which = 399 }
+		command = { type = secedeprovince which = ITA value = 1854 } # 
+		command = { type = secedeprovince which = ITA value = 444 } #cyprus
+		command = { type = removecore which = 444 }
+		command = { type = addclaim which = 409 where = ITA }
+		command = { type = addclaim which = 408 where = ITA }
+		command = { type = addclaim which = 437 where = ITA }
+		command = { type = addclaim which = 438 where = ITA }
+		command = { type = addclaim which = 443 where = ITA }
+		command = { type = addclaim which = 445 where = ITA }
+		command = { type = addclaim which = 1854 where = ITA }
+	}
+}
+
+event = {
+	id = 135246
+	random = no
+	country = BUL
+
+	trigger = {
+		ai = yes
+		OR = {
+			control = { province = 409 data = BUL } 
+			control = { province = 410 data = BUL } 
+			control = { province = 411 data = BUL } 
+		}
+	}
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+	picture = "vichy_regime"
+
+	action_a = { #BETA修正パッチ
+		name = "OK"
+		command = { type = secedeprovince which = ITA value = 409 } # 
+		command = { type = secedeprovince which = ITA value = 410 } # 
+		command = { type = secedeprovince which = ITA value = 411 } # 
+		command = { type = removecore which = 410 }
+		command = { type = removecore which = 411 }
+	}
+}
+
+event = {
+	id = 135247
+	random = no 
+	country = GER
+
+	trigger = {
+		NOT = {	ai = yes }
+		event = 135240
+		NOT = {
+			alliance = { country = TUR country = GER }
+			alliance = { country = TUR country = SOV }
+			alliance = { country = TUR country = ENG }
+			war = { country = TUR country = GER }
+		}
+		exists = TUR
+		random = 25
+	}
+
+	date = { day = 1 month = march year = 1940 }
+	offset = 14 #changing it up
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135247_NAME"
+	desc = "EVT_135247_DESC"
+	picture = "soviet_strategic_victory"
+
+	action_a = {
+		name = "EVT_135247_ACTA"
+		ai_chance = 100
+		command = { type = war which = TUR }
+	}
+}
+
+event = {
+	id = 135250
+	random = no 
+	country = GER
+
+	trigger = {
+		NOT = {
+			event = 60660
+			exists = SCH
+			war = { country = GER country = VIC }
+			war = { country = GER country = AUS }
+			war = { country = GER country = ITA }
+		}
+		OR = {
+			control = { province = 530 data = VIC }
+			control = { province = 530 data = AUS }
+			control = { province = 530 data = ITA }
+			control = { province = 530 data = GER }
+		}
+		OR = {
+			control = { province = 372 data = VIC }
+			control = { province = 372 data = AUS }
+			control = { province = 372 data = ITA }
+			control = { province = 372 data = GER }
+		}
+		OR = {
+			control = { province = 532 data = VIC }
+			control = { province = 532 data = AUS }
+			control = { province = 532 data = ITA }
+			control = { province = 532 data = GER }
+		}
+		OR = {
+			control = { province = 533 data = VIC }
+			control = { province = 533 data = AUS }
+			control = { province = 533 data = ITA }
+			control = { province = 533 data = GER }
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135250_NAME"
+	desc = "EVT_135250_DESC"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = secedeprovince which = VIC value = 530 }
+		command = { type = secedeprovince which = AUS value = 372 }
+		command = { type = secedeprovince which = ITA value = 372 }
+		command = { type = secedeprovince which = GER value = 532 }
+		command = { type = secedeprovince which = GER value = 533 }
+		command = { type = addcore which = 532 }
+		command = { type = addcore which = 533 }
+	}
+}
+
+event = {
+	id = 135251
+	random = no 
+	country = ITA
+
+	trigger = {
+		NOT = {
+			event = 60660
+			exists = SCH
+			war = { country = GER country = VIC }
+			war = { country = GER country = AUS }
+			war = { country = GER country = ITA }
+		}
+		OR = {
+			control = { province = 530 data = VIC }
+			control = { province = 530 data = AUS }
+			control = { province = 530 data = ITA }
+			control = { province = 530 data = GER }
+		}
+		OR = {
+			control = { province = 372 data = VIC }
+			control = { province = 372 data = AUS }
+			control = { province = 372 data = ITA }
+			control = { province = 372 data = GER }
+		}
+		OR = {
+			control = { province = 532 data = VIC }
+			control = { province = 532 data = AUS }
+			control = { province = 532 data = ITA }
+			control = { province = 532 data = GER }
+		}
+		OR = {
+			control = { province = 533 data = VIC }
+			control = { province = 533 data = AUS }
+			control = { province = 533 data = ITA }
+			control = { province = 533 data = GER }
+		}
+		alliance = { country = GER country = ITA }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135251_NAME"
+	desc = "EVT_135250_DESC"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = secedeprovince which = VIC value = 530 }
+	#	command = { type = secedeprovince which = AUS value = 372 }
+	#	command = { type = secedeprovince which = ITA value = 372 }
+		command = { type = secedeprovince which = GER value = 532 }
+		command = { type = secedeprovince which = GER value = 533 }
+		command = { type = addcore which = 372 }
+	}
+}
+
+event = {
+	id = 135252
+	random = no 
+	country = VIC
+
+	trigger = {
+		NOT = {
+			event = 60660
+			exists = SCH
+			war = { country = GER country = VIC }
+			war = { country = GER country = AUS }
+			war = { country = GER country = ITA }
+		}
+		OR = {
+			control = { province = 530 data = VIC }
+			control = { province = 530 data = AUS }
+			control = { province = 530 data = ITA }
+			control = { province = 530 data = GER }
+		}
+		OR = {
+			control = { province = 372 data = VIC }
+			control = { province = 372 data = AUS }
+			control = { province = 372 data = ITA }
+			control = { province = 372 data = GER }
+		}
+		OR = {
+			control = { province = 532 data = VIC }
+			control = { province = 532 data = AUS }
+			control = { province = 532 data = ITA }
+			control = { province = 532 data = GER }
+		}
+		OR = {
+			control = { province = 533 data = VIC }
+			control = { province = 533 data = AUS }
+			control = { province = 533 data = ITA }
+			control = { province = 533 data = GER }
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135252_NAME"
+	desc = "EVT_135250_DESC"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+	#	command = { type = secedeprovince which = VIC value = 530 }
+		command = { type = secedeprovince which = AUS value = 372 }
+		command = { type = secedeprovince which = ITA value = 372 }
+		command = { type = secedeprovince which = GER value = 532 }
+		command = { type = secedeprovince which = GER value = 533 }
+		command = { type = addcore which = 530 }
+	}
+}
+
+event = {
+	id = 135253
+	random = no 
+	country = AUS
+
+	trigger = {
+		NOT = {
+			event = 60660
+			exists = SCH
+			war = { country = GER country = VIC }
+			war = { country = GER country = AUS }
+			war = { country = GER country = ITA }
+		}
+		OR = {
+			control = { province = 530 data = VIC }
+			control = { province = 530 data = AUS }
+			control = { province = 530 data = ITA }
+			control = { province = 530 data = GER }
+		}
+		OR = {
+			control = { province = 372 data = VIC }
+			control = { province = 372 data = AUS }
+			control = { province = 372 data = ITA }
+			control = { province = 372 data = GER }
+		}
+		OR = {
+			control = { province = 532 data = VIC }
+			control = { province = 532 data = AUS }
+			control = { province = 532 data = ITA }
+			control = { province = 532 data = GER }
+		}
+		OR = {
+			control = { province = 533 data = VIC }
+			control = { province = 533 data = AUS }
+			control = { province = 533 data = ITA }
+			control = { province = 533 data = GER }
+		}
+		alliance = { country = GER country = AUS }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135253_NAME"
+	desc = "EVT_135250_DESC"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = secedeprovince which = VIC value = 530 }
+	#	command = { type = secedeprovince which = AUS value = 372 }
+		command = { type = secedeprovince which = ITA value = 372 }
+		command = { type = secedeprovince which = GER value = 532 }
+		command = { type = secedeprovince which = GER value = 533 }
+		command = { type = addcore which = 372 }
+	}
+}
+
+event = {
+	id = 135254
+	random = no 
+	country = ITA
+
+	trigger = {
+		NOT = {
+			exists = SCH
+		}
+		control = { province = 372 data = ITA }
+		alliance = { country = GER country = AUS }
+		alliance = { country = GER country = ITA }
+		ispuppet = ITA
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135254_NAME"
+	desc = "EVT_135254_DESC"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = secedeprovince which = AUS value = 372 }
+		command = { type = removecore which = 372 }
+	}
+}
+
+#スウェーデン降伏
+
+event = {
+	id = 135255
+	random = no
+	country = GER
+
+	trigger = {
+		OR = {
+			lost_national = { country = SWE value = 60 }
+			lost_VP = { country = SWE value = 60 }
+		}
+		war = { country = SWE country = GER }
+	}
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135255_NAME"
+	desc = "EVT_135255_DESC"
+
+	picture = "defeat"
+
+	action_a = {
+		name = "EVT_135255_ACTA"
+		ai_chance = 100
+		command = { type = dissent value = -3 }
+		command = { type = trigger which = 135256 }
+	}
+	action_b = {
+		name = "EVT_135255_ACTB"
+		ai_chance = 0
+		command = { type = dissent value = 1 }
+	}
+}
+
+event = {
+	id = 135256
+	random = no
+	country = SWE
+
+	name = "EVT_135256_NAME"
+	desc = "EVT_135256_DESC"
+
+	picture = "defeat"
+
+	action_a = {
+		name = "EVT_135256_ACTA"
+		ai_chance = 100
+		command = { type = leave_alliance }
+		command = { type = peace which = GER value = 1 }
+		command = { type = peace which = JAP value = 1 }
+		command = { type = access which = GER }
+		command = { type = dissent value = 10 }
+		command = { type = trigger which = 135257 }
+	}
+	action_b = {
+		name = "EVT_135256_ACTB"
+		ai_chance = 0
+		command = { type = dissent value = -20 }
+	}
+}
+
+event = {
+	id = 135257
+	random = no 
+	country = GER
+
+	name = "EVT_135257_NAME"
+	desc = "EVT_135257_DESC"
+
+	#picture = "uprising"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = make_puppet which = SWE }
+	}
+}
+
+##########
+#  イタリア不在時の三国同盟
+##########
+
+event = {
+	id = 135260
+	random = no
+	country = GER
+
+	name = "EVT_135260_NAME"
+	desc = "EVT_135260_DESC"
+
+	picture = "tripartite"
+
+	trigger = {
+		OR = { #BETA修正パッチ
+			control = { province = 56 data = GER } #Paris
+			control = { province = 56 data = VIC } #Paris
+		}
+		exists = JAP
+		exists = SOV
+		NOT = {
+			war = { country = GER country = JAP }
+			war = { country = JAP country = ITA }
+			alliance = { country = GER country = ENG }
+			alliance = { country = GER country = SOV }
+			alliance = { country = JAP country = ENG }
+			alliance = { country = JAP country = SOV }
+			event = 130107  #Tri-Partite Pact #FEPKBETA3
+		}
+		OR = {
+			war = { country = GER country = ITA }
+			alliance = { country = ITA country = ENG }
+			alliance = { country = ITA country = SOV }
+			NOT = {
+				exists = ITA
+			}
+		}
+	}
+
+        date = { day = 27 month = september year = 1940 }
+
+	action_a = {
+		ai_chance = 99
+		name = "EVT_75_ACTA"
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = relation which = SOV value = -10 }
+		command = { type = trigger which = 135261 } #Japan only
+		command = { type = sleepevent which = 130107 } #Tri-Partite Pact
+	}
+	action_b = {
+		ai_chance = 1
+		name = "EVT_75_ACTB"
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = sleepevent which = 3465 } #Falkenhausen leaves
+		command = { type = sleepevent which = 130107 } #Tri-Partite Pact
+	}
+}
+
+event = {
+	id = 135261
+	random = no
+	country = JAP
+
+	name = "EVT_135260_NAME"
+	desc = "EVT_135260_DESC"
+
+	picture = "tripartite"
+
+	action_a = {
+		ai_chance = 97
+		name = "EVT_75_ACTA"
+		command = { type = money value = 10 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = relation which = SOV value = -10 }
+		command = { type = relation which = USA value = -10 }
+		command = { type = relation which = ENG value = -10 }
+		command = { type = relation which = AST value = -10 }
+		command = { type = relation which = NZL value = -10 }
+		command = { type = relation which = GER value = 25 }
+		command = { type = setflag which = JAPtripartite }
+	}
+	action_b = {
+		ai_chance = 3
+		name = "EVT_75_ACTB"
+		command = { type = money value = -10 }
+		command = { type = domestic which = interventionism value = -1 }
+	}
+}
+
+##########
+#  Yugoslavia Gives Up - Germany defeated
+##########
+event = {
+	id = 135270
+	random = no
+	country = YUG
+
+	trigger = {
+		OR = {
+			war = { country = YUG country = SOV }
+			war = { country = YUG country = USA }
+			war = { country = YUG country = ENG }
+		}
+		OR = { #these signal german defeat
+			event = 131301
+			event = 131302
+			event = 131303
+			event = 131304
+		}
+		NOT = {
+			war = { country = USA country = SOV }
+		}
+		participant = { country = -1 value = 2 }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135270_NAME"
+	desc = "EVT_135270_DESC"
+
+        picture = "constitutional"
+
+	action_a = {
+		name = "EVT_135270_ACTA"
+		ai_chance = 100
+		command = { type = leave_alliance }
+		command = { type = peace which = ENG value = 1 }
+		command = { type = peace which = USA value = 1 }
+		command = { type = peace which = CAN value = 1 }
+		command = { type = peace which = MEX value = 1 }
+		command = { type = peace which = VEN value = 1 }
+		command = { type = peace which = PAN value = 1 }
+		command = { type = peace which = LIB value = 1 }
+		command = { type = peace which = PHI value = 1 }
+		command = { type = peace which = JAP value = 1 }
+		command = { type = peace which = SOV value = 1 }
+		command = { type = peace which = HOL value = 1 }
+		command = { type = peace which = BRA value = 1 }
+		command = { type = peace which = ECU value = 1 }
+		command = { type = peace which = PRU value = 1 }
+		command = { type = peace which = HON value = 1 }
+		command = { type = peace which = COL value = 1 }
+		command = { type = peace which = TUR value = 1 }
+		command = { type = peace which = SAF value = 1 }
+		command = { type = peace which = FIN value = 1 }
+		command = { type = peace which = IRE value = 1 }
+		#chinas
+		command = { type = peace which = CHI value = 1 }
+		command = { type = peace which = CHC value = 1 }
+		command = { type = peace which = CSX value = 1 }
+		command = { type = peace which = CGX value = 1 }
+		command = { type = peace which = CXB value = 1 }
+		command = { type = peace which = SIK value = 1 }
+		command = { type = peace which = CYN value = 1 }
+		#access
+		command = { type = access which = USA }
+		command = { type = access which = ENG }
+		command = { type = access which = FRA }
+		command = { type = access which = SOV }
+		#neutral relations
+		command = { type = set_relation which = SOV value = 0 }
+		command = { type = set_relation which = USA value = 0 }
+		command = { type = set_relation which = ENG value = 0 }
+		#upset people
+		command = { type = dissent value = 20 }
+		#new sliders
+
+		#new government
+
+		#ministers
+
+		#leaders
+
+		#teach teams
+
+		#end puppets
+
+		#independence
+
+	}
+	action_b = {
+		name = "EVT_135270_ACTB"
+		ai_chance = 0
+		command = { type = dissent value = 30 }
+		command = { type = domestic which = defense_lobby value = 1 }
+	}
+}
+
+event = {
+	id = 135271
+	random = no
+	country = YUG
+
+	trigger = {
+		event = 135270 #Yugoslavia gave up and is at peace
+		OR = {
+			event = 131325 #SOV cedes
+			event = 131326 #USA cedes
+			event = 131327 #ENG cedes
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135271_NAME"
+	desc = "EVT_135271_DESC"
+
+        picture = "constitutional"
+
+	action_a = {
+		name = "EVT_135271_ACTA"
+		ai_chance = 100
+		#remove claims
+
+		#cede
+		#Norway
+		command = { type = secedeprovince which = NOR value = 107 }
+		command = { type = secedeprovince which = NOR value = 108 }
+		command = { type = secedeprovince which = NOR value = 109 }
+		command = { type = secedeprovince which = NOR value = 110 }
+		command = { type = secedeprovince which = NOR value = 111 }
+		command = { type = secedeprovince which = NOR value = 116 }
+		command = { type = secedeprovince which = NOR value = 117 }
+		command = { type = secedeprovince which = NOR value = 118 }
+		command = { type = secedeprovince which = NOR value = 124 }
+		command = { type = secedeprovince which = NOR value = 125 }
+		command = { type = secedeprovince which = NOR value = 128 }
+		command = { type = secedeprovince which = NOR value = 129 }
+
+		#Denmark
+		command = { type = secedeprovince which = DEN value = 91 }
+		command = { type = secedeprovince which = DEN value = 92 }
+		command = { type = secedeprovince which = DEN value = 292 }
+		command = { type = secedeprovince which = DEN value = 293 }
+		command = { type = secedeprovince which = DEN value = 294 }
+		command = { type = secedeprovince which = DEN value = 295 }
+		command = { type = secedeprovince which = DEN value = 800 }
+
+		#Belgium
+		command = { type = secedeprovince which = BEL value = 45 }
+		command = { type = secedeprovince which = BEL value = 52 }
+		command = { type = secedeprovince which = BEL value = 51 }
+		command = { type = secedeprovince which = BEL value = 50 }
+		command = { type = secedeprovince which = BEL value = 65 }
+		command = { type = secedeprovince which = BEL value = 68 }
+		command = { type = secedeprovince which = BEL value = 69 }
+		command = { type = secedeprovince which = BEL value = 70 }
+
+		#Holland
+		command = { type = secedeprovince which = HOL value = 46 }
+		command = { type = secedeprovince which = HOL value = 47 }
+		command = { type = secedeprovince which = HOL value = 48 }
+		command = { type = secedeprovince which = HOL value = 49 }
+		command = { type = secedeprovince which = HOL value = 77 }
+		command = { type = secedeprovince which = HOL value = 78 }
+		command = { type = secedeprovince which = HOL value = 79 }
+		#Carribean
+		command = { type = secedeprovince which = HOL value = 801 }
+		command = { type = secedeprovince which = HOL value = 874 }
+
+		#Lux, well, no, they're one province, adding this because they didnt exist for some reason one time
+		command = { type = independence which = LUX value = 1 when = 1 }
+		command = { type = dissent value = -5 }
+		
+		#France
+		command = { type = secedeprovince which = FRA value = 72 }
+		command = { type = secedeprovince which = FRA value = 73 }
+		command = { type = secedeprovince which = FRA value = 316 }	
+		command = { type = secedeprovince which = FRA value = 529 }
+		command = { type = secedeprovince which = FRA value = 527 }
+		command = { type = secedeprovince which = FRA value = 566 }
+		command = { type = secedeprovince which = FRA value = 365 }
+		command = { type = secedeprovince which = FRA value = 364 }
+		command = { type = secedeprovince which = FRA value = 363 }
+		command = { type = secedeprovince which = FRA value = 362 }
+		command = { type = secedeprovince which = FRA value = 358 }
+		command = { type = secedeprovince which = FRA value = 328 }
+		command = { type = secedeprovince which = FRA value = 327 }
+		command = { type = secedeprovince which = FRA value = 326 }
+		command = { type = secedeprovince which = FRA value = 325 }
+		command = { type = secedeprovince which = FRA value = 324 }
+		command = { type = secedeprovince which = FRA value = 359 }
+		command = { type = secedeprovince which = FRA value = 361 }
+		command = { type = secedeprovince which = FRA value = 322 }
+		command = { type = secedeprovince which = FRA value = 323 }
+		command = { type = secedeprovince which = FRA value = 59 }
+		command = { type = secedeprovince which = FRA value = 60 }
+		command = { type = secedeprovince which = FRA value = 61}
+		command = { type = secedeprovince which = FRA value = 62 }
+		command = { type = secedeprovince which = FRA value = 63 }
+		command = { type = secedeprovince which = FRA value = 318 }
+		command = { type = secedeprovince which = FRA value = 317 }
+		command = { type = secedeprovince which = FRA value = 64 }
+		command = { type = secedeprovince which = FRA value = 54 }
+		command = { type = secedeprovince which = FRA value = 42 }
+		command = { type = secedeprovince which = FRA value = 55 }
+		command = { type = secedeprovince which = FRA value = 41 }
+		command = { type = secedeprovince which = FRA value = 56 }
+		command = { type = secedeprovince which = FRA value = 57 }
+		command = { type = secedeprovince which = FRA value = 58 }
+		command = { type = secedeprovince which = FRA value = 32 }
+		command = { type = secedeprovince which = FRA value = 33 }
+		command = { type = secedeprovince which = FRA value = 34 }
+		command = { type = secedeprovince which = FRA value = 35 }
+		command = { type = secedeprovince which = FRA value = 36 }
+		command = { type = secedeprovince which = FRA value = 37 }
+		command = { type = secedeprovince which = FRA value = 38 }
+		command = { type = secedeprovince which = FRA value = 39 }
+		command = { type = secedeprovince which = FRA value = 40 }
+		command = { type = secedeprovince which = FRA value = 320 }
+		command = { type = secedeprovince which = FRA value = 321 }
+		command = { type = secedeprovince which = FRA value = 528 }
+		command = { type = secedeprovince which = FRA value = 319 }
+		command = { type = secedeprovince which = FRA value = 360 }
+		command = { type = secedeprovince which = FRA value = 43 }
+		command = { type = secedeprovince which = FRA value = 44 }
+		command = { type = secedeprovince which = FRA value = 53 }
+		command = { type = secedeprovince which = FRA value = 18 }
+		command = { type = secedeprovince which = FRA value = 366 }
+		command = { type = secedeprovince which = FRA value = 367 }
+		
+		#Austria
+		command = { type = secedeprovince which = AUS value = 373 }
+		command = { type = secedeprovince which = AUS value = 377 }
+		command = { type = secedeprovince which = AUS value = 460 }
+		command = { type = secedeprovince which = AUS value = 461 }
+		command = { type = secedeprovince which = AUS value = 462 }
+		command = { type = secedeprovince which = AUS value = 463 }
+		command = { type = secedeprovince which = AUS value = 464 }
+		command = { type = secedeprovince which = AUS value = 465 }
+
+		#Yugoslavia
+		command = { type = secedeprovince which = YUG value = 380 }
+		command = { type = secedeprovince which = YUG value = 459 }
+		command = { type = secedeprovince which = YUG value = 455 }
+		command = { type = secedeprovince which = YUG value = 454 }
+		command = { type = secedeprovince which = YUG value = 453 }
+		command = { type = secedeprovince which = YUG value = 381 }
+		command = { type = secedeprovince which = YUG value = 382 }
+		command = { type = secedeprovince which = YUG value = 383 }
+		command = { type = secedeprovince which = YUG value = 384 }
+		command = { type = secedeprovince which = YUG value = 385 }
+		command = { type = secedeprovince which = YUG value = 386 }
+		command = { type = secedeprovince which = YUG value = 387 }
+		command = { type = secedeprovince which = YUG value = 388 }
+		command = { type = secedeprovince which = YUG value = 389 }
+		command = { type = secedeprovince which = YUG value = 451 }
+		command = { type = secedeprovince which = YUG value = 452 }
+		command = { type = secedeprovince which = YUG value = 418 }
+		command = { type = secedeprovince which = YUG value = 415 }
+		command = { type = secedeprovince which = YUG value = 493 }
+		command = { type = secedeprovince which = YUG value = 494 }
+		command = { type = secedeprovince which = YUG value = 413 }
+		command = { type = secedeprovince which = YUG value = 414 }
+
+		#Greece
+		command = { type = secedeprovince which = GRE value = 392 }
+		command = { type = secedeprovince which = GRE value = 410 }
+		command = { type = secedeprovince which = GRE value = 411 }
+		command = { type = secedeprovince which = GRE value = 412 }
+		command = { type = secedeprovince which = GRE value = 403 }
+		command = { type = secedeprovince which = GRE value = 402 }
+		command = { type = secedeprovince which = GRE value = 393 }
+		command = { type = secedeprovince which = GRE value = 401 }
+		command = { type = secedeprovince which = GRE value = 400 }
+		command = { type = secedeprovince which = GRE value = 405 }
+		command = { type = secedeprovince which = GRE value = 398 }
+		command = { type = secedeprovince which = GRE value = 399 }
+		command = { type = secedeprovince which = GRE value = 394 }
+		command = { type = secedeprovince which = GRE value = 395 }
+		command = { type = secedeprovince which = GRE value = 396 }
+
+		#Persia
+		command = { type = secedeprovince which = PER value = 1859 }
+		command = { type = secedeprovince which = PER value = 1789 }
+		command = { type = secedeprovince which = PER value = 1788 }
+		command = { type = secedeprovince which = PER value = 1825 }
+		command = { type = secedeprovince which = PER value = 1826 }
+		command = { type = secedeprovince which = PER value = 1787 }
+		command = { type = secedeprovince which = PER value = 1502 }
+		command = { type = secedeprovince which = PER value = 1501 }
+		command = { type = secedeprovince which = PER value = 1500 }
+		command = { type = secedeprovince which = PER value = 1503 }
+		command = { type = secedeprovince which = PER value = 1498 }
+		command = { type = secedeprovince which = PER value = 1499 }
+		command = { type = secedeprovince which = PER value = 1497 }
+		command = { type = secedeprovince which = PER value = 1496 }
+		command = { type = secedeprovince which = PER value = 1495 }
+
+		#Romania
+		command = { type = secedeprovince which = ROM value = 496 }
+		command = { type = secedeprovince which = ROM value = 428 }
+		command = { type = secedeprovince which = ROM value = 498 }
+		command = { type = secedeprovince which = ROM value = 495 }
+		command = { type = secedeprovince which = ROM value = 496 }
+		command = { type = secedeprovince which = ROM value = 427 }
+		command = { type = secedeprovince which = ROM value = 429 }
+		command = { type = secedeprovince which = ROM value = 430 }
+		#command = { type = secedeprovince which = ROM value = 230 } #Bessarabia stays Russian
+		command = { type = secedeprovince which = ROM value = 433 }
+		#command = { type = secedeprovince which = ROM value = 434 } #Bessarabia stays Russian
+		#command = { type = secedeprovince which = ROM value = 435 } #Bessarabia stays Russian
+		command = { type = secedeprovince which = ROM value = 436 }
+		command = { type = secedeprovince which = ROM value = 432 }
+		command = { type = secedeprovince which = ROM value = 431 }
+		command = { type = secedeprovince which = ROM value = 424 }
+		command = { type = secedeprovince which = ROM value = 425 }
+		command = { type = secedeprovince which = ROM value = 426 }
+		command = { type = secedeprovince which = ROM value = 423 } #Constanta
+
+		#Bulgaria
+		command = { type = secedeprovince which = BUL value = 417 } #Sophia
+		command = { type = secedeprovince which = BUL value = 419 }
+		command = { type = secedeprovince which = BUL value = 416 }
+		command = { type = secedeprovince which = BUL value = 420 }
+		command = { type = secedeprovince which = BUL value = 422 }
+		command = { type = secedeprovince which = BUL value = 421 }
+
+		#Hungary
+		command = { type = secedeprovince which = HUN value = 457 } #Budapest
+		command = { type = secedeprovince which = HUN value = 458 }
+		command = { type = secedeprovince which = HUN value = 456 }
+		command = { type = secedeprovince which = HUN value = 491 }
+		command = { type = secedeprovince which = HUN value = 492 }
+		command = { type = secedeprovince which = HUN value = 497 }
+
+		#Czechoslovakia
+		command = { type = secedeprovince which = CZE value = 469 } #Prague
+		command = { type = secedeprovince which = CZE value = 471 }
+		command = { type = secedeprovince which = CZE value = 472 }
+		command = { type = secedeprovince which = CZE value = 470 }
+		command = { type = secedeprovince which = CZE value = 466 }
+		command = { type = secedeprovince which = CZE value = 468 }
+		command = { type = secedeprovince which = CZE value = 467 }
+		command = { type = secedeprovince which = CZE value = 474 }
+		command = { type = secedeprovince which = CZE value = 475 }
+		command = { type = secedeprovince which = CZE value = 476 }
+		command = { type = secedeprovince which = CZE value = 478 }
+		command = { type = secedeprovince which = CZE value = 477 }
+		command = { type = secedeprovince which = CZE value = 490 }
+		command = { type = secedeprovince which = CZE value = 499 } #Ruthenia
+
+		#Germany
+		command = { type = secedeprovince which = DDR value = 300 } #Berlin
+		command = { type = secedeprovince which = DDR value = 301 }
+		command = { type = secedeprovince which = DDR value = 299 }
+		command = { type = secedeprovince which = DDR value = 309 }
+		command = { type = secedeprovince which = DDR value = 296 }
+		command = { type = secedeprovince which = DDR value = 297 }
+		command = { type = secedeprovince which = DDR value = 298 }
+		command = { type = secedeprovince which = DDR value = 310 }
+		command = { type = secedeprovince which = DDR value = 311 }
+		command = { type = secedeprovince which = DDR value = 80 }
+		command = { type = secedeprovince which = DDR value = 81 }
+		command = { type = secedeprovince which = DDR value = 82 }
+		command = { type = secedeprovince which = DDR value = 83 }
+		command = { type = secedeprovince which = DDR value = 84 }
+		command = { type = secedeprovince which = DDR value = 85 }
+		command = { type = secedeprovince which = DDR value = 86 }
+		command = { type = secedeprovince which = DDR value = 87 }
+		command = { type = secedeprovince which = DDR value = 88 }
+		command = { type = secedeprovince which = DDR value = 89 }
+		command = { type = secedeprovince which = DDR value = 90 }
+		command = { type = secedeprovince which = DDR value = 76 }
+		command = { type = secedeprovince which = DDR value = 67 }
+		command = { type = secedeprovince which = DDR value = 66 }
+		command = { type = secedeprovince which = DDR value = 75 }
+		command = { type = secedeprovince which = DDR value = 74 }
+		command = { type = secedeprovince which = DDR value = 374 }
+		command = { type = secedeprovince which = DDR value = 375 }
+		command = { type = secedeprovince which = DDR value = 376 }
+		command = { type = secedeprovince which = DDR value = 312 }
+		command = { type = secedeprovince which = DDR value = 313 }
+		command = { type = secedeprovince which = DDR value = 314 }
+		command = { type = secedeprovince which = DDR value = 315 }
+		command = { type = secedeprovince which = DDR value = 473 } #Silesia
+		command = { type = secedeprovince which = DDR value = 482 } #Silesia
+		command = { type = secedeprovince which = DDR value = 308 } #Silesia
+		command = { type = secedeprovince which = DDR value = 302 } #Silesia
+		#command = { type = secedeprovince which = DDR value = 510 } #East Prussia
+		command = { type = secedeprovince which = DDR value = 304 } #East Prussia
+
+		command = { type = secedeprovince which = DFR value = 80 } # 西ドイツ
+		command = { type = secedeprovince which = DFR value = 81 }
+		command = { type = secedeprovince which = DFR value = 82 }
+		command = { type = secedeprovince which = DFR value = 83 }
+		command = { type = secedeprovince which = DFR value = 84 }
+		command = { type = secedeprovince which = DFR value = 85 }
+		command = { type = secedeprovince which = DFR value = 86 }
+		command = { type = secedeprovince which = DFR value = 87 }
+		command = { type = secedeprovince which = DFR value = 88 }
+		command = { type = secedeprovince which = DFR value = 89 }
+		command = { type = secedeprovince which = DFR value = 90 }
+		command = { type = secedeprovince which = DFR value = 76 }
+		command = { type = secedeprovince which = DFR value = 67 }
+		command = { type = secedeprovince which = DFR value = 66 }
+		command = { type = secedeprovince which = DFR value = 75 }
+		command = { type = secedeprovince which = DFR value = 74 }
+		command = { type = secedeprovince which = DFR value = 374 }
+		command = { type = secedeprovince which = DFR value = 375 }
+		command = { type = secedeprovince which = DFR value = 376 }
+		command = { type = secedeprovince which = DFR value = 312 }
+		command = { type = secedeprovince which = DFR value = 313 }
+		command = { type = secedeprovince which = DFR value = 314 }
+		command = { type = secedeprovince which = DFR value = 315 }
+
+		#Poland, not including the east
+		command = { type = secedeprovince which = POL value = 489 }
+		command = { type = secedeprovince which = POL value = 488 }
+		command = { type = secedeprovince which = POL value = 487 }
+		command = { type = secedeprovince which = POL value = 486 }
+		command = { type = secedeprovince which = POL value = 485 } #Warsaw
+		command = { type = secedeprovince which = POL value = 305 }
+		command = { type = secedeprovince which = POL value = 306 }
+		command = { type = secedeprovince which = POL value = 303 }
+		command = { type = secedeprovince which = POL value = 307 }
+		command = { type = secedeprovince which = POL value = 483 }
+		command = { type = secedeprovince which = POL value = 484 }
+		command = { type = secedeprovince which = POL value = 481 }
+		command = { type = secedeprovince which = POL value = 480 }
+		command = { type = secedeprovince which = POL value = 479 }
+
+		#Egypt
+		#command = { type = secedeprovince which = EGY value = 900 } #suez
+		command = { type = secedeprovince which = EGY value = 1800 }
+		command = { type = secedeprovince which = EGY value = 1801 }
+
+		command = { type = secedeprovince which = EGY value = 915 }
+		command = { type = secedeprovince which = EGY value = 914 }
+		command = { type = secedeprovince which = EGY value = 913 }
+		command = { type = secedeprovince which = EGY value = 912 }
+		command = { type = secedeprovince which = EGY value = 911 }
+		command = { type = secedeprovince which = EGY value = 910 }
+		command = { type = secedeprovince which = EGY value = 909 }
+		command = { type = secedeprovince which = EGY value = 908 }
+		command = { type = secedeprovince which = EGY value = 907 }
+		command = { type = secedeprovince which = EGY value = 906 }
+		command = { type = secedeprovince which = EGY value = 905 }
+		command = { type = secedeprovince which = EGY value = 1023 }
+		command = { type = secedeprovince which = EGY value = 1024 }
+		command = { type = secedeprovince which = EGY value = 1025 }
+		command = { type = secedeprovince which = EGY value = 1026 }
+		command = { type = secedeprovince which = EGY value = 1027 }
+		command = { type = secedeprovince which = EGY value = 1020 }
+		command = { type = secedeprovince which = EGY value = 1019 }
+		command = { type = secedeprovince which = EGY value = 1021 }
+		command = { type = secedeprovince which = EGY value = 1022 }
+		command = { type = secedeprovince which = EGY value = 901 }
+		command = { type = secedeprovince which = EGY value = 4 }
+		command = { type = secedeprovince which = EGY value = 902 }
+		command = { type = secedeprovince which = EGY value = 904 }
+		command = { type = secedeprovince which = EGY value = 1799 }
+
+
+		#Iraq
+		command = { type = secedeprovince which = IRQ value = 1866 }
+		command = { type = secedeprovince which = IRQ value = 1860 }
+		command = { type = secedeprovince which = IRQ value = 1865 }
+		command = { type = secedeprovince which = IRQ value = 1790 }
+		command = { type = secedeprovince which = IRQ value = 1824 }
+		command = { type = secedeprovince which = IRQ value = 1823 }
+		command = { type = secedeprovince which = IRQ value = 1806 }
+		command = { type = secedeprovince which = IRQ value = 1791 }
+		command = { type = secedeprovince which = IRQ value = 1864 }
+
+		#French North Africa
+		command = { type = secedeprovince which = FRA value = 966 }
+		command = { type = secedeprovince which = FRA value = 960 }
+		command = { type = secedeprovince which = FRA value = 958 }
+		command = { type = secedeprovince which = FRA value = 959 }
+		command = { type = secedeprovince which = FRA value = 968 }
+		command = { type = secedeprovince which = FRA value = 969 }
+		command = { type = secedeprovince which = FRA value = 956 }
+		command = { type = secedeprovince which = FRA value = 954 }
+		command = { type = secedeprovince which = FRA value = 953 }
+		command = { type = secedeprovince which = FRA value = 952 }
+		command = { type = secedeprovince which = FRA value = 951 }
+		command = { type = secedeprovince which = FRA value = 950 }
+		command = { type = secedeprovince which = FRA value = 949 }
+		command = { type = secedeprovince which = FRA value = 948 }
+		command = { type = secedeprovince which = FRA value = 947 }
+		command = { type = secedeprovince which = FRA value = 946 }
+		command = { type = secedeprovince which = FRA value = 945 }
+		command = { type = secedeprovince which = FRA value = 944 }
+		command = { type = secedeprovince which = FRA value = 943 }
+		command = { type = secedeprovince which = FRA value = 942 }
+		command = { type = secedeprovince which = FRA value = 970 }
+		command = { type = secedeprovince which = FRA value = 1013 }
+		command = { type = secedeprovince which = FRA value = 1014 }
+		command = { type = secedeprovince which = FRA value = 941 }
+		command = { type = secedeprovince which = FRA value = 940 }
+		command = { type = secedeprovince which = FRA value = 939 }
+		command = { type = secedeprovince which = FRA value = 938 }
+		command = { type = secedeprovince which = FRA value = 937 }
+		command = { type = secedeprovince which = FRA value = 936 }
+		command = { type = secedeprovince which = FRA value = 935 }
+		command = { type = secedeprovince which = FRA value = 934 }
+
+		#Italy
+		command = { type = secedeprovince which = ITA value = 378 }
+		command = { type = secedeprovince which = ITA value = 371 }
+		command = { type = secedeprovince which = ITA value = 370 }
+		command = { type = secedeprovince which = ITA value = 531 }
+		command = { type = secedeprovince which = ITA value = 368 }
+		command = { type = secedeprovince which = ITA value = 369 }
+		command = { type = secedeprovince which = ITA value = 512 }
+		command = { type = secedeprovince which = ITA value = 379 }
+		command = { type = secedeprovince which = ITA value = 513 }
+		command = { type = secedeprovince which = ITA value = 514 }
+		command = { type = secedeprovince which = ITA value = 515 }
+		command = { type = secedeprovince which = ITA value = 516 }
+		command = { type = secedeprovince which = ITA value = 517 }
+		command = { type = secedeprovince which = ITA value = 518 }
+		command = { type = secedeprovince which = ITA value = 519 }
+		command = { type = secedeprovince which = ITA value = 520 }
+		command = { type = secedeprovince which = ITA value = 521 }
+		command = { type = secedeprovince which = ITA value = 522 }
+		command = { type = secedeprovince which = ITA value = 523 }
+		command = { type = secedeprovince which = ITA value = 524 }
+		command = { type = secedeprovince which = ITA value = 525 }
+		command = { type = secedeprovince which = ITA value = 526 }
+		command = { type = secedeprovince which = ITA value = 534 }
+
+		#Albania
+		command = { type = secedeprovince which = ALB value = 390 }
+		command = { type = secedeprovince which = ALB value = 391 }
+
+		command = { type = secedeprovince which = ENG value = 3 } # 極東想定・英本土返還
+		command = { type = secedeprovince which = ENG value = 5 }
+		command = { type = secedeprovince which = ENG value = 6 }
+		command = { type = secedeprovince which = ENG value = 7 }
+		command = { type = secedeprovince which = ENG value = 8 }
+		command = { type = secedeprovince which = ENG value = 9 }
+		command = { type = secedeprovince which = ENG value = 10 }
+		command = { type = secedeprovince which = ENG value = 11 }
+		command = { type = secedeprovince which = ENG value = 12 }
+		command = { type = secedeprovince which = ENG value = 13 }
+		command = { type = secedeprovince which = ENG value = 14 }
+		command = { type = secedeprovince which = ENG value = 15 }
+		command = { type = secedeprovince which = ENG value = 16 }
+		command = { type = secedeprovince which = ENG value = 17 }
+		command = { type = secedeprovince which = ENG value = 19 }
+		command = { type = secedeprovince which = ENG value = 20 }
+		command = { type = secedeprovince which = ENG value = 21 }
+		command = { type = secedeprovince which = ENG value = 22 }
+		command = { type = secedeprovince which = ENG value = 23 }
+		command = { type = secedeprovince which = ENG value = 28 } # 北アイルランド
+		command = { type = secedeprovince which = ENG value = 29 }
+
+		#Libya #FEPK1.093
+		command = { type = secedeprovince which = LBY value = 916 }
+		command = { type = secedeprovince which = LBY value = 917 }
+		command = { type = secedeprovince which = LBY value = 918 }
+		command = { type = secedeprovince which = LBY value = 919 }
+		command = { type = secedeprovince which = LBY value = 920 }
+		command = { type = secedeprovince which = LBY value = 921 }
+		command = { type = secedeprovince which = LBY value = 922 }
+		command = { type = secedeprovince which = LBY value = 923 }
+		command = { type = secedeprovince which = LBY value = 924 }
+		command = { type = secedeprovince which = LBY value = 925 }
+		command = { type = secedeprovince which = LBY value = 926 }
+		command = { type = secedeprovince which = LBY value = 927 }
+		command = { type = secedeprovince which = LBY value = 928 }
+		command = { type = secedeprovince which = LBY value = 929 }
+		command = { type = secedeprovince which = LBY value = 930 }
+		command = { type = secedeprovince which = LBY value = 931 }
+		command = { type = secedeprovince which = LBY value = 932 }
+		command = { type = secedeprovince which = LBY value = 933 }
+		command = { type = secedeprovince which = LBY value = 1015 }
+		command = { type = secedeprovince which = LBY value = 1016 }
+		command = { type = secedeprovince which = LBY value = 1017 }
+		command = { type = secedeprovince which = LBY value = 1018 }
+
+		#Ethiopia #FEPK1.093
+		command = { type = secedeprovince which = ETH value = 1042 }
+		command = { type = secedeprovince which = ETH value = 1043 }
+		command = { type = secedeprovince which = ETH value = 1044 }
+		command = { type = secedeprovince which = ETH value = 1045 }
+		command = { type = secedeprovince which = ETH value = 1046 }
+		command = { type = secedeprovince which = ETH value = 1047 }
+		command = { type = secedeprovince which = ETH value = 1048 }
+		command = { type = secedeprovince which = ETH value = 1049 }
+		command = { type = secedeprovince which = ETH value = 1050 }
+		command = { type = secedeprovince which = ETH value = 1051 }
+		command = { type = secedeprovince which = ETH value = 1052 }
+		command = { type = secedeprovince which = ETH value = 1053 }
+		command = { type = secedeprovince which = ETH value = 1054 }
+		command = { type = secedeprovince which = ETH value = 1033 }
+		command = { type = secedeprovince which = ETH value = 1038 }
+		command = { type = secedeprovince which = ETH value = 1039 }
+	}
+}
+
+event = {
+	id = 135272
+	random = no
+	country = CZE
+
+	trigger = {
+		OR = {
+			war = { country = CZE country = SOV }
+			war = { country = CZE country = USA }
+			war = { country = CZE country = ENG }
+		}
+		OR = { #these signal german defeat
+			event = 131301
+			event = 131302
+			event = 131303
+			event = 131304
+		}
+		NOT = {
+			war = { country = USA country = SOV }
+		}
+		participant = { country = -1 value = 2 }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135272_NAME"
+	desc = "EVT_135272_DESC"
+
+        picture = "constitutional"
+
+	action_a = {
+		name = "EVT_135272_ACTA"
+		ai_chance = 100
+		command = { type = leave_alliance }
+		command = { type = peace which = ENG value = 1 }
+		command = { type = peace which = USA value = 1 }
+		command = { type = peace which = CAN value = 1 }
+		command = { type = peace which = MEX value = 1 }
+		command = { type = peace which = VEN value = 1 }
+		command = { type = peace which = PAN value = 1 }
+		command = { type = peace which = LIB value = 1 }
+		command = { type = peace which = PHI value = 1 }
+		command = { type = peace which = JAP value = 1 }
+		command = { type = peace which = SOV value = 1 }
+		command = { type = peace which = HOL value = 1 }
+		command = { type = peace which = BRA value = 1 }
+		command = { type = peace which = ECU value = 1 }
+		command = { type = peace which = PRU value = 1 }
+		command = { type = peace which = HON value = 1 }
+		command = { type = peace which = COL value = 1 }
+		command = { type = peace which = TUR value = 1 }
+		command = { type = peace which = SAF value = 1 }
+		command = { type = peace which = FIN value = 1 }
+		command = { type = peace which = IRE value = 1 }
+		#chinas
+		command = { type = peace which = CHI value = 1 }
+		command = { type = peace which = CHC value = 1 }
+		command = { type = peace which = CSX value = 1 }
+		command = { type = peace which = CGX value = 1 }
+		command = { type = peace which = CXB value = 1 }
+		command = { type = peace which = SIK value = 1 }
+		command = { type = peace which = CYN value = 1 }
+		#access
+		command = { type = access which = USA }
+		command = { type = access which = ENG }
+		command = { type = access which = FRA }
+		command = { type = access which = SOV }
+		#neutral relations
+		command = { type = set_relation which = SOV value = 0 }
+		command = { type = set_relation which = USA value = 0 }
+		command = { type = set_relation which = ENG value = 0 }
+		#upset people
+		command = { type = dissent value = 20 }
+		#new sliders
+
+		#new government
+
+		#ministers
+
+		#leaders
+
+		#teach teams
+
+		#end puppets
+
+		#independence
+
+	}
+	action_b = {
+		name = "EVT_135272_ACTB"
+		ai_chance = 0
+		command = { type = dissent value = 30 }
+		command = { type = domestic which = defense_lobby value = 1 }
+	}
+}
+
+event = {
+	id = 135273
+	random = no
+	country = CZE
+
+	trigger = {
+		event = 135272 #Yugoslavia gave up and is at peace
+		OR = {
+			event = 131325 #SOV cedes
+			event = 131326 #USA cedes
+			event = 131327 #ENG cedes
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135273_NAME"
+	desc = "EVT_135273_DESC"
+
+        picture = "constitutional"
+
+	action_a = {
+		name = "EVT_135273_ACTA"
+		ai_chance = 100
+		#remove claims
+
+		#cede
+		#Norway
+		command = { type = secedeprovince which = NOR value = 107 }
+		command = { type = secedeprovince which = NOR value = 108 }
+		command = { type = secedeprovince which = NOR value = 109 }
+		command = { type = secedeprovince which = NOR value = 110 }
+		command = { type = secedeprovince which = NOR value = 111 }
+		command = { type = secedeprovince which = NOR value = 116 }
+		command = { type = secedeprovince which = NOR value = 117 }
+		command = { type = secedeprovince which = NOR value = 118 }
+		command = { type = secedeprovince which = NOR value = 124 }
+		command = { type = secedeprovince which = NOR value = 125 }
+		command = { type = secedeprovince which = NOR value = 128 }
+		command = { type = secedeprovince which = NOR value = 129 }
+
+		#Denmark
+		command = { type = secedeprovince which = DEN value = 91 }
+		command = { type = secedeprovince which = DEN value = 92 }
+		command = { type = secedeprovince which = DEN value = 292 }
+		command = { type = secedeprovince which = DEN value = 293 }
+		command = { type = secedeprovince which = DEN value = 294 }
+		command = { type = secedeprovince which = DEN value = 295 }
+		command = { type = secedeprovince which = DEN value = 800 }
+
+		#Belgium
+		command = { type = secedeprovince which = BEL value = 45 }
+		command = { type = secedeprovince which = BEL value = 52 }
+		command = { type = secedeprovince which = BEL value = 51 }
+		command = { type = secedeprovince which = BEL value = 50 }
+		command = { type = secedeprovince which = BEL value = 65 }
+		command = { type = secedeprovince which = BEL value = 68 }
+		command = { type = secedeprovince which = BEL value = 69 }
+		command = { type = secedeprovince which = BEL value = 70 }
+
+		#Holland
+		command = { type = secedeprovince which = HOL value = 46 }
+		command = { type = secedeprovince which = HOL value = 47 }
+		command = { type = secedeprovince which = HOL value = 48 }
+		command = { type = secedeprovince which = HOL value = 49 }
+		command = { type = secedeprovince which = HOL value = 77 }
+		command = { type = secedeprovince which = HOL value = 78 }
+		command = { type = secedeprovince which = HOL value = 79 }
+		#Carribean
+		command = { type = secedeprovince which = HOL value = 801 }
+		command = { type = secedeprovince which = HOL value = 874 }
+
+		#Lux, well, no, they're one province, adding this because they didnt exist for some reason one time
+		command = { type = independence which = LUX value = 1 when = 1 }
+		command = { type = dissent value = -5 }
+		
+		#France
+		command = { type = secedeprovince which = FRA value = 72 }
+		command = { type = secedeprovince which = FRA value = 73 }
+		command = { type = secedeprovince which = FRA value = 316 }	
+		command = { type = secedeprovince which = FRA value = 529 }
+		command = { type = secedeprovince which = FRA value = 527 }
+		command = { type = secedeprovince which = FRA value = 566 }
+		command = { type = secedeprovince which = FRA value = 365 }
+		command = { type = secedeprovince which = FRA value = 364 }
+		command = { type = secedeprovince which = FRA value = 363 }
+		command = { type = secedeprovince which = FRA value = 362 }
+		command = { type = secedeprovince which = FRA value = 358 }
+		command = { type = secedeprovince which = FRA value = 328 }
+		command = { type = secedeprovince which = FRA value = 327 }
+		command = { type = secedeprovince which = FRA value = 326 }
+		command = { type = secedeprovince which = FRA value = 325 }
+		command = { type = secedeprovince which = FRA value = 324 }
+		command = { type = secedeprovince which = FRA value = 359 }
+		command = { type = secedeprovince which = FRA value = 361 }
+		command = { type = secedeprovince which = FRA value = 322 }
+		command = { type = secedeprovince which = FRA value = 323 }
+		command = { type = secedeprovince which = FRA value = 59 }
+		command = { type = secedeprovince which = FRA value = 60 }
+		command = { type = secedeprovince which = FRA value = 61}
+		command = { type = secedeprovince which = FRA value = 62 }
+		command = { type = secedeprovince which = FRA value = 63 }
+		command = { type = secedeprovince which = FRA value = 318 }
+		command = { type = secedeprovince which = FRA value = 317 }
+		command = { type = secedeprovince which = FRA value = 64 }
+		command = { type = secedeprovince which = FRA value = 54 }
+		command = { type = secedeprovince which = FRA value = 42 }
+		command = { type = secedeprovince which = FRA value = 55 }
+		command = { type = secedeprovince which = FRA value = 41 }
+		command = { type = secedeprovince which = FRA value = 56 }
+		command = { type = secedeprovince which = FRA value = 57 }
+		command = { type = secedeprovince which = FRA value = 58 }
+		command = { type = secedeprovince which = FRA value = 32 }
+		command = { type = secedeprovince which = FRA value = 33 }
+		command = { type = secedeprovince which = FRA value = 34 }
+		command = { type = secedeprovince which = FRA value = 35 }
+		command = { type = secedeprovince which = FRA value = 36 }
+		command = { type = secedeprovince which = FRA value = 37 }
+		command = { type = secedeprovince which = FRA value = 38 }
+		command = { type = secedeprovince which = FRA value = 39 }
+		command = { type = secedeprovince which = FRA value = 40 }
+		command = { type = secedeprovince which = FRA value = 320 }
+		command = { type = secedeprovince which = FRA value = 321 }
+		command = { type = secedeprovince which = FRA value = 528 }
+		command = { type = secedeprovince which = FRA value = 319 }
+		command = { type = secedeprovince which = FRA value = 360 }
+		command = { type = secedeprovince which = FRA value = 43 }
+		command = { type = secedeprovince which = FRA value = 44 }
+		command = { type = secedeprovince which = FRA value = 53 }
+		command = { type = secedeprovince which = FRA value = 18 }
+		command = { type = secedeprovince which = FRA value = 366 }
+		command = { type = secedeprovince which = FRA value = 367 }
+		
+		#Austria
+		command = { type = secedeprovince which = AUS value = 373 }
+		command = { type = secedeprovince which = AUS value = 377 }
+		command = { type = secedeprovince which = AUS value = 460 }
+		command = { type = secedeprovince which = AUS value = 461 }
+		command = { type = secedeprovince which = AUS value = 462 }
+		command = { type = secedeprovince which = AUS value = 463 }
+		command = { type = secedeprovince which = AUS value = 464 }
+		command = { type = secedeprovince which = AUS value = 465 }
+
+		#Yugoslavia
+		command = { type = secedeprovince which = YUG value = 380 }
+		command = { type = secedeprovince which = YUG value = 459 }
+		command = { type = secedeprovince which = YUG value = 455 }
+		command = { type = secedeprovince which = YUG value = 454 }
+		command = { type = secedeprovince which = YUG value = 453 }
+		command = { type = secedeprovince which = YUG value = 381 }
+		command = { type = secedeprovince which = YUG value = 382 }
+		command = { type = secedeprovince which = YUG value = 383 }
+		command = { type = secedeprovince which = YUG value = 384 }
+		command = { type = secedeprovince which = YUG value = 385 }
+		command = { type = secedeprovince which = YUG value = 386 }
+		command = { type = secedeprovince which = YUG value = 387 }
+		command = { type = secedeprovince which = YUG value = 388 }
+		command = { type = secedeprovince which = YUG value = 389 }
+		command = { type = secedeprovince which = YUG value = 451 }
+		command = { type = secedeprovince which = YUG value = 452 }
+		command = { type = secedeprovince which = YUG value = 418 }
+		command = { type = secedeprovince which = YUG value = 415 }
+		command = { type = secedeprovince which = YUG value = 493 }
+		command = { type = secedeprovince which = YUG value = 494 }
+		command = { type = secedeprovince which = YUG value = 413 }
+		command = { type = secedeprovince which = YUG value = 414 }
+
+		#Greece
+		command = { type = secedeprovince which = GRE value = 392 }
+		command = { type = secedeprovince which = GRE value = 410 }
+		command = { type = secedeprovince which = GRE value = 411 }
+		command = { type = secedeprovince which = GRE value = 412 }
+		command = { type = secedeprovince which = GRE value = 403 }
+		command = { type = secedeprovince which = GRE value = 402 }
+		command = { type = secedeprovince which = GRE value = 393 }
+		command = { type = secedeprovince which = GRE value = 401 }
+		command = { type = secedeprovince which = GRE value = 400 }
+		command = { type = secedeprovince which = GRE value = 405 }
+		command = { type = secedeprovince which = GRE value = 398 }
+		command = { type = secedeprovince which = GRE value = 399 }
+		command = { type = secedeprovince which = GRE value = 394 }
+		command = { type = secedeprovince which = GRE value = 395 }
+		command = { type = secedeprovince which = GRE value = 396 }
+
+		#Persia
+		command = { type = secedeprovince which = PER value = 1859 }
+		command = { type = secedeprovince which = PER value = 1789 }
+		command = { type = secedeprovince which = PER value = 1788 }
+		command = { type = secedeprovince which = PER value = 1825 }
+		command = { type = secedeprovince which = PER value = 1826 }
+		command = { type = secedeprovince which = PER value = 1787 }
+		command = { type = secedeprovince which = PER value = 1502 }
+		command = { type = secedeprovince which = PER value = 1501 }
+		command = { type = secedeprovince which = PER value = 1500 }
+		command = { type = secedeprovince which = PER value = 1503 }
+		command = { type = secedeprovince which = PER value = 1498 }
+		command = { type = secedeprovince which = PER value = 1499 }
+		command = { type = secedeprovince which = PER value = 1497 }
+		command = { type = secedeprovince which = PER value = 1496 }
+		command = { type = secedeprovince which = PER value = 1495 }
+
+		#Romania
+		command = { type = secedeprovince which = ROM value = 496 }
+		command = { type = secedeprovince which = ROM value = 428 }
+		command = { type = secedeprovince which = ROM value = 498 }
+		command = { type = secedeprovince which = ROM value = 495 }
+		command = { type = secedeprovince which = ROM value = 496 }
+		command = { type = secedeprovince which = ROM value = 427 }
+		command = { type = secedeprovince which = ROM value = 429 }
+		command = { type = secedeprovince which = ROM value = 430 }
+		#command = { type = secedeprovince which = ROM value = 230 } #Bessarabia stays Russian
+		command = { type = secedeprovince which = ROM value = 433 }
+		#command = { type = secedeprovince which = ROM value = 434 } #Bessarabia stays Russian
+		#command = { type = secedeprovince which = ROM value = 435 } #Bessarabia stays Russian
+		command = { type = secedeprovince which = ROM value = 436 }
+		command = { type = secedeprovince which = ROM value = 432 }
+		command = { type = secedeprovince which = ROM value = 431 }
+		command = { type = secedeprovince which = ROM value = 424 }
+		command = { type = secedeprovince which = ROM value = 425 }
+		command = { type = secedeprovince which = ROM value = 426 }
+		command = { type = secedeprovince which = ROM value = 423 } #Constanta
+
+		#Bulgaria
+		command = { type = secedeprovince which = BUL value = 417 } #Sophia
+		command = { type = secedeprovince which = BUL value = 419 }
+		command = { type = secedeprovince which = BUL value = 416 }
+		command = { type = secedeprovince which = BUL value = 420 }
+		command = { type = secedeprovince which = BUL value = 422 }
+		command = { type = secedeprovince which = BUL value = 421 }
+
+		#Hungary
+		command = { type = secedeprovince which = HUN value = 457 } #Budapest
+		command = { type = secedeprovince which = HUN value = 458 }
+		command = { type = secedeprovince which = HUN value = 456 }
+		command = { type = secedeprovince which = HUN value = 491 }
+		command = { type = secedeprovince which = HUN value = 492 }
+		command = { type = secedeprovince which = HUN value = 497 }
+
+		#Czechoslovakia
+		command = { type = secedeprovince which = CZE value = 469 } #Prague
+		command = { type = secedeprovince which = CZE value = 471 }
+		command = { type = secedeprovince which = CZE value = 472 }
+		command = { type = secedeprovince which = CZE value = 470 }
+		command = { type = secedeprovince which = CZE value = 466 }
+		command = { type = secedeprovince which = CZE value = 468 }
+		command = { type = secedeprovince which = CZE value = 467 }
+		command = { type = secedeprovince which = CZE value = 474 }
+		command = { type = secedeprovince which = CZE value = 475 }
+		command = { type = secedeprovince which = CZE value = 476 }
+		command = { type = secedeprovince which = CZE value = 478 }
+		command = { type = secedeprovince which = CZE value = 477 }
+		command = { type = secedeprovince which = CZE value = 490 }
+		command = { type = secedeprovince which = CZE value = 499 } #Ruthenia
+
+		#Germany
+		command = { type = secedeprovince which = DDR value = 300 } #Berlin
+		command = { type = secedeprovince which = DDR value = 301 }
+		command = { type = secedeprovince which = DDR value = 299 }
+		command = { type = secedeprovince which = DDR value = 309 }
+		command = { type = secedeprovince which = DDR value = 296 }
+		command = { type = secedeprovince which = DDR value = 297 }
+		command = { type = secedeprovince which = DDR value = 298 }
+		command = { type = secedeprovince which = DDR value = 310 }
+		command = { type = secedeprovince which = DDR value = 311 }
+		command = { type = secedeprovince which = DDR value = 80 }
+		command = { type = secedeprovince which = DDR value = 81 }
+		command = { type = secedeprovince which = DDR value = 82 }
+		command = { type = secedeprovince which = DDR value = 83 }
+		command = { type = secedeprovince which = DDR value = 84 }
+		command = { type = secedeprovince which = DDR value = 85 }
+		command = { type = secedeprovince which = DDR value = 86 }
+		command = { type = secedeprovince which = DDR value = 87 }
+		command = { type = secedeprovince which = DDR value = 88 }
+		command = { type = secedeprovince which = DDR value = 89 }
+		command = { type = secedeprovince which = DDR value = 90 }
+		command = { type = secedeprovince which = DDR value = 76 }
+		command = { type = secedeprovince which = DDR value = 67 }
+		command = { type = secedeprovince which = DDR value = 66 }
+		command = { type = secedeprovince which = DDR value = 75 }
+		command = { type = secedeprovince which = DDR value = 74 }
+		command = { type = secedeprovince which = DDR value = 374 }
+		command = { type = secedeprovince which = DDR value = 375 }
+		command = { type = secedeprovince which = DDR value = 376 }
+		command = { type = secedeprovince which = DDR value = 312 }
+		command = { type = secedeprovince which = DDR value = 313 }
+		command = { type = secedeprovince which = DDR value = 314 }
+		command = { type = secedeprovince which = DDR value = 315 }
+		command = { type = secedeprovince which = DDR value = 473 } #Silesia
+		command = { type = secedeprovince which = DDR value = 482 } #Silesia
+		command = { type = secedeprovince which = DDR value = 308 } #Silesia
+		command = { type = secedeprovince which = DDR value = 302 } #Silesia
+		#command = { type = secedeprovince which = DDR value = 510 } #East Prussia
+		command = { type = secedeprovince which = DDR value = 304 } #East Prussia
+
+		command = { type = secedeprovince which = DFR value = 80 } # 西ドイツ
+		command = { type = secedeprovince which = DFR value = 81 }
+		command = { type = secedeprovince which = DFR value = 82 }
+		command = { type = secedeprovince which = DFR value = 83 }
+		command = { type = secedeprovince which = DFR value = 84 }
+		command = { type = secedeprovince which = DFR value = 85 }
+		command = { type = secedeprovince which = DFR value = 86 }
+		command = { type = secedeprovince which = DFR value = 87 }
+		command = { type = secedeprovince which = DFR value = 88 }
+		command = { type = secedeprovince which = DFR value = 89 }
+		command = { type = secedeprovince which = DFR value = 90 }
+		command = { type = secedeprovince which = DFR value = 76 }
+		command = { type = secedeprovince which = DFR value = 67 }
+		command = { type = secedeprovince which = DFR value = 66 }
+		command = { type = secedeprovince which = DFR value = 75 }
+		command = { type = secedeprovince which = DFR value = 74 }
+		command = { type = secedeprovince which = DFR value = 374 }
+		command = { type = secedeprovince which = DFR value = 375 }
+		command = { type = secedeprovince which = DFR value = 376 }
+		command = { type = secedeprovince which = DFR value = 312 }
+		command = { type = secedeprovince which = DFR value = 313 }
+		command = { type = secedeprovince which = DFR value = 314 }
+		command = { type = secedeprovince which = DFR value = 315 }
+
+		#Poland, not including the east
+		command = { type = secedeprovince which = POL value = 489 }
+		command = { type = secedeprovince which = POL value = 488 }
+		command = { type = secedeprovince which = POL value = 487 }
+		command = { type = secedeprovince which = POL value = 486 }
+		command = { type = secedeprovince which = POL value = 485 } #Warsaw
+		command = { type = secedeprovince which = POL value = 305 }
+		command = { type = secedeprovince which = POL value = 306 }
+		command = { type = secedeprovince which = POL value = 303 }
+		command = { type = secedeprovince which = POL value = 307 }
+		command = { type = secedeprovince which = POL value = 483 }
+		command = { type = secedeprovince which = POL value = 484 }
+		command = { type = secedeprovince which = POL value = 481 }
+		command = { type = secedeprovince which = POL value = 480 }
+		command = { type = secedeprovince which = POL value = 479 }
+
+		#Egypt
+		#command = { type = secedeprovince which = EGY value = 900 } #suez
+		command = { type = secedeprovince which = EGY value = 1800 }
+		command = { type = secedeprovince which = EGY value = 1801 }
+
+		command = { type = secedeprovince which = EGY value = 915 }
+		command = { type = secedeprovince which = EGY value = 914 }
+		command = { type = secedeprovince which = EGY value = 913 }
+		command = { type = secedeprovince which = EGY value = 912 }
+		command = { type = secedeprovince which = EGY value = 911 }
+		command = { type = secedeprovince which = EGY value = 910 }
+		command = { type = secedeprovince which = EGY value = 909 }
+		command = { type = secedeprovince which = EGY value = 908 }
+		command = { type = secedeprovince which = EGY value = 907 }
+		command = { type = secedeprovince which = EGY value = 906 }
+		command = { type = secedeprovince which = EGY value = 905 }
+		command = { type = secedeprovince which = EGY value = 1023 }
+		command = { type = secedeprovince which = EGY value = 1024 }
+		command = { type = secedeprovince which = EGY value = 1025 }
+		command = { type = secedeprovince which = EGY value = 1026 }
+		command = { type = secedeprovince which = EGY value = 1027 }
+		command = { type = secedeprovince which = EGY value = 1020 }
+		command = { type = secedeprovince which = EGY value = 1019 }
+		command = { type = secedeprovince which = EGY value = 1021 }
+		command = { type = secedeprovince which = EGY value = 1022 }
+		command = { type = secedeprovince which = EGY value = 901 }
+		command = { type = secedeprovince which = EGY value = 4 }
+		command = { type = secedeprovince which = EGY value = 902 }
+		command = { type = secedeprovince which = EGY value = 904 }
+		command = { type = secedeprovince which = EGY value = 1799 }
+
+
+		#Iraq
+		command = { type = secedeprovince which = IRQ value = 1866 }
+		command = { type = secedeprovince which = IRQ value = 1860 }
+		command = { type = secedeprovince which = IRQ value = 1865 }
+		command = { type = secedeprovince which = IRQ value = 1790 }
+		command = { type = secedeprovince which = IRQ value = 1824 }
+		command = { type = secedeprovince which = IRQ value = 1823 }
+		command = { type = secedeprovince which = IRQ value = 1806 }
+		command = { type = secedeprovince which = IRQ value = 1791 }
+		command = { type = secedeprovince which = IRQ value = 1864 }
+
+		#French North Africa
+		command = { type = secedeprovince which = FRA value = 966 }
+		command = { type = secedeprovince which = FRA value = 960 }
+		command = { type = secedeprovince which = FRA value = 958 }
+		command = { type = secedeprovince which = FRA value = 959 }
+		command = { type = secedeprovince which = FRA value = 968 }
+		command = { type = secedeprovince which = FRA value = 969 }
+		command = { type = secedeprovince which = FRA value = 956 }
+		command = { type = secedeprovince which = FRA value = 954 }
+		command = { type = secedeprovince which = FRA value = 953 }
+		command = { type = secedeprovince which = FRA value = 952 }
+		command = { type = secedeprovince which = FRA value = 951 }
+		command = { type = secedeprovince which = FRA value = 950 }
+		command = { type = secedeprovince which = FRA value = 949 }
+		command = { type = secedeprovince which = FRA value = 948 }
+		command = { type = secedeprovince which = FRA value = 947 }
+		command = { type = secedeprovince which = FRA value = 946 }
+		command = { type = secedeprovince which = FRA value = 945 }
+		command = { type = secedeprovince which = FRA value = 944 }
+		command = { type = secedeprovince which = FRA value = 943 }
+		command = { type = secedeprovince which = FRA value = 942 }
+		command = { type = secedeprovince which = FRA value = 970 }
+		command = { type = secedeprovince which = FRA value = 1013 }
+		command = { type = secedeprovince which = FRA value = 1014 }
+		command = { type = secedeprovince which = FRA value = 941 }
+		command = { type = secedeprovince which = FRA value = 940 }
+		command = { type = secedeprovince which = FRA value = 939 }
+		command = { type = secedeprovince which = FRA value = 938 }
+		command = { type = secedeprovince which = FRA value = 937 }
+		command = { type = secedeprovince which = FRA value = 936 }
+		command = { type = secedeprovince which = FRA value = 935 }
+		command = { type = secedeprovince which = FRA value = 934 }
+
+		#Italy
+		command = { type = secedeprovince which = ITA value = 378 }
+		command = { type = secedeprovince which = ITA value = 371 }
+		command = { type = secedeprovince which = ITA value = 370 }
+		command = { type = secedeprovince which = ITA value = 531 }
+		command = { type = secedeprovince which = ITA value = 368 }
+		command = { type = secedeprovince which = ITA value = 369 }
+		command = { type = secedeprovince which = ITA value = 512 }
+		command = { type = secedeprovince which = ITA value = 379 }
+		command = { type = secedeprovince which = ITA value = 513 }
+		command = { type = secedeprovince which = ITA value = 514 }
+		command = { type = secedeprovince which = ITA value = 515 }
+		command = { type = secedeprovince which = ITA value = 516 }
+		command = { type = secedeprovince which = ITA value = 517 }
+		command = { type = secedeprovince which = ITA value = 518 }
+		command = { type = secedeprovince which = ITA value = 519 }
+		command = { type = secedeprovince which = ITA value = 520 }
+		command = { type = secedeprovince which = ITA value = 521 }
+		command = { type = secedeprovince which = ITA value = 522 }
+		command = { type = secedeprovince which = ITA value = 523 }
+		command = { type = secedeprovince which = ITA value = 524 }
+		command = { type = secedeprovince which = ITA value = 525 }
+		command = { type = secedeprovince which = ITA value = 526 }
+		command = { type = secedeprovince which = ITA value = 534 }
+
+		#Albania
+		command = { type = secedeprovince which = ALB value = 390 }
+		command = { type = secedeprovince which = ALB value = 391 }
+
+		command = { type = secedeprovince which = ENG value = 3 } # 極東想定・英本土返還
+		command = { type = secedeprovince which = ENG value = 5 }
+		command = { type = secedeprovince which = ENG value = 6 }
+		command = { type = secedeprovince which = ENG value = 7 }
+		command = { type = secedeprovince which = ENG value = 8 }
+		command = { type = secedeprovince which = ENG value = 9 }
+		command = { type = secedeprovince which = ENG value = 10 }
+		command = { type = secedeprovince which = ENG value = 11 }
+		command = { type = secedeprovince which = ENG value = 12 }
+		command = { type = secedeprovince which = ENG value = 13 }
+		command = { type = secedeprovince which = ENG value = 14 }
+		command = { type = secedeprovince which = ENG value = 15 }
+		command = { type = secedeprovince which = ENG value = 16 }
+		command = { type = secedeprovince which = ENG value = 17 }
+		command = { type = secedeprovince which = ENG value = 19 }
+		command = { type = secedeprovince which = ENG value = 20 }
+		command = { type = secedeprovince which = ENG value = 21 }
+		command = { type = secedeprovince which = ENG value = 22 }
+		command = { type = secedeprovince which = ENG value = 23 }
+		command = { type = secedeprovince which = ENG value = 28 } # 北アイルランド
+		command = { type = secedeprovince which = ENG value = 29 }
+
+		#Libya #FEPK1.093
+		command = { type = secedeprovince which = LBY value = 916 }
+		command = { type = secedeprovince which = LBY value = 917 }
+		command = { type = secedeprovince which = LBY value = 918 }
+		command = { type = secedeprovince which = LBY value = 919 }
+		command = { type = secedeprovince which = LBY value = 920 }
+		command = { type = secedeprovince which = LBY value = 921 }
+		command = { type = secedeprovince which = LBY value = 922 }
+		command = { type = secedeprovince which = LBY value = 923 }
+		command = { type = secedeprovince which = LBY value = 924 }
+		command = { type = secedeprovince which = LBY value = 925 }
+		command = { type = secedeprovince which = LBY value = 926 }
+		command = { type = secedeprovince which = LBY value = 927 }
+		command = { type = secedeprovince which = LBY value = 928 }
+		command = { type = secedeprovince which = LBY value = 929 }
+		command = { type = secedeprovince which = LBY value = 930 }
+		command = { type = secedeprovince which = LBY value = 931 }
+		command = { type = secedeprovince which = LBY value = 932 }
+		command = { type = secedeprovince which = LBY value = 933 }
+		command = { type = secedeprovince which = LBY value = 1015 }
+		command = { type = secedeprovince which = LBY value = 1016 }
+		command = { type = secedeprovince which = LBY value = 1017 }
+		command = { type = secedeprovince which = LBY value = 1018 }
+
+		#Ethiopia #FEPK1.093
+		command = { type = secedeprovince which = ETH value = 1042 }
+		command = { type = secedeprovince which = ETH value = 1043 }
+		command = { type = secedeprovince which = ETH value = 1044 }
+		command = { type = secedeprovince which = ETH value = 1045 }
+		command = { type = secedeprovince which = ETH value = 1046 }
+		command = { type = secedeprovince which = ETH value = 1047 }
+		command = { type = secedeprovince which = ETH value = 1048 }
+		command = { type = secedeprovince which = ETH value = 1049 }
+		command = { type = secedeprovince which = ETH value = 1050 }
+		command = { type = secedeprovince which = ETH value = 1051 }
+		command = { type = secedeprovince which = ETH value = 1052 }
+		command = { type = secedeprovince which = ETH value = 1053 }
+		command = { type = secedeprovince which = ETH value = 1054 }
+		command = { type = secedeprovince which = ETH value = 1033 }
+		command = { type = secedeprovince which = ETH value = 1038 }
+		command = { type = secedeprovince which = ETH value = 1039 }
+	}
+}
+
+event = { #このイベントではSC→135286で共産化→選挙イベントで共産政権
+	id = 135280
+	random = no
+	country = HUN
+
+	trigger = {
+		puppet = { country = HUN country = SOV }
+		OR = { #these signal german defeat
+			event = 131301
+			event = 131302
+			event = 131303
+			event = 131304
+		}
+	}
+
+	date = { day = 1 month = january year = 1942 }
+	offset = 13
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135280_NAME"
+	desc = "EVT_135280_DESC"
+
+	#picture = "german_replacements"
+
+	action_a = {
+		name = "OK"
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = set_domestic which = freedom value = 3 }
+		command = { type = domestic which = defense_lobby value = -1 }
+		command = { type = headofstate which = 21046 }
+		command = { type = headofgovernment which = 21062 }
+		command = { type = foreignminister which = 21078 }
+		command = { type = armamentminister which = 21091 }
+		command = { type = ministerofsecurity which = 21109 }
+		command = { type = ministerofintelligence which = 21125 }
+		command = { type = chiefofstaff which = 21137 }
+		command = { type = chiefofarmy which = 21149 }
+		command = { type = chiefofnavy which = 21156 }
+		command = { type = chiefofair which = 21166 }
+	}
+}
+
+event = { 
+	id = 135281
+	random = no
+	country = ROM
+
+	trigger = {
+		puppet = { country = ROM country = SOV }
+		OR = { #these signal german defeat
+			event = 131301
+			event = 131302
+			event = 131303
+			event = 131304
+		}
+	}
+
+	date = { day = 1 month = january year = 1942 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135280_NAME"
+	desc = "EVT_135281_DESC"
+
+	#picture = "german_replacements"
+
+	action_a = {
+		name = "OK"
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 10 }
+		command = { type = set_domestic which = freedom value = 3 }
+		command = { type = domestic which = defense_lobby value = -1 }
+		command = { type = headofstate which = 22038 }
+		command = { type = headofgovernment which = 22051 }
+		command = { type = foreignminister which = 22080 }
+		command = { type = armamentminister which = 22098 }
+		command = { type = ministerofsecurity which = 22112 }
+		command = { type = ministerofintelligence which = 22121 }
+		command = { type = chiefofstaff which = 22131 }
+		command = { type = chiefofarmy which = 22144 }
+		command = { type = chiefofnavy which = 22153 }
+		command = { type = chiefofair which = 22161 }
+	}
+}
+
+event = { 
+	id = 135282
+	random = no
+	country = BUL
+
+	trigger = {
+		puppet = { country = BUL country = SOV }
+		OR = { #these signal german defeat
+			event = 131301
+			event = 131302
+			event = 131303
+			event = 131304
+		}
+	}
+
+	date = { day = 1 month = january year = 1942 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135280_NAME"
+	desc = "EVT_135281_DESC"
+
+	#picture = "german_replacements"
+
+	action_a = {
+		name = "OK"
+		command = { type = set_domestic which = democratic value = 2 }
+		command = { type = set_domestic which = political_left value = 10 }
+		command = { type = set_domestic which = freedom value = 3 }
+		command = { type = domestic which = defense_lobby value = -1 }
+		command = { type = headofstate which = 19050 } 
+		command = { type = headofgovernment which = 19060 }
+		command = { type = foreignminister which = 19074 }
+		command = { type = ministerofsecurity which = 19103 }
+		command = { type = armamentminister which = 19088 }
+		command = { type = ministerofintelligence which = 19113 }
+		command = { type = chiefofstaff which = 19123 }
+		command = { type = chiefofarmy which = 19135 }
+		command = { type = chiefofair which = 19150 }
+		command = { type = chiefofnavy which = 19142 }
+	}
+}
+
+event = { 
+	id = 135283
+	random = no
+	country = ALB
+
+	trigger = {
+		puppet = { country = ALB country = SOV }
+		OR = { #these signal german defeat
+			event = 131301
+			event = 131302
+			event = 131303
+			event = 131304
+		}
+	}
+
+	date = { day = 1 month = january year = 1942 }
+	offset = 16
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135280_NAME"
+	desc = "EVT_135281_DESC"
+
+	#picture = "german_replacements"
+
+	action_a = {
+		name = "OK"
+		command = { type = set_domestic which = democratic value = 2 }
+		command = { type = set_domestic which = political_left value = 9 }
+		command = { type = set_domestic which = freedom value = 1 }
+		command = { type = domestic which = defense_lobby value = -1 }
+		command = { type = headofstate which = 32049 }
+		command = { type = headofgovernment which = 32062 }
+		command = { type = foreignminister which = 32076 }
+		command = { type = armamentminister which = 32097 }
+		command = { type = ministerofsecurity which = 32120 }
+		command = { type = ministerofintelligence which = 32142 }
+	}
+}
+
+event = { 
+	id = 135284
+	random = no
+	country = POL
+
+	trigger = {
+		puppet = { country = POL country = SOV }
+		OR = { #these signal german defeat
+			event = 131301
+			event = 131302
+			event = 131303
+			event = 131304
+		}
+	}
+
+	date = { day = 1 month = january year = 1942 }
+	offset = 17
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135280_NAME"
+	desc = "EVT_135281_DESC"
+
+	#picture = "german_replacements"
+
+	action_a = {
+		name = "OK"
+		command = { type = set_domestic which = democratic value = 2 }
+		command = { type = set_domestic which = political_left value = 10 }
+		command = { type = set_domestic which = freedom value = 1 }
+		command = { type = domestic which = defense_lobby value = -1 }
+		command = { type = headofstate which = 13039 }
+		command = { type = headofgovernment which = 13048 }
+		command = { type = foreignminister which = 13062 }
+		command = { type = armamentminister which = 13086 }
+		command = { type = ministerofsecurity which = 13025 }
+		command = { type = ministerofintelligence which = 13111 }
+	}
+}
+
+event = { 
+	id = 135285
+	random = no
+	country = CZE
+
+	trigger = {
+		puppet = { country = CZE country = SOV }
+		OR = { #these signal german defeat
+			event = 131301
+			event = 131302
+			event = 131303
+			event = 131304
+		}
+	}
+
+	date = { day = 1 month = january year = 1942 }
+	offset = 18
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135280_NAME"
+	desc = "EVT_135281_DESC"
+
+	#picture = "german_replacements"
+
+	action_a = {
+		name = "OK"
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 10 }
+		command = { type = set_domestic which = freedom value = -1 }
+		command = { type = domestic which = defense_lobby value = -1 }
+		command = { type = headofstate which = 24033 }
+		command = { type = headofgovernment which = 24147 }
+		command = { type = foreignminister which = 24055 }
+		command = { type = armamentminister which = 24307 }
+		command = { type = ministerofsecurity which = 24156 }
+		command = { type = ministerofintelligence which = 24157 }
+	}
+}
+
+event = { 
+	id = 135286
+	random = no
+	country = HUN
+
+	trigger = {
+		puppet = { country = HUN country = SOV }
+	}
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+
+	date = { day = 1 month = march year = 1948 }
+	offset = 2
+	deathdate = { day = 1 month = april year = 1948 }
+
+	#picture = "german_replacements"
+
+	action_a = {
+		name = "OK"
+		command = { type = set_domestic which = democratic value = 2 }
+		command = { type = set_domestic which = political_left value = 10 }
+	}
+}

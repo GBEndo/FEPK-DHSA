@@ -1,0 +1,1551 @@
+#########################################################################
+#	FEPK_another.txt
+#	その他イベント
+#########################################################################
+#id = 138100-09		仏白蘭の首都帰還
+#id = 138110-19		初期設定調整イベント
+#id = 138120-29		（非史実）ドイツのチベット支援イベント
+#id = 138140-49		ナチスドイツ追加イベント
+#id = 138150-69		バルカン紛争イベント
+#id = 138199		スライダー移動確認イベント
+#########################################################################
+#############
+#  首都帰還
+#############
+
+event = {
+	id = 138101
+	random = no
+	country = FRA
+
+	trigger = {
+		OR = { #these signal german defeat
+			NOT = {
+				exists = GER
+			}
+			event = 131301
+			event = 131302
+			event = 131303
+			event = 131304
+		}
+		control = { province = 56 data = FRA }
+		event = 130423 #FEPKBETA4.1
+        }
+
+	date = { day = 1 month = january year = 1941 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_700001_NAME"
+	desc = "EVT_700001_DESC"
+
+	#picture = "tannu_tuva"
+
+	action_a = {
+		name = "OK"
+		command = { type = capital which = 56 } #Paris
+		command = { type = free_ic value = -7 } #removes free IC provided by 1941, 1944, and vichy events
+		command = { type = end_mastery which = SYR }
+		command = { type = end_mastery which = LEB }
+	}
+}
+
+event = {
+	id = 138102
+	random = no
+	country = HOL
+
+	trigger = {
+		OR = { #these signal german defeat
+			NOT = {
+				exists = GER
+			}
+			event = 131301
+			event = 131302
+			event = 131303
+			event = 131304
+		}
+		control = { province = 77 data = HOL }
+		control = { province = 78 data = HOL }
+		control = { province = 79 data = HOL }
+		control = { province = 49 data = HOL }
+		control = { province = 48 data = HOL }
+		control = { province = 46 data = HOL }
+		control = { province = 48 data = HOL }
+		event = 130420 #FEPKBETA4.1
+	}
+
+	date = { day = 1 month = january year = 1941 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_700002_NAME"
+	desc = "EVT_700002_DESC"
+	#picture = "tannu_tuva"
+
+	action_a = {
+		name = "OK"
+		command = { type = capital which = 47 }
+		command = { type = addcore which = 46 }
+		command = { type = addcore which = 47 }
+		command = { type = addcore which = 48 }
+		command = { type = addcore which = 49 }
+		command = { type = addcore which = 77 }
+		command = { type = addcore which = 78 }
+		command = { type = addcore which = 79 }
+		#Indonesia
+		command = { type = removecore which = 1628 }
+		command = { type = removecore which = 1629 }
+		command = { type = removecore which = 1630 }
+		command = { type = removecore which = 1631 }
+		command = { type = removecore which = 1632 }
+		command = { type = removecore which = 1633 }
+		command = { type = removecore which = 1634 }
+		command = { type = removecore which = 1355 }
+		command = { type = removecore which = 1356 }
+		command = { type = removecore which = 1357 }
+		command = { type = removecore which = 1358 }
+		command = { type = removecore which = 1354 }
+		command = { type = removecore which = 1359 }
+		command = { type = removecore which = 1648 }
+		command = { type = removecore which = 1649 }
+		command = { type = removecore which = 1645 }
+		command = { type = removecore which = 1650 }
+		command = { type = removecore which = 1643 }
+		command = { type = removecore which = 1642 }
+		command = { type = removecore which = 1641 }
+		command = { type = removecore which = 1635 }
+		command = { type = removecore which = 1636 }
+		command = { type = removecore which = 1637 }
+		command = { type = removecore which = 1638 }
+		command = { type = removecore which = 1639 }
+		command = { type = removecore which = 1657 }
+		command = { type = removecore which = 1653 }
+		command = { type = removecore which = 1651 }
+		command = { type = removecore which = 1640 }
+		command = { type = removecore which = 1652 }
+		command = { type = removecore which = 1654 }
+		command = { type = removecore which = 1655 }
+		command = { type = removecore which = 1656 }
+		command = { type = removecore which = 1659 } #dutch retained control of these when indonesia declared independence
+		command = { type = removecore which = 1661 }
+		command = { type = removecore which = 1660 }
+		command = { type = removecore which = 1663 }
+		command = { type = removecore which = 1662 }
+		command = { type = removecore which = 1664 }
+		command = { type = removecore which = 1665 }
+		command = { type = removecore which = 1673 }
+		command = { type = removecore which = 1674 }
+		command = { type = headofstate which = 8001 } #FEPK変更部分
+	}
+}
+
+event = {
+	id = 138103
+	random = no
+	country = BEL
+
+	trigger = {
+		OR = { #these signal german defeat
+			NOT = {
+				exists = GER
+			}
+			event = 131301
+			event = 131302
+			event = 131303
+			event = 131304
+		}
+		control = { province = 50 data = BEL }
+		control = { province = 68 data = BEL }
+		control = { province = 69 data = BEL }
+		control = { province = 51 data = BEL }
+		control = { province = 52 data = BEL }
+		control = { province = 70 data = BEL }
+		control = { province = 65 data = BEL }
+		control = { province = 45 data = BEL }
+		event = 130421 #FEPKBETA4.1
+        }
+
+	date = { day = 1 month = january year = 1941 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_700003_NAME"
+	desc = "EVT_700003_DESC"
+
+	#picture = "tannu_tuva"
+
+	action_a = {
+		name = "OK"
+		command = { type = capital which = 51 }
+		command = { type = addcore which = 45 }
+		command = { type = addcore which = 50 }
+		command = { type = addcore which = 51 }
+		command = { type = addcore which = 52 }
+		command = { type = addcore which = 65 }
+		command = { type = addcore which = 68 }
+		command = { type = addcore which = 69 }
+		command = { type = addcore which = 70 }
+		#Belgian Congo
+		command = { type = removecore which = 1071 }
+		command = { type = removecore which = 1072 }
+		command = { type = removecore which = 1073 }
+		command = { type = removecore which = 1074 }
+		command = { type = removecore which = 1142 }
+		command = { type = removecore which = 1095 }
+		command = { type = removecore which = 1143 }
+		command = { type = removecore which = 1144 }
+		command = { type = removecore which = 1127 }
+		command = { type = removecore which = 1098 }
+		command = { type = removecore which = 1063 }
+		command = { type = headofstate which = 15001 } #FEPK変更部分
+		command = { type = free_ic value = -3 } #so they arent totally defenselesse
+	}
+}
+
+#############
+#  その他イベント
+#############
+
+event = { # 1936シナリオのみ
+	id = 138110
+	random = no 
+	country = CHI
+	
+	trigger = {
+		ai = yes
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	action_a = {
+		command = { type = construct which = land_fort where = 1278 value = 4 } # FEPK1.06
+		command = { type = construct which = land_fort where = 1268 value = 4 } # FEPK1.06
+		command = { type = construct which = land_fort where = 1265 value = 4 } # FEPK1.06
+		command = { type = construct which = land_fort where = 1264 value = 4 } # FEPK1.06
+		command = { type = construct which = land_fort where = 1261 value = 4 } # FEPK1.06
+		command = { type = construct which = land_fort where = 1259 value = 4 } # FEPK1.06
+		command = { type = sleepevent which = 55690 } # FEPK1.06
+	}
+}
+
+event = {
+	id = 138111
+	random = no
+	country = CHC
+
+	trigger = {
+		ai = yes
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	action_a = {
+		name = "OK"
+		command = { type = allow_dig_in } #this is missing in at least 1941, wtf?
+		command = { type = province_keypoints which = 1275 value = 1 }
+	}
+}
+
+
+event = {
+	id = 138113
+	random = no
+	country = YUG
+
+	trigger = {
+		ai = yes
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	action_a = {
+		name = "OK"
+		command = { type = province_keypoints which = 413 value = -1 }
+		command = { type = province_keypoints which = 453 value = 1 }
+	}
+}
+
+##########
+#  チベット亡命政府への支援
+##########
+event = {
+	id = 138120
+	country = GER
+	trigger = {
+		NOT = { war = { country = ENG } }
+		NOT = { 
+			exists = TIB 
+			exists = CHI
+			exists = MAN
+		}
+		government = fascist
+		event = 134071	#チベット動乱終結済み
+		alliance = { country = IND }
+		NOT = { alliance = { country = CHC } }
+		control = { province = 1453 data = CHC }	#ラサ
+		random = 30
+	}
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	name = "EVT_138120_NAME"	#チベット亡命政府とドイツ
+	desc = "EVT_138120_DESC"	#ソビエトロシアならぬ新たな赤い津波――中国共産党がチベットを飲み込んだ。彼らの法王は、インドへの脱出を余儀なくされた。共産主義の勢力が中国で主流となってしまったことはドイツにとってとても不愉快な事だが、ドイツ本国からあまりに距離があることから対応は後手に回っていた。直接の脅威になりえぬならばとドイツは静観を決め込むつもりであったが、ドイツのインド総督府はハインリヒ・ハラーという男を通してダライ・ラマ14世と面会する機会を得た。ハラーはオーストリア出身の登山家で、ナチ党員であり、そしてイギリス軍から逃れるために標高5000ｍの山を超えてインドからチベットに脱出しダライ・ラマと親交を深めたという。彼らを通じて、ドイツ政府はチベットの独立機運の強さを知ることとなった。我々がチベットの独立を支援するならば、中国共産党の増長を防ぐこともできるだろう。ダライ・ラマとその支援者たちはチベットを脱出しインドへ入っており、彼らはチベットの奪還に向けて中国への敵愾心を燃やしている。彼らを武装させて共にインドとの国境を超え、共産党の魔の手から彼らを救おう。
+	
+	style = 0
+
+	action_a = {
+		name = "EVT_138120_ACTA"	#インドに脱出したチベット人達への支援を開始せよ
+		ai_chance = 98
+		command = { type = resource which = supplies value = -1000 }
+		command = { type = manpowerpool value = -1 }
+		command = { type = relation which = CHC value = -100 }
+		#command = { type = ai_prepare_war which = CHC }
+		command = { type = event which = 138121 where = -1 when = 155 }
+	}
+	action_b = {
+		name = "EVT_138120_ACTB"	#我々に中国との外交問題を新造する余裕はない！
+		ai_chance = 2
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = dissent value = 5 }
+	}
+}
+
+event = {
+	id = 138121
+	country = GER
+	
+	name = "EVT_138121_NAME"	#チベット人義勇山岳猟兵の編成
+	desc = "EVT_138121_DESC"	#チベット人たちは、法王をラサに帰すべくドイツ人から訓練を受けた。彼らが中国軍に追い出された時、彼らには装備も訓練も足りていなかった。彼らは歴戦のドイツ式の指導を受けて、今や中国兵に対して十分に戦えるだけの力を得た。今の彼らなら我々と戦列を並べて共産主義者の波を押し返すことが出来るはずだ。
+	style = 0
+	picture = "german_reinforcment"
+	
+	action = {
+		name = "OK"
+		command = { type = add_corps which = "第1チベット軍" value = land where = 1474 }	#スリナガル
+		command = { type = add_division which = "SS第49義勇山岳師団「シャンバラ」" value = bergsjaeger when = 3 }
+		
+		command = { type = add_division which = "SS第50義勇山岳師団「スヴェン・ヘディン」" value = bergsjaeger when = 3 }
+		command = { type = ai_prepare_war which = CHC }
+		command = { type = ai which = "switch/AXIS_versusCHC.ai" }
+	}
+}
+
+event = {
+	id = 138122
+	country = GER
+	decision = {
+		event = 138121
+		NOT = { war = { country = CHC } }
+	}
+	decision_trigger = { 
+		control = { province = 1205 data = CHC } #Beiping
+	}
+	trigger = {
+		ai = no
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	name = "EVT_138122_NAME"	#中国共産党に圧力をかける
+	desc = "EVT_138122_DESC"	#チベットの独立を巡って、我々は
+	
+}
+
+##########
+#  Heydrich Dies
+##########
+event = {
+	id = 138140
+	random = no
+	country = GER
+
+	trigger = {
+		war = { country = GER country = ENG }
+		control = { province = 19 data = ENG } #London is ENG
+		control = { province = 469 data = GER } #Prague is GER
+	}
+
+	date = { year = 1942 month = may day = 27 }
+
+	name = "EVT_391_NAME"
+	desc = "EVT_391_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = sleepminister which = 244 }
+		command = { type = sleepminister which = 266 }
+		command = { type = sleepminister which = 271 }
+		command = { type = sleepevent which = 138144 }
+	}
+}
+##########
+#  Hitler has been assassinated!
+##########
+event = {
+	id = 138141 #2025 replace
+	random = no
+	country = GER
+
+	trigger = {
+		government = fascist
+		InCabinet = 1 #AH HOS
+		OR = { #BETA修正パッチ
+			AND = {
+				dissent = 15
+				NOT = { #FEPKBETA3
+					event = 135303 #bitter peace with germany
+					event = 135313 #bitter peace with germany and japan
+				}
+			}
+			lost_national = { country = GER value = 25 }
+			lost_ic = { country = GER value = 25 }
+		}
+		random = 5
+		NOT = {
+			event = 138142 #failed assassination
+		}
+	}
+
+	date = { day = 1 month = june year = 1941 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_2025_NAME"
+	desc = "EVT_2025_DESC"
+
+	picture = "hitler_assasination"
+
+	action_a = {
+		name = "OK"
+		command = { type = sleepminister which = 1 }		#Adolf Hitler
+		command = { type = sleepminister which = 41 }		#Adolf Hitler
+		command = { type = sleepminister which = 177 }		#Adolf Hitler
+		command = { type = sleepminister which = 108 }		#Heinrich Himmler
+		command = { type = sleepminister which = 261 }		#Heinrich Himmler
+		command = { type = sleepleader which = 505 }		#Heinrich Himmler
+		command = { type = sleepminister which = 56 }		#Joseph Goebbels
+		command = { type = sleepminister which = 110 }		#Joseph Goebbels
+		command = { type = sleepminister which = 246 }		#Joseph Goebbels
+		command = { type = sleepminister which = 263 }		#Joseph Goebbels
+		command = { type = sleepminister which = 10 }		#Hermann Ging
+		command = { type = sleepminister which = 213 }		#Hermann Ging
+		command = { type = sleepminister which = 79 }		#Hermann Ging
+		command = { type = sleepminister which = 245 }		#Hermann Ging
+		command = { type = sleepleader which = 440 }		#Hermann Ging
+		command = { type = sleepteam which = 23 }		#Hermann Ging
+		command = { type = sleepteam which = 82 }
+		command = { type = sleepminister which = 42 }		#Martin Bormann
+		command = { type = sleepminister which = 139 }		#Martin Bormann
+		command = { type = sleepleader which = 440 }		#Bormann, is this the same guy???
+		command = { type = sleepminister which = 2 }		#Rudolf Hess
+		command = { type = sleepminister which = 76 }		#Rudolf Hess
+		command = { type = sleepminister which = 55 }		#Joachim von Ribbentrop
+		#command = { type = sleepminister which = 43 }		#Albert Speer
+		#command = { type = sleepminister which = 86 }		#Albert Speer
+		#command = { type = sleepminister which = 100 }		#Albert Speer
+		command = { type = sleepminister which = 244 }		#Reinhard Heydrich
+		command = { type = sleepminister which = 266 }		#Reinhard Heydrich
+		command = { type = sleepminister which = 271 }
+		#command = { type = sleepminister which = 32 }		#Karl Ditz
+		#command = { type = sleepminister which = 192 }		#Karl Ditz
+		#command = { type = sleepminister which = 240 }		#Karl Ditz
+		#command = { type = sleepleader which = 389 }		#Ditz
+		#command = { type = sleepteam which = 25 }		#Karl Ditz
+		command = { type = sleepminister which = 57 }		#Alfred Rosenberg
+		command = { type = sleepminister which = 58 }		#Arthur Seyss-Inquart
+		command = { type = sleepminister which = 59 }		#Johann Schwerin von Krosigk
+		command = { type = sleepminister which = 85 }		#Johann Schwerin von Krosigk
+		command = { type = sleepminister which = 77 }		#Hjalmar Schacht
+		command = { type = sleepminister which = 5 }		#Wilhelm Frick
+		command = { type = sleepminister which = 137 }		#Wilhelm Frick
+		command = { type = sleepminister which = 78 }		#Friedrich Flick
+		command = { type = sleepminister which = 80 }		#Walter Funk
+		command = { type = sleepminister which = 81 }		#Walter Darr・
+		command = { type = sleepminister which = 82 }		#Kurt Daluege
+		command = { type = sleepminister which = 83 }		#Max Amann
+		command = { type = sleepminister which = 84 }		#Franz Xavier-Schwarz
+		command = { type = sleepminister which = 109 }		#Viktor Lutze
+		command = { type = sleepminister which = 111 }		#Heinrich M・ler
+		command = { type = sleepminister which = 112 }		#Arthur Seyss-Inquart
+		command = { type = sleepminister which = 113 }		#Karl Hanke
+		command = { type = sleepminister which = 136 }		#Hans-Georg von Friedeburg
+		command = { type = sleepminister which = 193 }		#Hans-Georg von Friedeburg
+		command = { type = sleepminister which = 138 }		#Ernst Kaltenbrunner
+		command = { type = sleepminister which = 156 }		#Alfred Jodl
+		#command = { type = sleepminister which = 157 }		#Heinz Guderian
+		#command = { type = sleepleader which = 94 }		#Guderian
+		#command = { type = sleepteam which = 22 }		#Heinz Guderian
+		command = { type = sleepminister which = 159 }		#Fritz Bayerlein
+		command = { type = sleepminister which = 163 }		#Kurt Zeitzler
+		command = { type = sleepleader which = 369 }		#Zeitzler
+		command = { type = sleepminister which = 174 }		#Walther von Brauchitsch
+		#command = { type = sleepminister which = 175 }		#Kurt von Hammerstein-Equord
+		#command = { type = sleepleader which = 116 }		#von Hammerstein-Equord  K.
+		command = { type = sleepminister which = 176 }		#Wilhelm Keitel
+		command = { type = sleepleader which = 154 }		#Keitel  W.
+		command = { type = sleepminister which = 178 }		#Ferdinand Schner
+		command = { type = sleepleader which = 249 }		#Schner
+		command = { type = sleepminister which = 203 }		#Hugo Sperrle
+		command = { type = sleepleader which = 470 }		#Sperrle
+		command = { type = sleepteam which = 24 }		#Hugo Sperrle
+		command = { type = sleepminister which = 204 }		#Robert Ritter von Greim
+		command = { type = sleepleader which = 475 }		#von Greim
+		#command = { type = sleepminister which = 206 }		#Eberhard Milch
+		#command = { type = sleepleader which = 456 }		#Milch
+		command = { type = sleepminister which = 207 }		#Albert Kesselring
+		command = { type = sleepleader which = 157 }		#Kesselring
+		command = { type = sleepleader which = 451 }		#Kesselring
+		command = { type = sleepteam which = 94 }	#FEPKDH
+
+		command = { type = sleepleader which = 21 }		#Blumentritt
+		command = { type = sleepleader which = 27 }		#Brandenberger
+		command = { type = sleepleader which = 29 }		#Br舫er
+		command = { type = sleepleader which = 44 }		#de Angelis
+		command = { type = sleepleader which = 85 }		#Geyr von Schweppenburg
+		command = { type = sleepleader which = 225 }		#Remer
+		command = { type = sleepleader which = 251 }		#Seydlitz-Kurzbach
+		command = { type = sleepleader which = 260 }		#Student
+		command = { type = sleepleader which = 284 }		#von Brockdorff-Ahlefeldt
+		command = { type = sleepleader which = 286 }		#von Choltitz
+		command = { type = sleepleader which = 315 }		#von Lauchert
+		command = { type = sleepleader which = 317 }		#von le Suire
+		command = { type = sleepleader which = 322 }		#von Mackensen
+		command = { type = sleepleader which = 334 }		#von Reichenau
+		command = { type = sleepminister which = 238 }
+		command = { type = sleepleader which = 351 }		#von Weichs
+		command = { type = sleepleader which = 49 }		#Dietl
+		command = { type = sleepleader which = 421 }		#von Friedeburg
+		command = { type = sleepleader which = 397 }		#Kienast
+		command = { type = sleepleader which = 398 }		#Kieseritzky
+		command = { type = sleepleader which = 420 }		#von Arnauld de la Periere
+		command = { type = sleepleader which = 428 }		#Bogatsch
+		command = { type = sleepleader which = 434 }		#Dessloch
+		command = { type = sleepleader which = 436 }		#Felmy
+		command = { type = sleepleader which = 437 }		#Galland
+		command = { type = sleepteam which = 18 }		#Adolf Galland
+		command = { type = sleepleader which = 447 }		#Jeschonnek
+		command = { type = sleepleader which = 452 }		#Koller
+		command = { type = sleepleader which = 463 }		#Putzier
+		command = { type = sleepleader which = 464 }		#Rudel
+		command = { type = sleepteam which = 65 }	#FEPKDH
+		command = { type = sleepleader which = 473 }		#Udet
+		command = { type = sleepteam which = 21 }		#Ernst Udet
+		command = { type = sleepminister which = 209 }		
+		command = { type = sleepleader which = 479 }		#von Richthofen
+		command = { type = sleepteam which = 58 }	#FEPKDH
+		command = { type = sleepleader which = 483 }		#Wever
+		command = { type = sleepleader which = 484 }		#Wimmer
+		command = { type = sleepleader which = 487 }		#Alpers
+		command = { type = sleepleader which = 495 }		#Demelhuber
+		command = { type = sleepleader which = 496 }		#Dietrich
+		command = { type = sleepleader which = 497 }		#Eicke
+		command = { type = sleepleader which = 498 }		#Fegelein
+		command = { type = sleepleader which = 500 }		#Gille
+		command = { type = sleepleader which = 511 }		#Kr舂er
+		command = { type = sleepleader which = 515 }		#Lammerding
+		command = { type = sleepleader which = 523 }		#Rener
+		command = { type = sleepleader which = 530 }		#Steiner
+		command = { type = sleepleader which = 488 }		#Augsberger
+		command = { type = sleepleader which = 489 }		#Becker  C.
+		command = { type = sleepleader which = 493 }		#Brenner
+		command = { type = sleepleader which = 494 }		#Debes
+		command = { type = sleepleader which = 499 }		#Fitzhum
+		command = { type = sleepleader which = 503 }		#Hausser #FEPK1.12
+		command = { type = sleepleader which = 507 }		#Jungclaus
+		command = { type = sleepleader which = 509 }		#Kleinheisterkamp
+		command = { type = sleepleader which = 514 }		#Kumm
+		command = { type = sleepleader which = 516 }		#Lombard
+		command = { type = sleepleader which = 518 }		#Mohnke
+		command = { type = sleepleader which = 520 }		#Peiper
+		command = { type = sleepleader which = 521 }		#Priess
+		command = { type = sleepleader which = 525 }		#Sauberzweig
+		command = { type = sleepleader which = 527 }		#Simon
+		command = { type = sleepleader which = 528 }		#Skorzeny
+		command = { type = sleepleader which = 532 }		#Trabandt
+		command = { type = sleepleader which = 533 }		#von dem Bach-Zelewski
+		command = { type = sleepleader which = 535 }		#von Massow
+		command = { type = sleepleader which = 538 }		#von Pfeffer-Wildenbruch
+		command = { type = sleepleader which = 540 }		#Wisch
+		command = { type = sleepleader which = 541 }		#Wisliceny
+		command = { type = sleepleader which = 547 }		#Britzelmayr
+		command = { type = sleepleader which = 551 }		#Feketehalmy-Czeydner
+		command = { type = sleepleader which = 552 }		#Feurstein
+		command = { type = sleepleader which = 553 }		#Glaise-Horstenau
+		command = { type = sleepleader which = 554 }		#Grassy
+		command = { type = sleepleader which = 559 }		#Kienbauer
+		command = { type = sleepleader which = 561 }		#Kubena
+		command = { type = sleepleader which = 563 }		#Lr
+		command = { type = sleepleader which = 564 }		#Materna
+		command = { type = sleepleader which = 568 }		#Rendulic
+		command = { type = sleepleader which = 576 }		#von Hubicki
+		command = { type = sleepleader which = 644 }		#ギュンター・コルテン
+		
+		command = { type = sleepleader which = 300 }
+		command = { type = sleepleader which = 490 }
+		command = { type = sleepleader which = 491 }
+		command = { type = sleepleader which = 492 }
+		command = { type = sleepleader which = 501 }
+		command = { type = sleepleader which = 502 }
+		command = { type = sleepleader which = 503 }
+		command = { type = sleepleader which = 504 }
+		command = { type = sleepleader which = 505 }
+		command = { type = sleepleader which = 506 }
+		command = { type = sleepleader which = 508 }
+		command = { type = sleepleader which = 510 }
+		command = { type = sleepleader which = 512 }
+		command = { type = sleepleader which = 513 }
+		command = { type = sleepleader which = 514 }
+		command = { type = sleepleader which = 517 }
+		command = { type = sleepleader which = 519 }
+		command = { type = sleepleader which = 522 }
+		command = { type = sleepleader which = 524 }
+		command = { type = sleepleader which = 526 }
+		command = { type = sleepleader which = 529 }
+		command = { type = sleepleader which = 530 }
+		command = { type = sleepleader which = 531 }
+		command = { type = sleepleader which = 536 }
+		command = { type = sleepleader which = 539 }
+		command = { type = sleepleader which = 542 }
+		command = { type = sleepleader which = 543 }
+		command = { type = sleepleader which = 567 }
+		command = { type = sleepleader which = 979 }
+		command = { type = sleepleader which = 980 }
+		command = { type = sleepleader which = 981 }
+		command = { type = sleepleader which = 993 }
+		command = { type = sleepleader which = 994 }
+		command = { type = sleepleader which = 995 }
+		command = { type = sleepleader which = 996 }
+		command = { type = sleepleader which = 997 }
+		command = { type = sleepleader which = 506 }
+		command = { type = sleepleader which = 522 }
+		command = { type = sleepleader which = 1100809 }
+		command = { type = sleepleader which = 1100810 }
+		command = { type = sleepleader which = 1100982 }
+		command = { type = sleepleader which = 1101757 }
+
+
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = domestic which = professional_army value = 1 } #toward standing
+
+		command = { type = headofstate which = 34 }		#Beck
+		command = { type = headofgovernment which = 48 }	#Goedeler
+		command = { type = foreignminister which = 69 }		#von Hassel
+		command = { type = armamentminister which = 96 }	#Paul Lejeune-Jung
+		command = { type = ministerofsecurity which = 133 }	#Julius Leber
+		#or
+		#command = { type = ministerofsecurity which = 125 }	#Josef Wirmer
+		command = { type = ministerofintelligence which = 148 } #Canaris
+		command = { type = chiefofstaff which = 162 }		#Witzleben
+		command = { type = chiefofarmy which = 184 }		#Witzleben
+		command = { type = chiefofnavy which = 192 }		#Donitz
+		command = { type = chiefofair which = 206 }		#Milch
+
+		command = { type = dissent value = 3 }
+
+		command = { type = sleepevent which = 138142 } #Failed assassination of Hitler
+	}
+}
+##########
+#  Failed Assassination of Hitler
+##########
+event = {
+	id = 138142 #2026 replace
+	random = no
+	country = GER
+
+	trigger = {
+		government = fascist
+		InCabinet = 1 #AH HOS
+		OR = { #BETA修正パッチ
+			AND = {
+				dissent = 15
+				NOT = { #FEPKBETA3
+					event = 135303 #bitter peace with germany
+					event = 135313 #bitter peace with germany and japan
+				}
+			}
+			lost_national = { country = GER value = 25 }
+			lost_ic = { country = GER value = 25 }
+		}
+		random = 5
+		NOT = {
+			event = 138141 #successful assassination
+		}
+	}
+
+	date = { day = 1 month = june year = 1941 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_2026_NAME"
+	desc = "EVT_2026_DESC"
+
+	picture = "Fail_Hitler_Assasination"
+
+	action_a = {
+		name = "OK"
+		command = { type = sleepminister which = 7 }		#Ludwig Beck
+		command = { type = sleepleader which = 1102074 }	#Ludwig Beck
+		command = { type = sleepminister which = 34 }		#Ludwig Beck
+		command = { type = sleepminister which = 35 }		#Hjalmar Schacht
+		command = { type = sleepminister which = 77 }		#Hjalmar Schacht
+		command = { type = sleepminister which = 92 }		#Hjalmar Schacht
+		command = { type = sleepminister which = 140 }		#Hjalmar Schacht
+		command = { type = sleepminister which = 48 }		#Carl Friedrich Goerdeler
+		command = { type = sleepminister which = 99 }		#Carl Friedrich Goerdeler
+		command = { type = sleepminister which = 68 }		#Friedrich-Werner von der Schulenberg
+		command = { type = sleepminister which = 69 }		#Ulrich von Hassel
+		command = { type = sleepminister which = 6 }		#Wilhelm Canaris
+		command = { type = sleepminister which = 148 }		#Wilhelm Canaris
+		command = { type = sleepminister which = 101 }		#Johannes Popitz
+		command = { type = sleepminister which = 102 }		#Claus von Stauffenberg
+		command = { type = sleepminister which = 268 }		#Claus von Stauffenberg
+		command = { type = sleepminister which = 125 }		#Josef Wirmer
+		command = { type = sleepminister which = 126 }		#Fritz von Schulenburg
+		command = { type = sleepminister which = 127 }		#Henning von Tresckow
+		command = { type = sleepminister which = 146 }		#Hans Oster
+		command = { type = sleepminister which = 160 }		#Erich Hoepner
+		command = { type = sleepminister which = 183 }		#Erich Hoepner
+		command = { type = sleepleader which = 140 }		#Hopner
+		command = { type = sleepminister which = 162 }		#Erwin von Witzleben
+		command = { type = sleepminister which = 184 }		#Erwin von Witzleben
+		command = { type = sleepleader which = 354 }		#von Witzleben
+		command = { type = sleepminister which = 165 }		#Erwin Rommel
+		command = { type = sleepminister which = 260 }		#Erwin Rommel
+		command = { type = sleepteam which = 55 }			#Erwin Rommel
+		command = { type = sleepleader which = 230 }		#Rommel
+		command = { type = sleepminister which = 231 }		#Gunther von Kluge
+		command = { type = sleepleader which = 311 }		#von Kluge
+		command = { type = sleepleader which = 164 }		#Wolfgang von Kluge
+		command = { type = sleepminister which = 155 }		#Franz Halder
+		command = { type = sleepleader which = 114 }		#Halder
+		command = { type = sleepminister which = 248 }		#Hans Dohnanyi
+		command = { type = sleepminister which = 96 }		#Paul Lejeune-Jung
+		command = { type = sleepminister which = 133 }		#Julius Leber
+		command = { type = sleepleader which = 212 }		#Olbricht
+		command = { type = sleepleader which = 78 }		#Fromm
+		command = { type = sleepleader which = 344 }		#von Stulpnagel  C.H.
+		command = { type = sleepleader which = 419 }		#Thiele
+		command = { type = sleepleader which = 539 }		#Wagner
+		command = { type = sleepleader which = 695 }		#Fellgiebel
+		command = { type = sleepleader which = 644 }	#ギュンター・コルテン
+
+		command = { type = dissent value = 1 }
+		command = { type = domestic which = freedom value = -1 } #even more closed
+		command = { type = sleepevent which = 138141 } #successful assassination
+	}
+}
+##########
+#  New Kids On The Block - Generals take over after Hitler is assassinated
+##########
+event = {
+	id = 138143
+	random = no
+	country = GER
+
+	trigger = {
+		event = 138141 #hitler is successfully assassinated
+		random = 25
+	}
+
+	date = { day = 1 month = july year = 1942 } #around when rommel became a marshal
+	offset = 15
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_138143_NAME"
+	desc = "EVT_138143_DESC"
+	picture = "crusader"
+
+	action_a = {
+		name = "EVT_138143_ACTA"
+		ai_chance = 100
+		command = { type = wakeminister which = 229 }	#von Manstein
+		command = { type = wakeminister which = 267 } #von Rundstedt
+		command = { type = wakeminister which = 260 }	#Rommel 
+		command = { type = headofstate which = 260 } #Rommel
+		command = { type = headofgovernment which = 267 } #von Rundstedt
+		command = { type = armamentminister which = 100 } #Speer
+		command = { type = ministerofsecurity which = 268 } #Stauffenberg
+		command = { type = ministerofintelligence which = 146 }	#Hans Oster
+		command = { type = chiefofstaff which = 229 } #Manstein
+		command = { type = chiefofarmy which = 157 } #Guderian
+		command = { type = chiefofair which = 272 } #Kammhuber
+
+		command = { type = domestic which = professional_army value = 1 } #toward standing, everyone loves rommel
+		command = { type = extra_tc value = 900 } #マップ外TC修正
+
+		command = { type = dissent value = -100 }
+		command = { type = local_setflag which = War_weariness when = 1 value = 99 }	#厭戦イベント無効化
+	}
+	action_c = {
+		name = "EVT_138143_ACTC"
+		ai_chance = 0
+		command = { type = dissent value = 5 }
+	}
+}
+##########
+#  New Kids On The Block - SS takes over after Hitler dies of natural causes
+##########
+event = {
+	id = 138144
+	random = no
+	country = GER
+
+	trigger = {
+		InCabinet = 1 #AH HOS
+		war = { country = USA country = GER }
+		random = 10
+	}
+
+	date = { day = 21 month = april year = 1946 }
+	offset = 8
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_138144_NAME"
+	desc = "EVT_138144_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "EVT_138144_ACTA"
+		command = { type = sleepminister which = 1 } #Hitler
+		command = { type = sleepminister which = 41 }
+		command = { type = sleepminister which = 177 }
+		command = { type = sleepminister which = 42 } #Bormann
+		command = { type = sleepminister which = 139 }
+		command = { type = sleepminister which = 2 } #Hess
+		command = { type = sleepminister which = 76 }
+		command = { type = sleepminister which = 55 } #Ribbentrop
+
+		command = { type = set_domestic which = democratic value = 1 }
+		command = { type = set_domestic which = political_left value = 1 }
+		command = { type = set_domestic which = freedom value = 1 }
+		command = { type = set_domestic which = free_market value = 1 }
+		command = { type = domestic which = professional_army value = -2 }
+		command = { type = set_domestic which = defense_lobby value = 10 }
+		command = { type = set_domestic which = interventionism value = 10 }
+
+		command = { type = headofstate which = 261 } #Himmler
+		command = { type = headofgovernment which = 266 } #Heydrich
+		command = { type = foreignminister which = 58 } #Seyss-Inquart
+		command = { type = armamentminister which = 87 } #Pohl
+		command = { type = ministerofsecurity which = 111 } #Muller
+		command = { type = ministerofintelligence which = 138 } #Kaltenbrunner
+		command = { type = chiefofstaff which = 230 } #Busch
+		command = { type = chiefofarmy which = 232 } #Hausser
+		command = { type = chiefofnavy which = 192 } #Donitz
+		command = { type = chiefofair which = 204 } #von Greim
+
+		command = { type = sleepevent which = 138145 } #if SS takes over, no triumverate
+	}
+}
+##########
+#  New Kids On The Block - Hitler Dies of Natural Causes
+##########
+event = {
+	id = 138145
+	random = no
+	country = GER
+
+	trigger = {
+		InCabinet = 1 #AH HOS
+		war = { country = USA country = GER }
+		random = 15
+	}
+
+	date = { day = 21 month = april year = 1946 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_138145_NAME"
+	desc = "EVT_138145_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "EVT_138145_ACTA"
+		command = { type = sleepminister which = 1 } #Hitler
+		command = { type = sleepminister which = 41 }
+		command = { type = sleepminister which = 177 }
+		command = { type = sleepminister which = 42 } #Bormann
+		command = { type = sleepminister which = 139 }
+		command = { type = sleepminister which = 2 } #Hess
+		command = { type = sleepminister which = 76 }
+		command = { type = sleepminister which = 55 } #Ribbentrop
+
+		command = { type = set_domestic which = democratic value = 1 }
+		command = { type = set_domestic which = political_left value = 1 }
+		command = { type = set_domestic which = freedom value = 1 }
+		command = { type = set_domestic which = free_market value = 1 }
+		command = { type = domestic which = professional_army value = -1 }
+		command = { type = set_domestic which = defense_lobby value = 10 }
+		command = { type = set_domestic which = interventionism value = 10 }
+
+		command = { type = headofstate which = 245 } #Goring
+		command = { type = headofgovernment which = 263 } #Goebbels
+		command = { type = foreignminister which = 57 } #Rosenberg
+		command = { type = armamentminister which = 100 } #Speer
+		command = { type = ministerofsecurity which = 108 } #Himmler
+		command = { type = ministerofintelligence which = 142 } #Schellenberg
+		command = { type = chiefofstaff which = 156 } #Jodl
+		command = { type = chiefofarmy which = 178 } #Schorner
+		command = { type = chiefofnavy which = 192 } #Donitz
+		command = { type = chiefofair which = 10 } #Goring
+		command = { type = dissent value = -1 }
+
+		command = { type = sleepevent which = 138144 }
+	}
+}
+
+event = { 
+	id = 138146
+	random = no
+
+	country = GER
+
+	trigger = {
+		InCabinet = 1 #AH alive
+		war = { country = GER country = ENG }
+		war = { country = GER country = SOV }
+		war = { country = GER country = USA }
+		NOT = { manpower = 300 }
+		random = 30
+	}
+
+	date = { day = 1 month = august year = 1942 } #historically february 18 1943
+	offset = 7
+	deathdate = { day = 15 month = june year = 1944 } #right before 1944 scenario
+
+	name = "EVT_138146_NAME"
+	desc = "EVT_138146_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "EVT_138146_ACTA"
+		ai_chance = 100
+		command = { type = ministerofsecurity which = 110 } #Goebbels
+		command = { type = manpowerpool value = 300 } # 1.09
+		command = { type = domestic which = free_market value = -1 } #more towards central planning
+		command = { type = domestic which = professional_army value = -2 } #more towards drafted army
+		command = { type = domestic which = freedom value = -1 } #more closed society
+		command = { type = dissent value = 1 }
+	}
+	action_b = {
+		name = "EVT_138146_ACTB"
+		ai_chance = 0
+		command = { type = dissent value = -1 }
+	}
+}
+
+event = {
+	id = 138147
+	random = no
+	country = GER
+	style = 0
+
+	trigger = { 
+		headofstate = 1 #AH
+		random = 95
+	}
+
+	date = { day = 21 month = april year = 1952 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_138147_NAME"
+	desc = "EVT_138147_DESC"
+	picture = "allied_strategic_defeat"
+
+	action_a = {
+		ai_chance = 100
+		name = "EVT_138147_ACTA"
+		command = { type = headofstate which = 245 } #Goring
+		command = { type = headofgovernment which = 263 } #Goebbels
+		command = { type = foreignminister which = 57 } #Rosenberg
+		command = { type = armamentminister which = 100 } #Speer
+		command = { type = ministerofsecurity which = 108 } #Himmler
+		command = { type = ministerofintelligence which = 142 } #Schellenberg
+		command = { type = chiefofstaff which = 156 } #Jodl
+		command = { type = chiefofarmy which = 178 } #Schorner
+		command = { type = chiefofnavy which = 192 } #Donitz
+		command = { type = chiefofair which = 10 } #Goring
+		command = { type = sleepminister which = 1 } #Hitler
+		command = { type = sleepminister which = 41 }
+		command = { type = sleepminister which = 177 }
+		command = { type = sleepminister which = 42 } #Bormann
+		command = { type = sleepminister which = 139 }
+		command = { type = sleepminister which = 55 } #Ribbentrop
+	}
+}
+
+
+
+##########
+#  Military Access for Balkan War
+##########
+event = {
+	id = 138150
+	random = no
+	country = GER
+
+	trigger = {
+		OR = {
+			war = { country = HUN country = ROM }
+			war = { country = BUL country = ROM }
+		}
+		NOT = {
+			war = { country = HUN country = GER }
+			war = { country = BUL country = GER }
+			war = { country = ROM country = GER }
+			event = 60202 # FEPK変更部分
+			flag = royal_vienne
+		}
+	}
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_138150_NAME"
+	desc = "EVT_138150_DESC"
+
+	#picture = "FIN_give_in"
+
+	action_a = {
+		name = "EVT_138150_ACTA"
+		command = { type = end_access which = ROM }
+		command = { type = end_access which = HUN }
+		command = { type = end_access which = BUL }
+		command = { type = non_aggression which = GER where = ROM }
+		command = { type = non_aggression which = GER where = HUN }
+		command = { type = non_aggression which = GER where = BUL }
+		command = { type = end_guarantee which = GER where = ROM }
+		command = { type = end_guarantee which = GER where = HUN }
+		command = { type = end_guarantee which = GER where = BUL }
+		command = { type = set_relation which = ROM value = -150 }
+		command = { type = set_relation which = HUN value = -150 }
+		command = { type = set_relation which = BUL value = -150 }
+	}
+}
+
+##########
+#  Romania wins and offers Hungary peace
+##########
+event = {
+	id = 138151
+	random = no
+	country = ROM
+
+	trigger = {
+		OR = {
+			event = 138150 #trouble in the balkans
+			flag = romano_hungarian_war
+		}
+		OR = {
+			alliance = { country = GER country = ROM } #new
+			control = { province = 457 data = ROM } #Budapest
+			lost_VP = { country = HUN value = 50 }
+		}
+		war = { country = HUN country = ROM }
+	}
+
+	date = { day = 1 month = june year = 1940 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_138151_NAME"
+	desc = "EVT_138151_DESC"
+
+	picture = "romania_tank"
+
+	action_a = {
+		name = "EVT_138151_ACTA"
+		ai_chance = 100
+		command = { type = dissent value = -3 }
+		command = { type = trigger which = 138152 }
+	}
+	action_b = {
+		name = "EVT_138151_ACTB"
+		ai_chance = 0
+		command = { type = dissent value = 10 }
+	}
+}
+##########
+#  Romania Victorious
+##########
+event = {
+	id = 138152
+	random = no
+	country = HUN
+
+	name = "EVT_138152_NAME"
+	desc = "EVT_138152_DESC"
+
+	picture = "romania_tank"
+
+	action_a = {
+		name = "EVT_138152_ACTA"
+		ai_chance = 100
+		command = { type = leave_alliance }
+		command = { type = peace which = ROM value = 1 }
+		command = { type = peace which = GER value = 1 }
+		command = { type = access which = ROM }
+		#command = { type = alliance which = GER }
+	}
+	action_b = {
+		name = "EVT_138152_ACTB"
+		ai_chance = 0
+		command = { type = dissent value = 10 }
+		command = { type = sleepevent which = 138153 } #Hungary gives spoils
+	}
+}
+##########
+#  Hungary Defeated - spoils
+##########
+event = {
+	id = 138153
+	random = no
+	country = HUN
+
+	trigger = {
+		event = 138152
+		NOT = {
+			war = { country = BUL country = ROM }
+		}
+	}
+
+	date = { day = 1 month = june year = 1940 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_138153_NAME"
+	desc = "EVT_138153_DESC"
+
+	picture = "surrender"
+
+	action_a = {
+		name = "EVT_138153_ACTA"
+		command = { type = dissent value = 10 }
+		command = { type = set_domestic which = democratic value = 2 } #FEPKBETA5.2
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = set_domestic which = free_market value = 2 }
+		command = { type = set_domestic which = freedom value = 2 }
+		command = { type = set_domestic which = professional_army value = 3 }
+		command = { type = set_domestic which = defense_lobby value = 10 }
+		command = { type = set_domestic which = interventionism value = 10 }
+
+		command = { type = removecore which = 428 } #in romania
+		command = { type = removecore which = 496 }
+		command = { type = removecore which = 498 }
+		command = { type = removecore which = 495 }
+		command = { type = secedeprovince which = ROM value = 428 } #Transylvania
+		command = { type = secedeprovince which = ROM value = 496 } #
+		command = { type = secedeprovince which = ROM value = 498 } #
+		command = { type = secedeprovince which = ROM value = 427 } #newly added
+		command = { type = secedeprovince which = ROM value = 429 } #
+		command = { type = secedeprovince which = ROM value = 430 } #
+		command = { type = secedeprovince which = ROM value = 495 } #
+		#command = { type = alliance which = GER }
+
+		command = { type = sleepminister which = 21011 } #FEPKBETA5.2
+
+		command = { type = setflag which = romdefeatshun }
+	}
+}
+##########
+#  Hungary defeats Romania and offers peace
+##########
+event = {
+	id = 138154
+	random = no
+	country = HUN
+
+	trigger = {
+		OR = {
+			event = 138150 #trouble in the balkans
+			flag = romano_hungarian_war
+		}
+		OR = {
+			alliance = { country = GER country = HUN }
+			control = { province = 424 data = HUN } #Bucharest
+			lost_VP = { country = ROM value = 50 }
+		}
+		war = { country = HUN country = ROM }
+	}
+
+	date = { day = 1 month = june year = 1940 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_138154_NAME"
+	desc = "EVT_138154_DESC"
+
+	picture = "hungarian_tank"
+
+	action_a = {
+		name = "EVT_138154_ACTA"
+		ai_chance = 100
+		command = { type = dissent value = -3 }
+		command = { type = trigger which = 138155 }
+	}
+	action_b = {
+		name = "EVT_138154_ACTB"
+		ai_chance = 0
+		command = { type = dissent value = 10 }
+	}
+}
+##########
+#  Romania defeated by Hungary
+##########
+event = {
+	id = 138155
+	random = no
+	country = ROM
+
+	name = "EVT_138155_NAME"
+	desc = "EVT_138155_DESC"
+
+	picture = "hungarian_tank"
+
+	action_a = {
+		name = "EVT_138155_ACTA"
+		ai_chance = 100
+		command = { type = leave_alliance }
+		command = { type = addcore which = 498 }
+		#command = { type = addcore which = 427 }
+		command = { type = addcore which = 428 }
+		#command = { type = addcore which = 429 }
+		#command = { type = addcore which = 430 }
+		#command = { type = addcore which = 495 }
+		command = { type = addcore which = 496 }
+		#command = { type = addcore which = 494 }
+		command = { type = peace which = HUN value = 1 }
+		command = { type = peace which = GER value = 1 }
+		command = { type = access which = HUN }
+		#command = { type = alliance which = GER }
+	}
+	action_b = {
+		name = "EVT_138155_ACTB"
+		ai_chance = 0
+		command = { type = dissent value = 10 }
+	}
+}
+##########
+#  Romania Defeated - spoils
+##########
+event = {
+	id = 138156
+	random = no
+	country = ROM
+
+	trigger = {
+		event = 138155
+		NOT = {
+			war = { country = BUL country = ROM }
+		}
+	}
+
+	date = { day = 1 month = june year = 1940 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_138156_NAME"
+	desc = "EVT_138156_DESC"
+
+	picture = "surrender"
+
+	action_a = {
+		name = "EVT_138156_ACTA"
+		command = { type = dissent value = 10 }
+		command = { type = removecore which = 428 }
+		command = { type = removecore which = 498 }
+		command = { type = removecore which = 496 }
+		command = { type = secedeprovince which = HUN value = 498 } #Transylvania
+		#command = { type = secedeprovince which = HUN value = 427 } #Transylvania
+		command = { type = secedeprovince which = HUN value = 428 } #Transylvania
+		#command = { type = secedeprovince which = HUN value = 429 } #Transylvania
+		#command = { type = secedeprovince which = HUN value = 430 } #Transylvania
+		#command = { type = secedeprovince which = HUN value = 495 } #Transylvania
+		command = { type = secedeprovince which = HUN value = 496 } #Transylvania
+		#command = { type = alliance which = GER }
+	}
+}
+
+##########
+#  70675-? - Romano-Bulgarian War and related events
+##########
+##########
+#  Romania offers Bulgaria peace
+##########
+event = {
+	id = 138160
+	random = no
+	country = ROM
+
+	trigger = {
+		OR = {
+			event = 138150 #trouble in the balkans
+			flag = romano_bulgarian_war
+		}
+		OR = {
+			alliance = { country = GER country = ROM }
+			control = { province = 417 data = ROM } #sofia
+			lost_VP = { country = BUL value = 50 }
+		}
+		war = { country = BUL country = ROM }
+	}
+
+	date = { day = 1 month = july year = 1940 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_138160_NAME"
+	desc = "EVT_138160_DESC"
+
+	picture = "romania_tank"
+
+	action_a = {
+		name = "EVT_138160_ACTA"
+		ai_chance = 100
+		command = { type = dissent value = -3 }
+		command = { type = sleepevent which = 138163 }
+		command = { type = trigger which = 138161 } #bulgaria accepts/rejects romanian offer
+	}
+	action_b = {
+		name = "EVT_138160_ACTB"
+		ai_chance = 0
+		command = { type = dissent value = 10 }
+	}
+}
+##########
+#  Bulgaria defeated, Romania offers peace
+##########
+event = {
+	id = 138161
+	random = no
+	country = BUL
+
+	name = "EVT_138161_NAME"
+	desc = "EVT_138161_DESC"
+
+	picture = "romania_tank"
+
+	action_a = {
+		name = "EVT_138161_ACTA"
+		ai_chance = 100
+		command = { type = leave_alliance }
+		command = { type = peace which = ROM value = 1 }
+		command = { type = peace which = GER value = 1 }
+		command = { type = dissent value = -3 }
+		command = { type = access which = ROM }
+		#command = { type = alliance which = GER }
+	}
+	action_b = {
+		name = "EVT_138161_ACTB"
+		ai_chance = 0
+		command = { type = dissent value = 10 }
+		command = { type = sleepevent which = 138162 } #bulgaria gives spoils
+	}
+}
+##########
+#  Bulgaria defeated - spoils
+##########
+event = {
+	id = 138162
+	random = no
+	country = BUL
+
+	trigger = {
+		event = 138161
+		NOT = {
+			war = { country = HUN country = ROM }
+		}
+	}
+
+	date = { day = 1 month = july year = 1940 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_138162_NAME"
+	desc = "EVT_138162_DESC"
+
+	picture = "surrender"
+
+	action_a = {
+		name = "EVT_138162_ACTA"
+		command = { type = dissent value = 10 }
+		command = { type = removecore which = 423 } #constanta
+		command = { type = secedeprovince which = ROM value = 423 } #constanta
+		#command = { type = alliance which = GER }
+		command = { type = trigger which = 70689 } #romania rejoins axis
+	}
+}
+##########
+#  Bulgaria offers Romania peace
+##########
+event = {
+	id = 138163
+	random = no
+	country = BUL
+
+	trigger = {
+		OR = {
+			event = 138150 #trouble in the balkans
+			flag = romano_bulgarian_war
+		}
+		OR = {
+			alliance = { country = GER country = BUL }
+			control = { province = 424 data = BUL } #Bucharest
+			lost_VP = { country = ROM value = 50 }
+		}
+		war = { country = BUL country = ROM }
+	}
+
+	date = { day = 1 month = july year = 1940 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_138163_NAME"
+	desc = "EVT_138163_DESC"
+
+	picture = "hungarian_tank"
+
+	action_a = {
+		name = "EVT_138163_ACTA"
+		ai_chance = 100
+		command = { type = dissent value = -3 }
+		command = { type = sleepevent which = 138160 }
+		command = { type = trigger which = 138164 } #romania accepts/rejects offer
+	}
+	action_b = {
+		name = "EVT_138163_ACTB"
+		ai_chance = 0
+		command = { type = dissent value = 10 }
+	}
+}
+##########
+#  Romania defeated, Bulgaria offers peace
+##########
+event = {
+	id = 138164
+	random = no
+	country = ROM
+
+	name = "EVT_138164_NAME"
+	desc = "EVT_138164_DESC"
+
+	picture = "hungarian_tank"
+
+	action_a = {
+		name = "EVT_138164_ACTA"
+		ai_chance = 100
+		command = { type = leave_alliance }
+		command = { type = peace which = BUL value = 1 }
+		command = { type = peace which = GER value = 1 }
+		command = { type = dissent value = -3 }
+		command = { type = access which = BUL }
+		#command = { type = alliance which = GER }
+	}
+	action_b = {
+		name = "EVT_138164_ACTB"
+		ai_chance = 0
+		command = { type = dissent value = 10 }
+		command = { type = sleepevent which = 138165 } #Romania gives spoils
+	}
+}
+##########
+#  Romania defeated - spoils to Bulgaria
+##########
+event = {
+	id = 138165
+	random = no
+	country = ROM
+
+	trigger = {
+		event = 138164
+		NOT = {
+			war = { country = HUN country = ROM }
+		}
+	}
+
+	date = { day = 1 month = july year = 1940 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_138165_NAME"
+	desc = "EVT_138165_DESC"
+
+	picture = "surrender"
+
+	action_a = {
+		name = "EVT_138165_ACTA"
+		command = { type = dissent value = 10 }
+		command = { type = removecore which = 423 }
+		command = { type = secedeprovince which = BUL value = 423 } #constanta
+		#command = { type = alliance which = GER }
+	}
+}
+
+event = {
+	id = 138169
+	random = no
+	country = GER
+
+	trigger = {
+		OR = {
+			event = 138150 #trouble in the balkans
+			flag = romano_hungarian_war
+			flag = romano_bulgarian_war
+		}
+		NOT = {
+			war = { country = AUS country = ROM }	#DHSA0.4
+			war = { country = HUN country = ROM }
+			war = { country = BUL country = ROM }
+			war = { country = BUL country = HUN } #if
+			war = { country = HUN country = GER }
+			war = { country = BUL country = GER }
+			war = { country = ROM country = GER }
+		}
+	}
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_138169_NAME"
+	desc = "EVT_138169_DESC"
+
+	#picture = "FIN_give_in"
+
+	action_a = {
+		name = "EVT_138169_ACTA"
+		command = { type = alliance which = HUN }
+		command = { type = alliance which = ROM }
+		command = { type = alliance which = BUL }
+	}
+}
+
+

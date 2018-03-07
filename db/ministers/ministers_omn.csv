@@ -1,0 +1,30 @@
+OMN;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+92001;Head of State;サイード・イブン・ティモール;36;PA;Ruthless Powermonger;High;M92001;x
+92002;Head of Government;サイード・イブン・ティモール;36;PA;Backroom Backstabber;High;M92001;x
+92003;Foreign Minister;サイード・イブン・ティモール;36;PA;General Staffer;High;M92001;x
+92004;Minister of Armament;ジャームズ・E・ドラモンド;36;SC;Resource Industrialist;Medium;M92004;x
+92005;Minister of Security;ヘンリー・L・W・L・バーナム;36;SC;Compassionate Gentleman;Medium;M92005;x
+92006;Head of Military Intelligence;ジェフリー・デニス;36;SC;Technical Specialist;Medium;M92006;x
+92007;Chief of Staff;サイード・イブン・ティモール;36;PA;School of Defence;High;M92001;x
+92008;Chief of Army;サイード・イブン・ティモール;36;PA;Static Defence Doctrine;High;M92001;x
+92009;Chief of Navy;ジェフリー・クレイドン;36;SC;Open Seas Doctrine;Medium;M92009;x
+92010;Chief of Air Force;アブダラー・イブン・ティムール;36;PA;Air Superiority Doctrine;Medium;M92010;x
+92011;Foreign Minister;ハーバート・A・ローレンス＝フィッシャー;39;SC;Great Compromiser;High;M92011;x
+92012;Foreign Minister;イブラヒム・イブン・ティモール;44;PA;Iron Fisted Brute;High;M92012;x
+92013;Minister of Armament;アルトウール・ヘンダーソン;41;SC;Infantry Proponent;Medium;M92013;x
+92014;Minister of Armament;ジェームズ・H・トーマス;43;SC;laissez-faire capitalist;Medium;M92014;x
+92015;Minister of Armament;アリ・イブン・ティムール;45;SC;Corrupt Kleptocrat;Medium;M92015;x
+92016;Minister of Security;ロバート・バナタイン・フィンレイ;40;SC;Silent Lawyer;Medium;M92016;x
+92017;Minister of Security;サイード・イブン・ティモール;45;PA;Efficient Sociopath;Medium;M92001;x
+92018;Head of Military Intelligence;ハロルド・ベレスフォード＝バトラー;42;SC;Industrial Specialist;Medium;M92018;x
+92019;Chief of Staff;P・A・マン;38;SC;School of Fire Support;High;M92019;x
+92020;Chief of Staff;アンガス・ダグラス＝ハミルトン;41;SC;School of Mass Combat;High;M92020;x
+92021;Chief of Staff;ジャミル・イブン・ティモール;45;PA;School of Manoeuvre;High;M92021;x
+92022;Chief of Army;エリク・ライト;38;SC;Guns and Butter Doctrine;High;M92022;x
+92023;Chief of Army;アンガス・ダグラス＝ハミルトン;41;SC;Decisive Battle Doctrine;High;M92020;x
+92024;Chief of Army;ザヒール・イブン・ティモール;45;PA;Elastic Defence Doctrine;High;M92024;x
+92025;Chief of Navy;デレク・リーフ;43;SC;Indirect Approach Doctrine;Medium;M92025;x
+92026;Chief of Air Force;デレク・リーフ;40;SC;Naval Aviation Doctrine;Medium;M92025;x
+92027;Chief of Air Force;R・E・マーティン;41;SC;Army Aviation Doctrine;Medium;M92027;x
+92028;Chief of Air Force;ファウジ・イブン・ティモール;45;PA;Carpet Bombing Doctrine;Medium;M92028;x

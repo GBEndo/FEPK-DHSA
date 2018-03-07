@@ -1,0 +1,492 @@
+##############################
+# Country definition for SPR #
+##############################
+province = {
+  id = 334 # ラコルニャ
+  anti_air = 2
+  air_base = { size = 4 current_size = 4 }
+  naval_base = { size = 7 current_size = 7 }
+}
+province = {
+  id = 341 # マドリード
+  anti_air = 3
+  air_base = { size = 2 current_size = 2 }
+}
+province = {
+  id = 347 # セヴィリヤ
+  anti_air = 2
+  air_base = { size = 4 current_size = 4 }
+  naval_base = { size = 7 current_size = 7 }
+}
+province = {
+  id = 354 # ヴァレンシア
+  anti_air = 2
+  air_base = { size = 2 current_size = 2 }
+  naval_base = { size = 3 current_size = 3 }
+}
+province = {
+  id = 356 # タラゴナ
+  anti_air = 2
+  air_base = { size = 4 current_size = 4 }
+  naval_base = { size = 7 current_size = 7 }
+}
+province = {
+  id = 535 # マジョルカ
+  anti_air = 2
+  air_base = { size = 4 current_size = 4 }
+  naval_base = { size = 7 current_size = 7 }
+}
+province = {
+  id = 963 # グラン・カナリア
+  air_base = { size = 2 current_size = 2 }
+  naval_base = { size = 1 current_size = 1 }
+}
+province = {
+  id = 972 # ヴィリャシスネロス
+  anti_air = 2
+  air_base = { size = 2 current_size = 2 }
+  naval_base = { size = 2 current_size = 2 }
+}
+
+#####################
+# Country main data #
+#####################
+
+country = {
+  tag                = SPR
+  regular_id         = SPA
+  intrinsic_gov_type = left_wing_radical
+  capital            = 341 # マドリード
+  dissent            = 30
+  manpower           = 250
+  # Resource Reserves
+  energy         = 1000
+  metal          = 1000
+  rare_materials = 500
+  oil            = 500
+  supplies       = 500
+  money          = 20
+  transports     = 100
+  escorts        = 27
+
+  diplomacy = {
+    relation = { tag = ENG value = -10 }
+    relation = { tag = FIN value = 35 }
+    relation = { tag = FRA value = 10 }
+    relation = { tag = GER value = -50 }
+    relation = { tag = IRE value = 50 }
+    relation = { tag = ITA value = -50 }
+    relation = { tag = POR value = -50 }
+    relation = { tag = SOV value = -10 }
+  }
+  SpyInfo                = { country = "SPR" NumberOfSpies = 7 }
+  SpyInfo                = { country = "ENG" NumberOfSpies = 3 }
+  SpyInfo                = { country = "FRA" NumberOfSpies = 8 }
+  SpyInfo                = { country = "SOV" NumberOfSpies = 3 }
+  SpyInfo                = { country = "AUS" NumberOfSpies = 3 }
+  SpyInfo                = { country = "ARG" NumberOfSpies = 3 }
+  SpyInfo                = { country = "MEX" NumberOfSpies = 3 }
+  SpyInfo                = { country = "USA" NumberOfSpies = 6 }
+  SpyInfo                = { country = "ECU" NumberOfSpies = 3 }
+  SpyInfo                = { country = "VEN" NumberOfSpies = 3 }
+  SpyInfo                = { country = "BRA" NumberOfSpies = 3 }
+  SpyInfo                = { country = "COL" NumberOfSpies = 6 }
+  SpyInfo                = { country = "POR" NumberOfSpies = 9 }
+  SpyInfo                = { country = "ITA" NumberOfSpies = 9 }
+
+  nationalprovinces      = { 334 332 333 339 338 341 343 346 347 349 350 351 352 353 354 342 355 340 330 331 356 329 357 535 536 537 961 962 963 964 965 348 }
+  ownedprovinces         = { 334 332 333 339 338 341 343 346 347 349 350 351 352 353 354 342 355 340 330 331 356 329 357 535 536 537 961 962 963 964 965 957 955 954 967 971 972 1091 }
+  controlledprovinces    = { 334 332 333 339 338 341 343 346 347 349 350 351 352 353 354 342 355 340 330 331 356 329 357 535 536 537 961 962 963 964 965 957 955 954 967 971 972 1091 }
+
+  techapps               = { 4010 4020 4120 2150 2010 2020 2400 2290 2300 2310 4220 2450 2460 4130 2510 3260 1010 1190 1110 9010 5010 5080 5090 5190 6010 6020 3010 3020 3070 3080 3130 3140 3250 3400 3410 8010 8020 8050 }
+
+  policy = {
+    date              = { year = 0 month = january day = 0 }
+    democratic        = 9
+    political_left    = 1
+    freedom           = 7
+    free_market       = 4
+    professional_army = 3
+    defense_lobby     = 4
+    interventionism   = 5
+  }
+  headofstate            = { type = 9 id = 11001 } # ニセト・アルカラ＝サモラ
+  headofgovernment       = { type = 9 id = 11002 } # マヌエル・ポルテラ・バリャダレス
+  foreignminister        = { type = 9 id = 11003 } # ホアキン・ウルサイス・カダバル
+  armamentminister       = { type = 9 id = 11004 } # ホセ・メンディサバル・イ・ボニリャ
+  ministerofsecurity     = { type = 9 id = 11005 } # マヌエル・ポルテラ・バリャダレス
+  ministerofintelligence = { type = 9 id = 11006 } # ファン・ヘレナンデス・サラビア
+  chiefofstaff           = { type = 9 id = 11007 } # ホセ・ミアハ・メナント
+  chiefofarmy            = { type = 9 id = 11008 } # ニコラス・モレロ・ロボ
+  chiefofnavy            = { type = 9 id = 11009 } # アントニオ・アサロラ・グレシリョン
+  chiefofair             = { type = 9 id = 11010 } # ミゲル・ヌニェス・デ・プラド
+  dormant_leaders        = { 3007 3050 }
+
+  landunit = {
+    id       = { type = 27600 id = 5 }
+    name     = "第1軍団"
+    location = 341
+    division = {
+      id             = { type = 27600 id = 6 }
+      name           = "第1歩兵師団"
+      type           = infantry
+    }
+    division = {
+      id             = { type = 27600 id = 8 }
+      name           = "第1騎兵師団"
+      type           = cavalry
+    }
+    division = {
+      id             = { type = 27600 id = 9 }
+      name           = "軽装備機甲隊"
+      type           = light_armor
+      model          = 0
+      strength       = 30
+    }
+  }
+  landunit = {
+    id       = { type = 27600 id = 10 }
+    name     = "第2軍団"
+    location = 356
+    division = {
+      id             = { type = 27600 id = 11 }
+      name           = "第2歩兵師団"
+      type           = infantry
+      extra          = anti_tank
+    }
+    division = {
+      id             = { type = 27600 id = 13 }
+      name           = "第3歩兵師団"
+      type           = infantry
+    }
+    division = {
+      id             = { type = 27600 id = 14 }
+      name           = "山岳旅団"
+      type           = bergsjaeger
+    }
+  }
+  landunit = {
+    id       = { type = 27600 id = 15 }
+    name     = "第3軍団"
+    location = 354
+    division = {
+      id             = { type = 27600 id = 16 }
+      name           = "第4歩兵師団"
+      type           = infantry
+      extra          = anti_air
+    }
+    division = {
+      id             = { type = 27600 id = 18 }
+      name           = "第5歩兵師団"
+      type           = infantry
+      extra          = artillery
+    }
+  }
+  landunit = {
+    id       = { type = 27600 id = 19 }
+    name     = "バレアレス司令部"
+    location = 535
+    division = {
+      id             = { type = 27600 id = 20 }
+      name           = "バレアレス司令部"
+      type           = infantry
+      strength       = 30
+    }
+  }
+  landunit = {
+    id       = { type = 27600 id = 21 }
+    name     = "カナリアス司令部"
+    location = 963
+    division = {
+      id             = { type = 27600 id = 22 }
+      name           = "カナリアス司令部"
+      type           = infantry
+      strength       = 30
+    }
+  }
+  landunit = {
+    id       = { type = 27600 id = 23 }
+    name     = "アフリカ陸軍"
+    location = 957
+    division = {
+      id             = { type = 27600 id = 24 }
+      name           = "西部地区師団"
+      type           = infantry
+    }
+    division = {
+      id             = { type = 27600 id = 25 }
+      name           = "東部地区師団"
+      type           = infantry
+    }
+  }
+  landunit = {
+    id       = { type = 27600 id = 26 }
+    name     = "サハラ部隊"
+    location = 971
+    division = {
+      id             = { type = 27600 id = 27 }
+      name           = "サハラ軍団"
+      type           = infantry
+      strength       = 30
+    }
+  }
+  landunit = {
+    id       = { type = 27600 id = 28 }
+    name     = "植民地軍防衛部隊"
+    location = 1091
+    division = {
+      id             = { type = 27600 id = 29 }
+      name           = "植民地軍防衛部隊"
+      type           = militia
+      strength       = 30
+    }
+  }
+
+  navalunit = {
+    id       = { type = 27600 id = 30 }
+    name     = "カディス海軍"
+    location = 347
+    base     = 347
+    division = {
+      id             = { type = 27600 id = 31 }
+      name           = "ARE リパブリカ"
+      type           = light_cruiser
+      model          = 0
+      strength       = 60
+    }
+    division = {
+      id             = { type = 27600 id = 32 }
+      name           = "護衛隊"
+      type           = destroyer
+      model          = 1
+      strength       = 100
+    }
+  }
+  navalunit = {
+    id       = { type = 27600 id = 33 }
+    name     = "メンデス・ヌニェス艦隊"
+    location = 334
+    base     = 334
+    division = {
+      id             = { type = 27600 id = 34 }
+      name           = "ARE メンデス・ヌニェス"
+      type           = light_cruiser
+      model          = 0
+      strength       = 100
+    }
+  }
+  navalunit = {
+    id       = { type = 27600 id = 35 }
+    name     = "戦闘艦隊"
+    location = 356
+    base     = 356
+    division = {
+      id             = { type = 27600 id = 36 }
+      name           = "ARE ハイメ1世"
+      type           = battleship
+      model          = 0
+      strength       = 50
+    }
+    division = {
+      id             = { type = 27600 id = 37 }
+      name           = "ARE エスパーニャ"
+      type           = battleship
+      model          = 0
+      strength       = 100
+    }
+    division = {
+      id             = { type = 27600 id = 38 }
+      name           = "ARE ミゲル・デ・セルバンテス"
+      type           = light_cruiser
+      model          = 1
+      strength       = 100
+    }
+    division = {
+      id             = { type = 27600 id = 39 }
+      name           = "ARE アルミランテ・セルベラ"
+      type           = light_cruiser
+      model          = 1
+      strength       = 100
+    }
+    division = {
+      id             = { type = 27600 id = 40 }
+      name           = "第1魚雷艇隊"
+      type           = destroyer
+      model          = 0
+      strength       = 100
+    }
+    division = {
+      id             = { type = 27600 id = 41 }
+      name           = "第2魚雷艇隊"
+      type           = destroyer
+      model          = 1
+      strength       = 100
+    }
+    division = {
+      id             = { type = 27600 id = 42 }
+      name           = "第1海上輸送隊"
+      type           = transport
+      strength       = 100
+    }
+    division = {
+      id             = { type = 27600 id = 43 }
+      name           = "第2海上輸送隊"
+      type           = transport
+      strength       = 100
+    }
+  }
+  navalunit = {
+    id       = { type = 27600 id = 44 }
+    name     = "植民地艦隊"
+    location = 963
+    base     = 963
+    division = {
+      id             = { type = 27600 id = 45 }
+      name           = "第3魚雷艇隊"
+      type           = destroyer
+      model          = 1
+      strength       = 100
+    }
+    division = {
+      id             = { type = 27600 id = 47 }
+      name           = "第3海上輸送隊"
+      type           = transport
+      strength       = 100
+    }
+    division = {
+      id             = { type = 27600 id = 48 }
+      name           = "第4海上輸送隊"
+      type           = transport
+      strength       = 100
+    }
+  }
+  navalunit = {
+    id       = { type = 27600 id = 49 }
+    name     = "グループC"
+    location = 354
+    base     = 354
+    division = {
+      id             = { type = 27600 id = 50 }
+      name           = "S101艦隊"
+      type           = submarine
+      model          = 0
+      strength       = 100
+    }
+  }
+  navalunit = {
+    id       = { type = 27600 id = 51 }
+    name     = "グループB"
+    location = 354
+    base     = 354
+    division = {
+      id             = { type = 27600 id = 72 }
+      name           = "S103艦隊"
+      type           = submarine
+      model          = 1
+      strength       = 75
+    }
+  }
+  navalunit = {
+    id       = { type = 27600 id = 53 }
+    name     = "ARE リベルタード"
+    location = 356
+    base     = 356
+    division = {
+      id             = { type = 27600 id = 54 }
+      name           = "ARE リベルタード"
+      type           = light_cruiser
+      model          = 1
+      strength       = 100
+    }
+  }
+
+  airunit = { 
+    id       = { type = 27600 id = 55 }
+    name     = "第1航空戦隊"
+    location = 341
+    base     = 341
+    division = {
+      id             = { type = 27600 id = 56 }
+      name           = "第1戦術爆撃航空群"
+      type           = tactical_bomber
+      strength       = 30
+    }
+    division = {
+      id             = { type = 27600 id = 57 }
+      name           = "第2戦術爆撃航空群"
+      type           = tactical_bomber
+      strength       = 30
+    }
+  }
+  airunit = { 
+    id       = { type = 27600 id = 58 }
+    name     = "第2航空戦隊"
+    location = 356
+    base     = 356
+    division = {
+      id             = { type = 27600 id = 59 }
+      name           = "第1戦闘航空群"
+      type           = interceptor
+      strength       = 30
+    }
+    division = {
+      id             = { type = 27600 id = 60 }
+      name           = "第3戦闘航空群"
+      type           = interceptor
+      strength       = 30
+    }
+  }
+  airunit = { 
+    id       = { type = 27600 id = 61 }
+    name     = "第3航空戦隊"
+    location = 354
+    base     = 354
+    division = {
+      id             = { type = 27600 id = 62 }
+      name           = "第1戦略爆撃航空群"
+      type           = strategic_bomber
+      strength       = 30
+    }
+    division = {
+      id             = { type = 27600 id = 63 }
+      name           = "第2戦略爆撃航空群"
+      type           = strategic_bomber
+      strength       = 30
+    }
+  }
+  airunit = { 
+    id       = { type = 27600 id = 64 }
+    name     = "アフリカ飛行部隊"
+    location = 963
+    base     = 963
+    division = {
+      id             = { type = 27600 id = 65 }
+      name           = "第1爆撃航空群"
+      type           = tactical_bomber
+      strength       = 30
+    }
+    division = {
+      id             = { type = 27600 id = 66 }
+      name           = "第2戦闘航空群"
+      type           = interceptor
+      strength       = 30
+    }
+  }
+
+  division_development = {
+    id             = { type = 27600 id = 500 }
+    name           = "ARE カナリアス"
+    type           = heavy_cruiser
+    model          = 1
+    cost           = 5.0
+    date           = { year = 1935 month = september day = 1 }
+  }
+  division_development = {
+    id             = { type = 27600 id = 501 }
+    name           = "ARE バレアレス"
+    type           = heavy_cruiser
+    model          = 1
+    cost           = 5.0
+    date           = { year = 1935 month = december day = 1 }
+  }
+}

@@ -1,0 +1,44 @@
+# JAP and USA to MAN befliends
+
+###################################
+# Diplomacy
+###################################
+trade = {
+	favored = {
+		MAN = 80
+		USA = 80
+	}
+	embargo = {
+		CHI CSX SIK CXB CYN CGX CHC
+	}
+}
+tech_sharing = {
+	favored = {
+		MAN = 100
+		MEN = 100
+		USA = 150
+	}
+	embargo = {
+		CHI CSX SIK CXB CYN CGX CHC
+	}
+}
+befriend = {
+	USA = 150
+	MAN = 100
+	MEN = 50
+	GER = 0
+	ITA = 0
+}
+
+combat = {
+	SOV = 50
+	CHI = 30
+	CHC = 50
+}
+
+protect = {
+	MAN = 100
+	MEN = 10
+	USA = 10
+}
+

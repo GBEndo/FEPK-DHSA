@@ -1,0 +1,235 @@
+allowed_brigades = naval_anti_air_l
+allowed_brigades = naval_radar_l
+allowed_brigades = naval_fire_controll_l
+allowed_brigades = naval_improved_hull_l
+allowed_brigades = naval_torpedoes_l
+allowed_brigades = naval_anti_air_s
+allowed_brigades = naval_radar_s
+allowed_brigades = floatplane
+
+upgrade = { type = carrier upgrade_time_factor = 1.21 upgrade_cost_factor = 0.9 }
+
+# 0 - ‘æˆêŸ¢ŠE‘åíŠúŒ^„—míŠÍ
+model = {
+	cost						= 6
+	buildtime 					= 615
+	defaultorganisation 		= 30
+	morale						= 30
+	manpower					= 0.75
+	maxspeed					= 18
+	surfacedetectioncapability	= 1
+	airdetectioncapability		= 1
+	subdetectioncapability		= 2
+	visibility					= 80
+	seadefence					= 8
+	airdefence					= 1
+	seaattack					= 12
+	airattack					= 1
+	subattack					= 0
+	convoyattack					= 12
+	shorebombardment			= 5
+	transportcapability			= 0
+	range						= 2500
+	supplyconsumption			= 0.4
+	fuelconsumption				= 0.8
+	distance					= 0.3
+	upgrade_time_factor = 1
+	upgrade_cost_factor = 1
+	equipment = { battlecruiser = 1 manpower = 750 }
+}
+# 1 - ‰ŠúŒ^„—míŠÍ
+model = {
+	cost						= 7
+	buildtime 					= 615
+	defaultorganisation 		= 30
+	morale						= 30
+	manpower					= 1.3
+	maxspeed					= 21
+	surfacedetectioncapability	= 1
+	airdetectioncapability		= 1
+	subdetectioncapability		= 2
+	visibility					= 80
+	seadefence					= 9
+	airdefence					= 2
+	seaattack					= 14
+	airattack					= 1
+	subattack					= 0
+	convoyattack					= 14
+	shorebombardment			= 6
+	transportcapability			= 0
+	range						= 2700
+	supplyconsumption			= 0.5
+	fuelconsumption				= 0.8
+	distance					= 0.31
+	upgrade_time_factor = 1
+	upgrade_cost_factor = 1
+	equipment = { battlecruiser = 1 manpower = 1300 }
+}
+# 2 - Šî–{Œ^„—míŠÍ
+model = {
+	cost						= 8
+	buildtime 					= 615
+	defaultorganisation 		= 30
+	morale						= 30
+	manpower					= 1.4
+	maxspeed					= 23
+	surfacedetectioncapability	= 1
+	airdetectioncapability		= 1
+	subdetectioncapability		= 2
+	visibility					= 80
+	seadefence					= 10
+	airdefence					= 3
+	seaattack					= 16
+	airattack					= 1
+	subattack					= 0
+	convoyattack					= 16
+	shorebombardment			= 7
+	transportcapability			= 0
+	range						= 3000
+	supplyconsumption			= 0.5
+	fuelconsumption				= 0.8
+	distance					= 0.32
+	upgrade_time_factor = 1
+	upgrade_cost_factor = 1
+	equipment = { battlecruiser = 1 manpower = 1400 }
+}
+# 3 - ‰ü—ÇŒ^„—míŠÍ
+model = {
+	cost						= 9
+	buildtime 					= 615
+	defaultorganisation 		= 30
+	morale						= 30
+	manpower					= 1.7
+	maxspeed					= 26
+	surfacedetectioncapability	= 1
+	airdetectioncapability		= 1
+	subdetectioncapability		= 2
+	visibility					= 80
+	seadefence					= 12
+	airdefence					= 3
+	seaattack					= 17
+	airattack					= 3
+	subattack					= 0
+	convoyattack					= 17
+	shorebombardment			= 8
+	transportcapability			= 0
+	range						= 3500
+	supplyconsumption			= 0.6
+	fuelconsumption				= 0.8
+	distance					= 0.34
+	upgrade_time_factor = 1
+	upgrade_cost_factor = 1
+	equipment = { battlecruiser = 1 manpower = 1700 }
+}
+# 4 - ”­“WŒ^„—míŠÍ
+model = {
+	cost						= 10
+	buildtime 					= 630
+	defaultorganisation 		= 30
+	morale						= 30
+	manpower					= 1.7
+	maxspeed					= 28
+	surfacedetectioncapability	= 1
+	airdetectioncapability		= 1
+	subdetectioncapability		= 2
+	visibility					= 80
+	seadefence					= 14
+	airdefence					= 4
+	seaattack					= 18
+	airattack					= 4
+	subattack					= 0
+	convoyattack					= 18
+	shorebombardment			= 9
+	transportcapability			= 0
+	range						= 4000
+	supplyconsumption			= 0.7
+	fuelconsumption				= 0.8
+	distance					= 0.36
+	upgrade_time_factor = 1
+	upgrade_cost_factor = 1
+	equipment = { battlecruiser = 1 manpower = 1700 }
+}
+# 5 - €Œ»‘ãŒ^„—míŠÍ
+model = {
+	cost						= 12
+	buildtime 					= 630
+	defaultorganisation 		= 30
+	morale						= 30
+	manpower					= 1.7
+	maxspeed					= 30
+	surfacedetectioncapability	= 1
+	airdetectioncapability		= 1
+	subdetectioncapability		= 3
+	visibility					= 80
+	seadefence					= 16
+	airdefence					= 5
+	seaattack					= 20
+	airattack					= 5
+	subattack					= 1
+	convoyattack					= 20
+	shorebombardment			= 10
+	transportcapability			= 0
+	range						= 4000
+	supplyconsumption			= 0.8
+	fuelconsumption				= 0.8
+	distance					= 0.36
+	upgrade_time_factor = 1
+	upgrade_cost_factor = 1
+	equipment = { battlecruiser = 1 manpower = 1700 }
+}
+# 6 - Œ´q—Í„—míŠÍ
+model = {
+	cost						= 14
+	buildtime 					= 640
+	defaultorganisation 		= 30
+	morale						= 30
+	manpower					= 0.75
+	maxspeed					= 30
+	surfacedetectioncapability	= 1
+	airdetectioncapability		= 2
+	subdetectioncapability		= 4
+	visibility					= 80
+	seadefence					= 18
+	airdefence					= 6
+	seaattack					= 22
+	airattack					= 6
+	subattack					= 1
+	convoyattack					= 22
+	shorebombardment			= 10
+	transportcapability			= 0
+	range						= 8000
+	supplyconsumption			= 2
+	fuelconsumption				= 0
+	distance					= 0.36
+	upgrade_time_factor = 1
+	upgrade_cost_factor = 1
+	equipment = { battlecruiser = 1 manpower = 750 }
+}
+# 7 - Œ»‘ãŒ^„—míŠÍ
+model = {
+	cost						= 14
+	buildtime 					= 640
+	defaultorganisation 		= 30
+	morale						= 30
+	manpower					= 0.75
+	maxspeed					= 30
+	surfacedetectioncapability	= 1
+	airdetectioncapability		= 2
+	subdetectioncapability		= 4
+	visibility					= 80
+	seadefence					= 18
+	airdefence					= 6
+	seaattack					= 22
+	airattack					= 6
+	subattack					= 1
+	convoyattack					= 22
+	shorebombardment			= 10
+	transportcapability			= 0
+	range						= 4000
+	supplyconsumption			= 0.8
+	fuelconsumption				= 0.8
+	distance					= 0.36
+	upgrade_time_factor = 1
+	upgrade_cost_factor = 1
+	equipment = { battlecruiser = 1 manpower = 750 }
+}

@@ -1,0 +1,48 @@
+# USA Land Prio Build by Lothos
+
+###################################
+# Construction and Tech Research
+###################################
+military = { 
+	relative_build_scheme 	= no
+	max_batch_peace 	= 360
+	max_batch_war 		= 360
+	max_batch_home_front 	= 360
+
+	#### Divisions etc...
+	infantry 		= 27
+	cavalry 		= 0
+	motorized 		= 12
+	mechanized 		= 4
+	light_armor 		= 0
+	armor 			= 8
+	paratrooper 		= 0
+	marine 			= 8
+	bergsjaeger 		= 0
+	garrison		= 0
+	hq 			= 2
+	militia 		= 0
+#					61 %
+	interceptor 		= 2
+	multi_role 		= 14
+	escort 			= 0
+	cas 			= 0
+	strategic_bomber 	= 5
+	tactical_bomber 	= 3
+	naval_bomber 		= 3
+	transport_plane 	= 0
+	flying_bomb 		= 0
+	flying_rocket 		= 0
+#					27 %
+	battleship 		= 0
+	carrier 		= 1
+	escort_carrier		= 1
+	destroyer 		= 3
+	light_cruiser 		= 1
+	heavy_cruiser 		= 1
+	battlecruiser 		= 0
+	submarine 		= 1
+	transports 		= 4
+#					12 %
+	cag = 100
+}

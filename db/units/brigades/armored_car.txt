@@ -1,0 +1,72 @@
+# 0 - Basic
+model = { cost = 3 buildtime = 60 manpower = 2 defensiveness = 1 toughness = 1 defaultorganisation = 5 softness = -5 softattack = 2 suppression = 1 supplyconsumption = 0.4 fuelconsumption = 0.16 upgrade_time_factor = 0.5 upgrade_cost_factor = 1.0 equipment = { manpower = 2000 armored_car = 84 }}
+# 1 - Improved
+model =
+{ cost                = 3
+  buildtime           = 60
+  manpower            = 2
+  defensiveness       = 2
+  toughness           = 1
+  defaultorganisation = 10
+  softness            = -5
+  softattack          = 3
+  hardattack          = 1
+  supplyconsumption   = 0.4
+  fuelconsumption     = 0.18
+  upgrade_time_factor = 0.5
+  upgrade_cost_factor = 1.0
+  suppression         = 1
+  equipment = { manpower = 2000 armored_car = 84 }
+}
+# 2 - åªë„å^ëïçbé‘
+model =
+{ cost                = 3
+  buildtime           = 60
+  manpower            = 2
+  defensiveness       = 2
+  toughness           = 2
+  defaultorganisation = 15
+  softness            = -5
+  softattack          = 4
+  hardattack          = 1
+  supplyconsumption   = 0.5
+  fuelconsumption     = 0.19
+  upgrade_time_factor = 0.5
+  upgrade_cost_factor = 1.0
+  suppression         = 1
+  equipment = { manpower = 2000 armored_car = 84 }
+}
+model =
+{ cost                = 3
+  buildtime           = 60
+  manpower            = 2
+  defensiveness       = 2
+  toughness           = 2
+  defaultorganisation = 20
+  softness            = -5
+  softattack          = 5
+  hardattack          = 1
+  supplyconsumption   = 0.6
+  fuelconsumption     = 0.20
+  upgrade_time_factor = 0.5
+  upgrade_cost_factor = 1.0
+  suppression         = 1
+  equipment = { manpower = 2000 armored_car = 84 }
+}
+model =
+{ cost                = 3
+  buildtime           = 60
+  manpower            = 2
+  defensiveness       = 2
+  toughness           = 3
+  defaultorganisation = 25
+  softness            = -5
+  softattack          = 6
+  hardattack          = 1
+  supplyconsumption   = 0.7
+  fuelconsumption     = 0.21
+  upgrade_time_factor = 0.5
+  upgrade_cost_factor = 1.0
+  suppression         = 1
+  equipment = { manpower = 2000 armored_car = 84 }
+}

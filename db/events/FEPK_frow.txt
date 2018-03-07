@@ -1,0 +1,5652 @@
+#########################################################################
+#	FEPK_frow.txt
+#	西部戦線関連イベント
+#########################################################################
+#id = 130300-09		「大西洋の壁」関連イベント
+#id = 130310-29		オランダ・ベルギー国王捕縛イベント
+#id = 130330-59		英本土決戦イベント
+#id = 130360-69		英国王捕縛イベント
+#id = 130400-99		第二次世界大戦西部戦線イベント(対波～対仏戦)
+#########################################################################
+##########
+#  The Atlantic Wall
+##########
+event = {
+	id = 130300
+	random = no
+	country = GER
+
+	trigger = {
+		event = 130402 #germany destroyed the maginot line
+		OR = {
+			AND = {
+				control = { province = 32 data = GER }
+				control = { province = 33 data = GER }
+				control = { province = 39 data = GER }
+				control = { province = 41 data = GER }
+				control = { province = 42 data = GER }
+				control = { province = 18 data = GER }
+				control = { province = 43 data = GER }
+				control = { province = 45 data = GER }
+				control = { province = 46 data = GER }
+				control = { province = 47 data = GER }
+				control = { province = 78 data = GER }
+				control = { province = 90 data = GER }
+				control = { province = 91 data = GER }
+				control = { province = 92 data = GER }
+				control = { province = 292 data = GER }
+			}
+			AND = {
+				alliance = { country = GER country = VIC }
+				control = { province = 32 data = VIC }
+				control = { province = 33 data = VIC }
+				control = { province = 39 data = VIC }
+				control = { province = 41 data = VIC }
+				control = { province = 42 data = VIC }
+				control = { province = 18 data = VIC }
+				control = { province = 43 data = VIC }
+				control = { province = 45 data = VIC }
+				control = { province = 46 data = VIC }
+				control = { province = 47 data = VIC }
+				control = { province = 78 data = VIC }
+				control = { province = 90 data = VIC }
+				control = { province = 91 data = VIC }
+				control = { province = 92 data = VIC }
+				control = { province = 292 data = VIC }
+			}
+		}#or
+		supplies = 5500
+		metal = 3000
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 30
+	deathdate = { day = 1 month = june year = 1941 }
+
+	name = "EVT_130300_NAME"
+	desc = "EVT_130300_DESC"
+
+	picture = "fort_sabotaged"
+
+	action_a = {
+		name = "EVT_130300_ACTA"
+		ai_chance = 100
+		command = { type = supplies value = -5000 }
+		command = { type = metalpool value = -2500 }
+		command = { type = money value = -100 }
+		command = { type = manpowerpool value = -5 }
+	}
+	action_b = {
+		name = "EVT_130300_ACTB"
+		ai_chance = 0
+		command = { type = sleepevent which = 130301 }
+	}
+}
+
+event = {
+	id = 130301
+	random = no
+	country = GER
+
+	trigger = {
+		event = 130300
+		control = { province = 32 data = GER }
+		control = { province = 33 data = GER }
+		control = { province = 39 data = GER }
+		control = { province = 41 data = GER }
+		control = { province = 42 data = GER }
+		control = { province = 18 data = GER }
+		control = { province = 43 data = GER }
+		control = { province = 45 data = GER }
+		control = { province = 46 data = GER }
+		control = { province = 47 data = GER }
+		control = { province = 78 data = GER }
+		control = { province = 90 data = GER }
+		control = { province = 91 data = GER }
+		control = { province = 92 data = GER }
+		control = { province = 292 data = GER }
+		random = 35
+	}
+
+	date = { day = 1 month = may year = 1943 }
+	offset = 30
+	deathdate = { day = 15 month = june year = 1944 } #right before 1944 scenario
+
+	name = "EVT_130301_NAME"
+	desc = "EVT_130301_DESC"
+
+	picture = "fort_sabotaged"
+
+	action_a = {
+		name = "EVT_130301_ACTA"
+		ai_chance = 100
+		command = { type = construct which = coastal_fort where = 32 value = 1 } #
+		command = { type = construct which = flak where = 32 value = 1 } #
+		command = { type = construct which = coastal_fort where = 33 value = 1 } #
+		command = { type = construct which = flak where = 33 value = 1 } #
+		command = { type = construct which = coastal_fort where = 39 value = 1 } #
+		command = { type = construct which = flak where = 39 value = 1 } #
+		command = { type = construct which = coastal_fort where = 41 value = 1 } #
+		command = { type = construct which = flak where = 41 value = 1 } #
+		command = { type = construct which = coastal_fort where = 42 value = 1 } #
+		command = { type = construct which = flak where = 42 value = 1 } #
+		command = { type = construct which = coastal_fort where = 18 value = 1 } #
+		command = { type = construct which = flak where = 18 value = 1 } #
+		command = { type = construct which = coastal_fort where = 43 value = 1 } #
+		command = { type = construct which = flak where = 43 value = 1 } #
+		command = { type = construct which = coastal_fort where = 45 value = 1 } #
+		command = { type = construct which = flak where = 45 value = 1 } #
+		command = { type = construct which = coastal_fort where = 46 value = 1 } #
+		command = { type = construct which = flak where = 46 value = 1 } #
+		command = { type = construct which = coastal_fort where = 47 value = 1 } #
+		command = { type = construct which = flak where = 47 value = 1 } #
+		command = { type = construct which = coastal_fort where = 78 value = 1 } #
+		command = { type = construct which = flak where = 78 value = 1 } #
+		command = { type = construct which = coastal_fort where = 90 value = 1 } #
+		command = { type = construct which = flak where = 90 value = 1 } #
+		command = { type = construct which = coastal_fort where = 91 value = 1 } #
+		command = { type = construct which = flak where = 91 value = 1 } #
+		command = { type = construct which = coastal_fort where = 92 value = 1 } #
+		command = { type = construct which = flak where = 92 value = 1 } #
+		command = { type = construct which = coastal_fort where = 292 value = 1 } #
+		command = { type = construct which = flak where = 292 value = 1 } #
+	}
+}
+
+event = {
+	id = 130302
+	random = no
+	country = GER
+
+	trigger = {
+		event = 130402 #germany destroyed the maginot line
+		OR = {
+			AND = {
+				control = { province = 125 data = GER }
+				control = { province = 124 data = GER }
+				control = { province = 118 data = GER }
+				control = { province = 117 data = GER }
+				control = { province = 110 data = GER }
+				control = { province = 109 data = GER }
+				control = { province = 108 data = GER }
+				control = { province = 107 data = GER }
+			}
+			AND = {
+				alliance = { country = GER country = NOR }
+				control = { province = 125 data = NOR }
+				control = { province = 124 data = NOR }
+				control = { province = 118 data = NOR }
+				control = { province = 117 data = NOR }
+				control = { province = 110 data = NOR }
+				control = { province = 109 data = NOR }
+				control = { province = 108 data = NOR }
+				control = { province = 107 data = NOR }
+			}
+			AND = {
+				alliance = { country = GER country = SCA }
+				control = { province = 125 data = SCA }
+				control = { province = 124 data = SCA }
+				control = { province = 118 data = SCA }
+				control = { province = 117 data = SCA }
+				control = { province = 110 data = SCA }
+				control = { province = 109 data = SCA }
+				control = { province = 108 data = SCA }
+				control = { province = 107 data = SCA }
+			}
+		}#or
+		supplies = 8000
+		metal = 5500
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 30
+	deathdate = { day = 1 month = june year = 1945 }
+
+	name =  "EVT_130302_NAME"
+	desc = "EVT_130302_DESC"
+
+	picture = "fort_sabotaged"
+
+	action_a = {
+		name = "EVT_130300_ACTA"
+		ai_chance = 50
+		command = { type = supplies value = -7500 }
+		command = { type = metalpool value = -5000 }
+		command = { type = money value = -200 }
+		command = { type = manpowerpool value = -10 }
+	}
+	action_b = {
+		name = "EVT_130300_ACTB"
+		ai_chance = 50
+		command = { type = sleepevent which = 130303 }
+	}
+}
+
+event = {
+	id = 130303
+	random = no
+	country = GER
+
+	trigger = {
+		event = 130302
+		control = { province = 125 data = GER }
+		control = { province = 124 data = GER }
+		control = { province = 118 data = GER }
+		control = { province = 117 data = GER }
+		control = { province = 110 data = GER }
+		control = { province = 109 data = GER }
+		control = { province = 108 data = GER }
+		control = { province = 107 data = GER }
+		random = 10
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 30
+	deathdate = { day = 1 month = june year = 1945 }
+
+	name = "EVT_130303_NAME"
+	desc = "EVT_130303_DESC"
+
+	picture = "fort_sabotaged"
+
+	action_a = {
+		name = "EVT_130301_ACTA"
+		ai_chance = 100
+		command = { type = construct which = coastal_fort where = 125 value = 1 }
+		command = { type = construct which = flak where = 125 value = 1 }
+		command = { type = construct which = coastal_fort where = 124 value = 1 }
+		command = { type = construct which = flak where = 124 value = 1 }
+		command = { type = construct which = coastal_fort where = 118 value = 1 }
+		command = { type = construct which = flak where = 118 value = 1 }
+		command = { type = construct which = coastal_fort where = 117 value = 1 }
+		command = { type = construct which = flak where = 117 value = 1 }
+		command = { type = construct which = coastal_fort where = 110 value = 1 }
+		command = { type = construct which = flak where = 110 value = 1 }
+		command = { type = construct which = coastal_fort where = 109 value = 1 }
+		command = { type = construct which = flak where = 109 value = 1 }
+		command = { type = construct which = coastal_fort where = 108 value = 1 }
+		command = { type = construct which = flak where = 108 value = 1 }
+		command = { type = construct which = coastal_fort where = 107 value = 1 }
+		command = { type = construct which = flak where = 107 value = 1 }
+	}
+}
+
+event = {
+	id = 130304
+	random = no
+	country = GER
+
+	trigger = {
+		event = 130301
+		event = 130303
+		minister = 165 # Rommel
+		OR = {
+			AND = {
+				control = { province = 32 data = GER }
+				control = { province = 33 data = GER }
+				control = { province = 39 data = GER }
+				control = { province = 41 data = GER }
+				control = { province = 42 data = GER }
+				control = { province = 18 data = GER }
+				control = { province = 43 data = GER }
+				control = { province = 45 data = GER }
+				control = { province = 46 data = GER }
+				control = { province = 47 data = GER }
+				control = { province = 78 data = GER }
+				control = { province = 90 data = GER }
+				control = { province = 91 data = GER }
+				control = { province = 92 data = GER }
+				control = { province = 292 data = GER }
+			}
+			AND = {
+				alliance = { country = GER country = VIC }
+				control = { province = 32 data = VIC }
+				control = { province = 33 data = VIC }
+				control = { province = 39 data = VIC }
+				control = { province = 41 data = VIC }
+				control = { province = 42 data = VIC }
+				control = { province = 18 data = VIC }
+				control = { province = 43 data = VIC }
+				control = { province = 45 data = VIC }
+				control = { province = 46 data = VIC }
+				control = { province = 47 data = VIC }
+				control = { province = 78 data = VIC }
+				control = { province = 90 data = VIC }
+				control = { province = 91 data = VIC }
+				control = { province = 92 data = VIC }
+				control = { province = 292 data = VIC }
+			}
+		}#or
+		OR = {
+			AND = {
+				control = { province = 125 data = GER }
+				control = { province = 124 data = GER }
+				control = { province = 118 data = GER }
+				control = { province = 117 data = GER }
+				control = { province = 110 data = GER }
+				control = { province = 109 data = GER }
+				control = { province = 108 data = GER }
+				control = { province = 107 data = GER }
+			}
+			AND = {
+				alliance = { country = GER country = NOR }
+				control = { province = 125 data = NOR }
+				control = { province = 124 data = NOR }
+				control = { province = 118 data = NOR }
+				control = { province = 117 data = NOR }
+				control = { province = 110 data = NOR }
+				control = { province = 109 data = NOR }
+				control = { province = 108 data = NOR }
+				control = { province = 107 data = NOR }
+			}
+			AND = {
+				alliance = { country = GER country = SCA }
+				control = { province = 125 data = SCA }
+				control = { province = 124 data = SCA }
+				control = { province = 118 data = SCA }
+				control = { province = 117 data = SCA }
+				control = { province = 110 data = SCA }
+				control = { province = 109 data = SCA }
+				control = { province = 108 data = SCA }
+				control = { province = 107 data = SCA }
+			}
+		}#or
+		supplies = 12000
+		metal = 7000
+	}
+
+	date = { day = 14 month = october year = 1944 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name =  "EVT_130304_NAME"
+	desc = "EVT_130304_DESC"
+
+	picture = "fort_sabotaged"
+
+	action_a = {
+		name = "EVT_130304_ACTA"
+		ai_chance = 100
+		command = { type = supplies value = -10000 }
+		command = { type = metalpool value = -5000 }
+		command = { type = money value = -200 }
+		command = { type = manpowerpool value = -5 }
+	}
+	action_b = {
+		name = "EVT_130304_ACTB"
+		ai_chance = 0
+		command = { type = sleepevent which = 130305 }
+	}
+}
+
+event = {
+	id = 130305
+	random = no
+	country = GER
+
+	trigger = {
+		event = 130304
+		minister = 165 # Rommel
+		OR = {
+			AND = {
+				control = { province = 32 data = GER }
+				control = { province = 33 data = GER }
+				control = { province = 39 data = GER }
+				control = { province = 41 data = GER }
+				control = { province = 42 data = GER }
+				control = { province = 18 data = GER }
+				control = { province = 43 data = GER }
+				control = { province = 45 data = GER }
+				control = { province = 46 data = GER }
+				control = { province = 47 data = GER }
+				control = { province = 78 data = GER }
+				control = { province = 90 data = GER }
+				control = { province = 91 data = GER }
+				control = { province = 92 data = GER }
+				control = { province = 292 data = GER }
+			}
+			AND = {
+				alliance = { country = GER country = VIC }
+				control = { province = 32 data = VIC }
+				control = { province = 33 data = VIC }
+				control = { province = 39 data = VIC }
+				control = { province = 41 data = VIC }
+				control = { province = 42 data = VIC }
+				control = { province = 18 data = VIC }
+				control = { province = 43 data = VIC }
+				control = { province = 45 data = VIC }
+				control = { province = 46 data = VIC }
+				control = { province = 47 data = VIC }
+				control = { province = 78 data = VIC }
+				control = { province = 90 data = VIC }
+				control = { province = 91 data = VIC }
+				control = { province = 92 data = VIC }
+				control = { province = 292 data = VIC }
+			}
+		}#or
+		OR = {
+			AND = {
+				control = { province = 125 data = GER }
+				control = { province = 124 data = GER }
+				control = { province = 118 data = GER }
+				control = { province = 117 data = GER }
+				control = { province = 110 data = GER }
+				control = { province = 109 data = GER }
+				control = { province = 108 data = GER }
+				control = { province = 107 data = GER }
+			}
+			AND = {
+				alliance = { country = GER country = NOR }
+				control = { province = 125 data = NOR }
+				control = { province = 124 data = NOR }
+				control = { province = 118 data = NOR }
+				control = { province = 117 data = NOR }
+				control = { province = 110 data = NOR }
+				control = { province = 109 data = NOR }
+				control = { province = 108 data = NOR }
+				control = { province = 107 data = NOR }
+			}
+			AND = {
+				alliance = { country = GER country = SCA }
+				control = { province = 125 data = SCA }
+				control = { province = 124 data = SCA }
+				control = { province = 118 data = SCA }
+				control = { province = 117 data = SCA }
+				control = { province = 110 data = SCA }
+				control = { province = 109 data = SCA }
+				control = { province = 108 data = SCA }
+				control = { province = 107 data = SCA }
+			}
+		}#or
+		random = 25
+	}
+
+	date = { day = 14 month = october year = 1944 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130305_NAME"
+	desc = "EVT_130305_DESC"
+
+	picture = "fort_sabotaged"
+
+	action_a = {
+		name = "EVT_130305_ACTA"
+		ai_chance = 100
+		command = { type = construct which = coastal_fort where = 32 value = 3 } #
+		command = { type = construct which = flak where = 32 value = 2 } #
+		command = { type = construct which = coastal_fort where = 33 value = 3 } #
+		command = { type = construct which = flak where = 33 value = 2 } #
+		command = { type = construct which = coastal_fort where = 39 value = 3 } #
+		command = { type = construct which = flak where = 39 value = 2 } #
+		command = { type = construct which = coastal_fort where = 41 value = 3 } #
+		command = { type = construct which = flak where = 41 value = 2 } #
+		command = { type = construct which = coastal_fort where = 42 value = 3 } #
+		command = { type = construct which = flak where = 42 value = 2 } #
+		command = { type = construct which = coastal_fort where = 18 value = 3 } #
+		command = { type = construct which = flak where = 18 value = 2 } #
+		command = { type = construct which = coastal_fort where = 43 value = 3 } #
+		command = { type = construct which = flak where = 43 value = 2 } #
+		command = { type = construct which = coastal_fort where = 45 value = 3 } #
+		command = { type = construct which = flak where = 45 value = 2 } #
+		command = { type = construct which = coastal_fort where = 46 value = 3 } #
+		command = { type = construct which = flak where = 46 value = 2 } #
+		command = { type = construct which = coastal_fort where = 47 value = 3 } #
+		command = { type = construct which = flak where = 47 value = 2 } #
+		command = { type = construct which = coastal_fort where = 78 value = 3 } #
+		command = { type = construct which = flak where = 78 value = 2 } #
+		command = { type = construct which = coastal_fort where = 90 value = 3 } #
+		command = { type = construct which = flak where = 90 value = 2 } #
+		command = { type = construct which = coastal_fort where = 91 value = 3 } #
+		command = { type = construct which = flak where = 91 value = 2 } #
+		command = { type = construct which = coastal_fort where = 92 value = 3 } #
+		command = { type = construct which = flak where = 92 value = 2 } #
+		command = { type = construct which = coastal_fort where = 292 value = 3 } #
+		command = { type = construct which = flak where = 292 value = 2 } #
+		command = { type = construct which = coastal_fort where = 125 value = 3 }
+		command = { type = construct which = flak where = 125 value = 2 }
+		command = { type = construct which = coastal_fort where = 124 value = 3 }
+		command = { type = construct which = flak where = 124 value = 2 }
+		command = { type = construct which = coastal_fort where = 118 value = 3 }
+		command = { type = construct which = flak where = 118 value = 2 }
+		command = { type = construct which = coastal_fort where = 117 value = 3 }
+		command = { type = construct which = flak where = 117 value = 2 }
+		command = { type = construct which = coastal_fort where = 110 value = 3 }
+		command = { type = construct which = flak where = 110 value = 2 }
+		command = { type = construct which = coastal_fort where = 109 value = 3 }
+		command = { type = construct which = flak where = 109 value = 2 }
+		command = { type = construct which = coastal_fort where = 108 value = 3 }
+		command = { type = construct which = flak where = 108 value = 2 }
+		command = { type = construct which = coastal_fort where = 107 value = 3 }
+		command = { type = construct which = flak where = 107 value = 2 }
+	}
+}
+
+##########
+#  Capture the KING or QUEEN
+##########
+
+event = {
+	id = 130310
+	random = no
+	country = GER
+
+	trigger = {
+		war = { country = GER country = HOL }
+		OR = {
+			NOT = {	control = { province = 77 data = HOL } }
+			NOT = {	control = { province = 78 data = HOL } }
+			NOT = {	control = { province = 79 data = HOL } }
+			NOT = {	control = { province = 49 data = HOL } }
+			NOT = {	control = { province = 48 data = HOL } }
+			NOT = {	control = { province = 46 data = HOL } }
+			NOT = {	control = { province = 47 data = HOL } }
+		}
+		NOT = {
+			flag = opcapturequeen
+		}
+	}
+
+	style = 0
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130310_NAME"
+	desc = "EVT_130310_DESC"
+
+	picture = "rotterdam"
+
+	action_a = {
+		name = "EVT_130310_ACTA"
+		command = { type = setflag which = opcapturequeen }
+		command = { type = trigger which = 130315 }
+	}
+}
+
+event = {
+	id = 130311
+	random = no
+	country = GER
+
+	trigger = {
+		event = 130310
+		random = 8
+		control = { province = 47 data = GER }
+		flag = opcapturequeen
+	}
+
+	style = 0
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130311_NAME"
+	desc = "EVT_130311_DESC"
+
+	picture = "rotterdam"
+
+	action_a = {
+		name = "EVT_130311_ACTA"
+		command = { type = clrflag which = opcapturequeen }
+		command = { type = setflag which = queencapturedger }
+		command = { type = sleepevent which = 130312 }
+		command = { type = trigger which = 130316 }
+	}
+}
+
+event = {
+	id = 130312
+	random = no
+	country = GER
+
+	trigger = {
+		event = 130310
+		random = 12
+		flag = opcapturequeen
+		NOT = { control = { province = 47 data = GER } }
+		control = { province = 19 data = ENG } # ロンドン制圧していれば確実に逮捕
+	}
+
+	style = 0
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130312_NAME"
+	desc = "EVT_130312_DESC"
+
+	picture = "rotterdam"
+
+	action_a = {
+		name = "EVT_130312_ACTA"
+		command = { type = clrflag which = opcapturequeen }
+		command = { type = setflag which = queencapturedfail }
+		command = { type = sleepevent which = 130311 }
+		command = { type = trigger which = 130317 }
+	}
+}
+
+event = {
+	id = 130313
+	random = no
+	country = GER
+
+	trigger = {
+		flag = queencapturedger
+		event = 130420 # HOL falled
+		NOT = {
+			control = { province = 77 data = HOL }
+			control = { province = 78 data = HOL }
+			control = { province = 79 data = HOL }
+			control = { province = 49 data = HOL }
+			control = { province = 48 data = HOL }
+			control = { province = 46 data = HOL }
+			control = { province = 47 data = HOL }
+		}
+	}
+
+	style = 0
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130313_NAME"
+	desc = "EVT_130313_DESC"
+
+	picture = "rotterdam"
+
+	action_a = {
+		name = "EVT_130313_ACTA"
+		command = { type = province_revoltrisk which = 46 value = -100 }
+		command = { type = province_revoltrisk which = 47 value = -100 }
+		command = { type = province_revoltrisk which = 48 value = -100 }
+		command = { type = province_revoltrisk which = 49 value = -100 }
+		command = { type = province_revoltrisk which = 77 value = -100 }
+		command = { type = province_revoltrisk which = 78 value = -100 }
+		command = { type = province_revoltrisk which = 79 value = -100 }
+	}
+}
+
+event = {
+	id = 130314
+	random = no
+	country = GER
+
+	trigger = {
+		flag = queencapturedfail
+		event = 130420 # HOL falled #FEPK1.092
+		NOT = {
+			control = { province = 77 data = HOL }
+			control = { province = 78 data = HOL }
+			control = { province = 79 data = HOL }
+			control = { province = 49 data = HOL }
+			control = { province = 48 data = HOL }
+			control = { province = 46 data = HOL }
+			control = { province = 47 data = HOL }
+		}
+	}
+
+	style = 0
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130314_NAME"
+	desc = "EVT_130314_DESC"
+
+	picture = "rotterdam"
+
+	action_a = {
+		name = "EVT_130314_ACTA"
+		#restart
+		command = { type = province_revoltrisk which = 46 value = 21 }
+		command = { type = province_revoltrisk which = 47 value = 21 }
+		command = { type = province_revoltrisk which = 48 value = 15 }
+		command = { type = province_revoltrisk which = 49 value = 21 }
+		command = { type = province_revoltrisk which = 77 value = 15 }
+		command = { type = province_revoltrisk which = 78 value = 9 }
+		command = { type = province_revoltrisk which = 79 value = 9 }
+	}
+}
+
+
+event = {
+	id = 130315
+	random = no
+	country = HOL
+
+	name = "EVT_130315_NAME"
+	desc = "EVT_130315_DESC"
+
+	picture = "rotterdam"
+
+	action_a = {
+		name = "EVT_130315_ACTA"
+		ai_chance = 90
+		command = { type = dissent value = 3 }
+	}
+	action_b = {
+		name = "EVT_130315_ACTB"
+		ai_chance = 10
+		command = { type = sleepevent which = 130312 }
+	}
+}
+
+
+event = {
+	id = 130316
+	random = no
+	country = HOL
+
+	name = "EVT_130316_NAME"
+	desc = "EVT_130316_DESC"
+
+	picture = "rotterdam"
+
+	action_a = {
+		name = "EVT_130316_ACTA"
+		command = { type = headofstate which = 8186 } # Juliana
+	}
+}
+
+event = {
+	id = 130317
+	random = no
+	country = HOL
+
+	name = "EVT_130317_NAME"
+	desc = "EVT_130317_DESC"
+
+	picture = "rotterdam"
+
+	action_a = {
+		name = "EVT_130317_ACTA"
+		command = { type = dissent value = -3 }
+		command = { type = province_keypoints which = 47 value = -1 }
+		command = { type = province_keypoints which = 801 value = 1 }
+	}
+}
+
+event = {
+	id = 130320
+	random = no
+	country = GER
+
+	trigger = {
+		war = { country = GER country = BEL }
+		OR = {
+			NOT = {	control = { province = 45 data = BEL } }
+			NOT = {	control = { province = 51 data = BEL } }
+			NOT = {	control = { province = 52 data = BEL } }
+			NOT = {	control = { province = 50 data = BEL } }
+			NOT = {	control = { province = 65 data = BEL } }
+			NOT = {	control = { province = 68 data = BEL } }
+			NOT = {	control = { province = 69 data = BEL } }
+			NOT = {	control = { province = 70 data = BEL } }
+		}
+		NOT = {
+			flag = opcaptureking
+		}
+	}
+
+	style = 0
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130320_NAME"
+	desc = "EVT_130320_DESC"
+
+	picture = "leopold"
+
+	action_a = {
+		name = "EVT_130320_ACTA"
+		command = { type = setflag which = opcaptureking }
+		command = { type = trigger which = 130325 }
+	}
+}
+
+event = {
+	id = 130321
+	random = no
+	country = GER
+
+	trigger = {
+		event = 130320
+		random = 12
+		control = { province = 51 data = GER }
+		flag = opcaptureking
+	}
+
+	style = 0
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130321_NAME"
+	desc = "EVT_130321_DESC"
+
+	picture = "Surrender_of_Belgium"
+
+	action_a = {
+		name = "EVT_130321_ACTA"
+		command = { type = clrflag which = opcaptureking }
+		command = { type = setflag which = kingcapturedger }
+		command = { type = sleepevent which = 130322 }
+		command = { type = trigger which = 130326 }
+	}
+}
+
+event = {
+	id = 130322
+	random = no
+	country = GER
+
+	trigger = {
+		event = 130320
+		random = 8
+		flag = opcaptureking
+		NOT = { control = { province = 51 data = GER } }
+		control = { province = 19 data = ENG } # ロンドン制圧していれば確実に逮捕
+	}
+
+	style = 0
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130322_NAME"
+	desc = "EVT_130322_DESC"
+
+	picture = "leopold"
+
+	action_a = {
+		name = "EVT_130322_ACTA"
+		command = { type = clrflag which = opcaptureking }
+		command = { type = setflag which = kingcapturedfail }
+		command = { type = sleepevent which = 130321 }
+		command = { type = trigger which = 130327 }
+	}
+}
+
+event = {
+	id = 130323
+	random = no
+	country = GER
+
+	trigger = {
+		flag = kingcapturedger
+		event = 130421 # BEL falled
+		NOT = {
+			control = { province = 45 data = BEL }
+			control = { province = 52 data = BEL }
+			control = { province = 51 data = BEL }
+			control = { province = 50 data = BEL }
+			control = { province = 65 data = BEL }
+			control = { province = 68 data = BEL }
+			control = { province = 69 data = BEL }
+			control = { province = 70 data = BEL }
+		}
+	}
+
+	style = 0
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130323_NAME"
+	desc = "EVT_130323_DESC"
+
+	picture = "Surrender_of_Belgium"
+
+	action_a = {
+		name = "EVT_130323_ACTA"
+		command = { type = province_revoltrisk which = 45 value = -100 }
+		command = { type = province_revoltrisk which = 52 value = -100 }
+		command = { type = province_revoltrisk which = 51 value = -100 }
+		command = { type = province_revoltrisk which = 50 value = -100 }
+		command = { type = province_revoltrisk which = 65 value = -100 }
+		command = { type = province_revoltrisk which = 68 value = -100 }
+		command = { type = province_revoltrisk which = 69 value = -100 }
+		command = { type = province_revoltrisk which = 70 value = -100 }
+	}
+}
+
+event = { #1.092
+	id = 130324
+	random = no
+	country = GER
+
+	trigger = {
+		flag = kingcapturedfail
+		event = 130421 # BEL falled #FEPK1.092
+		NOT = {
+			control = { province = 45 data = BEL }
+			control = { province = 52 data = BEL }
+			control = { province = 51 data = BEL }
+			control = { province = 50 data = BEL }
+			control = { province = 65 data = BEL }
+			control = { province = 68 data = BEL }
+			control = { province = 69 data = BEL }
+			control = { province = 70 data = BEL }
+		}
+	}
+
+	style = 0
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130324_NAME"
+	desc = "EVT_130324_DESC"
+
+	#picture = "fort_sabotaged"
+
+	action_a = {
+		name = "EVT_130324_ACTA"
+		#restart
+		command = { type = province_revoltrisk which = 45 value = 15 }
+		command = { type = province_revoltrisk which = 52 value = 15 }
+		command = { type = province_revoltrisk which = 51 value = 21 }
+		command = { type = province_revoltrisk which = 50 value = 21 }
+		command = { type = province_revoltrisk which = 65 value = 9 }
+		command = { type = province_revoltrisk which = 68 value = 15 }
+		command = { type = province_revoltrisk which = 69 value = 9 }
+		command = { type = province_revoltrisk which = 70 value = 9 }
+	}
+}
+
+
+event = {
+	id = 130325
+	random = no
+	country = BEL
+
+	name = "EVT_130325_NAME"
+	desc = "EVT_130325_DESC"
+
+	#picture = "fort_sabotaged"
+
+	action_a = {
+		name = "EVT_130325_ACTA"
+		ai_chance = 30
+		command = { type = dissent value = 3 }
+	}
+	action_b = {
+		name = "EVT_130325_ACTB"
+		ai_chance = 70
+		command = { type = sleepevent which = 130322 }
+	}
+}
+
+
+event = {
+	id = 130326
+	random = no
+	country = BEL
+
+	name = "EVT_130326_NAME"
+	desc = "EVT_130326_DESC"
+
+	#picture = "fort_sabotaged"
+
+	action_a = {
+		name = "EVT_130326_ACTA"
+		command = { type = headofstate which = 15031 } # Charles
+	}
+}
+
+event = {
+	id = 130327
+	random = no
+	country = BEL
+
+	name = "EVT_130327_NAME"
+	desc = "EVT_130327_DESC"
+
+	#picture = "fort_sabotaged"
+
+	action_a = {
+		name = "EVT_130327_ACTA"
+		command = { type = dissent value = -3 }
+	}
+}
+
+##########
+#  Battle of Britain
+##########
+
+event = {
+	id = 130330
+	random = no
+	country = ENG
+	trigger = {
+		war = { country = GER country = ENG }
+		NOT = {
+			flag = battleofbritain
+			headofstate = 1031 # Edward 8
+			headofstate = 1032
+			headofstate = 1244
+			headofgovernment = 1157 # Halifax
+		}
+		OR = {
+			control = { province = 3 data = GER }  #Stornoway
+			control = { province = 5 data = GER }  #Scapaflow
+			control = { province = 6 data = GER }  #Inverness
+			control = { province = 7 data = GER }  #Aberdeen
+			control = { province = 8 data = GER }  #Dunfermline
+			control = { province = 9 data = GER }  #Glasgor
+			control = { province = 10 data = GER }  #Edinburgh
+			control = { province = 11 data = GER }  #Sunderland
+			control = { province = 12 data = GER }  #Blackpool
+			control = { province = 13 data = GER }  #Sheffield
+			control = { province = 14 data = GER }  #Liverpool
+			control = { province = 15 data = GER }  #Cardiff
+			control = { province = 17 data = GER }  #Norwich
+			control = { province = 20 data = GER }  #Dover
+			control = { province = 21 data = GER }  #Portsmouth
+			control = { province = 22 data = GER }  #Bristol
+			control = { province = 23 data = GER }  #Plymouth
+			control = { province = 16 data = GER }  #Birmingham
+			control = { province = 19 data = GER }  #London
+		}
+	}
+	
+	name = "EVT_130330_NAME"
+	desc = "EVT_130330_DESC"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	picture = "german_reinforcment_5"
+
+	action_a = {
+		name = "EVT_130330_ACTA"
+		command = { type = dissent value = -30 }
+		command = { type = setflag which = battleofbritain }
+		command = { type = trigger which = 130331 }
+	}
+}
+
+event = {
+	id = 130331
+	random = no
+	country = GER
+
+	name = "EVT_130331_NAME"
+	desc = "EVT_130331_DESC"
+	style = 0
+
+	picture = "german_reinforcment_5"
+
+	action_a = {
+		name = "EVT_130331_ACTA"
+		command = { type = dissent value = -3 }
+	}
+}
+
+event = {
+	id = 130332
+	random = no
+	country = ENG
+	trigger = {
+		flag = battleofbritain
+		atwar = no
+	}
+	
+	name = "EVT_130332_NAME"
+	desc = "EVT_130332_DESC"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	#picture = "german_reinforcment_5"
+
+	action_a = {
+		name = "EVT_130332_ACTA"
+		command = { type = capital which = 19 }
+		command = { type = clrflag which = battleofbritain }
+		command = { type = clrflag which = battleoflondon }
+		command = { type = clrflag which = engcapescaped }
+		command = { type = clrflag which = ottawa }
+	}
+}
+
+event = {
+	id = 130335
+	random = no
+	country = ENG
+	trigger = {
+		flag = battleofbritain
+		control = { province = 19 data = ENG } # London
+		OR = {
+			control = { province = 16 data = GER }  #Birmingham
+			control = { province = 17 data = GER }  #Norwich
+			control = { province = 20 data = GER }  #Dover
+			control = { province = 21 data = GER }  #Portsmouth
+			control = { province = 22 data = GER }  #Bristol
+		}
+	}
+	
+	name = "EVT_130335_NAME"
+	desc = "EVT_130335_DESC"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	picture = "german_reinforcment_6"
+
+	action_a = {
+		name = "EVT_130335_ACTA"
+		command = { type = setflag which = battleoflondon }
+		command = { type = add_corps which = "ホーム・ガード・オブ・ロンドン" value = land where = 19 }
+		command = { type = add_division which = "「シティ」郷土防衛隊" value = garrison when = 0 }
+		command = { type = add_division which = "「ウェストミンスター」郷土防衛隊" value = garrison when = 0 }
+		command = { type = add_division which = "「イーストエンド」郷土防衛隊" value = garrison when = 0 }
+		command = { type = add_corps which = "ロンドン軍団" value = land where = 19 }
+		command = { type = add_division which = "第151「ロンドン」師団" value = garrison when = 2 }
+		command = { type = add_division which = "第160「ケント」師団" value = garrison when = 2 }
+		command = { type = add_division which = "第161「ミドルセックス」師団" value = garrison when = 2 }
+
+		command = { type = trigger which = 130336 }
+	}
+}
+
+event = {
+	id = 130336
+	random = no
+	country = GER
+	
+	name = "EVT_130336_NAME"
+	desc = "EVT_130336_DESC"
+	style = 0
+
+	picture = "german_reinforcment_6"
+
+	action_a = {
+		name = "EVT_130336_ACTA"
+		command = { type = dissent value = -3 }
+	}
+}
+
+event = {
+	id = 130337
+	random = no
+	country = ENG
+	trigger = {
+		flag = battleoflondon
+		control = { province = 19 data = GER } # London
+	}
+	
+	name = "EVT_130337_NAME"
+	desc = "EVT_130337_DESC"
+
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	picture = "german_strategic_victory2"
+
+	action_a = {
+		name = "EVT_130337_ACTA"
+		command = { type = clrflag which = battleoflondon }
+		command = { type = trigger which = 130338 }
+	}
+}
+
+event = {
+	id = 130338
+	random = no
+	country = GER
+	
+	name = "EVT_130338_NAME"
+	desc = "EVT_130338_DESC"
+
+	style = 0
+
+	picture = "german_strategic_victory2"
+
+	action_a = {
+		name = "EVT_130338_ACTA"
+		command = { type = dissent value = -10 }
+	}
+}
+
+event = { 
+	id = 130339
+	random = no
+	country = ENG
+
+	trigger = {
+		flag = battleofbritain
+		control = { province = 19 data = ENG }  # London
+
+		control = { province = 16 data = GER }  # Birmingham
+		control = { province = 17 data = GER }  # Norwich
+		control = { province = 20 data = GER }  # Dover
+		control = { province = 21 data = GER }  # Portsmouth
+		control = { province = 22 data = GER }  # Bristol
+
+		garrison = { country = ENG province = 19 size = 1 }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130339_NAME"
+	desc = "EVT_130339_DESC"
+
+	picture = "german_supplies"
+
+	action_a = {
+		name = "EVT_130339_ACTA"
+		ai_chance = 100
+		command = { type = supplies value = -500 }
+		command = { type = supplies value = 500 where = 19 }
+	}
+	action_b = {
+		name ="EVT_130339_ACTB"
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+	}
+}
+
+event = { 
+	id = 130340
+	random = no
+	country = ENG
+
+	trigger = {
+		flag = battleofbritain
+		NOT = {
+			flag = georgecapturedger # 国王が捕まっていない
+		}
+		flag = georgecapturedfail
+		control = { province = 10 data = ENG } #Edinburgh
+		OR = {
+			control = { province = 19 data = GER }  # London #ロンドン陥落時
+			AND = {
+				control = { province = 16 data = GER } # Birmingham #ロンドン完全包囲下
+				control = { province = 17 data = GER } # Norwich
+				control = { province = 20 data = GER } # Dover
+				control = { province = 21 data = GER } # Portsmouth
+				control = { province = 22 data = GER } # Bristol
+			}
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130340_NAME"
+	desc = "EVT_130340_DESC"
+
+	picture = "german_reinforcment"
+
+	action_a = {
+		name = "EVT_130340_ACTA"
+		command = { type = setflag which = engcapescaped }
+		command = { type = capital which = 10 } #Edinburgh
+		command = { type = construct which = flak where = 10 value = 10 } # 1.073
+	}
+}
+
+event = { 
+	id = 130341
+	random = no
+	country = ENG
+
+	trigger = {
+		flag = battleofbritain
+		NOT = {
+			flag = georgecapturedger # 国王が捕まっていない
+		}
+		flag = georgecapturedfail
+		control = { province = 10 data = GER } #Edinburgh
+		control = { province = 6 data = ENG }  #Inverness
+		OR = {
+			control = { province = 19 data = GER }  # London #ロンドン陥落時
+			AND = {
+				control = { province = 16 data = GER } # Birmingham #ロンドン完全包囲下
+				control = { province = 17 data = GER } # Norwich
+				control = { province = 20 data = GER } # Dover
+				control = { province = 21 data = GER } # Portsmouth
+				control = { province = 22 data = GER } # Bristol
+			}
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130341_NAME"
+	desc = "EVT_130341_DESC"
+
+	picture = "german_reinforcment"
+
+	action_a = {
+		name = "EVT_130341_ACTA"
+		command = { type = sleepevent which = 130340 }
+		command = { type = setflag which = engcapescaped }
+		command = { type = capital which = 6 } #Inverness
+		command = { type = add_corps which = "スコットランド軍団" value = land where = 6 }
+		command = { type = add_division which = "第163「インヴァネス」師団" value = garrison when = 2 }
+		command = { type = add_division which = "第171「アバディーン」師団" value = garrison when = 2 }
+		command = { type = add_division which = "第174「ハイランダー」師団" value = garrison when = 2 }
+		command = { type = construct which = land_fort where = 10 value = -10 } #Edinburgh # 1.07
+
+	}
+}
+
+event = {
+	id = 130342
+	random = no
+	country = ENG
+	trigger = {
+		flag = engcapescaped
+		NOT = {
+			flag = ottawa # オタワまでは脱出していない
+		}
+		control = { province = 3 data = ENG } # Stornoway
+		control = { province = 5 data = ENG } # Scapaflow
+		control = { province = 6 data = ENG } # Inverness
+		control = { province = 7 data = ENG } # Aberdeen
+		control = { province = 8 data = ENG } # Dunfermline
+		control = { province = 9 data = ENG } # Glasgor
+		control = { province = 10 data = ENG } # Edinburgh
+		control = { province = 11 data = ENG } # Sunderland
+		control = { province = 12 data = ENG } # Blackpool
+		control = { province = 13 data = ENG } # Sheffield
+		control = { province = 14 data = ENG } # Liverpool
+		control = { province = 15 data = ENG } # Cardiff
+		control = { province = 17 data = ENG } # Norwich
+		control = { province = 20 data = ENG } # Dover
+		control = { province = 21 data = ENG } # Portsmouth
+		control = { province = 22 data = ENG } # Bristol
+		control = { province = 23 data = ENG } # Plymouth
+		control = { province = 16 data = ENG } # Birmingham
+		control = { province = 19 data = ENG } # London
+	}
+	
+	name = "EVT_130342_NAME"
+	desc = "EVT_130342_DESC"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "EVT_130342_ACTA"
+		command = { type = capital which = 19 }
+		command = { type = clrflag which = battleofbritain }
+		command = { type = clrflag which = battleoflondon }
+		command = { type = clrflag which = engcapescaped }
+		command = { type = clrflag which = ottawa }
+
+	}
+}
+
+event = {
+	id = 130343
+	random = no
+	country = ENG
+	trigger = {
+		NOT = {
+			control = { province = 6 data = ENG } # Inverness
+			control = { province = 10 data = ENG } # Edinburgh
+		}
+		alliance = { country = ENG country = CAN }
+		owned = { province = 588 data = CAN }
+		control = { province = 588 data = CAN }
+		OR = {
+			NOT = {
+				control = { province = 19 data = ENG } # London
+			}
+			flag = engcapescaped
+		}
+	}
+	
+	name = "EVT_130343_NAME"
+	desc = "EVT_130343_DESC"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "EVT_130343_ACTA"
+		command = { type = setflag which = engcapescaped }
+		command = { type = setflag which = ottawa }
+		command = { type = addcore which = 572 }
+		command = { type = addcore which = 573 }
+		command = { type = addcore which = 574 }
+		command = { type = addcore which = 578 }
+		command = { type = addcore which = 579 }
+		command = { type = addcore which = 580 }
+		command = { type = addcore which = 581 }
+		command = { type = addcore which = 584 }
+		command = { type = addcore which = 585 }
+		command = { type = addcore which = 586 }
+		command = { type = addcore which = 587 }
+		command = { type = addcore which = 588 }
+		command = { type = addcore which = 589 }
+		command = { type = addcore which = 590 }
+		command = { type = addcore which = 591 }
+		command = { type = addcore which = 1909 }
+		command = { type = trigger which = 130344 }
+		command = { type = construct which = land_fort where = 10 value = -10 } #Edinburgh # 1.07
+	}
+}
+
+event = {
+	id = 130344
+	random = no
+	country = CAN
+
+	name = "EVT_130344_NAME"
+	desc = "EVT_130344_DESC"
+	style = 0
+
+	action_a = {
+		name = "EVT_130344_ACTA"
+		command = { type = secedeprovince which = ENG value = 572 }
+		command = { type = secedeprovince which = ENG value = 573 }
+		command = { type = secedeprovince which = ENG value = 574 }
+		command = { type = secedeprovince which = ENG value = 578 }
+		command = { type = secedeprovince which = ENG value = 579 }
+		command = { type = secedeprovince which = ENG value = 580 }
+		command = { type = secedeprovince which = ENG value = 581 }
+		command = { type = secedeprovince which = ENG value = 584 }
+		command = { type = secedeprovince which = ENG value = 585 }
+		command = { type = secedeprovince which = ENG value = 586 }
+		command = { type = secedeprovince which = ENG value = 587 }
+		command = { type = secedeprovince which = ENG value = 588 }
+		command = { type = secedeprovince which = ENG value = 589 }
+		command = { type = secedeprovince which = ENG value = 590 }
+		command = { type = secedeprovince which = ENG value = 591 }
+		command = { type = secedeprovince which = ENG value = 1909 }
+		command = { type = removecore which = 572 }
+		command = { type = removecore which = 573 }
+		command = { type = removecore which = 574 }
+		command = { type = removecore which = 578 }
+		command = { type = removecore which = 579 }
+		command = { type = removecore which = 580 }
+		command = { type = removecore which = 581 }
+		command = { type = removecore which = 584 }
+		command = { type = removecore which = 585 }
+		command = { type = removecore which = 586 }
+		command = { type = removecore which = 587 }
+		command = { type = removecore which = 588 }
+		command = { type = removecore which = 589 }
+		command = { type = removecore which = 590 }
+		command = { type = removecore which = 591 }
+		command = { type = trigger which = 130345 }
+
+		command = { type = free_ic value = 30 }
+	}
+}
+
+event = {
+	id = 130345
+	random = no
+	country = ENG
+
+	name = "EVT_130345_NAME"
+	desc = "EVT_130345_DESC"
+	style = 0
+
+	action_a = {
+		name = "EVT_130345_ACTA"
+		command = { type = manpowerpool value = 100 }
+		command = { type = dissent value = -100 }
+
+	#	command = { type = free_ic value = 30 } #BETA修正パッチ
+		command = { type = free_rare_materials value = 40 }
+		command = { type = free_metal value = 80 }
+		command = { type = free_energy value = 120 }
+		command = { type = free_manpower value = 1 }
+
+		command = { type = capital which = 588 }
+	}
+}
+
+event = {
+	id = 130346
+	random = no
+	country = ENG
+	trigger = {
+		flag = ottawa
+		control = { province = 3 data = ENG } # Stornoway
+		control = { province = 5 data = ENG } # Scapaflow
+		control = { province = 6 data = ENG } # Inverness
+		control = { province = 7 data = ENG } # Aberdeen
+		control = { province = 8 data = ENG } # Dunfermline
+		control = { province = 9 data = ENG } # Glasgor
+		control = { province = 10 data = ENG } # Edinburgh
+		control = { province = 11 data = ENG } # Sunderland
+		control = { province = 12 data = ENG } # Blackpool
+		control = { province = 13 data = ENG } # Sheffield
+		control = { province = 14 data = ENG } # Liverpool
+		control = { province = 15 data = ENG } # Cardiff
+		control = { province = 17 data = ENG } # Norwich
+		control = { province = 20 data = ENG } # Dover
+		control = { province = 21 data = ENG } # Portsmouth
+		control = { province = 22 data = ENG } # Bristol
+		control = { province = 23 data = ENG } # Plymouth
+		control = { province = 16 data = ENG } # Birmingham
+		control = { province = 19 data = ENG } # London
+		owned = { province = 19 data = ENG } # London
+	}
+	
+	name = "EVT_130346_NAME"
+	desc = "EVT_130346_DESC"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "EVT_130346_ACTA"
+		command = { type = clrflag which = battleofbritain }
+		command = { type = clrflag which = battleoflondon }
+		command = { type = clrflag which = engcapescaped }
+		command = { type = clrflag which = ottawa }
+
+		command = { type = capital which = 19 }
+
+		command = { type = removecore which = 572 }
+		command = { type = removecore which = 573 }
+		command = { type = removecore which = 574 }
+		command = { type = removecore which = 578 }
+		command = { type = removecore which = 579 }
+		command = { type = removecore which = 580 }
+		command = { type = removecore which = 581 }
+		command = { type = removecore which = 584 }
+		command = { type = removecore which = 585 }
+		command = { type = removecore which = 586 }
+		command = { type = removecore which = 587 }
+		command = { type = removecore which = 588 }
+		command = { type = removecore which = 589 }
+		command = { type = removecore which = 590 }
+		command = { type = removecore which = 591 }
+		command = { type = removecore which = 1909 }
+		command = { type = secedeprovince which = CAN value = 572 }
+		command = { type = secedeprovince which = CAN value = 573 }
+		command = { type = secedeprovince which = CAN value = 574 }
+		command = { type = secedeprovince which = CAN value = 578 }
+		command = { type = secedeprovince which = CAN value = 579 }
+		command = { type = secedeprovince which = CAN value = 580 }
+		command = { type = secedeprovince which = CAN value = 581 }
+		command = { type = secedeprovince which = CAN value = 584 }
+		command = { type = secedeprovince which = CAN value = 585 }
+		command = { type = secedeprovince which = CAN value = 586 }
+		command = { type = secedeprovince which = CAN value = 587 }
+		command = { type = secedeprovince which = CAN value = 588 }
+		command = { type = secedeprovince which = CAN value = 589 }
+		command = { type = secedeprovince which = CAN value = 590 }
+		command = { type = secedeprovince which = CAN value = 591 }
+		command = { type = secedeprovince which = CAN value = 1909 }
+
+	#	command = { type = free_ic value = 30 } #BETA修正パッチ
+		command = { type = free_rare_materials value = -40 }
+		command = { type = free_metal value = -80 }
+		command = { type = free_energy value = -120 }
+		command = { type = free_manpower value = -1 }
+		command = { type = trigger which = 130347 }
+	}
+}
+
+event = {
+	id = 130347
+	random = no
+	country = CAN
+
+	name = "EVT_130347_NAME"
+	desc = "EVT_130347_DESC"
+	style = 0
+
+	action_a = {
+		name = "EVT_130347_ACTA"
+		command = { type = capital which = 588 }
+
+		command = { type = addcore which = 572 }
+		command = { type = addcore which = 573 }
+		command = { type = addcore which = 574 }
+		command = { type = addcore which = 578 }
+		command = { type = addcore which = 579 }
+		command = { type = addcore which = 580 }
+		command = { type = addcore which = 581 }
+		command = { type = addcore which = 584 }
+		command = { type = addcore which = 585 }
+		command = { type = addcore which = 586 }
+		command = { type = addcore which = 587 }
+		command = { type = addcore which = 588 }
+		command = { type = addcore which = 589 }
+		command = { type = addcore which = 590 }
+		command = { type = addcore which = 591 }
+		command = { type = addcore which = 1909 }
+
+		command = { type = free_ic value = -30 }
+	}
+}
+
+event = {
+	id = 130348
+	random = no
+	country = CAN
+
+	trigger = {
+		flag = ottawa
+		control = { province = 588 data = ENG }
+		NOT = {
+			alliance = { country = ENG country = CAN }
+		}
+	}
+	
+	name = "EVT_130348_NAME"
+	desc = "EVT_130348_DESC"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		command = { type = addcore which = 572 }
+		command = { type = addcore which = 573 }
+		command = { type = addcore which = 574 }
+		command = { type = addcore which = 578 }
+		command = { type = addcore which = 579 }
+		command = { type = addcore which = 580 }
+		command = { type = addcore which = 581 }
+		command = { type = addcore which = 584 }
+		command = { type = addcore which = 585 }
+		command = { type = addcore which = 586 }
+		command = { type = addcore which = 587 }
+		command = { type = addcore which = 588 }
+		command = { type = addcore which = 589 }
+		command = { type = addcore which = 590 }
+		command = { type = addcore which = 591 }
+		command = { type = addcore which = 1909 }
+
+		command = { type = free_ic value = -30 }
+
+		command = { type = trigger which = 130349 }
+	}
+}
+
+event = {
+	id = 130349
+	random = no
+	country = ENG
+
+	name = "EVT_130349_NAME"
+	desc = "EVT_130349_DESC"
+	style = 0
+
+	action_a = {
+		name = "EVT_130349_ACTA"
+		command = { type = clrflag which = engcapescaped }
+		command = { type = clrflag which = ottawa }
+
+		command = { type = capital which = 19 }
+
+		command = { type = removecore which = 572 }
+		command = { type = removecore which = 573 }
+		command = { type = removecore which = 574 }
+		command = { type = removecore which = 578 }
+		command = { type = removecore which = 579 }
+		command = { type = removecore which = 580 }
+		command = { type = removecore which = 581 }
+		command = { type = removecore which = 584 }
+		command = { type = removecore which = 585 }
+		command = { type = removecore which = 586 }
+		command = { type = removecore which = 587 }
+		command = { type = removecore which = 588 }
+		command = { type = removecore which = 589 }
+		command = { type = removecore which = 590 }
+		command = { type = removecore which = 591 }
+		command = { type = removecore which = 1909 }
+		command = { type = secedeprovince which = CAN value = 572 }
+		command = { type = secedeprovince which = CAN value = 573 }
+		command = { type = secedeprovince which = CAN value = 574 }
+		command = { type = secedeprovince which = CAN value = 578 }
+		command = { type = secedeprovince which = CAN value = 579 }
+		command = { type = secedeprovince which = CAN value = 580 }
+		command = { type = secedeprovince which = CAN value = 581 }
+		command = { type = secedeprovince which = CAN value = 584 }
+		command = { type = secedeprovince which = CAN value = 585 }
+		command = { type = secedeprovince which = CAN value = 586 }
+		command = { type = secedeprovince which = CAN value = 587 }
+		command = { type = secedeprovince which = CAN value = 588 }
+		command = { type = secedeprovince which = CAN value = 589 }
+		command = { type = secedeprovince which = CAN value = 590 }
+		command = { type = secedeprovince which = CAN value = 591 }
+		command = { type = secedeprovince which = CAN value = 1909 }
+
+	#	command = { type = free_ic value = 30 } #BETA修正パッチ
+		command = { type = free_rare_materials value = -40 }
+		command = { type = free_metal value = -80 }
+		command = { type = free_energy value = -120 }
+		command = { type = free_manpower value = -1 }
+	}
+}
+
+event = {
+	id = 130350
+	random = no
+	country = CAN
+
+	trigger = {
+		event = 130348
+		control = { province = 588 data = CAN }
+	}
+	
+	name = "EVT_130350_NAME"
+	desc = "EVT_130350_DESC"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "EVT_130350_ACTA"
+		command = { type = capital which = 588 }
+	}
+}
+
+event = {
+	id = 130360
+	random = no
+	country = GER
+
+	trigger = {
+		war = { country = GER country = ENG }
+		flag = battleofbritain
+		OR = {
+			control = { province = 19 data = GER }  #London
+			control = { province = 16 data = GER }  #Birmingham
+			control = { province = 17 data = GER }  #Norwich
+			control = { province = 20 data = GER }  #Dover
+			control = { province = 21 data = GER }  #Portsmouth
+			control = { province = 22 data = GER }  #Bristol
+		}
+		NOT = {
+			flag = opcapturegeorge
+		}
+	}
+
+	style = 0
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130360_NAME"
+	desc = "EVT_130360_DESC"
+
+	#picture = "fort_sabotaged"
+
+	action_a = {
+		name = "EVT_130360_ACTA"
+		command = { type = setflag which = opcapturegeorge }
+	}
+}
+
+event = {
+	id = 130361
+	random = no
+	country = GER
+
+	trigger = {
+		event = 130360
+		random = 5
+		OR = {
+			control = { province = 19 data = GER } # London
+			AND = {
+				control = { province = 19 data = U73 } # London
+				puppet = { country = U73 country = GER }
+			}
+		}
+		flag = opcapturegeorge
+	}
+
+	style = 0
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130361_NAME"
+	desc = "EVT_130361_DESC"
+
+	#picture = "fort_sabotaged"
+
+	action_a = {
+		name = "EVT_130361_ACTA"
+		command = { type = clrflag which = opcapturegeorge }
+		command = { type = setflag which = georgecapturedger }
+		command = { type = sleepevent which = 130362 }
+		command = { type = trigger which = 130366 }
+	}
+}
+
+event = {
+	id = 130362
+	random = no
+	country = GER
+
+	trigger = {
+		event = 130360
+		random = 10
+		flag = opcapturegeorge
+		NOT = {
+			AND = {
+				control = { province = 588 data = -3 }  #Ottawa
+				control = { province = 19 data = -3 }  #London
+			}
+			AND = {
+				control = { province = 6 data = -3 }  #Inverness
+				control = { province = 10 data = -3 }  #Edinburgh
+				control = { province = 19 data = -3 }  #London
+			}
+		}
+	}
+
+	style = 0
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130362_NAME"
+	desc = "EVT_130362_DESC"
+
+	#picture = "fort_sabotaged"
+
+	action_a = {
+		name = "EVT_130362_ACTA"
+		command = { type = clrflag which = opcapturegeorge }
+		command = { type = setflag which = georgecapturedfail }
+		command = { type = sleepevent which = 130361 }
+		command = { type = trigger which = 130367 }
+	}
+}
+
+event = {
+	id = 130363
+	random = no
+	country = GER
+
+	trigger = {
+		flag = georgecapturedger
+		NOT = {
+			control = { province = 3 data = ENG } # Stornoway
+			control = { province = 5 data = ENG } # Scapaflow
+			control = { province = 6 data = ENG } # Inverness
+			control = { province = 7 data = ENG } # Aberdeen
+			control = { province = 8 data = ENG } # Dunfermline
+			control = { province = 9 data = ENG } # Glasgor
+			control = { province = 10 data = ENG } # Edinburgh
+			control = { province = 11 data = ENG } # Sunderland
+			control = { province = 12 data = ENG } # Blackpool
+			control = { province = 13 data = ENG } # Sheffield
+			control = { province = 14 data = ENG } # Liverpool
+			control = { province = 15 data = ENG } # Cardiff
+			control = { province = 17 data = ENG } # Norwich
+			control = { province = 20 data = ENG } # Dover
+			control = { province = 21 data = ENG } # Portsmouth
+			control = { province = 22 data = ENG } # Bristol
+			control = { province = 23 data = ENG } # Plymouth
+			control = { province = 16 data = ENG } # Birmingham
+			control = { province = 19 data = ENG } # London
+		}
+	}
+
+	style = 0
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130363_NAME"
+	desc = "EVT_130363_DESC"
+
+	picture = "barricadas"
+
+	action_a = {
+		name = "EVT_130363_ACTA"
+		command = { type = province_revoltrisk which = 3 value = -100 }
+		command = { type = province_revoltrisk which = 5 value = -100 }
+		command = { type = province_revoltrisk which = 6 value = -100 }
+		command = { type = province_revoltrisk which = 7 value = -100 }
+		command = { type = province_revoltrisk which = 8 value = -100 }
+		command = { type = province_revoltrisk which = 9 value = -100 }
+		command = { type = province_revoltrisk which = 10 value = -100 }
+		command = { type = province_revoltrisk which = 11 value = -100 }
+		command = { type = province_revoltrisk which = 12 value = -100 }
+		command = { type = province_revoltrisk which = 13 value = -100 }
+		command = { type = province_revoltrisk which = 14 value = -100 }
+		command = { type = province_revoltrisk which = 15 value = -100 }
+		command = { type = province_revoltrisk which = 17 value = -100 }
+		command = { type = province_revoltrisk which = 20 value = -100 }
+		command = { type = province_revoltrisk which = 21 value = -100 }
+		command = { type = province_revoltrisk which = 22 value = -100 }
+		command = { type = province_revoltrisk which = 23 value = -100 }
+		command = { type = province_revoltrisk which = 16 value = -100 }
+		command = { type = province_revoltrisk which = 19 value = -100 }
+	}
+}
+
+event = {
+	id = 130364
+	random = no
+	country = GER
+
+	trigger = {
+		flag = georgecapturedfail
+		exists = ENG
+		NOT = {
+			control = { province = 3 data = ENG } # Stornoway
+			control = { province = 5 data = ENG } # Scapaflow
+			control = { province = 6 data = ENG } # Inverness
+			control = { province = 7 data = ENG } # Aberdeen
+			control = { province = 8 data = ENG } # Dunfermline
+			control = { province = 9 data = ENG } # Glasgor
+			control = { province = 10 data = ENG } # Edinburgh
+			control = { province = 11 data = ENG } # Sunderland
+			control = { province = 12 data = ENG } # Blackpool
+			control = { province = 13 data = ENG } # Sheffield
+			control = { province = 14 data = ENG } # Liverpool
+			control = { province = 15 data = ENG } # Cardiff
+			control = { province = 17 data = ENG } # Norwich
+			control = { province = 20 data = ENG } # Dover
+			control = { province = 21 data = ENG } # Portsmouth
+			control = { province = 22 data = ENG } # Bristol
+			control = { province = 23 data = ENG } # Plymouth
+			control = { province = 16 data = ENG } # Birmingham
+			control = { province = 19 data = ENG } # London
+		}
+	}
+
+	style = 0
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130364_NAME"
+	desc = "EVT_130364_DESC"
+
+	picture = "partisan_revolt"
+
+	action_a = {
+		name = "EVT_130364_ACTA"
+		#restart
+		command = { type = province_revoltrisk which = 3 value = 15 }
+		command = { type = province_revoltrisk which = 5 value = 15 }
+		command = { type = province_revoltrisk which = 6 value = 30 }
+		command = { type = province_revoltrisk which = 7 value = 15 }
+		command = { type = province_revoltrisk which = 8 value = 15 }
+		command = { type = province_revoltrisk which = 9 value = 15 }
+		command = { type = province_revoltrisk which = 10 value = 30 }
+		command = { type = province_revoltrisk which = 11 value = 15 }
+		command = { type = province_revoltrisk which = 12 value = 15 }
+		command = { type = province_revoltrisk which = 13 value = 15 }
+		command = { type = province_revoltrisk which = 14 value = 15 }
+		command = { type = province_revoltrisk which = 15 value = 15 }
+		command = { type = province_revoltrisk which = 17 value = 15 }
+		command = { type = province_revoltrisk which = 20 value = 15 }
+		command = { type = province_revoltrisk which = 21 value = 15 }
+		command = { type = province_revoltrisk which = 22 value = 15 }
+		command = { type = province_revoltrisk which = 23 value = 15 }
+		command = { type = province_revoltrisk which = 16 value = 15 }
+		command = { type = province_revoltrisk which = 19 value = 30 }
+	}
+}
+
+event = {
+	id = 130366
+	random = no
+	country = ENG
+
+	style = 0
+	name = "EVT_130366_NAME"
+	desc = "EVT_130366_DESC"
+
+	#picture = "fort_sabotaged"
+
+	action_a = {
+		name = "EVT_130366_ACTA"
+		command = { type = dissent value = 10 }
+		command = { type = headofstate which = 1182 } # Elizabeth2
+	}
+}
+
+event = {
+	id = 130367
+	random = no
+	country = ENG
+
+	trigger = {
+		control = { province = 10 data = ENG }
+	}
+	style = 0
+	name = "EVT_130367_NAME"
+	desc = "EVT_130367_DESC"
+
+	#picture = "fort_sabotaged"
+
+	action_a = {
+		name = "EVT_130367_ACTA"
+		command = { type = dissent value = -100 }
+		command = { type = add_corps which = "近衛軍団" value = land where = 10 } # 1.07
+		command = { type = add_division which = "近衛師団" value = garrison when = 2 where = anti_tank }
+		command = { type = add_division which = "王立騎馬砲兵師団" value = garrison when = 2 where = artillery }
+	}
+}
+
+event = {
+	id = 130368
+	random = no
+	country = ENG
+	trigger = {
+		NOT = {
+			exists = GER
+		}
+		flag = georgecapturedger
+		control = { province = 19 data = ENG } # London
+		owned = { province = 19 data = ENG } # London
+	}
+	
+	name = "EVT_130368_NAME"
+	desc = "EVT_130368_DESC"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 7 month = february year = 1952 }
+
+	action_a = {
+		name = "EVT_130368_ACTA"
+		command = { type = clrflag which = georgecapturedger }
+		command = { type = headofstate which = 1033 } # George6
+		command = { type = capital which = 19 }
+	}
+}
+
+##########
+#  SMEP-western front event
+##########
+
+event = {
+	id = 130400
+	random = no
+	country = GER
+
+	trigger = {
+		control = { province = 466 data = GER } #bohemia region
+		control = { province = 471 data = GER }
+		control = { province = 472 data = GER }
+		control = { province = 467 data = GER }
+		control = { province = 475 data = GER }
+		control = { province = 474 data = GER }
+		control = { province = 468 data = GER }
+		control = { province = 469 data = GER }
+		control = { province = 470 data = GER }
+		control = { province = 315 data = GER } #siegfried line
+		control = { province = 314 data = GER }
+		control = { province = 74 data = GER }
+		control = { province = 75 data = GER }
+		control = { province = 66 data = GER }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = august year = 1939 }
+
+	name = "EVT_130400_NAME"
+	desc = "EVT_130400_DESC"
+
+	picture = "fort_sabotaged"
+
+	action_a = {
+		name = "EVT_130400_ACTA"
+		command = { type = construct which = land_fort where = 466 value = -10 } #bohemia region
+		command = { type = construct which = land_fort where = 467 value = -10 }
+		command = { type = construct which = land_fort where = 471 value = -10 }
+		command = { type = construct which = land_fort where = 472 value = -10 }
+		command = { type = construct which = land_fort where = 474 value = -10 }
+		command = { type = construct which = land_fort where = 475 value = -10 }
+		command = { type = construct which = land_fort where = 468 value = -10 }
+		command = { type = construct which = land_fort where = 469 value = -10 }
+		command = { type = construct which = land_fort where = 470 value = -10 }
+		command = { type = construct which = land_fort where = 315 value = 2 } #siegfried line
+		command = { type = construct which = land_fort where = 314 value = 2 }
+		command = { type = construct which = land_fort where = 74 value = 2 }
+		command = { type = construct which = land_fort where = 75 value = 2 }
+		command = { type = construct which = land_fort where = 66 value = 2 }
+	}
+}
+##########
+#  Flanking the Maginot Line
+##########
+event = { 
+	id = 130401
+	random = no
+	country = FRA
+
+	trigger = {
+		NOT = {
+			control = { province = 64 data = FRA } #Reims
+			control = { province = 317 data = FRA } #Chaumont
+			exists = VIC
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 2
+	deathdate = { day = 15 month = june year = 1941 }
+
+	name = "EVT_130401_NAME"
+	desc = "EVT_130401_DESC"
+
+	picture = "fort_sabotaged"
+
+	action_a = {
+		name = "EVT_130401_ACTA"
+		command = { type = construct which = land_fort where = 72 value = -7 }
+		command = { type = construct which = land_fort where = 73 value = -7 }
+		command = { type = construct which = land_fort where = 316 value = -7 }
+	}
+}
+##########
+#  Destroying the Maginot Line
+##########
+event = { 
+	id = 130402
+	random = no
+	country = GER
+
+	trigger = {
+		control = { province = 72 data = GER } #Maginot Line
+		control = { province = 73 data = GER }
+		control = { province = 316 data = GER }
+		OR = {
+			AND = {
+				control = { province = 364 data = GER } #Marseille
+				control = { province = 325 data = GER } #Bordeaux
+				control = { province = 56 data = GER } #Paris
+			}
+			event = 130425 #Independent Vichy France
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 15 month = june year = 1941 }
+
+	name = "EVT_130402_NAME"
+	desc = "EVT_130402_DESC"
+
+	picture = "fort_sabotaged"
+
+	action_a = {
+		name = "EVT_130402_ACTA"
+		command = { type = construct which = land_fort where = 72 value = -10 }
+		command = { type = construct which = land_fort where = 73 value = -10 }
+		command = { type = construct which = land_fort where = 316 value = -10 }
+		command = { type = supplies value = 1000 }
+	}
+}
+
+##########
+#	Wehrmacht breakthroughs Maginot Line!
+##########
+event = {
+	id = 130403
+	random = no
+	country = FRA
+	
+	trigger = {
+		war = { country = FRA country = GER }
+		
+		NOT = { 
+			event = 130401	#「迂回」発生せず
+			war = { country = HOL country = GER }
+			war = { country = BEL country = GER }
+			war = { country = LUX country = GER }
+			exists = VIC	#フランス降伏前
+		}	
+		OR = {
+			control = { province = 72 data = GER } #Maginot Line
+			control = { province = 73 data = GER }
+			control = { province = 316 data = GER }
+		}
+	}
+	
+	date = { day = 0 month = 6 year = 1935 }
+	offset = 2
+	deathdate = { day = 20 month = 5 year = 1941 }
+	
+	name = "EVT_130403_NAME"
+	desc = "EVT_130403_DESC"
+	
+	picture = "fort_sabotaged"
+	
+	action = {
+		name = "EVT_130401_ACTA"
+		command = { type = construct which = land_fort where = 72 value = -7 }
+		command = { type = construct which = land_fort where = 73 value = -7 }
+		command = { type = construct which = land_fort where = 316 value = -7 }
+		command = { type = dissent value = 5 }
+		command = { type = morale which = land value = -5 }
+		command = { type = sleepevent which = 130401 }
+	}
+}
+
+##########
+#  Savoy and Nice
+##########
+event = { 
+	id = 130407
+	random = no
+	country = GER
+
+	trigger = {
+		exists = VIC
+		NOT = {
+			war = { country = VIC country = GER }
+			war = { country = VIC country = ITA }
+			flag = gerdefeatsita #Germany defeated Italy
+			ispuppet = ITA
+		}
+		alliance = { country = ITA country = GER }
+		OR = {
+			control = { province = 527 data = VIC }
+			control = { province = 527 data = ITA }
+		}
+		OR = {
+			control = { province = 366 data = VIC }
+			control = { province = 366 data = ITA }
+		}
+		event = 130426 #germany returns territory
+		event = 130427 #italy returns territory
+
+		event = 130423 # Vichy France by GER # FEPK
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130407_NAME"
+	desc = "EVT_130407_DESC"
+	picture = "schwerpunkt"
+
+	action_a = {
+		name = "EVT_130407_ACTA"
+		ai_chance = 98
+		command = { type = relation which = VIC value = -20 }
+		command = { type = relation which = ITA value = 10 }
+		command = { type = trigger which = 130408 } #
+	}
+	action_b = {
+		name = "EVT_130407_ACTB"
+		ai_chance = 2
+		command = { type = relation which = VIC value = 10 }
+		command = { type = relation which = ITA value = -20 }
+	}
+}
+##########
+#  Savoy and Nice to Italy
+##########
+event = { 
+	id = 130408
+	random = no
+	country = VIC
+
+	name = "EVT_130408_NAME"
+	desc = "EVT_130408_DESC"
+	picture = "schwerpunkt"
+
+	action_a = {
+		name = "EVT_130408_ACTA"
+		command = { type = secedeprovince which = ITA value = 527 } #Grenoble
+		command = { type = secedeprovince which = ITA value = 366 } #Nice
+		command = { type = trigger which = 130409 } #
+	}
+}
+##########
+#  Savoy and Nice to Italy
+##########
+event = { 
+	id = 130409
+	random = no
+	country = ITA
+
+	name = "EVT_130409_NAME"
+	desc = "EVT_130409_DESC"
+	picture = "schwerpunkt"
+
+	action_a = {
+		name = "EVT_130409_ACTA"
+		command = { type = addcore which = 527 }
+		command = { type = addcore which = 366 }
+	}
+}
+
+##########
+#  Altmark Incident - GER
+##########
+event = {
+	id = 130410
+	random = no
+	country = GER
+
+	name = "EVT_26_NAME"
+	desc = "EVT_26_DESC"
+	picture = "Altmark"
+
+	trigger = {
+		control = { province = 19 data = ENG } #London
+		war = { country = ENG country = GER }
+		exists = NOR
+		NOT = {
+			alliance = { country = NOR country = GER }
+			alliance = { country = NOR country = ENG }
+			alliance = { country = NOR country = SOV }
+		}
+		random = 40
+		AND = {
+			month = 1 #february
+			NOT = { month = 3 } #april
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 4
+	deathdate = { day = 15 month = march year = 1943 }
+
+	action_a = {
+		ai_chance = 98
+		name = "EVT_26_ACTA"
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = relation which = NOR value = -10 }
+		command = { type = trigger which = 130411 }
+		command = { type = trigger which = 130412 }
+	}
+	action_b = {
+		ai_chance = 2
+		name = "EVT_26_ACTB"
+		#command = { type = domestic which = defense_lobby value = -1 }
+		command = { type = relation which = NOR value = -10 }
+		command = { type = trigger which = 130411 }
+		command = { type = trigger which = 130412 }
+		command = { type = sleepevent which = 130413 }
+	}
+}
+##########
+#  Altmark Incident - ENG
+##########
+event = {
+	id = 130411
+	random = no
+	country = ENG
+
+	name = "EVT_27_NAME"
+	desc = "EVT_27_DESC"
+
+	picture = "Altmark"
+
+	action_a = {
+		ai_chance = 100
+		name = "EVT_27_ACTA"
+		#command = { type = manpowerpool value = 1 }
+		command = { type = dissent value = -1 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = relation which = NOR value = -10 }
+	}
+	action_b = {
+		ai_chance = 0
+		name = "EVT_27_ACTB"
+		#command = { type = manpowerpool value = 1 }
+		#command = { type = dissent value = -1 }
+		#command = { type = domestic which = defense_lobby value = -1 }
+		command = { type = relation which = NOR value = -10 }
+		command = { type = sleepevent which = 130435 }
+	}
+}
+##########
+#  Altmark Incident - NOR
+##########
+event = {
+	id = 130412
+	random = no
+	country = NOR
+
+	name = "EVT_28_NAME"
+	desc = "EVT_28_DESC"
+
+	picture = "Altmark"
+
+	action_a = {
+		ai_chance = 100
+		name = "EVT_28_ACTA"
+		#command = { type = relation which = ENG value = -10 }
+		command = { type = domestic which = defense_lobby value = 1 }
+	}
+	action_b = {
+		ai_chance = 0
+		name = "EVT_28_ACTB"
+		#command = { type = relation which = ENG value = -10 }
+		command = { type = domestic which = defense_lobby value = -1 }
+	}
+}
+##########
+#  Fall Weserubung
+##########
+event = {
+	id = 130413
+	random = no
+	country = GER
+
+	name = "EVT_29_NAME"
+	desc = "EVT_29_DESC"
+
+	picture = "weserubung"
+
+	trigger = {
+		event = 130410
+		OR = {
+			exists = NOR
+			exists = DEN
+		}
+		random = 40
+		war = { country = ENG country = GER }
+		NOT = {
+			OR = {
+				atwar = DEN
+				atwar = NOR
+			}
+			alliance = { country = SOV country = DEN }
+			alliance = { country = SOV country = NOR }
+			alliance = { country = GER country = DEN }
+			alliance = { country = GER country = NOR }
+		}
+		NOT = {
+			war = { country = GER country = SOV }
+			war = { country = GER country = POL }
+		}      
+		AND = {
+			month = 3 #april
+			NOT = { month = 5 } #june
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 4
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		ai_chance = 100
+		name = "EVT_29_ACTA"
+		command = { type = add_corps which = "ヴェーザー演習輸送部隊" value = naval when = 384 where = 296 }
+		command = { type = add_division which = "第1任務部隊" value = transport when = 0 }
+		command = { type = add_division which = "第2任務部隊" value = transport when = 0 }
+		command = { type = add_division which = "第3任務部隊" value = transport when = 0 }
+		command = { type = war which = NOR }
+		command = { type = war which = DEN }
+		command = { type = domestic which = defense_lobby value = 1 }
+	}
+	action_b = {
+		ai_chance = 0
+		name = "EVT_29_ACTB"
+		command = { type = domestic which = defense_lobby value = -1 }
+	}
+}
+##########
+#  The end of the Vichy regime
+##########
+event = {
+	id = 130414
+	random = no
+	country = GER
+
+	trigger = {
+		exists = FRA
+		war = { country = GER country = ENG }
+		war = { country = VIC country = ENG }
+		NOT = { #FEPK #1.07
+			event = 130800
+		}
+		OR = {
+			flag = usa_defeats_ita
+			flag = eng_defeats_ita
+			NOT = { #Allies in Vichy #FEPK #1.07
+				control = { province = 320 data = VIC }
+			}
+			NOT = { #Allies in Paris
+				control = { province = 56 data = GER } #Paris and surrounding area
+				control = { province = 57 data = GER }
+				control = { province = 40 data = GER }
+			}
+			NOT = {
+				#french morocco
+				control = { province = 966 data = VIC }
+				control = { province = 960 data = VIC }
+				control = { province = 958 data = VIC } #Casablanca
+				control = { province = 959 data = VIC }
+				control = { province = 956 data = VIC }
+				#algeria
+				control = { province = 953 data = VIC } #Oran
+				control = { province = 952 data = VIC }
+				control = { province = 950 data = VIC }
+				control = { province = 951 data = VIC }
+				control = { province = 949 data = VIC } #Algiers
+				control = { province = 948 data = VIC }
+				control = { province = 947 data = VIC }
+				control = { province = 946 data = VIC }
+				control = { province = 944 data = VIC }
+				control = { province = 945 data = VIC }
+				control = { province = 943 data = VIC }
+				control = { province = 942 data = VIC }
+				#french morocco
+				control = { province = 966 data = ITA }
+				control = { province = 960 data = ITA }
+				control = { province = 958 data = ITA } #Casablanca
+				control = { province = 959 data = ITA }
+				control = { province = 956 data = ITA }
+				#algeria
+				control = { province = 953 data = ITA } #Oran
+				control = { province = 952 data = ITA }
+				control = { province = 950 data = ITA }
+				control = { province = 951 data = ITA }
+				control = { province = 949 data = ITA } #Algiers
+				control = { province = 948 data = ITA }
+				control = { province = 947 data = ITA }
+				control = { province = 946 data = ITA }
+				control = { province = 944 data = ITA }
+				control = { province = 945 data = ITA }
+				control = { province = 943 data = ITA }
+				control = { province = 942 data = ITA }
+				#tunisia
+				control = { province = 939 data = VIC } #Tunis, new
+				control = { province = 939 data = ITA } #Tunis, new
+			}
+		}
+	}
+
+	date = { day = 1 month = january year = 1939 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_50_NAME"
+	desc = "EVT_50_DESC"
+	picture = "end_of_vichy"
+
+	action_a = {
+		name = "EVT_50_ACTA"
+		ai_chance = 100
+		command = { type = end_mastery which = VIC }
+		command = { type = trigger which = 130415 } #Vichy transfer
+	}
+	action_b = {
+		name = "EVT_50_ACTB"
+		ai_chance = 0
+		command = { type = dissent value = 1 }
+	}
+}
+##########
+#  The end of the Vichy regime
+##########
+event = {
+	id = 130415
+	random = no
+	country = VIC
+
+	name = "EVT_50_NAME"
+	desc = "EVT_50_DESC"
+	picture = "end_of_vichy"
+
+	action_a = {
+		name = EVT_50_ACTA
+		ai_chance = 100
+		command = { type = end_puppet }
+		command = { type = leave_alliance } #FEPK #1.084
+		#command = { type = peace_with_all which = VIC }
+		command = { type = peace which = ENG value = 1 }
+		command = { type = peace which = USA value = 1 }
+		command = { type = peace which = FRA value = 1 }
+		command = { type = peace which = SOV value = 1 }
+		command = { type = access which = GER }
+		command = { type = access which = ITA }
+		command = { type = access which = USA }
+		command = { type = access which = ENG }
+		command = { type = access which = FRA }
+		command = { type = access which = CAN }
+		command = { type = access which = SAF }
+		command = { type = access which = AST }
+		command = { type = access which = NZL }
+		command = { type = secedeprovince which = GER value = 319 }
+		command = { type = secedeprovince which = GER value = 320 }
+		command = { type = secedeprovince which = GER value = 327 }
+		command = { type = secedeprovince which = GER value = 328 }
+		command = { type = secedeprovince which = GER value = 324 }
+		command = { type = secedeprovince which = GER value = 322 }
+		command = { type = secedeprovince which = GER value = 321 }
+		command = { type = secedeprovince which = GER value = 359 }
+		command = { type = secedeprovince which = GER value = 358 }
+		command = { type = secedeprovince which = GER value = 362 }
+		command = { type = secedeprovince which = GER value = 361 }
+		command = { type = secedeprovince which = GER value = 360 }
+		command = { type = secedeprovince which = GER value = 363 }
+		command = { type = secedeprovince which = GER value = 364 }
+		command = { type = secedeprovince which = GER value = 365 }
+		command = { type = secedeprovince which = GER value = 528 }
+		command = { type = secedeprovince which = GER value = 529 }
+		command = { type = secedeprovince which = GER value = 527 }
+		command = { type = secedeprovince which = GER value = 366 }
+		command = { type = secedeprovince which = GER value = 367 } #Corsica, will probably be given to Italy
+
+		command = { type = secedeprovince which = FRA value = 1861 }
+		command = { type = secedeprovince which = FRA value = 1862 }
+		command = { type = secedeprovince which = FRA value = 1863 }
+		command = { type = secedeprovince which = FRA value = 1792 }
+		command = { type = secedeprovince which = FRA value = 1793 }
+		command = { type = secedeprovince which = FRA value = 1794 }
+		command = { type = secedeprovince which = FRA value = 1795 }
+
+		command = { type = secedeprovince which = FRA value = 1326 }
+		command = { type = secedeprovince which = FRA value = 1338 }
+		command = { type = secedeprovince which = FRA value = 1335 }
+		command = { type = secedeprovince which = FRA value = 1306 }
+		command = { type = secedeprovince which = FRA value = 1329 }
+		command = { type = secedeprovince which = FRA value = 1328 }
+		command = { type = secedeprovince which = FRA value = 1332 }
+		command = { type = secedeprovince which = FRA value = 1333 }
+		command = { type = secedeprovince which = FRA value = 1334 }
+		command = { type = secedeprovince which = FRA value = 1336 }
+		command = { type = secedeprovince which = FRA value = 1337 }
+		command = { type = secedeprovince which = FRA value = 1339 } #laos
+		command = { type = secedeprovince which = FRA value = 1340 }
+		command = { type = secedeprovince which = FRA value = 1341 }
+
+		#command = { type = trigger which = 130416 } #France annexes Vichy
+	}
+}
+##########
+#  Death of Vichy
+##########
+event = {
+	id = 130416
+	random = no
+	country = FRA
+	
+	trigger = {
+		event = 130415
+ 		OR = {
+ 			NOT = { garrison = { country = VIC province = 320 type = land size = 1 area = 2 } }
+ 			region = { region = "France" country = FRA value = 25 }
+ 			region = { region = "France" country = ENG value = 25 }
+ 			region = { region = "France" country = USA value = 25 }
+ 			region = { region = "France" country = SOV value = 25 }
+ 		}
+	}
+		
+	date = { day = 0 month = january year = 1935 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130416_NAME" # "End of the Vichy Regime"
+	desc = "EVT_130416_DESC"
+
+	action_a = {
+		name = "EVT_130103_ACTA" # "Viva la France!"
+		ai_chance = 100
+		
+		command = { type = inherit which = VIC }
+		command = { type = headofgovernment which = 2238 } #Darlan #changed for doomsday
+		command = { type = chiefofstaff which = 2215 } #Giraud
+		#command = { type = trigger which = 130429 } #france garrisons north africa
+		command = { type = sleepevent which = 130423 } #creation of vichy
+	}
+}
+##########
+#  German occupation of Denmark - DEN
+##########
+event = {
+	id = 130417
+	random = no
+	country = DEN
+
+	name = "EVT_93_NAME"
+	desc = "EVT_93_DESC"
+
+	picture = "denmark"
+
+	trigger = {
+		war = { country = GER country = DEN }
+		NOT = { control = { province = 91 data = DEN } }
+		NOT = { war = { country = POL country = GER } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		ai_chance = 99
+		name = "EVT_93_ACTA"
+		#command = { type = leave_alliance }
+		#command = { type = peace which = GER value = 1 }
+		#command = { type = access which = GER }
+		#command = { type = domestic which = political_left value = -2 }
+		#command = { type = domestic which = freedom value = -2 }
+		#command = { type = domestic which = democratic value = -2 }
+		#command = { type = relation which = GER value = 10 }
+		command = { type = demobilize which = naval when = 0 where = 0 value = 1 }
+		command = { type = demobilize which = naval when = 0 where = 0 value = -1 }
+		command = { type = secedeprovince which = ENG value = 800 } # Gothab
+		command = { type = secedeprovince which = ENG value = 1 } # Reykjavik
+		command = { type = secedeprovince which = ENG value = 2 } # Akureyri
+		#command = { type = secedeprovince which = GER value = 91 } # 
+		command = { type = secedeprovince which = GER value = 92 } # 
+		command = { type = secedeprovince which = GER value = 292 } # 
+		command = { type = secedeprovince which = GER value = 293 } # 
+		command = { type = secedeprovince which = GER value = 294 } # 
+		command = { type = secedeprovince which = GER value = 295 } # 
+		#command = { type = dissent value = 15 }
+	}
+	action_b = {
+		ai_chance = 1
+		name = "EVT_93_ACTB"
+		command = { type = domestic which = freedom value = 1 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = sleepevent which = 130418 }
+	}
+}
+##########
+#  German occupation of Denmark - GER
+##########
+event = {
+	id = 130418
+	random = no
+	country = GER
+
+	trigger = {
+		event = 130417
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_6193_NAME"
+	desc = "EVT_93_DESC"
+
+	picture = "denmark"
+
+	action_a = {
+		name = "了解" # "OK"
+		command = { type = inherit which = DEN }
+		command = { type = addcore which = 91 } 
+	}
+}
+##########
+#  Churchill becomes Prime Minister
+##########
+event = {
+	id = 130419
+	random = no
+	country = ENG
+
+	name = "EVT_65_NAME"
+	desc = "EVT_65_DESC"
+
+	picture = "churchill"
+
+	trigger = {
+		OR = { 
+			war = { country = ENG country = GER }
+			war = { country = ENG country = SOV }
+		}
+		government = democratic
+		OR = {
+			war = { country = ENG country = SOV }
+			control = { province = 56 data = GER } #Paris in German hands
+			control = { province = 51 data = GER } #Brussels in German hands
+			control = { province = 107 data = GER } #Oslo in German hands
+		}
+	}
+
+        date = { day = 1 month = january year = 1940 } #irl may 10, 1940
+        offset = 5
+	deathdate = { day = 20 month = june year = 1941 } #before 1941 scenario
+
+	action_a = {
+		name = "EVT_65_ACTA" # "Appoint Winston Churchill"
+		ai_chance = 97
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofgovernment which = 1038 } #Churchill
+		command = { type = armamentminister which = 1062 } #Kingsley Wood, may 12 1940
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = domestic which = defense_lobby value = 2 }
+		command = { type = dissent value = -2 }
+		command = { type = sleepevent which = 131050 }#Halifax peace
+	}
+	action_b = {
+		name = "EVT_130419_ACTB" # "Appoint Lord Halifax"
+		ai_chance = 3
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofgovernment which = 1157 } #Halifax
+		command = { type = foreignminister which = 1158 } #Templewood
+		command = { type = armamentminister which = 1060 } #Simon
+		command = { type = ministerofsecurity which = 1159 } #Anderson
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = domestic which = defense_lobby value = -1 }
+	}
+}
+
+##########
+#  Holland relocates capital - The Dutch Capitulation
+##########
+event = {
+	id = 130420
+	random = no
+	country = HOL
+
+	trigger = {
+		control = { province = 77 data = GER }
+		control = { province = 78 data = GER }
+		control = { province = 79 data = GER }
+		control = { province = 49 data = GER }
+		control = { province = 48 data = GER }
+		control = { province = 46 data = GER }
+		control = { province = 48 data = GER }
+        }
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_2810_NAME"
+	desc = "EVT_2810_DESC"
+
+	action_a = {
+		name = "なんということだ！" # "Oh noes!"
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofgovernment which = 8050 }
+		command = { type = foreignminister which = 8067 }
+		command = { type = armamentminister which = 8086 }
+		command = { type = ministerofsecurity which = 8117 }
+		command = { type = ministerofintelligence which = 8133 }
+
+		command = { type = secedeprovince which = GER value = 47 }
+		command = { type = secedeprovince which = GER value = 46 }
+		command = { type = secedeprovince which = GER value = 77 }
+		command = { type = secedeprovince which = GER value = 78 }
+		command = { type = secedeprovince which = GER value = 79 }
+		command = { type = secedeprovince which = GER value = 48 }
+		command = { type = secedeprovince which = GER value = 49 }
+
+		#Dutch Caribbean
+		#command = { type = secedeprovince which = ENG value = 801 } #FEPKクラサオ維持+VPで併合阻む
+		command = { type = secedeprovince which = ENG value = 874 }
+		command = { type = removecore which = 801 }
+		command = { type = removecore which = 874 }
+
+		#1941 claims on aachen
+		command = { type = removecore which = 66 }
+
+		command = { type = alliance which = FRA }
+
+		#command = { type = trigger which = 130404 } #Dutch partisans
+	}
+}
+##########
+#  Belgium relocates capital - The Belgian Capitulation
+##########
+event = {
+	id = 130421
+	random = no
+	country = BEL
+
+	trigger = {
+		control = { province = 50 data = GER }
+		control = { province = 68 data = GER }
+		control = { province = 69 data = GER }
+		control = { province = 51 data = GER }
+		control = { province = 52 data = GER }
+		control = { province = 70 data = GER }
+		control = { province = 65 data = GER }
+		control = { province = 45 data = GER }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_2809_NAME"
+	desc = "EVT_2809_DESC"
+
+	action_a = {
+		name = "なんということだ！" # "Oh noes!"
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofgovernment which = 15037 }
+		command = { type = foreignminister which = 15044 }
+		command = { type = armamentminister which = 15059 }
+		command = { type = ministerofsecurity which = 15081 }
+		command = { type = ministerofintelligence which = 15093 }
+
+		command = { type = secedeprovince which = GER value = 45 }
+		command = { type = secedeprovince which = GER value = 46 }
+		command = { type = secedeprovince which = GER value = 50 }
+		command = { type = secedeprovince which = GER value = 51 }
+		command = { type = secedeprovince which = GER value = 52 }
+		command = { type = secedeprovince which = GER value = 65 }
+		command = { type = secedeprovince which = GER value = 68 }
+		command = { type = secedeprovince which = GER value = 69 }
+		command = { type = secedeprovince which = GER value = 70 }
+
+		command = { type = alliance which = FRA }
+
+		command = { type = free_ic value = 3 } #so they arent totally defenselesse
+
+		#command = { type = trigger which = 130403 } #Belgian partisans
+	}
+}
+##########
+#  Polish War taking too long
+##########
+event = { 
+	id = 130422
+	random = no
+	country = GER
+
+	trigger = {
+		war = { country = GER country = POL }
+		NOT = {
+			lost_national = { country = POL value = 50 }
+		}
+		#control = { province = 485 data = POL } #Warsaw
+		random = 35
+		OR = {
+			AND = {
+				year = 1939
+				month = 11
+				event = 2028	#ポーランドが戦争を選んだパターンで3ヶ月経っている
+			}
+			AND = {
+				year = 1940
+				month = 5
+				event = 132305	#アルザス＝ロレーヌ要求開戦で3ヶ月経っている
+			}
+		}
+	}
+
+	date = { day = 1 month = december year = 1939 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1940 }
+
+	name = "EVT_130422_NAME"
+	desc = "EVT_130422_DESC"
+	picture = "german_strategic_defeat2"
+
+	action_a = {
+		name = "EVT_130422_ACTA"
+		command = { type = dissent value = 5 }
+	}
+}
+
+##########
+#  Vichy France
+##########
+event = {
+	id = 130423
+	random = no
+	country = GER
+
+	trigger = {
+		OR = {
+			control = { province = 56 data = GER } #Paris
+			AND = {
+				control = { province = 56 data = ITA }
+				ispuppet = ITA
+				alliance = { country = ITA country = GER }
+			}
+			AND = {
+				control = { province = 56 data = HOL }
+				ispuppet = HOL
+				alliance = { country = HOL country = GER }
+			}
+		}
+		lost_national = { country = FRA value = 35 }
+		NOT = {
+			war = { country = GER country = ITA }
+			exists = VIC
+			war = { country = GER country = SOV }
+			puppet = { country = FRA country = GER }
+		}
+		war = { country = GER country = FRA }
+		war = { country = GER country = ENG }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 15 month = june year = 1943 } #was 1941... changed
+
+	name = "EVT_2021_NAME"
+	desc = "EVT_2021_DESC"
+	picture = "VIC"
+
+	action_a = {
+		name = "ACTIONNAME2021A" #Set up French Puppet Government in Vichy
+		ai_chance = 99
+		command = { type = trigger which = 130424 } #FRA
+		command = { type = sleepevent which = 131460 }#Vichy France by ITA
+	}
+	action_b = {
+		name = "ACTIONNAME2021B" #Total conquest is preferable
+		ai_chance = 1
+		command = { type = sleepevent which = 131460 }#Vichy France by ITA
+	}
+}
+##########
+#  The Vichy Regime
+##########
+event = {
+	id = 130424
+	random = no
+	country = FRA
+
+	name = "EVT_2800_NAME"
+	desc = "EVT_2800_DESC"
+	picture = "VIC"
+
+	action_a = {
+		name = "ACTIONNAME2800A" #We have no choice but to accept
+		ai_chance = 97
+		command = { type = capital which = 1075 } # Brazzaville
+		command = { type = construct which = air_base where = 1075 value = 4 } #Brazzaville
+		command = { type = construct which = flak where = 1075 value = 2 } #Brazzaville
+		command = { type = independence which = VIC value = 0 }
+		command = { type = dissent value = -5 }
+
+		# Delete the original French Army
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+
+		command = { type = remove_division which = "MN アルジェリ" value = FRA } #FEPKBETA4.5
+		command = { type = remove_division which = "MN コルベール" value = FRA }
+		command = { type = remove_division which = "MN デュプレ" value = FRA }
+		command = { type = remove_division which = "MN ジャン・ド・ヴィエンヌ" value = FRA }
+		command = { type = remove_division which = "MN ラ・ガリソニエール" value = FRA }
+		command = { type = remove_division which = "MN マルセイエーズ" value = FRA }
+		command = { type = remove_division which = "MN エミール ベルタン" value = FRA }
+		command = { type = remove_division which = "MN ジャンヌ・ダルク" value = FRA }
+		command = { type = remove_division which = "MN ラモット・ピケ" value = FRA }
+		command = { type = remove_division which = "MN プリモゲ" value = FRA }
+		command = { type = remove_division which = "MN プロヴァンス" value = FRA }
+		command = { type = remove_division which = "MN ブルターニュ" value = FRA }
+		command = { type = remove_division which = "MN フォシュ" value = FRA }
+		command = { type = remove_division which = "MN ダンケルク" value = FRA }
+		command = { type = remove_division which = "MN ストラスブール" value = FRA }
+		command = { type = remove_division which = "MN ベアルヌ" value = FRA }
+		command = { type = remove_division which = "MN リシュリュー" value = FRA }
+		command = { type = remove_division which = "MN ジョルジュ・レイグ" value = FRA }
+		command = { type = remove_division which = "MN グロワール" value = FRA }
+		command = { type = remove_division which = "MN モンカルム" value = FRA }
+		command = { type = remove_division which = "第1駆逐隊" value = FRA }
+		command = { type = remove_division which = "第2駆逐隊" value = FRA }
+		command = { type = remove_division which = "第3駆逐隊" value = FRA }
+		command = { type = remove_division which = "第4駆逐隊" value = FRA }
+		command = { type = remove_division which = "第5駆逐隊" value = FRA }
+		command = { type = remove_division which = "第6駆逐隊" value = FRA }
+		command = { type = remove_division which = "第7駆逐隊" value = FRA }
+		command = { type = remove_division which = "第8駆逐隊" value = FRA }
+		command = { type = remove_division which = "第1輸送隊" value = FRA }
+		command = { type = remove_division which = "第2輸送隊" value = FRA }
+		command = { type = remove_division which = "第3輸送隊" value = FRA }
+		command = { type = remove_division which = "第4輸送隊" value = FRA }
+		command = { type = remove_division which = "第5輸送隊" value = FRA }
+		command = { type = remove_division which = "第6輸送隊" value = FRA }
+		command = { type = remove_division which = "第7輸送隊" value = FRA }
+		command = { type = remove_division which = "第1潜水隊" value = FRA }
+		command = { type = remove_division which = "第2潜水隊" value = FRA }
+		command = { type = remove_division which = "第3潜水隊" value = FRA }
+		command = { type = remove_division which = "第4潜水隊" value = FRA }
+		command = { type = remove_division which = "第5潜水隊" value = FRA }
+		command = { type = remove_division which = "第6潜水隊" value = FRA }
+		command = { type = remove_division which = "第1戦術爆撃航空隊" value = FRA }
+		command = { type = remove_division which = "第21戦闘航空隊" value = FRA }
+		command = { type = remove_division which = "第23戦闘航空隊" value = FRA }
+		command = { type = remove_division which = "第24戦闘航空隊" value = FRA }
+
+		command = { type = add_corps which = "中部アフリカ隊" value = land where = 1075 }
+		command = { type = add_division which = "第1植民地師団" value = infantry when = 2 }
+		command = { type = add_division which = "第2植民地師団" value = infantry when = 2 }
+		command = { type = add_division which = "第3植民地師団" value = infantry when = 2 }
+
+		command = { type = secedeprovince which = GER value = 40 }
+		command = { type = secedeprovince which = GER value = 41 }
+		command = { type = secedeprovince which = GER value = 42 }
+		command = { type = secedeprovince which = GER value = 43 }
+		command = { type = secedeprovince which = GER value = 44 }
+		command = { type = secedeprovince which = GER value = 32 }
+		command = { type = secedeprovince which = GER value = 33 }
+		command = { type = secedeprovince which = GER value = 34 }
+		command = { type = secedeprovince which = GER value = 35 }
+		command = { type = secedeprovince which = GER value = 36 }
+		command = { type = secedeprovince which = GER value = 37 }
+		command = { type = secedeprovince which = GER value = 38 }
+		command = { type = secedeprovince which = GER value = 39 }
+		command = { type = secedeprovince which = GER value = 70 }
+		command = { type = secedeprovince which = GER value = 18 }
+		command = { type = secedeprovince which = GER value = 326 }
+		command = { type = secedeprovince which = GER value = 364 }
+		command = { type = secedeprovince which = GER value = 62 }
+		command = { type = secedeprovince which = GER value = 63 }
+		command = { type = secedeprovince which = GER value = 64 }
+		command = { type = secedeprovince which = GER value = 60 }
+		command = { type = secedeprovince which = GER value = 61 }
+		command = { type = secedeprovince which = GER value = 53 }
+		command = { type = secedeprovince which = GER value = 54 }
+		command = { type = secedeprovince which = GER value = 55 }
+		command = { type = secedeprovince which = GER value = 325 }
+		command = { type = secedeprovince which = GER value = 323 }
+		command = { type = secedeprovince which = GER value = 56 }
+		command = { type = secedeprovince which = GER value = 57 }
+		command = { type = secedeprovince which = GER value = 58 }
+		command = { type = secedeprovince which = GER value = 59 }
+		command = { type = secedeprovince which = GER value = 317 }
+		command = { type = secedeprovince which = GER value = 318 }
+		command = { type = secedeprovince which = GER value = 316 }
+		command = { type = secedeprovince which = GER value = 72 }
+		command = { type = secedeprovince which = GER value = 73 }
+
+		#if italy loses stuff, they should have it back..
+		command = { type = control which = ITA value = 525 }
+		command = { type = control which = ITA value = 526 }
+		command = { type = control which = ITA value = 524 }
+		command = { type = control which = ITA value = 523 }
+		command = { type = control which = ITA value = 522 }
+		command = { type = control which = ITA value = 521 }
+		command = { type = control which = ITA value = 520 }
+		command = { type = control which = ITA value = 519 }
+		command = { type = control which = ITA value = 518 }
+		command = { type = control which = ITA value = 517 }
+		command = { type = control which = ITA value = 516 }
+		command = { type = control which = ITA value = 515 }
+		command = { type = control which = ITA value = 513 }
+		command = { type = control which = ITA value = 514 } 
+		command = { type = control which = ITA value = 512 }
+		command = { type = control which = ITA value = 379 }
+		command = { type = control which = ITA value = 369 }
+		command = { type = control which = ITA value = 368 }
+		command = { type = control which = ITA value = 531 }
+		command = { type = control which = ITA value = 370 }
+		command = { type = control which = ITA value = 378 }
+		command = { type = control which = ITA value = 534 }
+
+		#French islands in Caribbean to USA
+		command = { type = secedeprovince which = USA value = 875 }
+		command = { type = secedeprovince which = USA value = 898 }
+		command = { type = secedeprovince which = USA value = 899 }
+
+		#command = { type = sleepevent which = 2103 } #? #FEPKbeta
+
+		#command = { type = trigger which = 130425 }
+
+		##Moved ministerial changes to new event with options##
+		command = { type = trigger which = 130428 } #Leadership of Free France
+		#command = { type = sleepevent which =  } #German surrender to Poland-France
+
+		command = { type = sleepminister which = 2238 } #Petain HOG #FEPK1.095
+	}
+	action_b = {
+		name = "ACTIONNAME2800B" #Never! Vive la France!
+		ai_chance = 3
+		command = { type = capital which = 949 } #Algiers
+		command = { type = set_domestic which = democratic value = 8 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = domestic which = freedom value = -1 }
+		##Civilian Cabinet##
+		command = { type = headofstate which = 2208 } #Chautemps
+		command = { type = headofgovernment which = 2209 } #Mandel
+		command = { type = foreignminister which =  2054 } #Deladier
+		command = { type = armamentminister which =  2082 } #Herriot
+		command = { type = ministerofsecurity which = 2210 } #Delbos
+		command = { type = ministerofintelligence which =  2134 } #Luizet
+		command = { type = chiefofstaff which =  2150 } #DeGaulle
+		command = { type = chiefofarmy which =  2164 } #Bertin-Boussus
+		command = { type = chiefofnavy which =  2173 } #Campinchi
+		command = { type = chiefofair which =  2184 } #Cot
+
+		command = { type = relation which = ENG value = 50 }
+		command = { type = relation which = GER value = -50 }
+		command = { type = dissent value = 10 }
+		command = { type = sleepevent which = 130425 } #Independent Vichy France
+
+		command = { type = sleepminister which = 2238 } #Petain HOG #FEPK1.095
+	}
+}
+
+##########
+#  Independent Vichy France
+##########
+event = { 
+	id = 130425
+	random = no
+	country = VIC
+
+	trigger = {
+		event = 130424 #The Vichy Regime, France chooses
+		control = { province = 320 data = VIC } #Vichy
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 15 month = june year = 1941 }
+
+	name = "EVT_4003_NAME"
+	desc = "EVT_2021_DESC"
+
+	action_a = {
+		name = "ACTIONNAME4003A" #We have to accomodate to the New Order!
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = set_domestic which = freedom value = 3 }
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = interventionism value = 1 }
+		command = { type = add_division value = transport }
+		command = { type = transport_pool which = VIC value = 80 }
+		command = { type = escort_pool which = VIC value = 20 }
+		command = { type = set_relation which = GER value = 150 }
+		command = { type = set_relation which = ITA value = 100 }
+		command = { type = set_relation which = SPA value = 50 }
+		command = { type = set_relation which = FRA value = -100 }
+		command = { type = set_relation which = ENG value = -50 }
+		command = { type = set_relation which = USA value = -50 }
+		command = { type = leave_alliance }
+		command = { type = peace which = ENG value = 1 }
+		command = { type = belligerence value = -20 }
+
+		command = { type = removecore which = 61 }
+		command = { type = removecore which = 1306 }
+		command = { type = removecore which = 1329 }
+		command = { type = removecore which = 1328 }
+		command = { type = removecore which = 1332 }
+		command = { type = removecore which = 1333 }
+		command = { type = removecore which = 1334 }
+		command = { type = removecore which = 1336 }
+		command = { type = removecore which = 1335 }
+		command = { type = removecore which = 1338 }
+		command = { type = removecore which = 1337 }
+		command = { type = removecore which = 1339 }
+		command = { type = removecore which = 1340 }
+		command = { type = removecore which = 1341 }
+		command = { type = removecore which = 1326 }
+		command = { type = removecore which = 1081 }
+		command = { type = removecore which = 1082 }
+		command = { type = removecore which = 1083 }
+
+		command = { type = removecore which = 966 }
+		command = { type = removecore which = 960 }
+		command = { type = removecore which = 958 }
+		command = { type = removecore which = 959 }
+		command = { type = removecore which = 968 }
+		command = { type = removecore which = 969 }
+		command = { type = removecore which = 956 }
+		command = { type = removecore which = 954 }
+		command = { type = removecore which = 953 }
+		command = { type = removecore which = 952 }
+		command = { type = removecore which = 951 }
+		command = { type = removecore which = 950 }
+		command = { type = removecore which = 949 }
+		command = { type = removecore which = 948 }
+		command = { type = removecore which = 947 }
+		command = { type = removecore which = 946 }
+		command = { type = removecore which = 945 }
+		command = { type = removecore which = 944 }
+		command = { type = removecore which = 943 }
+		command = { type = removecore which = 942 }
+		command = { type = removecore which = 970 }
+		command = { type = removecore which = 1013 }
+		command = { type = removecore which = 1014 }
+		command = { type = removecore which = 941 }
+		command = { type = removecore which = 940 }
+		command = { type = removecore which = 939 }
+		command = { type = removecore which = 938 }
+		command = { type = removecore which = 937 }
+		command = { type = removecore which = 936 }
+		command = { type = removecore which = 935 }
+		command = { type = removecore which = 934 }
+
+		command = { type = removecore which = 61 }
+		command = { type = removecore which = 326 }
+		command = { type = removecore which = 325 }
+		command = { type = removecore which = 323 }
+		command = { type = removecore which = 60 }
+		command = { type = removecore which = 59 }
+		command = { type = removecore which = 35 }
+		command = { type = removecore which = 34 }
+		command = { type = removecore which = 32 }
+		command = { type = removecore which = 33 }
+		command = { type = removecore which = 36 }
+		command = { type = removecore which = 37 }
+		command = { type = removecore which = 38 }
+		command = { type = removecore which = 39 }
+		command = { type = removecore which = 40 }
+		command = { type = removecore which = 58 }
+		command = { type = removecore which = 57 }
+		command = { type = removecore which = 56 }
+		command = { type = removecore which = 62 }
+		command = { type = removecore which = 318 }
+		command = { type = removecore which = 316 }
+		command = { type = removecore which = 317 }
+		command = { type = removecore which = 63 }
+		command = { type = removecore which = 73 }
+		command = { type = removecore which = 72 }
+		command = { type = removecore which = 64 }
+		command = { type = removecore which = 55 }
+		command = { type = removecore which = 53 }
+		command = { type = removecore which = 54 }
+		command = { type = removecore which = 41 }
+		command = { type = removecore which = 42 }
+		command = { type = removecore which = 18 }
+		command = { type = removecore which = 43 }
+		command = { type = removecore which = 44 }
+
+		command = { type = removecore which = 971 }
+		command = { type = removecore which = 972 }
+		command = { type = removecore which = 1086 }
+		command = { type = removecore which = 1087 }
+		command = { type = removecore which = 1088 }
+		command = { type = removecore which = 1089 }
+		command = { type = removecore which = 1077 }
+
+		##Removal of Syrian provinces##
+		command = { type = removecore which = 1862 } 
+		command = { type = removecore which = 1863 }
+		command = { type = removecore which = 1792 }
+		command = { type = removecore which = 1795 }
+		command = { type = removecore which = 1861 }
+		###Removal of Lebanese Provinces as Cores###
+		command = { type = removecore which = 1793 }
+		command = { type = removecore which = 1794 }
+		###Removal of MAD Provinces as Cores###
+		command = { type = removecore which = 1134 }
+		command = { type = removecore which = 1137 }
+		##Removal of Fr Guyana##
+		command = { type = removecore which = 875 } 
+		command = { type = removecore which = 898 }
+		command = { type = removecore which = 899 }
+		##Removal of Chad##
+		command = { type = removecore which = 1080 } 
+		command = { type = removecore which = 1081 }
+		command = { type = removecore which = 1082 }
+		##Removal of Equitorial Africa##
+		command = { type = removecore which = 1070 } 
+		command = { type = removecore which = 1077 }
+		command = { type = removecore which = 1078 }
+		command = { type = removecore which = 1079 }
+		command = { type = removecore which = 1086 }
+		command = { type = removecore which = 1087 }
+		command = { type = removecore which = 1088 }
+		command = { type = removecore which = 1089 }
+		##Removal of FR Somaliland##
+		command = { type = removecore which = 1037 } 
+		##Removal of FR West Africa##
+		command = { type = removecore which = 973 } 
+		command = { type = removecore which = 974 }
+		command = { type = removecore which = 975 } 
+		command = { type = removecore which = 1083 } 
+		command = { type = removecore which = 1084 } 
+		command = { type = removecore which = 998 } 
+		command = { type = removecore which = 976 } 
+		command = { type = removecore which = 977 } 
+		command = { type = removecore which = 979 } 
+		command = { type = removecore which = 980 } 
+		command = { type = removecore which = 984 } 
+		command = { type = removecore which = 981 } 
+		command = { type = removecore which = 985 } 
+		command = { type = removecore which = 986 } 
+		command = { type = removecore which = 994 } 
+		command = { type = removecore which = 978 } 
+		command = { type = removecore which = 997 } 
+		command = { type = removecore which = 996 } 
+		command = { type = removecore which = 991 } 
+		command = { type = removecore which = 990 } 
+		command = { type = removecore which = 989 } 
+		command = { type = removecore which = 987 } 
+		command = { type = removecore which = 995 } 
+		command = { type = removecore which = 993 } 
+		command = { type = removecore which = 1004 } 
+		command = { type = removecore which = 1003 } 
+		command = { type = removecore which = 1005 } 
+		command = { type = removecore which = 1006 } 
+		##Removal of New caledonia and Oceania##
+		command = { type = removecore which = 1687 }
+		command = { type = removecore which = 1688 }
+		command = { type = removecore which = 1689 }
+		command = { type = removecore which = 1690 }
+		command = { type = removecore which = 1691 }
+		command = { type = removecore which = 1692 }
+		command = { type = removecore which = 1751 } 
+		##Removal of Tunisia##
+		command = { type = removecore which = 934 } 
+		command = { type = removecore which = 935 }
+		command = { type = removecore which = 936 }
+		command = { type = removecore which = 937 }
+		command = { type = removecore which = 938 }
+		command = { type = removecore which = 939 }
+		command = { type = removecore which = 940 }
+		command = { type = removecore which = 941 }
+		##Removal of Morocco##
+		command = { type = removecore which = 958 } #all of Morocco
+		command = { type = removecore which = 959 }	
+		command = { type = removecore which = 960 }
+		command = { type = removecore which = 966 }
+		command = { type = removecore which = 968 }
+		command = { type = removecore which = 956 } 
+		##Removal of French Congo##
+		command = { type = removecore which = 1093 }
+		command = { type = removecore which = 1092 }
+		command = { type = removecore which = 1075 }
+		command = { type = removecore which = 1076 }
+
+		command = { type = removecore which = 1135 }
+		command = { type = add_corps which = "首都軍司令部" value = land when = 380032 where = 361 }
+		command = { type = add_division which = "首都軍司令部" value = hq when = 1 where = police }
+
+		command = { type = add_corps which = "首都軍" value = land when = 380022 where = 363 }
+		command = { type = add_division which = "第2歩兵師団" value = infantry when = 1 where = artillery }
+		command = { type = add_division which = "第4歩兵師団" value = infantry when = 1 }
+		command = { type = add_division which = "第6歩兵師団" value = infantry when = 1 }
+		command = { type = add_division which = "第7歩兵師団" value = infantry when = 1 where = anti_air }
+		command = { type = add_division which = "第8歩兵師団" value = infantry when = 1 }
+		command = { type = add_division which = "第1自動車化歩兵師団" value = motorized when = 0 where = anti_tank }
+		command = { type = add_division which = "第3自動車化歩兵師団" value = motorized when = 0 }
+
+		command = { type = add_corps which = "北方アフリカ隊司令部" value = land when = 380028 where = 939 }
+		command = { type = add_division which = "北方アフリカ隊司令部" value = hq when = 1 where = anti_air }
+
+		command = { type = add_corps which = "第1アフリカ部隊" value = land when = 380008 where = 932 }
+		command = { type = add_division which = "第9歩兵師団" value = infantry when = 1 where = artillery }
+		command = { type = add_division which = "第10歩兵師団" value = infantry when = 1 where = anti_air }
+		command = { type = add_division which = "第11歩兵師団" value = infantry when = 1 }
+		command = { type = add_division which = "第2自動車化歩兵師団" value = motorized when = 0 where = anti_tank }
+
+		command = { type = add_corps which = "第2アフリカ部隊" value = land when = 380015 where = 939 }
+		command = { type = add_division which = "第12歩兵師団" value = infantry when = 1 where = artillery }
+		command = { type = add_division which = "第1騎兵師団" value = cavalry when = 2 }
+
+		command = { type = add_corps which = "第3アフリカ部隊" value = land when = 380025 where = 958 } 
+		command = { type = add_division which = "第13歩兵師団" value = infantry when = 1 }
+		command = { type = add_division which = "第14歩兵師団" value = infantry when = 1 }
+
+		command = { type = add_corps which = "マダガスカル隊" value = land where = 1137 }
+		command = { type = add_division which = "第1予備歩兵師団" value = militia when = 0 }
+
+		command = { type = add_corps which = "ジブチ隊" value = land where = 1037 }
+		command = { type = add_division which = "第2予備歩兵師団" value = militia when = 0 }
+	
+		command = { type = add_corps which = "ギアナ隊" value = land where = 875 }
+		command = { type = add_division which = "第3予備歩兵師団" value = militia when = 0 }
+
+		command = { type = add_corps which = "フォールドフランス隊" value = land where = 899 }
+		command = { type = add_division which = "第4予備歩兵師団" value = militia when = 0 }
+
+		command = { type = add_corps which = "ガボン隊" value = land where = 987 }
+		command = { type = add_division which = "第5予備歩兵師団" value = militia when = 0 }
+		command = { type = add_division which = "第6予備歩兵師団" value = militia when = 0 }
+
+		command = { type = add_corps which = "アフリカ隊" value = land where = 981 }
+		command = { type = add_division which = "第1植民地師団" value = infantry when = 1 }
+		command = { type = add_division which = "第2植民地師団" value = infantry when = 1 }
+		command = { type = add_division which = "第3植民地師団" value = infantry when = 1 }
+
+		command = { type = add_corps which = "フランス第1艦隊" value = naval when = 380034 where = 949 }
+		command = { type = add_division which = "MN アルジェリ" value = heavy_cruiser when = 2 }
+		command = { type = add_division which = "MN コルベール" value = heavy_cruiser when = 1 }
+		command = { type = add_division which = "MN デュプレ" value = heavy_cruiser when = 1 }
+		command = { type = add_division which = "MN ジャン・ド・ヴィエンヌ" value = light_cruiser when = 3 }
+		command = { type = add_division which = "MN ラ・ガリソニエール" value = light_cruiser when = 3 }
+		command = { type = add_division which = "MN マルセイエーズ" value = light_cruiser when = 3 }
+		command = { type = add_division which = "MN エミール ベルタン" value = light_cruiser when = 2 }
+		command = { type = add_division which = "MN ジャンヌ・ダルク" value = light_cruiser when = 1 }
+		command = { type = add_division which = "MN ラモット・ピケ" value = light_cruiser when = 1 }
+		command = { type = add_division which = "MN プリモゲ" value = light_cruiser when = 1 }
+		command = { type = add_division which = "第1駆逐隊" value = destroyer when = 2 }
+		command = { type = add_division which = "第2駆逐隊" value = destroyer when = 1 }
+		command = { type = add_division which = "第3駆逐隊" value = destroyer when = 0 }
+
+		command = { type = add_corps which = "フランス第2艦隊" value = naval when = 380033 where = 365 }
+		command = { type = add_division which = "MN プロヴァンス" value = battleship when = 1 }
+		command = { type = add_division which = "MN ブルターニュ" value = battleship when = 1 } #FEPKBETA4.5
+		command = { type = add_division which = "MN フォシュ" value = heavy_cruiser when = 1 }
+		command = { type = add_division which = "第4駆逐隊" value = destroyer when = 2 }
+		command = { type = add_division which = "第5駆逐隊" value = destroyer when = 1 }
+
+		command = { type = add_corps which = "フランス第3艦隊" value = naval when = 380035 where = 365 }
+		command = { type = add_division which = "MN ダンケルク" value = battlecruiser when = 3 }
+		command = { type = add_division which = "MN ストラスブール" value = battlecruiser when = 3 }
+		command = { type = add_division which = "第6駆逐隊" value = destroyer when = 1 }
+		command = { type = add_division which = "第1輸送隊" value = transport when = 0 }
+		command = { type = add_division which = "第2輸送隊" value = transport when = 0 }
+
+		command = { type = add_corps which = "アフリカ艦隊" value = naval when = 380040 where = 981 }
+		command = { type = add_division which = "MN ベアルヌ" value = carrier when = 1 where = cag }
+		command = { type = add_division which = "MN リシュリュー" value = battleship when = 3 }
+		command = { type = add_division which = "MN ジョルジュ・レイグ" value = light_cruiser when = 3 }
+		command = { type = add_division which = "MN グロワール" value = light_cruiser when = 3 }
+		command = { type = add_division which = "MN モンカルム" value = light_cruiser when = 3 }	
+		command = { type = add_division which = "第7駆逐隊" value = destroyer when = 2 }
+		command = { type = add_division which = "第8駆逐隊" value = destroyer when = 0 }
+		command = { type = add_division which = "第3輸送隊" value = transport when = 0 }
+		command = { type = add_division which = "第4輸送隊" value = transport when = 0 }
+		command = { type = add_division which = "第5輸送隊" value = transport when = 0 }
+		command = { type = add_division which = "第6輸送隊" value = transport when = 0 }
+		command = { type = add_division which = "第7輸送隊" value = transport when = 0 }
+
+		command = { type = add_corps which = "第1潜水艦隊" value = naval when = 380039 where = 365 }
+		command = { type = add_division which = "第1潜水隊" value = submarine when = 2 }
+		command = { type = add_division which = "第2潜水隊" value = submarine when = 2 }
+		command = { type = add_division which = "第3潜水隊" value = submarine when = 2 }
+		command = { type = add_division which = "第4潜水隊" value = submarine when = 1 }
+		command = { type = add_division which = "第5潜水隊" value = submarine when = 1 }
+		command = { type = add_division which = "第6潜水隊" value = submarine when = 1 }
+
+		command = { type = add_corps which = "北部航空作戦区" value = air when = 380052 where = 320 }
+		command = { type = add_division which = "第21戦闘航空隊" value = interceptor when = 1 }
+		command = { type = add_division which = "第23戦闘航空隊" value = interceptor when = 1 }
+		command = { type = add_division which = "第1戦術爆撃航空隊" value = tactical_bomber when = 1 }
+
+		command = { type = add_corps which = "北部航空作戦区" value = air when = 380051 where = 939 }
+		command = { type = add_division which = "第24戦闘航空隊" value = interceptor when = 1 }
+		command = { type = add_division which = "第2戦術爆撃航空隊" value = tactical_bomber when = 1 }
+		command = { type = add_division which = "第18襲撃航空隊" value = tactical_bomber when = 1 }
+
+		command = { type = add_corps which = "ダカール航空軍団" value = air when = 380054 where = 981 }
+		command = { type = add_division which = "海軍第1爆撃航空隊" value = naval_bomber when = 0 }
+
+		command = { type = add_corps which = "西アフリカ航空軍団" value = air when = 380045 where = 981 }
+		command = { type = add_division which = "海軍第2爆撃航空隊" value = naval_bomber when = 0 }
+
+		##Independance of SYR-LEB-MAD##
+		command = { type = independence which = SYR value = 0 when = 0 }
+		#command = { type = dissent value = -5 }
+		##removal of Syrian provinces as Cores##
+		command = { type = removecore which = 1862 }
+		command = { type = removecore which = 1863 }
+		command = { type = removecore which = 1792 }
+		command = { type = removecore which = 1795 }
+		command = { type = removecore which = 1861 }
+		command = { type = trigger which = 71690 } #Syrian event
+
+		command = { type = independence which = LEB value = 0 when = 0 }
+		#command = { type = dissent value = -5 }
+		##removal of Lebanese provinces as cores##
+		command = { type = removecore which = 1793 }
+		command = { type = removecore which = 1794 }
+		command = { type = trigger which = 71691 } #Lebanese event
+
+		#command = { type = independence which = MAD value = 0 when = 0 } #value 0 means units defect
+		#command = { type = dissent value = -5 }
+		##removal of MAD provinces as cores##
+		command = { type = removecore which = 1134 }
+		command = { type = removecore which = 1137 }
+		#command = { type = trigger which = 71692 } #Madagascar event
+
+		#French islands in Caribbean to USA
+		command = { type = secedeprovince which = USA value = 875 }
+		command = { type = secedeprovince which = USA value = 898 }
+		command = { type = secedeprovince which = USA value = 899 }
+
+		#free transports/escorts, as their colonies initially starve (removed because in AOD the liberator (germany) gives convoys/escorts?
+		#command = { type = transport_pool which = VIC value = 50 }
+		#command = { type = escort_pool which = VIC value = 50 }
+
+		command = { type = capital which = 320 } #Vichy
+
+		command = { type = access which = GER }
+		command = { type = access which = ITA }
+
+		command = { type = dissent value = -100 }
+
+		#command = { type = sleepevent which = 71476 } #Vichy France - 1941 setup event
+	}
+}
+##########
+#  Vichy France - Return of occupied provinces
+##########
+event = {
+	id = 130426
+	random = no
+	country = GER
+
+	trigger = {
+		exists = VIC
+		NOT = {
+			war = { country = GER country = VIC }
+		}
+	}
+
+	name = "EVT_2022_NAME"
+	desc = "EVT_2022_DESC"
+	picture = "VIC"
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 4
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "了解" # "OK" #Return occupied provinces as per agreement
+		command = { type = set_relation which = VIC value = 30 }
+		command = { type = guarantee which = GER where = VIC }
+		command = { type = secedeprovince which = VIC value = 319 }
+		command = { type = secedeprovince which = VIC value = 320 }
+		command = { type = secedeprovince which = VIC value = 327 }
+		command = { type = secedeprovince which = VIC value = 328 }
+		command = { type = secedeprovince which = VIC value = 324 }
+		command = { type = secedeprovince which = VIC value = 322 }
+		command = { type = secedeprovince which = VIC value = 321 }
+		command = { type = secedeprovince which = VIC value = 359 }
+		command = { type = secedeprovince which = VIC value = 358 }
+		command = { type = secedeprovince which = VIC value = 362 }
+		command = { type = secedeprovince which = VIC value = 361 }
+		command = { type = secedeprovince which = VIC value = 360 }
+		command = { type = secedeprovince which = VIC value = 363 }
+		command = { type = secedeprovince which = VIC value = 364 }
+		command = { type = secedeprovince which = VIC value = 365 }
+		command = { type = secedeprovince which = VIC value = 366 }
+		command = { type = secedeprovince which = VIC value = 528 }
+		command = { type = secedeprovince which = VIC value = 529 }
+		command = { type = secedeprovince which = VIC value = 527 }
+		command = { type = secedeprovince which = VIC value = 367 }
+	}
+}
+##########
+#  Vichy France - Return of occupied provinces
+##########
+event = { 
+	id = 130427
+	random = no
+	country = ITA
+	
+	trigger = {
+		exists = VIC
+		alliance = { country = GER country = ITA }
+		NOT = {
+			war = { country = ITA country = VIC }
+		}
+	}
+	
+	name = "EVT_2900_NAME"
+	desc = "EVT_2900_DESC"
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 4
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action_a = {
+		name = "了解" # "OK" #Return occupied provinces as per agreement
+		command = { type = secedeprovince which = GER value = 40 }
+		command = { type = secedeprovince which = GER value = 41 }
+		command = { type = secedeprovince which = GER value = 42 }
+		command = { type = secedeprovince which = GER value = 43 }
+		command = { type = secedeprovince which = GER value = 44 }
+		command = { type = secedeprovince which = GER value = 32 }
+		command = { type = secedeprovince which = GER value = 33 }
+		command = { type = secedeprovince which = GER value = 34 }
+		command = { type = secedeprovince which = GER value = 35 }
+		command = { type = secedeprovince which = GER value = 36 }
+		command = { type = secedeprovince which = GER value = 37 }
+		command = { type = secedeprovince which = GER value = 38 }
+		command = { type = secedeprovince which = GER value = 39 }
+		command = { type = secedeprovince which = GER value = 70 }
+		command = { type = secedeprovince which = GER value = 18 }
+		command = { type = secedeprovince which = GER value = 326 }
+		command = { type = secedeprovince which = GER value = 364 }
+		command = { type = secedeprovince which = GER value = 62 }
+		command = { type = secedeprovince which = GER value = 63 }
+		command = { type = secedeprovince which = GER value = 64 }
+		command = { type = secedeprovince which = GER value = 60 }
+		command = { type = secedeprovince which = GER value = 61 }
+		command = { type = secedeprovince which = GER value = 53 }
+		command = { type = secedeprovince which = GER value = 54 }
+		command = { type = secedeprovince which = GER value = 55 }
+		command = { type = secedeprovince which = GER value = 325 }
+		command = { type = secedeprovince which = GER value = 323 }
+		command = { type = secedeprovince which = GER value = 56 }
+		command = { type = secedeprovince which = GER value = 57 }
+		command = { type = secedeprovince which = GER value = 58 }
+		command = { type = secedeprovince which = GER value = 59 }
+		command = { type = secedeprovince which = GER value = 317 }
+		command = { type = secedeprovince which = GER value = 318 }
+		command = { type = secedeprovince which = GER value = 316 }
+		command = { type = secedeprovince which = GER value = 72 }
+		command = { type = secedeprovince which = GER value = 73 }
+		command = { type = secedeprovince which = VIC value = 319 }
+		command = { type = secedeprovince which = VIC value = 320 }
+		command = { type = secedeprovince which = VIC value = 327 }
+		command = { type = secedeprovince which = VIC value = 328 }
+		command = { type = secedeprovince which = VIC value = 324 }
+		command = { type = secedeprovince which = VIC value = 322 }
+		command = { type = secedeprovince which = VIC value = 321 }
+		command = { type = secedeprovince which = VIC value = 359 }
+		command = { type = secedeprovince which = VIC value = 358 }
+		command = { type = secedeprovince which = VIC value = 362 }
+		command = { type = secedeprovince which = VIC value = 361 }
+		command = { type = secedeprovince which = VIC value = 360 }
+		command = { type = secedeprovince which = VIC value = 363 }
+		command = { type = secedeprovince which = VIC value = 364 }
+		command = { type = secedeprovince which = VIC value = 365 }
+		command = { type = secedeprovince which = VIC value = 366 } #Nice
+		command = { type = secedeprovince which = VIC value = 528 }
+		command = { type = secedeprovince which = VIC value = 529 }
+		command = { type = secedeprovince which = VIC value = 527 } #Grenoble
+		command = { type = secedeprovince which = VIC value = 367 } #Corsica
+		#french morocco
+		command = { type = secedeprovince which = VIC value = 966 }
+		command = { type = secedeprovince which = VIC value = 960 }
+		command = { type = secedeprovince which = VIC value = 958 }
+		command = { type = secedeprovince which = VIC value = 959 }
+		command = { type = secedeprovince which = VIC value = 968 }
+		command = { type = secedeprovince which = VIC value = 969 }
+		command = { type = secedeprovince which = VIC value = 956 }
+		#algeria
+		command = { type = secedeprovince which = VIC value = 953 }
+		command = { type = secedeprovince which = VIC value = 952 }
+		command = { type = secedeprovince which = VIC value = 950 }
+		command = { type = secedeprovince which = VIC value = 951 }
+		command = { type = secedeprovince which = VIC value = 949 }
+		command = { type = secedeprovince which = VIC value = 948 }
+		command = { type = secedeprovince which = VIC value = 947 }
+		command = { type = secedeprovince which = VIC value = 946 }
+		command = { type = secedeprovince which = VIC value = 944 }
+		command = { type = secedeprovince which = VIC value = 945 }
+		command = { type = secedeprovince which = VIC value = 943 }
+		command = { type = secedeprovince which = VIC value = 942 }
+		command = { type = secedeprovince which = VIC value = 970 }
+		command = { type = secedeprovince which = VIC value = 1013 }
+		command = { type = secedeprovince which = VIC value = 1014 }
+		#Tunisia
+		command = { type = secedeprovince which = VIC value = 941 }
+		command = { type = secedeprovince which = VIC value = 940 }
+		command = { type = secedeprovince which = VIC value = 939 }
+		command = { type = secedeprovince which = VIC value = 938 }
+		command = { type = secedeprovince which = VIC value = 937 }
+		command = { type = secedeprovince which = VIC value = 936 }
+		command = { type = secedeprovince which = VIC value = 935 }
+		command = { type = secedeprovince which = VIC value = 934 }
+		command = { type = addcore which = 366 }
+		command = { type = addcore which = 527 }
+		command = { type = addcore which = 367 }
+	}
+}
+#both spains have the return of occupied province events in the scw file
+##########
+#  Leadership of Free France
+##########
+event = {
+	id = 130428
+	random = no
+	persistent = no
+	country = FRA
+
+	name = "EVT_970_NAME"
+	desc = "EVT_970_DESC"
+
+
+	action_a = {
+		name = "EVT_130428_ACTA"
+		ai_chance = 88
+		command = { type = relation which = ENG value = -5 }
+		command = { type = relation which = SOV value = -15 }
+		command = { type = set_domestic which = democratic value = 5 }	
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = manpowerpool value = 10 } #defections and new recruits
+		command = { type = domestic which = freedom value = -1 }
+
+		##De Gaulle Cabinet##
+		command = { type = headofstate which = 2031 }
+		command = { type = headofgovernment which = 2046 }
+		command = { type = foreignminister which = 2061 }
+		command = { type = armamentminister which = 2088 }
+		command = { type = ministerofsecurity which = 2114 }
+		command = { type = ministerofintelligence which = 2134 }
+		command = { type = chiefofstaff which = 2150 }
+		command = { type = chiefofarmy which = 2164 }
+		command = { type = chiefofnavy which = 2178 }
+		command = { type = chiefofair which = 2193 }
+		
+		command = { type = sleepteam which = 1403 }
+		command = { type = sleepteam which = 1408 }
+		command = { type = sleepteam which = 1411 }
+		command = { type = sleepteam which = 1418 }
+		command = { type = sleepteam which = 1420 }
+		command = { type = sleepteam which = 1422 }
+		command = { type = sleepteam which = 1423 }
+
+		command = { type = free_ic value = 7 }
+		#command = { type = free_energy value = 20 }
+		#command = { type = free_metal value = 20 }
+		#command = { type = free_rare_materials value = 5 }
+		#command = { type = free_oil value = 5 }
+		
+		#possibly french if france directly intervened in SCW
+		command = { type = secedeprovince which = VIC value = 1091 } #
+		command = { type = secedeprovince which = VIC value = 965 } #
+		command = { type = secedeprovince which = VIC value = 964 } #
+		command = { type = secedeprovince which = VIC value = 963 } #
+		command = { type = secedeprovince which = VIC value = 962 } #
+		command = { type = secedeprovince which = VIC value = 961 } #
+		command = { type = secedeprovince which = VIC value = 535 } #
+		command = { type = secedeprovince which = VIC value = 536 } #
+		command = { type = secedeprovince which = VIC value = 537 } #
+		command = { type = secedeprovince which = VIC value = 972 } #
+		command = { type = secedeprovince which = VIC value = 971 } #
+		command = { type = secedeprovince which = VIC value = 967 } #
+		command = { type = secedeprovince which = VIC value = 957 } #
+		command = { type = secedeprovince which = VIC value = 955 } #
+		command = { type = secedeprovince which = VIC value = 954 } #
+	}
+	action_b = {
+		name = "EVT_130428_ACTB"
+		ai_chance = 10
+		command = { type = relation which = ENG value = 5 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = relation which = SOV value = -25 }
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = domestic which = freedom value = -1 }
+
+		##Giraud Cabinet-Military junta effectively##
+		command = { type = headofstate which = 2211 } #Giraud
+		command = { type = headofgovernment which = 2212 } #Giraud
+		command = { type = foreignminister which = 2213 } #Mast
+		command = { type = armamentminister which = 2214 } #Koenig
+		command = { type = ministerofsecurity which = 2114 } #Chautemps
+		command = { type = ministerofintelligence which = 2133 } #Marie
+		command = { type = chiefofstaff which = 2215 } #Giraud
+		command = { type = chiefofarmy which = 2158 } #DeLattre de Tassigny
+		command = { type = chiefofnavy which = 2173 } #Campinchi
+		command = { type = chiefofair which = 2193 } #Valin
+		
+		command = { type = sleepteam which = 1403 }
+		command = { type = sleepteam which = 1408 }
+		command = { type = sleepteam which = 1411 }
+		command = { type = sleepteam which = 1418 }
+		command = { type = sleepteam which = 1420 }
+		command = { type = sleepteam which = 1422 }
+		command = { type = sleepteam which = 1423 }
+
+		command = { type = free_ic value = 7 }
+		#command = { type = free_energy value = 20 }
+		#command = { type = free_metal value = 20 }
+		#command = { type = free_rare_materials value = 5 }
+		#command = { type = free_oil value = 5 }
+		
+		#possibly french if france directly intervened in SCW
+		command = { type = secedeprovince which = VIC value = 1091 } #
+		command = { type = secedeprovince which = VIC value = 965 } #
+		command = { type = secedeprovince which = VIC value = 964 } #
+		command = { type = secedeprovince which = VIC value = 963 } #
+		command = { type = secedeprovince which = VIC value = 962 } #
+		command = { type = secedeprovince which = VIC value = 961 } #
+		command = { type = secedeprovince which = VIC value = 535 } #
+		command = { type = secedeprovince which = VIC value = 536 } #
+		command = { type = secedeprovince which = VIC value = 537 } #
+		command = { type = secedeprovince which = VIC value = 972 } #
+		command = { type = secedeprovince which = VIC value = 971 } #
+		command = { type = secedeprovince which = VIC value = 967 } #
+		command = { type = secedeprovince which = VIC value = 957 } #
+		command = { type = secedeprovince which = VIC value = 955 } #
+		command = { type = secedeprovince which = VIC value = 954 } #
+	}
+	action_c = {  #Ahistorical-presumes escape by politicians to N.Africa##
+		name = "EVT_130428_ACTC"
+		ai_chance = 2
+		command = { type = relation which = SOV value = -10 }
+		command = { type = set_domestic which = democratic value = 8 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = domestic which = freedom value = -1 }
+
+		##Civilian Cabinet##
+		command = { type = headofstate which = 2208 } #Chautemps
+		command = { type = headofgovernment which = 2209 } #Mandel
+		command = { type = foreignminister which =  2054 } #Deladier
+		command = { type = armamentminister which =  2082 } #Herriot
+		command = { type = ministerofsecurity which = 2210 } #Delbos
+		command = { type = ministerofintelligence which =  2134 } #Luizet
+		command = { type = chiefofstaff which =  2150 } #DeGaulle
+		command = { type = chiefofarmy which =  2164 } #Bertin-Boussus
+		command = { type = chiefofnavy which =  2173 } #Campinchi
+		command = { type = chiefofair which =  2184 } #Cot
+		
+		command = { type = sleepteam which = 1403 }
+		command = { type = sleepteam which = 1408 }
+		command = { type = sleepteam which = 1411 }
+		command = { type = sleepteam which = 1418 }
+		command = { type = sleepteam which = 1420 }
+		command = { type = sleepteam which = 1422 }
+		command = { type = sleepteam which = 1423 }
+
+		command = { type = free_ic value = 7 }
+		#command = { type = free_energy value = 20 }
+		#command = { type = free_metal value = 20 }
+		#command = { type = free_rare_materials value = 5 }
+		#command = { type = free_oil value = 5 }
+		
+		#possibly french if france directly intervened in SCW
+		command = { type = secedeprovince which = VIC value = 1091 } #
+		command = { type = secedeprovince which = VIC value = 965 } #
+		command = { type = secedeprovince which = VIC value = 964 } #
+		command = { type = secedeprovince which = VIC value = 963 } #
+		command = { type = secedeprovince which = VIC value = 962 } #
+		command = { type = secedeprovince which = VIC value = 961 } #
+		command = { type = secedeprovince which = VIC value = 535 } #
+		command = { type = secedeprovince which = VIC value = 536 } #
+		command = { type = secedeprovince which = VIC value = 537 } #
+		command = { type = secedeprovince which = VIC value = 972 } #
+		command = { type = secedeprovince which = VIC value = 971 } #
+		command = { type = secedeprovince which = VIC value = 967 } #
+		command = { type = secedeprovince which = VIC value = 957 } #
+		command = { type = secedeprovince which = VIC value = 955 } #
+		command = { type = secedeprovince which = VIC value = 954 } #
+	}
+}
+
+##########
+#  Hungary receives Presov
+##########
+event = {
+	id = 130429
+	random = no
+	country = HUN
+
+	trigger = {
+		NOT = {
+			exists = CZE
+		}
+		control = { province = 499 data = HUN } #Presov
+	}
+
+	#date = { day = 0 month = january year = 1935 }
+	#offset = 3
+	#deathdate = { day = 29 month = august year = 1939 }
+
+	name = "EVT_2019_NAME"
+	desc = "EVT_2019_DESC"
+	picture = "german_replacements"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = dissent value = -5 }
+	}
+}
+
+
+##########
+#  Paris Falls
+##########
+event = {
+	id = 130430
+	random = no
+	country = GER
+
+	trigger = {
+	#	ai = yes
+		exists = ITA
+		OR = {
+			AND = {
+				control = { province = 56 data = GER } # Germany controls Paris
+				lost_national = { country = FRA value = 20 } # At least 20% of national provinces lost
+			}
+			AND = {
+				control = { province = 56 data = ITA } # Italy controls Paris
+				lost_national = { country = FRA value = 20 } # At least 20% of national provinces lost
+			}
+			lost_national = { country = FRA value = 35 }
+		}
+		war = { country = GER country = FRA }
+		NOT = {
+			exists = RSI
+			war = { country = GER country = ITA }
+			war = { country = GER country = SOV }
+			alliance = { country = GER country = ITA }
+			alliance = { country = GER country = AUS }
+			puppet = { country = ITA country = GER }
+			ispuppet = ITA
+			flag = gerdefeatsita #Germany defeated Italy
+		}
+	#	random = 50 #FEPK変更部分 #1.078
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130430_NAME"
+	desc = "EVT_130430_DESC"
+
+	picture = "german_replacements"
+
+	action_a = {
+		name = "EVT_130430_ACTA"
+		ai_chance = 98
+		command = { type = trigger which = 130431 } #Italy Joins
+	}
+	action_b = {
+		name = "EVT_130430_ACTB"
+		ai_chance = 2
+		command = { }
+	}
+}
+##########
+#  Italy joins the Axis
+##########
+event = {
+	id = 130431
+	random = no
+	country = ITA
+
+	name = "EVT_130431_NAME"
+	desc = "EVT_130431_DESC"
+
+	picture = "german_replacements"
+
+	action_a = {
+		name = "EVT_130431_ACTA"
+		ai_chance = 97
+		command = { type = belligerence which = ITA value = 20 } #20 seems good, otherwise they get no belligerence
+		command = { type = alliance which = GER } #
+	}
+	action_b = {
+		name = "EVT_130431_ACTB"
+		ai_chance = 3
+		command = { type = relation which = GER value = -20 }
+	}
+}
+
+#130432-130435 FarEast event
+
+#id = 130432-33		RAFファニーウォーイベント
+#	Parliament asks bombing to Germany
+event = {
+	id = 130432
+	country = ENG
+
+	trigger = {
+		OR = {
+			headofgovernment = 1157	#Halifax
+			headofgovernment = 1037	#Chamberlain
+		}
+		war = { country = ENG country = GER }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	style = 0
+	picture = "parliamentary_scandal"
+
+	name = "EVT_130432_NAME"
+	desc = "EVT_130432_DESC"
+	
+	action_a = {
+		name = "EVT_130432_ACTA"
+		ai_chance = 95
+		command = { type = build_cost which = air when = on_upgrade where = relative value = -20 }
+		
+		command = { type = hard_attack which = tactical_bomber value = -1 }
+		command = { type = soft_attack which = tactical_bomber value = -5 }
+		command = { type = naval_attack which = tactical_bomber value = -1 }
+		command = { type = strategic_attack which = tactical_bomber value = -5 }
+
+		command = { type = hard_attack which = strategic_bomber value = -1 }
+		command = { type = soft_attack which = strategic_bomber value = -2 }
+		command = { type = naval_attack which = strategic_bomber value = -2 }
+		command = { type = strategic_attack which = strategic_bomber value = -12 }
+
+		command = { type = hard_attack which = cas value = -7 }
+		command = { type = soft_attack which = cas value = -12 }
+		command = { type = naval_attack which = cas value = -2 }
+
+		command = { type = hard_attack which = naval_bomber value = -1 }
+		command = { type = soft_attack which = naval_bomber value = -1 }
+		command = { type = naval_attack which = naval_bomber value = -4 }
+
+		command = { type = hard_attack which = escort value = -1 }
+		command = { type = soft_attack which = escort value = -1 }
+		
+		command = { type = belligerence value = -5 }
+		command = { type = ai which = "switch/eng_funny_war.ai" }
+	}
+	action_b = {
+		name = "EVT_130432_ACTB"
+		ai_chance = 5
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = sleepevent which = 130433 }
+	}
+}
+
+#RAF change their policy
+event = {
+	id = 130433
+	country = ENG
+
+	decision = { 
+		war = { country = ENG country = GER }
+		event = 130432
+	}
+	decision_trigger = {
+		OR = {
+			event = 130423
+			event = 131460	#対伊ヴィシーイベント	#一応
+			not = { region = { region = "France" country = FRA value = 10 } }
+			lost_national = { country = GER value = 15 }
+		}
+	}
+
+	trigger = {
+		event = 130432
+		headofgovernment = 1038	#Churchill
+		OR = {
+			event = 130423
+			event = 131460	#対伊ヴィシーイベント	#一応
+			not = { region = { region = "France" country = FRA value = 10 } }
+			lost_national = { country = GER value = 15 }
+		}
+	}
+
+	style = 0
+	decision_picture = "decision_english_declaration_war"
+	picture = "churchill"
+
+	date = { day = 0 month = january year = 1940 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130433_NAME"
+	desc = "EVT_130433_DESC"
+	
+	action_a = {
+		name = "EVT_130433_ACTA"	#Now, Twilight War is over!
+		command = { type = build_cost which = air when = on_upgrade where = relative value = 20 }
+
+		command = { type = hard_attack which = tactical_bomber value = 1 }
+		command = { type = soft_attack which = tactical_bomber value = 5 }
+		command = { type = naval_attack which = tactical_bomber value = 1 }
+		command = { type = strategic_attack which = tactical_bomber value = 5 }
+
+		command = { type = hard_attack which = strategic_bomber value = 1 }
+		command = { type = soft_attack which = strategic_bomber value = 2 }
+		command = { type = naval_attack which = strategic_bomber value = 2 }
+		command = { type = strategic_attack which = strategic_bomber value = 12 }
+
+		command = { type = hard_attack which = cas value = 7 }
+		command = { type = soft_attack which = cas value = 12 }
+		command = { type = naval_attack which = cas value = 2 }
+
+		command = { type = hard_attack which = naval_bomber value = 1 }
+		command = { type = soft_attack which = naval_bomber value = 1 }
+		command = { type = naval_attack which = naval_bomber value = 4 }
+
+		command = { type = hard_attack which = escort value = 1 }
+		command = { type = soft_attack which = escort value = 1 }
+		command = { type = ai which = "switch/eng_funny_war_end.ai" }
+	}
+}
+
+#フランス降伏と仏領インドシナ
+#フランス降伏時にアジアで半端に戦端が開かれていくと日本がインドシナを得られないのでそれに対策するイベント
+#都合のいいイベントだなあ。
+event = {
+	id = 130434
+	country = FRA
+	
+	trigger = {
+		event = 130428	#自由フランスの主導権
+		area = { area = "indochina" country = FRA value = 1 }
+	}
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	style = 0
+	picture = "VIC"
+	
+	name = "EVT_130434_NAME"
+	desc = "EVT_130434_DESC"
+	
+	action_a = {
+		name = "OK"
+		command = { type = secedearea which = VIC value = "Indochina" }
+	}
+}
+
+
+#########################
+# Wilfred Plan
+#########################
+event = {
+	id = 130435
+	random = no
+	country = ENG
+
+	name = "EVT_130435_NAME"	#ウィルフレッド作戦
+	desc = "EVT_130435_DESC"	#
+	style = 0
+	picture = "Churchill"
+
+	decision = {
+		event = 130411
+		war = { country = ENG country = GER }
+		exists = NOR
+		NOT = {
+			alliance = { country = NOR country = GER }
+			war = { country = NOR country = ENG }
+			war = { country = NOR country = GER }
+			war = { country = NOR country = SOV }
+		}
+	}
+
+	decision_trigger = {
+		NOT = {
+			alliance = { country = NOR country = ENG }
+			alliance = { country = NOR country = SOV }
+		}
+		supplies = 300
+	}
+
+	trigger = {
+		random = 5
+		event = 130411
+		war = { country = ENG country = GER }
+		exists = NOR
+		NOT = {
+			alliance = { country = NOR country = GER }
+			alliance = { country = NOR country = ENG }
+			alliance = { country = NOR country = SOV }
+			war = { country = NOR country = ENG }
+			war = { country = NOR country = GER }
+			war = { country = NOR country = SOV }
+		}
+	}
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 5
+	deathdate = { day = 29 month = january year = 1960 }
+
+	action = {
+		ai_chance = 1
+		name = "EVT_130435_ACTA"	#ノルウェーを確保してナチスに打撃を与えよう！
+		command = { type = war which = NOR }
+		command = { type = dissent value = 10 }
+		command = { type = supplies value = -300 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = relation which = USA value = -80 }
+		command = { type = relation which = SOV value = -80 }
+		command = { type = end_trades which = ENG where = USA }
+		command = { type = end_trades which = ENG where = SOV }
+	}
+	
+	action = { 
+		ai_chance = 99
+		name = "EVT_130435_ACTB"	#
+		command = { type = sleepevent which = 130435 }
+	}
+}
+
+##########
+#  Franco asks Germany to join Axis - Different from post-war event
+##########
+event = {
+	id = 130436
+	random = no
+	country = SPA
+
+	trigger = {
+		atwar = no
+		OR = {
+			alliance = { country = GER country = ITA }
+			alliance = { country = GER country = RSI } #just incase
+		}
+		war = { country = GER country = ENG }
+		OR = {
+			AND = { #UK lost Suez AND London, no war with USA
+				control = { province = 19 data = GER } #Germany controls London
+				NOT = {
+					control = { province = 900 data = ENG } #Suez
+					control = { province = 901 data = ENG }
+					war = { country = GER country = USA }
+				}
+			}
+			AND = { #UK lost Suez OR London, no war with USSR or USA
+				OR = {
+					control = { province = 19 data = GER } #Germany controls London
+					NOT = {
+						control = { province = 900 data = ENG } #Suez
+						control = { province = 901 data = ENG }
+					}
+				}
+				NOT = {
+					war = { country = GER country = SOV }
+					war = { country = GER country = USA }
+				}
+			}
+		}
+		NOT = {
+			war = { country = GER country = SPA }
+			alliance = { country = GER country = SPA }
+			alliance = { country = ENG country = SPA }
+			alliance = { country = SOV country = SPA }
+			ispuppet = SPA
+			exists = SPR
+		}
+		random = 50
+	}
+
+	date = { day = 1 month = january year = 1939 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130436_NAME"
+	desc = "EVT_130436_DESC"
+	picture = "german_replacements"
+
+	action_a = {
+		name = "EVT_130436_ACTA"
+		ai_chance = 75
+		command = { type = trigger which = 130437 }
+	}
+	action_b = {
+		name = "EVT_130436_ACTB"
+		ai_chance = 25
+		command = { }
+	}
+}
+##########
+#  Germany responds to Spain's request
+##########
+event = {
+	id = 130437
+	random = no
+	country = GER
+
+	name = "EVT_130437_NAME"
+	desc = "EVT_130437_DESC"
+	picture = "german_replacements"
+
+	action_a = {
+		name = "EVT_130437_ACTA"
+		ai_chance = 75
+		command = { type = supplies value = -2000 } #more elaborate maybe?
+		command = { type = trigger which = 130438 }
+		command = { type = trigger which = 130440 }
+		command = { type = secedeprovince which = SPA value = 326 }
+	}
+	action_b = {
+		name = "EVT_130437_ACTB"
+		ai_chance = 25
+		command = { type = relation which = SPA value = -50 }
+	}
+}
+##########
+#  Germany grants Spain Axis membership
+##########
+event = {
+	id = 130438
+	random = no
+	country = SPA
+
+	name = "EVT_130438_NAME"
+	desc = "EVT_130438_DESC"
+	picture = "german_replacements"
+
+	action_a = {
+		name = "EVT_130438_ACTA"
+		ai_chance = 100
+		command = { type = supplies value = 2000 } #more elaborate maybe?
+		command = { type = alliance which = GER }
+		command = { type = setflag which = axis_spain }
+		command = { type = addcore which = 326 }
+		command = { type = sleepevent which = 132045 } #since axis_spain flag is set here, sleep the generic event that does it
+	}
+}
+
+event = {
+	id = 130440
+	random = no
+	country = VIC
+
+	name = "EVT_130440_NAME"
+	desc = "EVT_130438_DESC"
+	picture = "german_replacements"
+
+	action_a = {
+		name = "EVT_130440_ACTA"
+		ai_chance = 100
+		command = { type = relation which = SPA value = -10 }
+		command = { type = relation which = GER value = -10 }
+		command = { type = secedeprovince which = SPA value = 326 }
+	}
+}
+
+##########
+#  Leadership of Free France - Vichy never created
+##########
+event = {
+	id = 130439
+	random = no
+	country = FRA
+
+	trigger = {
+		#event = 130423 #Germany had the option to create Vichy
+		#event = 130424 #France replied
+		NOT = { exists = VIC }
+		lost_national = { country = FRA value = 90 }
+		war = { country = GER country = FRA }
+	}
+
+	date = { day = 1 month = january year = 1939 }
+	offset = 7
+	deathdate = { day = 20 month = june year = 1941 } #before 1941 scenario
+
+	name = "EVT_970_NAME"
+	desc = "EVT_970_DESC"
+
+
+	action_a = {  #Ahistorical-presumes escape by politicians to N.Africa##
+		name = "EVT_970_ACTC"
+		ai_chance = 100
+		command = { type = capital which = 949 } #Algiers
+		command = { type = set_domestic which = democratic value = 8 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = domestic which = freedom value = -1 }
+
+		##Civilian Cabinet##
+		command = { type = headofstate which = 2208 } #Chautemps
+		command = { type = headofgovernment which = 2209 } #Mandel
+		command = { type = foreignminister which =  2054 } #Deladier
+		command = { type = armamentminister which =  2082 } #Herriot
+		command = { type = ministerofsecurity which = 2210 } #Delbos
+		command = { type = ministerofintelligence which =  2134 } #Luizet
+		command = { type = chiefofstaff which =  2150 } #DeGaulle
+		command = { type = chiefofarmy which =  2164 } #Bertin-Boussus
+		command = { type = chiefofnavy which =  2173 } #Campinchi
+		command = { type = chiefofair which =  2184 } #Cot
+
+		command = { type = free_ic value = 7 }
+		#command = { type = free_energy value = 20 }
+		#command = { type = free_metal value = 20 }
+		#command = { type = free_rare_materials value = 5 }
+		#command = { type = free_oil value = 5 }
+
+		##Independance of SYR-LEB## #FEPKBETA4
+		command = { type = independence which = SYR value = 0 when = 0 }
+		command = { type = removecore which = 1862 }
+		command = { type = removecore which = 1863 }
+		command = { type = removecore which = 1792 }
+		command = { type = removecore which = 1795 }
+		command = { type = removecore which = 1861 }
+		command = { type = trigger which = 71690 } #Syrian event
+
+		command = { type = independence which = LEB value = 0 when = 0 }
+		command = { type = removecore which = 1793 }
+		command = { type = removecore which = 1794 }
+		command = { type = trigger which = 71691 } #Lebanese event
+	}
+}
+
+# 130440 used
+
+#BEAの設立
+event = {
+	id = 130441
+	random = no
+	country = ENG
+	
+	decision = {
+		war = { country = ENG country = GER }
+		war = { country = FRA country = GER }
+		
+		control = { province = 72 data = FRA }	#メス
+		control = { province = 44 data = FRA }	#リール
+	}
+	decision_trigger = {
+		manpower = 130
+		NOT = { resource_shortage = supplies }
+	}
+	
+	trigger = {
+		war = { country = ENG country = GER }
+		war = { country = FRA country = GER }
+		
+		control = { province = 72 data = FRA }	#メス
+		control = { province = 44 data = FRA }	#リール
+		random = 50
+		manpower = 130
+	}
+
+	date = { day = 0 month = january year = 1939 }
+	offset = 13
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130441_NAME"	#イギリス海外派遣軍の展開
+	desc = "EVT_130441_DESC"	#
+	style = 2
+	picture = "English_declaration_war"
+	decision_picture = "decision_english_declaration_war"
+
+	action_a = {
+		name = "EVT_130441_ACTA"	#軍をドイツとの国境に展開せよ
+		ai_chance = 99	
+		command = { type = relation which = FRA value = 20 }
+		command = { type = resource which = supplies value = -4000 }
+		command = { type = add_corps which = "英国遠征軍統合参謀本部" value = land when = 1138 where = 44 }	#リール
+		command = { type = add_division which = "イギリス海外派遣軍司令部" value = hq when = 0 where = artillery }
+		
+		command = { type = add_corps which = "英国遠征軍第1軍" value = land when = 1023 where = 72 }	#メス
+		command = { type = add_division which = "第1歩兵師団" value = infantry when = 1 where = artillery }
+		command = { type = add_division which = "第2歩兵師団" value = infantry when = 1 where = engineer }
+		command = { type = add_division which = "第48「サウスミッドランズ」師団" value = infantry when = 1 where = artillery }
+		command = { type = add_corps which = "英国遠征軍第2軍" value = land when = 1005 where = 72 }	#メス
+		command = { type = add_division which = "第3歩兵師団" value = motorized when = 0 where = artillery }
+		command = { type = add_division which = "第4歩兵師団" value = infantry when = 1 where = artillery }
+		command = { type = add_division which = "第50「ノーザンブリアン」師団" value = motorized when = 0 where = anti_tank }
+		command = { type = add_corps which = "英国遠征軍第3軍" value = land when = 1347 where = 72 }	#メス
+		command = { type = add_division which = "第42「イーストランカシャー」師団" value = infantry when = 1 where = artillery }
+		command = { type = add_division which = "第44「ホームカウンティーズ」師団" value = infantry when = 1 where = engineer }
+		command = { type = add_corps which = "ザール軍" value = land when = 1124 where = 72 }	#メス
+		command = { type = add_division which = "第51「ハイランド」師団" value = infantry when = 1 where = artillery }
+	}
+	action_a = {
+		name = "EVT_130441_ACTB"	#フランスに援軍は必要ない
+		ai_chance = 1
+		command = { type = relation which = FRA value = -30 }
+		command = { type = sleepevent which = 130442 }
+	}
+}
+
+event = {
+	id = 130442
+	country = ENG
+	trigger = {
+		OR = {
+			event = 130424
+			control = { province = 18 data = GER }	#カレー
+			control = { province = 43 data = GER }	#ダンケルク
+			control = { province = 56 data = GER }	#パリ
+		}
+		event = 130441
+		garrison = { country = ENG province = 43 type = land size = 1 area = 2 }
+		random = 30
+		NOT = { event = 130448 }	#「フランス＝レジスタンス」以降は発生しない
+	}
+	
+	date = { day = 0 month = january year = 1939 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	style = 0
+	picture = "allied_marginal_defeat"
+
+	name = "EVT_130442_NAME"	#ダンケルクの撤退
+	desc = "EVT_130442_DESC"	#
+	
+	action = {
+		name = "EVT_130442_ACTA"	#いつか必ず戻るぞ……！
+		#command = { type = remove_units which = all where = ENG when = 2 value = "France" }
+		command = { trigger = { event = 130425 } type = secederegion which = GER value = "France" }
+		command = { type = manpowerpool value = 192 }	#フランス側は139
+		command = { type = trigger which = 130443 }
+	}
+}
+
+event = {
+	id = 130443
+	country = FRA
+	trigger = {
+		garrison = { country = FRA province = 43 type = land size = 1 area = 2 }
+		event = 130425
+	}
+	
+	style = 0
+	picture = "allied_marginal_defeat"
+
+	name = "EVT_130442_NAME"	#ダンケルクの撤退
+	desc = "EVT_130442_DESC"	#
+	
+	action = {
+		name = "EVT_130442_ACTA"	#いつか必ず戻るぞ……！
+		#command = { type = remove_units which = all where = FRA when = 2 value = "France" }
+		#command = { type = secederegion which = GER value = "France" }
+		command = { type = manpowerpool value = 139 }
+	}
+}
+
+event = {
+	id = 130444
+	country = SOV
+	#one_action = yes
+	trigger = {
+		OR = {
+			event = 130138
+			event = 130140
+			event = 130141
+		}
+		war = { country = GER country = FRA }
+		NOT = { war = { country = GER country = SOV } }
+		lost_national = { country = FRA value = 1 }
+	}
+	
+	style = 0
+	picture = "industry_sabotaged"
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1963 }
+
+	
+	name = "EVT_130444_NAME"	#ドイツのフランス侵攻と共産党の連携
+	desc = "EVT_130444_DESC"	#
+	
+	action = {
+		name = "EVT_130444_ACTA"	#ドイツと共に今こそ西欧の帝国主義を壊滅せしめるのだ！
+		ai_chance = 95
+		command = { type = trigger which = 130445 }
+		command = { type = relation which = FRA value = -20 }
+	}
+	action = {
+		name = "EVT_130444_ACTB"	#フランスの内乱を招くべきではない
+		command = { }
+	}
+}
+	
+event = {
+	id = 130445
+	country = FRA
+	one_action = yes
+	
+	name = "EVT_130445_NAME"	#フランス帝国主義およびアメリカ・イギリス帝国主義反対運動
+	desc = "EVT_130445_DESC"	#
+	style = 0
+	picture = "industry_sabotaged"
+	
+	action = {	#成功
+		name = "EVT_130445_ACTA"	#共産党員による妨害活動の影響は小さくない
+		ai_chance = 87
+		command = { type = dissent value = 5 }
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = construct which = ic where = -4 value = -1 }
+		command = { type = morale which = land value = -5 }
+	}
+	action = {	#大成功
+		name = "EVT_130445_ACTB"	#共産党員はフランスの戦時体制を壊滅させてしまった！
+		ai_chance = 3
+		command = { type = dissent value = 25 }
+		command = { type = domestic which = political_left value = 2 }
+		command = { type = construct which = ic where = -4 value = -2 }
+		command = { type = construct which = ic where = -4 value = -2 }
+		command = { type = construct which = ic where = -4 value = -2 }
+		command = { type = construct which = ic where = -4 value = -2 }
+		command = { type = construct which = ic where = -4 value = -2 }
+		command = { type = construct which = ic where = -4 value = -2 }
+		command = { type = construct which = ic where = -4 value = -2 }
+		command = { type = construct which = ic where = -4 value = -2 }
+		command = { type = morale which = land value = -10 }
+		command = { type = max_organization which = land value = -10 }
+		command = { type = ground_def_eff value = -0.1 when = 1 }
+	}
+	action = {	#失敗
+		name = "EVT_130445_ACTC"	#フランス共産党の活動は事前に察知され、妨害はほとんど起きずに済んだ
+		ai_chance = 10
+		command = { type = dissent value = 1 }
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = construct which = ic where = -4 value = -1 }
+	}
+}
+	
+#フランス・レジスタンスイベント第1段階
+event = {
+	id = 130448
+	random = no
+	country = GER
+
+	trigger = {
+		control = { province = 56 data = GER } #Paris
+		war = { country = GER country = FRA }
+		war = { country = GER country = ENG }
+		event = 130423 # Vichy France
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 13
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130448_NAME"
+	desc = "EVT_130448_DESC"
+	picture = "partisan_revolt"
+
+	action_a = {
+		name = "EVT_130448_ACTA"
+		# SET REVOLTRISK
+		command = { type = province_revoltrisk which = 40 value = 6 }
+		command = { type = province_revoltrisk which = 41 value = 8 }
+		command = { type = province_revoltrisk which = 42 value = 5 }
+		command = { type = province_revoltrisk which = 43 value = 8 }
+		command = { type = province_revoltrisk which = 44 value = 8 }
+		command = { type = province_revoltrisk which = 32 value = 5 }
+		command = { type = province_revoltrisk which = 33 value = 9 }
+		command = { type = province_revoltrisk which = 34 value = 6 }
+		command = { type = province_revoltrisk which = 35 value = 6 }
+		command = { type = province_revoltrisk which = 36 value = 6 }
+		command = { type = province_revoltrisk which = 37 value = 5 }
+		command = { type = province_revoltrisk which = 38 value = 6 }
+		command = { type = province_revoltrisk which = 39 value = 9 }
+		command = { type = province_revoltrisk which = 70 value = 6 }
+		command = { type = province_revoltrisk which = 18 value = 6 }
+		command = { type = province_revoltrisk which = 326 value = 6 }
+		command = { type = province_revoltrisk which = 364 value = 6 }
+		command = { type = province_revoltrisk which = 62 value = 7 }
+		command = { type = province_revoltrisk which = 63 value = 6 }
+		command = { type = province_revoltrisk which = 64 value = 9 }
+		command = { type = province_revoltrisk which = 60 value = 6 }
+		command = { type = province_revoltrisk which = 61 value = 6 }
+		command = { type = province_revoltrisk which = 53 value = 6 }
+		command = { type = province_revoltrisk which = 54 value = 7 }
+		command = { type = province_revoltrisk which = 55 value = 9 }
+		command = { type = province_revoltrisk which = 325 value = 7 }
+		command = { type = province_revoltrisk which = 323 value = 9 }
+		#command = { type = province_revoltrisk which = 56 value = 27 }
+		command = { type = province_revoltrisk which = 57 value = 6 }
+		command = { type = province_revoltrisk which = 58 value = 6 }
+		command = { type = province_revoltrisk which = 59 value = 6 }
+		command = { type = province_revoltrisk which = 317 value = 6 }
+		command = { type = province_revoltrisk which = 318 value = 10 }
+		command = { type = province_revoltrisk which = 319 value = 6 }
+		#command = { type = province_revoltrisk which = 320 value = 12 }
+		command = { type = province_revoltrisk which = 327 value = 6 }
+		command = { type = province_revoltrisk which = 328 value = 7 }
+		command = { type = province_revoltrisk which = 324 value = 6 }
+		command = { type = province_revoltrisk which = 322 value = 6 }
+		command = { type = province_revoltrisk which = 321 value = 9 }
+		command = { type = province_revoltrisk which = 359 value = 6 }
+		command = { type = province_revoltrisk which = 358 value = 6 }
+		command = { type = province_revoltrisk which = 362 value = 12 }
+		command = { type = province_revoltrisk which = 361 value = 6 }
+		command = { type = province_revoltrisk which = 360 value = 7 }
+		command = { type = province_revoltrisk which = 363 value = 6 }
+		command = { type = province_revoltrisk which = 364 value = 6 }
+		command = { type = province_revoltrisk which = 365 value = 7 }
+		command = { type = province_revoltrisk which = 366 value = 6 }
+		command = { type = province_revoltrisk which = 528 value = 6 }
+		command = { type = province_revoltrisk which = 529 value = 9 }
+		command = { type = province_revoltrisk which = 527 value = 6 }
+		command = { type = province_revoltrisk which = 367 value = 6 }
+	}
+}
+#フランス・レジスタンスイベント第2段階―共産党の参加
+event = {
+	id = 130449
+	random = no
+	country = GER
+
+	trigger = {
+		control = { province = 56 data = GER } #Paris
+		war = { country = GER country = FRA }
+		war = { country = GER country = ENG }
+		event = 130448
+		war = { country = GER country = SOV }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 13
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_130449_NAME"	#フランス共産党によるレジスタンス活動の開始
+	desc = "EVT_130449_DESC"	
+	picture = "partisan_revolt"
+
+	action_a = {
+		name = "EVT_130449_ACTA"
+		# SET REVOLTRISK
+		command = { type = province_revoltrisk which = 40 value = 7 }
+		command = { type = province_revoltrisk which = 41 value = 8 }
+		command = { type = province_revoltrisk which = 42 value = 6 }
+		command = { type = province_revoltrisk which = 43 value = 8 }
+		command = { type = province_revoltrisk which = 44 value = 8 }
+		command = { type = province_revoltrisk which = 32 value = 6 }
+		command = { type = province_revoltrisk which = 33 value = 8 }
+		command = { type = province_revoltrisk which = 34 value = 5 }
+		command = { type = province_revoltrisk which = 35 value = 5 }
+		command = { type = province_revoltrisk which = 36 value = 5 }
+		command = { type = province_revoltrisk which = 37 value = 5 }
+		command = { type = province_revoltrisk which = 38 value = 5 }
+		command = { type = province_revoltrisk which = 39 value = 9 }
+		command = { type = province_revoltrisk which = 70 value = 5 }
+		command = { type = province_revoltrisk which = 18 value = 5 }
+		command = { type = province_revoltrisk which = 326 value = 5 }
+		command = { type = province_revoltrisk which = 364 value = 5 }
+		command = { type = province_revoltrisk which = 62 value = 7 }
+		command = { type = province_revoltrisk which = 63 value = 5 }
+		command = { type = province_revoltrisk which = 64 value = 9 }
+		command = { type = province_revoltrisk which = 60 value = 5 }
+		command = { type = province_revoltrisk which = 61 value = 5 }
+		command = { type = province_revoltrisk which = 53 value = 5 }
+		command = { type = province_revoltrisk which = 54 value = 6 }
+		command = { type = province_revoltrisk which = 55 value = 8 }
+		command = { type = province_revoltrisk which = 325 value = 7 }
+		command = { type = province_revoltrisk which = 323 value = 8 }
+		#command = { type = province_revoltrisk which = 56 value = 27 }
+		command = { type = province_revoltrisk which = 57 value = 5 }
+		command = { type = province_revoltrisk which = 58 value = 5 }
+		command = { type = province_revoltrisk which = 59 value = 5 }
+		command = { type = province_revoltrisk which = 317 value = 5 }
+		command = { type = province_revoltrisk which = 318 value = 9 }
+		command = { type = province_revoltrisk which = 319 value = 5 }
+		#command = { type = province_revoltrisk which = 320 value = 12 }
+		command = { type = province_revoltrisk which = 327 value = 5 }
+		command = { type = province_revoltrisk which = 328 value = 7 }
+		command = { type = province_revoltrisk which = 324 value = 5 }
+		command = { type = province_revoltrisk which = 322 value = 5 }
+		command = { type = province_revoltrisk which = 321 value = 8 }
+		command = { type = province_revoltrisk which = 359 value = 5 }
+		command = { type = province_revoltrisk which = 358 value = 5 }
+		command = { type = province_revoltrisk which = 362 value = 12 }
+		command = { type = province_revoltrisk which = 361 value = 5 }
+		command = { type = province_revoltrisk which = 360 value = 6 }
+		command = { type = province_revoltrisk which = 363 value = 5 }
+		command = { type = province_revoltrisk which = 364 value = 5 }
+		command = { type = province_revoltrisk which = 365 value = 7 }
+		command = { type = province_revoltrisk which = 366 value = 5 }
+		command = { type = province_revoltrisk which = 528 value = 5 }
+		command = { type = province_revoltrisk which = 529 value = 9 }
+		command = { type = province_revoltrisk which = 527 value = 5 }
+		command = { type = province_revoltrisk which = 367 value = 5 }
+	}
+}
+
+#########################################################################
+#  アイルランドへの参戦要請
+#########################################################################
+event = {
+	id = 130450
+	random = no
+	country = ENG
+
+	trigger = {
+		exists = IRE
+		war = { country = ENG  country = GER }
+		control = { province = 28 data = ENG }
+		control = { province = 29 data = ENG }
+		OR = {
+			alliance = { country = FRA country = GER }
+			control = { province = 56 data = GER } # パリ
+		}
+		NOT = {
+			OR = {
+				alliance = { country = ENG country = IRE }
+				alliance = { country = GER country = IRE }
+				atwar = IRE
+			}
+		}
+	}
+
+	name = "EVT_130450_NAME"
+	desc = "EVT_130450_DESC"
+	style = 0
+	picture = "constitutional"
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "ACTIONNAME130450A"
+		ai_chance = 70
+		command = { type = dissent value = 1 }
+		command = { type = trigger which = 130451 } #IRE
+	}
+	action_b = {
+		name = "ACTIONNAME130450B"
+		ai_chance = 30
+		command = { type = dissent value = -1 }
+	}
+}
+#########################################################################
+#  イギリスからの参戦要請
+#########################################################################
+event = {
+	id = 130451
+	random = no
+	country = IRE
+
+	# Triggered by ENG 130450
+
+	name = "EVT_130451_NAME"
+	desc = "EVT_130451_DESC"
+	style = 0
+
+	action_a = {
+		name = "ACTIONNAME130451A"
+		ai_chance = 97
+		command = { type = relation which = GER value = 10 }
+		command = { type = trigger which = 130452 } #ENG
+	}
+	action_b = {
+		name = "ACTIONNAME130451B"
+		ai_chance = 3
+		command = { type = relation which = GER value = -10 }
+		command = { type = leave_alliance }
+		command = { type = removecore which = 28 }
+		command = { type = trigger which = 130453 } #ENG
+	}
+}
+#########################################################################
+#  アイルランドが参戦を拒否
+#########################################################################
+event = {
+	id = 130452
+	random = no
+	country = ENG
+
+	# Triggered by IRE 130451
+
+	name = "EVT_130452_NAME"
+	desc = "EVT_130452_DESC"
+	style = 0
+
+	action_a = {
+		ai_chance = 90
+		name = "EVT_130452_ACTA"	#
+		command = { type = relation which = IRE value = -10 }
+	}
+	action_b = {
+		ai_chance = 10
+		name = "EVT_130452_ACTB"	#
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = war which = IRE }
+	}
+}
+#########################################################################
+#  アイルランドが参戦
+#########################################################################
+event = {
+	id = 130453
+	random = no
+	country = ENG
+
+	# Triggered by IRE 130451
+
+	name = "EVT_130453_NAME"
+	desc = "EVT_130453_DESC"
+	style = 0
+
+	action_a = {
+		name = "OK"
+		command = { type = relation which = IRE value = 30 }
+		command = { type = alliance which = IRE }
+		command = { type = removecore which = 29 }
+		command = { type = secedeprovince which = IRE value = 29 }
+	}
+}
+#########################################################################
+#  ドイツがアイルランドに圧力をかける
+#########################################################################
+event = {
+	id = 130454
+	random = no
+	country = GER
+
+	trigger = { #FEPKBETA3.1
+		exists = IRE
+		war = { country = ENG country = GER }
+		NOT = {
+			alliance = { country = ENG country = IRE }
+			alliance = { country = USA country = IRE }
+			alliance = { country = GER country = IRE }
+			alliance = { country = SOV country = IRE }
+			atwar = IRE
+		}
+		OR = { # Paris
+			control = { province = 56 data = GER }
+			alliance = { country = FRA country = GER }
+			AND = {
+				control = { province = 56 data = VIC }
+				alliance = { country = VIC country = GER }
+			}
+		}
+		OR = { #London
+			control = { province = 19 data = GER }
+			AND = {
+				control = { province = 19 data = U73 }
+				alliance = { country = U73 country = GER }
+			}
+			AND = {
+				control = { province = 28 data = GER }
+				control = { province = 29 data = GER }
+			}
+		}
+		OR = {
+			AND = {
+				control = { province = 5 data = GER }
+				control = { province = 10 data = GER }
+				control = { province = 19 data = GER }
+			}
+			random = 20
+		}
+	}
+
+	name = "EVT_130454_NAME"
+	desc = "EVT_130454_DESC"
+	style = 0
+	picture = "german_reinforcment_5"
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "ACTIONNAME130454A"
+		ai_chance = 90
+		command = { type = trigger which = 130455 } #IRE
+	}
+	action_b = {
+		name = "ACTIONNAME130454B"
+		ai_chance = 10
+		command = { type = dissent value = -1 }
+	}
+}
+event = {
+	id = 130455
+	random = no
+	country = IRE
+
+	# Triggered by GER 130454
+
+	name = "EVT_130455_NAME"
+	desc = "EVT_130455_DESC"
+	style = 0
+	picture = "furios_hitler"
+
+	action_a = {
+		name = "ACTIONNAME130455A"
+		ai_chance = 75
+		command = { type = relation which = ENG value = -50 }
+		command = { type = relation which = GER value = 50 }
+		command = { type = trigger which = 130456 } #GER
+	}
+	action_b = {
+		name = "ACTIONNAME130455B"
+		ai_chance = 25
+		command = { type = relation which = ENG value = 10 }
+		command = { type = relation which = GER value = -25 }
+		command = { type = trigger which = 130457 } #GER
+	}
+}
+event = {
+	id = 130456
+	random = no
+	country = GER
+
+	# Triggered by IRE 130455
+
+	name = "EVT_130456_NAME"
+	desc = "EVT_130456_DESC"
+	style = 0
+	picture = "german_reinforcment_5"
+
+	action_a = {
+		name = "OK"
+		command = { type = coup_nation which = IRE }
+		command = { type = make_puppet which = IRE }
+		command = { type = alliance which = IRE }
+		command = { type = secedeprovince which = IRE value = 29 }
+		command = { type = secedeprovince which = IRE value = 28 }
+	}
+}
+event = {
+	id = 130457
+	random = no
+	country = GER
+
+	# Triggered by IRE 130455
+
+	name = "EVT_130457_NAME"
+	desc = "EVT_130457_DESC"
+	style = 0
+	picture = "german_reinforcment_5"
+
+	action_a = {
+		name = "ACTIONNAME130457A"
+		command = { type = war which = IRE }
+	}
+	action_b = {
+		name = "ACTIONNAME130457B"
+		command = { type = relation which = IRE value = 5 }
+	}
+}
+
+event = {
+	id = 130458
+	random = no
+	tag = { USA ENG ITA FRA SOV JAP CHI CAN AUS NZL GER ITA AUS VIC HUN ROM }
+	trigger = {
+		NOT = { exists = IRE }
+		control = { province = 30 data = -1 }
+		area = { area = "Eire" country = -3 value = 50 }
+	}
+	
+	name = "EVT_130458_NAME"	#IRAの活発化
+	desc = "EVT_130458_DESC"	#
+	style = 0
+	picture = "finish_soldiers"
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1963 }
+
+
+	action = {
+		name = "EVT_130458_ACTA"	#独立の気運どころの騒ぎではない！
+		command = { type = province_revoltrisk which = 27 value = 25 }
+		command = { type = province_revoltrisk which = 26 value = 25 }
+		command = { type = province_revoltrisk which = 25 value = 25 }
+		command = { type = province_revoltrisk which = 24 value = 25 }
+		command = { type = province_revoltrisk which = 30 value = 25 }
+		command = { type = province_revoltrisk which = 28 value = 10 }
+		command = { type = province_revoltrisk which = 29 value = 10 }
+	}
+}
+
+# Narvik/Iron route
+event = {
+	id = 130460
+	random = no
+	country = GER
+	
+	name = "EVT_130460_NAME"	#『鉄の道』の封鎖
+	desc = "EVT_130460_DESC"	#
+	style = 2
+	picture = "Narvik"
+
+	trigger = {
+		OR = { #ナルヴィクの判定：ナルヴィクが同盟国のコントロール下
+			AND = { 
+				atwar = yes 
+				NOT = { exists = NOR } 				
+				NOT = { control = { province = 125 data = -3 } } #ナルビク
+			}
+			AND = { 
+				NOT = { control = { province = 125 data = -3 } } 
+				war = { country = GER country = NOR } 
+			}
+		}
+		OR = { #バルト海の判定：ソ連海軍にバルト海を封鎖されておらず、かつ冬でない
+			flag = BaltiqueSOV
+			month = 11 
+			AND = { 
+				month = 1 
+				NOT = { month = 4 } 
+			} 
+		} # november, december, january, february, march (frozen Baltic sea)
+	}
+
+	date = { day = 2 month = january year = 1936 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1970 }
+
+	action = {
+		name = "EVT_130460_ACTA"	#ノルウェーの占領を急げ
+		#command = { type = dissent value = 2 }
+		command = { type = supplies value = -50 }
+		command = { type = setflag which = NarvikNO }
+		command = { type = embargo which = SWE where = GER value = 1 } # Embargo
+	}
+}
+
+event = {
+	id = 130461
+	random = no
+	tag = { ENG FRA }
+	
+	name = "EVT_130460_NAME"	#『鉄の道』の封鎖
+	desc = "EVT_130461_DESC"	#
+	style = 2
+	picture = "Narvik"
+
+	trigger = {
+		control = { province = 125 data = -1 }	#ナルビク
+		war = { country = GER country = -1 }		
+	}
+
+	date = { day = 2 month = january year = 1936 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action = {
+		name = "OK" 
+		command = { type = dissent value = -2 }
+		command = { type = supplies value = 100 }
+	}
+}
+
+event = {
+	id = 130462
+	random = no
+	country = GER
+	persistent = yes
+		
+	name = "EVT_130462_NAME"	#『鉄の道』の封鎖解除
+	desc = "EVT_130462_DESC"	#
+	style = 2
+	picture = "Narvik"
+
+	trigger = {
+		flag = NarvikNO		
+		OR = {
+			AND = {
+				atwar = yes 
+				OR = {
+					control = { province = 495 data = -3 }	#ナルヴィクがコントロール下
+					AND = {	#冬でなく、かつソ連海軍にバルト海を封鎖されていない
+						month = 5
+						NOT = { month = 11 }
+						NOT = { flag = BaltiqueSOV }
+					}
+				}
+			}
+			atwar = no
+		}
+	}
+
+	date = { day = 2 month = january year = 1936 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "OK" 
+		command = { type = dissent value = -1 }
+		command = { type = supplies value = 50 }
+		command = { type = setflag which = NarvikOK }
+		command = { type = clrflag which = NarvikNO }
+		command = { type = embargo which = SWE where = GER value = -1 }
+	}
+}
+
+# The Red fleet controls the Baltic sea
+event = {
+	id = 130463
+	random = no
+	country = SOV
+	persistent = yes
+	
+	name = "EVT_130463_NAME"	#バルト海制海権をソ連が掌握
+	desc = "EVT_130463_DESC"	#
+	style = 2
+	picture = "Narvik"
+
+	trigger = { 
+		NOT = { flag = BaltiqueSOV }
+		war = { country = SOV country = GER }
+	    OR = { 
+			garrison = { country = SOV province = 2494   type = naval size = 3 area = no }	#ボスニア湾
+			AND = { #ボスニア湾ルレオからストックホルムまでの沿岸
+				garrison = { country = SOV province = 2492   type = naval size = 3 area = no }
+				garrison = { country = SOV province = 2489   type = naval size = 3 area = no } 
+				garrison = { country = SOV province = 2481   type = naval size = 3 area = no } 
+			}
+			AND = { #カルマル湾+ストックホルム海岸
+				garrison = { country = SOV province = 2481   type = naval size = 3 area = no } 
+				garrison = { country = SOV province = 2723   type = naval size = 3 area = no } 
+			}
+			AND = { #クルラント潟+カルマル湾
+				garrison = { country = SOV province = 2480   type = naval size = 3 area = no }
+				garrison = { country = SOV province = 2481   type = naval size = 3 area = no } 
+			}
+			AND = { #ポメラニア湾+ダンツィヒ湾
+				garrison = { country = SOV province = 2477   type = naval size = 3 area = no }
+				garrison = { country = SOV province = 2478   type = naval size = 3 area = no } 
+			} 
+		}
+	}
+
+	date = { day = 2 month = january year = 1936 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "OK" 
+		command = { type = setflag which = BaltiqueSOV }
+	}
+}
+
+event = {
+	id = 130464
+	random = no
+	country = SOV
+	persistent = yes
+	
+	name = "EVT_130464_NAME"	#ソ連がバルト海制海権を喪失
+	desc = "EVT_130464_DESC"	#
+	style = 2
+	picture = "Narvik"
+
+	trigger = { 
+		flag = BaltiqueSOV 
+		OR = { 
+			NOT = { war = { country = SOV country = GER } }
+			NOT = { 
+				OR = {  
+					garrison = { country = SOV province = 2494   type = naval size = 3 area = no }
+					AND = { #ボスニア湾ルレオからストックホルムまでの沿岸
+						garrison = { country = SOV province = 2492   type = naval size = 3 area = no }
+						garrison = { country = SOV province = 2489   type = naval size = 3 area = no } 
+						garrison = { country = SOV province = 2481   type = naval size = 3 area = no } 
+					}
+					AND = { #カルマル湾+ストックホルム海岸
+						garrison = { country = SOV province = 2481   type = naval size = 3 area = no } 
+						garrison = { country = SOV province = 2479   type = naval size = 3 area = no } 		
+					}
+					AND = { #クルラント潟+カルマル湾
+						garrison = { country = SOV province = 2480   type = naval size = 3 area = no }
+						garrison = { country = SOV province = 2481   type = naval size = 3 area = no } 
+					}
+					AND = { #ポメラニア湾+ダンツィヒ湾
+						garrison = { country = SOV province = 2477   type = naval size = 3 area = no }
+						garrison = { country = SOV province = 2478   type = naval size = 3 area = no } 
+					} 
+				} 
+			} 
+		}                        
+	}
+
+	date = { day = 2 month = january year = 1936 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "OK" 
+		command = { type = clrflag which = BaltiqueSOV }
+	}
+}

@@ -1,0 +1,935 @@
+#########################################################################
+#	FEPK_assault.txt
+#	è„ó§éxâáÉCÉxÉìÉgåQ
+#
+#	éjé¿èÄãíÉCÉxÉìÉgMODólÇÃÉCÉxÉìÉgÇéQçlÇ…Ç≥ÇπÇƒÇ¢ÇΩÇæÇ´Ç‹ÇµÇΩÅB
+#	ãñâ¬Çí∏Ç¢ÇΩçÏé“ólÅAÇ†ÇËÇ™Ç∆Ç§Ç≤Ç¥Ç¢Ç‹Ç∑ÅI
+#
+#########################################################################
+#id = 134200-29		ì˙ñ{ìÏêiÉCÉxÉìÉg
+#id = 134230-39		ì˙ñ{ìåêiÉCÉxÉìÉg(IF)
+#########################################################################
+
+event = {
+	id = 134200
+	random = no
+	country = ENG
+
+        trigger = {
+		control = { province = 1350 data = ENG }
+		war = { country = JAP country = ENG }
+		ai = JAP
+		random = 70
+		NOT = {
+			garrison = { country = ENG province = 1350 type = land size = 4 area = yes }
+		}
+	}
+
+	name = "EVT_134200_NAME"
+	desc = "EVT_134200_DESC"
+	style = 0
+	picture = "fall_of_malaya"
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "EVT_134200_ACTA"
+		command = { type = control which = JAP value = 1350 }
+		command = { type = trigger which = 134201 }
+		command = { type = sleepevent which = 134202 }
+	}
+}
+
+event = {
+	id = 134201
+	random = no
+	country = JAP
+
+	name = "EVT_134201_NAME"
+	style = 0
+
+	action_a = {
+		name = "OK"
+		command = { type = add_corps which = "ëÊ25åR" value = land when = 101205 where = 1350 }
+		command = { type = add_division which = "ëÊ25åRéióﬂïî" value = hq when = 1 where = artillery }
+		command = { type = add_division value = infantry when = 3 where = engineer }#ëÊ18étíc
+		command = { type = add_division value = motorized when = 0 }#ãﬂâqétíc
+		command = { type = add_division value = motorized when = 0 }#ëÊ5étíc
+		command = { type = add_division which = "ëÊ3êÌé‘íc" value = armor when = 1 }#êÌé‘ëÊ1ÅAëÊ2ÅAëÊ6ÅAëÊ14òAë‡
+		command = { type = add_division value = infantry when = 2 }#ëÊ56étíc
+		command = { type = supplies value = 1500 where = 1350 }
+		command = { type = oilpool value = 750 where = 1350 }
+	}
+}
+
+event = {
+	id = 134202
+	random = no
+	country = ENG
+
+	trigger = {
+		control = { province = 1351 data = ENG }
+		war = { country = JAP country = ENG }
+		ai = JAP
+		random = 30
+		NOT = {
+			garrison = { country = ENG province = 1351 type = land size = 4 area = yes }
+		}
+	}
+
+	name = "EVT_134202_NAME"
+	desc = "EVT_134202_DESC"
+	style = 0
+	picture = "fall_of_malaya"
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "EVT_134202_ACTA"
+		command = { type = control which = JAP value = 1351 }
+		command = { type = trigger which = 134203 }
+		command = { type = sleepevent which = 134200 }
+	}
+}
+
+event = {
+	id = 134203
+	random = no
+	country = JAP
+
+	name = "EVT_134203_NAME"
+	style = 0
+
+	action_a = {
+		name = "OK"
+		command = { type = add_corps which = "ëÊ25åR" value = land when = 101205 where = 1351 }
+		command = { type = add_division which = "ëÊ25åRéióﬂïî" value = hq when = 1 where = artillery }
+		command = { type = add_division value = infantry when = 3 where = engineer }#ëÊ18étíc
+		command = { type = add_division value = motorized when = 0 }#ãﬂâqétíc
+		command = { type = add_division value = motorized when = 0 }#ëÊ5étíc
+		command = { type = add_division which = "ëÊ3êÌé‘åRíc" value = armor when = 1 }
+		command = { type = add_division value = infantry when = 2 }#ëÊ56étíc
+		command = { type = supplies value = 1500 where = 1351 }
+		command = { type = oilpool value = 750 where = 1351 }
+	}
+}
+
+event = {
+	id = 134204
+	random = no
+	country = PHI
+
+	trigger = {
+		control = { province = 1736 data = PHI }
+		control = { province = 1741 data = PHI }
+		control = { province = 1743 data = PHI }
+		control = { province = 1745 data = PHI }
+		control = { province = 1749 data = PHI }
+		control = { province = 1750 data = PHI }
+		war = { country = JAP country = PHI }
+		ai = JAP
+		random = 50
+	}
+
+	name = "EVT_134204_NAME"
+	desc = "EVT_134204_DESC"
+	style = 0
+	picture = "fall_of_philipines"
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "EVT_134204_ACTA"
+		command = { type = control which = JAP value = 1736 }
+		command = { type = control which = JAP value = 1741 }
+		command = { type = control which = JAP value = 1743 }
+		command = { type = control which = JAP value = 1745 }
+		command = { type = control which = JAP value = 1749 }
+		command = { type = control which = JAP value = 1750 }
+		command = { type = trigger which = 134206 }
+		command = { type = sleepevent which = 134205 }
+	}
+}
+
+event = {
+	id = 134205
+	random = no
+	country = USA
+
+	trigger = {
+		control = { province = 1736 data = USA }
+		control = { province = 1741 data = USA }
+		control = { province = 1743 data = USA }
+		control = { province = 1745 data = USA }
+		control = { province = 1749 data = USA }
+		control = { province = 1750 data = USA }
+		war = { country = JAP country = USA }
+		ai = JAP
+		random = 50
+	}
+
+	name = "EVT_134205_NAME"
+	desc = "EVT_134205_DESC"
+	style = 0
+	picture = "fall_of_philipines"
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "EVT_134205_ACTA"
+		command = { type = control which = JAP value = 1736 }
+		command = { type = control which = JAP value = 1741 }
+		command = { type = control which = JAP value = 1743 }
+		command = { type = control which = JAP value = 1745 }
+		command = { type = control which = JAP value = 1749 }
+		command = { type = control which = JAP value = 1750 }
+		command = { type = trigger which = 134206 }
+		command = { type = sleepevent which = 134204 }
+	}
+}
+
+event = {
+	id = 134206
+	random = no
+	country = JAP
+
+	name = "EVT_134206_NAME"
+	style = 0
+
+	action_a = {
+		name = "OK"
+		command = { type = add_corps which = "ëÊ14åR" value = land when = 101046 where = 1743 }
+		command = { type = add_division which = "ëÊ14åRéióﬂïî" value = hq when = 1 where = artillery }
+		command = { type = add_division value = infantry when = 2 where = engineer }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = add_division which = "ëÊ65ó∑íc" value = infantry when = 2 where = light_armor_brigade }
+		command = { type = add_corps value = land where = 1743 }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = supplies value = 1000 where = 1743 }
+		command = { type = oilpool value = 300 where = 1743 }
+
+		command = { type = add_corps value = land when = 101149 where = 1750 }
+		command = { type = add_division value = infantry when = 1 }
+		command = { type = supplies value = 500 where = 1750 }
+		command = { type = oilpool value = 100 where = 1750 }
+
+		command = { type = add_corps value = land when = 101187 where = 1741 }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = add_corps value = land when = 101187 where = 1741 }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = supplies value = 500 where = 1741 }
+	}
+}
+
+event = {
+	id = 134207
+	random = no
+	country = HOL
+
+	trigger = {
+		control = { province = 1628 data = HOL }
+		war = { country = JAP country = HOL }
+		ai = JAP
+		random = 60
+		OR = {
+			NOT = {
+				exists = PHI
+			}
+			alliance = { country = PHI country = JAP }
+			puppet = { country = PHI country = JAP }
+			lost_national = { country = PHI value = 75 }
+		}
+		OR = {
+			control = { province = 1353 data = JAP }
+			NOT = {
+				war = { country = JAP country = ENG }
+			}
+		}
+		NOT = {
+			garrison = { country = HOL province = 1628 type = land size = 4 area = yes }
+		}
+	}
+
+	name = "EVT_134207_NAME"
+	desc = "EVT_134207_DESC"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+	picture = "fall_of_dutch_east_india"
+
+	action_a = {
+		name = "EVT_134207_ACTA"
+		command = { type = control which = JAP value = 1628 }
+		command = { type = trigger which = 110308 }
+		command = { type = sleepevent which = 110309 }
+	}
+}
+
+event = {
+          id = 134208
+          random = no
+          country = JAP
+
+	name = "EVT_134208_NAME"
+	style = 0
+
+	action_a = {
+		name = "OK"
+		command = { type = add_corps which = "ëÊ16åR" value = land when = 101059 where = 1628 }
+		command = { type = add_division which = "ëÊ16åRéióﬂïî" value = hq when = 1 where = artillery }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = add_division value = infantry when = 2 where = engineer }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = add_division value = infantry when = 1 where = light_armor_brigade }
+		command = { type = supplies value = 1200 where = 1628 }
+		command = { type = oilpool value = 400 where = 1628 }
+	}
+}
+
+event = {
+	id = 134209
+	random = no
+	country = HOL
+
+	trigger = {
+		control = { province = 1632 data = HOL }
+		war = { country = JAP country = HOL }
+		ai = JAP
+		random = 40
+		OR = {
+			NOT = {
+				exists = PHI
+			}
+			alliance = { country = PHI country = JAP }
+			puppet = { country = PHI country = JAP }
+			lost_national = { country = PHI value = 75 }
+		}
+		OR = {
+			control = { province = 1353 data = JAP }
+			NOT = {
+				war = { country = JAP country = ENG }
+			}
+		}
+		NOT = {
+			garrison = { country = HOL province = 1632 type = land size = 4 area = yes }
+		}
+	}
+
+	name = "EVT_134209_NAME"
+	desc = "EVT_134209_DESC"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+	picture = "fall_of_dutch_east_india"
+
+	action_a = {
+		name = "EVT_134209_ACTA"
+		command = { type = control which = JAP value = 1632 }
+		command = { type = trigger which = 134210 }
+		command = { type = sleepevent which = 110307 }
+	}
+}
+
+event = {
+	id = 134210
+	random = no
+	country = JAP
+
+	name = "EVT_134210_NAME"
+	style = 0
+
+	action_a = {
+		name = "OK"
+		command = { type = add_corps which = "ëÊ16åR" value = land when = 101059 where = 1632 }
+		command = { type = add_division which = "ëÊ16åRéióﬂïî" value = hq when = 1 where = artillery }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = add_division value = infantry when = 2 where = engineer }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = add_division value = infantry when = 1 where = light_armor_brigade }
+		command = { type = supplies value = 1200 where = 1632 }
+		command = { type = oilpool value = 400 where = 1632 }
+	}
+}
+
+event = {
+	id = 134211
+	random = no
+	country = AST
+
+	trigger = {
+		OR = {
+			control = { province = 1672 data = AST }
+			control = { province = 1682 data = AST }
+		}
+		war = { country = JAP country = AST }
+		war = { country = JAP country = USA }
+		ai = JAP
+		random = 35
+		OR = {
+			NOT = {
+				exists = HOL
+			}
+			NOT = {
+				war = { country = HOL country = JAP }
+			}
+			AND = {
+				war = { country = JAP country = HOL }
+				NOT = {
+					control = { province = 1628 data = HOL }
+					control = { province = 1631 data = HOL }
+				}
+			}
+		}
+	}
+
+	name = "EVT_134211_NAME"
+	desc = "EVT_134211_DESC"
+	style = 0
+	picture = "coralsea_map"
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "EVT_134211_ACTA"
+		command = { type = control which = JAP value = 1672 }
+		command = { type = control which = JAP value = 1682 }
+		command = { type = trigger which = 134212 }
+		command = { type = trigger which = 134213 }
+	}
+}
+
+event = {
+	id = 134212
+	random = no
+	country = ENG
+
+	trigger = {
+		OR = {
+			control = { province = 1685 data = ENG }
+			control = { province = 1684 data = ENG }
+			control = { province = 1622 data = ENG }
+			control = { province = 1614 data = ENG }
+			control = { province = 1683 data = ENG }
+		}
+		war = { country = JAP country = ENG }
+	}
+
+	name = "EVT_134212_NAME"
+	desc = "EVT_134212_DESC"
+	style = 0
+	picture = "coralsea_map"
+
+	action_a = {
+		name = "EVT_134212_ACTA"
+		command = { type = control which = JAP value = 1685 }
+		command = { type = control which = JAP value = 1684 }
+		command = { type = control which = JAP value = 1622 }
+		command = { type = control which = JAP value = 1614 }
+		command = { type = control which = JAP value = 1683 }
+		command = { type = trigger which = 134214 }
+	}
+}
+
+event = {
+	id = 134213
+	random = no
+	country = JAP
+
+	name = "EVT_134213_NAME"
+	style = 0
+
+	action_a = {
+		name = "OK"
+		command = { type = add_corps which = "ëÊ18åR" value = land when = 101001 where = 1672 }
+		command = { type = add_division which = "ëÊ18åRéióﬂïî" value = hq when = 1 where = artillery }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = add_corps which = "ÉjÉÖÅ[ÉMÉjÉAï∫íc" value = land where = 1672 }
+		command = { type = add_division which = "ÉjÉÖÅ[ÉMÉjÉAï∫íc" value = garrison when = 1 }
+		command = { type = add_division which = "ÉâÉGï∫íc" value = garrison when = 1 }
+		command = { type = supplies value = 600 where = 1672 }
+		command = { type = oilpool value = 300 where = 1672 }
+	}
+}
+
+event = {
+	id = 134214
+	random = no
+	country = JAP
+
+	name = "EVT_134214_NAME"
+	style = 0
+
+	action_a = {
+		name = "OK"
+		command = { type = construct which = naval_base where = 1685 value = 1 }
+		command = { type = construct which = air_base where = 1685 value = 2 }
+		command = { type = add_corps which = "ÉKÉ_ÉãÉJÉiÉãï∫íc" value = land where = 1685 }
+		command = { type = add_division which = "ÉKÉ_ÉãÉJÉiÉãï∫íc" value = garrison when = 0 }
+		command = { type = supplies value = 50 where = 1685 }
+	}
+}
+
+event = {
+	id = 134215
+	random = no
+	country = AST
+
+	trigger = {
+		control = { province = 1694 data = AST }
+		control = { province = 1703 data = AST }
+		war = { country = JAP country = AST }
+		ai = JAP
+		random = 35
+		OR = {
+			NOT = {
+				exists = ENG
+			}
+			NOT = {
+				war = { country = JAP country = ENG }
+			}
+			control = { province = 1685 data = JAP }
+		}
+		NOT = {
+			control = { province = 1672 data = AST }
+			control = { province = 1679 data = AST }
+			control = { province = 1680 data = AST }
+		}
+		OR = {
+			NOT = {
+				exists = HOL
+			}
+			NOT = {
+				war = { country = HOL country = JAP }
+			}
+			AND = {
+				war = { country = JAP country = HOL }
+				NOT = {
+					control = { province = 1628 data = HOL }
+					control = { province = 1631 data = HOL }
+					control = { province = 1665 data = HOL }
+					control = { province = 1659 data = HOL }
+				}
+			}
+		}
+	}
+
+	name = "EVT_134215_NAME"
+	desc = "EVT_134215_DESC"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+	picture = "japanese_reinforcments2"
+
+	action_a = {
+		name = "EVT_134215_ACTA"
+		command = { type = control which = JAP value = 1694 }
+		command = { type = control which = JAP value = 1703 }
+		command = { type = trigger which = 134216 }
+	}
+}
+
+event = {
+	id = 134216
+	random = no
+	country = JAP
+
+	name = "EVT_134216_NAME"
+	style = 0
+
+	action_a = {
+		name = "OK"
+		command = { type = add_corps which = "ëÊ9ï˚ñ åR" value = land where = 1694 }
+		command = { type = add_division which = "ëÊ9ï˚ñ åRéióﬂïî" value = hq when = 1 where = artillery }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = supplies value = 1500 where = 1694 }
+		command = { type = oilpool value = 600 where = 1694 }
+		command = { type = add_corps which = "ÉIÅ[ÉXÉgÉäÉAçUó™åR" value = land where = 1703 }
+		command = { type = add_division which = "ÉIÅ[ÉXÉgÉäÉAçUó™åRéióﬂïî" value = hq when = 1 where = artillery }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = supplies value = 1500 where = 1703 }
+		command = { type = oilpool value = 600 where = 1703 }
+	}
+}
+
+#	ì˙ñ{ìåêiÉCÉxÉìÉg(IF)
+
+event = {
+	id = 134230
+	random = no
+	country = USA
+
+	trigger = {
+		control = { province = 662 data = USA }
+		war = { country = USA country = JAP }
+		ai = JAP
+		random = 20
+		OR = {
+			alliance = { country = AST country = JAP }
+			puppet = { country = AST country = JAP }
+			AND = {
+				control = { province = 1665 data = JAP }
+				control = { province = 1672 data = JAP }
+				control = { province = 1679 data = JAP }
+				NOT = {
+					war = { country = JAP country = AST }
+				}
+			}
+			AND = {
+				control = { province = 1703 data = JAP }
+				control = { province = 1728 data = JAP }
+				NOT = {
+					exists = AST
+				}
+			}
+		}
+	}
+
+	name = "EVT_134230_NAME"
+	desc = "EVT_134230_DESC"
+	picture = "japanese_reinforcments2"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "EVT_134230_ACTA"
+		command = { type = control which = JAP value = 1786 }
+		command = { type = control which = JAP value = 662 }
+		command = { type = control which = JAP value = 1766 }
+		command = { type = control which = JAP value = 1624 }
+		command = { type = trigger which = 134231 }
+	}
+}
+
+event = {
+	id = 134231
+	random = no
+	country = JAP
+
+	name = "EVT_134231_NAME"
+	style = 0
+
+	action_a = {
+		name = "OK"
+		command = { type = transport_pool which = JAP value = 30 }
+		command = { type = construct which = coastal_fort where = 662 value = 1 }
+		command = { type = construct which = naval_base where = 662 value = 3 }
+		command = { type = construct which = air_base where = 662 value = 5 }
+		command = { type = add_corps which = "É~ÉbÉhÉEÉFÉCìáï∫íc" value = land where = 662 }
+		command = { type = add_division which = "É~ÉbÉhÉEÉFÉCìáï∫íc" value = garrison when = 1 }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = add_corps which = "É~ÉbÉhÉEÉFÉCìáçUó™åR" value = land where = 662 }
+		command = { type = add_division value = marine when = 2 where = artillery }
+		command = { type = add_division value = marine when = 2 where = artillery }
+		command = { type = add_division value = marine when = 2 where = artillery }
+		command = { type = supplies value = 1000 where = 1786 }
+		command = { type = oilpool value = 1000 where = 1786 }
+		command = { type = add_corps which = "ÉEÉFÅ[ÉNìáï∫íc" value = land where = 1786 }
+		command = { type = add_division which = "ÉEÉFÅ[ÉNìáï∫íc" value = garrison when = 1 }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = add_corps which = "ÉEÉFÅ[ÉNìáçUó™åR" value = land where = 1786 }
+		command = { type = add_division value = marine when = 2 where = artillery }
+		command = { type = add_division value = marine when = 2 where = artillery }
+		command = { type = supplies value = 500 where = 1786 }
+		command = { type = oilpool value = 250 where = 1786 }
+	}
+}
+
+
+event = {
+	id = 134232
+	random = no
+	country = USA
+
+	trigger = {
+		control = { province = 663 data = USA }
+		NOT = {
+			garrison = { country = USA province = 663 type = land size = 4 area = yes }
+		}
+		war = { country = USA country = JAP }
+		ai = JAP
+		random = 30
+		control = { province = 662 data = JAP }
+		OR = {
+			alliance = { country = AST country = JAP }
+			puppet = { country = AST country = JAP }
+			AND = {
+				control = { province = 1665 data = JAP }
+				control = { province = 1672 data = JAP }
+				control = { province = 1679 data = JAP }
+				NOT = {
+					war = { country = JAP country = AST }
+				}
+			}
+			AND = {
+				control = { province = 1703 data = JAP }
+				control = { province = 1728 data = JAP }
+				NOT = {
+					exists = AST
+				}
+			}
+		}
+	}
+
+	name = "EVT_134232_NAME"
+	desc = "EVT_134232_DESC"
+	picture = "japanese_reinforcments2"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "EVT_134232_ACTA"
+		command = { type = control which = JAP value = 663 }
+		command = { type = trigger which = 134231 }
+		command = { type = sleepevent which = 134234 }
+	}
+}
+
+event = {
+	id = 134233
+	random = no
+	country = JAP
+
+	name = "EVT_134233_NAME"
+	style = 0
+
+	action_a = {
+		name = "OK"
+		command = { type = add_corps which = "ÉnÉèÉCçUó™åR" value = land where = 663 }
+		command = { type = add_division value = marine when = 2 where = artillery }
+		command = { type = add_division value = marine when = 2 where = artillery }
+		command = { type = add_division value = marine when = 2 where = artillery }
+		command = { type = add_division value = marine when = 2 where = artillery }
+		command = { type = add_division value = marine when = 2 where = artillery }
+		command = { type = add_division value = marine when = 2 where = artillery }
+		command = { type = add_division value = marine when = 2 where = artillery }
+		command = { type = add_division value = marine when = 2 where = artillery }
+		command = { type = add_division value = marine when = 2 where = artillery }
+		command = { type = add_division value = marine when = 2 where = artillery }
+		command = { type = add_division value = marine when = 2 where = artillery }
+		command = { type = add_division value = marine when = 2 where = artillery }
+		command = { type = supplies value = 2000 where = 663 }
+		command = { type = oilpool value = 1000 where = 663 }
+	}
+}
+
+event = {
+	id = 134234
+	random = no
+	country = USA
+
+	trigger = {
+		control = { province = 661 data = USA }
+		control = { province = 658 data = USA }
+		OR = {
+			NOT = {
+				garrison = { country = USA province = 661 type = land size = 4 area = yes }
+			}
+			NOT = {
+				garrison = { country = USA province = 658 type = land size = 4 area = yes }
+			}
+		}
+		war = { country = USA country = JAP }
+		ai = JAP
+		random = 20
+		control = { province = 662 data = JAP }
+		OR = {
+			alliance = { country = AST country = JAP }
+			puppet = { country = AST country = JAP }
+			AND = {
+				control = { province = 1665 data = JAP }
+				control = { province = 1672 data = JAP }
+				control = { province = 1679 data = JAP }
+				NOT = {
+					war = { country = JAP country = AST }
+				}
+			}
+			AND = {
+				control = { province = 1703 data = JAP }
+				control = { province = 1728 data = JAP }
+				NOT = {
+					exists = AST
+				}
+			}
+		}
+	}
+
+	name = "EVT_134234_NAME"
+	desc = "EVT_134234_DESC"
+	picture = "japanese_reinforcments2"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "EVT_134234_ACTA"
+		command = { type = control which = JAP value = 661 }
+		command = { type = control which = JAP value = 658 }
+		command = { type = trigger which = 134235 }
+		command = { type = sleepevent which = 134232 }
+	}
+}
+
+event = {
+	id = 134235
+	random = no
+	country = JAP
+
+	name = "EVT_134235_NAME"
+	style = 0
+
+	action_a = {
+		name = "OK"
+		command = { type = add_corps which = "ÉnÉèÉCçUó™ñkåR" value = land where = 661 }
+		command = { type = add_division value = marine when = 2 where = artillery }
+		command = { type = add_division value = marine when = 2 where = artillery }
+		command = { type = add_division value = marine when = 2 where = artillery }
+		command = { type = add_division value = marine when = 2 where = artillery }
+		command = { type = add_division value = marine when = 2 where = artillery }
+		command = { type = add_division value = marine when = 2 where = artillery }
+		command = { type = supplies value = 1000 where = 661 }
+		command = { type = oilpool value = 500 where = 661 }
+		command = { type = add_corps which = "ÉnÉèÉCçUó™ìÏåR" value = land where = 658 }
+		command = { type = add_division value = marine when = 2 where = artillery }
+		command = { type = add_division value = marine when = 2 where = artillery }
+		command = { type = add_division value = marine when = 2 where = artillery }
+		command = { type = add_division value = marine when = 2 where = artillery }
+		command = { type = add_division value = marine when = 2 where = artillery }
+		command = { type = add_division value = marine when = 2 where = artillery }
+		command = { type = supplies value = 1000 where = 658 }
+		command = { type = oilpool value = 500 where = 658 }
+	}
+}
+
+event = {
+	id = 134236
+	random = no
+	country = USA
+
+	trigger = {
+		control = { province = 762 data = USA }
+		control = { province = 761 data = USA }
+		control = { province = 765 data = USA }
+		war = { country = USA country = JAP }
+		ai = JAP
+		random = 20
+		control = { province = 661 data = JAP }
+		control = { province = 660 data = JAP }
+		control = { province = 663 data = JAP }
+		control = { province = 659 data = JAP }
+		control = { province = 658 data = JAP }
+	}
+
+	name = "EVT_134236_NAME"
+	desc = "EVT_134236_DESC"
+	picture = "japanese_reinforcments"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 21
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "EVT_134236_ACTA"
+		command = { type = control which = JAP value = 762 }
+		command = { type = control which = JAP value = 761 }
+		command = { type = control which = JAP value = 765 }
+		command = { type = trigger which = 134237 }
+	}
+}
+
+event = {
+	id = 134237
+	random = no
+	country = JAP
+
+	name = "EVT_134237_NAME"
+	style = 0
+
+	action_a = {
+		name = "OK"
+		command = { type = supplies value = 3000 where = 762 }
+		command = { type = oilpool value = 1000 where = 762 }
+
+		command = { type = add_corps which = "ïƒñ{ìyçUó™åR" value = land where = 762 }
+		command = { type = add_division which = "ïƒñ{ìyçUó™åRéióﬂïî" value = hq when = 1 where = artillery }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = add_division value = armor when = 1 }
+		command = { type = add_division value = armor when = 1 }
+		command = { type = add_division value = armor when = 1 }
+		command = { type = add_division value = armor when = 1 }
+
+		command = { type = add_corps value = land where = 761 }
+		command = { type = add_division value = hq when = 1 where = artillery }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = add_division value = armor when = 1 }
+
+		command = { type = add_corps value = land where = 765 }
+		command = { type = add_division value = hq when = 1 where = artillery }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = add_division value = armor when = 1 }
+	}
+}

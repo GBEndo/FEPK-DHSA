@@ -1,0 +1,50 @@
+TAJ;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+524001;Head of State;ディミトリ・ポロトポポフ;36;LE;Die-hard Reformer;High;M524001;x
+524002;Head of Government;ボボザン・ガフロフ;36;LE;Flamboyant Tough Guy;High;M524002;x
+524003;Foreign Minister;ウルンボイ・ウシュロフ;36;LE;General Staffer;High;M524003;x
+524004;Minister of Armament;ミルザ・オグリ・フセイノフ;36;LE;Tank Proponent;Medium;M524004;x
+524005;Minister of Security;グリゴリ・ブロイド;36;LE;Back Stabber;Medium;M524005;x
+524006;Head of Military Intelligence;スレン・スチャドゥンツ;36;LE;Dismal Enigma;Medium;M524006;x
+524007;Chief of Staff;アラ・ガフロフ;36;LE;School of Fire Support;Medium;M524007;x
+524008;Chief of Army;ヴェニアミン・プロトポポフ;36;LE;Decisive Battle Doctrine;Medium;M524008;x
+524009;Chief of Navy;ペンダル・リンデンコ;36;LE;Indirect Approach Doctrine;Medium;M524009;x
+524010;Chief of Air Force;ミハイル・バルスコフ;36;LE;Vertical Envelopment Doctrine;Medium;M524010;x
+524011;Head of State;ガサン・アブドゥライエフ;36;SL;Stern Imperialist;High;M524011;x
+524012;Head of State;ベフラン・セレズネフ;36;PA;Insignificant Layman;High;M524012;x
+524013;Head of Government;シャダン・ラヴレネツ;36;SL;Corporate Suit;High;M524013;x
+524014;Head of Government;イェヴゲニー・マメドフ;36;PA;Backroom Backstabber;High;M524014;x
+524015;Foreign Minister;シリンショ・ショテモル;36;LE;Iron Fisted Brute;High;M524015;x
+524016;Foreign Minister;フェダ・ロンジン;36;SL;Ideological Crusader;High;M524016;x
+524017;Foreign Minister;ガリ・アベレフ;36;SL;Biased Intellectual;High;M524017;x
+524018;Foreign Minister;パガハン・アサノフ;36;PA;Ideological Crusader;High;M524018;x
+524019;Foreign Minister;フレバ・パシュコフ;36;PA;Iron Fisted Brute;High;M524019;x
+524020;Minister of Armament;カムシャド・ゲンキン;36;LE;Resource Industrialist;Medium;M524020;x
+524021;Minister of Armament;アブドゥッロ・ラキムバエフ;36;LE;Military Entrepreneur;Medium;M524021;x
+524022;Minister of Armament;アレクサンドル・バイコフ;36;LE;Theoretical Scientist;Medium;M524022;x
+524023;Minister of Armament;ザンド・コルズ;36;SL;Military Entrepreneur;Medium;M524023;x
+524024;Minister of Armament;ナズ・ギンディス;36;SL;Tank Proponent;Medium;M524024;x
+524025;Minister of Armament;イヴァン・プロシト;36;PA;Air to Ground Proponent;Medium;M524025;x
+524026;Minister of Armament;イリヤ・チェルニャエフ;36;PA;Theoretical Scientist;Medium;M524026;x
+524027;Minister of Security;ママダリ・クルバノフ;36;LE;Compassionate Gentleman;Medium;M524027;x
+524028;Minister of Security;マムトゥン・クルバノフ;36;SL;Silent Lawyer;Medium;M524028;x
+524029;Minister of Security;グリゴリー・バランシン;36;SL;Compassionate Gentleman;Medium;M524029;x
+524030;Minister of Security;アレクサンデル・ベルクマン;36;PA;Prince of Terror;Medium;M524030;x
+524031;Minister of Security;マハスティ・ガフロフ;36;PA;Silent Lawyer;Medium;M524031;x
+524032;Minister of Security;ゲナジ神父;36;PA;Crime Fighter;Medium;M524032;x
+524033;Head of Military Intelligence;ムムトズ・ラセルトフ;36;LE;Logistics Specialist;Medium;M524033;x
+524034;Head of Military Intelligence;シャイアン・バリシュニコフ;36;SL;Dismal Enigma;Medium;M524034;x
+524035;Head of Military Intelligence;イゴール・バリエンコフ;36;SL;Technical Specialist;Medium;M524035;x
+524036;Head of Military Intelligence;ヴァレリー・バルスコフ;36;PA;Technical Specialist;Medium;M524036;x
+524037;Head of Military Intelligence;フェリクス・イリアン;36;PA;Political Specialist;Medium;M524037;x
+524038;Chief of Staff;ニキライ・プロヴォトヴォロフ;36;LE;School of Mass Combat;Medium;M524038;x
+524039;Chief of Staff;ユーリー・ペルミノフ;36;SL;School of Manoeuvre;Medium;M524039;x
+524040;Chief of Staff;ウルンボイ・ウシュロフ;36;PA;School of Psychology;Medium;M524003;x
+524041;Chief of Army;ネールファル・カザチェステヴォ;36;LE;Guns and Butter Doctrine;Medium;M524041;x
+524042;Chief of Army;ニキータ・プロスクリャコフ;36;SL;Armoured Spearhead Doctrine;Medium;M524042;x
+524043;Chief of Army;アラ・ガフロフ;36;PA;Static Defence Doctrine;Medium;M524007;x
+524044;Chief of Navy;シアマク・シナイスキ;36;SL;Open Seas Doctrine;Medium;M524044;x
+524045;Chief of Navy;ウルンボイ・ウシュロフ;36;PA;Decisive Naval Battle Doctrine;Medium;M524003;x
+524046;Chief of Air Force;ペンダル・リンデンコ;36;SL;Army Aviation Doctrine;Medium;M524009;x
+524047;Chief of Air Force;ヴァルター・スーレン;36;PA;Carpet Bombing Doctrine;Medium;M524047;x
+524048;Head of State;ヨーゼフ・ベルヒトルト;36;NS;Reichskommissar;Medium;M524048;x

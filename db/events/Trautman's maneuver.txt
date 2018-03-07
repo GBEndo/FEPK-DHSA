@@ -1,0 +1,843 @@
+#########################################################################
+#
+#		日本・極東追加イベント（トラウトマン工作）
+#
+#########################################################################
+###### 追加イベント一覧 ############
+#########################################################################
+#id = 55702#  盧溝橋事件からの孫イベント
+#id = 55703#  トラウトマン対応版中華民国山西軍閥併合イベント
+#id = 55705#  第二次上海事変（中国側
+#id = 55706#  第二次上海事変（日本側
+#######################################################トラウトマン工作イベント
+#id = 55710#  トラウトマン工作(南京前トリガ  中国側発生
+#id = 55711#  トラウトマン工作(南京前の連鎖  日本側
+#id = 55712#  トラウトマン工作(南京前の連鎖  中国側処理
+#id = 55713#  トラウトマン工作(南京後トリガ  中国側発生
+#id = 55714#  トラウトマン工作(南京後の連鎖  日本側
+#id = 55715#  トラウトマン工作(南京後の連鎖  中国側処理
+#id = 55716#  トラウトマン工作(戦後処理１
+#id = 55717#  トラウトマン工作(戦後処理２
+#id = 55718#  共産党の同盟離脱
+###############################################################国民党の統一戦争
+#id = 55740#  中共殲滅をトリガにした日中分離､ 国民党の統一戦争トリガイベント	#CSX山西  CGX広西  CXB西北  CYN雲南
+#id = 55741#  軍閥の同盟離脱
+#id = 55742#  軍閥の同盟離脱
+#id = 55743#  軍閥の同盟離脱
+#id = 55744#  軍閥の同盟離脱
+###############################################################対中作戦イベント
+#id = 55780#  徐州会戦('38/4-5
+#id = 55781#  援蒋ルートの遮断
+#id = 55782#  インフラの回復
+##############################################################################
+#  盧溝橋事件からの孫イベント
+##############################################################################
+event = {
+	id = 55702
+	random = no
+	country = JAP
+	trigger = {
+		ai = yes
+	}
+
+	name = ai_event
+	desc = ai_event
+
+	action_a = {
+		name = "ACT55702A"
+		command = { type = add_corps value = land where = 1237 }
+		command = { type = add_division value = infantry when = 0  }
+	}
+}
+
+##############################################################################
+#  aiの山西軍閥併合イベントのトラウトマン盧溝橋対応Ver
+##############################################################################
+event = {
+	id = 55703
+	random = no
+	country = CHI
+	
+	trigger = {
+		ai = yes
+		ai = CSX
+		war = { country = CSX country = JAP }
+		lost_national = { country = CSX value = 65 }
+	}
+
+	name = ai_event
+	desc = ai_event
+
+	date = { day = 1 month = march year = 1937 }
+        offset = 3
+	deathdate = { day = 29 month = december year = 1938 }
+
+	action_a = {
+		name = "OK"
+		#command = { type = war	which = JAP }
+		command = { type = ai_prepare_war which = JAP }
+		command = { type = inherit which = CSX }
+		#CSX指揮官
+		command = { type = wakeleader which = 50085 }
+		command = { type = wakeleader which = 50174 }
+		command = { type = wakeleader which = 50300 }
+		command = { type = wakeleader which = 50314 }
+		command = { type = wakeleader which = 50348 }
+		#CSX閣僚
+		command = { type = wakeminister which = 52114 }
+		command = { type = wakeminister which = 52211 }
+		command = { type = wakeminister which = 52212 }
+		command = { type = wakeminister which = 52213 }
+		command = { type = wakeminister which = 52214 }
+		command = { type = wakeminister which = 52215 }
+		command = { type = wakeminister which = 52216 }
+		command = { type = wakeminister which = 52217 }
+		command = { type = wakeminister which = 52218 }
+		command = { type = wakeminister which = 52220 }
+	}
+}
+##############################################################################
+#  上海租界攻撃計画
+##############################################################################
+event = { 
+	id = 55705
+	random = no
+	country = CHI
+	
+	name = "EVT_55705_NAME"
+	desc = "EVT_55705_DESC"
+	style = 0
+	picture = "military_parade"
+
+	trigger = {
+		control = { province = 1235 data = CHI }
+		OR = {
+			event = 21
+			event = 59906
+		}
+		OR = {
+			event = 55703
+			lost_national = { country = CSX value = 65 }
+			NOT = { exists = CSX }
+			war = { country = CHI country = JAP }
+		}
+	}
+	date = { day = 1 month = march year = 1937 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1938 }
+
+	action_a = { # 
+		name = "EVT_55705_ACTA"
+		command = { type = war	which = JAP }
+		command = { type = trigger	which = 55706 }
+		#command = { type = ai_prepare_war	which = JAP } #諸軍閥と同盟・上海近辺に軍配備・開戦は後にするか？1237上海
+	}
+}
+event = { #FEPK変更部分 # 1.06
+	id = 55706
+	random = no
+	country = JAP
+	
+	name = "EVT_55706_NAME"
+	desc = "EVT_55706_DESC"
+	style = 0
+	picture = "japanese_reinforcments"
+
+	action_a = { # 
+		name = "EVT_55706_ACTA"
+		ai_chance = 98
+		command = { type = sleepleader which = 101066 } # Ishiwara
+		command = { type = sleepteam which = 1930 }     # Ishiwara
+		command = { type = sleepminister which = 5525 } # Ishiwara
+		command = { type = sleepminister which = 5533 } # Ishiwara
+		command = { type = sleepminister which = 5576 } # FEPK追加部分 #1.05 #石原莞爾(HoG)
+		command = { type = dissent	value = -1 }
+
+	}
+	action_b = { # 
+		name = "EVT_55706_ACTB"
+		ai_chance = 2
+		command = { type = dissent	value = 10 }
+	}
+	action_c = { # 
+		name = "EVT_55706_ACTC"
+		ai_chance = 0
+		command = { type = secedeprovince which = CHI value = 1237 }
+		command = { type = dissent	value = 5 }
+	}
+}
+#######################################################トラウトマン工作イベント
+###############################################################################
+#  トラウトマン工作(南京前トリガ  中国側発生＞日本側＞中国側処理
+###############################################################################
+event = { 
+	id = 55710
+	random = no
+	country = CHI
+	
+	name = "EVT_55710_NAME"
+	desc = "EVT_55710_DESC"
+	style = 0
+	picture = "japanese_officers"
+
+	trigger = {
+		war = { country = CHI country = JAP }
+		control = { province = 1235 data = CHI }
+		control = { province = 1236 data = JAP }
+		control = { province = 1237 data = JAP }
+		control = { province = 1238 data = JAP }
+		random = 20
+	}
+
+
+	date = { day = 0 month = january year = 1935 } # Real Date:
+	offset = 14
+	deathdate = { day = 29 month = august year = 1938 }
+	action_a = { # 
+		name = "EVT_55710_ACTB"
+		ai_chance = 90 #75 #FEPKBETA4
+		command = { type = sleepevent	which = 55711 }
+	}
+	action_b = { # 
+		name = "EVT_55710_ACTA"
+		ai_chance = 10 #25 #FEPKBETA4
+		command = { type = trigger	which = 55711 }
+	}
+}
+event = { 
+	id = 55711
+	random = no
+	country = JAP
+	
+	name = "EVT_55711_NAME"
+	desc = "EVT_55711_DESC"
+	style = 0
+	picture = "japan_celebrating"
+
+	action_a = { # 
+		name = "EVT_55711_ACTA"
+		# 山西軍閥地域を日本領へ､ 上海租借､ 日華同盟､ 対中共攻撃
+		ai_chance = 80
+		command = { type = peace which = CHI value = 0 }
+		command = { type = access	which = CHI }
+		command = { type = inherit which = CSX }
+		command = { type = trigger	which = 55712 }
+	}
+	action_b = { # 
+		name = "EVT_55711_ACTB"
+		ai_chance = 20
+		command = { type = dissent	value = 5 }
+		command = { type = sleepevent	which = 55712 }
+	}
+}
+event = { 
+	id = 55712
+	random = no
+	country = CHI
+
+	name = "EVT_55711_NAME"
+	desc = "EVT_55711_DESC"
+	style = 0
+	picture = "japanese_reinforcments"
+
+	#trigger by 55711
+
+	action_a = { # 
+		name = "EVT_55712_ACTA"
+		#山西軍閥地域を日本領へ､ 上海租借､ 日華同盟､ 対中共攻撃
+		command = { type = trigger	which = 55718 }
+		command = { type = ai_prepare_war which = CHC }
+		command = { type = access which = JAP }
+		command = { type = end_access which = CHC }
+		command = { type = secedeprovince which = MEN value = 1206 }
+		command = { type = secedeprovince which = MEN value = 1207 }
+		command = { type = secedeprovince which = MEN value = 1208 }
+		command = { type = secedeprovince which = MEN value = 1209 }
+		command = { type = secedeprovince which = JAP value = 1204 } #1204 1205 1206 1210 1211 1212#Part of Hebei
+		command = { type = secedeprovince which = JAP value = 1205 } #1213 1216 # Shandong
+		command = { type = secedeprovince which = JAP value = 1206 }
+		command = { type = secedeprovince which = JAP value = 1207 }
+		command = { type = secedeprovince which = JAP value = 1208 }
+		command = { type = secedeprovince which = JAP value = 1209 }
+		command = { type = secedeprovince which = JAP value = 1210 } #1209 1225 1226 # Shanxi
+		command = { type = secedeprovince which = JAP value = 1211 } #1207 1208 1272 # Suiyuan
+		command = { type = secedeprovince which = JAP value = 1212 }
+		command = { type = secedeprovince which = JAP value = 1213 }
+		command = { type = secedeprovince which = JAP value = 1214 } #煙台	#旧ドイツ租借州
+		command = { type = secedeprovince which = JAP value = 1215 } #青島
+		command = { type = secedeprovince which = JAP value = 1216 } #済南
+		command = { type = secedeprovince which = JAP value = 1224 }
+		command = { type = secedeprovince which = JAP value = 1225 }
+		command = { type = secedeprovince which = JAP value = 1226 }
+		command = { type = secedeprovince which = JAP value = 1237 } #上海
+		
+		command = { type = removecore which = 1323 }
+		command = { type = removecore which = 1324 }
+		command = { type = removecore which = 1322 }
+		
+		command = { type = removecore which = 1204 }
+		command = { type = removecore which = 1205 }
+		command = { type = removecore which = 1206 }
+		command = { type = removecore which = 1207 }
+		command = { type = removecore which = 1208 }
+		command = { type = removecore which = 1209 }
+		command = { type = removecore which = 1210 }
+		command = { type = removecore which = 1211 }
+		command = { type = removecore which = 1212 }
+		command = { type = removecore which = 1213 }
+		command = { type = removecore which = 1214 }
+		command = { type = removecore which = 1215 }
+		command = { type = removecore which = 1216 }
+		
+		command = { type = removecore which = 1224 }
+		command = { type = removecore which = 1225 }
+		command = { type = removecore which = 1226 }
+		command = { type = removecore which = 1202 }
+		command = { type = removecore which = 1374 }
+		command = { type = removecore which = 1375 }
+		command = { type = removecore which = 1376 }
+		command = { type = removecore which = 1378 }
+		command = { type = removecore which = 1377 }
+		command = { type = removecore which = 1379 }
+		command = { type = removecore which = 1380 }
+		command = { type = removecore which = 1381 }
+		command = { type = removecore which = 1382 }
+		command = { type = removecore which = 1387 }
+		command = { type = removecore which = 1388 }
+		command = { type = removecore which = 1389 }
+		command = { type = removecore which = 1390 }
+		command = { type = removecore which = 1394 }
+		command = { type = removecore which = 1395 }
+		command = { type = removecore which = 1396 }
+		command = { type = removecore which = 1530 }
+		command = { type = removecore which = 1396 }
+		command = { type = removecore which = 1386 }
+		command = { type = removecore which = 1397 }
+		command = { type = removecore which = 1272 }
+		command = { type = removecore which = 1203 }
+		command = { type = removecore which = 1398 }
+		
+		command = { type = dissent	value = 5 }
+		command = { type = alliance which = JAP }
+		command = { type = sleepevent	which = 55210 }
+		command = { type = sleepevent	which = 55212 }
+	}
+}
+###############################################################################
+#  トラウトマン工作(南京後トリガ  中国側発生＞日本側＞中国側処理
+###############################################################################
+event = { 
+	id = 55713
+	random = no
+	country = CHI
+	
+	name = "EVT_55710_NAME"
+	desc = "EVT_55710_DESC"
+	style = 0
+	picture = "japanese_officers"
+
+	trigger = {
+		war = { country = CHI country = JAP }
+		control = { province = 1235 data = JAP }
+		random = 95
+	}
+
+	date = { day = 0 month = january year = 1935 } # Real Date:
+	offset = 14
+	deathdate = { day = 29 month = august year = 1938 }
+
+	action_a = { # 
+		name = "EVT_55713_ACTA"
+		ai_chance = 98
+		command = { type = sleepevent	which = 55711 }
+		command = { type = sleepevent	which = 55714 }
+	}
+	action_b = { # 
+		name = "EVT_55713_ACTB"
+		ai_chance = 2
+		command = { type = sleepevent	which = 55710 }
+		command = { type = trigger	which = 55714 }
+#		command = { type = inherit which = CSX }
+		command = { type = dissent	value = 5 }
+	}
+}
+event = { 
+	id = 55714
+	random = no
+	country = JAP
+	
+	name = "EVT_55714_NAME"
+	desc = "EVT_55714_DESC"
+	style = 0
+	picture = "japan_celebrating"
+
+	action_a = { # 
+		name = "EVT_55714_ACTA"
+		ai_chance = 99
+		command = { type = inherit which = CSX }
+		command = { type = peace which = CHI value = 0 }
+		command = { type = access	which = CHI }
+		command = { type = trigger	which = 55715 }
+	}
+	action_b = { # 
+		name = "EVT_55714_ACTB"
+		ai_chance = 1
+		command = { type = dissent	value = 10 }
+		command = { type = sleepevent	which = 55715 }
+	}
+}
+event = { 
+	id = 55715
+	random = no
+	country = CHI
+
+	name = "EVT_55714_NAME"
+	desc = "EVT_55714_DESC"
+	style = 0
+	picture = "japanese_reinforcments"
+
+	#triger by 55714
+
+	action_a = { # 
+		name = "EVT_55715_ACTA"
+		#山西軍閥地域を日本領へ､ 上海租借､ 日華同盟､ 対中共攻撃
+		command = { type = headofgovernment which = 52114 }	#汪兆銘
+		command = { type = chiefofstaff which = 52217 }	#閻錫山（CoS）
+		command = { type = trigger	which = 55718 }
+		command = { type = ai_prepare_war	which = CHC }
+		command = { type = access	which = JAP }
+		command = { type = end_access which = CHC }
+
+		command = { type = secedeprovince	which =   MEN value = 1206 }
+		command = { type = secedeprovince	which =   MEN value = 1207 }
+		command = { type = secedeprovince	which =   MEN value = 1208 }
+		command = { type = secedeprovince	which =   MEN value = 1209 }
+		command = { type = secedeprovince	which =   JAP value = 1206 }
+		command = { type = secedeprovince	which =   JAP value = 1207 }
+		command = { type = secedeprovince	which =   JAP value = 1208 }
+		command = { type = secedeprovince	which =   JAP value = 1209 }
+
+		command = { type = secedeprovince	which =   JAP value = 1214 } #煙台	#旧ドイツ租借州
+		command = { type = secedeprovince	which =   JAP value = 1215 } #青島
+
+		command = { type = secedeprovince	which =   JAP value = 1204 } #1204 1205 1206 1210 1211 1212 # Part of Hebei
+		command = { type = secedeprovince	which =   JAP value = 1205 } #1213 1216 # Shandong
+		command = { type = secedeprovince	which =   JAP value = 1210 } #1209 1225 1226 # Shanxi
+		command = { type = secedeprovince	which =   JAP value = 1211 } #1207 1208 1272 # Suiyuan
+		command = { type = secedeprovince	which =   JAP value = 1212 }
+		command = { type = secedeprovince	which =   JAP value = 1213 }
+		command = { type = secedeprovince	which =   JAP value = 1216 }	#済南
+		command = { type = secedeprovince	which =   JAP value = 1224 }
+		command = { type = secedeprovince	which =   JAP value = 1225 }
+		command = { type = secedeprovince	which =   JAP value = 1226 }
+
+		command = { type = secedeprovince	which =   JAP value = 1217 }	#↓汪兆銘のU87のMinimumCore州
+		command = { type = secedeprovince	which =   JAP value = 1218 }
+		command = { type = secedeprovince	which =   JAP value = 1219 }
+		command = { type = secedeprovince	which =   JAP value = 1220 }
+		command = { type = secedeprovince	which =   JAP value = 1235 }
+		command = { type = secedeprovince	which =   JAP value = 1236 }	#↑
+		command = { type = secedeprovince	which =   JAP value = 1237 }	#上海
+		command = { type = secedeprovince	which =   JAP value = 1238 }
+		command = { type = removecore which = 1323 }
+		command = { type = removecore which = 1324 }
+		command = { type = removecore which = 1322 }
+		command = { type = removecore which = 1206 }
+		command = { type = removecore which = 1207 }
+		command = { type = removecore which = 1208 }
+		command = { type = removecore which = 1209 }
+		command = { type = removecore which = 1214 }
+		command = { type = removecore which = 1215 }
+		command = { type = removecore which = 1204 }
+		command = { type = removecore which = 1205 }
+		command = { type = removecore which = 1210 }
+		command = { type = removecore which = 1211 }
+		command = { type = removecore which = 1212 }
+		command = { type = removecore which = 1213 }
+		command = { type = removecore which = 1224 }
+		command = { type = removecore which = 1225 }
+		command = { type = removecore which = 1226 }
+		command = { type = removecore which = 1220 }
+		command = { type = removecore which = 1217 }
+		command = { type = removecore which = 1218 }
+		command = { type = removecore which = 1235 }
+		command = { type = removecore which = 1236 }
+		command = { type = removecore which = 1237 }
+		command = { type = removecore which = 1238 }
+		command = { type = removecore which = 1202 }
+		command = { type = removecore which = 1374 }
+		command = { type = removecore which = 1375 }
+		command = { type = removecore which = 1376 }
+		command = { type = removecore which = 1378 }
+		command = { type = removecore which = 1377 }
+		command = { type = removecore which = 1379 }
+		command = { type = removecore which = 1380 }
+		command = { type = removecore which = 1381 }
+		command = { type = removecore which = 1382 }
+		command = { type = removecore which = 1387 }
+		command = { type = removecore which = 1388 }
+		command = { type = removecore which = 1389 }
+		command = { type = removecore which = 1390 }
+		command = { type = removecore which = 1394 }
+		command = { type = removecore which = 1395 }
+		command = { type = removecore which = 1396 }
+		command = { type = removecore which = 1530 }
+		command = { type = removecore which = 1396 }
+		command = { type = removecore which = 1386 }
+		command = { type = removecore which = 1397 }
+		command = { type = removecore which = 1219 }
+		command = { type = removecore which = 1216 }
+		command = { type = removecore which = 1272 }
+		command = { type = removecore which = 1203 }
+		command = { type = removecore which = 1398 }
+		command = { type = dissent	value = 10 }
+		command = { type = sleepevent	which = 55210 }
+		command = { type = sleepevent	which = 55212 }#ここはこのままでいいのかな？
+	}
+}
+###############################################################################
+#  トラウトマン工作(戦後処理
+###############################################################################
+event = { 
+	id = 55716
+	random = no
+	country = JAP
+
+	name = "EVT_55716_NAME"
+	desc = "EVT_55716_DESC"
+	style = 0
+	picture = "japanese_reinforcments"
+
+	trigger = {
+		OR = {
+			event = 55712
+			event = 55715
+		}
+	}
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = { # 
+		name = "EVT_55716_ACTA"
+		command = { type = alliance	which = CHI }
+		command = { type = access	which = CHI }
+		command = { type = non_aggression which = JAP where = CHI }
+		command = { type = non_aggression which = JAP where = CSX }
+		command = { type = non_aggression which = JAP where = CGX }
+		command = { type = non_aggression which = JAP where = CXB }
+		command = { type = non_aggression which = JAP where = CYN }
+		command = { type = war	which = CHC }
+		command = { type = secedeprovince	which = MEN value = 1398 }
+		command = { type = trigger	which = 55717 }
+
+	}
+}
+event = { 
+	id = 55717
+	random = no
+	country = CHI
+
+	name = "EVT_55716_NAME"
+	desc = "EVT_55716_DESC"
+	style = 0
+	picture = "japanese_reinforcments"
+
+	#trigger by 55716
+
+	action_a = { # 
+		name = "EVT_55716_ACTA"
+		command = { type = dissent	value = 15 }
+		command = { type = end_access which = CHC }
+		command = { type = end_non_aggression which = CHC where = CHI }
+		command = { type = non_aggression which = CHI where = CSX }
+		command = { type = non_aggression which = CHI where = CGX }
+		command = { type = non_aggression which = CHI where = CXB }
+		command = { type = non_aggression which = CHI where = CYN }
+		command = { type = ai which = "switch/chi_puppet.ai" }
+		command = { type = damage_division which = -1 where = -80 }
+		command = { type = damage_division which = -1 where = -80 }
+		command = { type = damage_division which = -1 where = -80 }
+		command = { type = damage_division which = -1 where = -80 }
+		command = { type = damage_division which = -1 where = -80 }
+		command = { type = damage_division which = -1 where = -80 }
+		command = { type = damage_division which = -1 where = -80 }
+		command = { type = damage_division which = -1 where = -80 }
+		command = { type = damage_division which = -1 where = -80 }
+		command = { type = damage_division which = -1 where = -80 }
+		command = { type = damage_division which = -1 where = -80 }
+		command = { type = damage_division which = -1 where = -80 }
+		command = { type = damage_division which = -1 where = -80 }
+		command = { type = damage_division which = -1 where = -80 }
+		command = { type = damage_division which = -1 where = -80 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		command = { type = delete_unit which = -1 }
+		#AI転換イベントはさむか？
+	}
+}
+event = { 
+	id = 55718
+	random = no
+	country = CHC
+
+	name = "EVT_55716_NAME"
+	desc = "EVT_55716_DESC"
+	style = 0
+	picture = "japanese_reinforcments"
+	style = 0
+
+	#trigger by 55712/15
+
+	action_a = { # 
+		name = "EVT_55718_ACTA"	#なんてことだ！
+		command = { type = leave_alliance }
+		command = { type = end_access which = CHI }
+		command = { type = end_non_aggression which = CHC where = CHI }
+	}
+}
+
+
+###############################################################################
+#  中共殲滅をトリガにした日中分離､ 国民党の統一戦争トリガイベント
+###############################################################################
+
+event = { 
+	id = 55740
+	random = no
+	country = CHI
+
+	name = "EVT55740N"
+	desc = "EVT55740D"
+	style = 0
+	picture = "japanese_reinforcments"
+
+	trigger = {
+		event = 55716
+		NOT = { exists = CHC }
+		alliance = { country = JAP country = CHI }
+		NOT = { puppet = { country = CHI country = JAP } }
+		OR = {
+			exists = CSX
+			exists = CGX
+			exists = CXB
+			exists = CYN
+		}
+	}
+	date = { day = 0 month = january year = 1935 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = { # 
+		name = "EVT_55716_ACTA"
+		command = { type = leave_alliance }
+		command = { type = end_mastery which = CSX } #FEPKBETA4
+		command = { type = end_mastery which = CGX }
+		command = { type = end_mastery which = CXB }
+		command = { type = end_mastery which = CYN }
+		command = { type = end_access which = CSX }
+		command = { type = end_access which = CGX }
+		command = { type = end_access which = CXB }
+		command = { type = end_access which = CYN }
+		command = { type = end_non_aggression which = CHI where = CSX }
+		command = { type = end_non_aggression which = CHI where = CGX }
+		command = { type = end_non_aggression which = CHI where = CXB }
+		command = { type = end_non_aggression which = CHI where = CYN }
+		command = { type = ai which = "switch/chi_war_warlords.ai" }
+		command = { type = ai_prepare_war which = CSX }
+		command = { type = ai_prepare_war which = CGX }
+		command = { type = ai_prepare_war which = CXB }
+		command = { type = ai_prepare_war which = CYN }
+		command = { type = trigger which = 55741 }
+		command = { type = trigger which = 55742 }
+		command = { type = trigger which = 55743 }
+		command = { type = trigger which = 55744 }
+	}
+}
+event = { 
+	id = 55741
+	random = no
+	country = CSX
+
+	name = "EVT55740N"
+	desc = "EVT55740D"
+	style = 0
+
+	#trigger by 55740
+
+	action_a = { # 
+		name = "OK"
+		command = { type = end_puppet } #FEPKBETA4
+		command = { type = leave_alliance }
+		command = { type = end_access which = CHI }
+		command = { type = ai_prepare_war which = CHI }
+	}
+}
+event = { 
+	id = 55742
+	random = no
+	country = CGX
+
+	name = "EVT55740N"
+	desc = "EVT55740D"
+	style = 0
+
+	#trigger by 55740
+
+	action_a = { # 
+		name = "OK"
+		command = { type = end_puppet } #FEPKBETA4
+		command = { type = leave_alliance }
+		command = { type = end_access which = CHI }
+		command = { type = ai_prepare_war which = CHI }
+	}
+}
+event = { 
+	id = 55743
+	random = no
+	country = CXB
+
+	name = "EVT55740N"
+	desc = "EVT55740D"
+	style = 0
+
+	#trigger by 55740
+
+	action_a = { # 
+		name = "OK"
+		command = { type = end_puppet } #FEPKBETA4
+		command = { type = leave_alliance }
+		command = { type = end_access which = CHI }
+		command = { type = ai_prepare_war which = CHI }
+	}
+}
+event = { 
+	id = 55744
+	random = no
+	country = CYN
+
+	name = "EVT55740N"
+	desc = "EVT55740D"
+	style = 0
+
+	#trigger by 55740
+
+	action_a = { # 
+		name = "OK"
+		command = { type = end_puppet } #FEPKBETA4
+		command = { type = leave_alliance }
+		command = { type = end_access which = CHI }
+		command = { type = ai_prepare_war which = CHI }
+	}
+}
+###############################################################対中作戦イベント
+###############################################################################
+#  徐州会戦
+###############################################################################
+event = { 
+	id = 55780#暫定
+	random = no
+	country = JAP
+	
+	name = "EVT55780N"
+	desc = "EVT55780D"
+	style = 0
+	picture = "japanese_reinforcments"
+
+	trigger = {
+		ai = no
+		war = { country = CHI country = JAP }
+		control = { province = 1218 data = JAP }#日本軍が徐州を陥落
+	}
+
+	date = { day = 0 month = january year = 1935 } # Real Date: 1938/4
+	offset = 14
+	deathdate = { day = 29 month = december year = 1963 }
+	action_a = { # 
+		name = "ACT55780A"
+		command = { type = dissent	value = -1 }
+		command = { type = construct which = infrastructure where = 1216 value = -10 }#済南
+		command = { type = construct which = infrastructure where = 1217 value = -10 }#連雲港
+		command = { type = construct which = infrastructure where = 1218 value = -20 }#徐州
+		command = { type = construct which = infrastructure where = 1219 value = -10 }#南通
+		command = { type = construct which = infrastructure where = 1220 value = -10 }#揚州
+		command = { type = construct which = infrastructure where = 1221 value = -10 }#合肥
+		command = { type = construct which = infrastructure where = 1222 value = -10 }#Ｘ陽
+		command = { type = construct which = infrastructure where = 1223 value = -10 }#開封
+	}
+}
+event = { 
+	id = 55781#暫定
+	random = no
+	country = JAP
+	
+	name = "EVT55781N"
+	desc = "EVT55781D"
+	style = 0
+	picture = "japanese_reinforcments"
+
+	trigger = {
+		war = { country = CHI country = JAP }
+		control = { province = 1325 data = JAP }#日本軍が欽州を陥落
+		control = { province = 1319 data = JAP }#日本軍が南寧を陥落
+		control = { province = 1309 data = JAP }#日本軍がBoseを陥落
+		control = { province = 1306 data = FRA }#仏印がフランス領
+		control = { province = 1326 data = FRA }#仏印がフランス領
+	}
+
+	date = { day = 0 month = january year = 1935 } # Real Date: 1939/2
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+	action_a = { # 
+		name = "ACT55781A"
+		command = { type = dissent	value = -2 }
+		command = { type = energypool			value = 1500	where = 1325 }
+		command = { type = metalpool			value = 1000	where = 1325 }
+		command = { type = rarematerialspool	value = 500		where = 1325 }
+		command = { type = oilpool				value = 1000	where = 1325 }
+		command = { type = supplies				value = 1000	where = 1325 }
+		#援蒋物資を押さえるので資源を＋
+	}
+}
+###############################################################################
+#  インフラの回復
+###############################################################################
+event = { 
+	id = 55782#暫定
+	random = no
+	country = JAP
+	
+	name = "EVT55782N"
+	desc = "EVT55782D"
+	style = 0
+	picture = "japanese_reinforcments"
+
+	trigger = {
+		event = 55780
+		event = 55104
+		war = { country = CHI country = JAP }
+		OR = {
+			control = { province = 1218 data = U87 }
+			control = { province = 1218 data = JAP }
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 } # Real Date: 1938/4
+	offset = 14
+	deathdate = { day = 29 month = december year = 1963 }
+	action_a = { # 
+		name = "ACT55782A"
+		command = { type = dissent	value = -1 }
+		command = { type = construct which = infrastructure where = 1216 value = 10 }#済南
+		command = { type = construct which = infrastructure where = 1217 value = 10 }#連雲港
+		command = { type = construct which = infrastructure where = 1218 value = 20 }#徐州
+		command = { type = construct which = infrastructure where = 1219 value = 10 }#南通
+		command = { type = construct which = infrastructure where = 1220 value = 10 }#揚州
+		command = { type = construct which = infrastructure where = 1221 value = 10 }#合肥
+		command = { type = construct which = infrastructure where = 1222 value = 10 }#Ｘ陽
+		command = { type = construct which = infrastructure where = 1223 value = 10 }#開封
+	}
+}
+

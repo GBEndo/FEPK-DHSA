@@ -1,0 +1,53 @@
+
+max_front_ratios = {
+	SOV = 4.0 
+	GER = -1
+	UKR = -1
+	BLR = -1
+	SCA = -1
+	FIN= -1
+	SIB = -1
+	U16 = -1
+}
+###################################
+# Diplomacy
+###################################
+demand_claims = {
+	SOV
+}
+
+target = { 
+		1548 = 200
+		1572 = 200
+		1574 = 100
+		1575 = 100
+		1576 = 100
+		1427 = 50
+} 
+trade = {
+	cancel_deal_threshold = 2
+
+	energy 		= -1
+	rare_materials 	= -1
+	metal 		= -1
+	oil 		= -1
+	supplies 	= -1
+	money 		= -1
+
+	favored = {
+		GER = 200
+		SWE = 20
+		ITA = 50
+		SPR = 40
+		BUL = 40
+		YUG = 40
+		TUR = 50
+		JAP = 40
+		ENG = 50
+		FRA = 50
+		POL = 50
+		ROM = 50
+	}
+	embargo = { SOV }
+}
+

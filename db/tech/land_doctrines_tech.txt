@@ -1,0 +1,2437 @@
+technology =
+{ id          = 6
+  category    = land_doctrines
+  name        = TECH_LD_NAME # Localized name
+  desc        = TECH_LD_DESC # Localized description
+  # 火力重視ドクトリン
+  application =
+  { id        = 6010
+    name      = TECH_APP_LD_1_NAME
+    desc      = TECH_APP_LD_1_DESC
+    position  = { x = 112 y = 10 }
+    year      = 1933
+    # 戦術単位：大隊
+    component = { id = 6011 name = TECH_CMP_LD_1_1_NAME type = infantry_focus difficulty = 10 }
+    # 射撃訓練
+    component = { id = 6012 name = TECH_CMP_LD_1_2_NAME type = training difficulty = 10 }
+    # 射界交差射撃
+    component = { id = 6013 name = TECH_CMP_LD_1_3_NAME type = training difficulty = 10 }
+    # 反復訓練と精神鍛錬
+    component = { id = 6014 name = TECH_CMP_LD_1_4_NAME type = training difficulty = 10 }
+    # 連隊固有火力支援部隊
+    component = { id = 6015 name = TECH_CMP_LD_1_5_NAME type = training difficulty = 10 }
+    required  = { }
+    effects =
+    { command = { type = max_organization which = land value = 10 }
+      command = { type = counterattack value = 2 }
+      command = { type = deactivate which = 6210 }
+      command = { type = activate_unit_type which = hq }
+      command = { type = new_model which = hq value = 0 }
+    }
+  }
+  # 火力優越ドクトリン
+  application =
+  { id        = 6020
+    name      = TECH_APP_LD_2_NAME
+    desc      = TECH_APP_LD_2_DESC
+    position  = { x = 10 y = 60 }
+    year      = 1936
+    # 大規模火力支援
+    component = { id = 6021 name = TECH_CMP_LD_2_1_NAME type = infantry_focus difficulty = 10 }
+    # 援護射撃下の前進
+    component = { id = 6022 name = TECH_CMP_LD_2_2_NAME type = small_unit_tactics difficulty = 10 }
+    # 戦術単位：中隊
+    component = { id = 6023 name = TECH_CMP_LD_2_3_NAME type = centralized_execution difficulty = 10 }
+    # 間接的火力支援重視
+    component = { id = 6024 name = TECH_CMP_LD_2_4_NAME type = technical_efficiency difficulty = 10 }
+    # ウェストポイント式将校訓練
+    component = { id = 6025 name = TECH_CMP_LD_2_5_NAME type = training difficulty = 10 }
+    required  = { 6010 }
+    effects =
+    { command = { type = max_organization which = land value = 10 }
+      command = { type = assault value = 2 }
+      command = { type = deactivate which = 6030 }
+      command = { type = hq_supply_eff value = 1 }
+    }
+  }
+  # 大規模戦闘計画ドクトリン
+  application =
+  { id        = 6030
+    name      = TECH_APP_LD_3_NAME
+    desc      = TECH_APP_LD_3_DESC
+    position  = { x = 215 y = 60 }
+    year      = 1936
+    # 大規模火力支援
+    component = { id = 6031 name = TECH_CMP_LD_3_1_NAME type = infantry_focus difficulty = 9 }
+    # 援護射撃下の前進
+    component = { id = 6032 name = TECH_CMP_LD_3_2_NAME type = large_unit_tactics difficulty = 9 }
+    # 参謀による計画立案
+    component = { id = 6033 name = TECH_CMP_LD_3_3_NAME type = centralized_execution difficulty = 9 }
+    # 攻勢思考
+    component = { id = 6034 name = TECH_CMP_LD_3_4_NAME type = individual_courage difficulty = 9 }
+    # サンドハースト式将校訓練
+    component = { id = 6035 name = TECH_CMP_LD_3_5_NAME type = training difficulty = 9 }
+    required  = { 6010 }
+    effects =
+    { command = { type = delay value = 2 }
+      command = { type = max_organization which = land value = 10 }
+      command = { type = assault value = 1 }
+      command = { type = deactivate which = 6020 }
+      command = { type = hq_supply_eff value = 1 }
+      command = { type = sce_frequency value = 0.2 }
+    }
+  }
+  # 遅延戦術ドクトリン
+  application =
+  { id        = 6040
+    name      = TECH_APP_LD_4_NAME
+    desc      = TECH_APP_LD_4_DESC
+    position  = { x = 10 y = 80 }
+    year      = 1937
+    # 中規模火力支援
+    component = { id = 6041 name = TECH_CMP_LD_4_1_NAME type = infantry_focus difficulty = 10 }
+    # 接敵と遅延戦術
+    component = { id = 6042 name = TECH_CMP_LD_4_2_NAME type = small_unit_tactics difficulty = 10 }
+    # 目標統制重視
+    component = { id = 6043 name = TECH_CMP_LD_4_3_NAME type = centralized_execution difficulty = 10 }
+    # 基本型射撃指揮所
+    component = { id = 6044 name = TECH_CMP_LD_4_4_NAME type = technical_efficiency difficulty = 10 }
+    # 戦闘における下士官の限定的主導権
+    component = { id = 6045 name = TECH_CMP_LD_4_5_NAME type = training difficulty = 10 }
+    required  = { 6020 }
+    effects =
+    { command = { type = delay value = 2 }
+      command = { type = tactical_withdrawal value = 2 }
+      command = { type = counterattack value = 2 }
+      command = { type = build_cost which = infantry when = on_upgrade where = relative value = -5 }
+      command = { type = build_cost which = artillery when = on_upgrade where = relative value = -5 }
+      command = { type = sce_frequency value = 0.1 }
+    }
+  }
+  # 機動防御ドクトリン
+  application =
+  { id        = 6050
+    name      = TECH_APP_LD_5_NAME
+    desc      = TECH_APP_LD_5_DESC
+    position  = { x = 10 y = 100 }
+    year      = 1938
+    # 計算済み射撃データ
+    component = { id = 6051 name = TECH_CMP_LD_5_1_NAME type = combined_arms_focus difficulty = 10 }
+    # 接敵と包囲
+    component = { id = 6052 name = TECH_CMP_LD_5_2_NAME type = small_unit_tactics difficulty = 10 }
+    # 地域制圧重視
+    component = { id = 6053 name = TECH_CMP_LD_5_3_NAME type = decentralized_execution difficulty = 10 }
+    # 改良型射撃指揮所
+    component = { id = 6054 name = TECH_CMP_LD_5_4_NAME type = technical_efficiency difficulty = 10 }
+    # 戦術単位：小隊
+    component = { id = 6055 name = TECH_CMP_LD_5_5_NAME type = training difficulty = 10 }
+    required  = { 6040 }
+    effects =
+    { command = { type = morale which = land value = 10 }
+      command = { type = max_organization which = land value = 10 }
+      command = { type = tactical_withdrawal value = 2 }
+      command = { type = counterattack value = 2 }
+      command = { type = delay value = 2 }
+      command = { type = build_cost which = infantry when = on_upgrade where = relative value = -5 }
+      command = { type = build_cost which = artillery when = on_upgrade where = relative value = -5 }
+      command = { type = speed which = hq value = 1 }
+      command = { type = hq_supply_eff value = 1 }
+      command = { type = sce_frequency value = 0.2 }
+    }
+  }
+  # スタンドオフドクトリン
+  application =
+  { id        = 6060
+    name      = TECH_APP_LD_6_NAME
+    desc      = TECH_APP_LD_6_DESC
+    position  = { x = 10 y = 120 }
+    year      = 1939
+    # 中規模火力支援
+    component = { id = 6061 name = TECH_CMP_LD_6_1_NAME type = infantry_focus difficulty = 10 }
+    # 接敵と包囲
+    component = { id = 6062 name = TECH_CMP_LD_6_2_NAME type = small_unit_tactics difficulty = 10 }
+    # 目標統制重視
+    component = { id = 6063 name = TECH_CMP_LD_6_3_NAME type = centralized_execution difficulty = 10 }
+    # 基本的空陸協同作戦
+    component = { id = 6064 name = TECH_CMP_LD_6_4_NAME type = technical_efficiency difficulty = 10 }
+    # 制圧射撃重視
+    component = { id = 6065 name = TECH_CMP_LD_6_5_NAME type = training difficulty = 10 }
+    required  = { 6020 }
+    effects =
+    { command = { type = morale which = land value = 10 }
+      command = { type = assault value = 2 }
+      command = { type = ambush value = 2 }
+      command = { type = build_cost which = infantry when = on_upgrade where = relative value = -5 }
+      command = { type = build_cost which = artillery when = on_upgrade where = relative value = -5 }
+      command = { type = hq_supply_eff value = 1 }
+      command = { type = sce_frequency value = 0.1 }
+    }
+  }
+  # 統合支援ドクトリン
+  application =
+  { id        = 6070
+    name      = TECH_APP_LD_7_NAME
+    desc      = TECH_APP_LD_7_DESC
+    position  = { x = 10 y = 140 }
+    year      = 1940
+    # 小規模火力支援
+    component = { id = 6071 name = TECH_CMP_LD_7_1_NAME type = infantry_focus difficulty = 10 }
+    # 接敵と撃滅
+    component = { id = 6072 name = TECH_CMP_LD_7_2_NAME type = small_unit_tactics difficulty = 10 }
+    # 地域制圧重視
+    component = { id = 6073 name = TECH_CMP_LD_7_3_NAME type = decentralized_execution difficulty = 10 }
+    # 改良型射撃指揮所
+    component = { id = 6074 name = TECH_CMP_LD_7_4_NAME type = technical_efficiency difficulty = 10 }
+    # 基本的空陸協同作戦
+    component = { id = 6075 name = TECH_CMP_LD_7_5_NAME type = training difficulty = 10 }
+    required  = { 6060 }
+    effects =
+    { command = { type = morale which = land value = 10 }
+      command = { type = counterattack value = 4 }
+      command = { type = breakthrough value = 1 }
+      command = { type = encirclement value = 1 }
+      command = { type = assault value = 2 }
+      command = { type = ambush value = 2 }
+      command = { type = new_model which = hq value = 1 }
+      command = { type = scrap_model which = hq value = 0 }
+      command = { type = build_cost which = infantry when = on_upgrade where = relative value = -5 }
+      command = { type = build_cost which = artillery when = on_upgrade where = relative value = -5 }
+      command = { type = speed which = hq value = 1 }
+      command = { type = hq_supply_eff value = 1 }
+      command = { type = sce_frequency value = 0.2 }
+    }
+  }
+  # 連隊規模の戦闘チーム
+  application =
+  { id        = 6080
+    name      = TECH_APP_LD_8_NAME
+    desc      = TECH_APP_LD_8_DESC
+    position  = { x = 10 y = 160 }
+    year      = 1942
+    # 戦術単位：小隊
+    component = { id = 6081 name = TECH_CMP_LD_8_1_NAME type = infantry_focus difficulty = 10 }
+    # 大隊固有火力支援班
+    component = { id = 6082 name = TECH_CMP_LD_8_2_NAME type = small_unit_tactics difficulty = 10 }
+    # 下士官の主導権を重視
+    component = { id = 6083 name = TECH_CMP_LD_8_3_NAME type = decentralized_execution difficulty = 10 }
+    # 発展型射撃統制指令所
+    component = { id = 6084 name = TECH_CMP_LD_8_4_NAME type = technical_efficiency difficulty = 10 }
+    # 小隊内での射撃と運動との連携
+    component = { id = 6085 name = TECH_CMP_LD_8_5_NAME type = training difficulty = 10 }
+    required  = { 6070 6050 }
+    effects =
+    { command = { type = tactical_withdrawal value = 4 }
+      command = { type = max_organization which = land value = 10 }
+      command = { type = delay value = 2 }
+      command = { type = breakthrough value = 2 }
+      command = { type = encirclement value = 2 }
+      command = { type = ambush value = 1 }
+      command = { type = new_model which = hq value = 2 }
+      command = { type = scrap_model which = hq value = 1 }
+      command = { type = build_cost which = infantry when = on_upgrade where = relative value = 10 }
+      command = { type = build_cost which = artillery when = on_upgrade where = relative value = 10 }
+      command = { type = build_cost which = sp_artillery when = on_upgrade where = relative value = -10 }
+      command = { type = build_cost which = motorized when = on_upgrade where = relative value = -10 }
+      command = { type = speed which = hq value = 1 }
+      command = { type = hq_supply_eff value = 2 }
+      command = { type = sce_frequency value = 0.3 }
+    }
+  }
+  # 諸兵科連合部隊防御
+  application =
+  { id        = 6090
+    name      = TECH_APP_LD_9_NAME
+    desc      = TECH_APP_LD_9_DESC
+    position  = { x = 0 y = 200 }
+    year      = 1943
+    # 時間指定目標砲撃任務
+    component = { id = 6091 name = TECH_CMP_LD_9_1_NAME type = combined_arms_focus difficulty = 10 }
+    # 射撃と運動
+    component = { id = 6092 name = TECH_CMP_LD_9_2_NAME type = small_unit_tactics difficulty = 10 }
+    # 戦術単位：分隊
+    component = { id = 6093 name = TECH_CMP_LD_9_3_NAME type = decentralized_execution difficulty = 10 }
+    # 発展型空陸連携
+    component = { id = 6094 name = TECH_CMP_LD_9_4_NAME type = technical_efficiency difficulty = 10 }
+    # 統合作戦
+    component = { id = 6095 name = TECH_CMP_LD_9_5_NAME type = training difficulty = 10 }
+    required  = { 1230 6080 }
+    effects =
+    { command = { type = deactivate which = 6100 }
+      command = { type = tactical_withdrawal value = 4 }
+      command = { type = morale which = land value = 20 }
+      command = { type = max_organization which = land value = 20 }
+      command = { type = counterattack value = 2 }
+      command = { type = delay value = 2 }
+      command = { type = build_cost which = infantry when = on_upgrade where = relative value = 5 }
+      command = { type = build_cost which = artillery when = on_upgrade where = relative value = 5 }
+      command = { type = build_cost which = sp_artillery when = on_upgrade where = relative value = -5 }
+      command = { type = build_cost which = motorized when = on_upgrade where = relative value = -5 }
+      command = { type = hq_supply_eff value = 2 }
+      command = { type = sce_frequency value = 0.3 }
+    }
+  }
+  # 機械化兵による攻勢
+  application =
+  { id        = 6100
+    name      = TECH_APP_LD_10_NAME
+    desc      = TECH_APP_LD_10_DESC
+    position  = { x = 20 y = 220 }
+    year      = 1943
+    # 火砲用近接信管
+    component = { id = 6101 name = TECH_CMP_LD_10_1_NAME type = combined_arms_focus difficulty = 10 }
+    # 戦術単位：分隊
+    component = { id = 6102 name = TECH_CMP_LD_10_2_NAME type = small_unit_tactics difficulty = 10 }
+    # 空/陸機動理論
+    component = { id = 6103 name = TECH_CMP_LD_10_3_NAME type = decentralized_execution difficulty = 10 }
+    # 発展型空陸連携
+    component = { id = 6104 name = TECH_CMP_LD_10_4_NAME type = technical_efficiency difficulty = 10 }
+    # 高度な分隊級戦術
+    component = { id = 6105 name = TECH_CMP_LD_10_5_NAME type = training difficulty = 10 }
+    required  = { 1260 6080 }
+    effects =
+    { command = { type = deactivate which = 6090 }
+      command = { type = morale which = land value = 20 }
+      command = { type = max_organization which = land value = 20 }
+      command = { type = breakthrough value = 2 }
+      command = { type = encirclement value = 2 }
+      command = { type = assault value = 2 }
+      command = { type = build_cost which = infantry when = on_upgrade where = relative value = 5 }
+      command = { type = build_cost which = artillery when = on_upgrade where = relative value = 5 }
+      command = { type = build_cost which = sp_artillery when = on_upgrade where = relative value = -5 }
+      command = { type = build_cost which = motorized when = on_upgrade where = relative value = -5 }
+      command = { type = build_cost which = mechanized when = on_upgrade where = relative value = -15 }
+      command = { type = hq_supply_eff value = 2 }
+      command = { type = sce_frequency value = 0.3 }
+    }
+  }
+  # 大規模強襲ドクトリン
+  application =
+  { id        = 6110
+    name      = TECH_APP_LD_11_NAME
+    desc      = TECH_APP_LD_11_DESC
+    position  = { x = 215 y = 80 }
+    year      = 1938
+    # 複数の目標を事前選定
+    component = { id = 6111 name = TECH_CMP_LD_11_1_NAME type = infantry_focus difficulty = 9 }
+    # 集中攻撃
+    component = { id = 6112 name = TECH_CMP_LD_11_2_NAME type = large_unit_tactics difficulty = 9 }
+    # 予定表にもとづく戦争遂行
+    component = { id = 6113 name = TECH_CMP_LD_11_3_NAME type = centralized_execution difficulty = 9 }
+    # 常勝思考
+    component = { id = 6114 name = TECH_CMP_LD_11_4_NAME type = individual_courage difficulty = 9 }
+    # 戦闘における下士官の限定的主導権
+    component = { id = 6115 name = TECH_CMP_LD_11_5_NAME type = training difficulty = 9 }
+    required  = { 6030 }
+    effects =
+    { command = { type = morale which = land value = 30 }
+      command = { type = counterattack value = 4 }
+      command = { type = breakthrough value = 1 }
+      command = { type = encirclement value = 2 }
+      command = { type = assault value = 2 }
+      command = { type = ambush value = 2 }
+      command = { type = new_model which = hq value = 1 }
+      command = { type = scrap_model which = hq value = 0 }
+      command = { type = build_cost which = infantry when = on_upgrade where = relative value = -5 }
+      command = { type = speed which = hq value = 1 }
+      command = { type = hq_supply_eff value = 1 }
+    }
+  }
+  # 塹壕戦ドクトリン
+  application =
+  { id        = 6120
+    name      = TECH_APP_LD_12_NAME
+    desc      = TECH_APP_LD_12_DESC
+    position  = { x = 215 y = 100 }
+    year      = 1936
+    # 師団固有砲兵
+    component = { id = 6121 name = TECH_CMP_LD_12_1_NAME type = infantry_focus difficulty = 9 }
+    # 迅速塹壕構築技術
+    component = { id = 6122 name = TECH_CMP_LD_12_2_NAME type = large_unit_tactics difficulty = 9 }
+    # 厳格な階級組織
+    component = { id = 6123 name = TECH_CMP_LD_12_3_NAME type = centralized_execution difficulty = 9 }
+    # 絶対死守の精神
+    component = { id = 6124 name = TECH_CMP_LD_12_4_NAME type = individual_courage difficulty = 9 }
+    # 機関銃座を使った射撃
+    component = { id = 6125 name = TECH_CMP_LD_12_5_NAME type = training difficulty = 9 }
+    required  = { 6030 }
+    effects =
+    { command = { type = delay value = 4 }
+      command = { type = morale which = land value = 10 }
+      command = { type = build_cost which = infantry when = on_upgrade where = relative value = -5 }
+      command = { type = hq_supply_eff value = 1 }
+    }
+  }
+  # 防衛計画事前策定ドクトリン
+  application =
+  { id        = 6130
+    name      = TECH_APP_LD_13_NAME
+    desc      = TECH_APP_LD_13_DESC
+    position  = { x = 215 y = 120 }
+    year      = 1940
+    # 多重掩蔽壕線
+    component = { id = 6131 name = TECH_CMP_LD_13_1_NAME type = infantry_focus difficulty = 9 }
+    # 重なり合った地雷原
+    component = { id = 6132 name = TECH_CMP_LD_13_2_NAME type = large_unit_tactics difficulty = 9 }
+    # 防衛拠点思考
+    component = { id = 6133 name = TECH_CMP_LD_13_3_NAME type = centralized_execution difficulty = 9 }
+    # トンネル網
+    component = { id = 6134 name = TECH_CMP_LD_13_4_NAME type = individual_courage difficulty = 9 }
+    # 局所予備兵力
+    component = { id = 6135 name = TECH_CMP_LD_13_5_NAME type = training difficulty = 9 }
+    required  = { 6120 }
+    effects =
+    { command = { type = delay value = 4 }
+      command = { type = morale which = land value = 10 }
+      command = { type = max_organization which = land value = 10 }
+      command = { type = tactical_withdrawal value = 2 }
+      command = { type = build_cost which = infantry when = on_upgrade where = relative value = -5 }
+      command = { type = build_cost which = anti_tank when = on_upgrade where = relative value = -5 }
+      command = { type = hq_supply_eff value = 1 }
+      command = { type = sce_frequency value = 0.1 }
+    }
+  }
+  # 中央作戦立案ドクトリン
+  application =
+  { id        = 6140
+    name      = TECH_APP_LD_14_NAME
+    desc      = TECH_APP_LD_14_DESC
+    position  = { x = 215 y = 140 }
+    year      = 1942
+    # 砲兵師団
+    component = { id = 6141 name = TECH_CMP_LD_14_1_NAME type = infantry_focus difficulty = 9 }
+    # 多方向攻撃
+    component = { id = 6142 name = TECH_CMP_LD_14_2_NAME type = large_unit_tactics difficulty = 9 }
+    # 高度な参謀本部計画
+    component = { id = 6143 name = TECH_CMP_LD_14_3_NAME type = centralized_execution difficulty = 9 }
+    # 集中火器管制
+    component = { id = 6144 name = TECH_CMP_LD_14_4_NAME type = individual_courage difficulty = 9 }
+    # 戦術単位：中隊
+    component = { id = 6145 name = TECH_CMP_LD_14_5_NAME type = training difficulty = 9 }
+    required  = { 6130 }
+    effects =
+    { command = { type = max_organization which = land value = 10 }
+      command = { type = counterattack value = 2 }
+      command = { type = build_cost which = infantry when = on_upgrade where = relative value = -5 }
+      command = { type = build_cost which = anti_tank when = on_upgrade where = relative value = -5 }
+      command = { type = build_cost which = d_rsv_33 when = on_upgrade where = relative value = -5 }
+      command = { type = speed which = hq value = 1 }
+      command = { type = hq_supply_eff value = 1 }
+      command = { type = sce_frequency value = 0.1 }
+    }
+  }
+  # 消耗抑制ドクトリン
+  application =
+  { id        = 6150
+    name      = TECH_APP_LD_15_NAME
+    desc      = TECH_APP_LD_15_DESC
+    position  = { x = 160 y = 180 }
+    year      = 1942
+    # 戦場の要塞化に重点
+    component = { id = 6151 name = TECH_CMP_LD_15_1_NAME type = infantry_focus difficulty = 9 }
+    # 作戦的予備兵力
+    component = { id = 6152 name = TECH_CMP_LD_15_2_NAME type = large_unit_tactics difficulty = 9 }
+    # 大規模部隊による反撃
+    component = { id = 6153 name = TECH_CMP_LD_15_3_NAME type = centralized_execution difficulty = 9 }
+    # 固定式砲台
+    component = { id = 6154 name = TECH_CMP_LD_15_4_NAME type = individual_courage difficulty = 9 }
+    # 戦術単位：中隊
+    component = { id = 6155 name = TECH_CMP_LD_15_5_NAME type = training difficulty = 9 }
+    required  = { 6110 }
+    effects =
+    { command = { type = max_organization which = land value = 5 }
+      command = { type = assault value = 3 }
+      command = { type = ambush value = 1 }
+      command = { type = deactivate which = 6160 }
+      command = { type = deactivate which = 6170 }
+      command = { type = build_cost which = artillery when = on_upgrade where = relative value = -5 }
+      command = { type = build_cost which = engineer when = on_upgrade where = relative value = -5 }
+      command = { type = hq_supply_eff value = 1 }
+      command = { type = sce_frequency value = 0.3 }
+    }
+  }
+  # 浸透強襲ドクトリン
+  application =
+  { id        = 6160
+    name      = TECH_APP_LD_16_NAME
+    desc      = TECH_APP_LD_16_DESC
+    position  = { x = 160 y = 220 }
+    year      = 1942
+    # 夜間攻撃
+    component = { id = 6161 name = TECH_CMP_LD_16_1_NAME type = infantry_focus difficulty = 9 }
+    # 戦闘部隊分散
+    component = { id = 6162 name = TECH_CMP_LD_16_2_NAME type = large_unit_tactics difficulty = 9 }
+    # 参謀：地形評価
+    component = { id = 6163 name = TECH_CMP_LD_16_3_NAME type = centralized_execution difficulty = 9 }
+    # 白兵戦重視
+    component = { id = 6164 name = TECH_CMP_LD_16_4_NAME type = individual_courage difficulty = 9 }
+    # 小隊規模の夜間攻撃訓練
+    component = { id = 6165 name = TECH_CMP_LD_16_5_NAME type = training difficulty = 9 }
+    required  = { 6110 }
+    effects =
+    { command = { type = morale which = land value = 50 }
+      command = { type = breakthrough value = 2 }
+      command = { type = encirclement value = 1 }
+      command = { type = assault value = 2 }
+      command = { type = ambush value = 5 }
+      command = { type = deactivate which = 6150 }
+      command = { type = deactivate which = 6170 }
+      command = { type = night_move which = infantry value = 10 }
+      command = { type = night_move which = paratrooper value = 10 }
+      command = { type = night_move which = marine value = 10 }
+      command = { type = night_move which = bergsjaeger value = 10 }
+      command = { type = night_move which = cavalry value = 10 }
+      command = { type = night_move which = militia value = 10 }
+      command = { type = night_move which = hq value = 10 }
+      command = { type = night_attack which = infantry value = 10 }
+      command = { type = night_attack which = paratrooper value = 10 }
+      command = { type = night_attack which = marine value = 10 }
+      command = { type = night_attack which = bergsjaeger value = 10 }
+      command = { type = night_attack which = cavalry value = 10 }
+      command = { type = night_attack which = militia value = 10 }
+      command = { type = night_defense which = infantry value = 10 }
+      command = { type = night_defense which = paratrooper value = 10 }
+      command = { type = night_defense which = marine value = 10 }
+      command = { type = night_defense which = bergsjaeger value = 10 }
+      command = { type = night_defense which = cavalry value = 10 }
+      command = { type = night_defense which = militia value = 10 }
+      command = { type = build_cost which = marine when = on_upgrade where = relative value = -5 }
+      command = { type = build_cost which = militia when = on_upgrade where = relative value = -10 }
+      command = { type = build_cost which = armor when = on_upgrade where = relative value = 5 }
+      command = { type = build_cost which = light_armor when = on_upgrade where = relative value = 5 }
+      command = { type = hq_supply_eff value = 1 }
+      command = { type = sce_frequency value = 0.3 }
+    }
+  }
+  # 段階的作戦遂行ドクトリン
+  application =
+  { id        = 6170
+    name      = TECH_APP_LD_17_NAME
+    desc      = TECH_APP_LD_17_DESC
+    position  = { x = 160 y = 200 }
+    year      = 1942
+    # 専属砲兵
+    component = { id = 6171 name = TECH_CMP_LD_17_1_NAME type = infantry_focus difficulty = 9 }
+    # 専属航空支援
+    component = { id = 6172 name = TECH_CMP_LD_17_2_NAME type = large_unit_tactics difficulty = 9 }
+    # 目標確保の原則
+    component = { id = 6173 name = TECH_CMP_LD_17_3_NAME type = centralized_execution difficulty = 9 }
+    # 分隊作戦規定
+    component = { id = 6174 name = TECH_CMP_LD_17_4_NAME type = technical_efficiency difficulty = 9 }
+    # 戦術単位：小隊
+    component = { id = 6175 name = TECH_CMP_LD_17_5_NAME type = training difficulty = 9 }
+    required  = { 6110 }
+    effects =
+    { command = { type = tactical_withdrawal value = 2 }
+      command = { type = delay value = 2 }
+      command = { type = max_organization which = land value = 15 }
+      command = { type = breakthrough value = 2 }
+      command = { type = encirclement value = 2 }
+      command = { type = assault value = 2 }
+      command = { type = ambush value = 2 }
+      command = { type = deactivate which = 6150 }
+      command = { type = deactivate which = 6160 }
+      command = { type = build_cost which = motorized when = on_upgrade where = relative value = -10 }
+      command = { type = build_cost which = infantry when = on_upgrade where = relative value = 10 }
+      command = { type = hq_supply_eff value = 1 }
+      command = { type = sce_frequency value = 0.3 }
+    }
+  }
+  # 強襲突破ドクトリン
+  application =
+  { id        = 6180
+    name      = TECH_APP_LD_18_NAME
+    desc      = TECH_APP_LD_18_DESC
+    position  = { x = 270 y = 180 }
+    year      = 1944
+    # 下級野砲
+    component = { id = 6181 name = TECH_CMP_LD_18_1_NAME type = infantry_focus difficulty = 9 }
+    # 浸透予備兵力
+    component = { id = 6182 name = TECH_CMP_LD_18_2_NAME type = large_unit_tactics difficulty = 9 }
+    # 担当戦区
+    component = { id = 6183 name = TECH_CMP_LD_18_3_NAME type = centralized_execution difficulty = 9 }
+    # 小隊用軽機関銃
+    component = { id = 6184 name = TECH_CMP_LD_18_4_NAME type = individual_courage difficulty = 9 }
+    # 分隊作戦規定
+    component = { id = 6185 name = TECH_CMP_LD_18_5_NAME type = training difficulty = 9 }
+    required  = { 6140 6150 }
+    effects =
+    { command = { type = morale which = land value = 25 }
+      command = { type = tactical_withdrawal value = 3 }
+      command = { type = breakthrough value = 2 }
+      command = { type = assault value = 6 }
+      command = { type = ambush value = 2 }
+      command = { type = new_model which = hq value = 2 }
+      command = { type = scrap_model which = hq value = 1 }
+      command = { type = build_cost which = artillery when = on_upgrade where = relative value = -5 }
+      command = { type = build_cost which = engineer when = on_upgrade where = relative value = -5 }
+      command = { type = speed which = hq value = 1 }
+      command = { type = hq_supply_eff value = 1 }
+      command = { type = sce_frequency value = 0.3 }
+    }
+  }
+  # 縦深浸透ドクトリン
+  application =
+  { id        = 6190
+    name      = TECH_APP_LD_19_NAME
+    desc      = TECH_APP_LD_19_DESC
+    position  = { x = 270 y = 220 }
+    year      = 1943
+    # 自立部隊
+    component = { id = 6191 name = TECH_CMP_LD_19_1_NAME type = infantry_focus difficulty = 9 }
+    # 独立戦闘部隊
+    component = { id = 6192 name = TECH_CMP_LD_19_2_NAME type = small_unit_tactics difficulty = 9 }
+    # 移動式指令部
+    component = { id = 6193 name = TECH_CMP_LD_19_3_NAME type = decentralized_execution difficulty = 9 }
+    # 殺すか殺されるかの思考
+    component = { id = 6194 name = TECH_CMP_LD_19_4_NAME type = individual_courage difficulty = 9 }
+    # 歩兵突撃戦術
+    component = { id = 6195 name = TECH_CMP_LD_19_5_NAME type = training difficulty = 9 }
+    required  = { 6140 6160 }
+    effects =
+    { command = { type = breakthrough value = 2 }
+      command = { type = encirclement value = 2 }
+      command = { type = ambush value = 6 }
+      command = { type = new_model which = hq value = 2 }
+      command = { type = scrap_model which = hq value = 1 }
+      command = { type = night_move which = infantry value = 40 }
+      command = { type = night_move which = paratrooper value = 40 }
+      command = { type = night_move which = marine value = 40 }
+      command = { type = night_move which = bergsjaeger value = 40 }
+      command = { type = night_move which = cavalry value = 40 }
+      command = { type = night_move which = militia value = 40 }
+      command = { type = night_move which = hq value = 40 }
+      command = { type = night_attack which = infantry value = 40 }
+      command = { type = night_attack which = paratrooper value = 40 }
+      command = { type = night_attack which = marine value = 40 }
+      command = { type = night_attack which = bergsjaeger value = 40 }
+      command = { type = night_attack which = cavalry value = 40 }
+      command = { type = night_attack which = militia value = 40 }
+      command = { type = night_defense which = infantry value = 40 }
+      command = { type = night_defense which = paratrooper value = 40 }
+      command = { type = night_defense which = marine value = 40 }
+      command = { type = night_defense which = bergsjaeger value = 40 }
+      command = { type = night_defense which = cavalry value = 40 }
+      command = { type = night_defense which = militia value = 40 }
+      command = { type = build_cost which = marine when = on_upgrade where = relative value = -5 }
+      command = { type = build_cost which = militia when = on_upgrade where = relative value = -10 }
+      command = { type = build_cost which = armor when = on_upgrade where = relative value = 5 }
+      command = { type = build_cost which = light_armor when = on_upgrade where = relative value = 5 }
+      command = { type = speed which = hq value = 1 }
+      command = { type = hq_supply_eff value = 1 }
+      command = { type = sce_frequency value = 0.3 }
+    }
+  }
+  # 部隊相互運用性
+  application =
+  { id        = 6200
+    name      = TECH_APP_LD_20_NAME
+    desc      = TECH_APP_LD_20_DESC
+    position  = { x = 270 y = 200 }
+    year      = 1944
+    # 諸兵科連合部隊作戦
+    component = { id = 6201 name = TECH_CMP_LD_20_1_NAME type = combined_arms_focus difficulty = 9 }
+    # 長距離偵察
+    component = { id = 6202 name = TECH_CMP_LD_20_2_NAME type = small_unit_tactics difficulty = 9 }
+    # 前進司令部
+    component = { id = 6203 name = TECH_CMP_LD_20_3_NAME type = centralized_execution difficulty = 9 }
+    # 射撃指揮所
+    component = { id = 6204 name = TECH_CMP_LD_20_4_NAME type = technical_efficiency difficulty = 9 }
+    # 戦術単位：分隊
+    component = { id = 6205 name = TECH_CMP_LD_20_5_NAME type = training difficulty = 9 }
+    required  = { 6140 6170 }
+    effects =
+    { command = { type = tactical_withdrawal value = 4 }
+      command = { type = breakthrough value = 2 }
+      command = { type = encirclement value = 4 }
+      command = { type = ambush value = 1 }
+      command = { type = new_model which = hq value = 2 }
+      command = { type = scrap_model which = hq value = 1 }
+      command = { type = build_cost which = mechanized when = on_upgrade where = relative value = -10 }
+      command = { type = build_cost which = armor when = on_upgrade where = relative value = -10 }
+      command = { type = build_cost which = light_armor when = on_upgrade where = relative value = -10 }
+      command = { type = speed which = hq value = 1 }
+      command = { type = hq_supply_eff value = 2 }
+      command = { type = sce_frequency value = 0.3 }
+    }
+  }
+  # 機動重視ドクトリン
+  application =
+  { id        = 6210
+    name      = TECH_APP_LD_21_NAME
+    desc      = TECH_APP_LD_21_DESC
+    position  = { x = 496 y = 10 }
+    year      = 1933
+    # 自動車化兵による偵察
+    component = { id = 6211 name = TECH_CMP_LD_21_1_NAME type = combined_arms_focus difficulty = 10 }
+    # 基本的浸透戦術
+    component = { id = 6212 name = TECH_CMP_LD_21_2_NAME type = training difficulty = 10 }
+    # 急襲戦術
+    component = { id = 6213 name = TECH_CMP_LD_21_3_NAME type = training difficulty = 10 }
+    # 下士官の責任
+    component = { id = 6214 name = TECH_CMP_LD_21_4_NAME type = training difficulty = 10 }
+    # 機動訓練
+    component = { id = 6215 name = TECH_CMP_LD_21_5_NAME type = training difficulty = 10 }
+    required  = { }
+    effects =
+    { command = { type = max_organization which = land value = 20 }
+      command = { type = deactivate which = 6010 }
+      command = { type = activate_unit_type which = hq }
+      command = { type = new_model which = hq value = 0 }
+      command = { type = speed which = hq value = 1 }
+      command = { type = speed_cap_art which = hq value = 1 }
+      command = { type = speed_cap_at which = hq value = 1 }
+      command = { type = speed_cap_aa which = hq value = 1 }
+      command = { type = sce_frequency value = 0.1 }
+    }
+  }
+  # 先鋒突撃ドクトリン
+  application =
+  { id        = 6220
+    name      = TECH_APP_LD_22_NAME
+    desc      = TECH_APP_LD_22_DESC
+    position  = { x = 420 y = 80 }
+    year      = 1937
+    # 強襲分遣隊
+    component = { id = 6221 name = TECH_CMP_LD_22_1_NAME type = combined_arms_focus difficulty = 10 }
+    # 戦術偵察
+    component = { id = 6222 name = TECH_CMP_LD_22_2_NAME type = small_unit_tactics difficulty = 10 }
+    # 戦術単位：小隊
+    component = { id = 6223 name = TECH_CMP_LD_22_3_NAME type = decentralized_execution difficulty = 10 }
+    # 攻撃開始線への浸透
+    component = { id = 6224 name = TECH_CMP_LD_22_4_NAME type = technical_efficiency difficulty = 10 }
+    # バート・テルツSS士官学校式将校訓練
+    component = { id = 6225 name = TECH_CMP_LD_22_5_NAME type = training difficulty = 10 }
+    required  = { 6210 }
+    effects =
+    { command = { type = morale which = land value = 10 }
+      command = { type = max_organization which = land value = 5 }
+      command = { type = counterattack value = 2 }
+      command = { type = breakthrough value = 2 }
+      command = { type = encirclement value = 4 }
+      command = { type = assault value = 2 }
+      command = { type = ambush value = 1 }
+      command = { type = deactivate which = 6300 }
+      command = { type = new_model which = hq value = 1 }
+      command = { type = scrap_model which = hq value = 0 }
+      command = { type = build_cost which = armor when = on_upgrade where = relative value = -10 }
+      command = { type = build_cost which = light_armor when = on_upgrade where = relative value = -10 }
+      command = { type = speed which = hq value = 1 }
+      command = { type = speed_cap_art which = hq value = 1 }
+      command = { type = speed_cap_at which = hq value = 1 }
+      command = { type = speed_cap_aa which = hq value = 1 }
+      command = { type = hq_supply_eff value = 1 }
+      command = { type = sce_frequency value = 0.2 }
+    }
+  }
+  # 遅延戦術ドクトリン
+  application =
+  { id        = 6230
+    name      = TECH_APP_LD_23_NAME
+    desc      = TECH_APP_LD_23_DESC
+    position  = { x = 420 y = 140 }
+    year      = 1939
+    # 機動作戦的展開
+    component = { id = 6231 name = TECH_CMP_LD_23_1_NAME type = combined_arms_focus difficulty = 10 }
+    # 局所予備兵力
+    component = { id = 6232 name = TECH_CMP_LD_23_2_NAME type = small_unit_tactics difficulty = 10 }
+    # 反斜面陣形重視
+    component = { id = 6233 name = TECH_CMP_LD_23_3_NAME type = decentralized_execution difficulty = 10 }
+    # 複数の砲撃目標を事前選定
+    component = { id = 6234 name = TECH_CMP_LD_23_4_NAME type = technical_efficiency difficulty = 10 }
+    # 下士官の主導権を重視
+    component = { id = 6235 name = TECH_CMP_LD_23_5_NAME type = training difficulty = 10 }
+    required  = { 6220 }
+    effects =
+    { command = { type = max_organization which = land value = 5 }
+      command = { type = delay value = 4 }
+      command = { type = ambush value = 1 }
+      command = { type = build_cost which = infantry when = on_upgrade where = relative value = -5 }
+      command = { type = build_cost which = artillery when = on_upgrade where = relative value = -5 }
+      command = { type = sce_frequency value = 0.1 }
+    }
+  }
+  # 弾力的防衛ドクトリン
+  application =
+  { id        = 6240
+    name      = TECH_APP_LD_24_NAME
+    desc      = TECH_APP_LD_24_DESC
+    position  = { x = 420 y = 160 }
+    year      = 1940
+    # 機動予備兵力
+    component = { id = 6241 name = TECH_CMP_LD_24_1_NAME type = combined_arms_focus difficulty = 10 }
+    # 局地的反撃
+    component = { id = 6242 name = TECH_CMP_LD_24_2_NAME type = small_unit_tactics difficulty = 10 }
+    # 現地指揮
+    component = { id = 6243 name = TECH_CMP_LD_24_3_NAME type = decentralized_execution difficulty = 10 }
+    # 妨害地雷原
+    component = { id = 6244 name = TECH_CMP_LD_24_4_NAME type = technical_efficiency difficulty = 10 }
+    # 歩兵対戦車戦術
+    component = { id = 6245 name = TECH_CMP_LD_24_5_NAME type = training difficulty = 10 }
+    required  = { 6230 }
+    effects =
+    { command = { type = tactical_withdrawal value = 4 }
+      command = { type = max_organization which = land value = 5 }
+      command = { type = counterattack value = 2 }
+      command = { type = delay value = 2 }
+      command = { type = build_cost which = infantry when = on_upgrade where = relative value = -5 }
+      command = { type = build_cost which = artillery when = on_upgrade where = relative value = -5 }
+      command = { type = hq_supply_eff value = 1 }
+      command = { type = sce_frequency value = 0.1 }
+    }
+  }
+  # 重心攻撃ドクトリン
+  application =
+  { id        = 6250
+    name      = TECH_APP_LD_25_NAME
+    desc      = TECH_APP_LD_25_DESC
+    position  = { x = 420 y = 100 }
+    year      = 1937
+    # 野砲分散配置
+    component = { id = 6251 name = TECH_CMP_LD_25_1_NAME type = combined_arms_focus difficulty = 10 }
+    # 前衛機動部隊
+    component = { id = 6252 name = TECH_CMP_LD_25_2_NAME type = small_unit_tactics difficulty = 10 }
+    # 戦術単位：分隊
+    component = { id = 6253 name = TECH_CMP_LD_25_3_NAME type = decentralized_execution difficulty = 10 }
+    # 地雷除去
+    component = { id = 6254 name = TECH_CMP_LD_25_4_NAME type = technical_efficiency difficulty = 10 }
+    # 分隊用軽機関銃
+    component = { id = 6255 name = TECH_CMP_LD_25_5_NAME type = training difficulty = 10 }
+    required  = { 6220 }
+    effects =
+    { command = { type = morale which = land value = 20 }
+      command = { type = max_organization which = land value = 5 }
+      command = { type = breakthrough value = 2 }
+      command = { type = encirclement value = 2 }
+      command = { type = assault value = 2 }
+      command = { type = build_cost which = armor when = on_upgrade where = relative value = -10 }
+      command = { type = build_cost which = light_armor when = on_upgrade where = relative value = -10 }
+      command = { type = build_cost which = light_armor_brigade when = on_upgrade where = relative value = -5 }
+      command = { type = hq_supply_eff value = 1 }
+      command = { type = sce_frequency value = 0.3 }
+    }
+  }
+  # 電撃戦ドクトリン
+  application =
+  { id        = 6260
+    name      = TECH_APP_LD_26_NAME
+    desc      = TECH_APP_LD_26_DESC
+    position  = { x = 420 y = 120 }
+    year      = 1938
+    # 諸兵科連合部隊の集中的投入
+    component = { id = 6261 name = TECH_CMP_LD_26_1_NAME type = combined_arms_focus difficulty = 10 }
+    # 威力偵察
+    component = { id = 6262 name = TECH_CMP_LD_26_2_NAME type = small_unit_tactics difficulty = 10 }
+    # 下級部隊の独立指揮
+    component = { id = 6263 name = TECH_CMP_LD_26_3_NAME type = decentralized_execution difficulty = 10 }
+    # 前進航空管制
+    component = { id = 6264 name = TECH_CMP_LD_26_4_NAME type = technical_efficiency difficulty = 10 }
+    # 歩兵と装甲部隊の高度な連携
+    component = { id = 6265 name = TECH_CMP_LD_26_5_NAME type = training difficulty = 10 }
+    required  = { 6250 }
+    effects =
+    { command = { type = morale which = land value = 20 }
+      command = { type = max_organization which = land value = 10 }
+      command = { type = breakthrough value = 4 }
+      command = { type = encirclement value = 4 }
+      command = { type = build_cost which = light_armor when = on_upgrade where = relative value = -10 }
+      command = { type = build_cost which = armor when = on_upgrade where = relative value = -10 }
+      command = { type = speed which = hq value = 1 }
+      command = { type = speed_cap_art which = hq value = 1 }
+      command = { type = speed_cap_at which = hq value = 1 }
+      command = { type = speed_cap_aa which = hq value = 1 }
+      command = { type = hq_supply_eff value = 1 }
+      command = { type = sce_frequency value = 0.3 }
+      command = { type = task_efficiency which = airborne_assault value = -0.05 }
+    }
+  }
+  # カンプフグルッペドクトリン
+  application =
+  { id        = 6270
+    name      = TECH_APP_LD_27_NAME
+    desc      = TECH_APP_LD_27_DESC
+    position  = { x = 420 y = 180 }
+    year      = 1941
+    # 自走支援部隊
+    component = { id = 6271 name = TECH_CMP_LD_27_1_NAME type = combined_arms_focus difficulty = 10 }
+    # 作戦偵察戦術
+    component = { id = 6272 name = TECH_CMP_LD_27_2_NAME type = small_unit_tactics difficulty = 10 }
+    # 下級レベル向け付属部隊
+    component = { id = 6273 name = TECH_CMP_LD_27_3_NAME type = decentralized_execution difficulty = 10 }
+    # 自己完結戦闘部隊
+    component = { id = 6274 name = TECH_CMP_LD_27_4_NAME type = technical_efficiency difficulty = 10 }
+    # 歩兵乗車戦闘戦術
+    component = { id = 6275 name = TECH_CMP_LD_27_5_NAME type = training difficulty = 10 }
+    required  = { 6260 6240 }
+    effects =
+    { command = { type = max_organization which = land value = 10 }
+      command = { type = ambush value = 3 }
+      command = { type = new_model which = hq value = 2 }
+      command = { type = scrap_model which = hq value = 1 }
+      command = { type = build_cost which = mechanized when = on_upgrade where = relative value = -5 }
+      command = { type = build_cost which = tank_destroyer when = on_upgrade where = relative value = -5 }
+      command = { type = hq_supply_eff value = 1 }
+      command = { type = sce_frequency value = 0.4 }
+    }
+  }
+  # 緊急機動部隊ドクトリン
+  application =
+  { id        = 6280
+    name      = TECH_APP_LD_28_NAME
+    desc      = TECH_APP_LD_28_DESC
+    position  = { x = 420 y = 200 }
+    year      = 1943
+    # 流動的戦闘思考
+    component = { id = 6281 name = TECH_CMP_LD_28_1_NAME type = combined_arms_focus difficulty = 10 }
+    # 柔軟戦闘隊形
+    component = { id = 6282 name = TECH_CMP_LD_28_2_NAME type = small_unit_tactics difficulty = 10 }
+    # 行軍隊形からの攻撃
+    component = { id = 6283 name = TECH_CMP_LD_28_3_NAME type = decentralized_execution difficulty = 10 }
+    # 発展型指揮・統制・通信能力
+    component = { id = 6284 name = TECH_CMP_LD_28_4_NAME type = technical_efficiency difficulty = 10 }
+    # 子部隊展開
+    component = { id = 6285 name = TECH_CMP_LD_28_5_NAME type = training difficulty = 10 }
+    required  = { 6270 }
+    effects =
+    { command = { type = max_organization which = land value = 5 }
+      command = { type = tactical_withdrawal value = 4 }
+      command = { type = counterattack value = 4 }
+      command = { type = delay value = 2 }
+      command = { type = build_cost which = infantry when = on_upgrade where = relative value = 10 }
+      command = { type = build_cost which = artillery when = on_upgrade where = relative value = 10 }
+      command = { type = build_cost which = motorized when = on_upgrade where = relative value = -10 }
+      command = { type = build_cost which = sp_artillery when = on_upgrade where = relative value = -10 }
+      command = { type = hq_supply_eff value = 1 }
+      command = { type = sce_frequency value = 0.2 }
+    }
+  }
+  # 先鋒司令部ドクトリン
+  application =
+  { id        = 6290
+    name      = TECH_APP_LD_29_NAME
+    desc      = TECH_APP_LD_29_DESC
+    position  = { x = 420 y = 220 }
+    year      = 1943
+    # 縦深偵察重視
+    component = { id = 6291 name = TECH_CMP_LD_29_1_NAME type = combined_arms_focus difficulty = 10 }
+    # 高度な子部隊作戦規定
+    component = { id = 6292 name = TECH_CMP_LD_29_2_NAME type = small_unit_tactics difficulty = 10 }
+    # 担当戦区
+    component = { id = 6293 name = TECH_CMP_LD_29_3_NAME type = decentralized_execution difficulty = 10 }
+    # 敵撹乱重視
+    component = { id = 6294 name = TECH_CMP_LD_29_4_NAME type = technical_efficiency difficulty = 10 }
+    # 自立部隊
+    component = { id = 6295 name = TECH_CMP_LD_29_5_NAME type = training difficulty = 10 }
+    required  = { 6270 }
+    effects =
+    { command = { type = max_organization which = land value = 5 }
+      command = { type = breakthrough value = 4 }
+      command = { type = encirclement value = 2 }
+      command = { type = assault value = 1 }
+      command = { type = build_cost which = mechanized when = on_upgrade where = relative value = -10 }
+      command = { type = build_cost which = tank_destroyer when = on_upgrade where = relative value = -10 }
+      command = { type = speed which = hq value = 1 }
+      command = { type = speed_cap_art which = hq value = 1 }
+      command = { type = speed_cap_at which = hq value = 1 }
+      command = { type = speed_cap_aa which = hq value = 1 }
+      command = { type = hq_supply_eff value = 1 }
+      command = { type = sce_frequency value = 0.3 }
+    }
+  }
+  # 人海戦術ドクトリン
+  application =
+  { id        = 6300
+    name      = TECH_APP_LD_30_NAME
+    desc      = TECH_APP_LD_30_DESC
+    position  = { x = 560 y = 60 }
+    year      = 1936
+    # 大規模火力支援
+    component = { id = 6301 name = TECH_CMP_LD_30_1_NAME type = individual_courage difficulty = 10 }
+    # 援護射撃下の前進
+    component = { id = 6302 name = TECH_CMP_LD_30_2_NAME type = training difficulty = 10 }
+    # 参謀による計画立案
+    component = { id = 6303 name = TECH_CMP_LD_30_3_NAME type = training difficulty = 10 }
+    # 阻止分遣隊
+    component = { id = 6304 name = TECH_CMP_LD_30_4_NAME type = training difficulty = 10 }
+    # フルンゼ軍事アカデミー式将校訓練
+    component = { id = 6305 name = TECH_CMP_LD_30_5_NAME type = management difficulty = 10 }
+    required  = { 6210 }
+    effects =
+    { command = { type = morale which = land value = 50 }
+      command = { type = max_organization which = land value = -10 }
+      command = { type = counterattack value = 2 }
+      command = { type = assault value = 2 }
+      command = { type = deactivate which = 6220 }
+      command = { type = build_cost which = infantry when = on_upgrade where = relative value = -5 }
+      command = { type = build_cost which = cavalry when = on_upgrade where = relative value = -10 }
+      command = { type = sce_frequency value = 0.1 }
+    }
+  }
+  # 広域戦線ドクトリン
+  application =
+  { id        = 6310
+    name      = TECH_APP_LD_31_NAME
+    desc      = TECH_APP_LD_31_DESC
+    position  = { x = 560 y = 120 }
+    year      = 1937
+    # 砲兵師団
+    component = { id = 6311 name = TECH_CMP_LD_31_1_NAME type = infantry_focus difficulty = 10 }
+    # 広範囲攻撃
+    component = { id = 6312 name = TECH_CMP_LD_31_2_NAME type = large_unit_tactics difficulty = 10 }
+    # 戦術単位：大隊
+    component = { id = 6313 name = TECH_CMP_LD_31_3_NAME type = centralized_execution difficulty = 10 }
+    # 複数阻止分遣隊
+    component = { id = 6314 name = TECH_CMP_LD_31_4_NAME type = individual_courage difficulty = 10 }
+    # 下士官の主導権を抑制
+    component = { id = 6315 name = TECH_CMP_LD_31_5_NAME type = training difficulty = 10 }
+    required  = { 6300 }
+    effects =
+    { command = { type = max_organization which = land value = 10 }
+      command = { type = tactical_withdrawal value = 2 }
+      command = { type = breakthrough value = 2 }
+      command = { type = encirclement value = 1 }
+      command = { type = assault value = 2 }
+      command = { type = build_cost which = infantry when = on_upgrade where = relative value = -5 }
+      command = { type = build_cost which = cavalry when = on_upgrade where = relative value = -10 }
+      command = { type = sce_frequency value = 0.1 }
+      command = { type = deactivate which = 14080 }
+    }
+  }
+  # 局地防衛ドクトリン
+  application =
+  { id        = 6320
+    name      = TECH_APP_LD_32_NAME
+    desc      = TECH_APP_LD_32_DESC
+    position  = { x = 560 y = 160 }
+    year      = 1941
+    # 砲兵集団
+    component = { id = 6321 name = TECH_CMP_LD_32_1_NAME type = infantry_focus difficulty = 10 }
+    # 全方位防衛
+    component = { id = 6322 name = TECH_CMP_LD_32_2_NAME type = large_unit_tactics difficulty = 10 }
+    # 詳細な部隊指揮計画
+    component = { id = 6323 name = TECH_CMP_LD_32_3_NAME type = centralized_execution difficulty = 10 }
+    # 連帯責任の精神
+    component = { id = 6324 name = TECH_CMP_LD_32_4_NAME type = individual_courage difficulty = 10 }
+    # 機関銃座
+    component = { id = 6325 name = TECH_CMP_LD_32_5_NAME type = training difficulty = 10 }
+    required  = { 6300 }
+    effects =
+    { command = { type = counterattack value = 2 }
+      command = { type = delay value = 2 }
+      command = { type = build_cost which = infantry when = on_upgrade where = relative value = -5 }
+      command = { type = build_cost which = militia when = on_upgrade where = relative value = -10 }
+      command = { type = sce_frequency value = 0.1 }
+      command = { type = deactivate which = 14080 }
+    }
+  }
+  # 縦深作戦ドクトリン
+  application =
+  { id        = 6330
+    name      = TECH_APP_LD_33_NAME
+    desc      = TECH_APP_LD_33_DESC
+    position  = { x = 560 y = 140 }
+    year      = 1940
+    # 機械化前進部隊
+    component = { id = 6331 name = TECH_CMP_LD_33_1_NAME type = combined_arms_focus difficulty = 10 }
+    # 自己完結指揮
+    component = { id = 6332 name = TECH_CMP_LD_33_2_NAME type = large_unit_tactics difficulty = 10 }
+    # 前進司令部
+    component = { id = 6333 name = TECH_CMP_LD_33_3_NAME type = centralized_execution difficulty = 10 }
+    # 長距離偵察
+    component = { id = 6334 name = TECH_CMP_LD_33_4_NAME type = individual_courage difficulty = 10 }
+    # 戦術単位：中隊
+    component = { id = 6335 name = TECH_CMP_LD_33_5_NAME type = training difficulty = 10 }
+    required  = { 6310 }
+    effects =
+    { command = { type = morale which = land value = 20 }
+      command = { type = breakthrough value = 2 }
+      command = { type = encirclement value = 2 }
+      command = { type = ambush value = 2 }
+      command = { type = new_model which = hq value = 1 }
+      command = { type = scrap_model which = hq value = 0 }
+      command = { type = build_cost which = infantry when = on_upgrade where = relative value = -5 }
+      command = { type = build_cost which = d_rsv_33 when = on_upgrade where = relative value = -10 }
+      command = { type = build_cost which = militia when = on_upgrade where = relative value = -10 }
+      command = { type = speed which = hq value = 1 }
+      command = { type = hq_supply_eff value = 1 }
+      command = { type = sce_frequency value = 0.2 }
+      command = { type = task_efficiency which = airborne_assault value = -0.05 }
+    }
+  }
+  # 縦深防御ドクトリン
+  application =
+  { id        = 6340
+    name      = TECH_APP_LD_34_NAME
+    desc      = TECH_APP_LD_34_DESC
+    position  = { x = 560 y = 180 }
+    year      = 1941
+    # 反撃準備射撃
+    component = { id = 6341 name = TECH_CMP_LD_34_1_NAME type = combined_arms_focus difficulty = 10 }
+    # 前線対戦車砲陣地
+    component = { id = 6342 name = TECH_CMP_LD_34_2_NAME type = large_unit_tactics difficulty = 10 }
+    # 軍予備兵力
+    component = { id = 6343 name = TECH_CMP_LD_34_3_NAME type = centralized_execution difficulty = 10 }
+    # 多層地雷原
+    component = { id = 6344 name = TECH_CMP_LD_34_4_NAME type = individual_courage difficulty = 10 }
+    # 大規模陣形擬装
+    component = { id = 6345 name = TECH_CMP_LD_34_5_NAME type = training difficulty = 10 }
+    required  = { 6320 }
+    effects =
+    { command = { type = max_organization which = land value = 10 }
+      command = { type = tactical_withdrawal value = 3 }
+      command = { type = counterattack value = 2 }
+      command = { type = delay value = 3 }
+      command = { type = build_cost which = infantry when = on_upgrade where = relative value = -5 }
+      command = { type = build_cost which = anti_tank when = on_upgrade where = relative value = -5 }
+      command = { type = hq_supply_eff value = 1 }
+      command = { type = sce_frequency value = 0.2 }
+    }
+  }
+  # 大規模陣形作戦規定ドクトリン
+  application =
+  { id        = 6350
+    name      = TECH_APP_LD_35_NAME
+    desc      = TECH_APP_LD_35_DESC
+    position  = { x = 560 y = 200 }
+    year      = 1941
+    # 作戦的欺瞞
+    component = { id = 6351 name = TECH_CMP_LD_35_1_NAME type = combined_arms_focus difficulty = 9 }
+    # 偽情報
+    component = { id = 6352 name = TECH_CMP_LD_35_2_NAME type = large_unit_tactics difficulty = 9 }
+    # 移動式指令部
+    component = { id = 6353 name = TECH_CMP_LD_35_3_NAME type = centralized_execution difficulty = 9 }
+    # 対偵察活動
+    component = { id = 6354 name = TECH_CMP_LD_35_4_NAME type = individual_courage difficulty = 9 }
+    # 固有戦車大隊
+    component = { id = 6355 name = TECH_CMP_LD_35_5_NAME type = training difficulty = 9 }
+    required  = { 6330 6340 }
+    effects =
+    { command = { type = max_organization which = land value = 10 }
+      command = { type = counterattack value = 2 }
+      command = { type = assault value = 2 }
+      command = { type = new_model which = hq value = 2 }
+      command = { type = scrap_model which = hq value = 1 }
+      command = { type = build_cost which = infantry when = on_upgrade where = relative value = 5 }
+      command = { type = build_cost which = militia when = on_upgrade where = relative value = 5 }
+      command = { type = build_cost which = cavalry when = on_upgrade where = relative value = 5 }
+      command = { type = build_cost which = motorized when = on_upgrade where = relative value = -5 }
+      command = { type = build_cost which = mechanized when = on_upgrade where = relative value = -5 }
+      command = { type = speed which = hq value = 1 }
+      command = { type = hq_supply_eff value = 1 }
+      command = { type = sce_frequency value = 0.2 }
+    }
+  }
+  # 突破優先ドクトリン
+  application =
+  { id        = 6360
+    name      = TECH_APP_LD_36_NAME
+    desc      = TECH_APP_LD_36_DESC
+    position  = { x = 560 y = 220 }
+    year      = 1943
+    # 縦深攻撃による敵部隊拘束
+    component = { id = 6361 name = TECH_CMP_LD_36_1_NAME type = combined_arms_focus difficulty = 8 }
+    # 反撃阻止を優先
+    component = { id = 6362 name = TECH_CMP_LD_36_2_NAME type = large_unit_tactics difficulty = 8 }
+    # 敵戦力評価参謀
+    component = { id = 6363 name = TECH_CMP_LD_36_3_NAME type = centralized_execution difficulty = 8 }
+    # 厳格な隊形連携
+    component = { id = 6364 name = TECH_CMP_LD_36_4_NAME type = individual_courage difficulty = 8 }
+    # 長期持久力
+    component = { id = 6365 name = TECH_CMP_LD_36_5_NAME type = training difficulty = 8 }
+    required  = { 6350 }
+    effects =
+    { command = { type = morale which = land value = 20 }
+      command = { type = breakthrough value = 4 }
+      command = { type = assault value = 2 }
+      command = { type = build_cost which = infantry when = on_upgrade where = relative value = 5 }
+      command = { type = build_cost which = militia when = on_upgrade where = relative value = 5 }
+      command = { type = build_cost which = cavalry when = on_upgrade where = relative value = 5 }
+      command = { type = build_cost which = motorized when = on_upgrade where = relative value = -5 }
+      command = { type = build_cost which = mechanized when = on_upgrade where = relative value = -5 }
+      command = { type = build_cost which = armor when = on_upgrade where = relative value = -5 }
+      command = { type = build_cost which = light_armor when = on_upgrade where = relative value = -5 }
+      command = { type = hq_supply_eff value = 2 }
+      command = { type = sce_frequency value = 0.25 }
+    }
+  }
+  # 高機動攻勢ドクトリン
+  application =
+  { id        = 6370
+    name      = TECH_APP_LD_37_NAME
+    desc      = TECH_APP_LD_37_DESC
+    position  = { x = 560 y = 240 }
+    year      = 1943
+    # 空中機動諸兵科連合隊形
+    component = { id = 6371 name = TECH_CMP_LD_37_1_NAME type = combined_arms_focus difficulty = 8 }
+    # 縦深浸透強襲
+    component = { id = 6372 name = TECH_CMP_LD_37_2_NAME type = large_unit_tactics difficulty = 8 }
+    # 多次元攻撃
+    component = { id = 6373 name = TECH_CMP_LD_37_3_NAME type = centralized_execution difficulty = 8 }
+    # 対偵察専門分遣隊
+    component = { id = 6374 name = TECH_CMP_LD_37_4_NAME type = individual_courage difficulty = 8 }
+    # 擬装攻撃開始線
+    component = { id = 6375 name = TECH_CMP_LD_37_5_NAME type = training difficulty = 8 }
+    required  = { 6350 }
+    effects =
+    { command = { type = morale which = land value = 20 }
+      command = { type = encirclement value = 2 }
+      command = { type = build_cost which = infantry when = on_upgrade where = relative value = 5 }
+      command = { type = build_cost which = militia when = on_upgrade where = relative value = 5 }
+      command = { type = build_cost which = cavalry when = on_upgrade where = relative value = 5 }
+      command = { type = build_cost which = motorized when = on_upgrade where = relative value = -5 }
+      command = { type = build_cost which = mechanized when = on_upgrade where = relative value = -5 }
+      command = { type = build_cost which = armor when = on_upgrade where = relative value = -5 }
+      command = { type = build_cost which = light_armor when = on_upgrade where = relative value = -5 }
+      command = { type = hq_supply_eff value = 2 }
+      command = { type = sce_frequency value = 0.25 }
+    }
+  }
+  # エアランドバトルドクトリン
+  application =
+  { id        = 14050
+    name      = TECH_APP_LD_105_NAME
+    desc      = TECH_APP_LD_105_DESC
+    position  = { x = 10 y = 260 }
+    year      = 1946
+    # ヘリコプター
+    component = { id = 14051 name = TECH_CMP_LD_105_1_NAME type = aeronautics difficulty = 8 }
+    # 縦深偵察
+    component = { id = 14052 name = TECH_CMP_LD_105_2_NAME type = training difficulty = 8 }
+    # 分散型通信システム
+    component = { id = 14053 name = TECH_CMP_LD_105_3_NAME type = electronics difficulty = 10 }
+    # 下級部隊の主動性
+    component = { id = 14054 name = TECH_CMP_LD_105_4_NAME type = individual_courage difficulty = 8 }
+    # 小隊級弾着観測員
+    component = { id = 14055 name = TECH_CMP_LD_105_5_NAME type = training difficulty = 6 }
+    required  = { }
+    or_required = { 6090 6100 }
+    effects =
+    { command = { type = max_organization which = land value = 10 }
+      command = { type = morale which = land value = 10 }
+      command = { type = build_cost which = cavalry when = on_upgrade where = relative value = -5 }
+      command = { type = new_model which = hq value = 3 }
+      command = { type = scrap_model which = hq value = 2 }
+    }
+  }
+  # 機械化波状攻撃ドクトリン
+  application =
+  { id        = 14060
+    name      = TECH_APP_LD_106_NAME
+    desc      = TECH_APP_LD_106_DESC
+    position  = { x = 560 y = 260 }
+    year      = 1945
+    # 大隊レベルでの主導性
+    component = { id = 14061 name = TECH_CMP_LD_106_1_NAME type = individual_courage difficulty = 8 }
+    # 機甲楔形陣形
+    component = { id = 14062 name = TECH_CMP_LD_106_2_NAME type = large_unit_tactics difficulty = 8 }
+    # 完全機械化補給体制
+    component = { id = 14063 name = TECH_CMP_LD_106_3_NAME type = training difficulty = 8 }
+    # 中央集中型通信システム
+    component = { id = 14064 name = TECH_CMP_LD_106_4_NAME type = individual_courage difficulty = 8 }
+    # 機械化諸兵科連合訓練
+    component = { id = 14065 name = TECH_CMP_LD_106_5_NAME type = training difficulty = 8 }
+    required  = { 6360 6370 }
+    effects =
+    { command = { type = morale which = armor value = 30 }
+      command = { type = morale which = light_armor value = 30 }
+      command = { type = morale which = mechanized value = 30 }
+      command = { type = new_model which = hq value = 3 }
+      command = { type = scrap_model which = hq value = 2 }
+    }
+  }
+  # 集中突撃ドクトリン
+  application =
+  { id        = 14070
+    name      = TECH_APP_LD_107_NAME
+    desc      = TECH_APP_LD_107_DESC
+    position  = { x = 215 y = 260 }
+    year      = 1946
+    # 戦力の同時増強
+    component = { id = 14071 name = TECH_CMP_LD_107_1_NAME type = combined_arms_focus difficulty = 8 }
+    # 密集陣形
+    component = { id = 14072 name = TECH_CMP_LD_107_2_NAME type = infantry_focus difficulty = 8 }
+    # 指揮権の集中化
+    component = { id = 14073 name = TECH_CMP_LD_107_3_NAME type = centralized_execution difficulty = 8 }
+    # 集中弾幕射撃
+    component = { id = 14074 name = TECH_CMP_LD_107_4_NAME type = artillery difficulty = 8 }
+    # 集中突撃訓練
+    component = { id = 14075 name = TECH_CMP_LD_107_5_NAME type = training difficulty = 8 }
+    required  = { }
+    or_required = { 6140 }
+    effects =
+    { command = { type = max_organization which = artillery value = 20 }
+      command = { type = morale which = artillery value = 20 }
+      command = { type = max_organization which = d_rsv_33 value = 20 }
+      command = { type = morale which = d_rsv_33 value = 20 }
+      command = { type = build_cost which = d_rsv_33 when = on_upgrade where = relative value = 15 }
+      command = { type = new_model which = hq value = 3 }
+      command = { type = scrap_model which = hq value = 2 }
+    }
+  }
+  # ゲリラ戦ドクトリン
+  application =
+  { id        = 14080
+    name      = TECH_APP_LD_108_NAME
+    desc      = TECH_APP_LD_108_DESC
+    position  = { x = 575 y = 80 }
+    year      = 1945
+    # 戦術部隊 - 小隊
+    component = { id = 14081 name = TECH_CMP_LD_108_1_NAME type = infantry_focus difficulty = 10 }
+    # 情報活動および通信
+    component = { id = 14082 name = TECH_CMP_LD_108_2_NAME type = individual_courage difficulty = 10 }
+    # 一撃離脱戦術
+    component = { id = 14083 name = TECH_CMP_LD_108_3_NAME type = small_unit_tactics difficulty = 10 }
+    # 心理作戦
+    component = { id = 14084 name = TECH_CMP_LD_108_4_NAME type = training difficulty = 10 }
+    # 戦闘作戦
+    component = { id = 14085 name = TECH_CMP_LD_108_5_NAME type = decentralized_execution difficulty = 10 }
+    required  = { 6300 }
+    effects =
+    { command = { type = max_organization which = infantry value = -10 }
+      command = { type = morale which = militia value = 50 }
+      command = { type = delay value = 2 }
+      command = { type = ambush value = 4 }
+      command = { type = mountain_attack which = militia value = 5 }
+      command = { type = mountain_defense which = militia value = 10 }
+      command = { type = mountain_move which = militia value = 5 }
+      command = { type = hill_attack which = militia value = 5 }
+      command = { type = hill_defense which = militia value = 10 }
+      command = { type = hill_move which = militia value = 5 }
+      command = { type = swamp_attack which = militia value = 5 }
+      command = { type = swamp_defense which = militia value = 10 }
+      command = { type = deactivate which = 6310 }
+      command = { type = deactivate which = 6320 }
+    }
+  }
+  # 国土総拠点化ドクトリン
+  application =
+  { id        = 14110
+    name      = TECH_APP_LD_58_NAME
+    desc      = TECH_APP_LD_58_DESC
+    position  = { x = 575 y = 100 }
+    year      = 1945
+    # 拠点の分散配置
+    component = { id = 14111 name = TECH_CMP_LD_58_1_NAME type = decentralized_execution difficulty = 20 }
+    # 効率的な武器管理
+    component = { id = 14112 name = TECH_CMP_LD_58_2_NAME type = general_equipment difficulty = 20 }
+    # 偽装された砲の配備
+    component = { id = 14113 name = TECH_CMP_LD_58_3_NAME type = training difficulty = 20 }
+    # 軍民一体の秘匿
+    component = { id = 14114 name = TECH_CMP_LD_58_4_NAME type = individual_courage difficulty = 20 }
+    # 総力戦体制
+    component = { id = 14115 name = TECH_CMP_LD_58_5_NAME type = management difficulty = 20 }
+    required  = { 14080 }
+    effects =
+    { command = { type = max_organization which = land value = 40 }
+      command = { type = counterattack value = 6 }
+      command = { type = delay value = 6 }
+      command = { type = tactical_withdrawal value = 6 }
+      command = { type = assault value = 4 }
+      command = { type = sce_frequency value = 0.3 }
+    }
+  }
+  # 国民突撃ドクトリン
+  application =
+  { id        = 14090
+    name      = TECH_APP_LD_109_NAME
+    desc      = TECH_APP_LD_109_DESC
+    position  = { x = 434 y = 240 }
+    year      = 1945
+    # 局所防衛
+    component = { id = 14091 name = TECH_CMP_LD_109_1_NAME type = decentralized_execution difficulty = 8 }
+    # 分隊級先制力
+    component = { id = 14092 name = TECH_CMP_LD_109_2_NAME type = small_unit_tactics difficulty = 8 }
+    # 徴兵拡張
+    component = { id = 14093 name = TECH_CMP_LD_109_3_NAME type = centralized_execution difficulty = 8 }
+    # 国土防衛部隊
+    component = { id = 14094 name = TECH_CMP_LD_109_4_NAME type = individual_courage difficulty = 10 }
+    # 野外実地演習
+    component = { id = 14095 name = TECH_CMP_LD_109_5_NAME type = training difficulty = 8 }
+    required  = { 6290 }
+    effects =
+    { command = { type = deactivate which = 14100 }
+      command = { type = max_organization which = infantry value = -10 }
+      command = { type = build_time which = militia when = on_upgrade where = relative value = -20 }
+      command = { type = morale which = infantry value = -10 }
+      command = { type = trickleback_mod value = 5 }
+      command = { type = new_model which = hq value = 3 }
+      command = { type = scrap_model which = hq value = 2 }
+      command = { type = urban_defense which = militia value = 10 }
+      command = { type = urban_defense which = infantry value = 10 }
+      command = { type = urban_defense which = garrison value = 10 }
+      command = { type = urban_defense which = paratrooper value = 10 }
+      command = { type = urban_defense which = marine value = 10 }
+      command = { type = urban_defense which = bergsjaeger value = 10 }
+      command = { type = urban_defense which = motorized value = 10 }
+      command = { type = urban_defense which = cavalry value = 10 }
+      command = { type = urban_defense which = mechanized value = 5 }
+      command = { type = urban_defense which = light_armor value = 5 }
+      command = { type = urban_defense which = armor value = 5 }
+    }
+  }
+  # 近代電撃戦ドクトリン
+  application =
+  { id        = 14100
+    name      = TECH_APP_LD_110_NAME
+    desc      = TECH_APP_LD_110_DESC
+    position  = { x = 420 y = 260 }
+    year      = 1947
+    # 空/陸機動理論
+    component = { id = 14101 name = TECH_CMP_LD_10_3_NAME type = combined_arms_focus difficulty = 8 }
+    # 多次元攻撃
+    component = { id = 14102 name = TECH_CMP_LD_37_3_NAME type = centralized_execution difficulty = 8 }
+    # 縦深偵察
+    component = { id = 14103 name = TECH_CMP_LD_105_2_NAME type = training difficulty = 8 }
+    # 分散型通信システム
+    component = { id = 14104 name = TECH_CMP_LD_105_3_NAME type = electronics difficulty = 10 }
+    # 発展型空陸連携
+    component = { id = 14105 name = TECH_CMP_LD_9_4_NAME type = technical_efficiency difficulty = 8 }
+    required  = { 6290 }
+    effects =
+    { command = { type = deactivate which = 14090 }
+      command = { type = morale which = land value = 10 }
+      command = { type = breakthrough value = 5 }
+      command = { type = new_model which = hq value = 3 }
+      command = { type = scrap_model which = hq value = 2 }
+    }
+  }
+  # ハンター集団ドクトリン
+  application =
+  { id        = 6720
+    name      = TECH_APP_LD_142_NAME
+    desc      = TECH_APP_LD_142_DESC
+    position  = { x = 140 y = 340 }
+    picture   = "DH6720"
+    year      = 1948
+    # 精鋭ハンター集団
+    component = { id = 6721 name = TECH_CMP_LD_142_1_NAME type = small_unit_tactics difficulty = 15 }
+    # ハンター集団基本型ドクトリン
+    component = { id = 6722 name = TECH_CMP_LD_142_2_NAME type = small_unit_tactics difficulty = 15 }
+    # ハンター集団発展型ドクトリン
+    component = { id = 6723 name = TECH_CMP_LD_142_3_NAME type = combined_arms_focus difficulty = 15 }
+    # 装甲支援
+    component = { id = 6724 name = TECH_CMP_LD_142_4_NAME type = mechanics difficulty = 15 }
+    # ハンター集団訓練
+    component = { id = 6725 name = TECH_CMP_LD_142_5_NAME type = training difficulty = 15 }
+    required  = { 14100 }
+    effects =
+    { command = { type = morale which = land value = 5 }
+      command = { type = max_organization which = land value = -15 }
+      command = { type = ground_def_eff when = 1 value = 0.2 }
+      command = { type = encirclement value = 2 }
+      command = { type = sce_frequency value = 0.5 }
+      command = { type = build_cost which = infantry when = on_upgrade where = relative value = 5 }
+      command = { type = max_organization which = sp_artillery value = 10 }
+      command = { type = morale which = sp_artillery value = 10 }
+      command = { type = max_organization which = sp_rct_artillery value = 10 }
+      command = { type = morale which = sp_rct_artillery value = 10 }
+      command = { type = max_organization which = tank_destroyer value = 10 }
+      command = { type = morale which = tank_destroyer value = 10 }
+    }
+  }
+  # 暗視戦術ドクトリン
+  application =
+  { id        = 6730
+    name      = TECH_APP_LD_143_NAME
+    position  = { x = 5 y = 360 }
+    position  = { x = 140 y = 360 }
+    position  = { x = 275 y = 360 }
+    picture   = "DH6730"
+    year      = 1950
+    # 赤外線暗視装置
+    component = { id = 6731 name = TECH_CMP_LD_143_1_NAME type = general_equipment difficulty = 15 }
+    # 伸縮型距離測定器
+    component = { id = 6732 name = TECH_CMP_LD_143_2_NAME type = electronics difficulty = 15 }
+    # 画像変換器
+    component = { id = 6733 name = TECH_CMP_LD_143_3_NAME type = industrial_engineering difficulty = 15 }
+    # 基本型歩兵訓練
+    component = { id = 6734 name = TECH_CMP_LD_143_4_NAME type = infantry_focus difficulty = 15 }
+    # 基本型装甲訓練
+    component = { id = 6735 name = TECH_CMP_LD_143_5_NAME type = training difficulty = 15 }
+    required  = { }
+    or_required = { 6790 6720 6770 }
+    effects =
+    { command = { type = night_move which = land value = 25 }
+      command = { type = night_attack which = land value = 25 }
+      command = { type = night_defense which = land value = 25 }
+      command = { type = new_model which = hq value = 4 }
+      command = { type = scrap_model which = hq value = 3 }
+      command = { type = suppression which = land value = 1 }
+      command = { type = tactical_withdrawal value = 2 }
+      command = { type = ambush value = 2 }
+      command = { type = night_attack which = air value = 15 }
+      command = { type = night_defense which = air value = 15 }
+      command = { type = build_cost which = land when = on_upgrade where = relative value = 10 }
+    }
+  }
+  # 現代型先鋒ドクトリン
+  application =
+  { id        = 6740
+    name      = TECH_APP_LD_144_NAME
+    position  = { x = 140 y = 380 }
+    picture   = "2170"
+    year      = 1953
+    # 精鋭軍集結ドクトリン
+    component = { id = 6741 name = TECH_CMP_LD_144_1_NAME type = combined_arms_focus difficulty = 15 }
+    # 発展型軍司令部と統制
+    component = { id = 6742 name = TECH_CMP_LD_144_2_NAME type = industrial_engineering difficulty = 15 }
+    # 発展型連隊司令部と統制
+    component = { id = 6743 name = TECH_CMP_LD_144_3_NAME type = mechanics difficulty = 15 }
+    # 発展型攻勢ドクトリン
+    component = { id = 6744 name = TECH_CMP_LD_144_4_NAME type = small_unit_tactics difficulty = 15 }
+    # 発展型防勢ドクトリン
+    component = { id = 6745 name = TECH_CMP_LD_144_5_NAME type = training difficulty = 15 }
+    required  = { 6720 6730 }
+    effects =
+    { command = { type = morale which = land value = 5 }
+      command = { type = encirclement value = 2 }
+      command = { type = breakthrough value = 2 }
+      command = { type = sce_frequency value = 0.5 }
+      command = { type = build_cost which = infantry when = on_upgrade where = relative value = 5 }
+      command = { type = build_cost which = militia when = on_upgrade where = relative value = 5 }
+      command = { type = build_cost which = marine when = on_upgrade where = relative value = 5 }
+      command = { type = speed which = hq value = 1 }
+      command = { type = max_organization which = sp_artillery value = 10 }
+      command = { type = morale which = sp_artillery value = 10 }
+      command = { type = max_organization which = sp_rct_artillery value = 10 }
+      command = { type = morale which = sp_rct_artillery value = 10 }
+      command = { type = max_organization which = tank_destroyer value = 10 }
+      command = { type = morale which = tank_destroyer value = 10 }
+    }
+  }
+  # 航空騎兵ドクトリン
+  application =
+  { id        = 6750
+    name      = TECH_APP_LD_145_NAME
+    position  = { x = 5 y = 400 }
+    position  = { x = 140 y = 400 }
+    position  = { x = 275 y = 400 }
+    picture   = "DH6750"
+    year      = 1955
+    # 航空騎兵装備
+    component = { id = 6751 name = TECH_CMP_LD_145_1_NAME type = infantry_focus difficulty = 16 }
+    # 航空騎兵機動
+    component = { id = 6752 name = TECH_CMP_LD_145_2_NAME type = small_unit_tactics difficulty = 16 }
+    # 航空騎兵戦術
+    component = { id = 6753 name = TECH_CMP_LD_145_3_NAME type = aircraft_testing difficulty = 16 }
+    # 航空騎兵基本訓練
+    component = { id = 6754 name = TECH_CMP_LD_145_4_NAME type = decentralized_execution difficulty = 16 }
+    # 航空騎兵発展型訓練
+    component = { id = 6755 name = TECH_CMP_LD_145_5_NAME type = training difficulty = 16 }
+    required  = { }
+    or_required = { 6740 6780 6800 }
+    effects =
+    { command = { type = max_organization which = land value = 5 }
+      command = { type = morale which = paratrooper value = 5 }
+      command = { type = max_organization which = paratrooper value = 5 }
+      command = { type = morale which = cavalry value = 5 }
+      command = { type = max_organization which = cavalry value = 5 }
+      command = { type = assault value = 2 }
+    }
+  }
+  # 神の鉄槌ドクトリン
+  application =
+  { id        = 6810
+    name      = TECH_APP_LD_151_NAME
+    position  = { x = 140 y = 420 }
+    picture   = "10100"
+    year      = 1955
+    # 地上核兵器輸送
+    component = { id = 6811 name = TECH_CMP_LD_151_1_NAME type = small_unit_tactics difficulty = 16 }
+    # 海上核兵器輸送
+    component = { id = 6812 name = TECH_CMP_LD_151_2_NAME type = piloting difficulty = 16 }
+    # 核兵器随伴陸軍用装備
+    component = { id = 6813 name = TECH_CMP_LD_151_3_NAME type = nuclear_engineering difficulty = 16 }
+    # 核兵器統合運用戦術
+    component = { id = 6814 name = TECH_CMP_LD_151_4_NAME type = combined_arms_focus difficulty = 16 }
+    # 攻撃後制圧
+    component = { id = 6815 name = TECH_CMP_LD_151_5_NAME type = combined_arms_focus difficulty = 16 }
+    required  = { 6750 6740 }
+    effects =
+    { command = { type = nuke_damage value = 10 }
+      command = { type = morale which = land value = 5 }
+      command = { type = assault value = 1 }
+      command = { type = build_cost which = infantry when = on_upgrade where = relative value = 5 }
+      command = { type = build_cost which = militia when = on_upgrade where = relative value = 5 }
+      command = { type = build_cost which = marine when = on_upgrade where = relative value = 5 }
+      command = { type = build_cost which = cavalry when = on_upgrade where = relative value = 5 }
+      command = { type = build_cost which = motorized when = on_upgrade where = relative value = 5 }
+    }
+  }
+  # 特殊部隊重視ドクトリン
+  application =
+  { id        = 6760
+    name      = TECH_APP_LD_146_NAME
+    position  = { x = 5 y = 440 }
+    position  = { x = 140 y = 440 }
+    position  = { x = 275 y = 440 }
+    picture   = "10030"
+    year      = 1960
+    # 特殊部隊装備
+    component = { id = 6761 name = TECH_CMP_LD_146_1_NAME type = general_equipment difficulty = 16 }
+    # 特殊部隊機動
+    component = { id = 6762 name = TECH_CMP_LD_146_2_NAME type = training difficulty = 16 }
+    # 海兵訓練
+    component = { id = 6763 name = TECH_CMP_LD_146_3_NAME type = naval_engineering difficulty = 16 }
+    # 山岳兵訓練
+    component = { id = 6764 name = TECH_CMP_LD_146_4_NAME type = infantry_focus difficulty = 16 }
+    # 空挺訓練
+    component = { id = 6765 name = TECH_CMP_LD_146_5_NAME type = small_unit_tactics difficulty = 16 }
+    required  = { }
+    or_required = { 6810 6860 6880 }
+    effects =
+    { command = { type = build_cost which = marine when = on_upgrade where = relative value = 5 }
+      command = { type = build_cost which = bergsjaeger when = on_upgrade where = relative value = 5 }
+      command = { type = new_model which = hq value = 5 }
+      command = { type = scrap_model which = hq value = 4 }
+      command = { type = tactical_withdrawal value = 2 }
+      command = { type = delay value = 2 }
+      command = { type = ambush value = 5 }
+      command = { type = urban_attack which = land value = 10 }
+    }
+  }
+  # 迅速対応ドクトリン
+  application =
+  { id        = 6820
+    name      = TECH_APP_LD_152_NAME
+    position  = { x = 140 y = 460 }
+    picture   = "10080"
+    year      = 1963
+    # 現代型浸透戦術
+    component = { id = 6821 name = TECH_CMP_LD_152_1_NAME type = small_unit_tactics difficulty = 16 }
+    # 連携包囲訓練
+    component = { id = 6822 name = TECH_CMP_LD_152_2_NAME type = decentralized_execution difficulty = 16 }
+    # 部隊迅速展開訓練
+    component = { id = 6823 name = TECH_CMP_LD_152_3_NAME type = training difficulty = 16 }
+    # 諸兵科機動防御戦術
+    component = { id = 6824 name = TECH_CMP_LD_152_4_NAME type = combined_arms_focus difficulty = 16 }
+    # 空地共同
+    component = { id = 6825 name = TECH_CMP_LD_152_5_NAME type = aeronautics difficulty = 16 }
+    required  = { 6810 6760 }
+    effects =
+    { command = { type = max_organization which = land value = 5 }
+      command = { type = build_cost which = infantry when = on_upgrade where = relative value = 5 }
+      command = { type = build_cost which = militia when = on_upgrade where = relative value = 5 }
+      command = { type = build_cost which = garrison when = on_upgrade where = relative value = 5 }
+      command = { type = build_cost which = marine when = on_upgrade where = relative value = 5 }
+      command = { type = build_cost which = cavalry when = on_upgrade where = relative value = 5 }
+      command = { type = build_cost which = motorized when = on_upgrade where = relative value = 5 }
+      command = { type = encirclement value = 2 }
+      command = { type = ambush value = 2 }
+      command = { type = delay value = 1 }
+    }
+  }
+  # 高次戦場統合ドクトリン
+  application =
+  { id        = 6830
+    name      = TECH_APP_LD_153_NAME
+    position  = { x = 140 y = 480 }
+    picture   = "DH6830"
+    year      = 1970
+    # 発展型機動重視戦術
+    component = { id = 6831 name = TECH_CMP_LD_153_1_NAME type = combined_arms_focus difficulty = 16 }
+    # 発展型電撃戦術
+    component = { id = 6832 name = TECH_CMP_LD_153_2_NAME type = technical_efficiency difficulty = 16 }
+    # 発展型先鋒司令部
+    component = { id = 6833 name = TECH_CMP_LD_153_3_NAME type = management difficulty = 16 }
+    # 兵站管理
+    component = { id = 6834 name = TECH_CMP_LD_153_4_NAME type = mathematics difficulty = 16 }
+    # 部隊統合運用
+    component = { id = 6835 name = TECH_CMP_LD_153_5_NAME type = training difficulty = 16 }
+    required  = { 6820 }
+    effects =
+    { command = { type = morale which = land value = 5 }
+      command = { type = counterattack value = 1 }
+      command = { type = breakthrough value = 3 }
+      command = { type = encirclement value = 4 }
+      command = { type = build_cost which = infantry when = on_upgrade where = relative value = 5 }
+      command = { type = build_cost which = garrison when = on_upgrade where = relative value = 5 }
+      command = { type = build_cost which = marine when = on_upgrade where = relative value = 5 }
+      command = { type = build_cost which = bergsjaeger when = on_upgrade where = relative value = 5 }
+      command = { type = hq_supply_eff value = 1 }
+      command = { type = speed which = hq value = 1 }
+      command = { type = sce_frequency value = 1 }
+    }
+  }
+  # 圧倒的攻撃ドクトリン
+  application =
+  { id        = 6770
+    name      = TECH_APP_LD_147_NAME
+    desc      = TECH_APP_LD_147_DESC
+    position  = { x = 275 y = 340 }
+    picture   = "DH6770"
+    year      = 1948
+    # 大隊レベルの主導性
+    component = { id = 6771 name = TECH_CMP_LD_147_1_NAME type = large_unit_tactics difficulty = 15 }
+    # 機甲楔形陣形
+    component = { id = 6772 name = TECH_CMP_LD_147_2_NAME type = technical_efficiency difficulty = 15 }
+    # 完全機械化補給体制
+    component = { id = 6773 name = TECH_CMP_LD_147_3_NAME type = large_unit_tactics difficulty = 15 }
+    # 中央集中型通信システム
+    component = { id = 6774 name = TECH_CMP_LD_147_4_NAME type = combined_arms_focus difficulty = 15 }
+    # 機械化諸兵科連合訓練
+    component = { id = 6775 name = TECH_CMP_LD_147_5_NAME type = training difficulty = 15 }
+    required  = { 14060 }
+    effects =
+    { command = { type = build_cost which = land when = on_upgrade where = relative value = -10 }
+      command = { type = ground_def_eff when = 1 value = 0.2 }
+      command = { type = morale which = land value = 5 }
+      command = { type = max_organization which = land value = -20 }
+      command = { type = assault value = 4 }
+      command = { type = hq_supply_eff value = 1 }
+      command = { type = speed which = hq value = 1 }
+    }
+  }
+  # 弾力的対応ドクトリン
+  application =
+  { id        = 6780
+    name      = TECH_APP_LD_148_NAME
+    position  = { x = 275 y = 380 }
+    picture   = "1280"
+    year      = 1952
+    # 大隊レベルの主導性
+    component = { id = 6781 name = TECH_CMP_LD_148_1_NAME type = infantry_focus difficulty = 15 }
+    # 機甲楔形陣形
+    component = { id = 6782 name = TECH_CMP_LD_148_2_NAME type = large_unit_tactics difficulty = 15 }
+    # 完全機械化補給体制
+    component = { id = 6783 name = TECH_CMP_LD_148_3_NAME type = combined_arms_focus difficulty = 15 }
+    # 中央集中型通信システム
+    component = { id = 6784 name = TECH_CMP_LD_148_4_NAME type = small_unit_tactics difficulty = 15 }
+    # 機械化諸兵科連合訓練
+    component = { id = 6785 name = TECH_CMP_LD_148_5_NAME type = piloting difficulty = 15 }
+    required  = { 6770 6730 }
+    effects =
+    { command = { type = counterattack value = 1 }
+      command = { type = delay value = 1 }
+      command = { type = tactical_withdrawal value = 1 }
+      command = { type = hq_supply_eff value = 1 }
+      command = { type = build_cost which = motorized when = on_upgrade where = relative value = -5 }
+      command = { type = build_cost which = mechanized when = on_upgrade where = relative value = -5 }
+      command = { type = build_cost which = armor when = on_upgrade where = relative value = -10 }
+    }
+  }
+  # 大規模報復ドクトリン
+  application =
+  { id        = 6860
+    name      = TECH_APP_LD_156_NAME
+    position  = { x = 275 y = 420 }
+    picture   = "1300"
+    year      = 1957
+    # 正面戦線への展開
+    component = { id = 6861 name = TECH_CMP_LD_156_1_NAME type = decentralized_execution difficulty = 16 }
+    # 空対地核兵器
+    component = { id = 6862 name = TECH_CMP_LD_156_2_NAME type = nuclear_engineering difficulty = 16 }
+    # 地対地核兵器
+    component = { id = 6863 name = TECH_CMP_LD_156_3_NAME type = nuclear_engineering difficulty = 16 }
+    # 潜水艦発射ミサイルとの連携
+    component = { id = 6864 name = TECH_CMP_LD_156_4_NAME type = submarine_tactics difficulty = 16 }
+    # ICBM重視
+    component = { id = 6865 name = TECH_CMP_LD_156_5_NAME type = rocketry difficulty = 16 }
+    required  = { 6750 6780 }
+    effects =
+    { command = { type = nuke_damage value = 20 }
+      command = { type = counterattack value = 4 }
+      command = { type = speed which = hq value = 1 }
+      command = { type = sce_frequency value = 0.5 }
+      command = { type = build_cost which = infantry when = on_upgrade where = relative value = -5 }
+      command = { type = build_cost which = militia when = on_upgrade where = relative value = -10 }
+      command = { type = build_cost which = bergsjaeger when = on_upgrade where = relative value = -5 }
+      command = { type = build_cost which = marine when = on_upgrade where = relative value = -5 }
+    }
+  }
+  # 現実的脅威と抑制ドクトリン
+  application =
+  { id        = 6870
+    name      = TECH_APP_LD_157_NAME
+    position  = { x = 275 y = 460 }
+    picture   = "1260"
+    year      = 1963
+    # 縦深による敵部隊遅延
+    component = { id = 6871 name = TECH_CMP_LD_157_1_NAME type = infantry_focus difficulty = 16 }
+    # 戦域把握
+    component = { id = 6872 name = TECH_CMP_LD_157_2_NAME type = management difficulty = 16 }
+    # 特殊部隊の展開
+    component = { id = 6873 name = TECH_CMP_LD_157_3_NAME type = small_unit_tactics difficulty = 16 }
+    # 機動防御
+    component = { id = 6874 name = TECH_CMP_LD_157_4_NAME type = combined_arms_focus difficulty = 16 }
+    # 威圧的訓練
+    component = { id = 6875 name = TECH_CMP_LD_157_5_NAME type = training difficulty = 16 }
+    required  = { 6860 6760 }
+    effects =
+    { command = { type = assault value = 3 }
+      command = { type = delay value = 1 }
+      command = { type = hq_supply_eff value = 1 }
+      command = { type = sce_frequency value = 0.5 }
+    }
+  }
+  # 作戦機動群ドクトリン
+  application =
+  { id        = 6840
+    name      = TECH_APP_LD_154_NAME
+    position  = { x = 275 y = 480 }
+    picture   = "DH6840"
+    year      = 1970
+    # 機動強行突破
+    component = { id = 6841 name = TECH_CMP_LD_154_1_NAME type = combined_arms_focus difficulty = 16 }
+    # 縦深防御
+    component = { id = 6842 name = TECH_CMP_LD_154_2_NAME type = combined_arms_focus difficulty = 16 }
+    # 大規模部隊編成
+    component = { id = 6843 name = TECH_CMP_LD_154_3_NAME type = management difficulty = 16 }
+    # 厳密な波状攻撃計画
+    component = { id = 6844 name = TECH_CMP_LD_154_4_NAME type = mathematics difficulty = 16 }
+    # 統合戦術改良訓練
+    component = { id = 6845 name = TECH_CMP_LD_154_5_NAME type = training difficulty = 16 }
+    required  = { 6870 }
+    effects =
+    { command = { type = assault value = 5 }
+      command = { type = encirclement value = 1 }
+      command = { type = ambush value = 1 }
+      command = { type = breakthrough value = 1 }
+      command = { type = hq_supply_eff value = 1 }
+      command = { type = speed which = hq value = 1 }
+      command = { type = sce_frequency value = 0.5 }
+      command = { type = build_cost which = land when = on_upgrade where = relative value = 10 }
+    }
+  }
+  # 現代型部隊相互運用ドクトリン
+  application =
+  { id        = 6790
+    name      = TECH_APP_LD_149_NAME
+    desc      = TECH_APP_LD_149_DESC
+    position  = { x = 5 y = 340 }
+    picture   = "DH6790"
+    year      = 1949
+    # 諸兵科攻撃戦術
+    component = { id = 6791 name = TECH_CMP_LD_149_1_NAME type = combined_arms_focus difficulty = 15 }
+    # 諸兵科防御戦術
+    component = { id = 6792 name = TECH_CMP_LD_149_2_NAME type = combined_arms_focus difficulty = 15 }
+    # タスクフォース
+    component = { id = 6793 name = TECH_CMP_LD_149_3_NAME type = small_taskforce_tactics difficulty = 15 }
+    # 航空突破線偵察
+    component = { id = 6794 name = TECH_CMP_LD_149_4_NAME type = piloting difficulty = 15 }
+    # 戦闘規模の把握
+    component = { id = 6795 name = TECH_CMP_LD_149_5_NAME type = management difficulty = 15 }
+    required  = { }
+    or_required = { 14050 14070 }
+    effects =
+    { command = { type = max_organization which = land value = 5 }
+      command = { type = ground_def_eff when = 1 value = 0.2 }
+      command = { type = counterattack value = 2 }
+      command = { type = delay value = 2 }
+      command = { type = hq_supply_eff value = 1 }
+      command = { type = speed which = hq value = 1 }
+      command = { type = sce_frequency value = 0.5 }
+      command = { type = build_cost which = land when = on_upgrade where = relative value = 5 }
+      command = { type = max_organization which = motorized value = 20 }
+      command = { type = morale which = motorized value = 20 }
+      command = { type = max_organization which = mechanized value = 20 }
+      command = { type = morale which = mechanized value = 20 }
+      command = { type = max_organization which = armor value = 20 }
+      command = { type = morale which = armor value = 20 }
+    }
+  }
+  # 軍事計画ドクトリン
+  application =
+  { id        = 6800
+    name      = TECH_APP_LD_150_NAME
+    position  = { x = 5 y = 380 }
+    picture   = "1090"
+    year      = 1951
+    # 大規模上陸訓練
+    component = { id = 6801 name = TECH_CMP_LD_150_1_NAME type = naval_engineering difficulty = 15 }
+    # 準現代型空挺戦術
+    component = { id = 6802 name = TECH_CMP_LD_150_2_NAME type = training difficulty = 15 }
+    # 海地共同作戦
+    component = { id = 6803 name = TECH_CMP_LD_150_3_NAME type = small_taskforce_tactics difficulty = 15 }
+    # 空母艦隊との連携
+    component = { id = 6804 name = TECH_CMP_LD_150_4_NAME type = carrier_tactics difficulty = 15 }
+    # 高速展開
+    component = { id = 6805 name = TECH_CMP_LD_150_5_NAME type = combined_arms_focus difficulty = 15 }
+    required  = { 6730 }
+    or_required = { 6790 6490 }
+    effects =
+    { command = { type = morale which = land value = 5 }
+      command = { type = max_organization which = paratrooper value = 5 }
+      command = { type = morale which = paratrooper value = 5 }
+      command = { type = max_organization which = marine value = 5 }
+      command = { type = morale which = marine value = 5 }
+      command = { type = task_efficiency which = amphibious_assault value = 0.2 }
+      command = { type = ambush value = 1 }
+      command = { type = tactical_withdrawal value = 1 }
+      command = { type = speed which = hq value = 1 }
+      command = { type = hq_supply_eff value = 2 }
+      command = { type = sce_frequency value = 0.5 }
+      command = { type = build_cost which = land when = on_upgrade where = relative value = 5 }
+    }
+  }
+  # 強襲粉砕ドクトリン
+  application =
+  { id        = 6880
+    name      = TECH_APP_LD_158_NAME
+    position  = { x = 5 y = 420 }
+    picture   = "14090"
+    year      = 1958
+    # 伏撃歩兵
+    component = { id = 6881 name = TECH_CMP_LD_158_1_NAME type = infantry_focus difficulty = 16 }
+    # 各防御陣地の連携
+    component = { id = 6882 name = TECH_CMP_LD_158_2_NAME type = small_unit_tactics difficulty = 16 }
+    # 全地形防御訓練
+    component = { id = 6883 name = TECH_CMP_LD_158_3_NAME type = training difficulty = 16 }
+    # 防衛線の固守
+    component = { id = 6884 name = TECH_CMP_LD_158_4_NAME type = large_unit_tactics difficulty = 16 }
+    # 国土防衛の徹底
+    component = { id = 6885 name = TECH_CMP_LD_158_5_NAME type = individual_courage difficulty = 16 }
+    required  = { 6800 6750 }
+    effects =
+    { command = { type = max_organization which = land value = -10 }
+      command = { type = morale which = land value = 5 }
+      command = { type = assault value = 4 }
+      command = { type = speed which = hq value = 1 }
+      command = { type = hq_supply_eff value = 2 }
+      command = { type = sce_frequency value = 0.5 }
+      command = { type = build_cost which = land when = on_upgrade where = relative value = 5 }
+    }
+  }
+  # 核兵器重視ドクトリン
+  application =
+  { id        = 6890
+    name      = TECH_APP_LD_159_NAME
+    position  = { x = 5 y = 460 }
+    picture   = "DH6890"
+    year      = 1966
+    # 多目的同時攻撃
+    component = { id = 6891 name = TECH_CMP_LD_159_1_NAME type = decentralized_execution difficulty = 16 }
+    # 爆撃機用核兵器の最適化
+    component = { id = 6892 name = TECH_CMP_LD_159_2_NAME type = nuclear_engineering difficulty = 16 }
+    # 海中からの脅威
+    component = { id = 6893 name = TECH_CMP_LD_159_3_NAME type = submarine_tactics difficulty = 16 }
+    # 誘導弾推進剤
+    component = { id = 6894 name = TECH_CMP_LD_159_4_NAME type = rocketry difficulty = 16 }
+    # 核搭載戦略爆撃機戦術
+    component = { id = 6895 name = TECH_CMP_LD_159_5_NAME type = bomber_tactics difficulty = 16 }
+    required  = { 6880 6760 }
+    effects =
+    { command = { type = max_organization which = land value = -5 }
+      command = { type = nuke_damage value = 30 }
+      command = { type = ambush value = 1 }
+      command = { type = counterattack value = 2 }
+      command = { type = delay value = 2 }
+      command = { type = tactical_withdrawal value = 2 }
+      command = { type = hq_supply_eff value = 1 }
+      command = { type = build_cost which = land when = on_upgrade where = relative value = 10 }
+    }
+  }
+  # 積極的機動防衛ドクトリン
+  application =
+  { id        = 6850
+    name      = TECH_APP_LD_155_NAME
+    position  = { x = 5 y = 480 }
+    picture   = "DH6850"
+    year      = 1970
+    # 諸兵科連合防御
+    component = { id = 6851 name = TECH_CMP_LD_155_1_NAME type = combined_arms_focus difficulty = 16 }
+    # 機動部隊展開
+    component = { id = 6852 name = TECH_CMP_LD_155_2_NAME type = technical_efficiency difficulty = 16 }
+    # 包囲線制定
+    component = { id = 6853 name = TECH_CMP_LD_155_3_NAME type = management difficulty = 16 }
+    # 数学的に妥当な防衛戦力
+    component = { id = 6854 name = TECH_CMP_LD_155_4_NAME type = mathematics difficulty = 16 }
+    # 多国籍軍訓練
+    component = { id = 6855 name = TECH_CMP_LD_155_5_NAME type = training difficulty = 16 }
+    required  = { 6890 }
+    effects =
+    { command = { type = max_organization which = land value = -5 }
+      command = { type = morale which = land value = 5 }
+      command = { type = ambush value = 1 }
+      command = { type = counterattack value = 1 }
+      command = { type = delay value = 1 }
+      command = { type = tactical_withdrawal value = 2 }
+      command = { type = speed which = hq value = 1 }
+      command = { type = hq_supply_eff value = 1 }
+      command = { type = build_cost which = land when = on_upgrade where = relative value = 5 }
+      command = { type = max_organization which = cavalry value = 20 }
+      command = { type = morale which = cavalry value = 20 }
+    }
+  }
+  # 非対称戦争ドクトリン
+  application =
+  { id        = 14190
+    name      = TECH_APP_LD_119_NAME
+    desc      = TECH_APP_LD_119_DESC
+    position  = { x = 410 y = 340 }
+    picture   = "14190"
+    year      = 1945
+    # 非対称戦争論
+    component = { id = 14191 name = TECH_CMP_LD_119_1_NAME type = management difficulty = 10 }
+    # 対戦車戦術
+    component = { id = 14192 name = TECH_CMP_LD_119_2_NAME type = small_unit_tactics difficulty = 10 }
+    # 対空戦術
+    component = { id = 14193 name = TECH_CMP_LD_119_3_NAME type = training difficulty = 10 }
+    # 海軍サボタージュ
+    component = { id = 14194 name = TECH_CMP_LD_119_4_NAME type = individual_courage difficulty = 10 }
+    # テロ戦術
+    component = { id = 14195 name = TECH_CMP_LD_119_5_NAME type = training difficulty = 10 }
+    required  = { }
+    or_required = { 14090 14110 }
+    effects =
+    { command = { type = intelligence which = us value = 5 }
+      command = { type = surprise which = land value = 5 }
+      command = { type = army_detection which = us value = 5 }
+      command = { type = intelligence which = them value = -5 }
+      command = { type = army_detection which = them value = -5 }
+      command = { type = tactical_withdrawal value = 10 }
+      command = { type = delay value = 5 }
+      command = { type = ambush value = 5 }
+      command = { type = breakthrough value = 5 }
+      command = { type = encirclement value = 5 }
+      command = { type = counterattack value = 15 }
+      command = { type = hq_supply_eff value = 3 }
+      command = { type = sce_frequency value = 0.1 }
+      command = { type = max_organization which = land value = 10 }
+      command = { type = morale which = land value = 5 }
+      command = { type = air_defense which = land value = 1 }
+    }
+  }
+  # 陣地戦ドクトリン
+  application =
+  { id        = 14200
+    name      = TECH_APP_LD_161_NAME
+    position  = { x = 410 y = 360 }
+    picture   = "14200"
+    year      = 1948
+    # 敵の士気喪失
+    component = { id = 14201 name = TECH_CMP_LD_161_1_NAME type = training difficulty = 10 }
+    # 敵兵力の枯渇
+    component = { id = 14202 name = TECH_CMP_LD_161_2_NAME type = small_unit_tactics difficulty = 10 }
+    # 都市包囲ドクトリン
+    component = { id = 14203 name = TECH_CMP_LD_161_3_NAME type = decentralized_execution difficulty = 10 }
+    # 勇敢なパルチザン
+    component = { id = 14204 name = TECH_CMP_LD_161_4_NAME type = individual_courage difficulty = 10 }
+    # 大規模抵抗戦
+    component = { id = 14205 name = TECH_CMP_LD_161_5_NAME type = large_unit_tactics difficulty = 10 }
+    required  = { 14190 }
+    effects =
+    { command = { type = new_model which = hq value = 4 }
+      command = { type = scrap_model which = hq value = 3 }
+      command = { type = tactical_withdrawal value = 5 }
+      command = { type = hq_supply_eff value = 3 }
+      command = { type = sce_frequency value = 0.1 }
+      command = { type = ambush value = 5 }
+      command = { type = breakthrough value = 15 }
+      command = { type = assault value = 15 }
+      command = { type = counterattack value = 15 }
+      command = { type = encirclement value = 15 }
+      command = { type = max_organization which = land value = 10 }
+      command = { type = morale which = land value = 15 }
+      command = { type = muddy_attack which = land value = 2 }
+      command = { type = plain_attack which = land value = 5 }
+      command = { type = desert_attack which = land value = 2 }
+      command = { type = mountain_attack which = land value = 2 }
+      command = { type = hill_attack which = land value = 5 }
+      command = { type = forest_attack which = land value = 5 }
+      command = { type = jungle_attack which = land value = 2 }
+      command = { type = swamp_attack which = land value = 2 }
+      command = { type = urban_attack which = land value = 10 }
+      command = { type = fort_attack which = land value = 10 }
+    }
+  }
+  # 持久人民戦争ドクトリン
+  application =
+  { id        = 14220
+    name      = TECH_APP_LD_163_NAME
+    position  = { x = 410 y = 380 }
+    picture   = "14220"
+    year      = 1960
+    # 国際支援
+    component = { id = 14221 name = TECH_CMP_LD_163_1_NAME type = management difficulty = 10 }
+    # やるか死ぬかの精神
+    component = { id = 14222 name = TECH_CMP_LD_163_2_NAME type = individual_courage difficulty = 10 }
+    # イデオロギー闘争セッション
+    component = { id = 14223 name = TECH_CMP_LD_163_3_NAME type = management difficulty = 10 }
+    # 分散された戦闘集団
+    component = { id = 14224 name = TECH_CMP_LD_163_4_NAME type = decentralized_execution difficulty = 10 }
+    # 地下指揮統制
+    component = { id = 14225 name = TECH_CMP_LD_163_5_NAME type = centralized_execution difficulty = 10 }
+    required  = { 14200 }
+    effects =
+    { command = { type = ground_def_eff when = 1 value = 0.2 }
+      command = { type = intelligence which = us value = 25 }
+      command = { type = surprise which = land value = 15 }
+      command = { type = army_detection which = us value = 5 }
+      command = { type = army_detection which = them value = -10 }
+      command = { type = relative_manpower value = 5 }
+      command = { type = tactical_withdrawal value = 5 }
+      command = { type = ambush value = 5 }
+      command = { type = delay value = 5 }
+      command = { type = breakthrough value = 15 }
+      command = { type = assault value = 15 }
+      command = { type = encirclement value = 5 }
+      command = { type = counterattack value = 5 }
+      command = { type = hq_supply_eff value = 3 }
+      command = { type = sce_frequency value = 0.1 }
+      command = { type = max_organization which = land value = 10 }
+      command = { type = morale which = land value = 15 }
+      command = { type = night_move which = land value = 15 }
+      command = { type = night_defense which = land value = 15 }
+      command = { type = air_defense which = land value = 1 }
+    }
+  }
+  # 焦点化ドクトリン
+  application =
+  { id        = 14230
+    name      = TECH_APP_LD_164_NAME
+    position  = { x = 410 y = 410 }
+    picture   = "14230"
+    year      = 1960
+    # 人民戦争経験
+    component = { id = 14231 name = TECH_CMP_LD_164_1_NAME type = infantry_focus difficulty = 12 }
+    # 快速民兵組織
+    component = { id = 14232 name = TECH_CMP_LD_164_2_NAME type = small_unit_tactics difficulty = 12 }
+    # 前衛主義
+    component = { id = 14233 name = TECH_CMP_LD_164_3_NAME type = centralized_execution difficulty = 12 }
+    # 革命ジャンプスタートドクトリン
+    component = { id = 14234 name = TECH_CMP_LD_164_4_NAME type = individual_courage difficulty = 12 }
+    # 民兵と通常戦力の協力
+    component = { id = 14235 name = TECH_CMP_LD_164_5_NAME type = centralized_execution difficulty = 12 }
+    required  = { 14220 }
+    effects =
+    { command = { type = trickleback_mod value = 1 }
+      command = { type = attrition_mod value = 1 }
+      command = { type = deactivate which = 14240 }
+      command = { type = deactivate which = 14250 }
+      command = { type = surprise which = land value = 5 }
+      command = { type = army_detection which = us value = 5 }
+      command = { type = intelligence which = them value = -25 }
+      command = { type = army_detection which = them value = -15 }
+      command = { type = hq_supply_eff value = 5 }
+      command = { type = sce_frequency value = 0.5 }
+      command = { type = max_organization which = land value = 15 }
+      command = { type = morale which = land value = 5 }
+      command = { type = delay value = 5 }
+      command = { type = breakthrough value = 15 }
+      command = { type = assault value = 5 }
+      command = { type = counterattack value = 5 }
+      command = { type = encirclement value = 15 }
+      command = { type = ambush value = 15 }
+      command = { type = new_model which = hq value = 5 }
+      command = { type = scrap_model which = hq value = 4 }
+      command = { type = tactical_withdrawal value = 5 }
+      command = { type = hill_attack which = land value = 5 }
+      command = { type = jungle_attack which = land value = 5 }
+      command = { type = hill_defense which = land value = 5 }
+      command = { type = jungle_defense which = land value = 5 }
+    }
+  }
+  # 都市反乱重視ドクトリン
+  application =
+  { id        = 14240
+    name      = TECH_APP_LD_165_NAME
+    position  = { x = 410 y = 430 }
+    picture   = "14240"
+    year      = 1960
+    # 海外支援重視
+    component = { id = 14241 name = TECH_CMP_LD_165_1_NAME type = management difficulty = 12 }
+    # テロリズム
+    component = { id = 14242 name = TECH_CMP_LD_165_2_NAME type = small_unit_tactics difficulty = 12 }
+    # 先進的な待ち伏せ
+    component = { id = 14243 name = TECH_CMP_LD_165_3_NAME type = training difficulty = 12 }
+    # 暗殺
+    component = { id = 14244 name = TECH_CMP_LD_165_4_NAME type = decentralized_execution difficulty = 12 }
+    # 都市型対戦車戦術
+    component = { id = 14245 name = TECH_CMP_LD_165_5_NAME type = individual_courage difficulty = 12 }
+    required  = { 14220 }
+    effects =
+    { command = { type = trickleback_mod value = 1 }
+      command = { type = attrition_mod value = 1 }
+      command = { type = deactivate which = 14230 }
+      command = { type = deactivate which = 14250 }
+      command = { type = intelligence which = us value = 15 }
+      command = { type = surprise which = land value = 15 }
+      command = { type = army_detection which = us value = 5 }
+      command = { type = intelligence which = them value = -5 }
+      command = { type = army_detection which = them value = -5 }
+      command = { type = hq_supply_eff value = 3 }
+      command = { type = new_model which = hq value = 5 }
+      command = { type = scrap_model which = hq value = 4 }
+      command = { type = sce_frequency value = 0.3 }
+      command = { type = urban_attack which = infantry value = 15 }
+      command = { type = urban_defense which = infantry value = 25 }
+      command = { type = urban_defense which = militia value = 25 }
+      command = { type = urban_attack which = militia value = 15 }
+      command = { type = urban_defense which = land value = 15 }
+      command = { type = urban_attack which = land value = 15 }
+      command = { type = hard_attack which = infantry value = 5 }
+      command = { type = soft_attack which = infantry value = 5 }
+      command = { type = hard_attack which = militia value = 2 }
+      command = { type = soft_attack which = militia value = 2 }
+      command = { type = max_organization which = land value = 5 }
+      command = { type = morale which = land value = 5 }
+      command = { type = delay value = 5 }
+      command = { type = ambush value = 25 }
+      command = { type = tactical_withdrawal value = 15 }
+    }
+  }
+  # 民俗と信仰重視ドクトリン
+  application =
+  { id        = 14250
+    name      = TECH_APP_LD_166_NAME
+    position  = { x = 410 y = 450 }
+    picture   = "14250"
+    year      = 1960
+    # 彼の父親の遺灰と彼の神々の寺院という世界観
+    component = { id = 14251 name = TECH_CMP_LD_166_1_NAME type = management difficulty = 12 }
+    # 自由戦士の精神
+    component = { id = 14252 name = TECH_CMP_LD_166_2_NAME type = infantry_focus difficulty = 12 }
+    # 宗教や民族的アイデンティティへの訴え
+    component = { id = 14253 name = TECH_CMP_LD_166_3_NAME type = training difficulty = 12 }
+    # 非対称戦争戦術
+    component = { id = 14254 name = TECH_CMP_LD_166_4_NAME type = individual_courage difficulty = 12 }
+    # 緩やかな組織単位
+    component = { id = 14255 name = TECH_CMP_LD_166_5_NAME type = decentralized_execution difficulty = 12 }
+    required  = { 14220 }
+    effects =
+    { command = { type = trickleback_mod value = 10 }
+      command = { type = attrition_mod value = 5 }
+      command = { type = deactivate which = 14230 }
+      command = { type = deactivate which = 14240 }
+      command = { type = new_model which = hq value = 5 }
+      command = { type = scrap_model which = hq value = 4 }
+      command = { type = surprise which = land value = 15 }
+      command = { type = army_detection which = us value = 25 }
+      command = { type = intelligence which = them value = -20 }
+      command = { type = army_detection which = them value = -10 }
+      command = { type = relative_manpower value = 15 }
+      command = { type = hq_supply_eff value = 3 }
+      command = { type = sce_frequency value = 0.3 }
+      command = { type = hard_attack which = militia value = 1 }
+      command = { type = soft_attack which = militia value = 1 }
+      command = { type = hard_attack which = infantry value = 2 }
+      command = { type = soft_attack which = infantry value = 2 }
+      command = { type = delay value = 5 }
+      command = { type = assault value = 5 }
+      command = { type = counterattack value = 5 }
+      command = { type = ambush value = 5 }
+      command = { type = tactical_withdrawal value = 5 }
+      command = { type = max_organization which = land value = 5 }
+      command = { type = morale which = land value = 25 }
+    }
+  }
+  # 現代人民戦争ドクトリン
+  application =
+  { id        = 14260
+    name      = TECH_APP_LD_167_NAME
+    position  = { x = 410 y = 480 }
+    picture   = "14260"
+    year      = 1970
+    # 生産力の理論
+    component = { id = 14261 name = TECH_CMP_LD_167_1_NAME type = mathematics difficulty = 15 }
+    # 軍の近代化
+    component = { id = 14262 name = TECH_CMP_LD_167_2_NAME type = technical_efficiency difficulty = 15 }
+    # 軍事の非政治化
+    component = { id = 14263 name = TECH_CMP_LD_167_3_NAME type = management difficulty = 15 }
+    # 防衛縦深伸長
+    component = { id = 14264 name = TECH_CMP_LD_167_4_NAME type = centralized_execution difficulty = 15 }
+    # C3Iの生存性ノード
+    component = { id = 14265 name = TECH_CMP_LD_167_5_NAME type = industrial_engineering difficulty = 15 }
+    required  = { }
+    or_required = { 14250 14240 14230 }
+    effects =
+    { command = { type = intelligence which = us value = 15 }
+      command = { type = intelligence which = them value = -5 }
+      command = { type = surprise which = land value = 5 }
+      command = { type = army_detection which = us value = 10 }
+      command = { type = army_detection which = them value = -5 }
+      command = { type = wartime_ic_mod value = 10 }
+      command = { type = hq_supply_eff value = 3 }
+      command = { type = sce_frequency value = 0.3 }
+      command = { type = max_organization which = land value = 20 }
+      command = { type = morale which = land value = 5 }
+      command = { type = defensiveness which = land value = 5 }
+      command = { type = hard_attack which = land value = 3 }
+      command = { type = air_defense which = land value = 5 }
+    }
+  }
+  # 大戦型病院システム
+  application =
+  { id        = 14000
+    name      = TECH_APP_LD_100_NAME
+    desc      = TECH_APP_LD_100_DESC
+    position  = { x = 567 y = 340 }
+    year      = 1936
+    # 負傷兵回復
+    component = { id = 14001 name = TECH_CMP_LD_100_1_NAME type = centralized_execution difficulty = 8 }
+    # 野戦医療
+    component = { id = 14002 name = TECH_CMP_LD_100_2_NAME type = training difficulty = 8 }
+    # 救護兵用キット
+    component = { id = 14003 name = TECH_CMP_LD_100_3_NAME type = combined_arms_focus difficulty = 8 }
+    # 戦闘医療
+    component = { id = 14004 name = TECH_CMP_LD_100_4_NAME type = individual_courage difficulty = 8 }
+    # 初期型救急車
+    component = { id = 14005 name = TECH_CMP_LD_100_5_NAME type = mechanics difficulty = 8 }
+    required  = { }
+    effects =
+    { command = { type = attrition_mod value = 2 }
+      command = { type = trickleback_mod value = 5 }
+    }
+  }
+  # 初期型病院システム
+  application =
+  { id        = 14010
+    name      = TECH_APP_LD_101_NAME
+    desc      = TECH_APP_LD_101_DESC
+    position  = { x = 567 y = 360 }
+    year      = 1938
+    # 傷病兵分類
+    component = { id = 14011 name = TECH_CMP_LD_101_1_NAME type = centralized_execution difficulty = 8 }
+    # 個別治療パック
+    component = { id = 14012 name = TECH_CMP_LD_101_2_NAME type = infantry_focus difficulty = 8 }
+    # 野戦医療統合化
+    component = { id = 14013 name = TECH_CMP_LD_101_3_NAME type = small_unit_tactics difficulty = 8 }
+    # 半無菌環境
+    component = { id = 14014 name = TECH_CMP_LD_101_4_NAME type = technical_efficiency difficulty = 8 }
+    # 初期型トリアージ
+    component = { id = 14015 name = TECH_CMP_LD_101_5_NAME type = training difficulty = 8 }
+    required  = { 14000 }
+    effects =
+    { command = { type = attrition_mod value = 2 }
+      command = { type = trickleback_mod value = 5 }
+    }
+  }
+  # 基本型病院システム
+  application =
+  { id        = 14020
+    name      = TECH_APP_LD_102_NAME
+    desc      = TECH_APP_LD_102_DESC
+    position  = { x = 567 y = 380 }
+    year      = 1941
+    # 基本型傷病兵搬送
+    component = { id = 14021 name = TECH_CMP_LD_102_1_NAME type = centralized_execution difficulty = 8 }
+    # 救護所
+    component = { id = 14022 name = TECH_CMP_LD_102_2_NAME type = large_unit_tactics difficulty = 8 }
+    # サルファ剤
+    component = { id = 14023 name = TECH_CMP_LD_102_3_NAME type = chemistry difficulty = 8 }
+    # 改良型救急車
+    component = { id = 14024 name = TECH_CMP_LD_102_4_NAME type = mechanics difficulty = 8 }
+    # 発展型トリアージ
+    component = { id = 14025 name = TECH_CMP_LD_102_5_NAME type = training difficulty = 8 }
+    required  = { 14010 }
+    effects =
+    { command = { type = attrition_mod value = 2 }
+      command = { type = trickleback_mod value = 5 }
+    }
+  }
+  # 改良型病院システム
+  application =
+  { id        = 14030
+    name      = TECH_APP_LD_103_NAME
+    desc      = TECH_APP_LD_103_DESC
+    position  = { x = 567 y = 400 }
+    year      = 1945
+    # 後方病院
+    component = { id = 14031 name = TECH_CMP_LD_103_1_NAME type = centralized_execution difficulty = 8 }
+    # 野戦外科手術
+    component = { id = 14032 name = TECH_CMP_LD_103_2_NAME type = large_unit_tactics difficulty = 8 }
+    # 改良型医薬品
+    component = { id = 14033 name = TECH_CMP_LD_103_3_NAME type = chemistry difficulty = 8 }
+    # 前線搬送システム
+    component = { id = 14034 name = TECH_CMP_LD_103_4_NAME type = small_unit_tactics difficulty = 8 }
+    # 戦闘外科医
+    component = { id = 14035 name = TECH_CMP_LD_103_5_NAME type = training difficulty = 8 }
+    required  = { 14020 }
+    effects =
+    { command = { type = attrition_mod value = 2 }
+      command = { type = trickleback_mod value = 5 }
+    }
+  }
+  # 発展型病院システム
+  application =
+  { id        = 14040
+    name      = TECH_APP_LD_104_NAME
+    desc      = TECH_APP_LD_104_DESC
+    position  = { x = 567 y = 420 }
+    year      = 1950
+    # ヘリコプター搬送
+    component = { id = 14041 name = TECH_CMP_LD_104_1_NAME type = aeronautics difficulty = 9 }
+    # 移動病院
+    component = { id = 14042 name = TECH_CMP_LD_104_2_NAME type = large_unit_tactics difficulty = 9 }
+    # 発展型医薬品
+    component = { id = 14043 name = TECH_CMP_LD_104_3_NAME type = chemistry difficulty = 9 }
+    # 無線指示による搬送
+    component = { id = 14044 name = TECH_CMP_LD_104_4_NAME type = electronics difficulty = 9 }
+    # 救護兵訓練
+    component = { id = 14045 name = TECH_CMP_LD_104_5_NAME type = training difficulty = 9 }
+    required  = { 14030 }
+    effects =
+    { command = { type = attrition_mod value = 2 }
+      command = { type = trickleback_mod value = 5 }
+    }
+  }
+  # 準現代型病院システム
+  application =
+  { id        = 6480
+    name      = TECH_APP_LD_48_NAME
+    desc      = TECH_APP_LD_48_DESC
+    position  = { x = 567 y = 440 }
+    year      = 1955
+    # 改善されたヘリコプター輸送
+    component = { id = 6481 name = TECH_CMP_LD_48_1_NAME type = aeronautics difficulty = 10 }
+    # 民間医療機関の協力
+    component = { id = 6482 name = TECH_CMP_LD_48_2_NAME type = large_unit_tactics difficulty = 10 }
+    # 現代型医薬品
+    component = { id = 6483 name = TECH_CMP_LD_48_3_NAME type = chemistry difficulty = 10 }
+    # 高度な搬送訓練
+    component = { id = 6484 name = TECH_CMP_LD_48_4_NAME type = small_unit_tactics difficulty = 10 }
+    # 軍医養成訓練
+    component = { id = 6485 name = TECH_CMP_LD_48_5_NAME type = training difficulty = 10 }
+    required  = { 14040 }
+    effects =
+    { command = { type = attrition_mod value = 2 }
+      command = { type = trickleback_mod value = 5 }
+    }
+  }
+  # 現代型病院システム
+  application =
+  { id        = 14120
+    name      = TECH_APP_LD_112_NAME
+    position  = { x = 567 y = 460 }
+    picture   = "DH14120"
+    year      = 1962
+    # 現代型ヘリコプター搬送
+    component = { id = 14121 name = TECH_CMP_LD_112_1_NAME type = aeronautics difficulty = 10 }
+    # 現代型移動病院
+    component = { id = 14122 name = TECH_CMP_LD_112_2_NAME type = mechanics difficulty = 10 }
+    # 現代型医薬品
+    component = { id = 14123 name = TECH_CMP_LD_112_3_NAME type = chemistry difficulty = 10 }
+    # 無線指示による搬送
+    component = { id = 14124 name = TECH_CMP_LD_112_4_NAME type = electronics difficulty = 10 }
+    # 救護兵訓練
+    component = { id = 14125 name = TECH_CMP_LD_112_5_NAME type = training difficulty = 10 }
+    required  = { 6480 }
+    effects =
+    { command = { type = attrition_mod value = 2 }
+      command = { type = trickleback_mod value = 5 }
+    }
+  }
+  # 卓越型病院システム
+  application =
+  { id        = 14130
+    name      = TECH_APP_LD_113_NAME
+    position  = { x = 567 y = 480 }
+    picture   = "DH14130"
+    year      = 1970
+    # 改良型ヘリコプター搬送
+    component = { id = 14131 name = TECH_CMP_LD_113_1_NAME type = aeronautics difficulty = 11 }
+    # 改良型移動病院
+    component = { id = 14132 name = TECH_CMP_LD_113_2_NAME type = technical_efficiency difficulty = 11 }
+    # 改良型医薬品
+    component = { id = 14133 name = TECH_CMP_LD_113_3_NAME type = chemistry difficulty = 11 }
+    # 改良型無線指示による搬送
+    component = { id = 14134 name = TECH_CMP_LD_113_4_NAME type = electronics difficulty = 11 }
+    # 改良型救護兵訓練
+    component = { id = 14135 name = TECH_CMP_LD_113_5_NAME type = training difficulty = 11 }
+    required  = { 14120 }
+    effects =
+    { command = { type = attrition_mod value = 2 }
+      command = { type = trickleback_mod value = 5 }
+    }
+  }
+}

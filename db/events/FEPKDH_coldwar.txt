@@ -1,0 +1,898 @@
+#########################################################################
+#	FEPKDH_coldwar.txt
+#	FEPKDH冷戦イベント
+#########################################################################
+#id = 160000	JAP	共産主義の防波堤としての大日本帝国
+#id = 160001	USA	共産主義の防波堤としての大日本帝国
+#id = 160002	USA	日米交渉の行方
+#id = 160003	JAP	日米交渉の行方 ― 秘密裏の支援を行う
+#id = 160004	JAP	日米交渉の行方 ― 満洲の開放要求
+#id = 160005	JAP	日米交渉の行方 ― 中華民国への譲歩を要求
+#id = 160006	JAP	日米交渉の行方 ― 大陸からの即時撤退を求める！
+#id = 160007	JAP	日米交渉の行方 ― アメリカは同盟と不可侵を求める
+#id = 160008	USA	日本が条件を拒否
+#id = 160009	SOV	アメリカが日本との停戦を求める
+#id = 160010	CHI	アメリカが日本との停戦を求める ― 白紙和平
+#id = 160011	CHI	アメリカが日本との停戦を求める ― 華北国境線の再定義
+#id = 160012	JAP	華北国境の再定義
+#id = 160013	CHI	アメリカが日本との停戦を求める ― 満洲が手中に！
+#id = 160014	JAP	満洲国の終焉
+#id = 160015	MAN	満洲開放
+#id = 160016	JAP	日米同盟
+#id = 160050-63	東西ドイツ統合イベント(TRAPベース)
+#id = 160100-11	ベルリン封鎖
+#第三次大戦ネタリスト
+#1950	朝鮮戦争
+#1956	スエズ動乱
+#1958	ソ連による最後通牒（https://en.wikipedia.org/wiki/Berlin_Crisis_of_1961）
+#1960	ベトナム戦争
+#1961	ケネディ＝フルシチョフ会談
+#1962	キューバ危機
+#########################################################################
+
+event = {
+	id = 160000
+	country = JAP
+	random = no
+	trigger = {
+		war = { country = SOV }	#日ソが戦争中
+		exists = CHI	#中国亜大陸が日本のコントロール下にない
+		NOT = {
+			war = { country = USA }	#アメリカと戦争中でない
+			alliance = { country = USA }	#アメリカと同盟していない
+			war = { country = ENG }	#連合国と戦争中でない
+			alliance = { country = ENG }	#連合国と戦争中でない
+			exists = GER	#WW2終了後
+			flag = usadefeatsjap	#日本降伏が発生していない
+			ideology = nazi	#JAPの政体が国家社会主義でない
+			event = 131297	#革命が起こった！（アメリカ）が発生していない
+		}
+		OR = {	#冷戦状況にある
+			alliance = { country = SOV country = POL }
+			alliance = { country = SOV country = DDR }
+			alliance = { country = SOV country = CZE }
+			alliance = { country = SOV country = HUN }
+			alliance = { country = SOV country = AUS }
+			alliance = { country = SOV country = GRE }
+			alliance = { country = SOV country = YUG }
+			alliance = { country = SOV country = BUL }
+			alliance = { country = SOV country = ROM }
+			alliance = { country = SOV country = LUX }
+			alliance = { country = SOV country = HOL }
+			alliance = { country = SOV country = BEL }
+			alliance = { country = SOV country = FRA }
+			alliance = { country = SOV country = SPA }
+			alliance = { country = SOV country = SPR }
+		}
+	}
+	
+	date = { day = 0 month = 0 year = 1941 }
+	offset = 11
+	deathdate = { day = 29 month = december year = 1963 }
+
+	picture = "hull-note"
+	style = 0
+
+	name = "EVT_160000_NAME"	#共産主義の防波堤としての大日本帝国
+	desc = "EVT_160000_DESC"	#ソ連に満州への侵攻を受けた大日本帝国は、自らを太平洋における共産主義への防波堤として連合国に売り出すことを画策した。冷戦構造の中にあって現状どちらにも付いていない大日本帝国ではあるがドイツなき今、ソ連と正面から戦ったときの結果は明白であった。そこで知米派の人間を中心に、ソビエトが日本に対し大きな力を持つならばそれは太平洋からアメリカまでの制海権を脅かすことであるから、アメリカは日本の対ソ戦争について支援を行うよう働きかけるべきだという意見が生まれていた。ただ、言うまでもなく近年アメリカと日本の関係は冷え切っており、その現状があってアメリカが日本の提案を聞き入れるとは気楽には考えられなかった。
+	
+	action = {
+		name = "EVT_160000_ACTA"	#物は試しだ。アメリカに話を持ちかけてみよう
+		ai_chance = 50
+		command = { type = dissent value = 5 }
+		command = { type = trigger which = 160001 }
+	}
+	action = {
+		name = "EVT_160000_ACTB"	#何故アメリカに我々が頼らねばならんのだ？
+		ai_chance = 50
+		command = { type = dissent value = 1 }
+	}
+}
+
+event = {
+	id = 160001
+	country = USA
+	
+	picture = "hull-note"
+	style = 0
+
+	name = "EVT_160001_NAME"	#共産主義の防波堤としての大日本帝国
+	desc = "EVT_160001_DESC"	#アジアで際限なき拡大に精を出す大日本帝国は、ついにソビエト連邦との全面的な衝突に至った。怨敵ドイツを退け、東欧に大きな影響力を発揮できるようになった赤軍は今や全力を持って大陸における日本の勢力圏を攻撃することが出来――アジア最大の海軍に守られた日本本土はともかくとして――それ以外の全てを奪い取ることも出来るだろう。そこで大日本帝国は、アメリカがソビエト連邦との対決姿勢を強めていることを利用して、ソビエト連邦の侵攻を防ぐ力として合衆国を利用しようとしているのだ。我々は確かに世界秩序を東西で二分することになったが、アメリカが介入することは第三次世界大戦への道を開くことになり兼ねない。海軍力の貧弱なソビエト連邦には、どうやっても英米を脅かす方法はないのだ。日本人のやることに関わる必要はあるのだろうか？
+	
+	action = {
+		name = "EVT_160001_ACTA"	#ソビエトの増長を防ぐために必要なことだ
+		command = { type = dissent value = 2 }
+		command = { type = relation which = JAP value = 50 }
+		command = { type = relation which = SOV value = -100 }
+		command = { type = trigger which = 160002 }
+	}
+	action = {
+		name = "EVT_160001_ACTB"	#何故我々が日本人に便宜を図ってやる必要が？
+		command = { type = relation which = SOV value = 50 }
+		command = { type = relation which = JAP value = -100 }
+	}
+}
+
+
+#########################################################################
+# TRAP東西ドイツ統合イベント改造
+#########################################################################
+#FEPK1.11で全般的に修正
+
+event = {
+	id = 160050
+	random = no
+	country = DDR
+	
+	trigger = {
+		exists = DFR
+		exists = USA
+		alliance = { country = USA country = DFR }
+		
+		OR = {
+			NOT = {
+				exists = SOV
+				government = communist
+			}
+			NOT = {
+				control = { province = 300 data = DDR } # 追加部分
+				lost_VP = { country = DDR value = 50 }
+				lost_national = { country = DDR value = 50 }
+				lost_IC = { country = DDR value = 50 }
+			}
+			AND = {
+				alliance = { country = SOV country = DDR }
+				lost_VP = { country = SOV value = 50 }
+				lost_national = { country = SOV value = 50 }
+				lost_IC = { country = SOV value = 50 }
+			}
+		#	allies = 700
+		}
+	}
+	name = "EVT_160050_NAME"
+	desc = "EVT_160050_DESC"
+	picture = "coldwar"
+	style = 0
+	
+
+        date = { day = 0 month = january year = 1939 }
+        offset = 30
+	deathdate = { day = 29 month = december year = 1963 } #FEPK1.11
+
+ 	action_a = {
+		name = "EVT_160050_ACTA"
+		ai_chance = 95
+		command = { type = end_puppet }
+		command = { type = leave_alliance }
+		command = { type = secederegion which = DFR value = Germany when = 0 }
+		command = { type = trigger which = 160051 }
+	}
+ 	action_b = {
+		name = "EVT_160050_ACTB"
+		ai_chance = 4
+		command = { type = belligerence value = 15 }
+		command = { type = relation which = DFR value = -75 }
+		command = { type = dissent value = 25 }
+	}
+ 	action_c = {
+		name = "EVT_160050_ACTC"
+		ai_chance = 1
+		command = { type = end_puppet }
+		command = { type = leave_alliance }
+		command = { type = relation which = SOV value = -100 }
+		command = { type = dissent value = 5 }
+		command = { type = trigger which = 160052 }
+	}
+	
+}
+
+event = {
+	id = 160051
+	random = no
+	country = DFR
+	
+	name = "EVT_160051_NAME"
+	desc = "EVT_160051_DESC"
+	picture = "coldwar"
+	style = 0
+	
+ 	action_a = {
+		name = "EVT_160051_ACTA"
+		command = { type = inherit which = DDR }
+		command = { type = trigger which = 160062 }
+		}
+}
+
+event = {
+	id = 160052
+	random = no
+	country = USA
+
+	name = "EVT_160052_NAME"
+	desc = "EVT_160052_DESC"
+	picture = "coldwar"
+	style = 0
+	
+ 	action_a = {
+		name = "EVT_160052_ACTA"
+		ai_chance = 49
+		command = { type = trigger which = 160053 }
+		command = { type = relation which = DDR value = 50 }
+		command = { type = relation which = DFR value = -25 }
+		command = { type = dissent value = 5 }
+		}
+ 	action_b = {
+		name = "EVT_160052_ACTB"
+		ai_chance = 49
+		command = { type = trigger which = 160051 }
+		command = { type = relation which = DFR value = 15 }
+		}
+ 	action_c = {
+		name = "EVT_160052_ACTC"
+		ai_chance = 2
+		command = { type = war which = DDR }
+		command = { type = relation which = DFR value = -5 }
+		command = { type = dissent value = 5 }
+		}
+	
+}
+
+event = {
+	id = 160053
+	random = no
+	country = DDR
+	
+	name = "EVT_160053_NAME"
+	desc = "EVT_160053_DESC"
+	picture = "coldwar"
+	style = 0
+	
+ 	action_a = {
+		name = "EVT_160053_ACTA"
+		ai_chance = 95
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = set_domestic which = free_market value = 7 }
+		command = { type = set_domestic which = freedom value = 8 }
+		command = { type = alliance which = USA }
+		}
+ 	action_b = {
+		name = "EVT_160053_ACTB"
+		ai_chance = 5
+		command = { type = war which = USA }
+		}
+	
+}
+
+event = {
+	id = 160054
+	random = no
+	country = DFR
+	
+	trigger = {
+		exists = DDR
+		exists = SOV
+		alliance = { country = SOV country = DDR }
+		OR = {
+			NOT = {
+				exists = USA
+				government = democratic
+			}
+			NOT = {
+				control = { province = 75 data = DFR } # 追加部分
+				control = { province = 300 data = DFR }
+				control = { province = 376 data = DFR }
+				lost_VP = { country = DFR value = 50 }
+				lost_national = { country = DFR value = 50 }
+				lost_IC = { country = DFR value = 50 }
+			}
+			AND = {
+				alliance = { country = USA country = DFR }
+				lost_VP = { country = USA value = 50 }
+				lost_national = { country = USA value = 50 }
+				lost_IC = { country = USA value = 50 }
+			}
+			AND = {
+				alliance = { country = ENG country = DFR }
+				NOT = {
+					alliance = { country = USA country = DFR }
+				}
+				lost_VP = { country = USA value = 50 }
+				lost_national = { country = USA value = 50 }
+				lost_IC = { country = USA value = 50 }
+			}
+		}
+	}
+	name = "EVT_160054_NAME"
+	desc = "EVT_160054_DESC"
+	picture = "coldwar"
+	style = 0
+	
+        date = { day = 0 month = january year = 1939 }
+        offset = 30
+	deathdate = { day = 29 month = december year = 1963 } #FEPK1.11
+
+ 	action_a = {
+		name = "EVT_160054_ACTA"
+		ai_chance = 95
+		command = { type = end_puppet }
+		command = { type = leave_alliance }
+		command = { type = secederegion which = DDR value = Germany when = 0 }
+		command = { type = trigger which = 160055 }
+		}
+ 	action_b = {
+		name = "EVT_160054_ACTB"
+		ai_chance = 4
+		command = { type = belligerence value = 15 }
+		command = { type = relation which = DDR value = -75 }
+		command = { type = dissent value = 25 }
+		}
+ 	action_c = {
+		name = "EVT_160054_ACTC"
+		ai_chance = 1
+		command = { type = end_puppet }
+		command = { type = leave_alliance }
+		command = { type = relation which = USA value = -100 }
+		command = { type = dissent value = 5 }
+		command = { type = trigger which = 160056 }
+		}
+}
+
+event = {
+	id = 160055
+	random = no
+	country = DDR
+	
+	name = "EVT_160055_NAME"
+	desc = "EVT_160055_DESC"
+	picture = "coldwar"
+	
+ 	action_a = {
+		name = "EVT_160055_ACTA"
+		command = { type = inherit which = DFR }
+		command = { type = trigger which = 160062 }
+		}
+}
+
+event = {
+	id = 160056
+	random = no
+	country = SOV
+
+	name = "EVT_160056_NAME"
+	desc = "EVT_160056_DESC"
+	picture = "coldwar"
+	style = 0
+	
+ 	action_a = {
+		name = "EVT_160056_ACTA"
+		ai_chance = 49
+		command = { type = trigger which = 160057 }
+		command = { type = relation which = DFR value = 50 }
+		command = { type = relation which = DDR value = -25 }
+		command = { type = dissent value = 5 }
+		}
+ 	action_b = {
+		name = "EVT_160056_ACTB"
+		ai_chance = 49
+		command = { type = trigger which = 160055 }
+		command = { type = relation which = DDR value = 15 }
+		}
+ 	action_c = {
+		name = "EVT_160056_ACTC"
+		ai_chance = 2
+		command = { type = war which = DFR }
+		command = { type = relation which = DDR value = -5 }
+		command = { type = dissent value = 5 }
+		}
+	
+}
+
+event = {
+	id = 160057
+	random = no
+	country = DFR
+	
+	name = "EVT_160057_NAME"
+	desc = "EVT_160057_DESC"
+	picture = "coldwar"
+	style = 0
+	
+ 	action_a = {
+		name = "EVT_160057_ACTA"
+		ai_chance = 95
+		command = { type = set_domestic which = political_left value = 9 }
+		command = { type = set_domestic which = free_market value = 0 }
+		command = { type = set_domestic which = freedom value = 0 }
+		command = { type = alliance which = SOV }
+		}
+ 	action_b = {
+		name = "EVT_160057_ACTB"
+		ai_chance = 5
+		command = { type = war which = SOV }
+		}
+	
+}
+
+event = {
+	id = 160058
+	random = no
+	country = DDR
+	
+	trigger = {
+		ai = no
+		OR = { 
+			alliance = { country = DDR country = DFR }
+			alliance = { country = DDR country = GER }
+		}
+	}
+	name = "EVT_160058_NAME"
+	desc = "EVT_160058_DESC"
+	picture = "coldwar"
+	style = 0
+	
+        date = { day = 0 month = january year = 1939 }
+        offset = 30
+	deathdate = { day = 29 month = december year = 1963 } #FEPK1.11
+
+ 	action_a = {
+		name = "EVT_160058_ACTA"
+		ai_chance = 100
+		command = { type = trigger which = 160059 }
+		}
+ 	action_c = {
+		name = "EVT_160058_ACTC"
+		ai_chance = 0
+		command = { type = dissent value = 30 }
+		}
+	
+}
+
+event = {
+	id = 160059
+	random = no
+	country = DDR
+	
+	name = "EVT_160059_NAME"
+	desc = "EVT_160059_DESC"
+	picture = "coldwar"
+	style = 0
+	
+ 	action_a = {
+		name = "EVT_160059_ACTA"
+		command = { type = inherit which = DFR }
+		command = { type = inherit which = GER }
+		command = { type = trigger which = 160062 }
+		command = { type = dissent value = -30 }
+		}
+}
+
+event = {
+	id = 160060
+	random = no
+	country = DFR
+	
+	trigger = { 
+		ai = no
+		OR = {
+			alliance = { country = DDR country = DFR }
+			alliance = { country = GER country = DFR }
+		}
+	}
+	name = "EVT_160060_NAME"
+	desc = "EVT_160060_DESC"
+	picture = "coldwar"
+	style = 0
+	
+        date = { day = 0 month = january year = 1939 }
+        offset = 30
+	deathdate = { day = 29 month = december year = 1963 } #FEPK1.11
+
+ 	action_a = {
+		name = "EVT_160060_ACTA"
+		ai_chance = 100
+		command = { type = trigger which = 160061 }
+	}
+ 	action_b = {
+		name = "EVT_160060_ACTB"
+		ai_chance = 0
+		command = { type = dissent value = 30 }
+	}
+}
+
+event = {
+	id = 160061
+	random = no
+	country = DFR
+	
+	name = "EVT_160061_NAME"
+	desc = "EVT_160061_DESC"
+	picture = "coldwar"
+	style = 0
+	
+ 	action_a = {
+		name = "EVT_160061_ACTA"
+		command = { type = inherit which = DDR }
+		command = { type = inherit which = GER }
+		command = { type = trigger which = 160062 }
+		command = { type = dissent value = -30 }
+		}
+}
+
+event = {
+	id = 160062
+	random = no
+	tag = { DFR DDR }
+	
+	trigger = {
+		control = { province = 300 data = -1 }
+		NOT = { capital = { province = 300 data = -1 } }
+	}
+
+	name = "EVT_160062_NAME"
+	desc = "EVT_160062_DESC"
+	picture = "coldwar"
+	
+ 	action_a = {
+		name = "EVT_160062_ACTA"
+		command = { type = capital which = 300 }
+	}
+}
+
+event = {
+	id = 160100
+	random = no
+	country = SOV
+	
+	trigger = {
+		NOT = {
+			war = { country = GER }
+			war = { country = ITA }
+			war = { country = JAP }
+			war = { country = FRA }
+			war = { country = ENG }
+		}
+		event = 134044
+		alliance = { country = SOV country = DDR }
+		alliance = { country = USA country = DFR }
+		NOT = { alliance = { country = SOV country = USA } }
+		NOT = { war = { country = SOV country = USA } }
+		random = 60
+	}
+	decision = {
+		NOT = {
+			war = { country = GER }
+			war = { country = ITA }
+			war = { country = JAP }
+			war = { country = FRA }
+			war = { country = ENG }
+		}
+		event = 134044
+		alliance = { country = SOV country = DDR }
+		alliance = { country = USA country = DFR }
+		NOT = { alliance = { country = SOV country = USA } }
+		NOT = { war = { country = SOV country = USA } }
+	}
+	decision_trigger = {
+		garrison = { country = SOV province = 300 size = 1 }
+	}
+	
+	date = { day = 0 month = 0 year = 1941 }
+	offset = 11
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_160100_NAME"	#ベルリン封鎖
+	desc = "EVT_160100_DESC"	#
+	picture = "coldwar"
+	decision_picture = "decision_spread_revolution"
+	
+	action = {
+		name = "EVT_160100_ACTA"	#ベルリンを封鎖せよ！
+		ai_chance = 100
+		command = { type = relation which = ENG value = -20 }
+		command = { type = relation which = USA value = -20 }
+		command = { type = relation which = FRA value = -20 }
+		command = { type = trigger which = 160101 }
+	}
+	action = {
+		name = "EVT_160100_ACTB"	#西側との緊張を招けばろくなことにならんぞ！
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+	}
+}
+
+event = {
+	id = 160101
+	random = no
+	country = USA
+	
+	name = "EVT_160100_NAME"	#ベルリン封鎖
+	desc = "EVT_160101_DESC"	#
+	picture = "coldwar"
+	
+	action = {
+		name = "EVT_160101_ACTA"	#ならば、ベルリンを救おう。空から！
+		ai_chance = 99
+		command = { type = relation which = SOV value = -20 }
+		command = { type = free_ic value = -25 }
+		command = { type = dissent value = -2 }
+		command = { type = trigger which = 160103 }
+	}
+	action = {
+		name = "EVT_160101_ACTB"	#遺憾ながら、ベルリンは諦めるしかあるまい
+		ai_chance = 1
+		command = { type = dissent value = 4 }
+		command = { type = trigger which = 160102 }
+	}
+}
+
+event = {
+	id = 160102
+	random = no
+	country = SOV
+	
+	name = "EVT_160102_NAME"	#西側諸国はベルリンの放棄を決定！
+	desc = "EVT_160102_DESC"	#
+	picture = "coldwar"
+	
+	action = {
+		name = "EVT_160102_ACTA"	#資本主義者も思い知ったことだろう！
+		command = { type = dissent value = -2 }
+		command = { type = construct which = ic where = -4 value = 1 }
+		command = { type = construct which = ic where = -4 value = 1 }
+		command = { type = construct which = ic where = -4 value = 1 }
+		command = { type = construct which = ic where = -4 value = 1 }
+		command = { type = construct which = ic where = 300 value = -4 }
+	}
+}
+
+event = { 
+	id = 160103
+	random = no
+	country = USA
+	
+	name = "EVT_160103_NAME"	#ベルリン大空輸
+	desc = "EVT_160103_DESC"	#
+	picture = "C-54"
+	
+	action = {
+		name = "EVT_160103_ACTA"	#我々はベルリンを放棄するつもりはない
+		command = { type = dissent value = -2 }
+	}
+}
+
+event = {
+	id = 160104
+	random = no
+	country = USA
+	trigger = {
+		event = 160103
+		alliance = { country = SOV country = DDR }
+		alliance = { country = USA country = DFR }
+		NOT = { 
+			alliance = { country = SOV country = USA } 
+			war = { country = SOV country = USA }
+		}
+	}
+	
+	name = "EVT_160104_NAME"	#ブラックフライデー
+	desc = "EVT_160104_DESC"	#
+	
+	date = { day = 12 month = 7 year = 1948 }
+	
+	picture = "C-54"
+	
+	action = {
+		name = "OK"	#
+		command = { type = relation which = DFR value = 10 }
+		command = { type = max_organization which = transport_plane value = 5 }
+		command = { type = gain_tech which = 15190 }
+	}
+}
+
+event = {
+	id = 160105
+	random = no
+	country = SOV
+	
+	trigger = {
+		random = 15
+		event = 160103
+	}
+	
+	date = { day = 0 month = 0 year = 1941 }
+	offset = 31	#150日後には95％の確率で発生している想定
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_160105_NAME"	#ベルリン大空輸の影響
+	desc = "EVT_160105_DESC"	#
+	picture = "C-54"
+	
+	action = {
+		name = "EVT_160105_ACTA"	#ちっ
+		command = { type = dissent value = 3 }
+		command = { type = belligerence value = 10 }
+		command = { type = relation which = DFR value = -30 }
+	}
+}
+
+event = {
+	id = 160106
+	random = no
+	country = SOV
+	trigger = {
+		random = 60
+		event = 160105
+	}
+	
+	date = { day = 0 month = 0 year = 1941 }
+	offset = 9
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	name = "EVT_160106_NAME"	#ベルリン大空輸の妨害
+	desc = "EVT_160106_DESC"	#
+	picture = "C-54"
+	
+	action = {
+		name = "EVT_160106_ACTA"	#直接的な手段に出る訳にはいかない……。
+		ai_chance = 92
+		command = { type = belligerence value = 5 }
+		command = { type = dissent value = 2 }
+		command = { type = relation which = DFR value = -10 }
+		command = { type = sleepevent which = 160107 }
+	}
+	action = {
+		name = "EVT_160106_ACTB"	#これ以上連中の思い通りにはさせられない、航空機への攻撃を許可せよ
+		command = { type = belligerence value = 15 }
+		command = { type = dissent value = 5 }
+	}
+}
+
+event = {
+	id = 160107
+	random = no
+	country = USA
+
+	trigger = {
+		event = 160106
+	}
+
+	date = { day = 0 month = 0 year = 1941 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	picture = "C-54"
+
+	name = "EVT_160107_NAME"	#アメリカ空軍機撃墜事件
+	desc = "EVT_160107_DESC"	#
+	
+	action = {
+		name = "EVT_160107_ACTA"	#大使館に抗議、空輸部隊への護衛戦闘機の配備を
+		ai_chance = 95
+		command = { type = resource which = supplies value = -1000 }
+		command = { type = dissent value = 2 }
+		command = { type = relation which = SOV value = -40 }
+		command = { type = trigger which = 160108 }
+	}
+	action = {
+		name = "EVT_160108_ACTB"	#ベルリンは諦めざるをえまい
+		command = { type = dissent value = 5 }
+		command = { type = relation which = DFR value = -40 }
+		command = { type = trigger which = 160102 }
+	}
+}
+
+event = {
+	id = 160108
+	random = no
+	country = SOV
+	
+	name = "EVT_160108_NAME"	#アメリカ空軍機墜落事件
+	desc = "EVT_160108_DESC"	#
+	
+	picture = "coldwar"
+
+	action = {
+		name = "EVT_160108_ACTA"	#アメリカと戦争はできない、公式の謝罪を！
+		ai_chance = 99
+		command = { type = dissent value = 8 }
+		command = { type = belligerence value = -5 }
+		command = { type = relation which = USA value = 10 }
+	}
+	action = {
+		name = "EVT_160108_ACTB"	#ドイツ領内への侵入機は全て撃墜すると言明し総動員体制に入る
+		ai_chance = 1
+		command = { type = belligerence value = 10 }
+		command = { type = trigger which = 160109 }
+	}
+}
+
+event = {
+	id = 160109
+	random = no
+	country = USA
+	
+	name = "EVT_160109_NAME"	#西ベルリンか戦争か （平和への最後の望み）
+	desc = "EVT_160109_DESC"	#
+	
+	picture = "coldwar"
+
+	action = {
+		name = "EVT_160109_ACTA"	#ならば戦争だ
+		ai_chance = 85
+		command = { type = sleepevent which = 160104 }
+		command = { type = sleepevent which = 160105 }
+		command = { type = sleepevent which = 160106 }
+		command = { type = war which = SOV }
+	}
+	action = {
+		name = "EVT_160109_ACTB"	#全軍、ベルリンから撤退
+		ai_chance = 15
+		command = { type = sleepevent which = 160104 }
+		command = { type = sleepevent which = 160105 }
+		command = { type = sleepevent which = 160106 }
+		command = { type = dissent value = 20 }
+		command = { type = trigger which = 160102 }
+	}
+}
+
+event = {
+	id = 160110
+	random = no
+	country = SOV
+	persistent = yes
+	trigger = {
+		event = 160106
+		alliance = { country = SOV country = DDR }
+		alliance = { country = USA country = DFR }
+		NOT = { 
+			alliance = { country = SOV country = USA } 
+			war = { country = SOV country = USA }
+		}
+		random = 33
+	}
+
+	date = { day = 0 month = 0 year = 1941 }
+	offset = 23
+	deathdate = { day = 29 month = december year = 1963 }
+
+	
+	name = "EVT_160110_NAME"	#ベルリン封鎖解除
+	desc = "EVT_160110_DESC"	#
+	picture = "C-54"
+
+	action = {
+		name = "EVT_160110_ACTA"	#失敗を認めざるしか無い……封鎖解除
+		ai_chance = 95
+		command = { type = dissent value = 3 }
+		command = { type = trigger which = 160111 }
+		command = { type = trigger which = 160112 }
+		command = { type = sleepevent which = 160110 }
+	}
+	action = {
+		name = "EVT_160110_ACTB"	#こんなところで奴らに譲歩などするものか！
+		ai_chance = 5
+		command = { type = belligerence value = 2 }
+		command = { type = dissent value = 1 }
+	}
+}
+
+event = {
+	id = 160111
+	random = no
+	country = USA
+	
+	name = "EVT_160111_NAME"	#ベルリン封鎖解除
+	desc = "EVT_160111_DESC"	#
+	
+	picture = "C-54"
+
+	action = {
+		name = "EVT_160111_ACTA"	#大変結構！
+		command = { type = belligerence value = -5 }
+		command = { type = dissent value = -10 }
+		command = { type = relation which = DFR value = 70 }
+		command = { type = free_ic value = 25 }
+		
+	}
+}

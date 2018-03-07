@@ -1,0 +1,215 @@
+spyprefs ={
+	percentage_on_spies 		= 0.1
+	percentage_foreign_mission 	= 0.1
+	{
+		NumberOfSpies = 1
+		counter_espionage =  1
+		country = JAP
+	}
+}
+
+construction = { 
+	max_factor = 0.1
+}
+
+military = { 
+	relative_build_scheme 	= no
+
+	#### Divisions etc...
+	infantry 		= 14
+	cavalry 		= 0
+	motorized 		= 4
+	mechanized 		= 0
+	light_armor		= 0
+	armor			= 4
+	paratrooper		= 0
+	marine 			= 0
+	bergsjaeger		= 4
+	garrison		= 0
+	hq			= 4
+	militia 		= 0
+#				30 %
+	interceptor		= 8
+	multi_role 		= 0
+	cas			= 0
+	strategic_bomber 	= 0
+	tactical_bomber 	= 0
+	naval_bomber 		= 4
+	transport_plane 	= 0
+	flying_bomb 		= 0
+	flying_rocket 		= 0
+#				12 %
+	battleship 		= 0
+	carrier 		= 6
+	escort_carrier		= 2
+	destroyer 		= 22
+	light_cruiser 		= 6
+	heavy_cruiser 		= 0
+	battlecruiser 		= 0
+	submarine 		= 6
+	nuclear_submarine 	= 0
+	transports 		= 16
+#				58 %
+	cag = 100
+}
+
+technology = { 
+	endgoal = { } 
+	preference = {
+		# Tools
+		5050 5060 5070
+
+		# Engineering
+		5080 5090 5100
+		
+		# Production Control
+		5110 5120
+		
+		# Assembly Line
+		5130 5140 5150 5180
+		
+		# Cryptography
+		5310 5320 5330 5340
+		
+		# Special Weapons
+		7140 7150 7160
+
+		#Infantry
+		1010 1020 1030 1040 1050 1060
+
+		# Arcriculture
+		5020 5030 5040
+
+		# Inf support
+		1310 1320 1330 1340 1350 1360
+
+		# Marines
+		1150 1160 1170 1180
+		
+		# Carrier
+		3320 3330 3340 3350 3360 3370 3380 3390
+
+		# Light Carrier
+		12100 12110 12120 12130 12140 12150
+
+		# Naval Doctrines
+		8140 8250 8230 8320 8310
+
+		# Land Doctrines
+		6160
+
+		# Air Doctrines
+				
+		#空ドク
+		9040 9090 9100 9110 9120 9130 9350
+	} 
+	ignore 	= {
+		# Strategic bombers
+		4220 4230 4240
+
+		# Air Transports
+		4250 4260 4270
+
+		# Vehicle Assembly & Rocket Assembly
+		5160 5170
+
+		# Airborne
+		1070 1080 1090 1100
+		
+		# Mechanized
+		1260 1270 1280 1290
+
+		# Bas Decimetric
+		5410 5420 5430 5440 5450 5460
+
+		2010 2020 2030 2040 2050 2060 2070 2080 2090 2100 2110 2120 2130 2140 11000 11010 # Tanks
+
+		# Tank destroyers
+		2170 2180 2190 2200 2210
+
+		# SP guns
+		2220 2230 2240 2250
+
+		# SP Rocket Artillery
+		2260 2270 2280 
+
+		# Rocket Artillery
+		2370 2380 2390
+
+		# Mechanized
+		1260 1270 1280 1290
+
+		# Battle Cruiser
+		3190 3200 3210 3220 3230 3240
+		#戦艦
+		3290 3300
+		#戦闘機 #どこで使うんだよ
+		4040 4070 4100
+		#CAS #足がとどかねーよ
+		4170 4280 4180
+		# Armoured Cars
+		2150 2160
+		#空ドク
+		9050 9060 9070 9080 9270
+		9150 9160 9170 9180 9430
+		
+		# Atomic Research
+		5470 5480 5490 5500 5510 5520 5530 5540
+
+		# Test and Research
+		5550 5560 5570 5580 5590
+	}
+ 
+	armor 		= 3
+	infantry 	= 5
+	industry 	= 9
+	aircraft 	= 4
+	naval 		= 7
+	land_doctrines 	= 2
+	secret_weapons 	= 1
+	air_doctrines 	= 3
+	naval_doctrines = 5
+}
+garrison = {
+	country_priorities = {
+		CHI = 50
+		SOV = 50
+		PRK = 50
+	}
+}
+
+invasion = {
+	target = {
+		# Japanese Heartland
+		1192 = 4000 # Amami
+		1193 = 4000 # Okinawa
+		1599 = 4000 # Iwo Jima
+		# Asia
+		1196 = 2000 # Pusan
+		1323 = 2000 # Taibei
+	} 
+} 
+admiral = {
+	base = {
+		1184	# Tokyo
+		1187	# Osaka
+	}
+	target = { 
+		1192
+		1193
+		1599
+		1196
+		1323
+		} 
+	core = {
+		2193
+		2187
+		2192
+		2213
+		2185
+		2590
+		2212
+		2194
+		2589
+	} 
+}

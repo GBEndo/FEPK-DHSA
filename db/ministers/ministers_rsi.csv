@@ -1,0 +1,39 @@
+RSI;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+508001;Head of State;ベニート・ムッソリーニ;36;NS;Barking Buffoon;High;M3002;x
+508002;Head of Government;アキレ・スタラーセ;36;NS;Political Protege;High;M3126;x
+508003;Foreign Minister;エドゥアルド・モローニ;36;FA;Biased Intellectual;High;M508003;x
+508004;Minister of Armament;ギアムピエトロ・ペレグリーニ;36;NS;Military Entrepreneur;Medium;M508004;x
+508005;Minister of Security;グイド・ブファリーニ＝グイディ;36;FA;Efficient Sociopath;Very High;M3005;x
+508006;Head of Military Intelligence;カーロ・サンブルーニ;36;FA;Dismal Enigma;Medium;M508006;x
+508007;Chief of Staff;ガストーン・ガンバラ;36;FA;School of Mass Combat;Medium;L6074;x
+508008;Chief of Army;ロドルフォ・グラッツィアーニ;36;FA;Decisive Battle Doctrine;Medium;M508008;x
+508009;Chief of Navy;ピエル・アンジェロ・ブランディマルテ;36;FA;Open Seas Doctrine;Medium;L6280;x
+508010;Chief of Air Force;アリゴ・テサリ;36;FA;Army Aviation Doctrine;Medium;L6283;x
+508011;Head of State;パオロ・タオン・ディ・レヴェル;45;NS;Resigned Generalissimo;High;M3035;x
+508012;Head of Government;ジュニオ・ボルゲーゼ;45;NS;Corporate Suit;High;M508012;x
+508013;Foreign Minister;マリオ・マンガーニ;42;NS;The Cloak N Dagger Schemer;High;M508013;x
+508014;Minister of Armament;ロマノ・ルゲロ;36;NS;Theoretical Scientist;Medium;M508014;x
+508037;Head of State;ジュニオ・ボルゲーゼ;45;NS;Resigned Grand Admiral;High;M508012;x
+508015;Minister of Armament;G・インペリアリ・デ・フランカリロ;45;NS;Administrative Genius;High;M3071;x
+508016;Minister of Armament;フェルナンド・メザソマ;43;FA;Infantry Proponent;High;M508016;x
+508017;Minister of Security;アレッサンドロ・パヴォリーニ;36;NS;Prince of Terror;Very High;M508017;x
+508018;Minister of Security;レンゾ・モンターナ;43;FA;Crime Fighter;Very High;L6265;x
+508019;Minister of Security;ルイジ・ピセンティ;36;FA;Silent Lawyer;Very High;M508019;x
+508020;Head of Military Intelligence;ピオ・フィリパーニ・ロンコーニ;45;NS;Logistics Specialist;Medium;M508020;x
+508021;Head of Military Intelligence;ブルーノ・ペレゴ;40;FA;Technical Specialist;Medium;M508021;x
+508022;Head of Military Intelligence;カーロ・アルベルト・ビギーニ;36;NS;Industrial Specialist;Medium;M508022;x
+508023;Chief of Staff;アレッサンドロ・パヴォリーニ;36;NS;School of Defence;Medium;M508017;x
+508024;Chief of Army;ジュニオ・ボルゲーゼ;36;NS;Decisive Battle Doctrine;High;M508012;x
+508025;Chief of Navy;カーロ・ディ・コサータ;36;FA;Indirect Approach Doctrine;Medium;L6164;x
+508026;Chief of Air Force;リノ・コルソ・フォギエレ;45;NS;Air Superiority Doctrine;Low;M3161;x
+508036;Head of State;ロドルフォ・グラッツィアーニ;36;FA;Resigned Generalissimo;Medium;M508008;x
+508027;Chief of Air Force;ルゲロ・ボノミ;43;FA;Vertical Envelopment Doctrine;Low;M508027;x
+508028;Minister of Armament;カール・ウォルフ;43;NS;Military Entrepreneur;High;M508028;x
+508035;Minister of Armament;ロドルフォ・グラッツィアーニ;36;FA;Infantry Proponent;High;M508008;x
+508029;Minister of Security;カール・ウォルフ;43;NS;Compassionate Gentleman;High;M508028;x
+508031;Chief of Staff;アルベルト・ケッセルリンク;42;NS;School of Defence;Very High;M508031;x
+508030;Chief of Staff;カール・ウォルフ;43;NS;School of Psychology;High;M508028;x
+508032;Chief of Army;アルベルト・ケッセルリンク;42;NS;Elastic Defence Doctrine;Very High;M508031;x
+508034;Chief of Army;ハインリッヒ・ゴットフリート・フォン・ヴィエンチンホフ＝シェール;44;FA;Armoured Spearhead Doctrine;High;M508034;x
+508033;Chief of Air Force;アルベルト・ケッセルリンク;42;NS;Army Aviation Doctrine;Very High;M508031;x

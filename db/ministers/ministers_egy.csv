@@ -1,0 +1,108 @@
+EGY;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+512001;Head of State;ファウド1世;36;SC;Autocratic Charmer;High;M512001;x
+512002;Head of Government;アリ・マヒール・パシャ;36;SC;Silent Workhorse;High;M512002;x
+512003;Foreign Minister;アリ・マヒール・パシャ;36;SC;Great Compromiser;High;M512002;x
+512004;Minister of Armament;モハンメド・アル・フランサウィ;36;SC;Battle Fleet Proponent;Medium;M512004;x
+512005;Minister of Security;ムスタファ・アン＝ナース・パシャ;36;SC;Silent Lawyer;Medium;M512005;x
+512006;Head of Military Intelligence;モハンメド・ヒルミ・イッサ;36;SC;Dismal Enigma;Medium;M512006;x
+512007;Chief of Staff;ハッサン・サブリ・パシャ;36;SC;School of Defence;Medium;M512007;x
+512008;Chief of Army;ハッサン・サブリ・パシャ;36;SC;Static Defence Doctrine;Medium;M512007;x
+512009;Chief of Navy;アブダラ・ジワール・パシャ;36;SC;Indirect Approach Doctrine;Medium;M512009;x
+512010;Chief of Air Force;ファウド1世;36;SC;Vertical Envelopment Doctrine;Medium;M512010;x
+512011;Head of State;ファルク1世;36;SC;Insignificant Layman;High;M512011;x
+512012;Head of State;ファルク1世;36;SL;Pig-headed Isolationist;High;M512011;x
+512013;Head of State;アガ・カーン1世;45;SD;Benevolent Gentleman;High;M512013;x
+512014;Head of Government;ムスタファ・アン＝ナース・パシャ;36;SC;Flamboyant Tough Guy;High;M512005;x
+512015;Head of Government;ハッサン・サブリ・パシャ;40;SC;Old General;High;M512007;x
+512016;Head of Government;マフムード・アン・ヌクライシ・パシャ;40;SC;Backroom Backstabber;High;M512016;x
+512017;Head of Government;ムハンマド・マフムード・パシャ;36;ML;Happy Amateur;High;M512017;x
+512018;Head of Government;アリ・マヒール・パシャ;39;ML;Smiling Oilman;High;M512002;x
+512019;Head of Government;ハッサン・シリー・パシャ;40;ML;Political Protege;High;M512019;x
+512020;Head of Government;マフムード・アン・ヌクライシ・パシャ;45;ML;Silent Workhorse;High;M512016;x
+512021;Head of Government;イスマイル・シドゥキ・パシャ;46;ML;Naive Optimist;High;M512021;x
+512022;Head of Government;アブデルハミド・バダウィ・パシャ;36;SL;Ambitious Union Boss;High;M512022;x
+512023;Head of Government;ワセフ・ブトロス・ガリ;38;SL;Political Protege;High;M512023;x
+512024;Head of Government;ムスタファ・アン＝ナース・パシャ;42;SL;Backroom Backstabber;High;M512005;x
+512025;Head of Government;アリ・マヒール・パシャ;45;SL;Naive Optimist;High;M512025;x
+512026;Head of Government;アブダラ・ジワール・パシャ;36;SD;Old Admiral;High;M512009;x
+512027;Head of Government;アリ・チャンシ・パシャ;40;SD;Corporate Suit;High;M512027;x
+512028;Foreign Minister;ワセフ・ブトロス・ガリ;36;SC;The Cloak N Dagger Schemer;High;M512023;x
+512029;Foreign Minister;アブデルファタ・ヤヒヤ・パシャ;37;SC;Apologetic Clerk;High;M512029;x
+512030;Foreign Minister;ハッサン・サブリ・パシャ;39;SC;General Staffer;High;M512007;x
+512031;Foreign Minister;サリブ・サミ・ベイ;40;SC;Iron Fisted Brute;High;M512031;x
+512032;Foreign Minister;ムハンマド・マフムード・パシャ;45;SC;Biased Intellectual;High;M512017;x
+512033;Foreign Minister;イブラヒム・アブデル・ハディ;46;SC;The Cloak N Dagger Schemer;High;M512033;x
+512034;Foreign Minister;アフメド・カシャバ・パシャ;47;SC;Apologetic Clerk;High;M512034;x
+512035;Foreign Minister;アブドゥラ・ナハウィ;36;ML;Biased Intellectual;High;M512035;x
+512036;Foreign Minister;ハッサン・シリー・パシャ;40;ML;Great Compromiser;High;M512019;x
+512037;Foreign Minister;マフムード・アン・ヌクライシ・パシャ;44;ML;Apologetic Clerk;High;M512016;x
+512038;Foreign Minister;アブデルハミド・バダウィ・パシャ;46;ML;The Cloak N Dagger Schemer;High;M512038;x
+512039;Foreign Minister;アフメド・ロフティ・アル・サイード;46;ML;Biased Intellectual;High;M512039;x
+512040;Foreign Minister;エリエ・ネシム・モセリ;36;SL;Great Compromiser;High;M512040;x
+512041;Foreign Minister;アリ・マヒール・パシャ;42;SL;The Cloak N Dagger Schemer;High;M512002;x
+512042;Foreign Minister;アリ・チャンシ・パシャ;36;SD;The Cloak N Dagger Schemer;Medium;M512042;x
+512043;Foreign Minister;ワセフ・ブトロス・ガリ;40;SD;Great Compromiser;High;M512023;x
+512044;Foreign Minister;ムスタファ・アン＝ナース・パシャ;42;SD;General Staffer;High;M512005;x
+512045;Minister of Armament;ファルク1世;36;SC;Corrupt Kleptocrat;High;M512045;x
+512046;Minister of Armament;アリ・タハール;41;SC;laissez-faire capitalist;High;M512046;x
+512047;Minister of Armament;ムハンマド・マフムード・パシャ;43;SC;Resource Industrialist;High;M512017;x
+512048;Minister of Armament;アブデルハミド・ソリマン;45;SC;Air Superiority Proponent;Medium;M512048;x
+512049;Minister of Armament;ワヒド・ガイラム・パシャ;36;ML;laissez-faire capitalist;Medium;M512049;x
+512050;Minister of Armament;ターラト・ハルブ;38;ML;Administrative Genius;Medium;M512050;x
+512051;Minister of Armament;タラル・アル＝キュロス;41;ML;Air to Ground Proponent;High;M512051;x
+512052;Minister of Armament;サリブ・サミ・ベイ;45;ML;Tank Proponent;High;M512031;x
+512053;Minister of Armament;モハンメド・サラディン;36;SL;Air to Sea Proponent;High;M512053;x
+512054;Minister of Armament;アリ・ハソウナ・パシャ;41;SL;Infantry Proponent;High;M512054;x
+512055;Minister of Armament;アリ・アミール・パシャ;45;SL;Administrative Genius;High;M512055;x
+512056;Minister of Armament;モハンメド・ファーミ・アル＝カイス;36;SD;Strategic Air Proponent;High;M512056;x
+512057;Minister of Armament;アブデル＝アジム;42;SD;Infantry Proponent;High;M512057;x
+512058;Minister of Armament;アガ・カーン1世;44;SD;Resource Industrialist;High;M512058;x
+512059;Minister of Security;アミル・アル＝フセイニ;38;SC;Efficient Sociopath;High;M512059;x
+512060;Minister of Security;ムハンマド・マフムード・パシャ;40;SC;Compassionate Gentleman;High;M512017;x
+512061;Minister of Security;ナワル・ザキ;43;SC;Man of the People;High;M512061;x
+512062;Minister of Security;カメル・ナビ・パシャ;36;ML;Man of the People;Medium;M512062;x
+512063;Minister of Security;サー・ラルフ・スティーヴンソン;42;ML;Prince of Terror;Medium;M512063;x
+512064;Minister of Security;ロマルコス・ハナ・パシャ;44;ML;Crime Fighter;Medium;M512064;x
+512065;Minister of Security;サリブ・サミール・パシャ;36;SL;Back Stabber;Medium;M512065;x
+512066;Minister of Security;モハンメド・ナジブ・パシャ;42;SL;Compassionate Gentleman;Medium;M512066;x
+512067;Minister of Security;モハンメド・ヒルミ・イッサ;45;SL;Man of the People;Medium;M512006;x
+512068;Minister of Security;ガファール・ワリ・パシャ;36;SD;Back Stabber;Medium;M512068;x
+512069;Minister of Security;マクラン・エベイド・パシャ;40;SD;Man of the People;Medium;M512069;x
+512070;Minister of Security;アリ・ヒラリ・パシャ;46;SD;Crime Fighter;Medium;M512070;x
+512071;Head of Military Intelligence;モハンメド・アル・フランサウィ;36;SC;Technical Specialist;Medium;M512004;x
+512072;Head of Military Intelligence;ピエール・ラカウ;41;SC;Industrial Specialist;Medium;M512072;x
+512073;Head of Military Intelligence;ソリマ・サミ;36;ML;Naval Intelligence Specialist;Medium;M512073;x
+512075;Head of Military Intelligence;アリ・チャンシ・パシャ;36;SL;Industrial Specialist;Medium;M512027;x
+512076;Head of Military Intelligence;ジョージ・クレスウェル;42;SL;Dismal Enigma;Medium;M512076;x
+512077;Head of Military Intelligence;アガ・カーン1世;36;SD;Industrial Specialist;Medium;M512077;x
+512078;Head of Military Intelligence;ワヒド・ラーファト;44;SD;Technical Specialist;Medium;M512078;x
+512079;Chief of Staff;アブデルハミド・ソリマン;38;SC;School of Psychology;Medium;M512048;x
+512081;Chief of Staff;ハッサン・シリー・パシャ;36;ML;School of Defence;High;M512019;x
+512082;Chief of Staff;アビル・ナシュラン;41;ML;School of Manoeuvre;Medium;M512080;x
+512083;Chief of Staff;モハンメド・アフラタン;36;SL;School of Mass Combat;Medium;M512083;x
+512085;Chief of Staff;アブダラ・ジワール・パシャ;36;SD;School of Manoeuvre;High;M512009;x
+512088;Chief of Army;モハンメド・ナギブ;43;SC;Decisive Battle Doctrine;High;M512088;x
+512089;Chief of Army;ハッサン・シリー・パシャ;36;ML;Elastic Defence Doctrine;High;M512019;x
+512091;Chief of Army;ムスタファ・カメル;36;SL;Decisive Battle Doctrine;High;M512087;x
+512093;Chief of Army;ワセフ・ブトロス・ガリ;36;SD;Guns and Butter Doctrine;High;M512023;x
+512096;Chief of Navy;モハンメド・アジミ・パシャ;43;SC;Base Control Doctrine;Medium;M512096;x
+512097;Chief of Navy;タラル・アル＝キュロス;36;ML;Indirect Approach Doctrine;High;M512051;x
+512099;Chief of Navy;ピエール・ラカウ;36;SL;Power Projection Doctrine;Medium;M512072;x
+512100;Chief of Navy;アリ・ハミド・パシャ;42;SL;Base Control Doctrine;Medium;M512072;x
+512102;Chief of Navy;ワヒド・ラーファト;44;SD;Power Projection Doctrine;Medium;M512078;x
+512103;Chief of Air Force;アブデルハミド・ソリマン;36;SC;Air Superiority Doctrine;Medium;M512048;x
+512104;Chief of Air Force;モハンメド・アジミ・パシャ;43;SC;Army Aviation Doctrine;Medium;M512096;x
+512105;Chief of Air Force;モハンメド・ナシェード;36;ML;Army Aviation Doctrine;Medium;M512105;x
+512107;Chief of Air Force;アリ・マヒール・パシャ;36;SL;Naval Aviation Doctrine;High;M512002;x
+512108;Chief of Air Force;アリ・チャンシ・パシャ;41;SL;Carpet Bombing Doctrine;Medium;M512027;x
+512109;Chief of Air Force;アガ・カーン1世;36;SD;Army Aviation Doctrine;Medium;M512077;x
+512110;Chief of Air Force;ソリマ・サミ;42;SD;Naval Aviation Doctrine;Medium;M512073;x
+512111;Head of State;モハンメド・ナギブ;52;SD;Resigned Generalissimo;High;M512088;x
+512112;Head of Government;イブラヒム・アブデル・ハディ;49;SC;Political Protege;High;M512033;x
+512113;Head of Government;モハンメド・ナギブ;52;SD;Old General;High;M512088;x
+512114;Minister of Armament;ノウレッディン・アラフ;52;SD;Theoretical Scientist;High;M512114;x
+512115;Minister of Security;カマレッディン・フセイン;52;SD;Prince of Terror;Medium;M512115;x
+512116;Chief of Staff;モハンメド・ナギブ;52;SD;School of Mass Combat;High;M512088;x
+512117;Chief of Army;ガマール・アブドゥン＝ナーセル;52;SD;Armoured Spearhead Doctrine;High;L512001;x
+512118;Chief of Air Force;ガマール・アブドゥン＝ナーセル;52;SD;Carpet Bombing Doctrine;Medium;L512001;x

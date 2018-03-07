@@ -1,0 +1,33 @@
+###################################
+# Diplomacy
+###################################
+
+befriend = {
+	GER = 50
+}
+
+trade = {
+	favored = {
+		SWE = 30
+		FIN = 30
+		ROM = 30
+		ITA = 30
+		HUN = 30
+		YUG = 30
+		SPA = 20
+		BUL = 30
+		JAP = 10
+		CHI = 10
+		GER = 150
+	}
+	embargo = { }
+}
+
+tech_sharing = {
+	favored = {
+		ITA = 30
+		JAP = 10
+		GER = 100
+	}
+	embargo = { }
+}

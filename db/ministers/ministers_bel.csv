@@ -1,0 +1,153 @@
+BEL;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+15001;Head of State;レオポルド3世;36;ML;Benevolent Gentleman;NA;M15001;x
+15002;Head of Government;ポール・ヴァン・ズィーランド;36;ML;Silent Workhorse;NA;M15002;x
+15003;Foreign Minister;ポール・ヴァン・ズィーランド;36;ML;Biased Intellectual;Very High;M15002;x
+15004;Minister of Armament;アルベール・デヴチェ;36;ML;Laissez-Faire Capitalist;Very High;M15004;x
+15005;Minister of Security;エウグネ・ソウダン;36;SL;Silent Lawyer;Very High;M15005;x
+15006;Head of Military Intelligence;アルベール・デヴチェ;36;ML;Political Specialist;Very High;M15004;x
+15007;Chief of Staff;オスカー・クモント;36;SC;School of Defence;Very High;M15007;x
+15008;Chief of Army;ヴィクトル・ヴァン・ストリドンク・デ・バーケル;36;SC;Static Defence Doctrine;Very High;M15008;x
+15009;Chief of Navy;G・ティマーマン;36;SC;Indirect Approach Doctrine;Very High;M15009;x
+15010;Chief of Air Force;L・F・E・ワウテル;36;SC;Vertical Envelopment Doctrine;Very High;M15010;x
+15030;Head of State;レオポルド3世;36;NS;Benevolent Gentleman;NA;M15001;x
+15031;Head of State;フランドル伯シャルル;36;ML;Benevolent Gentleman;NA;M15031;x
+15032;Head of State;ジュリアン・ラホー;45;ST;Ruthless Powermonger;NA;M15024;x
+15034;Head of Government;ポール＝アンリ・スパーク;36;SD;Ambitious Union Boss;NA;M15034;x
+15035;Head of Government;レオン・デグレル;36;NS;Old General;NA;M15013;x
+15036;Head of Government;ポール＝エミル・ヤンソン;37;ML;Silent Workhorse;NA;M15036;x
+15037;Head of Government;ユベール・ピエルロ;38;SC;Naive Optimist;NA;M15037;x
+15038;Head of Government;カミーユ・ユイスマン;39;SD;Happy Amateur;NA;M15038;x
+15040;Head of Government;ジョセフ・ジャクモッテ;44;LE;Political Protege;NA;M15020;x
+15041;Head of Government;アヒレ・ファン・アッケル;39;SD;Corporate Suit;NA;M15041;x
+15042;Head of Government;ガストン・エイスケンズ;45;SC;Corporate Suit;NA;M15042;x
+15043;Head of Government;ジュリアン・ラホー;45;ST;Backroom Backstabber;NA;M15024;x
+15044;Foreign Minister;ポール＝アンリ・スパーク;36;SL;Great Compromiser;Very High;M15034;x
+15046;Foreign Minister;レオン・デグレル;36;NS;Iron Fisted Brute;Very High;M15013;x
+15047;Foreign Minister;ルイ・デ・ブロウカ;37;SD;Ideological Crusader;Very High;M15047;x
+15048;Foreign Minister;エウグネ・ソウダン;38;SL;Ideological Crusader;Very High;M15005;x
+15049;Foreign Minister;ユベール・ピエルロ;39;SC;Great Compromiser;Very High;M15037;x
+15051;Foreign Minister;ジュール・パイア;41;SD;General Staffer;Very High;M15051;x
+15052;Foreign Minister;ジェフ・ヴァン・デ・ウィーレ;42;NS;Iron Fisted Brute;Very High;M15011;x
+15053;Foreign Minister;エドガー・ラルマンド;43;ST;Biased Intellectual;Very High;M15022;x
+15054;Foreign Minister;ジュリアン・ラホー;45;ST;Ideological Crusader;Very High;M15024;x
+15055;Foreign Minister;ガストン・エイスケンズ;47;SC;Great Compromiser;Very High;M15042;x
+15056;Minister of Armament;ヘンドリック・デ・マン;36;SL;Administrative Genius;Very High;M15056;x
+15059;Minister of Armament;カミル・ガット;37;ML;Administrative Genius;Very High;M15059;x
+15060;Minister of Armament;レオン・デグレル;37;NS;Infantry Proponent;Very High;M15013;x
+15061;Minister of Armament;ジュール・マーロット;38;SD;Resource Industrialist;Very High;M15061;x
+15062;Minister of Armament;エマニュエル・ミシェズ;39;ML;Tank Proponent;Very High;M15062;x
+15063;Minister of Armament;ポール＝アンリ・スパーク;39;SD;Resource Industrialist;Very High;M15034;x
+15064;Minister of Armament;ヘンリ・デニス;40;SC;Infantry Proponent;Very High;M15064;x
+15065;Minister of Armament;エドガー・ラルマンド;44;LE;Resource Industrialist;Very High;M15022;x
+15066;Minister of Armament;ガストン・エイスケンズ;40;ML;Administrative Genius;Very High;M15042;x
+15067;Minister of Armament;フランツ・デ・ヴォーゲル;45;ML;Laissez-Faire Capitalist;Very High;M15067;x
+15068;Minister of Armament;マーセル・ヴォーティエ;46;ML;Laissez-Faire Capitalist;Very High;M15068;x
+15069;Minister of Armament;アルバート・デ・ヴリーシャウアー;46;SC;Resource Industrialist;Very High;M15069;x
+15070;Minister of Armament;ジャン・デュヴィエサール;47;SC;Administrative Genius;Very High;M15070;x
+15071;Minister of Security;アルベール・ヤンセン;36;SC;Compassionate Gentleman;Very High;M15071;x
+15072;Minister of Security;フランソワ・ボヴェッセ;36;SC;Silent Lawyer;Very High;M15072;x
+15073;Minister of Security;ポール・ハイマンズ;36;SL;Compassionate Gentleman;Very High;M15073;x
+15075;Minister of Security;ポール・オーヴァークス;36;NS;Crime Fighter;Very High;M15075;x
+15076;Minister of Security;ポール＝エミル・ヤンソン;37;ML;Crime Fighter;Very High;M15036;x
+15077;Minister of Security;レオン・デグレル;37;NS;Prince of Terror;Very High;M15013;x
+15079;Minister of Security;ジョセフ・フォリエン;38;SC;Silent Lawyer;Very High;M15079;x
+15081;Minister of Security;ヘンリ・コムテ・カールトン・デ・ウィアート;39;ML;Crime Fighter;Very High;M15081;x
+15083;Minister of Security;ジュール・パイア;42;SD;Prince of Terror;Very High;M15051;x
+15084;Minister of Security;ヴィクトル・デ・ラヴェリー;44;SL;Crime Fighter;Very High;M15084;x
+15085;Minister of Security;ジュリアン・ラホー;44;ST;Prince of Terror;Very High;M15024;x
+15086;Minister of Security;アドルフェ・ヴァン・グラベケ;45;SC;Man of the People;Very High;M15086;x
+15087;Minister of Security;オーグスト・ビュイスレ;45;SC;Silent Lawyer;Very High;M15087;x
+15088;Minister of Security;チャールズ・デゥ・バス・デ・ウォーナッフェ;45;SC;Crime Fighter;Very High;M15088;x
+15089;Minister of Security;アルベール・ライラー;46;ML;Compassionate Gentleman;Very High;M15089;x
+15090;Minister of Security;ポール・ストルイ;47;SC;Man of the People;Very High;M15090;x
+15091;Minister of Security;ジャン・レイ;47;SC;Silent Lawyer;Very High;M15091;x
+15092;Head of Military Intelligence;ヴィクトル・デ・ラヴェリー;36;SD;Logistics Specialist;Very High;M15084;x
+15093;Head of Military Intelligence;ヘンリ・デニス;36;SC;Logistics Specialist;Very High;M15064;x
+15095;Head of Military Intelligence;ポール・オーヴァークス;36;NS;Industrial Specialist;Very High;M15075;x
+15096;Head of Military Intelligence;ジュール・パイア;40;SD;Logistics Specialist;Very High;M15051;x
+15097;Head of Military Intelligence;レオン・デルシネ;44;ML;Industrial Specialist;Very High;M15097;x
+15098;Head of Military Intelligence;オーグスト・ビュイスレ;44;SC;Technical Specialist;Very High;M15087;x
+15099;Head of Military Intelligence;ハーマン・ヴォス;44;SD;Political Specialist;Very High;M15099;x
+15100;Head of Military Intelligence;レオン・ムンデリーア;45;ML;Dismal Enigma;Very High;M15100;x
+15101;Head of Military Intelligence;B・E・M・デ・フライター;46;ML;Dismal Enigma;Very High;M15101;x
+15102;Head of Military Intelligence;ピエール・ヴァーメイレン;47;SL;Technical Specialist;Very High;M15102;x
+15104;Chief of Staff;レオン・デグレル;36;NS;School of Mass Combat;Very High;M15013;x
+15105;Chief of Staff;ジョルジュ・デフォンテーン;38;SC;School of Fire Support;Very High;M15105;x
+15106;Chief of Staff;ヴィクトル・ヴァン・ストリドンク・デ・バーケル;40;SC;School of Mass Combat;Very High;M15008;x
+15107;Chief of Staff;オスカー・ミキエル;40;SC;School of Mass Combat;Very High;M15107;x
+15108;Chief of Army;レネ・ラグロー;36;NS;Decisive Battle Doctrine;Very High;M15017;x
+15109;Chief of Army;レオン・デグレル;36;NS;Guns and Butter Doctrine;Very High;M15013;x
+15110;Chief of Army;ラウル・ヴァン・オーヴァーストラッテン;38;SC;Guns and Butter Doctrine;Very High;M15110;x
+15111;Chief of Army;イヴァン・ジェラール;40;ML;Elastic Defence Doctrine;Very High;M15111;x
+15112;Chief of Army;チャールズ・バスティン;39;SD;Static Defence Doctrine;Very High;M15112;x
+15113;Chief of Army;ジュール・パイア;43;SD;Armoured Spearhead Doctrine;Very High;M15051;x
+15114;Chief of Navy;フリッツ・コンラッド;36;NS;Indirect Approach Doctrine;Very High;M15018;x
+15115;Chief of Air Force;フリッツ・ロブ;36;NS;Army Aviation Doctrine;Very High;M15019;x
+15116;Chief of Air Force;ジュール・イセレンタン;37;SC;Air Superiority Doctrine;Very High;M15116;x
+15117;Minister of Security;オーグスト・デ・スフレイヴァー;36;SC;Compassionate Gentleman;Very High;M15117;x
+15118;Head of State;レオポルド3世;37;ML;Benevolent Gentleman;NA;M15001;x
+15119;Minister of Armament;ガイ・ボウシラー;41;SD;Theoretical Scientist;Very High;M15119;x
+15120;Minister of Armament;エミル・フランク;36;ML;Laissez-Faire Capitalist;Very High;M15120;x
+15121;Minister of Armament;アルベール＝エドアール・ヤンセン;38;ML;Resource Industrialist;Very High;M15121;x
+15122;Minister of Armament;チャールズ・ポマレ;38;SD;Infantry Proponent;Very High;M15122;x
+15123;Minister of Armament;チャールズ・レグニエ;36;SC;Air Superiority Proponent;Very High;M15123;x
+15124;Minister of Armament;エドモンド・ラベンズ;36;SC;Resource Industrialist;Very High;M15124;x
+15125;Minister of Armament;アルベール・ワウタース;39;SD;Military Entrepreneur;Very High;M15125;x
+15126;Minister of Security;アントワーヌ・デルフォッセ;42;ML;Compassionate Gentleman;Very High;M15126;x
+15127;Minister of Security;ヴィクトル・マイストリア;37;ML;Silent Lawyer;Very High;M15127;x
+15128;Minister of Armament;ルイ・フランク;36;SC;Resource Industrialist;Very High;M15128;x
+15129;Minister of Armament;ヘンドリック・ヘイマン;36;SC;Air to Ground Proponent;Very High;M15129;x
+15130;Minister of Armament;モーリス・リペンズ;36;ML;Resource Industrialist;Very High;M15130;x
+15131;Minister of Security;フィリップ・ヴァン・アイザッカー;36;SC;Crime Fighter;Very High;M15131;x
+15132;Head of Government;フラン・ヴァン・コーウェラート;36;SC;Naive Optimist;Very High;M15132;x
+15133;Foreign Minister;フラン・ヴァン・コーウェラート;36;SC;Ideological Crusader;Very High;M15132;x
+15134;Head of State;レオポルド3世;36;PA;Benevolent Gentleman;Very High;M15001;x
+15020;Head of State;ジョセフ・ジャクモッテ;36;LE;Weary Stiffneck;NA;M15020;x
+15021;Head of Government;ジョセフ・ジャクモッテ;36;LE;Political Protege;NA;M15020;x
+15022;Foreign Minister;ワー・ヴァン・オーヴァーストラッテン;36;LE;Biased Intellectual;Very High;M15118;x
+15023;Minister of Armament;アブラハム・レオン;36;LE;Resource Industrialist;Very High;M15119;x
+15024;Minister of Security;アドヘマー・ヘノー;36;LE;Crime Fighter;Very High;M15120;x
+15025;Head of Military Intelligence;ジュリアン・ラホー;36;LE;Political Specialist;Very High;M15024;x
+15026;Chief of Staff;ジョルジュ・ヴァリーケン;36;LE;School of Mass Combat;Very High;M15121;x
+15027;Chief of Army;ジョルジュ・ヴァリーケン;36;LE;Elastic Defence Doctrine;Very High;M15121;x
+15028;Chief of Navy;ジョルジュ・ヴァリーケン;36;LE;Undistinguished Suit;Very High;M15121;x
+15029;Chief of Air Force;ジョルジュ・ヴァリーケン;36;LE;Undistinguished Suit;Very High;M15121;x
+15135;Head of State;レオポルド3世;36;SL;Benevolent Gentleman;Very High;M15001;x
+15136;Head of State;フランドル伯シャルル;36;SL;Benevolent Gentleman;Very High;M15031;x
+15137;Minister of Armament;クリエル・ヴァン・オーベルバーグ;37;SC;Theoretical Scientist;High;M15137;x
+15138;Head of Government;ジョルジュ・テウニス;36;SC;Naive Optimist;High;M15138;x
+15139;Minister of Armament;ジョルジュ・テウニス;36;SC;Laissez-Faire Capitalist;High;M15138;x
+15140;Minister of Armament;グスタフ・サップ;36;SC;Military Entrepreneur;High;M15140;x
+15141;Head of Government;ジョリス・ファン・セヴェレン;36;FA;Flamboyant Tough Guy;Very High;M15141;x
+15142;Head of Government;チャールズ・ソンヴィル;36;FA;Flamboyant Tough Guy;Very High;M15142;x
+15143;Foreign Minister;エミル・ティエール;36;FA;Great Compromiser;Very High;M15143;x
+15144;Foreign Minister;ワルド・ヘルマンズ;36;FA;Biased Intellectual;Very High;M15144;x
+15145;Foreign Minister;ポル・ラ・ロイ;36;FA;Ideological Crusader;Very High;M15145;x
+15146;Minister of Armament;ルネ・ランブリット;37;FA;Administrative Genius;Very High;M15146;x
+15147;Minister of Armament;ジョリス・ファン・セヴェレン;36;FA;Military Entrepreneur;Very High;M15141;x
+15148;Minister of Armament;チャールズ・ソンヴィル;36;FA;Resource Industrialist;Very High;M15142;x
+15149;Minister of Security;ルネ・ランブリット;37;FA;Efficient Sociopath;Very High;M15146;x
+15150;Minister of Security;エミル・ティエール;36;FA;Compassionate Gentleman;Very High;M15143;x
+15151;Minister of Security;ジャン・リクールト;36;FA;Man of the People;Very High;M15151;x
+15152;Minister of Security;ワルド・ヘルマンズ;36;FA;Silent Lawyer;Very High;M15144;x
+15153;Head of Military Intelligence;ジョリス・ファン・セヴェレン;36;FA;Logistics Specialist;Very High;M15141;x
+15154;Head of Military Intelligence;ジャン・リクールト;36;FA;Political Specialist;Very High;M15151;x
+15155;Chief of Staff;ジョリス・ファン・セヴェレン;36;FA;School of Psychology;Very High;M15141;x
+15156;Minister of Armament;アキレサンドル・ガロパン;36;ML;Administrative Genius;Very High;M15156;x
+15158;Head of State;ボードゥアン1世;50;SL;Autocratic Charmer;High;M15158;x
+15159;Head of State;ボードゥアン1世;50;ML;Autocratic Charmer;High;M15158;x
+15160;Head of Government;ジャン・デュヴィエサール;50;SC;Political Protege;NA;M15070;x
+15161;Head of Government;ジョセフ・フォリエン;50;SC;Backroom Backstabber;NA;M15079;x
+15162;Head of Government;ジャン・ヴァン・ユッテ;53;SC;Naive Optimist;NA;M15162;x
+15163;Minister of Armament;B・E・M・デ・フライター;46;SL;Military Entrepreneur;High;M15101;x
+15165;Minister of Armament;エティエンヌ・ド・グレーフ;50;ML;Resource Industrialist;High;M15165;x
+15167;Minister of Security;アルバート・デ・ヴリーシャウアー;49;SC;Silent Lawyer;Very High;M15069;x
+15168;Minister of Security;モーリス・ブラッスール;50;ML;Man of the People;Very High;M15168;x
+15169;Minister of Security;ルードヴィック・モワルセン;52;SC;Prince of Terror;Very High;M15169;x
+15170;Minister of Armament;オーグスト・ビュイスレ;49;SC;Laissez-Faire Capitalist;Very High;M15087;x
+15171;Minister of Armament;オスカル・ベオーニュ;49;ML;Resource Industrialist;High;M15171;x
+15172;Minister of Armament;レオン=エル・トロクレ;47;SD;Resource Industrialist;Very High;M15172;x
+15173;Minister of Armament;B・E・M・デ・フライター;47;SL;Infantry Proponent;High;M15101;x
+15174;Minister of Security;ピエール・ヴァーメイレン;47;SL;Silent Lawyer;Very High;M15102;x
+15175;Minister of Armament;ジャン・ヴァン・ユッテ;50;SC;Laissez-Faire Capitalist;Very High;M15162;x

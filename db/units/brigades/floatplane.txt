@@ -1,0 +1,151 @@
+detachable = yes
+
+# 0 - 初期型水上機
+model = {
+	cost 				= 1
+	buildtime			= 120
+	manpower 			= 0.02
+	surfacedetectioncapability	= 1
+	airdetectioncapability		= 1
+	subdetectioncapability		= 0
+	airdefence			= 0
+	seaattack			= 0.5
+	convoyattack			= 0
+	subattack			= 0
+	airattack			= 0
+	shorebombardment		= 0
+	distance			= 0
+	supplyconsumption 		= 0.1
+	fuelconsumption			= 0.1
+	upgrade_time_factor 		= 0.5
+	upgrade_cost_factor 		= 1
+	equipment = { manpower = 20 floatplane = 4 }
+}
+# 1 - 基本型水上機
+model = {
+	cost 				= 1.2
+	buildtime			= 120
+	manpower 			= 0.02
+	surfacedetectioncapability	= 2
+	airdetectioncapability		= 2
+	subdetectioncapability		= 0
+	airdefence			= 0
+	seaattack			= 1
+	convoyattack			= 0
+	subattack			= 0
+	airattack			= 0
+	shorebombardment		= 0
+	distance			= 0
+	supplyconsumption 		= 0.1
+	fuelconsumption			= 0.1
+	upgrade_time_factor 		= 0.5
+	upgrade_cost_factor 		= 1
+	equipment = { manpower = 20 floatplane = 4 }
+}
+# 2 - 改良型水上機
+model = {
+	cost 				= 1.4
+	buildtime			= 120
+	manpower 			= 0.02
+	surfacedetectioncapability	= 2
+	airdetectioncapability		= 2
+	subdetectioncapability		= 0
+	airdefence			= 0
+	seaattack			= 1
+	convoyattack			= 0
+	subattack			= 0
+	airattack			= 0.5
+	shorebombardment		= 0
+	distance			= 0
+	supplyconsumption 		= 0.1
+	fuelconsumption			= 0.1
+	upgrade_time_factor 		= 0.5
+	upgrade_cost_factor 		= 1
+	equipment = { manpower = 20 floatplane = 4 }
+}
+# 3 - 発展型水上機
+model = {
+	cost 				= 1.6
+	buildtime			= 120
+	manpower 			= 0.02
+	surfacedetectioncapability	= 2
+	airdetectioncapability		= 2
+	subdetectioncapability		= 1
+	airdefence			= 0
+	seaattack			= 1
+	convoyattack			= 0
+	subattack			= 0
+	airattack			= 1
+	shorebombardment		= 0
+	distance			= 0
+	supplyconsumption 		= 0.1
+	fuelconsumption			= 0.1
+	upgrade_time_factor 		= 0.5
+	upgrade_cost_factor 		= 1
+	equipment = { manpower = 20 floatplane = 4 }
+}
+# 4 - 準現代型水上機
+model = {
+	cost 				= 1.8
+	buildtime			= 140
+	manpower 			= 0.02
+	surfacedetectioncapability	= 3
+	airdetectioncapability		= 2
+	subdetectioncapability		= 2
+	airdefence			= 0
+	seaattack			= 1
+	convoyattack			= 0
+	subattack			= 0
+	airattack			= 1
+	shorebombardment		= 0
+	distance			= 0
+	supplyconsumption 		= 0.1
+	fuelconsumption			= 0.1
+	upgrade_time_factor 		= 0.5
+	upgrade_cost_factor 		= 1
+	equipment = { manpower = 20 floatplane = 4 }
+}
+# 5 - ジェット水上機
+model = {
+	cost 				= 4
+	buildtime			= 280
+	manpower 			= 0.02
+	surfacedetectioncapability	= 4
+	airdetectioncapability		= 5
+	subdetectioncapability		= 2
+	airdefence			= 2
+	seadefence			= 1
+	seaattack			= 2
+	convoyattack			= 0
+	subattack			= 1
+	airattack			= 2
+	shorebombardment		= 0
+	distance			= 0
+	supplyconsumption 		= 0.1
+	fuelconsumption			= 1
+	upgrade_time_factor 		= 0.5
+	upgrade_cost_factor 		= 1
+	equipment = { manpower = 20 floatplane = 4 }
+}
+# 6 - 艦載ヘリコプター
+model = {
+	cost 				= 4
+	buildtime			= 240
+	manpower 			= 0.02
+	surfacedetectioncapability	= 4
+	airdetectioncapability		= 3
+	subdetectioncapability		= 7
+	airdefence			= 1
+	seadefence			= 1
+	seaattack			= 1
+	convoyattack			= 2
+	subattack			= 6
+	airattack			= 1
+	shorebombardment		= 0
+	distance			= 0
+	supplyconsumption 		= 0.1
+	fuelconsumption			= 1
+	upgrade_time_factor 		= 0.5
+	upgrade_cost_factor 		= 1
+	equipment = { manpower = 20 floatplane = 4 }
+}

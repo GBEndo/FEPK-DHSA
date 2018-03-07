@@ -1,0 +1,3176 @@
+#########################################################################
+#
+#		日本・極東追加イベント（スカンディナビアイベント）
+#				by 脳内毛沢東 & 閣僚変更modの人
+#
+#########################################################################
+###### 追加イベント一覧 ############
+#########################################################################
+#id = 57700-4 スカンディナビア同盟の形成
+#id = 57705-7 フィンランドを同盟に加える？
+#id = 57750-2 降伏イベント（スウェーデン)
+#id = 57753-5 降伏イベント（ノルウェー)
+#id = 57756-8 降伏イベント（デンマーク)
+#id = 57759-61 降伏イベント（フィンランド)
+#id = 57770-1 ドイツから和平提案
+#id = 57772-3 ソビエトから和平提案
+#id = 57780 北海航路のレンドリース - 対北欧援助物資
+#id = 57781 北海航路のレンドリース2 - 対北欧援助物資
+#id = 57782-7 北海航路のレンドリース
+#id = 57800-9 スカンディナビア成立処理
+#id = 57810 大スカンディナビア主義の高揚
+#id = 57811-2 バルト帝国再び？
+#id = 57813-5 ポーランドの陣営変え
+#id = 57820-	スカンジナビアの同盟参加
+#########################################################################
+
+#########################################################################
+#  The Scandinavian Alliance
+#########################################################################
+event = {
+	id = 57700
+	random = no
+	country = SWE
+	trigger = {
+		war = { country = GER country = ENG }
+		NOT = {
+			ispuppet = SWE
+			ispuppet = NOR
+			ispuppet = DEN
+			alliance = { country = SWE country = GER }
+			alliance = { country = SWE country = ENG }
+			alliance = { country = SWE country = SOV }
+		}
+		domestic = { type = interventionism value = 5 }
+	}
+	
+	date = { day = 1 month = september year = 1939 } 
+	offset = 15
+	deathdate = { day = 1 month = january year = 1942 }
+	
+	name = "EVT_57700_NAME"
+	desc = "EVT_57700_DESC"
+	#大戦の勃発によりデンマークとノルウェーはドイツの脅威にさらされることになった、このような状況に対し、スウェーデンは両国と同盟を締結し、ドイツに対抗するべきか、それとも今までどおり局外中立を保つか、激しい議論が重ねられた
+	style = 0
+
+	action_a = {
+		name = "EVT_57700_ACTA"
+		ai_chance = 40
+		command = { type = leave_alliance }
+		command = { type = trigger which = 57701 }
+		command = { type = trigger which = 57702 }
+		command = { type = trigger which = 57703 }
+		command = { type = trigger which = 57704 }
+		command = { type = setflag which = sweden }
+	}
+	action_b = {
+		name = "EVT_57700_ACTB"
+		command = { type = domestic which = interventionism value = -1 }
+		ai_chance = 60
+	}
+}
+##ノルウェー、デンマークがAIかどうか判定
+event = {
+	id = 57701
+	random = no
+	country = NOR
+	trigger = {
+		ai = no
+		NOT = {
+			alliance = { country = NOR country = GER }
+			alliance = { country = NOR country = ENG }
+			alliance = { country = NOR country = SOV }
+		}
+	}
+	name = "EVT_57700_NAME"
+	desc = "EVT_57700_DESC"
+	#大戦の勃発によりデンマークとノルウェーはドイツの脅威にさらされることになった、このような状況に対し、スウェーデンは両国と同盟を締結し、「速やかにドイツに対抗するべきだ」と提案してきた
+	style = 0
+
+	action_a = {
+		name = "受諾する"
+		ai_chance = 100
+		command = { type = leave_alliance }
+		command = { type = alliance which = SWE }
+		command = { type = setflag which = norway }
+		command = { type = sleepevent which = 57804 }
+	}
+	action_b = {
+		name = "断る"
+		ai_chance = 0
+		command = { }
+	}
+}
+
+event = {
+	id = 57702
+	random = no
+	country = DEN
+	trigger = {
+		ai = no
+		NOT = {
+			alliance = { country = DEN country = GER }
+			alliance = { country = DEN country = ENG }
+			alliance = { country = DEN country = SOV }
+		}
+	}
+	name = "EVT_57700_NAME"
+	desc = "EVT_57700_DESC"
+	#大戦の勃発によりデンマークとノルウェーはドイツの脅威にさらされることになった、このような状況に対し、スウェーデンは両国と同盟を締結し、「速やかにドイツに対抗するべきだ」と提案してきた
+	style = 0
+
+	action_a = {
+		name = "受諾する"
+		ai_chance = 100
+		command = { type = leave_alliance }
+		command = { type = alliance which = SWE }
+		command = { type = setflag which = denmark }
+		command = { type = sleepevent which = 57804 }
+		command = { type = sleepevent which = 130417 } #German occupation of Denmark
+	}
+	action_b = {
+		name = "断る"
+		ai_chance = 0
+		command = { }
+	}
+}
+
+event = {
+	id = 57703
+	random = no
+	country = NOR
+	trigger = {
+		ai = yes
+		NOT = {
+			alliance = { country = NOR country = GER }
+			alliance = { country = NOR country = ENG }
+			alliance = { country = NOR country = SOV }
+		}
+	}
+	name = "EVT_57700_NAME"
+	desc = "EVT_57700_DESC"
+	#大戦の勃発によりデンマークとノルウェーはドイツの脅威にさらされることになった、このような状況に対し、スウェーデンは両国と同盟を締結し、「速やかにドイツに対抗するべきだ」と提案してきた
+	style = 0
+
+	action_a = {
+		name = "受諾する"
+		ai_chance = 100
+		command = { type = leave_alliance }
+		command = { type = alliance which = SWE }
+		command = { type = setflag which = norway }
+	}
+	action_b = {
+		name = "断る"
+		ai_chance = 0
+		command = { }
+	}
+}
+
+event = {
+	id = 57704
+	random = no
+	country = DEN
+	trigger = {
+		ai = yes
+		NOT = {
+			alliance = { country = DEN country = GER }
+			alliance = { country = DEN country = ENG }
+			alliance = { country = DEN country = SOV }
+		}
+	}
+	name = "EVT_57700_NAME"
+	desc = "EVT_57700_DESC"
+	#大戦の勃発によりデンマークとノルウェーはドイツの脅威にさらされることになった、このような状況に対し、スウェーデンは両国と同盟を締結し、「速やかにドイツに対抗するべきだ」と提案してきた
+	style = 0
+
+	action_a = {
+		name = "受諾する"
+		ai_chance = 100
+		command = { type = leave_alliance }
+		command = { type = alliance which = SWE }
+		command = { type = setflag which = denmark }
+		command = { type = sleepevent which = 130417 } #German occupation of Denmark
+	}
+	action_b = {
+		name = "断る"
+		ai_chance = 0
+		command = { }
+	}
+}
+
+#########################################################################
+# Allies help finland ? フィンランドがAIかどうか判定
+#########################################################################
+event = {
+	id = 57705
+	random = no
+	country = FIN
+	trigger = {
+		event = 57700
+		NOT = { ispuppet = FIN }
+		NOT = { exists = POL }
+		OR = {
+			flag = norway
+			flag = denmark
+		}
+		ai = no
+		NOT = {
+			alliance = { country = FIN country = GER }
+			alliance = { country = FIN country = ENG }
+			alliance = { country = FIN country = SOV }
+		}
+	}
+	
+	date = { day = 23 month = august year = 1939 }
+	offset = 5
+	deathdate = { day = 28 month = january year = 1940 }
+	
+	picture = "finland_sweden"
+	
+	name = "EVT_57705_NAME"
+	#1939年8月にドイツとソ連が不可侵条約を締結したことで、戦いの矛先はフィンランドに向けられる。この条約においてドイツはソ連に、フィンランドを含めたバルト諸国の併合も認めた。当然ながらこれはすべて秘密協定であった。しかし時間とともにその密約はフィンランド政府の知るところとなる。ソ連との軍事的緊張の高まりを受け、フィンランドがドイツに援助を求めたとき、ドイツはこれに応じない姿勢を示したのだ。もしもソ連と戦争になった場合、フィンランドは大国に立ち向かわざるを得ないだろう。しかしながら希望はある。隣人の掲げるスカンディナビア同盟に参加することだ。
+	desc = "EVT_57705_DESC"
+	style = 0
+	action_a = {
+		name = "EVT_57705_ACTA"
+		ai_chance = 100
+		command = { type = leave_alliance }
+		command = { type = relation which = SWE value = 400 }
+		command = { type = relation which = NOR value = 400 }
+		command = { type = relation which = DEN value = 400 }
+		command = { type = trigger which = 57707 }
+		command = { type = sleepevent which = 57804 }
+	}
+	action_b = {
+		name = "EVT_57705_ACTB"
+		ai_chance = 0
+		command = { }
+	}
+}
+
+event = {
+	id = 57706
+	random = no
+	country = FIN
+	trigger = {
+		event = 57700
+		NOT = { ispuppet = FIN }
+		NOT = { exists = POL }
+		OR = {
+			flag = norway
+			flag = denmark
+		}
+		ai = yes
+		NOT = {
+			alliance = { country = FIN country = GER }
+			alliance = { country = FIN country = ENG }
+			alliance = { country = FIN country = SOV }
+		}
+	}
+	
+	date = { day = 23 month = august year = 1939 }
+	offset = 5
+	deathdate = { day = 28 month = january year = 1940 }
+	
+	picture = "finland_sweden"
+	
+	name = "AI_EVENT"
+	#1939年8月にドイツとソ連が不可侵条約を締結したことで、戦いの矛先はフィンランドに向けられる。この条約においてドイツはソ連に、フィンランドを含めたバルト諸国の併合も認めた。当然ながらこれはすべて秘密協定であった。しかし時間とともにその密約はフィンランド政府の知るところとなる。ソ連との軍事的緊張の高まりを受け、フィンランドがドイツに援助を求めたとき、ドイツはこれに応じない姿勢を示したのだ。もしもソ連と戦争になった場合、フィンランドは大国に立ち向かわざるを得ないだろう。しかしながら希望はある。隣人の掲げるスカンディナビア同盟に参加することだ。
+	desc = "EVT_57705_DESC"
+	style = 0
+	action_a = {
+		name = "EVT_57705_ACTA"
+		ai_chance = 100
+		command = { type = leave_alliance }
+		command = { type = relation which = SWE value = 400 }
+		command = { type = relation which = NOR value = 400 }
+		command = { type = relation which = DEN value = 400 }
+		command = { type = trigger which = 57707 }
+	}
+	action_b = {
+		name = "EVT_57705_ACTB"
+		ai_chance = 0
+		command = { }
+	}
+}
+
+event = {
+	id = 57707
+	random = no
+	country = SWE
+
+	picture = "finland_sweden"
+	
+	name = "EVT_57707_NAME"
+	#ソ連との軍事的緊張の高まりを受け、これを牽制する為にフィンランドがスカンディナビア同盟に参加したいと申し出ている。もし、加盟させることができれば、懸案であった汎スカンディナビア勢力をほぼ糾合できたことになる。しかしながら、フィンランドを参加させるとソビエトと対立することになり、戦争に巻き込まれることもあるだろう。
+	desc = "EVT_57707_DESC"
+	style = 0
+
+	action_a = {
+		name = "EVT_57707_ACTA"
+		ai_chance = 30
+		command = { type = alliance which = FIN }
+		command = { type = dissent value = -5 }	
+		command = { type = domestic which = interventionism value = 2 }
+		command = { type = relation which = SOV value = -100 }
+		command = { type = setflag which = finland }
+		command = { type = sleepevent which = 130581 } #End of the Finnish Winter War(SOV)
+	}
+	action_b = {
+		name = "EVT_57707_ACTB"
+		ai_chance = 70
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = sleepevent which = 57810 } #大スカンディナビア主義の高揚(フィンランドがコアプロヴィンスにならない場合、中核州が飛び地になって変になるので)
+	}
+}
+
+#########################################################################
+#  スカンジナビア同盟の連合軍からの離脱
+#########################################################################
+
+event = {
+	id = 57710
+	random = no
+	country = SWE
+	trigger = {
+		event = 130413	#ヴェーゼル演習作戦
+		flag = sweden	#スカンジナビア同盟イベント発生済み
+		war = { country = GER }
+		alliance = { country = ENG }
+		OR = {
+			alliance = { country = NOR }
+			alliance = { country = DEN }
+			alliance = { country = FIN }
+		}
+	}
+	
+	name = "EVT_57710_NAME"	#ドイツのデンマーク侵攻とスカンジナビア同盟の動向
+	desc = "EVT_57710_DESC"	#ドイツがデンマーク・ノルウェー両国に侵攻すると、スウェーデンを含めたスカンジナビア各国は連合国と同盟し、ドイツとの戦争状態に入った。当然連合国の一員として戦争を行うことは大国の支援を受けられる意味では強力だが、一方で戦争の推移に関しても英米の方針に引きずられることになる。そこで、我々には今英国から離れて単独で戦争を行う選択肢がある。我々の同盟独力でドイツに対して団結して対抗し、長期戦になるであろう連合国からも一歩距離を取って、ドイツから有利な講和条件を引き出すのだ。
+	
+	date = { day = 23 month = august year = 1939 }
+	offset = 12
+	deathdate = { day = 28 month = january year = 1963 }
+	
+	picture = "finland_sweden"
+	
+	action = {
+		name = "EVT_57710_ACTA"	#我々は自らの手で自らの生存を守る
+		command = { type = leave_alliance }
+		command = { type = relation which = ENG value = -20 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = trigger which = 57711 }	#DEN
+		command = { type = trigger which = 57712 }	#NOR
+		command = { type = trigger which = 57713 }	#FIN
+	}
+	action = {
+		name = "EVT_57710_ACTB"	#大国の影響から離れるのは自殺行為だ！
+		command = { type = relation which = ENG value = 10 }
+	}
+}
+
+#event = {
+#	id = 57711
+#	country = DEN
+#	trigger = {
+#		war = { country = GER }
+#	}
+#	
+#	name = "EVT_57711_NAME"	#スカンジナビア同盟の連合国離脱
+#	desc = "EVT_57711_DESC"	#
+#	
+#	action = {
+#		name 
+	
+	
+
+#########################################################################
+#  Surrender events - Sweden
+#########################################################################
+
+event = {
+	id = 57750
+	random = no
+	country = SWE
+	trigger = {
+		NOT = { exists = FIN }
+		flag = finland
+	}
+
+	date = { day = 1 month = september year = 1939 } 
+    offset = 15
+    deathdate = { day = 29 month = december year = 1963 }
+    
+	picture = "finland_sweden"
+	
+	name = "EVT_57750_NAME" #Finland Surrender
+	desc = "EVT_57750_DESC"
+	style = 0
+
+	action_a = {
+		name = "OK"
+		command = { type = addcore which = 103 } #FINLAND
+		command = { type = addcore which = 130 }
+		command = { type = addcore which = 131 }
+		command = { type = addcore which = 132 }
+		command = { type = addcore which = 136 }
+		command = { type = addcore which = 137 }
+		command = { type = addcore which = 138 }
+		command = { type = addcore which = 139 }
+		command = { type = addcore which = 140 }
+		command = { type = addcore which = 141 }
+		command = { type = addcore which = 142 }
+		command = { type = addcore which = 143 }
+		command = { type = addcore which = 144 }
+		command = { type = addcore which = 145 }
+		command = { type = addcore which = 146 }
+		command = { type = addcore which = 147 }
+		command = { type = addcore which = 148 }
+		command = { type = addcore which = 149 }
+		command = { type = addcore which = 135 } # 
+		command = { type = addcore which = 150 } # 
+		command = { type = addcore which = 151 } # 
+		command = { type = addcore which = 152 } # Karelia
+		command = { type = addcore which = 133 } # FEPK # 1.06
+		command = { type = addcore which = 134 }
+		command = { type = addcore which = 187 }
+		command = { type = clrflag which = finland }
+		
+	}
+}
+
+event = {
+	id = 57751
+	random = no
+	country = SWE
+	trigger = {
+		NOT = { exists = NOR }
+		flag = norway
+	}
+	
+	date = { day = 1 month = september year = 1939 } 
+    offset = 15
+    deathdate = { day = 29 month = december year = 1963 }
+    
+	picture = "finland_sweden"
+	
+	name = "EVT_57751_NAME" #Norway Surrender
+	desc = "EVT_57751_DESC"
+	style = 0
+
+	action_a = {
+		name = "OK"
+		command = { type = addcore which = 107 } #Norway
+		command = { type = addcore which = 108 }
+		command = { type = addcore which = 109 }
+		command = { type = addcore which = 110 }
+		command = { type = addcore which = 111 }
+		command = { type = addcore which = 116 }
+		command = { type = addcore which = 117 }
+		command = { type = addcore which = 118 }
+		command = { type = addcore which = 124 }
+		command = { type = addcore which = 125 }
+		command = { type = addcore which = 128 }
+		command = { type = addcore which = 129 }
+		command = { type = clrflag which = norway }
+	}
+}
+
+event = {
+	id = 57752
+	random = no
+	country = SWE
+	trigger = {
+		NOT = { exists = DEN }
+		flag = denmark
+	}
+	
+	date = { day = 1 month = september year = 1939 } 
+    offset = 15
+    deathdate = { day = 29 month = december year = 1963 }
+    
+	picture = "finland_sweden"
+	
+	name = "EVT_57752_NAME" #Denmark Surrender
+	desc = "EVT_57752_DESC"
+	style = 0
+
+	action_a = {
+		name = "OK"
+		command = { type = addcore which = 91 } #Denmark
+		command = { type = addcore which = 92 }
+		command = { type = addcore which = 292 }
+		command = { type = addcore which = 293 }
+		command = { type = addcore which = 294 }
+		command = { type = addcore which = 295 }
+		command = { type = clrflag which = denmark }
+	}
+}
+
+#########################################################################
+#  Surrender events - Norway
+#########################################################################
+
+event = {
+	id = 57753
+	random = no
+	country = NOR
+	trigger = {
+		NOT = { exists = FIN }
+		flag = norway
+		flag = finland
+	}
+	
+	date = { day = 1 month = september year = 1939 } 
+    offset = 15
+    deathdate = { day = 29 month = december year = 1963 }
+    
+	picture = "finland_sweden"
+	
+	name = "EVT_57750_NAME" #Finland Surrender
+	desc = "EVT_57750_DESC"
+	style = 0
+
+	action_a = {
+		name = "OK"
+		command = { type = addcore which = 103 } #FINLAND
+		command = { type = addcore which = 130 }
+		command = { type = addcore which = 131 }
+		command = { type = addcore which = 132 }
+		command = { type = addcore which = 136 }
+		command = { type = addcore which = 137 }
+		command = { type = addcore which = 138 }
+		command = { type = addcore which = 139 }
+		command = { type = addcore which = 140 }
+		command = { type = addcore which = 141 }
+		command = { type = addcore which = 142 }
+		command = { type = addcore which = 143 }
+		command = { type = addcore which = 144 }
+		command = { type = addcore which = 145 }
+		command = { type = addcore which = 146 }
+		command = { type = addcore which = 147 }
+		command = { type = addcore which = 148 }
+		command = { type = addcore which = 149 }
+		command = { type = clrflag which = finland }
+	}
+}
+
+event = {
+	id = 57754
+	random = no
+	country = NOR
+	trigger = {
+		NOT = { exists = SWE }
+		flag = sweden
+		flag = norway
+	}
+	
+	date = { day = 1 month = september year = 1939 } 
+    offset = 15
+    deathdate = { day = 29 month = december year = 1963 }
+    
+	picture = "finland_sweden"
+	
+	name = "EVT_57754_NAME" #Sweden Surrender
+	desc = "EVT_57754_DESC"
+	style = 0
+
+	action_a = {
+		name = "OK"
+		command = { type = addcore which = 93 } #Sweden
+		command = { type = addcore which = 95 }
+		command = { type = addcore which = 96 }
+		command = { type = addcore which = 97 }
+		command = { type = addcore which = 98 }
+		command = { type = addcore which = 99 }
+		command = { type = addcore which = 100 }
+		command = { type = addcore which = 101 }
+		command = { type = addcore which = 102 }
+		command = { type = addcore which = 104 }
+		command = { type = addcore which = 105 }
+		command = { type = addcore which = 106 }
+		command = { type = addcore which = 112 }
+		command = { type = addcore which = 113 }
+		command = { type = addcore which = 114 }
+		command = { type = addcore which = 115 }
+		command = { type = addcore which = 119 }
+		command = { type = addcore which = 120 }
+		command = { type = addcore which = 121 }
+		command = { type = addcore which = 122 }
+		command = { type = addcore which = 123 }
+		command = { type = addcore which = 126 }
+		command = { type = addcore which = 127 }
+		command = { type = clrflag which = sweden }
+	}
+}
+
+event = {
+	id = 57755
+	random = no
+	country = NOR
+	trigger = {
+		NOT = { exists = DEN }
+		flag = norway
+		flag = denmark
+	}
+	
+	date = { day = 1 month = september year = 1939 } 
+    offset = 15
+    deathdate = { day = 29 month = december year = 1963 }
+    
+	picture = "finland_sweden"
+	
+	name = "EVT_57752_NAME" #Denmark Surrender
+	desc = "EVT_57752_DESC"
+	style = 0
+
+	action_a = {
+		name = "OK"
+		command = { type = addcore which = 91 } #DENMARK
+		command = { type = addcore which = 92 }
+		command = { type = addcore which = 292 }
+		command = { type = addcore which = 293 }
+		command = { type = addcore which = 294 }
+		command = { type = addcore which = 295 }
+		command = { type = clrflag which = denmark }
+	}
+}
+
+#########################################################################
+#  Surrender events - Denmark
+#########################################################################
+
+event = {
+	id = 57756
+	random = no
+	country = DEN
+	trigger = {
+		NOT = { exists = FIN }
+		flag = denmark
+		flag = finland
+	}
+	
+	date = { day = 1 month = september year = 1939 } 
+    offset = 15
+    deathdate = { day = 29 month = december year = 1963 }
+    
+	picture = "finland_sweden"
+	
+	name = "EVT_57750_NAME" #Finland Surrender
+	desc = "EVT_57750_DESC"
+	style = 0
+
+	action_a = {
+		name = "OK"
+		command = { type = addcore which = 103 } #FINLAND
+		command = { type = addcore which = 130 }
+		command = { type = addcore which = 131 }
+		command = { type = addcore which = 132 }
+		command = { type = addcore which = 136 }
+		command = { type = addcore which = 137 }
+		command = { type = addcore which = 138 }
+		command = { type = addcore which = 139 }
+		command = { type = addcore which = 140 }
+		command = { type = addcore which = 141 }
+		command = { type = addcore which = 142 }
+		command = { type = addcore which = 143 }
+		command = { type = addcore which = 144 }
+		command = { type = addcore which = 145 }
+		command = { type = addcore which = 146 }
+		command = { type = addcore which = 147 }
+		command = { type = addcore which = 148 }
+		command = { type = addcore which = 149 }
+		command = { type = clrflag which = finland }
+	}
+}
+
+event = {
+	id = 57757
+	random = no
+	country = DEN
+	trigger = {
+		NOT = { exists = NOR }
+		flag = denmark
+		flag = norway
+	}
+	
+	date = { day = 1 month = september year = 1939 } 
+    offset = 15
+    deathdate = { day = 29 month = december year = 1963 }
+    
+	picture = "finland_sweden"
+	
+	name = "EVT_57751_NAME" #Norway Surrender
+	desc = "EVT_57751_DESC"
+	style = 0
+
+	action_a = {
+		name = "OK"
+		command = { type = addcore which = 107 } #Norway
+		command = { type = addcore which = 108 }
+		command = { type = addcore which = 109 }
+		command = { type = addcore which = 110 }
+		command = { type = addcore which = 111 }
+		command = { type = addcore which = 116 }
+		command = { type = addcore which = 117 }
+		command = { type = addcore which = 118 }
+		command = { type = addcore which = 124 }
+		command = { type = addcore which = 125 }
+		command = { type = addcore which = 128 }
+		command = { type = addcore which = 129 }
+		command = { type = clrflag which = norway }
+	}
+}
+
+event = {
+	id = 57758
+	random = no
+	country = DEN
+	trigger = {
+		NOT = { exists = SWE }
+		flag = sweden
+		flag = denmark
+	}
+	
+	date = { day = 1 month = september year = 1939 } 
+    offset = 15
+    deathdate = { day = 29 month = december year = 1963 }
+    
+	picture = "finland_sweden"
+	
+	name = "EVT_57754_NAME" #Sweden Surrender
+	desc = "EVT_57754_DESC"
+	style = 0
+
+	action_a = {
+		name = "OK"
+		command = { type = addcore which = 93 } #Sweden
+		command = { type = addcore which = 95 }
+		command = { type = addcore which = 96 }
+		command = { type = addcore which = 97 }
+		command = { type = addcore which = 98 }
+		command = { type = addcore which = 99 }
+		command = { type = addcore which = 100 }
+		command = { type = addcore which = 101 }
+		command = { type = addcore which = 102 }
+		command = { type = addcore which = 104 }
+		command = { type = addcore which = 105 }
+		command = { type = addcore which = 106 }
+		command = { type = addcore which = 112 }
+		command = { type = addcore which = 113 }
+		command = { type = addcore which = 114 }
+		command = { type = addcore which = 115 }
+		command = { type = addcore which = 119 }
+		command = { type = addcore which = 120 }
+		command = { type = addcore which = 121 }
+		command = { type = addcore which = 122 }
+		command = { type = addcore which = 123 }
+		command = { type = addcore which = 126 }
+		command = { type = addcore which = 127 }
+		command = { type = clrflag which = sweden }
+	}
+}
+
+#########################################################################
+#  Surrender events - Finland
+#########################################################################
+
+event = {
+	id = 57759
+	random = no
+	country = FIN
+	trigger = {
+		NOT = { exists = NOR }
+		flag = finland
+		flag = norway
+	}
+	
+	date = { day = 1 month = september year = 1939 } 
+    offset = 15
+    deathdate = { day = 29 month = december year = 1963 }
+    
+	picture = "finland_sweden"
+	
+	name = "EVT_57751_NAME" #Norway Surrender
+	desc = "EVT_57751_DESC"
+	style = 0
+
+	action_a = {
+		name = "OK"
+		command = { type = addcore which = 107 } #Norway
+		command = { type = addcore which = 108 }
+		command = { type = addcore which = 109 }
+		command = { type = addcore which = 110 }
+		command = { type = addcore which = 111 }
+		command = { type = addcore which = 116 }
+		command = { type = addcore which = 117 }
+		command = { type = addcore which = 118 }
+		command = { type = addcore which = 124 }
+		command = { type = addcore which = 125 }
+		command = { type = addcore which = 128 }
+		command = { type = addcore which = 129 }
+		command = { type = clrflag which = norway }
+	}
+}
+
+event = {
+	id = 57760
+	random = no
+	country = FIN
+	trigger = {
+		NOT = { exists = SWE }
+		flag = finland
+		flag = sweden
+	}
+	
+	date = { day = 1 month = september year = 1939 } 
+    offset = 15
+    deathdate = { day = 29 month = december year = 1963 }
+    
+	picture = "finland_sweden"
+	
+	name = "EVT_57754_NAME" #Sweden Surrender
+	desc = "EVT_57754_DESC"
+	style = 0
+
+	action_a = {
+		name = "OK"
+		command = { type = addcore which = 93 } #Sweden
+		command = { type = addcore which = 95 }
+		command = { type = addcore which = 96 }
+		command = { type = addcore which = 97 }
+		command = { type = addcore which = 98 }
+		command = { type = addcore which = 99 }
+		command = { type = addcore which = 100 }
+		command = { type = addcore which = 101 }
+		command = { type = addcore which = 102 }
+		command = { type = addcore which = 104 }
+		command = { type = addcore which = 105 }
+		command = { type = addcore which = 106 }
+		command = { type = addcore which = 112 }
+		command = { type = addcore which = 113 }
+		command = { type = addcore which = 114 }
+		command = { type = addcore which = 115 }
+		command = { type = addcore which = 119 }
+		command = { type = addcore which = 120 }
+		command = { type = addcore which = 121 }
+		command = { type = addcore which = 122 }
+		command = { type = addcore which = 123 }
+		command = { type = addcore which = 126 }
+		command = { type = addcore which = 127 }
+		command = { type = clrflag which = sweden }
+	}
+}
+
+event = {
+	id = 57761
+	random = no
+	country = FIN
+	trigger = {
+		NOT = { exists = DEN }
+		flag = finland
+		flag = denmark
+	}
+	
+	date = { day = 1 month = september year = 1939 } 
+    offset = 15
+    deathdate = { day = 29 month = december year = 1963 }
+    
+	picture = "finland_sweden"
+	
+	name = "EVT_57752_NAME" #Denmark Surrender
+	desc = "EVT_57752_DESC"
+	style = 0
+
+	action_a = {
+		name = "OK"
+		command = { type = addcore which = 91 } #DENMARK
+		command = { type = addcore which = 92 }
+		command = { type = addcore which = 292 }
+		command = { type = addcore which = 293 }
+		command = { type = addcore which = 294 }
+		command = { type = addcore which = 295 }
+		command = { type = clrflag which = denmark }
+	}
+}
+
+#########################################################################
+#  German offer peace
+#########################################################################
+
+event = {
+	id = 57770
+	random = no
+	country = GER
+	trigger = {
+		OR = {
+			flag = denmark
+			flag = finland
+			flag = norway
+			flag = sweden
+		}
+		OR = {
+			AND = {
+				war = { country = GER country = SWE }
+				NOT = { ispuppet = SWE }
+			}
+			AND = {
+				war = { country = GER country = NOR }
+				NOT = { ispuppet = NOR }
+			}
+			AND = {
+				war = { country = GER country = DEN }
+				NOT = { ispuppet = DEN }
+			}
+			AND = {
+				war = { country = GER country = FIN }
+				NOT = { ispuppet = FIN }
+			}
+		}
+		NOT = {
+			control = { province = 300 data = GER } # Berlin
+		}
+	}
+	picture = "Bitter_Peace"
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	name = "EVT_57770_NAME"
+	desc = "EVT_57770_DESC"
+	style = 0
+
+	action_a = {
+		name = "EVT_57770_ACTA"
+		ai_chance = 100
+		command = { type = dissent value = 10 }
+		#command = { type = peace which = SWE value = 1 }
+		#command = { type = peace which = NOR value = 1 }
+		#command = { type = peace which = DEN value = 1 }
+		#command = { type = peace which = FIN value = 1 }
+		command = { type = secedeprovince which = FIN value = 103 } #FINLAND
+		command = { type = secedeprovince which = FIN value = 130 }
+		command = { type = secedeprovince which = FIN value = 131 }
+		command = { type = secedeprovince which = FIN value = 132 }
+		command = { type = secedeprovince which = FIN value = 136 }
+		command = { type = secedeprovince which = FIN value = 137 }
+		command = { type = secedeprovince which = FIN value = 138 }
+		command = { type = secedeprovince which = FIN value = 139 }
+		command = { type = secedeprovince which = FIN value = 140 }
+		command = { type = secedeprovince which = FIN value = 141 }
+		command = { type = secedeprovince which = FIN value = 142 }
+		command = { type = secedeprovince which = FIN value = 143 }
+		command = { type = secedeprovince which = FIN value = 144 }
+		command = { type = secedeprovince which = FIN value = 145 }
+		command = { type = secedeprovince which = FIN value = 146 }
+		command = { type = secedeprovince which = FIN value = 147 }
+		command = { type = secedeprovince which = FIN value = 148 }
+		command = { type = secedeprovince which = FIN value = 149 }
+		command = { type = secedeprovince which = SWE value = 103 } #FINLAND
+		command = { type = secedeprovince which = SWE value = 130 }
+		command = { type = secedeprovince which = SWE value = 131 }
+		command = { type = secedeprovince which = SWE value = 132 }
+		command = { type = secedeprovince which = SWE value = 136 }
+		command = { type = secedeprovince which = SWE value = 137 }
+		command = { type = secedeprovince which = SWE value = 138 }
+		command = { type = secedeprovince which = SWE value = 139 }
+		command = { type = secedeprovince which = SWE value = 140 }
+		command = { type = secedeprovince which = SWE value = 141 }
+		command = { type = secedeprovince which = SWE value = 142 }
+		command = { type = secedeprovince which = SWE value = 143 }
+		command = { type = secedeprovince which = SWE value = 144 }
+		command = { type = secedeprovince which = SWE value = 145 }
+		command = { type = secedeprovince which = SWE value = 146 }
+		command = { type = secedeprovince which = SWE value = 147 }
+		command = { type = secedeprovince which = SWE value = 148 }
+		command = { type = secedeprovince which = SWE value = 149 }
+		command = { type = secedeprovince which = NOR value = 103 } #FINLAND
+		command = { type = secedeprovince which = NOR value = 130 }
+		command = { type = secedeprovince which = NOR value = 131 }
+		command = { type = secedeprovince which = NOR value = 132 }
+		command = { type = secedeprovince which = NOR value = 136 }
+		command = { type = secedeprovince which = NOR value = 137 }
+		command = { type = secedeprovince which = NOR value = 138 }
+		command = { type = secedeprovince which = NOR value = 139 }
+		command = { type = secedeprovince which = NOR value = 140 }
+		command = { type = secedeprovince which = NOR value = 141 }
+		command = { type = secedeprovince which = NOR value = 142 }
+		command = { type = secedeprovince which = NOR value = 143 }
+		command = { type = secedeprovince which = NOR value = 144 }
+		command = { type = secedeprovince which = NOR value = 145 }
+		command = { type = secedeprovince which = NOR value = 146 }
+		command = { type = secedeprovince which = NOR value = 147 }
+		command = { type = secedeprovince which = NOR value = 148 }
+		command = { type = secedeprovince which = NOR value = 149 }
+		command = { type = secedeprovince which = DEN value = 103 } #FINLAND
+		command = { type = secedeprovince which = DEN value = 130 }
+		command = { type = secedeprovince which = DEN value = 131 }
+		command = { type = secedeprovince which = DEN value = 132 }
+		command = { type = secedeprovince which = DEN value = 136 }
+		command = { type = secedeprovince which = DEN value = 137 }
+		command = { type = secedeprovince which = DEN value = 138 }
+		command = { type = secedeprovince which = DEN value = 139 }
+		command = { type = secedeprovince which = DEN value = 140 }
+		command = { type = secedeprovince which = DEN value = 141 }
+		command = { type = secedeprovince which = DEN value = 142 }
+		command = { type = secedeprovince which = DEN value = 143 }
+		command = { type = secedeprovince which = DEN value = 144 }
+		command = { type = secedeprovince which = DEN value = 145 }
+		command = { type = secedeprovince which = DEN value = 146 }
+		command = { type = secedeprovince which = DEN value = 147 }
+		command = { type = secedeprovince which = DEN value = 148 }
+		command = { type = secedeprovince which = DEN value = 149 }
+
+		command = { type = secedeprovince which = NOR value = 107 } #Norway
+		command = { type = secedeprovince which = NOR value = 108 }
+		command = { type = secedeprovince which = NOR value = 109 }
+		command = { type = secedeprovince which = NOR value = 110 }
+		command = { type = secedeprovince which = NOR value = 111 }
+		command = { type = secedeprovince which = NOR value = 116 }
+		command = { type = secedeprovince which = NOR value = 117 }
+		command = { type = secedeprovince which = NOR value = 118 }
+		command = { type = secedeprovince which = NOR value = 124 }
+		command = { type = secedeprovince which = NOR value = 125 }
+		command = { type = secedeprovince which = NOR value = 128 }
+		command = { type = secedeprovince which = NOR value = 129 }
+		command = { type = secedeprovince which = SWE value = 107 } #Norway
+		command = { type = secedeprovince which = SWE value = 108 }
+		command = { type = secedeprovince which = SWE value = 109 }
+		command = { type = secedeprovince which = SWE value = 110 }
+		command = { type = secedeprovince which = SWE value = 111 }
+		command = { type = secedeprovince which = SWE value = 116 }
+		command = { type = secedeprovince which = SWE value = 117 }
+		command = { type = secedeprovince which = SWE value = 118 }
+		command = { type = secedeprovince which = SWE value = 124 }
+		command = { type = secedeprovince which = SWE value = 125 }
+		command = { type = secedeprovince which = SWE value = 128 }
+		command = { type = secedeprovince which = SWE value = 129 }
+		command = { type = secedeprovince which = DEN value = 107 } #Norway
+		command = { type = secedeprovince which = DEN value = 108 }
+		command = { type = secedeprovince which = DEN value = 109 }
+		command = { type = secedeprovince which = DEN value = 110 }
+		command = { type = secedeprovince which = DEN value = 111 }
+		command = { type = secedeprovince which = DEN value = 116 }
+		command = { type = secedeprovince which = DEN value = 117 }
+		command = { type = secedeprovince which = DEN value = 118 }
+		command = { type = secedeprovince which = DEN value = 124 }
+		command = { type = secedeprovince which = DEN value = 125 }
+		command = { type = secedeprovince which = DEN value = 128 }
+		command = { type = secedeprovince which = DEN value = 129 }
+		command = { type = secedeprovince which = FIN value = 107 } #Norway
+		command = { type = secedeprovince which = FIN value = 108 }
+		command = { type = secedeprovince which = FIN value = 109 }
+		command = { type = secedeprovince which = FIN value = 110 }
+		command = { type = secedeprovince which = FIN value = 111 }
+		command = { type = secedeprovince which = FIN value = 116 }
+		command = { type = secedeprovince which = FIN value = 117 }
+		command = { type = secedeprovince which = FIN value = 118 }
+		command = { type = secedeprovince which = FIN value = 124 }
+		command = { type = secedeprovince which = FIN value = 125 }
+		command = { type = secedeprovince which = FIN value = 128 }
+		command = { type = secedeprovince which = FIN value = 129 }
+
+		command = { type = secedeprovince which = DEN value = 91 } #Denmark
+		command = { type = secedeprovince which = DEN value = 92 }
+		command = { type = secedeprovince which = DEN value = 292 }
+		command = { type = secedeprovince which = DEN value = 293 }
+		command = { type = secedeprovince which = DEN value = 294 }
+		command = { type = secedeprovince which = DEN value = 295 }
+		command = { type = secedeprovince which = SWE value = 91 } #Denmark
+		command = { type = secedeprovince which = SWE value = 92 }
+		command = { type = secedeprovince which = SWE value = 292 }
+		command = { type = secedeprovince which = SWE value = 293 }
+		command = { type = secedeprovince which = SWE value = 294 }
+		command = { type = secedeprovince which = SWE value = 295 }
+		command = { type = secedeprovince which = NOR value = 91 } #Denmark
+		command = { type = secedeprovince which = NOR value = 92 }
+		command = { type = secedeprovince which = NOR value = 292 }
+		command = { type = secedeprovince which = NOR value = 293 }
+		command = { type = secedeprovince which = NOR value = 294 }
+		command = { type = secedeprovince which = NOR value = 295 }
+		command = { type = secedeprovince which = FIN value = 91 } #Denmark
+		command = { type = secedeprovince which = FIN value = 92 }
+		command = { type = secedeprovince which = FIN value = 292 }
+		command = { type = secedeprovince which = FIN value = 293 }
+		command = { type = secedeprovince which = FIN value = 294 }
+		command = { type = secedeprovince which = FIN value = 295 }
+
+		command = { type = secedeprovince which = SWE value = 93 } #Sweden
+		command = { type = secedeprovince which = SWE value = 95 }
+		command = { type = secedeprovince which = SWE value = 96 }
+		command = { type = secedeprovince which = SWE value = 97 }
+		command = { type = secedeprovince which = SWE value = 98 }
+		command = { type = secedeprovince which = SWE value = 99 }
+		command = { type = secedeprovince which = SWE value = 100 }
+		command = { type = secedeprovince which = SWE value = 101 }
+		command = { type = secedeprovince which = SWE value = 102 }
+		command = { type = secedeprovince which = SWE value = 104 }
+		command = { type = secedeprovince which = SWE value = 105 }
+		command = { type = secedeprovince which = SWE value = 106 }
+		command = { type = secedeprovince which = SWE value = 112 }
+		command = { type = secedeprovince which = SWE value = 113 }
+		command = { type = secedeprovince which = SWE value = 114 }
+		command = { type = secedeprovince which = SWE value = 115 }
+		command = { type = secedeprovince which = SWE value = 119 }
+		command = { type = secedeprovince which = SWE value = 120 }
+		command = { type = secedeprovince which = SWE value = 121 }
+		command = { type = secedeprovince which = SWE value = 122 }
+		command = { type = secedeprovince which = SWE value = 123 }
+		command = { type = secedeprovince which = SWE value = 126 }
+		command = { type = secedeprovince which = SWE value = 127 }
+		command = { type = secedeprovince which = FIN value = 93 } #Sweden
+		command = { type = secedeprovince which = FIN value = 95 }
+		command = { type = secedeprovince which = FIN value = 96 }
+		command = { type = secedeprovince which = FIN value = 97 }
+		command = { type = secedeprovince which = FIN value = 98 }
+		command = { type = secedeprovince which = FIN value = 99 }
+		command = { type = secedeprovince which = FIN value = 100 }
+		command = { type = secedeprovince which = FIN value = 101 }
+		command = { type = secedeprovince which = FIN value = 102 }
+		command = { type = secedeprovince which = FIN value = 104 }
+		command = { type = secedeprovince which = FIN value = 105 }
+		command = { type = secedeprovince which = FIN value = 106 }
+		command = { type = secedeprovince which = FIN value = 112 }
+		command = { type = secedeprovince which = FIN value = 113 }
+		command = { type = secedeprovince which = FIN value = 114 }
+		command = { type = secedeprovince which = FIN value = 115 }
+		command = { type = secedeprovince which = FIN value = 119 }
+		command = { type = secedeprovince which = FIN value = 120 }
+		command = { type = secedeprovince which = FIN value = 121 }
+		command = { type = secedeprovince which = FIN value = 122 }
+		command = { type = secedeprovince which = FIN value = 123 }
+		command = { type = secedeprovince which = FIN value = 126 }
+		command = { type = secedeprovince which = FIN value = 127 }
+		command = { type = secedeprovince which = NOR value = 93 } #Sweden
+		command = { type = secedeprovince which = NOR value = 95 }
+		command = { type = secedeprovince which = NOR value = 96 }
+		command = { type = secedeprovince which = NOR value = 97 }
+		command = { type = secedeprovince which = NOR value = 98 }
+		command = { type = secedeprovince which = NOR value = 99 }
+		command = { type = secedeprovince which = NOR value = 100 }
+		command = { type = secedeprovince which = NOR value = 101 }
+		command = { type = secedeprovince which = NOR value = 102 }
+		command = { type = secedeprovince which = NOR value = 104 }
+		command = { type = secedeprovince which = NOR value = 105 }
+		command = { type = secedeprovince which = NOR value = 106 }
+		command = { type = secedeprovince which = NOR value = 112 }
+		command = { type = secedeprovince which = NOR value = 113 }
+		command = { type = secedeprovince which = NOR value = 114 }
+		command = { type = secedeprovince which = NOR value = 115 }
+		command = { type = secedeprovince which = NOR value = 119 }
+		command = { type = secedeprovince which = NOR value = 120 }
+		command = { type = secedeprovince which = NOR value = 121 }
+		command = { type = secedeprovince which = NOR value = 122 }
+		command = { type = secedeprovince which = NOR value = 123 }
+		command = { type = secedeprovince which = NOR value = 126 }
+		command = { type = secedeprovince which = NOR value = 127 }
+		command = { type = secedeprovince which = DEN value = 93 } #Sweden
+		command = { type = secedeprovince which = DEN value = 95 }
+		command = { type = secedeprovince which = DEN value = 96 }
+		command = { type = secedeprovince which = DEN value = 97 }
+		command = { type = secedeprovince which = DEN value = 98 }
+		command = { type = secedeprovince which = DEN value = 99 }
+		command = { type = secedeprovince which = DEN value = 100 }
+		command = { type = secedeprovince which = DEN value = 101 }
+		command = { type = secedeprovince which = DEN value = 102 }
+		command = { type = secedeprovince which = DEN value = 104 }
+		command = { type = secedeprovince which = DEN value = 105 }
+		command = { type = secedeprovince which = DEN value = 106 }
+		command = { type = secedeprovince which = DEN value = 112 }
+		command = { type = secedeprovince which = DEN value = 113 }
+		command = { type = secedeprovince which = DEN value = 114 }
+		command = { type = secedeprovince which = DEN value = 115 }
+		command = { type = secedeprovince which = DEN value = 119 }
+		command = { type = secedeprovince which = DEN value = 120 }
+		command = { type = secedeprovince which = DEN value = 121 }
+		command = { type = secedeprovince which = DEN value = 122 }
+		command = { type = secedeprovince which = DEN value = 123 }
+		command = { type = secedeprovince which = DEN value = 126 }
+		command = { type = secedeprovince which = DEN value = 127 }
+		command = { type = trigger which = 57771 }
+		command = { type = trigger which = 57772 }
+		command = { type = trigger which = 57773 }
+		command = { type = trigger which = 57774 }
+	}
+	action_b = {
+		name = "EVT_57770_ACTB"
+		ai_chance = 0
+		command = { type = dissent value = 20 }
+	}
+}
+
+event = {
+	id = 57771
+	random = no
+	country = SWE
+
+	picture = "Bitter_Peace"
+	
+	name = "EVT_57771_NAME"
+	desc = "EVT_57771_DESC"
+	style = 0
+
+	action_a = {
+		name = "EVT_57771_ACTA"
+		ai_chance = 100
+		command = { type = dissent value = -15 }
+		command = { type = peace which = GER value = 1 }
+		command = { type = secedeprovince which = FIN value = 103 } #FINLAND
+		command = { type = secedeprovince which = FIN value = 130 }
+		command = { type = secedeprovince which = FIN value = 131 }
+		command = { type = secedeprovince which = FIN value = 132 }
+		command = { type = secedeprovince which = FIN value = 136 }
+		command = { type = secedeprovince which = FIN value = 137 }
+		command = { type = secedeprovince which = FIN value = 138 }
+		command = { type = secedeprovince which = FIN value = 139 }
+		command = { type = secedeprovince which = FIN value = 140 }
+		command = { type = secedeprovince which = FIN value = 141 }
+		command = { type = secedeprovince which = FIN value = 142 }
+		command = { type = secedeprovince which = FIN value = 143 }
+		command = { type = secedeprovince which = FIN value = 144 }
+		command = { type = secedeprovince which = FIN value = 145 }
+		command = { type = secedeprovince which = FIN value = 146 }
+		command = { type = secedeprovince which = FIN value = 147 }
+		command = { type = secedeprovince which = FIN value = 148 }
+		command = { type = secedeprovince which = FIN value = 149 }
+		command = { type = secedeprovince which = NOR value = 107 } #Norway
+		command = { type = secedeprovince which = NOR value = 108 }
+		command = { type = secedeprovince which = NOR value = 109 }
+		command = { type = secedeprovince which = NOR value = 110 }
+		command = { type = secedeprovince which = NOR value = 111 }
+		command = { type = secedeprovince which = NOR value = 116 }
+		command = { type = secedeprovince which = NOR value = 117 }
+		command = { type = secedeprovince which = NOR value = 118 }
+		command = { type = secedeprovince which = NOR value = 124 }
+		command = { type = secedeprovince which = NOR value = 125 }
+		command = { type = secedeprovince which = NOR value = 128 }
+		command = { type = secedeprovince which = NOR value = 129 }
+		command = { type = secedeprovince which = DEN value =  91 } #Denmark
+		command = { type = secedeprovince which = DEN value =  92 }
+		command = { type = secedeprovince which = DEN value = 292 }
+		command = { type = secedeprovince which = DEN value = 293 }
+		command = { type = secedeprovince which = DEN value = 294 }
+		command = { type = secedeprovince which = DEN value = 295 }
+	}
+}
+event = {
+	id = 57772
+	random = no
+	country = FIN
+
+	picture = "Bitter_Peace"
+	
+	name = "EVT_57771_NAME"
+	desc = "EVT_57771_DESC"
+	style = 0
+
+	action_a = {
+		name = "EVT_57771_ACTA"
+		ai_chance = 100
+		command = { type = dissent value = -15 }
+		command = { type = peace which = GER value = 1 }
+		command = { type = secedeprovince which = SWE value = 93 } #Sweden
+		command = { type = secedeprovince which = SWE value = 95 }
+		command = { type = secedeprovince which = SWE value = 96 }
+		command = { type = secedeprovince which = SWE value = 97 }
+		command = { type = secedeprovince which = SWE value = 98 }
+		command = { type = secedeprovince which = SWE value = 99 }
+		command = { type = secedeprovince which = SWE value = 100 }
+		command = { type = secedeprovince which = SWE value = 101 }
+		command = { type = secedeprovince which = SWE value = 102 }
+		command = { type = secedeprovince which = SWE value = 104 }
+		command = { type = secedeprovince which = SWE value = 105 }
+		command = { type = secedeprovince which = SWE value = 106 }
+		command = { type = secedeprovince which = SWE value = 112 }
+		command = { type = secedeprovince which = SWE value = 113 }
+		command = { type = secedeprovince which = SWE value = 114 }
+		command = { type = secedeprovince which = SWE value = 115 }
+		command = { type = secedeprovince which = SWE value = 119 }
+		command = { type = secedeprovince which = SWE value = 120 }
+		command = { type = secedeprovince which = SWE value = 121 }
+		command = { type = secedeprovince which = SWE value = 122 }
+		command = { type = secedeprovince which = SWE value = 123 }
+		command = { type = secedeprovince which = SWE value = 126 }
+		command = { type = secedeprovince which = SWE value = 127 }
+		command = { type = secedeprovince which = NOR value = 107 } #Norway
+		command = { type = secedeprovince which = NOR value = 108 }
+		command = { type = secedeprovince which = NOR value = 109 }
+		command = { type = secedeprovince which = NOR value = 110 }
+		command = { type = secedeprovince which = NOR value = 111 }
+		command = { type = secedeprovince which = NOR value = 116 }
+		command = { type = secedeprovince which = NOR value = 117 }
+		command = { type = secedeprovince which = NOR value = 118 }
+		command = { type = secedeprovince which = NOR value = 124 }
+		command = { type = secedeprovince which = NOR value = 125 }
+		command = { type = secedeprovince which = NOR value = 128 }
+		command = { type = secedeprovince which = NOR value = 129 }
+		command = { type = secedeprovince which = DEN value =  91 } #Denmark
+		command = { type = secedeprovince which = DEN value =  92 }
+		command = { type = secedeprovince which = DEN value = 292 }
+		command = { type = secedeprovince which = DEN value = 293 }
+		command = { type = secedeprovince which = DEN value = 294 }
+		command = { type = secedeprovince which = DEN value = 295 }
+	}
+}
+event = {
+	id = 57773
+	random = no
+	country = NOR
+
+	picture = "Bitter_Peace"
+	
+	name = "EVT_57771_NAME"
+	desc = "EVT_57771_DESC"
+	style = 0
+
+	action_a = {
+		name = "EVT_57771_ACTA"
+		ai_chance = 100
+		command = { type = dissent value = -15 }
+		command = { type = peace which = GER value = 1 }
+		command = { type = secedeprovince which = FIN value = 103 } #FINLAND
+		command = { type = secedeprovince which = FIN value = 130 }
+		command = { type = secedeprovince which = FIN value = 131 }
+		command = { type = secedeprovince which = FIN value = 132 }
+		command = { type = secedeprovince which = FIN value = 136 }
+		command = { type = secedeprovince which = FIN value = 137 }
+		command = { type = secedeprovince which = FIN value = 138 }
+		command = { type = secedeprovince which = FIN value = 139 }
+		command = { type = secedeprovince which = FIN value = 140 }
+		command = { type = secedeprovince which = FIN value = 141 }
+		command = { type = secedeprovince which = FIN value = 142 }
+		command = { type = secedeprovince which = FIN value = 143 }
+		command = { type = secedeprovince which = FIN value = 144 }
+		command = { type = secedeprovince which = FIN value = 145 }
+		command = { type = secedeprovince which = FIN value = 146 }
+		command = { type = secedeprovince which = FIN value = 147 }
+		command = { type = secedeprovince which = FIN value = 148 }
+		command = { type = secedeprovince which = FIN value = 149 }
+		command = { type = secedeprovince which = SWE value = 93 } #Sweden
+		command = { type = secedeprovince which = SWE value = 95 }
+		command = { type = secedeprovince which = SWE value = 96 }
+		command = { type = secedeprovince which = SWE value = 97 }
+		command = { type = secedeprovince which = SWE value = 98 }
+		command = { type = secedeprovince which = SWE value = 99 }
+		command = { type = secedeprovince which = SWE value = 100 }
+		command = { type = secedeprovince which = SWE value = 101 }
+		command = { type = secedeprovince which = SWE value = 102 }
+		command = { type = secedeprovince which = SWE value = 104 }
+		command = { type = secedeprovince which = SWE value = 105 }
+		command = { type = secedeprovince which = SWE value = 106 }
+		command = { type = secedeprovince which = SWE value = 112 }
+		command = { type = secedeprovince which = SWE value = 113 }
+		command = { type = secedeprovince which = SWE value = 114 }
+		command = { type = secedeprovince which = SWE value = 115 }
+		command = { type = secedeprovince which = SWE value = 119 }
+		command = { type = secedeprovince which = SWE value = 120 }
+		command = { type = secedeprovince which = SWE value = 121 }
+		command = { type = secedeprovince which = SWE value = 122 }
+		command = { type = secedeprovince which = SWE value = 123 }
+		command = { type = secedeprovince which = SWE value = 126 }
+		command = { type = secedeprovince which = SWE value = 127 }
+		command = { type = secedeprovince which = DEN value =  91 } #Denmark
+		command = { type = secedeprovince which = DEN value =  92 }
+		command = { type = secedeprovince which = DEN value = 292 }
+		command = { type = secedeprovince which = DEN value = 293 }
+		command = { type = secedeprovince which = DEN value = 294 }
+		command = { type = secedeprovince which = DEN value = 295 }
+	}
+}
+event = {
+	id = 57774
+	random = no
+	country = DEN
+
+	picture = "Bitter_Peace"
+	
+	name = "EVT_57771_NAME"
+	desc = "EVT_57771_DESC"
+	style = 0
+
+	action_a = {
+		name = "EVT_57771_ACTA"
+		ai_chance = 100
+		command = { type = dissent value = -15 }
+		command = { type = peace which = GER value = 1 }
+		command = { type = secedeprovince which = FIN value = 103 } #FINLAND
+		command = { type = secedeprovince which = FIN value = 130 }
+		command = { type = secedeprovince which = FIN value = 131 }
+		command = { type = secedeprovince which = FIN value = 132 }
+		command = { type = secedeprovince which = FIN value = 136 }
+		command = { type = secedeprovince which = FIN value = 137 }
+		command = { type = secedeprovince which = FIN value = 138 }
+		command = { type = secedeprovince which = FIN value = 139 }
+		command = { type = secedeprovince which = FIN value = 140 }
+		command = { type = secedeprovince which = FIN value = 141 }
+		command = { type = secedeprovince which = FIN value = 142 }
+		command = { type = secedeprovince which = FIN value = 143 }
+		command = { type = secedeprovince which = FIN value = 144 }
+		command = { type = secedeprovince which = FIN value = 145 }
+		command = { type = secedeprovince which = FIN value = 146 }
+		command = { type = secedeprovince which = FIN value = 147 }
+		command = { type = secedeprovince which = FIN value = 148 }
+		command = { type = secedeprovince which = FIN value = 149 }
+		command = { type = secedeprovince which = NOR value = 107 } #Norway
+		command = { type = secedeprovince which = NOR value = 108 }
+		command = { type = secedeprovince which = NOR value = 109 }
+		command = { type = secedeprovince which = NOR value = 110 }
+		command = { type = secedeprovince which = NOR value = 111 }
+		command = { type = secedeprovince which = NOR value = 116 }
+		command = { type = secedeprovince which = NOR value = 117 }
+		command = { type = secedeprovince which = NOR value = 118 }
+		command = { type = secedeprovince which = NOR value = 124 }
+		command = { type = secedeprovince which = NOR value = 125 }
+		command = { type = secedeprovince which = NOR value = 128 }
+		command = { type = secedeprovince which = NOR value = 129 }
+		command = { type = secedeprovince which = SWE value = 93 } #Sweden
+		command = { type = secedeprovince which = SWE value = 95 }
+		command = { type = secedeprovince which = SWE value = 96 }
+		command = { type = secedeprovince which = SWE value = 97 }
+		command = { type = secedeprovince which = SWE value = 98 }
+		command = { type = secedeprovince which = SWE value = 99 }
+		command = { type = secedeprovince which = SWE value = 100 }
+		command = { type = secedeprovince which = SWE value = 101 }
+		command = { type = secedeprovince which = SWE value = 102 }
+		command = { type = secedeprovince which = SWE value = 104 }
+		command = { type = secedeprovince which = SWE value = 105 }
+		command = { type = secedeprovince which = SWE value = 106 }
+		command = { type = secedeprovince which = SWE value = 112 }
+		command = { type = secedeprovince which = SWE value = 113 }
+		command = { type = secedeprovince which = SWE value = 114 }
+		command = { type = secedeprovince which = SWE value = 115 }
+		command = { type = secedeprovince which = SWE value = 119 }
+		command = { type = secedeprovince which = SWE value = 120 }
+		command = { type = secedeprovince which = SWE value = 121 }
+		command = { type = secedeprovince which = SWE value = 122 }
+		command = { type = secedeprovince which = SWE value = 123 }
+		command = { type = secedeprovince which = SWE value = 126 }
+		command = { type = secedeprovince which = SWE value = 127 }
+	}
+}
+
+
+
+#########################################################################
+#  USSR offer peace
+#########################################################################
+
+event = {
+	id = 57775
+	random = no
+	country = SOV
+	trigger = {
+		OR = {
+			flag = denmark
+			flag = finland
+			flag = norway
+			flag = sweden
+		}
+		OR = {
+			AND = {
+				war = { country = GER country = SWE }
+				NOT = { ispuppet = SWE }
+			}
+			AND = {
+				war = { country = GER country = NOR }
+				NOT = { ispuppet = NOR }
+			}
+			AND = {
+				war = { country = GER country = DEN }
+				NOT = { ispuppet = DEN }
+			}
+			AND = {
+				war = { country = GER country = FIN }
+				NOT = { ispuppet = FIN }
+			}
+		}
+		NOT = {
+			control = { province = 175 data = SOV } # Moscow
+		}
+	}
+	picture = "Bitter_Peace"
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	name = "EVT_57772_NAME"
+	desc = "EVT_57772_DESC"
+	style = 0
+
+	action_a = {
+		name = "EVT_57770_ACTA"
+		ai_chance = 95
+		command = { type = dissent value = 10 }
+		#command = { type = peace which = SWE }
+		#command = { type = peace which = NOR }
+		#command = { type = peace which = DEN }
+		#command = { type = peace which = FIN }
+		command = { type = secedeprovince which = FIN value = 103 } #FINLAND
+		command = { type = secedeprovince which = FIN value = 130 }
+		command = { type = secedeprovince which = FIN value = 131 }
+		command = { type = secedeprovince which = FIN value = 132 }
+		command = { type = secedeprovince which = FIN value = 136 }
+		command = { type = secedeprovince which = FIN value = 137 }
+		command = { type = secedeprovince which = FIN value = 138 }
+		command = { type = secedeprovince which = FIN value = 139 }
+		command = { type = secedeprovince which = FIN value = 140 }
+		command = { type = secedeprovince which = FIN value = 141 }
+		command = { type = secedeprovince which = FIN value = 142 }
+		command = { type = secedeprovince which = FIN value = 143 }
+		command = { type = secedeprovince which = FIN value = 144 }
+		command = { type = secedeprovince which = FIN value = 145 }
+		command = { type = secedeprovince which = FIN value = 146 }
+		command = { type = secedeprovince which = FIN value = 147 }
+		command = { type = secedeprovince which = FIN value = 148 }
+		command = { type = secedeprovince which = FIN value = 149 }
+		command = { type = secedeprovince which = SWE value = 103 } #FINLAND
+		command = { type = secedeprovince which = SWE value = 130 }
+		command = { type = secedeprovince which = SWE value = 131 }
+		command = { type = secedeprovince which = SWE value = 132 }
+		command = { type = secedeprovince which = SWE value = 136 }
+		command = { type = secedeprovince which = SWE value = 137 }
+		command = { type = secedeprovince which = SWE value = 138 }
+		command = { type = secedeprovince which = SWE value = 139 }
+		command = { type = secedeprovince which = SWE value = 140 }
+		command = { type = secedeprovince which = SWE value = 141 }
+		command = { type = secedeprovince which = SWE value = 142 }
+		command = { type = secedeprovince which = SWE value = 143 }
+		command = { type = secedeprovince which = SWE value = 144 }
+		command = { type = secedeprovince which = SWE value = 145 }
+		command = { type = secedeprovince which = SWE value = 146 }
+		command = { type = secedeprovince which = SWE value = 147 }
+		command = { type = secedeprovince which = SWE value = 148 }
+		command = { type = secedeprovince which = SWE value = 149 }
+		command = { type = secedeprovince which = NOR value = 103 } #FINLAND
+		command = { type = secedeprovince which = NOR value = 130 }
+		command = { type = secedeprovince which = NOR value = 131 }
+		command = { type = secedeprovince which = NOR value = 132 }
+		command = { type = secedeprovince which = NOR value = 136 }
+		command = { type = secedeprovince which = NOR value = 137 }
+		command = { type = secedeprovince which = NOR value = 138 }
+		command = { type = secedeprovince which = NOR value = 139 }
+		command = { type = secedeprovince which = NOR value = 140 }
+		command = { type = secedeprovince which = NOR value = 141 }
+		command = { type = secedeprovince which = NOR value = 142 }
+		command = { type = secedeprovince which = NOR value = 143 }
+		command = { type = secedeprovince which = NOR value = 144 }
+		command = { type = secedeprovince which = NOR value = 145 }
+		command = { type = secedeprovince which = NOR value = 146 }
+		command = { type = secedeprovince which = NOR value = 147 }
+		command = { type = secedeprovince which = NOR value = 148 }
+		command = { type = secedeprovince which = NOR value = 149 }
+		command = { type = secedeprovince which = DEN value = 103 } #FINLAND
+		command = { type = secedeprovince which = DEN value = 130 }
+		command = { type = secedeprovince which = DEN value = 131 }
+		command = { type = secedeprovince which = DEN value = 132 }
+		command = { type = secedeprovince which = DEN value = 136 }
+		command = { type = secedeprovince which = DEN value = 137 }
+		command = { type = secedeprovince which = DEN value = 138 }
+		command = { type = secedeprovince which = DEN value = 139 }
+		command = { type = secedeprovince which = DEN value = 140 }
+		command = { type = secedeprovince which = DEN value = 141 }
+		command = { type = secedeprovince which = DEN value = 142 }
+		command = { type = secedeprovince which = DEN value = 143 }
+		command = { type = secedeprovince which = DEN value = 144 }
+		command = { type = secedeprovince which = DEN value = 145 }
+		command = { type = secedeprovince which = DEN value = 146 }
+		command = { type = secedeprovince which = DEN value = 147 }
+		command = { type = secedeprovince which = DEN value = 148 }
+		command = { type = secedeprovince which = DEN value = 149 }
+
+		command = { type = secedeprovince which = NOR value = 107 } #Norway
+		command = { type = secedeprovince which = NOR value = 108 }
+		command = { type = secedeprovince which = NOR value = 109 }
+		command = { type = secedeprovince which = NOR value = 110 }
+		command = { type = secedeprovince which = NOR value = 111 }
+		command = { type = secedeprovince which = NOR value = 116 }
+		command = { type = secedeprovince which = NOR value = 117 }
+		command = { type = secedeprovince which = NOR value = 118 }
+		command = { type = secedeprovince which = NOR value = 124 }
+		command = { type = secedeprovince which = NOR value = 125 }
+		command = { type = secedeprovince which = NOR value = 128 }
+		command = { type = secedeprovince which = NOR value = 129 }
+		command = { type = secedeprovince which = SWE value = 107 } #Norway
+		command = { type = secedeprovince which = SWE value = 108 }
+		command = { type = secedeprovince which = SWE value = 109 }
+		command = { type = secedeprovince which = SWE value = 110 }
+		command = { type = secedeprovince which = SWE value = 111 }
+		command = { type = secedeprovince which = SWE value = 116 }
+		command = { type = secedeprovince which = SWE value = 117 }
+		command = { type = secedeprovince which = SWE value = 118 }
+		command = { type = secedeprovince which = SWE value = 124 }
+		command = { type = secedeprovince which = SWE value = 125 }
+		command = { type = secedeprovince which = SWE value = 128 }
+		command = { type = secedeprovince which = SWE value = 129 }
+		command = { type = secedeprovince which = DEN value = 107 } #Norway
+		command = { type = secedeprovince which = DEN value = 108 }
+		command = { type = secedeprovince which = DEN value = 109 }
+		command = { type = secedeprovince which = DEN value = 110 }
+		command = { type = secedeprovince which = DEN value = 111 }
+		command = { type = secedeprovince which = DEN value = 116 }
+		command = { type = secedeprovince which = DEN value = 117 }
+		command = { type = secedeprovince which = DEN value = 118 }
+		command = { type = secedeprovince which = DEN value = 124 }
+		command = { type = secedeprovince which = DEN value = 125 }
+		command = { type = secedeprovince which = DEN value = 128 }
+		command = { type = secedeprovince which = DEN value = 129 }
+		command = { type = secedeprovince which = FIN value = 107 } #Norway
+		command = { type = secedeprovince which = FIN value = 108 }
+		command = { type = secedeprovince which = FIN value = 109 }
+		command = { type = secedeprovince which = FIN value = 110 }
+		command = { type = secedeprovince which = FIN value = 111 }
+		command = { type = secedeprovince which = FIN value = 116 }
+		command = { type = secedeprovince which = FIN value = 117 }
+		command = { type = secedeprovince which = FIN value = 118 }
+		command = { type = secedeprovince which = FIN value = 124 }
+		command = { type = secedeprovince which = FIN value = 125 }
+		command = { type = secedeprovince which = FIN value = 128 }
+		command = { type = secedeprovince which = FIN value = 129 }
+
+		command = { type = secedeprovince which = DEN value = 91 } #Denmark
+		command = { type = secedeprovince which = DEN value = 92 }
+		command = { type = secedeprovince which = DEN value = 292 }
+		command = { type = secedeprovince which = DEN value = 293 }
+		command = { type = secedeprovince which = DEN value = 294 }
+		command = { type = secedeprovince which = DEN value = 295 }
+		command = { type = secedeprovince which = SWE value = 91 } #Denmark
+		command = { type = secedeprovince which = SWE value = 92 }
+		command = { type = secedeprovince which = SWE value = 292 }
+		command = { type = secedeprovince which = SWE value = 293 }
+		command = { type = secedeprovince which = SWE value = 294 }
+		command = { type = secedeprovince which = SWE value = 295 }
+		command = { type = secedeprovince which = NOR value = 91 } #Denmark
+		command = { type = secedeprovince which = NOR value = 92 }
+		command = { type = secedeprovince which = NOR value = 292 }
+		command = { type = secedeprovince which = NOR value = 293 }
+		command = { type = secedeprovince which = NOR value = 294 }
+		command = { type = secedeprovince which = NOR value = 295 }
+		command = { type = secedeprovince which = FIN value = 91 } #Denmark
+		command = { type = secedeprovince which = FIN value = 92 }
+		command = { type = secedeprovince which = FIN value = 292 }
+		command = { type = secedeprovince which = FIN value = 293 }
+		command = { type = secedeprovince which = FIN value = 294 }
+		command = { type = secedeprovince which = FIN value = 295 }
+
+		command = { type = secedeprovince which = SWE value = 93 } #Sweden
+		command = { type = secedeprovince which = SWE value = 95 }
+		command = { type = secedeprovince which = SWE value = 96 }
+		command = { type = secedeprovince which = SWE value = 97 }
+		command = { type = secedeprovince which = SWE value = 98 }
+		command = { type = secedeprovince which = SWE value = 99 }
+		command = { type = secedeprovince which = SWE value = 100 }
+		command = { type = secedeprovince which = SWE value = 101 }
+		command = { type = secedeprovince which = SWE value = 102 }
+		command = { type = secedeprovince which = SWE value = 104 }
+		command = { type = secedeprovince which = SWE value = 105 }
+		command = { type = secedeprovince which = SWE value = 106 }
+		command = { type = secedeprovince which = SWE value = 112 }
+		command = { type = secedeprovince which = SWE value = 113 }
+		command = { type = secedeprovince which = SWE value = 114 }
+		command = { type = secedeprovince which = SWE value = 115 }
+		command = { type = secedeprovince which = SWE value = 119 }
+		command = { type = secedeprovince which = SWE value = 120 }
+		command = { type = secedeprovince which = SWE value = 121 }
+		command = { type = secedeprovince which = SWE value = 122 }
+		command = { type = secedeprovince which = SWE value = 123 }
+		command = { type = secedeprovince which = SWE value = 126 }
+		command = { type = secedeprovince which = SWE value = 127 }
+		command = { type = secedeprovince which = FIN value = 93 } #Sweden
+		command = { type = secedeprovince which = FIN value = 95 }
+		command = { type = secedeprovince which = FIN value = 96 }
+		command = { type = secedeprovince which = FIN value = 97 }
+		command = { type = secedeprovince which = FIN value = 98 }
+		command = { type = secedeprovince which = FIN value = 99 }
+		command = { type = secedeprovince which = FIN value = 100 }
+		command = { type = secedeprovince which = FIN value = 101 }
+		command = { type = secedeprovince which = FIN value = 102 }
+		command = { type = secedeprovince which = FIN value = 104 }
+		command = { type = secedeprovince which = FIN value = 105 }
+		command = { type = secedeprovince which = FIN value = 106 }
+		command = { type = secedeprovince which = FIN value = 112 }
+		command = { type = secedeprovince which = FIN value = 113 }
+		command = { type = secedeprovince which = FIN value = 114 }
+		command = { type = secedeprovince which = FIN value = 115 }
+		command = { type = secedeprovince which = FIN value = 119 }
+		command = { type = secedeprovince which = FIN value = 120 }
+		command = { type = secedeprovince which = FIN value = 121 }
+		command = { type = secedeprovince which = FIN value = 122 }
+		command = { type = secedeprovince which = FIN value = 123 }
+		command = { type = secedeprovince which = FIN value = 126 }
+		command = { type = secedeprovince which = FIN value = 127 }
+		command = { type = secedeprovince which = NOR value = 93 } #Sweden
+		command = { type = secedeprovince which = NOR value = 95 }
+		command = { type = secedeprovince which = NOR value = 96 }
+		command = { type = secedeprovince which = NOR value = 97 }
+		command = { type = secedeprovince which = NOR value = 98 }
+		command = { type = secedeprovince which = NOR value = 99 }
+		command = { type = secedeprovince which = NOR value = 100 }
+		command = { type = secedeprovince which = NOR value = 101 }
+		command = { type = secedeprovince which = NOR value = 102 }
+		command = { type = secedeprovince which = NOR value = 104 }
+		command = { type = secedeprovince which = NOR value = 105 }
+		command = { type = secedeprovince which = NOR value = 106 }
+		command = { type = secedeprovince which = NOR value = 112 }
+		command = { type = secedeprovince which = NOR value = 113 }
+		command = { type = secedeprovince which = NOR value = 114 }
+		command = { type = secedeprovince which = NOR value = 115 }
+		command = { type = secedeprovince which = NOR value = 119 }
+		command = { type = secedeprovince which = NOR value = 120 }
+		command = { type = secedeprovince which = NOR value = 121 }
+		command = { type = secedeprovince which = NOR value = 122 }
+		command = { type = secedeprovince which = NOR value = 123 }
+		command = { type = secedeprovince which = NOR value = 126 }
+		command = { type = secedeprovince which = NOR value = 127 }
+		command = { type = secedeprovince which = DEN value = 93 } #Sweden
+		command = { type = secedeprovince which = DEN value = 95 }
+		command = { type = secedeprovince which = DEN value = 96 }
+		command = { type = secedeprovince which = DEN value = 97 }
+		command = { type = secedeprovince which = DEN value = 98 }
+		command = { type = secedeprovince which = DEN value = 99 }
+		command = { type = secedeprovince which = DEN value = 100 }
+		command = { type = secedeprovince which = DEN value = 101 }
+		command = { type = secedeprovince which = DEN value = 102 }
+		command = { type = secedeprovince which = DEN value = 104 }
+		command = { type = secedeprovince which = DEN value = 105 }
+		command = { type = secedeprovince which = DEN value = 106 }
+		command = { type = secedeprovince which = DEN value = 112 }
+		command = { type = secedeprovince which = DEN value = 113 }
+		command = { type = secedeprovince which = DEN value = 114 }
+		command = { type = secedeprovince which = DEN value = 115 }
+		command = { type = secedeprovince which = DEN value = 119 }
+		command = { type = secedeprovince which = DEN value = 120 }
+		command = { type = secedeprovince which = DEN value = 121 }
+		command = { type = secedeprovince which = DEN value = 122 }
+		command = { type = secedeprovince which = DEN value = 123 }
+		command = { type = secedeprovince which = DEN value = 126 }
+		command = { type = secedeprovince which = DEN value = 127 }
+		command = { type = trigger which = 57776 }
+		command = { type = trigger which = 57777 }
+		command = { type = trigger which = 57778 }
+		command = { type = trigger which = 57779 }
+	}
+	action_b = {
+		name = "EVT_57770_ACTB"
+		ai_chance = 5
+		command = { type = dissent value = 15 }
+	}
+}
+
+event = {
+	id = 57776
+	random = no
+	country = SWE
+
+	picture = "Bitter_Peace"
+	
+	name = "EVT_57773_NAME"
+	desc = "EVT_57773_DESC"
+	style = 0
+
+	action_a = {
+		name = "EVT_57773_ACTA"
+		ai_chance = 99
+		command = { type = dissent value = -10 }
+		command = { type = peace which = GER value = 1 }
+		command = { type = secedeprovince which = FIN value = 103 } #FINLAND
+		command = { type = secedeprovince which = FIN value = 130 }
+		command = { type = secedeprovince which = FIN value = 131 }
+		command = { type = secedeprovince which = FIN value = 132 }
+		command = { type = secedeprovince which = FIN value = 136 }
+		command = { type = secedeprovince which = FIN value = 137 }
+		command = { type = secedeprovince which = FIN value = 138 }
+		command = { type = secedeprovince which = FIN value = 139 }
+		command = { type = secedeprovince which = FIN value = 140 }
+		command = { type = secedeprovince which = FIN value = 141 }
+		command = { type = secedeprovince which = FIN value = 142 }
+		command = { type = secedeprovince which = FIN value = 143 }
+		command = { type = secedeprovince which = FIN value = 144 }
+		command = { type = secedeprovince which = FIN value = 145 }
+		command = { type = secedeprovince which = FIN value = 146 }
+		command = { type = secedeprovince which = FIN value = 147 }
+		command = { type = secedeprovince which = FIN value = 148 }
+		command = { type = secedeprovince which = FIN value = 149 }
+		command = { type = secedeprovince which = NOR value = 107 } #Norway
+		command = { type = secedeprovince which = NOR value = 108 }
+		command = { type = secedeprovince which = NOR value = 109 }
+		command = { type = secedeprovince which = NOR value = 110 }
+		command = { type = secedeprovince which = NOR value = 111 }
+		command = { type = secedeprovince which = NOR value = 116 }
+		command = { type = secedeprovince which = NOR value = 117 }
+		command = { type = secedeprovince which = NOR value = 118 }
+		command = { type = secedeprovince which = NOR value = 124 }
+		command = { type = secedeprovince which = NOR value = 125 }
+		command = { type = secedeprovince which = NOR value = 128 }
+		command = { type = secedeprovince which = NOR value = 129 }
+		command = { type = secedeprovince which = DEN value =  91 } #Denmark
+		command = { type = secedeprovince which = DEN value =  92 }
+		command = { type = secedeprovince which = DEN value = 292 }
+		command = { type = secedeprovince which = DEN value = 293 }
+		command = { type = secedeprovince which = DEN value = 294 }
+		command = { type = secedeprovince which = DEN value = 295 }
+	}
+}
+event = {
+	id = 57777
+	random = no
+	country = FIN
+
+	picture = "Bitter_Peace"
+	
+	name = "EVT_57773_NAME"
+	desc = "EVT_57773_DESC"
+	style = 0
+
+	action_a = {
+		name = "EVT_57773_ACTA"
+		ai_chance = 100
+		command = { type = dissent value = -10 }
+		command = { type = peace which = GER value = 1 }
+		command = { type = secedeprovince which = SWE value = 93 } #Sweden
+		command = { type = secedeprovince which = SWE value = 95 }
+		command = { type = secedeprovince which = SWE value = 96 }
+		command = { type = secedeprovince which = SWE value = 97 }
+		command = { type = secedeprovince which = SWE value = 98 }
+		command = { type = secedeprovince which = SWE value = 99 }
+		command = { type = secedeprovince which = SWE value = 100 }
+		command = { type = secedeprovince which = SWE value = 101 }
+		command = { type = secedeprovince which = SWE value = 102 }
+		command = { type = secedeprovince which = SWE value = 104 }
+		command = { type = secedeprovince which = SWE value = 105 }
+		command = { type = secedeprovince which = SWE value = 106 }
+		command = { type = secedeprovince which = SWE value = 112 }
+		command = { type = secedeprovince which = SWE value = 113 }
+		command = { type = secedeprovince which = SWE value = 114 }
+		command = { type = secedeprovince which = SWE value = 115 }
+		command = { type = secedeprovince which = SWE value = 119 }
+		command = { type = secedeprovince which = SWE value = 120 }
+		command = { type = secedeprovince which = SWE value = 121 }
+		command = { type = secedeprovince which = SWE value = 122 }
+		command = { type = secedeprovince which = SWE value = 123 }
+		command = { type = secedeprovince which = SWE value = 126 }
+		command = { type = secedeprovince which = SWE value = 127 }
+		command = { type = secedeprovince which = NOR value = 107 } #Norway
+		command = { type = secedeprovince which = NOR value = 108 }
+		command = { type = secedeprovince which = NOR value = 109 }
+		command = { type = secedeprovince which = NOR value = 110 }
+		command = { type = secedeprovince which = NOR value = 111 }
+		command = { type = secedeprovince which = NOR value = 116 }
+		command = { type = secedeprovince which = NOR value = 117 }
+		command = { type = secedeprovince which = NOR value = 118 }
+		command = { type = secedeprovince which = NOR value = 124 }
+		command = { type = secedeprovince which = NOR value = 125 }
+		command = { type = secedeprovince which = NOR value = 128 }
+		command = { type = secedeprovince which = NOR value = 129 }
+		command = { type = secedeprovince which = DEN value =  91 } #Denmark
+		command = { type = secedeprovince which = DEN value =  92 }
+		command = { type = secedeprovince which = DEN value = 292 }
+		command = { type = secedeprovince which = DEN value = 293 }
+		command = { type = secedeprovince which = DEN value = 294 }
+		command = { type = secedeprovince which = DEN value = 295 }
+	}
+}
+event = {
+	id = 57778
+	random = no
+	country = NOR
+
+	picture = "Bitter_Peace"
+	
+	name = "EVT_57773_NAME"
+	desc = "EVT_57773_DESC"
+	style = 0
+
+	action_a = {
+		name = "EVT_57773_ACTA"
+		ai_chance = 100
+		command = { type = dissent value = -10 }
+		command = { type = peace which = GER value = 1 }
+		command = { type = secedeprovince which = FIN value = 103 } #FINLAND
+		command = { type = secedeprovince which = FIN value = 130 }
+		command = { type = secedeprovince which = FIN value = 131 }
+		command = { type = secedeprovince which = FIN value = 132 }
+		command = { type = secedeprovince which = FIN value = 136 }
+		command = { type = secedeprovince which = FIN value = 137 }
+		command = { type = secedeprovince which = FIN value = 138 }
+		command = { type = secedeprovince which = FIN value = 139 }
+		command = { type = secedeprovince which = FIN value = 140 }
+		command = { type = secedeprovince which = FIN value = 141 }
+		command = { type = secedeprovince which = FIN value = 142 }
+		command = { type = secedeprovince which = FIN value = 143 }
+		command = { type = secedeprovince which = FIN value = 144 }
+		command = { type = secedeprovince which = FIN value = 145 }
+		command = { type = secedeprovince which = FIN value = 146 }
+		command = { type = secedeprovince which = FIN value = 147 }
+		command = { type = secedeprovince which = FIN value = 148 }
+		command = { type = secedeprovince which = FIN value = 149 }
+		command = { type = secedeprovince which = SWE value = 93 } #Sweden
+		command = { type = secedeprovince which = SWE value = 95 }
+		command = { type = secedeprovince which = SWE value = 96 }
+		command = { type = secedeprovince which = SWE value = 97 }
+		command = { type = secedeprovince which = SWE value = 98 }
+		command = { type = secedeprovince which = SWE value = 99 }
+		command = { type = secedeprovince which = SWE value = 100 }
+		command = { type = secedeprovince which = SWE value = 101 }
+		command = { type = secedeprovince which = SWE value = 102 }
+		command = { type = secedeprovince which = SWE value = 104 }
+		command = { type = secedeprovince which = SWE value = 105 }
+		command = { type = secedeprovince which = SWE value = 106 }
+		command = { type = secedeprovince which = SWE value = 112 }
+		command = { type = secedeprovince which = SWE value = 113 }
+		command = { type = secedeprovince which = SWE value = 114 }
+		command = { type = secedeprovince which = SWE value = 115 }
+		command = { type = secedeprovince which = SWE value = 119 }
+		command = { type = secedeprovince which = SWE value = 120 }
+		command = { type = secedeprovince which = SWE value = 121 }
+		command = { type = secedeprovince which = SWE value = 122 }
+		command = { type = secedeprovince which = SWE value = 123 }
+		command = { type = secedeprovince which = SWE value = 126 }
+		command = { type = secedeprovince which = SWE value = 127 }
+		command = { type = secedeprovince which = DEN value =  91 } #Denmark
+		command = { type = secedeprovince which = DEN value =  92 }
+		command = { type = secedeprovince which = DEN value = 292 }
+		command = { type = secedeprovince which = DEN value = 293 }
+		command = { type = secedeprovince which = DEN value = 294 }
+		command = { type = secedeprovince which = DEN value = 295 }
+	}
+}
+event = {
+	id = 57779
+	random = no
+	country = DEN
+
+	picture = "Bitter_Peace"
+	
+	name = "EVT_57773_NAME"
+	desc = "EVT_57773_DESC"
+	style = 0
+
+	action_a = {
+		name = "EVT_57773_ACTA"
+		ai_chance = 100
+		command = { type = dissent value = -10 }
+		command = { type = peace which = GER value = 1 }
+		command = { type = secedeprovince which = FIN value = 103 } #FINLAND
+		command = { type = secedeprovince which = FIN value = 130 }
+		command = { type = secedeprovince which = FIN value = 131 }
+		command = { type = secedeprovince which = FIN value = 132 }
+		command = { type = secedeprovince which = FIN value = 136 }
+		command = { type = secedeprovince which = FIN value = 137 }
+		command = { type = secedeprovince which = FIN value = 138 }
+		command = { type = secedeprovince which = FIN value = 139 }
+		command = { type = secedeprovince which = FIN value = 140 }
+		command = { type = secedeprovince which = FIN value = 141 }
+		command = { type = secedeprovince which = FIN value = 142 }
+		command = { type = secedeprovince which = FIN value = 143 }
+		command = { type = secedeprovince which = FIN value = 144 }
+		command = { type = secedeprovince which = FIN value = 145 }
+		command = { type = secedeprovince which = FIN value = 146 }
+		command = { type = secedeprovince which = FIN value = 147 }
+		command = { type = secedeprovince which = FIN value = 148 }
+		command = { type = secedeprovince which = FIN value = 149 }
+		command = { type = secedeprovince which = NOR value = 107 } #Norway
+		command = { type = secedeprovince which = NOR value = 108 }
+		command = { type = secedeprovince which = NOR value = 109 }
+		command = { type = secedeprovince which = NOR value = 110 }
+		command = { type = secedeprovince which = NOR value = 111 }
+		command = { type = secedeprovince which = NOR value = 116 }
+		command = { type = secedeprovince which = NOR value = 117 }
+		command = { type = secedeprovince which = NOR value = 118 }
+		command = { type = secedeprovince which = NOR value = 124 }
+		command = { type = secedeprovince which = NOR value = 125 }
+		command = { type = secedeprovince which = NOR value = 128 }
+		command = { type = secedeprovince which = NOR value = 129 }
+		command = { type = secedeprovince which = SWE value = 93 } #Sweden
+		command = { type = secedeprovince which = SWE value = 95 }
+		command = { type = secedeprovince which = SWE value = 96 }
+		command = { type = secedeprovince which = SWE value = 97 }
+		command = { type = secedeprovince which = SWE value = 98 }
+		command = { type = secedeprovince which = SWE value = 99 }
+		command = { type = secedeprovince which = SWE value = 100 }
+		command = { type = secedeprovince which = SWE value = 101 }
+		command = { type = secedeprovince which = SWE value = 102 }
+		command = { type = secedeprovince which = SWE value = 104 }
+		command = { type = secedeprovince which = SWE value = 105 }
+		command = { type = secedeprovince which = SWE value = 106 }
+		command = { type = secedeprovince which = SWE value = 112 }
+		command = { type = secedeprovince which = SWE value = 113 }
+		command = { type = secedeprovince which = SWE value = 114 }
+		command = { type = secedeprovince which = SWE value = 115 }
+		command = { type = secedeprovince which = SWE value = 119 }
+		command = { type = secedeprovince which = SWE value = 120 }
+		command = { type = secedeprovince which = SWE value = 121 }
+		command = { type = secedeprovince which = SWE value = 122 }
+		command = { type = secedeprovince which = SWE value = 123 }
+		command = { type = secedeprovince which = SWE value = 126 }
+		command = { type = secedeprovince which = SWE value = 127 }
+	}
+}
+
+
+
+################################################################################
+#(USA) 北海航路 - 対北欧援助物資
+################################################################################
+##########
+#  The Lend-Lease Act to SWE
+##########
+event = {
+	id = 57780
+	random = no
+	country = USA
+
+	trigger = {
+		war = { country = SWE country = GER }
+		OR = {
+			control = { province = 125 data = NOR }	#北海を北欧諸国が所有
+			control = { province = 125 data = DEN }	
+			control = { province = 125 data = SWE }	
+			control = { province = 125 data = FIN }	
+			control = { province = 125 data = SCA }	
+			control = { province = 125 data = ENG }	
+		}
+		OR = {
+			control = { province = 128 data = NOR }	#北海を北欧諸国が所有
+			control = { province = 128 data = DEN }	
+			control = { province = 128 data = SWE }	
+			control = { province = 128 data = FIN }	
+			control = { province = 128 data = SCA }	
+			control = { province = 128 data = ENG }	
+		}
+		OR = {
+			control = { province = 129 data = NOR }	#北海を北欧諸国が所有
+			control = { province = 129 data = DEN }	
+			control = { province = 129 data = SWE }	
+			control = { province = 129 data = FIN }	
+			control = { province = 129 data = SCA }	
+			control = { province = 129 data = ENG }	
+		}
+		OR = {
+			control = { province = 132 data = NOR }	#北海を北欧諸国が所有
+			control = { province = 132 data = DEN }	
+			control = { province = 132 data = SWE }	
+			control = { province = 132 data = FIN }	
+			control = { province = 132 data = SCA }	
+			control = { province = 132 data = ENG }	
+		}
+		NOT = {
+			alliance = { country = GER country = USA }
+			war = { country = SWE country = USA }
+			war = { country = SWE country = ENG }
+		}
+	}
+
+	date = { day = 11 month = march year = 1941 } #historic
+	offset = 60
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_57780_NAME"
+	desc = "EVT_3703_DESC"
+
+	picture = "lend_lease"
+
+	action_a = {
+		name = "ACTIONNAME3700A" #Pass the Act
+		ai_chance = 99
+		command = { type = supplies value = -2000 }
+		command = { type = relation which = SWE value = 20 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = trigger which = 57781 } #SWE lend-lease startup
+	}
+	action_b = {
+		name = "ACTIONNAME3700B" #Remain Completely Neutral
+		ai_chance = 1
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = sleepevent which = 57780 } #lend-lease SWE The First Shipment
+		command = { type = sleepevent which = 57782 } #lend-lease SWE
+	}
+}
+##########
+#  The Lend-Lease Act - The First Shipment
+##########
+event = {
+	id = 57781
+	random = no
+	country = SWE
+
+	name = "EVT_57781_NAME"
+	desc = "EVT_3405_DESC"
+
+	picture = "lend_lease"
+
+	action_a = {
+		name = "OK"
+		command = { type = supplies value = 2000 }
+		command = { type = free_ic		value = 8 }
+		command = { type = free_energy		value = 16 }
+		command = { type = free_metal		value = 8 }
+		command = { type = free_rare_materials	value = 4 }
+		command = { type = free_money		value = 3 }
+		command = { type = free_oil		value = 8 }
+		command = { type = free_supplies	value = 6 }
+		command = { type = setflag which = USA_Lend-Lease_SWE }
+	}
+}
+##########
+#  Lend-Lease Shipment to SWE
+##########
+event = {
+	id = 57782
+	random = no
+	persistent = yes
+	country = USA
+
+	trigger = {
+		flag = USA_Lend-Lease_SWE
+		war = { country = SWE country = GER }
+		OR = {
+			control = { province = 125 data = NOR }	#北海を北欧諸国が所有
+			control = { province = 125 data = DEN }	
+			control = { province = 125 data = SWE }	
+			control = { province = 125 data = FIN }	
+			control = { province = 125 data = SCA }	
+			control = { province = 125 data = ENG }	
+		}
+		OR = {
+			control = { province = 128 data = NOR }	#北海を北欧諸国が所有
+			control = { province = 128 data = DEN }	
+			control = { province = 128 data = SWE }	
+			control = { province = 128 data = FIN }	
+			control = { province = 128 data = SCA }	
+			control = { province = 128 data = ENG }	
+		}
+		OR = {
+			control = { province = 129 data = NOR }	#北海を北欧諸国が所有
+			control = { province = 129 data = DEN }	
+			control = { province = 129 data = SWE }	
+			control = { province = 129 data = FIN }	
+			control = { province = 129 data = SCA }	
+			control = { province = 129 data = ENG }	
+		}
+		OR = {
+			control = { province = 132 data = NOR }	#北海を北欧諸国が所有
+			control = { province = 132 data = DEN }	
+			control = { province = 132 data = SWE }	
+			control = { province = 132 data = FIN }	
+			control = { province = 132 data = SCA }	
+			control = { province = 132 data = ENG }	
+		}
+		NOT = {
+			alliance = { country = GER country = USA }
+			war = { country = SWE country = USA }
+			war = { country = SWE country = ENG }
+		}
+                random = 5 # 5% chance every 12 days
+	}
+
+	date = { day = 1 month = may year = 1941 }
+	offset = 12
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_57782_NAME"
+	desc = "EVT_3703_DESC"
+	picture = "lend_lease"
+
+	action_a = {
+		name = "ACTIONNAME3703A"
+		ai_chance = 99
+		command = { type = supplies value = -2000 }
+		command = { type = trigger which = 57783 }
+	}
+	action_b = {
+		name = "ACTIONNAME3703B"
+		ai_chance = 1
+		command = { type = relation which = SWE value = -5 }
+	}
+}
+
+##########
+#  A Lend-Lease Shipment Arrives from the USA
+##########
+event = {
+	id = 57783
+	random = no
+	country = SWE
+	persistent = yes
+
+	name = "EVT_3405_NAME"
+	desc = "EVT_3405_DESC"
+	picture = "lend_lease"
+
+	action_a = {
+		name = "OK"
+		command = { type = supplies value = 2000 }
+	}
+}
+
+##########
+#  End Lend-Lease Shipment to SWE
+##########
+
+event = {
+	id = 57784
+	random = no
+	country = SWE
+
+	trigger = {
+		flag = USA_Lend-Lease_SWE
+		OR = {
+			event = 131232 #USA surrender
+			event = 131242
+			event = 131253
+			NOT = {
+				war = { country = SWE country = GER }
+			}
+			NOT = {
+				exists = GER
+			}
+			NOT = {
+				exists = USA
+			}
+			alliance = { country = GER country = USA }
+			war = { country = SWE country = USA }
+		}
+	}
+
+	date = { day = 1 month = may year = 1941 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133004_NAME"
+	desc = "EVT_133004_DESC"
+	picture = "lend_lease"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = free_ic		value = -8 }
+		command = { type = free_energy		value = -16 }
+		command = { type = free_metal		value = -8 }
+		command = { type = free_rare_materials	value = -4 }
+		command = { type = free_money		value = -3 }
+		command = { type = free_oil		value = -8 }
+		command = { type = free_supplies	value = -6 }
+		command = { type = clrflag which = USA_Lend-Lease_SWE }
+		command = { type = sleepevent which = 57782 }
+	}
+}
+
+##########
+#  The Lend-Lease Act to FIN
+##########
+event = {
+	id = 57785
+	random = no
+	country = USA
+
+	trigger = {
+		war = { country = FIN country = GER }
+		OR = {
+			control = { province = 125 data = NOR }	#北海を北欧諸国が所有
+			control = { province = 125 data = DEN }	
+			control = { province = 125 data = SWE }	
+			control = { province = 125 data = FIN }	
+			control = { province = 125 data = SCA }	
+			control = { province = 125 data = ENG }	
+		}
+		OR = {
+			control = { province = 128 data = NOR }	#北海を北欧諸国が所有
+			control = { province = 128 data = DEN }	
+			control = { province = 128 data = SWE }	
+			control = { province = 128 data = FIN }	
+			control = { province = 128 data = SCA }	
+			control = { province = 128 data = ENG }	
+		}
+		OR = {
+			control = { province = 129 data = NOR }	#北海を北欧諸国が所有
+			control = { province = 129 data = DEN }	
+			control = { province = 129 data = SWE }	
+			control = { province = 129 data = FIN }	
+			control = { province = 129 data = SCA }	
+			control = { province = 129 data = ENG }	
+		}
+		OR = {
+			control = { province = 132 data = NOR }	#北海を北欧諸国が所有
+			control = { province = 132 data = DEN }	
+			control = { province = 132 data = SWE }	
+			control = { province = 132 data = FIN }	
+			control = { province = 132 data = SCA }	
+			control = { province = 132 data = ENG }	
+		}
+		NOT = {
+			alliance = { country = GER country = USA }
+			war = { country = FIN country = USA }
+			war = { country = FIN country = ENG }
+		}
+	}
+
+	date = { day = 11 month = march year = 1941 } #historic
+	offset = 60
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_57785_NAME"
+	desc = "EVT_3703_DESC"
+
+	picture = "lend_lease"
+
+	action_a = {
+		name = "ACTIONNAME3700A" #Pass the Act
+		ai_chance = 99
+		command = { type = supplies value = -2000 }
+		command = { type = relation which = FIN value = 20 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = trigger which = 57786 } #FIN lend-lease startup
+	}
+	action_b = {
+		name = "ACTIONNAME3700B" #Remain Completely Neutral
+		ai_chance = 1
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = sleepevent which = 57785 } #lend-lease FIN The First Shipment
+		command = { type = sleepevent which = 57787 } #lend-lease FIN
+	}
+}
+##########
+#  The Lend-Lease Act - The First Shipment
+##########
+event = {
+	id = 57786
+	random = no
+	country = FIN
+
+	name = "EVT_57786_NAME"
+	desc = "EVT_3405_DESC"
+
+	picture = "lend_lease"
+
+	action_a = {
+		name = "OK"
+		command = { type = supplies value = 2000 }
+		command = { type = free_ic		value = 8 }
+		command = { type = free_energy		value = 16 }
+		command = { type = free_metal		value = 8 }
+		command = { type = free_rare_materials	value = 4 }
+		command = { type = free_money		value = 3 }
+		command = { type = free_oil		value = 8 }
+		command = { type = free_supplies	value = 6 }
+		command = { type = setflag which = USA_Lend-Lease_FIN }
+	}
+}
+##########
+#  Lend-Lease Shipment to FIN
+##########
+event = {
+	id = 57787
+	random = no
+	persistent = yes
+	country = USA
+
+	trigger = {
+		flag = USA_Lend-Lease_FIN
+		war = { country = FIN country = GER }
+		OR = {
+			control = { province = 125 data = NOR }	#北海を北欧諸国が所有
+			control = { province = 125 data = DEN }	
+			control = { province = 125 data = SWE }	
+			control = { province = 125 data = FIN }	
+			control = { province = 125 data = SCA }	
+			control = { province = 125 data = ENG }	
+		}
+		OR = {
+			control = { province = 128 data = NOR }	#北海を北欧諸国が所有
+			control = { province = 128 data = DEN }	
+			control = { province = 128 data = SWE }	
+			control = { province = 128 data = FIN }	
+			control = { province = 128 data = SCA }	
+			control = { province = 128 data = ENG }	
+		}
+		OR = {
+			control = { province = 129 data = NOR }	#北海を北欧諸国が所有
+			control = { province = 129 data = DEN }	
+			control = { province = 129 data = SWE }	
+			control = { province = 129 data = FIN }	
+			control = { province = 129 data = SCA }	
+			control = { province = 129 data = ENG }	
+		}
+		OR = {
+			control = { province = 132 data = NOR }	#北海を北欧諸国が所有
+			control = { province = 132 data = DEN }	
+			control = { province = 132 data = SWE }	
+			control = { province = 132 data = FIN }	
+			control = { province = 132 data = SCA }	
+			control = { province = 132 data = ENG }	
+		}
+		NOT = {
+			alliance = { country = GER country = USA }
+			war = { country = FIN country = USA }
+			war = { country = FIN country = ENG }
+		}
+                random = 5 # 5% chance every 12 days
+	}
+
+	date = { day = 1 month = may year = 1941 }
+	offset = 12
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_57787_NAME"
+	desc = "EVT_3703_DESC"
+	picture = "lend_lease"
+
+	action_a = {
+		name = "ACTIONNAME3703A"
+		ai_chance = 99
+		command = { type = supplies value = -2000 }
+		command = { type = trigger which = 57788 }
+	}
+	action_b = {
+		name = "ACTIONNAME3703B"
+		ai_chance = 1
+		command = { type = relation which = FIN value = -5 }
+	}
+}
+
+##########
+#  A Lend-Lease Shipment Arrives from the USA
+##########
+event = {
+	id = 57788
+	random = no
+	country = FIN
+	persistent = yes
+
+	name = "EVT_3405_NAME"
+	desc = "EVT_3405_DESC"
+	picture = "lend_lease"
+
+	action_a = {
+		name = "OK"
+		command = { type = supplies value = 2000 }
+	}
+}
+
+##########
+#  End Lend-Lease Shipment to FIN
+##########
+
+event = {
+	id = 57789
+	random = no
+	country = FIN
+
+	trigger = {
+		flag = USA_Lend-Lease_FIN
+		OR = {
+			event = 131232 #USA surrender
+			event = 131242
+			event = 131253
+			NOT = {
+				war = { country = FIN country = GER }
+			}
+			NOT = {
+				exists = GER
+			}
+			NOT = {
+				exists = USA
+			}
+			alliance = { country = GER country = USA }
+			war = { country = FIN country = USA }
+		}
+	}
+
+	date = { day = 1 month = may year = 1941 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_133004_NAME"
+	desc = "EVT_133004_DESC"
+	picture = "lend_lease"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = free_ic		value = -8 }
+		command = { type = free_energy		value = -16 }
+		command = { type = free_metal		value = -8 }
+		command = { type = free_rare_materials	value = -4 }
+		command = { type = free_money		value = -3 }
+		command = { type = free_oil		value = -8 }
+		command = { type = free_supplies	value = -6 }
+		command = { type = clrflag which = USA_Lend-Lease_FIN }
+		command = { type = sleepevent which = 57787 }
+	}
+}
+
+#########################################################################
+#  The Scandinavian Union - Sweden
+#########################################################################
+event = {
+	id = 57800
+	random = no
+	country = SWE
+	decision = {
+		NOT = { exists = SCA }
+		flag = sweden
+		OR = {
+			flag = norway
+			flag = denmark
+		}
+	}
+	decision_trigger = {
+		atwar = no
+	}
+	trigger = {
+		ai = no
+	}
+
+	date = { day = 0 month = january year = 1944 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	name = "EVT_57800_NAME"
+	desc = "EVT_57800_DESC"
+	style = 2
+	decision_picture = "decision_congress"
+	picture = "scandinavian_union"
+
+	action_a = {
+		name = "EVT_57800_ACTA"	#100年来の宿願をここに！
+		command = { type = country which = SCA }
+		command = { type = trigger which = 57808 }
+	}
+}
+#########################################################################
+#  The Scandinavian Union - Norway
+#########################################################################
+event = {
+	id = 57801
+	random = no
+	country = NOR
+	decision = {
+		NOT = { exists = SCA }
+		flag = norway
+		OR = {
+			flag = sweden
+			flag = denmark
+		}
+	}
+	decision_trigger = {
+		atwar = no
+	}
+	trigger = {
+		ai = no
+	}
+	
+	date = { day = 0 month = january year = 1944 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	name = "EVT_57800_NAME"
+	desc = "EVT_57800_DESC"
+	style = 2
+	decision_picture = "decision_congress"
+	picture = "scandinavian_union"
+
+	action_a = {
+		name = "EVT_57800_ACTA"	#100年来の宿願をここに！
+		command = { type = country which = SCA }
+	}
+}
+#########################################################################
+#  The Scandinavian Union - Denmark
+#########################################################################
+event = {
+	id = 57802
+	random = no
+	country = DEN
+	decision = {
+		NOT = { exists = SCA }
+		flag = denmark
+		OR = {
+			flag = sweden
+			flag = norway
+		}
+	}
+	decision_trigger = {
+		atwar = no
+	}
+	trigger = {
+		ai = no
+	}
+	
+	date = { day = 0 month = january year = 1944 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	name = "EVT_57800_NAME"
+	desc = "EVT_57800_DESC"
+	style = 2
+	decision_picture = "decision_congress"
+	picture = "scandinavian_union"
+
+	action_a = {
+		name = "EVT_57800_ACTA"	#100年来の宿願をここに！
+		command = { type = country which = SCA }
+	}
+}
+#########################################################################
+#  The Scandinavian Union - Finland
+#########################################################################
+event = {
+	id = 57803
+	random = no
+	country = FIN
+	decision = {
+		NOT = { exists = SCA }
+		flag = finland
+		OR = {
+			flag = norway
+			flag = denmark
+			flag = sweden
+		}
+	}
+	decision_trigger = {
+		atwar = no
+	}
+	trigger = {
+		ai = no
+	}
+	
+	date = { day = 0 month = january year = 1944 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	name = "EVT_57800_NAME"
+	desc = "EVT_57800_DESC"
+	style = 2
+	decision_picture = "decision_congress"
+	picture = "scandinavian_union"
+
+	action_a = {
+		name = "EVT_57800_ACTA"	#100年来の宿願をここに！
+		command = { type = country which = SCA }
+	}
+}
+#########################################################################
+#  The Scandinavian Union - AI
+#########################################################################
+event = {
+	id = 57804
+	random = no
+	country = SWE
+	trigger = {
+		NOT = { exists = SCA }
+		ai = SWE
+		ai = NOR
+		ai = DEN
+		ai = FIN
+		atwar = no
+		flag = sweden
+		OR = {
+			flag = norway
+			flag = denmark
+		}
+	}
+	
+	date = { day = 0 month = january year = 1944 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	name = "AI_EVT"
+	desc = "EVT_57800_DESC"
+	style = 0
+
+	action_a = {
+		name = "OK"
+		command = { type = country which = SCA }
+		#command = { type = sleepevent which = 57808 }
+	}
+}
+
+#########################################################################
+#  The Scandinavian Union
+#########################################################################
+event = {
+	id = 57805
+	random = no
+	country = SWE
+
+	name = "EVT_57800_NAME"
+	desc = "EVT_57800_DESC"
+	style = 0
+
+	action_a = {
+		name = "OK"
+		command = { type = independence which = SCA }
+	}
+}
+
+#########################################################################
+#  The Scandinavian Union - Finland Annexed
+#########################################################################
+event = {
+	id = 57806
+	random = no
+	country = SCA
+	trigger = {
+		flag = finland
+	}
+	
+	name = "EVT_57800_NAME"
+	desc = "EVT_57800_DESC"
+	style = 0
+
+	action_a = {
+		name = "OK"
+		command = { type = inherit which = FIN }
+		command = { type = addcore which = 103 } #FINLAND
+		command = { type = addcore which = 130 }
+		command = { type = addcore which = 131 }
+		command = { type = addcore which = 132 }
+		command = { type = addcore which = 136 }
+		command = { type = addcore which = 137 }
+		command = { type = addcore which = 138 }
+		command = { type = addcore which = 139 }
+		command = { type = addcore which = 140 }
+		command = { type = addcore which = 141 }
+		command = { type = addcore which = 142 }
+		command = { type = addcore which = 143 }
+		command = { type = addcore which = 144 }
+		command = { type = addcore which = 145 }
+		command = { type = addcore which = 146 }
+		command = { type = addcore which = 147 }
+		command = { type = addcore which = 148 }
+		command = { type = addcore which = 149 }
+		command = { type = waketeam which = 32001 } #BETA修正パッチ
+		command = { type = waketeam which = 32005 }
+		command = { type = waketeam which = 32008 }
+		command = { type = waketeam which = 32010 }
+		command = { type = waketeam which = 32018 }
+		command = { type = waketeam which = 32020 }
+		command = { type = waketeam which = 32023 }
+		command = { type = clrflag which = finland }
+	}
+}
+
+event = {
+	id = 57807
+	random = no
+	country = SCA
+	trigger = {
+		NOT = {
+			flag = finland
+		}
+	}
+	
+	name = "EVT_57800_NAME"
+	desc = "EVT_57800_DESC"
+	style = 0
+
+	action_a = {
+		name = "OK"
+		command = { type = removecore which = 103 } #FINLAND
+		command = { type = removecore which = 130 }
+		command = { type = removecore which = 131 }
+		command = { type = removecore which = 132 }
+		command = { type = removecore which = 136 }
+		command = { type = removecore which = 137 }
+		command = { type = removecore which = 138 }
+		command = { type = removecore which = 139 }
+		command = { type = removecore which = 140 }
+		command = { type = removecore which = 141 }
+		command = { type = removecore which = 142 }
+		command = { type = removecore which = 143 }
+		command = { type = removecore which = 144 }
+		command = { type = removecore which = 145 }
+		command = { type = removecore which = 146 }
+		command = { type = removecore which = 147 }
+		command = { type = removecore which = 148 }
+		command = { type = removecore which = 149 }
+		command = { type = sleepleader which = 514120 }
+		command = { type = sleepleader which = 514121 }
+		command = { type = sleepleader which = 514122 }
+		command = { type = sleepleader which = 514123 }
+		command = { type = sleepleader which = 514124 }
+		command = { type = sleepleader which = 514125 }
+		command = { type = sleepleader which = 514126 }
+		command = { type = sleepleader which = 514127 }
+		command = { type = sleepleader which = 514128 }
+		command = { type = sleepleader which = 514129 }
+		command = { type = sleepleader which = 514130 }
+		command = { type = sleepleader which = 514131 }
+		command = { type = sleepleader which = 514132 }
+		command = { type = sleepleader which = 514133 }
+		command = { type = sleepleader which = 514134 }
+		command = { type = sleepleader which = 514135 }
+		command = { type = sleepleader which = 514136 }
+		command = { type = sleepleader which = 514137 }
+		command = { type = sleepleader which = 514138 }
+		command = { type = sleepleader which = 514139 }
+		command = { type = sleepleader which = 514140 }
+		command = { type = sleepleader which = 514141 }
+		command = { type = sleepleader which = 514142 }
+		command = { type = sleepleader which = 514143 }
+		command = { type = sleepleader which = 514144 }
+		command = { type = sleepleader which = 514145 }
+		command = { type = sleepleader which = 514146 }
+		command = { type = sleepleader which = 514148 }
+		command = { type = sleepminister which = 514091 }
+		command = { type = sleepminister which = 514092 }
+		command = { type = sleepminister which = 514093 }
+		command = { type = sleepminister which = 514094 }
+		command = { type = sleepminister which = 514095 }
+		command = { type = sleepminister which = 514096 }
+		command = { type = sleepminister which = 514097 }
+		command = { type = sleepminister which = 514098 }
+	}
+}
+
+#########################################################################
+#  The Scandinavian Union - SCA
+#########################################################################
+event = {
+	id = 57808
+	random = no
+	country = SCA
+#	trigger = {
+#		OR = {
+#			event = 57800
+#			event = 57801
+#			event = 57802
+#			event = 57803
+#			event = 57804
+#		}
+#	}
+#	
+#	date = { day = 0 month = january year = 1935 }
+#	offset = 1
+#	deathdate = { day = 29 month = december year = 1963 }
+#	
+	name = "EVT_57800_NAME"
+	desc = "EVT_57800_DESC"
+	style = 2
+	picture = "scandinavian_union"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = inherit which = SWE }
+		command = { type = inherit which = NOR }
+		command = { type = inherit which = DEN }	
+		command = { type = addcore which = 1 }
+		command = { type = addcore which = 2 }
+		command = { type = addcore which = 91 }
+		command = { type = addcore which = 295 }
+		command = { type = addcore which = 800 }
+		command = { type = trigger which = 57806 }
+		command = { type = trigger which = 57807 }
+		command = { type = clrflag which = sweden }
+		command = { type = clrflag which = norway }
+		command = { type = clrflag which = denmark }
+		command = { type = trigger which = 57809 }
+	}
+}
+
+event = {
+	id = 57809
+	random = no
+	country = SCA
+
+	name = "EVT_57809_NAME"	#連邦首都
+	desc = "EVT_57809_DESC"	#スカンジナビア連邦は成立し、古くからその首都はイェーテボリであるとされていた。我々はここで遷都を選び、汎スカンジナビア主義をこの地から掲げる選択を選ぶことが出来る！
+	style = 0
+
+	action = {
+		name = "EVT_57809_ACTA"	#イェーテボリへ！
+		ai_chance = 100
+		command = { type = dissent value = -1 }
+		command = { type = capital which = 98 }
+	}
+	action = {
+		name = "EVT_57809_ACTB"	#あえてストックホルムを選ぼう
+		ai_chance = 0
+		trigger = { control = { province = 101 data = SCA } }
+		command = { type = capital which = 101 }
+	}
+	action = {
+		name = "EVT_57809_ACTC"	#王の土地、ウプサラを！
+		ai_chance = 0
+		trigger = { control = { province = 102 data = SCA } }
+		command = { type = dissent value = 1 }
+		command = { type = capital which = 102 }
+	}
+	action = {
+		name = "EVT_57809_ACTD"	#新たな首都をトロンヘイムに
+		ai_chance = 0
+		trigger = { control = { province = 118 data = SCA } }
+		command = { type = dissent value = 2 }
+		command = { type = capital which = 118 }
+	}
+	action = {
+		name = "EVT_57809_ACTE"	#バルトの要衝、コペンハーゲンだ
+		ai_chance = 0
+		trigger = { control = { province = 294 data = SCA } }
+		command = { type = dissent value = 3 }
+		command = { type = capital which = 294 }
+	}
+	action = {
+		name = "EVT_57809_ACTF"	#スカンジナビア連邦最大都市、オスロへ
+		ai_chance = 0
+		trigger = { control = { province = 107 data = SCA } }
+		command = { type = dissent value = 2 }
+		command = { type = capital which = 107 }
+	}
+	action = {
+		name = "EVT_57809_ACTG"	#世界最北の大都市、ヘルシンキだ
+		ai_chance = 0
+		trigger = { control = { province = 142 data = SCA } }
+		command = { type = dissent value = 3 }
+		command = { type = capital which = 142 }
+	}
+}
+
+#########################################################################
+#  Back to Stormaktstiden
+#########################################################################
+event = {
+	id = 57810
+	random = no
+	country = SCA
+
+	trigger = {
+		war = { country = SOV country = ENG } 
+		war = { country = SOV country = USA }
+	}
+
+	name = "EVT_57810_NAME"
+	desc = "EVT_57810_DESC"
+
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "EVT_57810_ACTA" 
+		ai_chance = 60
+		command = { type = belligerence which = SCA value = 3 }
+		command = { type = dissent value = -1 }	
+		command = { type = addcore which = 133 }
+		command = { type = addcore which = 134 }
+		command = { type = addcore which = 135 }
+		command = { type = addcore which = 150 }
+		command = { type = addcore which = 151 }
+		command = { type = addcore which = 152 }
+		command = { type = relation which = SOV value = -50 }
+	}
+	action_b = {
+		name = "EVT_57810_ACTB"
+		ai_chance = 40
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = dissent value = 5 }	
+		command = { type = relation which = SOV value = 50 }
+	}
+}
+
+event = {
+	id = 57811
+	random = no
+	country = SCA
+
+	trigger = {
+		control = { province = 187 data = SCA } #Leninglard
+		control = { province = 194 data = SCA } #Tallinn
+		control = { province = 197 data = SCA } #Riga
+		control = { province = 207 data = SCA } #Kaunus
+	}
+
+	name = "EVT_57811_NAME" #Sweden Empire Strike back
+	desc = "EVT_57811_DESC"
+
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "EVT_57811_ACTA" 
+		ai_chance = 60
+		command = { type = belligerence which = SCA value = -10 }
+		command = { type = independence which = LIT value = 1 }
+		command = { type = independence which = LAT value = 1 }
+		command = { type = independence which = EST value = 1 }
+	}
+	action_b = {
+		name = "EVT_57811_ACTB" # Install a Puppet
+		ai_chance = 20
+		command = { type = belligerence which = SCA value = 10 }
+		command = { type = independence which = LIT value = 1 }
+		command = { type = independence which = LAT value = 1 }
+		command = { type = independence which = EST value = 1 }
+		command = { type = trigger which = 57812 }
+	}
+	action_c = {
+		name = "EVT_57811_ACTC"
+		ai_chance = 20
+		command = { type = belligerence which = SCA value = 20 }
+		command = { type = addcore which = 187 }
+		command = { type = addcore which = 188 }
+		command = { type = addcore which = 193 }
+		command = { type = addcore which = 194 }
+		command = { type = addcore which = 195 }
+		command = { type = addcore which = 196 }
+		command = { type = addcore which = 197 }
+		command = { type = addcore which = 198 }
+		command = { type = addcore which = 199 }
+		command = { type = addcore which = 202 }
+		command = { type = relation which = USA value = -50 }
+		command = { type = relation which = ENG value = -50 }
+		command = { type = relation which = FRA value = -50 }
+		command = { type = relation which = FIN value = -50 }
+		command = { type = relation which = NOR value = -50 }
+		command = { type = relation which = DEN value = -50 }
+		command = { type = relation which = SOV value = -50 }
+		command = { type = relation which = POL value = -30 }
+	}
+}
+
+event = {
+	id = 57812
+	random = no
+	country = SCA
+
+	name = "EVT_57812_NAME"
+	desc = "EVT_57811_DESC"
+
+	style = 0
+
+	action_a = {
+		name = "EVT_57811_ACTB"
+		command = { type = make_puppet which = LIT }
+		command = { type = make_puppet which = LAT }
+		command = { type = make_puppet which = EST }
+		command = { type = alliance which = LIT }
+		command = { type = alliance which = LAT }
+		command = { type = alliance which = EST }
+	}
+}
+
+#########################################################################
+#  ポーランドの陣営変え
+#########################################################################
+
+event = {
+	id = 57813
+	random = no
+	country = POL
+
+	trigger = {
+		control = { province = 485 data = SCA } #Warsaw
+		OR = {
+			puppet = { country = POL country = SOV }
+			alliance = { country = POL country = SOV }
+		}
+	}
+	name = "EVT_57813_NAME"
+	desc = "EVT_57813_DESC"
+
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "OK" 
+		command = { type = end_puppet }
+		command = { type = leave_alliance }
+		command = { type = trigger which = 57814 }
+		command = { type = set_domestic which = democratic value = 8 }
+		command = { type = set_domestic which = political_left value = 4 }
+	}
+}
+
+
+event = {
+	id = 57814
+	random = no
+	country = SCA
+
+	name = "EVT_57813_NAME"
+	desc = "EVT_57813_DESC"
+	style = 0
+
+	action_a = {
+		name = "EVT_57814_ACTA" 
+		ai_chance = 60
+		command = { type = make_puppet which = POL }
+		command = { type = alliance which = POL }
+	}
+	action_b = {
+		name = "EVT_57814_ACTB"
+		ai_chance = 40
+		command = { type = belligerence which = SCA value = 1 }
+		command = { type = peace which = POL }
+		command = { type = addcore which = 302 }
+		command = { type = trigger which = 57815 }
+	}
+}
+
+event = {
+	id = 57815
+	random = no
+	country = POL
+
+	name = "EVT_57815_NAME"
+	desc = "EVT_57815_DESC"
+	style = 0
+
+	action_a = {
+		name = "OK" 
+		command = { type = secedeprovince which = SCA value = 302 }
+	}
+}
+
+#########################################################################
+#  スカンジナビアの陣営決定（WW2中）
+#########################################################################
+event = {
+	id = 57820
+	random = no
+	country = SCA
+	decision = {
+		atwar = no
+		ispuppet = no
+		exists = GER
+		NOT = { alliance = { country = ENG } }
+		NOT = { alliance = { country = USA } }
+		NOT = { alliance = { country = SOV } }
+		NOT = { alliance = { country = GER } }
+	}
+	
+	trigger = {
+		atwar = no
+		ispuppet = no
+		exists = GER
+		OR = {
+			AND = {	#ドイツ有利判定
+				NOT = { government = communist }
+				NOT = { owned = { province = 175 data = SOV } }	#モスクワ
+				control = { province = 175 data = GER }	#おおよそビターピース条件
+				NOT = { lost_national = { country = GER value = 2 } }	#ドイツが大攻勢を受けていない
+			}
+			AND = {	#連合有利
+				lost_national = { country = GER value = 25 }	#ドイツ不利
+				war = { country = ENG country = GER }
+				alliance = { country = ENG country = USA }
+			}
+			AND = {	#ソ連有利
+				government = communist
+				lost_national = { country = GER value = 25 }
+				war = { country = SOV country = GER }
+				NOT = { war = { country = SOV country = USA } }
+			}
+		}
+	}
+}

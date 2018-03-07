@@ -1,0 +1,2550 @@
+#########################################################################
+#	FEPK_bripuppet.txt
+#	ÉCÉMÉäÉXò¯ôSçëä÷òAÉCÉxÉìÉg
+#########################################################################
+#id = 133200-59		âpçëÇÃò¯ôSçëê¨óßèàóù
+#id = 133260-99		âpçëÇÃò¯ôSçëîªíËè¡é∏èàóù
+#########################################################################
+##########
+#  British Capture and Puppet Events
+##########
+##########
+#  UK captures Warsaw
+##########
+event = {
+	id = 133200
+	random = no 
+	country = ENG
+	persistent = yes
+
+	trigger = {
+		control = { province = 485 data = ENG } #Warsaw
+		NOT = { flag = britishpoland }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133200_NAME"
+	desc = "EVT_133200_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133200_ACTA"
+		command = { type = setflag which = britishpoland }
+	}
+}
+##########
+#  UK allies Poland
+##########
+event = {
+	id = 133201
+	random = no
+	country = ENG
+
+	trigger = {
+		exists = POL
+		flag = britishpoland
+		NOT = { exists = GER }
+		NOT = { alliance = { country = ENG country = POL } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133201_NAME"
+	desc = "EVT_133201_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133201_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = POL } #
+		command = { type = clrflag which = britishpoland }
+	}
+	action_b = {
+		name = "EVT_133201_ACTB"
+		ai_chance = 0
+		command = { type = relation which = SOV value = 5 }
+		command = { type = clrflag which = britishpoland }
+	}
+}
+##########
+#  UK captures Prague
+##########
+event = {
+	id = 133202
+	random = no 
+	country = ENG
+	persistent = yes
+
+	trigger = {
+		control = { province = 469 data = ENG } #Prague
+		NOT = { flag = britishczechoslovakia }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133202_NAME"
+	desc = "EVT_133202_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133202_ACTA"
+        	command = { type = setflag which = britishczechoslovakia }
+	}
+}
+##########
+#  UK allies Czechoslovakia
+##########
+event = {
+	id = 133203
+	random = no 
+	country = ENG
+
+	trigger = {
+		exists = CZE
+		flag = britishczechoslovakia
+		NOT = { exists = GER }
+		NOT = { alliance = { country = ENG country = CZE } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133203_NAME"
+	desc = "EVT_133203_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133203_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = CZE } #
+		command = { type = clrflag which = britishczechoslovakia }
+	}
+	action_b = {
+		name = "EVT_133203_ACTB"
+		ai_chance = 0
+		command = { type = relation which = SOV value = 5 }
+		command = { type = clrflag which = britishczechoslovakia }
+	}
+}
+##########
+#  UK captures Budapest
+##########
+event = {
+	id = 133204
+	random = no 
+	country = ENG
+	persistent = yes
+
+	trigger = {
+		control = { province = 457 data = ENG } #Budapest
+		NOT = { flag = britishhungary }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133204_NAME"
+	desc = "EVT_133204_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133204_ACTA"
+        	command = { type = setflag which = britishhungary }
+	}
+}
+##########
+#  UK allies Hungary
+##########
+event = {
+	id = 133205
+	random = no 
+	country = ENG
+
+	trigger = {
+		exists = HUN
+		flag = britishhungary
+		NOT = { exists = GER }
+		NOT = { alliance = { country = ENG country = HUN } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133205_NAME"
+	desc = "EVT_133205_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133205_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = HUN } #
+		command = { type = clrflag which = britishhungary }
+	}
+	action_b = {
+		name = "EVT_133205_ACTB"
+		ai_chance = 0
+		command = { type = relation which = SOV value = 5 }
+		command = { type = clrflag which = britishhungary }
+	}
+}
+##########
+#  UK captures Bucharest
+##########
+event = {
+	id = 133206
+	random = no 
+	country = ENG
+	persistent = yes
+
+	trigger = {
+		control = { province = 424 data = ENG } #Bucharest
+		NOT = { flag = britishromania }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133206_NAME"
+	desc = "EVT_133206_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133206_ACTA"
+        	command = { type = setflag which = britishromania }
+	}
+}
+##########
+#  UK allies Romania
+##########
+event = {
+	id = 133207
+	random = no 
+	country = ENG
+
+	trigger = {
+		exists = ROM
+		flag = britishromania
+		NOT = { exists = GER }
+		NOT = { alliance = { country = ENG country = ROM } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133207_NAME"
+	desc = "EVT_133207_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133207_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = ROM } #
+		command = { type = clrflag which = britishromania }
+	}
+	action_b = {
+		name = "EVT_133207_ACTB"
+		ai_chance = 0
+		command = { type = relation which = SOV value = 5 }
+		command = { type = clrflag which = britishromania }
+	}
+}
+##########
+#  UK captures Sofia
+##########
+event = {
+	id = 133208
+	random = no 
+	country = ENG
+	persistent = yes
+
+	trigger = {
+		control = { province = 417 data = ENG } #Sofia
+		NOT = { flag = britishbulgaria }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133208_NAME"
+	desc = "EVT_133208_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133208_ACTA"
+        	command = { type = setflag which = britishbulgaria }
+	}
+}
+##########
+#  UK allies Bulgaria
+##########
+event = {
+	id = 133209
+	random = no 
+	country = ENG
+
+	trigger = {
+		exists = BUL
+		flag = britishbulgaria
+		NOT = { exists = GER }
+		NOT = { alliance = { country = ENG country = BUL } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133209_NAME"
+	desc = "EVT_133209_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133209_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = BUL } #
+		command = { type = clrflag which = britishbulgaria }
+	}
+	action_b = {
+		name = "EVT_133209_ACTB"
+		ai_chance = 0
+		command = { type = relation which = SOV value = 5 }
+		command = { type = clrflag which = britishbulgaria }
+	}
+}
+##########
+#  UK captures Oslo
+##########
+event = {
+	id = 133210
+	random = no 
+	country = ENG
+	persistent = yes
+
+	trigger = {
+		control = { province = 107 data = ENG } #Oslo
+		NOT = { flag = britishnorway }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133210_NAME"
+	desc = "EVT_133210_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133210_ACTA"
+        	command = { type = setflag which = britishnorway }
+	}
+}
+##########
+#  UK allies Norway
+##########
+event = {
+	id = 133211
+	random = no 
+	country = ENG
+
+	trigger = {
+		exists = NOR
+		flag = britishnorway
+		NOT = { exists = GER }
+		NOT = { alliance = { country = ENG country = NOR } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133211_NAME"
+	desc = "EVT_133211_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133211_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = NOR } #
+		command = { type = clrflag which = britishnorway }
+	}
+	action_b = {
+		name = "EVT_133211_ACTB"
+		ai_chance = 0
+		command = { type = relation which = SOV value = 5 }
+		command = { type = clrflag which = britishnorway }
+	}
+}
+##########
+#  UK captures Stockholm
+##########
+event = {
+	id = 133212
+	random = no 
+	country = ENG
+	persistent = yes
+
+	trigger = {
+		control = { province = 101 data = ENG } #Stockholm
+		NOT = { flag = britishsweden }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133212_NAME"
+	desc = "EVT_133212_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133212_ACTA"
+        	command = { type = setflag which = britishsweden }
+	}
+}
+##########
+#  UK allies Sweden
+##########
+event = {
+	id = 133213
+	random = no 
+	country = ENG
+
+	trigger = {
+		exists = SWE
+		flag = britishsweden
+		NOT = { exists = GER }
+		NOT = { alliance = { country = ENG country = SWE } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133213_NAME"
+	desc = "EVT_133213_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133213_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = SWE } #
+		command = { type = clrflag which = britishsweden }
+	}
+	action_b = {
+		name = "EVT_133213_ACTB"
+		ai_chance = 0
+		command = { type = relation which = SOV value = 5 }
+		command = { type = clrflag which = britishsweden }
+	}
+}
+##########
+#  UK captures Copenhagen
+##########
+event = {
+	id = 133214
+	random = no 
+	country = ENG
+	persistent = yes
+
+	trigger = {
+		control = { province = 294 data = ENG } #Copenhagen
+		NOT = { flag = britishdenmark }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133214_NAME"
+	desc = "EVT_133214_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133214_ACTA"
+        	command = { type = setflag which = britishdenmark }
+	}
+}
+##########
+#  UK allies Denmark
+##########
+event = {
+	id = 133215
+	random = no 
+	country = ENG
+
+	trigger = {
+		exists = DEN
+		flag = britishdenmark
+		NOT = { exists = GER }
+		NOT = { alliance = { country = ENG country = DEN } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133215_NAME"
+	desc = "EVT_133215_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133215_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = DEN } #
+		command = { type = clrflag which = britishdenmark }
+	}
+	action_b = {
+		name = "EVT_133215_ACTB"
+		ai_chance = 0
+		command = { type = relation which = SOV value = 5 }
+		command = { type = clrflag which = britishdenmark }
+	}
+}
+##########
+#  UK captures Vienna
+##########
+event = {
+	id = 133216
+	random = no 
+	country = ENG
+	persistent = yes
+
+	trigger = {
+		control = { province = 463 data = ENG } #Vienna
+		NOT = { flag = britishaustria }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133216_NAME"
+	desc = "EVT_133216_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133216_ACTA"
+        	command = { type = setflag which = britishaustria }
+	}
+}
+##########
+#  UK allies Austria
+##########
+event = {
+	id = 133217
+	random = no 
+	country = ENG
+
+	trigger = {
+		exists = AUS
+		flag = britishaustria
+		NOT = { exists = GER }
+		NOT = { alliance = { country = ENG country = AUS } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133217_NAME"
+	desc = "EVT_133217_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133217_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = AUS } #
+		command = { type = clrflag which = britishaustria }
+	}
+	action_b = {
+		name = "EVT_133217_ACTB"
+		ai_chance = 0
+		command = { type = relation which = SOV value = 5 }
+		command = { type = clrflag which = britishaustria }
+	}
+}
+##########
+#  UK captures Athens
+##########
+event = {
+	id = 133218
+	random = no 
+	country = ENG
+	persistent = yes
+
+	trigger = {
+		control = { province = 401 data = ENG } #Athens
+		NOT = { flag = britishgreece }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133218_NAME"
+	desc = "EVT_133218_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133218_ACTA"
+        	command = { type = setflag which = britishgreece }
+	}
+}
+##########
+#  UK allies Greece
+##########
+event = {
+	id = 133219
+	random = no 
+	country = ENG
+
+	trigger = {
+		exists = GRE
+		flag = britishgreece
+		NOT = { exists = GER }
+		NOT = { alliance = { country = ENG country = GRE } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133219_NAME"
+	desc = "EVT_133219_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133219_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = GRE } #
+		command = { type = clrflag which = britishgreece }
+	}
+	action_b = {
+		name = "EVT_133219_ACTB"
+		ai_chance = 0
+		command = { type = relation which = SOV value = 5 }
+		command = { type = clrflag which = britishgreece }
+	}
+}
+##########
+#  UK captures Brussels
+##########
+event = {
+	id = 133220
+	random = no 
+	country = ENG
+	persistent = yes
+
+	trigger = {
+		control = { province = 51 data = ENG } #Brussels
+		NOT = { flag = britishbelgium }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133220_NAME"
+	desc = "EVT_133220_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133220_ACTA"
+        	command = { type = setflag which = britishbelgium }
+	}
+}
+##########
+#  UK allies Belgium
+##########
+event = {
+	id = 133221
+	random = no 
+	country = ENG
+
+	trigger = {
+		exists = BEL
+		flag = britishbelgium
+		NOT = { exists = GER }
+		NOT = { alliance = { country = ENG country = BEL } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133221_NAME"
+	desc = "EVT_133221_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133221_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = BEL } #
+		command = { type = clrflag which = britishbelgium }
+	}
+	action_b = {
+		name = "EVT_133221_ACTB"
+		ai_chance = 0
+		command = { type = relation which = SOV value = 5 }
+		command = { type = clrflag which = britishbelgium }
+	}
+}
+##########
+#  UK captures Amsterdam
+##########
+event = {
+	id = 133222
+	random = no 
+	country = ENG
+	persistent = yes
+
+	trigger = {
+		control = { province = 47 data = ENG } #Amsterdam
+		NOT = { flag = britishholland }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133222_NAME"
+	desc = "EVT_133222_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133222_ACTA"
+        	command = { type = setflag which = britishholland }
+	}
+}
+##########
+#  UK allies Holland
+##########
+event = {
+	id = 133223
+	random = no 
+	country = ENG
+
+	trigger = {
+		exists = HOL
+		flag = britishholland
+		NOT = { exists = GER }
+		NOT = { alliance = { country = ENG country = HOL } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133223_NAME"
+	desc = "EVT_133223_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133223_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = HOL } #
+		command = { type = clrflag which = britishholland }
+	}
+	action_b = {
+		name = "EVT_133223_ACTB"
+		ai_chance = 0
+		command = { type = relation which = SOV value = 5 }
+		command = { type = clrflag which = britishholland }
+	}
+}
+##########
+#  UK captures Luxembourg
+##########
+event = {
+	id = 133224
+	random = no 
+	country = ENG
+	persistent = yes
+
+	trigger = {
+		control = { province = 71 data = ENG } #Luxembourg
+		NOT = { flag = britishluxembourg }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133224_NAME"
+	desc = "EVT_133224_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133224_ACTA"
+        	command = { type = setflag which = britishluxembourg }
+	}
+}
+##########
+#  UK allies Luxembourg
+##########
+event = {
+	id = 133225
+	random = no 
+	country = ENG
+
+	trigger = {
+		exists = LUX
+		flag = britishluxembourg
+		NOT = { exists = GER }
+		NOT = { alliance = { country = ENG country = LUX } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133225_NAME"
+	desc = "EVT_133225_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133225_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = LUX } #
+		command = { type = clrflag which = britishluxembourg }
+	}
+	action_b = {
+		name = "EVT_133225_ACTB"
+		ai_chance = 0
+		command = { type = relation which = SOV value = 5 }
+		command = { type = clrflag which = britishluxembourg }
+	}
+}
+##########
+#  UK captures Paris
+##########
+event = {
+	id = 133226
+	random = no 
+	country = ENG
+	persistent = yes
+
+	trigger = {
+		control = { province = 56 data = ENG } #Paris
+		NOT = { flag = britishfrance }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133226_NAME"
+	desc = "EVT_133226_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133226_ACTA"
+        	command = { type = setflag which = britishfrance }
+        	command = { type = addclaim which = 56 }	
+	}
+}
+##########
+#  UK allies France
+##########
+event = {
+	id = 133227
+	random = no 
+	country = ENG
+
+	trigger = {
+		exists = FRA
+		flag = britishfrance
+		NOT = { exists = GER }
+		NOT = { alliance = { country = ENG country = FRA } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133227_NAME"
+	desc = "EVT_133227_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133227_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = FRA } #
+		command = { type = clrflag which = britishfrance }
+	}
+	action_b = {
+		name = "EVT_133227_ACTB"
+		ai_chance = 0
+		command = { type = relation which = SOV value = 5 }
+		command = { type = clrflag which = britishfrance }
+	}
+}
+##########
+#  UK captures Rome
+##########
+event = {
+	id = 133228
+	random = no 
+	country = ENG
+	persistent = yes
+
+	trigger = {
+		control = { province = 515 data = ENG } #Rome
+		NOT = { flag = britishitaly }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133228_NAME"
+	desc = "EVT_133228_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133228_ACTA"
+        	command = { type = setflag which = britishitaly }
+	}
+}
+##########
+#  UK allies Italy
+##########
+event = {
+	id = 133229
+	random = no 
+	country = ENG
+
+	trigger = {
+		exists = ITA
+		flag = britishitaly
+		NOT = { exists = GER }
+		NOT = { alliance = { country = ENG country = ITA } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133229_NAME"
+	desc = "EVT_133229_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133229_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = ITA } #
+		command = { type = clrflag which = britishitaly }
+	}
+	action_b = {
+		name = "EVT_133229_ACTB"
+		ai_chance = 0
+		command = { type = relation which = SOV value = 5 }
+		command = { type = clrflag which = britishitaly }
+	}
+}
+##########
+#  UK captures Belgrade
+##########
+event = {
+	id = 133230
+	random = no 
+	country = ENG
+	persistent = yes
+
+	trigger = {
+		control = { province = 453 data = ENG } #Belgrade
+		NOT = { flag = britishyugoslavia }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133230_NAME"
+	desc = "EVT_133230_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133230_ACTA"
+        	command = { type = setflag which = britishyugoslavia }
+	}
+}
+##########
+#  UK allies Yugoslavia
+##########
+event = {
+	id = 133231
+	random = no 
+	country = ENG
+
+	trigger = {
+		exists = YUG
+		flag = britishyugoslavia
+		NOT = { exists = GER }
+		NOT = { alliance = { country = ENG country = YUG } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133231_NAME"
+	desc = "EVT_133231_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133231_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = YUG } #
+		command = { type = clrflag which = britishyugoslavia }
+	}
+	action_b = {
+		name = "EVT_133231_ACTB"
+		ai_chance = 0
+		command = { type = relation which = SOV value = 5 }
+		command = { type = clrflag which = britishyugoslavia }
+	}
+}
+##########
+#  UK captures Tirana
+##########
+event = {
+	id = 133232
+	random = no 
+	country = ENG
+	persistent = yes
+
+	trigger = {
+		control = { province = 390 data = ENG } #Tirana
+		NOT = { flag = britishalbania }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133232_NAME"
+	desc = "EVT_133232_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133232_ACTA"
+        	command = { type = setflag which = britishalbania }
+	}
+}
+##########
+#  UK allies Albania
+##########
+event = {
+	id = 133233
+	random = no 
+	country = ENG
+
+	trigger = {
+		exists = ALB
+		flag = britishalbania
+		NOT = { exists = GER }
+		NOT = { alliance = { country = ENG country = ALB } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133233_NAME"
+	desc = "EVT_133233_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133233_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = ALB } #
+		command = { type = clrflag which = britishalbania }
+	}
+	action_b = {
+		name = "EVT_133233_ACTB"
+		ai_chance = 0
+		command = { type = relation which = SOV value = 5 }
+		command = { type = clrflag which = britishalbania }
+	}
+}
+##########
+#  UK captures Madrid
+##########
+event = {
+	id = 133234
+	random = no 
+	country = ENG
+	persistent = yes
+
+	trigger = {
+		control = { province = 341 data = ENG } #Madrid
+		NOT = { flag = britishspain }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133234_NAME"
+	desc = "EVT_133234_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133234_ACTA"
+        	command = { type = setflag which = britishspain }
+	}
+}
+##########
+#  UK allies Republican Spain
+##########
+event = {
+	id = 133235
+	random = no 
+	country = ENG
+
+	trigger = {
+		exists = SPR
+		flag = britishspain
+		NOT = { exists = GER }
+		NOT = { alliance = { country = ENG country = SPR } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133235_NAME"
+	desc = "EVT_133235_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133235_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = SPR } #
+		command = { type = clrflag which = britishspain }
+	}
+	action_b = {
+		name = "EVT_133235_ACTB"
+		ai_chance = 0
+		command = { type = relation which = SOV value = 5 }
+		command = { type = clrflag which = britishspain }
+	}
+}
+##########
+#  UK captures Lisbon
+##########
+event = {
+	id = 133236
+	random = no 
+	country = ENG
+	persistent = yes
+
+	trigger = {
+		control = { province = 336 data = ENG } #Lisbon
+		NOT = { flag = britishportugal }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133236_NAME"
+	desc = "EVT_133236_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133236_ACTA"
+        	command = { type = setflag which = britishportugal }
+	}
+}
+##########
+#  UK allies Portugal
+##########
+event = {
+	id = 133237
+	random = no 
+	country = ENG
+
+	trigger = {
+		exists = POR
+		flag = britishportugal
+		NOT = { exists = GER }
+		NOT = { alliance = { country = ENG country = POR } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133237_NAME"
+	desc = "EVT_133237_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133237_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = POR } #
+		command = { type = clrflag which = britishportugal }
+	}
+	action_b = {
+		name = "EVT_133237_ACTB"
+		ai_chance = 0
+		command = { type = relation which = SOV value = 5 }
+		command = { type = clrflag which = britishportugal }
+	}
+}
+##########
+#  UK captures Bern
+##########
+event = {
+	id = 133238
+	random = no 
+	country = ENG
+	persistent = yes
+
+	trigger = {
+		control = { province = 532 data = ENG } #Bern
+		NOT = { flag = britishswitzerland }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133238_NAME"
+	desc = "EVT_133238_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133238_ACTA"
+        	command = { type = setflag which = britishswitzerland }
+	}
+}
+##########
+#  UK allies Switzerland
+##########
+event = {
+	id = 133239
+	random = no 
+	country = ENG
+
+	trigger = {
+		exists = SCH
+		flag = britishswitzerland
+		NOT = { exists = GER }
+		NOT = { alliance = { country = ENG country = SCH } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133239_NAME"
+	desc = "EVT_133239_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133239_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = SCH } #
+		command = { type = clrflag which = britishswitzerland }
+	}
+	action_b = {
+		name = "EVT_133239_ACTB"
+		ai_chance = 0
+		command = { type = relation which = SOV value = 5 }
+		command = { type = clrflag which = britishswitzerland }
+	}
+}
+##########
+#  UK captures Ankara
+##########
+event = {
+	id = 133240
+	random = no 
+	country = ENG
+	persistent = yes
+
+	trigger = {
+		control = { province = 448 data = ENG } #Ankara
+		NOT = { flag = britishturkey }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133240_NAME"
+	desc = "EVT_133240_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133240_ACTA"
+        	command = { type = setflag which = britishturkey }
+	}
+}
+##########
+#  UK allies Turkey
+##########
+event = {
+	id = 133241
+	random = no 
+	country = ENG
+
+	trigger = {
+		exists = TUR
+		flag = britishturkey
+		NOT = { exists = GER }
+		NOT = { alliance = { country = ENG country = TUR } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133241_NAME"
+	desc = "EVT_133241_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133241_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = TUR } #
+		command = { type = clrflag which = britishturkey }
+	}
+	action_b = {
+		name = "EVT_133241_ACTB"
+		ai_chance = 0
+		command = { type = relation which = SOV value = 5 }
+		command = { type = clrflag which = britishturkey }
+	}
+}
+##########
+#  UK captures Tripoli
+##########
+event = {
+	id = 133242
+	random = no 
+	country = ENG
+	persistent = yes
+
+	trigger = {
+		control = { province = 932 data = ENG } #Tripoli
+		NOT = { flag = britishlibya }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133242_NAME"
+	desc = "EVT_133242_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133242_ACTA"
+        	command = { type = setflag which = britishlibya }
+	}
+}
+##########
+#  UK allies Libya
+##########
+event = {
+	id = 133243
+	random = no 
+	country = ENG
+
+	trigger = {
+		exists = LBY
+		flag = britishlibya
+		NOT = { exists = GER }
+		NOT = { alliance = { country = ENG country = LBY } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133243_NAME"
+	desc = "EVT_133243_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133243_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = LBY } #
+		command = { type = clrflag which = britishlibya }
+	}
+	action_b = {
+		name = "EVT_133243_ACTB"
+		ai_chance = 0
+		command = { type = relation which = SOV value = 5 }
+		command = { type = clrflag which = britishlibya }
+	}
+}
+##########
+#  UK captures Seoul
+##########
+event = {
+	id = 133244
+	random = no 
+	country = ENG
+	persistent = yes
+
+	trigger = {
+		control = { province = 1199 data = ENG } #Seoul
+		NOT = { flag = britishkorea }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133244_NAME"
+	desc = "EVT_133244_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133244_ACTA"
+        	command = { type = setflag which = britishkorea }
+	}
+}
+##########
+#  UK allies Korea
+##########
+event = {
+	id = 133245
+	random = no 
+	country = ENG
+
+	trigger = {
+		exists = KOR
+		flag = britishkorea
+		NOT = { alliance = { country = ENG country = KOR } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133245_NAME"
+	desc = "EVT_133245_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133245_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = KOR } #
+		command = { type = clrflag which = britishkorea }
+	}
+	action_b = {
+		name = "EVT_133245_ACTB"
+		ai_chance = 0
+		command = { type = relation which = SOV value = 5 }
+		command = { type = clrflag which = britishkorea }
+	}
+}
+##########
+#  UK captures Dublin
+##########
+event = {
+	id = 133246
+	random = no 
+	country = ENG
+	persistent = yes
+
+	trigger = {
+		control = { province = 30 data = ENG } #Dublin
+		NOT = { flag = britishireland }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133246_NAME"
+	desc = "EVT_133246_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133246_ACTA"
+		command = { type = setflag which = britishireland }
+	}
+}
+##########
+#  UK allies ireland
+##########
+event = {
+	id = 133247
+	random = no
+	country = ENG
+
+	trigger = {
+		exists = IRE
+		flag = britishireland
+		NOT = { exists = GER }
+		NOT = { alliance = { country = ENG country = IRE } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133247_NAME"
+	desc = "EVT_133247_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133247_ACTA"
+		ai_chance = 100
+		command = { type = removecore which = 28 where = IRE }
+		command = { type = removecore which = 20 where = IRE }
+		command = { type = make_puppet which = IRE } #
+		command = { type = clrflag which = britishireland }
+	}
+	action_b = {
+		name = "EVT_133247_ACTB"
+		ai_chance = 0
+		command = { type = clrflag which = britishireland }
+	}
+}
+
+#########################################################################
+#  UK captures Scandinabia Peninsula
+#########################################################################
+event = {
+	id = 133248
+	random = no 
+	country = ENG
+	persistent = yes
+
+	trigger = {
+		control = { province = 98 data = ENG }
+		NOT = { flag = britishsca }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133248_NAME"
+	desc = "EVT_133248_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133248_ACTA"
+        	command = { type = setflag which = britishsca }
+	}
+}
+
+##########
+#  UK allies Scandinavia
+##########
+event = {
+	id = 133249
+	random = no 
+	country = ENG
+
+	trigger = {
+		exists = SCA
+		flag = britishsca
+		NOT = { exists = GER }
+		NOT = { alliance = { country = ENG country = SCA } }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133249_NAME"
+	desc = "EVT_133249_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133249_ACTA"
+		ai_chance = 100
+		command = { type = make_puppet which = SCA } #
+		command = { type = clrflag which = britishsca }
+	}
+	action_b = {
+		name = "EVT_133249_ACTB"
+		ai_chance = 0
+		command = { type = relation which = SOV value = 5 }
+		command = { type = clrflag which = britishsca }
+	}
+}
+
+
+#########################################################################
+#  UK Loses Warsaw
+#########################################################################
+event = {
+	id = 133260
+	random = no 
+	country = ENG
+	persistent = yes
+
+	trigger = {
+		flag = britishpoland
+		NOT = { control = { province = 485 data = ENG } }#Warsaw
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133260_NAME"
+	desc = "EVT_133260_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133260_ACTA"
+		command = { type = clrflag which = britishpoland }
+	}
+}
+#########################################################################
+#  UK Loses Prague
+#########################################################################
+event = {
+	id = 133261
+	random = no 
+	country = ENG
+	persistent = yes
+
+	trigger = {
+		flag = britishczechoslovakia
+		NOT = {	control = { province = 469 data = ENG } } #Prague
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133261_NAME"
+	desc = "EVT_133261_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133261_ACTA"
+        	command = { type = clrflag which = britishczechoslovakia }
+	}
+}
+#########################################################################
+#  UK Loses Budapest
+#########################################################################
+event = {
+	id = 133262
+	random = no 
+	country = ENG
+	persistent = yes
+
+	trigger = {
+		flag = britishhungary
+		NOT = {	control = { province = 457 data = ENG } } #Budapest
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133262_NAME"
+	desc = "EVT_133262_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133262_ACTA"
+        	command = { type = clrflag which = britishhungary }
+	}
+}
+#########################################################################
+#  UK Loses Bucharest
+#########################################################################
+event = {
+	id = 133263
+	random = no 
+	country = ENG
+	persistent = yes
+
+	trigger = {
+		flag = britishromania
+		NOT = { control = { province = 424 data = ENG } } #Bucharest
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133263_NAME"
+	desc = "EVT_133263_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133263_ACTA"
+        	command = { type = clrflag which = britishromania }
+	}
+}
+#########################################################################
+#  UK Loses Sofia
+#########################################################################
+event = {
+	id = 133264
+	random = no 
+	country = ENG
+	persistent = yes
+
+	trigger = {
+		flag = britishbulgaria
+		NOT = { control = { province = 417 data = ENG } } #Sofia
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133264_NAME"
+	desc = "EVT_133264_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133264_ACTA"
+        	command = { type = clrflag which = britishbulgaria }
+	}
+}
+#########################################################################
+#  UK Loses Oslo
+#########################################################################
+event = {
+	id = 133265
+	random = no 
+	country = ENG
+	persistent = yes
+
+	trigger = {
+		flag = britishnorway
+		NOT = { control = { province = 107 data = ENG } } #Oslo
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133265_NAME"
+	desc = "EVT_133265_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133265_ACTA"
+        	command = { type = clrflag which = britishnorway }
+	}
+}
+#########################################################################
+#  UK Loses Stockholm
+#########################################################################
+event = {
+	id = 133266
+	random = no 
+	country = ENG
+	persistent = yes
+
+	trigger = {
+		flag = britishsweden
+		NOT = { control = { province = 101 data = ENG } } #Stockholm
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133266_NAME"
+	desc = "EVT_133266_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133266_ACTA"
+        	command = { type = clrflag which = britishsweden }
+	}
+}
+#########################################################################
+#  UK Loses Copenhagen
+#########################################################################
+event = {
+	id = 133267
+	random = no 
+	country = ENG
+	persistent = yes
+
+	trigger = {
+		flag = britishdenmark
+		NOT = {	control = { province = 294 data = ENG } } #Copenhagen
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133267_NAME"
+	desc = "EVT_133267_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133267_ACTA"
+        	command = { type = clrflag which = britishdenmark }
+	}
+}
+#########################################################################
+#  UK Loses Vienna
+#########################################################################
+event = {
+	id = 133268
+	random = no 
+	country = ENG
+	persistent = yes
+
+	trigger = {
+		flag = britishaustria
+		NOT = { control = { province = 463 data = ENG } } #Vienna
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133268_NAME"
+	desc = "EVT_133268_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133268_ACTA"
+        	command = { type = clrflag which = britishaustria }
+	}
+}
+#########################################################################
+#  UK Loses Athens
+#########################################################################
+event = {
+	id = 133269
+	random = no 
+	country = ENG
+	persistent = yes
+
+	trigger = {
+		flag = britishgreece
+		NOT = { control = { province = 401 data = ENG } } #Athens
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133269_NAME"
+	desc = "EVT_133269_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133269_ACTA"
+        	command = { type = clrflag which = britishgreece }
+	}
+}
+#########################################################################
+#  UK Loses Brussels
+#########################################################################
+event = {
+	id = 133270
+	random = no 
+	country = ENG
+	persistent = yes
+
+	trigger = {
+		flag = britishbelgium
+		NOT = {	control = { province = 51 data = ENG } } #Brussels
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133270_NAME"
+	desc = "EVT_133270_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133270_ACTA"
+        	command = { type = clrflag which = britishbelgium }
+	}
+}
+#########################################################################
+#  UK Loses Amsterdam
+#########################################################################
+event = {
+	id = 133271
+	random = no 
+	country = ENG
+	persistent = yes
+
+	trigger = {
+		flag = britishholland
+		NOT = {	control = { province = 47 data = ENG } } #Amsterdam
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133271_NAME"
+	desc = "EVT_133271_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133271_ACTA"
+        	command = { type = clrflag which = britishholland }
+	}
+}
+#########################################################################
+#  UK Loses Luxembourg
+#########################################################################
+event = {
+	id = 133272
+	random = no 
+	country = ENG
+	persistent = yes
+
+	trigger = {
+		flag = britishluxembourg
+		NOT = {	control = { province = 71 data = ENG } } #Luxembourg
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133272_NAME"
+	desc = "EVT_133272_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133272_ACTA"
+        	command = { type = clrflag which = britishluxembourg }
+	}
+}
+#########################################################################
+#  UK Loses Paris
+#########################################################################
+event = {
+	id = 133273
+	random = no 
+	country = ENG
+	persistent = yes
+
+	trigger = {
+		flag = britishfrance
+		NOT = {	control = { province = 56 data = ENG } } #Paris
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133273_NAME"
+	desc = "EVT_133273_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133273_ACTA"
+        	command = { type = clrflag which = britishfrance }
+	}
+}
+#########################################################################
+#  UK Loses Rome
+#########################################################################
+event = {
+	id = 133274
+	random = no 
+	country = ENG
+	persistent = yes
+
+	trigger = {
+		flag = britishitaly
+		NOT = {	control = { province = 515 data = ENG } } #Rome
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133274_NAME"
+	desc = "EVT_133274_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133274_ACTA"
+        	command = { type = clrflag which = britishitaly }
+	}
+}
+#########################################################################
+#  UK Loses Belgrade
+#########################################################################
+event = {
+	id = 133275
+	random = no 
+	country = ENG
+	persistent = yes
+
+	trigger = {
+		flag = britishyugoslavia
+		NOT = {	control = { province = 453 data = ENG } } #Belgrade
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133275_NAME"
+	desc = "EVT_133275_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133275_ACTA"
+        	command = { type = clrflag which = britishyugoslavia }
+	}
+}
+#########################################################################
+#  UK Loses Tirana
+#########################################################################
+event = {
+	id = 133276
+	random = no 
+	country = ENG
+	persistent = yes
+
+	trigger = {
+		flag = britishalbania
+		NOT = {	control = { province = 390 data = ENG } } #Tirana
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133276_NAME"
+	desc = "EVT_133276_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133276_ACTA"
+        	command = { type = clrflag which = britishalbania }
+	}
+}
+#########################################################################
+#  UK Loses Madrid
+#########################################################################
+event = {
+	id = 133277
+	random = no 
+	country = ENG
+	persistent = yes
+
+	trigger = {
+		flag = britishspain
+		NOT = {	control = { province = 341 data = ENG } } #Madrid
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133277_NAME"
+	desc = "EVT_133277_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133277_ACTA"
+        	command = { type = clrflag which = britishspain }
+	}
+}
+#########################################################################
+#  UK Loses Lisbon
+#########################################################################
+event = {
+	id = 133278
+	random = no 
+	country = ENG
+	persistent = yes
+
+	trigger = {
+		flag = britishportugal
+		NOT = {	control = { province = 336 data = ENG } } #Lisbon
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133278_NAME"
+	desc = "EVT_133278_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133278_ACTA"
+        	command = { type = clrflag which = britishportugal }
+	}
+}
+#########################################################################
+#  UK Loses Bern
+#########################################################################
+event = {
+	id = 133279
+	random = no 
+	country = ENG
+	persistent = yes
+
+	trigger = {
+		flag = britishswitzerland
+		NOT = {	control = { province = 532 data = ENG } } #Bern
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133279_NAME"
+	desc = "EVT_133279_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133279_ACTA"
+        	command = { type = clrflag which = britishswitzerland }
+	}
+}
+#########################################################################
+#  UK Loses Ankara
+#########################################################################
+event = {
+	id = 133280
+	random = no 
+	country = ENG
+	persistent = yes
+
+	trigger = {
+		flag = britishturkey
+		NOT = {	control = { province = 448 data = ENG } } #Ankara
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133280_NAME"
+	desc = "EVT_133280_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133280_ACTA"
+        	command = { type = clrflag which = britishturkey }
+	}
+}
+#########################################################################
+#  UK Loses Rangoon
+#########################################################################
+event = {
+	id = 133281
+	random = no 
+	country = ENG
+	persistent = yes
+
+	trigger = {
+		NOT = { control = { province = 1299 data = ENG } } #Rangoon
+		flag = britishburma
+	}
+
+	#date = { day = 0 month = january year = 1935 }
+	#offset = 3
+	#deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133281_NAME"
+	desc = "EVT_133281_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133281_ACTA"
+		ai_chance = 100
+		command = { type = clrflag which = britishburma }
+	}
+}
+#########################################################################
+#  UK Loses Delhi
+#########################################################################
+event = {
+	id = 133282
+	random = no 
+	country = ENG
+	persistent = yes
+
+	trigger = {
+		NOT = { control = { province = 1469 data = ENG } } #Delhi
+		flag = britishindia
+	}
+
+	#date = { day = 0 month = january year = 1935 }
+	#offset = 3
+	#deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133282_NAME"
+	desc = "EVT_133282_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133282_ACTA"
+		ai_chance = 100
+		command = { type = clrflag which = britishindia }
+	}
+}
+#########################################################################
+#  UK Loses Bangkok
+#########################################################################
+event = {
+	id = 133283
+	random = no 
+	country = ENG
+	persistent = yes
+
+	trigger = {
+		NOT = { control = { province = 1343 data = ENG } } #Bangkok
+		flag = britishsiam 
+	}
+
+	#date = { day = 0 month = january year = 1935 }
+	#offset = 3
+	#deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133283_NAME"
+	desc = "EVT_133283_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133283_ACTA"
+		ai_chance = 100
+		command = { type = clrflag which = britishsiam }
+	}
+}
+#########################################################################
+#  UK Loses Kabul
+#########################################################################
+event = {
+	id = 133284
+	random = no 
+	country = ENG
+	persistent = yes
+
+	trigger = {
+		NOT = { control = { province = 1486 data = ENG } } #Kabul
+		flag = britishafghanistan
+	}
+
+	#date = { day = 0 month = january year = 1935 }
+	#offset = 3
+	#deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133284_NAME"
+	desc = "EVT_133284_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133284_ACTA"
+		ai_chance = 100
+		command = { type = clrflag which = britishafghanistan }
+	}
+}
+#########################################################################
+#  UK Loses Seoul
+#########################################################################
+event = {
+	id = 133285
+	random = no 
+	country = ENG
+	persistent = yes
+
+	trigger = {
+		NOT = { control = { province = 1199 data = ENG } } #Seoul
+		flag = britishkorea 
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133285_NAME"
+	desc = "EVT_133285_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133285_ACTA"
+		command = { type = clrflag which = britishkorea }
+	}
+}
+
+#########################################################################
+#  UK Loses Dublin
+#########################################################################
+event = {
+	id = 133286
+	random = no 
+	country = ENG
+	persistent = yes
+
+	trigger = {
+		NOT = { control = { province = 30 data = ENG } } #Dublin
+		flag = britishireland
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133286_NAME"
+	desc = "EVT_133286_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133286_ACTA"
+		command = { type = clrflag which = britishireland }
+	}
+}
+
+#########################################################################
+#  UK Loses Goteborg
+#########################################################################
+event = {
+	id = 133288
+	random = no 
+	country = ENG
+	persistent = yes
+
+	trigger = {
+		flag = britishsca
+		NOT = {	control = { province = 98 data = ENG } }
+		NOT = {
+			event = 131326
+			event = 131327
+			event = 131328
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1953 }
+
+	name = "EVT_133288_NAME"
+	desc = "EVT_133288_DESC"
+	style = 0
+	picture = "soviet_offensive_east"
+
+	action_a = {
+		name = "EVT_133288_ACTA"
+        	command = { type = clrflag which = britishsca }
+	}
+}

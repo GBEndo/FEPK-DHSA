@@ -1,0 +1,1991 @@
+#########################################################################
+#
+#		日本・極東追加イベント（日満仮想イベント）
+#					by 統制派
+#			2007小ネタMOD様より55480-を流用
+#
+#########################################################################
+###### 追加イベント一覧 ############
+#########################################################################
+#id = 55400 皇道派の壊滅
+#id = 55401 統制派の壊滅
+#id = 55410 北満州油田
+#id = 55411 北満州油田
+#id = 55430 高砂義勇兵
+#id = 55431 南洋の老人の歌
+#id = 55432	南洋諸島の統合
+#id = 55450 河豚計画
+#id = 55451 河豚計画－米国ユダヤ社会の反応（ルーズベルト政権）
+#id = 55452 河豚計画－米国ユダヤ社会の反応（非ルーズベルト政権）
+#id = 55453 河豚計画－米国ユダヤ社会の反応（日本側）
+#id = 55454 河豚計画－満洲にユダヤ人自治区誕生（日本側）
+#id = 55455 河豚計画－満洲にユダヤ人自治区誕生（満洲側）
+#id = 55456 河豚計画－米国ユダヤ社会の反応（中国滅亡・U87が存在）
+#id = 55457 河豚計画ー対日禁輸フラグ消去（アメリカ）
+#id = 55458 河豚計画ー対日禁輸フラグ消去（オランダ）
+#id = 55459 河豚計画－米国ユダヤ社会の反応（中国と非開戦）
+#id = 55470 ポーランドレジスタンスと日本（ドイツ側）
+#id = 55471 ポーランドレジスタンスと日本（日本側）
+#id = 55480 東南海地震
+#id = 55481 ベンガル大飢饉
+#########################################################################
+#id = 60900 海軍乙事件
+#id = 60910-2 北部仏印進駐
+#id = 60913 タイ・仏印紛争
+#id = 60914-8 東京条約
+#id = 60919-21 南部仏印進駐
+#id = 60922 日本の南部仏印進駐をトリガーとする石油禁輸
+#id = 60923-24 AIヴィシーとタイの戦力増強
+#id = 60927 北部仏印進駐(航空基地を得ている場合)
+#id = 60928 
+#id = 60940-2 日系アメリカ人の強制収用
+############################
+# 皇道派の壊滅
+############################
+event ={
+	id = 55400
+	random = no
+	country = JAP
+	style = 0
+
+	name = "EVT_55400_NAME"
+	desc = "EVT_55400_DESC"
+
+	picture = "226"
+
+	action_a = { # 
+		name = "EVT_55400_ACTA"
+		command = { type = sleepleader which = 101000 } # 阿部信行
+		command = { type = sleepleader which = 101380 } # Obata
+		command = { type = sleepleader which = 101385 } # Obata
+		command = { type = sleepleader which = 101381 } # Masaki
+		command = { type = sleepleader which = 101012 } # Araki
+		command = { type = sleepleader which = 101202 } # Yamaoka
+#		command = { type = sleepleader which = 101207 } # Yanagawa
+#		command = { type = sleepleader which = 101388 } # Suzuki
+#		command = { type = sleepleader which = 101389 } # Suzuki	# 柳川と鈴木は支那事変で復活してるので、残すことにした
+
+		command = { type = sleepleader which = 101261 } # 中村良三	海軍からバランスを取って退役させられた人物
+		command = { type = sleepleader which = 101400 } # 小林齊造
+		
+		#青年将校4名
+		command = { type = sleepleader which = 1002241 }
+		command = { type = sleepleader which = 1002242 }
+		command = { type = sleepleader which = 1002243 }
+		command = { type = sleepleader which = 1002244 }
+
+		command = { type = sleepminister which = 5550 } # Masaki
+		command = { type = sleepminister which = 5552 } # Obata
+		command = { type = sleepminister which = 5553 } # Obata
+		command = { type = sleepminister which = 5554 } # Obata
+		command = { type = sleepminister which = 5143 } # Araki
+		command = { type = sleepminister which = 5510 } # Araki
+		command = { type = sleepminister which = 5523 } # Araki
+		command = { type = sleepminister which = 5531 } # Araki
+		command = { type = sleepminister which = 5565 } # 山下奉文
+		command = { type = sleepminister which = 5566 } # 山下奉文
+		command = { type = sleepteam which = 1937 }     # Obata
+
+
+	}
+}
+############################
+# 統制派の壊滅
+############################
+event ={
+	id = 55401
+	random = no
+	country = JAP
+	style = 0
+
+	name = "EVT_55401_NAME"
+	desc = "EVT_55401_DESC"
+
+	picture = "226"
+
+	action_a = { # 
+		name = "EVT_55400_ACTA"
+		command = { type = sleepleader which = 101000 } # 阿部信行
+		command = { type = sleepleader which = 101163 } # 杉山元
+		command = { type = sleepleader which = 101422 } # 杉山元
+		command = { type = sleepleader which = 101181 } # 東條英機
+		command = { type = sleepleader which = 101335 } # 東條英機
+		command = { type = sleepleader which = 101382 } # 永田鐵山
+		command = { type = sleepleader which = 101386 } # 永田鐵山
+		#command = { type = sleepleader which = 101066 } # 石原莞爾
+		#command = { type = sleepleader which = 101141 } # 岡村寧次（山下ポジションにする）
+		command = { type = sleepleader which = 101383 } # 渡辺錠太郎	#DHSA0.2
+
+		command = { type = sleepleader which = 101299 } # 米内光政（横須賀鎮守府）
+		command = { type = sleepleader which = 101234 } # 井上成美
+		command = { type = sleepleader which = 101284 } # 高橋三吉（第一艦隊）
+
+		command = { type = sleepminister which = 5155 } # 杉山元
+		command = { type = sleepminister which = 5165 } # 杉山元
+		command = { type = sleepminister which = 5156 } # 東條英機
+		command = { type = sleepminister which = 5166 } # 東條英機
+		command = { type = sleepminister which = 5556 } # 永田鐵山
+		command = { type = sleepminister which = 5557 } # 永田鐵山
+		command = { type = sleepminister which = 5006 } # 岡村寧次
+		command = { type = sleepminister which = 5525 } # 石原莞爾
+		command = { type = sleepminister which = 5533 } # 石原莞爾
+		command = { type = sleepminister which = 5576 } # FEPK追加部分 # 1.05 # 石原莞爾(HoG)
+		command = { type = sleepminister which = 5180 } # 井上成美
+		command = { type = sleepminister which = 5540 } # 井上成美
+		command = { type = wakeminister which = 5655 }	#北一輝 
+		command = { type = wakeminister which = 5656 } #北一輝
+	}
+}
+############################
+# North Manchuria Oil Field
+############################
+event = {
+	id = 55410
+	random = no
+	country = JAP
+	style = 0
+
+	trigger = {
+		alliance = { country = JAP country = MAN }
+		OR = {
+			event = 55455 # Fugu Plan
+			alliance = { country = JAP country = USA }
+		}
+		owned = { province = 1380 data = MAN }
+		technology = 5070
+		technology = 5100
+		technology = 5230
+		#random = 30
+		money = 1000
+	}
+
+	name = "EVT_55410_NAME"
+	desc = "EVT_55410_DESC"
+	picture = "factory"
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 6
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "EVT_55410_ACTA"
+		ai_chance = 99
+		command = { type = money value = -1000 }
+		command = { type = trigger which = 55411 } # MAN
+	}
+	action_b = {
+		name = "EVT_55410_ACTB"
+		ai_chance = 1
+		command = { }
+	}
+}
+event = {
+	id = 55411
+	random = no
+	country = MAN
+	style = 0
+
+	name = "EVT_55410_NAME"
+	desc = "EVT_55410_DESC"
+	picture = "factory"
+
+	action_a = {
+		name = "OK"
+		command = { type = add_prov_resource which = 1380 value = 18 where = oil }
+		command = { type = add_prov_resource which = 1380 value = 24 where = energy } #
+		command = { type = add_prov_resource which = 1380 value = 9 where = metal } #
+		command = { type = add_prov_resource which = 1380 value = 7 where = rare_materials } #
+		command = { type = waketeam which = 6452 }
+	}
+}
+#########################################################################
+# Taiwanese Volunteer Army
+#########################################################################
+event = { 
+	id = 55430
+	random = no
+	country = JAP
+	
+	style = 0
+
+	trigger = {
+		random = 10
+		OR = {
+			war = { country = JAP  country = ENG }
+			war = { country = JAP  country = USA }
+			war = { country = JAP  country = HOL }
+		}
+		owned = { province = 1322 data = JAP }
+	}
+
+	name = "EVT_55430_NAME"
+	desc = "EVT_55430_DESC"
+	picture = "japanese_reinforcments3"
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = { #
+		name = "EVT_55430_ACTA"
+		ai_chance = 100
+		#Army:
+		command = { type = add_corps value = land where = 1322 }
+		command = { type = add_division value = bergsjaeger when = 3 }
+		command = { type = add_division value = bergsjaeger when = 3 }
+#		command = { type = add_division value = bergsjaeger when = 3 }
+		command = { type = addcore which = 1322 } # 高雄
+		command = { type = addcore which = 1323 } # 台北
+		command = { type = addcore which = 1324 } # 花蓮
+		#Resources:
+#		command = { type = manpowerpool value = 10 } # manpower
+	}
+}
+#########################################################################
+# Battle of Peleliu
+#########################################################################
+event = { 
+	id = 55431
+	random = no
+	country = JAP
+	trigger = {
+		OR = {
+			war = { country = USA country = JAP }
+			war = { country = ENG country = JAP }
+			war = { country = HOL country = JAP }
+		}
+		OR = {
+			control = { province = 1621 data = USA } # パラオ
+			control = { province = 1621 data = ENG } # パラオ
+			control = { province = 1621 data = HOL } # パラオ
+		}
+		NOT = { #FEPKBETA5.5
+			event = 131510 # 日本が降伏状態でない
+			event = 131520
+			event = 131572
+			event = 131582
+		}
+	}
+		
+	name = "EVT_55431_NAME"
+	desc = "EVT_55431_DESC"
+	style = 0
+	picture = "japanese_reinforcments3"
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action_a = {
+		name = "EVT_55431_ACTA"
+		command = { type = manpowerpool value = -10 } # manpower
+		command = { type = belligerence which = JAP value = -5 }
+		command = { type = addcore which = 1627 } # サイパン
+		command = { type = addcore which = 1626 } # テニアン
+		command = { type = addcore which = 1625 } # ロタ
+		command = { type = addcore which = 1619 } # ヤップ
+		command = { type = addcore which = 1621 } # パラオ
+		command = { type = addcore which = 1604 } # ウォレライ
+		command = { type = addcore which = 1620 } # ヌグル
+		command = { type = addcore which = 1618 } # ウルシー
+		command = { type = addcore which = 1617 } # ウォレアイ
+		command = { type = addcore which = 1616 } # プルスク
+		command = { type = addcore which = 1615 } # ウルル
+		command = { type = addcore which = 1613 } # トラック
+		command = { type = addcore which = 1612 } # サタワン
+		command = { type = addcore which = 1610 } # ポナペ
+		command = { type = addcore which = 1609 } # コシャエ
+		command = { type = addcore which = 1600 } # ビキニ
+		command = { type = addcore which = 1601 } # エニウェトク
+		command = { type = addcore which = 1602 } # ウォッジェ
+		command = { type = addcore which = 1603 } # マロエラップ
+		command = { type = addcore which = 1605 } # マジュロ
+		command = { type = addcore which = 1606 } # ミリ
+		command = { type = addcore which = 1607 } # ヤルート
+		command = { type = addcore which = 1608 } # クワジャリン
+	}
+}
+#########################################################################
+# Integrate of the Pacific Islands
+#########################################################################
+event = { 
+	id = 55432
+	random = no
+	country = JAP
+	trigger = {
+		ispuppet = USA
+		NOT = { #FEPKBETA5.5
+			event = 131510 # 日本が降伏状態でない
+			event = 131520
+			event = 131680
+			event = 131572
+			event = 131582
+			war = { country = JAP country = USA }
+		}
+		
+		region = { region = "Asian Pacific" country = -3 value = 80 }
+	}
+		
+	name = "EVT_55432_NAME"	# 南洋諸島の統合
+	desc = "EVT_55432_DESC"	# アメリカが主権を失い彼らが領有していた南洋諸島の全てが日本国の手に渡ると、係争の心配が無くなったことから南洋諸島への日本人の入植は戦前より更に進みつつある。かつては沖縄県を本籍とするものが多かったが、情勢が安定したとわかると本土からも次々と移り住む者が出ている。島々での物流や人の流れも増しており、日本の新天地として将来性も見込めるだろう。
+	style = 0
+	picture = "japanese_reinforcments3"
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action_a = {
+		name = "EVT_55432_ACTA"	# 現地人の希望者への国籍付与も検討せねば
+		#command = { type = manpowerpool value = -10 } # manpower
+		#command = { type = belligerence which = JAP value = -5 }
+		command = { type = addcore which = 1627 } # サイパン
+		command = { type = addcore which = 1626 } # テニアン
+		command = { type = addcore which = 1625 } # ロタ
+		command = { type = addcore which = 1619 } # ヤップ
+		command = { type = addcore which = 1621 } # パラオ
+		command = { type = addcore which = 1604 } # ウォレライ
+		command = { type = addcore which = 1620 } # ヌグル
+		command = { type = addcore which = 1618 } # ウルシー
+		command = { type = addcore which = 1617 } # ウォレアイ
+		command = { type = addcore which = 1616 } # プルスク
+		command = { type = addcore which = 1615 } # ウルル
+		command = { type = addcore which = 1613 } # トラック
+		command = { type = addcore which = 1612 } # サタワン
+		command = { type = addcore which = 1610 } # ポナペ
+		command = { type = addcore which = 1609 } # コシャエ
+		command = { type = addcore which = 1600 } # ビキニ
+		command = { type = addcore which = 1601 } # エニウェトク
+		command = { type = addcore which = 1602 } # ウォッジェ
+		command = { type = addcore which = 1603 } # マロエラップ
+		command = { type = addcore which = 1605 } # マジュロ
+		command = { type = addcore which = 1606 } # ミリ
+		command = { type = addcore which = 1607 } # ヤルート
+		command = { type = addcore which = 1608 } # クワジャリン
+		command = { type = addcore which = 661 } # Nihau
+		command = { type = addcore which = 660 } # Kauai
+		command = { type = addcore which = 663 } # Pearl Harbor
+		command = { type = addcore which = 659 } # Maui
+		command = { type = addcore which = 658 } # Hawaii
+		command = { type = sleepevent which = 55431 }
+	}
+}
+#########################################################################
+# Fugu Plan
+#########################################################################
+event = { 
+	id = 55450
+	random = no
+	country = JAP
+	name = "EVT_55450_NAME"
+	desc = "EVT_55450_DESC"
+	trigger = {
+		owned = { province = 1798 data = ENG } # 
+		random = 10
+		alliance = { country = MAN  country = JAP }	#DHSA0.2
+		AND = {
+			NOT = {
+				war = { country = JAP country = ENG }
+				war = { country = JAP country = USA }
+				alliance = { country = GER  country = JAP }
+				}
+			war = { country = GER country = ENG }
+			}
+		}
+
+	date = { day = 0 month = january year = 1939 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+	style = 0
+	picture = "Schiff"
+
+	action_a = { #
+		name = "EVT_55450_ACTA"
+		ai_chance = 1
+		command = { type = money value = -800 }
+		command = { type = supplies value = -6000 }
+		command = { type = oilpool value = -6000 }
+	}
+	action_b  = { #
+		ai_chance = 99
+		name = "EVT_55450_ACTB"
+		command = { type = sleepevent which = 55451 }
+		command = { type = sleepevent which = 55452 }
+		command = { type = sleepevent which = 55456 }
+		command = { type = sleepevent which = 55459 }
+	}
+}
+#########################################################################
+# Fugu Plan - Jewish Reaction in USA
+#########################################################################
+event = { 
+
+	id = 55451
+	random = no
+	country = USA
+
+	trigger = {
+		event = 55450
+		owned = { province = 1798 data = ENG } # 
+		headofstate = 6001 # 
+		random = 10
+		alliance = { country = MAN  country = JAP }	#DHSA0.2
+		AND = {
+			NOT = {
+				war = { country = JAP country = ENG }
+				war = { country = JAP country = USA }
+				alliance = { country = GER  country = JAP }
+				alliance = { country = USA  country = JAP }
+				relation = { which = JAP value = 190 } 
+			}
+			war = { country = GER country = ENG }
+		OR = {
+			exists = CHI
+			NOT = { exists = U87 }
+			}
+		}
+	}
+
+	date = { day = 0 month = january year = 1940 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_55451_NAME"
+	desc = "EVT_55451_DESC"
+	style = 0
+	picture = "economic"
+
+	action_a = { #
+		name = "EVT_55451_ACTA"
+		ai_chance = 3
+		command = { type = money value = -1000 }
+		command = { type = supplies value = -15000 }
+		command = { type = oilpool value = -15000 }
+		command = { type = sleepevent which = 55452 }
+		command = { type = sleepevent which = 55453 }
+		command = { type = sleepevent which = 55456 }
+		command = { type = sleepevent which = 55459 }
+	}
+	action_b  = { #
+		name = "EVT_55451_ACTB"
+		ai_chance = 97
+		command = { type = sleepevent which = 55452 }
+		command = { type = sleepevent which = 55454 }
+		command = { type = sleepevent which = 55456 }
+		command = { type = sleepevent which = 55459 }
+	}
+}
+#########################################################################
+# Fugu Plan - Jewish Reaction in USA
+#########################################################################
+event = { 
+
+	id = 55452
+	random = no
+	country = USA
+
+	trigger = {
+		event = 55450
+		owned = { province = 1798 data = ENG } # 
+		OR = {
+			NOT = { headofstate = 6001 }
+			alliance = { country = USA  country = JAP }
+			relation = { which = JAP value = 190 } 
+		}
+		alliance = { country = MAN  country = JAP }	#DHSA0.2
+		random = 10
+		AND = {
+			NOT = {
+				war = { country = JAP country = ENG }
+				war = { country = JAP country = USA }
+				alliance = { country = GER  country = JAP }
+			}
+			war = { country = GER country = ENG }
+		OR = {
+			exists = CHI
+			NOT = { exists = U87 }
+			}
+		}
+	}
+
+	date = { day = 0 month = january year = 1940 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_55451_NAME"
+	desc = "EVT_55451_DESC"
+	style = 0
+	picture = "economic"
+
+	action_a = { #
+		name = "EVT_55451_ACTA"
+		ai_chance = 50
+		command = { type = money value = -2000 }
+		command = { type = supplies value = -15000 }
+		command = { type = oilpool value = -15000 }
+		command = { type = sleepevent which = 55451 }
+		command = { type = sleepevent which = 55453 }
+		command = { type = sleepevent which = 55456 }
+		command = { type = sleepevent which = 55459 }
+	}
+	action_b  = { #
+		name = "EVT_55451_ACTB"
+		ai_chance = 50
+		command = { type = sleepevent which = 55451 }
+		command = { type = sleepevent which = 55454 }
+		command = { type = sleepevent which = 55456 }
+		command = { type = sleepevent which = 55459 }
+	}
+}
+#########################################################################
+# Fugu Plan - Jewish Reaction in USA
+#########################################################################
+event = { 
+
+	id = 55453
+	random = no
+	country = JAP
+
+	trigger = {
+		OR = {
+			event = 55451 # 米国の反応
+			event = 55452 # 米国の反応
+			event = 55456 # 米国の反応
+			event = 55459 # 米国の反応
+		}
+		random = 20
+	}
+
+	date = { day = 0 month = january year = 1940 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_55453_NAME"
+	desc = "EVT_55451_DESC"
+	style = 0
+	picture = "economic"
+
+	action_a = { #
+		name = "EVT_55400_ACTA"
+		ai_chance = 100
+		command = { type = dissent value = 3 }
+	}
+}
+#########################################################################
+# Fugu Plan - Start of Immigration (for JAP)
+#########################################################################
+event = { 
+	id = 55454
+	random = no
+	country = JAP
+
+	trigger = {
+		OR = {
+			event = 55451 # 米国の反応
+			event = 55452 # 米国の反応
+			event = 55456 # 米国の反応
+			event = 55459 # 米国の反応
+		}
+		NOT = { event = 55453 } # 米国の協力不調
+		owned = { province = 1798 data = ENG } # 
+		random = 20
+		alliance = { country = MAN  country = JAP }	#DHSA0.2
+		AND = {
+			NOT = {
+				war = { country = JAP country = ENG }
+				war = { country = JAP country = USA }
+				alliance = { country = GER  country = JAP }
+			}
+			war = { country = GER country = ENG }
+		}
+	}
+	name = "EVT_55454_NAME"
+	desc = "EVT_55454_DESC"
+	style = 0
+	picture = "lend_lease"
+
+	date = { day = 0 month = january year = 1940 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = { #
+		name = "EVT_55454_ACTA"
+		command = { type = relation which = USA value = 350 }
+		command = { type = relation which = GER value = -350 }
+		command = { type = belligerence which = JAP value = -30 }
+		command = { trigger = { NOT = { technology = 5210 } }
+					type = gain_tech which = 5210 }
+		command = { trigger = { technology = 5210 } 
+					type = gain_tech which = -1 }
+		command = { trigger = { NOT = { technology = 5220 } }
+					type = gain_tech which = 5220 }
+		command = { trigger = { technology = 5220 } 
+					type = gain_tech which = -1 }
+		command = { trigger = { NOT = { technology = 5230 } }
+					type = gain_tech which = 5230 }
+		command = { trigger = { technology = 5230 } 
+					type = gain_tech which = -1 }
+		command = { type = gain_tech  which = -1 }
+		command = { type = gain_tech  which = -1 }
+		command = { type = gain_tech  which = -1 }
+		command = { type = construct which = ic where = 1179 value = 1 } # 札幌
+		command = { type = construct which = ic where = 1184 value = 1 } # 東京
+		command = { type = construct which = ic where = 1190 value = 1 } # 福岡
+		command = { type = construct which = infrastructure where = 1183 value = 20 } #
+		command = { type = construct which = infrastructure where = 1186 value = 20 } #
+		command = { type = secedeprovince which = MAN value = 1202 } # 大連
+	#	command = { type = sleepevent which = 59904 }
+		command = { type = sleepevent which = 138023 } #太平洋戦争 #smep_ai # FEPKBETA4
+		command = { type = sleepevent which = 56500 } #開戦を求める御前会議 #hull-note
+		command = { type = sleepevent which = 56000 } #ハルノート通常
+		command = { type = sleepevent which = 56200 } #ハルノート日華事変勝利
+		command = { type = sleepevent which = 55290 } #米国禁輸(日華事変)
+		command = { type = sleepevent which = 132435 } #米国禁輸(仏印進駐1)
+		command = { type = sleepevent which = 132439 } #米国禁輸(仏印進駐2) #FEPK1.12
+		command = { type = trigger which = 55455 } # MAN
+		command = { type = trigger which = 55457 } # USA
+		command = { type = trigger which = 55458 } # HOL
+	}
+}
+#########################################################################
+# Fugu Plan - Start of Immigration (for MAN)
+#########################################################################
+event = { 
+	id = 55455
+	random = no
+	country = MAN
+	
+	name = "EVT_55454_NAME"
+	desc = "EVT_55454_DESC"
+	style = 0
+	picture = "lend_lease"
+
+	action_a = { #
+		name = "EVT_55454_ACTA"	
+		command = { type = domestic which = democratic value = 5 }	
+		command = { type = domestic which = freedom value = 3 }
+		command = { type = domestic which = free_market value = 1 }
+		command = { type = relation which = USA value = 150 }
+		command = { type = relation which = GER value = -150 }
+		command = { type = belligerence which = MAN value = -30 }
+		command = { type = manpowerpool value = 10 } # manpower
+
+		command = { type = gain_tech  which = -1 }
+		command = { type = gain_tech  which = -1 }
+		command = { type = gain_tech  which = -1 }
+
+		command = { type = addcore which = 1202 } # 大連
+		command = { type = construct which = ic where = 1202 value = 1 } # 大連
+		command = { type = construct which = ic where = 1390 value = 2 } # 新京
+		command = { type = construct which = ic where = 1380 value = 1 } # 斉斉哈爾
+		command = { type = construct which = infrastructure where = 1390 value = 20 } # 新京
+		command = { type = construct which = infrastructure where = 1389 value = 20 } # 奉天
+		command = { type = construct which = infrastructure where = 1379 value = 20 } # 哈爾濱
+		command = { type = construct which = infrastructure where = 1202 value = 20 } # 大連
+		command = { type = construct which = infrastructure where = 1380 value = 20 } # 斉斉哈爾
+		command = { type = construct which = infrastructure where = 1378 value = 20 } # 吉林
+		command = { type = construct which = infrastructure where = 1394 value = 20 } # 安東
+		command = { type = construct which = infrastructure where = 1395 value = 20 } # 営口
+		command = { type = construct which = infrastructure where = 1396 value = 20 } # 金溪
+		command = { type = add_prov_resource which = 1380 value = 12 where = metal } # 
+		command = { type = add_prov_resource which = 1380 value = 6 where = energy } # 
+		command = { type = add_prov_resource which = 1380 value = 4 where = rare_materials } # 
+		command = { type = province_manpower which = 1390 value = 3 } # 
+		command = { type = province_manpower which = 1380 value = 1 } # 
+		command = { type = province_manpower which = 1378 value = 2 } # 
+		command = { type = province_manpower which = 1379 value = 3 } # 
+		command = { type = province_manpower which = 1389 value = 3 } # 
+		command = { type = province_manpower which = 1394 value = 1 } # 
+		command = { type = province_manpower which = 1395 value = 1 } # 
+		command = { type = province_manpower which = 1396 value = 1 } # 
+		command = { type = province_manpower which = 1202 value = 1 } # 
+		command = { type = waketeam which = 6441 } # 
+		command = { type = waketeam which = 6442 } # 
+		command = { type = waketeam which = 6443 } # 
+		command = { type = waketeam which = 6444 } # 
+		command = { type = waketeam which = 6452 } #スタンダード・オイル
+		command = { type = waketeam which = 6453 }	#GM三菱
+	}
+
+}
+#########################################################################
+# Fugu Plan - Jewish Reaction in USA
+#########################################################################
+event = { 
+
+	id = 55456
+	random = no
+	country = USA
+
+	trigger = {
+		event = 55450
+		owned = { province = 1798 data = ENG } # 
+		alliance = { country = MAN  country = JAP }	#DHSA0.2
+		random = 10
+		AND = {
+			NOT = {
+				war = { country = JAP country = ENG }
+				war = { country = JAP country = USA }
+				alliance = { country = GER  country = JAP }
+				alliance = { country = USA  country = JAP }
+			}
+			war = { country = GER country = ENG }
+			NOT = { exists = CHI }
+			exists = U87
+		}
+	}
+
+	date = { day = 0 month = january year = 1940 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_55451_NAME"
+	desc = "EVT_55451_DESC"
+	style = 0
+	picture = "economic"
+
+	action_a = { #
+		name = "EVT_55451_ACTA"
+		ai_chance = 90
+		command = { type = money value = -2000 }
+		command = { type = supplies value = -15000 }
+		command = { type = oilpool value = -15000 }
+		command = { type = sleepevent which = 55451 }
+		command = { type = sleepevent which = 55452 }
+		command = { type = sleepevent which = 55453 }
+		command = { type = sleepevent which = 55459 }
+	}
+	action_b  = { #
+		name = "EVT_55451_ACTB"
+		ai_chance = 10
+		command = { type = sleepevent which = 55451 }
+		command = { type = sleepevent which = 55452 }
+		command = { type = sleepevent which = 55454 }
+		command = { type = sleepevent which = 55459 }
+	}
+}
+event = { 
+	id = 55457
+	random = no
+	country = USA
+	
+	name = "AI_EVENT"
+	style = 0
+
+	action_a = { #
+		name = "AI_EVENT"
+		command = { type = local_clrflag which = USAEmbargoJAP }
+		command = { type = local_clrflag which = USAEmbargoGER_JAP }
+		command = { type = local_clrflag which = USAEmbargoITA_JAP }
+		command = { type = local_clrflag which = USAEmbargoGER_ITA_JAP }
+		command = { type = ai which = "switch/USA_embargo_none.ai" } #BETA修正パッチ
+		command = { type = embargo which = -1 where = JAP value = 0 }
+	}
+}
+
+event = { 
+	id = 55458
+	random = no
+	country = HOL
+	
+	name = "AI_EVENT"
+	style = 0
+
+	action_a = { #
+		name = "AI_EVENT"
+		command = { type = local_clrflag which = HOLEmbargoJAP }
+		command = { type = local_clrflag which = HOLEmbargoGER_JAP }
+		command = { type = local_clrflag which = HOLEmbargoITA_JAP }
+		command = { type = local_clrflag which = HOLEmbargoGER_ITA_JAP }
+		command = { type = ai which = "switch/HOL_embargo_none.ai" } #BETA修正パッチ
+		command = { type = embargo which = -1 where = JAP value = 0 }
+	}
+}
+
+#########################################################################
+# Fugu Plan - Jewish Reaction in USA
+#########################################################################
+event = { 
+
+	id = 55459
+	random = no
+	country = USA
+
+	trigger = {
+		event = 55450
+		alliance = { country = MAN  country = JAP }	#DHSA0.2
+		owned = { province = 1798 data = ENG } # 
+		OR = {
+			alliance = { country = USA  country = JAP }
+			relation = { which = JAP value = 150 } 
+		}
+		random = 10
+		AND = {
+			NOT = {
+				war = { country = JAP country = ENG }
+				war = { country = JAP country = USA }
+				alliance = { country = GER  country = JAP }
+			}
+			war = { country = GER country = ENG }
+		OR = {
+			exists = CHI
+			NOT = { exists = U87 }
+			}
+		NOT = { event = 59906 } # 盧溝橋で非開戦
+		NOT = { war = { country = JAP country = CHI } }
+		}
+	}
+
+	date = { day = 0 month = january year = 1940 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_55451_NAME"
+	desc = "EVT_55451_DESC"
+	style = 0
+	picture = "economic"
+
+	action_a = { #
+		name = "EVT_55451_ACTA"
+		ai_chance = 65
+		command = { type = money value = -2000 }
+		command = { type = supplies value = -15000 }
+		command = { type = oilpool value = -15000 }
+		command = { type = sleepevent which = 55451 }
+		command = { type = sleepevent which = 55452 }
+		command = { type = sleepevent which = 55453 }
+		command = { type = sleepevent which = 55456 }
+	}
+	action_b  = { #
+		name = "EVT_55451_ACTB"
+		ai_chance = 35
+		command = { type = sleepevent which = 55451 }
+		command = { type = sleepevent which = 55452 }
+		command = { type = sleepevent which = 55454 }
+		command = { type = sleepevent which = 55456 }
+	}
+}
+
+#########################################################################
+# Polish Young Man's Far-east Association - Hidden in Japanese Embassy
+#########################################################################
+event = { 
+	id = 55470
+	random = no
+	country = GER
+	
+	trigger = {
+		NOT = {
+			war = { country = JAP country = POL }
+			war = { country = JAP country = ENG }
+			war = { country = JAP country = USA }
+			war = { country = JAP country = GER }
+			alliance = { country = GER  country = JAP }
+			exists = POL	#DHSA0.2
+			}
+		OR = {
+			non_aggression = { country = GER country = SOV }
+			alliance = { country = GER country = SOV }
+		}
+		war = { country = GER country = ENG }
+		random = 10
+	}
+	
+	name = "EVT_55470_NAME"
+	desc = "EVT_55470_DESC"
+	style = 0
+	picture = "german_reinforcment_6"
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action_a  = {  #BETA修正パッチ
+		name = "EVT_55470_ACTB"
+		ai_chance = 99
+		command = { type = dissent value = 1 }
+	#	command = { type = sleepevent which = 55473 }
+	}
+	action_b = {  #BETA修正パッチ
+		name = "EVT_55470_ACTA"
+		ai_chance = 1
+		command = { type = relation which = JAP value = -50 }
+	#	command = { type = trigger which = 55473 } # JAP #BETA修正パッチ
+	}
+}
+#########################################################################
+# Polish Young Man's Far-east Association - Mandatory Search
+#########################################################################
+event = { 
+	id = 55471
+	random = no
+	country = JAP
+	
+	name = "EVT_55470_NAME"
+	desc = "EVT_55471_DESC"
+	style = 0
+	picture = "german_reinforcment_6"
+	
+	action_a = { #
+		name = "EVT_55471_ACTA"
+		ai_chance = 0
+		command = { type = belligerence which = JAP value = -5 }
+		command = { type = war which = GER }
+	}
+	action_b  = { #
+		name = "EVT_55471_ACTB"
+		ai_chance = 95
+		command = { type = dissent value = 1 }
+		command = { type = relation which = GER value = -20 }
+	}
+	action_c  = { #
+		name = "EVT_55471_ACTC"
+		ai_chance = 5
+		command = { type = dissent value = 2 }
+		command = { type = relation which = GER value = -5 }
+	}
+}
+#########################################################################
+#  東南海地震
+#########################################################################
+event = {
+	id = 55480
+	random = no
+	trigger = { owned = { province = 1185 data = -1 } }
+
+	date = { day = 6 month = december year = 1944 }
+
+	name = "EVT_55480_NAME"
+	desc = "EVT_55480_DESC"
+
+	action_a = {
+		name = "ACTIONNAME55480A"
+		command = { type = manpowerpool value = -2 }
+		command = { type = construct which = ic where = 1185 value = -1 } #BETA修正パッチ
+	#	command = { type = construct which = ic where = 1185 value = -3 }
+	}
+}
+#########################################################################
+#  ベンガル大飢饉
+#########################################################################
+event = {
+	id = 55481
+	random = no
+	trigger = {
+		random = 10
+		owned = { province = 1285 data = -1 }#ダッカ
+		owned = { province = 1457 data = -1 }#カルカッタ
+		government = democratic
+		year = 1943
+		OR = {#大きな大戦が起きているか
+			war = { country = ENG country = GER }
+			war = { country = JAP country = USA }
+			war = { country = SOV country = USA }
+			war = { country = GER country = SOV }
+		}
+	}
+
+	date = { day = 0 month = january year = 1943 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_55481_NAME"
+	desc = "EVT_55481_DESC"
+
+	style = 0
+	picture = "india"
+
+	action_a = {
+		name = "ACTIONNAME55480A"
+		command = { type = province_manpower which = 1285 value = -1 }
+		command = { type = province_manpower which = 1457 value = -1 }
+	}
+}
+#########################################################################
+#  海軍乙事件
+#########################################################################
+event = {
+	id = 60900  #FEPK変更部分 #1.07
+	country = JAP
+	random = no
+
+	trigger = {
+		random = 20
+		event = 132442 #山本長官暗殺
+		NOT = {
+			control = { province = 1613 data = JAP } #トラック
+			control = { province = 1621 data = JAP } #パラオ
+		}
+		war = { country = JAP country = USA }
+	}
+
+	name = "EVT_60900_NAME"
+	desc = "EVT_60900_DESC"
+	picture = "Yamamoto_Assesination"
+	style = 0
+
+	date = { day = 18 month = april year = 1943 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "EVT_60900_ACTA"
+		command = { type = sleepminister which = 5201 } #古賀峯一
+		command = { type = sleepleader which = 101243 } #古賀峯一
+		command = { type = sleepleader which = 101223 } #福留繁
+		command = { type = sleepleader which = 101305 } #福留繁
+		command = { type = setflag which = Kaigunotsu }
+		command = { type = ambush value = -20 }
+		command = { type = surprise which = land value = -10 }
+		command = { type = surprise which = air value = -40 }
+		command = { type = surprise which = naval value = -40 }
+	}
+}
+
+event = {
+	id = 60901
+	random = no 
+	country = JAP
+	
+	trigger = {
+		flag = Kaigunotsu
+		NOT = {
+			war = { country = USA country = JAP }
+		}
+	}
+
+	date = { day = 18 month = april year = 1943 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_60901_NAME"
+	desc = "EVT_60901_DESC"
+	#picture = "Yamamoto_Assesination"
+	style = 0
+	
+	action_a = {
+		name = "OK"
+		command = { type = clrflag which = Kaigunotsu }
+		command = { type = ambush value = 20 }
+		command = { type = surprise which = land value = 10 }
+		command = { type = surprise which = air value = 40 }
+		command = { type = surprise which = naval value = 40 }
+	}
+}
+
+#########################################################################
+#  北部仏印進駐
+#########################################################################
+event = { # FEPK変更部分 # 1.08 # コマンド選択確率修正
+	id = 60910
+	country = JAP
+	random = no
+
+	trigger = {
+		NOT = {
+			flag = usadefeatsjap
+			flag = sovdefeatsjap
+			flag = gerdefeatsjap
+		}
+		#event = 2021
+		event = 130423 # FEPK変更部分
+		owned = { province = 1328 data = VIC } #ハノイ
+		owned = { province = 1337 data = VIC } #サイゴン
+		NOT = { alliance = { country = VIC country = GER } }
+		random = 50
+	}
+
+	name = "EVT_60910_NAME"
+	desc = "EVT_60910_DESC"
+	picture = "VIC"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		ai_chance = 100
+		name = "EVT_60910_ACTA"
+		command = { type = relation which = VIC value = -20 }
+		command = { type = relation which = USA value = -20 }
+		command = { type = dissent value = -2 }
+		command = { type = belligerence value = 5 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = sleepevent which = 60927 }
+		command = { type = sleepevent which = 135200 } #FEPKBETA3
+		command = { type = addclaim which = 1306 }
+		command = { type = addclaim which = 1326 }
+		command = { type = trigger which = 60911 }
+	}
+	action_b = {
+		ai_chance = 0
+		name = "EVT_60910_ACTB"
+		command = { type = sleepevent which = 60911 }
+		command = { type = sleepevent which = 60913 }
+		command = { type = sleepevent which = 60914 }
+		command = { type = sleepevent which = 60915 }
+		command = { type = sleepevent which = 60919 }
+		command = { type = sleepevent which = 60927 }
+		command = { type = sleepevent which = 135200 } #FEPKBETA3
+	}
+}
+
+event = {
+	id = 60911
+	country = VIC
+	random = no
+
+	#trigger 60910
+
+	name = "EVT_60911_NAME"
+	desc = "EVT_60911_DESC"
+	picture = "VIC"
+	style = 0
+
+
+	action_a = {
+		name = "EVT_60911_ACTA"
+		command = { type = secedeprovince which = JAP value = 1306 } #ルアンブラバン
+		command = { type = secedeprovince which = JAP value = 1326 } #ハイフォン
+		command = { type = relation which = JAP value = -30 }
+		command = { type = trigger which = 60912 }
+		command = { type = trigger which = 60923 }
+		command = { type = trigger which = 60924 }
+	}
+}
+
+event = {
+	id = 60912
+	country = JAP
+	random = no
+
+	#trigger 60911
+
+	name = "EVT_60910_NAME"
+	desc = "EVT_60910_DESC"
+	picture = "VIC"
+	style = 0
+
+
+	action_a = {
+		name = "OK"
+		command = { type = province_revoltrisk which = 1306 value = 10 } #ルアンブラバン
+		command = { type = province_revoltrisk which = 1326 value = 10 } #ハイフォン
+		command = { type = add_corps which = "第1インドシナ進駐軍" value = land where = 1326 }
+		command = { type = add_division which = "第1インドシナ師団" value = infantry when = 2 } 
+		command = { type = add_division which = "第2インドシナ師団" value = infantry when = 2 } 
+		command = { type = supplies value = 100 where = 1326 } 
+		command = { type = oilpool value = 20 where = 1326 } 
+	}
+}
+
+#########################################################################
+#  タイ・仏印紛争
+#########################################################################
+event = {
+	id = 60913
+	country = SIA
+	random = no
+
+	trigger = {
+		exists = VIC
+		exists = JAP
+		event = 60911
+		random = 40
+		NOT = { #BETA修正パッチ
+			alliance = { country = SIA country = JAP }
+			alliance = { country = VIC country = JAP }
+			alliance = { country = SIA country = GER }
+			alliance = { country = VIC country = GER }
+		}
+	}
+
+	name = "EVT_60913_NAME"
+	desc = "EVT_60913_DESC"
+	picture = "VIC"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		ai_chance = 100
+		name = "EVT_60913_ACTA"
+		command = { type = belligerence value = 5 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = ai which = "switch/sia_vic_war2.ai" }
+		command = { type = end_guarantee which = GER where = VIC } #BETA修正パッチ
+		command = { type = end_guarantee which = GER where = SIA }
+		command = { type = end_guarantee which = JAP where = VIC }
+		command = { type = end_guarantee which = JAP where = SIA }
+		command = { type = war which = VIC }
+		command = { type = dissent value = -2 }
+	}
+	action_b = {
+		ai_chance = 0
+		name = "EVT_60913_ACTB"
+		command = { type = dissent value = 2 }
+		command = { type = sleepevent which = 60914 }
+		command = { type = sleepevent which = 60915 }
+		command = { type = ai which = "sia_1935.ai" }
+		command = { type = trigger which = 60928 }
+	}
+}
+
+#########################################################################
+#  東京条約
+#########################################################################
+event = {
+	id = 60914
+	country = JAP
+	random = no
+
+	trigger = {
+		war = { country = SIA country = VIC }
+		NOT = { alliance = { country = SIA country = ENG } }
+		OR = {
+			AND = {
+				control = { province = 1339 data = SIA } #バタンバン
+				control = { province = 1340 data = SIA } #プノンペン
+			}
+			AND = {
+				control = { province = 1339 data = SIA } #バタンバン
+				control = { province = 1341 data = SIA } #ウボンラチャタニ
+			}
+			AND = {
+				control = { province = 1340 data = SIA } #プノンペン
+				control = { province = 1341 data = SIA } #ウボンラチャタニ
+			}
+		}
+		event = 60911
+	}
+
+	name = "EVT_60914_NAME"
+	desc = "EVT_60914_DESC"
+	picture = "VIC"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		ai_chance = 95
+		name = "EVT_60914_ACTA"
+		command = { type = relation which = VIC value = -30 }
+		command = { type = relation which = SIA value = 30 }
+		command = { type = sleepevent which = 60915 }
+		command = { type = guarantee which = GER where = VIC } #BETA修正パッチ
+		command = { type = trigger which = 60916 }
+		command = { type = trigger which = 60928 }
+	}
+	action_b = {
+		ai_chance = 5
+		name = "EVT_60914_ACTB"
+		command = { type = relation which = VIC value = 30 }
+		command = { type = relation which = SIA value = -30 }
+		command = { type = sleepevent which = 60915 }
+		command = { type = guarantee which = GER where = VIC } #BETA修正パッチ
+		command = { type = trigger which = 60918 }
+		command = { type = trigger which = 60928 }
+	}
+}
+
+event = {
+	id = 60915
+	country = JAP
+	random = no
+
+	trigger = {
+		war = { country = SIA country = VIC }
+		NOT = { alliance = { country = VIC country = GER } }
+		OR = {
+			AND = {
+				NOT = { control = { province = 1330 data = SIA } } #ピサヌローク
+				NOT = { control = { province = 1331 data = SIA } } #コンケーン
+			}
+			AND = {
+				NOT = { control = { province = 1330 data = SIA } } #ピサヌローク
+				NOT = { control = { province = 1342 data = SIA } } #ナコンラチャタニ
+			}
+			AND = {
+				NOT = { control = { province = 1331 data = SIA } } #コンケーン
+				NOT = { control = { province = 1342 data = SIA } } #ナコンラチャタニ
+			}
+			NOT = { control = { province = 1343 data = SIA } } #バンコック
+			NOT = { control = { province = 1345 data = SIA } } #トンブリ
+		}
+		event = 60911
+	}
+
+	name = "EVT_60914_NAME"
+	desc = "EVT_60914_DESC"
+	picture = "VIC"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1963 }
+
+
+	action_a = {
+		ai_chance = 90
+		name = "EVT_60914_ACTB"
+		command = { type = relation which = VIC value = 30 }
+		command = { type = relation which = SIA value = -30 }
+		command = { type = sleepevent which = 60914 }
+		command = { type = guarantee which = GER where = VIC } #BETA修正パッチ
+		command = { type = trigger which = 60918 }
+		command = { type = trigger which = 60928 }
+	}
+	action_b = {
+		ai_chance = 10
+		name = "EVT_60914_ACTA"
+		command = { type = relation which = VIC value = -30 }
+		command = { type = relation which = SIA value = 30 }
+		command = { type = sleepevent which = 60914 }
+		command = { type = guarantee which = GER where = VIC } #BETA修正パッチ
+		command = { type = trigger which = 60916 }
+		command = { type = trigger which = 60928 }
+	}
+}
+
+event = {
+	id = 60916
+	country = VIC
+	random = no
+
+	#trigger 60914
+
+	name = "EVT_60914_NAME"
+	desc = "EVT_60914_DESC"
+	picture = "VIC"
+	style = 0
+
+
+	action_a = {
+		name = "EVT_60916_ACTA"
+		command = { type = secedeprovince which = SIA value = 1339 } #バタンバン
+		command = { type = secedeprovince which = SIA value = 1340 } #プノンペン
+		command = { type = secedeprovince which = SIA value = 1341 } #ウボンラチャタニ
+		command = { type = dissent value = 3 }
+		command = { type = peace which = SIA }
+		command = { type = trigger which = 60917 }
+	}
+}
+
+event = {
+	id = 60917
+	country = SIA
+	random = no
+
+	#trigger 60916
+
+	name = "EVT_60914_NAME"
+	desc = "EVT_60914_DESC"
+	picture = "VIC"
+	style = 0
+
+
+	action_a = {
+		name = "OK"
+		command = { type = dissent value = -5 }
+		command = { type = free_ic value = 4 }
+		command = { type = free_energy value = 10 }
+		command = { type = free_metal value = 6 }
+		command = { type = free_rare_materials value = 12 }
+		command = { type = province_manpower which = 1339 value = 3 } #バタンバン
+		command = { type = province_manpower which = 1340 value = 2 } #プノンペン
+		command = { type = province_manpower which = 1341 value = 2 } #ウボンラチャタニ
+		command = { type = ai which = "sia_1935.ai" }
+	}
+}
+
+event = {
+	id = 60918
+	country = SIA
+	random = no
+
+	#trigger 60914
+
+	name = "EVT_60914_NAME"
+	desc = "EVT_60914_DESC"
+	picture = "VIC"
+	style = 0
+
+
+	action_a = {
+		name = "EVT_60916_ACTA"
+		command = { type = dissent value = 3 }
+		command = { type = removecore which = 1339 } #バタンバン
+		command = { type = removecore which = 1340 } #プノンペン
+		command = { type = removecore which = 1341 } #ウボンラチャタニ
+		command = { type = peace which = VIC }
+		command = { type = ai which = "sia_1935.ai" }
+	}
+}
+
+#########################################################################
+#  南部仏印進駐
+#########################################################################
+event = { # FEPK変更部分 # 1.08 # コマンド選択確率修正
+	id = 60919
+	country = JAP
+	random = no
+
+	trigger = {
+		NOT = {
+			flag = usadefeatsjap
+			flag = sovdefeatsjap
+			flag = gerdefeatsjap
+		}
+		OR = {
+			event = 60914	# 東京条約
+			event = 60915	# 東京条約
+			alliance = { country = VIC country = JAP } #FEPKBETA4
+			alliance = { country = VIC country = GER } #FEPKBETA4
+			AND = { 
+				alliance = { country = SIA country = JAP }	# 遠藤マイクロ	#タイと予め同盟していても割譲するように
+				NOT = { event = 60913 }
+				event = 60912
+			}
+		}
+		exists = VIC
+		random = 35
+	}
+
+	name = "EVT_60919_NAME"
+	desc = "EVT_60919_DESC"
+	picture = "VIC"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		ai_chance = 100
+		name = "EVT_60919_ACTA"
+		command = { type = relation which = VIC value = -20 }
+		command = { type = relation which = USA value = -20 }
+		command = { type = dissent value = -2 }
+		command = { type = belligerence value = 5 }
+		command = { type = addclaim which = 1306 } #ルアンブラバン #北部仏印 #FEPKBETA4.2
+		command = { type = addclaim which = 1326 } #ハイフォン
+
+		command = { type = addclaim which = 1328 } #ハノイ
+		command = { type = addclaim which = 1329 } #ヴィエンチャン
+		command = { type = addclaim which = 1332 } #ノーマラート
+		command = { type = addclaim which = 1333 } #ダナン
+		command = { type = addclaim which = 1334 } #キノン
+		command = { type = addclaim which = 1335 } #ニャチャン
+		command = { type = addclaim which = 1336 } #パクセ
+		command = { type = addclaim which = 1337 } #サイゴン
+		command = { type = addclaim which = 1338 } #ラックジャ
+		command = { type = addclaim which = 1339 } #バタンバン
+		command = { type = addclaim which = 1340 } #プノンペン
+		command = { type = addclaim which = 1341 } #ウボンラチャタニ
+		command = { type = trigger which = 60920 }
+		command = { type = sleepevent which = 60910 }
+	}
+	action_b = {
+		ai_chance = 0
+		name = "EVT_60919_ACTB"
+		command = { type = sleepevent which = 60910 }
+		command = { type = sleepevent which = 60920 }
+	}
+}
+
+
+event = {
+	id = 60920
+	country = VIC
+	random = no
+
+	#trigger 60919
+
+	name = "EVT_60920_NAME"
+	desc = "EVT_60920_DESC"
+	picture = "VIC"
+	style = 0
+
+
+	action_a = {
+		name = "EVT_60920_ACTA"
+		command = { type = secedeprovince which = JAP value = 1306 } #ルアンブラバン #北部仏印 #FEPKBETA4.2
+		command = { type = secedeprovince which = JAP value = 1326 } #ハイフォン
+
+		command = { type = secedeprovince which = JAP value = 1328 } #ハノイ
+		command = { type = secedeprovince which = JAP value = 1329 } #ヴィエンチャン
+		command = { type = secedeprovince which = JAP value = 1332 } #ノーマラート
+		command = { type = secedeprovince which = JAP value = 1333 } #ダナン
+		command = { type = secedeprovince which = JAP value = 1334 } #キノン
+		command = { type = secedeprovince which = JAP value = 1335 } #ニャチャン
+		command = { type = secedeprovince which = JAP value = 1336 } #パクセ
+		command = { type = secedeprovince which = JAP value = 1337 } #サイゴン
+		command = { type = secedeprovince which = JAP value = 1338 } #ラックジャ
+		command = { type = secedeprovince which = JAP value = 1339 } #バタンバン
+		command = { type = secedeprovince which = JAP value = 1340 } #プノンペン
+		command = { type = secedeprovince which = JAP value = 1341 } #ウボンラチャタニ
+		command = { type = relation which = JAP value = -50 }
+		command = { type = trigger which = 60921 }
+	}
+}
+
+event = {
+	id = 60921
+	country = JAP
+	random = no
+
+	#trigger 60920
+
+	name = "EVT_60919_NAME"
+	desc = "EVT_60919_DESC"
+	picture = "VIC"
+	style = 0
+
+
+	action_a = {
+		name = "OK"
+		command = { type = province_revoltrisk which = 1328 value = 10 } #ハノイ
+		command = { type = province_revoltrisk which = 1329 value = 10 } #ヴィエンチャン
+		command = { type = province_revoltrisk which = 1332 value = 10 } #ノーマラート
+		command = { type = province_revoltrisk which = 1333 value = 10 } #ダナン
+		command = { type = province_revoltrisk which = 1334 value = 10 } #キノン
+		command = { type = province_revoltrisk which = 1335 value = 10 } #ニャチャン
+		command = { type = province_revoltrisk which = 1336 value = 10 } #パクセ
+		command = { type = province_revoltrisk which = 1337 value = 10 } #サイゴン
+		command = { type = province_revoltrisk which = 1338 value = 10 } #ラックジャ
+		command = { type = province_revoltrisk which = 1339 value = 10 } #バタンバン
+		command = { type = province_revoltrisk which = 1340 value = 10 } #プノンペン
+		command = { type = province_revoltrisk which = 1341 value = 10 } #ウボンラチャタニ
+		command = { type = add_corps which = "第2インドシナ進駐軍" value = land where = 1337 }
+		command = { type = add_division which = "第3インドシナ師団" value = infantry when = 2 } 
+		command = { type = add_corps which = "第3インドシナ進駐軍" value = land where = 1338 }
+		command = { type = add_division which = "第4インドシナ師団" value = bergsjaeger when = 1 } 
+		command = { type = trigger which = 132435 } #FEPK_replaced.txt
+	}
+}
+
+#########################################################################
+#  日本の南部仏印進駐をトリガーとする石油禁輸
+#########################################################################
+event = {# FEPKでスリープ # FEPK変更部分 # 1.08 # コマンド選択確率修正
+	id = 60922
+	country = USA
+	random = no
+
+	#trigger 60921
+
+	name = "EVT_3701_NAME"
+	desc = "EVT_3701_DESC"
+	picture = "Oil_Embargo"
+	style = 0
+
+
+	action_a = {
+		name = "ACTIONNAME3701A" # Pass the Embargo
+		ai_chance = 100
+		#command = { type = sleepevent which = 3701 }
+		command = { type = sleepevent which = 132435 } # FEPK変更部分
+		command = { type = relation which = JAP value = -100 }
+		command = { type = relation which = CHI value = 20 }
+		command = { type = relation which = CHC value = 20 }
+		command = { type = relation which = VIC value = 20 }
+		command = { type = relation which = FRA value = 20 }
+		command = { type = relation which = HOL value = 20 }
+		command = { type = relation which = ENG value = 20 }
+		command = { type = trigger which = 3800 } #JAP
+		command = { type = end_trades which = USA where = JAP }
+		command = { type = end_trades which = VEN where = JAP }
+		command = { type = end_trades which = ENG where = JAP }
+		command = { type = end_trades which = HOL where = JAP }
+	}
+	action_b = {
+		name = "ACTIONNAME3701B" # Do not push the Mikado
+		ai_chance = 0
+		#command = { type = sleepevent which = 3701 }
+		command = { type = sleepevent which = 132435 } # FEPK変更部分
+		command = { type = relation which = JAP value = 15 }
+		command = { type = relation which = CHI value = -20 }
+		command = { type = relation which = CHC value = -20 }
+		command = { type = relation which = VIC value = -10 }
+		command = { type = relation which = FRA value = -10 }
+		command = { type = relation which = HOL value = -10 }
+		command = { type = relation which = ENG value = -10 }
+	}
+}
+
+#########################################################################
+#  AIヴィシーとタイの戦力増強
+#########################################################################
+event = {
+	id = 60923
+	country = VIC
+	random = no
+
+	trigger = {
+#		event = 60911
+#		owned = { province = 1328 data = VIC } #ハノイ
+#		NOT = { alliance = { country = VIC country = JAP } }
+#		atwar = no
+		ai = yes
+	}
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	picture = "VIC"
+	style = 0
+
+#	date = { day = 0 month = january year = 1935 }
+#	offset = 5
+#	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		ai_chance = 100
+		name = "OK"
+		command = { type = supplies value = 500 where = 1328 } 
+		command = { type = oilpool value = 200 where = 1328 } 
+		command = { type = ai which = "switch/sia_vic_war3.ai" }
+		command = { type = add_corps which = "第1インドシナ防衛軍" value = land where = 1340 }
+		command = { type = add_division which = "第1インドシナ歩兵師団" value = infantry when = 2 } 
+		command = { type = add_corps which = "第2インドシナ防衛軍" value = land where = 1328 }
+		command = { type = add_division which = "第2インドシナ歩兵師団" value = infantry when = 2 } 
+		command = { type = add_corps which = "第3インドシナ防衛軍" value = land where = 1339 }
+		command = { type = add_division which = "第3インドシナ歩兵師団" value = infantry when = 2 } 
+		command = { type = add_corps which = "第4インドシナ防衛軍" value = land where = 1341 }
+		command = { type = add_division which = "第4インドシナ歩兵師団" value = infantry when = 2 } 
+		command = { type = add_corps which = "第5インドシナ防衛軍" value = land where = 1332 }
+		command = { type = add_division which = "第5インドシナ歩兵師団" value = infantry when = 2 } 
+		command = { type = add_corps which = "第6インドシナ防衛軍" value = land where = 1329 }
+		command = { type = add_division which = "第6インドシナ歩兵師団" value = infantry when = 2 } 
+		command = { type = add_corps which = "東洋艦隊" value = naval where = 1328 }#コーチャン島沖開戦参加兵力
+		command = { type = add_division which = "ラモット・ピケ" value = light_cruiser when = 1 }
+		command = { type = add_division which = "第1通報艦隊" value = destroyer when = 1 } 
+		command = { type = add_division which = "第2通報艦隊" value = destroyer when = 1 } 
+		command = { type = add_corps which = "迎撃飛行隊" value = air where = 1328 }
+		command = { type = add_division value = interceptor when = 3 } 
+		command = { type = add_division value = interceptor when = 3 } 
+		command = { type = add_division value = tactical_bomber when = 3 } 
+		command = { type = trigger which = 60924 }
+	}
+}
+
+event = {
+	id = 60924
+	country = SIA
+	random = no
+
+	trigger = {
+		ai = yes
+	}
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	picture = "VIC"
+	style = 0
+
+	action_a = {
+		ai_chance = 100
+		name = "OK"
+		command = { type = supplies value = 500 where = 1343 } 
+		command = { type = oilpool value = 200 where = 1343 } 
+		command = { type = ai which = "switch/sia_vic_war1.ai" }
+		command = { type = add_corps which = "第1タイ防衛軍" value = land where = 1345 }
+		command = { type = add_division which = "第1タイ歩兵師団" value = infantry when = 2 } 
+		command = { type = add_corps which = "第2タイ防衛軍" value = land where = 1342 }
+		command = { type = add_division which = "第2タイ歩兵師団" value = infantry when = 1 } 
+		command = { type = add_corps which = "第3タイ防衛軍" value = land where = 1331 }
+		command = { type = add_division which = "第3タイ歩兵師団" value = infantry when = 2 } 
+		command = { type = add_corps which = "第4タイ防衛軍" value = land where = 1343 }
+		command = { type = add_division which = "第4タイ歩兵師団" value = infantry when = 1 } 
+		command = { type = add_corps which = "第5タイ防衛軍" value = land where = 1330 }
+		command = { type = add_division which = "第5タイ歩兵師団" value = infantry when = 1 } 
+		command = { type = add_corps which = "王立航空隊" value = air where = 1345 }
+		command = { type = add_division value = interceptor when = 3 } 
+		command = { type = add_division value = tactical_bomber when = 3 } 
+		command = { type = add_division value = tactical_bomber when = 3 } 
+	}
+}
+
+#########################################################################
+# タイ・仏印戦争無しでの仏印進駐に伴うタイへの領土割譲	
+#########################################################################
+event = {	#遠藤マイクロ
+	id = 60925
+	country = JAP
+	random = no
+	
+	trigger = {
+		NOT = { event = 60913 }
+		event = 60919
+		alliance = { country = SIA country = JAP }
+		NOT = { alliance = { country = VIC country = JAP } }
+	}
+	
+	name = "EVT_60914_NAME"
+	desc = "EVT_60914_DESC"
+	picture = "VIC"
+	style = 0
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action_a = {
+		ai_chance = 100
+		name = "OK"
+		command = { type = secedeprovince which = SIA value = 1339 } #バタンバン
+		command = { type = secedeprovince which = SIA value = 1340 } #プノンペン
+		command = { type = secedeprovince which = SIA value = 1341 } #ウボンラチャタニ
+	}
+}
+
+#########################################################################
+#  北部仏印進駐時の日本同盟国との領土調整
+#########################################################################
+event = {
+	id = 60926
+	tag = { U87 U74 MAN SIA BUR CYN }
+	persistent = yes
+	trigger = {
+		alliance = { country = -1 country = JAP }
+		OR = {
+			owned = { province = 1328 data = JAP }
+			owned = { province = 1337 data = JAP }
+		}
+		OR = { 
+			control = { province = 1306 data = -1 }
+			control = { province = 1326 data = -1 }
+		}
+	}
+	date = { day = 0 month = january year = 1935 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	name = "EVT_60926_NAME"	#国境線の調整
+	desc = "EVT_60926_DESC"	#日本の仏印進駐に伴い、我々は日本の同盟国として彼らにインドシナの領有権を手渡さねばならない。
+	picture = "VIC"
+	style = 0
+	
+	action = {
+		name = "OK"
+		command = { type = secedeprovince which = JAP value = 1306 } #ルアンブラバン
+		command = { type = secedeprovince which = JAP value = 1326 } #ハイフォン
+	}
+}
+
+
+#########################################################################
+#  北部仏印進駐(航空基地を得ている場合)
+#########################################################################
+event = { # FEPK変更部分 # 1.08 # コマンド選択確率修正
+	id = 60927
+	country = JAP
+	random = no
+
+	trigger = {
+		#event = 2021
+		NOT = {
+			flag = usadefeatsjap
+			flag = sovdefeatsjap
+			flag = gerdefeatsjap
+		}
+		event = 130423 # FEPK変更部分
+		owned = { province = 1328 data = VIC } #ハノイ
+		owned = { province = 1337 data = JAP } #サイゴン
+		NOT = { alliance = { country = VIC country = GER } }
+		NOT = { event = 60910 }
+		random = 30
+	}
+
+	name = "EVT_60910_NAME"
+	desc = "EVT_60910_DESC"
+	picture = "VIC"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		ai_chance = 100
+		name = "EVT_60927_ACTA"
+		command = { type = relation which = VIC value = -100 }
+		command = { type = relation which = USA value = -100 }
+		command = { type = dissent value = -2 }
+		command = { type = belligerence value = 5 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = sleepevent which = 60910 }
+		command = { type = trigger which = 60911 }
+		command = { type = trigger which = 60922 }
+	}
+	action_b = {
+		ai_chance = 0
+		name = "EVT_60927_ACTB"
+		command = { type = sleepevent which = 60910 }
+		command = { type = sleepevent which = 60911 }
+		command = { type = sleepevent which = 60913 }
+		command = { type = sleepevent which = 60914 }
+		command = { type = sleepevent which = 60915 }
+		command = { type = sleepevent which = 60919 }
+	}
+}
+
+
+event = {
+	id = 60928
+	country = VIC
+	random = no
+
+	trigger = {
+		ai = yes
+	}
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	picture = "VIC"
+	style = 0
+
+
+	action_a = {
+		name = "OK"
+		command = { type = ai which = "vic_1935.ai" }
+	}
+}
+
+#########################################################################
+#  日系アメリカ人の強制収用
+#########################################################################
+event = {
+	id = 60940
+	country = USA
+	random = no
+
+	trigger = {
+		headofstate = 6001
+		war = { country = USA country = JAP }
+		random = 35
+	}
+
+	name = "EVT_60940_NAME"
+	desc = "EVT_60940_DESC"
+	picture = "Pearl_harbor"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		ai_chance = 99
+		name = "EVT_60940_ACTA"
+		command = { type = relation which = JAP value = -400 }
+		command = { type = relation which = CHI value = 25 }
+		command = { type = relation which = CHC value = 10 }
+		command = { type = relation which = SIA value = -50 }
+		command = { type = relation which = PER value = -50 }
+		command = { type = relation which = AFG value = -50 }
+		command = { type = relation which = TIB value = -50 }
+		command = { type = dissent value = -2 }
+		command = { type = belligerence value = 20 }
+		command = { type = domestic which = democratic value = -2 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = manpowerpool value = -120 }
+		command = { type = sleepevent which = 60941 }
+		command = { type = setflag which = Jap_dec_foece1 }
+	}
+	action_b = {
+		ai_chance = 1
+		name = "EVT_60940_ACTB"
+		command = { type = dissent value = 5 }
+		command = { type = domestic which = defense_lobby value = -1 }
+		command = { type = sleepevent which = 60941 }
+		command = { type = sleepevent which = 60942 }
+	}
+}
+
+event = {
+	id = 60941
+	country = USA
+	random = no
+
+	trigger = {
+		NOT = { headofstate = 6001 }
+		war = { country = USA country = JAP }
+		random = 35
+	}
+
+	name = "EVT_60940_NAME"
+	desc = "EVT_60940_DESC"
+	picture = "Pearl_harbor"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		ai_chance = 67
+		name = "EVT_60940_ACTA"
+		command = { type = relation which = JAP value = -400 }
+		command = { type = relation which = CHI value = 10 }
+		command = { type = relation which = CHC value = 10 }
+		command = { type = relation which = SIA value = -50 }
+		command = { type = relation which = PER value = -50 }
+		command = { type = relation which = AFG value = -50 }
+		command = { type = relation which = TIB value = -50 }
+		command = { type = dissent value = -2 }
+		command = { type = belligerence value = 20 }
+		command = { type = domestic which = democratic value = -2 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = manpowerpool value = -100 }
+		command = { type = sleepevent which = 60940 }
+		command = { type = setflag which = Jap_dec_foece1 }
+	}
+	action_b = {
+		ai_chance = 33
+		name = "EVT_60940_ACTB"
+		command = { type = dissent value = 5 }
+		command = { type = domestic which = defense_lobby value = -1 }
+		command = { type = sleepevent which = 60940 }
+		command = { type = sleepevent which = 60942 }
+	}
+}
+
+event = {
+	id = 60942
+	country = USA
+	random = no
+
+	trigger = {
+		flag = Jap_dec_foece1
+		war = { country = USA country = JAP }
+		random = 30
+	}
+
+	name = "EVT_60942_NAME"
+	desc = "EVT_60942_DESC"
+	picture = "Pearl_harbor"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		ai_chance = 90
+		name = "EVT_60942_ACTA"
+		command = { type = add_corps which = "日系人部隊" value = land where = 663 }
+		command = { type = add_division which = "第442連隊" value = bergsjaeger when = 3 where = engineer } 
+		command = { type = add_corps which = "日系人部隊" value = land where = 765 }
+		command = { type = add_division which = "カリフォルニア隊" value = militia when = 0 } 
+	}
+	action_b = {
+		ai_chance = 10
+		name = "EVT_60942_ACTB"
+		command = { type = dissent value = 1 }
+	}
+}
+

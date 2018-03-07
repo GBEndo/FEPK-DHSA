@@ -1,0 +1,2900 @@
+##########################
+### REVOLTERS SET FREE ###
+###     AI EVENTS      ###
+##########################
+
+event = {
+	id = 15000
+	trigger = { }
+	random = no
+
+	country = ALG
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 5 }
+		command = { type = free_energy value = 16 }
+		command = { type = free_metal value = 8 }
+		# command = { type = free_oil value = 8 }
+		command = { type = free_rare_materials value = 4 }
+		command = { type = dissent value = 7 } #  independence in 1962
+		}
+	}
+
+event = {
+	id = 15001
+	trigger = { }
+	random = no
+
+	country = ANG
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 8 } #  independence in 1975
+		}
+	}
+
+#event = {
+#	id = 15002
+#	trigger = { }
+#	random = no
+#
+#	country = ARA
+#
+#	name = "AI_EVENT"
+#	desc = "AI_EVENT"
+#	style = 0
+#
+#	date = { day = 0 month = january year = 1935 }
+#	offset = 1
+#	deathdate = { day = 29 month = december year = 1963 }
+#
+#	action_a = {
+#		name = ""
+#		command = { type = free_ic value = 10 }
+#		command = { type = free_energy value = 36 }
+#		command = { type = free_metal value = 18 }
+#		# command = { type = free_oil value = 18 }
+#		command = { type = free_rare_materials value = 9 }
+#		command = { type = dissent value = 10 } #  "Hypothetical" nation
+#		}
+#	}
+
+event = {
+	id = 15003
+	trigger = { }
+	random = no
+
+	country = ARM
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 8 } #  independence in 1991
+		}
+	}
+
+event = {
+	id = 15004
+	trigger = { }
+	random = no
+
+	country = AZB
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 8 } #  independence in 1991
+		}
+	}
+
+event = {
+	id = 15005
+	trigger = { }
+	random = no
+
+	country = BEN
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		}
+	}
+
+event = {
+	id = 15006
+	trigger = { }
+	random = no
+
+	country = BUR
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 4 } #  independence in 1948
+		}
+	}
+
+event = {
+	id = 15007
+	trigger = { }
+	random = no
+
+	country = BLR
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 12 }
+		command = { type = free_energy value = 36 }
+		command = { type = free_metal value = 18 }
+		# command = { type = free_oil value = 18 }
+		command = { type = free_rare_materials value = 9 }
+		command = { type = dissent value = 8 } #  independence in 1990
+		}
+	}
+
+event = {
+	id = 15008
+	trigger = { }
+	random = no
+
+	country = BOS
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 3 }
+		command = { type = free_energy value = 6 }
+		command = { type = free_metal value = 3 }
+		# command = { type = free_oil value = 3 }
+		command = { type = free_rare_materials value = 2 }
+		command = { type = dissent value = 8 } #  independence in 1991 & Civil War
+		}
+	}
+
+
+event = {
+	id = 15011
+	trigger = { }
+	random = no
+
+	country = CAM
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 6 } #  independence in 1960
+		}
+	}
+
+event = {
+	id = 15012
+	trigger = { }
+	random = no
+
+	country = CMB
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 5 } #  independence in 1953
+		}
+	}
+
+event = {
+	id = 15013
+	trigger = { }
+	random = no
+
+	country = CON
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 6 } #  independence in 1960
+		}
+	}
+
+
+event = {
+	id = 15015
+	trigger = { }
+	random = no
+
+	country = CYP
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 6 } #  independence in 1960
+		}
+	}
+
+event = {
+	id = 15016
+	trigger = { }
+	random = no
+
+	country = EAF
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 6 } #  Kenya independence in 1963
+
+		}
+	}
+
+event = {
+	id = 15017
+	trigger = { }
+	random = no
+
+	country = EGY
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 10 }
+		command = { type = free_energy value = 20 }
+		command = { type = free_metal value = 10 }
+		# command = { type = free_oil value = 10 }
+		command = { type = free_rare_materials value = 5 }
+		command = { type = dissent value = 2 } #  Egypt was actually a puppet of the UK in the HOI2 era
+		}
+	}
+
+event = {
+	id = 15018
+	trigger = { }
+	random = no
+
+	country = EQA
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 8 } #  The federation ended in 1959 after the territories had chosen — in 1958 — to become self-governing republics of the French Community.
+
+		}
+	}
+
+event = {
+	id = 15019
+	trigger = { }
+	random = no
+
+	country = EUS
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 8 } #  Not independent as of 2005
+		}
+	}
+
+event = {
+	id = 15020
+	trigger = { }
+	random = no
+
+	country = GAB
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 6 } #  independence in 1960
+		}
+	}
+
+event = {
+	id = 15021
+	trigger = { }
+	random = no
+
+	country = GEO
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 8 } #  independence in 1991
+		}
+	}
+
+event = {
+	id = 15022
+	trigger = { }
+	random = no
+
+	country = GLD
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 5 } #  independence in 1956
+		}
+	}
+
+event = {
+	id = 15023
+	trigger = { }
+	random = no
+
+	country = GUI
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 7 } #  independence in 1968
+		}
+	}
+
+event = {
+	id = 15024
+	trigger = { }
+	random = no
+
+	country = GUY
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 7 } #  independence in 1966
+		}
+	}
+
+event = {
+	id = 15025
+	trigger = { }
+	random = no
+
+	country = ICL
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 4 } #  independence in 1944
+		}
+	}
+
+event = {
+	id = 15026
+	trigger = { }
+	random = no
+
+	country = IDC
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 7 }
+		command = { type = free_energy value = 18 }
+		command = { type = free_metal value = 9 }
+		# command = { type = free_oil value = 9 }
+		command = { type = free_rare_materials value = 5 }
+		command = { type = dissent value = 10 } #  "Hypothetical" nation
+		}
+	}
+
+
+event = {
+	id = 15028
+	trigger = { }
+	random = no
+
+	country = INO
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 18 }
+		command = { type = free_metal value = 9 }
+		# command = { type = free_oil value = 9 }
+		command = { type = free_rare_materials value = 5 }
+		command = { type = manpowerpool value = 40 }
+		command = { type = dissent value = 6 } #  independence in 1949 following 5 years of war
+		}
+	}
+
+event = {
+	id = 15029
+	trigger = { }
+	random = no
+
+	country = ISR
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 5 }
+		command = { type = free_energy value = 10 }
+		command = { type = free_metal value = 5 }
+		# command = { type = free_oil value = 5 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 4 } #  State of Israel was declared in 1948
+		}
+	}
+
+event = {
+	id = 15030
+	trigger = { }
+	random = no
+
+	country = JOR
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 4 } #  Independence 1946 (from League of Nations mandate)
+		}
+	}
+
+event = {
+	id = 15031
+	trigger = { }
+	random = no
+
+	country = KAZ
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 5 }
+		command = { type = free_energy value = 10 }
+		command = { type = free_metal value = 5 }
+		# command = { type = free_oil value = 5 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 8 } #  independence in 1991
+		}
+	}
+
+event = {
+	id = 15032
+	trigger = { }
+	random = no
+
+	country = KOR
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 4 }
+		command = { type = dissent value = 4 } #  independence in 1948
+		}
+	}
+
+event = {
+	id = 15033
+	trigger = { }
+	random = no
+
+	country = KUR
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 8 } #  Not independent as of 2005
+		command = { type = ai which = "switch/Ferocity_yes.ai" }
+	}
+}
+
+event = {
+	id = 15034
+	trigger = { }
+	random = no
+
+	country = KYG
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 8 } #  independence in 1991
+		}
+	}
+
+event = {
+	id = 15035
+	trigger = { }
+	random = no
+
+	country = LAO
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 8 }  # On july 19, 1949, France formally grants Laos independence. Three factions struggle for power
+		}
+	}
+
+event = {
+	id = 15036
+	trigger = { }
+	random = no
+
+	country = LBY
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 5 }  # Independence 1951 (from Italy)  
+		}
+	}
+
+event = {
+	id = 15037
+	trigger = { }
+	random = no
+
+	country = LEB
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 5 }  # Independence 1943 (from League of Nations mandate )  
+		}
+	}
+
+event = {
+	id = 15038
+	trigger = { }
+	random = no
+
+	country = MAD
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 6 }  # Independence 1960 
+		}
+	}
+
+event = {
+	id = 15039
+	trigger = { }
+	random = no
+
+	country = MAL
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 6 }  # Independence 1960 
+		}
+	}
+
+event = {
+	id = 15040
+	trigger = { }
+	random = no
+
+	country = MLY
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 8 }
+		command = { type = free_energy value = 18 }
+		command = { type = free_metal value = 10 }
+		# command = { type = free_oil value = 10 }
+		command = { type = free_rare_materials value = 4 }
+		command = { type = dissent value = 5 }  # Independence 1956
+		}
+	}
+
+event = {
+	id = 15041
+	trigger = { }
+	random = no
+
+	country = MOR
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 5 }  # Independence 1956
+		}
+	}
+
+event = {
+	id = 15042
+	trigger = { }
+	random = no
+
+	country = MOZ
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 8 } #  independence in 1975
+		}
+	}
+
+event = {
+	id = 15043
+	trigger = { }
+	random = no
+
+	country = MTN
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 3 }
+		command = { type = free_energy value = 6 }
+		command = { type = free_metal value = 3 }
+		# command = { type = free_oil value = 3 }
+		command = { type = free_rare_materials value = 2 }
+		command = { type = dissent value = 8 } #  Not independent as of 2005
+		}
+	}
+
+event = {
+	id = 15044
+	trigger = { }
+	random = no
+
+	country = NAM
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 8 } # Independence 1990 (from South African mandate) 
+		}
+	}
+
+event = {
+	id = 15045
+	trigger = { }
+	random = no
+
+	country = NIG
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 6 } #  Independence 1960
+		}
+	}
+
+
+event = {
+	id = 15047
+	trigger = { }
+	random = no
+
+	country = PAK
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 4 }
+		command = { type = dissent value = 4 } #  Independence 1947
+		}
+	}
+
+event = {
+	id = 15048
+	trigger = { }
+	random = no
+
+	country = PAL
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 4 } #  Hypothetical alternative to Israel 
+		}
+	}
+
+event = {
+	id = 15049
+	trigger = { }
+	random = no
+
+	country = PRI
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 18 }
+		command = { type = free_metal value = 10 }
+		# command = { type = free_oil value = 10 }
+		command = { type = free_rare_materials value = 5 }
+		command = { type = dissent value = 10 } #  Hypothetical
+		}
+	}
+
+event = {
+	id = 15050
+	trigger = { }
+	random = no
+
+	country = PRK
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 5 }
+		command = { type = dissent value = 10 } #  Founding of the Democratic People's Republic of Korea 1948 
+		}
+	}
+
+event = {
+	id = 15051
+	trigger = { }
+	random = no
+
+	country = QUE
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 4 }
+		command = { type = dissent value = 5 } #  "Hypothetical" nation
+		}
+	}
+
+event = {
+	id = 15052
+	trigger = { }
+	random = no
+
+	country = RHO
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 6 } #  independence in 1965
+		}
+	}
+
+
+event = {
+	id = 15054
+	trigger = { }
+	random = no
+
+	country = SAR
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 6 } #  independence in 1965 later joined Malaysia
+		}
+	}
+
+
+event = {
+	id = 15056
+	trigger = { }
+	random = no
+
+	country = SER
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 3 }
+		command = { type = free_energy value = 6 }
+		command = { type = free_metal value = 3 }
+		# command = { type = free_oil value = 3 }
+		command = { type = free_rare_materials value = 2 }
+		}
+	}
+
+event = {
+	id = 15057
+	trigger = { }
+	random = no
+
+	country = SIB
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 4 }
+		command = { type = dissent value = 10 } #  "Hypothetical" nation
+		}
+	}
+
+event = {
+	id = 15058
+	trigger = { }
+	random = no
+
+	country = SIE
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		}
+	}
+
+event = {
+	id = 15059
+	trigger = { }
+	random = no
+
+	country = SLV
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		}
+	}
+
+event = {
+	id = 15060
+	trigger = { }
+	random = no
+
+	country = SOM
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 5 } #  independence in 1960
+		}
+	}
+
+event = {
+	id = 15061
+	trigger = { }
+	random = no
+
+	country = SUD
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 4 } #  independence in 1956
+		}
+	}
+
+event = {
+	id = 15062
+	trigger = { }
+	random = no
+
+	country = SYR
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 4 }
+		command = { type = dissent value = 3 } #  independence in 1946
+		}
+	}
+
+event = {
+	id = 15063
+	trigger = { }
+	random = no
+
+	country = TAJ
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 4 }
+		command = { type = dissent value = 8 } #  independence in 1991
+		}
+	}
+
+
+event = {
+	id = 15065
+	trigger = { }
+	random = no
+
+	country = TRA
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 4 }
+		command = { type = dissent value = 10 } #  "Hypothetical" nation
+		}
+	}
+
+event = {
+	id = 15066
+	trigger = { }
+	random = no
+
+	country = TRK
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 4 }
+		command = { type = dissent value = 8 } #  independence in 1991
+		}
+	}
+
+event = {
+	id = 15067
+	trigger = { }
+	random = no
+
+	country = TUN
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 4 }
+		command = { type = dissent value = 5 } #  independence in 1956
+		}
+	}
+
+event = {
+	id = 15068
+	trigger = { }
+	random = no
+
+	country = UKR
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 15 }
+		command = { type = free_energy value = 30 }
+		command = { type = free_metal value = 15 }
+		# command = { type = free_oil value = 15 }
+		command = { type = free_rare_materials value = 8 }
+		command = { type = dissent value = 8 } #  independence in 1991
+		}
+	}
+
+event = {
+	id = 15069
+	trigger = { }
+	random = no
+
+	country = UZB
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 4 }
+		command = { type = dissent value = 8 } #  independence in 1991
+		}
+	}
+
+event = {
+	id = 15070
+	trigger = { }
+	random = no
+
+	country = VIE
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 4 }
+		command = { type = dissent value = 5 } #  Independence was declared after World War II, but the French continued to rule until 1954
+		}
+	}
+
+event = {
+	id = 15071
+	trigger = { }
+	random = no
+
+	country = BRU
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 4 }
+		}
+	}
+
+
+event = {
+	id = 15072
+	trigger = { 
+		NOT = { 
+			event = 2032  #does not happen if already set free by GER
+		      }
+		  }
+	random = no
+
+	country = CRO
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 3 }
+		command = { type = free_energy value = 20 }
+		command = { type = free_metal value = 10 }
+		# command = { type = free_oil value = 10 }
+		command = { type = free_rare_materials value = 5 }
+		}
+	}
+
+event = {
+	id = 15073
+	trigger = {  }
+	random = no
+
+	country = CSA
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = dissent value = 10 } #  "Hypothetical" nation
+		command = { type = sleepteam which = 112 } # USA's Norfolk Naval Yard
+		command = { type = sleepteam which = 109 } # USA's Newport News Shipbuilding
+		command = { type = waketeam which = 129 }  # USA's Philadelphia Naval Shipyard
+
+		}
+	}
+
+event = {
+	id = 15074
+	trigger = {  }
+	random = no
+
+	country = CAL
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = dissent value = 10 } #  "Hypothetical" nation
+		command = { type = sleepteam which = 103 } # USA's Douglas Aircraft Company
+		command = { type = sleepteam which = 117 } # USA's Standard Oil of California
+
+		}
+	}
+
+event = {
+	id = 15075
+	trigger = {  }
+	random = no
+
+	country = TEX
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = dissent value = 10 } #  "Hypothetical" nation
+		command = { type = sleepteam which = 118 } # USA's Texas Oil Company
+
+		}
+	}
+
+event = {
+	id = 15076
+	trigger = {  
+		ispuppet = USA 
+		}
+
+	random = no
+
+	country = USA
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = dissent value = 10 } #  The resistance & 'The Right to Bear Arms'
+		}
+	}
+
+event = {
+	id = 15077
+	trigger = {  
+		ispuppet = CAN 
+		}
+
+	random = no
+
+	country = CAN
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = dissent value = 4 } #  The resistance
+		}
+	}
+
+event = {
+	id = 15078
+	trigger = {  
+		puppet = { country = PHI country = JAP }
+		}
+
+	random = no
+
+	country = PHI
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = dissent value = 5 } #  The resistance
+		command = { type = sleepteam which = 6904 } #Douglas MacArthur
+		command = { type = sleepleader which = 430043 } # MacArthur
+		command = { type = sleepleader which = 430044 } # Wainwright
+
+		}
+	}
+
+event = {
+	id = 15079
+	trigger = {  
+		puppet = { country = POL country = GER }
+		}
+
+	random = no
+
+	country = POL
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = dissent value = 5 } #  The resistance
+		}
+	}
+
+event = {
+	id = 15080
+	trigger = {  
+		}
+
+	random = no
+
+	country = FLA
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = dissent value = 5 } #  The resistance
+		}
+	}
+
+event = {
+	id = 15081
+	trigger = {  
+		}
+
+	random = no
+
+	country = WLL
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = dissent value = 5 } #  The resistance
+		}
+	}
+
+event = {
+	id = 15082
+	trigger = { ai = yes }
+	random = no
+
+	country = SCA
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = dissent value = 10 } #  "Hypothetical" nation
+		command = { type = ai which = sca.ai }
+		}
+	}
+
+event = {
+	id = 15083
+	trigger = { }
+	random = no
+
+	country = MEN
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 5 }
+		command = { type = free_energy value = 14 }
+		command = { type = free_metal value = 9 }
+		command = { type = free_oil value = 2 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 5 } #  The resistance
+		}
+	}
+
+event = {
+	id = 15084
+	trigger = { }
+	random = no
+
+	country = U70
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 6 } #
+		}
+	}
+
+event = {
+	id = 15085
+	trigger = { }
+	random = no
+
+	country = U71
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 8 } #
+		}
+	}
+
+event = {
+	id = 15086
+	trigger = { }
+	random = no
+
+	country = U72
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 6 } #
+		}
+	}
+
+event = {
+	id = 15087
+	trigger = {
+		NOT = { alliance = { country = U73 country = GER }  }
+	 }
+	random = no
+
+	country = U73
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = dissent value = 15 } #
+
+		command = { type = addcore which = 3 }
+		command = { type = addcore which = 5 }
+		command = { type = addcore which = 6 }
+		command = { type = addcore which = 7 }
+		command = { type = addcore which = 8 }
+		command = { type = addcore which = 9 }
+		command = { type = addcore which = 10 }
+		command = { type = addcore which = 11 }
+		command = { type = addcore which = 12 }
+		command = { type = addcore which = 13 }
+		command = { type = addcore which = 14 }
+		command = { type = addcore which = 15 }
+		command = { type = addcore which = 17 }
+		command = { type = addcore which = 20 }
+		command = { type = addcore which = 21 }
+		command = { type = addcore which = 22 }
+		command = { type = addcore which = 23 }
+
+		}
+	}
+
+event = {
+	id = 15088
+	trigger = {
+		NOT = { alliance = { country = U87 country = JAP }  }
+	}
+	random = no
+
+	country = U74
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		}
+	}
+
+event = {
+	id = 15089
+	trigger = { }
+	random = no
+
+	country = U75
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 6 } #
+		}
+	}
+
+event = {
+	id = 15090
+	trigger = { }
+	random = no
+
+	country = U76
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 6 } #
+		}
+	}
+
+event = {
+	id = 15091
+	trigger = { }
+	random = no
+
+	country = U77
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = dissent value = 15 } #
+		}
+	}
+
+event = {
+	id = 15092
+	trigger = { }
+	random = no
+
+	country = U78
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = dissent value = 15 } #
+		}
+	}
+
+event = {
+	id = 15093
+	trigger = { }
+	random = no
+
+	country = U79
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 6 } #
+		}
+	}
+
+event = {
+	id = 15094
+	trigger = { }
+	random = no
+
+	country = U80
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 6 } #
+		}
+	}
+
+event = {
+	id = 15095
+	trigger = { }
+	random = no
+
+	country = U81
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 6 } #
+		}
+	}
+
+event = {
+	id = 15096
+	trigger = { }
+	random = no
+
+	country = U82
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 6 } #
+		}
+	}
+
+event = {
+	id = 15097
+	trigger = { }
+	random = no
+
+	country = U83
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 6 } #
+		}
+	}
+
+event = {
+	id = 15098
+	trigger = { }
+	random = no
+
+	country = U84
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 6 } #
+		}
+	}
+
+event = {
+	id = 15099
+	trigger = { }
+	random = no
+
+	country = U85
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 6 } #
+		}
+	}
+
+event = {
+	id = 15300
+	trigger = { }
+	random = no
+
+	country = U86
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 6 } #
+		}
+	}
+
+event = {
+	id = 15301
+	trigger = {
+		NOT = { alliance = { country = U87 country = JAP }  }
+	}
+	random = no
+
+	country = U87
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+#
+#command = { type = addcore which = 1221 } 
+#command = { type = addcore which = 1234 } 
+#command = { type = addcore which = 1240 } 
+#command = { type = addcore which = 1241 }
+#command = { type = addcore which = 1275 }
+#command = { type = addcore which = 1276 } 
+#command = { type = addcore which = 1277 } 
+#command = { type = addcore which = 1440 } 
+#command = { type = addcore which = 1441 } # Gansu
+#command = { type = addcore which = 1267 } 
+#command = { type = addcore which = 1268 } 
+#command = { type = addcore which = 1269 } 
+#command = { type = addcore which = 1270 } 
+#command = { type = addcore which = 1271 } 
+#command = { type = addcore which = 1278 } # Shaanxi
+#command = { type = addcore which = 1222 } 
+#command = { type = addcore which = 1223 } 
+#command = { type = addcore which = 1224 } 
+#command = { type = addcore which = 1227 } 
+#command = { type = addcore which = 1228 } 
+#command = { type = addcore which = 1229 } 
+#command = { type = addcore which = 1230 } # Henan
+#command = { type = addcore which = 1237 } # Jiangsu
+#command = { type = addcore which = 1273 } 
+#command = { type = addcore which = 1274 } 
+#command = { type = addcore which = 1439 } # Ningxia
+#command = { type = addcore which = 1225 } 
+#command = { type = addcore which = 1226 } # Shanxi
+#command = { type = addcore which = 1203 } 
+#command = { type = addcore which = 1204 } 
+#command = { type = addcore which = 1205 } 
+#command = { type = addcore which = 1206 } 
+#command = { type = addcore which = 1209 } 
+#command = { type = addcore which = 1210 } 
+#command = { type = addcore which = 1211 } 
+#command = { type = addcore which = 1212 } # Hebei
+#command = { type = addcore which = 1263 } 
+#command = { type = addcore which = 1265 } 
+#command = { type = addcore which = 1279 } 
+#command = { type = addcore which = 1280 } 
+#command = { type = addcore which = 1360 } 
+#command = { type = addcore which = 1361 } # Sichuan
+#command = { type = addcore which = 1231 } 
+#command = { type = addcore which = 1232 } 
+#command = { type = addcore which = 1233 } 
+#command = { type = addcore which = 1238 } 
+#command = { type = addcore which = 1239 } 
+#command = { type = addcore which = 1253 } 
+#command = { type = addcore which = 1264 } 
+#command = { type = addcore which = 1266 } # Hubei
+#command = { type = addcore which = 1262 } 
+#command = { type = addcore which = 1363 } 
+#command = { type = addcore which = 1364 } 
+#command = { type = addcore which = 1365 } # Guizhou
+#command = { type = addcore which = 1255 } 
+#command = { type = addcore which = 1256 } 
+#command = { type = addcore which = 1257 } 
+#command = { type = addcore which = 1259 } 
+#command = { type = addcore which = 1260 } 
+#command = { type = addcore which = 1261 } # Hunan
+#command = { type = addcore which = 1242 } 
+#command = { type = addcore which = 1250 } 
+#command = { type = addcore which = 1251 } 
+#command = { type = addcore which = 1252 } 
+#command = { type = addcore which = 1254 } # Jiangxi
+#command = { type = addcore which = 1243 } 
+#command = { type = addcore which = 1244 } 
+#command = { type = addcore which = 1245 } 
+#command = { type = addcore which = 1246 } 
+#command = { type = addcore which = 1247 } # Fujian
+#command = { type = addcore which = 1293 } 
+#command = { type = addcore which = 1294 } 
+#command = { type = addcore which = 1305 } 
+#command = { type = addcore which = 1307 } 
+#command = { type = addcore which = 1308 } 
+#command = { type = addcore which = 1327 } 
+#command = { type = addcore which = 1362 } # Yunnan
+#command = { type = addcore which = 1281 } 
+#command = { type = addcore which = 1282 } 
+#command = { type = addcore which = 1283 } # Xikang
+#command = { type = addcore which = 1442 } 
+#command = { type = addcore which = 1443 } 
+#command = { type = addcore which = 1444 } # Qinghai
+#command = { type = addcore which = 1258 } 
+#command = { type = addcore which = 1309 } 
+#command = { type = addcore which = 1310 } 
+#command = { type = addcore which = 1311 } 
+#command = { type = addcore which = 1319 } 
+#command = { type = addcore which = 1325 } # Guangxi
+#command = { type = addcore which = 1248 } 
+#command = { type = addcore which = 1249 } 
+#command = { type = addcore which = 1312 } 
+#command = { type = addcore which = 1313 } 
+#command = { type = addcore which = 1314 } 
+#command = { type = addcore which = 1317 } 
+#command = { type = addcore which = 1318 } 
+#command = { type = addcore which = 1320 } # Guangdong
+#command = { type = addcore which = 1420 } 
+#command = { type = addcore which = 1419 } 
+#command = { type = addcore which = 1434 } 
+#command = { type = addcore which = 1436 } 
+#command = { type = addcore which = 1437 } 
+#command = { type = addcore which = 1438 } 
+#command = { type = addcore which = 1399 } 
+#command = { type = addcore which = 1404 } 
+#command = { type = addcore which = 1385 } 
+#command = { type = addcore which = 1208 } 
+#command = { type = addcore which = 1207 } 
+#command = { type = addcore which = 1272 } 
+#command = { type = addcore which = 1273 } 
+#command = { type = addcore which = 1274 } 
+#command = { type = addcore which = 1386 } 
+#command = { type = addcore which = 1439 } 
+#command = { type = addcore which = 1418 } 
+#command = { type = addcore which = 1520 } 
+#command = { type = addcore which = 1384 } 
+#command = { type = addcore which = 1386 } 
+#command = { type = addcore which = 1382 } 
+#command = { type = addcore which = 1387 } 
+#command = { type = addcore which = 1388 } 
+#command = { type = addcore which = 1398 } #MEN
+#command = { type = addcore which = 1213 } 
+#command = { type = addcore which = 1214 } 
+#command = { type = addcore which = 1215 } 
+#command = { type = addcore which = 1216 } # Shandong
+#command = { type = addcore which = 1448 } 
+#command = { type = addcore which = 1450 } 
+#command = { type = addcore which = 1451 } 
+#command = { type = addcore which = 1452 } 
+#command = { type = addcore which = 1453 } # Tibet
+#command = { type = addcore which = 1421 } 
+#command = { type = addcore which = 1430 } 
+#command = { type = addcore which = 1431 } 
+#command = { type = addcore which = 1432 } 
+#command = { type = addcore which = 1433 } 
+#command = { type = addcore which = 1435 } 
+#command = { type = addcore which = 1445 } 
+#command = { type = addcore which = 1446 } 
+#command = { type = addcore which = 1447 } # Xinjiang
+#command = { type = addcore which = 1321 } #ŠC“ì
+
+		}
+	}
+
+event = {
+	id = 15302
+	trigger = { }
+	random = no
+
+	country = U88
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 6 } #
+		}
+	}
+
+event = {
+	id = 15303
+	trigger = { }
+	random = no
+
+	country = U89
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 6 } #
+		}
+	}
+
+event = {
+	id = 15304
+	trigger = { }
+	random = no
+
+	country = U90
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 6 } #
+		}
+	}
+
+event = {
+	id = 15305
+	trigger = { }
+	random = no
+
+	country = U91
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 6 } #
+		}
+	}
+
+event = {
+	id = 15306
+	trigger = { }
+	random = no
+
+	country = U92
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 6 } #
+		}
+	}
+
+event = {
+	id = 15307
+	trigger = { }
+	random = no
+
+	country = U93
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 6 } #
+		}
+	}
+
+event = {
+	id = 15308
+	trigger = { }
+	random = no
+
+	country = U94
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 6 } #
+		}
+	}
+
+event = {
+	id = 15309
+	trigger = { }
+	random = no
+
+	country = U95
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 6 } #
+		}
+	}
+
+event = {
+	id = 15310
+	trigger = { }
+	random = no
+
+	country = U96
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 6 } #
+		}
+	}
+
+event = {
+	id = 15311
+	trigger = { }
+	random = no
+
+	country = U97
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 6 } #
+		}
+	}
+
+event = {
+	id = 15312
+	trigger = { }
+	random = no
+
+	country = U98
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 6 } #
+		}
+	}
+
+event = {
+	id = 15313
+	trigger = { }
+	random = no
+
+	country = U99
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = ""
+		command = { type = free_ic value = 6 }
+		command = { type = free_energy value = 12 }
+		command = { type = free_metal value = 6 }
+		# command = { type = free_oil value = 6 }
+		command = { type = free_rare_materials value = 3 }
+		command = { type = dissent value = 6 } #
+		}
+	}

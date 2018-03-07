@@ -1,0 +1,107 @@
+PER;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+53001;Head of State;レザー・パフラヴィー;36;PA;Resigned Generalissimo;High;M53001;x
+53002;Head of Government;マフムード・ジャム;36;PA;Silent Workhorse;High;M53002;x
+53003;Foreign Minister;イノヤトゥラー・カーン・サミ;36;PA;Great Compromiser;Medium;M53003;x
+53004;Minister of Armament;アーマッド・カーン・ナクジャーヴァン;36;PA;Battle Fleet Proponent;Medium;M53004;x
+53005;Minister of Security;アリ・アクバー・デイヴァ;36;PA;Back Stabber;Medium;M53005;x
+53006;Head of Military Intelligence;レザー・ミザニ;36;PA;Naval Intelligence Specialist;Medium;M53006;x
+53007;Chief of Staff;レザー・パフラヴィー;36;PA;School of Defence;Medium;M53001;x
+53008;Chief of Army;アブドレザ・アフカーミ;36;PA;Static Defence Doctrine;Medium;M53008;x
+53009;Chief of Navy;アーマッド・ミラ・コスラヴァニ;36;PA;Indirect Approach Doctrine;High;M53009;x
+53010;Chief of Air Force;アーマッド・カーン・ナクジャーヴァン;36;PA;Naval Aviation Doctrine;High;M53004;x
+53031;Head of State;モハンマド・レザー・パフラヴィー;41;SC;Benevolent Gentleman;High;M53011;x
+53032;Head of State;モハンマド・レザー・パフラヴィー;41;PA;Autocratic Charmer;High;M53011;x
+53033;Head of Government;アフマド・マティーン・ダフタリー;39;FA;Naive Optimist;High;M53033;x
+53034;Head of Government;アリー・マンスール;40;PA;Old General;High;M53034;x
+53035;Head of Government;モハンマド・アリー・フォルーギー;41;SC;Political Protege;High;M53015;x
+53036;Head of Government;アリー・ソヘイリー;43;SL;Smiling Oilman;High;M53036;x
+53037;Head of Government;アフマド・ガヴァーム;42;SC;Happy Amateur;High;M53037;x
+53038;Head of Government;モハンマド・サーエド;44;SC;Silent Workhorse;High;M53038;x
+53039;Head of Government;モルテザーゴリー・バヤート;44;SL;Flamboyant Tough Guy;High;M53039;x
+53040;Head of Government;エブラーヒーム・ハキーミー;45;PA;Backroom Backstabber;High;M53040;x
+53041;Head of Government;モフセン・サドル;45;SC;Corporate Suit;High;M53041;x
+53042;Foreign Minister;ムスタファ・アディル;37;PA;Biased Intellectual;Medium;M53042;x
+53043;Foreign Minister;ミリア・ムーシン・カーン;38;PA;Ideological Crusader;Medium;M53043;x
+53044;Foreign Minister;アリー・ソヘイリー;39;PA;Iron Fisted Brute;Low;M53036;x
+53045;Foreign Minister;ムザファー・アラム;39;PA;Apologetic Clerk;Medium;M53045;x
+53046;Foreign Minister;イブラヒム・アラム;40;FA;The Cloak N Dagger Schemer;Medium;M53046;x
+53047;Foreign Minister;アマリ・ジャワド;40;FA;Biased Intellectual;Medium;M53047;x
+53048;Foreign Minister;アリー・ソヘイリー;41;SL;The Cloak N Dagger Schemer;Medium;M53036;x
+53049;Foreign Minister;モハンマド・サーエド;42;SC;Great Compromiser;High;M53038;x
+53051;Foreign Minister;ナスルラ・インティザム;44;SL;Biased Intellectual;Medium;M53051;x
+53052;Foreign Minister;アヌシャーヴァン・セパーボディ;45;PA;Apologetic Clerk;Medium;M53052;x
+53053;Foreign Minister;アブル・カシム・ナジム;45;SC;The Cloak N Dagger Schemer;Medium;M53053;x
+53054;Foreign Minister;アフマド・ガヴァーム;46;SC;Ideological Crusader;High;M53037;x
+53055;Foreign Minister;モハンマド・モサデック;46;SL;The Cloak N Dagger Schemer;Medium;M53013;x
+53056;Minister of Armament;レザー・ミザニ;37;PA;Resource Industrialist;Medium;M53006;x
+53057;Minister of Armament;ミルザ・リザ・アルファ・ドウレー;37;PA;Infantry Proponent;Medium;M53057;x
+53058;Minister of Armament;アルフレッド・ルドルフ・ジマーマン;38;SC;laissez-faire capitalist;Medium;M53014;x
+53059;Minister of Armament;アーマッド・カーン・ナクジャーヴァン;38;PA;Air to Sea Proponent;High;M53004;x
+53060;Minister of Armament;アーマッド・ミラ・コスラヴァニ;39;PA;Submarine Proponent;High;M53009;x
+53061;Minister of Armament;アブドレザ・アフカーミ;39;FA;Military Entrepreneur;Medium;M53008;x
+53062;Minister of Armament;モハンマド・ナクジャヴァニ;40;FA;Tank Proponent;Medium;M53062;x
+53063;Minister of Armament;モルテザ・ヤズディ;40;FA;Air Superiority Proponent;Medium;M53024;x
+53064;Minister of Armament;サイド・サル＝ディン・タバタバイ;41;SC;Battle Fleet Proponent;Medium;M53012;x
+53065;Minister of Armament;ゾカ・ドウレー;43;SL;Theoretical Scientist;Medium;M53065;x
+53066;Minister of Armament;モハンマド・バフラミ;44;SC;Strategic Air Proponent;Medium;M53026;x
+53067;Minister of Armament;ゾカ・ドウレー;45;PA;Tank Proponent;Medium;M53065;x
+53068;Minister of Armament;ジャファー・ピシェヴァリ;45;SC;Resource Industrialist;Medium;M53023;x
+53069;Minister of Armament;アヌシャーヴァン・セパーボディ;46;SC;Administrative Genius;Medium;M53052;x
+53070;Minister of Security;ソレイマン・ミルザ;36;PA;Crime Fighter;Medium;M53022;x
+53071;Minister of Security;ミルザ・リザ・アルファ・ドウレー;36;PA;Back Stabber;Medium;M53057;x
+53072;Minister of Security;アリ・マンソウア;38;PA;Man of the People;Medium;M53034;x
+53073;Minister of Security;フセイン・カーン・アラ;39;FA;Silent Lawyer;Medium;M53073;x
+53074;Minister of Security;モハンマド・バフラミ;41;SC;Compassionate Gentleman;Medium;M53026;x
+53075;Minister of Security;エラジ・エスカンダリ;42;SL;Prince of Terror;Medium;M53025;x
+53076;Minister of Security;ダービー伯エドワード・スタンリー卿;41;SC;Efficient Sociopath;Medium;M53076;x
+53077;Minister of Security;メーディ・マンジャラニ;45;PA;Prince of Terror;Medium;M53077;x
+53078;Minister of Security;アボルハサン・ハキミ;45;SC;Back Stabber;Medium;M53078;x
+53079;Minister of Security;ホセイン・アルファズニ;46;SC;Silent Lawyer;Medium;M53079;x
+53080;Head of Military Intelligence;ムハンメド・レザー・パヒアヴィ;37;PA;Political Specialist;Medium;M53011;x
+53081;Head of Military Intelligence;ディンシャー・イラーニ;38;PA;Technical Specialist;Medium;M53021;x
+53082;Head of Military Intelligence;アルフレッド・ルドルフ・ジマーマン;39;FA;Industrial Specialist;Medium;M53014;x
+53083;Head of Military Intelligence;アフマド・マティーン・ダフタリー;41;FA;Naval Intelligence Specialist;Medium;M53033;x
+53084;Head of Military Intelligence;アリ・セパーボディ・カジャー;41;SC;Dismal Enigma;Medium;M53084;x
+53085;Head of Military Intelligence;サー・ネヴィル・グラントリー;41;SL;Industrial Specialist;Medium;M53085;x
+53086;Head of Military Intelligence;アブドル・ホセイン・サルダリエ;45;PA;Dismal Enigma;Medium;M53086;x
+53087;Head of Military Intelligence;アブドラー・エンテザム;45;SC;Technical Specialist;Medium;M53087;x
+53088;Head of Military Intelligence;オヴァサク・アル＝ドレー・ノーリー;45;SC;Naval Intelligence Specialist;Medium;M53088;x
+53089;Head of Military Intelligence;モハンマド・モサデック;46;SL;Logistics Specialist;Medium;M53013;x
+53090;Chief of Staff;アリ・アクバー・デイヴァ;39;PA;School of Psychology;Medium;M53005;x
+53091;Chief of Staff;ハサン・マジド・フィルーズ;39;FA;School of Defence;Medium;M53028;x
+53092;Chief of Staff;レザー・ミザニ;41;SC;School of Mass Combat;Medium;M53006;x
+53093;Chief of Staff;アリ・カーン・ナクジアム;43;SL;School of Manoeuvre;Medium;M53027;x
+53094;Chief of Staff;モハンマド・レザー・パフラヴィー;45;PA;School of Defence;Medium;M53011;x
+53095;Chief of Staff;ホセイン・アフカーミ;45;SC;School of Fire Support;Medium;M53017;x
+53096;Chief of Army;マー・アフカーミ;38;PA;Guns and Butter Doctrine;Medium;M53018;x
+53097;Chief of Army;ハサン・マジド・フィルーズ;39;FA;Static Defence Doctrine;Medium;M53028;x
+53098;Chief of Army;アズラム・ミア・ガーニ;41;SC;Elastic Defence Doctrine;Medium;M53098;x
+53099;Chief of Army;モハンマド・ナクジャヴァニ;45;PA;Armoured Spearhead Doctrine;Medium;M53062;x
+53100;Chief of Army;ヘダヤット・ギランシャー;45;SC;Decisive Battle Doctrine;Medium;M53100;x
+53101;Chief of Navy;レザー・ミザニ;38;PA;Base Control Doctrine;Medium;M53006;x
+53102;Chief of Navy;シャプーア・キスラバディ;39;FA;Open Seas Doctrine;Medium;M53102;x
+53103;Chief of Navy;モハンマド・ミア・モハンナ;41;SC;Power Projection Doctrine;Medium;M53029;x
+53104;Chief of Navy;アーマッド・カーン・ナクジャーヴァン;45;PA;Decisive Naval Battle Doctrine;Medium;M53004;x
+53105;Chief of Navy;モハンマド・モイニ;45;SC;Indirect Approach Doctrine;Medium;M53020;x
+53106;Chief of Air Force;サデグ・カーン・クーパル;37;PA;Army Aviation Doctrine;High;M53106;x
+53107;Chief of Air Force;モハンマド・ナクジャヴァニ;39;FA;Air Superiority Doctrine;Medium;M53062;x
+53108;Chief of Air Force;モハンマド・モイニ;41;SC;Vertical Envelopment Doctrine;Medium;M53020;x
+53109;Chief of Air Force;モハンマド・ミア・モハンナ;45;SC;Naval Aviation Doctrine;Medium;M53029;x
+53110;Chief of Air Force;ヘダヤット・ギランシャー;46;PA;Carpet Bombing Doctrine;Medium;M53100;x
+53015;Minister of Security;モハンマド・アリー・フォルーギー;36;SC;Crime Fighter;Medium;M53015;x
+53021;Head of State;ディンシャー・イラーニ;36;ST;Stern Imperialist;High;M53021;x
+53022;Head of Government;ソレイマン・ミルザ;36;ST;Happy Amateur;High;M53022;x
+53023;Foreign Minister;ジャファー・ピシェヴァリ;36;ST;Iron Fisted Brute;Medium;M53023;x
+53026;Head of Military Intelligence;モハンマド・バフラミ;36;ST;Political Specialist;Medium;M53026;x
+53111;Head of Government;アブドル・ホセイン・ハジール;48;ML;Happy Amateur;High;M53111;x
+53112;Head of Government;モハンマド・サーエド;48;ML;Flamboyant Tough Guy;High;M53038;x
+53113;Head of Government;アリ・マンソウア;50;SC;Political Protege;High;M53034;x
+53114;Head of Government;アリ・ラズマーラー;50;PA;old airmarshal;High;M53114;x
+53115;Head of Government;フセイン・カーン・アラ;51;PA;Backroom Backstabber;High;M53073;x
+53116;Head of Government;モハンマド・モサデック;51;SL;Smiling Oilman;High;M53013;x
+53117;Head of Government;ファズロラ・ザヘディ;53;PA;Old General;High;M53117;x
+53118;Foreign Minister;アブドル・ホセイン・ハジール;51;ML;Ideological Crusader;Medium;M53111;x
+53119;Chief of Staff;アリ・ラズマーラー;53;PA;School of Psychology;Medium;M53114;x
+53120;Chief of Air Force;アリ・ラズマーラー;49;PA;Army Aviation Doctrine;Medium;M53114;x
+53121;Chief of Army;ファズロラ・ザヘディ;51;PA;Guns and Butter Doctrine;Medium;M53117;x

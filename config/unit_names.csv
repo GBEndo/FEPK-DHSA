@@ -1,0 +1,862 @@
+;;;;;;;;;;;X
+;;;;;;;;;;;X
+;;;;;;;;;;;X
+;;;;;;;;;;;X
+;;;;;;;;;;;X
+NAME_INFANTRY;歩兵;Infantry;;;;;;;;;X
+NAME_CAVALRY;騎兵;Cavalry;;;;;;;;;X
+NAME_MOTORIZED;自動車化歩兵;Motorized;;;;;;;;;X
+NAME_MECHANIZED;機械化歩兵;Mechanized;;;;;;;;;X
+NAME_LIGHT_ARMOR;軽戦車;Light Armored;;;;;;;;;X
+NAME_ARMOR;戦車;Armored;;;;;;;;;X
+NAME_PARATROOPER;空挺兵;Paratroops;;;;;;;;;X
+NAME_MARINE;海兵;Marines;;;;;;;;;X
+NAME_BERGSJAEGER;山岳兵;Mountain;;;;;;;;;X
+NAME_MILITIA;民兵;Militia;;;;;;;;;X
+NAME_GARRISON;守備師団;Garrison;;;;;;;;;X
+NAME_HQ;司令部;HQ;;;;;;;;;X
+NAME_FIGHTER;戦闘機;Fighters;;;;;;;;;X
+NAME_INTERCEPTOR;迎撃機;Interceptors;;;;;;;;;X
+NAME_MULTI_ROLE;戦闘機;Fighters;;;;;;;;;X
+NAME_ESCORT;護衛戦闘機;Escort Fighters;;;;;;;;;X
+NAME_STRATEGIC_BOMBER;戦略爆撃機;Strategic Bombers;;;;;;;;;X
+NAME_TACTICAL_BOMBER;戦術爆撃機;Tactical Bombers;;;;;;;;;X
+NAME_NAVAL_BOMBER;海軍爆撃機;Naval Bomber;;;;;;;;;X
+NAME_TRANSPORT_PLANE;輸送機;Transport Planes;;;;;;;;;X
+NAME_BATTLESHIP;戦艦;Battleship;;;;;;;;;X
+NAME_LIGHT_CRUISER;軽巡洋艦;Light Cruiser;;;;;;;;;X
+NAME_HEAVY_CRUISER;重巡洋艦;Heavy Cruiser;;;;;;;;;X
+NAME_BATTLECRUISER;巡洋戦艦;Battlecruiser;;;;;;;;;X
+NAME_DESTROYER;駆逐艦;Destroyers;;;;;;;;;X
+NAME_CARRIER;空母;Carrier;;;;;;;;;X
+NAME_SUBMARINE;潜水艦;Submarines;;;;;;;;;X
+NAME_TRANSPORT;輸送艦;Transports;;;;;;;;;X
+NAME_FLYING_BOMB;飛行爆弾;Flying Bomb;;;;;;;;;X
+NAME_FLYING_ROCKET;戦略ロケット;Strategic Rocket;;;;;;;;;X
+NAME_BALLISTIC_MISSILE;ミサイル;Missile;;;;;;;;;X
+NAME_ICBM;大陸間弾道ミサイル;ICBM;;;;;;;;;X
+NAME_ARTILLERY;砲兵旅団;Artillery Brigade;;;;;;;;;X
+NAME_SP_ARTILLERY;自走砲;Self-Propelled Artillery;;;;;;;;;X
+NAME_ROCKET_ARTILLERY;ロケット砲;Rocket Artillery;;;;;;;;;X
+NAME_SP_ROCKET_ARTILLERY;自走ロケット砲;Self-Propelled Rocket Artillery;;;;;;;;;X
+NAME_TANK_DESTROYER;駆逐戦車;Tank Destroyer;;;;;;;;;X
+NAME_HEAVY_ARMOR;重戦車;Heavy Armored;;;;;;;;;X
+NAME_SUPER_HEAVY_ARMOR;超重戦車;Super Heavy Armored;;;;;;;;;X
+NAME_ARMORED_CAR;装甲車;Armored Car;;;;;;;;;X
+NAME_POLICE;憲兵;Police;;;;;;;;;X
+NAME_ANTITANK;対戦車兵旅団;Anti-tank Brigade;;;;;;;;;X
+NAME_ANTIAIR;対空砲旅団;Anti-aircraft Brigade;;;;;;;;;X
+NAME_ENGINEER;工兵旅団;Engineer Brigade;;;;;;;;;X
+NAME_CAS;近接航空支援機;Close Air Support;;;;;;;;;X
+NAME_CAG;空母航空隊;Carrier Air Group;;;;;;;;;X
+SNAME_ARTILLERY;砲兵旅;Art;;;;;;;;;X
+SNAME_SP_ARTILLERY;自走砲;SP Art;;;;;;;;;X
+SNAME_ROCKET_ARTILLERY;ロケ砲;R Art;;;;;;;;;X
+SNAME_SP_ROCKET_ARTILLERY;自ﾛｹ砲;SP R Art;;;;;;;;;X
+SNAME_TANK_DESTROYER;駆逐戦;SP AT;;;;;;;;;X
+SNAME_HEAVY_ARMOR;重戦車;H Arm;;;;;;;;;X
+SNAME_SUPER_HEAVY_ARMOR;超重戦;SH Arm;;;;;;;;;X
+SNAME_ARMORED_CAR;装甲車;AC;;;;;;;;;X
+SNAME_ANTITANK;対戦車;AT;;;;;;;;;X
+SNAME_ANTIAIR;対空;AA;;;;;;;;;X
+SNAME_ENGINEER;工兵;Eng;;;;;;;;;X
+SNAME_POLICE;憲兵;Pol;;;;;;;;;X
+SNAME_CAS;近接支;CAS;;;;;;;;;X
+SNAME_CAG;艦載機;CAG;;;;;;;;;X
+SNAME_INFANTRY;歩兵;Inf;;;;;;;;;X
+SNAME_CAVALRY;騎兵;Cav;;;;;;;;;X
+SNAME_MOTORIZED;自動車;Mot;;;;;;;;;X
+SNAME_MECHANIZED;機械化;Mec;;;;;;;;;X
+SNAME_LIGHT_ARMOR;軽戦車;L Arm;;;;;;;;;X
+SNAME_ARMOR;戦車;Arm;;;;;;;;;X
+SNAME_PARATROOPER;空挺;Par;;;;;;;;;X
+SNAME_MARINE;海兵;Mar;;;;;;;;;X
+SNAME_BERGSJAEGER;山岳;Mtn;;;;;;;;;X
+SNAME_GARRISON;守備隊;Gar;;;;;;;;;X
+SNAME_HQ;司令部;HQ;;;;;;;;;X
+SNAME_INTERCEPTOR;迎撃機;Int F;;;;;;;;;X
+SNAME_MULTI_ROLE;戦闘機;Ftr;;;;;;;;;X
+SNAME_ESCORT;護衛戦;Esc F;;;;;;;;;X
+SNAME_STRATEGIC_BOMBER;戦略爆;Str;;;;;;;;;X
+SNAME_TACTICAL_BOMBER;戦術爆;Tac;;;;;;;;;X
+SNAME_NAVAL_BOMBER;対艦攻;Nav;;;;;;;;;X
+SNAME_TRANSPORT_PLANE;輸送機;Tra;;;;;;;;;X
+SNAME_BATTLESHIP;戦艦;BB;;;;;;;;;X
+SNAME_CRUISER;重巡;CA;;;;;;;;;X
+SNAME_LIGHT_CRUISER;軽巡;CL;;;;;;;;;X
+SNAME_HEAVY_CRUISER;重巡;CA;;;;;;;;;X
+SNAME_BATTLECRUISER;巡戦;BC;;;;;;;;;X
+SNAME_DESTROYER;駆逐;DD;;;;;;;;;X
+SNAME_CARRIER;空母;CV;;;;;;;;;X
+SNAME_SUBMARINE;潜水;SS;;;;;;;;;X
+SNAME_TRANSPORT;輸送;TP;;;;;;;;;X
+SNAME_FLYING_BOMB;V1;V1;;;;;;;;;X
+SNAME_FLYING_ROCKET;V2;V2;;;;;;;;;X
+SNAME_MILITIA;民兵;Mil;;;;;;;;;X
+SDESC_INFANTRY;歩兵師団;Infantry Division;;;;;;;;;X
+SDESC_CAVALRY;騎兵師団;Cavalry Division;;;;;;;;;X
+SDESC_MOTORIZED;自動車化歩兵師団;Motorized Infantry Division;;;;;;;;;X
+SDESC_MECHANIZED;機械化歩兵師団;Mechanized Infantry Division;;;;;;;;;X
+SDESC_LIGHT_ARMOR;軽戦車師団;Light Armored Division;;;;;;;;;X
+SDESC_ARMOR;戦車師団;Armored Division;;;;;;;;;X
+SDESC_PARATROOPER;空挺師団;Paratroop Division;;;;;;;;;X
+SDESC_MARINE;海兵師団;Marine Division;;;;;;;;;X
+SDESC_BERGSJAEGER;山岳師団;Mountain Division;;;;;;;;;X
+SDESC_GARRISON;守備師団;Garrison Division;;;;;;;;;X
+SDESC_HQ;司令部師団;HQ Division;;;;;;;;;X
+SDESC_CAS;近接航空支援師団;CAS Division;;;;;;;;;X
+SDESC_INTERCEPTOR;迎撃航空団;Interceptor Wing;;;;;;;;;X
+SDESC_MULTI_ROLE;戦闘航空団;Fighter Wing;;;;;;;;;X
+SDESC_ESCORT;護衛戦闘航空団;Escort Fighter Wing;;;;;;;;;X
+SDESC_STRATEGIC_BOMBER;戦略爆撃航空団;Strategic Bombing Wing;;;;;;;;;X
+SDESC_TACTICAL_BOMBER;戦術爆撃航空団;Tactical Bombing Wing;;;;;;;;;X
+SDESC_TRANSPORT_PLANE;輸送航空団;Transport Wing;;;;;;;;;X
+SDESC_NAVAL_BOMBER;海軍爆撃航空団;Naval Bomber Wing;;;;;;;;;X
+SDESC_BATTLESHIP;戦艦;Battleship;;;;;;;;;X
+SDESC_CRUISER;巡洋艦;Cruiser;;;;;;;;;X
+SDESC_LIGHT_CRUISER;軽巡洋艦;Light Cruiser;;;;;;;;;X
+SDESC_HEAVY_CRUISER;重巡洋艦;Heavy Cruiser;;;;;;;;;X
+SDESC_BATTLECRUISER;巡洋戦艦;Battlecruiser;;;;;;;;;X
+SDESC_DESTROYER;駆逐艦隊;Destroyer Flotilla;;;;;;;;;X
+SDESC_CARRIER;空母;Carrier;;;;;;;;;X
+SDESC_SUBMARINE;潜水艦隊;Submarine Flotilla;;;;;;;;;X
+SDESC_TRANSPORT;輸送艦隊;Transport Flotilla;;;;;;;;;X
+SDESC_MILITIA;民兵師団;Militia Division;;;;;;;;;X
+SDESC_FLYING_BOMB;飛行爆弾部隊;Flying Bomb Battery;;;;;;;;;X
+SDESC_FLYING_ROCKET;戦略ロケット部隊;Strategic Rocket Battery;;;;;;;;;X
+LDESC_INFANTRY;軍隊の主力はほとんどの場合、歩兵です。歩兵ユニットは比較的安価に編成できるうえ、定期的な燃料補給なしに戦闘や移動が行えます。しかし自動車などの高速な移動手段を持たないため、行軍速度は限られます。それでも歩兵は広い地域を占領したり、他の部隊が攻略した地域を確保したりできます。;Infantry will most likely make up the bulk of your army. They are relatively cheap to build and require no regular fuel supply to manoeuvre, but their lack of motorized transport means their speed of advance is limited. However, Infantry are able to occupy large areas of land, securing ground captured by other forces.;;;;;;;;;X
+LDESC_CAVALRY;騎兵は、ほとんどの地形をかなり高速で移動できるうえ、戦闘や移動に燃料を必要としません。しかし戦車部隊と比べると軽武装です。もしも敵から自動火器を浴びせられれば、兵士と馬の双方ともに壊滅的な損害を被ります。しかしまったく役に立たないわけではありません。必要な地域に即座に展開できる予備兵力としてなど、使い方によっては威力を発揮するでしょう。;Cavalry are able to move fairly rapidly over most types of terrain and do not require a supply of fuel to operate, but they are lightly armed when compared with Armoured units, and the automatic weapons of the time can inflict devastating casualties to both men and horses. That is not to say that Cavalry can't prove useful in some instances as a mobile reserve.;;;;;;;;;X
+LDESC_MOTORIZED;自動車化歩兵はトラックなどの装輪車両を利用することで、一般歩兵よりもはるかに素早く移動できます。しかし装輪車両が走れるのは道路に限られるので、インフラが整備されていないプロヴィンスでは、能力を十分発揮できない場合があります。;Motorized Infantry make use of wheeled vehicles, such as trucks, to manoeuvre more rapidly than basic Infantry. But they are limited to roads and so their performance may suffer in provinces with low infrastructure levels.;;;;;;;;;X
+LDESC_MECHANIZED;機械化歩兵はハーフトラック（半装軌車）などの全地形型車両を装備しており、自動車化歩兵のように移動が道路上に限られることもなく、十分に戦車部隊と連携して活動できます。しかしその特別装備ゆえに、生産コストは高くなります。;Mechanized Infantry are equipped with all-terrain vehicles, such as the halftrack, which does not limit them to roads as with Motorized Infantry and allows them to work well with armoured units. However, the specialist equipment they require means their cost is high.;;;;;;;;;X
+LDESC_LIGHT_ARMOR;地上戦において真の攻撃力を発揮するのが戦車です。そのスピードと火力であらゆる敵を粉砕できます（ただし強固な塹壕に立てこもる歩兵は除きます）。これほど強力な戦車ですが、重くなるほどスピードが鈍ります。また戦場に展開している限り、定期的な給油を必要とするため、燃料の補給が滞るとほとんど使い物にならなくなります。;Armoured units allow real projection of power on the battlefield. Their speed and firepower make them lethal against all but the best entrenched Infantry. However, as tanks become heavier, their speeds will reduce accordingly.  They also require a constant supply of fuel to remain in the field and if this vital supply is severed, the armoured unit will be almost useless.;;;;;;;;;X
+LDESC_ARMOR;地上戦において真の攻撃力を発揮するのが戦車です。そのスピードと火力であらゆる敵を粉砕できます（ただし強固な塹壕に立てこもる歩兵は除きます）。これほど強力な戦車ですが、重くなるほどスピードが鈍ります。また戦場に展開している限り、定期的な給油を必要とするため、燃料の補給が滞るとほとんど使い物にならなくなります。;Armoured units allow real projection of power on the battlefield. Their speed and firepower make them lethal against all but the best entrenched Infantry. However, as tanks became heaver, their speeds would reduce accordingly.  They also required a constant supply of fuel to remain in the field, and if this vital supply was severed, the armoured unit would be next to useless.;;;;;;;;;X
+LDESC_PARATROOPER;空挺兵は歩兵の中のエリート集団で、パラシュート降下およびグライダーによる戦場侵入を行うための特別な訓練を受けています。その持ち前の素早い展開能力を生かして、機動予備戦力や、敵後方の戦略拠点を確保する強襲部隊として用いるには最適な存在です。しかし移動手段の性質上、重火器の携行に制約があるので、彼らが活動を開始したら他の部隊を応援に向かわせるべきです。;Paratroopers are an elite branch of the Infantry, specifically trained to either parachute to the ground or be ferried to a battle in gliders. Their rapid deployment capability makes them ideal for use as a mobile reserve or for use in capturing a strategic asset behind enemy lines. However, they are handicapped by a lack of heavy equipment due to their mode of travel, and when they are in action it is advisable to move other units to their support.;;;;;;;;;X
+LDESC_MARINE;海兵は歩兵の中のエリート集団で、敵海岸線への強襲上陸といった海軍作戦を行うための特別な訓練を受けています。海兵隊は海岸での戦いにおいて、環境に適した特別な装備と戦術を駆使して、通常の歩兵を圧倒します。;Marines are an elite branch of the Infantry, specifically trained for assaulting beaches and other naval operations. They make use of specialised equipment and tactics to give them an edge over regular Infantry in such an environment.;;;;;;;;;X
+LDESC_BERGSJAEGER;山岳兵は歩兵の中のエリート集団で、山岳地帯における作戦活動が行えるように特別な訓練を受けています。山岳での戦いに投入されれば、環境に適した特別な装備と戦術を駆使して、通常の歩兵を圧倒します。;Mountain Troops are an elite branch of the Infantry, specifically trained for operations in mountainous terrain.  They make use of specialised equipment and tactics to give them an edge over regular Infantry in such an environment.;;;;;;;;;X
+LDESC_GARRISON;守備師団は、前線から遠く離れた重要地点を守るための2線級部隊です。移動手段を持たないために、戦略的再配備を除けば移動できません。重火器も装備されておらず、戦闘能力も限られています。しかし、こうした師団に後方を任せれば、戦闘能力の高い部隊を前線に回すことができます。;Garrison Divisions are second line troops used to safeguard valuable objectives far from the front lines. They lack heavy equipment and transportation, making them immobile except for strategic redeployment. They have limited fighting capability but can be used to free more capable troops for frontline use.;;;;;;;;;X
+LDESC_HQ;司令部は軍隊の頭脳であり、軍隊が活動するために欠かせない兵站管理や作戦計画を担当する参謀を抱えています。そのため司令部の近くで戦う部隊にはボーナスを与えられます。しかし司令部自体は戦闘能力は低いので、敵から守るようにしましょう。;Headquarters are the brains of your armed forces. They contain the staff that keeps your army running, such as logistics and planning staff. They give a bonus to the units fighting in the vicinity but it is advisable to guard them, as their own fighting ability is poor.;;;;;;;;;X
+LDESC_CAS;電撃戦戦術の鍵を握るのが近接航空支援機です。こうした航空機は敵部隊を正確に攻撃する能力を備えており、地上軍が迅速に敵戦線を突破するのを助けます。しかし近接航空支援機は構造が頑丈ながら低速なので、敵戦闘機の格好の獲物となってしまいます。;Close Air Support is the key to the blitzkrieg tactic. These planes have the ability to strike precisely at enemy units, enabling your ground forces to achieve a rapid breakthrough. They are slow, sturdy planes and this makes them an easy target for enemy fighters.;;;;;;;;;X
+LDESC_INTERCEPTOR;迎撃機は敵爆撃機を撃破するために作られた、短距離戦闘機です。高速で運動性に優れているため、爆撃機の防御機銃からも俊敏な動きで逃れることができます。しかも強力な武装を備え、装甲の厚い重爆撃機さえも十分撃墜できます。敵戦闘機に対しては、爆撃機ほどの戦果を望めませんが、それでも互角に戦えます。;Interceptors are short-range fighters designed to destroy enemy bombers. They have high speed and good manouverability to make them agile enough to evade the machine guns of the bombers, while having the firepower needed to disable a heavy, armoured bomber.  Against enemy fighters, they are less effective yet they still put up a good fight.;;;;;;;;;X
+LDESC_MULTI_ROLE;すべての空軍において屋台骨となるのが戦闘機です。その役割は制空権を確保すること、つまり敵の爆撃機や戦闘機と戦うことです。与えられたいかなる任務もこなせる万能選手ですが、特に優れた長所は持ち合わせていません。;Fighters are the backbone of any air force. They are used to achieve air superiority, engage enemy bombers and fighters. They are all-rounders, being able to fulfill any mission given to them, but excelling at none in particular.;;;;;;;;;X
+LDESC_ESCORT;護衛戦闘機は味方の爆撃機を護衛して、敵の迎撃機を近寄らせないために作られた長距離戦闘機です。こうした任務をこなすための戦術を訓練しており、爆撃機を護衛するとボーナスがもらえます。「制空権」任務では、あまり実力を発揮できません。;Escort Fighters are long-range fighters, designed to escort bombers and keep enemy interceptors from the bombers. They are drilled in tactics to achieve this mission and receive a bonus when escorting bombers. In Air Superiority missions, they are less effective.;;;;;;;;;X
+LDESC_STRATEGIC_BOMBER;戦略爆撃機は敵国の領土に大量の爆弾を投下し、工場とインフラを破壊することを目的とした大型航空機です。しかし長大な航続距離の代わりにスピードが遅いので、敵戦闘機の攻撃に対して脆弱です。;Strategic Bombers are the heaviest type of aircraft, designed to deliver a large payload of bombs to enemy provinces, with the aim of crippling his industry and infrastructure. However, the Strategic Bomber is slow despite its long range, which can make it vulnerable to attack by fighters.;;;;;;;;;X
+LDESC_TACTICAL_BOMBER;戦術爆撃機は中型の航空機で、戦闘機より大きいものの戦略爆撃機よりは小型です。戦車や歩兵といった敵地上部隊への攻撃を主な目的としています。ある程度の運動性能は備えているものの、敵戦闘機と空戦を行えば簡単に圧倒されてしまいます。;Tactical Bombers are medium-sized aircraft, larger than Fighters, yet smaller than Strategic Bombers, which are used primarily for delivering attacks against enemy ground units such as Armour and Infantry.  Although they have a limited dog-fighting capability, they can be easily outmatched by Fighters in air combat.;;;;;;;;;X
+LDESC_TRANSPORT_PLANE;輸送機は人員や資材・装備を素早く遠方に運ぶために作られています。空挺部隊が降下を行うときも、輸送機を必要とします。;Transport Planes are designed to ferry men and materials over long distances quickly. Paratroops need Transport Planes in order to make a paradrop.;;;;;;;;;X
+LDESC_BATTLESHIP;戦艦は海の女王です。敵主力艦に遠距離から砲弾を撃ち、海の底に葬り去るための海に浮かぶ巨大な砲台です。しかし今日では航空機や潜水艦の魚雷攻撃に対する脆弱を露呈し、さらに空母が出現したことで、その存在に終止符が打たれようとしています。;The Battleship is the Queen of the Sea. It is a massive floating gun platform, designed primarily to engage enemy capital ships at long range and send them to the bottom of the ocean. However, they are now vulnerable to air or submarine torpedo attacks, and the advent of the Aircraft Carrier has started to number their days.;;;;;;;;;X
+LDESC_LIGHT_CRUISER;軽巡洋艦は大型駆逐艦とほとんど大きさは変わりません。スピードと長い航続距離を伸ばすために、薄い装甲しか施していない場合がほとんどです。通常は、戦艦や空母などの主力艦を敵の航空機や潜水艦の攻撃から守る、護衛任務に使われます。;Light Cruisers are little more than large destroyers. They are usually lightly armored to give good speed and range. They are normally used in an escort role for capital ships like battleships or carriers, granting protection mainly from enemy air attacks, but also from enemy submarines.;;;;;;;;;X
+LDESC_HEAVY_CRUISER;重巡洋艦は軽巡洋艦よりもはるかに大きくて重装甲です。大口径の主砲により、陸上の敵を艦砲射撃できる能力を備えます。特に駆逐艦や軽巡洋艦といった敵の洋上艦には強いですが、航空機や潜水艦からの攻撃は受けやすいです。;Heavy Cruisers are larger and more heavily armored than their lighter counterparts. They have larger main guns, giving them the ability to bombard enemy units on land. They are effective against enemy surface ships, especially destroyers and light cruisers, but are susceptible to air and submarine attacks.;;;;;;;;;X
+LDESC_BATTLECRUISER;巡洋戦艦は、大口径の主砲と十分な装甲とともに、ある程度の高速性と長い航続距離を兼ね備えた、非常に大型の巡洋艦です。敵戦艦の追跡から逃れられるスピードと、船団護衛艦を打ち負かす攻撃力があることから、主に敵のシーレーンを攻撃するのに用いられます。;Battlecruisers are very heavy cruisers that combine large main guns and good armor with reasonable speed and a good range. They are mainly used against enemy shipping lanes, able to outrun enemy battleships and able to outfight convoy escorts.;;;;;;;;;X
+LDESC_DESTROYER;駆逐艦は洋上艦の中では最小かつ最速です。戦艦と比べれば装甲が薄いですが、そのスピードと運動性を生かし、艦隊の主力艦から離れた位置に強力な第1次防衛線を構築できます。小口径の主砲は、航空機との交戦において有効です。駆逐艦はたいてい集団で、船団護衛や対潜任務に用いられます。;The Destroyer is the smallest and the fastest of the surface ships. It is lightly armed in comparison with the battleship, but its speed and maneuverability allow it to provide a good first line of defence away from the main capital ships of a fleet, and its light guns are useful for engaging aircraft. Destroyers are usually combined in groups and used for convoy escort and anti-submarine duties.;;;;;;;;;X
+LDESC_CARRIER;空母は一躍、海軍の最重要艦に躍り出てきました。搭載された航空機を通じて発揮される空母の攻撃能力は、敵の主力艦や陸上兵力にとって危険極まりません。しかし、空母自体には軽い装甲が施されているに過ぎず、他の海軍部隊や自らの航空機に守ってもらわなくてはなりません。;The Aircraft Carrier is rapidly becoming the most important naval vessel. Its ability to project power through the aircraft it carries makes it dangerous to other capital ships and land forces. However, the ship itself is only lightly armed and must rely on other naval units, as well as its own aircraft, to afford it protection.;;;;;;;;;X
+LDESC_SUBMARINE;潜水艦は水中を航行できるように作られているので、敵の海軍部隊に発見されることなく攻撃が行えます。主武装である魚雷は、空母、戦艦、輸送艦、さらには敵潜水艦などあらゆる種類の艦船を沈められる強力な兵器です。しかし潜水艦は航続距離の短さを弱点として抱え、それを改良するための新技術の研究には非常にコストがかかります。;The Submarine is designed to travel underwater allowing it to operate clandestinely against other naval units. Its main armament consists of torpedoes which are deadly against all other types of vessel, be they Carrier, Battleship, Naval Transport or another Submarine. However, the Submarine can be handicapped by a short range and new technologies to improve them can be expensive.;;;;;;;;;X
+LDESC_TRANSPORT;輸送艦は物資や資源を世界中に運ぶために使われるほか、陸上部隊の水上輸送にも使われます。輸送艦はまったく武装を備えておらず、十分な護衛がないと、他の海軍部隊や航空機の攻撃によって簡単に沈められてしまいます。;Naval Transports are used for moving supplies and resources around the world. They can also be used to ferry land units across stretches of water. They are completely unarmed and, unless well protected, will be vulnerable to attack by other naval units or aircraft.;;;;;;;;;X
+LDESC_MILITIA;民兵は安上がりですぐに編成できる歩兵部隊です。短期間の訓練しか受けず、装備も貧弱ゆえに、戦闘ではほとんど役に立ちませんが、支配地域の治安維持や他の部隊を回せない状況での最後の防衛線として使うには便利な存在です。;Militia are a cheap and rapidly formed Infantry unit. Their hurried training and poor equipment mean they are of little use in combat, although they can be useful for controlling territory and as a last line of defence when no other units are available.;;;;;;;;;X
+LDESC_NAVAL_BOMBER;海軍爆撃機は海上戦闘に用いられ、敵の洋上艦に対して魚雷や徹甲爆弾による正確な戦術攻撃を行うための航空機です。格闘戦能力が限られているため、敵戦闘機の迎撃を受ければ撃墜される危険があります。;The Naval Bomber is designed for use over water and make accurate tactical strikes against enemy surface vessels using torpedoes or armour-piercing bombs.  They have a limited dog-fighting capability, which makes them vulnerable if intercepted by fighters.;;;;;;;;;X
+LDESC_FLYING_BOMB;飛行爆弾（例えばドイツ軍のV1）は、初期のジェットエンジンで推進する無人の航空機で、目標とするエリアに爆薬の詰まった弾頭を撃ちこむための兵器です。ロケットやミサイルよりも低速なので、敵戦闘機によって迎撃、撃墜されるおそれがあります。;The Flying Bomb (e.g. the German V1) is a pilotless aircraft powered by an early jet engine, designed to deliver a payload of explosives to an area target. It is slower than a rocket or missile, which means that it can be intercepted and shot down by enemy fighters.;;;;;;;;;X
+LDESC_FLYING_ROCKET;ロケットあるいは弾道ミサイル（例えばドイツ軍のV2）は、遠く離れた目標へ爆薬の詰まった弾頭を撃ちこむための兵器です。そのスピードゆえ迎撃することは事実上不可能ですが、通常弾頭を使って敵を破壊しても、普通の攻撃より割高になります。敵に精神的ダメージ以上の効果を期待するには、核兵器が必要です。;The Rocket or Ballistic Missile (e.g. the German V2) is designed to deliver a payload of explosives to a distant target. Its high speed makes it almost impossible to intercept but it is an expensive way of destroying the enemy with conventional explosives.  Nuclear weapons are needed to give it more than psychological effect.;;;;;;;;;X
+;;;;;;;;;;;X
+SDESC_ARTILLERY;この師団は砲兵旅団を有します。;This division has an artillery brigade.;;;;;;;;;X
+SDESC_SP_ARTILLERY;この師団は自走砲旅団を有します。;This division has a self-propelled artillery brigade.;;;;;;;;;X
+SDESC_ROCKET_ARTILLERY;この師団はロケット砲旅団を有します。;This division has a rocket artillery brigade.;;;;;;;;;X
+SDESC_SP_ROCKET_ARTILLERY;この師団は自走ロケット砲旅団を有します。;This division has a self-propelled rocket artillery brigade.;;;;;;;;;X
+SDESC_TANK_DESTROYER;この師団は駆逐戦車旅団を有します。;This division has a tank destroyer brigade.;;;;;;;;;X
+SDESC_LIGHT_ARMOR_BRIG;この師団は軽戦車旅団を有します。;This division has a light tank brigade;;;;;;;;;X
+SDESC_HEAVY_ARMOR;この師団は重戦車旅団を有します。;This division has a heavy tank brigade;;;;;;;;;X
+SDESC_SUPER_HEAVY_ARMOR;この師団は超重戦車旅団を有します。;This division has a super-heavy tank brigade;;;;;;;;;X
+SDESC_ARMORED_CAR;この師団は装甲車旅団を有します。;This division has an armored car brigade;;;;;;;;;X
+SDESC_ANTITANK;この師団は対戦車兵旅団を有します。;This division has an anti-tank brigade.;;;;;;;;;X
+SDESC_ANTIAIR;この師団は対空砲旅団を有します。;This division has an anti-aircraft brigade.;;;;;;;;;X
+SDESC_ENGINEER;この師団は工兵旅団を有します。;This division has an engineering brigade.;;;;;;;;;X
+SDESC_POLICE;この師団は憲兵旅団を有します。;This division has a police brigade.;;;;;;;;;X
+SDESC_CAG;この空母は空母航空隊を有します;This division has a carrier air group.;;;;;;;;;X
+LDESC_ARTILLERY;砲兵を配備した師団は、「対人攻撃力」が上がり、敵の一般歩兵や自動車化歩兵に与えるダメージが大きくなります。;Artillery pieces will increase the 'Soft Attack' capability of your units, inflicting more damage on Infantry and Motorized units.;;;;;;;;;X
+LDESC_SP_ARTILLERY;自走砲を配備した戦車師団や機械化師団は、敵歩兵に対する戦闘能力が向上します。しかも通常の砲兵部隊の場合と違い、配備した部隊の移動速度が落ちることはありません。;SP, or Self-Propelled, Artillery gives your armored and mechanized units an additional punch against enemy infantry while not reducing the speed of those units as much as normal artillery.;;;;;;;;;X
+LDESC_ROCKET_ARTILLERY;ロケット砲を配備した師団は、敵の非装甲ユニットに対する戦闘能力が上昇します。ロケット砲は、目標地域一帯に爆薬の詰まった弾頭の集中砲火を浴びせる面制圧兵器なので、歩兵部隊が集まっている場所に対して用いると最も効果的です。;Rocket Artillery gives your units an added capability against soft units. Rockets are an area weapon, saturating an area with explosions, and are thus most effective against Infantry concentrations.;;;;;;;;;X
+LDESC_SP_ROCKET_ARTILLERY;自走ロケット砲を配備した戦車師団および機械化師団は、歩兵のような非装甲ユニットに対する戦闘能力が上昇します。自走ロケット砲は敵の歩兵に対して非常に効果的なだけでなく、通常のロケット砲と違い、配備された快速部隊の移動スピードも落ちません。;SP, or Self-Propelled, Rocket Artillery gives your armored and mechanized units added capability against soft units such as infantry. They are very effective against enemy infantry, and do not reduce the speed of your fast units like normal rocket artillery.;;;;;;;;;X
+LDESC_TANK_DESTROYER;駆逐戦車は通常の戦車に近い存在ですが、回転砲塔を持たず、装甲のほとんどを前方方向に集中させている点が異なります。これを配備した部隊は、敵戦車部隊のような装甲ターゲットに対する戦闘能力が高まります。;Tank Destroyers are similar to normal Tanks. The difference is that they don't have a rotating turret, and mount most of their armor to the front. They give your units an added capability against hard targets such as enemy armor.;;;;;;;;;X
+LDESC_LIGHT_ARMOR_BRIG;軽戦車を配備したユニットは、敵戦車部隊のような装甲ターゲットに対する戦闘能力が上昇します。軽戦車は高速移送できるので回避能力が高く、鈍重な重戦車を使って仕留めることは困難です。この機動力を生かして、自分より重装甲な戦車の側面や背後に回りこみ、装甲の薄い部分を攻撃します。;Light Armor gives your units an added capability against hard targets such as enemy armor. Light Tanks are fast, evasive and therefore hard to kill using the more cumbersome heavy tanks. They use their mobility to strike at weaker armor on the sides and rear of heavier tanks.;;;;;;;;;X
+LDESC_HEAVY_ARMOR;重戦車を配備した師団は、対戦車攻撃力および対人攻撃力が飛躍的に向上します。重戦車はきわめて撃破されにくいので、敵陣を突破するときに用いられます。しかし弱点として重戦車は部隊の進撃速度を鈍らせ、かなりの量の補給物資と燃料を必要とします。;Heavy Armor gives your units a considerable boost in both hard and soft attack. Heavy Tanks are used when breaking enemy lines, being extremely hard to kill. But they slow your units down and require considerable amounts of supplies and fuel.;;;;;;;;;X
+LDESC_SUPER_HEAVY_ARMOR;超重戦車は究極の突撃兵器です。これを撃破することはほぼ不可能であり、配備した師団の対戦車攻撃力および対人攻撃力に恐ろしいほどのボーナスが加わります。しかし同時に膨大な量の補給物資と燃料を必要とし、配備した部隊の進撃速度は亀のように遅くなります。;Super Heavy Armor is the ultimate shock weapon. Nearly impossible to kill, they give horrendous bonuses to your units' hard and soft attack values. They also consume enormous amounts of supplies and fuel, and slow your units to a crawl.;;;;;;;;;X
+LDESC_ARMORED_CAR;装甲車は一般的に、薄い装甲板をめぐらせ若干の武装を備えた装輪車両です。これを配備した師団は、非装甲ターゲットに対する戦闘能力が向上します。とりわけ補給部隊のトラックや戦線後方にいる部隊を攻撃するのに効果的です。;Armored Cars are wheeled vehicles, typically with light armour and modest weaponry. They give your units an added capability against soft targets, being most effective against supply trucks and rear area troops.;;;;;;;;;X
+LDESC_ANTITANK;対戦車兵器を装備した師団は、対戦車攻撃力が向上し、敵戦車部隊や機械化部隊に対してより効果的な攻撃ができます。;Anti-Tank weapons will increase the 'Hard Attack' capability of your units, making them more effective against Armoured and Mechanized units.;;;;;;;;;X
+LDESC_ANTIAIR;対空兵器を配備した師団は、対空攻撃力が向上し、敵機に与えるダメージが増えます。;Anti-Aircraft weapons will increase the 'Air Attack' capability of your units, so that they inflict more damage on Aircraft.;;;;;;;;;X
+LDESC_ENGINEER;工兵旅団は渡河を手助けして師団の行軍を早め、指揮統率の低下を軽減します。;Engineer Brigades help crossing rivers, making the process quicker and reducing disorganisation.;;;;;;;;;X
+LDESC_POLICE;憲兵旅団は、パルチザンや反乱勢力を鎮圧するのに最適です。;Police Brigades are good at suppressing partisans and rebels.;;;;;;;;;X
+LDESC_CAG;1つの空母に搭載されたすべての航空機で、1つの空母航空隊を形成します。通常は、戦闘機、雷撃機、急降下爆撃機の混成部隊です。任務としては、空母の護衛や遠く離れた敵艦の攻撃を行います。;Carrier Air Groups represent the complement of planes stationed on carriers. They are usually a mix of fighters, torpedo and dive bombers which provide both protection for the carrier and allow it to strike enemy ships at a large distance.;;;;;;;;;X
+;;;;;;;;;;;X
+BINFO_STRENGTH;戦力;Strength;;;;;;;;;X
+BINFO_ORG;指揮統制;Organization;;;;;;;;;X
+BINFO_MOR;士気;Morale;;;;;;;;;X
+BINFO_HA;対戦車攻撃力;Hard Attack;;;;;;;;;X
+BINFO_SA;対人攻撃力;Soft Attack;;;;;;;;;X
+BINFO_AA;対空攻撃力;Air Attack;;;;;;;;;X
+BINFO_DD;防御度;Defensiveness;;;;;;;;;X
+BINFO_TD;耐久力;Toughness;;;;;;;;;X
+BINFO_SO;脆弱性;Softness;;;;;;;;;X
+BINFO_SP;制圧力;Suppression;;;;;;;;;X
+BINFO_EXP;経験値;Experience;;;;;;;;;X
+BINFO_AD;対空防御度;Air Defense;;;;;;;;;X
+BINFO_MS;最高速度;Maximum Speed;;;;;;;;;X
+BINFO_SU;物資消費量;Supply Consumption;;;;;;;;;X
+BINFO_FU;燃料消費量;Fuel Consumption;;;;;;;;;X
+BINFO_SD;対艦防御度;Sea Defense;;;;;;;;;X
+BINFO_SEA;対艦攻撃力;Sea Attack;;;;;;;;;X
+BINFO_SHOR;沿岸砲撃力;Shore Bombardment;;;;;;;;;X
+BINFO_RANGE;作戦行動半径;Range;;;;;;;;;X
+BINFO_SDC;対艦索敵力;Sea Detection Capability;;;;;;;;;X
+BINFO_ADC;対空索敵力;Air Detection Capability;;;;;;;;;X
+BINFO_VIS;被発見性;Visibility;;;;;;;;;X
+BINFO_STR;戦略爆撃;Strategic Attack;;;;;;;;;X
+BINFO_NAV;対艦攻撃力;Naval Attack;;;;;;;;;X
+BINFO_SUD;対地対艦防御度;Surface Defense;;;;;;;;;X
+BINFO_SUC;対潜索敵力;Sub Detection Capability;;;;;;;;;X
+BINFO_SUA;対潜攻撃力;Sub Attack;;;;;;;;;X
+;;;;;;;;;;;X
+DAY_MISSION;昼;Day;;;;;;;;;X
+NIGHT_MISSION;夜;Night;;;;;;;;;X
+BOTH_MISSION;両方;Both;;;;;;;;;X
+FREQ_MISSION;戦力/統制%d\%%以下で中止;Stop if Str/Org below %d \%%;;;;;;;;;X
+TITLE_MISSION;%sへの%s;%s on %s;;;;;;;;;X
+;;;;;;;;;;;X
+MISSION_NONE;なし;None;;;;;;;;;X
+MISSION_ATTACK;攻撃;Attack;;;;;;;;;X
+MISSION_REBASE;基地移動;Rebase;;;;;;;;;X
+MISSION_STRAT_REDEPLOY;戦略的再配備;Strategic Redeployment;;;;;;;;;X
+MISSION_SUPPORT_ATTACK;支援攻撃;Support Attack;;;;;;;;;X
+MISSION_SUPPORT_DEFENSE;防戦支援;Support Defense;;;;;;;;;X
+MISSION_RESERVES;待機;Reserves;;;;;;;;;X
+MISSION_ANTI_PARTISAN_DUTY;パルチザン掃討;Anti-Partisan Duty;;;;;;;;;X
+MISSION_AIR_SUPERIORITY;制空権;Air Superiority;;;;;;;;;X
+MISSION_GROUND_ATTACK;地上攻撃;Ground Attack;;;;;;;;;X
+MISSION_RUNWAY_CRATERING;空港空爆;Runway Cratering;;;;;;;;;X
+MISSION_INSTALLATION_STRIKE;軍事施設攻撃;Installation Strike;;;;;;;;;X
+MISSION_INTERDICTION;阻止攻撃;Interdiction;;;;;;;;;X
+MISSION_NAVAL_STRIKE;艦船攻撃;Naval Strike;;;;;;;;;X
+MISSION_PORT_STRIKE;港湾攻撃;Port Strike;;;;;;;;;X
+MISSION_LOGISTICAL_STRIKE;兵站攻撃;Logistical Strike;;;;;;;;;X
+MISSION_STRATEGIC_BOMBARDMENT;戦略爆撃;Strategic Bombardment;;;;;;;;;X
+MISSION_AIR_SUPPLY;空輸補給;Air Supply;;;;;;;;;X
+MISSION_AIRBORNE_ASSAULT;空挺強襲;Airborne Assault;;;;;;;;;X
+MISSION_CONVOY_RAIDING;船団襲撃;Convoy Raiding;;;;;;;;;X
+MISSION_ASW;対潜作戦;ASW;;;;;;;;;X
+MISSION_NAVAL_INTERDICTION;海上阻止;Naval Interdiction;;;;;;;;;X
+MISSION_SHORE_BOMBARDMENT;沿岸砲撃;Shore Bombardment;;;;;;;;;X
+MISSION_AMPHIBOUS_ASSAULT;強襲上陸;Amphibious Assault;;;;;;;;;X
+MISSION_SEA_TRANSPORT;海上輸送;Sea Transport;;;;;;;;;X
+MISSION_NAVAL_COMBAT_PATROL;海上戦闘哨戒;Naval Combat Patrol;;;;;;;;;X
+MISSION_CONVOY_AIR_RAIDING;船団爆撃;Bomb Convoys;;;;;;;;;X
+MISSION_NAVAL_PORT_STRIKE;空母による港湾攻撃;Carrier strike on Port;;;;;;;;;X
+MISSION_NAVAL_AIRBASE_STRIKE;空母による航空基地攻撃;Carrier strike on Airbase;;;;;;;;;X
+MISSION_NUKE;核攻撃;Nuke;;;;;;;;;X
+MISSION_RETREAT;退却;Retreat;;;;;;;;;X
+MISSION_DESC_ATTACK;「攻撃」任務は、敵が占領するプロヴィンスを攻略するときに使います。この任務を命じられた師団は目標とするプロヴィンスに移動を始め、そこに駐留する敵部隊と戦闘を交えることになります。;Attack missions are given when you want to conquer a province held by the enemy. Your divisions will start to move into the province and fight with any enemy units stationed there.;;;;;;;;;X
+MISSION_DESC_REBASE;「基地移動」任務は、航空ユニットを別の飛行場へ移動させるときに使います。新しい基地へ移動を完了した航空機は、そこから新たな任務を行うことができるようになります。;Rebase missions are given when you want to redeploy your air units between airfields. The aircraft will then be stationed at a different airfield and be able to stage other missions from there. ;;;;;;;;;X
+MISSION_DESC_REBASE_NAVAL;「基地移動」任務は、任務部隊に、今までとは別の海軍基地で物資と燃料の補給を行わせるときに命じます。これは陸上ユニットを搭載したり、下船させたりするために、母港は同じままで別の港に入港することとは違います。;Rebase missions are used to send your task force to another naval base, changing the supply and oil source for the naval task force to that base. This is different from entering a harbor to load or unload troops which does not change basing.;;;;;;;;;X
+MISSION_DESC_STRAT_REDEPLOY;「戦略的再配備」任務とは、鉄道を使って部隊を移動させることです。戦略的再配備を遂行中のユニットは戦うことができません。また戦略的再配備を使って移動できるユニットの数も限られています。;Strategic Redeployment is the movement of units via rail transport. Your units cannot fight while being strategic redeployed and your ability to transport units that way is limited.;;;;;;;;;X
+MISSION_DESC_SUPPORT_ATTACK;「支援攻撃」任務を命じられたユニットは、ターゲットにしたプロヴィンスの敵部隊と交戦しますが、戦いに勝利してもそこへ移動はしません。それゆえ、攻略部隊の中の少なくとも1つのユニットには「攻撃」任務を与えて、プロヴィンスを占領できるようにしておくほうが良いでしょう。;Units with a Support Attack mission will engage enemy units in the province you specify, but will not move into the attacked province when they win the battle. Therefore, it is advisable to give at least one of your attacking armies an attack mission so that they occupy the province.;;;;;;;;;X
+MISSION_DESC_SUPPORT_DEFENSE;「防御支援」任務はユニットに命じておけば、敵の攻撃が始まるまで、そのユニットを戦線後方にとどめておくことができます。この任務を与えられたすべての師団は、あらかじめ指定したプロヴィンスに敵が攻撃を始めると、そのプロヴィンスを守る戦いに加わります。;Support Defense missions enable you to keep your units behind the front lines until the enemy attack has started. Any division with this mission will join the defense of the specified province after the enemy attack has started.;;;;;;;;;X
+MISSION_DESC_RESERVES;「待機」任務を命じられたユニットは戦線の後方にとどまり、隣接したプロヴィンスのいずれかが敵の攻撃にさらされると、自動的に支援に向かいます。あらかじめプロヴィンスを指定しておく「防御支援」任務とは異なります。;Units with Reserves missions are stationed behind the front lines. They will automatically support any province adjacent to them that is under enemy attack.;;;;;;;;;X
+MISSION_DESC_ANTI_PARTISAN_DUTY;「パルチザン掃討」任務を命じられた師団は、駐留するプロヴィンスあるいは隣接したプロヴィンスでのパルチザン活動を鎮圧します。この師団が駐留するプロヴィンスでは、パルチザンの活動の発生頻度が時間とともに減少します。;Anti-Partisan Duty missions mean that the division will counter any partisan activity in its location or in an adjacent province. The partisan activity rating in the province will decrease over time.;;;;;;;;;X
+MISSION_DESC_AIR_SUPERIORITY;「制空権」任務は戦闘機隊に命じます。この任務を命じられた戦闘機隊は指定されたエリアを哨戒し、遭遇した敵機と交戦します。;Air Superiority missions are given to fighter units. They will patrol the target area and engage any enemy planes they encounter.;;;;;;;;;X
+MISSION_DESC_GROUND_ATTACK;「地上攻撃」任務は近接航空支援航空隊、または戦術爆撃航空隊に命じます。この任務を命じられたユニットは目標エリアの敵地上部隊を攻撃して、その戦力を減少させます。;Ground Attack missions are given to Close Air Support or Tactical Bomber squadrons. They will attack enemy ground units in the target area, reducing their strength.;;;;;;;;;X
+MISSION_DESC_RUNWAY_CRATERING;「空港空爆」任務は敵空軍基地を攻撃します。基地の規模レベルを低下させ、そこに駐機中の航空機に損害を与えます。;Runway Cratering missions are targeted against enemy airfields. They will reduce the airfield level, limiting the number of air units that can be stationed there.;;;;;;;;;X
+MISSION_DESC_INSTALLATION_STRIKE;「軍事施設攻撃」任務は、対空砲、レーダー施設、核施設、ロケット発射設備など、目標エリアの防衛施設を標的とします。;Installation Strike missions target the defense installations in the target area, such as AA guns, radar installations, nuclear and rocket facilities.;;;;;;;;;X
+MISSION_DESC_INTERDICTION;「阻止攻撃」任務は近接航空支援飛行隊、または戦術爆撃飛行隊に命じます。この任務を命じられたユニットは目標エリアの敵部隊を攻撃し、通信網を寸断することで、敵ユニットの指揮統制レベルを減少させます。;Interdiction missions are given to your Close Air Support or Tactical Bomber squadrons. They will attack enemy units in the target area and strike their communications, thus reducing their organization level.;;;;;;;;;X
+MISSION_DESC_NAVAL_STRIKE;「艦船攻撃」任務は、目標エリアを航行する敵艦船を撃沈するか、あるいは損害を与えることを目的としています。;Naval Strike missions target enemy warships in the target sea area. attempting to sink or damage them.;;;;;;;;;X
+MISSION_DESC_PORT_STRIKE;「港湾攻撃」任務は、目標エリアの港湾施設を標的として、湾内に停泊する艦船を攻撃します。;Port Strike missions are targeted at the port facilities of the target area, attempting to hit any ships in port there.;;;;;;;;;X
+MISSION_DESC_LOGISTICAL_STRIKE;「兵站攻撃」任務は、目標とするプロヴィンスのインフラを攻撃します。その結果、インフラのレベルは低下し、敵部隊は行動が阻害され、物資の補給効率が低下します。;Logistical Strike missions are targeted at the infrastructure level of the provinces in the target area. This will hamper enemy unit movement and reduce their supply efficiency.;;;;;;;;;X
+MISSION_DESC_STRATEGIC_BOMBARDMENT;「戦略爆撃」任務は、目標エリアの敵プロヴィンスをまんべんなく攻撃します。そうすれば、敵の物資やユニットの生産能力、防衛設備やインフラのレベルが低下します。この任務が行えるのは、戦略爆撃機だけです。;Strategic Bombardment missions target the enemy's industry. This will reduce his ability to produce supplies, new units and also affect his Transport Capacity. They can only be performed by strategic bomber units.;;;;;;;;;X
+MISSION_DESC_AIR_SUPPLY;「空輸」任務は輸送機に命じます。これを命じられた部隊は、包囲されている陸上ユニットが戦闘能力を維持できるように、包囲が解かれるまでの間、そのユニットへ物資の供給を試みます。;Air Supply missions are given to transport planes. They will attempt to ferry supplies to your encircled troops, maintaining their fighting efficiency until they can be relieved.;;;;;;;;;X
+MISSION_DESC_AIRBORNE_ASSAULT;「空挺強襲」任務は、空挺師団を乗り込ませた輸送機に命じます。空挺兵は指定した場所に降下し、そのプロヴィンスを確保しようとします。;Airborne Assault missions are given to transport planes that have been loaded with paratroop divisions. The paratroops will be dropped at the specified place and attempt to take that province.;;;;;;;;;X
+MISSION_DESC_CONVOY_RAIDING;「船団襲撃」任務とは、敵の船団を攻撃することです。これにより敵国は基地や海外プロヴィンスとの間の物資や資源の流れが滞ります。;Convoy Raiding missions strike at enemy convoys, reducing the movement of resources and supplies between his bases and overseas provinces.;;;;;;;;;X
+MISSION_DESC_ASW;「対潜作戦」任務を行う艦船は、エリア内にいる敵潜水艦を探し出して攻撃します。軽空母、駆逐艦、軽巡洋艦など、最高の対潜攻撃装備を持つ艦船が、この任務に最適です。;Ships on ASW missions will seek out and attack any enemy submarines in the area. This mission is best given to Carriers, Destroyers and Light Cruisers, as they are best equipped for sub hunting.;;;;;;;;;X
+MISSION_DESC_NAVAL_INTERDICTION;「海上阻止」任務が与えられた艦隊は目標エリアを哨戒して、進入してきた敵艦を攻撃します。;Naval Interdiction missions assign your fleets to patrol and engage any enemy ships entering the target area.;;;;;;;;;X
+MISSION_DESC_SHORE_BOMBARDMENT;「沿岸砲撃」任務は、主力艦（戦艦、巡洋戦艦、重巡洋艦）しか行うことができません。これを命じられた艦船は、指定エリア内の敵部隊に艦砲射撃を加えます。さらに、隣接する沿岸プロヴィンスで戦闘を行っている味方の部隊のためにも、自動的に援護射撃を行います。;Shore Bombardment missions can only be given to capital ships: battleships, battlecruisers and heavy cruisers. The ships will shell enemy units in the specified area. Furthermore, ships will automatically support any friendly unit in combat in a coastal province that is adjacent to them.;;;;;;;;;X
+MISSION_DESC_AMPHIBOUS_ASSAULT;「強襲上陸」任務は陸上ユニットを乗せた輸送艦に命じます。輸送艦から上陸した海兵やその他の師団は、海岸を強襲して確保しようとします。;Amphibious Assault missions are given to naval transports. They will unload marine and other divisions, which will attempt to take the beach by assault.;;;;;;;;;X
+MISSION_DESC_SEA_TRANSPORT;「海上輸送」任務は、陸上ユニットを乗せた輸送艦が行います。指定されたプロヴィンスに師団を上陸させた後、船は母港に戻ります。;Sea Transport missions are given to naval transports that have land units loaded on them. They will unload the divisions in the specified province and then return to their home port.;;;;;;;;;X
+MISSION_DESC_NAVAL_COMBAT_PATROL;「海上戦闘哨戒」任務を命じられた艦船は、対象地域の海域を哨戒し、遭遇するすべての敵艦と交戦します。戦闘哨戒は阻止攻撃よりも広いエリアをカバーしているため、敵艦を発見する確率は当然ながら低くなります。;Ships on a Naval Combat Patrol mission patrol the seazones of the target region and engage any enemy ships they encounter. Because combat patrol covers a larger area than interdiction, your chance of spotting an enemy naval force is correspondingly lower.;;;;;;;;;X
+MISSION_DESC_CONVOY_AIR_RAIDING;「船団爆撃」任務は、対艦爆撃能力を備えた爆撃機が行います。この任務を命じられた爆撃機は、目標エリア内の敵船団を攻撃して、敵が物資や資源を海上輸送する能力を削ぎます。;Bomb Convoy missions are given to bombers with the naval bombing capability. The planes will strike at enemy convoys in the target area, reducing the enemy's ability to move supplies and resources by sea.;;;;;;;;;X
+MISSION_DESC_NAVAL_PORT_STRIKE;「空母による港湾攻撃」任務は、空母に搭載されている空母航空隊が行います。これを命じられた艦載機は港湾内の敵艦船を攻撃します。;Carrier Strike on Port missions are given to the Carrier Air Group of an aircraft carrier. The carrier planes will target enemy ships in the port.;;;;;;;;;X
+MISSION_DESC_NAVAL_AIRBASE_STRIKE;「空母による航空基地攻撃」任務は、空母に搭載されている空母航空隊に命じます。この任務を命じられた艦載機は滑走路を攻撃して、施設のレベルを低下させることで、その基地を利用できる敵機の数を減らします。;Carrier strike on Airbase missions are given to the Carrier Air Group of an aircraft carrier. The carrier planes will target enemy runways, lowering their level and thus limiting the number of planes the enemy can base there.;;;;;;;;;X
+MISSION_DESC_NUKE;「核攻撃」任務は、史上空前の威力を持った大爆発を引き起こします。実験報告はこう書かれています：「1000個の太陽よりも眩しい。私は死に神になった。世界の破壊者になったのだ！」;A nuclear strike mission causes an explosion of unprecedented force. Reports from testing say: Brighter than a thousand suns. I am become death, the destroyer of worlds!;;;;;;;;;X
+NAME_ESCORT_CARRIER;軽空母;Light Carrier;;;;;;;;;X
+SNAME_ESCORT_CARRIER;軽空;CVL;;;;;;;;;X
+SDESC_ESCORT_CARRIER;軽空母;Light Carrier;;;;;;;;;X
+LDESC_ESCORT_CARRIER;戦争後期に入り、重要性を増していった海軍艦船です。軽空母は輸送船団の護衛、敵潜水艦の掃討、さらに艦載機による強襲上陸作戦の支援といった任務を遂行でき非常に有用で費用対効果が高く、高価な艦隊空母を他の重要な任務に回せるようになりました。しかし軽空母自体にほとんど武装はなく、装甲も脆弱で、排水量も艦隊空母と比べ格段に少ないです。;The Light Carrier became an important naval vessel later in the war. Its ability to protect convoys, actively hunt submarines and support amphibious operations through the aircraft it carries made it very useful and cost effective, freeing up the more expensive fleet carriers for other tasks. The ships themselves, however, are only lightly armed, lightly armored, and of far smaller displacement than fleet carriers.;;;;;;;;;X
+NAME_NUCLEAR_SUBMARINE;重潜水艦;Nuclear Submarine;;;;;;;;;X
+SNAME_NUCLEAR_SUBMARINE;重潜;SSN;;;;;;;;;X
+SDESC_NUCLEAR_SUBMARINE;重潜水艦;Nuclear Submarine;;;;;;;;;X
+LDESC_NUCLEAR_SUBMARINE;重潜水艦は水上偵察機を装備した長距離航行が可能な潜水艦です。また、種類によってはある程度の沿岸砲撃能力を有し、姿を隠したまま陸上を脅かすことも出来ます。;Nuclear Submarine;;;;;;;;;X
+NAME_NAVAL_ASW;対潜兵装;;;;;;;;;;X
+NAME_NAVAL_ANTI_AIR_S;後部航空甲板;;;;;;;;;;X
+NAME_NAVAL_RADAR_S;副砲;;;;;;;;;;X
+NAME_NAVAL_FIRE_CONTROLL_S;射撃管制;;;;;;;;;;X
+NAME_NAVAL_IMPROVED_HULL_S;補助艦改良型船体;;;;;;;;;;X
+NAME_NAVAL_TORPEDOES_S;ロケット兵装;;;;;;;;;;X
+NAME_NAVAL_ANTI_AIR_L;対空兵装;;;;;;;;;;X
+NAME_NAVAL_RADAR_L;艦載レーダー;;;;;;;;;;X
+NAME_NAVAL_FIRE_CONTROLL_L;射撃管制装置;;;;;;;;;;X
+NAME_NAVAL_IMPROVED_HULL_L;改良型船体;;;;;;;;;;X
+NAME_NAVAL_TORPEDOES_L;魚雷;;;;;;;;;;X
+SNAME_NAVAL_ASW;対潜兵装;;;;;;;;;;X
+SNAME_NAVAL_ANTI_AIR_S;後部航空甲板;;;;;;;;;;X
+SNAME_NAVAL_RADAR_S;副砲;;;;;;;;;;X
+SNAME_NAVAL_FIRE_CONTROLL_S;射管;;;;;;;;;;X
+SNAME_NAVAL_IMPROVED_HULL_S;改体;;;;;;;;;;X
+SNAME_NAVAL_TORPEDOES_S;ロケット兵装;;;;;;;;;;X
+SNAME_NAVAL_ANTI_AIR_L;対空兵装;;;;;;;;;;X
+SNAME_NAVAL_RADAR_L;電探;;;;;;;;;;X
+SNAME_NAVAL_FIRE_CONTROLL_L;射撃管制装置;;;;;;;;;;X
+SNAME_NAVAL_IMPROVED_HULL_L;改良型船体;;;;;;;;;;X
+SNAME_NAVAL_TORPEDOES_L;魚雷;;;;;;;;;;X
+SDESC_NAVAL_ASW;この艦船は対潜兵装を有します。;;;;;;;;;;X
+SDESC_NAVAL_ANTI_AIR_S;この艦船は後部飛行甲板を有します。;;;;;;;;;;X
+SDESC_NAVAL_RADAR_S;この艦船は追加の副砲を有します。;;;;;;;;;;X
+SDESC_NAVAL_FIRE_CONTROLL_S;この艦船は射撃管制装置を有します。;;;;;;;;;;X
+SDESC_NAVAL_IMPROVED_HULL_S;重要箇所の装甲を強化し、水密区画を増やすことで、船の生存性を向上させます。;;;;;;;;;;X
+SDESC_NAVAL_TORPEDOES_S;この艦船は噴進砲を有します。;;;;;;;;;;X
+SDESC_NAVAL_ANTI_AIR_L;この艦船は追加の対空砲を有します。;;;;;;;;;;X
+SDESC_NAVAL_RADAR_L;この艦船はレーダーを有します。;;;;;;;;;;X
+SDESC_NAVAL_FIRE_CONTROLL_L;この艦船は射撃管制装置を有します。;;;;;;;;;;X
+SDESC_NAVAL_IMPROVED_HULL_L;この艦船は船体の改良が施されています。;;;;;;;;;;X
+SDESC_NAVAL_TORPEDOES_L;この艦船は雷装を有します。;;;;;;;;;;X
+LDESC_NAVAL_ASW;ソナーと対潜兵器を強化し、敵潜水艦の探知・撃沈能力を向上させます。;;;;;;;;;;X
+LDESC_NAVAL_ANTI_AIR_S;艦の後部に航空甲板を設置し、空母には劣るものの航空機の運用を可能にします。;;;;;;;;;;X
+LDESC_NAVAL_RADAR_S;主砲よりも口径の小さい砲を複数配置して、艦艇の火力増強を図ります。;;;;;;;;;;X
+LDESC_NAVAL_FIRE_CONTROLL_S;機械式計算機を用いて発射諸元の計算および修正を行うことで、砲撃の射程と命中精度を向上させます。;;;;;;;;;;X
+LDESC_NAVAL_IMPROVED_HULL_S;重要箇所の装甲を強化し、水密区画を増やすことで、船の生存性を向上させます。;;;;;;;;;;X
+LDESC_NAVAL_TORPEDOES_S;自立推進式の爆弾です。研究が進むにつれて飛距離も伸び、誘導性を持つものも開発されます。;;;;;;;;;;X
+LDESC_NAVAL_ANTI_AIR_L;対空火器と目標照準システムを強化し、敵機との交戦能力を向上させます。;;;;;;;;;;X
+LDESC_NAVAL_RADAR_L;水上監視レーダーを強化し、敵海軍部隊や輸送船団の探知能力を向上させます。;;;;;;;;;;X
+LDESC_NAVAL_FIRE_CONTROLL_L;機械式計算機を用いて発射諸元の計算および修正を行うことで、砲撃の射程と命中精度を向上させます。;;;;;;;;;;X
+LDESC_NAVAL_IMPROVED_HULL_L;重要箇所の装甲を強化し、水密区画を増やすことで、船の生存性を向上させます。;;;;;;;;;;X
+LDESC_NAVAL_TORPEDOES_L;魚雷目標照準システムを近代化し、最新型の魚雷を搭載することで、艦船攻撃がより効果的に行えます。;;;;;;;;;;X
+;;;;;;;;;;;X
+;;;;;;;;;;;X
+;;;;;;;;;;;X
+MODEL_0_0;歩兵 '18;;;;;;;;;;X
+MODEL_0_1;歩兵 '36;;;;;;;;;;X
+MODEL_0_2;歩兵 '39;;;;;;;;;;X
+MODEL_0_3;歩兵 '41;;;;;;;;;;X
+MODEL_0_4;歩兵 '43;;;;;;;;;;X
+MODEL_0_5;歩兵 '45;;;;;;;;;;X
+MODEL_1_0;騎兵 '18;;;;;;;;;;X
+MODEL_1_1;騎兵 '36;;;;;;;;;;X
+MODEL_1_2;騎兵 '39;;;;;;;;;;X
+MODEL_1_3;半自動車化騎兵 '39;;;;;;;;;;X
+MODEL_1_4;装甲騎兵 '46;;;;;;;;;;X
+MODEL_1_5;航空騎兵 '51;;;;;;;;;;X
+MODEL_1_6;航空騎兵 '56;;;;;;;;;;X
+MODEL_1_7;航空騎兵 '61;;;;;;;;;;X
+MODEL_2_0;自動車化歩兵 '40;;;;;;;;;;X
+MODEL_2_1;自動車化歩兵 '42;;;;;;;;;;X
+MODEL_2_2;自動車化歩兵 '44;;;;;;;;;;X
+MODEL_2_6;自動車化歩兵 '61;;;;;;;;;;X
+MODEL_3_0;機械化歩兵 '42;;;;;;;;;;X
+MODEL_3_1;機械化歩兵 '43;;;;;;;;;;X
+MODEL_3_2;機械化歩兵 '44;;;;;;;;;;X
+MODEL_3_3;機械化歩兵 '45;;;;;;;;;;X
+MODEL_3_7;機械化歩兵 '61;;;;;;;;;;X
+MODEL_3_8;W.A.V.E.S.;;;;;;;;;;X
+MODEL_3_9;Hi-W.A.V.E.S.;;;;;;;;;;X
+MODEL_4_0;豆戦車;;;;;;;;;;X
+MODEL_4_1;基本型軽戦車;;;;;;;;;;X
+MODEL_4_2;改良型軽戦車;;;;;;;;;;X
+MODEL_4_3;発展型軽戦車;;;;;;;;;;X
+MODEL_4_4;準現代型軽戦車;;;;;;;;;;X
+MODEL_4_5;空;;;;;;;;;;X
+MODEL_4_6;発展型軽戦車;;;;;;;;;;X
+MODEL_4_7;準現代型軽戦車;;;;;;;;;;X
+MODEL_4_8;空;;;;;;;;;;X
+MODEL_5_0;第一次世界大戦型戦車;;;;;;;;;;X
+MODEL_5_1;初期型戦車;;;;;;;;;;X
+MODEL_5_2;基本型中戦車;;;;;;;;;;X
+MODEL_5_3;改良型中戦車;;;;;;;;;;X
+MODEL_5_4;発展型中戦車;;;;;;;;;;X
+MODEL_5_5;準現代型戦車;;;;;;;;;;X
+MODEL_5_8;冷戦型主力戦車;;;;;;;;;;X
+MODEL_5_9;現代型主力戦車;;;;;;;;;;X
+MODEL_6_0;空挺兵 '39;;;;;;;;;;X
+MODEL_6_1;空挺兵 '41;;;;;;;;;;X
+MODEL_6_2;空挺兵 '43;;;;;;;;;;X
+MODEL_6_3;空挺兵 '45;;;;;;;;;;X
+MODEL_6_7;空挺兵 '61;;;;;;;;;;X
+MODEL_7_0;海兵 '36;;;;;;;;;;X
+MODEL_7_1;海兵 '39;;;;;;;;;;X
+MODEL_7_2;海兵 '41;;;;;;;;;;X
+MODEL_7_3;海兵 '43;;;;;;;;;;X
+MODEL_7_7;海兵 '61;;;;;;;;;;X
+MODEL_8_0;山岳兵 '36;;;;;;;;;;X
+MODEL_8_1;山岳兵 '39;;;;;;;;;;X
+MODEL_8_2;山岳兵 '41;;;;;;;;;;X
+MODEL_8_3;山岳兵 '43;;;;;;;;;;X
+MODEL_8_7;山岳兵 '61;;;;;;;;;;X
+MODEL_9_0;守備隊 '18;;;;;;;;;;X
+MODEL_9_1;守備隊 '39;;;;;;;;;;X
+MODEL_9_2;守備隊 '43;;;;;;;;;;X
+MODEL_9_3;守備隊 '46;;;;;;;;;;X
+MODEL_9_4;守備隊 '56;;;;;;;;;;X
+MODEL_10_0;司令部 '36;;;;;;;;;;X
+MODEL_10_1;司令部 '39;;;;;;;;;;X
+MODEL_10_2;司令部 '43;;;;;;;;;;X
+MODEL_10_3;司令部 '46;;;;;;;;;;X
+MODEL_10_4;司令部 '50;;;;;;;;;;X
+MODEL_10_5;司令部 '59;;;;;;;;;;X
+MODEL_11_0;民兵 '36;;;;;;;;;;X
+MODEL_11_1;民兵 '43;;;;;;;;;;X
+MODEL_11_2;民兵 '46;;;;;;;;;;X
+MODEL_11_3;民兵 '56;;;;;;;;;;X
+MODEL_12_0;基本型戦闘機;;;;;;;;;;X
+MODEL_12_1;改良型戦闘機;;;;;;;;;;X
+MODEL_12_2;発展型戦闘機;;;;;;;;;;X
+MODEL_12_3;基本型ターボジェット戦闘機;;;;;;;;;;X
+MODEL_12_4;改良型ターボジェット戦闘機;;;;;;;;;;X
+MODEL_12_6;改善型超音速戦闘機;;;;;;;;;;X
+MODEL_12_7;発展型超音速戦闘機;;;;;;;;;;X
+MODEL_12_8;準現代型超音速戦闘機;;;;;;;;;;X
+MODEL_12_9;現代型超音速戦闘機;;;;;;;;;;X
+MODEL_13_0;大戦間期型戦闘機;;;;;;;;;;X
+MODEL_13_1;初期型戦闘機;;;;;;;;;;X
+MODEL_13_2;基本型迎撃機;;;;;;;;;;X
+MODEL_13_3;改良型迎撃機;;;;;;;;;;X
+MODEL_13_4;発展型迎撃機;;;;;;;;;;X
+MODEL_13_5;基本型ロケット迎撃機;;;;;;;;;;X
+MODEL_13_6;改良型ロケット迎撃機;;;;;;;;;;X
+MODEL_13_7;基本型ターボジェット迎撃機;;;;;;;;;;X
+MODEL_13_8;発展型ターボジェット迎撃機;;;;;;;;;;X
+MODEL_14_0;基本型戦略爆撃機;;;;;;;;;;X
+MODEL_14_1;改良型戦略爆撃機;;;;;;;;;;X
+MODEL_14_2;発展型戦略爆撃機;;;;;;;;;;X
+MODEL_14_3;ターボジェット戦略爆撃機;;;;;;;;;;X
+MODEL_14_5;大陸間戦略爆撃機;;;;;;;;;;X
+MODEL_14_6;改良型大陸間戦略爆撃機;;;;;;;;;;X
+MODEL_14_7;超音速大陸間戦略爆撃機;;;;;;;;;;X
+MODEL_15_0;大戦間期型戦術爆撃機;;;;;;;;;;X
+MODEL_15_1;初期型戦術爆撃機;;;;;;;;;;X
+MODEL_15_2;基本型戦術爆撃機;;;;;;;;;;X
+MODEL_15_3;改良型戦術爆撃機;;;;;;;;;;X
+MODEL_15_4;発展型戦術爆撃機;;;;;;;;;;X
+MODEL_15_5;基本型ジェット戦術爆撃機;;;;;;;;;;X
+MODEL_15_7;発展型ジェット戦術爆撃機;;;;;;;;;;X
+MODEL_15_8;準現代型ジェット戦術爆撃機;;;;;;;;;;X
+MODEL_15_9;現代型ジェット戦術爆撃機;;;;;;;;;;X
+MODEL_16_0;基本型対艦攻撃機;;;;;;;;;;X
+MODEL_16_1;改良型対艦攻撃機;;;;;;;;;;X
+MODEL_16_2;発展型対艦攻撃機;;;;;;;;;;X
+MODEL_16_3;基本型ジェット対艦攻撃機;;;;;;;;;;X
+MODEL_16_5;発展型ジェット対艦攻撃機;;;;;;;;;;X
+MODEL_17_0;基本型近接航空支援機;;;;;;;;;;X
+MODEL_17_1;改良型近接航空支援機;;;;;;;;;;X
+MODEL_17_2;発展型近接航空支援機;;;;;;;;;;X
+MODEL_17_3;ターボジェット近接航空支援機;;;;;;;;;;X
+MODEL_17_5;空対地ミサイル装備型近接航空支援機;;;;;;;;;;X
+MODEL_17_6;発展型ジェット近接支援機;;;;;;;;;;X
+MODEL_17_7;準現代型ジェット近接支援機;;;;;;;;;;X
+MODEL_18_0;基本型輸送機;;;;;;;;;;X
+MODEL_18_1;改良型輸送機;;;;;;;;;;X
+MODEL_18_2;発展型輸送機;;;;;;;;;;X
+MODEL_19_0;飛行爆弾;;;;;;;;;;X
+MODEL_20_0;戦略ロケット;;;;;;;;;;X
+MODEL_20_1;弾道ミサイル;;;;;;;;;;X
+MODEL_20_2;大陸間弾道ミサイル;;;;;;;;;;X
+MODEL_21_0;第一次世界大戦期型戦艦;;;;;;;;;;X
+MODEL_21_1;初期型戦艦;;;;;;;;;;X
+MODEL_21_2;基本型戦艦;;;;;;;;;;X
+MODEL_21_3;改良型戦艦;;;;;;;;;;X
+MODEL_21_4;発展型戦艦;;;;;;;;;;X
+MODEL_21_5;準現代型戦艦;;;;;;;;;;X
+MODEL_21_6;超大型戦艦;;;;;;;;;;X
+MODEL_21_7;原子力戦艦;;;;;;;;;;X
+MODEL_22_0;第一次世界大戦期型軽巡洋艦;;;;;;;;;;X
+MODEL_22_1;初期型軽巡洋艦;;;;;;;;;;X
+MODEL_22_2;基本型軽巡洋艦;;;;;;;;;;X
+MODEL_22_3;改良型軽巡洋艦;;;;;;;;;;X
+MODEL_22_4;発展型軽巡洋艦;;;;;;;;;;X
+MODEL_22_5;準現代型軽巡洋艦;;;;;;;;;;X
+MODEL_23_0;第一次世界大戦期型重巡洋艦;;;;;;;;;;X
+MODEL_23_1;初期型重巡洋艦;;;;;;;;;;X
+MODEL_23_2;基本型重巡洋艦;;;;;;;;;;X
+MODEL_23_3;改良型重巡洋艦;;;;;;;;;;X
+MODEL_23_4;発展型重巡洋艦;;;;;;;;;;X
+MODEL_23_5;準現代型重巡洋艦;;;;;;;;;;X
+MODEL_23_6;原子力重巡洋艦;;;;;;;;;;X
+MODEL_23_8;モニター艦;;;;;;;;;;X
+MODEL_24_0;第一次世界大戦期型巡洋戦艦;;;;;;;;;;X
+MODEL_24_1;初期型巡洋戦艦;;;;;;;;;;X
+MODEL_24_2;基本型巡洋戦艦;;;;;;;;;;X
+MODEL_24_3;改良型巡洋戦艦;;;;;;;;;;X
+MODEL_24_4;発展型巡洋戦艦;;;;;;;;;;X
+MODEL_24_5;準現代型巡洋戦艦;;;;;;;;;;X
+MODEL_24_6;原子力巡洋戦艦;;;;;;;;;;X
+MODEL_25_0;第一次世界大戦期型駆逐艦;;;;;;;;;;X
+MODEL_25_1;初期型駆逐艦;;;;;;;;;;X
+MODEL_25_2;基本型駆逐艦;;;;;;;;;;X
+MODEL_25_3;改良型駆逐艦;;;;;;;;;;X
+MODEL_25_4;発展型駆逐艦;;;;;;;;;;X
+MODEL_25_5;準現代型駆逐艦;;;;;;;;;;X
+MODEL_26_0;第一次世界大戦期型空母;;;;;;;;;;X
+MODEL_26_1;初期型空母;;;;;;;;;;X
+MODEL_26_2;基本型空母;;;;;;;;;;X
+MODEL_26_3;改良型空母;;;;;;;;;;X
+MODEL_26_4;発展型空母;;;;;;;;;;X
+MODEL_26_5;発展型大型空母;;;;;;;;;;X
+MODEL_26_6;発展型超大型空母;;;;;;;;;;X
+MODEL_26_7;準現代型空母;;;;;;;;;;X
+MODEL_26_8;現代型空母;;;;;;;;;;X
+MODEL_26_9;原子力空母;;;;;;;;;;X
+MODEL_28_0;潜水艇;;;;;;;;;;X
+MODEL_28_1;短距離潜水艦;;;;;;;;;;X
+MODEL_28_2;中距離潜水艦;;;;;;;;;;X
+MODEL_28_3;長距離潜水艦;;;;;;;;;;X
+MODEL_28_4;電気潜水艦;;;;;;;;;;X
+MODEL_28_5;準現代型潜水艦;;;;;;;;;;X
+MODEL_28_6;現代型潜水艦;;;;;;;;;;X
+MODEL_28_7;基本型原子力潜水艦;;;;;;;;;;X
+MODEL_28_8;改善型原子力潜水艦;;;;;;;;;;X
+MODEL_28_9;モニター潜水艦;;;;;;;;;;X
+MODEL_30_0;36年型輸送船;;;;;;;;;;X
+MODEL_30_1;38年型輸送船;;;;;;;;;;X
+MODEL_30_2;41年型輸送船;;;;;;;;;;X
+MODEL_30_3;43年型輸送船;;;;;;;;;;X
+MODEL_30_4;45年型輸送船;;;;;;;;;;X
+MODEL_30_5;49年型輸送船;;;;;;;;;;X
+MODEL_30_6;53年型輸送船;;;;;;;;;;X
+MODEL_30_7;58年型輸送船;;;;;;;;;;X
+BRIG_MODEL_0_0;旅団なし;No Brigade;;;;;;;;;X
+BRIG_MODEL_1_0;第一次世界大戦期型軽砲;Great War Light Artillery;;;;;;;;;X
+BRIG_MODEL_1_1;第一次世界大戦期型中砲;Great War Medium Artillery;;;;;;;;;X
+BRIG_MODEL_1_2;第一次世界大戦期型重砲;Great War Heavy Artillery;;;;;;;;;X
+BRIG_MODEL_1_3;初期型野戦砲;Early Artillery;;;;;;;;;X
+BRIG_MODEL_1_4;基本型野戦砲;Basic Artillery;;;;;;;;;X
+BRIG_MODEL_1_5;改良型野戦砲;Improved Artillery;;;;;;;;;X
+BRIG_MODEL_1_6;発展型野戦砲;Advanced Artillery;;;;;;;;;X
+BRIG_MODEL_1_7;準現代型野戦砲;Semi-Modern Artillery;;;;;;;;;X
+BRIG_MODEL_2_0;初期型自走砲;Early SP Artillery;;;;;;;;;X
+BRIG_MODEL_2_1;基本型自走砲;Basic SP Artillery;;;;;;;;;X
+BRIG_MODEL_2_2;改良型自走砲;Improved SP Artillery;;;;;;;;;X
+BRIG_MODEL_2_3;発展型自走砲;Advanced SP Artillery;;;;;;;;;X
+BRIG_MODEL_3_0;基本型ロケット砲;Basic Rocket Artillery;;;;;;;;;X
+BRIG_MODEL_3_1;改良型ロケット砲;Improved Rocket Artillery;;;;;;;;;X
+BRIG_MODEL_3_2;発展型ロケット砲;Advanced Rocket Artillery;;;;;;;;;X
+BRIG_MODEL_4_0;基本型自走ロケット砲;Basic SP Rct Artillery;;;;;;;;;X
+BRIG_MODEL_4_1;改良型自走ロケット砲;Improved SP Rct Artillery;;;;;;;;;X
+BRIG_MODEL_4_2;発展型自走ロケット砲;Advanced SP Rct Artillery;;;;;;;;;X
+BRIG_MODEL_5_0;初期型対戦車砲;Early Anti-Tank;;;;;;;;;X
+BRIG_MODEL_5_1;基本型対戦車砲;Basic Anti-Tank;;;;;;;;;X
+BRIG_MODEL_5_2;改良型対戦車砲;Improved Anti-Tank;;;;;;;;;X
+BRIG_MODEL_5_3;発展型対戦車砲;Advanced Anti-Tank;;;;;;;;;X
+BRIG_MODEL_5_4;準現代型対戦車砲;Semi-Modern Anti-Tank;;;;;;;;;X
+BRIG_MODEL_6_0;初期型駆逐戦車;Early Tank Destroyer;;;;;;;;;X
+BRIG_MODEL_6_1;基本型駆逐戦車;Basic Tank Destroyer;;;;;;;;;X
+BRIG_MODEL_6_2;改良型駆逐戦車;Improved Tank Destroyer;;;;;;;;;X
+BRIG_MODEL_6_3;発展型駆逐戦車;Advanced Tank Destroyer;;;;;;;;;X
+BRIG_MODEL_6_4;準現代型駆逐戦車;Semi-Modern Tank Destroyer;;;;;;;;;X
+BRIG_MODEL_7_0;軽戦車;Light Tank;;;;;;;;;X
+BRIG_MODEL_7_1;準現代型軽戦車;;;;;;;;;;X
+BRIG_MODEL_8_0;基本型重戦車;Basic Heavy Tank;;;;;;;;;X
+BRIG_MODEL_8_1;改良型重戦車;Improved Heavy Tank;;;;;;;;;X
+BRIG_MODEL_8_2;発展型重戦車;Advanced Heavy Tank;;;;;;;;;X
+BRIG_MODEL_8_3;準現代型重戦車;;;;;;;;;;X
+BRIG_MODEL_9_0;超重戦車;Super-Heavy Tank;;;;;;;;;X
+BRIG_MODEL_10_0;基本型装甲車;Basic Armored Car;;;;;;;;;X
+BRIG_MODEL_10_1;改良型装甲車;Improved Armored Car;;;;;;;;;X
+BRIG_MODEL_10_3;準現代型装甲車;;;;;;;;;;X
+BRIG_MODEL_10_4;現代型装甲車;;;;;;;;;;X
+BRIG_MODEL_11_0;基本型対空砲;Basic Anti-Air;;;;;;;;;X
+BRIG_MODEL_11_1;改良型対空砲;Improved Anti-Air;;;;;;;;;X
+BRIG_MODEL_11_2;発展型対空砲;Advanced Anti-Air;;;;;;;;;X
+BRIG_MODEL_11_3;準現代型対空砲;Semi-Modern Anti-Air;;;;;;;;;X
+BRIG_MODEL_11_7;短距離対空ミサイル;;;;;;;;;;X
+BRIG_MODEL_12_0;憲兵;Police;;;;;;;;;X
+BRIG_MODEL_13_0;工兵 '36;Engineer '36;;;;;;;;;X
+BRIG_MODEL_13_1;工兵 '40;Engineer '43;;;;;;;;;X
+BRIG_MODEL_14_0;第一次世界大戦期の空母航空隊;Great War Carrier Air Group;;;;;;;;;X
+BRIG_MODEL_14_1;初期型空母航空隊;Early Carrier Air Group;;;;;;;;;X
+BRIG_MODEL_14_2;基本型空母航空隊;Basic Carrier Air Group;;;;;;;;;X
+BRIG_MODEL_14_3;改良型空母航空隊;Improved Carrier Air Grp;;;;;;;;;X
+BRIG_MODEL_14_4;発展型空母航空隊;Advanced Carrier Air Grp;;;;;;;;;X
+BRIG_MODEL_14_5;発展型大型空母航空隊;Heavy Advanced CAG;;;;;;;;;X
+BRIG_MODEL_14_6;発展型超大型空母航空隊;Super-Heavy Advanced CAG;;;;;;;;;X
+BRIG_MODEL_14_7;準現代型空母航空隊;Semi-Modern CAG;;;;;;;;;X
+BRIG_MODEL_14_8;ターボジェット空母航空隊;Turbojet Carrier Air Grp;;;;;;;;;X
+BRIG_MODEL_14_9;改良型ターボジェット空母航空隊;Imp. Turbojet Carrier Air Grp;;;;;;;;;X
+MODEL_13_9;超音速迎撃機;;;;;;;;;;X
+MODEL_12_5;超音速戦闘機;;;;;;;;;;X
+BRIG_MODEL_10_2;現代型装甲車;Modern Armored Car;;;;;;;;;X
+BRIG_MODEL_1_9;躍進型野砲;;;;;;;;;;X
+BRIG_MODEL_2_7;飛躍型自走砲;;;;;;;;;;X
+BRIG_MODEL_6_7;飛躍型駆逐戦車;;;;;;;;;;X
+BRIG_MODEL_6_6;躍進型駆逐戦車;;;;;;;;;;X
+BRIG_MODEL_2_6;躍進型自走砲;;;;;;;;;;X
+BRIG_MODEL_1_8;現代型野砲;;;;;;;;;;X
+BRIG_MODEL_11_6;飛躍型対空砲;;;;;;;;;;X
+BRIG_MODEL_5_7;飛躍型対戦車砲;;;;;;;;;;X
+BRIG_MODEL_4_6;飛躍型自走ロケット砲;;;;;;;;;;X
+BRIG_MODEL_4_5;躍進型自走ロケット砲;;;;;;;;;;X
+BRIG_MODEL_5_6;躍進型対戦車砲;;;;;;;;;;X
+BRIG_MODEL_11_5;躍進型対空砲;;;;;;;;;;X
+MODEL_0_9;歩兵 '61;;;;;;;;;;X
+MODEL_0_8;歩兵 '56;;;;;;;;;;X
+MODEL_6_6;空挺兵 '56;;;;;;;;;;X
+MODEL_8_6;山岳兵 '56;;;;;;;;;;X
+MODEL_7_6;海兵 '56;;;;;;;;;;X
+MODEL_2_5;自動車化歩兵 '56;;;;;;;;;;X
+MODEL_3_6;機械化歩兵 '56;;;;;;;;;;X
+;;;;;;;;;;;X
+BRIG_MODEL_0_0;旅団なし;No Brigade;;;;;;;;;X
+BRIG_MODEL_1_0;第一次世界大戦期型軽砲;Great War Light Artillery;;;;;;;;;X
+BRIG_MODEL_1_1;第一次世界大戦期型中砲;Great War Medium Artillery;;;;;;;;;X
+BRIG_MODEL_1_2;第一次世界大戦期型重砲;Great War Heavy Artillery;;;;;;;;;X
+BRIG_MODEL_1_3;初期型野戦砲;Early Artillery;;;;;;;;;X
+BRIG_MODEL_1_4;基本型野戦砲;Basic Artillery;;;;;;;;;X
+BRIG_MODEL_1_5;改良型野戦砲;Improved Artillery;;;;;;;;;X
+BRIG_MODEL_1_6;発展型野戦砲;Advanced Artillery;;;;;;;;;X
+BRIG_MODEL_1_7;準現代型野戦砲;Semi-Modern Artillery;;;;;;;;;X
+BRIG_MODEL_2_0;初期型自走砲;Early SP Artillery;;;;;;;;;X
+BRIG_MODEL_2_1;基本型自走砲;Basic SP Artillery;;;;;;;;;X
+BRIG_MODEL_2_2;改良型自走砲;Improved SP Artillery;;;;;;;;;X
+BRIG_MODEL_2_3;発展型自走砲;Advanced SP Artillery;;;;;;;;;X
+BRIG_MODEL_3_0;基本型ロケット砲;Basic Rocket Artillery;;;;;;;;;X
+BRIG_MODEL_3_1;改良型ロケット砲;Improved Rocket Artillery;;;;;;;;;X
+BRIG_MODEL_3_2;発展型ロケット砲;Advanced Rocket Artillery;;;;;;;;;X
+BRIG_MODEL_4_0;基本型自走ロケット砲;Basic SP Rct Artillery;;;;;;;;;X
+BRIG_MODEL_4_1;改良型自走ロケット砲;Improved SP Rct Artillery;;;;;;;;;X
+BRIG_MODEL_4_2;発展型自走ロケット砲;Advanced SP Rct Artillery;;;;;;;;;X
+BRIG_MODEL_5_0;初期型対戦車砲;Early Anti-Tank;;;;;;;;;X
+BRIG_MODEL_5_1;基本型対戦車砲;Basic Anti-Tank;;;;;;;;;X
+BRIG_MODEL_5_2;改良型対戦車砲;Improved Anti-Tank;;;;;;;;;X
+BRIG_MODEL_5_3;発展型対戦車砲;Advanced Anti-Tank;;;;;;;;;X
+BRIG_MODEL_5_4;準現代型対戦車砲;Semi-Modern Anti-Tank;;;;;;;;;X
+BRIG_MODEL_6_0;初期型駆逐戦車;Early Tank Destroyer;;;;;;;;;X
+BRIG_MODEL_6_1;基本型駆逐戦車;Basic Tank Destroyer;;;;;;;;;X
+BRIG_MODEL_6_2;改良型駆逐戦車;Improved Tank Destroyer;;;;;;;;;X
+BRIG_MODEL_6_3;発展型駆逐戦車;Advanced Tank Destroyer;;;;;;;;;X
+BRIG_MODEL_6_4;準現代型駆逐戦車;Semi-Modern Tank Destroyer;;;;;;;;;X
+BRIG_MODEL_7_0;軽戦車;Light Tank;;;;;;;;;X
+BRIG_MODEL_8_0;基本型重戦車;Basic Heavy Tank;;;;;;;;;X
+BRIG_MODEL_8_1;改良型重戦車;Improved Heavy Tank;;;;;;;;;X
+BRIG_MODEL_8_2;発展型重戦車;Advanced Heavy Tank;;;;;;;;;X
+BRIG_MODEL_9_0;超重戦車;Super-Heavy Tank;;;;;;;;;X
+BRIG_MODEL_10_0;基本型装甲車;Basic Armored Car;;;;;;;;;X
+BRIG_MODEL_10_1;改良型装甲車;Improved Armored Car;;;;;;;;;X
+BRIG_MODEL_10_2;現代型装甲車;Modern Armored Car;;;;;;;;;X
+BRIG_MODEL_11_0;基本型対空砲;Basic Anti-Air;;;;;;;;;X
+BRIG_MODEL_11_1;改良型対空砲;Improved Anti-Air;;;;;;;;;X
+BRIG_MODEL_11_2;発展型対空砲;Advanced Anti-Air;;;;;;;;;X
+BRIG_MODEL_11_3;準現代型対空砲;Semi-Modern Anti-Air;;;;;;;;;X
+BRIG_MODEL_12_0;憲兵;Police;;;;;;;;;X
+BRIG_MODEL_13_0;工兵 '36;Engineer '36;;;;;;;;;X
+BRIG_MODEL_13_1;工兵 '40;Engineer '43;;;;;;;;;X
+BRIG_MODEL_14_0;第一次世界大戦期の空母航空隊;Great War Carrier Air Group;;;;;;;;;X
+BRIG_MODEL_14_1;初期型空母航空隊;Early Carrier Air Group;;;;;;;;;X
+BRIG_MODEL_14_2;基本型空母航空隊;Basic Carrier Air Group;;;;;;;;;X
+BRIG_MODEL_14_3;改良型空母航空隊;Improved Carrier Air Grp;;;;;;;;;X
+BRIG_MODEL_14_4;発展型空母航空隊;Advanced Carrier Air Grp;;;;;;;;;X
+BRIG_MODEL_14_5;発展型大型空母航空隊;Heavy Advanced CAG;;;;;;;;;X
+BRIG_MODEL_14_6;発展型超大型空母航空隊;Super-Heavy Advanced CAG;;;;;;;;;X
+BRIG_MODEL_14_7;準現代型空母航空隊;Semi-Modern CAG;;;;;;;;;X
+BRIG_MODEL_14_8;ターボジェット空母航空隊;Turbojet Carrier Air Grp;;;;;;;;;X
+BRIG_MODEL_14_9;改良型ターボジェット空母航空隊;Imp. Turbojet Carrier Air Grp;;;;;;;;;X
+MODEL_0_6;歩兵 '47;;;;;;;;;;X
+MODEL_0_7;歩兵 '51;;;;;;;;;;X
+MODEL_2_3;自動車化歩兵 '47;;;;;;;;;;X
+MODEL_2_4;自動車化歩兵 '51;;;;;;;;;;X
+MODEL_3_4;機械化歩兵 '47;;;;;;;;;;X
+MODEL_3_5;機械化歩兵 '51;;;;;;;;;;X
+MODEL_5_6;主力戦車;;;;;;;;;;X
+MODEL_5_7;発展型主力戦車;;;;;;;;;;X
+MODEL_6_4;空挺兵 '47;;;;;;;;;;X
+MODEL_6_5;空挺兵 '51;;;;;;;;;;X
+MODEL_7_4;海兵 '47;;;;;;;;;;X
+MODEL_7_5;海兵 '51;;;;;;;;;;X
+MODEL_8_4;山岳兵 '47;;;;;;;;;;X
+MODEL_8_5;山岳兵 '51;;;;;;;;;;X
+MODEL_21_8;改良型超大型戦艦;;;;;;;;;;X
+MODEL_21_9;超々大型戦艦;;;;;;;;;;X
+MODEL_22_6;現代型軽巡洋艦;;;;;;;;;;X
+MODEL_23_7;現代型重巡洋艦;;;;;;;;;;X
+MODEL_24_7;現代型巡洋戦艦;;;;;;;;;;X
+MODEL_25_6;戦後型駆逐艦;;;;;;;;;;X
+MODEL_27_0;初期型軽空母;;;;;;;;;;X
+MODEL_27_1;基本型軽空母;;;;;;;;;;X
+MODEL_27_2;改良型軽空母;;;;;;;;;;X
+MODEL_27_3;発展型軽空母;;;;;;;;;;X
+MODEL_27_4;準現代型軽空母;;;;;;;;;;X
+MODEL_27_5;現代型軽空母;;;;;;;;;;X
+MODEL_12_5;超音速戦闘機;;;;;;;;;;X
+MODEL_13_9;超音速迎撃機;;;;;;;;;;X
+MODEL_14_4;改良型ジェット戦略爆撃機;;;;;;;;;;X
+MODEL_15_6;改良型ジェット戦術爆撃機;;;;;;;;;;X
+MODEL_16_4;改良型ジェット海軍爆撃機;;;;;;;;;;X
+MODEL_17_4;改良型ジェット近接支援機;;;;;;;;;;X
+MODEL_18_3;準現代型輸送機;;;;;;;;;;X
+MODEL_18_4;現代型輸送機;;;;;;;;;;X
+BRIG_MODEL_2_4;準現代型自走砲;Semi-Modern SP Artillery;;;;;;;;;X
+BRIG_MODEL_2_5;現代型自走砲;Modern SP Artillery;;;;;;;;;X
+BRIG_MODEL_4_3;準現代型自走ロケット砲;Semi-Modern SP Rct Artillery;;;;;;;;;X
+BRIG_MODEL_4_4;現代型自走ロケット砲;Modern SP Rct Artillery;;;;;;;;;X
+BRIG_MODEL_5_5;現代型対戦車砲;Modern Anti-Tank;;;;;;;;;X
+BRIG_MODEL_6_5;現代型駆逐戦車;Modern Tank Destroyer;;;;;;;;;X
+BRIG_MODEL_11_4;現代型対空兵器;Modern Anti-Air;;;;;;;;;X
+BRIG_MODEL_15_0;基本型護衛戦闘機;Basic Escort Fighter;;;;;;;;;X
+BRIG_MODEL_15_1;改良型護衛戦闘機;Improved Escort Fighter;;;;;;;;;X
+BRIG_MODEL_15_2;発展型護衛戦闘機;Advanced Escort Fighter;;;;;;;;;X
+BRIG_MODEL_15_3;ターボジェット護衛戦闘機;Turbojet Escort Fighter;;;;;;;;;X
+BRIG_MODEL_15_4;改良型ジェット護衛戦闘機;Improved Turbojet Escort Fighter;;;;;;;;;X
+BRIG_MODEL_15_5;超音速護衛戦闘機;Supersonic Escort Fighter;;;;;;;;;X
+BRIG_MODEL_16_0;対潜兵装Ⅰ;;;;;;;;;;X
+BRIG_MODEL_16_1;対潜兵装Ⅱ;;;;;;;;;;X
+BRIG_MODEL_16_2;対潜兵装Ⅲ;;;;;;;;;;X
+BRIG_MODEL_16_3;対潜兵装Ⅳ;;;;;;;;;;X
+BRIG_MODEL_16_4;対潜兵装Ⅴ;;;;;;;;;;X
+BRIG_MODEL_16_5;対潜兵装Ⅵ;;;;;;;;;;X
+BRIG_MODEL_16_6;対潜兵装Ⅶ;;;;;;;;;;X
+BRIG_MODEL_20_0;改良型船体;;;;;;;;;;X
+BRIG_MODEL_17_0;後部航空甲板Ⅰ;;;;;;;;;;X
+BRIG_MODEL_17_1;後部航空甲板Ⅱ;;;;;;;;;;X
+BRIG_MODEL_17_2;後部航空甲板Ⅲ;;;;;;;;;;X
+BRIG_MODEL_17_3;後部航空甲板Ⅳ;;;;;;;;;;X
+BRIG_MODEL_17_4;後部航空甲板Ⅴ;;;;;;;;;;X
+BRIG_MODEL_17_5;後部航空甲板Ⅵ;;;;;;;;;;X
+BRIG_MODEL_18_0;副砲Ⅰ;;;;;;;;;;X
+BRIG_MODEL_18_1;副砲Ⅱ;;;;;;;;;;X
+BRIG_MODEL_18_2;副砲Ⅲ;;;;;;;;;;X
+BRIG_MODEL_18_3;副砲Ⅳ;;;;;;;;;;X
+BRIG_MODEL_18_4;副砲Ⅴ;;;;;;;;;;X
+BRIG_MODEL_18_5;副砲Ⅵ;;;;;;;;;;X
+BRIG_MODEL_18_6;副砲Ⅶ;;;;;;;;;;X
+BRIG_MODEL_18_7;副砲Ⅷ;;;;;;;;;;X
+BRIG_MODEL_18_8;副砲Ⅸ;;;;;;;;;;X
+BRIG_MODEL_18_9;副砲Ⅹ;;;;;;;;;;X
+BRIG_MODEL_19_0;射撃管制;;;;;;;;;;X
+BRIG_MODEL_19_1;射撃管制;;;;;;;;;;X
+BRIG_MODEL_20_1;改良型船体;;;;;;;;;;X
+BRIG_MODEL_21_0;墳進砲Ⅰ;;;;;;;;;;X
+BRIG_MODEL_21_1;墳進砲Ⅱ;;;;;;;;;;X
+BRIG_MODEL_21_2;墳進砲Ⅲ;;;;;;;;;;X
+BRIG_MODEL_21_3;墳進砲Ⅳ;;;;;;;;;;X
+BRIG_MODEL_21_4;試作型ロケット砲;;;;;;;;;;X
+BRIG_MODEL_21_5;ロケット砲;;;;;;;;;;X
+BRIG_MODEL_21_6;試作型艦対艦ミサイル;;;;;;;;;;X
+BRIG_MODEL_21_7;艦対艦ミサイル;;;;;;;;;;X
+BRIG_MODEL_22_0;対空兵装Ⅰ;;;;;;;;;;X
+BRIG_MODEL_22_1;対空兵装Ⅱ;;;;;;;;;;X
+BRIG_MODEL_22_2;対空兵装Ⅲ;;;;;;;;;;X
+BRIG_MODEL_22_3;対空兵装Ⅳ;;;;;;;;;;X
+BRIG_MODEL_22_4;対空兵装Ⅴ;;;;;;;;;;X
+BRIG_MODEL_22_5;対空兵装Ⅵ;;;;;;;;;;X
+BRIG_MODEL_22_6;対空兵装Ⅶ;;;;;;;;;;X
+BRIG_MODEL_22_7;艦対空ミサイル;;;;;;;;;;X
+BRIG_MODEL_23_0;レーダーⅠ;;;;;;;;;;X
+BRIG_MODEL_23_1;レーダーⅡ;;;;;;;;;;X
+BRIG_MODEL_23_2;レーダーⅢ;;;;;;;;;;X
+BRIG_MODEL_23_3;レーダーⅣ;;;;;;;;;;X
+BRIG_MODEL_23_4;レーダーⅤ;;;;;;;;;;X
+BRIG_MODEL_23_5;レーダーⅥ;;;;;;;;;;X
+BRIG_MODEL_23_6;レーダーⅦ;;;;;;;;;;X
+BRIG_MODEL_23_7;レーダーⅧ;;;;;;;;;;X
+BRIG_MODEL_23_8;レーダーⅨ;;;;;;;;;;X
+BRIG_MODEL_23_9;レーダーⅩ;;;;;;;;;;X
+BRIG_MODEL_23_10;レーダーⅩⅠ;;;;;;;;;;X
+BRIG_MODEL_23_11;レーダーⅩⅡ;;;;;;;;;;X
+BRIG_MODEL_24_0;射撃管制装置Ⅰ;;;;;;;;;;X
+BRIG_MODEL_24_1;射撃管制装置Ⅱ;;;;;;;;;;X
+BRIG_MODEL_24_2;射撃管制装置Ⅲ;;;;;;;;;;X
+BRIG_MODEL_24_3;射撃管制装置Ⅳ;;;;;;;;;;X
+BRIG_MODEL_24_4;射撃管制装置Ⅴ;;;;;;;;;;X
+BRIG_MODEL_24_5;射撃管制装置Ⅵ;;;;;;;;;;X
+BRIG_MODEL_24_6;射撃管制装置Ⅶ;;;;;;;;;;X
+BRIG_MODEL_24_7;射撃管制装置Ⅷ;;;;;;;;;;X
+BRIG_MODEL_25_0;改良型船体Ⅰ;;;;;;;;;;X
+BRIG_MODEL_25_1;改良型船体Ⅱ;;;;;;;;;;X
+BRIG_MODEL_25_2;改良型船体Ⅲ;;;;;;;;;;X
+BRIG_MODEL_25_3;改良型船体Ⅳ;;;;;;;;;;X
+BRIG_MODEL_25_4;改良型船体Ⅴ;;;;;;;;;;X
+BRIG_MODEL_25_5;改良型船体Ⅵ;;;;;;;;;;X
+BRIG_MODEL_26_0;魚雷Ⅰ;;;;;;;;;;X
+BRIG_MODEL_26_1;魚雷Ⅱ;;;;;;;;;;X
+BRIG_MODEL_26_2;魚雷Ⅲ;;;;;;;;;;X
+BRIG_MODEL_26_3;魚雷Ⅳ;;;;;;;;;;X
+BRIG_MODEL_26_4;魚雷Ⅴ;;;;;;;;;;X
+BRIG_MODEL_26_5;魚雷Ⅵ;;;;;;;;;;X
+BRIG_MODEL_26_6;魚雷Ⅶ;;;;;;;;;;X
+NAME_LIGHT_ARMOR_BRI;軽戦車旅団;Light Armored Brigade;;;;;;;;;X
+SNAME_LIGHT_ARMOR_BRI;軽戦旅;L-A;;;;;;;;;X
+BRIG_MODEL_25_6;改良型船体Ⅶ;;;;;;;;;;X
+BRIG_MODEL_13_2;工兵 '43;;;;;;;;;;X
+BRIG_MODEL_13_3;工兵 '45;;;;;;;;;;X
+BRIG_MODEL_13_4;工兵 '48;;;;;;;;;;X
+BRIG_MODEL_13_5;工兵 '53;;;;;;;;;;X
+;;;;;;;;;;;X
+;;;;;;;;;;;X
+BRIG_MODEL_24_8;射撃管制装置Ⅸ;;;;;;;;;;X
+BRIG_MODEL_24_9;射撃管制装置Ⅹ;;;;;;;;;;X
+;;;;;;;;;;;X
+BRIG_MODEL_30_0;初期型水上機;;;;;;;;;;X
+NAME_FLOATPLANE;水上偵察機;;;;;;;;;;X
+SNAME_FLOATPLANE;水上機;;;;;;;;;;X
+LDESC_FLOATPLANE;カタパルト射出式水上機は艦隊の索敵能力を向上させるでしょう。しかし、その能力は頭打ちが近く、遠からずレーダーに取って代わられるでしょう。;;;;;;;;;;X
+;;;;;;;;;;;X
+MODEL_25_7;冷戦期初期型駆逐艦;;;;;;;;;;X
+MODEL_25_8;冷戦期中期型駆逐艦;;;;;;;;;;X
+;;;;;;;;;;;X
+;;;;;;;;;;;X
+BRIG_MODEL_16_7;対潜兵装Ⅷ;;;;;;;;;;X
+BRIG_MODEL_16_8;対潜兵装Ⅸ;;;;;;;;;;X
+;;;;;;;;;;;X
+SDESC_FLOATPLANE;この艦船は水上機を有します。;;;;;;;;;;X
+BRIG_MODEL_30_1;基本型水上機;;;;;;;;;;X
+BRIG_MODEL_30_2;改良型水上機;;;;;;;;;;X
+BRIG_MODEL_30_3;発展型水上機;;;;;;;;;;X
+BRIG_MODEL_30_4;準現代型水上機;;;;;;;;;;X
+;;;;;;;;;;;X
+BRIG_MODEL_30_5;ジェット水上機;;;;;;;;;;X
+BRIG_MODEL_30_6;艦載ヘリコプター;;;;;;;;;;X
+;;;;;;;;;;;X
+NAME_D_RSV_33;砲兵;;;;;;;;;;X
+SNAME_D_RSV_33;砲兵;;;;;;;;;;X
+LDESC_D_RSV_33;砲兵を中心とした編成を成された「砲兵師団」は、圧倒的な火力で敵を攻撃できます。ソ連やドイツで編成され、火力主義の重要性を大戦後半に示しました。;;;;;;;;;;X
+SDESC_D_RSV_33;砲兵師団;;;;;;;;;;X
+MODEL_33_0;砲兵 '40;;;;;;;;;;X
+;;;;;;;;;;;X
+MODEL_33_1;砲兵 '43;;;;;;;;;;X
+MODEL_33_2;砲兵 '45;;;;;;;;;;X
+MODEL_33_3;砲兵 '49;;;;;;;;;;X
+MODEL_33_4;砲兵 '55;;;;;;;;;;X
+;;;;;;;;;;;X
+;;;;;;;;;;;X
+NAME_D_RSV_34;陸上戦艦;;;;;;;;;;X
+SNAME_D_RSV_34;陸上戦艦;;;;;;;;;;X
+SDESC_D_RSV_34;陸上戦艦師団;;;;;;;;;;X
+LDESC_D_RSV_34;陸上戦艦は、アドルフ・ヒトラー下のドイツで生産が計画された架空の超重戦車です。予定された重量は1000t、主砲はシャルンホルスト級の28cm砲となる予定でした。当然ながら、この過大なる重量は運用上大きな問題になるであろうことが想像され、史実では1944年には軍需大臣アルベルト・シュペーアにより計画が停止されています。;;;;;;;;;;X
+;;;;;;;;;;;X
+MODEL_34_0;陸上戦艦;;;;;;;;;;X
+NAME_CAVALRY_BRIGADE;;;;;;;;;;;X
+SNAME_CAVALRY_BRIGADE;;;;;;;;;;;X
+SDESC_CAVALRY_BRIGADE;;;;;;;;;;;X
+LDESC_CAVALRY_BRIGADE;;;;;;;;;;;X
+NAME_SP_ANTI_AIR;;;;;;;;;;;X
+SNAME_SP_ANTI_AIR;;;;;;;;;;;X
+SDESC_SP_ANTI_AIR;;;;;;;;;;;X
+LDESC_SP_ANTI_AIR;;;;;;;;;;;X
+NAME_MEDIUM_ARMOR;;;;;;;;;;;X
+SNAME_MEDIUM_ARMOR;;;;;;;;;;;X
+SDESC_MEDIUM_ARMOR;;;;;;;;;;;X
+LDESC_MEDIUM_ARMOR;;;;;;;;;;;X
+;;;;;;;;;;;X
+NAME_D_RSV_35;強襲揚陸艦;;;;;;;;;;X
+SNAME_D_RSV_35;揚陸艦;;;;;;;;;;X
+LDESC_D_RSV_35;強襲揚陸艦は、第二次大戦期の軽空母の位置を置換するように登場した新しい艦種です。ヘリコプターを搭載し、沿岸に対する垂直方向の攻撃を担います。搭載するヘリコプターのために対潜攻撃力は軽空母譲りのものがあり、同時に揚陸戦闘を得意とするために比較的高い沿岸攻撃能力も持ちます。ただし装甲の薄さは軽空母譲りで、また対艦攻撃に秀でているとも言い難いため運用の際には制海権は自陣営側にあるのが前提となるでしょう。;;;;;;;;;;X
+SDESC_D_RSV_35;強襲揚陸艦は高い対潜能力と沿岸攻撃力を有します。;;;;;;;;;;X
+MODEL_35_0;強襲ヘリコプター母艦;;;;;;;;;;X
+;;;;;;;;;;;X
+;;;;;;;;;;;X
+MODEL_29_0;初期型重潜水艦;;;;;;;;;;X
+MODEL_29_1;改良型重潜水艦;;;;;;;;;;X
+MODEL_29_2;超大型潜水艦;;;;;;;;;;X
+MODEL_29_3;改良型超大型潜水艦;;;;;;;;;;X
+MODEL_29_4;冷戦期重潜水艦;;;;;;;;;;X
+;;;;;;;;;;;X
+MODEL_29_5;基本型原子力潜水艦;;;;;;;;;;X
+MODEL_29_6;改善型原子力潜水艦;;;;;;;;;;X
+#EOF;;;;;;;;;;;X

@@ -1,0 +1,891 @@
+#########################################################################
+#	FEPK_partition_GRE.txt
+#	ÉMÉäÉVÉÉï™äÑèàóù
+#########################################################################
+#id = 135100-99		ÉMÉäÉVÉÉï™äÑèàóù
+#########################################################################
+#  Greece is attacked before historic date NOT by Germany
+##########
+event = {
+	id = 135100
+	random = no
+	country = GER
+
+	trigger = {
+		atwar = GRE
+		NOT = {
+			war = { country = GER country = GRE }
+			alliance = { country = GER country = GRE }
+		}
+	}
+
+        date = { day = 0 month = january year = 1935 }
+        offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135100_NAME"
+	desc = "EVT_135100_DESC"
+
+	#picture = "british_reinforcments5"
+
+	action_a = {
+		name = "OK"
+		ai_chance = 100
+		command = { type = sleepevent which = 135101 } #giving land to germany
+		command = { type = sleepevent which = 135102 }
+		command = { type = sleepevent which = 135103 }
+		command = { type = sleepevent which = 135104 }
+		command = { type = sleepevent which = 135105 }
+		command = { type = sleepevent which = 135106 }
+		command = { type = sleepevent which = 135107 }
+		command = { type = sleepevent which = 135108 }
+		command = { type = sleepevent which = 135109 } #germany has the land
+	}
+}
+##########
+#  Partition of Greece - Italy
+##########
+event = {
+	id = 135101
+	random = no 
+	country = ITA
+
+	trigger = {
+		alliance = { country = GER country = ITA }
+		NOT = { exists = GRE }
+		OR = {
+			alliance = { country = GER country = YUG }
+			NOT = {
+				exists = YUG
+			}
+			AND = {
+				exists = YUG
+				NOT = {
+					war = { country = GER country = YUG }
+				}
+			}
+		}
+		NOT = {
+			war = { country = GER country = HUN }
+			war = { country = GER country = ROM }
+			war = { country = GER country = BUL }
+			war = { country = GER country = ITA }
+			war = { country = GER country = ALB }
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135101_NAME"
+	desc = "EVT_135003_DESC"
+
+	picture = "failed_objective"
+
+	action_a = {
+		name = "OK"
+		command = { type = secedeprovince which = GER value = 392 } #
+		command = { type = secedeprovince which = GER value = 410 } #
+		command = { type = secedeprovince which = GER value = 411 } #
+		command = { type = secedeprovince which = GER value = 412 } #
+		command = { type = secedeprovince which = GER value = 403 } #
+		command = { type = secedeprovince which = GER value = 402 } #
+		command = { type = secedeprovince which = GER value = 393 } #
+		command = { type = secedeprovince which = GER value = 401 } #
+		command = { type = secedeprovince which = GER value = 400 } #
+		#command = { type = secedeprovince which = GER value = 405 } #
+		#command = { type = secedeprovince which = GER value = 398 } #
+		#command = { type = secedeprovince which = GER value = 399 } #
+		command = { type = secedeprovince which = GER value = 394 } #
+		command = { type = secedeprovince which = GER value = 395 } #
+		#command = { type = secedeprovince which = GER value = 396 } #
+		command = { type = secedeprovince which = GER value = 444 }	#Cyprus
+		#Albania
+		#command = { type = secedeprovince which = GER value = 390 }
+		#command = { type = secedeprovince which = GER value = 391 }
+	}
+}
+##########
+# Partition of Greece - Hungary
+##########
+event = {
+	id = 135102
+	random = no 
+	country = HUN
+
+	trigger = {
+		alliance = { country = GER country = HUN }
+		NOT = { exists = GRE }
+		OR = {
+			alliance = { country = GER country = YUG }
+			NOT = {
+				exists = YUG
+			}
+			AND = {
+				exists = YUG
+				NOT = {
+					war = { country = GER country = YUG }
+				}
+			}
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135102_NAME"
+	desc = "EVT_135003_DESC"
+
+	picture = "failed_objective"
+
+	action_a = {
+		name = "OK"
+		command = { type = secedeprovince which = GER value = 392 } #
+		command = { type = secedeprovince which = GER value = 410 } #
+		command = { type = secedeprovince which = GER value = 411 } #
+		command = { type = secedeprovince which = GER value = 412 } #
+		command = { type = secedeprovince which = GER value = 403 } #
+		command = { type = secedeprovince which = GER value = 402 } #
+		command = { type = secedeprovince which = GER value = 393 } #
+		command = { type = secedeprovince which = GER value = 401 } #
+		command = { type = secedeprovince which = GER value = 400 } #
+		command = { type = secedeprovince which = GER value = 405 } #
+		command = { type = secedeprovince which = GER value = 398 } #
+		command = { type = secedeprovince which = GER value = 399 } #
+		command = { type = secedeprovince which = GER value = 394 } #
+		command = { type = secedeprovince which = GER value = 395 } #
+		command = { type = secedeprovince which = GER value = 396 } #
+		command = { type = secedeprovince which = GER value = 444 }	#Cyprus
+		#Albania
+		command = { type = secedeprovince which = GER value = 390 }
+		command = { type = secedeprovince which = GER value = 391 }
+	}
+}
+##########
+# Partition of Greece - Romania
+##########
+event = {
+	id = 135103
+	random = no 
+	country = ROM
+
+	trigger = {
+		alliance = { country = GER country = ROM }
+		NOT = { exists = GRE }
+		OR = {
+			alliance = { country = GER country = YUG }
+			NOT = {
+				exists = YUG
+			}
+			AND = {
+				exists = YUG
+				NOT = {
+					war = { country = GER country = YUG }
+				}
+			}
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135103_NAME"
+	desc = "EVT_135003_DESC"
+
+	picture = "failed_objective"
+
+	action_a = {
+		name = "OK"
+		command = { type = secedeprovince which = GER value = 392 } #
+		command = { type = secedeprovince which = GER value = 410 } #
+		command = { type = secedeprovince which = GER value = 411 } #
+		command = { type = secedeprovince which = GER value = 412 } #
+		command = { type = secedeprovince which = GER value = 403 } #
+		command = { type = secedeprovince which = GER value = 402 } #
+		command = { type = secedeprovince which = GER value = 393 } #
+		command = { type = secedeprovince which = GER value = 401 } #
+		command = { type = secedeprovince which = GER value = 400 } #
+		command = { type = secedeprovince which = GER value = 405 } #
+		command = { type = secedeprovince which = GER value = 398 } #
+		command = { type = secedeprovince which = GER value = 399 } #
+		command = { type = secedeprovince which = GER value = 394 } #
+		command = { type = secedeprovince which = GER value = 395 } #
+		command = { type = secedeprovince which = GER value = 396 } #
+		command = { type = secedeprovince which = GER value = 444 }	#Cyprus
+		#Albania
+		command = { type = secedeprovince which = GER value = 390 }
+		command = { type = secedeprovince which = GER value = 391 }
+	}
+}
+##########
+#  Partition of Greece - Albania
+##########
+event = {
+	id = 135104
+	random = no 
+	country = ALB
+
+	trigger = {
+		alliance = { country = GER country = ALB }
+		NOT = { exists = GRE }
+		OR = {
+			alliance = { country = GER country = YUG }
+			NOT = {
+				exists = YUG
+			}
+			AND = {
+				exists = YUG
+				NOT = {
+					war = { country = GER country = YUG }
+				}
+			}
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135104_NAME"
+	desc = "EVT_135003_DESC"
+
+	picture = "failed_objective"
+
+	action_a = {
+		name = "OK"
+		command = { type = secedeprovince which = GER value = 392 } #
+		command = { type = secedeprovince which = GER value = 410 } #
+		command = { type = secedeprovince which = GER value = 411 } #
+		command = { type = secedeprovince which = GER value = 412 } #
+		command = { type = secedeprovince which = GER value = 403 } #
+		command = { type = secedeprovince which = GER value = 402 } #
+		command = { type = secedeprovince which = GER value = 393 } #
+		command = { type = secedeprovince which = GER value = 401 } #
+		command = { type = secedeprovince which = GER value = 400 } #
+		command = { type = secedeprovince which = GER value = 405 } #
+		command = { type = secedeprovince which = GER value = 398 } #
+		command = { type = secedeprovince which = GER value = 399 } #
+		command = { type = secedeprovince which = GER value = 394 } #
+		command = { type = secedeprovince which = GER value = 395 } #
+		command = { type = secedeprovince which = GER value = 396 } #
+		command = { type = secedeprovince which = GER value = 444 }	#Cyprus
+		#Albania
+		#command = { type = secedeprovince which = GER value = 390 }
+		#command = { type = secedeprovince which = GER value = 391 }
+	}
+}
+##########
+#  Partition of Greece - Yugoslavia
+##########
+event = {
+	id = 135105
+	random = no 
+	country = YUG
+
+	trigger = {
+		alliance = { country = GER country = YUG }
+		NOT = { exists = GRE }
+		OR = {
+			alliance = { country = GER country = YUG }
+			NOT = {
+				exists = YUG
+			}
+			AND = {
+				exists = YUG
+				NOT = {
+					war = { country = GER country = YUG }
+				}
+			}
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135105_NAME"
+	desc = "EVT_135003_DESC"
+
+	picture = "failed_objective"
+
+	action_a = {
+		name = "OK"
+		command = { type = secedeprovince which = GER value = 392 } #
+		command = { type = secedeprovince which = GER value = 410 } #
+		command = { type = secedeprovince which = GER value = 411 } #
+		command = { type = secedeprovince which = GER value = 412 } #
+		command = { type = secedeprovince which = GER value = 403 } #
+		command = { type = secedeprovince which = GER value = 402 } #
+		command = { type = secedeprovince which = GER value = 393 } #
+		command = { type = secedeprovince which = GER value = 401 } #
+		command = { type = secedeprovince which = GER value = 400 } #
+		command = { type = secedeprovince which = GER value = 405 } #
+		command = { type = secedeprovince which = GER value = 398 } #
+		command = { type = secedeprovince which = GER value = 399 } #
+		command = { type = secedeprovince which = GER value = 394 } #
+		command = { type = secedeprovince which = GER value = 395 } #
+		command = { type = secedeprovince which = GER value = 396 } #
+		command = { type = secedeprovince which = GER value = 444 }	#Cyprus
+		#Albania
+		command = { type = secedeprovince which = GER value = 390 }
+		command = { type = secedeprovince which = GER value = 391 }
+	}
+}
+##########
+#  Partition of Greece - Bulgaria
+##########
+event = {
+	id = 135106
+	random = no 
+	country = BUL
+
+	trigger = {
+		alliance = { country = GER country = BUL }
+		NOT = { exists = GRE }
+		OR = {
+			alliance = { country = GER country = YUG }
+			NOT = {
+				exists = YUG
+			}
+			AND = {
+				exists = YUG
+				NOT = {
+					war = { country = GER country = YUG }
+				}
+			}
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135106_NAME"
+	desc = "EVT_135003_DESC"
+
+	picture = "failed_objective"
+
+	action_a = {
+		name = "OK"
+		command = { type = secedeprovince which = GER value = 392 } #
+		command = { type = secedeprovince which = GER value = 410 } #
+		command = { type = secedeprovince which = GER value = 411 } #salonika
+		#command = { type = secedeprovince which = GER value = 412 } #edessa
+		command = { type = secedeprovince which = GER value = 403 } #
+		command = { type = secedeprovince which = GER value = 402 } #
+		command = { type = secedeprovince which = GER value = 393 } #
+		command = { type = secedeprovince which = GER value = 401 } #
+		command = { type = secedeprovince which = GER value = 400 } #
+		command = { type = secedeprovince which = GER value = 405 } #
+		command = { type = secedeprovince which = GER value = 398 } #
+		command = { type = secedeprovince which = GER value = 399 } #
+		command = { type = secedeprovince which = GER value = 394 } #
+		command = { type = secedeprovince which = GER value = 395 } #
+		command = { type = secedeprovince which = GER value = 396 } #
+		command = { type = secedeprovince which = GER value = 444 }	#Cyprus
+		#Albania
+		command = { type = secedeprovince which = GER value = 390 }
+		command = { type = secedeprovince which = GER value = 391 }
+	}
+}
+##########
+#  Partition of Greece - Turkey
+##########
+event = {
+	id = 135107
+	random = no 
+	country = TUR
+
+	trigger = {
+		alliance = { country = GER country = TUR }
+		NOT = { exists = GRE }
+		OR = {
+			alliance = { country = GER country = YUG }
+			NOT = {
+				exists = YUG
+			}
+			AND = {
+				exists = YUG
+				NOT = {
+					war = { country = GER country = YUG }
+				}
+			}
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135107_NAME"
+	desc = "EVT_135003_DESC"
+
+	picture = "failed_objective"
+
+	action_a = {
+		name = "OK"
+		command = { type = secedeprovince which = GER value = 392 } #
+		command = { type = secedeprovince which = GER value = 410 } #
+		command = { type = secedeprovince which = GER value = 411 } #
+		command = { type = secedeprovince which = GER value = 412 } #
+		command = { type = secedeprovince which = GER value = 403 } #
+		command = { type = secedeprovince which = GER value = 402 } #
+		command = { type = secedeprovince which = GER value = 393 } #
+		command = { type = secedeprovince which = GER value = 401 } #
+		command = { type = secedeprovince which = GER value = 400 } #
+		#command = { type = secedeprovince which = GER value = 405 } #
+		command = { type = secedeprovince which = GER value = 398 } #
+		command = { type = secedeprovince which = GER value = 399 } #
+		command = { type = secedeprovince which = GER value = 394 } #
+		command = { type = secedeprovince which = GER value = 395 } #
+		command = { type = secedeprovince which = GER value = 396 } #
+		command = { type = secedeprovince which = GER value = 444 }	#Cyprus
+		#Albania
+		command = { type = secedeprovince which = GER value = 390 }
+		command = { type = secedeprovince which = GER value = 391 }
+	}
+}
+##########
+# Partition of Greece - Austria
+##########
+event = {
+	id = 135108
+	random = no 
+	country = AUS
+
+	trigger = {
+		alliance = { country = GER country = AUS }
+		NOT = { exists = GRE }
+		OR = {
+			alliance = { country = GER country = YUG }
+			NOT = {
+				exists = YUG
+			}
+			AND = {
+				exists = YUG
+				NOT = {
+					war = { country = GER country = YUG }
+				}
+			}
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135108_NAME"
+	desc = "EVT_135003_DESC"
+
+	picture = "failed_objective"
+
+	action_a = {
+		name = "OK"
+		command = { type = secedeprovince which = GER value = 392 } #
+		command = { type = secedeprovince which = GER value = 410 } #
+		command = { type = secedeprovince which = GER value = 411 } #
+		command = { type = secedeprovince which = GER value = 412 } #
+		command = { type = secedeprovince which = GER value = 403 } #
+		command = { type = secedeprovince which = GER value = 402 } #
+		command = { type = secedeprovince which = GER value = 393 } #
+		command = { type = secedeprovince which = GER value = 401 } #
+		command = { type = secedeprovince which = GER value = 400 } #
+		command = { type = secedeprovince which = GER value = 405 } #
+		command = { type = secedeprovince which = GER value = 398 } #
+		command = { type = secedeprovince which = GER value = 399 } #
+		command = { type = secedeprovince which = GER value = 394 } #
+		command = { type = secedeprovince which = GER value = 395 } #
+		command = { type = secedeprovince which = GER value = 396 } #
+		command = { type = secedeprovince which = GER value = 444 }	#Cyprus
+		#Albania
+		command = { type = secedeprovince which = GER value = 390 }
+		command = { type = secedeprovince which = GER value = 391 }
+	}
+}
+#70084 free
+##########
+#  Partition of Greece - Germany - KEY EVENT
+##########
+event = {
+	id = 135109
+	random = no 
+	country = GER
+
+	trigger = {
+		NOT = { exists = GRE }
+		OR = {
+			NOT = {	exists = HUN }
+			NOT = {	war = { country = GER country = HUN } }
+		}
+		OR = {
+			NOT = {	exists = ROM }
+			NOT = {	war = { country = GER country = ROM } }
+		}
+		OR = {
+			NOT = {	exists = BUL }
+			NOT = {	war = { country = GER country = BUL } }
+		}
+		OR = {
+			NOT = { exists = ITA }
+			NOT = {	war = { country = GER country = ITA } }
+		}
+		OR = {
+			NOT = { exists = ALB }
+			NOT = {	war = { country = GER country = ALB } }
+		}
+		control = { province = 392 data = GER } #
+		control = { province = 403 data = GER } #
+		control = { province = 402 data = GER } #
+		control = { province = 401 data = GER } #
+		control = { province = 394 data = GER } #
+		control = { province = 395 data = GER } #
+		control = { province = 411 data = GER } #salonika, new
+		#control = { province = 412 data = GER } #edessa, new
+		control = { province = 410 data = GER } #FEPK, new
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135109_NAME"
+	desc = "EVT_135003_DESC"
+
+	picture = "greek_soldiers"
+
+	action_a = {
+		name = "EVT_135010_ACTA"
+		#command = { type = construct which = naval_base where = 411 value = 2 } #salonika
+		#command = { type = add_corps value = land where = 411 }
+		#command = { type = add_division value = garrison }
+		command = { type = sleepevent which = 135101 } #giving land to germany
+		command = { type = sleepevent which = 135102 }
+		command = { type = sleepevent which = 135103 }
+		command = { type = sleepevent which = 135104 }
+		command = { type = sleepevent which = 135105 }
+		command = { type = sleepevent which = 135106 }
+		command = { type = sleepevent which = 135107 }
+		command = { type = sleepevent which = 135108 }
+	}
+}
+##########
+#  Spoils from Greece to Italy
+##########
+event = {
+	id = 135110
+	random = no 
+	country = GER
+
+	trigger = {
+		alliance = { country = GER country = ITA }
+		event = 135109 #key german event
+		NOT = { ispuppet = ITA }
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135110_NAME"
+	desc = "EVT_135110_DESC"
+
+	picture = "failed_objective"
+
+	action_a = {
+		name = "OK"
+		command = { type = secedeprovince which = ITA value = 392 } #
+		command = { type = secedeprovince which = ITA value = 403 } #
+		command = { type = secedeprovince which = ITA value = 402 } #
+		command = { type = secedeprovince which = ITA value = 393 } #
+		command = { type = secedeprovince which = ITA value = 401 } #
+		command = { type = secedeprovince which = ITA value = 400 } #
+		command = { type = secedeprovince which = ITA value = 398 } #
+		command = { type = secedeprovince which = ITA value = 399 } #
+		command = { type = secedeprovince which = ITA value = 394 } #
+		command = { type = secedeprovince which = ITA value = 395 } #
+		command = { type = secedeprovince which = ITA value = 405 } #
+		command = { type = secedeprovince which = ITA value = 396 } #
+		command = { type = secedeprovince which = ITA value = 412 } #edessa, new
+		command = { type = secedeprovince which = ITA value = 411 } #salonika, new
+		command = { type = secedeprovince which = ITA value = 410 } #FEPK, new
+		command = { type = secedeprovince which = ITA value = 444 }	#Cyprus
+		#Albania
+		command = { type = secedeprovince which = ITA value = 390 }
+		command = { type = secedeprovince which = ITA value = 391 }
+
+	}
+}
+##########
+#  Spoils from Greece to Bulgaria
+##########
+event = {
+	id = 135111
+	random = no 
+	country = GER
+
+	trigger = {
+		alliance = { country = GER country = BUL }
+		control = { province = 412 data = GER }
+		event = 135109 #key german event
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135111_NAME"
+	desc = "EVT_135111_DESC"
+
+	picture = "failed_objective"
+
+	action_a = {
+		name = "OK"
+		command = { type = secedeprovince which = BUL value = 412 } #edessa
+	}
+}
+##########
+#  Spoils from Greece to Turkey
+##########
+event = {
+	id = 135112
+	random = no 
+	country = GER
+
+	trigger = {
+	#	flag = axis_turkey
+		alliance = { country = GER country = TUR }
+		alliance = { country = GER country = ITA }
+		NOT = { ispuppet = ITA }
+		event = 135109 #key german event
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135112_NAME"
+	desc = "EVT_135112_DESC"
+
+	picture = "failed_objective"
+
+	action_a = {
+		name = "OK"
+		command = { type = secedeprovince which = TUR value = 405 } #
+		command = { type = sleepevent which = 135112 } #other turkey spoils
+	}
+}
+##########
+#  Spoils from Greece to Turkey - Italy NOT Axis, so Turkey gets more
+##########
+event = {
+	id = 135113
+	random = no 
+	country = GER
+
+	trigger = {
+	#	flag = axis_turkey
+		alliance = { country = GER country = TUR }
+		OR = {
+			NOT = {
+				alliance = { country = GER country = ITA }
+			}
+			alliance = { country = GER country = RSI }
+			ispuppet = ITA
+		}
+		event = 135109 #key german event
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135112_NAME"
+	desc = "EVT_135113_DESC"
+	picture = "failed_objective"
+
+	action_a = {
+		name = "OK"
+		command = { type = secedeprovince which = TUR value = 411 } #
+		command = { type = secedeprovince which = TUR value = 412 } #
+		command = { type = secedeprovince which = TUR value = 405 } #
+		command = { type = secedeprovince which = TUR value = 392 } #
+		command = { type = secedeprovince which = TUR value = 403 } #
+		command = { type = secedeprovince which = TUR value = 402 } #
+		command = { type = secedeprovince which = TUR value = 393 } #
+		command = { type = secedeprovince which = TUR value = 401 } #
+		command = { type = secedeprovince which = TUR value = 400 } #
+		command = { type = secedeprovince which = TUR value = 398 } #
+		command = { type = secedeprovince which = TUR value = 399 } #
+		command = { type = secedeprovince which = TUR value = 394 } #
+		command = { type = secedeprovince which = TUR value = 395 } #
+		command = { type = secedeprovince which = TUR value = 405 } #
+		command = { type = secedeprovince which = TUR value = 396 } #
+		command = { type = secedeprovince which = TUR value = 410 } #DHSA0.4
+		command = { type = secedeprovince which = TUR value = 444 }	#Cyprus
+		command = { type = sleepevent which = 135112 } #other turkey spoils
+		command = { type = trigger which = 135114 }
+	}
+}
+
+event = {
+	id = 135114
+	random = no 
+	country = TUR
+
+	trigger = {
+		control = { province = 401 data = TUR } # Athens
+	}
+
+	name = "EVT_135114_NAME"
+	desc = "EVT_135114_DESC"
+
+	picture = "failed_objective"
+
+	action_a = {
+		name = "OK"
+		command = { type = addcore which = 392 }
+		command = { type = addcore which = 393 }
+		command = { type = addcore which = 394 }
+		command = { type = addcore which = 395 }
+		command = { type = addcore which = 396 }
+		command = { type = addcore which = 398 }
+		command = { type = addcore which = 399 }
+		command = { type = addcore which = 400 }
+		command = { type = addcore which = 401 }
+		command = { type = addcore which = 402 }
+		command = { type = addcore which = 403 }
+		command = { type = addcore which = 405 } #TUR
+		command = { type = addcore which = 410 }
+		command = { type = addcore which = 411 }
+		#command = { type = addcore which = 412 } #BLU
+	}
+}
+
+event = {
+	id = 135115
+	random = no 
+	country = ITA
+
+	trigger = {
+		event = 135109 #key german event
+		alliance = { country = GER country = ITA }
+		alliance = { country = GER country = BUL }
+		control = { province = 412 data = ITA }
+		NOT = {
+			ispuppet = BUL
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135115_NAME"
+	desc = "EVT_135115_DESC"
+	picture = "failed_objective"
+
+	action_a = {
+		name = "OK"
+		command = { type = secedeprovince which = BUL value = 412 }
+	}
+}
+
+event = {
+	id = 135116
+	random = no 
+	country = TUR
+
+	trigger = {
+		event = 135109 #key german event
+		alliance = { country = GER country = TUR }
+		alliance = { country = GER country = BUL }
+		control = { province = 412 data = TUR }
+		NOT = {
+			ispuppet = BUL
+		}
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135115_NAME"
+	desc = "EVT_135115_DESC"
+	picture = "failed_objective"
+
+	action_a = {
+		name = "OK"
+		command = { type = secedeprovince which = BUL value = 412 }
+	}
+}
+
+event = {
+	id = 135117
+	random = no 
+	country = BUL
+
+	trigger = {
+		alliance = { country = GER country = BUL }
+		alliance = { country = GER country = ITA }
+		NOT = { ispuppet = ITA }
+		control = { province = 410 data = BUL }
+		event = 135109 #key german event
+	}
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135117_NAME"
+	desc = "EVT_135117_DESC"
+
+	picture = "failed_objective"
+
+	action_a = {
+		name = "OK"
+		command = { type = removecore which = 410 }
+		command = { type = secedeprovince which = ITA value = 410 } #FEPK,new
+	}
+}
+
+##########
+#  Partition of Greece - Italy receives partisans
+##########
+event = {
+	id = 135118
+	random = no 
+	country = ITA
+
+	trigger = {
+		NOT = { exists = GRE }
+		control = { province = 392 data = ITA }
+		control = { province = 403 data = ITA }
+		control = { province = 402 data = ITA }
+		control = { province = 401 data = ITA }
+		control = { province = 394 data = ITA }
+		control = { province = 395 data = ITA }
+	}
+
+        date = { day = 0 month = january year = 1935 }
+        offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_135118_NAME"
+	desc = "EVT_135118_DESC"
+	picture = "greek_soldiers"
+
+	action_a = {
+		name = "OK"
+		command = { type = province_revoltrisk which = 392 value = 50 } #Greece
+		command = { type = province_revoltrisk which = 402 value = 50 }
+		command = { type = province_revoltrisk which = 403 value = 50 }
+		command = { type = province_revoltrisk which = 401 value = 50 }
+		command = { type = province_revoltrisk which = 395 value = 50 }
+		command = { type = province_revoltrisk which = 394 value = 50 }
+		command = { type = province_revoltrisk which = 412 value = 50 }
+		command = { type = province_revoltrisk which = 410 value = 50 }
+	}
+}

@@ -1,0 +1,64 @@
+RUS;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+4153;Head of State;キリル1世;36;FA;Weary Stiffneck;High;M4080;x
+4154;Head of Government;グレゴリー・ジレンコフ;36;FA;Silent Workhorse;High;M4081;x
+4155;Foreign Minister;ニコライ・ポクロフスキー;36;FA;General Staffer;Low;M4082;x
+4156;Minister of Armament;ニコライ・マクラコフ;36;FA;Military Entrepreneur;Medium;M4083;x
+4157;Minister of Security;ウラディミール・マリシュキン;36;FA;Back Stabber;Very High;M4084;x
+4158;Head of Military Intelligence;ミハイル・ミーンドロフ;36;FA;Dismal Enigma;Very High;M4085;x
+4159;Chief of Staff;アントン・デニキン;36;FA;School of Mass Combat;High;M4086;x
+4161;Chief of Navy;ボリス・マカロフ;36;FA;Decisive Naval Battle Doctrine;High;M4088;x
+4163;Head of State;アンドレイ・ヴラソフ;36;NS;Resigned Generalissimo;High;M4090;x
+4164;Head of State;ウラディミール4世;36;PA;Benevolent Gentleman;High;M4091;x
+4165;Head of State;アレクサンドル・ケレンスキー;36;SC;Die-hard Reformer;High;M4092;x
+4166;Head of Government;ニコライ・エジョフ;36;ST;Backroom Backstabber;High;M4031;x
+4095;Head of Government;イラクリジ・ツェレテリー;36;SC;Naive Optimist;High;M4095;x
+4096;Foreign Minister;ボリス・スターマー;36;FA;Iron Fisted Brute;Low;M4096;x
+4097;Foreign Minister;フェドール・チチェリン;36;NS;Biased Intellectual;Low;M4097;x
+4098;Foreign Minister;ゲオルギ・ブラソフ;36;NS;The Cloak N Dagger Schemer;Low;M4098;x
+4099;Foreign Minister;ボリス・チェルノフ;36;PA;Apologetic Clerk;Low;M4099;x
+4100;Foreign Minister;ピオトル・プレハノフ;36;PA;Ideological Crusader;Low;M4100;x
+4101;Foreign Minister;オレグ・ミルユコフ;36;SC;Great Compromiser;Low;M4101;x
+4102;Foreign Minister;パヴェル・コノヴァロフ;36;SC;Apologetic Clerk;Low;M4102;x
+4103;Minister of Armament;セルゲイ・ロジャンコ;36;FA;Resource Industrialist;Medium;M4103;x
+4104;Minister of Armament;ニコラス・クラスノフ;36;NS;Administrative Genius;Medium;M4104;x
+4105;Minister of Armament;ボリス・コメネノフ;36;NS;Resource Industrialist;Medium;M4105;x
+4106;Minister of Armament;ゲオルギ・ブラソフ;36;PA;Resource Industrialist;Medium;M4098;x
+4107;Minister of Armament;ユリジ・ロゼンフェルド;36;PA;Theoretical Scientist;Medium;M4107;x
+4108;Minister of Armament;セルゲイ・サヴィンコフ;36;SC;Theoretical Scientist;Medium;M4108;x
+4109;Minister of Armament;ボリス・マルチェフ;36;SC;Infantry Proponent;Medium;M4109;x
+4110;Minister of Security;セルゲイ・サゾーノフ;36;FA;Compassionate Gentleman;Very High;M4110;x
+4111;Minister of Security;グレゴリー・R・セミョーノフ;36;NS;Crime Fighter;Very High;M4111;x
+4112;Minister of Security;フェリクス・ユソポフ;36;NS;Back Stabber;Very High;M4112;x
+4113;Minister of Security;セルゲイ・ロジャンコ;36;PA;Silent Lawyer;Very High;M4103;x
+4114;Minister of Security;ニコライ・エジョフ;36;ST;Back Stabber;Undying;M4031;x
+4115;Minister of Security;ウラディミール・スコベレフ;36;SC;Prince of Terror;Very High;M4115;x
+4116;Minister of Security;フェリクス・ユソポフ;36;SC;Compassionate Gentleman;Very High;M4112;x
+4117;Head of Military Intelligence;ニコライ・エジョフ;36;ST;Technical Specialist;Undying;M4031;x
+4118;Head of Military Intelligence;ヴセヴォロド・トマシェフスキ;36;NS;Dismal Enigma;Very High;M4118;x
+4119;Head of Military Intelligence;セルゲイ・サゾーノフ;36;NS;Industrial Specialist;Very High;M4110;x
+4120;Head of Military Intelligence;アレクセイ・カレディン;36;PA;Logistics Specialist;Very High;M4120;x
+4122;Head of Military Intelligence;イリッチ・アントノフ;36;SC;Technical Specialist;Very High;M4122;x
+4123;Head of Military Intelligence;ユリジ・ロゼンフェルド;36;SC;Logistics Specialist;Very High;M4107;x
+4125;Chief of Staff;フョードル・トリクヒン;36;NS;School of Mass Combat;High;M4125;x
+4126;Chief of Staff;アンドレイ・ヴラソフ;36;NS;School of Fire Support;High;M4090;x
+4128;Chief of Staff;ミハイル・N・トハチェフスキー;36;PA;School of Manoeuvre;High;M4007;x
+4129;Chief of Staff;フェリクス・ロマノフスキー;36;SC;School of Fire Support;High;M4129;x
+4130;Chief of Staff;ジェフゲニジ・ヴォン・ロメル;36;SC;School of Manoeuvre;High;M4130;x
+4131;Chief of Army;アレクサンダー・エゴロフ;36;FA;Armoured Spearhead Doctrine;Very High;M4131;x
+4132;Chief of Army;アンドレイ・ヴラソフ;36;NS;Elastic Defence Doctrine;Very High;M4090;x
+4133;Chief of Army;ミハイル・N・トハチェフスキー;36;NS;Static Defence Doctrine;Very High;M4007;x
+4135;Chief of Army;ジェフゲニジ・ヴォン・ロメル;36;PA;Armoured Spearhead Doctrine;Very High;M4130;x
+4136;Chief of Army;ヴァシーリー・ブリュッヘル;36;SC;Armoured Spearhead Doctrine;Very High;M4136;x
+4137;Chief of Army;イゴール・ベレフ;36;SC;Static Defence Doctrine;Very High;M4137;x
+4138;Chief of Navy;ペーター・ドロズド;36;FA;Open Seas Doctrine;High;M4138;x
+4139;Chief of Navy;オレグ・ミシェルキン;36;NS;Indirect Approach Doctrine;High;M4139;x
+4142;Chief of Navy;コンスタンティン・ドゥシェノフ;36;PA;Base Control Doctrine;High;L10520;x
+4143;Chief of Navy;ロベルト・ヴォン・ウィレン;36;SC;Decisive Naval Battle Doctrine;High;M4143;x
+4144;Chief of Navy;エドゥアール・ガラー;36;SC;Open Seas Doctrine;High;L10417;x
+4145;Chief of Air Force;イワン・タウベ;36;FA;Air Superiority Doctrine;High;M4145;x
+4148;Chief of Air Force;ニコライ・カーラモフ;36;PA;Army Aviation Doctrine;High;L10472;x
+4149;Chief of Air Force;ジュリジ・アルクスニス;36;PA;Vertical Envelopment Doctrine;High;M4146;x
+4150;Chief of Air Force;セルゲイ・コレネフ;36;SC;Vertical Envelopment Doctrine;High;M4150;x
+4151;Chief of Air Force;ジェフゲニジ・スムシュケヴィッチ;36;SC;Air Superiority Doctrine;High;M4147;x
+4152;Head of State;ウラディミール4世;38;FA;Benevolent Gentleman;High;M4091;x

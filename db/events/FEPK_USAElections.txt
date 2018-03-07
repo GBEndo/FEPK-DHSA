@@ -1,0 +1,2501 @@
+#########################################################################
+# The proper US Elections, by Steven, Add this to your usa.txt
+#########################################################################
+
+#########################################################################
+# The chain operates as follows:					Event ID
+
+# Sleep all the other events						9993700
+
+# The 1936 possibilities:
+# 1936 - Roosevelt (Dem) vs Landon (Rep) - Historic			9993709
+
+# The 1940 possibilities:
+# 1940 - Roosevelt (Dem) vs Wilkie (Rep) - Historic			9993711
+# 1940 - Landon (Rep) vs Wallace (Dem) (Landon win '36)			9993713
+
+# ALTERNATIVELY, if Wilkie wins in 1940 then he will die in 1944 and we go to:
+# Charles McNary dies (Vice President)					9999304
+# Wendell Willkie dies							9999305
+# Charles McNary dies (Not VP)						9999306
+
+# If Alf Landon wins in 1936 and 1940, Frank Knox will be Vice President. He dies in
+# April 1944 and therefore we need the VP to be Landon from then on.
+# Frank Knox dies							9999318
+# Frank Knox VP dies							9999319
+
+# The 1944 possibilities:
+# 1944 - Roosevelt (Dem) vs Dewey (Rep) - Historic			9993715
+# 1944 - Dewey (Rep) vs Wallace (Dem) - Landon won in '36 steps down 	9993734
+# 1944 - Wallace (Dem) vs Dewey (Rep) - Wallace won in '40		9993717
+# 1944 - Dewey (Rep) vs Wallace (Dem) - Willkie died in '44	 	9993716
+
+# The 1948 possibilities:
+# 1948 - Truman (Dem) vs Dewey (Rep) - Historic				9993718
+# 1948 - Dewey (Rep) vs Barkley (Dem) - Dewey won in '44		9993719
+# 1948 - Barkley (Dem) vs Dewey (Rep) - Wallace won in '40	 	9993720
+# 1948 - Wallace (Dem) vs Dewey (Rep) - Wallace won in '44		9993733
+
+#The 1952 possibilities:
+# 1952 - Eisenhower (Rep) vs Stevenson (Dem) - Historic	(or Dewey '44)	9993721
+# 1952 - Eisenhower (Rep) vs Barkley (Dem) - Barkley won in '48		9993722
+# 1952 - Stevenson (Dem) vs Dewey (Rep) - Dewey won in '48 		9993723
+
+# The 1956 possibilities: (New for AoD)
+# 1956 - Eisenhower (Rep) vs Stevenson (Dem) - Historic			9993750
+# 1956 - Stevenson (Dem) vs Warren (Rep) - Stevenson won in '52		9993751
+# 1956 - Warren (Rep) vs Stevenson (Dem) - Barkley/Dewey won in '52	9993753
+
+# The 1960 possibilities: 
+# 1960 - Kennedy (Dem) vs Nixon (Rep) - Historic 			9993754
+# 1960 - Stevenson (Dem) vs Nixon (Rep) - Stevenson won in '56 only	9993755
+# 1960 - Warren (Rep) vs Kennedy (Dem) - Warren won in '56		9993756
+
+# The President has been assassinated! - Kennedy (VP Johnson)		9993757
+# The President has been assassinated! - Nixon (VP Henry Cabot Lodge)	9993758
+# The President has been assassinated! - Stevenson (VP Kennedy!)	9993759
+# The President has been assassinated! - Warren	(VP Nixon)		9993760	
+
+# The Midterms. These are the 1938, 1942, 1946 and 1950 midterm elections. They offer the player a few choices
+# with respect to making the country more left or right wing, but offer no ability to become less democratic
+
+# 1938 Midterm								9993724
+# 1942 Midterm								9993725
+# 1946 Midterm								9993726
+# 1950 Midterm								9993727
+# 1954 Midterm								9993761
+# 1958 Midterm								9993762
+# 1962 Midterm								9993763
+
+# Next, let's deal with the paternal autocrat elections. My basic premises is, whilst the US isn't fully
+# democratic anymore, it will still have relatively free and fair elections. Therefore the computer
+# and player can bail out of being PA, back into standard elections if they so desire. The chain for the PA elections
+# is as follows:
+# 1936 - Lemke vs Landon						9993728
+# 1940 - Lindbergh vs Wilkie						9993729
+# 1944 - Lindbergh vs Dewey						9993730
+# 1948 - Thurmond vs Dewey						9993731
+# 1952 - MacArthur vs Eisenhower					9993732
+# 1956 - MacArthur vs Warren						9993764
+# 1960 - Goldwater vs Nixon						9993765
+
+# Now, on the off chance they go Socialist, then Norman Thomas was never one to buck democracy either. This chain will
+# be as follows:
+# The Revolution has come						9993739
+# 1936 - Thomas vs Roosevelt						9993740
+# 1940 - Thomas vs Wallace						9993741		
+# 1944 - Thomas vs Wallace						9993742
+# 1948 - Thomas vs Barkley						9993743
+# 1952 - Hoopes vs Stevenson						9993744
+# 1956 - Hoopes vs Stevenson						9993766
+# 1960 - Hoopes vs Kennedy						9993767
+
+# Socialist and PA Presidents DON'T get assassinated! Lucky them......
+
+# Sleep the following events: 3709 3710 3711 3712 3713 3717 3715 3716 305 900077 900078 900079 900080 900144 900145 
+# 3726 3727 3728 3718 318 600000 600001 500001 305 318
+#########################################################################
+#  US. Presidential Election of 1936
+# Premise - That Roosevelt has been doing a good job for nearly four years.
+# Basically, there is NO alternative. If the player has mucked up dissent to
+# horrific levels, then tough. The chance of Landon winning is low.
+#########################################################################
+# Option 1A
+event = {
+	id = 9993709
+	random = no
+	country = USA
+
+	name = "EVT_3709_NAME"
+	desc = "EVT_3709_DESC"
+        picture = "roosevelt"
+	style = 0
+
+	trigger = {
+		government = democratic
+		NOT = {
+			ispuppet = USA
+			}
+	}
+
+	date = { day = 3 month = november year = 1936 }
+
+	action_a = {
+		name = "EVT_9993709_ACTA"
+		ai_chance = 95
+		command = { type = manpowerpool value = 20 }
+		command = { type = headofstate which = 6001 } # Roosevelt
+		command = { type = headofgovernment which = 6002 } # Garner
+		command = { type = foreignminister which = 6003 } # Hull
+		command = { type = armamentminister which = 6077 } # Morgenthau
+		command = { type = ministerofsecurity which = 6005 } # J E Hoover
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = sleepminister which = 6035 } #Landon does not run again
+		command = { type = dissent value = -14 } #Large dissent reduction as changing ministers causes dissent!
+	}
+	action_b = {
+		name = "EVT_9993709_ACTB"
+		ai_chance = 5
+		command = { type = headofstate which = 6035 } # Landon
+		command = { type = headofgovernment which = 6048 } # Knox
+		command = { type = foreignminister which = 6066 } # Vandenberg
+		command = { type = armamentminister which = 6085 } # Roper
+		command = { type = ministerofsecurity which = 6107 } # Murphy
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = construct which = ic where = -1 value = 5 }
+		command = { type = construct which = ic where = -1 value = 5 }
+		command = { type = oilpool value = 1000 } #Landon is an Oilman
+		command = { type = energypool value = 100 }
+		command = { type = metalpool value = 100 }
+		command = { type = rarematerialspool value = 100 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = domestic which = free_market value = 1 } #Move to Free Market
+		command = { type = sleepminister which = 6001 } #Roosevelt retires, not to run again
+		command = { type = dissent value = -11 }
+	}
+}
+
+
+# Now the 1940 elections!
+# Option 1B - Sees Roosevelt against Wilkie (historically) or
+# Option 2A - Sees Landon, having won in 1936 facing Henry A. Wallace
+#
+#########################################################################
+#  US. Presidential Election of 1940 - Roosevelt vs Willkie (historical)
+#########################################################################
+event = {
+	id = 9993711
+	random = no
+	country = USA
+
+	trigger = {
+		government = democratic
+		headofstate = 6001
+		NOT = {
+			ispuppet = USA
+		}
+	}
+
+	name = "EVT_3711_NAME"
+	desc = "EVT_3711_DESC"
+        picture = "us_election"
+	style = 0
+
+	date = { day = 5 month = november year = 1940 }
+
+	action_a = {
+		name = "EVT_9993711_ACTA"
+		ai_chance = 89
+		command = { type = manpowerpool value = 10 }
+		command = { type = headofstate which = 6001 } # Roosevelt
+		command = { type = headofgovernment which = 6044 } # Wallace
+		command = { type = foreignminister which = 6003 } # Hull
+		command = { type = armamentminister which = 6077 } # Morgenthau
+		command = { type = ministerofsecurity which = 6005 } # J E Hoover
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = sleepminister which = 6002 } #Garner retires to Texas
+		command = { type = dissent value = -14 }
+	}
+	action_b = {
+		name = "EVT_9993711_ACTB"
+		ai_chance = 11
+		command = { type = headofstate which = 6036 } #Willkie
+		command = { type = headofgovernment which = 6049 } #McNary
+		command = { type = foreignminister which = 6066 } #Vandenberg
+		command = { type = armamentminister which = 6088 } #Hooper
+		command = { type = ministerofsecurity which = 6005 } #Still Hoover!
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = sleepminister which = 6001 } #Roosevelt retires, not to run again
+		command = { type = sleepminister which = 6002 } #Garner retires to Texas
+		command = { type = dissent value = -12 }
+	}
+}
+
+#########################################################################
+#  US. Presidential Election of 1940 - Landon vs Wallace after Landon win in 1936
+#########################################################################
+event = {
+	id = 9993713
+	random = no
+	country = USA
+
+	trigger = {
+		government = democratic
+		headofstate = 6035
+		NOT = {
+			ispuppet = USA
+		}
+	}
+
+	name = "EVT_9993713_NAME"
+	desc = "EVT_9993713_DESC"
+        picture = "us_election"
+	style = 0
+
+	date = { day = 5 month = november year = 1940 }
+
+	action_a = {
+		name = "EVT_9993713_ACTA"
+		ai_chance = 89
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = supplies value = 200 }
+		command = { type = headofstate which = 6035 } # Landon
+		command = { type = headofgovernment which = 6048 } # Knox
+		command = { type = foreignminister which = 6066 } # Vandeburg
+		command = { type = armamentminister which = 6086 }
+		command = { type = ministerofsecurity which = 6108 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = domestic which = free_market value = 1 } #Move to Free Market
+		command = { type = dissent value = -13 }
+	}
+	action_b = {
+		name = "EVT_9993713_ACTB"
+		ai_chance = 11
+		command = { type = headofstate which = 6032 } # Wallace
+		command = { type = headofgovernment which = 6045 } # Clark
+		command = { type = foreignminister which = 6003 } #Hull
+		command = { type = armamentminister which = 6080 } #Grumman
+		command = { type = ministerofsecurity which = 6104 } #Clark
+		command = { type = manpowerpool value = 10 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = local_setflag which = wallace40 }
+		command = { type = dissent value = -11 }
+	}
+}
+
+# What if Wilkie wins? He dies in 1944 BEFORE the election. Therefore, we need a
+# new president!
+#
+# Sorting out Wilkie and McNary (who also dies)
+
+
+#####################################
+### Charles McNary passes away
+
+event = {
+	id = 9999304
+	random = no
+	country = USA
+	style = 0
+
+	trigger = {
+		headofgovernment = 6049
+	}
+
+
+	date = { day = 24 month = february year = 1944 }
+
+	name = "EVT_9999304_NAME"
+	desc = "EVT_9999304_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = sleepminister which = 6049 }
+		command = { type = headofgovernment which = 6277 } #Willkie
+		command = { type = sleepevent which = 9999306 } #Just in case
+		command = { type = dissent value = -3 }
+	}
+}
+
+#####################################
+### Wendell Wilkie passes away
+
+event = {
+	id = 9999305
+	random = no
+	country = USA
+	style = 0
+
+	trigger = {
+		headofstate = 6036
+		minister = 6036
+	}
+
+	date = { day = 7 month = october year = 1944 }
+
+	name = "EVT_9999305_NAME"
+	desc = "EVT_9999305_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = sleepminister which = 6036 } #Willkie HoS
+		command = { type = sleepminister which = 6277 } #Willkie HoG
+		command = { type = headofstate which = 6278 } #Vandenberg
+		command = { type = headofgovernment which = 6279 }
+		command = { type = sleepevent which = 306 } #Sleeps 'normal' event or else will fire again
+		command = { type = dissent value = -5 } #We mourn
+	}
+}
+
+#####################################
+### Charles McNary passes away
+
+event = {
+	id = 9999306
+	random = no
+	country = USA
+	style = 0
+
+	trigger = {
+		minister = 6049
+		NOT = { headofgovernment = 6049 }
+	}
+
+	date = { day = 24 month = february year = 1944 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = sleepminister which = 6049 }
+		command = { type = sleepevent which = 9999304 } #Just in case
+	}
+}
+
+# Sorting out Frank Knox's death:
+
+#####################################
+
+### Frank Knox passes away
+
+event = {
+	id = 9999318
+	random = no
+	country = USA
+	style = 0
+
+	trigger = {
+		NOT = { headofgovernment = 6048 }
+	}
+
+	date = { year = 1944 month = april day = 28 }
+
+	name = "EVT_103_NAME"
+	desc = "EVT_103_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = sleepminister which = 6153 }
+		command = { type = sleepminister which = 6048 }
+	}
+}
+
+#####################################
+### Frank Knox as VP passes away
+
+event = {
+	id = 9999319
+	random = no
+	country = USA
+	style = 0
+
+	trigger = {
+		headofgovernment = 6048
+	}
+
+	date = { day = 28 month = april year = 1944 }
+
+	name = "EVT_9999319_NAME"
+	desc = "EVT_9999319_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { trigger = { incabinet = 6153 } type = chiefofnavy which = 6155 }
+		command = { type = sleepminister which = 6048 }
+		command = { type = sleepminister which = 6153 }
+		command = { type = headofgovernment which = 6282 } #Alf Landon
+		command = { type = sleepevent which = 9999318 }
+		command = { type = dissent value = -3 }
+	}
+}
+
+
+# Onwards we go. Now the 1944 election possibilities.
+# They see the historic election of Roosevelt vs Dewey
+# Or, if Landon won in 1936 and was re-elected, he stands aside for Dewey, who faces Wallace.
+# Alternatively, perhaps Wallace won in 1940 after Landon initially won in 1936 - So Wallace again faces Dewey, though
+# under slightly different circumstances.
+# Lastly, we again see another Wallace vs Dewey battle, but this time, this is if Willkie won in 1940 and has died
+# along with his VP, Charles McNary.
+# First, Roosevelt verses Dewey
+
+#########################################################################
+#  US. Presidential Election of 1944 - Roosevelt vs Dewey (historical)
+#########################################################################
+event = {
+	id = 9993715
+	random = no
+	country = USA
+
+	name = "EVT_3715_NAME"
+	desc = "EVT_3715_DESC"
+        picture = "us_election"
+	style = 0
+
+	trigger = {
+		government = democratic
+		headofstate = 6001
+		NOT = { ispuppet = USA }
+	}
+
+	date = { day = 7 month = november year = 1944 }
+
+	action_a = {
+		name = "EVT_9993715_ACTA"
+		ai_chance = 89
+		command = { type = headofstate which = 6001 } # Roosevelt
+		command = { type = headofgovernment which = 6046 } # Truman
+		command = { type = foreignminister which = 6060 }
+		command = { type = armamentminister which = 6077 }
+		command = { type = ministerofsecurity which = 6005 } #J E Hoover
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = dissent value = -14 }
+	}
+	action_b = {
+		name = "EVT_9993715_ACTB"
+		ai_chance = 11
+		command = { type = headofstate which = 6038 } # Dewey
+		command = { type = headofgovernment which = 6050 } # Bricker
+		command = { type = foreignminister which = 6068 }
+		command = { type = armamentminister which = 6090 } # Rockerfeller
+		command = { type = ministerofsecurity which = 6110 }
+		command = { type = oilpool value = 100 }
+		command = { type = energypool value = 100 }
+		command = { type = metalpool value = 100 }
+		command = { type = rarematerialspool value = 100 }
+		command = { type = supplies value = 200 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = sleepminister which = 6001 } #Roosevelt retires, not to run again
+		command = { type = local_setflag which = dewey44 }
+		command = { type = dissent value = -10 }
+	}
+}
+
+#########################################################################
+#  US. Presidential Election of 1944 - Dewey vs Wallace after Willkie win (and death) in 1940
+#########################################################################
+event = {
+	id = 9993716
+	random = no
+	country = USA
+
+	name = "EVT_9993716_NAME"
+	desc = "EVT_9993716_DESC"
+        picture = "us_election"
+	style = 0
+
+	trigger = {
+		government = democratic
+		headofstate = 6278 #Vandenberg because of Willkie death
+		NOT = { ispuppet = USA }
+	}
+
+	date = { day = 7 month = november year = 1944 }
+
+	action_a = {
+		name = "EVT_9993716_ACTA"
+		ai_chance = 55
+		command = { type = headofstate which = 6038 } #Dewey
+		command = { type = headofgovernment which = 6050 } #Bricker
+		command = { type = foreignminister which = 6068 }
+		command = { type = armamentminister which = 6090 }
+		command = { type = ministerofsecurity which = 6110 }
+		command = { type = oilpool value = 100 }
+		command = { type = energypool value = 100 }
+		command = { type = metalpool value = 100 }
+		command = { type = rarematerialspool value = 100 }
+		command = { type = supplies value = 200 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = local_setflag which = dewey44 }
+		command = { type = dissent value = -17 }
+	}
+	action_b = {
+		name = "EVT_9993716_ACTB"
+		ai_chance = 45
+		command = { type = headofstate which = 6032 } # Wallace
+		command = { type = headofgovernment which = 6045 } # Clarke
+		command = { type = foreignminister which = 6003 }
+		command = { type = armamentminister which = 6080 }
+		command = { type = ministerofsecurity which = 6104 }
+		command = { type = oilpool value = 100 }
+		command = { type = energypool value = 100 }
+		command = { type = metalpool value = 100 }
+		command = { type = rarematerialspool value = 100 }
+		command = { type = supplies value = 200 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = local_setflag which = wallace44 }
+		command = { type = dissent value = -17 }
+	}
+}
+
+#########################################################################
+#  US. Presidential Election of 1944 - Wallace vs Dewey (after Wallace win in 1940 over Landon)
+#########################################################################
+event = {
+	id = 9993717
+	random = no
+	country = USA
+
+	name = "EVT_9993717_NAME"
+	desc = "EVT_9993717_DESC"
+        picture = "us_election"
+	style = 0
+
+	trigger = {
+		government = democratic
+		headofstate = 6032 #Wallace
+		local_flag = wallace40
+		NOT = { ispuppet = USA }
+	}
+
+	date = { day = 7 month = november year = 1944 }
+
+	action_a = {
+		name = "EVT_9993717_ACTA"
+		ai_chance = 86
+		command = { type = headofstate which = 6032 }
+		command = { type = headofgovernment which = 6045 }
+		command = { type = foreignminister which = 6003 }
+		command = { type = armamentminister which = 6080 }
+		command = { type = ministerofsecurity which = 6104 }
+		command = { type = oilpool value = 100 }
+		command = { type = energypool value = 100 }
+		command = { type = metalpool value = 100 }
+		command = { type = rarematerialspool value = 100 }
+		command = { type = supplies value = 200 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = dissent value = -17 }
+	}
+	action_b = {
+		name = "EVT_9993717_ACTB"
+		ai_chance = 14
+		command = { type = headofstate which = 6038 }
+		command = { type = headofgovernment which = 6050 }
+		command = { type = foreignminister which = 6068 }
+		command = { type = armamentminister which = 6090 }
+		command = { type = ministerofsecurity which = 6110 }
+		command = { type = oilpool value = 100 }
+		command = { type = energypool value = 100 }
+		command = { type = metalpool value = 100 }
+		command = { type = rarematerialspool value = 100 }
+		command = { type = supplies value = 200 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = local_setflag which = dewey44 }
+		command = { type = local_clrflag which = wallace40 }
+		command = { type = dissent value = -17 }
+	}
+}
+
+#########################################################################
+#  US. Presidential Election of 1944 - Wallace vs Dewey after Landon win in 1940
+#########################################################################
+event = {
+	id = 9993734
+	random = no
+	country = USA
+
+	name = "EVT_9993734_NAME"
+	desc = "EVT_9993734_DESC"
+        picture = "us_election"
+	style = 0
+
+	trigger = {
+		government = democratic
+		headofstate = 6035 # Landon
+		NOT = { ispuppet = USA }
+	}
+
+	date = { day = 7 month = november year = 1944 }
+
+	action_a = {
+		name = "EVT_9993734_ACTA"
+		ai_chance = 75
+		command = { type = headofstate which = 6038 } # Dewey
+		command = { type = headofgovernment which = 6050 }
+		command = { type = foreignminister which = 6068 }
+		command = { type = armamentminister which = 6090 }
+		command = { type = ministerofsecurity which = 6110 }
+		command = { type = oilpool value = 100 }
+		command = { type = energypool value = 100 }
+		command = { type = metalpool value = 100 }
+		command = { type = rarematerialspool value = 100 }
+		command = { type = supplies value = 200 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = local_setflag which = dewey44 }
+		command = { type = sleepminister which = 6035 } #Landon does not run again
+		command = { type = dissent value = -17 }
+	}
+	action_b = {
+		name = "EVT_9993734_ACTB"
+		ai_chance = 25
+		command = { type = headofstate which = 6032 } #Wallace
+		command = { type = headofgovernment which = 6045 }
+		command = { type = foreignminister which = 6003 }
+		command = { type = armamentminister which = 6080 }
+		command = { type = ministerofsecurity which = 6104 }
+		command = { type = oilpool value = 100 }
+		command = { type = energypool value = 100 }
+		command = { type = metalpool value = 100 }
+		command = { type = rarematerialspool value = 100 }
+		command = { type = supplies value = 200 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = local_setflag which = wallace44 }
+		command = { type = sleepminister which = 6035 } #Landon does not run again
+		command = { type = dissent value = -11 }
+	}
+}
+
+
+# Onwards we go. Now the 1948 election possibilities.
+# We see either the historic battle of Truman vs Dewey.
+# Or perhaps, if Dewey won in 1944, he faces Alben W. Barkley
+# Perhaps Wallace won in 1940 and was re-elected. He stands aside, and Dewey and Barkley again fight it out, though the
+# circumstances are slightly different.
+# Lastly, perhaps Wallace won for the first time in 1944, so wants to run again. He faces Dewey again.
+# First, Truman verses Dewey
+
+##################################################################
+# 1948 ELECTIONS - Truman vs. Dewey - Historic
+###################################################################
+
+event = {
+	id = 9993718
+	random = no
+	country = USA
+
+	trigger = {
+		government = democratic
+		headofstate = 6034 # Truman
+		NOT = { ispuppet = USA }
+	}
+
+	name = "EVT_9993718_NAME"
+	desc = "EVT_9993718_DESC"
+        picture = "us_election"
+	style = 0
+
+	date = { day = 2 month = november year = 1948 }
+
+	action_a = {
+		name = "EVT_9993718_ACTA"
+		ai_chance = 88
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = headofstate which = 6034 } #Truman
+		command = { type = headofgovernment which = 6047 } #Barkley 
+		command = { type = foreignminister which = 6064 } #Marshall
+		command = { type = armamentminister which = 6217 }
+		command = { type = ministerofsecurity which = 6005 }
+		command = { type = dissent value = -13 }
+	}
+	action_b = {
+		name = "EVT_9993718_ACTB"
+		ai_chance = 12
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 6038 } # Dewey
+		command = { type = headofgovernment which = 6210 } # Warren
+		command = { type = foreignminister which = 6066 }
+		command = { type = armamentminister which = 6088 }
+		command = { type = ministerofsecurity which = 6223 } #Gordon J Knight
+		command = { type = sleepminister which = 6034 } #Truman retires, not to run again.
+		command = { type = local_setflag which = dewey48 }
+		command = { type = dissent value = -11 }
+	}
+}
+
+# 1948 ELECTIONS - Dewey vs Barkley - After Dewey win (however arrived at) in 1944
+#############################################################################################
+
+event = {
+	id = 9993719
+	random = no
+	country = USA
+
+	trigger = {
+		government = democratic
+		headofstate = 6038 # Dewey
+		NOT = { ispuppet = USA }
+	}
+
+	name = "EVT_9993719_NAME"
+	desc = "EVT_9993719_DESC"
+        picture = "us_election"
+	style = 0
+
+	date = { day = 2 month = november year = 1948 }
+
+	action_a = {
+		name = "EVT_9993719_ACTA"
+		ai_chance = 89
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 6038 } # Dewey
+		command = { type = headofgovernment which = 6210 }
+		command = { type = foreignminister which = 6066 }
+		command = { type = armamentminister which = 6088 }
+		command = { type = ministerofsecurity which = 6110 } #Gibson still
+		command = { type = dissent value = -13 }
+	}
+	action_b = {
+		name = "EVT_9993719_ACTB"
+		ai_chance = 11
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 6284 } # Barkley
+		command = { type = headofgovernment which = 6046 } #Truman! Back in action.
+		command = { type = foreignminister which = 6213 }
+		command = { type = armamentminister which = 6217 }
+		command = { type = ministerofsecurity which = 6005 } #J E Hoover back in favour
+		command = { type = local_clrflag which = dewey44 } #Gets rid of Dewey flag
+		command = { type = dissent value = -11 }
+	}
+}
+
+# 1948 ELECTIONS - Barkley vs. Dewey - After Wallace won in 1940
+##############################################################################
+
+event = {
+	id = 9993720
+	random = no
+	country = USA
+
+	trigger = {
+		government = democratic
+		headofstate = 6032 #Wallace
+		local_flag = wallace40
+		NOT = { ispuppet = USA }
+	}
+
+	name = "EVT_9993720_NAME"
+	desc = "EVT_9993720_DESC"
+        picture = "us_election"
+	style = 0
+
+	date = { day = 2 month = november year = 1948 }
+
+	action_a = {
+		name = "EVT_9993719_ACTB"
+		ai_chance = 58
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 6284 } # Barkley
+		command = { type = headofgovernment which = 6285 } # Byrnes
+		command = { type = foreignminister which = 6213 }
+		command = { type = armamentminister which = 6217 }
+		command = { type = ministerofsecurity which = 6005 }
+		command = { type = sleepminister which = 6045 } #Clark retires
+		command = { type = dissent value = -13 }
+	}
+
+	action_b = {
+		name = "EVT_9993720_ACTB"
+		ai_chance = 42
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 6038 } # Dewey
+		command = { type = headofgovernment which = 6210 } #Warren
+		command = { type = foreignminister which = 6066 }
+		command = { type = armamentminister which = 6088 }
+		command = { type = ministerofsecurity which = 6005 }
+		command = { type = sleepminister which = 6045 } #Clark retires
+		command = { type = local_setflag which = dewey48 }
+		command = { type = dissent value = -12 }
+	}
+}
+#########################################################################
+#  US. Presidential Election of 1948 - Wallace vs Dewey (again - After Wallace won in 1944 for the first time)
+#########################################################################
+event = {
+	id = 9993733
+	random = no
+	country = USA
+
+	name = "EVT_9993733_NAME"
+	desc = "EVT_9993733_DESC"
+        picture = "us_election"
+	style = 0
+
+	trigger = {
+		government = democratic
+		headofstate = 6032 #Wallace
+		local_flag = wallace44
+		NOT = { ispuppet = USA }
+	}
+
+	date = { day = 2 month = november year = 1948 }
+
+	action_a = {
+		name = "EVT_9993733_ACTA"
+		ai_chance = 65
+		command = { type = headofstate which = 6038 } # Dewey
+		command = { type = headofgovernment which = 6210 } # Warren
+		command = { type = foreignminister which = 6066 }
+		command = { type = armamentminister which = 6088 }
+		command = { type = ministerofsecurity which = 6110 }
+		command = { type = oilpool value = 100 }
+		command = { type = energypool value = 100 }
+		command = { type = metalpool value = 100 }
+		command = { type = rarematerialspool value = 100 }
+		command = { type = supplies value = 200 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = sleepminister which = 6045 } #Clark retires
+		command = { type = local_setflag which = dewey48 }
+		command = { type = dissent value = -15 }
+	}
+	action_b = {
+		name = "EVT_9993733_ACTB"
+		ai_chance = 35
+		command = { type = headofstate which = 6032 } # Wallace
+		command = { type = headofgovernment which = 6046 } # Truman - Back in style!
+		command = { type = foreignminister which = 6063 }
+		command = { type = armamentminister which = 6217 }
+		command = { type = ministerofsecurity which = 6005 }
+		command = { type = oilpool value = 100 }
+		command = { type = energypool value = 100 }
+		command = { type = metalpool value = 100 }
+		command = { type = rarematerialspool value = 100 }
+		command = { type = supplies value = 200 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = sleepminister which = 6045 } #Clark retires
+		command = { type = dissent value = -12 }
+	}
+}
+
+# 1952 sees any of the following:
+# Truman retires, and Stevenson and Eisenhower contest the election. If Wallace won in 1944 and 48, or Dewey won in 1944
+# then they both retire as well, setting up the same contest.
+# However, if Dewey won in 1948 for the first time, he fights Stevenson. Eisenhower will have to wait.
+# If Barkley won in 1948 he faces Eisenhower instead.
+
+# 1952 ELECTIONS - Eisenhower vs. Stevenson - Historical, but also if Dewey or Wallace won in 1944 and re-elected
+####################################################################
+
+event = {
+	id = 9993721
+	random = no
+	country = USA
+
+	trigger = {
+		government = democratic
+		OR = { headofstate = 6034 
+			headofstate = 6032
+			headofstate = 6038 } # Truman, Wallace or Dewey
+		NOT = { local_flag = dewey48 } #If Dewey won in '48 first time, he'll run again!
+		NOT = {	ispuppet = USA }
+	}
+
+	name = "EVT_9993721_NAME"
+	desc = "EVT_9993721_DESC"
+      picture = "us_election"
+	style = 0
+
+	date = { day = 4 month = november year = 1952 }
+
+	action_a = {
+		name = "EVT_9993721_ACTA"
+		ai_chance = 91
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = domestic which = free_market value = 1 } #Move to Free Market
+		command = { type = headofstate which = 6208 } #Eisenhower
+		command = { type = headofgovernment which = 6211 } #Someone who isn't a crook!
+		command = { type = foreignminister which = 6215 }
+		command = { type = armamentminister which = 6219 }
+		command = { type = ministerofsecurity which = 6005 }
+		#command = { type = sleepminister which = 6137 } #Eisenhower can't be CoS
+		#command = { type = sleepminister which = 6147 } #Nor Head of the Army
+		command = { type = sleepminister which = 6046 } #Truman retires
+		command = { type = sleepminister which = 6034 } #Truman retires
+		command = { type = dissent value = -13 }
+	}
+	action_b = {
+		name = "EVT_9993721_ACTB"
+		ai_chance = 9
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = headofstate which = 6209 } #Stevenson
+		command = { type = headofgovernment which = 6212 } #Sparkman
+		command = { type = foreignminister which = 6216 }
+		command = { type = armamentminister which = 6220 }
+		command = { type = ministerofsecurity which = 6005 }
+		command = { type = sleepminister which = 6046 } #Truman retires
+		command = { type = sleepminister which = 6034 } #Truman retires
+		command = { type = local_setflag which = stevenson52 }
+		command = { type = dissent value = -11 }
+	}
+}
+
+# 1952 ELECTIONS HISTORICAL - Eisenhower vs. Barkley - Barkley won in 1948
+#########################################################################
+
+event = {
+	id = 9993722
+	random = no
+	country = USA
+
+	trigger = {
+		government = democratic
+		headofstate = 6284 #Barkley
+		NOT = {	ispuppet = USA }
+	}
+
+	name = "EVT_9993722_NAME"
+	desc = "EVT_9993722_DESC"
+      picture = "us_election"
+	style = 0
+
+	date = { day = 4 month = november year = 1952 }
+
+	action_a = {
+		name = "EVT_9993722_ACTA"
+		ai_chance = 51
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 6284 } #Barkley continues
+		command = { type = headofgovernment which = 6285 } #So does Byrnes as VP
+		command = { type = foreignminister which = 6213 }
+		command = { type = armamentminister which = 6217 }
+		command = { type = ministerofsecurity which = 6225 }
+		command = { type = sleepminister which = 6046 } #Truman retires
+		command = { type = sleepminister which = 6034 } #Truman retires
+		command = { type = dissent value = -13 }
+	}
+	action_b = {
+		name = "EVT_9993722_ACTB"
+		ai_chance = 49
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = domestic which = free_market value = 1 } #Move to Free Market
+		command = { type = headofstate which = 6208 } #Eisenhower
+		command = { type = headofgovernment which = 6239 } #McCarthy! #FEPK
+		command = { type = foreignminister which = 6215 }
+		command = { type = armamentminister which = 6219 }
+		command = { type = ministerofsecurity which = 6005 }
+		#command = { type = sleepminister which = 6137 } #Eisenhower can't be CoS
+		#command = { type = sleepminister which = 6147 } #Nor Head of the Army - Though he could 'lead' an army
+		command = { type = sleepminister which = 6046 } #Truman retires
+		command = { type = sleepminister which = 6034 } #Truman retires
+		command = { type = dissent value = -13 }
+	}
+}
+
+# 1952 ELECTIONS - Stevenson vs. Dewey - assumes Dewey won in 1948 only
+###################################################################################
+
+event = {
+	id = 9993723
+	random = no
+	country = USA
+
+	trigger = {
+		government = democratic
+		headofstate = 6038 #Dewey
+		local_flag = dewey48 #If Dewey won in '48 first time, he'll run again!
+		NOT = { ispuppet = USA }
+	}
+
+	name = "EVT_9993723_NAME"
+	desc = "EVT_9993723_DESC"
+      picture = "us_election"
+	style = 0
+
+	date = { day = 4 month = november year = 1952 }
+
+	action_a = {
+		name = "EVT_9993723_ACTA"
+		ai_chance = 55
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = headofstate which = 6209 } #Stevenson
+		command = { type = headofgovernment which = 6212 } #Sparkman
+		command = { type = foreignminister which = 6216 }
+		command = { type = armamentminister which = 6220 }
+		command = { type = ministerofsecurity which = 6005 }
+		command = { type = sleepminister which = 6046 } #Truman retires
+		command = { type = sleepminister which = 6034 } #Truman retires
+		command = { type = local_setflag which = stevenson52 }
+		command = { type = dissent value = -13 }
+	}
+	action_b = {
+		name = "EVT_9993723_ACTB"
+		ai_chance = 45
+		command = { type = set_domestic which = political_left value = 1 }
+		command = { type = headofstate which = 6038 } #Dewey
+		command = { type = headofgovernment which = 6210 } #Warren
+		command = { type = foreignminister which = 6215 }
+		command = { type = armamentminister which = 6091 }
+		command = { type = ministerofsecurity which = 6110 } #Gibson
+		command = { type = sleepminister which = 6046 } #Truman retires
+		command = { type = sleepminister which = 6034 } #Truman retires
+		command = { type = dissent value = -11 }
+	}
+}
+
+# 1956 sees the historic rematch between Stevenson and Eisenhower.
+# Alternatively, if Stevenson won in 1952, he faces Earl Warren. Eisenhower doesn't want to run again.
+# Lastly, if Dewey or Barkley won in 1952, they both stand down and Stevenson vs Warren happens. No Eisenhower. I
+# think he will be looking to retire.
+##################################################
+### 9993750 US Presidential Election 1956 Historic - Eisenhower v Stevenson
+##################################################
+
+event = {
+	id = 9993750
+	random = no
+	country = USA
+	style = 0
+
+	trigger = {
+		government = democratic
+		headofstate = 6208 #Eisenhower
+		NOT = { ispuppet = USA }
+	}
+
+	name = "EVT_9993750_NAME"
+	desc = "EVT_9993750_DESC"
+
+	date = { day = 4 month = november year = 1956 }
+
+	action_a = {
+		ai_chance = 89
+		name = "EVT_9993750_ACTA"
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = domestic which = free_market value = 1 } #Move to Free Market
+		command = { type = headofstate which = 6208 } #Ike
+		command = { type = headofgovernment which = 6211 } #Nixon
+		command = { type = foreignminister which = 6215 } #Dulles
+		command = { type = armamentminister which = 6248 } #Anderson
+		command = { type = ministerofsecurity which = 6005 } #Hoover
+		command = { type = dissent value = -13 }
+	}	
+	action_b = {
+		ai_chance = 11
+		name = "EVT_9993750_ACTB"
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = headofstate which = 6209 } #Stevenson
+		command = { type = headofgovernment which = 6212 } #Still Sparkman here
+		command = { type = foreignminister which = 6213 } #Acheson (back in action)
+		command = { type = armamentminister which = 6249 } 
+		command = { type = ministerofsecurity which = 6005 } #Still Hoover!
+		command = { type = sleepminister which = 6208 } #Eisenhower retires
+		command = { type = local_setflag which = stevenson56 }
+		command = { type = dissent value = -11 }
+	}
+}	
+
+
+
+##################################################
+### 9993751 US Presidential Election 1956 - Stevenson v Warren
+##################################################
+
+event = {
+	id = 9993751
+	random = no
+	country = USA
+	style = 0
+
+	trigger = {
+		government = democratic
+		headofstate = 6209 #Stevenson
+		local_flag = stevenson52 #Stevenson won in 1952!
+		NOT = { ispuppet = USA }
+		}
+
+	name = "EVT_9993751_NAME"
+	desc = "EVT_9993751_DESC"
+
+	date = { day = 4 month = november year = 1956 }
+
+	action_a = {
+		ai_chance = 80
+		name = "EVT_9993751_ACTA"
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = headofstate which = 6209 } #Stevenson
+		command = { type = headofgovernment which = 6245 } #Kefauver
+		command = { type = foreignminister which = 6216 } #Olson
+		command = { type = armamentminister which = 6249 } #Anderson
+		command = { type = ministerofsecurity which = 6005 } #Still Hoover!
+		command = { type = dissent value = -13 }	
+		command = { type = sleepminister which = 6208 } #Eisenhower retires
+		}
+	action_b = {
+		ai_chance = 20
+		name = "EVT_9993751_ACTB"
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = domestic which = free_market value = 1 } #Move to Free Market
+		command = { type = headofstate which = 6288 } #Warren
+		command = { type = headofgovernment which = 6243 } #Lodge - Thanks to Nathan Madien
+		command = { type = foreignminister which = 6215 } #Dulles
+		command = { type = armamentminister which = 6248 } #Anderson
+		command = { type = ministerofsecurity which = 6238 } #McCarthy!
+		command = { type = dissent value = -11 }
+		command = { type = local_clrflag which = stevenson52 } #He lost!
+		}
+	}
+
+##################################################
+### 9993753 US Presidential Election 1956 - Stevenson v Warren (New for both)
+##################################################
+
+event = {
+	id = 9993753
+	random = no
+	country = USA
+	style = 0
+
+	trigger = {
+		government = democratic
+			OR = {
+			headofstate = 6038 #Dewey
+			headofstate = 6284 #Barkley
+			}
+		NOT = { ispuppet = USA }
+		}
+
+	name = "EVT_9993753_NAME"
+	desc = "EVT_9993753_DESC"
+
+	date = { day = 4 month = november year = 1956 }
+
+	action_a = {
+		ai_chance = 50
+		name = "EVT_9993753_ACTA"
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = headofstate which = 6209 } #Stevenson
+		command = { type = headofgovernment which = 6245 } #Kefauver
+		command = { type = foreignminister which = 6216 } #Olson
+		command = { type = armamentminister which = 6249 } #Anderson
+		command = { type = ministerofsecurity which = 6005 } #Still Hoover!
+		command = { type = dissent value = -12 }	
+		command = { type = sleepminister which = 6208 } #Eisenhower retires
+		command = { type = sleepminister which = 6038 } #Dewey retires
+		command = { type = sleepminister which = 6284 } #Barkley retires
+		command = { type = local_setflag which = stevenson56 }
+		}
+	action_b = {
+		ai_chance = 50
+		name = "EVT_9993753_ACTB"
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = domestic which = free_market value = 1 } #Move to Free Market
+		command = { type = headofstate which = 6288 } #Warren
+		command = { type = headofgovernment which = 6243 } #Lodge - Thanks to Nathan Madien
+		command = { type = foreignminister which = 6215 } #Dulles
+		command = { type = armamentminister which = 6248 } #Anderson
+		command = { type = ministerofsecurity which = 6238 } #McCarthy!
+		command = { type = dissent value = -12 }
+		command = { type = sleepminister which = 6208 } #Eisenhower retires
+		command = { type = sleepminister which = 6038 } #Dewey retires
+		command = { type = sleepminister which = 6284 } #Barkley retires
+		}
+	}
+
+# 1960 sees either the classic Kenendy vs Nixon or
+# If Stevenson won in 1952, he stands aside for Kennedy and he engages Nixon as well.
+# If Stevenson won in 1956, he stands again, but selects a new VP (mainly done for fun - as you will see!), facing Nixon.
+# If Warren won in 1956, it is him who contests against Kennedy instead.
+##################################################
+### 9993754 US Presidential Election 1960 - Kennedy v Nixon (New for both)
+##################################################
+
+
+event = {
+	id = 9993754
+	random = no
+	country = USA
+	style = 0
+
+	trigger = {
+		government = democratic
+		OR = {
+			headofstate = 6208 #Eisenhower
+			headofstate = 6209 #Stevenson
+			}
+		local_flag = stevenson52 #Stevenson won in 1952!
+		NOT = { ispuppet = USA }
+		}
+
+	name = "EVT_9993754_NAME"
+	desc = "EVT_9993754_DESC"
+
+	date = { day = 4 month = november year = 1960 }
+
+	action_a = {
+		ai_chance = 75
+		name = "EVT_9993754_ACTA"
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = headofstate which = 6242 } #Kennedy
+		command = { type = headofgovernment which = 6244 } #Johnson
+		command = { type = foreignminister which = 6247 } #Rusk
+		command = { type = armamentminister which = 6250 } #Dillon
+		command = { type = ministerofsecurity which = 6005 } #Hoover - STILL!
+		command = { type = ministerofintelligence which = 6253 } #I like McCone - Let's stick him in too!
+		command = { type = dissent value = -13 }		
+		}	
+	action_b = {
+		ai_chance = 25
+		name = "EVT_9993754_ACTB"
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 6241 } #Tricky Dicky
+		command = { type = headofgovernment which = 6243 } #Lodge
+		command = { type = foreignminister which = 6246 } #Thurmond
+		command = { type = armamentminister which = 6251 } #Rockerfeller
+		command = { type = ministerofsecurity which = 6005 } #You know who
+		command = { type = dissent value = -11 }	
+		}
+	}
+
+##################################################
+### 9993755 US Presidential Election 1960 - Stevenson v Nixon (Stevenson won in '56)
+##################################################
+
+
+event = {
+	id = 9993755
+	random = no
+	country = USA
+	style = 0
+
+	trigger = {
+		government = democratic
+		headofstate = 6209 #Stevenson
+		local_flag = stevenson56 #Stevenson won in 1956!
+		NOT = { ispuppet = USA }
+		}
+
+	name = "EVT_9993755_NAME"
+	desc = "EVT_9993755_DESC"
+
+	date = { day = 4 month = november year = 1960 }
+
+	action_a = {
+		ai_chance = 75
+		name = "EVT_9993755_ACTA"
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = headofstate which = 6209 } #Stevenson
+		command = { type = headofgovernment which = 6289 } #Kennedy!
+		command = { type = foreignminister which = 6247 } #Rusk
+		command = { type = armamentminister which = 6250 } #Dillon
+		command = { type = ministerofsecurity which = 6005 } #Hoover - STILL!
+		command = { type = dissent value = -13 }		
+		}	
+	action_b = {
+		ai_chance = 25
+		name = "EVT_9993755_ACTB"
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 6241 } #Tricky Dicky
+		command = { type = headofgovernment which = 6243 } #Lodge
+		command = { type = foreignminister which = 6246 } #Thurmond
+		command = { type = armamentminister which = 6251 } #Rockerfeller
+		command = { type = ministerofsecurity which = 6005 } #You know who
+		command = { type = dissent value = -11 }	
+		}
+	}
+
+##################################################
+### 9993756 US Presidential Election 1960 - Warren v Kennedy (Warren won in '56)
+##################################################
+
+
+event = {
+	id = 9993756
+	random = no
+	country = USA
+	style = 0
+
+	trigger = {
+		government = democratic
+		headofstate = 6288 #Warren
+		NOT = { ispuppet = USA }
+		}
+
+	name = "EVT_9993756_NAME"
+	desc = "EVT_9993756_DESC"
+
+	date = { day = 4 month = november year = 1960 }
+
+	action_a = {
+		ai_chance = 51
+		name = "EVT_9993756_ACTA"
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = headofstate which = 6242 } #Kennedy
+		command = { type = headofgovernment which = 6244 } #Johnson
+		command = { type = foreignminister which = 6247 } #Rusk
+		command = { type = armamentminister which = 6250 } #Dillon
+		command = { type = ministerofsecurity which = 6005 } #Hoover - STILL!
+		command = { type = dissent value = -13 }		
+	}	
+	action_b = {
+		ai_chance = 49
+		name = "EVT_9993756_ACTB"
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = domestic which = free_market value = 1 } #Move to Free Market
+		command = { type = headofstate which = 6288 } #Warren
+		command = { type = headofgovernment which = 6243 } #Lodge - Thanks to Nathan Madien
+		command = { type = foreignminister which = 6246 } #Thurmond
+		command = { type = armamentminister which = 6251 } #Rockerfeller
+		command = { type = ministerofsecurity which = 6290 } #Frost
+		command = { type = dissent value = -11 }	
+	}
+}
+
+#####################################################
+### 9993757 USA - The Assassination of John F. Kennedy 
+#####################################################
+
+event = {
+	id = 9993757
+	random = no
+	country = USA
+	style = 0
+
+	trigger = {
+		random = 80
+		headofstate = 6242
+		}
+
+	date = { day = 22 month = november year = 1963 }
+
+	name = "EVT_9993757_NAME"
+	desc = "EVT_9993757_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = headofstate which = 6254 } # Lyndon B. Johnson
+		command = { type = sleepminister which = 6242 }
+		command = { type = dissent value = -5 }
+	}
+}
+
+#####################################################
+### 9993758 USA - The Assassination of Richard M. Nixon 
+#####################################################
+
+event = {
+	id = 9993758
+	random = no
+	country = USA
+	style = 0
+
+	trigger = {
+		random = 50 #Tricky Dicky harder to kill
+		headofstate = 6241
+		}
+
+	date = { day = 22 month = november year = 1963 }
+
+	name = "EVT_9993758_NAME"
+	desc = "EVT_9993758_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = headofstate which = 6291 } # HCL Jr
+		command = { type = sleepminister which = 6241 }
+		command = { type = dissent value = -5 }
+	}
+}
+
+#####################################################
+### 9993759 USA - The Assassination of Adlai E. Stevenson 
+#####################################################
+
+event = {
+	id = 9993759
+	random = no
+	country = USA
+	style = 0
+
+	trigger = {
+		random = 50 #Stevenson harder to kill
+		headofstate = 6209
+		}
+
+	date = { day = 22 month = november year = 1963 }
+	
+	name = "EVT_9993759_NAME"
+	desc = "EVT_9993759_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = headofstate which = 6242 } # JFK!
+		command = { type = sleepminister which = 6209 }
+		command = { type = dissent value = -5 }
+	}
+}
+
+#####################################################
+### 9993760 USA - The Assassination of Earl Warren 
+#####################################################
+
+event = {
+	id = 9993760
+	random = no
+	country = USA
+	style = 0
+
+	trigger = {
+		random = 50 #Warren harder to kill
+		headofstate = 6288
+		}
+
+	date = { day = 22 month = november year = 1963 }
+
+	name = "EVT_9993760_NAME"
+	desc = "EVT_9993760_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "OK"
+		command = { type = headofstate which = 6291 } # Lodge
+		command = { type = sleepminister which = 6288 }
+		command = { type = dissent value = -5 }
+	}
+}
+
+# Now, here's the fun.
+
+##################################################################################################################
+# 1938 Midterm Election
+##################################################################################################################
+event = {
+	id = 9993724
+	random = no
+	country = USA
+
+	trigger = {
+		OR = { 	government = democratic
+			ideology = paternal_autocrat 
+			ideology = left_wing_radical
+			} 
+		NOT = {
+			ispuppet = USA
+		}
+	}
+
+	name = "EVT_9993724_NAME"
+	desc = "EVT_9993724_DESC"
+        picture = "us_election"
+	style = 0
+
+	date = { day = 4 month = november year = 1938 }
+
+	action_a = {
+		name = "EVT_9993724_ACTA"
+		ai_chance = 80
+		command = { type = dissent value = -5 }
+	}
+	action_b = {
+		name = "EVT_9993724_ACTB"
+		ai_chance = 5
+		command = { type = dissent value = 3 }
+		command = { type = domestic which = political_left value = 1 }
+		command = { type = domestic which = free_market value = -1 }
+	}
+	action_c = {
+		name = "EVT_9993724_ACTC"
+		ai_chance = 5
+		command = { type = dissent value = 3 }
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = domestic which = free_market value = 1 }
+	}
+	action_d = {
+		name = "EVT_9993724_ACTD"
+		ai_chance = 10
+		command = { type = dissent value = 2 }
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = domestic which = freedom value = 1 }
+	}
+}
+##################################################################################################################
+# 1942 Midterm Election
+##################################################################################################################
+event = {
+	id = 9993725
+	random = no
+	country = USA
+
+	trigger = {
+		OR = { 	government = democratic
+			ideology = paternal_autocrat 
+			ideology = left_wing_radical
+			} 
+		NOT = {
+			ispuppet = USA
+		}
+	}
+
+	name = "EVT_9993724_NAME"
+	desc = "EVT_9993724_DESC"
+        picture = "us_election"
+	style = 0
+
+	date = { day = 4 month = november year = 1942 }
+
+	action_a = {
+		name = "EVT_9993724_ACTA"
+		ai_chance = 80
+		command = { type = dissent value = -5 }
+	}
+	action_b = {
+		name = "EVT_9993724_ACTB"
+		ai_chance = 5
+		command = { type = dissent value = 3 }
+		command = { type = domestic which = political_left value = 1 }
+		command = { type = domestic which = free_market value = -1 }
+	}
+	action_c = {
+		name = "EVT_9993724_ACTC"
+		ai_chance = 5
+		command = { type = dissent value = 3 }
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = domestic which = free_market value = 1 }
+	}
+	action_d = {
+		name = "EVT_9993724_ACTD"
+		ai_chance = 10
+		command = { type = dissent value = 2 }
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = domestic which = freedom value = 1 }
+	}
+}
+##################################################################################################################
+# 1946 Midterm Election
+##################################################################################################################
+event = {
+	id = 9993726
+	random = no
+	country = USA
+
+	trigger = {
+		OR = { 	government = democratic
+			ideology = paternal_autocrat 
+			ideology = left_wing_radical
+			} 
+		NOT = {
+			ispuppet = USA
+		}
+	}
+
+	name = "EVT_9993724_NAME"
+	desc = "EVT_9993724_DESC"
+        picture = "us_election"
+	style = 0
+
+	date = { day = 4 month = november year = 1946 }
+
+	action_a = {
+		name = "EVT_9993724_ACTA"
+		ai_chance = 80
+		command = { type = dissent value = -5 }
+	}
+	action_b = {
+		name = "EVT_9993724_ACTB"
+		ai_chance = 5
+		command = { type = dissent value = 3 }
+		command = { type = domestic which = political_left value = 1 }
+		command = { type = domestic which = free_market value = -1 }
+	}
+	action_c = {
+		name = "EVT_9993724_ACTC"
+		ai_chance = 5
+		command = { type = dissent value = 3 }
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = domestic which = free_market value = 1 }
+	}
+	action_d = {
+		name = "EVT_9993724_ACTD"
+		ai_chance = 10
+		command = { type = dissent value = 2 }
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = domestic which = freedom value = 1 }
+	}
+}
+##################################################################################################################
+# 1950 Midterm Election
+##################################################################################################################
+event = {
+	id = 9993727
+	random = no
+	country = USA
+
+	trigger = {
+		OR = { 	government = democratic
+			ideology = paternal_autocrat 
+			ideology = left_wing_radical
+			} 
+		NOT = {
+			ispuppet = USA
+		}
+	}
+
+	name = "EVT_9993724_NAME"
+	desc = "EVT_9993724_DESC"
+        picture = "us_election"
+	style = 0
+
+	date = { day = 4 month = november year = 1950 }
+
+	action_a = {
+		name = "EVT_9993724_ACTA"
+		ai_chance = 80
+		command = { type = dissent value = -5 }
+	}
+	action_b = {
+		name = "EVT_9993724_ACTB"
+		ai_chance = 5
+		command = { type = dissent value = 3 }
+		command = { type = domestic which = political_left value = 1 }
+		command = { type = domestic which = free_market value = -1 }
+	}
+	action_c = {
+		name = "EVT_9993724_ACTC"
+		ai_chance = 5
+		command = { type = dissent value = 3 }
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = domestic which = free_market value = 1 }
+	}
+	action_d = {
+		name = "EVT_9993724_ACTD"
+		ai_chance = 10
+		command = { type = dissent value = 2 }
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = domestic which = freedom value = 1 }
+	}
+}
+##################################################################################################################
+# 1954 Midterm Election
+##################################################################################################################
+event = {
+	id = 9993761
+	random = no
+	country = USA
+
+	trigger = {
+		OR = { 	government = democratic
+			ideology = paternal_autocrat 
+			ideology = left_wing_radical
+			} 
+		NOT = {
+			ispuppet = USA
+		}
+	}
+
+	name = "EVT_9993724_NAME"
+	desc = "EVT_9993724_DESC"
+        picture = "us_election"
+	style = 0
+
+	date = { day = 4 month = november year = 1954 }
+
+	action_a = {
+		name = "EVT_9993724_ACTA"
+		ai_chance = 80
+		command = { type = dissent value = -5 }
+	}
+	action_b = {
+		name = "EVT_9993724_ACTB"
+		ai_chance = 5
+		command = { type = dissent value = 3 }
+		command = { type = domestic which = political_left value = 1 }
+		command = { type = domestic which = free_market value = -1 }
+	}
+	action_c = {
+		name = "EVT_9993724_ACTC"
+		ai_chance = 5
+		command = { type = dissent value = 3 }
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = domestic which = free_market value = 1 }
+	}
+	action_d = {
+		name = "EVT_9993724_ACTD"
+		ai_chance = 10
+		command = { type = dissent value = 2 }
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = domestic which = freedom value = 1 }
+	}
+}
+##################################################################################################################
+# 1958 Midterm Election
+##################################################################################################################
+event = {
+	id = 9993762
+	random = no
+	country = USA
+
+	trigger = {
+		OR = { 	government = democratic
+			ideology = paternal_autocrat 
+			ideology = left_wing_radical
+			} 
+		NOT = {
+			ispuppet = USA
+		}
+	}
+
+	name = "EVT_9993724_NAME"
+	desc = "EVT_9993724_DESC"
+        picture = "us_election"
+	style = 0
+
+	date = { day = 4 month = november year = 1958 }
+
+	action_a = {
+		name = "EVT_9993724_ACTA"
+		ai_chance = 80
+		command = { type = dissent value = -5 }
+	}
+	action_b = {
+		name = "EVT_9993724_ACTB"
+		ai_chance = 5
+		command = { type = dissent value = 3 }
+		command = { type = domestic which = political_left value = 1 }
+		command = { type = domestic which = free_market value = -1 }
+	}
+	action_c = {
+		name = "EVT_9993724_ACTC"
+		ai_chance = 5
+		command = { type = dissent value = 3 }
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = domestic which = free_market value = 1 }
+	}
+	action_d = {
+		name = "EVT_9993724_ACTD"
+		ai_chance = 10
+		command = { type = dissent value = 2 }
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = domestic which = freedom value = 1 }
+	}
+}
+##################################################################################################################
+# 1962 Midterm Election
+##################################################################################################################
+event = {
+	id = 9993763
+	random = no
+	country = USA
+
+	trigger = {
+		OR = { 	government = democratic
+			ideology = paternal_autocrat 
+			ideology = left_wing_radical
+			} 
+		NOT = {
+			ispuppet = USA
+		}
+	}
+
+	name = "EVT_9993724_NAME"
+	desc = "EVT_9993724_DESC"
+        picture = "us_election"
+	style = 0
+
+	date = { day = 4 month = november year = 1962 }
+
+	action_a = {
+		name = "EVT_9993724_ACTA"
+		ai_chance = 80
+		command = { type = dissent value = -5 }
+	}
+	action_b = {
+		name = "EVT_9993724_ACTB"
+		ai_chance = 5
+		command = { type = dissent value = 3 }
+		command = { type = domestic which = political_left value = 1 }
+		command = { type = domestic which = free_market value = -1 }
+	}
+	action_c = {
+		name = "EVT_9993724_ACTC"
+		ai_chance = 5
+		command = { type = dissent value = 3 }
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = domestic which = free_market value = 1 }
+	}
+	action_d = {
+		name = "EVT_9993724_ACTD"
+		ai_chance = 10
+		command = { type = dissent value = 2 }
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = domestic which = freedom value = 1 }
+	}
+}
+
+
+# Now for the PA elections
+
+#########################################################################
+#  US. Presidential Election of 1936 - Paternal autocrat
+#########################################################################
+event = {
+	id = 9993728
+	random = no
+	country = USA
+
+	trigger = {
+		ideology = paternal_autocrat
+		NOT = { ispuppet = USA }
+	}
+
+	name = "EVT_3710_NAME"
+	desc = "EVT_9993728_DESC"
+        picture = "us_election"
+	style = 0
+
+	date = { day = 3 month = november year = 1936 }
+
+	action_a = {
+		name = "EVT_9993728_ACTA"
+		ai_chance = 90
+		command = { type = headofstate which = 6186 }
+		command = { type = headofgovernment which = 6187 }
+		command = { type = foreignminister which = 6070 }
+		command = { type = armamentminister which = 6094 }
+		command = { type = ministerofsecurity which = 6188 }
+		command = { type = chiefofstaff which = 6192 }
+		command = { type = chiefofarmy which = 6148 }
+		command = { type = chiefofnavy which = 6164 }
+		command = { type = chiefofair which = 6172 }
+		command = { type = domestic which = interventionism value = -2 }
+		command = { type = dissent value = -12 }
+		command = { type = sleepminister which = 6001 } #Roosevelt won't run again
+	}
+	action_b = {
+		name = "EVT_9993728_ACTB"
+		ai_chance = 10
+		command = { type = headofstate which = 6035 } #Landon
+		command = { type = headofgovernment which = 6048 }
+		command = { type = foreignminister which = 6065 }
+		command = { type = armamentminister which = 6085 }
+		command = { type = ministerofsecurity which = 6107 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = construct which = ic where = -1 value = 5 }
+		command = { type = construct which = ic where = -1 value = 5 }
+		command = { type = oilpool value = 1000 }
+		command = { type = energypool value = 100 }
+		command = { type = metalpool value = 100 }
+		command = { type = rarematerialspool value = 100 }
+		command = { type = dissent value = -11 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = domestic which = free_market value = 1 } #Move to Free Market
+		command = { type = domestic which = democratic value = 4 }
+		command = { type = sleepminister which = 6001 } #Roosevelt won't run again
+	}
+}
+
+#########################################################################
+#  US. Presidential Election of 1940 - Paternal autocrat
+#########################################################################
+event = {
+	id = 9993729
+	random = no
+	country = USA
+
+	trigger = {
+		ideology = paternal_autocrat
+		NOT = { ispuppet = USA }
+	}
+
+	name = "EVT_3712_NAME"
+	desc = "EVT_3727_DESC"
+       picture = "us_election"
+	style = 0
+
+	date = { day = 5 month = november year = 1940 }
+
+	action_a = {
+		name = "EVT_9993729_ACTA"
+		ai_chance = 95
+		command = { type = headofstate which = 6189 } #Lindbergh
+		command = { type = headofgovernment which = 6190 }
+		command = { type = foreignminister which = 6070 }
+		command = { type = armamentminister which = 6096 }
+		command = { type = ministerofsecurity which = 6191 }
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = dissent value = -12 }
+		command = { type = sleepminister which = 6001 } #Roosevelt - Incase not slept in 1936
+	}
+	action_b = {
+		name = "EVT_9993729_ACTB"
+		ai_chance = 5
+		command = { type = headofstate which = 6036 } #Willkie is back
+		command = { type = headofgovernment which = 6049 } #With Charles McNary
+		command = { type = foreignminister which = 6066 }
+		command = { type = armamentminister which = 6088 }
+		command = { type = ministerofsecurity which = 6005 } #JEH is back too
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = domestic which = democratic value = 4 }
+		command = { type = sleepminister which = 6001 } #Roosevelt - Incase not slept in 1936
+		command = { type = dissent value = -11 }
+	}
+}
+#########################################################################
+#  US. Presidential Election of 1944 - Paternal autocrat
+#########################################################################
+event = {
+	id = 9993730
+	random = no
+	country = USA
+
+	name = "EVT_3716_NAME"
+	desc = "EVT_3728_DESC"
+       picture = "us_election"
+	style = 0
+
+	trigger = {
+		ideology = paternal_autocrat
+		NOT = { ispuppet = USA }
+	}
+
+	date = { day = 7 month = november year = 1944 }
+
+	action_a = {
+		name = "EVT_9993730_ACTA"
+		ai_chance = 95
+		command = { type = headofstate which = 6189 }
+		command = { type = headofgovernment which = 6190 }
+		command = { type = foreignminister which = 6070 }
+		command = { type = armamentminister which = 6096 }
+		command = { type = ministerofsecurity which = 6191 }
+		command = { type = domestic which = interventionism value = 2 }
+		command = { type = domestic which = defense_lobby value = 3 }
+		command = { type = dissent value = -11 }
+		command = { type = sleepminister which = 6001 } #Roosevelt - Incase not slept in 1936 or 1940
+	}
+	action_b = {
+		name = "EVT_9993730_ACTB"
+		ai_chance = 5
+		command = { type = headofstate which = 6038 } #Dewey
+		command = { type = headofgovernment which = 6050 } #Bricker
+		command = { type = foreignminister which = 6068 }
+		command = { type = armamentminister which = 6090 }
+		command = { type = ministerofsecurity which = 6110 }
+		command = { type = oilpool value = 100 }
+		command = { type = energypool value = 100 }
+		command = { type = metalpool value = 100 }
+		command = { type = rarematerialspool value = 100 }
+		command = { type = supplies value = 200 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = domestic which = democratic value = 4 }
+		command = { type = sleepminister which = 6001 } #Roosevelt - Incase not slept in 1936 or 1940
+		command = { type = local_setflag which = dewey44 } #To get standard check
+		command = { type = dissent value = -10 }
+	}
+}
+
+#########################################################################
+#  US. Presidential Election of 1948 - Paternal autocrat
+#########################################################################
+event = {
+	id = 9993731
+	random = no
+	country = USA
+
+	name = "EVT_9993731_NAME"
+	desc = "EVT_9993731_DESC"
+       picture = "us_election"
+	style = 0
+
+	trigger = {
+		ideology = paternal_autocrat
+		NOT = { ispuppet = USA }
+	}
+
+	date = { day = 2 month = november year = 1948 }
+
+	action_a = {
+		name = "EVT_9993731_ACTA"
+		ai_chance = 90
+		command = { type = headofstate which = 6303 }
+		command = { type = headofgovernment which = 6304 }
+		command = { type = foreignminister which = 6068 }
+		command = { type = armamentminister which = 6097 }
+		command = { type = chiefofstaff which = 6181 }
+		command = { type = chiefofarmy which = 6182 }
+		command = { type = domestic which = interventionism value = 2 }
+		command = { type = domestic which = defense_lobby value = 3 }
+		command = { type = dissent value = -12 }
+	}
+	action_b = {
+		name = "EVT_9993731_ACTB"
+		ai_chance = 10
+		command = { type = headofstate which = 6038 } #Dewey
+		command = { type = headofgovernment which = 6210 } #Warren
+		command = { type = foreignminister which = 6066 }
+		command = { type = armamentminister which = 6088 }
+		command = { type = ministerofsecurity which = 6110 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = domestic which = democratic value = 4 }
+		command = { type = sleepevent which = 9993719 }
+		command = { type = sleepevent which = 9993720 }
+		command = { type = sleepevent which = 9993733 }
+		command = { type = local_setflag which = dewey48 } #To get standard check
+		command = { type = dissent value = -11 }
+	}
+}
+#########################################################################
+#  US. Presidential Election of 1952 - Paternal autocrat
+#########################################################################
+event = {
+	id = 9993732
+	random = no
+	country = USA
+
+	name = "EVT_9993732_NAME"
+	desc = "EVT_9993732_DESC"
+       picture = "us_election"
+	style = 0
+
+	trigger = {
+		ideology = paternal_autocrat
+		NOT = { ispuppet = USA }
+	}
+
+	date = { day = 4 month = november year = 1952 }
+
+	action_a = {
+		name = "EVT_9993732_ACTA"
+		ai_chance = 70
+		command = { type = headofstate which = 6236 } 
+		command = { type = headofgovernment which = 6283 } #McCarthy!
+		command = { type = chiefofstaff which = 6230 }
+		command = { type = domestic which = interventionism value = 2 }
+		command = { type = domestic which = defense_lobby value = 3 }
+		command = { type = dissent value = -11 }
+	}
+	action_b = {
+		name = "EVT_9993732_ACTB"
+		ai_chance = 30
+		command = { type = headofstate which = 6208 }
+		command = { type = headofgovernment which = 6211 }
+		command = { type = foreignminister which = 6215 }
+		command = { type = armamentminister which = 6219 }
+		command = { type = ministerofsecurity which = 6005 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = domestic which = democratic value = 4 }
+		command = { type = domestic which = free_market value = 1 } #Move to Free Market
+		command = { type = sleepevent which = 9993721 }
+		command = { type = sleepevent which = 9993722 }
+		command = { type = dissent value = -13 }
+	}
+}
+
+#########################################################################
+#  US. Presidential Election of 1956 - Paternal autocrat
+#########################################################################
+event = {
+	id = 9993764
+	random = no
+	country = USA
+
+	name = "EVT_9993764_NAME"
+	desc = "EVT_9993764_DESC"
+       picture = "us_election"
+	style = 0
+
+	trigger = {
+		ideology = paternal_autocrat
+		NOT = { ispuppet = USA }
+	}
+
+	date = { day = 4 month = november year = 1956 }
+
+	action_a = {
+		name = "EVT_9993764_ACTA"
+		ai_chance = 90
+		command = { type = headofstate which = 6236 }
+		command = { type = headofgovernment which = 6283 } #McCarthy!
+		command = { type = chiefofstaff which = 6230 }
+		command = { type = domestic which = interventionism value = 2 }
+		command = { type = domestic which = defense_lobby value = 3 }
+		command = { type = dissent value = -11 }
+	}
+	action_b = {
+		name = "EVT_9993764_ACTB"
+		ai_chance = 10
+		command = { type = headofstate which = 6288 } #Warren
+		command = { type = headofgovernment which = 6211 } #Nixon!
+		command = { type = foreignminister which = 6215 } #Dulles
+		command = { type = armamentminister which = 6248 } #Anderson
+		command = { type = ministerofsecurity which = 6238 } #McCarthy!
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = domestic which = democratic value = 4 }
+		command = { type = domestic which = free_market value = 1 } #Move to Free Market
+		command = { type = sleepevent which = 9993751 } #Other 1956 Elections with Warren
+		command = { type = sleepevent which = 9993753 } #Other 1956 Elections with Warren
+		command = { type = dissent value = -13 }
+	}
+}
+
+#########################################################################
+#  US. Presidential Election of 1960 - Paternal autocrat
+#########################################################################
+event = {
+	id = 9993765
+	random = no
+	country = USA
+
+	name = "EVT_9993765_NAME"
+	desc = "EVT_9993765_DESC"
+       picture = "us_election"
+	style = 0
+
+	trigger = {
+		ideology = paternal_autocrat
+		NOT = { ispuppet = USA }
+	}
+
+	date = { day = 4 month = november year = 1960 }
+
+	action_a = {
+		name = "EVT_9993765_ACTA"
+		ai_chance = 80
+		command = { type = headofstate which = 6292 } #Goldwater
+		command = { type = headofgovernment which = 6293 } #R W Reagan
+		command = { type = domestic which = interventionism value = 2 }
+		command = { type = domestic which = defense_lobby value = 3 }
+		command = { type = dissent value = -11 }
+	}
+	action_b = {
+		name = "EVT_9993765_ACTB"
+		ai_chance = 20
+		command = { type = headofstate which = 6241 } #Tricky Dicky
+		command = { type = headofgovernment which = 6243 } #Lodge
+		command = { type = foreignminister which = 6246 } #Thurmond
+		command = { type = armamentminister which = 6251 } #Rockerfeller
+		command = { type = ministerofsecurity which = 6005 } #You know who
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = domestic which = democratic value = 4 }
+		command = { type = dissent value = -13 }
+	}
+}
+
+#########################################################################
+#  US. Presidential Election of 1936 - Left Wing
+#########################################################################
+event = {
+	id = 9993740
+	random = no
+	country = USA
+
+	trigger = {
+		OR = { ideology = left_wing_radical
+			headofstate = 6042 }
+		NOT = { ispuppet = USA }
+	}
+
+	name = "EVT_9993740_NAME"
+	desc = "EVT_9993740_DESC"
+        picture = "us_election"
+	style = 0
+
+	date = { day = 3 month = november year = 1936 }
+
+	action_a = {
+		name = "EVT_9993740_ACTA"
+		ai_chance = 90
+		command = { type = headofstate which = 6042 } #Norman Thomas
+		command = { type = headofgovernment which = 6056 } #James Cannon - founding member of CPUSA
+		command = { type = foreignminister which = 6072 } #Floyd Olson 
+		command = { type = armamentminister which = 6098 } #Wyndham Mortimer
+		command = { type = ministerofsecurity which = 6114 } #William Aalto
+		command = { type = ministerofintelligence which = 6134 } #Harry Haywood
+		command = { type = chiefofstaff which = 6007 } #Malin Craig
+		command = { type = chiefofarmy which = 6149 } #Oliver Law
+		command = { type = chiefofnavy which = 6165 } #John Abt
+		command = { type = chiefofair which = 6010 } #Westover
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = dissent value = -12 }
+		command = { type = sleepminister which = 6001 } #Roosevelt
+	}
+	action_b = {
+		name = "EVT_9993740_ACTB"
+		ai_chance = 10
+		command = { type = manpowerpool value = 20 }
+		command = { type = headofstate which = 6001 }
+		command = { type = headofgovernment which = 6002 }
+		command = { type = foreignminister which = 6003 }
+		command = { type = armamentminister which = 6077 }
+		command = { type = ministerofsecurity which = 6005 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = domestic which = democratic value = 4 }
+		command = { type = sleepevent which = 9993709 }
+		command = { type = dissent value = -11 }
+	}
+}
+
+#########################################################################
+#  US. Presidential Election of 1940 - Left Wing Radical
+#########################################################################
+event = {
+	id = 9993741
+	random = no
+	country = USA
+
+	trigger = {
+		OR = { ideology = left_wing_radical
+			headofstate = 6042 }
+		NOT = { ispuppet = USA }
+	}
+
+	name = "EVT_9993741_NAME"
+	desc = "EVT_9993741_DESC"
+       picture = "us_election"
+	style = 0
+
+	date = { day = 5 month = november year = 1940 }
+
+	action_a = {
+		name = "EVT_9993741_ACTA"
+		ai_chance = 90
+		command = { type = headofstate which = 6042 } #Norman Thomas
+		command = { type = headofgovernment which = 6056 } #James Cannon - founding member of CPUSA
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = dissent value = -12 }
+		command = { type = sleepminister which = 6001 } #Roosevelt - Just in case
+	}
+	action_b = {
+		name = "EVT_9993741_ACTB"
+		ai_chance = 10
+		command = { type = headofstate which = 6032 } #Wallace
+		command = { type = headofgovernment which = 6045 }
+		command = { type = foreignminister which = 6003 }
+		command = { type = armamentminister which = 6080 }
+		command = { type = ministerofsecurity which = 6104 }
+		command = { type = dissent value = -11 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = domestic which = democratic value = 4 }
+		command = { type = sleepevent which = 9993713 }
+		command = { type = sleepminister which = 6001 } #Roosevelt - Just in case
+		command = { type = local_setflag which = wallace40 }
+	}
+}
+#########################################################################
+#  US. Presidential Election of 1944 - Left wing radical
+#########################################################################
+event = {
+	id = 9993742
+	random = no
+	country = USA
+
+	name = "EVT_9993742_NAME"
+	desc = "EVT_9993742_DESC"
+       picture = "us_election"
+	style = 0
+
+	trigger = {
+		OR = { ideology = left_wing_radical
+			headofstate = 6042 }
+		NOT = { ispuppet = USA }
+	}
+
+	date = { day = 7 month = november year = 1944 }
+
+	action_a = {
+		name = "EVT_9993742_ACTA"
+		ai_chance = 88
+		command = { type = headofstate which = 6042 } #Norman Thomas
+		command = { type = headofgovernment which = 6056 } #James Cannon - founding member of CPUSA
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = dissent value = -12 }
+		command = { type = sleepminister which = 6001 } #Roosevelt - Just in case
+	}
+	action_b = {
+		name = "EVT_9993742_ACTB"
+		ai_chance = 12
+		command = { type = headofstate which = 6032 }
+		command = { type = headofgovernment which = 6045 }
+		command = { type = foreignminister which = 6003 }
+		command = { type = armamentminister which = 6080 }
+		command = { type = ministerofsecurity which = 6104 }
+		command = { type = oilpool value = 100 }
+		command = { type = energypool value = 100 }
+		command = { type = metalpool value = 100 }
+		command = { type = rarematerialspool value = 100 }
+		command = { type = supplies value = 200 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = domestic which = democratic value = 4 }
+		command = { type = sleepevent which = 9993717 }
+		command = { type = sleepevent which = 9993716 }
+		command = { type = sleepevent which = 9993734 }
+		command = { type = sleepminister which = 6001 } #Roosevelt - Just in case
+		command = { type = local_setflag which = wallace44 }
+		command = { type = dissent value = -11 }
+	}
+}
+
+#########################################################################
+#  US. Presidential Election of 1948 - Left Wing Radical
+#########################################################################
+event = {
+	id = 9993743
+	random = no
+	country = USA
+
+	name = "EVT_9993743_NAME"
+	desc = "EVT_9993743_DESC"
+       picture = "us_election"
+	style = 0
+
+	trigger = {
+		OR = { ideology = left_wing_radical
+			headofstate = 6042 }
+		NOT = { ispuppet = USA }
+	}
+
+	date = { day = 2 month = november year = 1948 }
+
+	action_a = {
+		name = "EVT_9993743_ACTA"
+		ai_chance = 90
+		command = { type = headofstate which = 6042 } #Norman Thomas
+		command = { type = headofgovernment which = 6056 } #James Cannon - founding member of CPUSA
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = dissent value = -12 }
+	}
+	action_b = {
+		name = "EVT_9993743_ACTB"
+		ai_chance = 10
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 6047 }
+		command = { type = headofgovernment which = 6209 }
+		command = { type = foreignminister which = 6213 }
+		command = { type = armamentminister which = 6217 }
+		command = { type = ministerofsecurity which = 6005 }
+		command = { type = domestic which = democratic value = 4 }
+		command = { type = sleepevent which = 9993720 }
+		command = { type = dissent value = -11 }
+	}
+}
+#########################################################################
+#  US. Presidential Election of 1952 - Left Wing Radical
+#########################################################################
+event = {
+	id = 9993744
+	random = no
+	country = USA
+
+	name = "EVT_9993744_NAME"
+	desc = "EVT_9993744_DESC"
+       picture = "us_election"
+	style = 0
+
+	trigger = {
+		OR = { ideology = left_wing_radical
+			headofstate = 6042 }
+		NOT = { ispuppet = USA }
+	}
+
+	date = { day = 4 month = november year = 1952 }
+
+	action_a = {
+		name = "EVT_9993744_ACTA"
+		ai_chance = 75
+		command = { type = headofstate which = 6286 } #Hoopes
+		command = { type = headofgovernment which = 6287 } #Friedman
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = dissent value = -12 }
+		command = { type = sleepminister which = 6042 } #Thomas retires
+	}
+	action_b = {
+		name = "EVT_9993744_ACTB"
+		ai_chance = 25
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = headofstate which = 6209 }
+		command = { type = headofgovernment which = 6212 }
+		command = { type = foreignminister which = 6216 }
+		command = { type = armamentminister which = 6220 }
+		command = { type = ministerofsecurity which = 6005 }
+		command = { type = domestic which = democratic value = 4 }
+		command = { type = sleepevent which = 9993721 }
+		command = { type = sleepevent which = 9993723 }
+		command = { type = local_setflag which = stevenson52 }
+		command = { type = dissent value = -11 }
+	}
+}
+
+#########################################################################
+#  US. Presidential Election of 1956 - Left Wing Radical
+#########################################################################
+event = {
+	id = 9993766
+	random = no
+	country = USA
+
+	name = "EVT_9993766_NAME"
+	desc = "EVT_9993766_DESC"
+       picture = "us_election"
+	style = 0
+
+	trigger = {
+		OR = { ideology = left_wing_radical
+			headofstate = 6286 }
+		NOT = { ispuppet = USA }
+	}
+
+	date = { day = 4 month = november year = 1956 }
+
+	action_a = {
+		name = "EVT_9993766_ACTA"
+		ai_chance = 95
+		command = { type = headofstate which = 6286 } #Hoopes
+		command = { type = headofgovernment which = 6287 } #Friedman
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = dissent value = -12 }
+	}
+	action_b = {
+		name = "EVT_9993766_ACTB"
+		ai_chance = 5
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = headofstate which = 6209 } #Stevenson
+		command = { type = headofgovernment which = 6212 } #Still Sparkman here
+		command = { type = foreignminister which = 6213 } #Acheson (back in action)
+		command = { type = armamentminister which = 6249 } 
+		command = { type = ministerofsecurity which = 6005 } #Still Hoover!
+		command = { type = domestic which = democratic value = 4 }
+		command = { type = local_setflag which = stevenson56 }
+		command = { type = dissent value = -11 }
+	}
+}
+
+#########################################################################
+#  US. Presidential Election of 1960 - Left Wing Radical
+#########################################################################
+event = {
+	id = 9993767
+	random = no
+	country = USA
+
+	name = "EVT_9993767_NAME"
+	desc = "EVT_9993767_DESC"
+       picture = "us_election"
+	style = 0
+
+	trigger = {
+		OR = { ideology = left_wing_radical
+			headofstate = 6286 }
+		NOT = { ispuppet = USA }
+	}
+
+	date = { day = 4 month = november year = 1960 }
+
+	action_a = {
+		name = "EVT_9993767_ACTA"
+		ai_chance = 70
+		command = { type = headofstate which = 6286 } #Hoopes
+		command = { type = headofgovernment which = 6287 } #Friedman
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = dissent value = -12 }
+	}
+	action_b = {
+		name = "EVT_9993767_ACTB"
+		ai_chance = 30
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = headofstate which = 6242 } #Kennedy
+		command = { type = headofgovernment which = 6244 } #Johnson
+		command = { type = foreignminister which = 6247 } #Rusk
+		command = { type = armamentminister which = 6250 } #Dillon
+		command = { type = ministerofsecurity which = 6005 } #Hoover - STILL!
+		command = { type = ministerofintelligence which = 6253 } #I like McCone - Let's stick him in too!
+		command = { type = domestic which = democratic value = 4 }
+		command = { type = dissent value = -12 }
+	}
+}

@@ -1,0 +1,4476 @@
+#########################################################################
+#	FEPKDH_additional_events.txt
+#	FEPKDH用追加イベント by 遠藤
+#########################################################################
+#（実装済み）
+#大臣・指揮官系イベント
+#id = 150003		大勢力たる大東亜共栄圏
+#id = 150007-08		ヴラソフ降伏
+#id = 150009		ロシア内戦時にウクライナのヴラソフを消滅させるAIイベント
+#研究機関・技術系イベント
+#id = 150020		ドイツから色々接収するソビエトイベント
+#id = 150021-2		クラウス・フックスイベント
+#id = 150023		ウラル戦車工場占領
+#id = 150024		ロスアラモス占領
+#id = 150025		三菱自動車工業・日本IBMの開設
+#id = 150026-28		フェルディナント・ポルシェを招聘？
+#id = 150029		GER	航空事業再編
+#割譲系イベント
+#id = 150030		フランス降伏と仏領インドシナ
+#id = 150040-42		ITA	モズリー政権に占領地を返還
+#id = 150050-54		JAP	モズリー政権に占領地を返還
+#id = 150060		中華民国・共産党が満州重工業地帯を占領する
+#id = 150061-62		CHI	CHC	英領インドシナ半島を連合国に返還
+#第二次エチオピア戦争エチオピア勝利ルートイベント
+#id = 150070		ETH	エチオピアがイタリア軍を叩き落とす
+#id = 150071-73		ETH	ITA	エチオピアの講和条約とイタリアの反応
+#id = 150074		ITA	エチオピアを落としきれないイタリアに募る不満
+#id = 150075		ITA	軍に自信を無くしたイタリアは平和の中での改革に臨む
+#id = 150076		ITA	エチオピアに勝てないなら、白紙講和としてしまえ
+#id = 150077-78		ETH	イタリアの白紙和平提案に対する反応
+#id = 150079		ITA	エチオピアに負けたイタリア、欧州での戦争に関わらないことを宣言
+#id = 150080		ITA	中立イタリア、スプリトを頂けないか画策
+#id = 150081-83		GER	ITA	150080に対するドイツの反応
+#id = 150084		ITA	イタリア軍、自信喪失（150075）から回復
+#id = 150085		ITA	イタリア、復活したのでWW2に出る事にした
+#id = 150086		ENG GER	イタリアの求めに対する彼らの反応
+#id = 150090		ETH	イタリア、負けを認めない
+#id = 150091		USA	アフリカ系アメリカ人、エチオピアへの支援を望む
+#id = 150092-93		ETH	アメリカからのプレゼント
+#id = 150094		JAP	国内各団体、エチオピアへの支援を望む
+#id = 150095-96		ETH	日本からのプレゼント
+#id = 150097		ENG	世界各国からエチオピアへのパワが集まるので、スエズを封鎖するか？
+#id = 150098		ITA	スエズ封鎖に対するイタリアの反応
+
+#id = 150100-72		各種国旗・国名変更イベント（FEPKDH_Flags.txtに異動済み）
+
+#割譲系イベント2
+#id = 150200-		SIB～中央アジア諸国	日本の降伏とツァーリへの合流
+#id = 150300		バルバロッサ前ドイツAIの謎挙動の解決
+#id = 150310-11		JAP	対ソ全力攻撃AI
+#id = 150400		占領地の返還
+#id = 150500		厭戦
+#（以下予定）
+#id = 150600		ソビエトの屈服（ソビエト側）
+#id = 150601		ソビエトの屈服（日本側）
+#id = 150602		ソビエト連邦分割
+#id = 150603		ソビエト連邦分割―ポーランドの処遇
+#id = 150604		ソビエト連邦分割―バルト三国の処遇
+#id = 150605		ソビエト連邦分割―カレリアとヴィープリ
+#id = 150606		ソビエト連邦分割―ベラルーシとウクライナ
+#id = 150607		ソビエト連邦分割―中央アジア
+#id = 150608		（空き）
+#id = 150609		国境線の調整
+#id = 150610		エカテリンブルグ条約（ロシア側）
+#id = 150611		エカテリンブルグ条約（シベリア側）
+#id = 150612		エカテリンブルグ条約（ロシア側、中央アジア調整）
+#id = 150613		エカテリンブルグ条約（シベリア側、中央アジア調整）
+#id = 150614		エカテリンブルグ条約（シベリア側、蒙古調整）
+#id = 150615		（あけておく）
+#id = 150616		エカテリンブルグ会議前夜（トルキスタンルート）
+
+#id = 150700		第三国の第三次大戦参加（連合国側につく）
+#id = 150710		ベネズエラの運命
+#id = 150720		グアテマラ・エルサルバドルの運命
+#########################################################################
+
+
+
+#主勢力・大東亜共栄圏（共産圏全滅）
+event = {
+	id = 150003
+	country = JAP
+	
+	trigger = {
+		NOT = {
+			participant = { country = SOV value = 3 }
+			participant = { country = MON value = 3 }
+			participant = { country = TAN value = 3 }	
+			participant = { country = JAP value = 1 }
+			participant = { country = JAP value = 2 }
+			participant = { country = JAP value = 3 }
+			comintern = 1
+			exists = CHI
+			exists = SOV
+		}
+		alliance = { country = MAN country = JAP }
+		alliance = { country = U87 country = JAP }
+	}
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+
+	style = 0
+	picture = "japan_celebrating"
+
+	name = "EVT_150003_NAME"
+	desc = "EVT_150003_DESC"
+	
+	action_a = {
+		name = "EVT_150003_ACTA"
+		command = { type = dissent value = -5 }
+		command = { type = alliance_name which = GEACPS where = 3 }
+		command = { type = alliance which = MAN where = 3 }
+		command = { type = alliance_leader which = JAP where = 3 }
+	}
+}
+
+
+
+
+#####################################
+# Vlassov defects New for Armageddon 1.3
+#####################################
+
+event = {
+	id = 150007
+	random = no
+	country = GER
+
+	trigger = {
+		war = { country = GER country = SOV }
+		lost_national = { country = SOV value = 10 }
+		NOT = { lost_national = { country = GER value = 2 } }
+	}
+
+	name = "EVT_2036_NAME"
+	desc = "EVT_2036_DESC"
+	picture = "Vlassov"
+
+	date = { day = 1 month = january year = 1938 }
+	offset = 30 
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "EVT_2036_ACTA"
+		ai_chance = 90
+		command = { type = relation which = SOV value = -5 }
+		command = { type = wakeleader which = 579 }
+		command = { type = wakeleader which = 1102076 }
+		command = { type = wakeleader which = 1102077 }
+		command = { type = wakeleader which = 1102078 }
+		command = { type = wakeleader which = 1102079 }
+		command = { type = wakeleader which = 1102080 }
+		command = { type = trigger which = 150008 }
+	}
+	action_b = {
+		name = "EVT_2036_ACTB"
+		ai_chance = 10
+		command = { type = trigger which = 150008 }
+	}
+}
+
+event = { 
+	id = 150008
+	country = SOV
+	
+	name = "EVT_2036_NAME"
+	desc = "EVT_2036_DESC"
+	picture = "Vlassov"
+
+	action = {
+		name = "EVT_971_ACTA"	#裏切り者め！
+		command = { type = relation which = GER value = -5 }
+		command = { type = sleepminister which = 4011 }
+		command = { type = sleepleader which = 10363 }
+		command = { type = sleepminister which = 4154 }	#ジレンコフ
+		command = { type = sleepleader which = 111706 }
+	}
+}
+	
+event = {
+	id = 150009
+	country = UKR
+	random = no
+	trigger = {
+		event = 55336
+		minister = 518014
+		alliance = { country = UKR country = GER }
+	}
+	
+	date = { day = 1 month = january year = 1938 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	name = "EVT_150009_NAME"	#ウクライナの国家弁務官
+	desc = "EVT_150009_DESC"	#
+	
+	action = {
+		name = "OK"
+		command = { type = sleepminister which = 518014 }	#アンドレイ・ヴラソフ
+		command = { type = headofstate which = 518078 }	#エーリヒ・コッホ
+	}
+}
+
+event = {
+	id = 150018
+	country = USA
+	trigger = {
+		control = { province = 616 data = -1 }	#デトロイト
+		event = 130174
+	}
+
+	date = { day = 1 month = april year = 1943 }
+	offset = 19
+	deathdate = { day = 29 month = december year = 1963 }
+	picture = "factory"
+	
+	name = "EVT_150018_NAME"	#フォードによる兵器生産の増強
+	desc = "EVT_150018_DESC"	#
+	
+	action = {
+		name = "OK"
+		command = { type = construct which = ic where = 616 value = 2 }
+		command = { type = sleepteam which = 104 }
+		command = { type = waketeam which = 174 }
+	}
+}
+	
+
+event = {
+	id = 150019
+	country = GER
+	decision = {
+		core = { province = 465 data = -1 }	#リンツ
+		NOT = { exists = AUS }
+		control = { province = 465 data = -1 }
+		minister = 10
+	}
+	decision_trigger = {
+		money = 100
+	}
+	trigger = {
+		core = { province = 465 data = -1 }	#リンツ
+		NOT = { exists = AUS }
+		control = { province = 465 data = -1 }
+		minister = 10
+		random = 10
+	}
+	
+	date = { day = 0 month = january year = 1938 }
+	offset = 7
+	deathdate = { day = 15 month = june year = 1974 }
+	
+	picture = "factory"
+	decision_picture = "decision_ersatz_conversion"
+	
+	name = "EVT_150019_NAME"	#ヘルマン・ゲーリング国家工場
+	desc = "EVT_150019_DESC"	#
+	
+	action = {
+		name = "EVT_150019_ACTA"	#ヘルマン・ゲーリング国家工場への増資を行う
+		ai_chance = 95
+		command = { type = waketeam which = 82 }
+		command = { type = money value = -150 }
+		command = { type = add_prov_resource which = 465 value = 2 where = metal }
+	}
+	action = {
+		name = "EVT_150019_ACTB"	#ゲーリングを富ませる必要はない
+		ai_chance = 5
+		command = { type = sleepevent which = 150019 }
+	}
+}
+
+event = {
+	id = 150020
+	country = SOV
+	trigger = {
+		region = { region = "Germany" country = -3 data = 1 value = 15 }
+	}
+	
+	name = "EVT_150020_NAME"	#ドイツからの接収
+	desc = "EVT_150020_DESC"	#独ソ戦がソ連有利に傾きドイツ本土に赤軍が侵入すると、彼らはドイツから多くのものを得られるようになった。その最も代表的な成果の一つは、アサルトライフルStG44である。StGの設計は、レンドリースで供与されてきていたM1ガーランドと共にミハイル・カラシニコフの発想に活かされ、AK-47として知られる最も有名なアサルトライフルとして帰着した。
+	picture = "siberia"
+	
+	date = { day = 0 month = january year = 1943 }
+	offset = 7
+	deathdate = { day = 15 month = june year = 1974 }
+	
+	action_a = {
+		name = "OK"
+		command = { type = waketeam which = 3722 }	#ミハイル・カラシニコフ
+		command = { type = sleepteam which = 3714 }	#Tu
+		command = { type = waketeam which = 3763 }
+		command = { type = sleepteam which = 3723 }	#Su
+		command = { type = waketeam which = 3764 }
+		command = { type = sleepteam which = 3742 }	#MiG
+		command = { type = waketeam which = 3751 }
+	}
+}
+
+#クラウス・フックス
+event = {
+	id = 150021
+	country = SOV
+	trigger = {
+		NOT = {
+			war = { country = USA }
+			alliance = { country = USA }
+		}
+		tech_team = { id = 135 country = USA }	#ロスアラモス
+	}
+	
+	name = "EVT_150021_NAME"	#クラウス・フックス
+	desc = "EVT_150021_DESC"	#
+	picture = "KlausFuchs"
+	
+	date = { day = 0 month = 10 year = 1943 }
+	offset = 7
+	deathdate = { day = 15 month = june year = 1949 }
+	
+	action_a = {
+		name = "EVT_150021_ACTA"	#勲章ものだ
+		command = { type = steal_tech which = USA }
+		command = { type = steal_tech which = USA }
+		command = { type = steal_tech which = ENG }
+		command = { type = waketeam which = 3765 }
+	}
+}
+
+event = {
+	id = 150022
+	country = SOV
+	trigger = {
+		OR = {
+			AND = {
+				random = 80
+				OR = {
+					war = { country = USA }
+					war = { country = ENG }
+				}
+			}
+			random = 10
+		}
+		NOT = { alliance = { country = USA country = SOV } }
+		tech_team = { id = 3765 country = SOV }	#フックス
+	}
+	
+	name = "EVT_150022_NAME"	#クラウス・フックス告発
+	desc = "EVT_150022_DESC"	#
+	picture = "KlausFuchs"
+	
+	date = { day = 0 month = 10 year = 1947 }
+	offset = 7
+	deathdate = { day = 15 month = june year = 1964 }
+	
+	action_a = {
+		name = "EVT_150022_ACTA"	#ちぃっ
+		command = { type = sleepteam which = 3765 }
+	}
+}
+
+#ニジニ・タギル占領
+event = {
+	id = 150023
+	
+	trigger = {
+		event = 130547
+		control = { province = 1573 data = -1 } # ニジニ・タギル
+		war = { country = SOV country = -1 }
+		NOT = { country = SOV }
+	}
+	
+	name = "EVT_150023_NAME"	#ウラル戦車工場占領
+	desc = "EVT_150023_DESC"	#ソビエト連邦は戦線をウラルまで押し下げられ、ついに重要で大規模な兵器生産工場を持つニジニ・タギルの占領を許した。T-34をはじめとする様々な赤軍の優秀な戦車の生産を担うこの工場は、様々な戦車に関する有用な情報をわれらにもたらすだろう。
+	
+	style = 0
+	picture = "soviet_strategic_victory"
+
+	date = { day = 1 month = 0 year = 1940 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1950 }
+	
+	action = {
+		name = "ACTION_NAME_EXCELLENT"
+		command = { type = gain_tech which = 2070 }
+		command = { type = gain_tech which = 2080 }
+		command = { type = gain_tech which = 2090 }
+	}
+}
+
+
+#We captured Los Alamos
+event = {
+	id = 150024
+	
+	trigger = {
+		event = 28582
+		control = { province = 726 data = -1 } # LosAlamos
+		war = { country = USA country = -1 }
+		NOT = { country = USA }
+	}
+	
+	name = "EVT_150024_NAME"	#ロスアラモス占領
+	desc = "EVT_150024_DESC"	#ニューメキシコ州内で占領地を広げていく我が軍は、州北部のロスアラモスにて森に覆われた大規模な研究施設を発見した。ここ、ロスアラモス国立研究所はアメリカにおける核開発の中心地であり、多くの研究者たちがこの地で世界を変える新兵器を開発しているのだ。この研究所から多くの情報を接収し、我々の軍事計画に役立てよう。……とうの研究者たちが一番心配しているのは、彼らの最高の研究環境が失われないだろうかという事であるようで、研究成果を複製されること自体にはそれほど興味を持っていないようだ。
+	
+	style = 0
+	picture = "Oppenheimer"
+
+	date = { day = 1 month = 0 year = 1943 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1950 }
+	
+	action = {
+		name = "ACTION_NAME_EXCELLENT"
+		command = { type = gain_tech which = 5530 }
+		command = { type = gain_tech which = 5540 }
+		command = { type = gain_tech which = 7170 }
+		command = { type = gain_tech which = 7180 }
+		command = { type = gain_tech which = 7190 }
+	}
+}
+
+
+#米系企業の日本進出
+event = {
+	id = 150025
+	country = JAP
+	
+	trigger = {
+		event = 131243
+		NOT = {
+			government = communist
+			ideology = nazi
+		}
+		alliance = { country = JAP country = USA }
+		random = 70
+	}
+	
+	date = { day = 0 month = january year = 1935 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	style = 0
+	picture = "lend_lease"
+	
+	name = "EVT_150025_NAME"
+	desc = "EVT_150025_DESC"
+	
+	action = {
+		ai_chance = 80
+		name = "EVT_150025_ACTA"
+		command = { type = waketeam which = 1974 }	#三菱自動車工業
+		command = { type = waketeam which = 1975 }	#IBM Japan
+		command = { type = research_mod value = 5 }
+		command = { type = dissent value = 5 }
+	}
+	action = {
+		ai_chance = 20
+		name = "EVT_150025_ACTB"
+		command = { type = dissent value = -2 }
+		command = { type = domestic which = freedom value = -1 }
+	}
+}
+
+#ポルシェ”設計局”イベント
+event = {
+	id = 150026
+	country = SOV
+	
+	trigger = {
+		alliance = { country = SOV country = GER }
+		incabinet = 4002
+		money = 100
+	}
+	
+	style = 0
+	picture = "soviet_japanese_neutrality_pact"
+		
+	date = { day = 0 month = january year = 1935 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1951 }
+
+	name = "EVT_150026_NAME"	#ポルシェ博士を招待？
+	desc = "EVT_150026_DESC"	#1931年、ヨシフ・スターリンはドイツの自動車技術者フェルディナント・ポルシェ博士に対し、ソビエト連邦で働かないかとオファーを出していた。ポルシェは悩みに悩み、結局この要請を断った。今、ソビエト連邦とドイツの同盟が成立すると、再びこの案がモスクワから現れていた。同盟国として行動する上で、この卓越した技術をもった彼をロシアに迎え入れることができれば、ドイツ・ソ連双方にとって素晴らしい技術的な利益がもたらされるだろう。当然それは、自動車に限らず戦車についても、である。一度断られた提案を再びするならば、より大きな予算を確保して、彼になんとしても来て欲しいのだという意思を示す必要があるだろう。
+	
+	action = {
+		ai_chance = 90
+		name = "EVT_150026_ACTA"	#何としてでも彼を招き入れるのだ！
+		command = { type = trigger which = 150027 }
+		command = { type = money value = -100 }
+	}
+	action = {
+		ai_chance = 10
+		name = "EVT_150026_ACTB"	#また断られるのは目に見えている
+	}
+}
+
+event = {
+	id = 150027
+	country = GER
+	
+	style = 0
+	picture = "factory"
+	
+	name = "EVT_150027_NAME"	#スターリンがポルシェを欲する
+	desc = "EVT_150027_DESC"	#スターリンからの使者がやってきた。彼らは再び、ポルシェ博士がロシアでその才覚を振るうことを願っている。以前は「ロシア語の壁は厚い」と博士は断ったが、今度は翻訳者も雇い入れて更に良い条件を提示している。また、このオファーは独ソ同盟の友情を示すものにもなっている。政治的な意味を含むのだ。政治に興味のない博士にとって、やはり年齢と環境の違いは彼にとって首を横に振りたい懸念事項だろうが、それでも、2国の代表者が頼み込むなら断りはしないだろう。
+	
+	action = {
+		ai_chance = 100
+		name = "EVT_150027_ACTA"	#よろしい、ソ連の使者とともにポルシェ事務所へ向かおう
+		command = { type = sleepteam which = 12 }
+		command = { type = relation which = SOV value = 20 }
+	}
+	action = {
+		ai_chance = 0
+		name = "EVT_150027_ACTB"	#許可できない。彼の頭脳を手放すのはあまりに惜しい
+		command = { type = relation which = SOV value = -10 }
+		command = { type = sleepevent which = 150028 }
+	}
+}
+
+event = {
+	id = 150028
+	country = SOV
+	
+	trigger = {
+		event = 150027
+		alliance = { country = SOV country = GER }
+	}
+	
+	style = 0
+	picture = "soviet_japanese_neutrality_pact"
+		
+	date = { day = 0 month = january year = 1935 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1951 }
+
+	name = "EVT_150028_NAME"	#ポルシェ設計局の開設
+	desc = "EVT_150028_DESC"	#ポルシェ博士は独ソ両国の説得に応じ、ソビエトで設計局を開くことに同意した。それを聞くとスターリンは素早く彼が入国して不自由無く仕事ができるよう環境を用意することを指示した。何かあった際にドイツと行き来できる場所を選びたいとの博士の求めにより設計局はキエフに置かれ、彼とその家族はそこに暮らし、各種車両の開発に臨むこととなる。
+	
+	action = {
+		name = "EVT_150028_ACTA"	#ようこそ、同志ポルシェ！
+		command = { type = waketeam which = 3762 }
+	}
+}
+
+
+event = {
+	id = 150029
+	country = GER
+	
+	decision = {
+		OR = {
+			control = { province = 606 data = -3 }	#ワシントンDC
+			control = { province = 19 data = -3 }	#ロンドン
+			control = { province = 13 data = -3 }	#シェフィールド	#ロールスロイスの本社
+			control = { province = 620 data = -3 }	#シカゴ	#ボーイングの本社
+			control = { province = 607 data = -3 }	#バルチモア	#スカンクワークスの本部
+		}
+		technology = 15500	#実用エンジン
+	}
+	
+	decision_trigger = {
+		control = { province = 606 data = -3 }	#ワシントンDC
+		control = { province = 19 data = -3 }	#ロンドン
+		control = { province = 13 data = -3 }	#シェフィールド	#ロールスロイスの本社
+		control = { province = 620 data = -3 }	#シカゴ	#ボーイングの本社
+		control = { province = 607 data = -3 }	#バルチモア	#スカンクワークスの本部
+		money = 500
+	}
+	
+	trigger = {
+		control = { province = 606 data = -3 }	#ワシントンDC
+		control = { province = 19 data = -3 }	#ロンドン
+		control = { province = 13 data = -3 }	#シェフィールド	#ロールスロイスの本社
+		control = { province = 620 data = -3 }	#シカゴ	#ボーイングの本社
+		control = { province = 607 data = -3 }	#バルチモア	#スカンクワークスの本部
+		technology = 15500	#実用エンジン
+		money = 500
+	}
+	
+	style = 0
+	picture = "scientist"
+		
+	date = { day = 0 month = january year = 1944 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1951 }
+
+	name = "EVT_150029_NAME"	#航空事業再編
+	desc = "EVT_150029_DESC"	#ドイツの戦勝がほぼ確実になると、アメリカから航空機用工作機械の技術が、イギリスからフランク・ウィットルらによって研究された高性能のジェットエンジンの技術がそれぞれもたらされた。ドイツ航空省は、これらの資産を有効活用し、航空機の研究から生産・納入までを円滑に進められるようにするために航空業界の再編を目論んだ。戦後を迎えるにあたり、航空機の需要は民需に傾くだろう。現在の体制のまま戦後を迎えれば、軍用航空機を製作してきたいくつかの企業は、その高い技術力にも関わらず苦境に立たされるだろう。この再編計画を進めれば、民間での需要は低くなるであろう小型機の技術を国内で管理・保護することもできる。計画では、国内の航空機メーカーは大きく４つのグループに分けられることとなっている。
+	decision_desc = "EVT_150029_DECISION_DESC" 	#ドイツは英米の航空機の心臓部を掴み、彼らの能力を自らのものとしてフィードバックできるようになりました。このディシジョンを実行すると、ユンカース、アラド、メッサーシュミット、ハインケル、フォッケウルフの５つの航空機研究機関が削除され、代わりに４つの研究機関が導入されます。それらは例外なく、世界最強の航空機研究機関群であります。1. メッサーシュミット・ベルコウ・ブローム：戦闘機とヘリコプター（航空騎兵）を担当するグループ。2. 合同航空製造（FBW）：主に爆撃機やミサイルを担当するグループ。3. リピッシュ航空機製造：戦闘機を担当するグループ。4. BMW ロールスロイス：ロケットや航空産業の研究を担当するグループ。
+	
+	action = {
+		name = "EVT_150029_ACTA"	#もはや、誰も我々に並ぶことは出来ない
+		command = { type = money value = -500 }
+		command = { type = waketeam which = 78 }
+		command = { type = waketeam which = 79 }
+		command = { type = waketeam which = 76 }
+		command = { type = waketeam which = 77 }
+		command = { trigger = { ai = no } type = sleepteam which = 4 }	#Ju
+		command = { trigger = { ai = no } type = sleepteam which = 28 }	#Ar
+		command = { trigger = { ai = no } type = sleepteam which = 10 }	#Me
+		command = { trigger = { ai = no } type = sleepteam which = 26 }	#Fw
+		command = { trigger = { ai = no } type = sleepteam which = 2 }	#He
+		
+	}
+}
+
+
+#Wehrmacht's doctrine decision - Modern Blitzkrieg
+event = {
+	id = 150030
+	country = GER
+
+	trigger = {
+		ai = yes	#ドイツプレイヤーがAI
+		technology = 6290 #前線司令部
+		NOT = { technology = 14090 }	#国民突撃隊
+		OR = {
+			NOT = { war = { country = SOV country = GER } }	
+			NOT = { incabinet = 1 }
+		}
+		NOT = { lost_national = { country = GER value = 2 } }
+	}
+
+	name = "EVT_150030_NAME"
+	style = 0
+	picture = "panzer_reserves"
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		command = { type = deactivate which = 14090 }
+		command = { type = max_organization which = land value = 5 }
+	}
+}
+
+
+
+#########################################################################
+#  モズリー政権に占領地を返還（イタリア）
+#########################################################################
+event = {
+	id = 150040
+	random = no
+	country = ITA
+
+	trigger = {
+		NOT = {
+			control = { province = 3 data = ENG } # Stornoway
+			control = { province = 5 data = ENG } # Scapaflow
+			control = { province = 6 data = ENG } # Inverness
+			control = { province = 7 data = ENG } # Aberdeen
+			control = { province = 8 data = ENG } # Dunfermline
+			control = { province = 9 data = ENG } # Glasgor
+			control = { province = 10 data = ENG } # Edinburgh
+			control = { province = 11 data = ENG } # Sunderland
+			control = { province = 12 data = ENG } # Blackpool
+			control = { province = 13 data = ENG } # Sheffield
+			control = { province = 14 data = ENG } # Liverpool
+			control = { province = 15 data = ENG } # Cardiff
+			control = { province = 17 data = ENG } # Norwich
+			control = { province = 20 data = ENG } # Dover
+			control = { province = 21 data = ENG } # Portsmouth
+			control = { province = 22 data = ENG } # Bristol
+			control = { province = 23 data = ENG } # Plymouth
+			control = { province = 16 data = ENG } # Birmingham
+			event = 131000
+			exists = U73
+			ispuppet = ITA
+		}
+		control = { province = 19 data = ITA }
+		
+	}
+
+	name = "EVT_150040_NAME"	#イタリアのグレートブリテン島支配
+	desc = "EVT_150040_DESC"	#ついにイギリス全土が我々の支配下に入った。我々はグレートブリテン島全土をモズリーの傀儡政権に任せることができる。ただし、その場合においてもプリマス港だけは我が軍の保障占領下におかれる。
+	
+	style = 0
+	picture = "vichy_regime"
+
+	date = { day = 1 month = september year = 1939 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "ACT60162A"
+		ai_chance = 100
+		command = { type = independence which = U73 value = 1 when = 0 }
+		command = { type = addclaim which = 23 }	#プリマス
+		command = { type = trigger which = 150042 } # 
+		command = { type = trigger which = 150041 } # U73
+		command = { type = secedeprovince which = U73 value = 3 }
+		command = { type = secedeprovince which = U73 value = 5 }
+		command = { type = secedeprovince which = U73 value = 6 }
+		command = { type = secedeprovince which = U73 value = 7 }
+		command = { type = secedeprovince which = U73 value = 8 }
+		command = { type = secedeprovince which = U73 value = 9 }
+		command = { type = secedeprovince which = U73 value = 10 }
+		command = { type = secedeprovince which = U73 value = 11 }
+		command = { type = secedeprovince which = U73 value = 12 }
+		command = { type = secedeprovince which = U73 value = 13 }
+		command = { type = secedeprovince which = U73 value = 14 }
+		command = { type = secedeprovince which = U73 value = 15 }
+		command = { type = secedeprovince which = U73 value = 16 }
+		command = { type = secedeprovince which = U73 value = 17 }
+		command = { type = secedeprovince which = U73 value = 19 }
+		command = { type = secedeprovince which = U73 value = 20 }
+		command = { type = secedeprovince which = U73 value = 21 }
+		command = { type = secedeprovince which = U73 value = 22 }
+		#command = { type = secedeprovince which = U73 value = 23 }#FEPK #プリマス港保障占領
+		command = { type = add_corps which = "イタリア英占領軍司令部" value = land where = 23 }
+		command = { type = add_division which = "イタリア英占領軍総司令部" value = hq when = 1 where = police }
+		command = { type = add_corps which = "イタリア英南西地方占領軍" value = land where = 23 }
+		command = { type = add_division which = "プリマス駐屯部隊" value = garrison when = 1 where = police }
+		command = { type = construct which = land_fort where = 10 value = -10 } #Edinburgh # 1.07
+	}
+	action_b = {
+		name = "ACT60160B"
+		ai_chance = 0
+		command = { } 
+
+	}
+}
+
+
+event = {
+	id = 150041
+	random = no
+	country = U73
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+	picture = "vichy_regime"
+
+	action_a = {
+		name = "OK"
+		command = { type = addcore which = 3 }
+		command = { type = addcore which = 5 }
+		command = { type = addcore which = 6 }
+		command = { type = addcore which = 7 }
+		command = { type = addcore which = 8 }
+		command = { type = addcore which = 9 }
+		command = { type = addcore which = 10 }
+		command = { type = addcore which = 11 }
+		command = { type = addcore which = 12 }
+		command = { type = addcore which = 13 }
+		command = { type = addcore which = 14 }
+		command = { type = addcore which = 15 }
+		command = { type = addcore which = 16 } # FEPK修正部分 # 1.093
+		command = { type = addcore which = 17 }
+	#	command = { type = addcore which = 19 }
+		command = { type = addcore which = 20 }
+		command = { type = addcore which = 21 }
+		command = { type = addcore which = 22 }
+		command = { type = addcore which = 23 }
+		command = { type = secedeprovince which = ITA value = 23 }#FEPK #プリマス港保障占領
+		command = { type = transport_pool which = U73 value = 160 }
+		command = { type = escort_pool which = U73 value = 40 }
+		command = { type = headofgovernment which = 700301 }
+	}
+}
+event = {
+	id = 150042
+	random = no
+	country = ITA
+
+	name = "EVT_150040_NAME"
+	desc = "EVT_150040_DESC"
+	style = 0
+	picture = "vichy_regime"
+
+	action_a = {
+		name = "OK"
+		command = { type = make_puppet which = U73 } # 
+		command = { type = alliance which = U73 } # 
+	}
+}
+#
+event = {
+	id = 150043
+	random = no
+	country = ITA
+	save_date = yes
+	decision = {
+		event = 150042
+		headofgovernment = 3002	#ムッソリーニ
+		puppet = { country = U73 country = ITA }
+		NOT = { 
+			event = 131050
+			event = 9990002
+		}
+		NOT = { ideology = nazi }
+	}
+	decision_trigger = { }
+	trigger = {
+		event = 150042
+		headofgovernment = 3002	#ムッソリーニ
+		random = 30
+		puppet = { country = U73 country = ITA }
+		NOT = { 
+			event = 131050
+			event = 9990002
+		}
+	}
+	
+	date = { day = 1 month = september year = 1939 }
+	offset = 14
+	deathdate = { day = 29 month = 9 year = 1954 }
+
+	picture = "churchill"
+	
+	name = "EVT_150043_NAME"	#旧友、ウィンストン・チャーチルへ
+	desc = "EVT_150043_DESC"	#イタリア王国はブリテン島全土を制圧し、ついにロンドンに自らの望む政権を樹立することに成功した。傀儡政権の首班として選出されたのはオズワルド・モズレーであった。モズレーはその始まりこそムッソリーニの思想に大きな影響を受けて起ったのであるが、実際には彼の党の活動はヒトラーの影響を強く受けている。ファシスト同盟党員の制服のデザインや、党全体での反ユダヤ主義はそれを示していると言えるだろう。モズレーはムッソリーニの制御下には無いのである。つまりそれは、イタリアが樹立した政権が実際にはドイツによってコントロールされる可能性を秘めていた。苦労して手にしたブリテン島を横取りされては面白くない。ムッソリーニは筆を執る。手紙の宛先は、イギリスの元首相で、怨敵であり、旧友である、ウィンストン・チャーチルである。彼にブリテン島を任せられないだろうか。ヒトラーの信奉者より、あの現実を見てきた男のほうが、遥かに伊英の将来を作るには相応しいのではないだろうか。
+	
+	action = {
+		name = "EVT_150043_ACTA"	#チャーチルこそが新しい英国を導けるのだ
+		command = { type = dissent value = 1 }
+		command = { type = relation which = GER value = -10 }
+	}
+	action = {
+		name = "EVT_150043_ACTB"	#一度我々により斃された男を、果たして誰が信用しようか
+		command = { type = sleepevent which = 150044 }
+		command = { type = sleepevent which = 150046 }
+	}
+}
+
+event = {
+	id = 150044
+	country = ITA
+	trigger = {
+		event = 150043
+		random = 20
+		NOT = { event = { id = 150043 days = 15 } }
+	}
+
+	style = 0
+	picture = "churchill"
+
+	date = { day = 1 month = september year = 1939 }
+	offset = 3
+	deathdate = { day = 29 month = 10 year = 1954 }
+
+	name = "EVT_150044_NAME"	#イングランド新首相、ウィンストン・チャーチル
+	desc = "EVT_150044_DESC"	#チャーチルは枢軸国との戦いで疎開を繰り返したが、英国の降伏に伴いついに逃げ道を失った。英国が降伏文書に調印したのとほぼ同時に、カラビニエリは誰にも知られることなく――ドイツの親衛隊より先に――チャーチルを確保し彼をジェノヴァの小奇麗な屋敷へと移した。ある日、手紙が届けられた。差出人はベニート・ムッソリーニであった。首を吊るす前に何かを言っておきたいのだろうかと手紙を開けば、チャーチルに新しいイングランドの首相としてロンドンに向かって欲しいとの旨が記されていた。全く無茶苦茶な話である。一度転覆させた政権を修復して旗を上げさせたいとは。しかし、確かに、ファシスト同盟党は信用ならないものだ。あの男は防衛規則18Bに従って一度収監されたはずなのに、今やダウニング街10番地の家長に収まっている。あれはおそらく今やドイツとの関係を最優先するだろうし、党員には殆ど政治をやったことのある者がいない。放っておけば、彼らはなんだかんだと理由をつけてドイツに次々国土を売り渡してしまうかもしれない。0.1エーカーだって渡してやるものは無いのに。それならば、まだウィンストン・チャーチルによる政治体制のほうがマシかもしれない。例えイタリア製の鎖に縛られているのだとしても、少なくともチャーチルは王のことをよく知っているし、政治とは何が行えて、何が行えないのかはよくわかっている。チャーチルが1940年に組んだ政権の基盤であった労働党は既に雲散霧消し、旧来からの保守党の者たちは負け犬が再びロンドンに戻ってくることを良しとはしないだろう。それでも、イギリスを思えば、ジェノヴァから眺めているよりずっと良い。チャーチルは決意を固めた。ヴェネツィア宮殿へ宛てて、手紙を認める。ウィンストン・チャーチルは、新たなイングランドの首相として在ることを望むと。
+	
+	action = {
+		name = "EVT_150044_ACTA"	#ヒトラーの尻尾にブリテン島を任せる訳にはいかない
+		command = { type = relation which = GER value = -10 }
+		command = { type = sleepevent which = 150046 }
+		command = { type = trigger which = 150045 }
+	}
+}
+
+event = {
+	id = 150045
+	country = U73
+	
+	style = 0
+	picture = "churchill"
+	
+	name = "EVT_150044_NAME"	#
+	desc = "EVT_150045_DESC"	#イタリアの手回しによって、オズワルド・モズレーは首相職から降ろされ、引きずり降ろされたはずのウィンストン・チャーチルが再びその座につく。ファシスト同盟党への譲歩として、モズレーは財務大臣の座を与えられることとなった。国庫と金融政策のどちらにも手と口の出せる財務大臣というのは実際大きな権力を有しているが、チャーチルはモズレーが逮捕されるきっかけとなった政権の宰相まさにその人であるし、関係は最悪に近い状態から始まった。これまで英国で絶対的であった2つの政党――保守党と労働党――がどちらも壊滅的な今、彼らは政治体制を殆ど1から作り直さねばならなくなっている。
+	
+	action = {
+		name = "EVT_150045_ACTA"	#やっていけるのだろうか
+		command = { type = relation which = GER value = -20 }
+		command = { type = dissent value = 15 }
+		command = { type = wakeminister which = 700367 }
+		command = { type = headofgovernment which = 700367 }
+		command = { type = armamentminister which = 700303 }
+	}
+}
+		
+event = {
+	id = 150046
+	country = ITA
+	trigger = {
+		NOT = { event = 150045 } 
+		event = { id = 150043 days = 15 }
+	}
+
+	style = 0
+	picture = "churchill"
+
+	date = { day = 1 month = september year = 1939 }
+	offset = 3
+	deathdate = { day = 29 month = 10 year = 1954 }
+	
+	name = "EVT_150046_NAME"	#チャーチルは隠居を選ぶ
+	desc = "EVT_150046_DESC"	#チャーチルは枢軸国との戦いで疎開を繰り返したが、英国の降伏に伴いついに逃げ道を失った。英国が降伏文書に調印したのとほぼ同時に、カラビニエリは誰にも知られることなく――ドイツの親衛隊より先に――チャーチルを確保し彼をジェノヴァの小奇麗な屋敷へと移した。ある日、手紙が届けられた。差出人はベニート・ムッソリーニであった。首を吊るす前に何かを言っておきたいのだろうかと手紙を開けば、チャーチルに新しいイングランドの首相としてロンドンに向かって欲しいとの旨が記されていた。全く無茶苦茶な話である。一度転覆させた政権を修復して旗を上げさせたいとは。実際、彼が再びロンドンの地に踏み入れて何があるものか。保守党はそもそもドイツとの戦争を望んでいなかった。そして負けた。負け戦の戦争指導者を好意的に受け入れることはあるまい。労働党は既に四散した。当然のことだ、極右の政権が建ったイングランドのどこに彼らの居場所があろうものか。既にチャーチルの支持者はどこにも存在しないのだ。チャーチルはその任は受けられないとの返信をムッソリーニに宛てた。ドゥーチェはそれを受け取ると、ただひとつため息を付き、側近に「分かっていたことだ」と告げた。
+	
+	action = {
+		name = "EVT_150046_NAME"	#我々自身の力で、なんとかイングランドを操縦しよう
+		command = { type = relation which = GER value = -5 }
+		command = { type = dissent value = 2 }
+	}
+}
+
+
+#########################################################################
+#  モズリー政権に占領地を返還（日本）
+#########################################################################
+event = {
+	id = 150050
+	random = no
+	country = JAP
+
+	trigger = {
+		NOT = {
+			control = { province = 3 data = ENG } # Stornoway
+			control = { province = 5 data = ENG } # Scapaflow
+			control = { province = 6 data = ENG } # Inverness
+			control = { province = 7 data = ENG } # Aberdeen
+			control = { province = 8 data = ENG } # Dunfermline
+			control = { province = 9 data = ENG } # Glasgor
+			control = { province = 10 data = ENG } # Edinburgh
+			control = { province = 11 data = ENG } # Sunderland
+			control = { province = 12 data = ENG } # Blackpool
+			control = { province = 13 data = ENG } # Sheffield
+			control = { province = 14 data = ENG } # Liverpool
+			control = { province = 15 data = ENG } # Cardiff
+			control = { province = 17 data = ENG } # Norwich
+			control = { province = 20 data = ENG } # Dover
+			control = { province = 21 data = ENG } # Portsmouth
+			control = { province = 22 data = ENG } # Bristol
+			control = { province = 23 data = ENG } # Plymouth
+			control = { province = 16 data = ENG } # Birmingham
+			event = 131000
+			exists = U73
+			ispuppet = JAP
+		}
+		control = { province = 19 data = JAP }
+		
+	}
+
+	name = "EVT_150050_NAME"	#日本のグレートブリテン島支配
+	desc = "EVT_150050_DESC"	#ついにイギリス全土が我々の支配下に入った。我々はグレートブリテン島全土を傀儡政権に任せることができる。ただし、その場合においてもプリマス港だけは我が軍の保障占領下におかれる。
+	
+	style = 0
+	picture = "vichy_regime"
+
+	date = { day = 1 month = september year = 1939 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		name = "ACT60162A"
+		ai_chance = 100
+		command = { type = independence which = U73 value = 1 when = 0 }
+		command = { type = addclaim which = 23 }	#プリマス
+		command = { type = trigger which = 150052 } # 
+		command = { type = trigger which = 150051 } # U73
+		command = { type = secedeprovince which = U73 value = 3 }
+		command = { type = secedeprovince which = U73 value = 5 }
+		command = { type = secedeprovince which = U73 value = 6 }
+		command = { type = secedeprovince which = U73 value = 7 }
+		command = { type = secedeprovince which = U73 value = 8 }
+		command = { type = secedeprovince which = U73 value = 9 }
+		command = { type = secedeprovince which = U73 value = 10 }
+		command = { type = secedeprovince which = U73 value = 11 }
+		command = { type = secedeprovince which = U73 value = 12 }
+		command = { type = secedeprovince which = U73 value = 13 }
+		command = { type = secedeprovince which = U73 value = 14 }
+		command = { type = secedeprovince which = U73 value = 15 }
+		command = { type = secedeprovince which = U73 value = 16 }
+		command = { type = secedeprovince which = U73 value = 17 }
+		command = { type = secedeprovince which = U73 value = 19 }
+		command = { type = secedeprovince which = U73 value = 20 }
+		command = { type = secedeprovince which = U73 value = 21 }
+		command = { type = secedeprovince which = U73 value = 22 }
+		#command = { type = secedeprovince which = U73 value = 23 }#FEPK #プリマス港保障占領
+		command = { type = add_corps which = "大日本帝国英占領軍司令部" value = land where = 23 }
+		command = { type = add_division which = "大日本帝国英占領軍総司令部" value = hq when = 1 where = police }
+		command = { type = add_corps which = "大日本帝国英南西地方占領軍" value = land where = 23 }
+		command = { type = add_division which = "プリマス駐屯部隊" value = garrison when = 1 where = police }
+		command = { type = construct which = land_fort where = 10 value = -10 } #Edinburgh # 1.07
+	}
+	action_b = {
+		name = "ACT60160B"
+		ai_chance = 0
+		command = { } 
+
+	}
+}
+
+
+event = {
+	id = 150051
+	random = no
+	country = U73
+
+	name = "AI_EVENT"
+	desc = "AI_EVENT"
+	style = 0
+	picture = "vichy_regime"
+
+	action_a = {
+		name = "OK"
+		command = { type = addcore which = 3 }
+		command = { type = addcore which = 5 }
+		command = { type = addcore which = 6 }
+		command = { type = addcore which = 7 }
+		command = { type = addcore which = 8 }
+		command = { type = addcore which = 9 }
+		command = { type = addcore which = 10 }
+		command = { type = addcore which = 11 }
+		command = { type = addcore which = 12 }
+		command = { type = addcore which = 13 }
+		command = { type = addcore which = 14 }
+		command = { type = addcore which = 15 }
+		command = { type = addcore which = 16 } # FEPK修正部分 # 1.093
+		command = { type = addcore which = 17 }
+	#	command = { type = addcore which = 19 }
+		command = { type = addcore which = 20 }
+		command = { type = addcore which = 21 }
+		command = { type = addcore which = 22 }
+		command = { type = addcore which = 23 }
+		command = { type = secedeprovince which = JAP value = 23 }#FEPK #プリマス港保障占領
+		command = { type = transport_pool which = U73 value = 160 }
+		command = { type = escort_pool which = U73 value = 40 }
+		command = { type = headofgovernment which = 700301 }
+	}
+}
+event = {
+	id = 150052
+	random = no
+	country = JAP
+
+	name = "EVT_150050_NAME"
+	desc = "EVT_150050_DESC"
+	style = 0
+	picture = "vichy_regime"
+
+	action_a = {
+		name = "OK"
+		command = { type = make_puppet which = U73 } # 
+		command = { type = alliance which = U73 } # 
+	}
+}
+
+event = {
+	id = 150053
+	random = no
+	country = JAP
+	trigger = {
+		event = 150052
+		puppet = { country = U73 country = JAP }
+		OR = { 
+			ideology = nazi
+			ideology = fascist
+			ideology = paternal_autocrat
+			ideology = social_conservative
+		}
+	}
+	
+	name = "EVT_150053_NAME"	#日本のイングランド支配―スパイを首相に？
+	desc = "EVT_150053_DESC"	#日本軍がブリテン島全土を占領しロンドンに傀儡政権を建てると、帝国海軍は対英開戦前から情報を日本にもたらし続けたウィリアム・フランシス・フォーブス＝センピル卿を傀儡政権の首班とすることを求めた。彼は日英同盟の時代から日本軍における航空機の発展に大きく寄与し、また同盟解消後も英国の機密情報を日本国に流し続けた。本来であれば重い処罰が課せられるべき行動であったが、外交上の都合とセンピル卿が英国王室への繋がりの強いスコットランド貴族であることから彼はなんの処罰も受けず、軍から退役して国内に在住していた。極右的な思想を持つ彼はエドワード王とは思想面でも生まれ持っての関係としても近いと言えるが、一方で貴族が（前）英国王を裏切り傀儡政権での椅子に座るとなれば英国民からの批判は免れないだろう。
+	style = 0
+	picture = "vichy_regime"
+
+	date = { day = 1 month = september year = 1939 }
+	offset = 6
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action_a = {
+		ai_chance = 70
+		name = "EVT_150053_ACTA"	#よろしい、センピル卿をダウニング街に向かわせろ！
+		command = { type = trigger which = 150054 }
+		command = { type = relation which = ENG value = -50 }
+		command = { type = relation which = U73 value = -50 }
+	}
+	action_b = {
+		ai_chance = 30
+		name = "EVT_150053_ACTB"	#英国との関係の方が大事だ、黙らせろ
+		command = { type = dissent value = 1 }
+	}
+}	
+
+event = {
+	id = 150054
+	random = no
+	country = U73
+	
+	name = "EVT_150054_NAME"	#日本がセンピル卿の首相就任を要求
+	desc = "EVT_150054_DESC"	#日本国は元海軍のセンピル卿を傀儡政権の首相とすることを要求してきた。昨日までの敵国のスパイに国家を率いさせるなど信じられないことではあるが、我々に拒否権は無い。
+	style = 0
+	picture = "vichy_regime"
+
+	action_a = {
+		name = "EVT_150054_ACTA"	#仕方があるまい
+		command = { type = dissent value = 10 }
+		command = { type = headofgovernment which = 700366 } #Sempill
+	}
+}
+
+#インドシナに侵入した日本軍を中国軍が打ち払った時にインドシナが中国領になっちゃうので返す
+event = {
+	id = 150061
+	country = CHI
+	trigger = {
+		NOT = { war = { country = CHI country = ENG } }
+		OR = {
+			event = 131511	#対米降伏
+			event = 131521	#対ソ降伏
+			event = 131570	#対中降伏
+		}
+		region = { region = "Indochine" country = CHI value = 1 }
+	}
+	
+	date = { day = 15 month = 1 year = 1936 }
+	offset = 15
+	deathdate = { day = 29 month = 11 year = 1963 }
+	
+	name = "EVT_150061_NAME"	#国境線の調整
+	desc = "EVT_150061_DESC"	#日本が連合国に対して降伏したことにより、我々も保障占領していた連合国のアジア植民地を手放さなくてはならない。
+	
+	action = {
+		name = "OK"
+		command = { type = secederegion which = ENG value = "Indochine"  value = 0 }
+	}
+}
+
+event = {
+	id = 150070
+	country = ETH
+	
+	trigger = {
+		NOT = { 
+			event = 130740	#再独立したエチオピアではない
+			ispuppet = yes	#再独立したエチオピアではない
+			region = { region = "Ethiopia" country = ITA value = 1 }
+			area = { area = "Somalia" country = ITA value = 1 }
+		}	#つまり、イタリアが全東アフリカ植民地を失陥しているということ。
+		war = { country = ITA country = ETH }
+	}
+	
+	date = { day = 15 month = 1 year = 1936 }
+	offset = 45
+	deathdate = { day = 29 month = 11 year = 1963 }
+	
+	name = "EVT_150070_NAME"	#エチオピア軍がイタリアを圧倒！
+	desc = "EVT_150070_DESC"	#ムッソリーニと国際社会の予想に反して、エチオピア軍は予想を遥かに超える奮戦を見せた。エチオピア軍の中でまともな訓練を受けているものは軍全体の1/8、せいぜい10万人程度で全体に練度は低い。さらに遥かに装備に劣るにもかかわらず、イタリア軍に対し地形をよく用いよく護った。訓練の足りない新兵も国家のためよく戦った。一方のイタリア軍は先進国として遥かに良好な装備を有していたものの、イタリア人からなる10個師団はエチオピア軍の決死の防御を打ち崩すには足りず、現地軍は事前予測を遥かに超える損害の前に恐怖し多くの逃亡者が出た。イタリア軍のボーノ将軍の部隊は慎重を期すことに拘り過ぎたために戦線をろくに押しこむことは出来ず膠着してしまった。一方グラツィアーニ将軍による南方からの支援軍は数の劣勢が祟りアフリカの角で全面的な降伏に追い込まれてしまう。南部の敵を掃討したエチオピア軍は転進しボーノ将軍率いる主力軍に対峙。総力を以ってイタリア主力軍に対し攻勢をかけ、ついにはエチオピア全土からイタリア軍50万を放逐してしまった。海岸沿いは歴戦の勇士揃いとなったエチオピア兵たちが守りを固め、イタリア軍が再上陸する隙はもはやない。彼らに講和を提案しよう。過大な要求は相手に蹴られる可能性を高めるが、しかしイタリアの拠点地をアフリカの角から無くしてしまえば彼らはもう攻め入っては来れなくなるだろう。
+
+	picture = "war"
+	
+	action = {
+		name = "EVT_150070_ACTA"	#エリトリアを要求する
+		ai_chance = 80
+		command = { type = dissent value = -20 }
+		command = { type = trigger which = 150071 } #ITA
+	}
+	action = {
+		name = "EVT_150070_ACTA"	#エリトリアとソマリアを要求する
+		ai_chance = 20
+		command = { type = dissent value = -20 }
+		command = { type = belligerence value = 5 }
+		command = { type = trigger which = 150072 } #ITA
+	}
+}
+
+event = {
+	id = 150071
+	country = ITA
+	
+	name = "EVT_150071_NAME"	# マッサワの悲劇 - エチオピアがエリトリアを要求！
+	desc = "EVT_150071_DESC"	# アビシニア戦争の復讐を目論んだイタリアに訪れたのは、さらなる悲劇であった。イタリア国民は自らの軍がまたしてもエチオピアに敗れ、今度は決戦に失敗するどころではなく侵攻に参加した軍のほとんどが潰走するという悲劇を目にすることとなった。マッサワでイタリア正規軍や現地軍が降伏した姿が報じられると、イタリア国民の間には厭戦と継戦で大きな論争と混乱が巻き起こった。35年時点で、国際社会は本戦争について殆ど関心を見せなかったが、世界各地でのアフリカ系人種の呼びかけが少しずつ広まりを見せ、エチオピアに対する支援の手が差し伸べられつつある。もしこのまま戦争を続ければイタリアに対する国際社会の目はますます厳しくなるだろうが、講和に応じれば連鎖的にイタリアのアフリカ植民地支配体制が崩壊する恐れもある。どちらにせよ、イタリア国民の自尊心に大きな傷が残ることに違いはなく、慎重な判断が求められる。
+	
+	action = {
+		name = "EVT_150071_ACTA"	#これ以上の戦いは無意味だ。講和に応じよう
+		ai_chance = 60
+		command = { type = dissent value = 30 }
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = belligerence value = -5 }
+		command = { type = relation which = ENG value = 10 }
+		command = { type = relation which = ETH value = 15 }
+		command = { type = relation which = GER value = -10 }
+		command = { type = peace which = ETH value = 0 }
+		command = { type = secederegion which = ETH value = "Ethiopia"  when = 2 }
+		#command = { type = secedearea which = ETH value = "Somalia" when = 2 }
+		command = { type = trigger which = 150073 }	#ETH
+	}
+	action = {
+		name = "EVT_150071_ACTB"	#ありえんことだ！　我々は必ず勝つ！
+		ai_chance = 40
+		command = { type = dissent value = 25 }
+		command = { type = belligerence value = 5 }
+		command = { type = relation which = ENG value = -10 }
+		command = { type = relation which = FRA value = -10 }
+		command = { type = relation which = JAP value = -10 }
+		command = { type = relation which = ETH value = 15 }
+		command = { type = relation which = GER value = 5 }
+		command = { type = trigger which = 150090 }	#ETH
+	}
+}
+
+event = {
+	id = 150072
+	country = ITA
+	
+	name = "EVT_150072_NAME"	# マッサワの悲劇 - エチオピアがイタリアの全東アフリカ領を要求！
+	desc = "EVT_150071_DESC"	# アビシニア戦争の復讐を目論んだイタリアに訪れたのは、さらなる悲劇であった。イタリア国民は自らの軍がまたしてもエチオピアに敗れ、今度は決戦に失敗するどころではなく侵攻に参加した軍のほとんどが潰走するという悲劇を目にすることとなった。マッサワでイタリア正規軍や現地軍が降伏した姿が報じられると、イタリア国民の間には厭戦と継戦で大きな論争と混乱が巻き起こった。35年時点で、国際社会は本戦争について殆ど関心を見せなかったが、世界各地でのアフリカ系人種の呼びかけが少しずつ広まりを見せ、エチオピアに対する支援の手が差し伸べられつつある。もしこのまま戦争を続ければイタリアに対する国際社会の目はますます厳しくなるだろうが、講和に応じればイタリアのアフリカ植民地支配体制が崩壊する恐れもある。どちらにせよ、イタリア国民の自尊心に大きな傷が残ることに違いはなく、慎重な判断が求められる。
+	
+	action = {
+		name = "EVT_150071_ACTA"	#これ以上の戦いは無意味だ。講和に応じよう
+		ai_chance = 40
+		command = { type = dissent value = 30 }
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = belligerence value = -5 }
+		command = { type = relation which = ENG value = 5 }
+		command = { type = relation which = ETH value = 15 }
+		command = { type = relation which = GER value = -10 }
+		command = { type = peace which = ETH value = 0 }
+		command = { type = secederegion which = ETH value = "Ethiopia"  when = 2 }
+		command = { type = secedearea which = ETH value = "Somalia" when = 2 }
+		command = { type = trigger which = 150073 }	#ETH
+	}
+	action = {
+		name = "EVT_150071_ACTB"	#ありえんことだ！　我々は必ず勝つ！
+		ai_chance = 60
+		command = { type = dissent value = 25 }
+		command = { type = belligerence value = 5 }
+		command = { type = relation which = ENG value = -10 }
+		command = { type = relation which = FRA value = -10 }
+		command = { type = relation which = JAP value = -10 }
+		command = { type = relation which = ETH value = 15 }
+		command = { type = relation which = GER value = 5 }
+		command = { type = trigger which = 150090 }	#ETH
+	}
+}
+
+#イタリア40年非参戦ルート
+event = {
+	id = 150073
+	country = ETH
+	
+	name = "EVT_150073_NAME"	#イタリアは講和を受諾した！
+	desc = "EVT_150073_DESC"	#イタリアに対する我々の和平案は承諾され、我々は正当な版図を手に入れることに成功した！　この勝利から得られたもののなんと大きなことか！
+	
+	action = {
+		name = "EVT_150073_ACTA"	#万歳！
+		command = { type = dissent value = -50 }
+		command = { type = domestic which = professional_army value = 2 }
+		command = { type = domestic which = defense_lobby value = 2 }
+		command = { type = steal_tech which = ITA }	#降伏したイタリア軍からの鹵獲品
+		command = { type = steal_tech which = ITA }
+		command = { type = steal_tech which = ITA }
+		command = { type = steal_tech which = ITA }
+		command = { type = steal_tech which = ITA }
+	}
+}
+
+event = {
+	id = 150074
+	country = ITA
+	
+	trigger = {
+		#event = 55601
+		exists = ETH
+		exists = GER	#戦後体制でない
+		NOT = { 
+			alliance = { country = ETH country = ITA }
+			alliance = { country = ETH country = ENG } 
+			alliance = { country = ETH country = GER }
+			flag = axis_italy
+			event = 62070
+			event = 130740
+			flag = ITA_NOT_ETH
+		}
+	}
+	
+	name = "EVT_150074_NAME"	#イタリア軍の戦闘能力への疑念
+	desc = "EVT_150074_DESC"	#欧州での動きが激しくなる中、イタリアは未だエチオピアに対する成果を出すことができていない。アスカリはおろか、イタリア人による正規軍の動きも決して良いものではなく、もしこのまま欧州での戦いに巻き込まれた場合、イタリアに果たして何が出来るのかという軍への不信感が国民の中に顕になりつつある。我らの軍は、我らの外交はどうあるべきなのだろう？　方針を転換し、平和の中での繁栄を求めるべきなのではないだろうか？
+	
+	date = { day = 1 month = 1 year = 1939 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = "EVT_150074_ACTA"	#何も心配することはない。イタリアはうまくやっていける
+		ai_chance = 80
+		command = { type = dissent value = 5 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = industrial_modifier which = total value = -5 }
+	}		
+	
+	action = {
+		name = "EVT_150074_ACTB"	#全ての国家戦略における方針の転換が必要だ
+		ai_chance = 20
+		command = { type = domestic which = defense_lobby value = -2 }
+		command = { type = peacetime_ic_mod value = 10 }
+		command = { type = domestic which = freedom value = 1 }
+		command = { type = industrial_modifier which = total value = -5 }
+		command = { type = trigger which = 150075 }
+	}
+}
+event = {
+	id = 150075
+	country = ITA
+	
+	name = "EVT_150075_NAME"	# イタリアに望まれる改革
+	desc = "EVT_150075_DESC"	# イタリアの市民は自信を喪失していた。アビシニア戦争の復讐を果たせず、ローマ帝国とは、イタリアの強さとは何であるのかがわからなくなっているからだ。一方ムッソリーニは、ここに来てすっかり冷静になっていた。国民の強い要望に応える形で始まった戦争がなかなか終わることが出来ない様を見て、イタリアは外への進出を果たすよりもまず国内での改革を行うべきであると考えるようになっていたのだ。きな臭くなってきたドイツ周辺から一時距離を置き、まず国内の問題を洗い直し、解決しよう。イタリアを回収するために外へ向くのは、それが完了してからだ。
+	
+	action = {
+		name = "EVT_150075_ACTA"	#やむをえまい
+		command = { type = dissent value = 10 }
+		command = { type = ground_def_eff value = 0.6 }
+		command = { type = sleepevent which = 130611 }	#アルバニア併合
+		command = { type = sleepevent which = 130600 }	#ギリシアへ侵攻
+		command = { type = sleepevent which = 130430 }	#ドイツ軍のセーヌ川進撃
+		
+	}
+}
+
+event = {
+	id = 150076
+	country = ITA
+	
+	decision = {
+		event = 150075
+		war = { country = ETH country = ITA }
+		NOT = { 
+			war = { country = ITA country = GER }
+			alliance = { country = ENG country = ETH }
+			alliance = { country = JAP country = ETH }
+			alliance = { country = FRA country = ETH }
+			alliance = { country = USA country = ETH }
+			alliance = { country = SOV country = ETH }
+		}
+	}
+	
+	decision_trigger = { 
+		atwar = GER
+	}
+	
+	trigger = {
+		event = 150075
+		war = { country = ETH country = ITA }
+		atwar = GER
+		random = 10
+	}
+	
+	date = { day = 1 month = 2 year = 1936 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	name = "EVT_150076_NAME"	#エチオピアに和平を提案？
+	desc = "EVT_150076_DESC"	#エチオピア侵攻が進まぬことは、イタリア軍が現代戦においては到底実用的でないということを示すに十分であった。国際面でも、イタリアに向けられる視線は少しずつ厳しくなっており、このまま戦争を続ければ勝てない軍で戦えない軍でドイツと肩を並べなくてはならないという状況が、少しずつ近づきつつある。他国がエチオピアを大々的に援助し始めるようなことがあればこの戦争はイタリアのコントロールできるものでなくなるのは間違いなく、ならば主導権がまだ我が国にあるうちにエチオピアからは手を引き彼の国の独立を保障、その他の国々への中立も宣言し国内の安定に務めるべきではなかろうか。
+	
+	action = {
+		name = "EVT_150076_ACTA"	#彼らに白紙和平を提案しよう
+		command = { type = trigger which = 150077 }
+		command = { type = dissent value = 5 }
+	}
+}
+
+event = {
+	id = 150077
+	country = ETH
+
+	name = "EVT_150077_NAME"	#イタリアが痛み分けを提案
+	desc = "EVT_150077_DESC"	#イタリアから講和を求める使者が来た。戦前の国境に戻し、我らの独立を保障するというのだ。非常に不利な戦いを続けてきた我々がこの条件を引き出せただけでも十分ではあろうが、さて……。
+
+	action = {
+		name = "EVT_150077_ACTA"	#虫のいい話だが、それ以外の道はない
+		ai_chance = 30
+		command = { type = peace which = ITA value = 0 }
+		command = { type = trigger which = 150078 }
+	}
+	action = {
+		trigger = {
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					NOT = { garrison = { country = -2 province = 1046 type = land size = 6 area = 2 } }
+					NOT = { lost_national = { country = ETH value = 1 } }
+				}
+			}
+		}
+		name = "EVT_150077_ACTA"	#馬鹿にしやがって、今更そんなことを！　断る！
+		ai_chance = 70
+		command = { type = dissent value = 2 }
+	}
+}
+
+event = {
+	id = 150078
+	country = ITA
+	
+	name = "EVT_150078_NAME"	#エチオピアが講和条約に調印
+	desc = "EVT_150078_DESC"	#エチオピアは我が国との講和に応じ、我々が彼らの戦闘前の国境線を保持し、また独立を保証することを承諾した。さて、イタリア軍の問題点を洗い出さねば……。
+	
+	action = {
+		name = "EVT_150078_ACTA"	#課題は山積している
+		command = { type = non_aggression which = ITA where = ETH }
+		command = { type = guarantee which = ITA where = ETH }
+	}
+}
+
+event = {
+	id = 150079
+	country = ITA
+	
+	decision = {
+		event = 150078
+		atwar = no
+	}
+	
+	decision_trigger = {
+		atwar = ENG 
+		atwar = GER
+	}
+	
+	trigger = {
+		event = 150078
+		atwar = ENG 
+		atwar = GER
+		atwar = no
+	}
+	
+	name = "EVT_150079_NAME"	#イタリア、中立を宣言
+	desc = "EVT_150079_DESC"	#エチオピア攻略を断念したイタリアは、自らの現状を鑑み欧州での戦争には関わらない姿勢を取ることとした。我々はいずれの陣営にも属さず、まず状況を静観することとしよう。
+	
+	date = { day = 1 month = 2 year = 1936 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = "EVT_150079_ACTA"	#真の帝国となるために、改革を断行しよう
+		command = { type = industrial_modifier which = total value = 5 }
+		command = { type = belligerence value = -15 }
+		command = { type = domestic which = defense_lobby value = -1 }
+		command = { type = domestic which = interventionism value = -4 }
+		command = { type = relation which = ENG value = 10 }
+		command = { type = relation which = FRA value = 10 }
+		command = { type = relation which = USA value = 10 }
+	}
+}
+
+event = {
+	id = 150080
+	country = ITA
+	trigger = {
+		NOT = { 
+			exists = YUG
+			war = { country = GER country = ITA }
+			alliance = { country = GER country = ITA }
+			exists = RSI
+			flag = gerdefeatsita
+		}
+		control = { province = 381 data = GER }
+		control = { province = 384 data = GER }	#ドイツ以外のどこか……洪牙利あたりが持って行っている可能性もあるのか？
+	}
+	
+	name = "EVT_150080_NAME"	#ドイツとの取引―アドリア海の領土を要求？
+	desc = "EVT_150080_DESC"	#ユーゴスラビアでのクーデターがきっかけとなって、かの国はドイツが全土を占領した。当然その中にはイタリアが前々から回収を目論んでいたダルマチアも含まれている。ここまで中立を守ってきたイタリアには、ドイツに対しての中立を再確認し不可侵条約を結ぶことで、ドイツの腹部が安全であることを約束することができる。そしてその見返りとして、旧ユーゴ領のイタリアを回収するのだ。うまくいけば、イタリアは一切血を流すこと無く最高の利益を受けることが出来るかもしれない。
+
+	date = { day = 1 month = september year = 1939 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action = {
+		name = "EVT_150080_ACTA"	#ドイツに提案してみよう
+		ai_chance = 70
+		command = { type = belligerence value = 5 }
+		command = { type = relation which = ENG value = -10 }
+		command = { type = relation which = FRA value = -10 }
+		command = { type = relation which = GER value = -10 }
+		command = { type = relation which = HUN value = -10 }
+		command = { type = trigger which = 150081 }
+	}
+	action = {
+		name = "EVT_150080_ACTB"	#非現実的すぎる
+		ai_chance = 30
+		command = { type = domestic which = interventionism value = -1 }
+	}
+}
+
+event = {
+	id = 150081
+	country = GER
+	
+	name = "EVT_150081_NAME"	#イタリアが取引を求めている
+	desc = "EVT_150081_DESC"	#イタリアがダルマチアを要求している。ここまで何もしていない彼らにダルマチアを渡してやる義理があるとは到底思えないが、取引を呑んでやればアルプス山脈から南は中立の壁として保証される。これより西方・東方に更にドイツが拡大するにあたり、ドイツ南方における安全が確保されるということである。
+	
+	action = {
+		name = "EVT_150081_ACTA"	#価値の無い取引だ
+		ai_chance = 70
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = relation which = ITA value = -20 }
+		command = { type = trigger which = 150082 }
+	}
+	action = {
+		name = "EVT_150081_ACTB"	#ここは連中に貸しを作ってやるとするか
+		ai_chance = 30
+		command = { type = dissent value = 2 }
+		command = { type = relation which = HUN value = -10 }
+		command = { type = relation which = ITA value = 30 }
+		command = { type = secedeprovince which = ITA value = 381 }
+		command = { type = secedeprovince which = ITA value = 384 }
+		command = { type = trigger which = 150083 }
+	}
+}
+
+event = {
+	id = 150082
+	country = ITA
+	
+	name = "EVT_150082_NAME"	#ドイツが提案を拒絶
+	desc = "EVT_150082_DESC"	#我々の領土交渉は失敗した。ドイツにはこちらにダルマチアを割譲する気は無いのだ。
+	
+	action = {
+		name = "EVT_150082_ACTA"	#そう都合良くはいかないものか
+		command = { type = dissent value = 5 }
+		command = { type = relation which = GER value = -20 }
+	}
+}
+
+event = {
+	id = 150083
+	country = ITA
+	
+	name = "EVT_150083_NAME"	#ドイツが提案を承諾！
+	desc = "EVT_150083_DESC"	#ドイツは我々の提案を受け入れ、アドリア海の領土は正当なイタリアへと割譲された！　約束通り彼らとの中立を確認しよう！
+	
+	action = {
+		name = "EVT_150083_ACTA"	#素晴らしい！
+		command = { type = dissent value = -5 }
+		command = { type = non_aggression which = ITA where = GER }
+		command = { type = guarantee which = ITA where = GER }
+	}
+}
+		
+event = {
+	id = 150084
+	country = ITA
+
+	trigger = {
+		event = 150075
+		atwar = no
+		OR = {
+			technology = 6080	#連帯規模戦闘
+			technology = 6140	#中央作戦立案
+			technology = 6270	#カンプグルッペ
+			technology = 6350	#大規模陣形作戦
+		}
+	}
+	
+	name = "EVT_150084_NAME"	#イタリア王国は生まれ変わった！
+	desc = "EVT_150084_DESC"	#エチオピアに勝てないというあまりに不甲斐ない現実が判明して、既に2年が経った。ムッソリーニはあれ以降国外に手を出すのではなく、国内での問題の解決に力を入れた方針を続けてきた。ついにその成果が目に現れて現れ始めた。めまぐるしく変わる世界の台風の目となりながら国内での利益を伸ばし、イタリアでの失業率は大きく低下した。軍も、他国の視察や検討を繰り返してやっと現代戦に対抗できる状態に持ち直したといえるだろう。イタリアは生まれ変わった。本当の大国として。本当の帝国になるために。
+	
+	date = { day = 1 month = 2 year = 1941 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = "EVT_150084_ACTA"	#さあ、我々の時間が来た！
+		command = { type = construct which = ic where = -4 value = 2 }
+		command = { type = construct which = ic where = -4 value = 2 }
+		command = { type = construct which = ic where = -4 value = 2 }
+		command = { type = construct which = ic where = -4 value = 2 }
+		command = { type = construct which = ic where = -4 value = 2 }
+		command = { type = manpowerpool value = 100 }
+		command = { type = dissent value = -5 }
+		command = { type = ground_def_eff value = 0.8 }
+	}
+}
+	
+event = {
+	id = 150085
+	random = no
+	country = ITA
+	
+	decision = {
+		event = 150080
+	}
+	decision_trigger = {
+		NOT = { dissent = 5 }
+	}
+	trigger = {
+		event = 150084
+		OR = {
+			AND = {
+				NOT = { 
+					war = { country = GER country = SOV }	#ドイツ快勝条件
+					lost_national = { country = GER value = 1 }
+				}
+			}
+			AND = {	#ドイツ快勝条件
+				exists = U73
+				participant = { country = U73 value = 1 }
+				NOT = { lost_national = { country = GER value = 1 } }
+			}
+			lost_national = { country = GER value = 20 }	#連合勝利条件
+		}
+	}
+	
+	name = "EVT_150085_NAME"	#イタリアの決断
+	desc = "EVT_150085_DESC"	#欧州にあって中立を保ち続けたイタリアは、国内での改革を完了しついに大戦へ参加する準備が完了した。いま、イタリア最大の決断が下されようとしている！
+	
+	action = {
+		name = "EVT_150085_ACTA"	#ドイツに同盟を打診せよ
+		ai_chance = 0
+		command = { type = event which = 150086 where = GER when = 1 }
+	}
+	action = {
+		trigger = {
+			lost_national = { country = GER value = 20 }
+		}
+		name = "EVT_150085_ACTA"	#イギリスに同盟を打診せよ
+		ai_chance = 100
+		command = { type = event which = 150086 where = ENG when = 1 }
+	}
+}
+
+event = {
+	id = 150086
+	tag = { GER ENG }
+	
+	name = "EVT_150086_NAME"	#イタリアが同盟を求める
+	desc = "EVT_150086_DESC"	#これまで頑なに戦争への参加をかわしてきたイタリアが、ついに我が国との同盟を結び、本戦争に関わることを求めてきた。さて、我々は彼らを歓迎すべきだろうか？
+	
+	action = {
+		name = "EVT_150086_ACTA"	#よろしい！　彼らを迎え入れろ！
+		ai_chance = 7
+		command = { type = alliance which = ITA }
+	}
+	action = {
+		ai_chance = 3
+		name = "EVT_150086_ACTB"	#火事場泥棒をしに来たのか？　イタリアは不要だ
+		ai_chance = 3
+		command = { type = relation which = ITA value = -20 }
+	}
+	action = {
+		trigger = {
+			ai = yes
+			country = GER	#ドイツはイタリアに割と甘い
+		}
+		name = "EVT_150086_ACTA"	#よろしい！　彼らを迎え入れろ！
+		ai_chance = 90
+		command = { type = alliance which = ITA }
+	}
+}
+	
+
+#エチオピア戦争への大国介入ルート
+event = {
+	id = 150090
+	country = ETH
+	
+	name = "EVT_150090_NAME"	#イタリアは講和を拒絶した！
+	desc = "EVT_150090_DESC"	#イタリアはあれほどの被害を出しながら、なお戦いを続けることを望むらしい。何度やっても同じことだと、彼らに教えるしかあるまい。
+
+	action = {
+		name = "EVT_150090_ACTA"	#なんと物分りの悪い……。
+		command = { type = belligerence value = -20 }
+		command = { type = domestic which = professional_army value = 3 }
+		command = { type = domestic which = defense_lobby value = 3 }
+	}
+}
+
+event = {
+	id = 150091
+	country = USA
+	
+	trigger = {
+		war = { country = ETH country = ITA }
+		NOT = { 
+			war = { country = USA country = ETH } 
+			ispuppet = ETH
+			alliance = { country = ITA country = GER }
+		}
+	}
+	
+	date = { day = 0 month = january year = 1938 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1939 }
+	
+	name = "EVT_150091_NAME"	#アフリカ系アメリカ人達の願い
+	desc = "EVT_150091_DESC"	#エチオピアとイタリアの戦争が始まった当初、世界の反応はエチオピアに対し冷ややかであった。特に欧州の各国はエチオピアを文明国であるとみなしていなかったし、文明国であるところのイタリアがかの国に兵を進めるのは、当時は文明化という大義名分のもと割りと珍しくもなく行われてきたからだ。しかし、エチオピアがイタリアに対して敢闘し今なお戦いを続けているということがわかると、エチオピアはイタリアが何かするまでもなく文明国であり、それを侵略せしめんとするイタリアは罰せられるべきだという意見が、主に有色人種を有する国々から出始めた。アフリカ系の人口を多く抱えるアメリカにおいてもその考えは広まりを見せ、政府はエチオピアに対し援助を惜しむべきでないという論調が現れ始めた。もちろん、人口の2割に満たないアフリカ系人口の意見を聞くことは絶対ではない。特に南部州の彼らの力など、大したことはないのだから……。
+	
+	action = {
+		name = "EVT_150091_ACTA"	#ナンセンスだ。何故合衆国が関わらねばならんのだ？
+		ai_chance = 80
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = dissent value = 1 }
+		command = { type = relation which = ITA value = 5 }
+	}
+	action = {
+		name = "EVT_150091_ACTB"	#有志による物資の提供運動を推進する
+		ai_chance = 13
+		command = { type = dissent value = 3 }
+		command = { type = money value = -50 }
+		command = { type = setflag which = USAvolunteersETH value = 1 }
+		command = { type = relation which = ETH value = 10 }
+		command = { type = relation which = ITA value = -5 }
+	}
+	action = {
+		name = "EVT_150091_ACTC"	#エチオピアに物資を提供しよう
+		ai_chance = 4
+		command = { type = dissent value = 5 }
+		command = { type = money value = -100 }
+		command = { type = supplies value = -1000 }
+		command = { type = setflag which = USAvolunteersETH value = 2 }
+		command = { type = relation which = ETH value = 20 }
+		command = { type = relation which = ITA value = -10 }
+	}
+	action = {
+		name = "EVT_150091_ACTD"	#自由のため、義勇軍を送れ！
+		ai_chance = 3
+		command = { type = dissent value = 8 }
+		command = { type = money value = -250 }
+		command = { type = supplies value = -2000 }
+		command = { type = manpowerpool value = -20 }
+		command = { type = setflag which = USAvolunteersETH value = 3 }
+		command = { type = relation which = ETH value = 40 }
+		command = { type = relation which = ITA value = -20 }
+	}
+}
+
+event = {
+	id = 150092
+	country = ETH
+	trigger = {
+		flag = { which = USAvolunteersETH when = 1 value = 1 } 
+	}
+	
+	date = { day = 0 month = january year = 1938 }
+	offset = 60
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	name = "EVT_150092_NAME"	#思いもよらないニュース―アメリカが支援を表明！
+	desc = "EVT_150092_DESC"	#驚くべき知らせが入った。アメリカ合衆国ではエチオピアを支援しようという運動が高まり、ついにホワイトハウスを動かしたのだという。彼らからの支援物資はそう遠くないうちに届くのだという。いま、我らの戦いはただエチオピアとイタリアという二国の戦争ではなく、人種と人種の戦いへと移り始めているのかもしれない。
+	
+	action = {
+		name = "EVT_150092_ACTA"	#助けが来る！　奮起せよ！
+		command = { type = dissent value = -3 }
+		command = { type = event which = 150093 where = -1 when = 60 }
+	}
+}
+
+event = {
+	id = 150093
+	country = ETH
+	
+	name = "EVT_150093_NAME"	#アメリカからの支援が到着！
+	desc = "EVT_150093_DESC"	#ついにアメリカからの支援が到着し始めた。彼らの手助けはきっと我らにとって大きな力となるだろう。
+	
+	action = {
+		name = "EVT_150093_ACTA"	#勝負はこれからだ
+		command = { type = supplies value = 500 }
+		command = {
+			trigger = {
+				flag = { which = USAvolunteersETH when = 1 value = 2 }
+			}
+			type = supplies value = 500 }
+		command = {
+			trigger = {
+				flag = { which = USAvolunteersETH when = 1 value = 2 }
+			}
+			type = free_ic value = 1 }
+		command = {
+			trigger = {
+				flag = { which = USAvolunteersETH when = 1 value = 2 }
+			}
+			type = supplies value = 500 }
+		command = {
+			trigger = {
+				flag = { which = USAvolunteersETH when = 1 value = 3 }
+			}
+			type = free_ic value = 1 }
+		command = {
+			trigger = {
+				flag = { which = USAvolunteersETH when = 1 value = 3 }
+			}
+			type = add_division value = infantry when = 1 }	#強すぎね？
+	}
+}
+
+event = {
+	id = 150094
+	country = JAP
+	
+	decision = {
+		event = 150091
+		NOT = { 
+			alliance = { country = JAP country = ITA }
+			ispuppet = ETH	
+			alliance = { country = ITA country = GER }
+		}
+		war = { country = ETH country = ITA }
+	}
+	decision_trigger = {
+		supplies = 4000
+	}
+	trigger = {
+		event = 150091
+		NOT = { alliance = { country = JAP country = ITA } }
+		war = { country = ETH country = ITA }
+	}
+
+	date = { day = 0 month = january year = 1938 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_150094_NAME"	#日本における親エチオピアの機運
+	desc = "EVT_150094_DESC"	#1935年、エチオピアとイタリアの戦争が始まると、日本の民間レベルでは右翼・左翼を問わず有色人種であるところのエチオピアを支援し、彼らの独立を保とうという運動が起こっていた。一方、政界のレベルで見れば、当時の外交状況の都合イタリアとの関係を悪化させるわけにはいかず、当然エチオピア支援の動きは民間レベルで止まっている。しかし、エチオピアは今なおイタリアへの抵抗を続けており、国際社会からもイタリアへの非難の声は日に日に高まりつつある。大日本帝国は主に満州の周辺に国境紛争を抱えているから常識的にはエチオピアに出す戦力はない。ただ、もし、エチオピアに対し日本が支援を出せれば、これは国際社会に対し大きな喧伝になるかもしれない。日本はそれぞれの国家が独立を保つことを支援するものであると。日本は自由を守る国家であるのだと。
+	
+	action = {
+		name = "EVT_150094_ACTA"	#民間レベルの支援で結構。政府は姿勢を変えない
+		ai_chance = 70
+		command = { type = setflag which = JAPvolunteersETH value = 1 }
+		command = { type = relation which = ITA value = 5 }
+	}
+	action = {
+		name = "EVT_150094_ACTB"	#姿勢だけでも見せておくか
+		ai_chance = 15
+		command = { type = supplies value = -500 }
+		command = { type = setflag which = JAPvolunteersETH value = 2 }
+		command = { type = dissent value = -1 }
+	}
+	action = {
+		name = "EVT_150094_ACTC"	#軍官民問わずの支援を送ろうではないか！
+		ai_chance = 15
+		command = { type = supplies value = -2000 }
+		command = { type = manpowerpool value = -30 }
+		command = { type = foreignminister	which = 5003 }	#廣田 弘毅 外務大臣
+		command = { type = setflag which = JAPvolunteersETH value = 3 }
+	}
+}
+
+event = {
+	id = 150095
+	country = ETH
+	trigger = {
+		flag = { which = JAPvolunteersETH when = 1 value = 1 } 
+	}
+	
+	date = { day = 0 month = january year = 1938 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	name = "EVT_150095_NAME"	#思いもよらないニュース―日本が支援を表明！
+	desc = "EVT_150095_DESC"	#日本からエチオピアへの支援の手が差し伸べられつつある。人種的差別撤廃を唱える彼らがこの戦争に関わってきたということは、この戦争の形が変わり始めたことを意味しているのかもしれない。
+	
+	action = {
+		name = "EVT_150095_ACTA"	#助けが来る！　奮起せよ！
+		command = { type = dissent value = -3 }
+		command = { type = event which = 150096 where = -1 when = 60 }
+	}
+}
+
+event = {
+	id = 150096
+	country = ETH
+	
+	name = "EVT_150096_NAME"	#日本からの支援が到着！
+	desc = "EVT_150096_DESC"	#ついに日本からの支援が到着し始めた。彼らの手助けはきっと我らにとって大きな力となるだろう。
+	
+	action = {
+		name = "EVT_150093_ACTA"	#勝負はこれからだ
+		command = { type = supplies value = 500 }
+		command = {
+			trigger = {
+				flag = { which = JAPvolunteersETH when = 1 value = 2 }
+			}
+			type = supplies value = 500 }
+		command = {
+			trigger = {
+				flag = { which = JAPvolunteersETH when = 1 value = 3 }
+			}
+			type = supplies value = 1000 }
+		command = {
+			trigger = {
+				flag = { which = JAPvolunteersETH when = 1 value = 3 }
+			}
+			type = free_ic value = 2 }
+		command = {
+			trigger = {
+				flag = { which = JAPvolunteersETH when = 1 value = 3 }
+			}
+			type = add_division value = infantry when = 1 }
+	}
+}
+	
+event = {
+	id = 150097
+	country = ENG
+
+	trigger = {
+		OR = {
+			AND = {
+				flag = { which = JAPvolunteersETH when = 1 value = 1 } 
+				flag = { which = USAvolunteersETH when = 1 value = 1 } 
+			}
+			event = 150090
+		}
+		war = { country = ETH country = ITA }
+		NOT = {
+			war = { country = ENG country = ITA }
+			alliance = { country = ENG country = ITA }
+			war = { country = ETH country = ENG }
+		}
+		control = { province = 900 data = ENG } # Suez
+		control = { province = 19 data = ENG } #London is ENG
+	}
+	
+	date = { day = 0 month = january year = 1938 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	name = "EVT_150097_NAME"	#イタリアのエチオピア侵攻とスエズ運河
+	desc = "EVT_150097_DESC"	#国際社会によるエチオピア支援の運動が高まりを見せると、イギリスでもこれに追従するべきだという考えが高まり始めた。英仏は一度、自らの既得権益が侵されることはないというイタリアからの条件を受け取りエチオピア侵攻を黙認している。ただ、こうも連合国外からの対伊圧力が強まった今、イタリアに対して宥和政策を取り続けるのは実質的にイタリアに味方する行為であって、特に中立国からはいい顔をされないだろう。もし我が国がスエズの封鎖を開始すれば、イタリアはエチオピア侵攻軍への補給を送り届けることができなくなり、彼らの侵攻は完全に停止するだろう。ただ、このようにアフリカの国家に対して援助を行うのは、植民地政策の観点では正しい行動とは言えない。形はどうあれ、一度どころか二度までもアフリカがヨーロッパに勝利したという経験を与えれば、ナショナリズム運動が彼の地で起こり始めるのは目に見えている。
+	
+	action = {
+		ai_chance = 70
+		name = "EVT_150097_ACTA"	#イタリアとの関係の方が大事だ。黙らせろ
+		command = { type = belligerence value = 10 }
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = domestic which = freedom value = -1 }
+		command = { type = relation which = ITA value = 20 }
+	}
+	action = {
+		ai_chance = 9
+		name = "EVT_150097_ACTB"	#封鎖を遂行せよ
+		command = { type = belligerence value = 5 }
+		command = { type = domestic which = freedom value = -1 }
+		command = { type = relation which = ITA value = -50 }
+		command = { type = trigger which = 150098 }
+	}
+	action = {
+		ai_chance = 21
+		trigger = {
+			ai = yes
+			Incabinet = 1038	#チャーチルはイタリアとの関係を望むし植民地を調子づかせたくない
+		}
+		name = "EVT_150097_ACTA"	#イタリアとの関係の方が大事だ。黙らせろ
+		command = { type = belligerence value = 10 }
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = domestic which = freedom value = -1 }
+		command = { type = relation which = ITA value = 20 }
+	}
+}
+		
+event = {
+	id = 150098
+	country = ITA
+	
+	name = "EVT_150098_NAME"	#イギリスがスエズ運河を封鎖！
+	desc = "EVT_150098_DESC"	#信じられないことに、イギリスは1935年時点での我々との協定を反故にしイタリア船舶のスエズ運河通過を禁止した。これではエチオピアに補給・増援を送ることが一切できず、実質的に我々はエチオピアに対する戦争継続の手段を失った。イギリスは、彼らを仲介としてエチオピアと講和するならば、封鎖を解くと我々に伝えてきている。
+	
+	action = {
+		ai_chance = 95
+		name = "EVT_150098_ACTA"	#やむをえまい。エチオピア侵攻を中止せよ
+		command = { type = peace which = ETH }
+		command = { type = dissent value = 15 }
+	}
+	action = {
+		ai_chance = 5
+		name = "EVT_150098_ACTB"	#我々を裏切るか、イギリス人め！　宣戦布告だ！
+		command = { type = war which = ENG }
+		command = { type = domestic which = defense_lobby value = 3 }
+		command = { type = domestic which = interventionism value = 2 }
+		command = { type = dissent value = 5 }
+	}
+}
+
+#
+##AoD風スライダー強制移動イベント（試作品）
+#event = {
+#	id = 150200
+#	persistent = yes
+#	
+#	decision = {
+#		ai = no
+#		NOT = {
+#			can_change_policy = { type = democratic value = 1 }
+#			can_change_policy = { type = democratic value = -1 }
+#			can_change_policy = { type = political_left value = 1 }
+#			can_change_policy = { type = political_left value = -1 }
+#			can_change_policy = { type = freedom value = 1 }
+#			can_change_policy = { type = freedom value = -1 }
+#			can_change_policy = { type = free_market value = 1 }
+#			can_change_policy = { type = free_market value = -1 }
+#			can_change_policy = { type = professional_army value = 1 }
+#			can_change_policy = { type = professional_army value = -1 }
+#			can_change_policy = { type = defense_lobby value = 1 }
+#			can_change_policy = { type = defense_lobby value = -1 }
+#			can_change_policy = { type = interventionism value = 1 }
+#			can_change_policy = { type = interventionism value = -1 }
+#		}
+#	}
+#	
+#	decision_trigger = {}
+#	trigger = {
+#		ai = no
+#	}
+#	
+#	date = { day = 1 month = july year = 1934 } 
+#	offset = 1
+#	deathdate = { day = 29 month = december year = 1963 }
+#	
+#	name = "EVT_150200_NAME"
+#	desc = "EVT_150200_DESC"
+#	style = 2
+#	
+#	decision_picture = "decision_congress"
+#	picture = "crusader"
+#	
+#	action = {
+#		name = "EVT_150200_DEMOCRATIC"
+#		command = { type = setflag which = change_policy_democratic }
+#		command = { type = trigger which = 150201 }
+#	}
+#	
+#	action = {
+#		name = "EVT_150200_POLITICAL_LEFT"
+#		command = { type = setflag which = change_policy_political_left }
+#		command = { type = trigger which = 150201 }
+#	}
+#	
+#	action = {
+#		name = "EVT_150200_FREEDOM"
+#		command = { type = setflag which = change_policy_freedom }
+#		command = { type = trigger which = 150201 }
+#	}
+#	
+#	action = {
+#		name = "EVT_150200_FREE_MARKET"
+#		command = { type = setflag which = change_policy_free_market }
+#		command = { type = trigger which = 150201 }
+#	}
+#	
+#	action = {
+#		name = "EVT_150200_PROFESSIONAL_ARMY"
+#		command = { type = setflag which = change_policy_professional_army }
+#		command = { type = trigger which = 150201 }
+#	}
+#	
+#	action = {
+#		name = "EVT_150200_DEFENSE_LOBBY"
+#		command = { type = setflag which = change_policy_defense_lobby }
+#		command = { type = trigger which = 150201 }
+#	}
+#	
+#	action = {
+#		name = "EVT_150200_INTERVENTIONISM"
+#		command = { type = setflag which = change_policy_interventionism }
+#		command = { type = trigger which = 150201 }
+#	}
+#	
+#	action = {
+#		name = "EVT_150200_SLEEP_SLIDER_FORCE"
+#		command = { type = sleepevent which = 150200 }
+#		command = { type = sleepevent which = 150201 }
+#	}
+#}
+#
+#event = {
+#	id = 150201
+#	persistent = yes
+#	
+#	name = "EVT_150200_NAME"
+#	desc = "EVT_150201_DESC"
+#	style = 0
+#	
+#	action = {
+#		trigger = { flag = change_policy_democratic }
+#		name = "EVT_150201_DEMOCRATIC_1"
+#		command = { type = domestic which = democratic value = 1 }
+#		command = { type = dissent value = 17.95 }
+#		command = { type = clrflag which = change_policy_democratic }
+#	}
+#
+#	action = {
+#		trigger = { flag = change_policy_democratic }
+#		name = "EVT_150201_DEMOCRATIC_2"
+#		command = { type = domestic which = democratic value = -1 }
+#		command = { type = dissent value = 17.95 }
+#		command = { type = clrflag which = change_policy_democratic }
+#	}
+#
+#	action = {
+#		trigger = { flag = change_policy_political_left }
+#		name = "EVT_150201_POLITICAL_LEFT_1"
+#		command = { type = domestic which = political_left value = 1 }
+#		command = { type = dissent value = 17.95 }
+#		command = { type = clrflag which = change_policy_political_left }
+#	}
+#
+#	action = {
+#		trigger = { flag = change_policy_political_left }
+#		name = "EVT_150201_POLITICAL_LEFT_2"
+#		command = { type = domestic which = political_left value = -1 }
+#		command = { type = dissent value = 17.95 }
+#		command = { type = clrflag which = change_policy_political_left }
+#	}
+#	
+#	action = {
+#		trigger = { flag = change_policy_freedom
+#					OR = {
+#						AND = {
+#							OR = {
+#								ideology = stalinist
+#								ideology = nazi
+#							}
+#							NOT = { domestic = { type = freedom value = 3 } }
+#						}
+#						AND = {
+#							OR = {
+#								ideology = leninist
+#								ideology = fascist
+#							}
+#							NOT = { domestic = { type = freedom value = 4 } }
+#						}
+#						AND = {
+#							ideology = paternal_autocrat
+#							NOT = { domestic = { type = freedom value = 6 } }
+#						}
+#						AND = {
+#							ideology = left_wing_radical
+#							NOT = { domestic = { type = freedom value = 7 } }
+#						}
+#						AND = {
+#							ideology = social_conservative
+#							NOT = { domestic = { type = freedom value = 9 } }
+#						}
+#						AND = {
+#							ideology = social_democrat
+#							NOT = { domestic = { type = freedom value = 10 } }
+#						}
+#						ideology = market_liberal
+#						ideology = social_liberal
+#					}
+#		}
+#		name = "EVT_150201_FREEDOM_1"
+#		command = { type = domestic which = freedom value = 1 }
+#		command = { type = dissent value = 17.95 }
+#		command = { type = clrflag which = change_policy_freedom }
+#	}
+#	
+#	action = {
+#		trigger = { flag = change_policy_freedom
+#					OR = {
+#						government = communist
+#						government = fascist
+#						AND = {
+#							ideology = social_conservative
+#							domestic = { type = freedom value = 4 }
+#						}
+#						AND = {
+#							ideology = social_democrat
+#							domestic = { type = freedom value = 6 }
+#						}
+#						AND = {
+#							OR = {
+#								ideology = market_liberal
+#								ideology = social_liberal
+#							}
+#							domestic = { type = freedom value = 9 }
+#						}
+#					}
+#		}
+#		name = "EVT_150201_FREEDOM_2"
+#		command = { type = domestic which = freedom value = -1 }
+#		command = { type = dissent value = 17.95 }
+#		command = { type = clrflag which = change_policy_freedom }
+#	}
+#	
+#	action = {
+#		trigger = { flag = change_policy_free_market
+#					OR = {
+#						AND = {
+#							ideology = stalinist
+#							NOT = { domestic = { type = free_market value = 3 } }
+#						}
+#						AND = {
+#							ideology = leninist
+#							NOT = { domestic = { type = free_market value = 5 } }
+#						}
+#						AND = {
+#							OR = {
+#								government = fascist
+#								ideology = left_wing_radical
+#								ideology = social_democrat
+#							}
+#							NOT = { domestic = { type = free_market value = 7 } }
+#						}
+#						AND = {
+#							ideology = social_liberal
+#							NOT = { domestic = { type = free_market value = 9 } }
+#						}
+#						AND = {
+#							ideology = social_conservative
+#							NOT = { domestic = { type = free_market value = 10 } }
+#						}
+#						ideology = market_liberal
+#					}
+#		}
+#		name = "EVT_150201_FREE_MARKET_1"
+#		command = { type = domestic which = free_market value = 1 }
+#		command = { type = dissent value = 17.95 }
+#		command = { type = clrflag which = change_policy_free_market }
+#	}
+#	
+#	action = {
+#		trigger = { flag = change_policy_free_market
+#					OR = {
+#						government = communist
+#						ideology = fascist
+#						ideology = nazi
+#						ideology = social_democrat
+#						AND = {
+#							ideology = paternal_autocrat
+#							domestic = { type = free_market value = 3 }
+#						}
+#						AND = {
+#							ideology = social_conservative
+#							domestic = { type = free_market value = 4 }
+#						}
+#						AND = {
+#							ideology = social_liberal
+#							domestic = { type = free_market value = 5 }
+#						}
+#						AND = {
+#							ideology = market_liberal
+#							domestic = { type = free_market value = 7 }
+#						}
+#					}
+#		}
+#		name = "EVT_150201_FREE_MARKET_2"
+#		command = { type = domestic which = free_market value = -1 }
+#		command = { type = dissent value = 17.95 }
+#		command = { type = clrflag which = change_policy_free_market }
+#	}
+#	
+#	action = {
+#		trigger = { flag = change_policy_professional_army }
+#		name = "EVT_150201_PROFESSIONAL_ARMY_1"
+#		command = { type = domestic which = professional_army value = 1 }
+#		command = { type = dissent value = 17.95 }
+#		command = { type = clrflag which = change_policy_professional_army }
+#	}
+#
+#	action = {
+#		trigger = { flag = change_policy_professional_army }
+#		name = "EVT_150201_PROFESSIONAL_ARMY_2"
+#		command = { type = domestic which = professional_army value = -1 }
+#		command = { type = dissent value = 17.95 }
+#		command = { type = clrflag which = change_policy_professional_army }
+#	}
+#	
+#	action = {
+#		trigger = { flag = change_policy_defense_lobby }
+#		name = "EVT_150201_DEFENSE_LOBBY_1"
+#		command = { type = domestic which = defense_lobby value = 1 }
+#		command = { type = dissent value = 17.95 }
+#		command = { type = clrflag which = change_policy_defense_lobby }
+#	}
+#
+#	action = {
+#		trigger = { flag = change_policy_defense_lobby }
+#		name = "EVT_150201_DEFENSE_LOBBY_2"
+#		command = { type = domestic which = defense_lobby value = -1 }
+#		command = { type = dissent value = 17.95 }
+#		command = { type = clrflag which = change_policy_defense_lobby }
+#	}
+#	
+#	action = {
+#		trigger = { flag = change_policy_interventionism }
+#		name = "EVT_150201_INTERVENTIONISM_1"
+#		command = { type = domestic which = interventionism value = 1 }
+#		command = { type = dissent value = 17.95 }
+#		command = { type = clrflag which = change_policy_interventionism }
+#	}
+#
+#	action = {
+#		trigger = { flag = change_policy_interventionism }
+#		name = "EVT_150201_INTERVENTIONISM_2"
+#		command = { type = domestic which = interventionism value = -1 }
+#		command = { type = dissent value = 17.95 }
+#		command = { type = clrflag which = change_policy_interventionism }
+#	}
+#	
+#	action = {
+#		name = "EVT_150201_CANCEL"
+#		command = { type = clrflag which = change_policy_democratic }
+#		command = { type = clrflag which = change_policy_political_left }
+#		command = { type = clrflag which = change_policy_freedom }
+#		command = { type = clrflag which = change_policy_free_market }
+#		command = { type = clrflag which = change_policy_professional_army }
+#		command = { type = clrflag which = change_policy_defense_lobby }
+#		command = { type = clrflag which = change_policy_interventionism }
+#	}
+#}
+
+
+event = {
+	id = 150200
+	random = no
+	country = SIB
+	trigger = {
+		flag = usadefeatsjap
+		relation = { which = RUS value = 100 }
+		alliance = { country = SIB country = RUS }
+		event = 55332	#日本によるシベリア独立
+	}
+	
+	name = "EVT_150200_NAME"	#日本の降伏とシベリアの動向
+	desc = "EVT_150200_DESC"	#日本が連合国に下った。彼らのもとで独立を果たした我が国は外交的には彼らの影響下から外れてしまった。とはいえ我々単独での講和を行おうとしてもそもそも我々は連合国に認められて独立を果たしたのではないために、おそらく彼らは痛み分けでは呑んではくれないだろう。そうなると、実質的にシベリア国には戦いを続ける以外の選択肢はなかった。その最中で、シベリアには大胆な選択肢があった。ツァーリへの合流である。ついこの間までソビエト連邦の構成国として同じ立場だった我々は、ともにソビエトロシアを共通の敵として戦い、今は同盟国である。また、ロシアは独ソ戦の際にシベリアに移転された重工業力のぶんで国力を一部失っており、一方シベリアは土地の特性ゆえにヨーロッパ側から大量の穀物を輸入して国民を養っていた。ロシアは重工業力が、シベリアは穀物が欲しい。経済的、理念的に双方の利益は一致しているのだ。その中で、シベリア国にはロシア王国への合流という選択肢が生まれていた。
+	
+	date = { day = 1 month = january year = 1935 }
+	offset = 7
+	deathdate = { day = 29 month = august year = 1963 }
+	
+	action_a = {
+		name = "EVT_150200_ACTA"	#我々は再びツァーリの下に集うべきなのではないだろうか？
+		ai_chance = 95
+		command = { type = relation which = RUS value = 50 }
+		command = { type = relation which = JAP value = -100 }
+		command = { type = trigger which = 150201 }	#シベリア合流？ ― ドイツの反応
+	}
+	action_b = {
+		name = "EVT_150200_ACTB"	#我々は独自に戦争を継続する
+		ai_chance = 5
+		command = { type = dissent value = 2 }
+	}
+}
+
+event = {
+	id = 150201
+	random = no
+	country = GER
+	
+	name = "EVT_150201_NAME"	#シベリア合流？ ― ドイツの反応
+	desc = "EVT_150201_DESC"	#ノヴォシビルスクからの使者はクレムリンと、そして我が国の大使館に訪れた。彼らはロシアへの合流を希望しているのだという。関係の良い両国が合邦すれば我々の大きな同盟国はその勢力を極東まで伸ばすことが出来る。これは日本が離脱した今、枢軸国全体が影響力を太平洋まで伸ばすためのメリットだ。一方で、戦後を迎えたときのデメリットにはなりうる。強大で最大の敵であるところのロシアは今世紀に渡っての敵であり、近年になってついに味方に引き入れた。これがあまりに大きな力を持てば、後々脅威となることは容易に想像できた。我々は彼らの合流を許すべきだろうか？
+	
+	action_a = {
+		name = "EVT_150201_ACTA"	#合邦を許可せよ。頼りになる同盟国は今すぐ必要になる
+		ai_chance = 60
+		command = { type = dissent value = 3 }
+		command = { type = relation which = RUS value = 100 }
+		command = { type = trigger which = 150202 }
+	}
+	action_b = {
+		name = "EVT_150201_ACTB"	#合邦は許可できない。将来的なリスクを無視できない
+		ai_chance = 40
+		command = { type = relation which = RUS value = -50 }
+		command = { type = relation which = SIB value = -150 }
+	}
+}
+
+event = {
+	id = 150202
+	random = no
+	country = RUS
+	
+	name = "EVT_150202_NAME"	#ツァーリの下へ結集！
+	desc = "EVT_150202_DESC"	#関係国の了承は得られた。ロシアはこれより極東に再びその勢力を取り戻す。旧シベリア首都ノヴォシビルスクはノヴォニコラエフスクに改名され、皆が王国のもとで団結するのだ！
+	
+	action = {
+		name = "EVT_150202_ACTA"	#大変結構！
+		command = { type = dissent value = -5 }
+		#SIB
+ 		command = { type = addcore which = 1548 }
+		command = { type = addcore which = 1531 }
+		command = { type = addcore which = 1532 }
+		command = { type = addcore which = 1533 }
+		command = { type = addcore which = 1534 }
+		command = { type = addcore which = 1535 }
+		command = { type = addcore which = 1536 }
+		command = { type = addcore which = 1537 }
+		command = { type = addcore which = 1538 }
+		command = { type = addcore which = 1539 }
+		command = { type = addcore which = 1540 }
+		command = { type = addcore which = 1543 }
+		command = { type = addcore which = 1544 }
+		command = { type = addcore which = 1545 }
+		command = { type = addcore which = 1546 }
+		command = { type = addcore which = 1547 }
+		command = { type = addcore which = 1549 }
+		command = { type = addcore which = 1558 }
+		command = { type = addcore which = 1559 }
+		command = { type = addcore which = 1560 }
+		command = { type = addcore which = 1561 }
+		command = { type = addcore which = 1412 }
+		command = { type = addcore which = 1413 }
+		command = { type = addcore which = 1414 }
+		command = { type = addcore which = 1415 }
+		command = { type = addcore which = 1416 }
+		command = { type = addcore which = 1417 }
+		command = { type = addcore which = 1520 }
+		command = { type = addcore which = 1522 }
+		command = { type = addcore which = 1521 }
+		command = { type = addcore which = 1383 }
+		command = { type = addcore which = 1384 }
+		command = { type = addcore which = 1156 }
+		command = { type = addcore which = 1157 }
+		command = { type = addcore which = 1158 }
+		command = { type = addcore which = 1159 }
+		command = { type = addcore which = 1160 }
+		command = { type = addcore which = 1161 }
+		command = { type = addcore which = 1162 }
+		command = { type = addcore which = 1163 }
+		command = { type = addcore which = 1562 }
+		command = { type = addcore which = 1563 }
+		command = { type = addcore which = 1409 }
+		command = { type = addcore which = 1410 }
+		command = { type = addcore which = 1411 }
+		command = { type = addcore which = 1523 }
+		command = { type = addcore which = 1164 }
+		command = { type = addcore which = 1165 }
+		command = { type = addcore which = 1594 }
+		command = { type = addcore which = 1596 }
+		command = { type = addcore which = 1598 }
+		command = { type = addcore which = 1155 }
+		command = { type = addcore which = 1541 }
+		command = { type = addcore which = 1542 }
+		command = { type = addcore which = 1593 }
+		command = { type = addcore which = 1552 }
+		#エカテリンブルク条約追加分
+		command = { type = addcore which = 1155 } #スヴェルドロフスク以東を中核州化
+		command = { type = addcore which = 1564 }
+		command = { type = addcore which = 1565 }
+		command = { type = addcore which = 1571 }
+		command = { type = addcore which = 1573 }
+		command = { type = addcore which = 1575 }
+		command = { type = addcore which = 1597 }
+		command = { type = addcore which = 1593 }
+		command = { type = addcore which = 1552 }
+		command = { type = addcore which = 1594 }
+		command = { type = addcore which = 1596 }
+		command = { type = addcore which = 1598 }
+		command = { type = addcore which = 1541 }
+		command = { type = addcore which = 1542 }
+		command = { type = addcore which = 1154 }
+		#全プリモルスク
+		command = { type = addcore which = 1371 }
+		command = { type = addcore which = 1372 }
+		command = { type = addcore which = 1373 }
+		command = { type = addcore which = 1369 }
+		command = { type = addcore which = 1368 }
+		command = { type = addcore which = 1367 }
+		command = { type = addcore which = 1370 }
+		command = { type = addcore which = 1366 }
+		command = { type = addcore which = 1526 }
+		command = { type = addcore which = 1527 }
+		command = { type = addcore which = 1528 }
+		command = { type = addcore which = 1529 }
+		command = { type = addcore which = 1523 }
+		command = { type = addcore which = 1410 }
+		command = { type = addcore which = 1409 }
+		command = { type = addcore which = 1164 }
+		command = { type = addcore which = 1524 }
+		command = { type = addcore which = 1525 }
+		command = { type = addcore which = 1165 }
+		command = { type = addcore which = 1166 }
+		command = { type = addcore which = 1167 }
+		command = { type = addcore which = 1170 }
+		command = { type = addcore which = 1171 }
+		command = { type = addcore which = 1172 }
+		command = { type = addcore which = 1405 }
+		command = { type = addcore which = 1175 }
+		command = { type = addcore which = 1176 }
+		command = { type = addcore which = 1177 }
+		command = { type = addcore which = 1411 }
+		command = { type = addcore which = 1174 }
+		command = { type = inherit which = SIB value = 1 }
+	}
+}
+
+event = {
+	id = 150210
+	random = no
+	country = SIB
+	trigger = {
+		flag = gerdefeatsjap
+		event = 55332	#日本によるシベリア独立
+		war = { country = RUS }
+	}
+	
+	name = "EVT_150210_NAME"	#日本の降伏とシベリアの動向
+	desc = "EVT_150210_DESC"	#日本が枢軸国の前に敗れた。彼らのもとで独立を果たした我が国は外交的には彼らの影響下から外れてしまった。孤立無援に近づきつつある我々は、枢軸国に和を申し出るべきかもしれない。その中で、シベリアには大胆な選択肢があった。ツァーリへの合流である。ついこの間までソビエト連邦の構成国として同じ立場だった我々は、ともにソビエトロシアを共通の敵として戦った筈なのに、今は外交的な柵に囚われて敵対状態にある。また、ロシアは独ソ戦の際にシベリアに移転された重工業力のぶんで国力を一部失っており、一方シベリアは土地の特性ゆえにヨーロッパ側から大量の穀物を輸入して国民を養っていた。ロシアは重工業力が、シベリアは穀物が欲しい。経済的、理念的に双方の利益は一致しているのだ。
+	
+	date = { day = 1 month = january year = 1935 }
+	offset = 7
+	deathdate = { day = 29 month = august year = 1963 }
+	
+	action_a = {
+		name = "EVT_150210_ACTA"	#我々は再びツァーリの下に集うべきなのではないだろうか？
+		ai_chance = 80
+		command = { type = relation which = RUS value = 50 }
+		command = { type = relation which = JAP value = -100 }
+		command = { type = trigger which = 150211 }	#シベリア合流？ ― ドイツの反応
+	}
+	action_b = {
+		name = "EVT_150210_ACTB"	#枢軸国と講和し、彼らとの同盟を模索する
+		ai_chance = 10
+		command = { type = dissent value = 5 }
+		command = { type = trigger which = 150220 }	#シベリアの講和交渉 ― 同盟を求める
+	}
+	action_c = {
+		name = "EVT_150210_ACTB"	#枢軸国と講和し、不可侵条約を提案する
+		ai_chance = 5
+		command = { type = dissent value = 5 }
+		command = { type = trigger which = 150230 }	#シベリアの講和交渉 ― 不可侵を求める
+	}
+	action_d = {
+		name = "EVT_150210_ACTD"	#我々は戦い続ける！
+		ai_chance = 5
+		command = { type = dissent value = 10 }
+		command = { type = trigger which = 150240 }	#講和は成らず
+	}
+}
+
+event = {
+	id = 150211
+	random = no
+	country = GER
+	
+	name = "EVT_150211_NAME"	#シベリア合流？ ― ドイツの反応
+	desc = "EVT_150211_DESC"	#ノヴォシビルスクからの使者はクレムリンと、そして我が国の大使館に訪れた。彼らはロシアへの合流を希望しているのだという。関係の深い両国が合邦すれば我々の大きな同盟国はその勢力を極東まで伸ばすことが出来る。これは日本が我々の手により壊滅的な状態となっている今、枢軸国全体が影響力を太平洋まで伸ばすためのメリットだ。一方で、戦後を迎えたときのデメリットにはなりうる。強大で最大の敵であるところのロシアは今世紀に渡っての敵であり、近年になってついに味方に引き入れた。これがあまりに大きな力を持てば、後々脅威となることは容易に想像できた。我々は彼らの合流を許すべきだろうか？
+	
+	action_a = {
+		name = "EVT_150211_ACTA"	#合邦を許可せよ。頼りになる同盟国は今すぐ必要になる
+		ai_chance = 60
+		command = { type = dissent value = 3 }
+		command = { type = relation which = RUS value = 100 }
+		command = { type = trigger which = 150212 }
+	}
+	action_b = {
+		name = "EVT_150211_ACTB"	#合邦は許可できない。将来的なリスクを無視できない
+		ai_chance = 40
+		command = { type = relation which = RUS value = -50 }
+		command = { type = relation which = SIB value = -150 }
+	}
+}
+
+event = {
+	id = 150212
+	random = no
+	country = RUS
+	
+	name = "EVT_150212_NAME"	#ツァーリの下へ結集！
+	desc = "EVT_150212_DESC"	#関係国の了承は得られた。ロシアはこれより極東に再びその勢力を取り戻す。旧シベリア首都ノヴォシビルスクはノヴォニコラエフスクに改名され、皆が王国のもとで団結するのだ！
+	
+	action = {
+		name = "EVT_150212_ACTA"	#大変結構！
+		command = { type = dissent value = -5 }
+		#SIB
+ 		command = { type = addcore which = 1548 }
+		command = { type = addcore which = 1531 }
+		command = { type = addcore which = 1532 }
+		command = { type = addcore which = 1533 }
+		command = { type = addcore which = 1534 }
+		command = { type = addcore which = 1535 }
+		command = { type = addcore which = 1536 }
+		command = { type = addcore which = 1537 }
+		command = { type = addcore which = 1538 }
+		command = { type = addcore which = 1539 }
+		command = { type = addcore which = 1540 }
+		command = { type = addcore which = 1543 }
+		command = { type = addcore which = 1544 }
+		command = { type = addcore which = 1545 }
+		command = { type = addcore which = 1546 }
+		command = { type = addcore which = 1547 }
+		command = { type = addcore which = 1549 }
+		command = { type = addcore which = 1558 }
+		command = { type = addcore which = 1559 }
+		command = { type = addcore which = 1560 }
+		command = { type = addcore which = 1561 }
+		command = { type = addcore which = 1412 }
+		command = { type = addcore which = 1413 }
+		command = { type = addcore which = 1414 }
+		command = { type = addcore which = 1415 }
+		command = { type = addcore which = 1416 }
+		command = { type = addcore which = 1417 }
+		command = { type = addcore which = 1520 }
+		command = { type = addcore which = 1522 }
+		command = { type = addcore which = 1521 }
+		command = { type = addcore which = 1383 }
+		command = { type = addcore which = 1384 }
+		command = { type = addcore which = 1156 }
+		command = { type = addcore which = 1157 }
+		command = { type = addcore which = 1158 }
+		command = { type = addcore which = 1159 }
+		command = { type = addcore which = 1160 }
+		command = { type = addcore which = 1161 }
+		command = { type = addcore which = 1162 }
+		command = { type = addcore which = 1163 }
+		command = { type = addcore which = 1562 }
+		command = { type = addcore which = 1563 }
+		command = { type = addcore which = 1409 }
+		command = { type = addcore which = 1410 }
+		command = { type = addcore which = 1411 }
+		command = { type = addcore which = 1523 }
+		command = { type = addcore which = 1164 }
+		command = { type = addcore which = 1165 }
+		command = { type = addcore which = 1594 }
+		command = { type = addcore which = 1596 }
+		command = { type = addcore which = 1598 }
+		command = { type = addcore which = 1155 }
+		command = { type = addcore which = 1541 }
+		command = { type = addcore which = 1542 }
+		command = { type = addcore which = 1593 }
+		command = { type = addcore which = 1552 }
+		#エカテリンブルク条約追加分
+		command = { type = addcore which = 1155 } #スヴェルドロフスク以東を中核州化
+		command = { type = addcore which = 1564 }
+		command = { type = addcore which = 1565 }
+		command = { type = addcore which = 1571 }
+		command = { type = addcore which = 1573 }
+		command = { type = addcore which = 1575 }
+		command = { type = addcore which = 1597 }
+		command = { type = addcore which = 1593 }
+		command = { type = addcore which = 1552 }
+		command = { type = addcore which = 1594 }
+		command = { type = addcore which = 1596 }
+		command = { type = addcore which = 1598 }
+		command = { type = addcore which = 1541 }
+		command = { type = addcore which = 1542 }
+		command = { type = addcore which = 1154 }
+		#全プリモルスク
+		command = { type = addcore which = 1371 }
+		command = { type = addcore which = 1372 }
+		command = { type = addcore which = 1373 }
+		command = { type = addcore which = 1369 }
+		command = { type = addcore which = 1368 }
+		command = { type = addcore which = 1367 }
+		command = { type = addcore which = 1370 }
+		command = { type = addcore which = 1366 }
+		command = { type = addcore which = 1526 }
+		command = { type = addcore which = 1527 }
+		command = { type = addcore which = 1528 }
+		command = { type = addcore which = 1529 }
+		command = { type = addcore which = 1523 }
+		command = { type = addcore which = 1410 }
+		command = { type = addcore which = 1409 }
+		command = { type = addcore which = 1164 }
+		command = { type = addcore which = 1524 }
+		command = { type = addcore which = 1525 }
+		command = { type = addcore which = 1165 }
+		command = { type = addcore which = 1166 }
+		command = { type = addcore which = 1167 }
+		command = { type = addcore which = 1170 }
+		command = { type = addcore which = 1171 }
+		command = { type = addcore which = 1172 }
+		command = { type = addcore which = 1405 }
+		command = { type = addcore which = 1175 }
+		command = { type = addcore which = 1176 }
+		command = { type = addcore which = 1177 }
+		command = { type = addcore which = 1411 }
+		command = { type = addcore which = 1174 }
+		command = { type = inherit which = SIB value = 1 }
+	}
+}
+
+event = {
+	id = 150220
+	random = no
+	country = GER
+	
+	name = "EVT_150220_NAME"	#シベリアの講和交渉 ― 同盟を求める
+	desc = "EVT_150220_DESC"	#シベリア国が我々との講和を求めてきた。彼らは自らに勝機が無いことを悟り、今や世界の盟主であるドイツとの同盟を求めている。我々自身が何も労せずに同盟国を得られると考えれば、悪い条件ではない。なんと返答すべきだろうか？
+	
+	action_a = {
+		name = "EVT_150220_ACTA"	#講和を受諾し、同盟を承認する
+		ai_chance = 50
+		command = { type = trigger which = 150221 }
+	}
+	action_b = {
+		name = "EVT_150220_ACTB"	#我々の衛星国としてなら、同盟を許そう
+		ai_chance = 49
+		command = { type = setflag which = GERpuppetsSIB }
+		command = { type = trigger which = 150221 }
+	}
+	action_c = {
+		name = "EVT_150220_ACTC"	#断る。我々は戦わねばならない
+		ai_chance = 1
+		command = { type = dissent value = 2 }
+		command = { type = belligerence which = GER value = 10 }
+		command = { type = trigger which = 150240 }
+	}
+}
+
+event = {
+	id = 150221
+	random = no
+	country = SIB
+	
+	name = "EVT_150221_NAME"	#ドイツからの講和条件
+	desc = "EVT_150221_DESC"	#ドイツはともかく、我々の提案に対して返答を返した。彼らの条件を呑んで平和を取り戻すかどうかはこちらの回答次第である。
+	
+	action = {
+		name = "EVT_150221_ACTA"	#平和を齎そう
+		ai_chance = 85
+		command = { type = peace which = GER value = 1 }
+		command = { type = alliance which = GER }
+		command = { type = trigger which = 150222 }
+	}
+	action = {
+		trigger = {
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					flag = GERpuppetsSIB
+				}
+			}
+		}
+		name = "EVT_150221_ACTB"	#受け入れられる条件ではない！
+		ai_chance = 15
+		command = { type = trigger which = 150240 }
+	}
+}
+
+event = {
+	id = 150222
+	random = no
+	country = GER
+	
+	trigger = {
+		flag = GERpuppetsSIB
+	}
+	
+	name = "EVT_150222_NAME"	#大陸最東端の衛星国
+	desc = "EVT_150222_DESC"	#シベリア国は国力の損耗と主権の喪失を秤にかけ、前者の方がより重いと見たようだ。彼らは今日、我々の衛星国となることを受諾した。
+	
+	action = {
+		name = "EVT_150222_ACTA"	#大変結構
+		command = { type = make_puppet which = SIB }
+	}
+}
+
+event = {
+	id = 150230
+	random = no
+	country = GER
+	
+	name = "EVT_150230_NAME"	#シベリアの講和交渉 ― 不可侵を求める
+	desc = "EVT_150230_DESC"	#シベリア国が我々との講和を求めてきた。彼らは自らに勝機が無いことを悟り、講和と不可侵条約の締結を求めている。確かに険しい地形の彼の地を完全に負かすまで侵攻するのは難しいとはいえ、平和を手にし今や自らは中立を保とうとは、なかなか都合のいい話である。
+	
+	action_a = {
+		name = "EVT_150230_ACTA"	#講和を受諾し、不可侵条約を締結する
+		ai_chance = 70
+		command = { type = trigger which = 150231 }
+	}
+	action_b = {
+		name = "EVT_150230_ACTB"	#断る。我々は戦わねばならない
+		ai_chance = 30
+		command = { type = dissent value = 1 }
+		command = { type = belligerence which = GER value = 5 }
+		command = { type = trigger which = 150240 }
+	}
+}
+
+event = {
+	id = 150231
+	random = no
+	country = SIB
+	
+	name = "EVT_150231_NAME"	#ドイツが講和条件を受諾！
+	desc = "EVT_150231_DESC"	#ドイツは我々との講和について素晴らしい返答をしてくれた。彼らは我々と講和し、また不可侵条約についても求めたとおりに締結してくれるのだという。ドイツにより世界が戦火に飲み込まれる中で我々は独立を保てるならば、それ以上何を求めようか！
+	
+	action = {
+		name = "EVT_150231_ACTA"	#平和を齎そう
+		ai_chance = 100
+		command = { type = peace which = GER value = 1 }
+		command = { type = non_aggression which = SIB where = GER }
+	}
+}
+
+event = {
+	id = 150240
+	random = no
+	country = SIB
+	
+	name = "EVT_150240_NAME"	#講和の決裂
+	desc = "EVT_150240_DESC"	#ドイツは我々との講和について、今や見向きもしなくなった。彼らは彼らとその同盟国の全力を以て我々を打ち倒しにやってくるだろう。それを前にして、果たしてこの国家はいつまで保たせることが出来るだろうか……。
+	
+	action = {
+		name = "EVT_150240_ACTA"	#それでも、我々は最善を尽くしたと思いたいのだ
+		ai_chance = 100
+		command = { type = dissent value = 5 }
+	}
+}
+
+event = {
+	id = 150241
+	random = no
+	country = GER
+	
+	trigger = {
+		event = 150240
+		NOT = { exists = SIB }
+		control = { province = 1572 data = -3 }	#スヴェルドロフスク
+	}
+
+	date = { day = 1 month = january year = 1935 }
+	offset = 14
+	deathdate = { day = 29 month = august year = 1963 }
+
+	name = "EVT_150241_NAME"	#シベリアの運命
+	desc = "EVT_150241_DESC"	#我々と敵対する道を選んだシベリア国は今や影も形もなく、旧首都スヴェルドロフスクには枢軸軍が駐屯している。この極寒の地の処遇について考える時期だろう……。
+	
+	action = {
+		name = "EVT_150241_ACTA"	#我々に友好的なシベリア国を復旧する
+		ai_chance = 60
+		command = { type = independence which = SIB value = 0 when = 0 }
+		command = { type = alliance which = SIB }
+		command = { type = make_puppet which = SIB }
+	}
+	action = {
+		trigger = {
+			alliance = { country = RUS }
+		}
+		ai_chance = 40
+		name = "EVT_150241_ACTB"	#ロシア王国が全面的な責任を持つべきだ
+		#SIB
+ 		command = { type = addcore which = 1548 where = RUS }
+		command = { type = addcore which = 1531 where = RUS }
+		command = { type = addcore which = 1532 where = RUS }
+		command = { type = addcore which = 1533 where = RUS }
+		command = { type = addcore which = 1534 where = RUS }
+		command = { type = addcore which = 1535 where = RUS }
+		command = { type = addcore which = 1536 where = RUS }
+		command = { type = addcore which = 1537 where = RUS }
+		command = { type = addcore which = 1538 where = RUS }
+		command = { type = addcore which = 1539 where = RUS }
+		command = { type = addcore which = 1540 where = RUS }
+		command = { type = addcore which = 1543 where = RUS }
+		command = { type = addcore which = 1544 where = RUS }
+		command = { type = addcore which = 1545 where = RUS }
+		command = { type = addcore which = 1546 where = RUS }
+		command = { type = addcore which = 1547 where = RUS }
+		command = { type = addcore which = 1549 where = RUS }
+		command = { type = addcore which = 1558 where = RUS }
+		command = { type = addcore which = 1559 where = RUS }
+		command = { type = addcore which = 1560 where = RUS }
+		command = { type = addcore which = 1561 where = RUS }
+		command = { type = addcore which = 1412 where = RUS }
+		command = { type = addcore which = 1413 where = RUS }
+		command = { type = addcore which = 1414 where = RUS }
+		command = { type = addcore which = 1415 where = RUS }
+		command = { type = addcore which = 1416 where = RUS }
+		command = { type = addcore which = 1417 where = RUS }
+		command = { type = addcore which = 1520 where = RUS }
+		command = { type = addcore which = 1522 where = RUS }
+		command = { type = addcore which = 1521 where = RUS }
+		command = { type = addcore which = 1383 where = RUS }
+		command = { type = addcore which = 1384 where = RUS }
+		command = { type = addcore which = 1156 where = RUS }
+		command = { type = addcore which = 1157 where = RUS }
+		command = { type = addcore which = 1158 where = RUS }
+		command = { type = addcore which = 1159 where = RUS }
+		command = { type = addcore which = 1160 where = RUS }
+		command = { type = addcore which = 1161 where = RUS }
+		command = { type = addcore which = 1162 where = RUS }
+		command = { type = addcore which = 1163 where = RUS }
+		command = { type = addcore which = 1562 where = RUS }
+		command = { type = addcore which = 1563 where = RUS }
+		command = { type = addcore which = 1409 where = RUS }
+		command = { type = addcore which = 1410 where = RUS }
+		command = { type = addcore which = 1411 where = RUS }
+		command = { type = addcore which = 1523 where = RUS }
+		command = { type = addcore which = 1164 where = RUS }
+		command = { type = addcore which = 1165 where = RUS }
+		command = { type = addcore which = 1594 where = RUS }
+		command = { type = addcore which = 1596 where = RUS }
+		command = { type = addcore which = 1598 where = RUS }
+		command = { type = addcore which = 1155 where = RUS }
+		command = { type = addcore which = 1541 where = RUS }
+		command = { type = addcore which = 1542 where = RUS }
+		command = { type = addcore which = 1593 where = RUS }
+		command = { type = addcore which = 1552 where = RUS }
+		#エカテリンブルク条約追加分
+		command = { type = addcore which = 1155 where = RUS } #スヴェルドロフスク以東を中核州化
+		command = { type = addcore which = 1564 where = RUS }
+		command = { type = addcore which = 1565 where = RUS }
+		command = { type = addcore which = 1571 where = RUS }
+		command = { type = addcore which = 1573 where = RUS }
+		command = { type = addcore which = 1575 where = RUS }
+		command = { type = addcore which = 1597 where = RUS }
+		command = { type = addcore which = 1593 where = RUS }
+		command = { type = addcore which = 1552 where = RUS }
+		command = { type = addcore which = 1594 where = RUS }
+		command = { type = addcore which = 1596 where = RUS }
+		command = { type = addcore which = 1598 where = RUS }
+		command = { type = addcore which = 1541 where = RUS }
+		command = { type = addcore which = 1542 where = RUS }
+		command = { type = addcore which = 1154 where = RUS }
+		#全プリモルスク
+		command = { type = addcore which = 1371 where = RUS }
+		command = { type = addcore which = 1372 where = RUS }
+		command = { type = addcore which = 1373 where = RUS }
+		command = { type = addcore which = 1369 where = RUS }
+		command = { type = addcore which = 1368 where = RUS }
+		command = { type = addcore which = 1367 where = RUS }
+		command = { type = addcore which = 1370 where = RUS }
+		command = { type = addcore which = 1366 where = RUS }
+		command = { type = addcore which = 1526 where = RUS }
+		command = { type = addcore which = 1527 where = RUS }
+		command = { type = addcore which = 1528 where = RUS }
+		command = { type = addcore which = 1529 where = RUS }
+		command = { type = addcore which = 1523 where = RUS }
+		command = { type = addcore which = 1410 where = RUS }
+		command = { type = addcore which = 1409 where = RUS }
+		command = { type = addcore which = 1164 where = RUS }
+		command = { type = addcore which = 1524 where = RUS }
+		command = { type = addcore which = 1525 where = RUS }
+		command = { type = addcore which = 1165 where = RUS }
+		command = { type = addcore which = 1166 where = RUS }
+		command = { type = addcore which = 1167 where = RUS }
+		command = { type = addcore which = 1170 where = RUS }
+		command = { type = addcore which = 1171 where = RUS }
+		command = { type = addcore which = 1172 where = RUS }
+		command = { type = addcore which = 1405 where = RUS }
+		command = { type = addcore which = 1175 where = RUS }
+		command = { type = addcore which = 1176 where = RUS }
+		command = { type = addcore which = 1177 where = RUS }
+		command = { type = addcore which = 1411 where = RUS }
+		command = { type = addcore which = 1174 where = RUS }
+		#SIB
+ 		command = { type = secedeprovince which = RUS value = 1548 }
+		command = { type = secedeprovince which = RUS value = 1531 }
+		command = { type = secedeprovince which = RUS value = 1532 }
+		command = { type = secedeprovince which = RUS value = 1533 }
+		command = { type = secedeprovince which = RUS value = 1534 }
+		command = { type = secedeprovince which = RUS value = 1535 }
+		command = { type = secedeprovince which = RUS value = 1536 }
+		command = { type = secedeprovince which = RUS value = 1537 }
+		command = { type = secedeprovince which = RUS value = 1538 }
+		command = { type = secedeprovince which = RUS value = 1539 }
+		command = { type = secedeprovince which = RUS value = 1540 }
+		command = { type = secedeprovince which = RUS value = 1543 }
+		command = { type = secedeprovince which = RUS value = 1544 }
+		command = { type = secedeprovince which = RUS value = 1545 }
+		command = { type = secedeprovince which = RUS value = 1546 }
+		command = { type = secedeprovince which = RUS value = 1547 }
+		command = { type = secedeprovince which = RUS value = 1549 }
+		command = { type = secedeprovince which = RUS value = 1558 }
+		command = { type = secedeprovince which = RUS value = 1559 }
+		command = { type = secedeprovince which = RUS value = 1560 }
+		command = { type = secedeprovince which = RUS value = 1561 }
+		command = { type = secedeprovince which = RUS value = 1412 }
+		command = { type = secedeprovince which = RUS value = 1413 }
+		command = { type = secedeprovince which = RUS value = 1414 }
+		command = { type = secedeprovince which = RUS value = 1415 }
+		command = { type = secedeprovince which = RUS value = 1416 }
+		command = { type = secedeprovince which = RUS value = 1417 }
+		command = { type = secedeprovince which = RUS value = 1520 }
+		command = { type = secedeprovince which = RUS value = 1522 }
+		command = { type = secedeprovince which = RUS value = 1521 }
+		command = { type = secedeprovince which = RUS value = 1383 }
+		command = { type = secedeprovince which = RUS value = 1384 }
+		command = { type = secedeprovince which = RUS value = 1156 }
+		command = { type = secedeprovince which = RUS value = 1157 }
+		command = { type = secedeprovince which = RUS value = 1158 }
+		command = { type = secedeprovince which = RUS value = 1159 }
+		command = { type = secedeprovince which = RUS value = 1160 }
+		command = { type = secedeprovince which = RUS value = 1161 }
+		command = { type = secedeprovince which = RUS value = 1162 }
+		command = { type = secedeprovince which = RUS value = 1163 }
+		command = { type = secedeprovince which = RUS value = 1562 }
+		command = { type = secedeprovince which = RUS value = 1563 }
+		command = { type = secedeprovince which = RUS value = 1409 }
+		command = { type = secedeprovince which = RUS value = 1410 }
+		command = { type = secedeprovince which = RUS value = 1411 }
+		command = { type = secedeprovince which = RUS value = 1523 }
+		command = { type = secedeprovince which = RUS value = 1164 }
+		command = { type = secedeprovince which = RUS value = 1165 }
+		command = { type = secedeprovince which = RUS value = 1594 }
+		command = { type = secedeprovince which = RUS value = 1596 }
+		command = { type = secedeprovince which = RUS value = 1598 }
+		command = { type = secedeprovince which = RUS value = 1155 }
+		command = { type = secedeprovince which = RUS value = 1541 }
+		command = { type = secedeprovince which = RUS value = 1542 }
+		command = { type = secedeprovince which = RUS value = 1593 }
+		command = { type = secedeprovince which = RUS value = 1552 }
+		#エカテリンブルク条約追加分
+		command = { type = secedeprovince which = RUS value = 1155 } #スヴェルドロフスク以東を中核州化
+		command = { type = secedeprovince which = RUS value = 1564 }
+		command = { type = secedeprovince which = RUS value = 1565 }
+		command = { type = secedeprovince which = RUS value = 1571 }
+		command = { type = secedeprovince which = RUS value = 1573 }
+		command = { type = secedeprovince which = RUS value = 1575 }
+		command = { type = secedeprovince which = RUS value = 1597 }
+		command = { type = secedeprovince which = RUS value = 1593 }
+		command = { type = secedeprovince which = RUS value = 1552 }
+		command = { type = secedeprovince which = RUS value = 1594 }
+		command = { type = secedeprovince which = RUS value = 1596 }
+		command = { type = secedeprovince which = RUS value = 1598 }
+		command = { type = secedeprovince which = RUS value = 1541 }
+		command = { type = secedeprovince which = RUS value = 1542 }
+		command = { type = secedeprovince which = RUS value = 1154 }
+		#全プリモルスク
+		command = { type = secedeprovince which = RUS value = 1371 }
+		command = { type = secedeprovince which = RUS value = 1372 }
+		command = { type = secedeprovince which = RUS value = 1373 }
+		command = { type = secedeprovince which = RUS value = 1369 }
+		command = { type = secedeprovince which = RUS value = 1368 }
+		command = { type = secedeprovince which = RUS value = 1367 }
+		command = { type = secedeprovince which = RUS value = 1370 }
+		command = { type = secedeprovince which = RUS value = 1366 }
+		command = { type = secedeprovince which = RUS value = 1526 }
+		command = { type = secedeprovince which = RUS value = 1527 }
+		command = { type = secedeprovince which = RUS value = 1528 }
+		command = { type = secedeprovince which = RUS value = 1529 }
+		command = { type = secedeprovince which = RUS value = 1523 }
+		command = { type = secedeprovince which = RUS value = 1410 }
+		command = { type = secedeprovince which = RUS value = 1409 }
+		command = { type = secedeprovince which = RUS value = 1164 }
+		command = { type = secedeprovince which = RUS value = 1524 }
+		command = { type = secedeprovince which = RUS value = 1525 }
+		command = { type = secedeprovince which = RUS value = 1165 }
+		command = { type = secedeprovince which = RUS value = 1166 }
+		command = { type = secedeprovince which = RUS value = 1167 }
+		command = { type = secedeprovince which = RUS value = 1170 }
+		command = { type = secedeprovince which = RUS value = 1171 }
+		command = { type = secedeprovince which = RUS value = 1172 }
+		command = { type = secedeprovince which = RUS value = 1405 }
+		command = { type = secedeprovince which = RUS value = 1175 }
+		command = { type = secedeprovince which = RUS value = 1176 }
+		command = { type = secedeprovince which = RUS value = 1177 }
+		command = { type = secedeprovince which = RUS value = 1411 }
+		command = { type = secedeprovince which = RUS value = 1174 }
+	}
+	action = {
+		name ="EVT_150241_ACTC"	#軍政を続行せよ！
+		ai_chance = 10
+		command = { type = dissent value = 3 }
+		command = { type = belligerence which = GER value = 10 }
+	}
+}
+
+event = {
+	id = 150250
+	random = no
+	country = GER
+	
+	trigger = {
+		NOT = { lost_national = { country = GER value = 1 } }
+		#エカテリンブルク条約からSIBが出ている
+		OR = {
+			event = 60610
+			event = 60611
+			event = 60629
+		}
+		#そのSIBが何らかの理由により独立国でなくなっている
+		OR = {
+			NOT = { exists = SIB }
+			ispuppet = SIB
+		}
+		#結果的に中央アジア各国と枢軸が敵対している
+		OR = {
+			war = { country = KAZ }
+			war = { country = KYG }
+			war = { country = TAJ }
+			war = { country = TRK }
+			war = { country = UZB }
+		}
+	}
+	
+	picture = "german_strategic_victory2"
+	
+	name = "EVT_150250_NAME"	#中央アジア各国への降伏勧告
+	desc = "EVT_150250_DESC"	#ソビエト連邦の解によって、中央アジアはシベリア国を宗主とする間接統治となり、形式上はそれぞれが独立国となった。しかし、そのシベリア国がもはや独立国ではないことにより、中央アジア各国は主を失い、四方をもはや敵に囲まれている。彼らもその現実はよく理解しているであろうし、我々の側から呼びかければ彼らは講和に応じるだろう。
+	
+	date = { day = 1 month = january year = 1935 }
+	offset = 7
+	deathdate = { day = 29 month = august year = 1953 }
+	
+	action = {
+		name = "EVT_150250_ACTA"	#降伏しドイツの属国となるよう要求する
+		ai_chance = 80
+		command = { type = trigger which = 150251 }	#KAZ
+		command = { type = trigger which = 150252 }	#KYG
+		command = { type = trigger which = 150253 }	#TAJ
+		command = { type = trigger which = 150254 }	#TRK
+		command = { type = trigger which = 150255 }	#UZB
+	}
+	action = {
+		name = "EVT_150250_ACTB"	#降伏しロシアへの合邦を行うよう要求する
+		trigger = {
+			alliance = { country = RUS }
+			NOT = { ispuppet = RUS }
+		}
+		ai_chance = 20
+		command = { type = dissent value = 5 }
+		command = { type = trigger which = 150251 }	#KAZ
+		command = { type = trigger which = 150252 }	#KYG
+		command = { type = trigger which = 150253 }	#TAJ
+		command = { type = trigger which = 150254 }	#TRK
+		command = { type = trigger which = 150255 }	#UZB
+		command = { type = setflag which = RUSconqMidASIA }
+	}
+	action = {
+		name = "EVT_150250_ACTC"	#征服せよ。それだけだ
+		ai_chance = 0
+		command = { type = dissent value = 5 }
+	}
+}
+
+event = {
+	id = 150251
+	random = no
+	country = KAZ
+	trigger = {
+		war = { country = GER }
+	}
+	
+	picture = "germany_invaded"
+	
+	name = "EVT_150251_NAME"	#ドイツの降伏勧告
+	desc = "EVT_150251_DESC"	#ドイツは我々に対し、武器を捨て要求に応じるように我が国に伝達した。実際我が国の敵は多く、これより先彼らと戦うことで得られるものはないだろう。我々はどうするべきだろうか。
+	
+	action = {
+		name = "EVT_150251_ACTA"	#降伏する
+		ai_chance = 98
+		command = { type = peace which = GER value = 1 }
+		command = { type = leave_alliance }
+		command = { type = setflag which = KAZsurrender }
+	}
+	action = {
+		name = "EVT_150251_ACTB"	#我々は戦う！
+		ai_chance = 2
+		command = { type = dissent value = 20 }
+	}
+}
+	
+event = {
+	id = 150252
+	random = no
+	country = KYG
+	trigger = {
+		war = { country = GER }
+	}
+	
+	picture = "germany_invaded"
+
+	name = "EVT_150251_NAME"	#ドイツの降伏勧告
+	desc = "EVT_150251_DESC"	#ドイツは我々に対し、武器を捨て要求に応じるように我が国に伝達した。実際我が国の敵は多く、これより先彼らと戦うことで得られるものはないだろう。我々はどうするべきだろうか。
+	
+	action = {
+		name = "EVT_150251_ACTA"	#降伏する
+		ai_chance = 98
+		command = { type = peace which = GER value = 1 }
+		command = { type = leave_alliance }
+		command = { type = setflag which = KYGsurrender }
+	}
+	action = {
+		name = "EVT_150251_ACTB"	#我々は戦う！
+		ai_chance = 2
+		command = { type = dissent value = 20 }
+	}
+}
+
+event = {
+	id = 150253
+	random = no
+	country = TAJ
+	trigger = {
+		war = { country = GER }
+	}
+	
+	picture = "germany_invaded"
+
+	name = "EVT_150251_NAME"	#ドイツの降伏勧告
+	desc = "EVT_150251_DESC"	#ドイツは我々に対し、武器を捨て要求に応じるように我が国に伝達した。実際我が国の敵は多く、これより先彼らと戦うことで得られるものはないだろう。我々はどうするべきだろうか。
+	
+	action = {
+		name = "EVT_150251_ACTA"	#降伏する
+		ai_chance = 98
+		command = { type = peace which = GER value = 1 }
+		command = { type = leave_alliance }
+		command = { type = setflag which = TAJsurrender }
+	}
+	action = {
+		name = "EVT_150251_ACTB"	#我々は戦う！
+		ai_chance = 2
+		command = { type = dissent value = 20 }
+	}
+}
+	
+event = {
+	id = 150254
+	random = no
+	country = TRK
+	trigger = {
+		war = { country = GER }
+	}
+
+	picture = "germany_invaded"
+
+	name = "EVT_150251_NAME"	#ドイツの降伏勧告
+	desc = "EVT_150251_DESC"	#ドイツは我々に対し、武器を捨て要求に応じるように我が国に伝達した。実際我が国の敵は多く、これより先彼らと戦うことで得られるものはないだろう。我々はどうするべきだろうか。
+	
+	action = {
+		name = "EVT_150251_ACTA"	#降伏する
+		ai_chance = 98
+		command = { type = peace which = GER value = 1 }
+		command = { type = leave_alliance }
+		command = { type = setflag which = TRKsurrender }
+	}
+	action = {
+		name = "EVT_150251_ACTB"	#我々は戦う！
+		ai_chance = 2
+		command = { type = dissent value = 20 }
+	}
+}
+
+event = {
+	id = 150255
+	random = no
+	country = UZB
+	trigger = {
+		war = { country = GER }
+	}
+	picture = "germany_invaded"
+
+	name = "EVT_150251_NAME"	#ドイツの降伏勧告
+	desc = "EVT_150251_DESC"	#ドイツは我々に対し、武器を捨て要求に応じるように我が国に伝達した。実際我が国の敵は多く、これより先彼らと戦うことで得られるものはないだろう。我々はどうするべきだろうか。
+	
+	action = {
+		name = "EVT_150251_ACTA"	#降伏する
+		ai_chance = 98
+		command = { type = peace which = GER value = 1 }
+		command = { type = leave_alliance }
+		command = { type = setflag which = UZBsurrender }
+	}
+	action = {
+		name = "EVT_150251_ACTB"	#我々は戦う！
+		ai_chance = 2
+		command = { type = dissent value = 20 }
+	}
+}
+
+event = {
+	id = 150256
+	random = no
+	country = GER
+	trigger = {
+		event = 150250
+		OR = {
+			flag = KAZsurrender
+			flag = KYGsurrender
+			flag = TAJsurrender
+			flag = TRKsurrender
+			flag = UZBsurrender
+		}
+		NOT = { flag = RUSconqMidASIA }
+	}
+
+	picture = "german_stratec_victory"
+
+	name = "EVT_150256_NAME"	#ドイツの降伏勧告への返答
+	desc = "EVT_150256_DESC"	#彼ら自身望まない戦争に巻き込まれ、そして我が国の寛大なる呼びかけに彼らは答えた。我々も彼らの誠意に応えてやらねばならぬ。
+
+	date = { day = 1 month = january year = 1935 }
+	offset = 4
+	deathdate = { day = 29 month = august year = 1953 }
+
+	action = {
+		name = "EVT_150256_ACTA"	#衛星国とせよ
+		command = { trigger = { flag = KAZsurrender } type = make_puppet which = KAZ }
+		command = { trigger = { flag = KYGsurrender } type = make_puppet which = KYG }
+		command = { trigger = { flag = TAJsurrender } type = make_puppet which = TAJ }
+		command = { trigger = { flag = TRKsurrender } type = make_puppet which = TRK }
+		command = { trigger = { flag = UZBsurrender } type = make_puppet which = UZB }
+	}
+}
+
+event = {
+	id = 150257
+	random = no
+	country = RUS
+	trigger = {
+		event = 150250
+		OR = {
+			flag = KAZsurrender
+			flag = KYGsurrender
+			flag = TAJsurrender
+			flag = TRKsurrender
+			flag = UZBsurrender
+		}
+		flag = RUSconqMidASIA
+	}
+	
+	name = "EVT_150256_NAME"	#ドイツの降伏勧告への返答
+	desc = "EVT_150256_DESC"	#彼ら自身望まない戦争に巻き込まれ、そしてドイツの提案に中央アジアの各国は応えた。ソビエトに取って代わる国家として散々分割された後に、またしてもドイツの都合で国土を拡張させられるとは、随分振り回されるものだ。
+	picture = "german_stratec_victory"
+
+	date = { day = 1 month = january year = 1935 }
+	offset = 4
+	deathdate = { day = 29 month = august year = 1953 }
+
+	action = {
+		name = "EVT_150256_ACTA"	#流石に混乱は避けられないか
+		command = { type = dissent value = 10 }
+		command = { trigger = { flag = KAZsurrender } type = inherit which = KAZ }
+		command = { trigger = { flag = KYGsurrender } type = inherit which = KYG }
+		command = { trigger = { flag = TAJsurrender } type = inherit which = TAJ }
+		command = { trigger = { flag = TRKsurrender } type = inherit which = TRK }
+		command = { trigger = { flag = UZBsurrender } type = inherit which = UZB }
+		command = { type = addcore which = 1422 }
+		command = { type = addcore which = 1423 }
+		command = { type = addcore which = 1556 }
+		command = { type = addcore which = 1555 }
+		command = { type = addcore which = 1550 }
+		command = { type = addcore which = 1424 }
+		command = { type = addcore which = 1569 }
+		command = { type = addcore which = 1579 }
+		command = { type = addcore which = 1583 }
+		command = { type = addcore which = 1580 }
+		command = { type = addcore which = 1582 }
+		command = { type = addcore which = 1587 }
+		command = { type = addcore which = 1425 }
+		command = { type = addcore which = 1568 }
+		command = { type = addcore which = 1578 }
+		command = { type = addcore which = 1588 }
+		command = { type = addcore which = 1589 }
+		command = { type = addcore which = 1590 }
+		command = { type = addcore which = 1591 }
+		command = { type = addcore which = 1581 }
+		command = { type = addcore which = 1592 }
+		command = { type = addcore which = 1551 }
+		command = { type = addcore which = 1557 }
+		command = { type = addcore which = 1553 }
+		command = { type = addcore which = 1554 }
+		command = { type = addcore which = 1426 }
+		command = { type = addcore which = 1586 }
+		command = { type = addcore which = 1576 }
+		command = { type = addcore which = 1429 }
+		command = { type = addcore which = 1428 }
+		command = { type = addcore which = 1485 }
+		command = { type = addcore which = 1484 }
+		command = { type = addcore which = 1490 }
+		command = { type = addcore which = 1491 }
+		command = { type = addcore which = 1584 }
+		command = { type = addcore which = 1585 }
+		command = { type = addcore which = 1489 }
+		command = { type = addcore which = 1487 }
+		command = { type = addcore which = 1427 }
+		command = { type = addcore which = 1488 }
+	}
+}
+
+
+	
+
+event = {	#一瞬だけスペイン侵攻フラグが立って仏西国境にムダに師団が積まれるAIの解消	#遠藤マイクロ
+	id = 150300
+	random = no
+	country = GER
+	
+	trigger = {
+		ai = yes
+		atwar = yes
+		local_flag = GERInvadeRussia
+		NOT = { local_flag = GERInvadeSpain }
+		NOT = { local_flag = GERInvadeEngland }
+		#NOT = { war = { country = GER country = USA } }
+		NOT = { event = 295042 }
+	}
+	
+	name = "AI_EVENT"
+	style = 0
+	
+	date = { day = 1 month = january year = 1935 }
+	offset = 7
+	deathdate = { day = 29 month = august year = 1953 }
+
+
+	action_a = { 
+		command = { type = ai which = "switch/GER_Spain_END.ai" } #
+	}
+}
+
+event = {	#小畑「ソ連は殺す。慈悲はない」
+	id = 150310
+	random = no
+	country = JAP
+	trigger = {
+		ai = yes
+		war = { country = JAP country = SOV }
+		flag = Kodoha	#皇道派ルート時のみ
+	}
+	
+	name = "EVT_150310_NAME"
+	style = 0
+	
+	date = { day = 1 month = january year = 1935 }
+	offset = 7
+	deathdate = { day = 29 month = august year = 1953 }
+	
+	action_a = {
+		command = { type = ai which = "switch/JAP_SOV_AllAttack.ai" } #
+	}
+}
+
+
+event = {	#永田「対支一撃論が完遂された今、ソビエトも一撃でやってやろう」
+	id = 150311
+	random = no
+	country = JAP
+	trigger = {
+		ai = yes
+		war = { country = JAP country = SOV }
+		OR = {
+			Incabinet = 5555	#てっつぁん（首相）
+			Incabinet = 5042	#東條さん（首相）
+		}
+		alliance = { country = JAP country = U87 }
+		NOT = {
+			exists = CHI
+			exists = CHC 
+		}
+	}
+	
+	name = "EVT_150311_NAME"
+	style = 0
+	
+	date = { day = 1 month = january year = 1935 }
+	offset = 7
+	deathdate = { day = 29 month = august year = 1953 }
+	
+	action_a = {
+		command = { type = ai which = "switch/JAP_SOV_AllAttack.ai" } #
+	}
+}
+
+
+event = {
+	id = 150400
+	random = no
+	tag = { SOV USA ENG FRA }
+	trigger = {
+		control = { province = 463 data = -1 }
+		NOT = { exists = GER }
+	}
+	
+	name = "EVT_131326_NAME"
+	desc = "EVT_131326_DESC"
+	
+	date = { day = 1 month = january year = 1935 }
+	offset = 7
+	deathdate = { day = 29 month = august year = 1953 }
+	
+	action = {
+		command = { type = make_puppet which = AUS }
+		command = { type = alliance which = AUS }
+		command = { type = secederegion which = AUS value = "Austria" when = 2 }
+	}
+}
+
+event = {
+	id = 150500
+	random = no
+	persistent = yes
+	tag =  { SOV RUS SIB GER AUS DFR DDR CHI JAP CHC MAN MEN KOR YUG USA ENG U73 ITA RSI HUN ROM POL FRA FIN IND PHI CAN ALB CZE BUL BUR GRE HOL BEL SAF SIA NZL ETH NOR DEN }   
+	trigger = {
+		atwar = yes
+		NOT = { manpower = 100 }
+		OR = {
+			AND = {
+				losses = 1000000
+				NOT = { local_flag = War_weariness }
+			}
+			AND = {
+				losses = 2000000
+				local_flag = { which = War_weariness when = -2 value = 2 }
+			}
+			AND = {
+				losses = 3000000
+				local_flag = { which = War_weariness when = -2 value = 3 }
+			}
+			AND = {
+				losses = 4000000
+				local_flag = { which = War_weariness when = -2 value = 4 }
+			}
+			AND = {
+				losses = 5000000
+				local_flag = { which = War_weariness when = -2 value = 5 }
+			}
+			AND = {
+				losses = 6000000
+				local_flag = { which = War_weariness when = -2 value = 6 }
+			}
+			AND = {
+				losses = 7000000
+				local_flag = { which = War_weariness when = -2 value = 7 }
+			}
+			AND = {
+				losses = 8000000
+				local_flag = { which = War_weariness when = -2 value = 8 }
+			}
+			AND = {
+				losses = 9000000
+				local_flag = { which = War_weariness when = -2 value = 9 }
+			}
+			AND = {
+				losses = 10000000
+				local_flag = { which = War_weariness when = -2 value = 10 }
+			}
+		}
+		random = 40
+		lost_national = { country = -1 value = 1 }
+	}
+	
+	name = "EVT_150500_NAME"	#厭戦
+	desc = "EVT_150500_DESC"	#我が国は、この戦争中に大量の犠牲者を出しました。兵士達は家族に会うため家に帰ることを望み、戦いを止めたがっています。労働者たちも次々と前線に送られており、国内の経済状況は悪化の一途をたどっています！
+	
+	date = { day = 1 month = january year = 1935 }
+	offset = 7
+	deathdate = { day = 29 month = august year = 1963 }
+			 
+	action_a = {
+		name = "EVT_150500_ACTA"	#早く戦争を終わらせなければ
+		command = {
+		
+			trigger = {
+				local_flag = { which = War_weariness when = -2 value = 5 }
+			}
+			type = industrial_modifier which = total value = -2 }
+		command = {
+			trigger = {
+				local_flag = { which = War_weariness when = 1 value = 5 }
+			}
+			type = industrial_modifier which = total value = -5 }
+			
+		command = {
+			trigger = {
+				local_flag = { which = War_weariness when = 1 value = 1 }
+				local_flag = { which = War_weariness when = -2 value = 9 }
+			}
+			type = relative_manpower value = -2 }
+		command = {
+			trigger = {
+				local_flag = { which = War_weariness when = 0 value = 9 }
+			}
+			type = relative_manpower value = -4 }
+		
+		command = {
+			trigger = {
+				local_flag = { which = War_weariness when = 1 value = 5 }
+			}
+			type = industrial_modifier which = supplies value = -5 }
+			
+		command = {
+			trigger = {
+				local_flag = { which = War_weariness when = -2 value = 4 }
+				NOT = { domestic = { type = freedom value = 5 } }
+			}
+			type = dissent value = 2.5 }
+		command = {
+			trigger = {
+				OR = {
+					AND = {
+						local_flag = { which = War_weariness when = -2 value = 4 }
+						domestic = { type = freedom value = 5 }
+					}
+					AND = {
+						local_flag = { which = War_weariness when = 1 value = 4 }
+						NOT = { domestic = { type = freedom value = 5 } }
+					}
+				}
+			}
+			type = dissent value = 5 }
+		command = {
+			trigger = {
+				local_flag = { which = War_weariness when = 1 value = 4 }
+				domestic = { type = freedom value = 5 }
+			}
+			type = dissent value = 10 }
+			
+		command = {
+			trigger = {
+				local_flag = { which = War_weariness when = -2 value = 5 }
+			}
+			type = research_mod value = -1 }
+		command = {
+			trigger = {
+				local_flag = { which = War_weariness when = 1 value = 5 }
+			}
+			type = research_mod value = -3 }
+			
+		command = { type = local_setflag which = War_weariness when = 1 value = 1 }
+	}
+}
+			
+
+###################################################################
+# USSR is completely defeated by Japan
+###################################################################
+
+event = {
+	id = 150600
+	random = no
+	country = SOV
+	persistent = yes
+	trigger = {
+		NOT = { war = { country = GER country = SOV } }
+		NOT = {
+			OR = {
+				event = 135303 #bitter peace
+				event = 135313 #bitter peace
+				event = 135323 #bitter peace
+				event = 131732 #日ソ講和
+				event = 131510 # 日本が降伏状態でない
+				event = 131520
+				event = 131572
+				event = 131582
+			}
+		}
+		war = { country = JAP country = SOV }
+		NOT = { #条件2
+			control = { province = 187 data = SOV } # Leningrad
+			control = { province = 163 data = SOV } # Stalingrad
+			control = { province = 175 data = SOV } # Moscow
+			control = { province = 1907 data = SOV } # Baku
+			control = { province = 154 data = SOV } #Archangelsk
+			control = { province = 1568 data = SOV } # Uralsk
+			control = { province = 1832 data = SOV } # Saratov
+			control = { province = 253 data = SOV } # Sevastopol
+			control = { province = 258 data = SOV } # Rostov
+			control = { province = 238 data = SOV } # Kiev
+			control = { province = 212 data = SOV } # Minsk
+			control = { province = 1848 data = SOV } # Batum
+			control = { province = 289 data = SOV } # Demyansk
+			control = { province = 278 data = SOV } # Tula
+			control = { province = 168 data = SOV } # Gorkij
+			control = { province = 485 data = SOV } # Warzaw
+			control = { province = 1572 data = SOV } # Sverdlovsk
+			control = { province = 1371 data = SOV } #vlad region
+			control = { province = 1372 data = SOV }
+			control = { province = 1373 data = SOV }
+			control = { province = 1523 data = SOV } #above Manchuria
+			control = { province = 1390 data = SOV } #Manchuria
+		} #条件2終わり
+		lost_national = { country = SOV value = 80 } #maybe raise this number
+		NOT = {
+			lost_national = { country = JAP value = 2 } #Stalin holds on if Japan is under major attack
+		}
+		event = 131730
+	}
+
+	name = "ソビエトロシアの屈服"
+	desc = "現地の駐留軍の拡大とイデオロギーの対立が引き金となり、北満州から沿岸州にかけての広い地域が戦場となった国境紛争は、大日本帝国陸軍の猛攻により日本の勝利に終わった。バルト海までの西進、これは日ソの両国が不可能と考えていたが日本はシベリアを越えウラルを越えこれを成し、この圧倒的な縦深を持ってすら赤軍は日本軍の攻撃を防ぎ切ることは出来なかった。もはやソビエトロシアには組織的な抵抗力はなく、日本のなすがままの状態である。"
+	style = 0
+	picture = "Bitter_Peace"
+
+	date = { day = 0 month = january year = 1935 }
+	offset = 10 # Check for trigger conditions every seven days
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action_a = {
+		name = "そんな、バカな……。"
+		ai_chance = 80
+		command = { type = relation which = ENG value = -100 }
+		command = { type = relation which = FRA value = -100 }
+		command = { type = relation which = USA value = -100 }
+		command = { type = sleepminister which = 4002 } #Stalin
+		command = { type = sleepminister which = 4074 }
+		command = { type = sleepminister which = 4059 }
+		command = { type = sleepminister which = 4073 }
+		command = { type = sleepminister which = 4034 } #Molotov
+		command = { type = sleepminister which = 4076 } 
+		command = { type = sleepminister which = 4072 } 
+		command = { type = headofgovernment which = 4075 } #Beria
+		command = { type = armamentminister which = 4071 } #Bulganin
+		command = { type = ministerofsecurity which = 4041 } #Beria
+		command = { type = chiefofstaff which = 4055 } #Bulganin
+		command = { type = chiefofarmy which = 4008 } #Voroshilov
+		command = { type = trigger which = 150601 } #germany responds
+		command = { type = sleepevent which = 150600 }
+		command = { type = peace which = GER }
+		command = { type = peace which = CHI }
+		command = { type = peace which = FIN }
+		command = { type = peace which = BUL }
+		command = { type = peace which = ITA }
+		command = { type = peace which = PER }
+		command = { type = peace which = TUR }
+		command = { type = peace which = AUS } # FEPKBETA3
+		command = { type = peace which = ENG }
+		command = { type = peace which = USA }
+		command = { type = access which = GER }
+		command = { type = access which = ITA }
+		command = { type = access which = U73 } # FEPKBETA3
+		command = { type = access which = FIN }
+		command = { type = access which = SWE }
+		command = { type = access which = SCA }
+		command = { type = access which = BUL }
+		command = { type = access which = HUN }
+		command = { type = access which = ROM }
+		command = { type = access which = PER }
+		command = { type = access which = TUR }
+		command = { type = access which = AUS } # FEPKBETA3
+		command = { type = access which = POL }
+		command = { type = access which = LAT }
+		command = { type = access which = LIT }
+		command = { type = access which = EST }
+	}
+	action_b = {
+		name = "あのような小国に屈する！？　ありえん！"
+		ai_chance = 20
+		command = { type = dissent value = 30 }
+		command = { type = set_domestic which = freedom value = 4 } #to represent lawlessness, open up society
+		command = { type = relation which = ENG value = 50 }
+		command = { type = relation which = FRA value = 50 }
+		command = { type = relation which = USA value = 50 }
+	}
+}
+
+event = {
+	id = 150601
+	random = no
+	country = JAP
+	name = "ソビエトの屈服"
+	desc = "新聞各紙が伝える「ロシア降伏」の速報は帝国に瞬く間に広がった。だが、官も民も半信半疑であった。大正10年にシベリアで泥沼に巻き込まれたことを覚えているものも少なくない。モスクワまで辿り着いたなどというのは、実は戦況の悪化を隠す大本営の虚言なのではないかと考える者さえ出る始末であった。だが、欧州の各国大使館からの連絡や首相の対ソ勝利宣言を受けてどうやらこれは本当であるらしいと分かると、一転して人々は歓喜に沸いた。"
+	style = 0
+	picture = "german_reinforcment_3"
+	
+	action_a = {
+		name = "共産主義の根源を撲滅し、彼の地に新たな秩序を！"
+		command = { type = inherit which = SOV }
+		command = { type = dissent value = -100 }
+		command = { type = trigger which = 150602 }
+	}
+}
+
+event = {
+	id = 150602
+	random = no
+	country = JAP
+	trigger = {
+		NOT = { exists = SOV }
+	}
+	save_date = yes
+	name = "ソビエト連邦分割"
+	desc = "モスクワまでを日本が直接統治するのは、あまりにも無茶がある。ここはソビエトの体制に非協力的だった人材から我々に協力的な政権をうちたてて、彼の地を間接的に我らの勢力圏としよう。"
+	style = 0
+	picture = "soviet_japanese_neutrality_pact"
+	
+	action_a = {
+		name = "OK"
+		command = { type = independence which = SIB value = 1 }
+		command = { type = independence which = RUS value = 1 }
+
+		command = { type = independence which = U16 value = 1 }
+		#ポーランドが生きていて、日本と戦争中でない
+		command = {
+		trigger = { NOT = { war = { country = JAP country = POL } } }
+		type = secederegion which = POL value = "Poland" }
+		#リトアニアが生きていて、日本と戦争中でない
+		command = {
+		trigger = { NOT = { war = { country = JAP country = LIT } } }
+		type = secedearea which = LIT value = "Lithuania" }
+		#エストニアが生きていて、日本と戦争中でない
+		command = {
+		trigger = { NOT = { war = { country = JAP country = EST } } }
+		type = secedearea which = EST value = "Estonia" }
+		#ラトビアが生きていて、日本と戦争中でない
+		command = {
+		trigger = { NOT = { war = { country = JAP country = LAT } } }
+		type = secedearea which = LAT value = "Latvia" }
+		#ルーマニアと戦争していないならベッサラビアはお返しする
+		command = {
+		trigger = { NOT = { war = { country = JAP country = ROM } } }
+		type = secedearea which = ROM value = "Bessarabia" }
+		command = { type = trigger which = 150603 }
+		command = { type = trigger which = 150604 }
+		command = { type = trigger which = 150605 }
+		command = { type = trigger which = 150606 }
+		command = { type = trigger which = 150607 }
+		#command = { type = trigger which = 150608 }
+	}
+}
+
+event = {
+	id = 150603
+	random = no
+	country = JAP
+	trigger = {
+		control = { province = 485 data = JAP }	#warsaw
+		NOT = { exists = POL }
+	}
+	name = "ソビエト連邦分割 - ポーランドの処遇"
+	desc = "何度も欧州の動乱に巻き込まれてきたポーランドは、今度は遠い異国たる日本にその運命が委ねられることとなった。当然彼の地には根強い独立運動が残っており、その扱いは慎重に行わなければなるまい。"
+	style = 0
+	picture = "german_stratec_victory"
+	
+	action = {
+		ai_chance = 30
+		name = "ポーランドはロシアに統治させる"
+		command = { type = secederegion which = RUS value = "Poland" }
+	}
+	action = {
+		name = "ポーランドは独立させ、同盟に引き入れる"
+		ai_chance = 40
+		command = { type = independence which = POL value = 1 }
+		command = { type = alliance which = POL }
+	}
+	action = {
+		name = "ポーランドは独立させ、彼らには中立であってもらおう"
+		ai_chance = 30
+		command = { type = independence which = POL value = 0 }
+		command = { type = belligerence value = -5 }
+		command = { type = relation which = POL value = 50 } 
+		command = { type = relation which = GER value = -20 } 
+		command = { type = relation which = USA value = 10 }
+		command = { type = relation which = ENG value = 10 }
+	}
+}
+
+event = {
+	id = 150604
+	random = no
+	country = JAP
+	trigger = {
+		OR = {
+			control = { province = 194 data = JAP }	#Talin
+			control = { province = 197 data = JAP }	#Riga
+			control = { province = 208 data = JAP }	#Wilna
+		}
+		OR = {
+			NOT = { exists = EST }
+			NOT = { exists = LIT }
+			NOT = { exists = LAT }
+		}
+	}
+	name = "ソビエト連邦分割 - バルト三国の処遇"
+	desc = "バルト三国はロシア帝国から1920年に独立し、その後も一応ソビエト連邦は彼らを攻撃しないという誓約をしていたものの、実際には常に圧力をかけ続けられてきた。彼らのほんの最近までの独立を再び樹立させるべきか、それとも昔にならいロシアがこれを統治すべきだろうか。"
+	style = 0
+	picture = "german_stratec_victory"
+	
+	action = {
+		ai_chance = 40
+		name = "バルト三国はロシアに統治させる"
+		command = { type = secederegion which = RUS value = "Baltic States" }
+	}
+	
+	action = {
+		trigger = {
+			NOT = { exists = LAT }
+			exists = LIT
+			exists = EST
+		}
+		ai_chance = 30
+		name = "ラトビアは独立させ、同盟に引き入れる"
+		command = { type = independence which = LAT value = 1 }
+		command = { type = alliance which = LAT }
+	}
+	action = {
+		trigger = {
+			NOT = { exists = LAT }
+			exists = LIT
+			exists = EST
+		}
+		ai_chance = 30
+		name = "ラトビアは独立させ、彼らには中立であってもらおう"
+		command = { type = independence which = LAT value = 0 }
+		command = { type = relation which = LAT value = 50 } 
+	}
+	
+	action = {
+		trigger = {
+			exists = LAT
+			exists = LIT
+			NOT = { exists = EST }
+		}
+		ai_chance = 30
+		name = "エストニアは独立させ、同盟に引き入れる"
+		command = { type = independence which = EST value = 1 }
+		command = { type = alliance which = EST }
+	}
+	action = {
+		trigger = {
+			exists = LAT
+			exists = LIT
+			NOT = { exists = EST }
+		}
+		ai_chance = 30
+		name = "エストニアは独立させ、彼らには中立であってもらおう"
+		command = { type = independence which = EST value = 0 }
+		command = { type = relation which = EST value = 50 } 
+	}
+	
+	action = {
+		trigger = {
+			exists = LAT
+			NOT = { exists = LIT }
+			exists = EST
+		}
+		ai_chance = 30
+		name = "リトアニアは独立させ、同盟に引き入れる"
+		command = { type = independence which = LIT value = 1 }
+		command = { type = alliance which = LIT }
+	}
+	action = {
+		trigger = {
+			exists = LAT
+			NOT = { exists = LIT }
+			exists = EST
+		}
+		ai_chance = 30
+		name = "リトアニアは独立させ、彼らには中立であってもらおう"
+		command = { type = independence which = LIT value = 0 }
+		command = { type = relation which = LIT value = 50 } 
+	}
+		
+	action = {
+		trigger = {
+			NOT = { exists = LAT }
+			exists = LIT
+			NOT = { exists = EST }
+		}
+		ai_chance = 30
+		name = "ラトビア・エストニアは独立させ、同盟に引き入れる"
+		command = { type = independence which = LAT value = 1 }
+		command = { type = alliance which = LAT }
+		command = { type = independence which = EST value = 1 }
+		command = { type = alliance which = EST }
+	}
+	action = {
+		trigger = {
+			NOT = { exists = LAT }
+			exists = LIT
+			NOT = { exists = EST }
+		}
+		ai_chance = 30
+		name = "ラトビア・エストニアは独立させ、中立国とする"
+		command = { type = independence which = LAT value = 0 }
+		command = { type = relation which = LAT value = 50 } 
+		command = { type = independence which = EST value = 0 }
+		command = { type = relation which = EST value = 50 } 
+	}
+	action = {
+		trigger = {
+			NOT = { exists = LAT }
+			NOT = { exists = LIT }
+			exists = EST
+		}
+		ai_chance = 30
+		name = "ラトビア・リトアニアは独立させ、同盟に引き入れる"
+		command = { type = independence which = LAT value = 1 }
+		command = { type = alliance which = LAT }
+		command = { type = independence which = LIT value = 1 }
+		command = { type = alliance which = LIT }
+	}
+	action = {
+		trigger = {
+			NOT = { exists = LAT }
+			NOT = { exists = LIT }
+			exists = EST
+		}
+		ai_chance = 30
+		name = "ラトビア・リトアニアは独立させ、中立国とする"
+		command = { type = independence which = LAT value = 0 }
+		command = { type = relation which = LAT value = 50 } 
+		command = { type = independence which = LIT value = 0 }
+		command = { type = relation which = LIT value = 50 } 
+	}
+		
+	action = {
+		trigger = {
+			exists = LAT
+			NOT = { exists = LIT }
+			NOT = { exists = EST }
+		}
+		ai_chance = 30
+		name = "ラトビア・エストニアは独立させ、同盟に引き入れる"
+		command = { type = independence which = LAT value = 1 }
+		command = { type = alliance which = LAT }
+		command = { type = independence which = EST value = 1 }
+		command = { type = alliance which = EST }
+	}
+	action = {
+		trigger = {
+			exists = LAT
+			NOT = { exists = LIT }
+			NOT = { exists = EST }
+		}
+		ai_chance = 30
+		name = "ラトビア・エストニアは独立させ、中立国とする"
+		command = { type = independence which = LAT value = 0 }
+		command = { type = relation which = LAT value = 50 } 
+		command = { type = independence which = EST value = 0 }
+		command = { type = relation which = EST value = 50 } 
+	}
+		
+	action = {
+		trigger = {
+			NOT = { exists = LAT }
+			NOT = { exists = LIT }
+			NOT = { exists = EST }
+		}
+		ai_chance = 30
+		name = "バルト三国は独立させ、同盟に引き入れる"
+		command = { type = independence which = LAT value = 1 }
+		command = { type = alliance which = LAT }
+		command = { type = independence which = EST value = 1 }
+		command = { type = alliance which = EST }
+		command = { type = independence which = LIT value = 1 }
+		command = { type = alliance which = LIT }
+	}
+	action = {
+		trigger = {
+			NOT = { exists = LAT }
+			NOT = { exists = LIT }
+			NOT = { exists = EST }
+		}
+		ai_chance = 30
+		name = "バルト三国は独立させ、中立国とする"
+		command = { type = independence which = LAT value = 0 }
+		command = { type = relation which = LAT value = 50 } 
+		command = { type = independence which = EST value = 0 }
+		command = { type = relation which = EST value = 50 } 
+		command = { type = independence which = LIT value = 0 }
+		command = { type = relation which = LIT value = 50 } 
+	}
+}
+
+event = {
+	id = 150605
+	random = no
+	country = JAP
+	name = "ソビエト連邦分割 - カレリアとヴィープリ"
+	desc = "レニングラードからのフィンランド国境をめぐって始まった冬戦争では、フィンランド軍は数において圧倒的に優れる赤軍に対しよく闘ったものの、敗北を喫した。フィンランドに対して圧力をかけていたこのソビエトが消滅した今、フィンランドが彼らの正当な領土を取り戻すことに誰が異論を挟もうか。"
+	style = 0
+	picture = "german_stratec_victory"
+	
+	action = {
+		trigger = {
+			exists = FIN
+			event = 130583	#冬戦争に負けているなら領土を元に戻す
+			NOT = { war = { country = JAP country = FIN } }
+		}
+		ai_chance = 100
+		name = "彼らをあるべき姿に戻そう"
+		command = { type = relation which = FIN value = 20 } 
+		command = { type = secederegion which = RUS value = "Finland" }
+	}
+	action = {
+		trigger = {
+			NOT = { exists = FIN }
+		}
+		ai_chance = 50
+		name = "フィンランドを独立させ、同盟に引き入れる"
+		command = { type = independence which = FIN value = 1 }
+		command = { type = alliance which = FIN }
+	}
+	action = {
+		trigger = {
+			NOT = { exists = FIN }
+		}
+		ai_chance = 50
+		name = "フィンランドを独立させ、彼らには中立であってもらおう"
+		command = { type = independence which = FIN value = 0 }
+		command = { type = belligerence value = -5 }
+		command = { type = relation which = FIN value = 50 } 
+	}
+}
+
+
+event = {
+	id = 150606
+	random = no
+	country = JAP
+	trigger = {
+		OR = {
+			NOT = { exists = UKR }
+			NOT = { exists = BLR }
+		}
+	}
+	name = "ソビエト連邦分割 - ベラルーシとウクライナ"
+	desc = "ソビエト連邦の解体によって、従来までソビエトの勢力圏内に属していたベラルーシやウクライナの扱いについても考えねばならない。第一次大戦終結間際、ベラルーシにはほんの一時期ベラルーシ人民共和国が存在し、これがベラルーシ最初の独立国であったがドイツ帝国の崩壊とともに短期で消滅。ウクライナの方が強い独立の気運を持っていたが、このウクライナ人民共和国もソビエトとの戦争により短命に終わっている。彼らはどうあるべきであろうか。"
+	style = 0
+	picture = "german_stratec_victory"
+	
+	action = {
+		ai_chance = 20
+		name = "ベラルーシとウクライナはロシアに統治させる"
+		#ベラルーシ全部（中核州範囲が入り組んでいるのでsecederegionは見送り）
+		command = { type = secedeprovince which = RUS value = 212 }
+		command = { type = secedeprovince which = RUS value = 221 }
+		command = { type = secedeprovince which = RUS value = 225 }
+		command = { type = secedeprovince which = RUS value = 218 }
+		command = { type = secedeprovince which = RUS value = 220 }
+		command = { type = secedeprovince which = RUS value = 272 }
+		command = { type = secedeprovince which = RUS value = 273 }
+		command = { type = secedeprovince which = RUS value = 274 }
+		command = { type = secedeprovince which = RUS value = 209 }
+		command = { type = secedeprovince which = RUS value = 211 }
+		command = { type = secedeprovince which = RUS value = 213 }
+		command = { type = secedeprovince which = RUS value = 214 }
+		command = { type = secedeprovince which = RUS value = 210 }
+		command = { type = secedeprovince which = RUS value = 222 }
+		command = { type = secedeprovince which = RUS value = 503 }
+		command = { type = secedeprovince which = RUS value = 504 }
+		command = { type = secedeprovince which = RUS value = 507 }
+		command = { type = secedeprovince which = RUS value = 505 }
+		command = { type = secedeprovince which = RUS value = 508 }
+		command = { type = secedeprovince which = RUS value = 208 }
+		#ウクライナ全部
+		command = { type = secederegion which = RUS value = "Ukraine" }
+	}
+	action = {
+		ai_chance = 50
+		name = "ベラルーシとウクライナは独立させ、同盟に引き入れる"
+		command = { type = independence which = BLR value = 1 }
+		command = { type = alliance which = BLR }
+		command = { type = independence which = UKR value = 1 }
+		command = { type = alliance which = UKR }
+	}
+	action = {
+		ai_chance = 30
+		name = "ベラルーシとウクライナは独立させ、中立国とする"
+		command = { type = independence which = BLR value = 0 }
+		command = { type = belligerence value = -5 }
+		command = { type = independence which = UKR value = 0 }
+		command = { type = belligerence value = -5 }
+		command = { type = relation which = RUS value = -10 }
+	}
+}
+
+event = {
+	id = 150607
+	random = no
+	country = JAP
+	trigger = {
+	}
+	name = "ソビエト連邦分割 - 中央アジア"
+	desc = "テュルク系民族は中央アジアに広く存在し、トルコ以外の殆どが彼ら自身による国を持っていなかった。彼らの独立に対する指向は強い。さて、彼らには……。"
+	style = 0
+	picture = "german_stratec_victory"
+	
+	action = {
+		ai_chance = 6
+		name = "中央アジアは独立させ、シベリアが管轄する"
+		command = { type = independence which = KAZ value = 1 }
+		command = { type = independence which = KYG value = 1 }
+		command = { type = independence which = TAJ value = 1 }
+		command = { type = independence which = TRK value = 1 }
+		command = { type = independence which = UZB value = 1 }
+	}
+	action = {
+		ai_chance = 6
+		name = "中央アジアは独立させ、日本が管轄する"
+		command = { type = independence which = KAZ value = 1 }
+		command = { type = independence which = KYG value = 1 }
+		command = { type = independence which = TAJ value = 1 }
+		command = { type = independence which = TRK value = 1 }
+		command = { type = independence which = UZB value = 1 }
+		command = { type = make_puppet which = KAZ }
+		command = { type = make_puppet which = KYG }
+		command = { type = make_puppet which = TAJ }
+		command = { type = make_puppet which = TRK }
+		command = { type = make_puppet which = UZB }
+	}
+	action = {
+		trigger = {
+			exists = U17 # U17が存在している
+		}
+		ai_chance = 88
+		name = "トルキスタンに中央アジアの割譲を提案する"
+		command = { type = relation which = SIB value = -20 }
+		command = { type = trigger which = 150616 }
+	}
+	action = {
+		name = "独立はナシだ。この地はシベリアの直轄とする"
+		ai_chance = 0
+		command = { type = dissent value = 10 }
+	}
+}
+	
+#id = 150608		（空き）
+
+#AI各国が第三次大戦に次々参加するので、連合に入ることが出来るようにしていく
+event = {
+	id = 150700
+	random = no
+	TAG =  { AFG ALB ALG ANG ARA ARG ARM AST AUS AZB BEL BEN BLR BOL BOS BRA BRU BUL BUR CAL CAM CAN CGX CHC CHI CHL CMB COL CON COS CRO CSA CSX CUB CXB CYN CYP CZE DDR DEN DFR EAF ECU EGY ENG EQA EST ETH EUS FIN FLA FRA GAB GEO GER GLD GRE GUA GUI GUY HOL HON HUN ICL IDC IND INO IRE IRQ ISR ITA JAP JOR KAZ KOR KUR KYG LAO LAT LBY LEB LIT LUX MAD MAL MAN MEN MEX MLY MON MOR MOZ MTN NAM NIC NIG NOR NZL OMN OTT PAK PAL PAN PAR PER PHI POL POR PRI PRK PRU QUE RHO ROM RSI RUS SAF SAL SAR SAU SCA SCH SCO SER SIA SIB SIE SIK SLO SLV SOM SPA SPR SUD SWE SYR TAJ TAN TEX TRA TRK TUN TUR UKR URU USA UZB VEN VIE WLL YEM YUG U01 U02 U03 U04 U08 U09 U10 U11 U12 U13 U14 U15 U16 U17 U18 U19 U20 U21 U22 U26 U27 U28 U29 U30 U31 U32 U33 U34 U35 U40 U41 U42 U43 U44 U45 U46 U47 U48 U49 U50 U51 U52 U53 U54 U55 U56 U67 U69 UTC UER UPE U70 U71 U72 U73 U74 U75 U76 U77 U78 U79 U80 U81 U82 U83 U84 U85 U86 U87 U88 U89 U90 U91 U92 U93 U94 U95 U96 U97 U98 U99 }
+	decision = {
+		NOT = {
+			ispuppet = yes
+			alliance = { country = ENG }
+			war = { country = ENG }
+			government = communist
+			local_flag = WW3againstSOVNeutral
+			exists = GER
+		}
+		war = { country = ENG country = SOV }
+		war = { country = SOV }
+	}
+	
+	decision_trigger = {}
+	
+	trigger = {
+		NOT = {
+			ispuppet = yes
+			alliance = { country = ENG }
+			war = { country = ENG }
+			government = communist
+			local_flag = WW3againstSOVNeutral
+			exists = GER
+		}
+		war = { country = ENG country = SOV }
+		war = { country = SOV }
+		random = 60
+	}
+	persistent = yes
+
+	name = "EVT_150700_NAME"	#第三次世界大戦と西側への参加
+	desc = "EVT_150700_DESC"	#我が国は共産主義に対する戦いに参加しているが、米英とは同盟状態にない。彼らはこの前代未聞の戦いのさなかで、可能な限り味方を増やしたいと考えている。もし我々が米英との同盟を求めれば、彼らはこの動きを歓迎するはずだ。
+	
+	style = 0
+	picture = "vichy_regime"
+
+	date = { day = 1 month = september year = 1939 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1963 }
+	
+	action = {
+		name = "EVT_150700_ACTA"	#米英と共に進む！
+		ai_chance = 99
+		command = { type = alliance which = ENG }
+		command = { type = set_relation which = ENG value = 120 }
+		command = { type = embargo which = -1 where = ENG value = -2 }
+	}
+	action = {
+		name = "EVT_150700_ACTB"	#我々は独自に戦争を続行する
+		ai_chance = 1
+		command = { type = local_setflag which = WW3againstSOVNeutral }
+	}
+}
+
+event = {
+	id = 150710
+	random = no
+	tag = { ITA GER JAP }
+	trigger = {
+		NOT = { exists = VEN }
+		control = { province = 811 data = -1 }
+	}
+	
+	name = "EVT_150710_NAME" # ベネズエラの運命
+	desc = "EVT_150710_DESC" # アメリカと我が国が対決する一方で、アメリカの影響を強く受けて我らに立ち向かったベネズエラはここに降伏した。この地域が持つ豊富な資源を全面的に利用するには、民心を回復させて現地の人間による政権を立てるのが最善であろう。彼らの独立を認めるべきだろうか。
+
+	picture = "indochina_demand"
+	style = 0
+	date = { day = 0 month = january year = 1934 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		ai_chance = 97
+		name = "EVT_57116_ACTA" # 独立宣言をさせる
+		command = { type = dissent value = -2 } # 国民不満度 -2
+		command = { type = independence which = VEN value = 1 when = 0 } # フィリピン独立
+		command = { type = alliance which = VEN } # 
+		command = { type = belligerence which = -1 value = -10 } # 好戦度 -10
+		command = { type = make_puppet which = VEN }
+		command = { type = trigger which = 150711 } # ベネズエラ共和国の成立 (ベネズエラ側)
+	}
+	action_b = {
+		ai_chance = 3
+		name = "EVT_57116_ACTB" # 完全制圧する
+		command = { type = belligerence which = -1 value = 5 } # 好戦性 +5
+		command = { type = sleepevent which = 150711 } # ベネズエラ共和国の成立 (ベネズエラ側)
+	}
+}
+
+event = {
+	id = 150711
+	country = BEN
+	random = no
+
+	name = "EVT_150711_NAME" # ベネズエラ共和国の成立
+	desc = "EVT_150711_DESC" # アメリカと我が国が対決する一方で、アメリカの影響を強く受けて立ち向かったベネズエラは降伏した。統治の方針としては、この地域が持つ豊富な資源を全面的に利用するために民心を掴む必要があり、ここにベネズエラは現地人政権による独立が許された。
+
+	picture = "indochina_demand"
+	style = 0
+
+	action_a = {
+		name = "EVT_57117_ACTA" # 前途多難である…
+		command = { type = dissent value = 10 } # 国民不満度 +10
+		command = { 
+			trigger = {
+				puppet = { country = VEN country = JAP }
+			}
+			type = access which = JAP } # 軍の通行許可
+		command = { 
+			trigger = {
+				puppet = { country = VEN country = GER }
+			}
+			type = access which = JAP } # 軍の通行許可
+		command = { 
+			trigger = {
+				puppet = { country = VEN country = ITA }
+			}
+			type = access which = JAP } # 軍の通行許可
+		command = { type = transport_pool which = VEN value = 1000 }
+	}
+}
+
+event = {
+	id = 150712
+	tag = { ITA GER JAP }
+	random = no
+
+	trigger = {
+		event = 150711 # ベネズエラ共和国の成立 (ベネズエラ側)
+		puppet = { country = VEN }
+	}
+
+	name = "EVT_150712_NAME" # ベネズエラ独立宣言
+	desc = "EVT_150712_DESC" # ベネズエラは、枢軸国を中心とした国家連合に組み込まれることになった。莫大な石油産出量を持ちアメリカへの足掛かりにもなるこの国が勢力圏内に存在することは、我々にとって大きな意味を持つだろう。
+
+	picture = "indochina_demand"
+	style = 0
+	date = { day = 0 month = january year = 1934 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	action_a = {
+		ai_chance = 97
+		name = "EVT_57115_ACTA" # 属国としてブロック経済圏に組み込む
+		command = { type = dissent value = -5 } # 国民不満度 -5
+		command = { type = make_puppet which = VEN } # 
+		command = { type = trigger which = 150713 }
+	}
+	action_b = {
+		ai_chance = 3
+		name = "EVT_57115_ACTB" # 緩やかな連邦制を維持する
+		command = { type = dissent value = -3 } # 国民不満度 -3
+		command = { type = alliance which = VEN } # 
+		command = { type = belligerence which = -1 value = -10 } # 好戦度 -10
+	}
+}
+#804 802 810 811 869 870 871
+event = {
+	id = 150713
+	country = -1
+	random = no
+	persistent = yes
+
+	trigger = {
+		event = 150712
+		alliance = { country = GER }
+		OR = {
+			alliance = { country = VEN country = JAP }
+			alliance = { country = VEN country = GER }
+			alliance = { country = VEN country = ITA }
+		}
+		NOT = {
+			OR = {
+				core = { province = 804 data = -1 }
+				core = { province = 802 data = -1 }
+				core = { province = 810 data = -1 }
+				core = { province = 811 data = -1 }
+				core = { province = 869 data = -1 }
+				core = { province = 870 data = -1 }
+				core = { province = 871 data = -1 }
+			}
+		}
+		OR = {
+			control = { province = 804 data = -1 }	
+			control = { province = 802 data = -1 }
+			control = { province = 810 data = -1 }
+			control = { province = 811 data = -1 }
+			control = { province = 869 data = -1 }
+			control = { province = 870 data = -1 }
+			control = { province = 871 data = -1 }
+		}
+	}
+
+	date = { day = 0 month = january year = 1934 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1963 }
+
+	name = "EVT_131634_NAME"
+	desc = "EVT_131634_DESC"
+
+	picture = "indochina_demand"
+	style = 0
+
+	action_a = {
+		ai_chance = 100
+		name = "OK"
+		command = { type = secedeprovince which = VEN value = 804 }	
+		command = { type = secedeprovince which = VEN value = 802 }
+		command = { type = secedeprovince which = VEN value = 810 }
+		command = { type = secedeprovince which = VEN value = 811 }
+		command = { type = secedeprovince which = VEN value = 869 }
+		command = { type = secedeprovince which = VEN value = 870 }
+		command = { type = secedeprovince which = VEN value = 871 }
+	}
+}
+
+#########
+#### Centroamerica from KR
+#########
+event = {
+	id = 150720
+	tag = { USA TEX CSA CAL U32 U06 CAN FRA ENG SOV RUS GER BRA ARG COL U31 VIC U08 U07 JAP CHC CHI NIC HON GUY }
+	persistent = yes
+	trigger = {
+		control = { province = 757 data = -1 }	#グアテマラシティ
+		NOT = {
+			local_flag = CENTROA_CONQ
+			exists = GUA
+			#exists = SAL
+			core = { province = 759 data = -1 }	#サンサルバドル
+			core = { province = 758 data = -1 }	#ベリーズシティ
+			core = { province = 757 data = -1 }
+		}
+	}
+	
+	name = "EVT_150720_NAME"	#グアテマラの運命
+	desc = "EVT_150720_DESC"	#グアテマラの各州は現在軍政下にあり、我が国の軍が展開している。本地域における不安要素はおおよそ取り除かれたと言って良いだろう。
+	picture = "american_surrender"
+	style = 0
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 15
+	deathdate = { day = 30 month = december year = 1963 }
+	
+	action = {
+		name = "EVT_150720_ACTA"	#この地は我が国の直轄とする
+		ai_chance = 1
+		command = { type = supplies value = 1000 }
+		command = { type = dissent value = -1 }
+		command = { type = local_setflag which = CENTROA_CONQ }
+	}
+	
+	action = {
+		name = "EVT_150720_ACTB"	#サンサルバドルとグアテマラを独立させる
+		ai_chance = 69
+		trigger = {
+			NOT = { exists = SAL }
+		}
+		command = { type = supplies value = 1000 }
+		command = { type = dissent value = -5 }
+		command = { type = independence which = SAL value = 1 when = 0 }
+		command = { type = make_puppet which = SAL }
+		command = { type = independence which = GUA value = 1 when = 0 }
+		command = { type = make_puppet which = GUA }
+	}
+	
+	action = {
+		name = "EVT_150720_ACTC"	#グアテマラのみを独立させる
+		ai_chance = 30
+		command = { type = supplies value = 1000 }
+		command = { type = dissent value = -5 }
+		command = { type = independence which = GUA value = 1 when = 0 }
+		command = { type = make_puppet which = GUA }
+		}
+	}
+
+event = {
+	id = 150999
+	#country = ITA
+	name = "debug"
+	persistent = yes
+	random = no
+	action = {
+		command = { type = dissent value = -5 }
+		command = { type = province_keypoints which = 532 value = 100 }
+		command = { type = province_keypoints which = 56 value = 100 }
+	}
+}

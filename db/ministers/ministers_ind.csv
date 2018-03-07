@@ -1,0 +1,96 @@
+IND;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;Name;Pool;;Personality;;;x
+59001;Head of State;ヴィクター・リンリスゴー卿;35;ML;Stern Imperialist;High;M59001;x
+59002;Head of Government;ジョン・エドワード・ゴライトリー;35;ML;Silent Workhorse;High;M59002;x
+59003;Foreign Minister;サー・ジレンドラ・ヴァヤフラサタール;35;ML;Iron Fisted Brute;High;M59003;x
+59004;Minister of Armament;アニャン・ブーラ;35;ML;Air Superiority Proponent;Very High;M59004;x
+59005;Minister of Security;ジョージ・H・ダグラス;35;ML;Man of the People;Medium;M59005;x
+59006;Head of Military Intelligence;アーチボルド・アンガス;35;ML;Political Specialist;Very High;M59006;x
+59007;Chief of Staff;ヴィクター・リンリスゴー卿;35;ML;School of Defence;Medium;M59007;x
+59008;Chief of Army;アーサー・A・バレット;35;ML;Static Defence Doctrine;High;M59008;x
+59009;Chief of Navy;ウィリアム・E・パリー;35;ML;Power Projection Doctrine;Very High;L1378;x
+59010;Chief of Air Force;ブルース・W・マクファーソン;35;ML;Vertical Envelopment Doctrine;High;M59010;x
+59031;Head of State;ラージェンドラ・プラサード博士;50;SD;Weary Stiffneck;High;M59031;x
+59032;Head of State;マラー・コトラ藩王バハドゥール・バスラム;35;SL;Pig-headed Isolationist;High;M59032;x
+59033;Head of State;マウントバッテン伯爵;45;SL;Popular Figurehead;High;M59033;x
+59034;Head of State;アーチボルド・ウェーヴェル;42;ML;Resigned Generalissimo;High;M59034;x
+59035;Head of State;ラース・ビハーリー・ボース;35;PA;Insignificant Layman;High;M59016;x
+59037;Head of State;マハトマ・モハンダス・ガンジー;35;SD;Benevolent Gentleman;High;M59037;x
+59038;Head of Government;ミハエル・モリス;35;SL;Happy Amateur;High;M59038;x
+59039;Head of Government;ジョン・マサイ博士;45;SL;Corporate Suit;High;M59039;x
+59040;Head of Government;バワラプール藩王ナボブ・クレイシ;42;ML;Smiling Oilman;High;M59040;x
+59041;Head of Government;サー・モハメド・イクバル;35;PA;Backroom Backstabber;High;M59041;x
+59043;Foreign Minister;スバス・チャンドラ・ボース;35;SD;The Cloak N Dagger Schemer;High;L101019;x
+59044;Foreign Minister;アナンササヤナム・アイヤンガー;37;SD;Great Compromiser;Low;M59044;x
+59045;Foreign Minister;サラト・チャンドラ・ボース;41;SD;Biased Intellectual;Very High;M59045;x
+59046;Foreign Minister;ジャワハルラール・ネルー;41;SD;Ideological Crusader;High;M59046;x
+59047;Foreign Minister;ビムラオ・ラムジ・アムベドカー;43;SD;Apologetic Clerk;Low;M59025;x
+59048;Foreign Minister;コフ・バフール藩王バハドゥール・ジャイラ;35;SL;Apologetic Clerk;High;M59048;x
+59049;Foreign Minister;モハンメド・アユブ・カーン;43;SL;General Staffer;High;M59049;x
+59050;Foreign Minister;アリ・カーン4世;42;ML;Great Compromiser;High;M59050;x
+59051;Foreign Minister;アハ・カーン3世;35;PA;Great Compromiser;Medium;M59051;x
+59053;Foreign Minister;アジョイ・クマール・ゴーシュ;43;PA;Biased Intellectual;Medium;M59023;x
+59055;Foreign Minister;クハワジャ・ナジムディン;47;PA;Apologetic Clerk;High;M59055;x
+59056;Minister of Armament;サルダール・ヴァラブハイ・パテル;35;SD;Military Entrepreneur;High;M59056;x
+59057;Minister of Armament;ラル・バハドゥール・シャストリ;44;SD;Administrative Genius;High;M59024;x
+59058;Minister of Armament;ミハエル・モリス;35;SL;laissez-faire capitalist;Medium;M59038;x
+59059;Minister of Armament;ジョン・マサイ博士;40;SL;Theoretical Scientist;Medium;M59039;x
+59060;Minister of Armament;ヒテンドラ・デサイ;45;SL;Resource Industrialist;Very High;M59060;x
+59061;Minister of Armament;コフ・バフール藩王バハドゥール・ジャイラ;36;ML;Battle Fleet Proponent;Medium;M59048;x
+59062;Minister of Armament;パタウディ藩王ナワブ・ジャイグーア;39;ML;Resource Industrialist;Medium;M59062;x
+59063;Minister of Armament;イスカンダー・ミルザ;35;PA;Infantry Proponent;Medium;M59014;x
+59064;Minister of Armament;サー・チョートゥ・ラム;38;PA;Air Superiority Proponent;High;M59026;x
+59065;Minister of Armament;ジョティ・バス;39;PA;Administrative Genius;Very High;M59021;x
+59067;Minister of Armament;ムハンメド・アリ・ボグラ;44;PA;Air to Sea Proponent;Medium;M59067;x
+59068;Minister of Security;ラフィ・アハメッド・キドワイ;35;SD;Crime Fighter;Medium;M59068;x
+59069;Minister of Security;ビムラオ・ラムジ・アムベドカー;41;SD;Man of the People;Very High;M59025;x
+59070;Minister of Security;ハリラル・J・カニア;35;SL;Silent Lawyer;Low;M59070;x
+59071;Minister of Security;サー・ヘンリー・ギドニー;42;SL;Compassionate Gentleman;Very High;M59071;x
+59072;Minister of Security;ハイデラバード＝ニザーム藩王オスマン;35;ML;Prince of Terror;Very High;M59015;x
+59073;Minister of Security;ムハンメド・ムジーブ;38;ML;Back Stabber;Very High;M59073;x
+59075;Minister of Security;アジョイ・クマール・ゴーシュ;42;PA;Efficient Sociopath;Very High;M59023;x
+59077;Head of Military Intelligence;シュリ・ジャグジヴァン・ラム;35;SD;Political Specialist;Very High;M59077;x
+59078;Head of Military Intelligence;ラフィ・アハメッド・キドワイ;43;SD;Dismal Enigma;Medium;M59068;x
+59080;Head of Military Intelligence;サー・チョートゥ・ラム;35;SL;Industrial Specialist;High;M59026;x
+59081;Head of Military Intelligence;ジェハンギル・ブハバ・ホミ;43;SL;Technical Specialist;Very High;M59079;x
+59082;Head of Military Intelligence;ステフェン・ホープ＝カーリル;45;SL;Naval Intelligence Specialist;Medium;L1356;x
+59083;Head of Military Intelligence;サー・ブワハドゥール・カンドラ;35;ML;Industrial Specialist;Medium;M59083;x
+59084;Head of Military Intelligence;リンゼー・ステファンソン;38;ML;Dismal Enigma;Medium;M59084;x
+59086;Head of Military Intelligence;ラース・ビハーリー・ボース;38;PA;Logistics Specialist;Very High;M59016;x
+59087;Head of Military Intelligence;アブドゥル・マジード・クワジャ;45;PA;Dismal Enigma;Medium;M59087;x
+59088;Chief of Staff;スバス・チャンドラ・ボース;35;SD;School of Psychology;Medium;L101019;x
+59089;Chief of Staff;アナンササヤナム・アイヤンガー;43;SD;School of Defence;High;M59044;x
+59090;Chief of Staff;チャールズ・T・M・ピゼー;46;SD;School of Manoeuvre;High;M59090;x
+59091;Chief of Staff;モハン・シン;35;SL;School of Mass Combat;Very Low;M59028;x
+59092;Chief of Staff;サルダール・バルデフ・シン;41;SL;School of Psychology;Medium;M59092;x
+59093;Chief of Staff;コダンデラ・カリアッパ;45;SL;School of Fire Support;High;M59093;x
+59094;Chief of Staff;ラージェンドラ・プラサード博士;35;ML;School of Defence;Low;M59031;x
+59095;Chief of Staff;コダンデラ・シマヤ;42;ML;School of Defence;Low;M59095;x
+59097;Chief of Staff;シャー・ナワズ・カーン;43;PA;School of Manoeuvre;Very High;M59017;x
+59099;Chief of Army;ラム・シン・サクール;35;SD;Guns and Butter Doctrine;Very High;M59099;x
+59100;Chief of Army;モハン・シン;41;SD;Decisive Battle Doctrine;Very Low;M59028;x
+59101;Chief of Army;コダンデラ・カリアッパ;35;SL;Elastic Defence Doctrine;Low;M59093;x
+59102;Chief of Army;サー・フランク・メセルヴィ;45;SL;Armoured Spearhead Doctrine;Very Low;M59102;x
+59103;Chief of Army;アーチボルド・ウェーヴェル;42;ML;Elastic Defence Doctrine;High;M59034;x
+59104;Chief of Army;バハルプール藩王クレイシ;36;PA;Static Defence Doctrine;Medium;M59040;x
+59107;Chief of Navy;バスカー・ソマン;35;SD;Decisive Naval Battle Doctrine;Medium;M59107;x
+59109;Chief of Navy;ラム・ダス・カタリ;47;SL;Power Projection Doctrine;Medium;M59019;x
+59110;Chief of Navy;W・H・グールド＝ブラッドフォード;42;ML;Open Seas Doctrine;Medium;L1349;x
+59112;Chief of Navy;ハリンダー・シン;46;PA;Indirect Approach Doctrine;Medium;M59112;x
+59113;Chief of Air Force;アーヤン・シン・ヴィブフサン;35;SD;Air Superiority Doctrine;Medium;M59113;x
+59115;Chief of Air Force;スブロト・ムケルジー;46;SD;Army Aviation Doctrine;Medium;M59115;x
+59116;Chief of Air Force;メハル・シン;35;SL;Army Aviation Doctrine;Medium;M59114;x
+59117;Chief of Air Force;アスピー・メルワン・エンジニア;43;SL;Naval Aviation Doctrine;Medium;M59117;x
+59119;Chief of Air Force;ラヴィンドラ・ダルシャン・シン;35;PA;Carpet Bombing Doctrine;High;M59118;x
+59121;Head of State;ラージェンドラ・プラサード博士;35;SL;Weary Stiffneck;High;M59031;x
+59122;Foreign Minister;インドール藩王イエスワンサロ;41;PA;Iron Fisted Brute;Medium;M59122;x
+59123;Minister of Armament;キサンガー藩王ビュラン;42;PA;Air to Ground Proponent;Very High;M59123;x
+59124;Minister of Security;バンガナパレ藩王アイ・カーン;36;PA;Prince of Terror;Very High;M59124;x
+59125;Minister of Security;モルビ藩王ワジ;44;PA;Compassionate Gentleman;Very High;M59125;x
+59126;Head of Military Intelligence;シッキム国王タシ・ナムギャル;36;PA;Political Specialist;Medium;M59126;x
+59127;Head of State;チャクラバルティ・ラージャゴーパーラーチャーリア;48;SD;Die-hard Reformer;High;M59127;x
+59128;Head of Government;ジャワハルラール・ネルー;45;SD;Political Protege;High;M59046;x
+59129;Foreign Minister;ガネッシュ・マヴァランカール;52;SD;Great Compromiser;High;M59129;x
+59130;Minister of Security;サルヴェパリ・ラダクリシュナン;51;SD;Compassionate Gentleman;Very High;M59130;x
+59160;Head of Government;スバス・チャンドラ・ボース;35;SD;Flamboyant Tough Guy;High;L101019;x
+59161;Head of State;スバス・チャンドラ・ボース;35;SD;Die-hard Reformer;High;L101019;x

@@ -1,0 +1,39 @@
+MAD;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+538001;Head of State;レオン・カイラ;36;SC;Resigned Generalissimo;High;M538001;x
+538002;Head of Government;レオン・カイラ;36;SC;Old General;High;M538001;x
+538003;Foreign Minister;ピエール・ジャン・エルバンジェ;36;SC;Apologetic Clerk;High;M538003;x
+538004;Minister of Armament;フランソワ・ド・マントン;36;SC;Resource Industrialist;Medium;M538004;x
+538005;Minister of Security;アンリ・マニガール;36;SC;Crime Fighter;Medium;M538005;x
+538006;Head of Military Intelligence;アルマン・アネ;36;SC;Industrial Specialist;Medium;M538006;x
+538007;Chief of Staff;アンリ・アミエル;36;SC;School of Manoeuvre;Medium;M538007;x
+538008;Chief of Army;アンリ・アミエル;36;SC;Armoured Spearhead Doctrine;Medium;M538007;x
+538009;Chief of Navy;ジョルジュ・ド・バルベジエール;36;SC;Base Control Doctrine;Medium;M538009;x
+538010;Chief of Air Force;マクス・ゲジ;36;SC;Naval Aviation Doctrine;Medium;M538010;x
+538011;Head of State;アルマン・アネ;39;SL;Barking Buffoon;High;M538006;x
+538012;Head of State;ポール・ル・ジャンティロム;40;SC;Pig-headed Isolationist;High;L24108;x
+538013;Head of State;ピエール・ド・サン＝マール;43;SL;Die-hard Reformer;High;M535007;x
+538014;Head of State;マルセル・ド・コペ;46;SL;Popular Figurehead;High;M538014;x
+538015;Head of State;フィリベール・チラナナ;36;PA;Insignificant Layman;High;M538015;x
+538016;Head of Government;アルマン・アネ;39;SL;Political Protege;High;M538006;x
+538017;Head of Government;ポール・ル・ジャンティロム;40;SC;Flamboyant Tough Guy;High;L24108;x
+538018;Head of Government;ピエール・ド・サン＝マール;43;SL;Smiling Oilman;High;M535007;x
+538019;Head of Government;マルセル・ド・コペ;46;SL;Backroom Backstabber;High;M538014;x
+538020;Head of Government;フィリベール・チラナナ;36;PA;Naive Optimist;High;M538015;x
+538021;Foreign Minister;ルネ・ルモワンヌ;42;SL;Great Compromiser;High;M538021;x
+538022;Foreign Minister;ジャン・ジョール・ラザフィンドラコト;36;PA;Biased Intellectual;High;M538022;x
+538023;Minister of Armament;ポール・ヴィベール;41;SL;Submarine Proponent;Medium;M538023;x
+538024;Minister of Armament;ラミリソン・ランドリアマンピアニナ;36;PA;Tank Proponent;Medium;M538024;x
+538025;Minister of Armament;リヴァ・ラハリソン;43;PA;laissez-faire capitalist;Medium;M538025;x
+538026;Minister of Security;ジャン・ピエール・ガブリエル;43;SL;Efficient Sociopath;Medium;M538026;x
+538027;Minister of Security;ウジェーヌ・ラコトンドラマリ;36;PA;Silent Lawyer;Medium;M538027;x
+538028;Head of Military Intelligence;マルセル・ド・コペ;43;SL;Logistics Specialist;Medium;M538014;x
+538029;Head of Military Intelligence;ウルモン・L・ジャム;36;PA;Dismal Enigma;Medium;M538029;x
+538030;Chief of Staff;ポール・ル・ジャンティロム;40;SC;School of Mass Combat;Medium;L24108;x
+538031;Chief of Staff;ジョゼフ・ラコトンドランドリア;36;PA;School of Fire Support;Medium;M538031;x
+538032;Chief of Army;ピエール・ド・サン＝マール;42;SL;Decisive Battle Doctrine;Medium;M535007;x
+538033;Chief of Army;ラフェノ・ファンジャヴァ;36;PA;Armoured Spearhead Doctrine;Medium;M538033;x
+538034;Chief of Navy;ジャン＝マリ・ケルヴィル;42;SL;Open Seas Doctrine;Medium;M538034;x
+538035;Chief of Navy;オリヴィエ・ランドリアナンテナイナ;36;PA;Decisive Naval Battle Doctrine;Medium;M538035;x
+538036;Chief of Air Force;マクス・アンドローエ;44;SL;Carpet Bombing Doctrine;Medium;M538036;x
+538037;Chief of Air Force;ソロモン・ラベマノエラ;36;PA;Vertical Envelopment Doctrine;Medium;M538037;x

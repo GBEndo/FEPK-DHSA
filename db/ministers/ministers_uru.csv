@@ -1,0 +1,91 @@
+URU;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+41001;Head of State;ガブリエル・テラ;36;PA;Powerhungry Demagogue;High;M41001;x
+41002;Head of Government;ガブリエル・テラ;36;PA;Smiling Oilman;High;M41001;x
+41003;Foreign Minister;ホセ・エスパルテル;36;PA;Iron Fisted Brute;Medium;M41003;x
+41004;Minister of Armament;アルフレド・バルドミル;36;PA;Military Entrepreneur;Medium;M41004;x
+41005;Minister of Security;ハインツ・グロッケンバーガー;36;PA;Prince of Terror;Medium;M41005;x
+41006;Head of Military Intelligence;クリスティアノ・ピラグイ・トレリェス;36;PA;Logistics Specialist;Medium;M41006;x
+41007;Chief of Staff;マヌエル・エインス・アスプルア;36;PA;School of Fire Support;Medium;M41007;x
+41008;Chief of Army;ホルヘ・エリオ・メンドーサ;36;PA;Static Defence Doctrine;Medium;M41008;x
+41009;Chief of Navy;カルロス・ジャクソン・ウリベ;36;PA;Decisive Naval Battle Doctrine;Medium;M41009;x
+41010;Chief of Air Force;コスメ・アルバレス・ベリッソ;36;PA;Air Superiority Doctrine;Medium;M41010;x
+41031;Head of State;アルフレド・バルドミル;38;SC;Resigned Generalissimo;High;M41004;x
+41032;Head of State;A・ドレス・グスタボ;38;SD;Insignificant Layman;High;M41032;x
+41033;Head of State;ファン・デ・アメサガ;43;ML;Benevolent Gentleman;High;M41033;x
+41034;Head of State;バルタサル・ブルン;43;SD;Weary Stiffneck;High;M41034;x
+41035;Head of State;トマス・ベレッタ・ガンドルフォ;47;SL;Die-hard Reformer;High;M41035;x
+41036;Head of State;ルイス・コンラド・バリェ・ベレス;47;LWR;Popular Figurehead;High;M41036;x
+41037;Head of Government;アルフレド・バルドミル;38;SC;Old General;High;M41004;x
+41038;Head of Government;A・ドレス・グスタボ;38;SD;Happy Amateur;High;M41032;x
+41039;Head of Government;ファン・デ・アメサガ;43;ML;Corporate Suit;High;M41033;x
+41040;Head of Government;バルタサル・ブルン;43;SD;Old Admiral;High;M41034;x
+41041;Head of Government;トマス・ベレッタ・ガンドルフォ;47;SL;Flamboyant Tough Guy;High;M41035;x
+41042;Head of Government;ルイス・コンラド・バリェ・ベレス;47;LWR;Naive Optimist;High;M41036;x
+41043;Foreign Minister;アルベルト・グアニ;38;SC;The Cloak N Dagger Schemer;Medium;M41043;x
+41044;Foreign Minister;バルタサル・ブルン;38;SD;Biased Intellectual;Medium;M41034;x
+41045;Foreign Minister;エクトル・アルベルト・ヘロナ;43;ML;Iron Fisted Brute;Medium;M41045;x
+41046;Foreign Minister;ワシントン・ベルトラン;43;SD;Ideological Crusader;Medium;M41046;x
+41047;Foreign Minister;ホセ・セラト;47;SL;Apologetic Clerk;Medium;M41047;x
+41048;Foreign Minister;エドゥアルド・ロドリゲス・ラレタ;47;SD;Great Compromiser;Medium;M41048;x
+41049;Foreign Minister;エミリオ・フルゴニ;47;LWR;The Cloak N Dagger Schemer;Medium;M41021;x
+41050;Minister of Armament;イグナシオ・フステ・モラレス;37;PA;laissez-faire capitalist;Medium;M41050;x
+41051;Minister of Armament;バレンティン・ゴメス;38;SC;Strategic Air Proponent;Medium;M41051;x
+41052;Minister of Armament;レオポルド・C・アゴリオ;38;SD;Theoretical Scientist;Medium;M41052;x
+41053;Minister of Armament;ビットリオ・アマト・マッソ;39;ML;Tank Proponent;Medium;M41053;x
+41054;Minister of Armament;ホルヘ・エリオ・メンドーサ;42;SC;Infantry Proponent;Medium;M41008;x
+41055;Minister of Armament;ホアキン・ガルシア・サンチェス;43;ML;Air to Ground Proponent;Medium;M41055;x
+41056;Minister of Armament;カルロス・ジャクソン・ウリベ;43;SD;Battle Fleet Proponent;Medium;M41009;x
+41057;Minister of Armament;エルネスト・サンチェス・エリソンド;44;SL;Air Superiority Proponent;Medium;M41057;x
+41058;Minister of Armament;フリオ・セサル・グラウエル;47;SL;Resource Industrialist;Medium;M41058;x
+41059;Minister of Armament;カルロス・ネベス・オチョア;37;LWR;Submarine Proponent;Medium;M41059;x
+41060;Minister of Security;パウロ・オルテガ・フルスシ;37;PA;Back Stabber;Medium;M41060;x
+41061;Minister of Security;オラシオ・アレドンド;38;SC;Man of the People;Medium;M41061;x
+41062;Minister of Security;A・ドレス・グスタボ;38;SD;Prince of Terror;Medium;M41032;x
+41063;Minister of Security;マリオ・カッシノニ;43;ML;Silent Lawyer;Medium;M41063;x
+41064;Minister of Security;ファン・カルロス・ブランコ;43;SD;Compassionate Gentleman;Medium;M41064;x
+41065;Minister of Security;アルベルト・ドミンゲス・カンポラ;44;SL;Prince of Terror;Medium;M41065;x
+41066;Minister of Security;アンドレス・パチェコ;47;SL;Efficient Sociopath;Medium;M41066;x
+41067;Minister of Security;ホセ・ペドロ・バレラ;47;SD;Crime Fighter;Medium;M41067;x
+41068;Head of Military Intelligence;アントニオ・デ・ララ・リバス;36;PA;Industrial Specialist;Medium;M41068;x
+41069;Head of Military Intelligence;フリオ・T・フェルナンデス;37;SC;Technical Specialist;Medium;M41069;x
+41070;Head of Military Intelligence;エンリケ・モウティシュ;38;SC;Industrial Specialist;Medium;M41070;x
+41071;Head of Military Intelligence;エンリケ・イソバ・アルバレス;38;SD;Technical Specialist;Medium;M41026;x
+41072;Head of Military Intelligence;フリオ・エスカロナ・バスケス;43;ML;Dismal Enigma;Medium;M41072;x
+41073;Head of Military Intelligence;イポリト・ガリナル;43;SD;Logistics Specialist;Medium;M41073;x
+41074;Head of Military Intelligence;アンドレス・トルエバ・マルティネス;47;SL;Technical Specialist;Medium;M41074;x
+41075;Head of Military Intelligence;ハメス・マクファルラネ・ルビオ;47;LWR;Industrial Specialist;Medium;M41075;x
+41077;Chief of Staff;カンティド・キンティオ・レイエス;38;SD;School of Defence;Medium;M41077;x
+41078;Chief of Staff;ファン・フランキ・フランケ;43;ML;School of Manoeuvre;Medium;M41078;x
+41079;Chief of Staff;フリオ・セサル・バドラ;47;SL;School of Psychology;Medium;M41027;x
+41081;Chief of Army;エンリコ・アマンシアス・ロドリゲス;38;SC;Elastic Defence Doctrine;Medium;M41081;x
+41082;Chief of Army;カンティド・キンティオ・レイエス;38;SD;Static Defence Doctrine;Medium;M41077;x
+41083;Chief of Army;エクトル・ロペス・カマラ;43;ML;Guns and Butter Doctrine;Medium;M41083;x
+41085;Chief of Army;エレアサル・ディアス・カミナテ;47;SL;Decisive Battle Doctrine;Medium;M41085;x
+41088;Chief of Navy;ラファエル・マルケス・アヤラ;38;SD;Base Control Doctrine;Medium;M41029;x
+41089;Chief of Navy;フランシスコ・スアレス・ビリャブランコ;43;ML;Open Seas Doctrine;Medium;M41089;x
+41090;Chief of Navy;カルロス・ネベス・オチョア;43;SD;Indirect Approach Doctrine;Medium;M41059;x
+41091;Chief of Navy;A・マルティン・デ・ラ・フロレス;47;SL;Power Projection Doctrine;Medium;M41091;x
+41092;Chief of Navy;クラウデリオ・ビオ・バルデス;47;SD;Open Seas Doctrine;Medium;M41092;x
+41093;Chief of Air Force;バレンティン・ゴメス;38;SC;Carpet Bombing Doctrine;Medium;M41051;x
+41094;Chief of Air Force;アルバロ・レドン・グティエレス;38;SD;Air Superiority Doctrine;Medium;M41030;x
+41095;Chief of Air Force;オリンド・オヘト・バレラ;43;ML;Army Aviation Doctrine;Medium;M41095;x
+41096;Chief of Air Force;エルネスト・サンチェス・エリソンド;43;SD;Army Aviation Doctrine;Medium;M41057;x
+41097;Chief of Air Force;A・マルティン・デ・ラ・フロレス;47;SL;Naval Aviation Doctrine;Medium;M41091;x
+41098;Chief of Air Force;マヌエル・レドンド・ガルバン;47;LWR;Vertical Envelopment Doctrine;Medium;M41098;x
+41011;Head of State;アベラルド・マルティネス;36;FA;Stern Imperialist;High;M41011;x
+41012;Head of Government;アベラルド・マルティネス;36;FA;Old Admiral;High;M41011;x
+41013;Foreign Minister;ルイス・サンティアゴ・レグエラ;36;FA;The Cloak N Dagger Schemer;Medium;M41013;x
+41014;Minister of Armament;アベラルド・ディアス・アルバレス;36;FA;Infantry Proponent;Medium;M41014;x
+41015;Minister of Security;ロベルト・アコスタ・ディエス;36;FA;Crime Fighter;Medium;M41015;x
+41016;Head of Military Intelligence;ルイ・ソロ・コンティオニ;36;FA;Industrial Specialist;Medium;M41016;x
+41017;Chief of Staff;テオ・ブカルディ・ラモス;36;FA;School of Manoeuvre;Medium;M41017;x
+41018;Chief of Army;テオ・ブカルディ・ラモス;36;FA;Elastic Defence Doctrine;Medium;M41017;x
+41019;Chief of Navy;エクトル・ボニリャ・ゴメス;36;FA;Base Control Doctrine;Medium;M41019;x
+41020;Chief of Air Force;フランシスコ・カスティリャ・パレデス;36;FA;Army Aviation Doctrine;Medium;M41020;x
+41021;Head of State;エミリオ・フルゴニ;36;LWR;Autocratic Charmer;High;M41021;x
+41022;Head of Government;エミリオ・フルゴニ;36;LWR;Ambitious Union Boss;High;M41021;x
+41023;Foreign Minister;カリクスト・アロヨ・タバオルダ;36;LE;Great Compromiser;Medium;M41023;x
+41024;Minister of Armament;ラモン・メネンデス・スリス;36;LE;Infantry Proponent;Medium;M41024;x
+41025;Minister of Security;ヘスス・メネンデス・スリス;36;LWR;Back Stabber;Medium;M41025;x
+41099;Head of State;アンドレス・トルエバ・マルティネス;52;SL;Pig-headed Isolationist;Medium;M41074;x

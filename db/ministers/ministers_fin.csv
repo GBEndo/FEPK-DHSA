@@ -1,0 +1,137 @@
+FIN;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+29001;Head of State;ペール・E・スヴェンヒュー;36;SC;Pig-headed Isolationist;High;M29001;x
+29002;Head of Government;トイヴォ・M・キヴィマキ;36;SC;Silent Workhorse;High;M29002;x
+29003;Foreign Minister;アンティ・V・ハクツェル;36;SC;Biased Intellectual;Medium;M29003;x
+29004;Minister of Armament;アービ・A・オクサラ;36;SC;Resource Industrialist;Medium;M29004;x
+29005;Minister of Security;ユーリア・W・プハッカ;36;SC;Silent Lawyer;Medium;M29005;x
+29006;Head of Military Intelligence;エスコ・リエキ;36;SC;Dismal Enigma;High;M29006;x
+29007;Chief of Staff;K・L・オーシュ;36;SC;School of Manoeuvre;High;M29007;x
+29008;Chief of Army;ユーゴ・オステルマン;36;SC;Elastic Defence Doctrine;Medium;M29008;x
+29009;Chief of Navy;ヴァイノ・ヴァルヴ;36;SC;Open Seas Doctrine;High;M29009;x
+29010;Chief of Air Force;ヤール・ルントクヴィスト;36;SC;Naval Aviation Doctrine;Very High;M29010;x
+29034;Head of State;カール・G・マンネルヘイム;44;SC;Resigned Generalissimo;High;M29034;x
+29035;Head of State;ユホ・K・パーシキヴィ;45;SD;Autocratic Charmer;High;M29035;x
+29036;Head of State;ペール・E・スヴェンヒュー;36;ML;Pig-headed Isolationist;High;M29001;x
+29039;Head of State;リスト・リュティ;40;ML;Weary Stiffneck;High;M29033;x
+29043;Head of State;キョスティ・カッリオ;37;SC;Stern Imperialist;High;M29032;x
+29044;Head of State;リスト・リュティ;39;SC;Weary Stiffneck;High;M29033;x
+29045;Head of State;リスト・リュティ;43;PA;Weary Stiffneck;High;M29033;x
+29047;Head of State;ユホ・K・パーシキヴィ;46;SC;Autocratic Charmer;High;M29035;x
+29048;Head of State;ブルーノ・サルミアラ;36;FA;Ruthless Powermonger;High;M29011;x
+29049;Head of State;オットー・ヴィレ・クーシネン;36;ST;Ruthless Powermonger;High;M29021;x
+29050;Head of Government;ヴァイノ・キヴィサロ;36;SD;Naive Optimist;High;M29050;x
+29051;Head of Government;アーホ・K・ケッコネン;43;ML;Backroom Backstabber;High;M29051;x
+29052;Head of Government;マウノ・ペカーラ;45;SD;Political Protege;High;M29052;x
+29053;Head of Government;キョスティ・カッリオ;36;ML;Corporate Suit;High;M29032;x
+29054;Head of Government;アイモ・カヤンデル;37;ML;Happy Amateur;High;M29054;x
+29055;Head of Government;ヤール・ルントクヴィスト;43;ML;Smiling Oilman;High;M29010;x
+29056;Head of Government;ユーリア・K・レイノ;46;ML;Naive Optimist;High;M29025;x
+29058;Head of Government;リスト・リュティ;39;SC;Backroom Backstabber;High;M29033;x
+29059;Head of Government;ヨハン・W・ランゲル;41;SC;Flamboyant Tough Guy;High;M29059;x
+29060;Head of Government;アンティ・V・ハクツェル;44;SC;Silent Workhorse;High;M29003;x
+29061;Head of Government;ユホ・K・パーシキヴィ;44;SC;Flamboyant Tough Guy;High;M29035;x
+29062;Head of Government;キョスティ・ヤーヴィネン;46;SC;Silent Workhorse;High;M29062;x
+29063;Head of Government;エドウィン・H・リンコミエス;43;SC;Naive Optimist;High;M29063;x
+29064;Head of Government;アーホ・J・カストレン;44;SC;Corporate Suit;High;M29064;x
+29065;Head of Government;ヴィートリ・コソラ;36;FA;Silent Workhorse;High;M29012;x
+29066;Head of Government;オットー・ヴィレ・クーシネン;39;ST;Flamboyant Tough Guy;High;M29021;x
+29067;Foreign Minister;アンセルミ・ピトカシルタ;36;SD;Apologetic Clerk;Medium;M29067;x
+29068;Foreign Minister;ヴァイノ・A・ターナー;39;SC;Ideological Crusader;Medium;M29068;x
+29069;Foreign Minister;ヴァイノ・キヴィサロ;43;SD;Iron Fisted Brute;Very High;M29050;x
+29071;Foreign Minister;エイノ・R・ホルスティ;36;ML;Great Compromiser;Medium;M29071;x
+29072;Foreign Minister;カール・V・ヴォイオンマ;38;ML;Apologetic Clerk;Medium;M29072;x
+29073;Foreign Minister;ユホ・E・エルコ;38;ML;Biased Intellectual;Medium;M29073;x
+29074;Foreign Minister;ロルフ・J・ウィティング;40;SC;The Cloak N Dagger Schemer;Medium;M29074;x
+29075;Foreign Minister;カール・J・エンケル;44;SD;Great Compromiser;Medium;M29070;x
+29076;Foreign Minister;アービ・A・オクサラ;36;SC;General Staffer;Medium;M29004;x
+29077;Foreign Minister;カール・ラムゼイ;43;SC;Iron Fisted Brute;Medium;M29077;x
+29078;Foreign Minister;ヨハン・W・ランゲル;46;SC;Biased Intellectual;High;M29059;x
+29079;Foreign Minister;ヒルジャ・リーピネン;36;FA;Ideological Crusader;High;M29013;x
+29080;Foreign Minister;オットー・ヴィレ・クーシネン;39;ST;Apologetic Clerk;Low;M29021;x
+29081;Foreign Minister;ヘラ・ウオリジョキ;42;ST;Great Compromiser;Low;M29081;x
+29082;Minister of Armament;ヴィルヤム・シニサロ;36;SD;Strategic Air Proponent;Medium;M29082;x
+29083;Minister of Armament;カール・A・ファゲルホルム;43;SD;Laissez-Faire Capitalist;Medium;M29083;x
+29084;Minister of Armament;マウノ・ペカーラ;44;SD;Theoretical Scientist;Medium;M29052;x
+29085;Minister of Armament;オットー・トイヴォネン;46;SD;Military Entrepreneur;Medium;M29085;x
+29086;Minister of Armament;ユホ・ニウカネン;36;ML;Administrative Genius;Medium;M29014;x
+29087;Minister of Armament;アイモ・カヤンデル;39;ML;Resource Industrialist;Medium;M29054;x
+29088;Minister of Armament;キョスティ・カッリオ;41;ML;Balanced Budget Economy;High;M29032;x
+29089;Minister of Armament;ヴァイノ・L・ヴァルヴ;44;ML;Military Entrepreneur;Medium;M29009;x
+29090;Minister of Armament;ヤール・ルントクヴィスト;46;ML;Air to Sea Proponent;Very High;M29010;x
+29091;Minister of Armament;アンティ・V・ハクツェル;36;SC;Battle Fleet Proponent;Medium;M29003;x
+29092;Minister of Armament;ペール・E・スヴェンヒュー;36;SC;Tank Proponent;High;M29001;x
+29093;Minister of Armament;レオナルド・グランデル;39;SC;Laissez-Faire Capitalist;Medium;M29093;x
+29094;Minister of Armament;ユホ・K・パーシキヴィ;41;SC;Resource Industrialist;High;M29035;x
+29095;Minister of Armament;アーホ・J・カストレン;43;SC;Infantry Proponent;NA;M29064;x
+29096;Minister of Armament;エドウィン・H・リンコミエス;44;SC;Administrative Genius;Medium;M29063;x
+29097;Minister of Armament;ゲオルグ・A・デ・グリペンバーグ;46;SC;Strategic Air Proponent;High;M29097;x
+29098;Minister of Armament;カール・R・ウォルデン;44;PA;Resource Industrialist;Medium;M29098;x
+29099;Minister of Armament;ユホ・ニウカネン;36;FA;Tank Proponent;Medium;M29014;x
+29100;Minister of Armament;ヴィートリ・コソラ;41;FA;Infantry Proponent;Low;M29012;x
+29101;Minister of Armament;モーリッツ・ローゼンベルグ;39;ST;Resource Industrialist;Low;M29024;x
+29102;Minister of Security;アーホ・K・ケッコネン;36;ML;Compassionate Gentleman;Medium;M29051;x
+29103;Minister of Security;ユーゴ・エミル・アーテラ;43;SD;Prince of Terror;Medium;M29103;x
+29104;Minister of Security;ヴァルフリド・エスコラ;44;SD;Back Stabber;Medium;M29104;x
+29105;Minister of Security;オラヴィ・I・コヤラ;46;SD;Crime Fighter;Medium;M29105;x
+29106;Minister of Security;リカルド・ローレンツ;36;ML;Crime Fighter;Medium;M29106;x
+29107;Minister of Security;アーンスト・V・L・ヴォン・ボーン;41;ML;Silent Lawyer;Medium;M29107;x
+29108;Minister of Security;ヴァイノ・L・ヴァルヴ;43;ML;Compassionate Gentleman;Medium;M29009;x
+29109;Minister of Security;レオ・R・アーンルース;44;ML;Man of the People;Medium;M29109;x
+29110;Minister of Security;ユーリア・K・レイノ;45;ML;Efficient Sociopath;Medium;M29025;x
+29111;Minister of Security;カーロ・H・ヒリラ;46;ML;Prince of Terror;Medium;M29111;x
+29112;Minister of Security;トイヴォ・J・ホレリ;36;SC;Compassionate Gentleman;Medium;M29112;x
+29113;Minister of Security;エスコ・リエキ;37;SC;Crime Fighter;High;M29006;x
+29114;Minister of Security;ヨハン・W・ランゲル;39;SC;Man of the People;High;M29059;x
+29115;Minister of Security;キョスティ・ヤーヴィネン;43;SC;Silent Lawyer;Medium;M29062;x
+29116;Minister of Security;リスト・リュティ;46;SC;Back Stabber;High;M29033;x
+29117;Minister of Security;ヨウコ・イタラ;36;FA;Prince of Terror;Low;M29015;x
+29118;Minister of Security;ブルーノ・サルミアラ;43;FA;Back Stabber;Medium;M29011;x
+29119;Minister of Security;ユーリア・レイノ;39;ST;Man of the People;Low;M29025;x
+29120;Head of Military Intelligence;エドヴァルド・カヤラ;36;SD;Naval Intelligence Specialist;High;M29120;x
+29121;Head of Military Intelligence;ブルーノ・スヴィランタ;44;SD;Dismal Enigma;High;M29121;x
+29123;Head of Military Intelligence;ヤルマル・F・プロコープ;41;ML;Political Specialist;High;M29123;x
+29124;Head of Military Intelligence;ベルン・R・ヴォン・フリーン;43;ML;Technical Specialist;High;M29124;x
+29125;Head of Military Intelligence;ユーリア・W・プハッカ;36;SC;Dismal Enigma;Medium;M29005;x
+29126;Head of Military Intelligence;ヴァイノ・ヴァルヴ;39;SC;Naval Intelligence Specialist;High;M29009;x
+29127;Head of Military Intelligence;トイヴォ・M・キヴィマキ;43;SC;Logistics Specialist;High;M29002;x
+29128;Head of Military Intelligence;ゲオルグ・A・デ・グリペンバーグ;44;SC;Industrial Specialist;High;M29097;x
+29129;Head of Military Intelligence;ヴィルホ・アンナラ;36;FA;Dismal Enigma;Medium;M29016;x
+29130;Head of Military Intelligence;ヴィートリ・コソラ;44;FA;Industrial Specialist;Medium;M29012;x
+29131;Head of Military Intelligence;ツーレ・レヘン;39;ST;Political Specialist;High;M29026;x
+29132;Chief of Staff;レオナルド・グランデル;36;SD;School of Fire Support;Very High;M29093;x
+29136;Chief of Staff;ユーゴ・オステルマン;36;SC;School of Mass Combat;Medium;M29008;x
+29137;Chief of Staff;カール・G・マンネルへイム;39;SC;Snow Miracle;Very High;M29034;x
+29138;Chief of Staff;クルト・ワレニウス;36;FA;School of Psychology;High;M29017;x
+29139;Chief of Staff;アクセリ・アンティラ;39;ST;School of Mass Combat;Very High;M29027;x
+29140;Chief of Army;カール・ヴォイノンマ;36;SD;Guns and Butter Doctrine;Very High;M29140;x
+29144;Chief of Army;K・L・オーシュ;36;SC;Elastic Defence Doctrine;High;M29007;x
+29145;Chief of Army;カール・G・マンネルへイム;39;SC;Decisive Battle Doctrine;Very High;M29034;x
+29146;Chief of Army;ヴィルホ・ヘラネン;36;FA;Static Defence Doctrine;High;M29018;x
+29147;Chief of Army;アクセリ・アンティラ;39;ST;Guns and Butter Doctrine;Very High;M29027;x
+29148;Chief of Navy;クラエス・ホロラ;36;SD;Open Seas Doctrine;High;M29148;x
+29150;Chief of Navy;イーロ・ラホラ;36;SC;Power Projection Doctrine;High;M29150;x
+29151;Chief of Navy;ローリ・ティアイネン;36;FA;Decisive Naval Battle Doctrine;Medium;M29019;x
+29152;Chief of Navy;イーロ・ラホラ;39;ST;Indirect Approach Doctrine;Very High;M29029;x
+29153;Chief of Air Force;ヴァリオ・ポルヴァリ;36;SD;Army Aviation Doctrine;Very High;M29153;x
+29155;Chief of Air Force;トイヴォ・ソメルト;36;SC;Air Superiority Doctrine;Very High;M29155;x
+29156;Chief of Air Force;タウノ・ヴィルヤネン;36;FA;Army Aviation Doctrine;Medium;M29020;x
+29157;Chief of Air Force;アクセリ・アンティラ;39;ST;Army Aviation Doctrine;Very High;M29027;x
+29158;Foreign Minister;カール・J・エンケル;44;PA;Biased Intellectual;Medium;M29070;x
+29160;Head of Government;カール・R・ウォルデン;40;SC;Happy Amateur;Medium;M29098;x
+29161;Head of Government;エドウィン・H・リンコミエス;43;PA;Naive Optimist;High;M29063;x
+29162;Head of State;キョスティ・カッリオ;37;ML;Stern Imperialist;High;M29032;x
+29163;Head of State;カール・G・マンネルへイム;44;ML;Resigned Generalissimo;High;M29034;x
+29164;Head of Government;カール・A・ファゲルホルム;48;SD;Ambitious Union Boss;High;M29083;x
+29165;Minister of Armament;ラルフ・ヨハン・トルグレン;48;SD;Military Entrepreneur;Medium;M29165;x
+29166;Minister of Security;カール・A・ファゲルホルム;48;SD;Man of the People;Medium;M29083;x
+29167;Foreign Minister;オーケ・ヘンリク・ガルツ;50;ML;Apologetic Clerk;Medium;M29167;x
+29168;Foreign Minister;サカリ・S・トゥオミオヤ;51;ML;Biased Intellectual;Medium;M29168;x
+29169;Foreign Minister;アーホ・K・ケッコネン;52;ML;Iron Fisted Brute;Medium;M29051;x
+29170;Minister of Armament;オンニ・A・ヒルトゥネン;50;ML;Infantry Proponent;Very High;M29170;x
+29171;Minister of Armament;ヴィアノ・J・スクセライネン;51;ML;Administrative Genius;Very High;M29171;x
+29172;Minister of Armament;ヴィルヨ・ランタラ;52;ML;Laissez-Faire Capitalist;Very High;M29172;x
+29173;Chief of Staff;ヨハネス・シホヴォ;48;SL;School of Psychology;Very High;L9738;x
+29174;Chief of Army;カールロ・マルンベリ;47;SL;Armoured Spearhead Doctrine;Very High;L9723;x
+29175;Chief of Navy;オラヴィ・アルホ;48;SL;Indirect Approach Doctrine;Medium;L9757;x
+29176;Chief of Air Force;オラヴィ・サルコ;48;SL;Vertical Envelopment Doctrine;Very High;L9777;x

@@ -1,0 +1,333 @@
+#########################################################################
+#	FEPKDH_Olympics.txt
+#	FEPKDH用オリンピックイベント
+#########################################################################
+#id = 140000-		ベルリンオリンピック1936
+#id = 140010-		東京オリンピック1940
+#id = 140020-		（非史実）ヘルシンキオリンピック1948
+#id = 140025-		（非史実）ロンドンオリンピック1952
+#id = 140030-		ロンドンオリンピック1948
+#id = 140035-		ヘルシンキオリンピック1952
+#id = 140040-		メルボルンオリンピック1956
+#id = 140045-		ローマオリンピック1960
+#########################################################################
+#  ベルリンオリンピック（元60521）
+#########################################################################
+event = {
+	id = 140000	#60521
+	random = no
+	country = GER
+
+	trigger = {
+		AND = {
+			atwar = no
+			NOT = {
+				belligerence = { value = 20 }
+			}
+		}
+	}
+
+	name = "EVT_140000_NAME"
+	desc = "EVT_140000_DESC"
+	style = 0
+	picture = "olympic"
+
+	date = { day = 0 month = august year = 1936 }
+
+	action_a = {
+		name = "OK"
+		command = { type = dissent value = -5 }
+	}
+}
+#########################################################################
+#  東京オリンピック1940（元55001,7-9）
+#########################################################################
+event = { 
+	id = 140010	#55001
+	random = no
+	country = JAP
+
+	name = "EVT_140010_NAME"
+	desc = "EVT_140010_DESC"
+	style = 0
+	picture = "olympic"
+
+	date = { day = 0 month = august year = 1936 }
+
+	action_a = { #
+		name = "EVT_140010_ACTA"
+		ai_chance = 100
+		command = { type = domestic which = freedom value = 1  }
+		#command = { type = domestic which = interventionism value = 2  }
+		command = { type = money value = -100 }
+		command = { type = construct which = ic where = 1184 value = 1 }
+		command = { type = dissent value = -1 }
+	}
+	action_b = { #
+		ai_chance = 0
+		name = "EVT_140010_ACTB"
+		command = { type = dissent value = 1 }
+		command = { type = sleepevent which = 140011 } # 中止
+		command = { type = sleepevent which = 140012 } # 成功
+		command = { type = sleepevent which = 140013 } # 失敗
+	}
+}
+#########################################################################
+####################### 東京五輪中止 ###############################
+
+event = { 
+	id = 140011	#55007
+	random = no
+	country = JAP
+
+	trigger = {
+		event = 140010
+		OR = {
+			NOT = { government = democratic }	# 民主主義ではない
+			atwar = yes				# 戦争中
+		}
+	}
+
+	name = "EVT_140011_NAME"
+	desc = "EVT_140011_DESC"
+	style = 0
+	picture = "olympic"
+
+	date = { day = 1 month = january year = 1938 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1939 }
+
+	action_a = { #
+		name = "EVT_140011_ACTA"
+		command = { type = construct which = ic where = 1184 value = 1 }
+		command = { type = domestic which = freedom value = -1 }
+		command = { type = dissent value = 3 }
+		command = { type = sleepevent which = 140012 } # Success
+		command = { type = sleepevent which = 140013 } # Failure
+	}
+}
+#########################################################################
+####################### 東京五輪成功 ###############################
+
+event = { 
+	id = 140012	#55008
+	random = no
+	country = JAP
+
+	trigger = {
+		event = 140010
+		government = democratic			# 民主主義である
+		atwar = no				# 戦争中ではない
+	}
+
+	name = "EVT_140012_NAME"
+	desc = "EVT_140012_DESC"
+	style = 0
+	picture = "olympic"
+
+	date = { day = 20 month = september year = 1940 }
+
+	action_a = { #
+		name = "EVT_140012_ACTA"
+		command = { type = domestic which = freedom value = 1 }
+		command = { type = domestic which = free_market value = 1 }
+		command = { type = dissent value = -3 }
+		command = { type = sleepevent which = 140013 } # Failure
+	}
+}
+#########################################################################
+####################### 東京五輪失敗 ###############################
+
+event = { 
+	id = 140013
+	random = no
+	country = JAP
+
+	trigger = {
+		event = 140010
+	}
+	name = "EVT_140013_NAME"
+	desc = "EVT_140013_DESC"
+	style = 0
+	picture = "olympic"
+
+	date = { day = 6 month = october year = 1940 }
+
+	action_a = { #
+		name = "EVT_140013_ACTA"
+		command = { type = dissent value = 5 }
+	}
+}
+
+#########################################################################
+#  （枢軸勝利後）ヘルシンキオリンピック
+#########################################################################
+event = {
+	id = 140020
+	random = no
+	country = GER
+	trigger = {
+		atwar = no
+		NOT = { control = { province = 142 data = -2 } }	#ヘルシンキ
+		exists = VIC
+		exists = RUS
+	}
+	
+	date = { day = 0 month = March year = 1946 }
+	offset = 5
+	date = { day = 29 month = March year = 1946 }
+	
+	name = "EVT_140020_NAME"	#オリンピックの再興へ ― ヘルシンキオリンピック
+	desc = "EVT_140020_DESC"	#
+	picture = "olympic"
+	
+	action = {
+		name = "EVT_140020_ACTA"	#オリンピックとともに平和の訪れを歓ぼう！
+		ai_chance = 100
+		command = { type = money value = -100 }
+		command = { type = dissent value = -1 }
+		command = { type = relation which = FIN value = 50 }
+		command = { type = relation which = SCA value = 50 }
+		
+	}
+	action = {
+		name = "EVT_140020_ACTB"	#世界はまだ「平和の祭典」を受け入れられる状態ではない
+		ai_chance = 0
+		command = { type = relation which = FIN value = -20 }
+		command = { type = relation which = SCA value = -20 }
+		command = { type = sleepevent which = 140021 }
+	}
+}	
+
+event = {
+	id = 140021
+	tag = { FIN SCA }
+	trigger = {
+		control = { province = 142 data = -1 }
+		event = 140020
+	}
+	
+	date = { day = 0 month = March year = 1946 }
+	offset = 5
+	date = { day = 29 month = April year = 1946 }
+	
+	name = "EVT_140021_NAME"	#ヘルシンキオリンピック開催決定
+	desc = "EVT_140021_DESC"	#
+	
+	picture = "olympic"
+	
+	action = {
+		name = "EVT_140021_ACTA"	#素晴らしい！　急ぎ競技場の建設計画を建てよ！
+		ai_chance = 100
+		command = { type = money value = -100 }
+		command = { type = construct which = ic where = 142 value = 1 }
+		command = { type = dissent value = -1 }
+	}
+	action = {
+		name = "EVT_140021_ACTB"	#財政難につき辞退する
+		ai_chance = 0
+		command = { type = dissent value = 1 }
+		command = { type = sleepevent which = 140022 } #FIN
+		command = { type = sleepevent which = 140023 } #SCA
+	}
+}
+
+event = {
+	id = 140022
+	country = FIN
+	trigger = {
+		control = { province = 142 data = -1 }
+		event = 140021
+		atwar = no
+	}
+	picture = "olympic"
+
+	date = { day = 28 month = 6 year = 1948 }
+
+	name = "EVT_140022_NAME"	#ヘルシンキオリンピック
+	desc = "EVT_140022_DESC"	#
+
+	action = {
+		name = "EVT_140022_ACTA"	#素晴らしい！
+		command = { type = domestic which = freedom value = 1 }
+		command = { type = domestic which = free_market value = 1 }
+		command = { type = dissent value = -3 }
+	}
+}
+
+event = {
+	id = 140023
+	country = SCA
+	trigger = {
+		control = { province = 142 data = -1 }
+		event = 140022
+		atwar = no
+	}
+	picture = "olympic"
+
+	date = { day = 28 month = 6 year = 1948 }
+
+	name = "EVT_140022_NAME"	#ヘルシンキオリンピック
+	desc = "EVT_140023_DESC"	#
+
+	action = {
+		name = "EVT_140022_ACTA"	#素晴らしい！
+		command = { type = domestic which = freedom value = 1 }
+		command = { type = domestic which = free_market value = 1 }
+		command = { type = dissent value = -3 }
+	}
+}
+
+event = {
+	id = 140025
+	tag = { U73 ENG }
+	trigger = {
+		event = 140020	#ヘルシンキオリンピック会議
+		atwar = no
+		control = { province = 19 data = -1 }	#ロンドン
+	}
+	
+	name = "EVT_140025_NAME"	#ロンドンオリンピック
+	desc = "EVT_140025_DESC"	#1947年6月21日、国際オリンピック委員会（Internationale Olympische Komitee、IOK）の会議がストックホルムで開催され、今回の1952年オリンピックではアメリカとイギリスの競技チームのオリンピック参加と、ロンドンでの開催が決定された。彼らの参加は1936年以来、実に16年ぶりのことであった。第二次大戦からついに復興しつつあるイギリスでのオリンピック開催をドイツとフランスのIOKが決定したということは、（少なくとも見た目上）連合構成国と枢軸構成国の距離が縮まったことを示すものだ。
+	
+	date = { day = 18 month = July year = 1952 }
+	
+	action = {
+		name = "EVT_140025_ACTA"	#平和の訪れだ！
+		command = { type = dissent value = -3 }
+	}
+}
+
+#ロンドンオリンピック1948（GERあり、JAPあり）
+event = {
+	id = 140030
+	country = ENG
+	trigger = {
+		NOT = { 
+			atwar = GER
+			atwar = JAP
+			atwar = ENG
+		}
+		exists = GER
+		exists = JAP
+	}
+	
+	date = { day = 28 month = July year = 1948 }
+	
+	name = "EVT_140030_NAME"	#ロンドンオリンピック
+	desc = "EVT_140030_DESC"	#1939年6月、IOCは1944年のオリンピック会場としてロンドンを選定した。しかし、国際情勢の悪化は1944年にオリンピックを開催できるほど世界を平穏なものとはしてくれなかった。ゆえに、情勢が比較的安定したこの1948年6月に、ロンドンオリンピックは繰り下がって開催された。英独の対立は解決されてたとは言えないものの、いくつかの国際的な分岐点をすり抜けて、4年前よりは随分改善している。聖火は無事、イタリアからドイツとフランスをわたり英仏海峡を渡り、ロンドンへたどり着いた。我々は彼らと手をつなぐことが出来たのだ。
+	
+	action = {
+		name = "EVT_140030_ACTA"	#さあ、始めよう！
+		command = { type = dissent value = -5 }
+		command = { type = relation which = GER value = 30 }
+		command = { type = relation which = FRA value = 30 }
+		command = { type = relation which = VIC value = 30 }
+		command = { type = relation which = ITA value = 30 }
+	}
+}
+	
+
+#ロンドンオリンピック1948（GERなし、JAPあり）
+#ロンドンオリンピック1948（GERあり、JAPなし）
+#ロンドンオリンピック1948（GERなし、JAPなし、史実通り）

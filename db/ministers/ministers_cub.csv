@@ -1,0 +1,95 @@
+CUB;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+33001;Head of State;ホセ・バルネ・イ・ビナヘラス;36;ML;Insignificant Layman;High;M33001;x
+33002;Head of Government;ミゲル・ゴメス・イ・アリアス;36;ML;Naive Optimist;High;M33002;x
+33003;Foreign Minister;ホセ・バルネ・イ・ビナヘラス;36;ML;Iron Fisted Brute;Medium;M33001;x
+33004;Minister of Armament;カルロス・プリオ;36;ML;Administrative Genius;Low;M33004;x
+33005;Minister of Security;セルジオ・カルボ;36;ML;Compassionate Gentleman;Medium;M33005;x
+33006;Head of Military Intelligence;マヌエル・フェラーラ;36;ML;Dismal Enigma;Medium;M33006;x
+33007;Chief of Staff;フリオ・サンギリ;36;ML;School of Defence;Medium;M33007;x
+33008;Chief of Army;サルバドル・カスタネダ・カストロ;36;ML;Elastic Defence Doctrine;Medium;M33008;x
+33009;Chief of Navy;ロドリゴ・A・フエンテス;36;ML;Open Seas Doctrine;Medium;M33009;x
+33010;Chief of Air Force;ドミンゴ・R・デル・トロ;36;ML;Army Aviation Doctrine;High;M33010;x
+33031;Head of State;ミゲル・ゴメス・イ・アリアス;36;ML;Benevolent Gentleman;High;M33002;x
+33032;Head of State;ヘラルド・マチャド;40;ML;Die-hard Reformer;High;M33032;x
+33033;Head of State;フェデリコ・ラデロ・ブル;36;SD;Insignificant Layman;High;M33014;x
+33034;Head of State;フルヘンシオ・バティスタ;40;SC;Resigned Generalissimo;High;M33034;x
+33035;Head of State;ラモン・グラウ・サン・マルティン;44;PA;Popular Figurehead;High;M33011;x
+33036;Head of State;ファン・マルティネス＝ビリェラ;36;LWR;Powerhungry Demagogue;High;M33021;x
+33037;Head of State;カルロス・プリオ;44;LWR;Popular Figurehead;High;M33004;x
+33038;Head of Government;ヘラルド・マチャド;36;ML;Silent Workhorse;High;M33032;x
+33039;Head of Government;エドゥアルド・チバス;40;ML;Political Protege;High;M33013;x
+33040;Head of Government;エウヘニオ・モリネ・カストロ;44;ML;Corporate Suit;High;M33040;x
+33041;Head of Government;フルヘンシオ・バティスタ;36;SD;Old General;High;M33034;x
+33042;Head of Government;カルロス・メンディエタ;40;SC;Flamboyant Tough Guy;High;M33042;x
+33043;Head of Government;フルヘンシオ・バティスタ;44;PA;Old General;High;M33034;x
+33044;Head of Government;アントニオ・G・オルメス;36;LWR;Naive Optimist;High;M33022;x
+33045;Head of Government;ホセ・イリサリ;41;LWR;Political Protege;High;M33023;x
+33046;Foreign Minister;ホルヘ・ルイス・エチャルテ;36;ML;The Cloak N Dagger Schemer;High;M33046;x
+33047;Foreign Minister;エドゥアルド・チバス;40;ML;Biased Intellectual;High;M33013;x
+33048;Foreign Minister;カルロス・メンディエタ;44;ML;Iron Fisted Brute;Medium;M33042;x
+33049;Foreign Minister;ホセ・マヌエル・コルティナ;36;SD;The Cloak N Dagger Schemer;Medium;M33049;x
+33050;Foreign Minister;ファン・レモス・イ・ルビオ;37;SD;General Staffer;Medium;M33050;x
+33051;Foreign Minister;ミゲル・カンパ・イ・カラベダ;39;SD;Ideological Crusader;Medium;M33051;x
+33052;Foreign Minister;ホセ・マヌエル・コルティナ;40;SC;The Cloak N Dagger Schemer;Medium;M33049;x
+33053;Foreign Minister;ホセ・アグスティン・マルティネス;42;SC;Biased Intellectual;Medium;M33053;x
+33054;Foreign Minister;E・サンティアゴ・サントベニオ;43;SC;Iron Fisted Brute;Medium;M33054;x
+33055;Foreign Minister;ホルヘ・マナシュ;44;SC;Apologetic Clerk;Medium;M33055;x
+33057;Foreign Minister;グスタボ・クエルボ・ルビオ;45;PA;Iron Fisted Brute;Medium;M33057;x
+33058;Foreign Minister;アルベルト・イノセンテ・アルバレス;46;PA;Great Compromiser;Medium;M33058;x
+33059;Foreign Minister;ホセ・イリサリ;36;LWR;Biased Intellectual;Very Low;M33023;x
+33060;Foreign Minister;カルロス・プリオ;44;LWR;Great Compromiser;Medium;M33004;x
+33061;Minister of Armament;エセキエル・ガルシア・エンセナ;36;ML;Administrative Genius;Medium;M33061;x
+33062;Minister of Armament;ミゲル・ゴメス・イ・アリアス;40;ML;laissez-faire capitalist;Medium;M33002;x
+33063;Minister of Armament;エドゥアルド・チバス;44;ML;Theoretical Scientist;Low;M33013;x
+33064;Minister of Armament;フルヘンシオ・バティスタ;36;SD;Corrupt Kleptocrat;Medium;M33034;x
+33065;Minister of Armament;ホセ・オルランド・フェレル;37;SD;Battle Fleet Proponent;Medium;M33065;x
+33066;Minister of Armament;ポリフィリオ・フランカ;40;SC;Corrupt Kleptocrat;Medium;M33066;x
+33067;Minister of Armament;フェデリコ・L・ブル;41;SC;Infantry Proponent;Low;M33014;x
+33068;Minister of Armament;A・デ・アグエロ・イ・ベタンクール;43;SC;Air to Ground Proponent;Medium;M33068;x
+33069;Minister of Armament;マヌエル・フェラーラ;44;PA;Corrupt Kleptocrat;Medium;M33006;x
+33070;Minister of Armament;アルベルト・オファリル;46;PA;Administrative Genius;Medium;M33070;x
+33071;Minister of Armament;カルロス・プリオ;36;LWR;Administrative Genius;High;M33004;x
+33072;Minister of Armament;ファン・マルティネス・ビリェラ;40;LWR;Submarine Proponent;Medium;M33021;x
+33073;Minister of Armament;ミゲル・カンパ・イ・カラベダ;44;LWR;Air to Ground Proponent;Medium;M33051;x
+33074;Minister of Security;エウヘニオ・モリネ・カストロ;36;ML;Crooked Kleptocrat;Medium;M33040;x
+33075;Minister of Security;ヘラルド・マチャド;40;ML;Efficient Sociopath;Medium;M33032;x
+33076;Minister of Security;カルロス・エビア;44;ML;Crime Fighter;High;M33015;x
+33077;Minister of Security;P・デ・ヘスス・カンディエ;36;SD;Back Stabber;Medium;M33077;x
+33078;Minister of Security;A・オデロ・イ・ガルシア;39;SD;Compassionate Gentleman;Medium;M33078;x
+33079;Minister of Security;ポリフィリオ・フランカ;40;SC;Crooked Kleptocrat;Medium;M33066;x
+33080;Minister of Security;C・デ・ラ・トリエンテ・イ・ペラサ;42;SC;Man of the People;Medium;M33080;x
+33081;Minister of Security;ギリェルモ・ポルテラ;43;SC;Back Stabber;Medium;M33081;x
+33082;Minister of Security;フルヘンシオ・バティスタ;44;PA;Crooked Kleptocrat;High;M33034;x
+33083;Minister of Security;アントニオ・S・デ・ブスタメンテ;46;PA;Crime Fighter;Medium;M33083;x
+33084;Minister of Security;サンダリオ・フンコ;36;LWR;Prince of Terror;Very Low;M33025;x
+33085;Minister of Security;ガブリエル・デ・ラ・カンパ・イ・クフィ;44;LWR;Man of the People;Low;M33085;x
+33086;Head of Military Intelligence;ホセ・バルネ・イ・ビナヘラス;36;ML;Political Specialist;Medium;M33001;x
+33087;Head of Military Intelligence;ファン・バルデス・イラリオ;40;ML;Logistics Specialist;Medium;M33016;x
+33088;Head of Military Intelligence;ラファエル・マルティネス・オルティス;44;ML;Dismal Enigma;Medium;M33088;x
+33089;Head of Military Intelligence;ラモン・グラウ・サン・マルティン;36;SD;Political Specialist;Low;M33011;x
+33090;Head of Military Intelligence;カルロス・エビア;38;SD;Industrial Specialist;Low;M33015;x
+33091;Head of Military Intelligence;ポリフィリオ・フランカ;40;SC;Dismal Enigma;Medium;M33066;x
+33092;Head of Military Intelligence;フェデリコ・ラデロ・ブル;44;PA;Technical Specialist;Medium;M33014;x
+33093;Head of Military Intelligence;ファン・バルデス・イラリオ;46;PA;Logistics Specialist;Medium;M33016;x
+33094;Head of Military Intelligence;アントニオ・G・オルメス;36;LWR;Dismal Enigma;Very Low;M33022;x
+33095;Head of Military Intelligence;フィデル・カストロ;44;LWR;Political Specialist;Very Low;M33095;x
+33097;Chief of Staff;フルヘンシオ・バティスタ;36;SC;School of Mass Combat;Undying;M33097;x
+33100;Chief of Staff;ファン・ブラス・エルナンデス;36;LWR;School of Manoeuvre;Medium;M33027;x
+33101;Chief of Staff;フィデル・カストロ;44;LWR;School of Mass Combat;Very Low;M33095;x
+33103;Chief of Army;フルヘンシオ・バティスタ;36;SC;Decisive Battle Doctrine;Undying;M33097;x
+33106;Chief of Army;ファン・ブラス・エルナンデス;36;LWR;Elastic Defence Doctrine;Medium;M33027;x
+33107;Chief of Army;ラウル・カストロ;44;LWR;Static Defence Doctrine;Medium;M33107;x
+33109;Chief of Navy;アンヘル・ゴンサレス;36;SC;Open Seas Doctrine;Medium;M33109;x
+33112;Chief of Navy;サンダリオ・フンコ;36;LWR;Open Seas Doctrine;Medium;M33025;x
+33114;Chief of Air Force;エンリケ・C・ロラス;36;ML;Naval Aviation Doctrine;Medium;M33020;x
+33115;Chief of Air Force;セルジオ・カルボ;44;ML;Vertical Envelopment Doctrine;Medium;M33005;x
+33118;Chief of Air Force;パラエス・メネンデス;44;PA;Air Superiority Doctrine;High;M33118;x
+33119;Chief of Air Force;アルバロ・P・キンタナ;36;LWR;Air Superiority Doctrine;High;M33030;x
+33120;Head of Military Intelligence;ガブリエル・デ・ラ・カンパ・イ・クフィ;41;LWR;Technical Specialist;Low;M33085;x
+33121;Head of Government;ラウル・ロペス・イ・カスティージョ;47;SC;Happy Amateur;High;M33121;x
+33122;Head of Government;マヌエル・デ・バロナ・ロレド;48;SC;Flamboyant Tough Guy;High;M33122;x
+33123;Head of Government;フェリックス・ランチス・サンチェス;50;SC;Political Protege;High;M33123;x
+33124;Head of Government;オスカル・イ・ロペス=マルティネス;51;SC;Naive Optimist;High;M33124;x
+33125;Foreign Minister;カルロス・プリオ・ソカレス;47;SC;Ideological Crusader;Medium;M33125;x
+33126;Minister of Security;アンドレス・ペレス・ショーモン;51;SC;Prince of Terror;Medium;M33126;x

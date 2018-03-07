@@ -1,0 +1,14 @@
+# 人的資源減少
+
+upgrading = 0.4 #この機に更改
+reinforcement = 0.10	
+
+front = { 
+
+	recklessness 		= 0 # 0-3
+	distrib_vs_ai 		= op_defensive
+	distrib_vs_human 	= op_defensive
+
+      	enemy_handicap = { } 
+      	passivity = { } 
+}

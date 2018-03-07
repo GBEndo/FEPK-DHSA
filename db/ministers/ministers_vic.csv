@@ -1,0 +1,44 @@
+VIC;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+57001;Head of State;フィリップ・ペタン;36;PA;Hero Of Werdun;High;M57001;x
+57002;Head of Government;ジャン＝フランソワ・ダルラン;36;PA;Old Admiral;High;M57002;x
+57003;Foreign Minister;ポール・ボードアン;36;PA;Iron Fisted Brute;Medium;M57003;x
+57004;Minister of Armament;マリウス・ベルリエ;36;PA;Laissez-Faire Capitalist;Medium;M57004;x
+57005;Minister of Security;ジョセフ・バルテルミ;36;PA;Silent Lawyer;Medium;M57005;x
+57006;Head of Military Intelligence;ルネ・ブスケ;36;PA;Technical Specialist;Medium;M57006;x
+57007;Chief of Staff;シャルル・ユンツィガー;36;PA;School of Defence;Medium;M57007;x
+57008;Chief of Army;マキシム・ウェイガン;36;PA;Elastic Defence Doctrine;Medium;M57008;x
+57009;Chief of Navy;ジャン＝フランソワ・ダルラン;36;PA;Decisive Naval Battle Doctrine;Low;M57002;x
+57010;Chief of Air Force;ジャン・マリー・ベルゲレ;36;PA;Army Aviation Doctrine;Medium;M57010;x
+57011;Head of Government;ピエール・ラヴァル;42;PA;Flamboyant Tough Guy;High;M57011;x
+57012;Foreign Minister;ジャン＝フランソワ・ダルラン;41;PA;General Staffer;Low;M57002;x
+57013;Foreign Minister;シャルル・アンドレ・ウェイス;41;PA;Iron Fisted Brute;Low;M57013;x
+57014;Foreign Minister;アルベール・トーマス;41;PA;The Cloak N Dagger Schemer;Low;M57014;x
+57015;Foreign Minister;ピエール・ラヴァル;42;PA;Apologetic Clerk;Medium;M57011;x
+57016;Foreign Minister;ガブリエル・ハノトー;42;PA;Ideological Crusader;Medium;M57016;x
+57017;Foreign Minister;エンリ・デ・ジョウヴェネル;43;PA;Biased Intellectual;Medium;M57017;x
+57018;Foreign Minister;アーン・レロイ;43;PA;Great Compromiser;Medium;M57018;x
+57019;Minister of Armament;トゥリオ・フランコ・フランコ;41;PA;Resource Industrialist;Medium;M57019;x
+57020;Minister of Armament;ルシエン・ラカゼ;41;PA;Military Entrepreneur;Medium;M57020;x
+57021;Minister of Armament;ロベルト・ハース;42;PA;Laissez-Faire Capitalist;Medium;M57021;x
+57022;Minister of Armament;ステファン・オーファン;42;PA;Air to Sea Proponent;Medium;M57022;x
+57023;Minister of Armament;ポール・パンルヴェ;43;PA;Administrative Genius;Medium;M57023;x
+57024;Minister of Armament;ポール・マントー;43;PA;Theoretical Scientist;Medium;M57024;x
+57025;Minister of Security;ジャン＝フランソワ・ダルラン;40;PA;Back Stabber;Low;M57002;x
+57026;Minister of Security;エドゥアール・ヘリオ;41;PA;Silent Lawyer;Low;M57026;x
+57027;Minister of Security;ピエール・ラヴァル;42;PA;Prince of Terror;Medium;M57011;x
+57028;Minister of Security;マリウス・ヴァイプル;42;PA;Man of the People;Medium;M57028;x
+57029;Minister of Security;ルネ・ブスケ;42;PA;Compassionate Gentleman;Medium;M57006;x
+57030;Minister of Security;ラファエル・アリベルト;43;PA;Crime Fighter;Medium;M57030;x
+57031;Minister of Security;ゴウファ・デ・ラプラデル;43;PA;Efficient Sociopath;Medium;M57031;x
+57032;Head of Military Intelligence;ピエール・ラヴァル;42;PA;Political Specialist;Medium;M57011;x
+57033;Chief of Staff;ジャン＝フランソワ・ダルラン;41;PA;School of Psychology;Low;M57002;x
+57034;Chief of Staff;ウジェーヌ・ブリドー;42;PA;School of Mass Combat;Medium;M57034;x
+57035;Chief of Army;ウジェーヌ・ブリドー;41;PA;Decisive Battle Doctrine;Medium;M57034;x
+57036;Chief of Navy;ジャン・エステヴァ;42;PA;Indirect Approach Doctrine;Medium;M57036;x
+57037;Chief of Navy;ジャン・マリー・アブリアル;43;PA;Open Seas Doctrine;Medium;M57037;x
+57038;Chief of Air Force;モーリス・ジャネキーン;42;PA;Carpet Bombing Doctrine;Medium;M57038;x
+57039;Head of Government;エンリ・デ・ジョウヴェネル;45;PA;Silent Workhorse;High;M57017;x
+57040;Head of Military Intelligence;ゴウファ・デ・ラプラデル;45;PA;Industrial Specialist;Medium;M57031;x
+57041;Head of State;ピエール・ラヴァル;51;PA;Powerhungry Demagogue;High;M57011;x
+57042;Minister of Armament;ルイ・ルノー;39;PA;Steel Magnate;High;M2239;x

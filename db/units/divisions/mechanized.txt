@@ -1,0 +1,286 @@
+allowed_brigades = anti_tank
+allowed_brigades = anti_air
+allowed_brigades = sp_artillery
+allowed_brigades = sp_rct_artillery
+allowed_brigades = tank_destroyer
+allowed_brigades = light_armor_brigade
+allowed_brigades = heavy_armor
+allowed_brigades = armored_car
+allowed_brigades = engineer
+allowed_brigades = super_heavy_armor
+
+upgrade = { type = infantry upgrade_time_factor = 0.38 upgrade_cost_factor = 0.58 }
+upgrade = { type = motorized upgrade_time_factor = 0.54 upgrade_cost_factor = 0.4 }
+upgrade = { type = light_armor upgrade_time_factor = 1.6 upgrade_cost_factor = 0.14 }
+upgrade = { type = armor upgrade_time_factor = 1.6 upgrade_cost_factor = 0.26 }
+
+# 0 - ‹@ŠB‰»•à•º '42
+model = {
+	cost 					= 14
+	buildtime	 			= 125
+	manpower 				= 10
+	maxspeed 				= 10
+	defaultorganisation 	= 30
+	morale					= 30
+	defensiveness 			= 20
+	toughness				= 20
+	softness				= 64
+	suppression				= 2
+	airdefence				= 5
+	softattack				= 14
+	hardattack				= 5
+	airattack				= 4
+	transportweight			= 30
+	supplyconsumption 		= 1.3
+	fuelconsumption			= 4.5
+	speed_cap_art			= 11
+	speed_cap_eng			= 11
+	speed_cap_at			= 11
+	speed_cap_aa			= 11
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 10000 trucks = 1378 artillery = 57 heavy_artillery = 78 anti_tank = 15 anti_air = 25 halftracks = 353 medium_armor = 47 }
+}
+# 1 - ‹@ŠB‰»•à•º '43
+model = {
+	cost 					= 14
+	buildtime	 			= 125
+	manpower 				= 10
+	maxspeed 				= 10
+	defaultorganisation 	= 30
+	morale					= 30
+	defensiveness 			= 25
+	toughness				= 25
+	softness				= 60
+	suppression				= 2
+	airdefence				= 6
+	softattack				= 16
+	hardattack				= 6
+	airattack				= 4
+	transportweight			= 30
+	supplyconsumption 		= 1.4
+	fuelconsumption			= 4.5
+	speed_cap_art			= 11
+	speed_cap_eng			= 11
+	speed_cap_at			= 11
+	speed_cap_aa			= 11
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 10000 trucks = 1324 artillery = 70 heavy_artillery = 58 anti_tank = 14 anti_air = 34 halftracks = 343 medium_armor = 48 }
+}
+# 2 - ‹@ŠB‰»•à•º '44
+model = {
+	cost 					= 14
+	buildtime	 			= 125
+	manpower 				= 10
+	maxspeed 				= 10
+	defaultorganisation 	= 30
+	morale					= 30
+	defensiveness 			= 32
+	toughness				= 32
+	softness				= 57
+	suppression				= 2
+	airdefence				= 6
+	softattack				= 18
+	hardattack				= 7
+	airattack				= 6
+	transportweight			= 30
+	supplyconsumption 		= 1.5
+	fuelconsumption			= 4.5
+	speed_cap_art			= 11
+	speed_cap_eng			= 11
+	speed_cap_at			= 11
+	speed_cap_aa			= 11
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 10000 trucks = 1269 artillery = 83 heavy_artillery = 37 anti_tank = 13 anti_air = 44 halftracks = 333 medium_armor = 49 }
+}
+# 3 - ‹@ŠB‰»•à•º '45
+model = {
+	cost 					= 14
+	buildtime	 			= 125
+	manpower 				= 10
+	maxspeed 				= 10
+	defaultorganisation 	= 30
+	morale					= 30
+	defensiveness 			= 37
+	toughness				= 37
+	softness				= 55
+	suppression				= 2
+	airdefence				= 6
+	softattack				= 20
+	hardattack				= 8
+	airattack				= 7
+	transportweight			= 30
+	supplyconsumption 		= 1.5
+	fuelconsumption			= 4.5
+	speed_cap_art			= 11
+	speed_cap_eng			= 11
+	speed_cap_at			= 11
+	speed_cap_aa			= 11
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 10000 trucks = 1215 artillery = 97 heavy_artillery = 17 anti_tank = 13 anti_air = 53 halftracks = 322 medium_armor = 50 }
+}
+# 4 - ‹@ŠB‰»•à•º '47
+model = {
+	cost 					= 14
+	buildtime	 			= 125
+	manpower 				= 10
+	maxspeed 				= 10
+	defaultorganisation 	= 30
+	morale					= 35
+	defensiveness 			= 42
+	toughness				= 37
+	softness				= 55
+	suppression				= 2
+	airdefence				= 8
+	softattack				= 24
+	hardattack				= 9
+	airattack				= 8
+	transportweight			= 30
+	supplyconsumption 		= 1.5
+	fuelconsumption			= 4.5
+	speed_cap_art			= 11
+	speed_cap_eng			= 11
+	speed_cap_at			= 11
+	speed_cap_aa			= 11
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 10000 trucks = 1017 artillery = 93 heavy_artillery = 17 anti_tank = 39 anti_air = 50 halftracks = 373 medium_armor = 45 }
+}
+# 5 - ‹@ŠB‰»•à•º '51
+model = {
+	cost 					= 14
+	buildtime	 			= 125
+	manpower 				= 10
+	maxspeed 				= 10
+	defaultorganisation 	= 30
+	morale					= 35
+	defensiveness 			= 47
+	toughness				= 42
+	softness				= 55
+	suppression				= 2
+	airdefence				= 9
+	softattack				= 28
+	hardattack				= 11
+	airattack				= 9
+	transportweight			= 30
+	supplyconsumption 		= 1.5
+	fuelconsumption			= 4.5
+	speed_cap_art			= 11
+	speed_cap_eng			= 11
+	speed_cap_at			= 11
+	speed_cap_aa			= 11
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 10000 trucks = 767 artillery = 78 heavy_artillery = 20 anti_tank = 30 anti_air = 48 halftracks = 557 medium_armor = 50 }
+}
+# 6 - ‹@ŠB‰»•à•º '56
+model = {
+	cost 					= 14
+	buildtime	 			= 125
+	manpower 				= 10
+	maxspeed 				= 10
+	defaultorganisation 	= 30
+	morale					= 35
+	defensiveness 			= 52
+	toughness				= 47
+	softness				= 55
+	suppression				= 2
+	airdefence				= 10
+	softattack				= 32
+	hardattack				= 13
+	airattack				= 10
+	transportweight			= 30
+	supplyconsumption 		= 1.5
+	fuelconsumption			= 4.5
+	speed_cap_art			= 11
+	speed_cap_eng			= 11
+	speed_cap_at			= 11
+	speed_cap_aa			= 11
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 10000 trucks = 822 artillery = 60 heavy_artillery = 30 anti_tank = 27 anti_air = 48 halftracks = 580 medium_armor = 37 }
+}
+# 7 - ‹@ŠB‰»•à•º '61
+model = {
+	cost 					= 14
+	buildtime	 			= 125
+	manpower 				= 10
+	maxspeed 				= 10
+	defaultorganisation 	= 30
+	morale					= 35
+	defensiveness 			= 57
+	toughness				= 52
+	softness				= 55
+	suppression				= 2
+	airdefence				= 11
+	softattack				= 36
+	hardattack				= 17
+	airattack				= 11
+	transportweight			= 30
+	supplyconsumption 		= 1.5
+	fuelconsumption			= 4.5
+	speed_cap_art			= 11
+	speed_cap_eng			= 11
+	speed_cap_at			= 11
+	speed_cap_aa			= 11
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 10000 trucks = 800 artillery = 58 heavy_artillery = 27 anti_tank = 27 anti_air = 30 halftracks = 532 medium_armor = 40 }
+}
+# 8 - W.A.V.E.S.
+model = {
+	cost 					= 40
+	buildtime	 			= 300
+	manpower 				= 5
+	maxspeed 				= 80
+	defaultorganisation 	= 50
+	morale					= 50
+	defensiveness 			= 55
+	toughness				= 50
+	softness				= 30
+	suppression				= 0
+	airdefence				= 30
+	softattack				= 60
+	hardattack				= 60
+	airattack				= 8
+	transportweight			= 40
+	supplyconsumption 		= 2.5
+	fuelconsumption			= 0
+	speed_cap_art			= 11
+	speed_cap_eng			= 11
+	speed_cap_at			= 11
+	speed_cap_aa			= 11
+	upgrade_time_factor = 50
+	upgrade_cost_factor = 50
+	equipment = { manpower = 5000 trucks = 100 helicopter = 200 }
+}
+# 9 - Hi-W.A.V.E.S.
+model = {
+	cost 					= 50
+	buildtime	 			= 300
+	manpower 				= 5
+	maxspeed 				= 100
+	defaultorganisation 	= 50
+	morale					= 50
+	defensiveness 			= 75
+	toughness				= 60
+	softness				= 20
+	suppression				= 0
+	airdefence				= 40
+	softattack				= 70
+	hardattack				= 70
+	airattack				= 11
+	transportweight			= 40
+	supplyconsumption 		= 3
+	fuelconsumption			= 0
+	speed_cap_art			= 11
+	speed_cap_eng			= 11
+	speed_cap_at			= 11
+	speed_cap_aa			= 11
+	upgrade_time_factor = 50
+	upgrade_cost_factor = 50
+	equipment = { manpower = 5000 trucks = 100 helicopter = 200 }
+}
